@@ -1,0 +1,15 @@
+<dec f='tvm/src/runtime/library_module.h' l='109' type='tvm::runtime::Module tvm::runtime::CreateModuleFromLibrary(ObjectPtr&lt;tvm::runtime::Library&gt; lib, tvm::runtime::PackedFuncWrapper wrapper = WrapPackedFunc)'/>
+<doc f='tvm/src/runtime/library_module.h' l='98'>/*!
+ * \brief Create a module from a library.
+ *
+ * \param lib The library.
+ * \param wrapper Optional function used to wrap a TVMBackendPackedCFunc,
+ * by default WrapPackedFunc is used.
+ * \return The corresponding loaded module.
+ *
+ * \note This function can create multiple linked modules
+ *       by parsing the binary blob section of the library.
+ */</doc>
+<def f='tvm/src/runtime/library_module.cc' l='200' ll='223' type='tvm::runtime::Module tvm::runtime::CreateModuleFromLibrary(ObjectPtr&lt;tvm::runtime::Library&gt; lib, tvm::runtime::PackedFuncWrapper packed_func_wrapper = WrapPackedFunc)'/>
+<use f='tvm/src/runtime/library_module.cc' l='227' u='c'/>
+<use f='tvm/src/runtime/system_library.cc' l='72' u='c'/>

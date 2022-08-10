@@ -1,0 +1,30 @@
+<def f='tvm/include/tvm/topi/nn/pooling.h' l='424' ll='429' type='tvm::te::Tensor tvm::topi::nn::adaptive_pool(const tvm::te::Tensor &amp; x, const Array&lt;tvm::PrimExpr&gt; &amp; output_size, tvm::topi::nn::PoolType pool_type, const std::string &amp; layout = &quot;NCHW&quot;)'/>
+<use f='tvm/include/tvm/topi/nn/pooling.h' l='488' u='c' c='_ZN3tvm4topi2nn11global_poolERKNS_2te6TensorENS1_8PoolTypeERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<use f='tvm/src/relay/op/nn/pooling.cc' l='587' u='c' c='_ZN3tvm5relay21AdaptivePool2DComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
+<doc f='tvm/include/tvm/topi/nn/pooling.h' l='398'>/*!
+ * \brief Adaptively perform pooling on height and width dimension of data.
+ *        The pooling kernel and stride sizes are automatically chosen for desired output sizes.
+ *        It decides the height and width dimension according to the layout string,
+ *        in which &apos;W&apos; and &apos;H&apos; means width and height respectively.
+ *        Width and height dimension cannot be split.
+ *        For example, NCHW, NCHW16c, etc. are valid for pool,
+ *        while NCHW16w, NCHW16h are not.
+ *        See \a layout for more information of the layout string convention.
+ *
+ * \param x The input tensor
+ * \param output_size Vector of two ints: {output_height, output_width}
+ * \param pool_type The type of pooling operator
+ * \param layout The input layout. Pooling supports any layout as long as &apos;H&apos; and &apos;W&apos; appear.
+ *        The layout is supposed to be composed of upper cases, lower cases and (optional) numbers,
+ *        where upper case indicates a dimension and
+ *        the corresponding lower case (with factor size) indicates the split dimension.
+ *        For example, NCHW16c can describe a 5-D tensor of
+ *        [batch_size, channel, height, width, channel_block].
+ *        (in which factor size `16` will not be used in pooling but for other operators,
+ *        it can be used to decide the output shape).
+ *        Since pooling does not care about the factor size of dimensions
+ *        other than `H` and `W`, one can pass `NCHWc` as well.
+ *
+ * \return The output tensor in same layout order
+ */</doc>
+<use f='tvm/src/topi/nn.cc' l='113' u='c'/>

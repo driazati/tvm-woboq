@@ -1,0 +1,12 @@
+<dec f='tvm/src/contrib/ethosu/cascader/plan_generator.h' l='58' type='std::vector&lt;StripeConfig&gt; tvm::contrib::ethosu::cascader::GenerateOutputStripeConfigs(const tvm::contrib::ethosu::cascader::Part &amp; part, int stripe_factors, bool enable_striping, bool multi_dimensional)'/>
+<def f='tvm/src/contrib/ethosu/cascader/plan_generator.cc' l='108' ll='218' type='std::vector&lt;StripeConfig&gt; tvm::contrib::ethosu::cascader::GenerateOutputStripeConfigs(const tvm::contrib::ethosu::cascader::Part &amp; part, int stripe_factors, bool enable_striping, bool multi_dimensional)'/>
+<use f='tvm/src/contrib/ethosu/cascader/plan_generator.cc' l='479' u='c' c='_ZN3tvm7contrib6ethosu8cascader18GenerateGraphPlansERKNS2_13CascaderGraphERKSt13unordered_mapINS2_6TensorESt6vectorINS2_12MemoryRegionESaIS9_EENS_7run1070765'/>
+<use f='tvm/src/contrib/ethosu/cascader/plan_generator.cc' l='566' u='c'/>
+<doc f='tvm/src/contrib/ethosu/cascader/plan_generator.h' l='50'>/*!
+ * \brief Generate possible output StripeConfigs that could be applied to a Part&apos;s output.
+ * \param part The Part to generate StripeConfigs for.
+ * \param stripe_factors How many striping factors to try per axis.
+ * \param enable_striping Whether striping is enabled
+ * \param multi_dimensional Whether to stripe in more than one dimension.
+ * \return The generated StripeConfigs for the Part&apos;s output.
+ */</doc>

@@ -1,0 +1,45 @@
+<inh f='tvm/include/tvm/relay/dataflow_pattern.h' l='40' c='tvm::relay::DFPatternNode'/>
+<def f='tvm/include/tvm/relay/dataflow_pattern.h' l='497' ll='514'/>
+<use f='tvm/include/tvm/relay/dataflow_pattern.h' l='522' c='_ZNK3tvm5relay16DominatorPatternptEv'/>
+<use f='tvm/include/tvm/relay/dataflow_pattern.h' l='522' c='_ZNK3tvm5relay16DominatorPatternptEv'/>
+<use f='tvm/include/tvm/relay/dataflow_pattern.h' l='522' c='_ZNK3tvm5relay16DominatorPattern3getEv'/>
+<use f='tvm/include/tvm/relay/dataflow_pattern.h' l='522'/>
+<use f='tvm/include/tvm/relay/dataflow_pattern_functor.h' l='89' c='_ZN3tvm5relay16DFPatternFunctorIFT_RKNS0_9DFPatternEDpT0_EE15VisitDFPattern_EPKNS0_20DominatorPatternNodeES7_'/>
+<use f='tvm/include/tvm/relay/dataflow_pattern_functor.h' l='116' c='_ZN3tvm5relay16DFPatternFunctorIFT_RKNS0_9DFPatternEDpT0_EE10InitVTableEv'/>
+<use f='tvm/include/tvm/relay/dataflow_pattern_functor.h' l='116' c='_ZN3tvm5relay16DFPatternFunctorIFT_RKNS0_9DFPatternEDpT0_EE10InitVTableEv'/>
+<use f='tvm/include/tvm/relay/dataflow_pattern_functor.h' l='145' c='_ZN3tvm5relay16DFPatternVisitor15VisitDFPattern_EPKNS0_20DominatorPatternNodeE'/>
+<use f='tvm/src/relay/ir/dataflow_matcher_impl.h' l='67' c='_ZN3tvm5relay16DFPatternMatcher15VisitDFPattern_EPKNS0_20DominatorPatternNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/ir/dataflow_matcher_impl.h' l='80' c='_ZN3tvm5relay16DFPatternMatcher11MatchesPathEPKNS0_20DominatorPatternNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/ir/dataflow_matcher_impl.h' l='81' c='_ZN3tvm5relay16DFPatternMatcher15DominatesParentEPKNS0_20DominatorPatternNodeERKNS_9RelayExprE'/>
+<size>40</size>
+<doc f='tvm/include/tvm/relay/dataflow_pattern.h' l='492'>/*!
+ * \brief Dominated Graph Pattern
+ * Pattern for fuzzy subgraphs where all outputs of the parent are used finally by the child, and
+ * every operation between the parent and the child matches the path.
+ */</doc>
+<mbr r='tvm::relay::DominatorPatternNode::parent' o='128' t='tvm::relay::DFPattern'/>
+<mbr r='tvm::relay::DominatorPatternNode::path' o='192' t='tvm::relay::DFPattern'/>
+<mbr r='tvm::relay::DominatorPatternNode::child' o='256' t='tvm::relay::DFPattern'/>
+<fun r='_ZN3tvm5relay20DominatorPatternNode10VisitAttrsEPNS_11AttrVisitorE'/>
+<smbr r='tvm::relay::DominatorPatternNode::_type_key' t='const char *const'/>
+<smbr r='tvm::relay::DominatorPatternNode::_type_final' t='const bool'/>
+<smbr r='tvm::relay::DominatorPatternNode::_type_child_slots' t='const int'/>
+<fun r='_ZN3tvm5relay20DominatorPatternNode16RuntimeTypeIndexEv'/>
+<fun r='_ZN3tvm5relay20DominatorPatternNode27_GetOrAllocRuntimeTypeIndexEv'/>
+<use f='tvm/src/relay/ir/dataflow_matcher.cc' l='301' c='_ZN3tvm5relay16DFPatternMatcher11MatchesPathEPKNS0_20DominatorPatternNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/ir/dataflow_matcher.cc' l='324' c='_ZN3tvm5relay16DFPatternMatcher15DominatesParentEPKNS0_20DominatorPatternNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/ir/dataflow_matcher.cc' l='345' c='_ZN3tvm5relay16DFPatternMatcher15VisitDFPattern_EPKNS0_20DominatorPatternNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/ir/dataflow_matcher.cc' l='622' c='_ZN3tvm5relay14PatternGrouper11CreateGroupERKNS_9RelayExprE'/>
+<size>40</size>
+<use f='tvm/src/relay/ir/dataflow_pattern.cc' l='301' c='_ZN3tvm5relay16DominatorPatternC1ENS0_9DFPatternES2_S2_'/>
+<use f='tvm/src/relay/ir/dataflow_pattern.cc' l='301' c='_ZN3tvm5relay16DominatorPatternC1ENS0_9DFPatternES2_S2_'/>
+<use f='tvm/src/relay/ir/dataflow_pattern.cc' l='309'/>
+<use f='tvm/src/relay/ir/dataflow_pattern.cc' l='309'/>
+<use f='tvm/src/relay/ir/dataflow_pattern.cc' l='309'/>
+<use f='tvm/src/relay/ir/dataflow_pattern.cc' l='317'/>
+<use f='tvm/src/relay/ir/dataflow_pattern.cc' l='318'/>
+<size>40</size>
+<use f='tvm/src/relay/ir/dataflow_pattern_functor.cc' l='59' c='_ZN3tvm5relay16DFPatternVisitor15VisitDFPattern_EPKNS0_20DominatorPatternNodeE'/>
+<size>40</size>
+<use f='tvm/src/relay/ir/indexed_graph.cc' l='481' c='_ZZN3tvm5relay18CreateIndexedGraphERKNS0_9DFPatternEEN9Annotator15VisitDFPattern_EPKNS0_20DominatorPatternNodeE'/>
+<size>40</size>

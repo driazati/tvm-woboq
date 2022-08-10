@@ -1,0 +1,14 @@
+<def f='tvm/include/tvm/topi/transform.h' l='1861' ll='1898' type='tvm::te::Tensor tvm::topi::sparse_to_dense(const tvm::te::Tensor &amp; sparse_indices, const Array&lt;tvm::PrimExpr&gt; &amp; output_shape, const tvm::te::Tensor &amp; sparse_values, const tvm::PrimExpr &amp; default_value, const std::string name = &quot;T_sparse_to_dense&quot;, const std::string tag = kInjective)'/>
+<doc f='tvm/include/tvm/topi/transform.h' l='1851'>/*!
+ * \brief Get a dense tensor.
+ * \param sparse_indices sparse_indices[i] contains sparse_values[i] will be placed.
+ * \param output_shape is the shape of the dense output tensor .
+ * \param sparse_values is a 0-D or 1-D tensor. Values for each row of sparse_indices.
+ * \param default_value is a 0-D tensor. Defaults to zero.
+ * \param name output tensor name.
+ * \param tag output tensor tag.
+ * \return Tensor of output_shape.
+ */</doc>
+<use f='tvm/src/relay/op/dyn/tensor/transform.cc' l='590' u='c' c='_ZN3tvm5relay3dyn20SparseToDenseComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
+<use f='tvm/src/relay/op/tensor/transform.cc' l='3917' u='c' c='_ZN3tvm5relay20SparseToDenseComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
+<use f='tvm/src/topi/transform.cc' l='146' u='c'/>

@@ -1,0 +1,13 @@
+<def f='tvm/include/tvm/tir/stmt.h' l='1427' type='const char *const'/>
+<doc f='tvm/include/tvm/tir/stmt.h' l='1420'>/*!
+ * \brief Marks the physical axis separators
+ *
+ * Only applies to a DataProducer, as it should be made part of the
+ * Buffer definition in a PrimFunc.  See `BufferNode::axis_separators`
+ * for more details.
+ */</doc>
+<use f='tvm/src/te/schedule/schedule_ops.cc' l='59' u='r' c='_ZN3tvm2te29WrapLayoutTransformationAttrsERKNS0_5StageENS_3tir4StmtE'/>
+<use f='tvm/src/te/schedule/schedule_ops.cc' l='237' u='r' c='_ZN3tvm2te16SchedulePostProc10VisitStmt_EPKNS_3tir12AttrStmtNodeE'/>
+<use f='tvm/src/te/schedule/schedule_postproc_to_primfunc.cc' l='92' u='r' c='_ZN3tvm2te20TensorToBufferMapper10VisitStmt_EPKNS_3tir12AttrStmtNodeE'/>
+<use f='tvm/src/te/schedule/schedule_postproc_to_primfunc.cc' l='290' u='r' c='_ZN3tvm2te27AxisSeparatorsAttrUnwrapper10VisitStmt_EPKNS_3tir12AttrStmtNodeE'/>
+<use f='tvm/src/te/schedule/schedule_postproc_to_primfunc.cc' l='375' u='r' c='_ZN3tvm2te27AxisSeparatorsAttrUnwrapper9Collector10VisitStmt_EPKNS_3tir12AttrStmtNodeE'/>

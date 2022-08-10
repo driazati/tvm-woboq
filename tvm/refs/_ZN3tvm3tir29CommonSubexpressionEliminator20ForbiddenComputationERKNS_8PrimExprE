@@ -1,0 +1,16 @@
+<dec f='tvm/src/tir/transforms/common_subexpr_elim.h' l='83' type='static bool tvm::tir::CommonSubexpressionEliminator::ForbiddenComputation(const tvm::PrimExpr &amp; expr)'/>
+<def f='tvm/src/tir/transforms/common_subexpr_elim.cc' l='69' ll='74' type='static bool tvm::tir::CommonSubexpressionEliminator::ForbiddenComputation(const tvm::PrimExpr &amp; expr)'/>
+<use f='tvm/src/tir/transforms/common_subexpr_elim.cc' l='93' u='c' c='_ZN3tvm3tir29CommonSubexpressionEliminator21IsEligibleComputationERKNS_8PrimExprE'/>
+<use f='tvm/src/tir/transforms/common_subexpr_elim.cc' l='97' u='r' c='_ZN3tvm3tir29CommonSubexpressionEliminator21IsEligibleComputationERKNS_8PrimExprE'/>
+<doc f='tvm/src/tir/transforms/common_subexpr_elim.cc' l='57'>/*!
+ * \brief Check whether a computation is forbidden for being treated by the CSE pass.
+          The important thing about forbidden computations is that not only we won&apos;t want
+          to collect them for the CSE pass, but we also won&apos;t even want to collect computations
+          that contain them.
+          The reason is that reusing such computations would change the semantics of the program,
+          and therefore before doing any introduction of var or any reuse of already introduced
+          variables, we will make sure that the computation being considered is not forbidden, and
+          that it does not even contain a forbidden computation.
+ * \param expr The expression to check
+ * \return Whether `expr` is a forbidden computation or not
+ */</doc>

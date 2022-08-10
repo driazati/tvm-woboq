@@ -1,0 +1,195 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>functor.h source code [tvm/include/tvm/node/functor.h] - Woboq Code Browser</title>
+<meta name="woboq:interestingDefinitions" content="tvm::NodeFunctor "/>
+<link rel="stylesheet" href="../../../.././data/qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href="../../../.././data/kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src="../../../.././data/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="../../../.././data/jquery/jquery-ui.min.js"></script>
+<script>var file = 'tvm/include/tvm/node/functor.h'; var root_path = '../../../..'; var data_path = '../../../.././data'; var ecma_script_api_version = 2;</script>
+<script src='../../../.././data/codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='../../..'>tvm</a>/<a href='../..'>include</a>/<a href='..'>tvm</a>/<a href='./'>node</a>/<a href='functor.h.html'>functor.h</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td><i>/*</i></td></tr>
+<tr><th id="2">2</th><td><i> * Licensed to the Apache Software Foundation (ASF) under one</i></td></tr>
+<tr><th id="3">3</th><td><i> * or more contributor license agreements.  See the NOTICE file</i></td></tr>
+<tr><th id="4">4</th><td><i> * distributed with this work for additional information</i></td></tr>
+<tr><th id="5">5</th><td><i> * regarding copyright ownership.  The ASF licenses this file</i></td></tr>
+<tr><th id="6">6</th><td><i> * to you under the Apache License, Version 2.0 (the</i></td></tr>
+<tr><th id="7">7</th><td><i> * "License"); you may not use this file except in compliance</i></td></tr>
+<tr><th id="8">8</th><td><i> * with the License.  You may obtain a copy of the License at</i></td></tr>
+<tr><th id="9">9</th><td><i> *</i></td></tr>
+<tr><th id="10">10</th><td><i> *   <a href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a></i></td></tr>
+<tr><th id="11">11</th><td><i> *</i></td></tr>
+<tr><th id="12">12</th><td><i> * Unless required by applicable law or agreed to in writing,</i></td></tr>
+<tr><th id="13">13</th><td><i> * software distributed under the License is distributed on an</i></td></tr>
+<tr><th id="14">14</th><td><i> * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY</i></td></tr>
+<tr><th id="15">15</th><td><i> * KIND, either express or implied.  See the License for the</i></td></tr>
+<tr><th id="16">16</th><td><i> * specific language governing permissions and limitations</i></td></tr>
+<tr><th id="17">17</th><td><i> * under the License.</i></td></tr>
+<tr><th id="18">18</th><td><i> */</i></td></tr>
+<tr><th id="19">19</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="20">20</th><td><i class="doc"> * <span class="command">\file</span> <span class="verb">tvm/node/functor.h</span></i></td></tr>
+<tr><th id="21">21</th><td><i class="doc"> * <span class="command">\brief</span> Defines the Functor data structures.</i></td></tr>
+<tr><th id="22">22</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="23">23</th><td><u>#<span data-ppcond="23">ifndef</span> <span class="macro" data-ref="_M/TVM_NODE_FUNCTOR_H_">TVM_NODE_FUNCTOR_H_</span></u></td></tr>
+<tr><th id="24">24</th><td><u>#define <dfn class="macro" id="_M/TVM_NODE_FUNCTOR_H_" data-ref="_M/TVM_NODE_FUNCTOR_H_">TVM_NODE_FUNCTOR_H_</dfn></u></td></tr>
+<tr><th id="25">25</th><td></td></tr>
+<tr><th id="26">26</th><td><u>#include <a href="../../../3rdparty/dmlc-core/include/dmlc/logging.h.html">&lt;dmlc/logging.h&gt;</a></u></td></tr>
+<tr><th id="27">27</th><td><u>#include <a href="../runtime/object.h.html">&lt;tvm/runtime/object.h&gt;</a></u></td></tr>
+<tr><th id="28">28</th><td></td></tr>
+<tr><th id="29">29</th><td><u>#include <a href="../../../../include/c++/10/type_traits.html">&lt;type_traits&gt;</a></u></td></tr>
+<tr><th id="30">30</th><td><u>#include <a href="../../../../include/c++/10/utility.html">&lt;utility&gt;</a></u></td></tr>
+<tr><th id="31">31</th><td><u>#include <a href="../../../../include/c++/10/vector.html">&lt;vector&gt;</a></u></td></tr>
+<tr><th id="32">32</th><td></td></tr>
+<tr><th id="33">33</th><td><b>namespace</b> <span class="namespace">tvm</span> {</td></tr>
+<tr><th id="34">34</th><td></td></tr>
+<tr><th id="35">35</th><td><b>using</b> <span class="namespace">runtime::</span>ObjectRef;</td></tr>
+<tr><th id="36">36</th><td></td></tr>
+<tr><th id="37">37</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="38">38</th><td><i class="doc"> * <span class="command">\brief</span> A dynamically dispatched functor on the type of the first argument.</i></td></tr>
+<tr><th id="39">39</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="40">40</th><td><i class="doc"> * This is a class that is useful to construct polymorphic dispatching</i></td></tr>
+<tr><th id="41">41</th><td><i class="doc"> * base on the AST/IR node's type.</i></td></tr>
+<tr><th id="42">42</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="43">43</th><td><i class="doc"> * <span class="command">\code</span></i></td></tr>
+<tr><th id="44">44</th><td><i class="doc"> *<span class="verb">   NodeFunctor&lt;std::string (const ObjectRef&amp; n, std::string prefix)&gt; tostr;</span></i></td></tr>
+<tr><th id="45">45</th><td><i class="doc"><span class="verb"></span> *<span class="verb">   tostr.set_dispatch&lt;Add&gt;([](const ObjectRef&amp; op, std::string prefix) {</span></i></td></tr>
+<tr><th id="46">46</th><td><i class="doc"><span class="verb"></span> *<span class="verb">     return prefix + "Add";</span></i></td></tr>
+<tr><th id="47">47</th><td><i class="doc"><span class="verb"></span> *<span class="verb">   });</span></i></td></tr>
+<tr><th id="48">48</th><td><i class="doc"><span class="verb"></span> *<span class="verb">   tostr.set_dispatch&lt;IntImm&gt;([](const ObjectRef&amp; op, std::string prefix) {</span></i></td></tr>
+<tr><th id="49">49</th><td><i class="doc"><span class="verb"></span> *<span class="verb">     return prefix + "IntImm"</span></i></td></tr>
+<tr><th id="50">50</th><td><i class="doc"><span class="verb"></span> *<span class="verb">   });</span></i></td></tr>
+<tr><th id="51">51</th><td><i class="doc"><span class="verb"></span> *<span class="verb"></span></i></td></tr>
+<tr><th id="52">52</th><td><i class="doc"><span class="verb"></span> *<span class="verb">   Expr x = make_const(1);</span></i></td></tr>
+<tr><th id="53">53</th><td><i class="doc"><span class="verb"></span> *<span class="verb">   Expr y = x + x;</span></i></td></tr>
+<tr><th id="54">54</th><td><i class="doc"><span class="verb"></span> *<span class="verb">   // dispatch to IntImm, outputs "MyIntImm"</span></i></td></tr>
+<tr><th id="55">55</th><td><i class="doc"><span class="verb"></span> *<span class="verb">   LOG(INFO) &lt;&lt; tostr(x, "My");</span></i></td></tr>
+<tr><th id="56">56</th><td><i class="doc"><span class="verb"></span> *<span class="verb">   // dispatch to IntImm, outputs "MyAdd"</span></i></td></tr>
+<tr><th id="57">57</th><td><i class="doc"><span class="verb"></span> *<span class="verb">   LOG(INFO) &lt;&lt; tostr(y, "My");</span></i></td></tr>
+<tr><th id="58">58</th><td><i class="doc"><span class="verb"></span> * \endcode</i></td></tr>
+<tr><th id="59">59</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="60">60</th><td><i class="doc"> * <span class="command">\tparam</span> <span class="arg">FType</span> function signiture</i></td></tr>
+<tr><th id="61">61</th><td><i class="doc"> *  This type if only defined for FType with function signature</i></td></tr>
+<tr><th id="62">62</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="63">63</th><td><b>template</b> &lt;<b>typename</b> FType&gt;</td></tr>
+<tr><th id="64">64</th><td><b>class</b> <dfn class="type" id="tvm::NodeFunctor" title='tvm::NodeFunctor' data-ref="tvm::NodeFunctor" data-ref-filename="tvm..NodeFunctor">NodeFunctor</dfn>;</td></tr>
+<tr><th id="65">65</th><td></td></tr>
+<tr><th id="66">66</th><td><b>template</b> &lt;<b>typename</b> R, <b>typename</b>... Args&gt;</td></tr>
+<tr><th id="67">67</th><td><b>class</b> <dfn class="type def" id="tvm::NodeFunctor" title='tvm::NodeFunctor' data-ref="tvm::NodeFunctor" data-ref-filename="tvm..NodeFunctor">NodeFunctor</dfn>&lt;R(<em>const</em> ObjectRef&amp; <dfn class="local col4 decl" id="9014n" title='n' data-type='const tvm::runtime::ObjectRef &amp;' data-ref="9014n" data-ref-filename="9014n">n</dfn>, Args...)&gt; {</td></tr>
+<tr><th id="68">68</th><td> <b>private</b>:</td></tr>
+<tr><th id="69">69</th><td>  <i class="doc">/*! <span class="command">\brief</span> internal function pointer type */</i></td></tr>
+<tr><th id="70">70</th><td>  <b>typedef</b> R (*<dfn class="typedef" id="tvm::NodeFunctor{type-parameter-0-0(consttvm::runtime::ObjectRef&amp;,type-parameter-0-1...)}::FPointer" title='tvm::NodeFunctor&lt;type-parameter-0-0 (const tvm::runtime::ObjectRef &amp;, type-parameter-0-1...)&gt;::FPointer' data-type='R (*)(const tvm::runtime::ObjectRef &amp;, Args...)' data-ref="tvm::NodeFunctor{type-parameter-0-0(consttvm::runtime::ObjectRef&amp;,type-parameter-0-1...)}::FPointer" data-ref-filename="tvm..NodeFunctor{type-parameter-0-0(consttvm..runtime..ObjectRef&amp;,type-parameter-0-1...)}..FPointer">FPointer</dfn>)(<em>const</em> ObjectRef&amp; <dfn class="local col5 decl" id="9015n" title='n' data-type='const tvm::runtime::ObjectRef &amp;' data-ref="9015n" data-ref-filename="9015n">n</dfn>, Args...);</td></tr>
+<tr><th id="71">71</th><td>  <i class="doc">/*! <span class="command">\brief</span> refer to itself. */</i></td></tr>
+<tr><th id="72">72</th><td>  <b>using</b> <dfn class="typedef" id="tvm::NodeFunctor{type-parameter-0-0(consttvm::runtime::ObjectRef&amp;,type-parameter-0-1...)}::TSelf" title='tvm::NodeFunctor&lt;type-parameter-0-0 (const tvm::runtime::ObjectRef &amp;, type-parameter-0-1...)&gt;::TSelf' data-type='NodeFunctor&lt;R (const tvm::runtime::ObjectRef &amp;, Args...)&gt;' data-ref="tvm::NodeFunctor{type-parameter-0-0(consttvm::runtime::ObjectRef&amp;,type-parameter-0-1...)}::TSelf" data-ref-filename="tvm..NodeFunctor{type-parameter-0-0(consttvm..runtime..ObjectRef&amp;,type-parameter-0-1...)}..TSelf">TSelf</dfn> = <a class="type" href="#tvm::NodeFunctor" title='tvm::NodeFunctor' data-ref="tvm::NodeFunctor" data-ref-filename="tvm..NodeFunctor">NodeFunctor</a>&lt;R(<em>const</em> ObjectRef&amp; <dfn class="local col6 decl" id="9016n" title='n' data-type='const tvm::runtime::ObjectRef &amp;' data-ref="9016n" data-ref-filename="9016n">n</dfn>, Args...)&gt;;</td></tr>
+<tr><th id="73">73</th><td>  <i class="doc">/*! <span class="command">\brief</span> internal function table */</i></td></tr>
+<tr><th id="74">74</th><td>  <span class="namespace">std::</span><a class="type" href="../../../../include/c++/10/bits/stl_vector.h.html#std::vector" title='std::vector' data-ref="std::vector" data-ref-filename="std..vector">vector</a>&lt;<a class="typedef" href="#tvm::NodeFunctor{type-parameter-0-0(consttvm::runtime::ObjectRef&amp;,type-parameter-0-1...)}::FPointer" title='tvm::NodeFunctor&lt;type-parameter-0-0 (const tvm::runtime::ObjectRef &amp;, type-parameter-0-1...)&gt;::FPointer' data-type='R (*)(const tvm::runtime::ObjectRef &amp;, Args...)' data-ref="tvm::NodeFunctor{type-parameter-0-0(consttvm::runtime::ObjectRef&amp;,type-parameter-0-1...)}::FPointer" data-ref-filename="tvm..NodeFunctor{type-parameter-0-0(consttvm..runtime..ObjectRef&amp;,type-parameter-0-1...)}..FPointer">FPointer</a>&gt; <dfn class="decl field" id="tvm::NodeFunctor::func_" title='tvm::NodeFunctor&lt;type-parameter-0-0 (const tvm::runtime::ObjectRef &amp;, type-parameter-0-1...)&gt;::func_' data-ref="tvm::NodeFunctor::func_" data-ref-filename="tvm..NodeFunctor..func_">func_</dfn>;</td></tr>
+<tr><th id="75">75</th><td></td></tr>
+<tr><th id="76">76</th><td> <b>public</b>:</td></tr>
+<tr><th id="77">77</th><td>  <i class="doc">/*! <span class="command">\brief</span> the result type of this functor */</i></td></tr>
+<tr><th id="78">78</th><td>  <b>using</b> <dfn class="typedef" id="tvm::NodeFunctor{type-parameter-0-0(consttvm::runtime::ObjectRef&amp;,type-parameter-0-1...)}::result_type" title='tvm::NodeFunctor&lt;type-parameter-0-0 (const tvm::runtime::ObjectRef &amp;, type-parameter-0-1...)&gt;::result_type' data-type='R' data-ref="tvm::NodeFunctor{type-parameter-0-0(consttvm::runtime::ObjectRef&amp;,type-parameter-0-1...)}::result_type" data-ref-filename="tvm..NodeFunctor{type-parameter-0-0(consttvm..runtime..ObjectRef&amp;,type-parameter-0-1...)}..result_type">result_type</dfn> = R;</td></tr>
+<tr><th id="79">79</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="80">80</th><td><i class="doc">   * <span class="command">\brief</span> Whether the functor can dispatch the corresponding Node</i></td></tr>
+<tr><th id="81">81</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">n</span> The node to be dispatched</i></td></tr>
+<tr><th id="82">82</th><td><i class="doc">   * <span class="command">\return</span> Whether dispatching function is registered for n's type.</i></td></tr>
+<tr><th id="83">83</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="84">84</th><td>  <em>bool</em> <dfn class="decl def fn" id="_ZNK3tvm11NodeFunctorIFT_RKNS_7runtime9ObjectRefEDpT0_EE12can_dispatchES5_" title='tvm::NodeFunctor&lt;type-parameter-0-0 (const tvm::runtime::ObjectRef &amp;, type-parameter-0-1...)&gt;::can_dispatch' data-ref="_ZNK3tvm11NodeFunctorIFT_RKNS_7runtime9ObjectRefEDpT0_EE12can_dispatchES5_" data-ref-filename="_ZNK3tvm11NodeFunctorIFT_RKNS_7runtime9ObjectRefEDpT0_EE12can_dispatchES5_">can_dispatch</dfn>(<em>const</em> ObjectRef&amp; <dfn class="local col7 decl" id="9017n" title='n' data-type='const tvm::runtime::ObjectRef &amp;' data-ref="9017n" data-ref-filename="9017n">n</dfn>) <em>const</em> {</td></tr>
+<tr><th id="85">85</th><td>    <a class="typedef" href="../../../../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint32_t" title='uint32_t' data-type='__uint32_t' data-ref="uint32_t" data-ref-filename="uint32_t">uint32_t</a> <dfn class="local col8 decl" id="9018type_index" title='type_index' data-type='uint32_t' data-ref="9018type_index" data-ref-filename="9018type_index">type_index</dfn> = <a class="local col7 ref" href="#9017n" title='n' data-ref="9017n" data-ref-filename="9017n">n</a><a class="ref fn" href="../runtime/object.h.html#_ZNK3tvm7runtime9ObjectRefptEv" title='tvm::runtime::ObjectRef::operator-&gt;' data-ref="_ZNK3tvm7runtime9ObjectRefptEv" data-ref-filename="_ZNK3tvm7runtime9ObjectRefptEv">-&gt;</a><a class="ref fn" href="../runtime/object.h.html#_ZNK3tvm7runtime6Object10type_indexEv" title='tvm::runtime::Object::type_index' data-ref="_ZNK3tvm7runtime6Object10type_indexEv" data-ref-filename="_ZNK3tvm7runtime6Object10type_indexEv">type_index</a>();</td></tr>
+<tr><th id="86">86</th><td>    <b>return</b> <a class="local col8 ref" href="#9018type_index" title='type_index' data-ref="9018type_index" data-ref-filename="9018type_index">type_index</a> &lt; <a class="member field" href="#tvm::NodeFunctor::func_" title='tvm::NodeFunctor&lt;type-parameter-0-0 (const tvm::runtime::ObjectRef &amp;, type-parameter-0-1...)&gt;::func_' data-ref="tvm::NodeFunctor::func_" data-ref-filename="tvm..NodeFunctor..func_">func_</a>.size() &amp;&amp; <a class="member field" href="#tvm::NodeFunctor::func_" title='tvm::NodeFunctor&lt;type-parameter-0-0 (const tvm::runtime::ObjectRef &amp;, type-parameter-0-1...)&gt;::func_' data-ref="tvm::NodeFunctor::func_" data-ref-filename="tvm..NodeFunctor..func_">func_</a>[<a class="local col8 ref" href="#9018type_index" title='type_index' data-ref="9018type_index" data-ref-filename="9018type_index">type_index</a>] != <b>nullptr</b>;</td></tr>
+<tr><th id="87">87</th><td>  }</td></tr>
+<tr><th id="88">88</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="89">89</th><td><i class="doc">   * <span class="command">\brief</span> invoke the functor, dispatch on type of n</i></td></tr>
+<tr><th id="90">90</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">n</span> The Node argument</i></td></tr>
+<tr><th id="91">91</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">args</span> The additional arguments</i></td></tr>
+<tr><th id="92">92</th><td><i class="doc">   * <span class="command">\return</span> The result.</i></td></tr>
+<tr><th id="93">93</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="94">94</th><td>  R <dfn class="decl def fn" id="_ZNK3tvm11NodeFunctorIFT_RKNS_7runtime9ObjectRefEDpT0_EEclES5_S7_" title='tvm::NodeFunctor&lt;type-parameter-0-0 (const tvm::runtime::ObjectRef &amp;, type-parameter-0-1...)&gt;::operator()' data-ref="_ZNK3tvm11NodeFunctorIFT_RKNS_7runtime9ObjectRefEDpT0_EEclES5_S7_" data-ref-filename="_ZNK3tvm11NodeFunctorIFT_RKNS_7runtime9ObjectRefEDpT0_EEclES5_S7_"><b>operator</b>()</dfn>(<em>const</em> ObjectRef&amp; <dfn class="local col9 decl" id="9019n" title='n' data-type='const tvm::runtime::ObjectRef &amp;' data-ref="9019n" data-ref-filename="9019n">n</dfn>, Args... <dfn class="local col0 decl" id="9020args" title='args' data-type='Args...' data-ref="9020args" data-ref-filename="9020args">args</dfn>) <em>const</em> {</td></tr>
+<tr><th id="95">95</th><td>    <a class="macro" href="../runtime/logging.h.html#681" title="if (!(can_dispatch(n))) ::tvm::runtime::detail::LogFatal(&quot;/home/runner/work/tvm-woboq/tvm-woboq/tvm/include/tvm/node/functor.h&quot;, 95).stream() &lt;&lt; ::tvm::runtime::detail::kTVM_INTERNAL_ERROR_MESSAGE &lt;&lt; &quot;  &quot; &lt;&lt; &quot;Check failed: (&quot; &quot;can_dispatch(n)&quot; &lt;&lt; &quot;) is false: &quot;" data-ref="_M/ICHECK">ICHECK</a>(<a class="member fn" href="#_ZNK3tvm11NodeFunctorIFT_RKNS_7runtime9ObjectRefEDpT0_EE12can_dispatchES5_" title='tvm::NodeFunctor&lt;type-parameter-0-0 (const tvm::runtime::ObjectRef &amp;, type-parameter-0-1...)&gt;::can_dispatch' data-ref="_ZNK3tvm11NodeFunctorIFT_RKNS_7runtime9ObjectRefEDpT0_EE12can_dispatchES5_" data-ref-filename="_ZNK3tvm11NodeFunctorIFT_RKNS_7runtime9ObjectRefEDpT0_EE12can_dispatchES5_">can_dispatch</a>(<a class="local col9 ref" href="#9019n" title='n' data-ref="9019n" data-ref-filename="9019n">n</a>)) <a class="ref fn" href="../../../../include/c++/10/ostream.html#_ZStlsRSt13basic_ostreamIcT_EPKc" title='std::operator&lt;&lt;' data-ref="_ZStlsRSt13basic_ostreamIcT_EPKc" data-ref-filename="_ZStlsRSt13basic_ostreamIcT_EPKc">&lt;&lt;</a> <q>"NodeFunctor calls un-registered function on type "</q></td></tr>
+<tr><th id="96">96</th><td>                            <a class="ref fn" href="../../../../include/c++/10/bits/basic_string.h.html#_ZStlsRSt13basic_ostreamIT_T0_ERKNSt7__cxx1112basic_stringIS0_S1_T1_EE" title='std::operator&lt;&lt;' data-ref="_ZStlsRSt13basic_ostreamIT_T0_ERKNSt7__cxx1112basic_stringIS0_S1_T1_EE" data-ref-filename="_ZStlsRSt13basic_ostreamIT_T0_ERKNSt7__cxx1112basic_stringIS0_S1_T1_EE">&lt;&lt;</a> <a class="local col9 ref" href="#9019n" title='n' data-ref="9019n" data-ref-filename="9019n">n</a><a class="ref fn" href="../runtime/object.h.html#_ZNK3tvm7runtime9ObjectRefptEv" title='tvm::runtime::ObjectRef::operator-&gt;' data-ref="_ZNK3tvm7runtime9ObjectRefptEv" data-ref-filename="_ZNK3tvm7runtime9ObjectRefptEv">-&gt;</a><a class="ref fn" href="../runtime/object.h.html#_ZNK3tvm7runtime6Object10GetTypeKeyB5cxx11Ev" title='tvm::runtime::Object::GetTypeKey' data-ref="_ZNK3tvm7runtime6Object10GetTypeKeyB5cxx11Ev" data-ref-filename="_ZNK3tvm7runtime6Object10GetTypeKeyB5cxx11Ev">GetTypeKey</a>();</td></tr>
+<tr><th id="97">97</th><td>    <b>return</b> (*<a class="member field" href="#tvm::NodeFunctor::func_" title='tvm::NodeFunctor&lt;type-parameter-0-0 (const tvm::runtime::ObjectRef &amp;, type-parameter-0-1...)&gt;::func_' data-ref="tvm::NodeFunctor::func_" data-ref-filename="tvm..NodeFunctor..func_">func_</a>[<a class="local col9 ref" href="#9019n" title='n' data-ref="9019n" data-ref-filename="9019n">n</a><a class="ref fn" href="../runtime/object.h.html#_ZNK3tvm7runtime9ObjectRefptEv" title='tvm::runtime::ObjectRef::operator-&gt;' data-ref="_ZNK3tvm7runtime9ObjectRefptEv" data-ref-filename="_ZNK3tvm7runtime9ObjectRefptEv">-&gt;</a><a class="ref fn" href="../runtime/object.h.html#_ZNK3tvm7runtime6Object10type_indexEv" title='tvm::runtime::Object::type_index' data-ref="_ZNK3tvm7runtime6Object10type_indexEv" data-ref-filename="_ZNK3tvm7runtime6Object10type_indexEv">type_index</a>()])(<a class="local col9 ref" href="#9019n" title='n' data-ref="9019n" data-ref-filename="9019n">n</a>, <span class="namespace">std::</span>forward&lt;Args&gt;(<a class="local col0 ref" href="#9020args" title='args' data-ref="9020args" data-ref-filename="9020args">args</a>)...);</td></tr>
+<tr><th id="98">98</th><td>  }</td></tr>
+<tr><th id="99">99</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="100">100</th><td><i class="doc">   * <span class="command">\brief</span> set the dispatcher for type TNode</i></td></tr>
+<tr><th id="101">101</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">f</span> The function to be set.</i></td></tr>
+<tr><th id="102">102</th><td><i class="doc">   * <span class="command">\tparam</span> <span class="arg">TNode</span> the type of Node to be dispatched.</i></td></tr>
+<tr><th id="103">103</th><td><i class="doc">   * <span class="command">\return</span> reference to self.</i></td></tr>
+<tr><th id="104">104</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="105">105</th><td>  <b>template</b> &lt;<b>typename</b> TNode&gt;</td></tr>
+<tr><th id="106">106</th><td>  <a class="typedef" href="#tvm::NodeFunctor{type-parameter-0-0(consttvm::runtime::ObjectRef&amp;,type-parameter-0-1...)}::TSelf" title='tvm::NodeFunctor&lt;type-parameter-0-0 (const tvm::runtime::ObjectRef &amp;, type-parameter-0-1...)&gt;::TSelf' data-type='NodeFunctor&lt;R (const tvm::runtime::ObjectRef &amp;, Args...)&gt;' data-ref="tvm::NodeFunctor{type-parameter-0-0(consttvm::runtime::ObjectRef&amp;,type-parameter-0-1...)}::TSelf" data-ref-filename="tvm..NodeFunctor{type-parameter-0-0(consttvm..runtime..ObjectRef&amp;,type-parameter-0-1...)}..TSelf">TSelf</a>&amp; <dfn class="decl def fn" id="_ZN3tvm11NodeFunctorIFT_RKNS_7runtime9ObjectRefEDpT0_EE12set_dispatchEPS8_" title='tvm::NodeFunctor&lt;type-parameter-0-0 (const tvm::runtime::ObjectRef &amp;, type-parameter-0-1...)&gt;::set_dispatch' data-ref="_ZN3tvm11NodeFunctorIFT_RKNS_7runtime9ObjectRefEDpT0_EE12set_dispatchEPS8_" data-ref-filename="_ZN3tvm11NodeFunctorIFT_RKNS_7runtime9ObjectRefEDpT0_EE12set_dispatchEPS8_">set_dispatch</dfn>(<a class="typedef" href="#tvm::NodeFunctor{type-parameter-0-0(consttvm::runtime::ObjectRef&amp;,type-parameter-0-1...)}::FPointer" title='tvm::NodeFunctor&lt;type-parameter-0-0 (const tvm::runtime::ObjectRef &amp;, type-parameter-0-1...)&gt;::FPointer' data-type='R (*)(const tvm::runtime::ObjectRef &amp;, Args...)' data-ref="tvm::NodeFunctor{type-parameter-0-0(consttvm::runtime::ObjectRef&amp;,type-parameter-0-1...)}::FPointer" data-ref-filename="tvm..NodeFunctor{type-parameter-0-0(consttvm..runtime..ObjectRef&amp;,type-parameter-0-1...)}..FPointer">FPointer</a> <dfn class="local col1 decl" id="9021f" title='f' data-type='tvm::NodeFunctor&lt;type-parameter-0-0 (const tvm::runtime::ObjectRef &amp;, type-parameter-0-1...)&gt;::FPointer' data-ref="9021f" data-ref-filename="9021f">f</dfn>) {  <i>// NOLINT(*)</i></td></tr>
+<tr><th id="107">107</th><td>    <a class="typedef" href="../../../../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint32_t" title='uint32_t' data-type='__uint32_t' data-ref="uint32_t" data-ref-filename="uint32_t">uint32_t</a> <dfn class="local col2 decl" id="9022tindex" title='tindex' data-type='uint32_t' data-ref="9022tindex" data-ref-filename="9022tindex">tindex</dfn> = TNode::RuntimeTypeIndex();</td></tr>
+<tr><th id="108">108</th><td>    <b>if</b> (<a class="member field" href="#tvm::NodeFunctor::func_" title='tvm::NodeFunctor&lt;type-parameter-0-0 (const tvm::runtime::ObjectRef &amp;, type-parameter-0-1...)&gt;::func_' data-ref="tvm::NodeFunctor::func_" data-ref-filename="tvm..NodeFunctor..func_">func_</a>.size() &lt;= <a class="local col2 ref" href="#9022tindex" title='tindex' data-ref="9022tindex" data-ref-filename="9022tindex">tindex</a>) {</td></tr>
+<tr><th id="109">109</th><td>      <a class="member field" href="#tvm::NodeFunctor::func_" title='tvm::NodeFunctor&lt;type-parameter-0-0 (const tvm::runtime::ObjectRef &amp;, type-parameter-0-1...)&gt;::func_' data-ref="tvm::NodeFunctor::func_" data-ref-filename="tvm..NodeFunctor..func_">func_</a>.resize(<a class="local col2 ref" href="#9022tindex" title='tindex' data-ref="9022tindex" data-ref-filename="9022tindex">tindex</a> + <var>1</var>, <b>nullptr</b>);</td></tr>
+<tr><th id="110">110</th><td>    }</td></tr>
+<tr><th id="111">111</th><td>    <a class="macro" href="../runtime/logging.h.html#681" title="if (!(func_[tindex] == nullptr)) ::tvm::runtime::detail::LogFatal(&quot;/home/runner/work/tvm-woboq/tvm-woboq/tvm/include/tvm/node/functor.h&quot;, 111).stream() &lt;&lt; ::tvm::runtime::detail::kTVM_INTERNAL_ERROR_MESSAGE &lt;&lt; &quot;  &quot; &lt;&lt; &quot;Check failed: (&quot; &quot;func_[tindex] == nullptr&quot; &lt;&lt; &quot;) is false: &quot;" data-ref="_M/ICHECK">ICHECK</a>(<a class="member field" href="#tvm::NodeFunctor::func_" title='tvm::NodeFunctor&lt;type-parameter-0-0 (const tvm::runtime::ObjectRef &amp;, type-parameter-0-1...)&gt;::func_' data-ref="tvm::NodeFunctor::func_" data-ref-filename="tvm..NodeFunctor..func_">func_</a>[<a class="local col2 ref" href="#9022tindex" title='tindex' data-ref="9022tindex" data-ref-filename="9022tindex">tindex</a>] == <b>nullptr</b>) <a class="ref fn" href="../../../../include/c++/10/ostream.html#_ZStlsRSt13basic_ostreamIcT_EPKc" title='std::operator&lt;&lt;' data-ref="_ZStlsRSt13basic_ostreamIcT_EPKc" data-ref-filename="_ZStlsRSt13basic_ostreamIcT_EPKc">&lt;&lt;</a> <q>"Dispatch for "</q> &lt;&lt; TNode::_type_key &lt;&lt; <q>" is already set"</q>;</td></tr>
+<tr><th id="112">112</th><td>    <a class="member field" href="#tvm::NodeFunctor::func_" title='tvm::NodeFunctor&lt;type-parameter-0-0 (const tvm::runtime::ObjectRef &amp;, type-parameter-0-1...)&gt;::func_' data-ref="tvm::NodeFunctor::func_" data-ref-filename="tvm..NodeFunctor..func_">func_</a>[<a class="local col2 ref" href="#9022tindex" title='tindex' data-ref="9022tindex" data-ref-filename="9022tindex">tindex</a>] = <a class="local col1 ref" href="#9021f" title='f' data-ref="9021f" data-ref-filename="9021f">f</a>;</td></tr>
+<tr><th id="113">113</th><td>    <b>return</b> *<b>this</b>;</td></tr>
+<tr><th id="114">114</th><td>  }</td></tr>
+<tr><th id="115">115</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="116">116</th><td><i class="doc">   * <span class="command">\brief</span> unset the dispatcher for type TNode</i></td></tr>
+<tr><th id="117">117</th><td><i class="doc">   *</i></td></tr>
+<tr><th id="118">118</th><td><i class="doc">   * <span class="command">\tparam</span> <span class="arg">TNode</span> the type of Node to be dispatched.</i></td></tr>
+<tr><th id="119">119</th><td><i class="doc">   * <span class="command">\return</span> reference to self.</i></td></tr>
+<tr><th id="120">120</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="121">121</th><td>  <b>template</b> &lt;<b>typename</b> TNode&gt;</td></tr>
+<tr><th id="122">122</th><td>  <a class="typedef" href="#tvm::NodeFunctor{type-parameter-0-0(consttvm::runtime::ObjectRef&amp;,type-parameter-0-1...)}::TSelf" title='tvm::NodeFunctor&lt;type-parameter-0-0 (const tvm::runtime::ObjectRef &amp;, type-parameter-0-1...)&gt;::TSelf' data-type='NodeFunctor&lt;R (const tvm::runtime::ObjectRef &amp;, Args...)&gt;' data-ref="tvm::NodeFunctor{type-parameter-0-0(consttvm::runtime::ObjectRef&amp;,type-parameter-0-1...)}::TSelf" data-ref-filename="tvm..NodeFunctor{type-parameter-0-0(consttvm..runtime..ObjectRef&amp;,type-parameter-0-1...)}..TSelf">TSelf</a>&amp; <dfn class="decl def fn" id="_ZN3tvm11NodeFunctorIFT_RKNS_7runtime9ObjectRefEDpT0_EE14clear_dispatchEv" title='tvm::NodeFunctor&lt;type-parameter-0-0 (const tvm::runtime::ObjectRef &amp;, type-parameter-0-1...)&gt;::clear_dispatch' data-ref="_ZN3tvm11NodeFunctorIFT_RKNS_7runtime9ObjectRefEDpT0_EE14clear_dispatchEv" data-ref-filename="_ZN3tvm11NodeFunctorIFT_RKNS_7runtime9ObjectRefEDpT0_EE14clear_dispatchEv">clear_dispatch</dfn>() {  <i>// NOLINT(*)</i></td></tr>
+<tr><th id="123">123</th><td>    <a class="typedef" href="../../../../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint32_t" title='uint32_t' data-type='__uint32_t' data-ref="uint32_t" data-ref-filename="uint32_t">uint32_t</a> <dfn class="local col3 decl" id="9023tindex" title='tindex' data-type='uint32_t' data-ref="9023tindex" data-ref-filename="9023tindex">tindex</dfn> = TNode::RuntimeTypeIndex();</td></tr>
+<tr><th id="124">124</th><td>    <a class="macro" href="../runtime/logging.h.html#687" title="if (auto __tvm__log__err = ::tvm::runtime::detail::LogCheck_LT(tindex, func_.size())) ::tvm::runtime::detail::LogFatal(&quot;/home/runner/work/tvm-woboq/tvm-woboq/tvm/include/tvm/node/functor.h&quot;, 124).stream() &lt;&lt; ::tvm::runtime::detail::kTVM_INTERNAL_ERROR_MESSAGE &lt;&lt; std::endl &lt;&lt; &quot;  &quot; &lt;&lt; &quot;Check failed: &quot; &lt;&lt; &quot;tindex&quot; &quot; &quot; &quot;&lt;&quot; &quot; &quot; &quot;func_.size()&quot; &lt;&lt; *__tvm__log__err &lt;&lt; &quot;: &quot;" data-ref="_M/ICHECK_LT">ICHECK_LT</a>(<a class="local col3 ref" href="#9023tindex" title='tindex' data-ref="9023tindex" data-ref-filename="9023tindex">tindex</a>, <a class="member field" href="#tvm::NodeFunctor::func_" title='tvm::NodeFunctor&lt;type-parameter-0-0 (const tvm::runtime::ObjectRef &amp;, type-parameter-0-1...)&gt;::func_' data-ref="tvm::NodeFunctor::func_" data-ref-filename="tvm..NodeFunctor..func_">func_</a>.size()) &lt;&lt; <q>"clear_dispatch: index out of range"</q>;</td></tr>
+<tr><th id="125">125</th><td>    <a class="member field" href="#tvm::NodeFunctor::func_" title='tvm::NodeFunctor&lt;type-parameter-0-0 (const tvm::runtime::ObjectRef &amp;, type-parameter-0-1...)&gt;::func_' data-ref="tvm::NodeFunctor::func_" data-ref-filename="tvm..NodeFunctor..func_">func_</a>[<a class="local col3 ref" href="#9023tindex" title='tindex' data-ref="9023tindex" data-ref-filename="9023tindex">tindex</a>] = <b>nullptr</b>;</td></tr>
+<tr><th id="126">126</th><td>    <b>return</b> *<b>this</b>;</td></tr>
+<tr><th id="127">127</th><td>  }</td></tr>
+<tr><th id="128">128</th><td>};</td></tr>
+<tr><th id="129">129</th><td></td></tr>
+<tr><th id="130">130</th><td><u>#define <dfn class="macro" id="_M/TVM_REG_FUNC_VAR_DEF" data-ref="_M/TVM_REG_FUNC_VAR_DEF">TVM_REG_FUNC_VAR_DEF</dfn>(ClsName) static TVM_ATTRIBUTE_UNUSED auto&amp; __make_functor##_##ClsName</u></td></tr>
+<tr><th id="131">131</th><td></td></tr>
+<tr><th id="132">132</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="133">133</th><td><i class="doc"> * <span class="command">\brief</span> Useful macro to set NodeFunctor dispatch in a global static field.</i></td></tr>
+<tr><th id="134">134</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="135">135</th><td><i class="doc"> * <span class="command">\code</span></i></td></tr>
+<tr><th id="136">136</th><td><i class="doc"> *<span class="verb">  // Use NodeFunctor to implement ReprPrinter similar to Visitor Pattern.</span></i></td></tr>
+<tr><th id="137">137</th><td><i class="doc"><span class="verb"></span> *<span class="verb">  // vtable allows easy patch of new Node types, without changing</span></i></td></tr>
+<tr><th id="138">138</th><td><i class="doc"><span class="verb"></span> *<span class="verb">  // interface of ReprPrinter.</span></i></td></tr>
+<tr><th id="139">139</th><td><i class="doc"><span class="verb"></span> *<span class="verb"></span></i></td></tr>
+<tr><th id="140">140</th><td><i class="doc"><span class="verb"></span> *<span class="verb">  class ReprPrinter {</span></i></td></tr>
+<tr><th id="141">141</th><td><i class="doc"><span class="verb"></span> *<span class="verb">   public:</span></i></td></tr>
+<tr><th id="142">142</th><td><i class="doc"><span class="verb"></span> *<span class="verb">    std::ostream&amp; stream;</span></i></td></tr>
+<tr><th id="143">143</th><td><i class="doc"><span class="verb"></span> *<span class="verb">    // the dispatch function.</span></i></td></tr>
+<tr><th id="144">144</th><td><i class="doc"><span class="verb"></span> *<span class="verb">    void print(Expr e) {</span></i></td></tr>
+<tr><th id="145">145</th><td><i class="doc"><span class="verb"></span> *<span class="verb">      const static FType&amp; f = *vtable();</span></i></td></tr>
+<tr><th id="146">146</th><td><i class="doc"><span class="verb"></span> *<span class="verb">      f(e, this);</span></i></td></tr>
+<tr><th id="147">147</th><td><i class="doc"><span class="verb"></span> *<span class="verb">    }</span></i></td></tr>
+<tr><th id="148">148</th><td><i class="doc"><span class="verb"></span> *<span class="verb"></span></i></td></tr>
+<tr><th id="149">149</th><td><i class="doc"><span class="verb"></span> *<span class="verb">    using FType = NodeFunctor&lt;void (const ObjectRef&amp;, ReprPrinter* )&gt;;</span></i></td></tr>
+<tr><th id="150">150</th><td><i class="doc"><span class="verb"></span> *<span class="verb">    // function to return global function table</span></i></td></tr>
+<tr><th id="151">151</th><td><i class="doc"><span class="verb"></span> *<span class="verb">    static FType&amp; vtable();</span></i></td></tr>
+<tr><th id="152">152</th><td><i class="doc"><span class="verb"></span> *<span class="verb">  };</span></i></td></tr>
+<tr><th id="153">153</th><td><i class="doc"><span class="verb"></span> *<span class="verb"></span></i></td></tr>
+<tr><th id="154">154</th><td><i class="doc"><span class="verb"></span> *<span class="verb">  // in cpp/cc file</span></i></td></tr>
+<tr><th id="155">155</th><td><i class="doc"><span class="verb"></span> *<span class="verb">  ReprPrinter::FType&amp; ReprPrinter::vtable() { // NOLINT(*)</span></i></td></tr>
+<tr><th id="156">156</th><td><i class="doc"><span class="verb"></span> *<span class="verb">    static FType inst; return inst;</span></i></td></tr>
+<tr><th id="157">157</th><td><i class="doc"><span class="verb"></span> *<span class="verb">  }</span></i></td></tr>
+<tr><th id="158">158</th><td><i class="doc"><span class="verb"></span> *<span class="verb"></span></i></td></tr>
+<tr><th id="159">159</th><td><i class="doc"><span class="verb"></span> *<span class="verb">  TVM_STATIC_IR_FUNCTOR(ReprPrinter, vtable)</span></i></td></tr>
+<tr><th id="160">160</th><td><i class="doc"><span class="verb"></span> *<span class="verb">  .set_dispatch&lt;Add&gt;([](const ObjectRef&amp; ref, ReprPrinter* p) {</span></i></td></tr>
+<tr><th id="161">161</th><td><i class="doc"><span class="verb"></span> *<span class="verb">    auto* n = static_cast&lt;const Add*&gt;(ref.get());</span></i></td></tr>
+<tr><th id="162">162</th><td><i class="doc"><span class="verb"></span> *<span class="verb">    p-&gt;print(n-&gt;a);</span></i></td></tr>
+<tr><th id="163">163</th><td><i class="doc"><span class="verb"></span> *<span class="verb">    p-&gt;stream &lt;&lt; '+'</span></i></td></tr>
+<tr><th id="164">164</th><td><i class="doc"><span class="verb"></span> *<span class="verb">    p-&gt;print(n-&gt;b);</span></i></td></tr>
+<tr><th id="165">165</th><td><i class="doc"><span class="verb"></span> *<span class="verb">  });</span></i></td></tr>
+<tr><th id="166">166</th><td><i class="doc"><span class="verb"></span> *<span class="verb"></span></i></td></tr>
+<tr><th id="167">167</th><td><i class="doc"><span class="verb"></span> *<span class="verb"></span></i></td></tr>
+<tr><th id="168">168</th><td><i class="doc"><span class="verb"></span> * \endcode</i></td></tr>
+<tr><th id="169">169</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="170">170</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">ClsName</span> The name of the class</i></td></tr>
+<tr><th id="171">171</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">FField</span> The static function that returns a singleton of NodeFunctor.</i></td></tr>
+<tr><th id="172">172</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="173">173</th><td><u>#define <dfn class="macro" id="_M/TVM_STATIC_IR_FUNCTOR" data-ref="_M/TVM_STATIC_IR_FUNCTOR">TVM_STATIC_IR_FUNCTOR</dfn>(ClsName, FField) \</u></td></tr>
+<tr><th id="174">174</th><td><u>  TVM_STR_CONCAT(TVM_REG_FUNC_VAR_DEF(ClsName), __COUNTER__) = ClsName::FField()</u></td></tr>
+<tr><th id="175">175</th><td>}  <i>// namespace tvm</i></td></tr>
+<tr><th id="176">176</th><td><u>#<span data-ppcond="23">endif</span>  // TVM_NODE_FUNCTOR_H_</u></td></tr>
+<tr><th id="177">177</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated while processing <a href='../../../src/arith/analyzer.cc.html'>tvm/src/arith/analyzer.cc</a><br/>Generated on <em>2022-Aug-10</em> from project tvm revision <em>fae79bb</em><br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

@@ -1,0 +1,14 @@
+<dec f='tvm/include/tvm/runtime/profiling.h' l='195' type='Map&lt;tvm::runtime::String, Map&lt;tvm::runtime::String, tvm::runtime::ObjectRef&gt;&gt;'/>
+<use f='tvm/src/node/structural_hash.cc' l='677' u='a' c='_ZN3tvm15ReportNodeTrait10VisitAttrsEPNS_7runtime9profiling10ReportNodeEPNS_11AttrVisitorE'/>
+<offset>192</offset>
+<doc f='tvm/include/tvm/runtime/profiling.h' l='188'>/*! \brief Metrics collected for the entire run of the model on a per-device basis.
+   *
+   * `device_metrics` is indexed by device name then metric.
+   *
+   * These metrics may be larger than the sum of the same metric in `calls`
+   * because these metrics include the overhead of the executor.
+   */</doc>
+<use f='tvm/src/runtime/profiling.cc' l='339' c='_ZNK3tvm7runtime9profiling10ReportNode6AsJSONEv'/>
+<use f='tvm/src/runtime/profiling.cc' l='351' u='m' c='_ZNK3tvm7runtime9profiling10ReportNode6AsJSONEv'/>
+<use f='tvm/src/runtime/profiling.cc' l='562' c='_ZNK3tvm7runtime9profiling10ReportNode7AsTableEbbb'/>
+<use f='tvm/src/runtime/profiling.cc' l='693' u='w' c='_ZN3tvm7runtime9profiling6ReportC1ENS0_5ArrayINS0_3MapINS0_6StringENS0_9ObjectRefEvvEEvEENS4_IS5_S7_vvEES7_'/>

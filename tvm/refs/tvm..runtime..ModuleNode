@@ -1,0 +1,165 @@
+<use f='tvm/include/tvm/runtime/module.h' l='75' c='_ZN3tvm7runtime6ModuleptEv'/>
+<use f='tvm/include/tvm/runtime/module.h' l='77' c='_ZNK3tvm7runtime6ModuleptEv'/>
+<use f='tvm/include/tvm/runtime/module.h' l='87'/>
+<use f='tvm/include/tvm/runtime/module.h' l='88'/>
+<inh f='tvm/include/tvm/runtime/object.h' l='167' c='tvm::runtime::Object'/>
+<def f='tvm/include/tvm/runtime/module.h' l='113' ll='239'/>
+<use f='tvm/include/tvm/runtime/module.h' l='278' c='_ZN3tvm7runtime6ModuleptEv'/>
+<use f='tvm/include/tvm/runtime/module.h' l='278' c='_ZN3tvm7runtime6ModuleptEv'/>
+<use f='tvm/include/tvm/runtime/module.h' l='280' c='_ZNK3tvm7runtime6ModuleptEv'/>
+<use f='tvm/include/tvm/runtime/module.h' l='281' c='_ZNK3tvm7runtime6ModuleptEv'/>
+<size>144</size>
+<doc f='tvm/include/tvm/runtime/module.h' l='91'>/*!
+ * \brief Base container of module.
+ *
+ * Please subclass ModuleNode to create a specific runtime module.
+ *
+ * \code
+ *
+ *  class MyModuleNode : public ModuleNode {
+ *   public:
+ *    // implement the interface
+ *  };
+ *
+ *  // use make_object to create a specific
+ *  // instace of MyModuleNode.
+ *  Module CreateMyModule() {
+ *    ObjectPtr&lt;MyModuleNode&gt; n =
+ *      tvm::runtime::make_object&lt;MyModuleNode&gt;();
+ *    return Module(n);
+ *  }
+ *
+ * \endcode
+ */</doc>
+<fun r='_ZN3tvm7runtime10ModuleNodeD1Ev'/>
+<fun r='_ZNK3tvm7runtime10ModuleNode8type_keyEv'/>
+<fun r='_ZN3tvm7runtime10ModuleNode11GetFunctionERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKNS0_9ObjectPtrINS0_6ObjectEEE'/>
+<fun r='_ZN3tvm7runtime10ModuleNode10SaveToFileERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES9_'/>
+<fun r='_ZN3tvm7runtime10ModuleNode12SaveToBinaryEPN4dmlc6StreamE'/>
+<fun r='_ZN3tvm7runtime10ModuleNode9GetSourceERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<fun r='_ZN3tvm7runtime10ModuleNode9GetFormatB5cxx11Ev'/>
+<fun r='_ZN3tvm7runtime10ModuleNode11GetFunctionERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEb'/>
+<fun r='_ZN3tvm7runtime10ModuleNode6ImportENS0_6ModuleE'/>
+<fun r='_ZN3tvm7runtime10ModuleNode14GetFuncFromEnvERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<fun r='_ZNK3tvm7runtime10ModuleNode7importsEv'/>
+<fun r='_ZNK3tvm7runtime10ModuleNode15IsDSOExportableEv'/>
+<fun r='_ZN3tvm7runtime10ModuleNode18ImplementsFunctionERKNS0_6StringEb'/>
+<smbr r='tvm::runtime::ModuleNode::_type_index' t='const uint32_t'/>
+<smbr r='tvm::runtime::ModuleNode::_type_key' t='const char *const'/>
+<smbr r='tvm::runtime::ModuleNode::_type_final' t='const bool'/>
+<smbr r='tvm::runtime::ModuleNode::_type_child_slots' t='const int'/>
+<fun r='_ZN3tvm7runtime10ModuleNode16RuntimeTypeIndexEv'/>
+<fun r='_ZN3tvm7runtime10ModuleNode27_GetOrAllocRuntimeTypeIndexEv'/>
+<mbr r='tvm::runtime::ModuleNode::imports_' o='192' t='std::vector&lt;Module&gt;'/>
+<mbr r='tvm::runtime::ModuleNode::import_cache_' o='384' t='std::unordered_map&lt;std::string, std::shared_ptr&lt;PackedFunc&gt;&gt;'/>
+<mbr r='tvm::runtime::ModuleNode::mutex_' o='832' t='std::mutex'/>
+<use f='tvm/src/runtime/object_internal.h' l='81' c='_ZN3tvm7runtime14ObjectInternal13GetModuleNodeEPv'/>
+<use f='tvm/src/runtime/object_internal.h' l='85' c='_ZN3tvm7runtime14ObjectInternal13GetModuleNodeEPv'/>
+<size>144</size>
+<ovr f='tvm/src/printer/model_library_format_printer.cc' l='31' c='tvm::printer::ModelLibraryFormatPrinter'/>
+<use f='tvm/src/printer/model_library_format_printer.cc' l='31'/>
+<size>144</size>
+<ovr f='tvm/src/relay/backend/aot_executor_codegen.cc' l='1302' c='tvm::relay::backend::AOTExecutorCodegenModule'/>
+<use f='tvm/src/relay/backend/aot_executor_codegen.cc' l='1302'/>
+<size>144</size>
+<ovr f='tvm/src/relay/backend/build_module.cc' l='165' c='tvm::relay::backend::RelayBuildModule'/>
+<use f='tvm/src/relay/backend/build_module.cc' l='165'/>
+<size>144</size>
+<ovr f='tvm/src/relay/backend/graph_executor_codegen.cc' l='652' c='tvm::relay::backend::GraphExecutorCodegenModule'/>
+<use f='tvm/src/relay/backend/graph_executor_codegen.cc' l='652'/>
+<size>144</size>
+<ovr f='tvm/include/tvm/runtime/vm/executable.h' l='57' c='tvm::runtime::vm::Executable'/>
+<use f='tvm/include/tvm/runtime/vm/executable.h' l='57'/>
+<ovr f='tvm/include/tvm/runtime/vm/vm.h' l='148' c='tvm::runtime::vm::VirtualMachine'/>
+<use f='tvm/include/tvm/runtime/vm/vm.h' l='148'/>
+<ovr f='tvm/src/relay/backend/vm/compiler.h' l='87' c='tvm::relay::vm::VMCompiler'/>
+<use f='tvm/src/relay/backend/vm/compiler.h' l='87'/>
+<size>144</size>
+<ovr f='tvm/src/runtime/aot_executor/aot_executor.h' l='39' c='tvm::runtime::AotExecutor'/>
+<use f='tvm/src/runtime/aot_executor/aot_executor.h' l='39'/>
+<size>144</size>
+<ovr f='tvm/src/runtime/aot_executor/aot_executor_factory.h' l='45' c='tvm::runtime::AotExecutorFactory'/>
+<use f='tvm/src/runtime/aot_executor/aot_executor_factory.h' l='45'/>
+<size>144</size>
+<use f='tvm/src/runtime/c_runtime_api.cc' l='426' c='TVMBackendGetFuncFromEnv'/>
+<size>144</size>
+<ovr f='tvm/src/runtime/const_loader_module.cc' l='48' c='tvm::runtime::ConstLoaderModuleNode'/>
+<use f='tvm/src/runtime/const_loader_module.cc' l='48'/>
+<size>144</size>
+<ovr f='tvm/src/runtime/graph_executor/graph_executor.h' l='67' c='tvm::runtime::GraphExecutor'/>
+<use f='tvm/src/runtime/graph_executor/graph_executor.h' l='67'/>
+<size>144</size>
+<ovr f='tvm/src/runtime/graph_executor/graph_executor_factory.h' l='45' c='tvm::runtime::GraphExecutorFactory'/>
+<use f='tvm/src/runtime/graph_executor/graph_executor_factory.h' l='45'/>
+<size>144</size>
+<ovr f='tvm/src/runtime/library_module.cc' l='38' c='tvm::runtime::LibraryModuleNode'/>
+<use f='tvm/src/runtime/library_module.cc' l='38'/>
+<use f='tvm/src/runtime/library_module.cc' l='71' c='_ZN3tvm7runtime14ModuleInternal14GetImportsAddrEPNS0_10ModuleNodeE'/>
+<use f='tvm/src/runtime/library_module.cc' l='135' c='_ZN3tvm7runtime17ProcessModuleBlobEPKcNS0_9ObjectPtrINS0_7LibraryEEESt8functionIFNS0_10PackedFuncEPFiP8TVMValuePiiS9_SA_PvERKNS3_INS0_6ObjectEEEEEPNS015931685'/>
+<use f='tvm/src/runtime/library_module.cc' l='208' c='_ZN3tvm7runtime23CreateModuleFromLibraryENS0_9ObjectPtrINS0_7LibraryEEESt8functionIFNS0_10PackedFuncEPFiP8TVMValuePiiS7_S8_PvERKNS1_INS0_6ObjectEEEEE'/>
+<size>144</size>
+<ovr f='tvm/src/runtime/metadata.cc' l='84' c='tvm::runtime::MetadataModuleNode'/>
+<use f='tvm/src/runtime/metadata.cc' l='84'/>
+<size>144</size>
+<use f='tvm/src/runtime/module.cc' l='48' c='_ZN3tvm7runtime10ModuleNode6ImportENS0_6ModuleE'/>
+<use f='tvm/src/runtime/module.cc' l='49' c='_ZN3tvm7runtime10ModuleNode6ImportENS0_6ModuleE'/>
+<use f='tvm/src/runtime/module.cc' l='51' c='_ZN3tvm7runtime10ModuleNode6ImportENS0_6ModuleE'/>
+<use f='tvm/src/runtime/module.cc' l='54' c='_ZN3tvm7runtime10ModuleNode6ImportENS0_6ModuleE'/>
+<use f='tvm/src/runtime/module.cc' l='65' c='_ZN3tvm7runtime10ModuleNode11GetFunctionERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEb'/>
+<size>144</size>
+<fun r='_ZN3tvm7runtime10ModuleNode6ImportENS0_6ModuleE'/>
+<fun r='_ZN3tvm7runtime10ModuleNode11GetFunctionERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEb'/>
+<fun r='_ZN3tvm7runtime10ModuleNode10SaveToFileERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES9_'/>
+<fun r='_ZN3tvm7runtime10ModuleNode12SaveToBinaryEPN4dmlc6StreamE'/>
+<fun r='_ZN3tvm7runtime10ModuleNode9GetSourceERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<fun r='_ZN3tvm7runtime10ModuleNode14GetFuncFromEnvERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<fun r='_ZN3tvm7runtime10ModuleNode9GetFormatB5cxx11Ev'/>
+<fun r='_ZNK3tvm7runtime10ModuleNode15IsDSOExportableEv'/>
+<fun r='_ZN3tvm7runtime10ModuleNode18ImplementsFunctionERKNS0_6StringEb'/>
+<ovr f='tvm/src/runtime/rpc/rpc_module.cc' l='161' c='tvm::runtime::RPCModuleNode'/>
+<use f='tvm/src/runtime/rpc/rpc_module.cc' l='161'/>
+<size>144</size>
+<use f='tvm/src/runtime/stackvm/stackvm.h' l='53' c='_ZNK3tvm7runtime7StackVM3RunERKNS0_7TVMArgsEPNS0_10ModuleNodeE'/>
+<use f='tvm/src/runtime/stackvm/stackvm.h' l='323'/>
+<use f='tvm/src/runtime/stackvm/stackvm.cc' l='191' c='_ZNK3tvm7runtime7StackVM3RunERKNS0_7TVMArgsEPNS0_10ModuleNodeE'/>
+<size>144</size>
+<ovr f='tvm/src/runtime/stackvm/stackvm_module.cc' l='38' c='tvm::runtime::StackVMModuleNode'/>
+<use f='tvm/src/runtime/stackvm/stackvm_module.cc' l='38'/>
+<size>144</size>
+<ovr f='tvm/src/runtime/static_library.cc' l='45' c='tvm::runtime::(anonymousnamespace)::StaticLibraryNode'/>
+<use f='tvm/src/runtime/static_library.cc' l='45'/>
+<size>144</size>
+<ovr f='tvm/src/support/ffi_testing.cc' l='123' c='tvm::FrontendTestModuleNode'/>
+<use f='tvm/src/support/ffi_testing.cc' l='123'/>
+<size>144</size>
+<use f='tvm/src/target/codegen.cc' l='121' c='_ZN3tvm7codegen16ModuleSerializer17CreateModuleIndexEv'/>
+<use f='tvm/src/target/codegen.cc' l='122' c='_ZN3tvm7codegen16ModuleSerializer17CreateModuleIndexEv'/>
+<use f='tvm/src/target/codegen.cc' l='125' c='_ZN3tvm7codegen16ModuleSerializer17CreateModuleIndexEv'/>
+<use f='tvm/src/target/codegen.cc' l='127' c='_ZN3tvm7codegen16ModuleSerializer17CreateModuleIndexEv'/>
+<use f='tvm/src/target/codegen.cc' l='135' c='_ZN3tvm7codegen16ModuleSerializer17CreateModuleIndexEv'/>
+<use f='tvm/src/target/codegen.cc' l='148' c='_ZN3tvm7codegen16ModuleSerializer17CreateModuleIndexEv'/>
+<use f='tvm/src/target/codegen.cc' l='157' c='_ZN3tvm7codegen16ModuleSerializer17CreateModuleIndexEv'/>
+<use f='tvm/src/target/codegen.cc' l='167' c='_ZN3tvm7codegen16ModuleSerializer17CreateModuleIndexEv'/>
+<use f='tvm/src/target/codegen.cc' l='174' c='_ZN3tvm7codegen16ModuleSerializer17CreateModuleIndexEv'/>
+<use f='tvm/src/target/codegen.cc' l='182' c='_ZN3tvm7codegen16ModuleSerializer17CreateModuleIndexEv'/>
+<use f='tvm/src/target/codegen.cc' l='224'/>
+<use f='tvm/src/target/codegen.cc' l='226'/>
+<size>144</size>
+<ovr f='tvm/src/runtime/hexagon/hexagon_module.h' l='57' c='tvm::runtime::HexagonModuleNode'/>
+<use f='tvm/src/runtime/hexagon/hexagon_module.h' l='57'/>
+<size>144</size>
+<ovr f='tvm/src/target/llvm/llvm_module.cc' l='88' c='tvm::codegen::LLVMModuleNode'/>
+<use f='tvm/src/target/llvm/llvm_module.cc' l='88'/>
+<size>144</size>
+<ovr f='tvm/src/target/source/interface_c.cc' l='44' c='tvm::codegen::InterfaceCNode'/>
+<use f='tvm/src/target/source/interface_c.cc' l='44'/>
+<size>144</size>
+<ovr f='tvm/src/target/source/source_module.cc' l='65' c='tvm::codegen::SourceModuleNode'/>
+<use f='tvm/src/target/source/source_module.cc' l='65'/>
+<ovr f='tvm/src/target/source/source_module.cc' l='91' c='tvm::codegen::CSourceModuleNode'/>
+<use f='tvm/src/target/source/source_module.cc' l='91'/>
+<ovr f='tvm/src/target/source/source_module.cc' l='169' c='tvm::codegen::CSourceCrtMetadataModuleNode'/>
+<use f='tvm/src/target/source/source_module.cc' l='169'/>
+<ovr f='tvm/src/target/source/source_module.cc' l='980' c='tvm::codegen::DeviceSourceModuleNode'/>
+<use f='tvm/src/target/source/source_module.cc' l='980'/>
+<size>144</size>

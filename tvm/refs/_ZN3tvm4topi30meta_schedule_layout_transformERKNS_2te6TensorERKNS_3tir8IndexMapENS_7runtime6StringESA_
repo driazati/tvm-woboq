@@ -1,0 +1,38 @@
+<def f='tvm/include/tvm/topi/transform.h' l='1733' ll='1748' type='tvm::te::Tensor tvm::topi::meta_schedule_layout_transform(const tvm::te::Tensor &amp; src, const tir::IndexMap &amp; index_map, const tvm::runtime::String name = &quot;T_meta_schedule_layout_trans&quot;, const tvm::runtime::String tag = kInjective)'/>
+<doc f='tvm/include/tvm/topi/transform.h' l='1697'>/*!
+ * \brief Transform the meta-schedule generated layout according to TIR&apos;s IndexMap
+ * \param src the source input.
+ * \param index_map The TIR IndexMap
+ * \param name output tensor name.
+ * \param tag output tensor tag.
+ * \return A tensor. The layout transformation method
+ * \note Example:
+ *
+ * For the indexing pattern below:
+ *
+ *  for i in range(32):
+ *    for j in range(64):
+ *      load A[
+ *        i / 16 *  4 + j / 16,
+ *        i % 16 * 16 + j % 16,
+ *      ]
+ *
+ *  The corresponding indexing pattern in TIR is:
+ *
+ *    A[i, j] =&gt; A&apos;[i / 4, j / 16, i % 4, j % 16]
+ *
+ *  which converts the pattern to:
+ *
+ *  for i in range(32):
+ *    for j in range(64):
+ *      load A&apos;[
+ *        i / 16 + j / 64,
+ *        i % 16,
+ *        j % 64 / 16,
+ *        j % 16,
+ *      ]
+ *
+ *  In this case, the transformation pattern is:
+ *    A&apos;[a, b, c, d] = A[a * 4 + c, b * 16 + d]
+ */</doc>
+<use f='tvm/src/relay/op/tensor/transform.cc' l='3400' u='c' c='_ZN3tvm5relay34MetaScheduleLayoutTransformComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>

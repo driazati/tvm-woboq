@@ -1,0 +1,26 @@
+<def f='tvm/include/tvm/te/schedule.h' l='654' type='tvm::te::Schedule tvm::te::create_schedule(Array&lt;tvm::te::Operation&gt; ops)'/>
+<doc f='tvm/include/tvm/te/schedule.h' l='649'>/*!
+ * \brief Create a schedule for array of ops(and their dependencies).
+ * \param ops The ops to be scheduled.
+ * \return sch The created Schedule.
+ */</doc>
+<use f='tvm/src/auto_scheduler/compute_dag.cc' l='694' u='c' c='_ZN3tvm14auto_scheduler10ComputeDAGC1ENS_7runtime5ArrayINS_2te6TensorEvEE'/>
+<use f='tvm/src/auto_scheduler/compute_dag.cc' l='1137' u='c' c='_ZNK3tvm14auto_scheduler10ComputeDAG13RewriteLayoutEPNS_7runtime5ArrayINS0_4StepEvEENS0_19LayoutRewriteOptionE'/>
+<use f='tvm/src/auto_scheduler/compute_dag.cc' l='1188' u='c' c='_ZNK3tvm14auto_scheduler10ComputeDAG10ApplyStepsERKNS_7runtime5ArrayINS0_4StepEvEEPNS3_INS_2te5StageEvEEPNS2_3MapIS9_NS3_INS_3tir7IterVarEvEENS2_10Obj13443217'/>
+<use f='tvm/src/auto_scheduler/compute_dag.cc' l='1216' u='c' c='_ZNK3tvm14auto_scheduler10ComputeDAG18PrintStepsAsPythonERKNS_7runtime5ArrayINS0_4StepEvEE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='554' u='c' c='_ZN3tvm5relay3tec13MakeShapeFunc6CreateERKNS0_8FunctionERKNS_6TargetESt8functionIFNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESF_EE'/>
+<use f='tvm/src/te/schedule/schedule_lang.cc' l='920' u='r'/>
+<use f='tvm/include/tvm/topi/generic/injective.h' l='66' u='c' c='_ZN3tvm4topi7generic18schedule_injectiveERKNS_6TargetERKNS_7runtime5ArrayINS_2te6TensorEvEE'/>
+<use f='tvm/include/tvm/topi/generic/extern.h' l='53' u='c' c='_ZN3tvm4topi7generic15schedule_externERKNS_6TargetERKNS_7runtime5ArrayINS_2te6TensorEvEE'/>
+<use f='tvm/include/tvm/topi/cuda/dense.h' l='97' u='c' c='_ZN3tvm4topi4cuda14schedule_denseERKNS_6TargetERKNS_7runtime5ArrayINS_2te6TensorEvEE'/>
+<use f='tvm/include/tvm/topi/cuda/injective.h' l='72' u='c' c='_ZN3tvm4topi4cuda18schedule_injectiveERKNS_6TargetERKNS_7runtime5ArrayINS_2te6TensorEvEE'/>
+<use f='tvm/include/tvm/topi/cuda/pooling.h' l='54' u='c' c='_ZN3tvm4topi4cuda13schedule_poolERKNS_6TargetERKNS_7runtime5ArrayINS_2te6TensorEvEE'/>
+<use f='tvm/include/tvm/topi/cuda/pooling.h' l='121' u='c' c='_ZN3tvm4topi4cuda20schedule_global_poolERKNS_6TargetERKNS_7runtime5ArrayINS_2te6TensorEvEE'/>
+<use f='tvm/include/tvm/topi/cuda/reduction.h' l='191' u='c' c='_ZN3tvm4topi4cuda15schedule_reduceERKNS_6TargetENS_7runtime5ArrayINS_2te6TensorEvEE'/>
+<use f='tvm/include/tvm/topi/cuda/softmax.h' l='53' u='c' c='_ZN3tvm4topi4cuda16schedule_softmaxERKNS_6TargetERKNS_7runtime5ArrayINS_2te6TensorEvEE'/>
+<use f='tvm/include/tvm/topi/generic/default.h' l='52' u='c' c='_ZN3tvm4topi7generic16default_scheduleERKNS_6TargetERKNS_7runtime5ArrayINS_2te6TensorEvEE'/>
+<use f='tvm/include/tvm/topi/generic/default.h' l='70' u='c' c='_ZN3tvm4topi7generic28default_schedule_auto_inlineERKNS_6TargetERKNS_7runtime5ArrayINS_2te6TensorEvEE'/>
+<use f='tvm/include/tvm/topi/x86/bnn.h' l='51' u='c' c='_ZN3tvm4topi3x8622schedule_binarize_packERKNS_6TargetERKNS_7runtime5ArrayINS_2te6TensorEvEE'/>
+<use f='tvm/include/tvm/topi/x86/bnn.h' l='83' u='c' c='_ZN3tvm4topi3x8621schedule_binary_denseERKNS_6TargetERKNS_7runtime5ArrayINS_2te6TensorEvEE'/>
+<use f='tvm/include/tvm/topi/x86/default.h' l='54' u='c' c='_ZN3tvm4topi3x8619MakeDefaultScheduleERKNS_6TargetERKNS_7runtime5ArrayINS_2te6TensorEvEEb'/>
+<use f='tvm/include/tvm/topi/x86/injective.h' l='73' u='c' c='_ZN3tvm4topi3x8618schedule_injectiveERKNS_6TargetERKNS_7runtime5ArrayINS_2te6TensorEvEE'/>

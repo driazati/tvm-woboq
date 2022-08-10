@@ -1,0 +1,10 @@
+<dec f='tvm/include/tvm/runtime/crt/rpc_common/session.h' l='179' type='void tvm::runtime::micro_rpc::Session::ClearReceiveBuffer()'/>
+<use f='tvm/src/runtime/micro/micro_session.cc' l='262' u='c' c='_ZN3tvm7runtime9micro_rpc21MicroTransportChannel4RecvEPvm'/>
+<use f='tvm/src/runtime/micro/micro_session.cc' l='369' u='c' c='_ZN3tvm7runtime9micro_rpc21MicroTransportChannel21HandleMessageReceivedENS1_11MessageTypeEPNS1_11FrameBufferE'/>
+<doc f='tvm/include/tvm/runtime/crt/rpc_common/session.h' l='172'>/*!
+   * \brief Clear the receive buffer and prepare to receive next message.
+   *
+   * Call this function after MessageReceivedFunc is invoked. Any SessionReceiver::Write() calls
+   * made will return errors until this function is called to prevent them from corrupting the
+   * valid message in the receive buffer.
+   */</doc>

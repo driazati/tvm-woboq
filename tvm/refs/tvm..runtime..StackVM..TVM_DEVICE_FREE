@@ -1,0 +1,15 @@
+<dec f='tvm/src/runtime/stackvm/stackvm.h' l='261' type='44'/>
+<use f='tvm/src/runtime/stackvm/stackvm.cc' l='160' c='_ZNK3tvm7runtime7StackVM9PrintCodeERSol'/>
+<use f='tvm/src/runtime/stackvm/stackvm.cc' l='582' c='_ZNK3tvm7runtime7StackVM3RunEPNS1_5StateE'/>
+<doc f='tvm/src/runtime/stackvm/stackvm.h' l='250'>/*!
+     * \brief free data into device.
+     * \code
+     *  device_type = stack[sp - 2].v_int64;
+     *  device_id = stack[sp - 1].v_int64;
+     *  ptr = stack[sp].v_handle;
+     *  stack[sp - 2].v_int64 = device_free(device_type, device_id, ptr);
+     *  sp = sp - 2;
+     *  pc = pc + 1;
+     * \endcode
+     */</doc>
+<use f='tvm/src/target/stackvm/codegen_stackvm.cc' l='285' u='r' c='_ZN3tvm7codegen14CodeGenStackVM10VisitExpr_EPKNS_3tir8CallNodeE'/>

@@ -1,0 +1,17 @@
+<dec f='tvm/src/relay/transforms/combine_parallel_op.h' l='192' type='tvm::relay::Call tvm::relay::ParallelOpCombiner::MakeCombinedCallFromFollowingOps(const tvm::relay::Expr &amp; data, const tvm::relay::Group &amp; branches, size_t depth, size_t parent_index)'/>
+<ovr f='tvm/src/relay/transforms/combine_parallel_batch_matmul.cc' l='105' c='_ZN3tvm5relay27ParallelBatchMatmulCombiner32MakeCombinedCallFromFollowingOpsERKNS_9RelayExprERKSt6vectorIS5_IPKNS0_8CallNodeESaIS8_EESaISA_EEmm'/>
+<doc f='tvm/src/relay/transforms/combine_parallel_op.h' l='181'>/*
+   * \brief Create combined call from ops that follow the initial combined op at the depth-th level.
+   *        This usually involves concatenating or stacking inputs, then creating a new call.
+   *        Only called if IsArgCompatbile returns true for each arg.
+   * \param data combined op
+   * \param branches branches of parallel ops to be combined
+   * \param depth depth at which to combine ops
+   * \param parent_index index of arg that corresponds to original input that was shared among
+   *                     all combined ops
+   * \return new combined call
+   */</doc>
+<ovr f='tvm/src/relay/transforms/combine_parallel_conv2d.cc' l='138' c='_ZN3tvm5relay22ParallelConv2DCombiner32MakeCombinedCallFromFollowingOpsERKNS_9RelayExprERKSt6vectorIS5_IPKNS0_8CallNodeESaIS8_EESaISA_EEmm'/>
+<ovr f='tvm/src/relay/transforms/combine_parallel_dense.cc' l='154' c='_ZN3tvm5relay28ParallelDenseToDenseCombiner32MakeCombinedCallFromFollowingOpsERKNS_9RelayExprERKSt6vectorIS5_IPKNS0_8CallNodeESaIS8_EESaISA_EEmm'/>
+<use f='tvm/src/relay/transforms/combine_parallel_op.cc' l='146' u='c' c='_ZN3tvm5relay18ParallelOpCombiner15CombineBranchesERKSt6vectorIS2_IPKNS0_8CallNodeESaIS5_EESaIS7_EE'/>
+<ovr f='tvm/src/relay/transforms/combine_parallel_op_batch.cc' l='126' c='_ZN3tvm5relay23ParallelOpBatchCombiner32MakeCombinedCallFromFollowingOpsERKNS_9RelayExprERKSt6vectorIS5_IPKNS0_8CallNodeESaIS8_EESaISA_EEmm'/>

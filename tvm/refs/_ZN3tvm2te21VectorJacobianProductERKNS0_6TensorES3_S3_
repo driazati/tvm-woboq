@@ -1,0 +1,17 @@
+<dec f='tvm/include/tvm/te/autodiff.h' l='72' type='tvm::te::Tensor tvm::te::VectorJacobianProduct(const tvm::te::Tensor &amp; output, const tvm::te::Tensor &amp; input, const tvm::te::Tensor &amp; head)'/>
+<doc f='tvm/include/tvm/te/autodiff.h' l='58'>/*!
+ * \brief The building block for reverse-mode AD.
+ *
+ *  Differentiate \p output wrt \p input and multiply the result by \p head on the left using tensor
+ *  dot product. \p input must be an immediate dependency of \p output (must be called from within
+ *  the body of \p output). That is, the function will compute one summand of the adjoint for \p
+ * input given the adjoint for \p output (which is called \p head here).
+ *
+ * \param output The tensor to differentiate.
+ * \param input The input tensor, which \p output should directly use.
+ * \param head The adjoint of \p output. Must be of shape `prefix + output.shape`
+ * \return The tensor of shape `prefix + input.shape`
+ *         representing the partial adjoint of \p input wrt one of its consumers (output)
+ */</doc>
+<def f='tvm/src/te/autodiff/adjoint.cc' l='64' ll='73' type='tvm::te::Tensor tvm::te::VectorJacobianProduct(const tvm::te::Tensor &amp; output, const tvm::te::Tensor &amp; input, const tvm::te::Tensor &amp; head)'/>
+<use f='tvm/src/te/autodiff/adjoint.cc' l='125' u='c' c='_ZN3tvm2te8GradientERKNS0_6TensorERKNS_7runtime5ArrayIS1_vEES3_'/>

@@ -1,0 +1,34 @@
+<def f='tvm/include/tvm/topi/nn/pooling.h' l='690' ll='699' type='tvm::te::Tensor tvm::topi::nn::pool1d(const tvm::te::Tensor &amp; x, const Array&lt;tvm::PrimExpr&gt; &amp; kernel_size, const Array&lt;tvm::PrimExpr&gt; &amp; stride_size, const Array&lt;tvm::PrimExpr&gt; &amp; dilation_size, const Array&lt;tvm::PrimExpr&gt; &amp; padding_size, tvm::topi::nn::PoolType pool_type, bool ceil_mode, const std::string &amp; layout = &quot;NCW&quot;, bool count_include_pad = true)'/>
+<use f='tvm/src/relay/op/nn/pooling.cc' l='1075' u='c' c='_ZN3tvm5relay13Pool1DComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
+<use f='tvm/src/relay/op/nn/pooling.cc' l='1078' u='c' c='_ZN3tvm5relay13Pool1DComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
+<doc f='tvm/include/tvm/topi/nn/pooling.h' l='660'>/*!
+ * \brief Perform pooling on the width dimension of data.
+ *        Width axis is determined by the layout string
+ *        in which &apos;W&apos; means width.
+ *        Width dimension cannot be split.
+ *        For example, NCW, NCW16c, etc. are valid for pool,
+ *        while NCW16w is not.
+ *        See \a layout for more information of the layout string convention.
+ * \param x The input tensor.
+ * \param kernel_size Vector of one int: {kernel_width}
+ * \param stride_size Vector of one int: {stride_width}
+ * \param dilation_size Vector of one int: {dilation_width}
+ * \param padding_size Vector of two ints: {head_pad_width, tail_pad_width}
+ * \param pool_type The type of pooling operator
+ * \param ceil_mode Whether to use ceil when calculating the output size
+ * \param layout The input layout. Pooling supports any layout as long as &apos;W&apos; appears.
+ *        The layout is supposed to be composed of upper cases, lower cases and (optional) numbers,
+ *        where upper case indicates a dimension and
+ *        the corresponding lower case (with factor size) indicates the split dimension.
+ *        For example, NCW16c can describe a 4-D tensor of
+ *        [batch_size, channel, width, channel_block].
+ *        (in which factor size `16` will not be used in pooling but for other operators,
+ *        it can be used to decide the output shape).
+ *        Since pooling does not care about the factor size of dimensions
+ *        other than `W`, one can pass `NCWc` as well.
+ * \param  count_include_pad Whether include padding in the calculation when pool_type is &apos;avg&apos;
+ *
+ *
+ * \return The output tensor in the same layout
+ */</doc>
+<use f='tvm/src/topi/nn.cc' l='123' u='c'/>

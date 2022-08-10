@@ -1,0 +1,36 @@
+<dec f='tvm/include/tvm/runtime/vm/executable.h' l='174' type='std::string tvm::runtime::vm::Executable::GetBytecode() const'/>
+<use f='tvm/src/relay/backend/vm/compiler.cc' l='979' u='c' c='_ZN3tvm5relay2vm10VMCompiler9LowerImplENS_8IRModuleE'/>
+<doc f='tvm/include/tvm/runtime/vm/executable.h' l='142'>/*!
+   * \brief Get the serialized form of the `functions`. This is
+   * essentially bytecode serialization.
+   *
+   * \return The serialized vm bytecode.
+   *
+   * \note The bytecode is in the following format:
+   *   func_name reg_file_size num_instructions
+   *   param1 param2 ... paramM
+   *   instruction1
+   *   instruction2
+   *   ...
+   *   instructionN
+   *
+   * Each instruction is printed in the following format:
+   *   opcode num_fields field1 ... fieldX # The text format.
+   *
+   * Serializing an `Instruction` requires us to deal with the bytecode. Each line
+   * of the instructions could be serialized as the following format:
+   *   hash, opcode, f1, f2, ..., fX, field with variable length
+   *   1. hash: the hash of the instruction. This number will be used to help us
+   * validate if an instruction is well-formed during deserialization.
+   *   2. opcode: the opcode code of the instruction.
+   *   3. f1, f2, ..., fX. These fields together represent the fixed fields in
+   * an instruction, e.g., `from` and `dst` fields of a `Move` instruction. For
+   * example, `DLDataType` will be unpacked into three fields (code, bits, lanes).
+   *   4. The rest of the line indicates the field with variable length, e.g.,
+   * the shape of a tensor, the args used by an `InvokPacked` instruction, etc.
+   *
+   * The field starting from # is only used for debugging. The serialized code
+   * doesn&apos;t contain it, therefore the deserializer doens&apos;t need to handle it.
+   */</doc>
+<use f='tvm/src/runtime/vm/executable.cc' l='64' u='c' c='_ZN3tvm7runtime2vm10Executable11GetFunctionERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKNS0_9ObjectPtrINS0_6ObjectEEE'/>
+<def f='tvm/src/runtime/vm/executable.cc' l='129' ll='167' type='std::string tvm::runtime::vm::Executable::GetBytecode() const'/>

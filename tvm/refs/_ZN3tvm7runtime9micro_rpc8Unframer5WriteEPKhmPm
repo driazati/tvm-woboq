@@ -1,0 +1,18 @@
+<dec f='tvm/include/tvm/runtime/crt/rpc_common/framing.h' l='71' type='tvm_crt_error_t tvm::runtime::micro_rpc::Unframer::Write(const uint8_t * data, size_t data_size_bytes, size_t * bytes_consumed)'/>
+<use f='tvm/src/runtime/micro/micro_session.cc' l='312' u='c' c='_ZN3tvm7runtime9micro_rpc21MicroTransportChannel22ConsumeReceivedPayloadENS0_15TypedPackedFuncIFbvEEE'/>
+<doc f='tvm/include/tvm/runtime/crt/rpc_common/framing.h' l='55'>/*!
+   * \brief Push data into unframer and try to decode one packet.
+   *
+   * This function will return when exactly one packet has been decoded. It may not consume all of
+   * `data` in this case, and valid bytes may remain at the end of data.
+   *
+   * \param data The new data to unframe and send downstream.
+   * \param data_size_bytes The number of valid bytes in data.
+   * \param bytes_consumed Pointer written with the number of bytes consumed from data.
+   * \return
+   *     - kTvmErrorNoError when successful -- continue writing data.
+   *     - kTvmErrorFramingInvalidState when the Unframer was in or enters an invalid state
+   *       (probably indicates memory corruption).
+   *     - kTvmErrorFramingShortPacket when a new packet started before the current one ended.
+   *     - kTvmErrorFramingInvalidEscape when an invalid escape sequence was seen
+   */</doc>

@@ -1,0 +1,12 @@
+<dec f='tvm/src/relay/transforms/combine_parallel_op.h' l='170' type='tvm::relay::Call tvm::relay::ParallelOpCombiner::MakeCombinedOp(const tvm::relay::Group &amp; branches)'/>
+<ovr f='tvm/src/relay/transforms/combine_parallel_batch_matmul.cc' l='87' c='_ZN3tvm5relay27ParallelBatchMatmulCombiner14MakeCombinedOpERKSt6vectorIS2_IPKNS0_8CallNodeESaIS5_EESaIS7_EE'/>
+<doc f='tvm/src/relay/transforms/combine_parallel_op.h' l='164'>/*
+   * \brief Makes combined op from parallel ops in branches. This usually involves
+   *        concatenating or stacking inputs, then creating a new call.
+   * \param branches branches that are to be combined
+   * \return new call with branches combined.
+   */</doc>
+<ovr f='tvm/src/relay/transforms/combine_parallel_conv2d.cc' l='83' c='_ZN3tvm5relay22ParallelConv2DCombiner14MakeCombinedOpERKSt6vectorIS2_IPKNS0_8CallNodeESaIS5_EESaIS7_EE'/>
+<ovr f='tvm/src/relay/transforms/combine_parallel_dense.cc' l='116' c='_ZN3tvm5relay28ParallelDenseToDenseCombiner14MakeCombinedOpERKSt6vectorIS2_IPKNS0_8CallNodeESaIS5_EESaIS7_EE'/>
+<use f='tvm/src/relay/transforms/combine_parallel_op.cc' l='131' u='c' c='_ZN3tvm5relay18ParallelOpCombiner15CombineBranchesERKSt6vectorIS2_IPKNS0_8CallNodeESaIS5_EESaIS7_EE'/>
+<ovr f='tvm/src/relay/transforms/combine_parallel_op_batch.cc' l='96' c='_ZN3tvm5relay23ParallelOpBatchCombiner14MakeCombinedOpERKSt6vectorIS2_IPKNS0_8CallNodeESaIS5_EESaIS7_EE'/>

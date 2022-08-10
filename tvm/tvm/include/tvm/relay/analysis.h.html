@@ -1,0 +1,274 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>analysis.h source code [tvm/include/tvm/relay/analysis.h] - Woboq Code Browser</title>
+<link rel="stylesheet" href="../../../.././data/qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href="../../../.././data/kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src="../../../.././data/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="../../../.././data/jquery/jquery-ui.min.js"></script>
+<script>var file = 'tvm/include/tvm/relay/analysis.h'; var root_path = '../../../..'; var data_path = '../../../.././data'; var ecma_script_api_version = 2;</script>
+<script src='../../../.././data/codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='../../..'>tvm</a>/<a href='../..'>include</a>/<a href='..'>tvm</a>/<a href='./'>relay</a>/<a href='analysis.h.html'>analysis.h</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td><i>/*</i></td></tr>
+<tr><th id="2">2</th><td><i> * Licensed to the Apache Software Foundation (ASF) under one</i></td></tr>
+<tr><th id="3">3</th><td><i> * or more contributor license agreements.  See the NOTICE file</i></td></tr>
+<tr><th id="4">4</th><td><i> * distributed with this work for additional information</i></td></tr>
+<tr><th id="5">5</th><td><i> * regarding copyright ownership.  The ASF licenses this file</i></td></tr>
+<tr><th id="6">6</th><td><i> * to you under the Apache License, Version 2.0 (the</i></td></tr>
+<tr><th id="7">7</th><td><i> * "License"); you may not use this file except in compliance</i></td></tr>
+<tr><th id="8">8</th><td><i> * with the License.  You may obtain a copy of the License at</i></td></tr>
+<tr><th id="9">9</th><td><i> *</i></td></tr>
+<tr><th id="10">10</th><td><i> *   <a href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a></i></td></tr>
+<tr><th id="11">11</th><td><i> *</i></td></tr>
+<tr><th id="12">12</th><td><i> * Unless required by applicable law or agreed to in writing,</i></td></tr>
+<tr><th id="13">13</th><td><i> * software distributed under the License is distributed on an</i></td></tr>
+<tr><th id="14">14</th><td><i> * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY</i></td></tr>
+<tr><th id="15">15</th><td><i> * KIND, either express or implied.  See the License for the</i></td></tr>
+<tr><th id="16">16</th><td><i> * specific language governing permissions and limitations</i></td></tr>
+<tr><th id="17">17</th><td><i> * under the License.</i></td></tr>
+<tr><th id="18">18</th><td><i> */</i></td></tr>
+<tr><th id="19">19</th><td></td></tr>
+<tr><th id="20">20</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="21">21</th><td><i class="doc"> * <span class="command">\file</span> <span class="verb">tvm/relay/analysis.h</span></i></td></tr>
+<tr><th id="22">22</th><td><i class="doc"> * <span class="command">\brief</span> The set of Relay analysis passes written in C++.</i></td></tr>
+<tr><th id="23">23</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="24">24</th><td><u>#<span data-ppcond="24">ifndef</span> <span class="macro" data-ref="_M/TVM_RELAY_ANALYSIS_H_">TVM_RELAY_ANALYSIS_H_</span></u></td></tr>
+<tr><th id="25">25</th><td><u>#define <dfn class="macro" id="_M/TVM_RELAY_ANALYSIS_H_" data-ref="_M/TVM_RELAY_ANALYSIS_H_">TVM_RELAY_ANALYSIS_H_</dfn></u></td></tr>
+<tr><th id="26">26</th><td></td></tr>
+<tr><th id="27">27</th><td><u>#include <a href="../ir/module.h.html">&lt;tvm/ir/module.h&gt;</a></u></td></tr>
+<tr><th id="28">28</th><td><u>#include <a href="adt.h.html">&lt;tvm/relay/adt.h&gt;</a></u></td></tr>
+<tr><th id="29">29</th><td><u>#include <a href="expr.h.html">&lt;tvm/relay/expr.h&gt;</a></u></td></tr>
+<tr><th id="30">30</th><td><u>#include <a href="function.h.html">&lt;tvm/relay/function.h&gt;</a></u></td></tr>
+<tr><th id="31">31</th><td><u>#include <a href="type.h.html">&lt;tvm/relay/type.h&gt;</a></u></td></tr>
+<tr><th id="32">32</th><td><u>#include <a href="../runtime/logging.h.html">&lt;tvm/runtime/logging.h&gt;</a></u></td></tr>
+<tr><th id="33">33</th><td></td></tr>
+<tr><th id="34">34</th><td><u>#include <a href="../../../../include/c++/10/string.html">&lt;string&gt;</a></u></td></tr>
+<tr><th id="35">35</th><td><u>#include <a href="../../../../include/c++/10/unordered_map.html">&lt;unordered_map&gt;</a></u></td></tr>
+<tr><th id="36">36</th><td></td></tr>
+<tr><th id="37">37</th><td><b>namespace</b> <span class="namespace">tvm</span> {</td></tr>
+<tr><th id="38">38</th><td><b>namespace</b> <span class="namespace">relay</span> {</td></tr>
+<tr><th id="39">39</th><td></td></tr>
+<tr><th id="40">40</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="41">41</th><td><i class="doc"> * <span class="command">\brief</span> Check that types are well kinded by applying "kinding rules".</i></td></tr>
+<tr><th id="42">42</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="43">43</th><td><i class="doc"> * This pass ensures we do not do things that violate the design of the</i></td></tr>
+<tr><th id="44">44</th><td><i class="doc"> * type system when writing down types.</i></td></tr>
+<tr><th id="45">45</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="46">46</th><td><i class="doc"> * For example tensors are not allowed to contain functions in Relay.</i></td></tr>
+<tr><th id="47">47</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="48">48</th><td><i class="doc"> * We check this by ensuring the `dtype` field of a Tensor always contains</i></td></tr>
+<tr><th id="49">49</th><td><i class="doc"> * a data type such as `int`, `float`, `uint`.</i></td></tr>
+<tr><th id="50">50</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="51">51</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">t</span> The type to check.</i></td></tr>
+<tr><th id="52">52</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">mod</span> The global module.</i></td></tr>
+<tr><th id="53">53</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">diag_ctx</span> The Diagnostic context.</i></td></tr>
+<tr><th id="54">54</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="55">55</th><td><i class="doc"> * <span class="command">\return</span> The kind of the passed type.</i></td></tr>
+<tr><th id="56">56</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="57">57</th><td><a class="macro" href="../runtime/c_runtime_api.h.html#64" title="__attribute__((visibility(&quot;default&quot;)))" data-ref="_M/TVM_DLL">TVM_DLL</a> <a class="typedef" href="type.h.html#tvm::relay::Kind" title='tvm::relay::Kind' data-type='tvm::TypeKind' data-ref="tvm::relay::Kind" data-ref-filename="tvm..relay..Kind">Kind</a> <dfn class="decl fn" id="_ZN3tvm5relay9KindCheckERKNS_4TypeERKNS_8IRModuleENS_7runtime8OptionalINS_17DiagnosticContextEEE" title='tvm::relay::KindCheck' data-ref="_ZN3tvm5relay9KindCheckERKNS_4TypeERKNS_8IRModuleENS_7runtime8OptionalINS_17DiagnosticContextEEE" data-ref-filename="_ZN3tvm5relay9KindCheckERKNS_4TypeERKNS_8IRModuleENS_7runtime8OptionalINS_17DiagnosticContextEEE">KindCheck</dfn>(<em>const</em> <a class="typedef" href="type.h.html#tvm::relay::Type" title='tvm::relay::Type' data-type='tvm::Type' data-ref="tvm::relay::Type" data-ref-filename="tvm..relay..Type">Type</a>&amp; <dfn class="local col1 decl" id="111t" title='t' data-type='const tvm::relay::Type &amp;' data-ref="111t" data-ref-filename="111t">t</dfn>, <em>const</em> <a class="type" href="../ir/module.h.html#tvm::IRModule" title='tvm::IRModule' data-ref="tvm::IRModule" data-ref-filename="tvm..IRModule">IRModule</a>&amp; <dfn class="local col2 decl" id="112mod" title='mod' data-type='const tvm::IRModule &amp;' data-ref="112mod" data-ref-filename="112mod">mod</dfn>,</td></tr>
+<tr><th id="58">58</th><td>                       <a class="type" href="../runtime/container/optional.h.html#tvm::runtime::Optional" title='tvm::runtime::Optional' data-ref="tvm::runtime::Optional" data-ref-filename="tvm..runtime..Optional">Optional</a>&lt;<a class="type" href="../ir/diagnostic.h.html#tvm::DiagnosticContext" title='tvm::DiagnosticContext' data-ref="tvm::DiagnosticContext" data-ref-filename="tvm..DiagnosticContext">DiagnosticContext</a>&gt; <dfn class="local col3 decl" id="113diag_ctx" title='diag_ctx' data-type='Optional&lt;tvm::DiagnosticContext&gt;' data-ref="113diag_ctx" data-ref-filename="113diag_ctx">diag_ctx</dfn> = <a class="type" href="../runtime/container/optional.h.html#tvm::runtime::Optional" title='tvm::runtime::Optional' data-ref="tvm::runtime::Optional" data-ref-filename="tvm..runtime..Optional">Optional</a>&lt;<a class="type" href="../ir/diagnostic.h.html#tvm::DiagnosticContext" title='tvm::DiagnosticContext' data-ref="tvm::DiagnosticContext" data-ref-filename="tvm..DiagnosticContext">DiagnosticContext</a>&gt;<a class="ref fn" href="../runtime/container/optional.h.html#_ZN3tvm7runtime8OptionalC1Ev" title='tvm::runtime::Optional::Optional&lt;T&gt;' data-ref="_ZN3tvm7runtime8OptionalC1Ev" data-ref-filename="_ZN3tvm7runtime8OptionalC1Ev">(</a>));</td></tr>
+<tr><th id="59">59</th><td></td></tr>
+<tr><th id="60">60</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="61">61</th><td><i class="doc"> * <span class="command">\brief</span> Check whether an expression is constant.</i></td></tr>
+<tr><th id="62">62</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="63">63</th><td><i class="doc"> * If the inputs of an expression are all constant, it means the expression</i></td></tr>
+<tr><th id="64">64</th><td><i class="doc"> * itself is constant also.</i></td></tr>
+<tr><th id="65">65</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="66">66</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">e</span> the expression.</i></td></tr>
+<tr><th id="67">67</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="68">68</th><td><i class="doc"> * <span class="command">\return</span> whether the expression is constant.</i></td></tr>
+<tr><th id="69">69</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="70">70</th><td><a class="macro" href="../runtime/c_runtime_api.h.html#64" title="__attribute__((visibility(&quot;default&quot;)))" data-ref="_M/TVM_DLL">TVM_DLL</a> <em>bool</em> <dfn class="decl fn" id="_ZN3tvm5relay13ConstantCheckERKNS_9RelayExprE" title='tvm::relay::ConstantCheck' data-ref="_ZN3tvm5relay13ConstantCheckERKNS_9RelayExprE" data-ref-filename="_ZN3tvm5relay13ConstantCheckERKNS_9RelayExprE">ConstantCheck</dfn>(<em>const</em> <a class="typedef" href="expr.h.html#tvm::relay::Expr" title='tvm::relay::Expr' data-type='tvm::RelayExpr' data-ref="tvm::relay::Expr" data-ref-filename="tvm..relay..Expr">Expr</a>&amp; <dfn class="local col4 decl" id="114e" title='e' data-type='const tvm::relay::Expr &amp;' data-ref="114e" data-ref-filename="114e">e</dfn>);</td></tr>
+<tr><th id="71">71</th><td></td></tr>
+<tr><th id="72">72</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="73">73</th><td><i class="doc"> * <span class="command">\brief</span> Check whether an expression is in the basic block normal form.</i></td></tr>
+<tr><th id="74">74</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="75">75</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">e</span> the expression.</i></td></tr>
+<tr><th id="76">76</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="77">77</th><td><i class="doc"> * <span class="command">\return</span> whether the expression is in the basic block normal form.</i></td></tr>
+<tr><th id="78">78</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="79">79</th><td><a class="macro" href="../runtime/c_runtime_api.h.html#64" title="__attribute__((visibility(&quot;default&quot;)))" data-ref="_M/TVM_DLL">TVM_DLL</a> <em>bool</em> <dfn class="decl fn" id="_ZN3tvm5relay25BasicBlockNormalFormCheckERKNS_9RelayExprE" title='tvm::relay::BasicBlockNormalFormCheck' data-ref="_ZN3tvm5relay25BasicBlockNormalFormCheckERKNS_9RelayExprE" data-ref-filename="_ZN3tvm5relay25BasicBlockNormalFormCheckERKNS_9RelayExprE">BasicBlockNormalFormCheck</dfn>(<em>const</em> <a class="typedef" href="expr.h.html#tvm::relay::Expr" title='tvm::relay::Expr' data-type='tvm::RelayExpr' data-ref="tvm::relay::Expr" data-ref-filename="tvm..relay..Expr">Expr</a>&amp; <dfn class="local col5 decl" id="115e" title='e' data-type='const tvm::relay::Expr &amp;' data-ref="115e" data-ref-filename="115e">e</dfn>);</td></tr>
+<tr><th id="80">80</th><td></td></tr>
+<tr><th id="81">81</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="82">82</th><td><i class="doc"> * <span class="command">\brief</span> Check that each Var is only bound once.</i></td></tr>
+<tr><th id="83">83</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="84">84</th><td><i class="doc"> * For example, the expression `let x = 1 in let x = 2 in 3` bound x twice.</i></td></tr>
+<tr><th id="85">85</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="86">86</th><td><i class="doc"> * `let f = (x -&gt; x) in let g = (x -&gt; x + 1) in f(g(2))` also bound x twice,</i></td></tr>
+<tr><th id="87">87</th><td><i class="doc"> * although x is not shadowed.</i></td></tr>
+<tr><th id="88">88</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="89">89</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">expr</span> the expression to check.</i></td></tr>
+<tr><th id="90">90</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">diag_ctx</span> the diagnostic context</i></td></tr>
+<tr><th id="91">91</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="92">92</th><td><i class="doc"> * <span class="command">\return</span> true iff all Var in expr is bound at most once.</i></td></tr>
+<tr><th id="93">93</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="94">94</th><td><a class="macro" href="../runtime/c_runtime_api.h.html#64" title="__attribute__((visibility(&quot;default&quot;)))" data-ref="_M/TVM_DLL">TVM_DLL</a> <em>bool</em> <dfn class="decl fn" id="_ZN3tvm5relay10WellFormedERKNS_9RelayExprENS_7runtime8OptionalINS_17DiagnosticContextEEE" title='tvm::relay::WellFormed' data-ref="_ZN3tvm5relay10WellFormedERKNS_9RelayExprENS_7runtime8OptionalINS_17DiagnosticContextEEE" data-ref-filename="_ZN3tvm5relay10WellFormedERKNS_9RelayExprENS_7runtime8OptionalINS_17DiagnosticContextEEE">WellFormed</dfn>(<em>const</em> <a class="typedef" href="expr.h.html#tvm::relay::Expr" title='tvm::relay::Expr' data-type='tvm::RelayExpr' data-ref="tvm::relay::Expr" data-ref-filename="tvm..relay..Expr">Expr</a>&amp; <dfn class="local col6 decl" id="116expr" title='expr' data-type='const tvm::relay::Expr &amp;' data-ref="116expr" data-ref-filename="116expr">expr</dfn>,</td></tr>
+<tr><th id="95">95</th><td>                        <a class="type" href="../runtime/container/optional.h.html#tvm::runtime::Optional" title='tvm::runtime::Optional' data-ref="tvm::runtime::Optional" data-ref-filename="tvm..runtime..Optional">Optional</a>&lt;<a class="type" href="../ir/diagnostic.h.html#tvm::DiagnosticContext" title='tvm::DiagnosticContext' data-ref="tvm::DiagnosticContext" data-ref-filename="tvm..DiagnosticContext">DiagnosticContext</a>&gt; <dfn class="local col7 decl" id="117diag_ctx" title='diag_ctx' data-type='Optional&lt;tvm::DiagnosticContext&gt;' data-ref="117diag_ctx" data-ref-filename="117diag_ctx">diag_ctx</dfn> = <a class="type" href="../runtime/container/optional.h.html#tvm::runtime::Optional" title='tvm::runtime::Optional' data-ref="tvm::runtime::Optional" data-ref-filename="tvm..runtime..Optional">Optional</a>&lt;<a class="type" href="../ir/diagnostic.h.html#tvm::DiagnosticContext" title='tvm::DiagnosticContext' data-ref="tvm::DiagnosticContext" data-ref-filename="tvm..DiagnosticContext">DiagnosticContext</a>&gt;<a class="ref fn" href="../runtime/container/optional.h.html#_ZN3tvm7runtime8OptionalC1Ev" title='tvm::runtime::Optional::Optional&lt;T&gt;' data-ref="_ZN3tvm7runtime8OptionalC1Ev" data-ref-filename="_ZN3tvm7runtime8OptionalC1Ev">(</a>));</td></tr>
+<tr><th id="96">96</th><td></td></tr>
+<tr><th id="97">97</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="98">98</th><td><i class="doc"> * <span class="command">\brief</span> Get all bound variables from expression expr.</i></td></tr>
+<tr><th id="99">99</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="100">100</th><td><i class="doc"> * Bound variables are all variables that are declared in the expr.</i></td></tr>
+<tr><th id="101">101</th><td><i class="doc"> * They only have meaning inside that expr, and can only be used in it.</i></td></tr>
+<tr><th id="102">102</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="103">103</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">expr</span> the expression.</i></td></tr>
+<tr><th id="104">104</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="105">105</th><td><i class="doc"> * <span class="command">\return</span> List of bound vars, in the PostDFS order in the expression.</i></td></tr>
+<tr><th id="106">106</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="107">107</th><td><a class="macro" href="../runtime/c_runtime_api.h.html#64" title="__attribute__((visibility(&quot;default&quot;)))" data-ref="_M/TVM_DLL">TVM_DLL</a> <span class="namespace">tvm::</span><a class="type" href="../runtime/container/array.h.html#tvm::runtime::Array" title='tvm::runtime::Array' data-ref="tvm::runtime::Array" data-ref-filename="tvm..runtime..Array">Array</a>&lt;<a class="type" href="expr.h.html#tvm::relay::Var" title='tvm::relay::Var' data-ref="tvm::relay::Var" data-ref-filename="tvm..relay..Var">Var</a>&gt; <dfn class="decl fn" id="_ZN3tvm5relay9BoundVarsERKNS_9RelayExprE" title='tvm::relay::BoundVars' data-ref="_ZN3tvm5relay9BoundVarsERKNS_9RelayExprE" data-ref-filename="_ZN3tvm5relay9BoundVarsERKNS_9RelayExprE">BoundVars</dfn>(<em>const</em> <a class="typedef" href="expr.h.html#tvm::relay::Expr" title='tvm::relay::Expr' data-type='tvm::RelayExpr' data-ref="tvm::relay::Expr" data-ref-filename="tvm..relay..Expr">Expr</a>&amp; <dfn class="local col8 decl" id="118expr" title='expr' data-type='const tvm::relay::Expr &amp;' data-ref="118expr" data-ref-filename="118expr">expr</dfn>);</td></tr>
+<tr><th id="108">108</th><td></td></tr>
+<tr><th id="109">109</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="110">110</th><td><i class="doc"> * <span class="command">\brief</span> Get all bound variables from pattern pat.</i></td></tr>
+<tr><th id="111">111</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="112">112</th><td><i class="doc"> * Bound variables are all variables that got bound by the pat.</i></td></tr>
+<tr><th id="113">113</th><td><i class="doc"> * They only have meaning inside that expr, and can only be used in it.</i></td></tr>
+<tr><th id="114">114</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="115">115</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">pat</span> the Pattern.</i></td></tr>
+<tr><th id="116">116</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="117">117</th><td><i class="doc"> * <span class="command">\return</span> List of bound vars, in the PostDFS order in the expression.</i></td></tr>
+<tr><th id="118">118</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="119">119</th><td><a class="macro" href="../runtime/c_runtime_api.h.html#64" title="__attribute__((visibility(&quot;default&quot;)))" data-ref="_M/TVM_DLL">TVM_DLL</a> <span class="namespace">tvm::</span><a class="type" href="../runtime/container/array.h.html#tvm::runtime::Array" title='tvm::runtime::Array' data-ref="tvm::runtime::Array" data-ref-filename="tvm..runtime..Array">Array</a>&lt;<a class="type" href="expr.h.html#tvm::relay::Var" title='tvm::relay::Var' data-ref="tvm::relay::Var" data-ref-filename="tvm..relay..Var">Var</a>&gt; <dfn class="decl fn" id="_ZN3tvm5relay9BoundVarsERKNS0_7PatternE" title='tvm::relay::BoundVars' data-ref="_ZN3tvm5relay9BoundVarsERKNS0_7PatternE" data-ref-filename="_ZN3tvm5relay9BoundVarsERKNS0_7PatternE">BoundVars</dfn>(<em>const</em> <a class="type" href="adt.h.html#tvm::relay::Pattern" title='tvm::relay::Pattern' data-ref="tvm::relay::Pattern" data-ref-filename="tvm..relay..Pattern">Pattern</a>&amp; <dfn class="local col9 decl" id="119pat" title='pat' data-type='const tvm::relay::Pattern &amp;' data-ref="119pat" data-ref-filename="119pat">pat</dfn>);</td></tr>
+<tr><th id="120">120</th><td></td></tr>
+<tr><th id="121">121</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="122">122</th><td><i class="doc"> * <span class="command">\brief</span> Get free type parameters from expression expr.</i></td></tr>
+<tr><th id="123">123</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="124">124</th><td><i class="doc"> * Free variables are variables that are not bound by a</i></td></tr>
+<tr><th id="125">125</th><td><i class="doc"> * let or a function parameter in the context.</i></td></tr>
+<tr><th id="126">126</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="127">127</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">expr</span> the expression.</i></td></tr>
+<tr><th id="128">128</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="129">129</th><td><i class="doc"> * <span class="command">\return</span> List of free vars, in the PostDFS order in the expression.</i></td></tr>
+<tr><th id="130">130</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="131">131</th><td><a class="macro" href="../runtime/c_runtime_api.h.html#64" title="__attribute__((visibility(&quot;default&quot;)))" data-ref="_M/TVM_DLL">TVM_DLL</a> <span class="namespace">tvm::</span><a class="type" href="../runtime/container/array.h.html#tvm::runtime::Array" title='tvm::runtime::Array' data-ref="tvm::runtime::Array" data-ref-filename="tvm..runtime..Array">Array</a>&lt;<a class="type" href="expr.h.html#tvm::relay::Var" title='tvm::relay::Var' data-ref="tvm::relay::Var" data-ref-filename="tvm..relay..Var">Var</a>&gt; <dfn class="decl fn" id="_ZN3tvm5relay8FreeVarsERKNS_9RelayExprE" title='tvm::relay::FreeVars' data-ref="_ZN3tvm5relay8FreeVarsERKNS_9RelayExprE" data-ref-filename="_ZN3tvm5relay8FreeVarsERKNS_9RelayExprE">FreeVars</dfn>(<em>const</em> <a class="typedef" href="expr.h.html#tvm::relay::Expr" title='tvm::relay::Expr' data-type='tvm::RelayExpr' data-ref="tvm::relay::Expr" data-ref-filename="tvm..relay..Expr">Expr</a>&amp; <dfn class="local col0 decl" id="120expr" title='expr' data-type='const tvm::relay::Expr &amp;' data-ref="120expr" data-ref-filename="120expr">expr</dfn>);</td></tr>
+<tr><th id="132">132</th><td></td></tr>
+<tr><th id="133">133</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="134">134</th><td><i class="doc"> * <span class="command">\brief</span> Get all variables from expression expr.</i></td></tr>
+<tr><th id="135">135</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="136">136</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">expr</span> the expression.</i></td></tr>
+<tr><th id="137">137</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="138">138</th><td><i class="doc"> * <span class="command">\return</span> List of all vars, in the PostDFS order in the expression.</i></td></tr>
+<tr><th id="139">139</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="140">140</th><td><a class="macro" href="../runtime/c_runtime_api.h.html#64" title="__attribute__((visibility(&quot;default&quot;)))" data-ref="_M/TVM_DLL">TVM_DLL</a> <span class="namespace">tvm::</span><a class="type" href="../runtime/container/array.h.html#tvm::runtime::Array" title='tvm::runtime::Array' data-ref="tvm::runtime::Array" data-ref-filename="tvm..runtime..Array">Array</a>&lt;<a class="type" href="expr.h.html#tvm::relay::Var" title='tvm::relay::Var' data-ref="tvm::relay::Var" data-ref-filename="tvm..relay..Var">Var</a>&gt; <dfn class="decl fn" id="_ZN3tvm5relay7AllVarsERKNS_9RelayExprE" title='tvm::relay::AllVars' data-ref="_ZN3tvm5relay7AllVarsERKNS_9RelayExprE" data-ref-filename="_ZN3tvm5relay7AllVarsERKNS_9RelayExprE">AllVars</dfn>(<em>const</em> <a class="typedef" href="expr.h.html#tvm::relay::Expr" title='tvm::relay::Expr' data-type='tvm::RelayExpr' data-ref="tvm::relay::Expr" data-ref-filename="tvm..relay..Expr">Expr</a>&amp; <dfn class="local col1 decl" id="121expr" title='expr' data-type='const tvm::relay::Expr &amp;' data-ref="121expr" data-ref-filename="121expr">expr</dfn>);</td></tr>
+<tr><th id="141">141</th><td></td></tr>
+<tr><th id="142">142</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="143">143</th><td><i class="doc"> * <span class="command">\brief</span> Get free TypeVars from expression expr.</i></td></tr>
+<tr><th id="144">144</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="145">145</th><td><i class="doc"> * Free type parameters are type parameters that are not bound by a function</i></td></tr>
+<tr><th id="146">146</th><td><i class="doc"> * type in the context.</i></td></tr>
+<tr><th id="147">147</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="148">148</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">expr</span> the expression.</i></td></tr>
+<tr><th id="149">149</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">mod</span> the module.</i></td></tr>
+<tr><th id="150">150</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="151">151</th><td><i class="doc"> * <span class="command">\return</span> List of free vars, in the PostDFS order visited by expr.</i></td></tr>
+<tr><th id="152">152</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="153">153</th><td><a class="macro" href="../runtime/c_runtime_api.h.html#64" title="__attribute__((visibility(&quot;default&quot;)))" data-ref="_M/TVM_DLL">TVM_DLL</a> <span class="namespace">tvm::</span><a class="type" href="../runtime/container/array.h.html#tvm::runtime::Array" title='tvm::runtime::Array' data-ref="tvm::runtime::Array" data-ref-filename="tvm..runtime..Array">Array</a>&lt;<a class="typedef" href="type.h.html#tvm::relay::TypeVar" title='tvm::relay::TypeVar' data-type='tvm::TypeVar' data-ref="tvm::relay::TypeVar" data-ref-filename="tvm..relay..TypeVar">TypeVar</a>&gt; <dfn class="decl fn" id="_ZN3tvm5relay12FreeTypeVarsERKNS_9RelayExprERKNS_8IRModuleE" title='tvm::relay::FreeTypeVars' data-ref="_ZN3tvm5relay12FreeTypeVarsERKNS_9RelayExprERKNS_8IRModuleE" data-ref-filename="_ZN3tvm5relay12FreeTypeVarsERKNS_9RelayExprERKNS_8IRModuleE">FreeTypeVars</dfn>(<em>const</em> <a class="typedef" href="expr.h.html#tvm::relay::Expr" title='tvm::relay::Expr' data-type='tvm::RelayExpr' data-ref="tvm::relay::Expr" data-ref-filename="tvm..relay..Expr">Expr</a>&amp; <dfn class="local col2 decl" id="122expr" title='expr' data-type='const tvm::relay::Expr &amp;' data-ref="122expr" data-ref-filename="122expr">expr</dfn>, <em>const</em> <a class="type" href="../ir/module.h.html#tvm::IRModule" title='tvm::IRModule' data-ref="tvm::IRModule" data-ref-filename="tvm..IRModule">IRModule</a>&amp; <dfn class="local col3 decl" id="123mod" title='mod' data-type='const tvm::IRModule &amp;' data-ref="123mod" data-ref-filename="123mod">mod</dfn>);</td></tr>
+<tr><th id="154">154</th><td></td></tr>
+<tr><th id="155">155</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="156">156</th><td><i class="doc"> * <span class="command">\brief</span> Get free TypeVars from type t.</i></td></tr>
+<tr><th id="157">157</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="158">158</th><td><i class="doc"> * Free type parameters are type parameters that are not bound by a function</i></td></tr>
+<tr><th id="159">159</th><td><i class="doc"> * type in the context.</i></td></tr>
+<tr><th id="160">160</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="161">161</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">t</span> the type.</i></td></tr>
+<tr><th id="162">162</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">mod</span> the module.</i></td></tr>
+<tr><th id="163">163</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="164">164</th><td><i class="doc"> * <span class="command">\return</span> List of free type vars, in the PostDFS order visited by type.</i></td></tr>
+<tr><th id="165">165</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="166">166</th><td><a class="macro" href="../runtime/c_runtime_api.h.html#64" title="__attribute__((visibility(&quot;default&quot;)))" data-ref="_M/TVM_DLL">TVM_DLL</a> <span class="namespace">tvm::</span><a class="type" href="../runtime/container/array.h.html#tvm::runtime::Array" title='tvm::runtime::Array' data-ref="tvm::runtime::Array" data-ref-filename="tvm..runtime..Array">Array</a>&lt;<a class="typedef" href="type.h.html#tvm::relay::TypeVar" title='tvm::relay::TypeVar' data-type='tvm::TypeVar' data-ref="tvm::relay::TypeVar" data-ref-filename="tvm..relay..TypeVar">TypeVar</a>&gt; <dfn class="decl fn" id="_ZN3tvm5relay12FreeTypeVarsERKNS_4TypeERKNS_8IRModuleE" title='tvm::relay::FreeTypeVars' data-ref="_ZN3tvm5relay12FreeTypeVarsERKNS_4TypeERKNS_8IRModuleE" data-ref-filename="_ZN3tvm5relay12FreeTypeVarsERKNS_4TypeERKNS_8IRModuleE">FreeTypeVars</dfn>(<em>const</em> <a class="typedef" href="type.h.html#tvm::relay::Type" title='tvm::relay::Type' data-type='tvm::Type' data-ref="tvm::relay::Type" data-ref-filename="tvm..relay..Type">Type</a>&amp; <dfn class="local col4 decl" id="124t" title='t' data-type='const tvm::relay::Type &amp;' data-ref="124t" data-ref-filename="124t">t</dfn>, <em>const</em> <a class="type" href="../ir/module.h.html#tvm::IRModule" title='tvm::IRModule' data-ref="tvm::IRModule" data-ref-filename="tvm..IRModule">IRModule</a>&amp; <dfn class="local col5 decl" id="125mod" title='mod' data-type='const tvm::IRModule &amp;' data-ref="125mod" data-ref-filename="125mod">mod</dfn>);</td></tr>
+<tr><th id="167">167</th><td></td></tr>
+<tr><th id="168">168</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="169">169</th><td><i class="doc"> * <span class="command">\brief</span> Get all bound type variables from expression expr.</i></td></tr>
+<tr><th id="170">170</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="171">171</th><td><i class="doc"> * Bound variables are all type variables that are declared in the expr.</i></td></tr>
+<tr><th id="172">172</th><td><i class="doc"> * They only have meaning inside that expr, and can only be used in it.</i></td></tr>
+<tr><th id="173">173</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="174">174</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">expr</span> the expression.</i></td></tr>
+<tr><th id="175">175</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">mod</span> the module.</i></td></tr>
+<tr><th id="176">176</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="177">177</th><td><i class="doc"> * <span class="command">\return</span> List of bound type vars, in the PostDFS order in the expression.</i></td></tr>
+<tr><th id="178">178</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="179">179</th><td><a class="macro" href="../runtime/c_runtime_api.h.html#64" title="__attribute__((visibility(&quot;default&quot;)))" data-ref="_M/TVM_DLL">TVM_DLL</a> <span class="namespace">tvm::</span><a class="type" href="../runtime/container/array.h.html#tvm::runtime::Array" title='tvm::runtime::Array' data-ref="tvm::runtime::Array" data-ref-filename="tvm..runtime..Array">Array</a>&lt;<a class="typedef" href="type.h.html#tvm::relay::TypeVar" title='tvm::relay::TypeVar' data-type='tvm::TypeVar' data-ref="tvm::relay::TypeVar" data-ref-filename="tvm..relay..TypeVar">TypeVar</a>&gt; <dfn class="decl fn" id="_ZN3tvm5relay13BoundTypeVarsERKNS_9RelayExprERKNS_8IRModuleE" title='tvm::relay::BoundTypeVars' data-ref="_ZN3tvm5relay13BoundTypeVarsERKNS_9RelayExprERKNS_8IRModuleE" data-ref-filename="_ZN3tvm5relay13BoundTypeVarsERKNS_9RelayExprERKNS_8IRModuleE">BoundTypeVars</dfn>(<em>const</em> <a class="typedef" href="expr.h.html#tvm::relay::Expr" title='tvm::relay::Expr' data-type='tvm::RelayExpr' data-ref="tvm::relay::Expr" data-ref-filename="tvm..relay..Expr">Expr</a>&amp; <dfn class="local col6 decl" id="126expr" title='expr' data-type='const tvm::relay::Expr &amp;' data-ref="126expr" data-ref-filename="126expr">expr</dfn>, <em>const</em> <a class="type" href="../ir/module.h.html#tvm::IRModule" title='tvm::IRModule' data-ref="tvm::IRModule" data-ref-filename="tvm..IRModule">IRModule</a>&amp; <dfn class="local col7 decl" id="127mod" title='mod' data-type='const tvm::IRModule &amp;' data-ref="127mod" data-ref-filename="127mod">mod</dfn>);</td></tr>
+<tr><th id="180">180</th><td></td></tr>
+<tr><th id="181">181</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="182">182</th><td><i class="doc"> * <span class="command">\brief</span> Get all bound type variables from type t.</i></td></tr>
+<tr><th id="183">183</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="184">184</th><td><i class="doc"> * Bound variables are all type variables that are declared in the type.</i></td></tr>
+<tr><th id="185">185</th><td><i class="doc"> * They only have meaning inside that type, and can only be used in it.</i></td></tr>
+<tr><th id="186">186</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="187">187</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">t</span> the type</i></td></tr>
+<tr><th id="188">188</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">mod</span> the module.</i></td></tr>
+<tr><th id="189">189</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="190">190</th><td><i class="doc"> * <span class="command">\return</span> List of bound type vars, in the PostDFS order visited by type.</i></td></tr>
+<tr><th id="191">191</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="192">192</th><td><a class="macro" href="../runtime/c_runtime_api.h.html#64" title="__attribute__((visibility(&quot;default&quot;)))" data-ref="_M/TVM_DLL">TVM_DLL</a> <span class="namespace">tvm::</span><a class="type" href="../runtime/container/array.h.html#tvm::runtime::Array" title='tvm::runtime::Array' data-ref="tvm::runtime::Array" data-ref-filename="tvm..runtime..Array">Array</a>&lt;<a class="typedef" href="type.h.html#tvm::relay::TypeVar" title='tvm::relay::TypeVar' data-type='tvm::TypeVar' data-ref="tvm::relay::TypeVar" data-ref-filename="tvm..relay..TypeVar">TypeVar</a>&gt; <dfn class="decl fn" id="_ZN3tvm5relay13BoundTypeVarsERKNS_4TypeERKNS_8IRModuleE" title='tvm::relay::BoundTypeVars' data-ref="_ZN3tvm5relay13BoundTypeVarsERKNS_4TypeERKNS_8IRModuleE" data-ref-filename="_ZN3tvm5relay13BoundTypeVarsERKNS_4TypeERKNS_8IRModuleE">BoundTypeVars</dfn>(<em>const</em> <a class="typedef" href="type.h.html#tvm::relay::Type" title='tvm::relay::Type' data-type='tvm::Type' data-ref="tvm::relay::Type" data-ref-filename="tvm..relay..Type">Type</a>&amp; <dfn class="local col8 decl" id="128t" title='t' data-type='const tvm::relay::Type &amp;' data-ref="128t" data-ref-filename="128t">t</dfn>, <em>const</em> <a class="type" href="../ir/module.h.html#tvm::IRModule" title='tvm::IRModule' data-ref="tvm::IRModule" data-ref-filename="tvm..IRModule">IRModule</a>&amp; <dfn class="local col9 decl" id="129mod" title='mod' data-type='const tvm::IRModule &amp;' data-ref="129mod" data-ref-filename="129mod">mod</dfn>);</td></tr>
+<tr><th id="193">193</th><td></td></tr>
+<tr><th id="194">194</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="195">195</th><td><i class="doc"> * <span class="command">\brief</span> Get all type variables in expression expr.</i></td></tr>
+<tr><th id="196">196</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="197">197</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">expr</span> the expression.</i></td></tr>
+<tr><th id="198">198</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">mod</span> the module.</i></td></tr>
+<tr><th id="199">199</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="200">200</th><td><i class="doc"> * <span class="command">\return</span> List of type vars, in the PostDFS order in the expression.</i></td></tr>
+<tr><th id="201">201</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="202">202</th><td><a class="macro" href="../runtime/c_runtime_api.h.html#64" title="__attribute__((visibility(&quot;default&quot;)))" data-ref="_M/TVM_DLL">TVM_DLL</a> <span class="namespace">tvm::</span><a class="type" href="../runtime/container/array.h.html#tvm::runtime::Array" title='tvm::runtime::Array' data-ref="tvm::runtime::Array" data-ref-filename="tvm..runtime..Array">Array</a>&lt;<a class="typedef" href="type.h.html#tvm::relay::TypeVar" title='tvm::relay::TypeVar' data-type='tvm::TypeVar' data-ref="tvm::relay::TypeVar" data-ref-filename="tvm..relay..TypeVar">TypeVar</a>&gt; <dfn class="decl fn" id="_ZN3tvm5relay11AllTypeVarsERKNS_9RelayExprERKNS_8IRModuleE" title='tvm::relay::AllTypeVars' data-ref="_ZN3tvm5relay11AllTypeVarsERKNS_9RelayExprERKNS_8IRModuleE" data-ref-filename="_ZN3tvm5relay11AllTypeVarsERKNS_9RelayExprERKNS_8IRModuleE">AllTypeVars</dfn>(<em>const</em> <a class="typedef" href="expr.h.html#tvm::relay::Expr" title='tvm::relay::Expr' data-type='tvm::RelayExpr' data-ref="tvm::relay::Expr" data-ref-filename="tvm..relay..Expr">Expr</a>&amp; <dfn class="local col0 decl" id="130expr" title='expr' data-type='const tvm::relay::Expr &amp;' data-ref="130expr" data-ref-filename="130expr">expr</dfn>, <em>const</em> <a class="type" href="../ir/module.h.html#tvm::IRModule" title='tvm::IRModule' data-ref="tvm::IRModule" data-ref-filename="tvm..IRModule">IRModule</a>&amp; <dfn class="local col1 decl" id="131mod" title='mod' data-type='const tvm::IRModule &amp;' data-ref="131mod" data-ref-filename="131mod">mod</dfn>);</td></tr>
+<tr><th id="203">203</th><td></td></tr>
+<tr><th id="204">204</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="205">205</th><td><i class="doc"> * <span class="command">\brief</span> Get all type variables in type t.</i></td></tr>
+<tr><th id="206">206</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="207">207</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">t</span> the type.</i></td></tr>
+<tr><th id="208">208</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">mod</span> the module.</i></td></tr>
+<tr><th id="209">209</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="210">210</th><td><i class="doc"> * <span class="command">\return</span> List of type vars, in the PostDFS order visited by type.</i></td></tr>
+<tr><th id="211">211</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="212">212</th><td><a class="macro" href="../runtime/c_runtime_api.h.html#64" title="__attribute__((visibility(&quot;default&quot;)))" data-ref="_M/TVM_DLL">TVM_DLL</a> <span class="namespace">tvm::</span><a class="type" href="../runtime/container/array.h.html#tvm::runtime::Array" title='tvm::runtime::Array' data-ref="tvm::runtime::Array" data-ref-filename="tvm..runtime..Array">Array</a>&lt;<a class="typedef" href="type.h.html#tvm::relay::TypeVar" title='tvm::relay::TypeVar' data-type='tvm::TypeVar' data-ref="tvm::relay::TypeVar" data-ref-filename="tvm..relay..TypeVar">TypeVar</a>&gt; <dfn class="decl fn" id="_ZN3tvm5relay11AllTypeVarsERKNS_4TypeERKNS_8IRModuleE" title='tvm::relay::AllTypeVars' data-ref="_ZN3tvm5relay11AllTypeVarsERKNS_4TypeERKNS_8IRModuleE" data-ref-filename="_ZN3tvm5relay11AllTypeVarsERKNS_4TypeERKNS_8IRModuleE">AllTypeVars</dfn>(<em>const</em> <a class="typedef" href="type.h.html#tvm::relay::Type" title='tvm::relay::Type' data-type='tvm::Type' data-ref="tvm::relay::Type" data-ref-filename="tvm..relay..Type">Type</a>&amp; <dfn class="local col2 decl" id="132t" title='t' data-type='const tvm::relay::Type &amp;' data-ref="132t" data-ref-filename="132t">t</dfn>, <em>const</em> <a class="type" href="../ir/module.h.html#tvm::IRModule" title='tvm::IRModule' data-ref="tvm::IRModule" data-ref-filename="tvm..IRModule">IRModule</a>&amp; <dfn class="local col3 decl" id="133mod" title='mod' data-type='const tvm::IRModule &amp;' data-ref="133mod" data-ref-filename="133mod">mod</dfn>);</td></tr>
+<tr><th id="213">213</th><td></td></tr>
+<tr><th id="214">214</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="215">215</th><td><i class="doc"> * <span class="command">\brief</span> Finds cases that the given match expression does not catch, if any.</i></td></tr>
+<tr><th id="216">216</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="217">217</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">match</span> the match expression to test</i></td></tr>
+<tr><th id="218">218</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="219">219</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">mod</span> The module used for accessing global type var definitions, can be None.</i></td></tr>
+<tr><th id="220">220</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="221">221</th><td><i class="doc"> * <span class="command">\return</span> Returns a list of cases (as patterns) that are not handled by the match</i></td></tr>
+<tr><th id="222">222</th><td><i class="doc"> * expression.</i></td></tr>
+<tr><th id="223">223</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="224">224</th><td><a class="macro" href="../runtime/c_runtime_api.h.html#64" title="__attribute__((visibility(&quot;default&quot;)))" data-ref="_M/TVM_DLL">TVM_DLL</a> <a class="type" href="../runtime/container/array.h.html#tvm::runtime::Array" title='tvm::runtime::Array' data-ref="tvm::runtime::Array" data-ref-filename="tvm..runtime..Array">Array</a>&lt;<a class="type" href="adt.h.html#tvm::relay::Pattern" title='tvm::relay::Pattern' data-ref="tvm::relay::Pattern" data-ref-filename="tvm..relay..Pattern">Pattern</a>&gt; <dfn class="decl fn" id="_ZN3tvm5relay14UnmatchedCasesERKNS0_5MatchERKNS_8IRModuleE" title='tvm::relay::UnmatchedCases' data-ref="_ZN3tvm5relay14UnmatchedCasesERKNS0_5MatchERKNS_8IRModuleE" data-ref-filename="_ZN3tvm5relay14UnmatchedCasesERKNS0_5MatchERKNS_8IRModuleE">UnmatchedCases</dfn>(<em>const</em> <a class="type" href="adt.h.html#tvm::relay::Match" title='tvm::relay::Match' data-ref="tvm::relay::Match" data-ref-filename="tvm..relay..Match">Match</a>&amp; <dfn class="local col4 decl" id="134match" title='match' data-type='const tvm::relay::Match &amp;' data-ref="134match" data-ref-filename="134match">match</dfn>, <em>const</em> <a class="type" href="../ir/module.h.html#tvm::IRModule" title='tvm::IRModule' data-ref="tvm::IRModule" data-ref-filename="tvm..IRModule">IRModule</a>&amp; <dfn class="local col5 decl" id="135mod" title='mod' data-type='const tvm::IRModule &amp;' data-ref="135mod" data-ref-filename="135mod">mod</dfn>);</td></tr>
+<tr><th id="225">225</th><td></td></tr>
+<tr><th id="226">226</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="227">227</th><td><i class="doc"> * <span class="command">\brief</span> Get reference counter of each internal ExprNode in body.</i></td></tr>
+<tr><th id="228">228</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="229">229</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">body</span> The body expression.</i></td></tr>
+<tr><th id="230">230</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="231">231</th><td><i class="doc"> * <span class="command">\return</span> The reference count mapping.</i></td></tr>
+<tr><th id="232">232</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="233">233</th><td><a class="macro" href="../runtime/c_runtime_api.h.html#64" title="__attribute__((visibility(&quot;default&quot;)))" data-ref="_M/TVM_DLL">TVM_DLL</a> <span class="namespace">std::</span><a class="type" href="../../../../include/c++/10/bits/unordered_map.h.html#std::unordered_map" title='std::unordered_map' data-ref="std::unordered_map" data-ref-filename="std..unordered_map">unordered_map</a>&lt;<em>const</em> Object*, <span class='typedef' title='size_t' data-type='unsigned long' data-ref="size_t" data-ref-filename="size_t">size_t</span>&gt; <dfn class="decl fn" id="_ZN3tvm5relay15GetExprRefCountERKNS_9RelayExprE" title='tvm::relay::GetExprRefCount' data-ref="_ZN3tvm5relay15GetExprRefCountERKNS_9RelayExprE" data-ref-filename="_ZN3tvm5relay15GetExprRefCountERKNS_9RelayExprE">GetExprRefCount</dfn>(<em>const</em> <a class="typedef" href="expr.h.html#tvm::relay::Expr" title='tvm::relay::Expr' data-type='tvm::RelayExpr' data-ref="tvm::relay::Expr" data-ref-filename="tvm..relay..Expr">Expr</a>&amp; <dfn class="local col6 decl" id="136body" title='body' data-type='const tvm::relay::Expr &amp;' data-ref="136body" data-ref-filename="136body">body</dfn>);</td></tr>
+<tr><th id="234">234</th><td></td></tr>
+<tr><th id="235">235</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="236">236</th><td><i class="doc"> * <span class="command">\brief</span> Get the updated module for collecting calibration data.</i></td></tr>
+<tr><th id="237">237</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="238">238</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">mod</span> The module to be updated.</i></td></tr>
+<tr><th id="239">239</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="240">240</th><td><i class="doc"> * <span class="command">\return</span> The updated module.</i></td></tr>
+<tr><th id="241">241</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="242">242</th><td><a class="macro" href="../runtime/c_runtime_api.h.html#64" title="__attribute__((visibility(&quot;default&quot;)))" data-ref="_M/TVM_DLL">TVM_DLL</a> <a class="type" href="../ir/module.h.html#tvm::IRModule" title='tvm::IRModule' data-ref="tvm::IRModule" data-ref-filename="tvm..IRModule">IRModule</a> <dfn class="decl fn" id="_ZN3tvm5relay18GetCalibrateModuleENS_8IRModuleE" title='tvm::relay::GetCalibrateModule' data-ref="_ZN3tvm5relay18GetCalibrateModuleENS_8IRModuleE" data-ref-filename="_ZN3tvm5relay18GetCalibrateModuleENS_8IRModuleE">GetCalibrateModule</dfn>(<a class="type" href="../ir/module.h.html#tvm::IRModule" title='tvm::IRModule' data-ref="tvm::IRModule" data-ref-filename="tvm..IRModule">IRModule</a> <dfn class="local col7 decl" id="137mod" title='mod' data-type='tvm::IRModule' data-ref="137mod" data-ref-filename="137mod">mod</dfn>);</td></tr>
+<tr><th id="243">243</th><td></td></tr>
+<tr><th id="244">244</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="245">245</th><td><i class="doc"> * <span class="command">\brief</span> Get the output map between subgrpahs and its inputs/output.</i></td></tr>
+<tr><th id="246">246</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="247">247</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">mod</span> The module for running calibration.</i></td></tr>
+<tr><th id="248">248</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="249">249</th><td><i class="doc"> * <span class="command">\return</span> The mapping between a subgraph name and its postition in the output tuple.</i></td></tr>
+<tr><th id="250">250</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="251">251</th><td><a class="macro" href="../runtime/c_runtime_api.h.html#64" title="__attribute__((visibility(&quot;default&quot;)))" data-ref="_M/TVM_DLL">TVM_DLL</a> <a class="type" href="../runtime/container/map.h.html#tvm::runtime::Map" title='tvm::runtime::Map' data-ref="tvm::runtime::Map" data-ref-filename="tvm..runtime..Map">Map</a>&lt;<a class="typedef" href="expr.h.html#tvm::relay::GlobalVar" title='tvm::relay::GlobalVar' data-type='tvm::GlobalVar' data-ref="tvm::relay::GlobalVar" data-ref-filename="tvm..relay..GlobalVar">GlobalVar</a>, <a class="type" href="../runtime/container/array.h.html#tvm::runtime::Array" title='tvm::runtime::Array' data-ref="tvm::runtime::Array" data-ref-filename="tvm..runtime..Array">Array</a>&lt;<a class="type" href="../ir/expr.h.html#tvm::Integer" title='tvm::Integer' data-ref="tvm::Integer" data-ref-filename="tvm..Integer">Integer</a>&gt;&gt; <dfn class="decl fn" id="_ZN3tvm5relay21GetCalibrateOutputMapERKNS_8IRModuleE" title='tvm::relay::GetCalibrateOutputMap' data-ref="_ZN3tvm5relay21GetCalibrateOutputMapERKNS_8IRModuleE" data-ref-filename="_ZN3tvm5relay21GetCalibrateOutputMapERKNS_8IRModuleE">GetCalibrateOutputMap</dfn>(<em>const</em> <a class="type" href="../ir/module.h.html#tvm::IRModule" title='tvm::IRModule' data-ref="tvm::IRModule" data-ref-filename="tvm..IRModule">IRModule</a>&amp; <dfn class="local col8 decl" id="138mod" title='mod' data-type='const tvm::IRModule &amp;' data-ref="138mod" data-ref-filename="138mod">mod</dfn>);</td></tr>
+<tr><th id="252">252</th><td></td></tr>
+<tr><th id="253">253</th><td>}  <i>// namespace relay</i></td></tr>
+<tr><th id="254">254</th><td>}  <i>// namespace tvm</i></td></tr>
+<tr><th id="255">255</th><td></td></tr>
+<tr><th id="256">256</th><td><u>#<span data-ppcond="24">endif</span>  // TVM_RELAY_ANALYSIS_H_</u></td></tr>
+<tr><th id="257">257</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated while processing <a href='../../../src/ir/module.cc.html'>tvm/src/ir/module.cc</a><br/>Generated on <em>2022-Aug-10</em> from project tvm revision <em>fae79bb</em><br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

@@ -1,0 +1,46 @@
+<inh f='tvm/include/tvm/ir/attrs.h' l='834' c='tvm::AttrsNode'/>
+<def f='tvm/include/tvm/relay/attrs/nn.h' l='210' ll='281'/>
+<use f='tvm/include/tvm/relay/attrs/nn.h' l='210'/>
+<size>128</size>
+<doc f='tvm/include/tvm/relay/attrs/nn.h' l='209'>/*! \brief Attributes used in convolution operators with winograd algorithm */</doc>
+<mbr r='tvm::relay::Conv2DWinogradAttrs::tile_size' o='192' t='int'/>
+<mbr r='tvm::relay::Conv2DWinogradAttrs::strides' o='256' t='Array&lt;tvm::relay::IndexExpr&gt;'/>
+<mbr r='tvm::relay::Conv2DWinogradAttrs::padding' o='320' t='Array&lt;tvm::relay::IndexExpr&gt;'/>
+<mbr r='tvm::relay::Conv2DWinogradAttrs::dilation' o='384' t='Array&lt;tvm::relay::IndexExpr&gt;'/>
+<mbr r='tvm::relay::Conv2DWinogradAttrs::groups' o='448' t='int'/>
+<mbr r='tvm::relay::Conv2DWinogradAttrs::channels' o='512' t='tvm::relay::IndexExpr'/>
+<mbr r='tvm::relay::Conv2DWinogradAttrs::kernel_size' o='576' t='Array&lt;tvm::relay::IndexExpr&gt;'/>
+<mbr r='tvm::relay::Conv2DWinogradAttrs::data_layout' o='640' t='tvm::String'/>
+<mbr r='tvm::relay::Conv2DWinogradAttrs::kernel_layout' o='704' t='tvm::String'/>
+<mbr r='tvm::relay::Conv2DWinogradAttrs::out_layout' o='768' t='tvm::String'/>
+<mbr r='tvm::relay::Conv2DWinogradAttrs::auto_scheduler_rewritten_layout' o='832' t='tvm::String'/>
+<mbr r='tvm::relay::Conv2DWinogradAttrs::meta_schedule_original_shape' o='896' t='Array&lt;tvm::PrimExpr&gt;'/>
+<mbr r='tvm::relay::Conv2DWinogradAttrs::out_dtype' o='960' t='tvm::DataType'/>
+<smbr r='tvm::relay::Conv2DWinogradAttrs::_type_key' t='const char *const'/>
+<smbr r='tvm::relay::Conv2DWinogradAttrs::_type_final' t='const bool'/>
+<smbr r='tvm::relay::Conv2DWinogradAttrs::_type_child_slots' t='const int'/>
+<fun r='_ZN3tvm5relay19Conv2DWinogradAttrs16RuntimeTypeIndexEv'/>
+<fun r='_ZN3tvm5relay19Conv2DWinogradAttrs27_GetOrAllocRuntimeTypeIndexEv'/>
+<fun r='_ZN3tvm5relay19Conv2DWinogradAttrs15_tvm_VisitAttrsERT_'/>
+<use f='tvm/src/relay/op/nn/convolution.cc' l='1054'/>
+<use f='tvm/src/relay/op/nn/convolution.cc' l='1054'/>
+<use f='tvm/src/relay/op/nn/convolution.cc' l='1054'/>
+<use f='tvm/src/relay/op/nn/convolution.cc' l='1061'/>
+<use f='tvm/src/relay/op/nn/convolution.cc' l='1079'/>
+<use f='tvm/src/relay/op/nn/convolution.cc' l='1084'/>
+<use f='tvm/src/relay/op/nn/convolution.cc' l='1086'/>
+<size>128</size>
+<use f='tvm/src/relay/transforms/annotate_texture_storage.cc' l='322' c='_ZNK3tvm5relay12_GLOBAL__N_111StorageInfo22SupportsTextureStorageEPKNS0_8CallNodeE'/>
+<size>128</size>
+<use f='tvm/src/relay/transforms/auto_scheduler_layout_rewrite.cc' l='86' c='_ZN3tvm5relay11FuncMutator10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/transforms/auto_scheduler_layout_rewrite.cc' l='168'/>
+<use f='tvm/src/relay/transforms/auto_scheduler_layout_rewrite.cc' l='169'/>
+<size>128</size>
+<use f='tvm/src/relay/transforms/meta_schedule_layout_rewrite.cc' l='102' c='_ZN3tvm5relay23MetaScheduleFuncMutator10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/transforms/meta_schedule_layout_rewrite.cc' l='102' c='_ZN3tvm5relay23MetaScheduleFuncMutator10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/transforms/meta_schedule_layout_rewrite.cc' l='102' c='_ZN3tvm5relay23MetaScheduleFuncMutator10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/transforms/meta_schedule_layout_rewrite.cc' l='102' c='_ZN3tvm5relay23MetaScheduleFuncMutator10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/transforms/meta_schedule_layout_rewrite.cc' l='160'/>
+<size>128</size>
+<use f='tvm/src/relay/transforms/to_mixed_precision.cc' l='127' c='_ZNK3tvm5relay18MixedPrecisionPass11GetNewAttrsEPKNS0_8CallNodeERKNS_7runtime8DataTypeE'/>
+<size>128</size>

@@ -1,0 +1,15 @@
+<dec f='tvm/include/tvm/meta_schedule/apply_history_best.h' l='72' type='Optional&lt;tvm::IRModule&gt; tvm::meta_schedule::ApplyHistoryBestNode::Query(runtime::String task_name, tvm::IRModule mod, tvm::Target target, Optional&lt;Array&lt;tvm::IRModule&gt;&gt; dispatched, tvm::meta_schedule::ApplyHistoryBestNode::FTakeTuningRecord f_take_tuning_record, tvm::meta_schedule::ApplyHistoryBestNode::FDirectDispatch f_direct_dispatch = nullptr)'/>
+<def f='tvm/src/meta_schedule/apply_history_best.cc' l='105' ll='147' type='Optional&lt;tvm::IRModule&gt; tvm::meta_schedule::ApplyHistoryBestNode::Query(runtime::String task_name, tvm::IRModule mod, tvm::Target target, Optional&lt;Array&lt;tvm::IRModule&gt;&gt; dispatched, tvm::meta_schedule::ApplyHistoryBestNode::FTakeTuningRecord f_take_tuning_record, tvm::meta_schedule::ApplyHistoryBestNode::FDirectDispatch f_direct_dispatch = nullptr)'/>
+<use f='tvm/src/meta_schedule/apply_history_best.cc' l='162' u='a'/>
+<doc f='tvm/include/tvm/meta_schedule/apply_history_best.h' l='61'>/*!
+   * \brief Query the best entry from the database
+   * \param task_name The name of the task to be queried
+   * \param mod The module to be queried
+   * \param target The target to be queried
+   * \param dispatched The IRs after dispatch
+   * \param f_take_tuning_record A callback function that takes a tuning record and does something
+   *   with it.
+   * \param f_direct_dispatch A function that directly dispatches an IRModule to the given workload
+   *   as result if available, skipping the database query.
+   */</doc>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='370' u='c' c='_ZN3tvm5relay3tec15ScheduleBuilder6CreateERKNS0_8FunctionESt8functionIFNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESC_EE'/>

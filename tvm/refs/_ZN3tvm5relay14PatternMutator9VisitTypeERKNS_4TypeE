@@ -1,0 +1,12 @@
+<dec f='tvm/include/tvm/relay/pattern_functor.h' l='154' type='tvm::relay::Type tvm::relay::PatternMutator::VisitType(const tvm::relay::Type &amp; t)'/>
+<doc f='tvm/include/tvm/relay/pattern_functor.h' l='148'>/*! \brief Used to visit the types inside of patterns.
+   *
+   * Can be overloaded to transform the types in arbitrary
+   * ways, one way would be to define a sub-class of type
+   * visitor for types which transform them appropriately.
+   */</doc>
+<ovr f='tvm/src/relay/analysis/util.cc' l='448' c='_ZZN3tvm5relay9TypeSubstERKNS_9RelayExprERKNS_7runtime3MapINS_7TypeVarENS_4TypeEvvEEEN16TypeSubstMutator9VisitTypeERKS7_'/>
+<def f='tvm/src/relay/ir/pattern_functor.cc' l='54' type='tvm::relay::Type tvm::relay::PatternMutator::VisitType(const tvm::relay::Type &amp; t)'/>
+<use f='tvm/src/relay/ir/pattern_functor.cc' l='58' u='c' c='_ZN3tvm5relay14PatternMutator8VisitVarERKNS0_3VarE'/>
+<ovr f='tvm/src/relay/transforms/de_duplicate.cc' l='83' c='_ZZN3tvm5relay5DeDupERKNS_9RelayExprEEN12DeDupMutator9VisitTypeERKNS_4TypeE'/>
+<ovr f='tvm/src/relay/transforms/type_infer.cc' l='768' c='_ZN3tvm5relay14TypeInferencer8Resolver9VisitTypeERKNS_4TypeE'/>

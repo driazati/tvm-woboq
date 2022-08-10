@@ -1,0 +1,16 @@
+<def f='tvm/3rdparty/dmlc-core/include/dmlc/strtonum.h' l='286' ll='288' type='float dmlc::strtof_check_range(const char * nptr, char ** endptr)'/>
+<use f='tvm/3rdparty/dmlc-core/include/dmlc/strtonum.h' l='470' u='c' c='_ZN4dmlc4stofERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEPm'/>
+<doc f='tvm/3rdparty/dmlc-core/include/dmlc/strtonum.h' l='272'>/*!
+ * \brief A faster implementation of strtof(). See documentation of
+ *        std::strtof() for more information. This function will check for
+ *        overflow. If the converted value is outside the range for the float
+ *        type, errno is set to ERANGE and HUGE_VALF is returned.
+ * TODO: the current version does not support hex number
+ * TODO: the current version does not handle long decimals: you may only have
+ *       up to 19 digits after the decimal point, and you cannot have too many
+ *       digits before the decimal point either.
+ * \param nptr Beginning of the string that&apos;s to be converted into float
+ * \param endptr After the conversion, this pointer will be set to point one
+ *               past the last character used in the conversion.
+ * \return Converted floating-point value, in float type
+ */</doc>

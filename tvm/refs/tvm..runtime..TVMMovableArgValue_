@@ -1,0 +1,28 @@
+<use f='tvm/include/tvm/runtime/object.h' l='503'/>
+<use f='tvm/include/tvm/runtime/packed_func.h' l='630'/>
+<inh f='tvm/include/tvm/runtime/packed_func.h' l='541' c='tvm::runtime::TVMPODValue_'/>
+<def f='tvm/include/tvm/runtime/packed_func.h' l='709' ll='745'/>
+<use f='tvm/include/tvm/runtime/packed_func.h' l='785'/>
+<use f='tvm/include/tvm/runtime/packed_func.h' l='940' c='_ZN3tvm7runtime11TVMRetValueaSEONS0_19TVMMovableArgValue_E'/>
+<size>16</size>
+<doc f='tvm/include/tvm/runtime/packed_func.h' l='699'>/*!
+ * \brief Internal auxiliary struct for TypedPackedFunc to indicate a movable argument.
+ *
+ *  We can only construct a movable argument once from a single argument position.
+ *  If the argument is passed as RValue reference, the result will be moved.
+ *  We should only construct a MovableArg from an argument once,
+ *  as the result will can moved.
+ *
+ * \note For internal development purpose only.
+ */</doc>
+<fun r='_ZN3tvm7runtime19TVMMovableArgValue_C1E8TVMValuei'/>
+<fun r='_ZNK3tvm7runtime19TVMMovableArgValue_cvNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEv'/>
+<fun r='_ZNK3tvm7runtime19TVMMovableArgValue_cvNS0_15TypedPackedFuncIT_EEEv'/>
+<fun r='_ZNK3tvm7runtime19TVMMovableArgValue_cv10DLDataTypeEv'/>
+<fun r='_ZNK3tvm7runtime19TVMMovableArgValue_cvNS0_8DataTypeEEv'/>
+<fun r='_ZNK3tvm7runtime19TVMMovableArgValue_cvNS0_11TVMArgValueEEv'/>
+<fun r='_ZNK3tvm7runtime19TVMMovableArgValue_cvT_Ev'/>
+<fun r='_ZNK3tvm7runtime19TVMMovableArgValue_10AsArgValueEv'/>
+<fun r='_ZNK3tvm7runtime19TVMMovableArgValue_cvT_Ev'/>
+<use f='tvm/src/runtime/c_runtime_api.cc' l='594' c='TVMCbArgToReturn'/>
+<size>16</size>

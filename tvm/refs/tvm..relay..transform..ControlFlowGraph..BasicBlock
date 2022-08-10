@@ -1,0 +1,17 @@
+<use f='tvm/src/relay/backend/liveness_analysis.h' l='62'/>
+<def f='tvm/src/relay/backend/liveness_analysis.h' l='73' ll='82'/>
+<use f='tvm/src/relay/backend/liveness_analysis.h' l='81' c='_ZN3tvm5relay9transform16ControlFlowGraph10BasicBlock4MakeEPNS_7support12GenericArenaINS4_19SimplePageAllocatorEEE'/>
+<size>72</size>
+<doc f='tvm/src/relay/backend/liveness_analysis.h' l='64'>/*!
+   * \brief A chunk of IR that does not have any control flow branching. At this stage in the IR,
+   * basic blocks correspond to:
+   *   (1) a sequence of nested Let expressions, where each node in the block corresponds to a
+   *       binding and the last node is either the (non-Let) body or a binding that branches
+   *       (e.g. &quot;let %x = if (%c) { true_block } else { false_block }&quot;).
+   *   (2) an atomic expression representing the target expression of a control flow branch, e.g.
+   *       %v and %u in &quot;let %x = if (%c) { %v } else { %u }&quot;.
+   */</doc>
+<mbr r='tvm::relay::transform::ControlFlowGraph::BasicBlock::nodes' o='0' t='std::vector&lt;NodePtr&gt;'/>
+<mbr r='tvm::relay::transform::ControlFlowGraph::BasicBlock::pred' o='192' t='std::vector&lt;BasicBlockPtr&gt;'/>
+<mbr r='tvm::relay::transform::ControlFlowGraph::BasicBlock::succ' o='384' t='std::vector&lt;BasicBlockPtr&gt;'/>
+<fun r='_ZN3tvm5relay9transform16ControlFlowGraph10BasicBlock4MakeEPNS_7support12GenericArenaINS4_19SimplePageAllocatorEEE'/>

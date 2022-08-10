@@ -1,0 +1,10 @@
+<dec f='tvm/src/relay/collage/sub_graph.h' l='134' type='tvm::relay::Expr tvm::relay::collage::NestedSubGraphNode::Rewrite(const tvm::relay::collage::DataflowGraph &amp; dataflow_graph, const tvm::relay::Expr &amp; expr) const'/>
+<doc f='tvm/src/relay/collage/sub_graph.h' l='127'>/*!
+   * \brief Returns \p expr rewritten to encode the partitioning implied by this nested sub-graph.
+   *
+   * It is valid for \p expr to not be the same as \p dataflow_graph.expr(), however all nodes
+   * inside this nested sub-graph must correspond to nodes shared between \p dataflow_graph.expr()
+   * and \p expr. See \p SubGraph::ParallelRewrite below.
+   */</doc>
+<def f='tvm/src/relay/collage/sub_graph.cc' l='522' ll='527' type='tvm::relay::Expr tvm::relay::collage::NestedSubGraphNode::Rewrite(const tvm::relay::collage::DataflowGraph &amp; dataflow_graph, const tvm::relay::Expr &amp; expr) const'/>
+<use f='tvm/src/relay/collage/sub_graph.cc' l='582' u='c' c='_ZN3tvm5relay7collage14NestedSubGraph15ParallelRewriteERKNS1_13DataflowGraphERKNS_9RelayExprESt6vectorIS2_SaIS2_EE'/>

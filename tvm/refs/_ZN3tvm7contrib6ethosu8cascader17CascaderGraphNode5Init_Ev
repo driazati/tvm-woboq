@@ -1,0 +1,12 @@
+<dec f='tvm/src/contrib/ethosu/cascader/graph.h' l='296' type='void tvm::contrib::ethosu::cascader::CascaderGraphNode::Init_()'/>
+<doc f='tvm/src/contrib/ethosu/cascader/graph.h' l='287'>/*!
+   * \brief Initialize the CascaderGraph by defining a topological ordering.
+   * \note This will traverse the Parts and Tensors using a depth-first
+   * visiting pattern and use the traversal order to initialize both the
+   * &apos;order&apos; vectors and the ID maps. The order vectors define the ordering
+   * that the cascader expects the CascaderGraph to be executed in, but reversed.
+   * The ID maps assign a unique integer ID to each Part and Tensor corresponding
+   * to their position in their respective order vector.
+   */</doc>
+<use f='tvm/src/contrib/ethosu/cascader/graph.cc' l='157' u='c' c='_ZN3tvm7contrib6ethosu8cascader17CascaderGraphNodeC1ESt6vectorINS2_6TensorESaIS5_EES7_'/>
+<def f='tvm/src/contrib/ethosu/cascader/graph.cc' l='171' ll='208' type='void tvm::contrib::ethosu::cascader::CascaderGraphNode::Init_()'/>

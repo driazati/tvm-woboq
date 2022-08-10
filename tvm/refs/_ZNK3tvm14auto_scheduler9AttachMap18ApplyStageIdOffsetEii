@@ -1,0 +1,14 @@
+<dec f='tvm/include/tvm/auto_scheduler/loop_state.h' l='214' type='tvm::auto_scheduler::AttachMap tvm::auto_scheduler::AttachMap::ApplyStageIdOffset(int start_id, int offset = 1) const'/>
+<doc f='tvm/include/tvm/auto_scheduler/loop_state.h' l='205'>/*!
+   * \brief Traverse through `stage_to_attach_iter` and `iter_to_attached_stages` map, add offset
+   * to stage indexes that are larger than the start_id. Used for steps that insert new stages to
+   * ComputeDAG (e.g., CacheRead/CacheWrite step).
+   * \param start_id The index threshold. This function only adds offset for stages
+   * with indices larger then this threshold.
+   * \param offset The index offset to be added to the stage index.
+   * \return The updated AttachMap after applying stage index offset.
+   */</doc>
+<def f='tvm/src/auto_scheduler/loop_state.cc' l='163' ll='191' type='tvm::auto_scheduler::AttachMap tvm::auto_scheduler::AttachMap::ApplyStageIdOffset(int start_id, int offset = 1) const'/>
+<use f='tvm/src/auto_scheduler/transform_step.cc' l='1563' u='c' c='_ZNK3tvm14auto_scheduler17CacheReadStepNode12ApplyToStateEPNS0_5StateERKNS0_10ComputeDAGE'/>
+<use f='tvm/src/auto_scheduler/transform_step.cc' l='1686' u='c' c='_ZNK3tvm14auto_scheduler18CacheWriteStepNode12ApplyToStateEPNS0_5StateERKNS0_10ComputeDAGE'/>
+<use f='tvm/src/auto_scheduler/transform_step.cc' l='1803' u='c' c='_ZNK3tvm14auto_scheduler15RfactorStepNode12ApplyToStateEPNS0_5StateERKNS0_10ComputeDAGE'/>

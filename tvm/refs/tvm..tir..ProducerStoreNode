@@ -1,0 +1,66 @@
+<inh f='tvm/include/tvm/tir/stmt.h' l='38' c='tvm::tir::StmtNode'/>
+<def f='tvm/include/tvm/tir/stmt.h' l='404' ll='433'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='420' c='_ZNK3tvm3tir17ProducerStoreNode12SEqualReduceEPKS1_NS_13SEqualReducerE'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='444' c='_ZNK3tvm3tir13ProducerStoreptEv'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='444' c='_ZNK3tvm3tir13ProducerStoreptEv'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='444' c='_ZNK3tvm3tir13ProducerStore3getEv'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='444'/>
+<size>48</size>
+<doc f='tvm/include/tvm/tir/stmt.h' l='394'>/*!
+ * \brief Store value into mult-dimensional array that will be read by the consumer
+ *        of the producer.
+ *
+ * \note This node only appears in high-level DSLs that are built on top of the TIR.
+ *       It should not appear in a valid TIR PrimFunc. A high-level DSL needs to lower
+ *       this node before TIR transformations.
+ *
+ * \sa DataProducer
+ */</doc>
+<mbr r='tvm::tir::ProducerStoreNode::producer' o='192' t='tvm::tir::DataProducer'/>
+<mbr r='tvm::tir::ProducerStoreNode::value' o='256' t='tvm::PrimExpr'/>
+<mbr r='tvm::tir::ProducerStoreNode::indices' o='320' t='Array&lt;tvm::PrimExpr&gt;'/>
+<fun r='_ZN3tvm3tir17ProducerStoreNode10VisitAttrsEPNS_11AttrVisitorE'/>
+<fun r='_ZNK3tvm3tir17ProducerStoreNode12SEqualReduceEPKS1_NS_13SEqualReducerE'/>
+<fun r='_ZNK3tvm3tir17ProducerStoreNode11SHashReduceENS_12SHashReducerE'/>
+<smbr r='tvm::tir::ProducerStoreNode::_type_key' t='const char *const'/>
+<smbr r='tvm::tir::ProducerStoreNode::_type_final' t='const bool'/>
+<smbr r='tvm::tir::ProducerStoreNode::_type_child_slots' t='const int'/>
+<fun r='_ZN3tvm3tir17ProducerStoreNode16RuntimeTypeIndexEv'/>
+<fun r='_ZN3tvm3tir17ProducerStoreNode27_GetOrAllocRuntimeTypeIndexEv'/>
+<use f='tvm/include/tvm/tir/stmt_functor.h' l='97' c='_ZN3tvm3tir11StmtFunctorIFT_RKNS0_4StmtEDpT0_EE10VisitStmt_EPKNS0_17ProducerStoreNodeES7_'/>
+<use f='tvm/include/tvm/tir/stmt_functor.h' l='123' c='_ZN3tvm3tir11StmtFunctorIFT_RKNS0_4StmtEDpT0_EE10InitVTableEv'/>
+<use f='tvm/include/tvm/tir/stmt_functor.h' l='123' c='_ZN3tvm3tir11StmtFunctorIFT_RKNS0_4StmtEDpT0_EE10InitVTableEv'/>
+<use f='tvm/include/tvm/tir/stmt_functor.h' l='169' c='_ZN3tvm3tir11StmtVisitor10VisitStmt_EPKNS0_17ProducerStoreNodeE'/>
+<use f='tvm/include/tvm/tir/stmt_functor.h' l='271' c='_ZN3tvm3tir11StmtMutator10VisitStmt_EPKNS0_17ProducerStoreNodeE'/>
+<size>48</size>
+<use f='tvm/src/contrib/hybrid/codegen_hybrid.h' l='125' c='_ZN3tvm7contrib13CodeGenHybrid10VisitStmt_EPKNS_3tir17ProducerStoreNodeE'/>
+<use f='tvm/src/contrib/hybrid/codegen_hybrid.cc' l='363' c='_ZN3tvm7contrib13CodeGenHybrid10VisitStmt_EPKNS_3tir17ProducerStoreNodeE'/>
+<size>48</size>
+<use f='tvm/src/printer/text_printer.h' l='351' c='_ZN3tvm3tir14TIRTextPrinter10VisitStmt_EPKNS0_17ProducerStoreNodeE'/>
+<size>48</size>
+<use f='tvm/src/printer/tir_text_printer.cc' l='503' c='_ZN3tvm3tir14TIRTextPrinter10VisitStmt_EPKNS0_17ProducerStoreNodeE'/>
+<size>48</size>
+<use f='tvm/src/te/operation/hybrid_op.cc' l='464' c='_ZN3tvm2te16ProviderReplacer10VisitStmt_EPKNS_3tir17ProducerStoreNodeE'/>
+<size>48</size>
+<use f='tvm/src/te/schedule/schedule_ops.cc' l='273' c='_ZN3tvm2te16SchedulePostProc10VisitStmt_EPKNS_3tir17ProducerStoreNodeE'/>
+<size>48</size>
+<use f='tvm/src/te/schedule/schedule_postproc_to_primfunc.cc' l='117' c='_ZN3tvm2te20TensorToBufferMapper10VisitStmt_EPKNS_3tir17ProducerStoreNodeE'/>
+<use f='tvm/src/te/schedule/schedule_postproc_to_primfunc.cc' l='122' c='_ZN3tvm2te20TensorToBufferMapper10VisitStmt_EPKNS_3tir17ProducerStoreNodeE'/>
+<size>48</size>
+<use f='tvm/src/tir/ir/stmt.cc' l='333' c='_ZN3tvm3tir13ProducerStoreC1ENS0_12DataProducerENS_8PrimExprENS_7runtime5ArrayIS3_vEENS_4SpanE'/>
+<use f='tvm/src/tir/ir/stmt.cc' l='333' c='_ZN3tvm3tir13ProducerStoreC1ENS0_12DataProducerENS_8PrimExprENS_7runtime5ArrayIS3_vEENS_4SpanE'/>
+<use f='tvm/src/tir/ir/stmt.cc' l='346'/>
+<use f='tvm/src/tir/ir/stmt.cc' l='346'/>
+<use f='tvm/src/tir/ir/stmt.cc' l='346'/>
+<use f='tvm/src/tir/ir/stmt.cc' l='349'/>
+<use f='tvm/src/tir/ir/stmt.cc' l='350'/>
+<size>48</size>
+<use f='tvm/src/tir/ir/stmt_functor.cc' l='100' c='_ZN3tvm3tir11StmtVisitor10VisitStmt_EPKNS0_17ProducerStoreNodeE'/>
+<use f='tvm/src/tir/ir/stmt_functor.cc' l='407' c='_ZN3tvm3tir11StmtMutator10VisitStmt_EPKNS0_17ProducerStoreNodeE'/>
+<size>48</size>
+<use f='tvm/src/tir/transforms/inject_virtual_thread.cc' l='529' c='_ZN3tvm3tir21VirtualThreadInjector10VisitStmt_EPKNS0_17ProducerStoreNodeE'/>
+<size>48</size>
+<use f='tvm/src/tir/transforms/storage_flatten.cc' l='1618' c='_ZN3tvm3tir16StorageFlattener10VisitStmt_EPKNS0_17ProducerStoreNodeE'/>
+<size>48</size>
+<use f='tvm/src/tir/transforms/vectorize_loop.cc' l='576' c='_ZN3tvm3tir10Vectorizer10VisitStmt_EPKNS0_17ProducerStoreNodeE'/>
+<size>48</size>

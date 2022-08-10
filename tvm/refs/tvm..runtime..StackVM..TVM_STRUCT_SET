@@ -1,0 +1,14 @@
+<dec f='tvm/src/runtime/stackvm/stackvm.h' l='286' type='47'/>
+<use f='tvm/src/runtime/stackvm/stackvm.cc' l='156' c='_ZNK3tvm7runtime7StackVM9PrintCodeERSol'/>
+<use f='tvm/src/runtime/stackvm/stackvm.cc' l='502' c='_ZNK3tvm7runtime7StackVM3RunEPNS1_5StateE'/>
+<doc f='tvm/src/runtime/stackvm/stackvm.h' l='276'>/*!
+     * \brief set data into structure.
+     * \code
+     *  index = code[pc + 1].v_int;
+     *  field = code[pc + 2].v_int;
+     *  ((StructType*)stack[sp - 1].v_handle)[index]-&gt;field = stack[sp];
+     *  pc = pc + 3
+     *  sp = sp - 1
+     * \endcode
+     */</doc>
+<use f='tvm/src/target/stackvm/codegen_stackvm.cc' l='460' u='r' c='_ZN3tvm7codegen14CodeGenStackVM10VisitStmt_EPKNS_3tir12EvaluateNodeE'/>

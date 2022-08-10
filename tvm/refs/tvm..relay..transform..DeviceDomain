@@ -1,0 +1,43 @@
+<use f='tvm/src/relay/transforms/device_domains.h' l='46'/>
+<def f='tvm/src/relay/transforms/device_domains.h' l='76' ll='138'/>
+<use f='tvm/src/relay/transforms/device_domains.h' l='160' c='_ZN3tvm5relay9transform13DeviceDomains21MakeHigherOrderDomainESt6vectorISt10shared_ptrINS1_12DeviceDomainEESaIS6_EE'/>
+<use f='tvm/src/relay/transforms/device_domains.cc' l='49' c='_ZN3tvm5relay9transform13DeviceDomains20MakeFirstOrderDomainERKNS_13VirtualDeviceE'/>
+<use f='tvm/src/relay/transforms/device_domains.cc' l='53' c='_ZN3tvm5relay9transform13DeviceDomains20MakeFirstOrderDomainERKNS_13VirtualDeviceE'/>
+<use f='tvm/src/relay/transforms/device_domains.cc' l='65' c='_ZN3tvm5relay9transform13DeviceDomains10MakeDomainERKNS_4TypeERKNS_13VirtualDeviceE'/>
+<size>32</size>
+<doc f='tvm/src/relay/transforms/device_domains.h' l='49'>/*!
+ * \brief Represents the domain over which we collect equality constraints.
+ *
+ * \code
+ *   D ::= ?x?                  -- first order, free
+ *       | &lt;virtual_device&gt;     -- first order, bound to specific virtual device
+ *       | fn(D1, ..., Dn):Dr   -- higher order
+ * \endcode
+ *
+ * We require a function value to be on the same device as its result. To support that we need
+ * a notion of the &apos;result domain&apos; of a domain:
+ * \code
+ *   result_domain(?x?)                = ?x?
+ *   result_domain(&lt;virtual_device&gt;)   = &lt;virtual_device&gt;
+ *   result_domain(fn(D1, ..., Dn):Dr) = result_domain(Dr)
+ * \endcode
+ *
+ * TODO(mbs): We currently don&apos;t allow sub-VirtualDevice constraints. Eg for a function we can
+ * express that the argument and result VirtualDevices must be exactly equal, but we cannot express
+ * that though the devices and targets for arguments and results must be equal, it is ok for
+ * memory scopes to differ. At the moment we can get away with this since we run PlanDevices
+ * twice: once with all memory scopes unconstrained, then again with just memory scopes as
+ * the new property to flow. However we&apos;re on thin ice here and better would be to allow
+ * constraints on VirtualDevices to be exploded into their device/target component and their
+ * memory scope component. Should we fold layout constraints into VirtualDevices then they would
+ * probably be grouped with memory scopes.
+ */</doc>
+<fun r='_ZN3tvm5relay9transform12DeviceDomainC1ENS_13VirtualDeviceE'/>
+<fun r='_ZN3tvm5relay9transform12DeviceDomainC1ESt6vectorISt10shared_ptrIS2_ESaIS5_EE'/>
+<fun r='_ZNK3tvm5relay9transform12DeviceDomain15is_higher_orderEv'/>
+<fun r='_ZNK3tvm5relay9transform12DeviceDomain26first_order_virtual_deviceEv'/>
+<fun r='_ZNK3tvm5relay9transform12DeviceDomain14function_arityEv'/>
+<fun r='_ZNK3tvm5relay9transform12DeviceDomain14function_paramEm'/>
+<fun r='_ZNK3tvm5relay9transform12DeviceDomain15function_resultEv'/>
+<mbr r='tvm::relay::transform::DeviceDomain::virtual_device_' o='0' t='const tvm::VirtualDevice'/>
+<mbr r='tvm::relay::transform::DeviceDomain::args_and_result_' o='64' t='const std::vector&lt;DeviceDomainPtr&gt;'/>

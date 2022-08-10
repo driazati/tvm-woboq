@@ -1,0 +1,15 @@
+<def f='tvm/src/arith/bound_deducer.cc' l='322' ll='338' type='tvm::arith::IntSet tvm::arith::DeduceBound(tvm::PrimExpr v, tvm::PrimExpr e, const std::unordered_map&lt;const VarNode *, IntSet&gt; &amp; hint_map, const std::unordered_map&lt;const VarNode *, IntSet&gt; &amp; relax_map)'/>
+<use f='tvm/src/arith/bound_deducer.cc' l='352' u='c' c='_ZN3tvm5arith11DeduceBoundENS_8PrimExprES1_RKNS_7runtime3MapINS_3tir3VarENS0_6IntSetEvvEES9_'/>
+<dec f='tvm/include/tvm/arith/bound.h' l='68' type='tvm::arith::IntSet tvm::arith::DeduceBound(tvm::PrimExpr v, tvm::PrimExpr cond, const std::unordered_map&lt;const VarNode *, IntSet&gt; &amp; hint_map, const std::unordered_map&lt;const VarNode *, IntSet&gt; &amp; relax_map)'/>
+<doc f='tvm/include/tvm/arith/bound.h' l='58'>/*!
+ * \brief Same as DeduceBound with  unordered_map signature.
+ *
+ * \param v The target variable to be deduced.
+ * \param cond The conditional expression.
+ * \param hint_map The domain of variable, used to help deduce.
+ * \param relax_map The domain of each variable, used to relax the domain,
+ *        The deduce bound mush implies e for all value in relax_map
+ * \return An integer set that always satisfies the condition.
+ */</doc>
+<use f='tvm/src/tir/transforms/loop_partition.cc' l='277' u='c' c='_ZN3tvm3tir15PartitionFinder15DeduceConditionERKNS_8PrimExprE'/>
+<use f='tvm/src/tir/transforms/loop_partition.cc' l='284' u='c' c='_ZN3tvm3tir15PartitionFinder15DeduceConditionERKNS_8PrimExprE'/>

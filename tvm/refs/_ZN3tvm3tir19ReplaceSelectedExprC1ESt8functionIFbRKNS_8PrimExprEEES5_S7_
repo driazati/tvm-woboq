@@ -1,0 +1,12 @@
+<dec f='tvm/src/tir/transforms/replace_selected_expr.h' l='56' type='void tvm::tir::ReplaceSelectedExpr::ReplaceSelectedExpr(std::function&lt;bool (const PrimExpr &amp;)&gt; predicate_selector, const tvm::PrimExpr &amp; new_expr, std::function&lt;bool (const PrimExpr &amp;)&gt; can_replace_inside)'/>
+<doc f='tvm/src/tir/transforms/replace_selected_expr.h' l='55'>// Constructor</doc>
+<use f='tvm/src/tir/transforms/replace_selected_expr.cc' l='53' u='c' c='_ZN3tvm3tir19ReplaceSelectedExpr25ReplaceSelectedExprInExprERKNS_8PrimExprESt8functionIFbS4_EES4_S7_'/>
+<use f='tvm/src/tir/transforms/replace_selected_expr.cc' l='69' u='c' c='_ZN3tvm3tir19ReplaceSelectedExpr25ReplaceSelectedExprInStmtERKNS0_4StmtESt8functionIFbRKNS_8PrimExprEEES8_SA_'/>
+<def f='tvm/src/tir/transforms/replace_selected_expr.cc' l='80' ll='85' type='void tvm::tir::ReplaceSelectedExpr::ReplaceSelectedExpr(std::function&lt;bool (const PrimExpr &amp;)&gt; predicate_selector, const tvm::PrimExpr &amp; new_expr, std::function&lt;bool (const PrimExpr &amp;)&gt; can_replace_inside)'/>
+<doc f='tvm/src/tir/transforms/replace_selected_expr.cc' l='73'>/*!
+ * \brief Protected constructor of ReplaceSelectedExpr.
+ * \param predicate_selector The predicate which tells what to replace
+ * \param new_expr The new expression that will replace everything that&apos;s selected by the predicate
+ * \param can_replace_inside The predicate which tells in which nodes we are allowed to recurse
+                              for pursuing further replacements
+ */</doc>

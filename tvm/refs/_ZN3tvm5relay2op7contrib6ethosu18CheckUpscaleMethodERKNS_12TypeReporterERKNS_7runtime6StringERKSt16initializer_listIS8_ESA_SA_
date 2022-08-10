@@ -1,0 +1,12 @@
+<dec f='tvm/src/relay/op/contrib/ethosu/common.h' l='95' type='void tvm::relay::op::contrib::ethosu::CheckUpscaleMethod(const tvm::relay::TypeReporter &amp; reporter, const tvm::runtime::String &amp; upscale_method, const std::initializer_list&lt;String&gt; &amp; allowed_upscale_methods, const tvm::runtime::String &amp; operator_name, const tvm::runtime::String &amp; operator_type = &quot;&quot;)'/>
+<doc f='tvm/src/relay/op/contrib/ethosu/common.h' l='87'>/*! \brief Check the upscale method matches one given in allowed_upscale_methods. Raise a type
+ * inference error if not.
+ * \param reporter The infer type reporter.
+ * \param upscale_method The upscale method string to check.
+ * \param allowed_upscale_methods An initializer list of allowed upscale methods.
+ * \param operator_name The name of the operator to report.
+ * \param operator_type The type of the operator to report e.g. &quot;ADD&quot; for binary_elementwise.
+ */</doc>
+<def f='tvm/src/relay/op/contrib/ethosu/common.cc' l='130' ll='155' type='void tvm::relay::op::contrib::ethosu::CheckUpscaleMethod(const tvm::relay::TypeReporter &amp; reporter, const tvm::runtime::String &amp; upscale_method, const std::initializer_list&lt;String&gt; &amp; allowed_upscale_methods, const tvm::runtime::String &amp; operator_name, const tvm::runtime::String &amp; operator_type = &quot;&quot;)'/>
+<use f='tvm/src/relay/op/contrib/ethosu/convolution.cc' l='58' u='c' c='_ZN3tvm5relay2op7contrib6ethosu15EthosuConv2DRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/src/relay/op/contrib/ethosu/pooling.cc' l='59' u='c' c='_ZN3tvm5relay2op7contrib6ethosu16EthosuPoolingRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>

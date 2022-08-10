@@ -1,0 +1,72 @@
+<inh f='tvm/include/tvm/runtime/object.h' l='167' c='tvm::runtime::Object'/>
+<def f='tvm/include/tvm/tir/schedule/state.h' l='85' ll='184'/>
+<use f='tvm/include/tvm/tir/schedule/state.h' l='201' c='_ZNK3tvm3tir13ScheduleState3getEv'/>
+<use f='tvm/include/tvm/tir/schedule/state.h' l='201' c='_ZNK3tvm3tir13ScheduleState3getEv'/>
+<use f='tvm/include/tvm/tir/schedule/state.h' l='203' c='_ZNK3tvm3tir13ScheduleStateptEv'/>
+<use f='tvm/include/tvm/tir/schedule/state.h' l='203' c='_ZNK3tvm3tir13ScheduleStateptEv'/>
+<use f='tvm/include/tvm/tir/schedule/state.h' l='203'/>
+<size>144</size>
+<doc f='tvm/include/tvm/tir/schedule/state.h' l='74'>/*!
+ * \brief The state of scheduling, which exposes a `Replace` method as
+ * the primary interface for all the scheduling primitives to manipulate the TensorIR.
+ *
+ * The data structure contains the following information
+ * 1) The AST being scheduled (mod)
+ * 2) The sref tree of schedulable statements (indicated by the srefs)
+ * 3) The dependency information of each block scope (block_info)
+ * 4) A reverse mapping from the AST nodes to that in the sref tree (stmt2ref)
+ * 5) A debug flag, if set, extra checking is enabled (debug_mask)
+ */</doc>
+<mbr r='tvm::tir::ScheduleStateNode::mod' o='128' t='tvm::IRModule'/>
+<mbr r='tvm::tir::ScheduleStateNode::block_info' o='192' t='std::unordered_map&lt;StmtSRef, BlockInfo, ObjectPtrHash, ObjectPtrEqual&gt;'/>
+<mbr r='tvm::tir::ScheduleStateNode::stmt2ref' o='640' t='std::unordered_map&lt;const StmtNode *, StmtSRef&gt;'/>
+<mbr r='tvm::tir::ScheduleStateNode::debug_mask' o='1088' t='int'/>
+<fun r='_ZN3tvm3tir17ScheduleStateNode10VisitAttrsEPNS_11AttrVisitorE'/>
+<fun r='_ZN3tvm3tir17ScheduleStateNode7ReplaceERKNS0_8StmtSRefERKNS0_4StmtERKNS_7runtime3MapINS0_5BlockESA_vvEE'/>
+<fun r='_ZNK3tvm3tir17ScheduleStateNode11DebugVerifyEv'/>
+<smbr r='tvm::tir::ScheduleStateNode::_type_key' t='const char *const'/>
+<smbr r='tvm::tir::ScheduleStateNode::_type_final' t='const bool'/>
+<smbr r='tvm::tir::ScheduleStateNode::_type_child_slots' t='const int'/>
+<fun r='_ZN3tvm3tir17ScheduleStateNode16RuntimeTypeIndexEv'/>
+<fun r='_ZN3tvm3tir17ScheduleStateNode27_GetOrAllocRuntimeTypeIndexEv'/>
+<fun r='_ZNK3tvm3tir17ScheduleStateNode12GetBlockInfoERKNS0_8StmtSRefE'/>
+<fun r='_ZN3tvm3tir17ScheduleStateNode20UpdateScopeBlockInfoERKNS0_4StmtE'/>
+<fun r='_ZNK3tvm3tir17ScheduleStateNode13GetBlockScopeERKNS0_8StmtSRefE'/>
+<fun r='_ZNK3tvm3tir17ScheduleStateNode20IsAffineBlockBindingERKNS0_8StmtSRefE'/>
+<fun r='_ZNK3tvm3tir17ScheduleStateNode23IsRegionCoveredConsumerERKNS0_8StmtSRefE'/>
+<fun r='_ZNK3tvm3tir17ScheduleStateNode15IsStagePipelineERKNS0_8StmtSRefE'/>
+<use f='tvm/src/tir/schedule/analysis/verify.cc' l='26' c='_ZN3tvm3tir16SRefTreeVerifier6VerifyEPKNS0_17ScheduleStateNodeE'/>
+<use f='tvm/src/tir/schedule/analysis/verify.cc' l='30' c='_ZN3tvm3tir16SRefTreeVerifierC1EPKNS0_17ScheduleStateNodeE'/>
+<use f='tvm/src/tir/schedule/analysis/verify.cc' l='132'/>
+<size>144</size>
+<use f='tvm/src/tir/schedule/concrete_schedule.cc' l='58' c='_ZN3tvm3tir14ScheduleCopier4CopyEPKNS0_20ConcreteScheduleNodeEPNS0_13ScheduleStateEPNS_7runtime3MapINS7_9ObjectRefES9_vvEE'/>
+<use f='tvm/src/tir/schedule/concrete_schedule.cc' l='58' c='_ZN3tvm3tir14ScheduleCopier4CopyEPKNS0_20ConcreteScheduleNodeEPNS0_13ScheduleStateEPNS_7runtime3MapINS7_9ObjectRefES9_vvEE'/>
+<size>144</size>
+<use f='tvm/src/tir/schedule/state.cc' l='128' c='_ZN3tvm3tir11SetSeqIndexEPNS0_17ScheduleStateNodeERKNS0_4StmtEi'/>
+<use f='tvm/src/tir/schedule/state.cc' l='149' c='_ZN3tvm3tir21SetSeqIndexInChildrenEPNS0_17ScheduleStateNodeEPKNS0_11SeqStmtNodeE'/>
+<use f='tvm/src/tir/schedule/state.cc' l='166' c='_ZN3tvm3tir10UpdateSRefEPNS0_17ScheduleStateNodeEPNS0_12StmtSRefNodeEPKNS0_8StmtNodeE'/>
+<use f='tvm/src/tir/schedule/state.cc' l='179' c='_ZN3tvm3tir18BlockInfoCollector7CollectEPNS0_17ScheduleStateNodeERKNS0_4StmtE'/>
+<use f='tvm/src/tir/schedule/state.cc' l='185' c='_ZN3tvm3tir18BlockInfoCollectorC1EPNS0_17ScheduleStateNodeE'/>
+<use f='tvm/src/tir/schedule/state.cc' l='386'/>
+<use f='tvm/src/tir/schedule/state.cc' l='404' c='_ZN3tvm3tir12StateCreator6CreateENS_8IRModuleEi'/>
+<use f='tvm/src/tir/schedule/state.cc' l='405' c='_ZN3tvm3tir12StateCreator6CreateENS_8IRModuleEi'/>
+<use f='tvm/src/tir/schedule/state.cc' l='405' c='_ZN3tvm3tir12StateCreator6CreateENS_8IRModuleEi'/>
+<use f='tvm/src/tir/schedule/state.cc' l='406' c='_ZN3tvm3tir12StateCreator6CreateENS_8IRModuleEi'/>
+<use f='tvm/src/tir/schedule/state.cc' l='425' c='_ZN3tvm3tir12StateCreatorC1EPNS0_17ScheduleStateNodeE'/>
+<use f='tvm/src/tir/schedule/state.cc' l='473'/>
+<use f='tvm/src/tir/schedule/state.cc' l='555' c='_ZN3tvm3tir14ReuseCollector7CollectEPKNS0_17ScheduleStateNodeERKNS0_4StmtE'/>
+<use f='tvm/src/tir/schedule/state.cc' l='567' c='_ZN3tvm3tir14ReuseCollectorC1EPKNS0_17ScheduleStateNodeE'/>
+<use f='tvm/src/tir/schedule/state.cc' l='588'/>
+<use f='tvm/src/tir/schedule/state.cc' l='616' c='_ZN3tvm3tir14SRefTreePruner5PruneEPNS0_17ScheduleStateNodeERKNS0_9ReuseInfoERKNS0_4StmtE'/>
+<use f='tvm/src/tir/schedule/state.cc' l='625' c='_ZN3tvm3tir14SRefTreePrunerC1EPNS0_17ScheduleStateNodeERKNS0_9ReuseInfoE'/>
+<use f='tvm/src/tir/schedule/state.cc' l='677'/>
+<use f='tvm/src/tir/schedule/state.cc' l='698' c='_ZN3tvm3tir11SRefUpdater6UpdateEPNS0_17ScheduleStateNodeEPNS0_12StmtSRefNodeERKSt13unordered_mapIPKNS_7runtime6ObjectENS0_8StmtSRefESt4hashISA_ESt8equ1317141'/>
+<use f='tvm/src/tir/schedule/state.cc' l='705' c='_ZN3tvm3tir11SRefUpdaterC1EPNS0_17ScheduleStateNodeEPNS0_12StmtSRefNodeERKSt13unordered_mapIPKNS_7runtime6ObjectENS0_8StmtSRefESt4hashISA_ESt8equal_to7034014'/>
+<use f='tvm/src/tir/schedule/state.cc' l='1104'/>
+<use f='tvm/src/tir/schedule/state.cc' l='1104'/>
+<use f='tvm/src/tir/schedule/state.cc' l='1104'/>
+<size>144</size>
+<fun r='_ZN3tvm3tir17ScheduleStateNode7ReplaceERKNS0_8StmtSRefERKNS0_4StmtERKNS_7runtime3MapINS0_5BlockESA_vvEE'/>
+<fun r='_ZNK3tvm3tir17ScheduleStateNode11DebugVerifyEv'/>
+<fun r='_ZNK3tvm3tir17ScheduleStateNode12GetBlockInfoERKNS0_8StmtSRefE'/>
+<fun r='_ZN3tvm3tir17ScheduleStateNode20UpdateScopeBlockInfoERKNS0_4StmtE'/>

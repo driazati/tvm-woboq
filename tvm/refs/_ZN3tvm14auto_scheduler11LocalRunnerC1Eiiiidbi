@@ -1,0 +1,16 @@
+<dec f='tvm/include/tvm/auto_scheduler/measure.h' l='398' type='void tvm::auto_scheduler::LocalRunner::LocalRunner(int timeout, int number, int repeat, int min_repeat_ms, double cooldown_interval, bool enable_cpu_cache_flush, int device)'/>
+<doc f='tvm/include/tvm/auto_scheduler/measure.h' l='386'>/*!
+   * \brief The constructor. See the corresponding class in python/tvm/auto_scheduler/measure.py
+   * for more detailed parameter explanation.
+   * \param timeout The timeout limit (in second) for each run.
+   * This is used in a wrapper of the multiprocessing.Process.join().
+   * \param number The number of times to run the generated code for taking average.
+   * \param repeat The number of times to repeat the measurement.
+   * \param min_repeat_ms The minimum duration of one repeat in milliseconds.
+   * \param cooldown_interval The cool down interval between two measurements.
+   * \param enable_cpu_cache_flush Whether to flush cache on CPU between repeated measurements.
+   * \param device Which device to run on if multiple are available.
+   */</doc>
+<def f='tvm/src/auto_scheduler/measure.cc' l='129' ll='140' type='void tvm::auto_scheduler::LocalRunner::LocalRunner(int timeout, int number, int repeat, int min_repeat_ms, double cooldown_interval, bool enable_cpu_cache_flush, int device)'/>
+<use f='tvm/src/auto_scheduler/measure.cc' l='415' u='c'/>
+<doc f='tvm/src/auto_scheduler/measure.cc' l='128'>/********** LocalRunner **********/</doc>

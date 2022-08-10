@@ -1,0 +1,47 @@
+<inh f='tvm/include/tvm/ir/tensor_type.h' l='36' c='tvm::BaseTensorTypeNode'/>
+<def f='tvm/include/tvm/ir/tensor_type.h' l='61' ll='93'/>
+<use f='tvm/include/tvm/ir/tensor_type.h' l='77' c='_ZNK3tvm14TensorTypeNode12SEqualReduceEPKS0_NS_13SEqualReducerE'/>
+<use f='tvm/include/tvm/ir/tensor_type.h' l='115' c='_ZNK3tvm10TensorTypeptEv'/>
+<use f='tvm/include/tvm/ir/tensor_type.h' l='115' c='_ZNK3tvm10TensorTypeptEv'/>
+<use f='tvm/include/tvm/ir/tensor_type.h' l='115' c='_ZNK3tvm10TensorType3getEv'/>
+<use f='tvm/include/tvm/ir/tensor_type.h' l='115'/>
+<use f='tvm/include/tvm/relay/type.h' l='64'/>
+<size>40</size>
+<doc f='tvm/include/tvm/ir/tensor_type.h' l='52'>/*!
+ * \brief This is the most commonly used type in relay.
+ *  TensorType have a fixed dimension, data type.
+ *
+ *  The elements of shape can be either IntImm(constant integer),
+ *  or any symbolic integer expression.
+ *  The symbolic integer allows generic shape inference in certain cases.
+ * \sa TensorType
+ */</doc>
+<mbr r='tvm::TensorTypeNode::shape' o='192' t='Array&lt;tvm::PrimExpr&gt;'/>
+<mbr r='tvm::TensorTypeNode::dtype' o='256' t='tvm::DataType'/>
+<fun r='_ZN3tvm14TensorTypeNode10VisitAttrsEPNS_11AttrVisitorE'/>
+<fun r='_ZNK3tvm14TensorTypeNode12SEqualReduceEPKS0_NS_13SEqualReducerE'/>
+<fun r='_ZNK3tvm14TensorTypeNode11SHashReduceENS_12SHashReducerE'/>
+<fun r='_ZNK3tvm14TensorTypeNode4SizeEv'/>
+<smbr r='tvm::TensorTypeNode::_type_key' t='const char *const'/>
+<smbr r='tvm::TensorTypeNode::_type_final' t='const bool'/>
+<smbr r='tvm::TensorTypeNode::_type_child_slots' t='const int'/>
+<fun r='_ZN3tvm14TensorTypeNode16RuntimeTypeIndexEv'/>
+<fun r='_ZN3tvm14TensorTypeNode27_GetOrAllocRuntimeTypeIndexEv'/>
+<use f='tvm/include/tvm/ir/type_functor.h' l='79' c='_ZN3tvm11TypeFunctorIFT_RKNS_4TypeEDpT0_EE10VisitType_EPKNS_14TensorTypeNodeES6_'/>
+<use f='tvm/include/tvm/ir/type_functor.h' l='102' c='_ZN3tvm11TypeFunctorIFT_RKNS_4TypeEDpT0_EE10InitVTableEv'/>
+<use f='tvm/include/tvm/ir/type_functor.h' l='102' c='_ZN3tvm11TypeFunctorIFT_RKNS_4TypeEDpT0_EE10InitVTableEv'/>
+<use f='tvm/include/tvm/ir/type_functor.h' l='128' c='_ZN3tvm11TypeVisitor10VisitType_EPKNS_14TensorTypeNodeE'/>
+<use f='tvm/include/tvm/ir/type_functor.h' l='147' c='_ZN3tvm11TypeMutator10VisitType_EPKNS_14TensorTypeNodeE'/>
+<size>40</size>
+<use f='tvm/src/ir/tensor_type.cc' l='34' c='_ZN3tvm10TensorTypeC1ENS_7runtime5ArrayINS_8PrimExprEvEENS1_8DataTypeE'/>
+<use f='tvm/src/ir/tensor_type.cc' l='34' c='_ZN3tvm10TensorTypeC1ENS_7runtime5ArrayINS_8PrimExprEvEENS1_8DataTypeE'/>
+<use f='tvm/src/ir/tensor_type.cc' l='54'/>
+<use f='tvm/src/ir/tensor_type.cc' l='54'/>
+<use f='tvm/src/ir/tensor_type.cc' l='54'/>
+<use f='tvm/src/ir/tensor_type.cc' l='61'/>
+<use f='tvm/src/ir/tensor_type.cc' l='62'/>
+<size>40</size>
+<fun r='_ZNK3tvm14TensorTypeNode4SizeEv'/>
+<use f='tvm/src/ir/type_functor.cc' l='32' c='_ZN3tvm11TypeVisitor10VisitType_EPKNS_14TensorTypeNodeE'/>
+<use f='tvm/src/ir/type_functor.cc' l='112' c='_ZN3tvm11TypeMutator10VisitType_EPKNS_14TensorTypeNodeE'/>
+<size>40</size>

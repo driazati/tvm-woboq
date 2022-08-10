@@ -1,0 +1,29 @@
+<dec f='tvm/include/tvm/runtime/packed_func.h' l='252' type='void tvm::runtime::TypedPackedFunc&lt;type-parameter-0-0 (type-parameter-0-1...)&gt;::TypedPackedFunc&lt;type-parameter-0-0 (type-parameter-0-1...)&gt;(tvm::runtime::PackedFunc packed)'/>
+<def f='tvm/include/tvm/runtime/packed_func.h' l='1707' ll='1708' type='void tvm::runtime::TypedPackedFunc&lt;type-parameter-0-0 (type-parameter-0-1...)&gt;::TypedPackedFunc&lt;type-parameter-0-0 (type-parameter-0-1...)&gt;(tvm::runtime::PackedFunc packed)'/>
+<doc f='tvm/include/tvm/runtime/packed_func.h' l='235'>/*!
+   * \brief construct by wrap a PackedFunc
+   *
+   * Example usage:
+   * \code
+   * PackedFunc packed([](TVMArgs args, TVMRetValue *rv) {
+   *   int x = args[0];
+   *   *rv = x + 1;
+   *  });
+   * // construct from packed function
+   * TypedPackedFunc&lt;int(int)&gt; ftyped(packed);
+   * // call the typed version.
+   * ICHECK_EQ(ftyped(1), 2);
+   * \endcode
+   *
+   * \param packed The packed function
+   */</doc>
+<doc f='tvm/include/tvm/runtime/packed_func.h' l='252'>// NOLINT(*)</doc>
+<use f='tvm/src/ir/diagnostic.cc' l='155' u='c' c='_ZN3tvm11GetRendererEv'/>
+<use f='tvm/src/ir/diagnostic.cc' l='161' u='c' c='_ZN3tvm11GetRendererEv'/>
+<use f='tvm/src/ir/op.cc' l='150' u='c'/>
+<use f='tvm/src/ir/op.cc' l='197' u='c'/>
+<use f='tvm/src/meta_schedule/profiler.cc' l='91' u='c' c='_ZN3tvm13meta_schedule8Profiler10TimedScopeENS_7runtime6StringE'/>
+<use f='tvm/src/relay/transforms/eliminate_common_subexpr.cc' l='111' u='c' c='_ZN3tvm5relay22EliminateCommonSubexprERKNS_9RelayExprENS_7runtime10PackedFuncE'/>
+<use f='tvm/src/target/source/codegen_cuda.cc' l='860' u='c' c='_ZN3tvm7codegen11CodeGenCUDA10VisitExpr_EPKNS_3tir8CallNodeERSo'/>
+<use f='tvm/src/tir/schedule/primitive/reduction.cc' l='1167' u='c'/>
+<use f='tvm/src/tir/schedule/primitive/reduction.cc' l='1167' u='c'/>

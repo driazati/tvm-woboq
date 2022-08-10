@@ -1,0 +1,52 @@
+<def f='tvm/src/runtime/rpc/rpc_endpoint.h' l='69' ll='199'/>
+<use f='tvm/src/runtime/rpc/rpc_endpoint.h' l='169' c='_ZN3tvm7runtime11RPCEndpoint6CreateESt10unique_ptrINS0_10RPCChannelESt14default_deleteIS3_EENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESC_NS0472375'/>
+<use f='tvm/src/runtime/rpc/rpc_endpoint.h' l='206' c='_ZN3tvm7runtime19CreateClientSessionESt10shared_ptrINS0_11RPCEndpointEE'/>
+<size>224</size>
+<doc f='tvm/src/runtime/rpc/rpc_endpoint.h' l='65'>/*!
+ * \brief Communication endpoints to connect local and remote RPC sessions.
+ *        An endpoint can either be a client or a server.
+ */</doc>
+<fun r='_ZN3tvm7runtime11RPCEndpointD1Ev'/>
+<fun r='_ZN3tvm7runtime11RPCEndpoint10ServerLoopEv'/>
+<fun r='_ZN3tvm7runtime11RPCEndpoint25ServerAsyncIOEventHandlerERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEi'/>
+<fun r='_ZN3tvm7runtime11RPCEndpoint17InitRemoteSessionENS0_7TVMArgsE'/>
+<fun r='_ZN3tvm7runtime11RPCEndpoint8CallFuncEPvPK8TVMValuePKiiSt8functionIFvNS0_7TVMArgsEEE'/>
+<fun r='_ZN3tvm7runtime11RPCEndpoint12CopyToRemoteEPvP8DLTensorm'/>
+<fun r='_ZN3tvm7runtime11RPCEndpoint14CopyFromRemoteEP8DLTensorPvm'/>
+<fun r='_ZN3tvm7runtime11RPCEndpoint13SysCallRemoteENS0_7RPCCodeEDpOT_'/>
+<fun r='_ZN3tvm7runtime11RPCEndpoint6CreateESt10unique_ptrINS0_10RPCChannelESt14default_deleteIS3_EENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESC_NS0472375'/>
+<fun r='_ZN3tvm7runtime11RPCEndpoint22HandleUntilReturnEventEbSt8functionIFvNS0_7TVMArgsEEE'/>
+<fun r='_ZN3tvm7runtime11RPCEndpoint4InitEv'/>
+<fun r='_ZN3tvm7runtime11RPCEndpoint8ShutdownEv'/>
+<mbr r='tvm::runtime::RPCEndpoint::channel_' o='0' t='std::unique_ptr&lt;RPCChannel&gt;'/>
+<mbr r='tvm::runtime::RPCEndpoint::mutex_' o='64' t='std::mutex'/>
+<mbr r='tvm::runtime::RPCEndpoint::reader_' o='384' t='support::RingBuffer'/>
+<mbr r='tvm::runtime::RPCEndpoint::writer_' o='704' t='support::RingBuffer'/>
+<mbr r='tvm::runtime::RPCEndpoint::handler_' o='1024' t='std::shared_ptr&lt;EventHandler&gt;'/>
+<mbr r='tvm::runtime::RPCEndpoint::syscall_remote_' o='1152' t='tvm::runtime::PackedFunc'/>
+<mbr r='tvm::runtime::RPCEndpoint::name_' o='1216' t='std::string'/>
+<mbr r='tvm::runtime::RPCEndpoint::remote_key_' o='1472' t='std::string'/>
+<mbr r='tvm::runtime::RPCEndpoint::fcleanup_' o='1728' t='TypedPackedFunc&lt;void ()&gt;'/>
+<fun r='_ZN3tvm7runtime11RPCEndpoint13SysCallRemoteENS0_7RPCCodeEDpOT_'/>
+<use f='tvm/src/runtime/rpc/rpc_endpoint.cc' l='694' c='_ZN3tvm7runtime11RPCEndpoint6CreateESt10unique_ptrINS0_10RPCChannelESt14default_deleteIS3_EENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESC_NS0472375'/>
+<use f='tvm/src/runtime/rpc/rpc_endpoint.cc' l='697' c='_ZN3tvm7runtime11RPCEndpoint6CreateESt10unique_ptrINS0_10RPCChannelESt14default_deleteIS3_EENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESC_NS0472375'/>
+<use f='tvm/src/runtime/rpc/rpc_endpoint.cc' l='697' c='_ZN3tvm7runtime11RPCEndpoint6CreateESt10unique_ptrINS0_10RPCChannelESt14default_deleteIS3_EENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESC_NS0472375'/>
+<use f='tvm/src/runtime/rpc/rpc_endpoint.cc' l='1000' c='_ZN3tvm7runtime16RPCClientSessionC1ESt10shared_ptrINS0_11RPCEndpointEE'/>
+<use f='tvm/src/runtime/rpc/rpc_endpoint.cc' l='1151'/>
+<use f='tvm/src/runtime/rpc/rpc_endpoint.cc' l='1155' c='_ZN3tvm7runtime19CreateClientSessionESt10shared_ptrINS0_11RPCEndpointEE'/>
+<size>224</size>
+<fun r='_ZN3tvm7runtime11RPCEndpoint22HandleUntilReturnEventEbSt8functionIFvNS0_7TVMArgsEEE'/>
+<fun r='_ZN3tvm7runtime11RPCEndpoint4InitEv'/>
+<fun r='_ZN3tvm7runtime11RPCEndpoint6CreateESt10unique_ptrINS0_10RPCChannelESt14default_deleteIS3_EENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESC_NS0472375'/>
+<fun r='_ZN3tvm7runtime11RPCEndpointD1Ev'/>
+<fun r='_ZN3tvm7runtime11RPCEndpoint8ShutdownEv'/>
+<fun r='_ZN3tvm7runtime11RPCEndpoint10ServerLoopEv'/>
+<fun r='_ZN3tvm7runtime11RPCEndpoint25ServerAsyncIOEventHandlerERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEi'/>
+<fun r='_ZN3tvm7runtime11RPCEndpoint17InitRemoteSessionENS0_7TVMArgsE'/>
+<fun r='_ZN3tvm7runtime11RPCEndpoint8CallFuncEPvPK8TVMValuePKiiSt8functionIFvNS0_7TVMArgsEEE'/>
+<fun r='_ZN3tvm7runtime11RPCEndpoint12CopyToRemoteEPvP8DLTensorm'/>
+<fun r='_ZN3tvm7runtime11RPCEndpoint14CopyFromRemoteEP8DLTensorPvm'/>
+<use f='tvm/src/runtime/rpc/rpc_event_impl.cc' l='41' c='_ZN3tvm7runtime23CreateEventDrivenServerENS0_10PackedFuncENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_'/>
+<size>224</size>
+<use f='tvm/src/runtime/rpc/rpc_socket_impl.cc' l='67' c='_ZN3tvm7runtime10RPCConnectENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiS6_bNS0_7TVMArgsE'/>
+<size>224</size>

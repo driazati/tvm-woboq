@@ -1,0 +1,49 @@
+<inh f='tvm/3rdparty/dmlc-core/include/dmlc/io.h' l='109' c='dmlc::SeekStream'/>
+<def f='tvm/3rdparty/dmlc-core/include/dmlc/memory_io.h' l='66' ll='103'/>
+<use f='tvm/src/meta_schedule/utils.h' l='120' c='_ZN3tvm13meta_schedule12Base64EncodeENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<use f='tvm/src/meta_schedule/utils.h' l='134' c='_ZN3tvm13meta_schedule12Base64DecodeENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<size>24</size>
+<doc f='tvm/3rdparty/dmlc-core/include/dmlc/memory_io.h' l='62'>/*!
+ * \brief A in memory stream that is backed by std::string.
+ *  This class allows us to read/write from/to a std::string.
+ */</doc>
+<fun r='_ZN4dmlc18MemoryStringStreamC1EPNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<fun r='_ZN4dmlc18MemoryStringStream4ReadEPvm'/>
+<fun r='_ZN4dmlc18MemoryStringStream5WriteEPKvm'/>
+<fun r='_ZN4dmlc18MemoryStringStream4SeekEm'/>
+<fun r='_ZN4dmlc18MemoryStringStream4TellEv'/>
+<mbr r='dmlc::MemoryStringStream::p_buffer_' o='64' t='std::string *'/>
+<mbr r='dmlc::MemoryStringStream::curr_ptr_' o='128' t='size_t'/>
+<use f='tvm/src/node/serialization.cc' l='49' c='_ZN3tvm12Base64DecodeENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<use f='tvm/src/node/serialization.cc' l='60' c='_ZN3tvm12Base64EncodeENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<use f='tvm/src/node/serialization.cc' l='521' c='_ZN3tvm9JSONGraph6CreateERKNS_7runtime9ObjectRefE'/>
+<use f='tvm/src/node/serialization.cc' l='588' c='_ZN3tvm8LoadJSONENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<size>24</size>
+<use f='tvm/src/node/structural_hash.cc' l='371'/>
+<use f='tvm/src/node/structural_hash.cc' l='380'/>
+<size>24</size>
+<use f='tvm/src/target/metadata.h' l='160' c='_ZN3tvm6target8metadata20InMemoryMetadataNodeC1ElRKSt6vectorINS_7runtime8metadata10TensorInfoESaIS6_EESA_SA_RKS3_INS_12ConstantInfoESaISB_EENS4_6StringE'/>
+<size>24</size>
+<use f='tvm/src/runtime/file_utils.cc' l='185' c='_ZN3tvm7runtime10LoadParamsERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<use f='tvm/src/runtime/file_utils.cc' l='233' c='_ZN3tvm7runtime10SaveParamsB5cxx11ERKNS0_3MapINS0_6StringENS0_7NDArrayEvvEE'/>
+<size>24</size>
+<use f='tvm/src/runtime/graph_executor/graph_executor.cc' l='277' c='_ZN3tvm7runtime13GraphExecutor10LoadParamsERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<use f='tvm/src/runtime/graph_executor/graph_executor.cc' l='667' c='_ZN3tvm7runtime13GraphExecutor11GetFunctionERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKNS0_9ObjectPtrINS0_6ObjectEEE'/>
+<size>24</size>
+<use f='tvm/src/runtime/stackvm/stackvm_module.cc' l='65' c='_ZN3tvm7runtime17StackVMModuleNode10SaveToFileERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES9_'/>
+<use f='tvm/src/runtime/stackvm/stackvm_module.cc' l='129' c='_ZN3tvm7runtime17StackVMModuleNode12LoadFromFileENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_'/>
+<size>24</size>
+<use f='tvm/src/runtime/vm/executable.cc' l='272' c='_ZN3tvm7runtime2vm10Executable4SaveEv'/>
+<use f='tvm/src/runtime/vm/executable.cc' l='331' c='_ZN3tvm7runtime2vm10Executable28MoveLateBoundConstantsToFileERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEm'/>
+<use f='tvm/src/runtime/vm/executable.cc' l='365' c='_ZN3tvm7runtime2vm10Executable30LoadLateBoundConstantsFromFileERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<use f='tvm/src/runtime/vm/executable.cc' l='739' c='_ZN3tvm7runtime2vm10Executable4LoadERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS0_6ModuleE'/>
+<use f='tvm/src/runtime/vm/executable.cc' l='1047' c='_ZN3tvm7runtime2vm10Executable10SaveToFileERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESA_'/>
+<use f='tvm/src/runtime/vm/executable.cc' l='1059' c='_ZN3tvm7runtime2vm18ExecutableLoadFileERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES9_'/>
+<size>24</size>
+<use f='tvm/src/target/codegen.cc' l='234' c='_ZN3tvm7codegen12_GLOBAL__N_115SerializeModuleB5cxx11ERKNS_7runtime6ModuleE'/>
+<size>24</size>
+<use f='tvm/src/target/llvm/codegen_cpu.cc' l='1157' c='_ZN3tvm7codegen22MetadataSerializerLLVM5VisitEPKcPNS_7runtime7NDArrayE'/>
+<use f='tvm/src/target/llvm/codegen_cpu.cc' l='1279' c='_ZN3tvm7codegen10CodeGenCPU14DefineMetadataENS_7runtime8metadata8MetadataE'/>
+<size>24</size>
+<use f='tvm/src/target/source/source_module.cc' l='710' c='_ZN3tvm7codegen18MetadataSerializer5VisitEPKcPNS_7runtime7NDArrayE'/>
+<size>24</size>

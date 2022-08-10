@@ -1,0 +1,11 @@
+<def f='tvm/include/tvm/topi/nn/pooling.h' l='439' ll='445' type='tvm::te::Tensor tvm::topi::nn::adaptive_pool3d(const tvm::te::Tensor &amp; x, const Array&lt;tvm::PrimExpr&gt; &amp; output_size, tvm::topi::nn::PoolType pool_type, const std::string &amp; layout = &quot;NCDHW&quot;)'/>
+<use f='tvm/src/relay/op/nn/pooling.cc' l='761' u='c' c='_ZN3tvm5relay21AdaptivePool3DComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
+<doc f='tvm/include/tvm/topi/nn/pooling.h' l='431'>/*!
+ * \brief Adaptively perform pooling on three dimensional data.
+ *        See the two dimensional version above for details.
+ * \param x The input tensor
+ * \param output_size Vector of three ints: {output_depth, output_height, output_width}
+ * \param pool_type The type of pooling operator
+ * \param layout The input layout. The default is &quot;NCDHW&quot;.
+ */</doc>
+<use f='tvm/src/topi/nn.cc' l='118' u='c'/>

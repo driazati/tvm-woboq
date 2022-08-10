@@ -1,0 +1,9 @@
+<dec f='tvm/include/tvm/target/virtual_device.h' l='328' type='static Optional&lt;tvm::VirtualDevice&gt; tvm::VirtualDevice::Join(const tvm::VirtualDevice &amp; lhs, const tvm::VirtualDevice &amp; rhs)'/>
+<doc f='tvm/include/tvm/target/virtual_device.h' l='323'>/*!
+   * \brief Returns the &apos;join&apos; of \p lhs and \p rhs. The result will agree pointwise with
+   * \p lhs and \p rhs on all their constrained fields. Returns the null optional if no such
+   * join exists, ie there&apos;s disagreement on at least one constrained field.
+   */</doc>
+<use f='tvm/src/relay/transforms/device_domains.cc' l='121' u='c' c='_ZN3tvm5relay9transform13DeviceDomains10JoinOrNullERKSt10shared_ptrINS1_12DeviceDomainEES7_'/>
+<def f='tvm/src/target/virtual_device.cc' l='88' ll='130' type='static Optional&lt;tvm::VirtualDevice&gt; tvm::VirtualDevice::Join(const tvm::VirtualDevice &amp; lhs, const tvm::VirtualDevice &amp; rhs)'/>
+<doc f='tvm/src/target/virtual_device.cc' l='87'>/* static */</doc>

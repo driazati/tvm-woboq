@@ -1,9 +1,0 @@
-<def f='tvm/relay/op/memory/on_device.h' l='83' ll='86' type='tvm::relay::Call tvm::relay::OnDeviceCopyOk(tvm::relay::Expr body)'/>
-<doc f='tvm/relay/op/memory/on_device.h' l='77'>/*!
- * \brief Wraps \p body in an &quot;on_device&quot; CallNode, but don&apos;t constrain the body or result to
- * any particular virtual device. This allows a &quot;device_copy&quot; to be inserted by PlanDevices
- * where required, while at the same time not introducing unnecessary freedom in the device
- * choices.
- */</doc>
-<use f='tvm/relay/transforms/device_planner.cc' l='391' u='c' c='_ZN3tvm5relay9transform12_GLOBAL__N_116RewriteOnDevices10VisitExpr_EPKNS0_8CallNodeE'/>
-<use f='tvm/relay/transforms/device_planner.cc' l='395' u='c' c='_ZN3tvm5relay9transform12_GLOBAL__N_116RewriteOnDevices10VisitExpr_EPKNS0_8CallNodeE'/>

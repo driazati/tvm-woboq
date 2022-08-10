@@ -1,0 +1,13 @@
+<dec f='tvm/include/tvm/runtime/vm/bytecode.h' l='274' type='static tvm::runtime::vm::Instruction tvm::runtime::vm::Instruction::AllocADT(tvm::runtime::vm::Index tag, tvm::runtime::vm::Index num_fields, const std::vector&lt;RegName&gt; &amp; fields, tvm::runtime::vm::RegName dst)'/>
+<use f='tvm/src/relay/backend/vm/compiler.cc' l='407' u='c' c='_ZN3tvm5relay2vm18VMFunctionCompiler10VisitExpr_EPKNS0_9TupleNodeE'/>
+<use f='tvm/src/relay/backend/vm/compiler.cc' l='694' u='c' c='_ZN3tvm5relay2vm18VMFunctionCompiler21DeviceAwareVisitExpr_EPKNS0_8CallNodeE'/>
+<doc f='tvm/include/tvm/runtime/vm/bytecode.h' l='266'>/*!
+   * \brief Construct an allocate datatype instruction.
+   * \param tag The datatype tag.
+   * \param num_fields The number of fields for the datatype.
+   * \param fields The registers containing the fields.
+   * \param dst The register name of the destination.
+   * \return The allocate instruction tensor.
+   */</doc>
+<def f='tvm/src/runtime/vm/bytecode.cc' l='387' ll='399' type='static tvm::runtime::vm::Instruction tvm::runtime::vm::Instruction::AllocADT(tvm::runtime::vm::Index tag, tvm::runtime::vm::Index num_fields, const std::vector&lt;RegName&gt; &amp; datatype_fields, tvm::runtime::vm::RegName dst)'/>
+<use f='tvm/src/runtime/vm/executable.cc' l='882' u='c' c='_ZN3tvm7runtime2vm22DeserializeInstructionERKNS1_23VMInstructionSerializerE'/>

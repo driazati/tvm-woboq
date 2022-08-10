@@ -1,0 +1,14 @@
+<def f='tvm/include/tvm/topi/cuda/reduction.h' l='50' ll='129' type='tvm::te::Schedule tvm::topi::cuda::ScheduleReduce(const tvm::Target &amp; target, tvm::te::Operation op, tvm::te::Schedule sch, bool is_idx_reduce = false)'/>
+<use f='tvm/include/tvm/topi/cuda/reduction.h' l='163' u='c' c='_ZN3tvm4topi4cuda19TraverseAfterReduceERKNS_6TargetENS_2te8ScheduleENS5_9OperationE'/>
+<use f='tvm/include/tvm/topi/cuda/reduction.h' l='168' u='c' c='_ZN3tvm4topi4cuda19TraverseAfterReduceERKNS_6TargetENS_2te8ScheduleENS5_9OperationE'/>
+<doc f='tvm/include/tvm/topi/cuda/reduction.h' l='39'>/*!
+ * \brief Schedule a given reduce operation.
+ *
+ * \param target The target to generate a schedule for.
+ * \param op The operation representing the injective operation.
+ * \param sch The schedule to apply this scheduling to
+ * \param is_idx_reduce Pass true to schedule a reduce op that returns
+ * an index, such as argmax or argmin.
+ *
+ * \return The schedule given by sch
+ */</doc>

@@ -1,0 +1,33 @@
+<def f='tvm/3rdparty/dmlc-core/include/dmlc/json.h' l='312' ll='370'/>
+<size>48</size>
+<doc f='tvm/3rdparty/dmlc-core/include/dmlc/json.h' l='296'>/*!
+ * \brief Helper class to read JSON into a class or struct object.
+ * \code
+ *  struct Param {
+ *    std::string name;
+ *    int value;
+ *    // define load function from JSON
+ *    inline void Load(dmlc::JSONReader *reader) {
+ *      dmlc::JSONStructReadHelper helper;
+ *      helper.DeclareField(&quot;name&quot;, &amp;name);
+ *      helper.DeclareField(&quot;value&quot;, &amp;value);
+ *      helper.ReadAllFields(reader);
+ *    }
+ *  };
+ * \endcode
+ */</doc>
+<fun r='_ZN4dmlc20JSONObjectReadHelper12DeclareFieldERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEPT_'/>
+<fun r='_ZN4dmlc20JSONObjectReadHelper20DeclareOptionalFieldERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEPT_'/>
+<fun r='_ZN4dmlc20JSONObjectReadHelper13ReadAllFieldsEPNS_10JSONReaderE'/>
+<fun r='_ZN4dmlc20JSONObjectReadHelper20DeclareFieldInternalERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEPT_b'/>
+<fun r='_ZN4dmlc20JSONObjectReadHelper14ReaderFunctionEPNS_10JSONReaderEPv'/>
+<mbr r='dmlc::JSONObjectReadHelper::map_' o='0' t='std::map&lt;std::string, Entry&gt;'/>
+<fun r='_ZN4dmlc20JSONObjectReadHelper13ReadAllFieldsEPNS_10JSONReaderE'/>
+<fun r='_ZN4dmlc20JSONObjectReadHelper14ReaderFunctionEPNS_10JSONReaderEPv'/>
+<fun r='_ZN4dmlc20JSONObjectReadHelper20DeclareFieldInternalERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEPT_b'/>
+<use f='tvm/src/node/serialization.cc' l='215' c='_ZN3tvm8JSONNode4LoadEPN4dmlc10JSONReaderE'/>
+<use f='tvm/src/node/serialization.cc' l='495' c='_ZN3tvm9JSONGraph4LoadEPN4dmlc10JSONReaderE'/>
+<size>48</size>
+<use f='tvm/src/runtime/file_utils.cc' l='51' c='_ZN3tvm7runtime12FunctionInfo4LoadEPN4dmlc10JSONReaderE'/>
+<use f='tvm/src/runtime/file_utils.cc' l='155' c='_ZN3tvm7runtime20LoadMetaDataFromFileERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEPSt13unordered_mapIS6_NS0_12FunctionInfoESt4hashIS6_ESt8eq8545263'/>
+<size>48</size>

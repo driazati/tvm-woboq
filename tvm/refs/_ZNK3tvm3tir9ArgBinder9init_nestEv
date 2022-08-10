@@ -1,0 +1,16 @@
+<def f='tvm/src/tir/transforms/arg_binder.h' l='120' type='const std::vector&lt;Stmt&gt; &amp; tvm::tir::ArgBinder::init_nest() const'/>
+<doc f='tvm/src/tir/transforms/arg_binder.h' l='109'>/*!
+   * \brief Initialization nest generated
+   *  This is only non-empty when BindDLTensor is called.
+   *
+   * \note The binder may choose to generate a let statement
+   *  and simply put def_map to map Variable to itself,
+   *  or update def_map to directly map to new value and not generate let statement.
+   *
+   *  Let statement is usually generated when bind to DLTensor and memory load is involved.
+   * \return The initialization nest generated during binding.
+   */</doc>
+<use f='tvm/src/tir/transforms/make_packed_api.cc' l='316' u='c' c='_ZN3tvm3tir13MakePackedAPIEONS0_8PrimFuncEi'/>
+<use f='tvm/src/tir/transforms/make_packed_api.cc' l='318' u='c' c='_ZN3tvm3tir13MakePackedAPIEONS0_8PrimFuncEi'/>
+<use f='tvm/src/tir/transforms/storage_flatten.cc' l='357' u='c' c='_ZN3tvm3tir19BufferShapeLegalize21HandleBufferBindScopeEPKNS0_12AttrStmtNodeE'/>
+<use f='tvm/src/tir/transforms/storage_flatten.cc' l='1132' u='c' c='_ZN3tvm3tir19BufferBindUnwrapper21HandleBufferBindScopeEPKNS0_12AttrStmtNodeE'/>

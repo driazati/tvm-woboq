@@ -1,0 +1,22 @@
+<def f='tvm/src/tir/transforms/storage_rewrite.cc' l='1363' ll='1399' type='void tvm::tir::VectorTypeRewriter::VectorTypeRewriter(const std::unordered_map&lt;const VarNode *, BufferVarInfo&gt; &amp; info_map, bool rewrite_params = true, bool rewrite_buffer_map = true, bool rewrite_allocate_node = true, bool rewrite_indices = true, bool rewrite_let_node = true, bool rewrite_allocate_const_node = true)'/>
+<use f='tvm/src/tir/transforms/storage_rewrite.cc' l='1646' u='c' c='_ZN3tvm3tir23PointerValueTypeRewriteENS0_8PrimFuncEbbbbbbb'/>
+<doc f='tvm/src/tir/transforms/storage_rewrite.cc' l='1343'>/* Constructor
+   *
+   * @param checker The VectorTypeAccessChecker that has previously read out
+   * information from the PrimFunc
+   *
+   * @param rewrite_params Whether pointer-type parameters passed into the
+   * function should be rewritten from scalar types to vectorized types.
+   *
+   * @param rewrite_buffer_map Whether buffers present in the buffer_map should
+   * have their data variable be rewritten from scalar types to vectorized types.
+   *
+   * @param rewrite_allocate_node Whether the buffer variable associated with
+   * AllocateNodes should be rewritten from scalar types to vectorized types.
+   *
+   * @param rewrite_indices Whether the indices to the Load and Store nodes
+   * should be rewritten to correspond to the new buffer_var type.
+   *
+   * @param rewrite_let_node Whether pointer declarations in let nodes
+   * should be re-written.
+   */</doc>

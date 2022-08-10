@@ -1,0 +1,12 @@
+<dec f='tvm/src/contrib/ethosu/cascader/graph.h' l='205' type='const tvm::contrib::ethosu::cascader::PerformanceInfo tvm::contrib::ethosu::cascader::PartNode::GetPerformanceInfo(const tvm::contrib::ethosu::cascader::StripeConfig &amp; output_stripe_config, tvm::contrib::ethosu::cascader::BufferMode buffer_mode)'/>
+<doc f='tvm/src/contrib/ethosu/cascader/graph.h' l='199'>/*!
+   * \brief Get the performance information for a given output stripe config.
+   * \param output_stripe_config The output stripe config to compute the performance for.
+   * \param is_rolling Whether the output config should be computed as a rolling buffer.
+   * \return The performance information containing the compute cycles and read/write bytes.
+   */</doc>
+<use f='tvm/src/contrib/ethosu/cascader/graph.cc' l='151' u='c'/>
+<ovr f='tvm/src/contrib/ethosu/cascader/parts/ethosu.cc' l='111' c='_ZN3tvm7contrib6ethosu8cascader14EthosuPartNode18GetPerformanceInfoERKNS2_12StripeConfigENS2_10BufferModeE'/>
+<ovr f='tvm/src/contrib/ethosu/cascader/parts/inline.cc' l='34' c='_ZN3tvm7contrib6ethosu8cascader14InlinePartNode18GetPerformanceInfoERKNS2_12StripeConfigENS2_10BufferModeE'/>
+<use f='tvm/src/contrib/ethosu/cascader/plan_generator.cc' l='371' u='c' c='_ZN3tvm7contrib6ethosu8cascader19GenerateSinglePlansERKNS2_4PartERKSt6vectorINS2_12StripeConfigESaIS7_EERKSt13unordered_mapINS2_6TensorES6_INS2_12Memo4994141'/>
+<use f='tvm/src/contrib/ethosu/cascader/plan_generator.cc' l='373' u='c' c='_ZN3tvm7contrib6ethosu8cascader19GenerateSinglePlansERKNS2_4PartERKSt6vectorINS2_12StripeConfigESaIS7_EERKSt13unordered_mapINS2_6TensorES6_INS2_12Memo4994141'/>

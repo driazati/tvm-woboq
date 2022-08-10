@@ -1,0 +1,16 @@
+<dec f='tvm/include/tvm/runtime/crt/rpc_common/framing.h' l='180' type='tvm_crt_error_t tvm::runtime::micro_rpc::Framer::StartPacket(size_t payload_size_bytes)'/>
+<doc f='tvm/include/tvm/runtime/crt/rpc_common/framing.h' l='165'>/*! \brief Start framing and writing a new packet to the wire.
+   *
+   * When transmitting payloads that are too large to be buffered, call this function first to send
+   * the packet header and length fields.
+   *
+   * \param payload_size_bytes Number of payload bytes included as part of this packet.
+   * \return
+   *     - kTvmErrorNoError when no error occurs
+   *     - kTvmErrorWriteStreamShortWrite if the WriteStream passed to constructor&apos;s Write()
+   *       function returns 0.
+   *     - kTvmErrorWriteStreamShortWrite if the WriteStream passed to constructor&apos;s Write()
+   *       function returns an invalid positive number.
+   *     - Any negative value (i.e. with bits in kTvmErrorSystemErrorMask set) returned by the
+   *       WriteStream&apos;s Write() function.
+   */</doc>

@@ -1,0 +1,11 @@
+<dec f='tvm/include/tvm/runtime/crt/rpc_common/session.h' l='122' type='tvm_crt_error_t tvm::runtime::micro_rpc::Session::StartSession()'/>
+<use f='tvm/src/runtime/micro/micro_session.cc' l='197' u='c' c='_ZN3tvm7runtime9micro_rpc21MicroTransportChannel20StartSessionInternalEv'/>
+<use f='tvm/src/runtime/micro/micro_session.cc' l='228' u='c' c='_ZN3tvm7runtime9micro_rpc21MicroTransportChannel20StartSessionInternalEv'/>
+<doc f='tvm/include/tvm/runtime/crt/rpc_common/session.h' l='114'>/*!
+   * \brief Start a new session regardless of state. Sends kStartSessionMessage.
+   *
+   * Generally speaking, this function should be called once per device reset by exactly one side
+   * in the system. No traffic can flow until this function is called.
+   *
+   * \return kTvmErrorNoError on success, or an error code otherwise.
+   */</doc>

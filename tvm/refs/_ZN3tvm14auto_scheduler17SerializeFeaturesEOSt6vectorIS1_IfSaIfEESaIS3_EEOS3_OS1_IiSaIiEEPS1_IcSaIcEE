@@ -1,0 +1,29 @@
+<def f='tvm/src/auto_scheduler/feature.cc' l='1612' ll='1664' type='TVMByteArray tvm::auto_scheduler::SerializeFeatures(std::vector&lt;std::vector&lt;float&gt;&gt; &amp;&amp; features, std::vector&lt;float&gt; &amp;&amp; normalized_throughputs, std::vector&lt;int&gt; &amp;&amp; task_ids, std::vector&lt;char&gt; * out_data)'/>
+<use f='tvm/src/auto_scheduler/feature.cc' l='1680' u='c'/>
+<use f='tvm/src/auto_scheduler/feature.cc' l='1700' u='c'/>
+<use f='tvm/src/auto_scheduler/feature.cc' l='1717' u='c'/>
+<doc f='tvm/src/auto_scheduler/feature.cc' l='1587'>/*
+ * \brief Serialize a two-dimensional variable-size feature vector with normalized throughputs
+ * and task ids to a one-dimensional flatten byte array.
+ *
+ * For faster data copy between c++ and python, the c++ part returns features in a single
+ * flatten array using a packed format. The python part then unpacks the flatten array.
+ *
+ * The packed format for n records is:
+ * {
+ *   int   n;
+ *   int   sizes[n+2];           // The sizes for the following arrays
+ *
+ *   float features_0[size[0]];  // The features for record 0
+ *   float features_1[size[1]];  // The features for record 1
+ *   ...
+ *   float features_i[size[i]];  // The features for record i
+ *   ... // until i == n - 1
+ *
+ *   float throughputs[sizes[n]];  // The normalized throughputs for n records
+ *   int   task_ids[size[n+1]];   // The task ids for n records
+ *
+ * }
+ * To implement this format, we also store int as float, so we can store all numbers
+ * into a single float array.
+ */</doc>

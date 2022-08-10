@@ -1,0 +1,16 @@
+<use f='tvm/include/tvm/target/virtual_device.h' l='338'/>
+<def f='tvm/include/tvm/target/virtual_device.h' l='349' ll='363'/>
+<size>56</size>
+<doc f='tvm/include/tvm/target/virtual_device.h' l='341'>/*!
+ * \brief A cache of \p VirtualDevices. This can be used:
+ *  - To avoid ending up with lots of identical instances, since the space of VirtualDevices for any
+ *    one compilation is very small but the number of points they need to be constructed can
+ *    be very large (eg during device planning).
+ *  - So we can assume \p VirtualDevices are pointer equal if and only if they are structurally
+ * equal. This simplifies the unification of &apos;device domains&apos; which are built on \p VirtualDevices.
+ */</doc>
+<fun r='_ZN3tvm18VirtualDeviceCache4MakeE12DLDeviceTypeiNS_6TargetENS_7runtime6StringE'/>
+<fun r='_ZN3tvm18VirtualDeviceCache6UniqueERKNS_13VirtualDeviceE'/>
+<mbr r='tvm::VirtualDeviceCache::cache_' o='0' t='std::unordered_set&lt;VirtualDevice, StructuralHash, StructuralEqual&gt;'/>
+<use f='tvm/include/tvm/target/compilation_config.h' l='181'/>
+<size>56</size>

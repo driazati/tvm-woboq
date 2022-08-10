@@ -1,0 +1,9 @@
+<dec f='tvm/include/tvm/runtime/profiling.h' l='309' type='tvm::runtime::ObjectRef tvm::runtime::profiling::MetricCollectorNode::Start(tvm::Device dev)'/>
+<doc f='tvm/include/tvm/runtime/profiling.h' l='303'>/*! \brief Start colling metrics for a function call.
+   * \param dev The device the call will be run on.
+   * \returns An object used to maintain state of the metric collection. This
+   * object will be passed to the corresponding `Stop` call. If the device is
+   * not supported, this function will return a nullptr ObjectRef.
+   */</doc>
+<use f='tvm/src/runtime/profiling.cc' l='138' u='c' c='_ZN3tvm7runtime9profiling8Profiler9StartCallENS0_6StringE8DLDeviceSt13unordered_mapINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS0_9ObjectRef8712940'/>
+<use f='tvm/src/runtime/profiling.cc' l='810' u='c' c='_ZN3tvm7runtime9profiling15ProfileFunctionENS0_6ModuleENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiiiNS0_5ArrayINS1_15MetricCollectorEvEE'/>

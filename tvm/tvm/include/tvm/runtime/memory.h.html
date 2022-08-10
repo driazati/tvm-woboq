@@ -1,0 +1,226 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>memory.h source code [tvm/include/tvm/runtime/memory.h] - Woboq Code Browser</title>
+<meta name="woboq:interestingDefinitions" content="tvm::runtime::ObjAllocatorBase,tvm::runtime::SimpleObjAllocator "/>
+<link rel="stylesheet" href="../../../.././data/qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href="../../../.././data/kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src="../../../.././data/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="../../../.././data/jquery/jquery-ui.min.js"></script>
+<script>var file = 'tvm/include/tvm/runtime/memory.h'; var root_path = '../../../..'; var data_path = '../../../.././data'; var ecma_script_api_version = 2;</script>
+<script src='../../../.././data/codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='../../..'>tvm</a>/<a href='../..'>include</a>/<a href='..'>tvm</a>/<a href='./'>runtime</a>/<a href='memory.h.html'>memory.h</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td><i>/*</i></td></tr>
+<tr><th id="2">2</th><td><i> * Licensed to the Apache Software Foundation (ASF) under one</i></td></tr>
+<tr><th id="3">3</th><td><i> * or more contributor license agreements.  See the NOTICE file</i></td></tr>
+<tr><th id="4">4</th><td><i> * distributed with this work for additional information</i></td></tr>
+<tr><th id="5">5</th><td><i> * regarding copyright ownership.  The ASF licenses this file</i></td></tr>
+<tr><th id="6">6</th><td><i> * to you under the Apache License, Version 2.0 (the</i></td></tr>
+<tr><th id="7">7</th><td><i> * "License"); you may not use this file except in compliance</i></td></tr>
+<tr><th id="8">8</th><td><i> * with the License.  You may obtain a copy of the License at</i></td></tr>
+<tr><th id="9">9</th><td><i> *</i></td></tr>
+<tr><th id="10">10</th><td><i> *   <a href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a></i></td></tr>
+<tr><th id="11">11</th><td><i> *</i></td></tr>
+<tr><th id="12">12</th><td><i> * Unless required by applicable law or agreed to in writing,</i></td></tr>
+<tr><th id="13">13</th><td><i> * software distributed under the License is distributed on an</i></td></tr>
+<tr><th id="14">14</th><td><i> * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY</i></td></tr>
+<tr><th id="15">15</th><td><i> * KIND, either express or implied.  See the License for the</i></td></tr>
+<tr><th id="16">16</th><td><i> * specific language governing permissions and limitations</i></td></tr>
+<tr><th id="17">17</th><td><i> * under the License.</i></td></tr>
+<tr><th id="18">18</th><td><i> */</i></td></tr>
+<tr><th id="19">19</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="20">20</th><td><i class="doc"> * <span class="command">\file</span> <span class="verb">tvm/runtime/memory.h</span></i></td></tr>
+<tr><th id="21">21</th><td><i class="doc"> * <span class="command">\brief</span> Runtime memory management.</i></td></tr>
+<tr><th id="22">22</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="23">23</th><td><u>#<span data-ppcond="23">ifndef</span> <span class="macro" data-ref="_M/TVM_RUNTIME_MEMORY_H_">TVM_RUNTIME_MEMORY_H_</span></u></td></tr>
+<tr><th id="24">24</th><td><u>#define <dfn class="macro" id="_M/TVM_RUNTIME_MEMORY_H_" data-ref="_M/TVM_RUNTIME_MEMORY_H_">TVM_RUNTIME_MEMORY_H_</dfn></u></td></tr>
+<tr><th id="25">25</th><td></td></tr>
+<tr><th id="26">26</th><td><u>#include <a href="object.h.html">&lt;tvm/runtime/object.h&gt;</a></u></td></tr>
+<tr><th id="27">27</th><td></td></tr>
+<tr><th id="28">28</th><td><u>#include <a href="../../../../include/c++/10/cstdlib.html">&lt;cstdlib&gt;</a></u></td></tr>
+<tr><th id="29">29</th><td><u>#include <a href="../../../../include/c++/10/type_traits.html">&lt;type_traits&gt;</a></u></td></tr>
+<tr><th id="30">30</th><td><u>#include <a href="../../../../include/c++/10/utility.html">&lt;utility&gt;</a></u></td></tr>
+<tr><th id="31">31</th><td></td></tr>
+<tr><th id="32">32</th><td><b>namespace</b> <span class="namespace">tvm</span> {</td></tr>
+<tr><th id="33">33</th><td><b>namespace</b> <span class="namespace">runtime</span> {</td></tr>
+<tr><th id="34">34</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="35">35</th><td><i class="doc"> * <span class="command">\brief</span> Allocate an object using default allocator.</i></td></tr>
+<tr><th id="36">36</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">args</span> arguments to the constructor.</i></td></tr>
+<tr><th id="37">37</th><td><i class="doc"> * <span class="command">\tparam</span> <span class="arg">T</span> the node type.</i></td></tr>
+<tr><th id="38">38</th><td><i class="doc"> * <span class="command">\return</span> The ObjectPtr to the allocated object.</i></td></tr>
+<tr><th id="39">39</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="40">40</th><td><b>template</b> &lt;<b>typename</b> T, <b>typename</b>... Args&gt;</td></tr>
+<tr><th id="41">41</th><td><b>inline</b> <a class="type" href="object.h.html#tvm::runtime::ObjectPtr" title='tvm::runtime::ObjectPtr' data-ref="tvm::runtime::ObjectPtr" data-ref-filename="tvm..runtime..ObjectPtr">ObjectPtr</a>&lt;T&gt; <a class="decl fn" href="#_ZN3tvm7runtime11make_objectEDpOT0_" title='tvm::runtime::make_object' data-ref="_ZN3tvm7runtime11make_objectEDpOT0_" data-ref-filename="_ZN3tvm7runtime11make_objectEDpOT0_">make_object</a>(Args&amp;&amp;... <dfn class="local col4 decl" id="9024args" title='args' data-type='Args &amp;&amp;...' data-ref="9024args" data-ref-filename="9024args">args</dfn>);</td></tr>
+<tr><th id="42">42</th><td></td></tr>
+<tr><th id="43">43</th><td><i>// Detail implementations after this</i></td></tr>
+<tr><th id="44">44</th><td><i>//</i></td></tr>
+<tr><th id="45">45</th><td><i>// The current design allows swapping the</i></td></tr>
+<tr><th id="46">46</th><td><i>// allocator pattern when necessary.</i></td></tr>
+<tr><th id="47">47</th><td><i>//</i></td></tr>
+<tr><th id="48">48</th><td><i>// Possible future allocator optimizations:</i></td></tr>
+<tr><th id="49">49</th><td><i>// - Arena allocator that gives ownership of memory to arena (deleter_= nullptr)</i></td></tr>
+<tr><th id="50">50</th><td><i>// - Thread-local object pools: one pool per size and alignment requirement.</i></td></tr>
+<tr><th id="51">51</th><td><i>// - Can specialize by type of object to give the specific allocator to each object.</i></td></tr>
+<tr><th id="52">52</th><td></td></tr>
+<tr><th id="53">53</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="54">54</th><td><i class="doc"> * <span class="command">\brief</span> Base class of object allocators that implements make.</i></td></tr>
+<tr><th id="55">55</th><td><i class="doc"> *  Use curiously recurring template pattern.</i></td></tr>
+<tr><th id="56">56</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="57">57</th><td><i class="doc"> * <span class="command">\tparam</span> <span class="arg">Derived</span> The derived class.</i></td></tr>
+<tr><th id="58">58</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="59">59</th><td><b>template</b> &lt;<b>typename</b> Derived&gt;</td></tr>
+<tr><th id="60">60</th><td><b>class</b> <dfn class="type def" id="tvm::runtime::ObjAllocatorBase" title='tvm::runtime::ObjAllocatorBase' data-ref="tvm::runtime::ObjAllocatorBase" data-ref-filename="tvm..runtime..ObjAllocatorBase">ObjAllocatorBase</dfn> {</td></tr>
+<tr><th id="61">61</th><td> <b>public</b>:</td></tr>
+<tr><th id="62">62</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="63">63</th><td><i class="doc">   * <span class="command">\brief</span> Make a new object using the allocator.</i></td></tr>
+<tr><th id="64">64</th><td><i class="doc">   * <span class="command">\tparam</span> <span class="arg">T</span> The type to be allocated.</i></td></tr>
+<tr><th id="65">65</th><td><i class="doc">   * <span class="command">\tparam</span> <span class="arg">Args</span> The constructor signature.</i></td></tr>
+<tr><th id="66">66</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">args</span> The arguments.</i></td></tr>
+<tr><th id="67">67</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="68">68</th><td>  <b>template</b> &lt;<b>typename</b> T, <b>typename</b>... Args&gt;</td></tr>
+<tr><th id="69">69</th><td>  <b>inline</b> <a class="type" href="object.h.html#tvm::runtime::ObjectPtr" title='tvm::runtime::ObjectPtr' data-ref="tvm::runtime::ObjectPtr" data-ref-filename="tvm..runtime..ObjectPtr">ObjectPtr</a>&lt;T&gt; <dfn class="decl def fn" id="_ZN3tvm7runtime16ObjAllocatorBase11make_objectEDpOTL0_0_" title='tvm::runtime::ObjAllocatorBase::make_object' data-ref="_ZN3tvm7runtime16ObjAllocatorBase11make_objectEDpOTL0_0_" data-ref-filename="_ZN3tvm7runtime16ObjAllocatorBase11make_objectEDpOTL0_0_">make_object</dfn>(Args&amp;&amp;... <dfn class="local col5 decl" id="9025args" title='args' data-type='Args &amp;&amp;...' data-ref="9025args" data-ref-filename="9025args">args</dfn>) {</td></tr>
+<tr><th id="70">70</th><td>    <b>using</b> <dfn class="local col6 typedef" id="9026Handler" title='Handler' data-type='typename Derived::template Handler&lt;T&gt;' data-ref="9026Handler" data-ref-filename="9026Handler">Handler</dfn> = <b>typename</b> Derived::<b>template</b> Handler&lt;T&gt;;</td></tr>
+<tr><th id="71">71</th><td>    <b>static_assert</b>(<span class="namespace">std::</span><a class="type" href="../../../../include/c++/10/type_traits.html#std::is_base_of" title='std::is_base_of' data-ref="std::is_base_of" data-ref-filename="std..is_base_of">is_base_of</a>&lt;<a class="type" href="object.h.html#tvm::runtime::Object" title='tvm::runtime::Object' data-ref="tvm::runtime::Object" data-ref-filename="tvm..runtime..Object">Object</a>, T&gt;::value, <q>"make can only be used to create Object"</q>);</td></tr>
+<tr><th id="72">72</th><td>    T* <dfn class="local col7 decl" id="9027ptr" title='ptr' data-type='T *' data-ref="9027ptr" data-ref-filename="9027ptr">ptr</dfn> = <a class="local col6 typedef" href="#9026Handler" title='Handler' data-type='typename Derived::template Handler&lt;T&gt;' data-ref="9026Handler" data-ref-filename="9026Handler">Handler</a>::New(<b>static_cast</b>&lt;Derived*&gt;(<b>this</b>), <span class="namespace">std::</span>forward&lt;Args&gt;(<a class="local col5 ref" href="#9025args" title='args' data-ref="9025args" data-ref-filename="9025args">args</a>)...);</td></tr>
+<tr><th id="73">73</th><td>    <a class="local col7 ref" href="#9027ptr" title='ptr' data-ref="9027ptr" data-ref-filename="9027ptr">ptr</a>-&gt;type_index_ = T::RuntimeTypeIndex();</td></tr>
+<tr><th id="74">74</th><td>    <a class="local col7 ref" href="#9027ptr" title='ptr' data-ref="9027ptr" data-ref-filename="9027ptr">ptr</a>-&gt;deleter_ = <a class="local col6 typedef" href="#9026Handler" title='Handler' data-type='typename Derived::template Handler&lt;T&gt;' data-ref="9026Handler" data-ref-filename="9026Handler">Handler</a>::Deleter();</td></tr>
+<tr><th id="75">75</th><td>    <b>return</b> <a class="type" href="object.h.html#tvm::runtime::ObjectPtr" title='tvm::runtime::ObjectPtr' data-ref="tvm::runtime::ObjectPtr" data-ref-filename="tvm..runtime..ObjectPtr">ObjectPtr</a>&lt;T&gt;(<a class="local col7 ref" href="#9027ptr" title='ptr' data-ref="9027ptr" data-ref-filename="9027ptr">ptr</a>);</td></tr>
+<tr><th id="76">76</th><td>  }</td></tr>
+<tr><th id="77">77</th><td></td></tr>
+<tr><th id="78">78</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="79">79</th><td><i class="doc">   * <span class="command">\tparam</span> <span class="arg">ArrayType</span> The type to be allocated.</i></td></tr>
+<tr><th id="80">80</th><td><i class="doc">   * <span class="command">\tparam</span> <span class="arg">ElemType</span> The type of array element.</i></td></tr>
+<tr><th id="81">81</th><td><i class="doc">   * <span class="command">\tparam</span> <span class="arg">Args</span> The constructor signature.</i></td></tr>
+<tr><th id="82">82</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">num_elems</span> The number of array elements.</i></td></tr>
+<tr><th id="83">83</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">args</span> The arguments.</i></td></tr>
+<tr><th id="84">84</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="85">85</th><td>  <b>template</b> &lt;<b>typename</b> ArrayType, <b>typename</b> ElemType, <b>typename</b>... Args&gt;</td></tr>
+<tr><th id="86">86</th><td>  <b>inline</b> <a class="type" href="object.h.html#tvm::runtime::ObjectPtr" title='tvm::runtime::ObjectPtr' data-ref="tvm::runtime::ObjectPtr" data-ref-filename="tvm..runtime..ObjectPtr">ObjectPtr</a>&lt;ArrayType&gt; <dfn class="decl def fn" id="_ZN3tvm7runtime16ObjAllocatorBase18make_inplace_arrayEmDpOTL0_1_" title='tvm::runtime::ObjAllocatorBase::make_inplace_array' data-ref="_ZN3tvm7runtime16ObjAllocatorBase18make_inplace_arrayEmDpOTL0_1_" data-ref-filename="_ZN3tvm7runtime16ObjAllocatorBase18make_inplace_arrayEmDpOTL0_1_">make_inplace_array</dfn>(<span class='typedef' title='size_t' data-type='unsigned long' data-ref="size_t" data-ref-filename="size_t">size_t</span> <dfn class="local col8 decl" id="9028num_elems" title='num_elems' data-type='size_t' data-ref="9028num_elems" data-ref-filename="9028num_elems">num_elems</dfn>, Args&amp;&amp;... <dfn class="local col9 decl" id="9029args" title='args' data-type='Args &amp;&amp;...' data-ref="9029args" data-ref-filename="9029args">args</dfn>) {</td></tr>
+<tr><th id="87">87</th><td>    <b>using</b> <dfn class="local col0 typedef" id="9030Handler" title='Handler' data-type='typename Derived::template ArrayHandler&lt;ArrayType, ElemType&gt;' data-ref="9030Handler" data-ref-filename="9030Handler">Handler</dfn> = <b>typename</b> Derived::<b>template</b> ArrayHandler&lt;ArrayType, ElemType&gt;;</td></tr>
+<tr><th id="88">88</th><td>    <b>static_assert</b>(<span class="namespace">std::</span><a class="type" href="../../../../include/c++/10/type_traits.html#std::is_base_of" title='std::is_base_of' data-ref="std::is_base_of" data-ref-filename="std..is_base_of">is_base_of</a>&lt;<a class="type" href="object.h.html#tvm::runtime::Object" title='tvm::runtime::Object' data-ref="tvm::runtime::Object" data-ref-filename="tvm..runtime..Object">Object</a>, ArrayType&gt;::value,</td></tr>
+<tr><th id="89">89</th><td>                  <q>"make_inplace_array can only be used to create Object"</q>);</td></tr>
+<tr><th id="90">90</th><td>    ArrayType* <dfn class="local col1 decl" id="9031ptr" title='ptr' data-type='ArrayType *' data-ref="9031ptr" data-ref-filename="9031ptr">ptr</dfn> =</td></tr>
+<tr><th id="91">91</th><td>        <a class="local col0 typedef" href="#9030Handler" title='Handler' data-type='typename Derived::template ArrayHandler&lt;ArrayType, ElemType&gt;' data-ref="9030Handler" data-ref-filename="9030Handler">Handler</a>::New(<b>static_cast</b>&lt;Derived*&gt;(<b>this</b>), <a class="local col8 ref" href="#9028num_elems" title='num_elems' data-ref="9028num_elems" data-ref-filename="9028num_elems">num_elems</a>, <span class="namespace">std::</span>forward&lt;Args&gt;(<a class="local col9 ref" href="#9029args" title='args' data-ref="9029args" data-ref-filename="9029args">args</a>)...);</td></tr>
+<tr><th id="92">92</th><td>    <a class="local col1 ref" href="#9031ptr" title='ptr' data-ref="9031ptr" data-ref-filename="9031ptr">ptr</a>-&gt;type_index_ = ArrayType::RuntimeTypeIndex();</td></tr>
+<tr><th id="93">93</th><td>    <a class="local col1 ref" href="#9031ptr" title='ptr' data-ref="9031ptr" data-ref-filename="9031ptr">ptr</a>-&gt;deleter_ = <a class="local col0 typedef" href="#9030Handler" title='Handler' data-type='typename Derived::template ArrayHandler&lt;ArrayType, ElemType&gt;' data-ref="9030Handler" data-ref-filename="9030Handler">Handler</a>::Deleter();</td></tr>
+<tr><th id="94">94</th><td>    <b>return</b> <a class="type" href="object.h.html#tvm::runtime::ObjectPtr" title='tvm::runtime::ObjectPtr' data-ref="tvm::runtime::ObjectPtr" data-ref-filename="tvm..runtime..ObjectPtr">ObjectPtr</a>&lt;ArrayType&gt;(<a class="local col1 ref" href="#9031ptr" title='ptr' data-ref="9031ptr" data-ref-filename="9031ptr">ptr</a>);</td></tr>
+<tr><th id="95">95</th><td>  }</td></tr>
+<tr><th id="96">96</th><td>};</td></tr>
+<tr><th id="97">97</th><td></td></tr>
+<tr><th id="98">98</th><td><i>// Simple allocator that uses new/delete.</i></td></tr>
+<tr><th id="99">99</th><td><b>class</b> <dfn class="type def" id="tvm::runtime::SimpleObjAllocator" title='tvm::runtime::SimpleObjAllocator' data-ref="tvm::runtime::SimpleObjAllocator" data-ref-filename="tvm..runtime..SimpleObjAllocator">SimpleObjAllocator</dfn> : <b>public</b> <a class="type" href="object.h.html#tvm::runtime::ObjAllocatorBase" title='tvm::runtime::ObjAllocatorBase' data-ref="tvm::runtime::ObjAllocatorBase" data-ref-filename="tvm..runtime..ObjAllocatorBase">ObjAllocatorBase</a>&lt;<a class="type" href="#tvm::runtime::SimpleObjAllocator" title='tvm::runtime::SimpleObjAllocator' data-ref="tvm::runtime::SimpleObjAllocator" data-ref-filename="tvm..runtime..SimpleObjAllocator">SimpleObjAllocator</a>&gt; {</td></tr>
+<tr><th id="100">100</th><td> <b>public</b>:</td></tr>
+<tr><th id="101">101</th><td>  <b>template</b> &lt;<b>typename</b> T&gt;</td></tr>
+<tr><th id="102">102</th><td>  <b>class</b> <dfn class="type def" id="tvm::runtime::SimpleObjAllocator::Handler" title='tvm::runtime::SimpleObjAllocator::Handler' data-ref="tvm::runtime::SimpleObjAllocator::Handler" data-ref-filename="tvm..runtime..SimpleObjAllocator..Handler">Handler</dfn> {</td></tr>
+<tr><th id="103">103</th><td>   <b>public</b>:</td></tr>
+<tr><th id="104">104</th><td>    <b>using</b> <dfn class="typedef" id="tvm::runtime::SimpleObjAllocator::Handler::StorageType" title='tvm::runtime::SimpleObjAllocator::Handler::StorageType' data-type='typename std::aligned_storage&lt;sizeof(T), alignof(T)&gt;::type' data-ref="tvm::runtime::SimpleObjAllocator::Handler::StorageType" data-ref-filename="tvm..runtime..SimpleObjAllocator..Handler..StorageType">StorageType</dfn> = <b>typename</b> <span class="namespace">std::</span><a class="type" href="../../../../include/c++/10/type_traits.html#std::aligned_storage" title='std::aligned_storage' data-ref="std::aligned_storage" data-ref-filename="std..aligned_storage">aligned_storage</a>&lt;<b>sizeof</b>(T), <b>alignof</b>(T)&gt;::type;</td></tr>
+<tr><th id="105">105</th><td></td></tr>
+<tr><th id="106">106</th><td>    <b>template</b> &lt;<b>typename</b>... Args&gt;</td></tr>
+<tr><th id="107">107</th><td>    <em>static</em> T* <dfn class="decl def fn" id="_ZN3tvm7runtime18SimpleObjAllocator7Handler3NewEPS1_DpOTL0__" title='tvm::runtime::SimpleObjAllocator::Handler::New' data-ref="_ZN3tvm7runtime18SimpleObjAllocator7Handler3NewEPS1_DpOTL0__" data-ref-filename="_ZN3tvm7runtime18SimpleObjAllocator7Handler3NewEPS1_DpOTL0__">New</dfn>(<a class="type" href="#tvm::runtime::SimpleObjAllocator" title='tvm::runtime::SimpleObjAllocator' data-ref="tvm::runtime::SimpleObjAllocator" data-ref-filename="tvm..runtime..SimpleObjAllocator">SimpleObjAllocator</a>*, Args&amp;&amp;... <dfn class="local col2 decl" id="9032args" title='args' data-type='Args &amp;&amp;...' data-ref="9032args" data-ref-filename="9032args">args</dfn>) {</td></tr>
+<tr><th id="108">108</th><td>      <i>// NOTE: the first argument is not needed for SimpleObjAllocator</i></td></tr>
+<tr><th id="109">109</th><td><i>      // It is reserved for special allocators that needs to recycle</i></td></tr>
+<tr><th id="110">110</th><td><i>      // the object to itself (e.g. in the case of object pool).</i></td></tr>
+<tr><th id="111">111</th><td><i>      //</i></td></tr>
+<tr><th id="112">112</th><td><i>      // In the case of an object pool, an allocator needs to create</i></td></tr>
+<tr><th id="113">113</th><td><i>      // a special chunk memory that hides reference to the allocator</i></td></tr>
+<tr><th id="114">114</th><td><i>      // and call allocator's release function in the deleter.</i></td></tr>
+<tr><th id="115">115</th><td><i></i></td></tr>
+<tr><th id="116">116</th><td><i>      // NOTE2: Use inplace new to allocate</i></td></tr>
+<tr><th id="117">117</th><td><i>      // This is used to get rid of warning when deleting a virtual</i></td></tr>
+<tr><th id="118">118</th><td><i>      // class with non-virtual destructor.</i></td></tr>
+<tr><th id="119">119</th><td><i>      // We are fine here as we captured the right deleter during construction.</i></td></tr>
+<tr><th id="120">120</th><td><i>      // This is also the right way to get storage type for an object pool.</i></td></tr>
+<tr><th id="121">121</th><td>      <a class="typedef" href="#tvm::runtime::SimpleObjAllocator::Handler::StorageType" title='tvm::runtime::SimpleObjAllocator::Handler::StorageType' data-type='typename std::aligned_storage&lt;sizeof(T), alignof(T)&gt;::type' data-ref="tvm::runtime::SimpleObjAllocator::Handler::StorageType" data-ref-filename="tvm..runtime..SimpleObjAllocator..Handler..StorageType">StorageType</a>* <dfn class="local col3 decl" id="9033data" title='data' data-type='tvm::runtime::SimpleObjAllocator::Handler::StorageType *' data-ref="9033data" data-ref-filename="9033data">data</dfn> = <b>new</b> <a class="typedef" href="#tvm::runtime::SimpleObjAllocator::Handler::StorageType" title='tvm::runtime::SimpleObjAllocator::Handler::StorageType' data-type='typename std::aligned_storage&lt;sizeof(T), alignof(T)&gt;::type' data-ref="tvm::runtime::SimpleObjAllocator::Handler::StorageType" data-ref-filename="tvm..runtime..SimpleObjAllocator..Handler..StorageType">StorageType</a>();</td></tr>
+<tr><th id="122">122</th><td>      <b>new</b> (<a class="local col3 ref" href="#9033data" title='data' data-ref="9033data" data-ref-filename="9033data">data</a>) T(<span class="namespace">std::</span>forward&lt;Args&gt;(<a class="local col2 ref" href="#9032args" title='args' data-ref="9032args" data-ref-filename="9032args">args</a>)...);</td></tr>
+<tr><th id="123">123</th><td>      <b>return</b> <b>reinterpret_cast</b>&lt;T*&gt;(<a class="local col3 ref" href="#9033data" title='data' data-ref="9033data" data-ref-filename="9033data">data</a>);</td></tr>
+<tr><th id="124">124</th><td>    }</td></tr>
+<tr><th id="125">125</th><td></td></tr>
+<tr><th id="126">126</th><td>    <em>static</em> <a class="type" href="object.h.html#tvm::runtime::Object" title='tvm::runtime::Object' data-ref="tvm::runtime::Object" data-ref-filename="tvm..runtime..Object">Object</a>::<a class="typedef" href="object.h.html#tvm::runtime::Object::FDeleter" title='tvm::runtime::Object::FDeleter' data-type='void (*)(tvm::runtime::Object *)' data-ref="tvm::runtime::Object::FDeleter" data-ref-filename="tvm..runtime..Object..FDeleter">FDeleter</a> <dfn class="decl def fn" id="_ZN3tvm7runtime18SimpleObjAllocator7Handler7DeleterEv" title='tvm::runtime::SimpleObjAllocator::Handler::Deleter' data-ref="_ZN3tvm7runtime18SimpleObjAllocator7Handler7DeleterEv" data-ref-filename="_ZN3tvm7runtime18SimpleObjAllocator7Handler7DeleterEv">Deleter</dfn>() { <b>return</b> <a class="member fn" href="#_ZN3tvm7runtime18SimpleObjAllocator7Handler8Deleter_EPNS0_6ObjectE" title='tvm::runtime::SimpleObjAllocator::Handler::Deleter_' data-ref="_ZN3tvm7runtime18SimpleObjAllocator7Handler8Deleter_EPNS0_6ObjectE" data-ref-filename="_ZN3tvm7runtime18SimpleObjAllocator7Handler8Deleter_EPNS0_6ObjectE">Deleter_</a>; }</td></tr>
+<tr><th id="127">127</th><td></td></tr>
+<tr><th id="128">128</th><td>   <b>private</b>:</td></tr>
+<tr><th id="129">129</th><td>    <em>static</em> <em>void</em> <dfn class="decl def fn" id="_ZN3tvm7runtime18SimpleObjAllocator7Handler8Deleter_EPNS0_6ObjectE" title='tvm::runtime::SimpleObjAllocator::Handler::Deleter_' data-ref="_ZN3tvm7runtime18SimpleObjAllocator7Handler8Deleter_EPNS0_6ObjectE" data-ref-filename="_ZN3tvm7runtime18SimpleObjAllocator7Handler8Deleter_EPNS0_6ObjectE">Deleter_</dfn>(<a class="type" href="object.h.html#tvm::runtime::Object" title='tvm::runtime::Object' data-ref="tvm::runtime::Object" data-ref-filename="tvm..runtime..Object">Object</a>* <dfn class="local col4 decl" id="9034objptr" title='objptr' data-type='tvm::runtime::Object *' data-ref="9034objptr" data-ref-filename="9034objptr">objptr</dfn>) {</td></tr>
+<tr><th id="130">130</th><td>      <i>// NOTE: this is important to cast back to T*</i></td></tr>
+<tr><th id="131">131</th><td><i>      // because objptr and tptr may not be the same</i></td></tr>
+<tr><th id="132">132</th><td><i>      // depending on how sub-class allocates the space.</i></td></tr>
+<tr><th id="133">133</th><td>      T* <dfn class="local col5 decl" id="9035tptr" title='tptr' data-type='T *' data-ref="9035tptr" data-ref-filename="9035tptr">tptr</dfn> = <b>static_cast</b>&lt;T*&gt;(<a class="local col4 ref" href="#9034objptr" title='objptr' data-ref="9034objptr" data-ref-filename="9034objptr">objptr</a>);</td></tr>
+<tr><th id="134">134</th><td>      <i>// It is important to do tptr-&gt;T::~T(),</i></td></tr>
+<tr><th id="135">135</th><td><i>      // so that we explicitly call the specific destructor</i></td></tr>
+<tr><th id="136">136</th><td><i>      // instead of tptr-&gt;~T(), which could mean the intention</i></td></tr>
+<tr><th id="137">137</th><td><i>      // call a virtual destructor(which may not be available and is not required).</i></td></tr>
+<tr><th id="138">138</th><td>      <a class="local col5 ref" href="#9035tptr" title='tptr' data-ref="9035tptr" data-ref-filename="9035tptr">tptr</a>-&gt;T::~T();</td></tr>
+<tr><th id="139">139</th><td>      <b>delete</b> <b>reinterpret_cast</b>&lt;<a class="typedef" href="#tvm::runtime::SimpleObjAllocator::Handler::StorageType" title='tvm::runtime::SimpleObjAllocator::Handler::StorageType' data-type='typename std::aligned_storage&lt;sizeof(T), alignof(T)&gt;::type' data-ref="tvm::runtime::SimpleObjAllocator::Handler::StorageType" data-ref-filename="tvm..runtime..SimpleObjAllocator..Handler..StorageType">StorageType</a>*&gt;(<a class="local col5 ref" href="#9035tptr" title='tptr' data-ref="9035tptr" data-ref-filename="9035tptr">tptr</a>);</td></tr>
+<tr><th id="140">140</th><td>    }</td></tr>
+<tr><th id="141">141</th><td>  };</td></tr>
+<tr><th id="142">142</th><td></td></tr>
+<tr><th id="143">143</th><td>  <i>// Array handler that uses new/delete.</i></td></tr>
+<tr><th id="144">144</th><td>  <b>template</b> &lt;<b>typename</b> ArrayType, <b>typename</b> ElemType&gt;</td></tr>
+<tr><th id="145">145</th><td>  <b>class</b> <dfn class="type def" id="tvm::runtime::SimpleObjAllocator::ArrayHandler" title='tvm::runtime::SimpleObjAllocator::ArrayHandler' data-ref="tvm::runtime::SimpleObjAllocator::ArrayHandler" data-ref-filename="tvm..runtime..SimpleObjAllocator..ArrayHandler">ArrayHandler</dfn> {</td></tr>
+<tr><th id="146">146</th><td>   <b>public</b>:</td></tr>
+<tr><th id="147">147</th><td>    <b>using</b> <dfn class="typedef" id="tvm::runtime::SimpleObjAllocator::ArrayHandler::StorageType" title='tvm::runtime::SimpleObjAllocator::ArrayHandler::StorageType' data-type='typename std::aligned_storage&lt;sizeof(ArrayType), alignof(ArrayType)&gt;::type' data-ref="tvm::runtime::SimpleObjAllocator::ArrayHandler::StorageType" data-ref-filename="tvm..runtime..SimpleObjAllocator..ArrayHandler..StorageType">StorageType</dfn> = <b>typename</b> <span class="namespace">std::</span><a class="type" href="../../../../include/c++/10/type_traits.html#std::aligned_storage" title='std::aligned_storage' data-ref="std::aligned_storage" data-ref-filename="std..aligned_storage">aligned_storage</a>&lt;<b>sizeof</b>(ArrayType), <b>alignof</b>(ArrayType)&gt;::type;</td></tr>
+<tr><th id="148">148</th><td>    <i>// for now only support elements that aligns with array header.</i></td></tr>
+<tr><th id="149">149</th><td>    <b>static_assert</b>(<b>alignof</b>(ArrayType) % <b>alignof</b>(ElemType) == <var>0</var> &amp;&amp;</td></tr>
+<tr><th id="150">150</th><td>                      <b>sizeof</b>(ArrayType) % <b>alignof</b>(ElemType) == <var>0</var>,</td></tr>
+<tr><th id="151">151</th><td>                  <q>"element alignment constraint"</q>);</td></tr>
+<tr><th id="152">152</th><td></td></tr>
+<tr><th id="153">153</th><td>    <b>template</b> &lt;<b>typename</b>... Args&gt;</td></tr>
+<tr><th id="154">154</th><td>    <em>static</em> ArrayType* <dfn class="decl def fn" id="_ZN3tvm7runtime18SimpleObjAllocator12ArrayHandler3NewEPS1_mDpOTL0__" title='tvm::runtime::SimpleObjAllocator::ArrayHandler::New' data-ref="_ZN3tvm7runtime18SimpleObjAllocator12ArrayHandler3NewEPS1_mDpOTL0__" data-ref-filename="_ZN3tvm7runtime18SimpleObjAllocator12ArrayHandler3NewEPS1_mDpOTL0__">New</dfn>(<a class="type" href="#tvm::runtime::SimpleObjAllocator" title='tvm::runtime::SimpleObjAllocator' data-ref="tvm::runtime::SimpleObjAllocator" data-ref-filename="tvm..runtime..SimpleObjAllocator">SimpleObjAllocator</a>*, <span class='typedef' title='size_t' data-type='unsigned long' data-ref="size_t" data-ref-filename="size_t">size_t</span> <dfn class="local col6 decl" id="9036num_elems" title='num_elems' data-type='size_t' data-ref="9036num_elems" data-ref-filename="9036num_elems">num_elems</dfn>, Args&amp;&amp;... <dfn class="local col7 decl" id="9037args" title='args' data-type='Args &amp;&amp;...' data-ref="9037args" data-ref-filename="9037args">args</dfn>) {</td></tr>
+<tr><th id="155">155</th><td>      <i>// NOTE: the first argument is not needed for ArrayObjAllocator</i></td></tr>
+<tr><th id="156">156</th><td><i>      // It is reserved for special allocators that needs to recycle</i></td></tr>
+<tr><th id="157">157</th><td><i>      // the object to itself (e.g. in the case of object pool).</i></td></tr>
+<tr><th id="158">158</th><td><i>      //</i></td></tr>
+<tr><th id="159">159</th><td><i>      // In the case of an object pool, an allocator needs to create</i></td></tr>
+<tr><th id="160">160</th><td><i>      // a special chunk memory that hides reference to the allocator</i></td></tr>
+<tr><th id="161">161</th><td><i>      // and call allocator's release function in the deleter.</i></td></tr>
+<tr><th id="162">162</th><td><i>      // NOTE2: Use inplace new to allocate</i></td></tr>
+<tr><th id="163">163</th><td><i>      // This is used to get rid of warning when deleting a virtual</i></td></tr>
+<tr><th id="164">164</th><td><i>      // class with non-virtual destructor.</i></td></tr>
+<tr><th id="165">165</th><td><i>      // We are fine here as we captured the right deleter during construction.</i></td></tr>
+<tr><th id="166">166</th><td><i>      // This is also the right way to get storage type for an object pool.</i></td></tr>
+<tr><th id="167">167</th><td>      <span class='typedef' title='size_t' data-type='unsigned long' data-ref="size_t" data-ref-filename="size_t">size_t</span> <dfn class="local col8 decl" id="9038unit" title='unit' data-type='size_t' data-ref="9038unit" data-ref-filename="9038unit">unit</dfn> = <b>sizeof</b>(<a class="typedef" href="#tvm::runtime::SimpleObjAllocator::ArrayHandler::StorageType" title='tvm::runtime::SimpleObjAllocator::ArrayHandler::StorageType' data-type='typename std::aligned_storage&lt;sizeof(ArrayType), alignof(ArrayType)&gt;::type' data-ref="tvm::runtime::SimpleObjAllocator::ArrayHandler::StorageType" data-ref-filename="tvm..runtime..SimpleObjAllocator..ArrayHandler..StorageType">StorageType</a>);</td></tr>
+<tr><th id="168">168</th><td>      <span class='typedef' title='size_t' data-type='unsigned long' data-ref="size_t" data-ref-filename="size_t">size_t</span> <dfn class="local col9 decl" id="9039requested_size" title='requested_size' data-type='size_t' data-ref="9039requested_size" data-ref-filename="9039requested_size">requested_size</dfn> = <a class="local col6 ref" href="#9036num_elems" title='num_elems' data-ref="9036num_elems" data-ref-filename="9036num_elems">num_elems</a> * <b>sizeof</b>(ElemType) + <b>sizeof</b>(ArrayType);</td></tr>
+<tr><th id="169">169</th><td>      <span class='typedef' title='size_t' data-type='unsigned long' data-ref="size_t" data-ref-filename="size_t">size_t</span> <dfn class="local col0 decl" id="9040num_storage_slots" title='num_storage_slots' data-type='size_t' data-ref="9040num_storage_slots" data-ref-filename="9040num_storage_slots">num_storage_slots</dfn> = (<a class="local col9 ref" href="#9039requested_size" title='requested_size' data-ref="9039requested_size" data-ref-filename="9039requested_size">requested_size</a> + <a class="local col8 ref" href="#9038unit" title='unit' data-ref="9038unit" data-ref-filename="9038unit">unit</a> - <var>1</var>) / <a class="local col8 ref" href="#9038unit" title='unit' data-ref="9038unit" data-ref-filename="9038unit">unit</a>;</td></tr>
+<tr><th id="170">170</th><td>      <a class="typedef" href="#tvm::runtime::SimpleObjAllocator::ArrayHandler::StorageType" title='tvm::runtime::SimpleObjAllocator::ArrayHandler::StorageType' data-type='typename std::aligned_storage&lt;sizeof(ArrayType), alignof(ArrayType)&gt;::type' data-ref="tvm::runtime::SimpleObjAllocator::ArrayHandler::StorageType" data-ref-filename="tvm..runtime..SimpleObjAllocator..ArrayHandler..StorageType">StorageType</a>* <dfn class="local col1 decl" id="9041data" title='data' data-type='tvm::runtime::SimpleObjAllocator::ArrayHandler::StorageType *' data-ref="9041data" data-ref-filename="9041data">data</dfn> = <b>new</b> <a class="typedef" href="#tvm::runtime::SimpleObjAllocator::ArrayHandler::StorageType" title='tvm::runtime::SimpleObjAllocator::ArrayHandler::StorageType' data-type='typename std::aligned_storage&lt;sizeof(ArrayType), alignof(ArrayType)&gt;::type' data-ref="tvm::runtime::SimpleObjAllocator::ArrayHandler::StorageType" data-ref-filename="tvm..runtime..SimpleObjAllocator..ArrayHandler..StorageType">StorageType</a>[<a class="local col0 ref" href="#9040num_storage_slots" title='num_storage_slots' data-ref="9040num_storage_slots" data-ref-filename="9040num_storage_slots">num_storage_slots</a>];</td></tr>
+<tr><th id="171">171</th><td>      <b>new</b> (<a class="local col1 ref" href="#9041data" title='data' data-ref="9041data" data-ref-filename="9041data">data</a>) ArrayType(<span class="namespace">std::</span>forward&lt;Args&gt;(<a class="local col7 ref" href="#9037args" title='args' data-ref="9037args" data-ref-filename="9037args">args</a>)...);</td></tr>
+<tr><th id="172">172</th><td>      <b>return</b> <b>reinterpret_cast</b>&lt;ArrayType*&gt;(<a class="local col1 ref" href="#9041data" title='data' data-ref="9041data" data-ref-filename="9041data">data</a>);</td></tr>
+<tr><th id="173">173</th><td>    }</td></tr>
+<tr><th id="174">174</th><td></td></tr>
+<tr><th id="175">175</th><td>    <em>static</em> <a class="type" href="object.h.html#tvm::runtime::Object" title='tvm::runtime::Object' data-ref="tvm::runtime::Object" data-ref-filename="tvm..runtime..Object">Object</a>::<a class="typedef" href="object.h.html#tvm::runtime::Object::FDeleter" title='tvm::runtime::Object::FDeleter' data-type='void (*)(tvm::runtime::Object *)' data-ref="tvm::runtime::Object::FDeleter" data-ref-filename="tvm..runtime..Object..FDeleter">FDeleter</a> <dfn class="decl def fn" id="_ZN3tvm7runtime18SimpleObjAllocator12ArrayHandler7DeleterEv" title='tvm::runtime::SimpleObjAllocator::ArrayHandler::Deleter' data-ref="_ZN3tvm7runtime18SimpleObjAllocator12ArrayHandler7DeleterEv" data-ref-filename="_ZN3tvm7runtime18SimpleObjAllocator12ArrayHandler7DeleterEv">Deleter</dfn>() { <b>return</b> <a class="member fn" href="#_ZN3tvm7runtime18SimpleObjAllocator12ArrayHandler8Deleter_EPNS0_6ObjectE" title='tvm::runtime::SimpleObjAllocator::ArrayHandler::Deleter_' data-ref="_ZN3tvm7runtime18SimpleObjAllocator12ArrayHandler8Deleter_EPNS0_6ObjectE" data-ref-filename="_ZN3tvm7runtime18SimpleObjAllocator12ArrayHandler8Deleter_EPNS0_6ObjectE">Deleter_</a>; }</td></tr>
+<tr><th id="176">176</th><td></td></tr>
+<tr><th id="177">177</th><td>   <b>private</b>:</td></tr>
+<tr><th id="178">178</th><td>    <em>static</em> <em>void</em> <dfn class="decl def fn" id="_ZN3tvm7runtime18SimpleObjAllocator12ArrayHandler8Deleter_EPNS0_6ObjectE" title='tvm::runtime::SimpleObjAllocator::ArrayHandler::Deleter_' data-ref="_ZN3tvm7runtime18SimpleObjAllocator12ArrayHandler8Deleter_EPNS0_6ObjectE" data-ref-filename="_ZN3tvm7runtime18SimpleObjAllocator12ArrayHandler8Deleter_EPNS0_6ObjectE">Deleter_</dfn>(<a class="type" href="object.h.html#tvm::runtime::Object" title='tvm::runtime::Object' data-ref="tvm::runtime::Object" data-ref-filename="tvm..runtime..Object">Object</a>* <dfn class="local col2 decl" id="9042objptr" title='objptr' data-type='tvm::runtime::Object *' data-ref="9042objptr" data-ref-filename="9042objptr">objptr</dfn>) {</td></tr>
+<tr><th id="179">179</th><td>      <i>// NOTE: this is important to cast back to ArrayType*</i></td></tr>
+<tr><th id="180">180</th><td><i>      // because objptr and tptr may not be the same</i></td></tr>
+<tr><th id="181">181</th><td><i>      // depending on how sub-class allocates the space.</i></td></tr>
+<tr><th id="182">182</th><td>      ArrayType* <dfn class="local col3 decl" id="9043tptr" title='tptr' data-type='ArrayType *' data-ref="9043tptr" data-ref-filename="9043tptr">tptr</dfn> = <b>static_cast</b>&lt;ArrayType*&gt;(<a class="local col2 ref" href="#9042objptr" title='objptr' data-ref="9042objptr" data-ref-filename="9042objptr">objptr</a>);</td></tr>
+<tr><th id="183">183</th><td>      <i>// It is important to do tptr-&gt;ArrayType::~ArrayType(),</i></td></tr>
+<tr><th id="184">184</th><td><i>      // so that we explicitly call the specific destructor</i></td></tr>
+<tr><th id="185">185</th><td><i>      // instead of tptr-&gt;~ArrayType(), which could mean the intention</i></td></tr>
+<tr><th id="186">186</th><td><i>      // call a virtual destructor(which may not be available and is not required).</i></td></tr>
+<tr><th id="187">187</th><td>      <a class="local col3 ref" href="#9043tptr" title='tptr' data-ref="9043tptr" data-ref-filename="9043tptr">tptr</a>-&gt;ArrayType::~ArrayType();</td></tr>
+<tr><th id="188">188</th><td>      <a class="typedef" href="#tvm::runtime::SimpleObjAllocator::ArrayHandler::StorageType" title='tvm::runtime::SimpleObjAllocator::ArrayHandler::StorageType' data-type='typename std::aligned_storage&lt;sizeof(ArrayType), alignof(ArrayType)&gt;::type' data-ref="tvm::runtime::SimpleObjAllocator::ArrayHandler::StorageType" data-ref-filename="tvm..runtime..SimpleObjAllocator..ArrayHandler..StorageType">StorageType</a>* <dfn class="local col4 decl" id="9044p" title='p' data-type='tvm::runtime::SimpleObjAllocator::ArrayHandler::StorageType *' data-ref="9044p" data-ref-filename="9044p">p</dfn> = <b>reinterpret_cast</b>&lt;<a class="typedef" href="#tvm::runtime::SimpleObjAllocator::ArrayHandler::StorageType" title='tvm::runtime::SimpleObjAllocator::ArrayHandler::StorageType' data-type='typename std::aligned_storage&lt;sizeof(ArrayType), alignof(ArrayType)&gt;::type' data-ref="tvm::runtime::SimpleObjAllocator::ArrayHandler::StorageType" data-ref-filename="tvm..runtime..SimpleObjAllocator..ArrayHandler..StorageType">StorageType</a>*&gt;(<a class="local col3 ref" href="#9043tptr" title='tptr' data-ref="9043tptr" data-ref-filename="9043tptr">tptr</a>);</td></tr>
+<tr><th id="189">189</th><td>      <b>delete</b>[] <a class="local col4 ref" href="#9044p" title='p' data-ref="9044p" data-ref-filename="9044p">p</a>;</td></tr>
+<tr><th id="190">190</th><td>    }</td></tr>
+<tr><th id="191">191</th><td>  };</td></tr>
+<tr><th id="192">192</th><td>};</td></tr>
+<tr><th id="193">193</th><td></td></tr>
+<tr><th id="194">194</th><td><b>template</b> &lt;<b>typename</b> T, <b>typename</b>... Args&gt;</td></tr>
+<tr><th id="195">195</th><td><b>inline</b> <a class="type" href="object.h.html#tvm::runtime::ObjectPtr" title='tvm::runtime::ObjectPtr' data-ref="tvm::runtime::ObjectPtr" data-ref-filename="tvm..runtime..ObjectPtr">ObjectPtr</a>&lt;T&gt; <dfn class="decl def fn" id="_ZN3tvm7runtime11make_objectEDpOT0_" title='tvm::runtime::make_object' data-ref="_ZN3tvm7runtime11make_objectEDpOT0_" data-ref-filename="_ZN3tvm7runtime11make_objectEDpOT0_">make_object</dfn>(Args&amp;&amp;... <dfn class="local col5 decl" id="9045args" title='args' data-type='Args &amp;&amp;...' data-ref="9045args" data-ref-filename="9045args">args</dfn>) {</td></tr>
+<tr><th id="196">196</th><td>  <b>return</b> <a class="type" href="#tvm::runtime::SimpleObjAllocator" title='tvm::runtime::SimpleObjAllocator' data-ref="tvm::runtime::SimpleObjAllocator" data-ref-filename="tvm..runtime..SimpleObjAllocator">SimpleObjAllocator</a><a class="ref fn" href="#99" title='tvm::runtime::SimpleObjAllocator::SimpleObjAllocator' data-ref="_ZN3tvm7runtime18SimpleObjAllocatorC1Ev" data-ref-filename="_ZN3tvm7runtime18SimpleObjAllocatorC1Ev">(</a>).make_object&lt;T&gt;(<span class="namespace">std::</span>forward&lt;Args&gt;(<a class="local col5 ref" href="#9045args" title='args' data-ref="9045args" data-ref-filename="9045args">args</a>)...);</td></tr>
+<tr><th id="197">197</th><td>}</td></tr>
+<tr><th id="198">198</th><td></td></tr>
+<tr><th id="199">199</th><td><b>template</b> &lt;<b>typename</b> ArrayType, <b>typename</b> ElemType, <b>typename</b>... Args&gt;</td></tr>
+<tr><th id="200">200</th><td><b>inline</b> <a class="type" href="object.h.html#tvm::runtime::ObjectPtr" title='tvm::runtime::ObjectPtr' data-ref="tvm::runtime::ObjectPtr" data-ref-filename="tvm..runtime..ObjectPtr">ObjectPtr</a>&lt;ArrayType&gt; <dfn class="decl def fn" id="_ZN3tvm7runtime25make_inplace_array_objectEmDpOT1_" title='tvm::runtime::make_inplace_array_object' data-ref="_ZN3tvm7runtime25make_inplace_array_objectEmDpOT1_" data-ref-filename="_ZN3tvm7runtime25make_inplace_array_objectEmDpOT1_">make_inplace_array_object</dfn>(<span class='typedef' title='size_t' data-type='unsigned long' data-ref="size_t" data-ref-filename="size_t">size_t</span> <dfn class="local col6 decl" id="9046num_elems" title='num_elems' data-type='size_t' data-ref="9046num_elems" data-ref-filename="9046num_elems">num_elems</dfn>, Args&amp;&amp;... <dfn class="local col7 decl" id="9047args" title='args' data-type='Args &amp;&amp;...' data-ref="9047args" data-ref-filename="9047args">args</dfn>) {</td></tr>
+<tr><th id="201">201</th><td>  <b>return</b> <a class="type" href="#tvm::runtime::SimpleObjAllocator" title='tvm::runtime::SimpleObjAllocator' data-ref="tvm::runtime::SimpleObjAllocator" data-ref-filename="tvm..runtime..SimpleObjAllocator">SimpleObjAllocator</a><a class="ref fn" href="#99" title='tvm::runtime::SimpleObjAllocator::SimpleObjAllocator' data-ref="_ZN3tvm7runtime18SimpleObjAllocatorC1Ev" data-ref-filename="_ZN3tvm7runtime18SimpleObjAllocatorC1Ev">(</a>).make_inplace_array&lt;ArrayType, ElemType&gt;(<a class="local col6 ref" href="#9046num_elems" title='num_elems' data-ref="9046num_elems" data-ref-filename="9046num_elems">num_elems</a>,</td></tr>
+<tr><th id="202">202</th><td>                                                                      <span class="namespace">std::</span>forward&lt;Args&gt;(<a class="local col7 ref" href="#9047args" title='args' data-ref="9047args" data-ref-filename="9047args">args</a>)...);</td></tr>
+<tr><th id="203">203</th><td>}</td></tr>
+<tr><th id="204">204</th><td></td></tr>
+<tr><th id="205">205</th><td>}  <i>// namespace runtime</i></td></tr>
+<tr><th id="206">206</th><td>}  <i>// namespace tvm</i></td></tr>
+<tr><th id="207">207</th><td><u>#<span data-ppcond="23">endif</span>  // TVM_RUNTIME_MEMORY_H_</u></td></tr>
+<tr><th id="208">208</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated while processing <a href='../../../src/arith/analyzer.cc.html'>tvm/src/arith/analyzer.cc</a><br/>Generated on <em>2022-Aug-10</em> from project tvm revision <em>fae79bb</em><br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

@@ -1,0 +1,26 @@
+<dec f='tvm/include/tvm/relay/expr.h' l='200' type='tvm::relay::Id'/>
+<use f='tvm/include/tvm/relay/expr.h' l='209' u='m' c='_ZNK3tvm5relay7VarNode9name_hintEv'/>
+<use f='tvm/include/tvm/relay/expr.h' l='212' u='a' c='_ZN3tvm5relay7VarNode10VisitAttrsEPNS_11AttrVisitorE'/>
+<use f='tvm/include/tvm/relay/expr.h' l='221' u='r' c='_ZNK3tvm5relay7VarNode12SEqualReduceEPKS1_NS_13SEqualReducerE'/>
+<use f='tvm/include/tvm/relay/expr.h' l='221' u='r' c='_ZNK3tvm5relay7VarNode12SEqualReduceEPKS1_NS_13SEqualReducerE'/>
+<use f='tvm/include/tvm/relay/expr.h' l='228' u='r' c='_ZNK3tvm5relay7VarNode11SHashReduceENS_12SHashReducerE'/>
+<offset>320</offset>
+<doc f='tvm/include/tvm/relay/expr.h' l='191'>/*!
+   * \brief The unique identifier of the Var.
+   *
+   * vid will be preserved for the same Var during type inference
+   * and other rewritings, while the VarNode might be recreated
+   * to attach additional information.
+   * This property can be used to keep track of parameter Var
+   * information across passes.
+   */</doc>
+<use f='tvm/src/relay/ir/expr.cc' l='167' u='w' c='_ZN3tvm5relay3VarC1ENS0_2IdENS_4TypeENS_4SpanE'/>
+<use f='tvm/src/relay/ir/expr.cc' l='183' u='r' c='_ZN3tvm5relay10WithFieldsENS0_3VarENS_7runtime8OptionalINS0_2IdEEENS3_INS_4TypeEEENS3_INS_13VirtualDeviceEEENS3_INS_4SpanEEE'/>
+<use f='tvm/src/relay/ir/expr.cc' l='188' u='r' c='_ZN3tvm5relay10WithFieldsENS0_3VarENS_7runtime8OptionalINS0_2IdEEENS3_INS_4TypeEEENS3_INS_13VirtualDeviceEEENS3_INS_4SpanEEE'/>
+<use f='tvm/src/relay/ir/expr.cc' l='193' u='w' c='_ZN3tvm5relay10WithFieldsENS0_3VarENS_7runtime8OptionalINS0_2IdEEENS3_INS_4TypeEEENS3_INS_13VirtualDeviceEEENS3_INS_4SpanEEE'/>
+<use f='tvm/src/relay/ir/expr_functor.cc' l='169' u='r' c='_ZN3tvm5relay11ExprMutator10VisitExpr_EPKNS0_7VarNodeE'/>
+<use f='tvm/src/relay/transforms/annotate_texture_storage.cc' l='376' u='r' c='_ZN3tvm5relay22RewriteVDStorageScopes10VisitExpr_EPKNS0_7VarNodeE'/>
+<use f='tvm/src/relay/transforms/partial_eval.cc' l='114' u='r' c='_ZNK3tvm5relay12partial_eval7VarHashclERKNS0_3VarE'/>
+<use f='tvm/src/relay/transforms/partial_eval.cc' l='122' u='m' c='_ZNK3tvm5relay12partial_eval8VarEqualclERKNS0_3VarES5_'/>
+<use f='tvm/src/relay/transforms/partial_eval.cc' l='122' u='m' c='_ZNK3tvm5relay12partial_eval8VarEqualclERKNS0_3VarES5_'/>
+<use f='tvm/src/relay/transforms/type_infer.cc' l='862' u='r' c='_ZN3tvm5relay26SameTypedSubgraphExtractor10VisitExpr_EPKNS0_7VarNodeE'/>

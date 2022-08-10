@@ -1,0 +1,13 @@
+<dec f='tvm/include/tvm/runtime/vm/bytecode.h' l='284' type='static tvm::runtime::vm::Instruction tvm::runtime::vm::Instruction::AllocClosure(tvm::runtime::vm::Index func_index, tvm::runtime::vm::Index num_freevar, const std::vector&lt;RegName&gt; &amp; free_vars, tvm::runtime::vm::RegName dst)'/>
+<use f='tvm/src/relay/backend/vm/compiler.cc' l='439' u='c' c='_ZN3tvm5relay2vm18VMFunctionCompiler10VisitExpr_EPKNS_13GlobalVarNodeE'/>
+<use f='tvm/src/relay/backend/vm/compiler.cc' l='686' u='c' c='_ZN3tvm5relay2vm18VMFunctionCompiler21DeviceAwareVisitExpr_EPKNS0_8CallNodeE'/>
+<doc f='tvm/include/tvm/runtime/vm/bytecode.h' l='276'>/*!
+   * \brief Construct an allocate closure instruction.
+   * \param func_index The index of the function table.
+   * \param num_freevar The number of free variables.
+   * \param free_vars The registers of the free variables.
+   * \param dst The destination register.
+   * \return The allocate closure instruction.
+   */</doc>
+<def f='tvm/src/runtime/vm/bytecode.cc' l='401' ll='413' type='static tvm::runtime::vm::Instruction tvm::runtime::vm::Instruction::AllocClosure(tvm::runtime::vm::Index func_index, tvm::runtime::vm::Index free_vars, const std::vector&lt;RegName&gt; &amp; free_var_register, tvm::runtime::vm::RegName dst)'/>
+<use f='tvm/src/runtime/vm/executable.cc' l='894' u='c' c='_ZN3tvm7runtime2vm22DeserializeInstructionERKNS1_23VMInstructionSerializerE'/>

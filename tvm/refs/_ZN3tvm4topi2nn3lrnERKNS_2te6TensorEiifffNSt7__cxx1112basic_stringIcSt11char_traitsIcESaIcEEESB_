@@ -1,0 +1,16 @@
+<def f='tvm/include/tvm/topi/nn/local_response_norm.h' l='52' ll='92' type='tvm::te::Tensor tvm::topi::nn::lrn(const tvm::te::Tensor &amp; data, int size, int axis = 1, float alpha = 1.0E-4, float beta = 0.75, float bias = 2, std::string name = &quot;tensor&quot;, std::string tag = kBroadcast)'/>
+<use f='tvm/src/topi/nn.cc' l='147' u='c'/>
+<doc f='tvm/include/tvm/topi/nn/local_response_norm.h' l='38'>/*!
+ * \brief Local response normalization inference operator
+ *
+ * \param data The input tensor. 4-D shape NCHW or NHWC
+ * \param size Integer to define normalisation window size
+ * \param axis Input data layout channel axis
+ * \param alpha Float scaling factor
+ * \param beta Exponent value
+ * \param bias Offset to avoid dividing by zero
+ * \param name The name of the operation
+ * \param tag The tag to mark the operation
+ *
+ * \return A Tensor whose op member is the Local response normalization operation
+ */</doc>

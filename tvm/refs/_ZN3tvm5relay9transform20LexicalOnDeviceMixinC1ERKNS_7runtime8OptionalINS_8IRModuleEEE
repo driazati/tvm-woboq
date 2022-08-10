@@ -1,0 +1,11 @@
+<dec f='tvm/src/relay/transforms/device_aware_visitors.h' l='53' type='void tvm::relay::transform::LexicalOnDeviceMixin::LexicalOnDeviceMixin(const Optional&lt;tvm::IRModule&gt; &amp; maybe_mod)'/>
+<use f='tvm/src/relay/transforms/device_aware_visitors.h' l='140' u='c' c='_ZN3tvm5relay9transform22DeviceAwareExprFunctorIFvRKNS_9RelayExprEEEC1ERKNS_7runtime8OptionalINS_8IRModuleEEE'/>
+<use f='tvm/src/relay/transforms/device_aware_visitors.h' l='265' u='c' c='_ZN3tvm5relay9transform22DeviceAwareExprVisitorC1ERKNS_7runtime8OptionalINS_8IRModuleEEE'/>
+<use f='tvm/src/relay/transforms/device_aware_visitors.h' l='311' u='c' c='_ZN3tvm5relay9transform22DeviceAwareExprMutatorC1ERKNS_7runtime8OptionalINS_8IRModuleEEE'/>
+<def f='tvm/src/relay/transforms/device_aware_visitors.cc' l='37' ll='49' type='void tvm::relay::transform::LexicalOnDeviceMixin::LexicalOnDeviceMixin(const Optional&lt;tvm::IRModule&gt; &amp; maybe_mod)'/>
+<doc f='tvm/src/relay/transforms/device_aware_visitors.cc' l='31'>// TODO(mbs): This machinery can be used a) on expressions/modules which have not had
+// device planning run, and b) on expressions for which we&apos;ve not kept track of their
+// containing module. For now we&apos;ll handle b) by being forgiving as possible when recovering
+// the device for an expression, and we&apos;ll support a) the same way. But better would be
+// to ICHECK fail when, eg, a variable is not in scope or the lexical device stack is empty.</doc>
+<use f='tvm/src/relay/transforms/to_a_normal_form.cc' l='176' u='c' c='_ZN3tvm5relay12_GLOBAL__N_14FillC1ERKNS0_15DependencyGraphEPSt13unordered_mapIPNS3_4NodeESt10shared_ptrINS0_9ScopeNodeEESt4hashIS8_ESt8equal_toIS8_ESa8587531'/>

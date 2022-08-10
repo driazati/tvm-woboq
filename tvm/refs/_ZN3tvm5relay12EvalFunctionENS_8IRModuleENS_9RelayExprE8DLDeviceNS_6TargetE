@@ -1,0 +1,30 @@
+<dec f='tvm/include/tvm/relay/interpreter.h' l='174' type='TypedPackedFunc&lt;tvm::runtime::ObjectRef (Array&lt;tvm::relay::Expr&gt;)&gt; tvm::relay::EvalFunction(tvm::IRModule mod, tvm::relay::Expr expr, tvm::Device device, tvm::Target target)'/>
+<def f='tvm/src/relay/backend/interpreter.cc' l='1013' ll='1104' type='TypedPackedFunc&lt;tvm::runtime::ObjectRef (Array&lt;tvm::relay::Expr&gt;)&gt; tvm::relay::EvalFunction(tvm::IRModule mod, tvm::relay::Expr expr, tvm::Device device, tvm::Target target)'/>
+<use f='tvm/src/relay/backend/interpreter.cc' l='1129' u='r'/>
+<doc f='tvm/include/tvm/relay/interpreter.h' l='147'>/*!
+ * \brief Returns a packed function over Relay expressions which will evaluate \p expr
+ * applied to those arguments, where \p expr is w.r.t. the definitions in \p mod.
+ *
+ * This function is intended to support the Python &apos;debug&apos; executor.
+ *
+ * The given \p expr should have function type. The given \p mod may be empty or
+ * undefined if \p expr is self-contained. Relay arguments passed to the result
+ * packed function must be constants, references, or constructors/tuples over such.
+ * As much work as possible is done while constructing the result packed function, and
+ * that function may be reasonably efficiently applied multiple times without redoing
+ * unnecessary work.
+ *
+ * Primitives are lowered and compiled to packed functions for execution on \p device
+ * with properties given by \p target. All other Relay constructs are interpreted.
+ *
+ * The interpreter is intended to be a &apos;reference&apos; implementation of the Relay semantics
+ * for testing and interactive use. It is not intended to be particularly efficient.
+ *
+ * \param mod A module containing definitions which can be referenced from
+ * \p expr. May be empty or undefined.
+ * \param expr An expression of function type to evaluate. May reference definitions from \p mod.
+ * \param device The device on which all primitives will be executed.
+ * \param target The compiler target flag for compiling primitives.
+ * \return A packed function that takes an array of Relay expressions and returns the
+ * result of applying \p expr to those arguments.
+ */</doc>

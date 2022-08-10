@@ -1,0 +1,16 @@
+<def f='tvm/include/tvm/topi/transform.h' l='741' ll='751' type='Array&lt;tvm::PrimExpr&gt; tvm::topi::StridedSliceOutputShape(const Array&lt;tvm::PrimExpr&gt; &amp; ishape, const Array&lt;tvm::Integer&gt; &amp; begin, const Array&lt;tvm::Integer&gt; &amp; end, const Array&lt;tvm::Integer&gt; &amp; strides, const Array&lt;tvm::Integer&gt; &amp; axes, const std::string &amp; slice_mode)'/>
+<doc f='tvm/include/tvm/topi/transform.h' l='727'>/*!
+ * \brief Calcluate the output shape of strided_slice, the entry point for Relay type relation
+ *
+ * \param ishape The input tensor shape
+ * \param begin The indices to begin with in the slicing
+ * \param end Indicies indicating end of the slice
+ * \param strides Specifies the stride values, it can be negative
+ * in that case, the input tensor will be reversed in that particular axis
+ * \param axes Axes along which slicing is applied. When it is specified, the length of begin, end,
+ * strides, and axes argument must be equal
+ * \param slice_mode Specifies the slice mode
+ *
+ * \return The output shape of strided_slice using the arguments above
+ */</doc>
+<use f='tvm/src/relay/op/tensor/transform.cc' l='2653' u='c' c='_ZN3tvm5relay15StridedSliceRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>

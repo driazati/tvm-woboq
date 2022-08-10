@@ -1,0 +1,12 @@
+<dec f='tvm/include/tvm/node/structural_equal.h' l='154' type='void tvm::SEqualReducer::Handler::DeferFail(const tvm::ObjectPathPair &amp; mismatch_paths)'/>
+<doc f='tvm/include/tvm/node/structural_equal.h' l='147'>/*!
+     * \brief Mark the comparison as failed, but don&apos;t fail immediately.
+     *
+     * This is useful for producing better error messages when comparing containers.
+     * For example, if two array sizes mismatch, it&apos;s better to mark the comparison as failed
+     * but compare array elements anyway, so that we could find the true first mismatch.
+     */</doc>
+<ovr f='tvm/src/node/structural_equal.cc' l='242' c='_ZN3tvm21RemapVarSEqualHandler9DeferFailERKNS_14ObjectPathPairE'/>
+<use f='tvm/src/node/structural_hash.cc' l='456' u='c' c='_ZN3tvm14ArrayNodeTrait18SEqualReduceTracedEPKNS_7runtime9ArrayNodeES4_RKNS_13SEqualReducerE'/>
+<use f='tvm/src/node/structural_hash.cc' l='459' u='c' c='_ZN3tvm14ArrayNodeTrait18SEqualReduceTracedEPKNS_7runtime9ArrayNodeES4_RKNS_13SEqualReducerE'/>
+<ovr f='tvm/src/tir/analysis/deep_equal.cc' l='46' c='_ZN3tvm3tir20DeepCmpSEqualHandler9DeferFailERKNS_14ObjectPathPairE'/>

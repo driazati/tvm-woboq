@@ -1,0 +1,28 @@
+<dec f='tvm/include/tvm/target/virtual_device.h' l='274' type='void tvm::VirtualDevice::VirtualDevice(DLDeviceType device_type = kInvalidDeviceType, int virtual_device_id = -1, tvm::Target target = {}, tvm::MemoryScope memory_scope = {})'/>
+<use f='tvm/include/tvm/target/virtual_device.h' l='286' u='c' c='_ZN3tvm13VirtualDevice13ForDeviceTypeE12DLDeviceTypei'/>
+<use f='tvm/include/tvm/target/virtual_device.h' l='302' u='c' c='_ZN3tvm13VirtualDevice18ForDeviceAndTargetERK8DLDeviceNS_6TargetE'/>
+<use f='tvm/include/tvm/target/virtual_device.h' l='308' u='c' c='_ZN3tvm13VirtualDevice9ForTargetENS_6TargetE'/>
+<use f='tvm/include/tvm/target/virtual_device.h' l='313' u='c' c='_ZN3tvm13VirtualDevice14ForMemoryScopeENS_7runtime6StringE'/>
+<use f='tvm/include/tvm/target/virtual_device.h' l='319' u='c' c='_ZN3tvm13VirtualDevice29ForDeviceTargetAndMemoryScopeERK8DLDeviceNS_6TargetENS_7runtime6StringE'/>
+<doc f='tvm/include/tvm/target/virtual_device.h' l='263'>/*!
+   * \brief Construct a virtual device.
+   * \param device_type The device type for the virtual device, or \p kInvalidDeviceType if
+   * unconstrained.  If \p target is defined then must match its \p target-&gt;kind-&gt;device_type.
+   * \param virtual_device_id The device id for the virtual device, or -1 if unconstrained.
+   * \param target The target describing how to compile for the virtual device, or null if
+   * unconstrained.
+   * \param memory_scope The memory scope w.r.t. the virtual device which holds data, or &quot;&quot; if
+   * unconstrained.
+   * \return The virtual device.
+   */</doc>
+<use f='tvm/src/parser/parser.cc' l='1090' u='c' c='_ZN3tvm6parser6Parser16ParseFunctionDefEv'/>
+<use f='tvm/src/relay/transforms/annotate_texture_storage.cc' l='379' u='c' c='_ZN3tvm5relay22RewriteVDStorageScopes10VisitExpr_EPKNS0_7VarNodeE'/>
+<use f='tvm/src/relay/transforms/annotate_texture_storage.cc' l='391' u='c' c='_ZN3tvm5relay22RewriteVDStorageScopes10VisitExpr_EPKNS0_12ConstantNodeE'/>
+<use f='tvm/src/relay/transforms/annotate_texture_storage.cc' l='413' u='c' c='_ZN3tvm5relay22RewriteVDStorageScopes21DeviceAwareVisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/target/compilation_config.cc' l='122' u='c' c='_ZNK3tvm21CompilationConfigNode22CanonicalVirtualDeviceERKNS_13VirtualDeviceE'/>
+<use f='tvm/src/target/compilation_config.cc' l='177' u='c' c='_ZN3tvm21CompilationConfigNode4InitERKNS_9transform11PassContextERKNS_7runtime5ArrayINS_6TargetEvEE'/>
+<def f='tvm/src/target/virtual_device.cc' l='69' ll='80' type='void tvm::VirtualDevice::VirtualDevice(DLDeviceType device_type = kInvalidDeviceType, int virtual_device_id = -1, tvm::Target target = {}, tvm::MemoryScope memory_scope = {})'/>
+<use f='tvm/src/target/virtual_device.cc' l='83' u='c' c='_ZN3tvm13VirtualDevice18FullyUnconstrainedEv'/>
+<use f='tvm/src/target/virtual_device.cc' l='128' u='c' c='_ZN3tvm13VirtualDevice4JoinERKS0_S2_'/>
+<use f='tvm/src/target/virtual_device.cc' l='165' u='c' c='_ZN3tvm13VirtualDevice7DefaultERKS0_S2_'/>
+<use f='tvm/src/target/virtual_device.cc' l='171' u='c' c='_ZN3tvm18VirtualDeviceCache4MakeE12DLDeviceTypeiNS_6TargetENS_7runtime6StringE'/>

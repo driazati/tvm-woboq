@@ -1,0 +1,14 @@
+<def f='tvm/3rdparty/dmlc-core/include/dmlc/endian.h' l='51' ll='60' type='void dmlc::ByteSwap(void * data, size_t elem_bytes, size_t num_elems)'/>
+<use f='tvm/include/tvm/runtime/ndarray.h' l='480' u='c' c='_ZN3tvm7runtime12SaveDLTensorEPN4dmlc6StreamEPK8DLTensor'/>
+<use f='tvm/include/tvm/runtime/ndarray.h' l='520' u='c' c='_ZN3tvm7runtime7NDArray4LoadEPN4dmlc6StreamE'/>
+<doc f='tvm/3rdparty/dmlc-core/include/dmlc/endian.h' l='43'>/*!
+ * \brief A generic inplace byte swapping function.
+ * \param data The data pointer.
+ * \param elem_bytes The number of bytes of the data elements
+ * \param num_elems Number of elements in the data.
+ * \note Always try pass in constant elem_bytes to enable
+ *       compiler optimization
+ */</doc>
+<use f='tvm/src/runtime/rpc/rpc_endpoint.cc' l='419' u='c' c='_ZN3tvm7runtime11RPCEndpoint12EventHandler20HandleCopyFromRemoteEv'/>
+<use f='tvm/src/runtime/rpc/rpc_endpoint.cc' l='444' u='c' c='_ZN3tvm7runtime11RPCEndpoint12EventHandler18HandleCopyToRemoteEv'/>
+<use f='tvm/src/runtime/rpc/rpc_endpoint.cc' l='453' u='c' c='_ZN3tvm7runtime11RPCEndpoint12EventHandler18HandleCopyToRemoteEv'/>

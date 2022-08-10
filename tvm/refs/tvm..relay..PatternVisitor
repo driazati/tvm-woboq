@@ -1,0 +1,43 @@
+<inh f='tvm/include/tvm/relay/pattern_functor.h' l='66' c='tvm::relay::PatternFunctor'/>
+<def f='tvm/include/tvm/relay/pattern_functor.h' l='125' ll='134'/>
+<size>8</size>
+<doc f='tvm/include/tvm/relay/pattern_functor.h' l='119'>/*! \brief A simple visitor wrapper around PatternFunctor.
+ *
+ * Exposes two visitors with default traversal strategies, one
+ * which doesn&apos;t compute a result but can mutate internal state,
+ * and another which functionally builds a new pattern.
+ */</doc>
+<fun r='_ZN3tvm5relay14PatternVisitor13VisitPattern_EPKNS0_19PatternWildcardNodeE'/>
+<fun r='_ZN3tvm5relay14PatternVisitor13VisitPattern_EPKNS0_14PatternVarNodeE'/>
+<fun r='_ZN3tvm5relay14PatternVisitor13VisitPattern_EPKNS0_22PatternConstructorNodeE'/>
+<fun r='_ZN3tvm5relay14PatternVisitor13VisitPattern_EPKNS0_16PatternTupleNodeE'/>
+<fun r='_ZN3tvm5relay14PatternVisitor9VisitTypeERKNS_4TypeE'/>
+<fun r='_ZN3tvm5relay14PatternVisitor8VisitVarERKNS0_3VarE'/>
+<fun r='_ZN3tvm5relay14PatternVisitor16VisitConstructorERKNS_11ConstructorE'/>
+<ovr f='tvm/src/relay/analysis/util.cc' l='176' c='tvm::relay::VarVisitor'/>
+<use f='tvm/src/relay/analysis/util.cc' l='176'/>
+<size>8</size>
+<ovr f='tvm/src/relay/analysis/well_formed.cc' l='35' c='tvm::relay::WellFormedChecker'/>
+<use f='tvm/src/relay/analysis/well_formed.cc' l='35'/>
+<size>8</size>
+<ovr f='tvm/src/relay/ir/indexed_graph.cc' l='138' c='tvm::relay::CreateIndexedGraph(consttvm::relay::Expr&amp;)::Creator::PatternCreator'/>
+<use f='tvm/src/relay/ir/indexed_graph.cc' l='138' c='_ZN3tvm5relay18CreateIndexedGraphERKNS_9RelayExprE'/>
+<ovr f='tvm/src/relay/ir/indexed_graph.cc' l='276' c='tvm::relay::CreateIndexedGraph(consttvm::relay::Expr&amp;)::Annotator::PatternAnnotator'/>
+<use f='tvm/src/relay/ir/indexed_graph.cc' l='276' c='_ZN3tvm5relay18CreateIndexedGraphERKNS_9RelayExprE'/>
+<ovr f='tvm/src/relay/ir/indexed_graph.cc' l='356' c='tvm::relay::CreateIndexedGraph(consttvm::relay::Expr&amp;)::Blocker::PatternBlocker'/>
+<use f='tvm/src/relay/ir/indexed_graph.cc' l='356' c='_ZN3tvm5relay18CreateIndexedGraphERKNS_9RelayExprE'/>
+<size>8</size>
+<ovr f='tvm/src/relay/transforms/dead_code.cc' l='273' c='tvm::relay::(anonymousnamespace)::PurityVisitor::PurityPatternVisitor'/>
+<use f='tvm/src/relay/transforms/dead_code.cc' l='273'/>
+<size>8</size>
+<ovr f='tvm/src/relay/transforms/device_planner.cc' l='618' c='tvm::relay::transform::(anonymousnamespace)::DeviceAnalyzer::DevicePatternAnalyzer'/>
+<use f='tvm/src/relay/transforms/device_planner.cc' l='618'/>
+<size>8</size>
+<ovr f='tvm/src/relay/transforms/partial_eval.cc' l='1041' c='InitializeFuncIdVisitor'/>
+<use f='tvm/src/relay/transforms/partial_eval.cc' l='1041' c='_ZN3tvm5relay12partial_eval16PartialEvaluator16InitializeFuncIdERKNS_9RelayExprE'/>
+<ovr f='tvm/src/relay/transforms/partial_eval.cc' l='1058' c='RegisterFuncIdVisitor'/>
+<use f='tvm/src/relay/transforms/partial_eval.cc' l='1058' c='_ZN3tvm5relay12partial_eval16PartialEvaluator14RegisterFuncIdERKNS_9RelayExprE'/>
+<size>8</size>
+<ovr f='tvm/src/relay/transforms/to_cps.cc' l='282' c='Remapper'/>
+<use f='tvm/src/relay/transforms/to_cps.cc' l='282' c='_ZN3tvm5relay5ToCPSERKNS0_8FunctionERKNS_8IRModuleEPSt13unordered_mapINS_9GlobalVarES8_NS_7runtime13ObjectPtrHashENS9_14ObjectPtrEqualESaISt4pairIKS8_S8_EEE'/>
+<size>8</size>

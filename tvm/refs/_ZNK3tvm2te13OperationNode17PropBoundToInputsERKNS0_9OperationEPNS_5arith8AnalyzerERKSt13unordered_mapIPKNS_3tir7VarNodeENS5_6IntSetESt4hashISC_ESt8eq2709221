@@ -1,0 +1,17 @@
+<dec f='tvm/include/tvm/te/operation.h' l='108' type='void tvm::te::OperationNode::PropBoundToInputs(const tvm::te::Operation &amp; self, arith::Analyzer * analyzer, const std::unordered_map&lt;const VarNode *, IntSet&gt; &amp; dom_map, std::unordered_map&lt;Tensor, TensorDom&gt; * out_dom_map) const'/>
+<doc f='tvm/include/tvm/te/operation.h' l='99'>/*!
+   * \brief Propagate the bounds to inputs
+   * \param self The reference to self.
+   * \param analyzer The analyzer to be used in the function.
+   * \param dom_map the domain map of Variables(corresponds to root_iter_vars)
+   * \param out_dom_map The output domain.
+   *  The function is only asked to fill the bounds for Tensors that
+   *  is already in the out_dom_map
+   */</doc>
+<ovr f='tvm/src/te/operation/compute_op.cc' l='202' c='_ZNK3tvm2te13ComputeOpNode17PropBoundToInputsERKNS0_9OperationEPNS_5arith8AnalyzerERKSt13unordered_mapIPKNS_3tir7VarNodeENS5_6IntSetESt4hashISC_ESt8eq10941970'/>
+<ovr f='tvm/src/te/operation/extern_op.cc' l='107' c='_ZNK3tvm2te12ExternOpNode17PropBoundToInputsERKNS0_9OperationEPNS_5arith8AnalyzerERKSt13unordered_mapIPKNS_3tir7VarNodeENS5_6IntSetESt4hashISC_ESt8equ1920430'/>
+<ovr f='tvm/src/te/operation/hybrid_op.cc' l='121' c='_ZNK3tvm2te12HybridOpNode17PropBoundToInputsERKNS0_9OperationEPNS_5arith8AnalyzerERKSt13unordered_mapIPKNS_3tir7VarNodeENS5_6IntSetESt4hashISC_ESt8equ6264819'/>
+<ovr f='tvm/src/te/operation/placeholder_op.cc' l='77' c='_ZNK3tvm2te17PlaceholderOpNode17PropBoundToInputsERKNS0_9OperationEPNS_5arith8AnalyzerERKSt13unordered_mapIPKNS_3tir7VarNodeENS5_6IntSetESt4hashISC_ES253690'/>
+<ovr f='tvm/src/te/operation/scan_op.cc' l='161' c='_ZNK3tvm2te10ScanOpNode17PropBoundToInputsERKNS0_9OperationEPNS_5arith8AnalyzerERKSt13unordered_mapIPKNS_3tir7VarNodeENS5_6IntSetESt4hashISC_ESt8equal12372833'/>
+<ovr f='tvm/src/te/operation/tensor_compute_op.cc' l='113' c='_ZNK3tvm2te19TensorComputeOpNode17PropBoundToInputsERKNS0_9OperationEPNS_5arith8AnalyzerERKSt13unordered_mapIPKNS_3tir7VarNodeENS5_6IntSetESt4hashISC_15099893'/>
+<use f='tvm/src/te/schedule/bound.cc' l='202' u='c' c='_ZN3tvm2te14InferRootBoundERKNS0_5StageERKNS0_12GraphContextEPSt13unordered_mapINS_3tir7IterVarENS_5RangeESt4hashIS9_ESt8equal_toIS9_ESaISt4pairIKS9_SA_EEE'/>

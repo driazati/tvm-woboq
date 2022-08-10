@@ -1,0 +1,27 @@
+<dec f='tvm/src/relay/qnn/utils.h' l='208' type='tvm::relay::Expr tvm::relay::qnn::FixedPointMultiplyPerChannel(tvm::relay::Expr tensor, std::vector&lt;double&gt; multiplier, const Array&lt;tvm::relay::IndexExpr&gt; &amp; input_shape, int channel_axis, const std::string &amp; rounding)'/>
+<doc f='tvm/src/relay/qnn/utils.h' l='184'>/*
+ * \brief Fixed point multiplication between integer tensor with floating point
+ scalar where the input tensor is per-axis/per-channel quantized..
+ * \param tensor The quantized input tensor of dtype int64.
+ * \param multiplier The scalar multiplier.
+ * \param input_shape Shape of the input tensor.
+ * \param channel_axis The channel_axis along which the input tensor is quantized. Default value is
+ -1 which corresponds to the last channel_axis.
+ * \param rounding &quot;UPWARD&quot; or &quot;TONEAREST&quot;. The rounding direction when the value
+ is midway between&quot; &quot;two representable values.
+ * \return The sequence of Relay ops for fixed point multiplication.
+
+ * \note Original compuation is scale_fp32 * quantized_tensor.  To convert into
+ *       integer computation, the multiplication with fp32 vector can be
+ *       replaced by multiplication with an int vector and then right shifting
+ *       the result. This approximates the floating point computation with a
+ *       fixed point computation.
+ *
+ *       Computation of fixed point multiplication is consist of following
+ steps:
+ *       1) Multiply the fixed point multiplier with quantized tensor.
+ *       2) Round the result.
+ *       3) Right shift the result
+ */</doc>
+<use f='tvm/src/relay/qnn/op/requantize.cc' l='250' u='c' c='_ZN3tvm5relay3qnn18RequantizeLowerIntERKNS_9RelayExprES4_S4_S4_S4_PKNS1_15RequantizeAttrsERKNS_7runtime5ArrayINS_8PrimExprEvEERKNS8_8DataTypeE'/>
+<def f='tvm/src/relay/qnn/utils.cc' l='112' ll='200' type='tvm::relay::Expr tvm::relay::qnn::FixedPointMultiplyPerChannel(tvm::relay::Expr tensor, std::vector&lt;double&gt; multipliers, const Array&lt;tvm::relay::IndexExpr&gt; &amp; input_shape, int channel_axis, const std::string &amp; rounding)'/>

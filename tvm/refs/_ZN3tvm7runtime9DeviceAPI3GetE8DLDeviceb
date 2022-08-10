@@ -1,0 +1,27 @@
+<dec f='tvm/include/tvm/runtime/device_api.h' l='205' type='static tvm::runtime::DeviceAPI * tvm::runtime::DeviceAPI::Get(tvm::Device dev, bool allow_missing = false)'/>
+<doc f='tvm/include/tvm/runtime/device_api.h' l='199'>/*!
+   * \brief Get device API based on device.
+   * \param dev The device
+   * \param allow_missing Whether allow missing
+   * \return The corresponding device API.
+   */</doc>
+<use f='tvm/src/runtime/vm/naive_allocator.h' l='43' u='c' c='_ZN3tvm7runtime2vm14NaiveAllocator5AllocEmm10DLDataType'/>
+<use f='tvm/src/runtime/vm/naive_allocator.h' l='50' u='c' c='_ZN3tvm7runtime2vm14NaiveAllocator4FreeERKNS1_6BufferE'/>
+<def f='tvm/src/runtime/c_runtime_api.cc' l='139' ll='141' type='static tvm::runtime::DeviceAPI * tvm::runtime::DeviceAPI::Get(tvm::Device dev, bool allow_missing = false)'/>
+<use f='tvm/src/runtime/ndarray.cc' l='75' u='c' c='_ZN3tvm7runtime18ArrayCopyFromBytesEP8DLTensorPKvm'/>
+<use f='tvm/src/runtime/ndarray.cc' l='77' u='c' c='_ZN3tvm7runtime18ArrayCopyFromBytesEP8DLTensorPKvm'/>
+<use f='tvm/src/runtime/ndarray.cc' l='94' u='c' c='_ZN3tvm7runtime16ArrayCopyToBytesEPK8DLTensorPvm'/>
+<use f='tvm/src/runtime/ndarray.cc' l='96' u='c' c='_ZN3tvm7runtime16ArrayCopyToBytesEPK8DLTensorPvm'/>
+<use f='tvm/src/runtime/ndarray.cc' l='106' u='c' c='_ZN3tvm7runtime7NDArray8Internal14DefaultDeleterEPNS0_6ObjectE'/>
+<use f='tvm/src/runtime/ndarray.cc' l='203' u='c' c='_ZN3tvm7runtime7NDArray5EmptyENS0_10ShapeTupleE10DLDataType8DLDeviceNS0_8OptionalINS0_6StringEEE'/>
+<use f='tvm/src/runtime/ndarray.cc' l='282' u='c' c='_ZN3tvm7runtime7NDArray10CopyFromToEPK8DLTensorPS2_Pv'/>
+<use f='tvm/src/runtime/profiling.cc' l='868' u='c' c='_ZN3tvm7runtime9profiling17WrapTimeEvaluatorENS0_10PackedFuncE8DLDeviceiiiiiS2_'/>
+<use f='tvm/src/runtime/rpc/rpc_local_session.cc' l='138' u='c' c='_ZN3tvm7runtime12LocalSession12GetDeviceAPIE8DLDeviceb'/>
+<use f='tvm/src/runtime/vm/pooled_allocator.h' l='61' u='c' c='_ZN3tvm7runtime2vm15PooledAllocator5AllocEmm10DLDataType'/>
+<use f='tvm/src/runtime/vm/pooled_allocator.h' l='66' u='c' c='_ZN3tvm7runtime2vm15PooledAllocator5AllocEmm10DLDataType'/>
+<use f='tvm/src/runtime/vm/pooled_allocator.h' l='91' u='c' c='_ZN3tvm7runtime2vm15PooledAllocator10ReleaseAllEv'/>
+<use f='tvm/src/target/llvm/codegen_amdgpu.cc' l='66' u='c' c='_ZN3tvm7codegen12_GLOBAL__N_128DetectROCMmaxThreadsPerBlockEv'/>
+<use f='tvm/src/target/llvm/codegen_amdgpu.cc' l='71' u='c' c='_ZN3tvm7codegen12_GLOBAL__N_128DetectROCMmaxThreadsPerBlockEv'/>
+<use f='tvm/src/target/target.cc' l='976' u='c' c='_ZN3tvm14TargetInternal11QueryDeviceEiPKNS_10TargetNodeE'/>
+<use f='tvm/src/target/target_kind.cc' l='116' u='c' c='_ZN3tvmL16DetectDeviceFlagE8DLDeviceNS_7runtime14DeviceAttrKindEPNS1_11TVMRetValueE'/>
+<use f='tvm/src/target/target_kind.cc' l='128' u='c' c='_ZN3tvmL16DetectDeviceFlagE8DLDeviceNS_7runtime14DeviceAttrKindEPNS1_11TVMRetValueE'/>

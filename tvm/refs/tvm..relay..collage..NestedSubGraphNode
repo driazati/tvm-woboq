@@ -1,0 +1,53 @@
+<inh f='tvm/include/tvm/runtime/object.h' l='167' c='tvm::runtime::Object'/>
+<def f='tvm/src/relay/collage/sub_graph.h' l='99' ll='138'/>
+<use f='tvm/src/relay/collage/sub_graph.h' l='110' c='_ZNK3tvm5relay7collage18NestedSubGraphNodeeqERKS2_'/>
+<use f='tvm/src/relay/collage/sub_graph.h' l='111' c='_ZNK3tvm5relay7collage18NestedSubGraphNodeneERKS2_'/>
+<use f='tvm/src/relay/collage/sub_graph.h' l='112' c='_ZNK3tvm5relay7collage18NestedSubGraphNodeltERKS2_'/>
+<use f='tvm/src/relay/collage/sub_graph.h' l='174' c='_ZNK3tvm5relay7collage14NestedSubGraphptEv'/>
+<use f='tvm/src/relay/collage/sub_graph.h' l='174' c='_ZNK3tvm5relay7collage14NestedSubGraphptEv'/>
+<use f='tvm/src/relay/collage/sub_graph.h' l='174' c='_ZNK3tvm5relay7collage14NestedSubGraph3getEv'/>
+<use f='tvm/src/relay/collage/sub_graph.h' l='174'/>
+<size>32</size>
+<doc f='tvm/src/relay/collage/sub_graph.h' l='87'>/*!
+ * \brief A nested sub-graph is a sub-graph which is to be nested inside a function as part of some
+ * enclosing sub-graph.
+ *
+ * Extraction yields a function with input nodes replaced by parameters and exit nodes in the
+ * function result. Rewriting replaces the sub-graph with a call to that function, and all
+ * outputs with (projections from) the call result.
+ *
+ * (Note that it&apos;s tempting to move attrs_ into \p SubGraphNode and thus avoid this class.
+ * However we found the implementation was easier to understand in this form since it makes
+ * the result of \p Extract unambiguous.)
+ */</doc>
+<mbr r='tvm::relay::collage::NestedSubGraphNode::sub_graph_obj_' o='128' t='tvm::runtime::ObjectRef'/>
+<mbr r='tvm::relay::collage::NestedSubGraphNode::attrs_' o='192' t='tvm::relay::collage::FunctionAttrsMap'/>
+<fun r='_ZN3tvm5relay7collage18NestedSubGraphNode10VisitAttrsEPNS_11AttrVisitorE'/>
+<fun r='_ZNK3tvm5relay7collage18NestedSubGraphNode9sub_graphEv'/>
+<fun r='_ZNK3tvm5relay7collage18NestedSubGraphNodeeqERKS2_'/>
+<fun r='_ZNK3tvm5relay7collage18NestedSubGraphNodeneERKS2_'/>
+<fun r='_ZNK3tvm5relay7collage18NestedSubGraphNodeltERKS2_'/>
+<fun r='_ZNK3tvm5relay7collage18NestedSubGraphNode4hashEv'/>
+<fun r='_ZNK3tvm5relay7collage18NestedSubGraphNode8ToStringB5cxx11Ev'/>
+<fun r='_ZNK3tvm5relay7collage18NestedSubGraphNode7ExtractERKNS1_13DataflowGraphE'/>
+<fun r='_ZNK3tvm5relay7collage18NestedSubGraphNode7RewriteERKNS1_13DataflowGraphERKNS_9RelayExprE'/>
+<smbr r='tvm::relay::collage::NestedSubGraphNode::_type_key' t='const char *const'/>
+<smbr r='tvm::relay::collage::NestedSubGraphNode::_type_final' t='const bool'/>
+<smbr r='tvm::relay::collage::NestedSubGraphNode::_type_child_slots' t='const int'/>
+<fun r='_ZN3tvm5relay7collage18NestedSubGraphNode16RuntimeTypeIndexEv'/>
+<fun r='_ZN3tvm5relay7collage18NestedSubGraphNode27_GetOrAllocRuntimeTypeIndexEv'/>
+<use f='tvm/src/relay/collage/sub_graph.cc' l='486'/>
+<use f='tvm/src/relay/collage/sub_graph.cc' l='486'/>
+<use f='tvm/src/relay/collage/sub_graph.cc' l='486'/>
+<use f='tvm/src/relay/collage/sub_graph.cc' l='494' c='_ZNK3tvm5relay7collage18NestedSubGraphNodeeqERKS2_'/>
+<use f='tvm/src/relay/collage/sub_graph.cc' l='498' c='_ZNK3tvm5relay7collage18NestedSubGraphNodeltERKS2_'/>
+<use f='tvm/src/relay/collage/sub_graph.cc' l='530' c='_ZN3tvm5relay7collage14NestedSubGraphC1ENS1_8SubGraphENS_7runtime3MapINS4_6StringENS4_9ObjectRefEvvEE'/>
+<size>32</size>
+<fun r='_ZN3tvm5relay7collage18NestedSubGraphNode10VisitAttrsEPNS_11AttrVisitorE'/>
+<fun r='_ZNK3tvm5relay7collage18NestedSubGraphNode9sub_graphEv'/>
+<fun r='_ZNK3tvm5relay7collage18NestedSubGraphNodeeqERKS2_'/>
+<fun r='_ZNK3tvm5relay7collage18NestedSubGraphNodeltERKS2_'/>
+<fun r='_ZNK3tvm5relay7collage18NestedSubGraphNode4hashEv'/>
+<fun r='_ZNK3tvm5relay7collage18NestedSubGraphNode8ToStringB5cxx11Ev'/>
+<fun r='_ZNK3tvm5relay7collage18NestedSubGraphNode7ExtractERKNS1_13DataflowGraphE'/>
+<fun r='_ZNK3tvm5relay7collage18NestedSubGraphNode7RewriteERKNS1_13DataflowGraphERKNS_9RelayExprE'/>

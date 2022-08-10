@@ -1,0 +1,440 @@
+<dec f='tvm/include/tvm/relay/expr.h' l='299' type='tvm::Array&lt;relay::Expr&gt;'/>
+<use f='tvm/include/tvm/relay/expr.h' l='326' u='a' c='_ZN3tvm5relay8CallNode10VisitAttrsEPNS_11AttrVisitorE'/>
+<use f='tvm/include/tvm/relay/expr.h' l='337' u='r' c='_ZNK3tvm5relay8CallNode12SEqualReduceEPKS1_NS_13SEqualReducerE'/>
+<use f='tvm/include/tvm/relay/expr.h' l='337' u='r' c='_ZNK3tvm5relay8CallNode12SEqualReduceEPKS1_NS_13SEqualReducerE'/>
+<use f='tvm/include/tvm/relay/expr.h' l='344' u='r' c='_ZNK3tvm5relay8CallNode11SHashReduceENS_12SHashReducerE'/>
+<use f='tvm/include/tvm/relay/expr_functor.h' l='487' u='m' c='_ZN3tvm5relay14ExpandDataflowENS_9RelayExprET_T0_'/>
+<use f='tvm/include/tvm/relay/expr_functor.h' l='493' u='m' c='_ZN3tvm5relay14ExpandDataflowENS_9RelayExprET_T0_'/>
+<use f='tvm/include/tvm/relay/expr_functor.h' l='495' u='m' c='_ZN3tvm5relay14ExpandDataflowENS_9RelayExprET_T0_'/>
+<use f='tvm/include/tvm/relay/expr_functor.h' l='495' u='m' c='_ZN3tvm5relay14ExpandDataflowENS_9RelayExprET_T0_'/>
+<offset>448</offset>
+<doc f='tvm/include/tvm/relay/expr.h' l='298'>/*! \brief The arguments(inputs) of the call */</doc>
+<use f='tvm/src/printer/relay_text_printer.cc' l='501' c='_ZN3tvm5relay16RelayTextPrinter10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/analysis/annotated_region_set.cc' l='58' u='m' c='_ZN3tvm5relay22AnnotatedRegionSetNode12MergeRegionsENS0_15AnnotatedRegionES2_'/>
+<use f='tvm/src/relay/analysis/annotated_region_set.cc' l='139' u='r' c='_ZN3tvm5relay18AnnotatedRegionSet7Creator10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/analysis/annotated_region_set.cc' l='142' u='m' c='_ZN3tvm5relay18AnnotatedRegionSet7Creator10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/analysis/annotated_region_set.cc' l='156' u='m' c='_ZN3tvm5relay18AnnotatedRegionSet7Creator10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/analysis/annotated_region_set.cc' l='160' u='m' c='_ZN3tvm5relay18AnnotatedRegionSet7Creator10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/analysis/dependency_graph.cc' l='90' c='_ZN3tvm5relay15DependencyGraph7Creator10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/analysis/get_calibration_data.cc' l='60' c='_ZN3tvm5relay9Collector8Rewrite_EPKNS0_8CallNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/analysis/get_calibration_data.cc' l='153' u='m' c='_ZN3tvm5relay12OutputMapper8Rewrite_EPKNS0_8CallNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/analysis/get_calibration_data.cc' l='165' u='m' c='_ZN3tvm5relay12OutputMapper8Rewrite_EPKNS0_8CallNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/backend/utils.h' l='467' u='m' c='_ZN3tvm5relay7backend11GetRootCallEPKNS0_8CallNodeEiRKSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaISB_EE'/>
+<use f='tvm/src/relay/backend/utils.h' l='469' u='m' c='_ZN3tvm5relay7backend11GetRootCallEPKNS0_8CallNodeEiRKSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaISB_EE'/>
+<use f='tvm/src/relay/backend/utils.h' l='470' u='m' c='_ZN3tvm5relay7backend11GetRootCallEPKNS0_8CallNodeEiRKSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaISB_EE'/>
+<use f='tvm/src/relay/backend/utils.h' l='473' u='m' c='_ZN3tvm5relay7backend11GetRootCallEPKNS0_8CallNodeEiRKSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaISB_EE'/>
+<use f='tvm/src/relay/backend/utils.h' l='474' u='m' c='_ZN3tvm5relay7backend11GetRootCallEPKNS0_8CallNodeEiRKSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaISB_EE'/>
+<use f='tvm/src/relay/backend/utils.h' l='477' u='m' c='_ZN3tvm5relay7backend11GetRootCallEPKNS0_8CallNodeEiRKSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaISB_EE'/>
+<use f='tvm/src/relay/backend/utils.h' l='493' u='m' c='_ZN3tvm5relay7backend11GetRootCallEPKNS0_8CallNodeERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<use f='tvm/src/relay/backend/utils.h' l='495' u='m' c='_ZN3tvm5relay7backend11GetRootCallEPKNS0_8CallNodeERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<use f='tvm/src/relay/backend/utils.h' l='519' u='m' c='_ZN3tvm5relay7backend11GetRootCallEPKNS0_8CallNodeEiRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<use f='tvm/src/relay/backend/utils.h' l='522' u='m' c='_ZN3tvm5relay7backend11GetRootCallEPKNS0_8CallNodeEiRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<use f='tvm/src/relay/backend/utils.h' l='523' u='m' c='_ZN3tvm5relay7backend11GetRootCallEPKNS0_8CallNodeEiRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<use f='tvm/src/relay/backend/utils.h' l='527' u='m' c='_ZN3tvm5relay7backend11GetRootCallEPKNS0_8CallNodeEiRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<use f='tvm/src/relay/transforms/pattern_utils.h' l='198' u='m' c='_ZN3tvm5relay15IsDepthwiseConvERKNS0_4CallET_RKNS_3tir6LayoutE'/>
+<use f='tvm/src/relay/transforms/pattern_utils.h' l='209' u='m' c='_ZN3tvm5relay25GetConv2DSuperChannelsDimEPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/analysis/mac_count.cc' l='67' u='r' c='_ZN3tvm5relay9mac_count12ConvMacCountERKNS0_4CallE'/>
+<use f='tvm/src/relay/analysis/mac_count.cc' l='96' u='r' c='_ZN3tvm5relay9mac_count23Conv2dTransposeMacCountERKNS0_4CallE'/>
+<use f='tvm/src/relay/analysis/mac_count.cc' l='127' u='r' c='_ZN3tvm5relay9mac_count13DenseMacCountERKNS0_4CallE'/>
+<use f='tvm/src/relay/analysis/mac_count.cc' l='149' u='r' c='_ZN3tvm5relay9mac_count19BatchMatmulMacCountERKNS0_4CallE'/>
+<use f='tvm/src/relay/analysis/util.cc' l='423' u='m' c='_ZN3tvm5relay21IsAllPositiveConstantERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/analysis/well_formed.cc' l='125' c='_ZN3tvm5relay17WellFormedChecker10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/backend/aot_executor_codegen.cc' l='98' u='r' c='_ZN3tvm5relay7backend20AOTOnDemandAllocator21DeviceAwareVisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/backend/contrib/codegen_c/codegen.cc' l='149' u='m' c='_ZN3tvm5relay7contrib8CodegenC10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/backend/contrib/codegen_c/codegen.cc' l='161' u='m' c='_ZN3tvm5relay7contrib8CodegenC10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/backend/contrib/codegen_c/codegen.cc' l='177' u='m' c='_ZN3tvm5relay7contrib8CodegenC10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/backend/contrib/codegen_c/codegen.cc' l='178' u='m' c='_ZN3tvm5relay7contrib8CodegenC10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/backend/contrib/example_target_hooks/relay_to_tir.cc' l='247' u='r' c='_ZN3tvm5relay7contrib20example_target_hooks12_GLOBAL__N_120ConvertAddToSubtract8Rewrite_EPKNS0_8CallNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/backend/graph_executor_codegen.cc' l='456' c='_ZN3tvm5relay7backend20GraphExecutorCodegen16GraphAddCallNodeEPKNS0_8CallNodeESt13unordered_mapINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEN411525254'/>
+<use f='tvm/src/relay/backend/graph_plan_memory.cc' l='224' c='_ZN3tvm5relay17StorageAllocaInit21DeviceAwareVisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/backend/graph_plan_memory.cc' l='347' c='_ZN3tvm5relay16StorageAllocator21DeviceAwareVisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/backend/interpreter.cc' l='667' u='m' c='_ZN3tvm5relay11Interpreter6InvokeERKNS0_18InterpreterClosureERKNS_7runtime5ArrayINS5_9ObjectRefEvEERKNS0_3VarE'/>
+<use f='tvm/src/relay/backend/interpreter.cc' l='762' c='_ZN3tvm5relay11Interpreter10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/backend/interpreter.cc' l='769' u='m' c='_ZN3tvm5relay11Interpreter10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/backend/liveness_analysis.cc' l='129' c='_ZN3tvm5relay9transform15VarUseCollector10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/backend/te_compiler.cc' l='853' c='_ZN3tvm5relay3tec22LowerTensorExprMutator21DeviceAwareVisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='225' c='_ZN3tvm5relay3tec16LowerToTECompute10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='235' u='m' c='_ZN3tvm5relay3tec16LowerToTECompute10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='415' c='_ZN3tvm5relay3tec15ScheduleBuilder10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='684' u='m' c='_ZN3tvm5relay3tec13MakeShapeFunc10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='704' u='m' c='_ZN3tvm5relay3tec13MakeShapeFunc10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='712' u='m' c='_ZN3tvm5relay3tec13MakeShapeFunc10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='713' u='m' c='_ZN3tvm5relay3tec13MakeShapeFunc10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='724' u='m' c='_ZN3tvm5relay3tec13MakeShapeFunc10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/op/op_common.h' l='130' c='_ZN3tvm5relay7OpMatchclERKNS0_4CallE'/>
+<use f='tvm/src/relay/op/op_common.h' l='133' c='_ZN3tvm5relay7OpMatchclERKNS0_4CallE'/>
+<use f='tvm/src/relay/backend/vm/compiler.cc' l='663' c='_ZN3tvm5relay2vm18VMFunctionCompiler21DeviceAwareVisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/backend/vm/compiler.cc' l='694' u='m' c='_ZN3tvm5relay2vm18VMFunctionCompiler21DeviceAwareVisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/backend/vm/lambda_lift.cc' l='89' u='r' c='_ZN3tvm5relay2vm12LambdaLifter21DeviceAwareVisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/backend/vm/manifest_lifetimes.cc' l='171' u='m' c='_ZN3tvm5relay9transform15AliasEliminator10VisitExpr_EPKNS0_7LetNodeE'/>
+<use f='tvm/src/relay/ir/dataflow_matcher.cc' l='247' u='r' c='_ZN3tvm5relay16DFPatternMatcher15VisitDFPattern_EPKNS0_15CallPatternNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/ir/dataflow_matcher.cc' l='253' u='r' c='_ZN3tvm5relay16DFPatternMatcher15VisitDFPattern_EPKNS0_15CallPatternNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/ir/dataflow_matcher.cc' l='264' u='m' c='_ZN3tvm5relay16DFPatternMatcher15VisitDFPattern_EPKNS0_15CallPatternNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/ir/dataflow_matcher.cc' l='265' u='m' c='_ZN3tvm5relay16DFPatternMatcher15VisitDFPattern_EPKNS0_15CallPatternNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/ir/dataflow_matcher.cc' l='286' u='m' c='_ZN3tvm5relay16DFPatternMatcher15VisitDFPattern_EPKNS0_15CallPatternNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/ir/dataflow_matcher.cc' l='287' u='m' c='_ZN3tvm5relay16DFPatternMatcher15VisitDFPattern_EPKNS0_15CallPatternNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/ir/dataflow_matcher.cc' l='678' c='_ZN3tvm5relay14PatternGrouper11CreateGroupERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/ir/expr.cc' l='221' u='w' c='_ZN3tvm5relay4CallC1ENS_9RelayExprENS_7runtime5ArrayIS2_vEENS_5AttrsENS4_INS_4TypeEvEENS_4SpanE'/>
+<use f='tvm/src/relay/ir/expr.cc' l='234' u='r' c='_ZN3tvm5relay10WithFieldsENS0_4CallENS_7runtime8OptionalINS_9RelayExprEEENS3_INS2_5ArrayIS4_vEEEENS3_INS_5AttrsEEENS3_INS6_INS_4TypeEvEEEENS3_INS_13Vi7126351'/>
+<use f='tvm/src/relay/ir/expr.cc' l='244' u='m' c='_ZN3tvm5relay10WithFieldsENS0_4CallENS_7runtime8OptionalINS_9RelayExprEEENS3_INS2_5ArrayIS4_vEEEENS3_INS_5AttrsEEENS3_INS6_INS_4TypeEvEEEENS3_INS_13Vi7126351'/>
+<use f='tvm/src/relay/ir/expr.cc' l='246' u='m' c='_ZN3tvm5relay10WithFieldsENS0_4CallENS_7runtime8OptionalINS_9RelayExprEEENS3_INS2_5ArrayIS4_vEEEENS3_INS_5AttrsEEENS3_INS6_INS_4TypeEvEEEENS3_INS_13Vi7126351'/>
+<use f='tvm/src/relay/ir/expr.cc' l='266' u='w' c='_ZN3tvm5relay10WithFieldsENS0_4CallENS_7runtime8OptionalINS_9RelayExprEEENS3_INS2_5ArrayIS4_vEEEENS3_INS_5AttrsEEENS3_INS6_INS_4TypeEvEEEENS3_INS_13Vi7126351'/>
+<use f='tvm/src/relay/ir/expr.cc' l='285' u='r'/>
+<use f='tvm/src/relay/ir/expr.cc' l='564' u='w' c='_ZN3tvm5relay9DismantleERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/ir/expr.cc' l='578' u='m' c='_ZN3tvm5relay9DismantleERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/ir/expr.cc' l='579' u='m' c='_ZN3tvm5relay9DismantleERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/ir/expr.cc' l='579' u='m' c='_ZN3tvm5relay9DismantleERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/ir/expr.cc' l='611' u='m' c='_ZN3tvm5relay4CallD1Ev'/>
+<use f='tvm/src/relay/ir/expr_functor.cc' l='221' u='m' c='_ZN3tvm5relay11ExprMutator10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/ir/expr_functor.cc' l='222' c='_ZN3tvm5relay11ExprMutator10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/ir/expr_functor.cc' l='335' c='_ZN3tvm5relay11ExprVisitor10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/ir/indexed_graph.cc' l='47' u='m' c='_ZZN3tvm5relay12RefToSummaryB5cxx11ERKNS_9RelayExprEEN7Visitor10VisitExpr_B5cxx11EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/ir/indexed_graph.cc' l='230' c='_ZZN3tvm5relay18CreateIndexedGraphERKNS_9RelayExprEEN9Annotator10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/op/call/call.cc' l='100' u='m' c='_ZN3tvm5relay19GetCallLoweredPropsEPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/op/call/call.cc' l='101' u='m' c='_ZN3tvm5relay19GetCallLoweredPropsEPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/op/call/call.cc' l='104' u='m' c='_ZN3tvm5relay19GetCallLoweredPropsEPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/op/memory/device_copy.cc' l='97' u='m' c='_ZN3tvm5relay18GetDeviceCopyPropsEPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/op/memory/device_copy.cc' l='104' u='m' c='_ZN3tvm5relay18GetDeviceCopyPropsEPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/op/memory/device_copy.cc' l='108' u='m' c='_ZN3tvm5relay18GetDeviceCopyPropsEPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/op/memory/on_device.cc' l='129' u='m' c='_ZN3tvm5relay16GetOnDevicePropsEPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/op/memory/on_device.cc' l='133' u='m' c='_ZN3tvm5relay16GetOnDevicePropsEPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/quantize/calibrate.cc' l='176' u='m' c='_ZN3tvm5relay8quantize14StatsCollector10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/quantize/realize.cc' l='362' u='r' c='_ZN3tvm5relay8quantize10AddRealizeERKNS0_4CallERKNS_7runtime5ArrayINS_9RelayExprEvEERKNS5_9ObjectRefE'/>
+<use f='tvm/src/relay/quantize/realize.cc' l='399' u='m' c='_ZN3tvm5relay8quantize18ConcatenateRealizeERKNS0_4CallERKNS_7runtime5ArrayINS_9RelayExprEvEERKNS5_9ObjectRefE'/>
+<use f='tvm/src/relay/quantize/realize.cc' l='402' u='m' c='_ZN3tvm5relay8quantize18ConcatenateRealizeERKNS0_4CallERKNS_7runtime5ArrayINS_9RelayExprEvEERKNS5_9ObjectRefE'/>
+<use f='tvm/src/relay/transforms/transform_layout.h' l='343' c='_ZN3tvm5relay14LayoutRewriterERKNS0_4CallERKNS_7runtime5ArrayINS_9RelayExprEvEERKNS4_9ObjectRefE'/>
+<use f='tvm/src/relay/transforms/transform_layout.h' l='416' c='_ZN3tvm5relay14LayoutRewriterERKNS0_4CallERKNS_7runtime5ArrayINS_9RelayExprEvEERKNS4_9ObjectRefE'/>
+<use f='tvm/src/relay/transforms/alter_op_layout.cc' l='71' c='_ZN3tvm5relay15alter_op_layout27AlterTransformMemorizerNode18CallWithNewLayoutsERKNS0_4CallENS_5AttrsERKSt6vectorINS_9RelayExprESaIS8_EE'/>
+<use f='tvm/src/relay/transforms/annotate_target.cc' l='78' u='m' c='_ZN3tvm5relay15annotate_target22AnnotateTargetRewriter12AnnotateArgsERKNS_7runtime5ArrayINS_9RelayExprEvEERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<use f='tvm/src/relay/transforms/annotate_target.cc' l='84' u='m' c='_ZN3tvm5relay15annotate_target22AnnotateTargetRewriter12AnnotateArgsERKNS_7runtime5ArrayINS_9RelayExprEvEERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<use f='tvm/src/relay/transforms/annotate_target.cc' l='86' u='m' c='_ZN3tvm5relay15annotate_target22AnnotateTargetRewriter12AnnotateArgsERKNS_7runtime5ArrayINS_9RelayExprEvEERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<use f='tvm/src/relay/transforms/annotate_target.cc' l='94' u='m' c='_ZN3tvm5relay15annotate_target22AnnotateTargetRewriter12AnnotateArgsERKNS_7runtime5ArrayINS_9RelayExprEvEERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<use f='tvm/src/relay/transforms/annotate_target.cc' l='151' u='m' c='_ZN3tvm5relay15annotate_target22AnnotateTargetRewriter35InsertCompilerEndAndPropogateTargetERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/annotate_target.cc' l='158' u='m' c='_ZN3tvm5relay15annotate_target22AnnotateTargetRewriter35InsertCompilerEndAndPropogateTargetERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/annotate_target.cc' l='159' u='m' c='_ZN3tvm5relay15annotate_target22AnnotateTargetRewriter35InsertCompilerEndAndPropogateTargetERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/annotate_target.cc' l='180' u='m' c='_ZN3tvm5relay15annotate_target22AnnotateTargetRewriter8Rewrite_EPKNS0_8CallNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/annotate_target.cc' l='185' u='m' c='_ZN3tvm5relay15annotate_target22AnnotateTargetRewriter8Rewrite_EPKNS0_8CallNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/annotate_target.cc' l='186' u='m' c='_ZN3tvm5relay15annotate_target22AnnotateTargetRewriter8Rewrite_EPKNS0_8CallNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/annotate_target.cc' l='196' u='m' c='_ZN3tvm5relay15annotate_target22AnnotateTargetRewriter8Rewrite_EPKNS0_8CallNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/annotate_target.cc' l='199' u='m' c='_ZN3tvm5relay15annotate_target22AnnotateTargetRewriter8Rewrite_EPKNS0_8CallNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/annotate_target.cc' l='257' u='r' c='_ZN3tvm5relay15annotate_target22AnnotateTargetRewriter8Rewrite_EPKNS0_8CallNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/annotate_target.cc' l='365' c='_ZN3tvm5relay15annotate_target21CallOpsTargetRewriter14RewriteVarCallERKNS0_4CallE'/>
+<use f='tvm/src/relay/transforms/annotate_texture_storage.cc' l='137' u='m' c='_ZN3tvm5relay12_GLOBAL__N_111StorageInfo21DeviceAwareVisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/transforms/annotate_texture_storage.cc' l='141' c='_ZN3tvm5relay12_GLOBAL__N_111StorageInfo21DeviceAwareVisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/transforms/annotate_texture_storage.cc' l='155' c='_ZN3tvm5relay12_GLOBAL__N_111StorageInfo21DeviceAwareVisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/transforms/annotate_texture_storage.cc' l='163' c='_ZN3tvm5relay12_GLOBAL__N_111StorageInfo21DeviceAwareVisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/transforms/annotate_texture_storage.cc' l='467' c='_ZN3tvm5relay21CollectVirtualDevices21DeviceAwareVisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/transforms/auto_scheduler_layout_rewrite.cc' l='79' u='m' c='_ZN3tvm5relay11FuncMutator10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/transforms/auto_scheduler_layout_rewrite.cc' l='80' u='m' c='_ZN3tvm5relay11FuncMutator10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/transforms/canonicalize_cast.cc' l='74' u='r' c='_ZN3tvm5relay17CastCanonicalizer10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/transforms/canonicalize_cast.cc' l='108' u='m' c='_ZN3tvm5relay17CastCanonicalizer13GetNewCallArgERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/canonicalize_cast.cc' l='116' u='r' c='_ZN3tvm5relay17CastCanonicalizer13GetNewCallArgERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/canonicalize_ops.cc' l='44' u='m' c='_ZN3tvm5relay17BiasAddSimplifier8Rewrite_EPKNS0_8CallNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/canonicalize_ops.cc' l='47' u='m' c='_ZN3tvm5relay17BiasAddSimplifier8Rewrite_EPKNS0_8CallNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/canonicalize_ops.cc' l='53' u='m' c='_ZN3tvm5relay17BiasAddSimplifier8Rewrite_EPKNS0_8CallNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/canonicalize_ops.cc' l='54' u='m' c='_ZN3tvm5relay17BiasAddSimplifier8Rewrite_EPKNS0_8CallNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/combine_parallel_batch_matmul.cc' l='64' u='m' c='_ZN3tvm5relay27ParallelBatchMatmulCombiner16CanOpsBeCombinedEPKNS0_8CallNodeES4_'/>
+<use f='tvm/src/relay/transforms/combine_parallel_batch_matmul.cc' l='65' u='m' c='_ZN3tvm5relay27ParallelBatchMatmulCombiner16CanOpsBeCombinedEPKNS0_8CallNodeES4_'/>
+<use f='tvm/src/relay/transforms/combine_parallel_batch_matmul.cc' l='88' u='m' c='_ZN3tvm5relay27ParallelBatchMatmulCombiner14MakeCombinedOpERKSt6vectorIS2_IPKNS0_8CallNodeESaIS5_EESaIS7_EE'/>
+<use f='tvm/src/relay/transforms/combine_parallel_batch_matmul.cc' l='93' u='m' c='_ZN3tvm5relay27ParallelBatchMatmulCombiner14MakeCombinedOpERKSt6vectorIS2_IPKNS0_8CallNodeESaIS5_EESaIS7_EE'/>
+<use f='tvm/src/relay/transforms/combine_parallel_batch_matmul.cc' l='110' u='m' c='_ZN3tvm5relay27ParallelBatchMatmulCombiner32MakeCombinedCallFromFollowingOpsERKNS_9RelayExprERKSt6vectorIS5_IPKNS0_8CallNodeESaIS8_EESaISA_EEmm'/>
+<use f='tvm/src/relay/transforms/combine_parallel_batch_matmul.cc' l='118' u='m' c='_ZN3tvm5relay27ParallelBatchMatmulCombiner32MakeCombinedCallFromFollowingOpsERKNS_9RelayExprERKSt6vectorIS5_IPKNS0_8CallNodeESaIS8_EESaISA_EEmm'/>
+<use f='tvm/src/relay/transforms/combine_parallel_batch_matmul.cc' l='134' u='m' c='_ZN3tvm5relay27ParallelBatchMatmulCombiner17UpdateGroupOutputERKNS_9RelayExprERKSt6vectorIS5_IPKNS0_8CallNodeESaIS8_EESaISA_EEmPSt13unordered_mapIS2_S9192580'/>
+<use f='tvm/src/relay/transforms/combine_parallel_conv2d.cc' l='67' u='m' c='_ZN3tvm5relay22ParallelConv2DCombiner16CanOpsBeCombinedEPKNS0_8CallNodeES4_'/>
+<use f='tvm/src/relay/transforms/combine_parallel_conv2d.cc' l='68' u='m' c='_ZN3tvm5relay22ParallelConv2DCombiner16CanOpsBeCombinedEPKNS0_8CallNodeES4_'/>
+<use f='tvm/src/relay/transforms/combine_parallel_conv2d.cc' l='85' u='m' c='_ZN3tvm5relay22ParallelConv2DCombiner14MakeCombinedOpERKSt6vectorIS2_IPKNS0_8CallNodeESaIS5_EESaIS7_EE'/>
+<use f='tvm/src/relay/transforms/combine_parallel_conv2d.cc' l='115' u='m' c='_ZN3tvm5relay22ParallelConv2DCombiner15IsArgCompatibleEPKNS0_8CallNodeES4_m'/>
+<use f='tvm/src/relay/transforms/combine_parallel_conv2d.cc' l='116' u='m' c='_ZN3tvm5relay22ParallelConv2DCombiner15IsArgCompatibleEPKNS0_8CallNodeES4_m'/>
+<use f='tvm/src/relay/transforms/combine_parallel_conv2d.cc' l='144' u='m' c='_ZN3tvm5relay22ParallelConv2DCombiner32MakeCombinedCallFromFollowingOpsERKNS_9RelayExprERKSt6vectorIS5_IPKNS0_8CallNodeESaIS8_EESaISA_EEmm'/>
+<use f='tvm/src/relay/transforms/combine_parallel_conv2d.cc' l='150' u='m' c='_ZN3tvm5relay22ParallelConv2DCombiner32MakeCombinedCallFromFollowingOpsERKNS_9RelayExprERKSt6vectorIS5_IPKNS0_8CallNodeESaIS8_EESaISA_EEmm'/>
+<use f='tvm/src/relay/transforms/combine_parallel_conv2d.cc' l='154' u='m' c='_ZN3tvm5relay22ParallelConv2DCombiner32MakeCombinedCallFromFollowingOpsERKNS_9RelayExprERKSt6vectorIS5_IPKNS0_8CallNodeESaIS8_EESaISA_EEmm'/>
+<use f='tvm/src/relay/transforms/combine_parallel_conv2d.cc' l='195' u='m' c='_ZN3tvm5relay22ParallelConv2DCombiner15TransformWeightERKSt6vectorIS2_IPKNS0_8CallNodeESaIS5_EESaIS7_EE'/>
+<use f='tvm/src/relay/transforms/combine_parallel_dense.cc' l='62' u='m' c='_ZN3tvm5relay28ParallelDenseToBatchCombiner14MakeCombinedOpERKSt6vectorIS2_IPKNS0_8CallNodeESaIS5_EESaIS7_EE'/>
+<use f='tvm/src/relay/transforms/combine_parallel_dense.cc' l='66' u='m' c='_ZN3tvm5relay28ParallelDenseToBatchCombiner14MakeCombinedOpERKSt6vectorIS2_IPKNS0_8CallNodeESaIS5_EESaIS7_EE'/>
+<use f='tvm/src/relay/transforms/combine_parallel_dense.cc' l='85' u='m' c='_ZN3tvm5relay28ParallelDenseToBatchCombiner16CanOpsBeCombinedEPKNS0_8CallNodeES4_'/>
+<use f='tvm/src/relay/transforms/combine_parallel_dense.cc' l='86' u='m' c='_ZN3tvm5relay28ParallelDenseToBatchCombiner16CanOpsBeCombinedEPKNS0_8CallNodeES4_'/>
+<use f='tvm/src/relay/transforms/combine_parallel_dense.cc' l='109' u='m' c='_ZN3tvm5relay28ParallelDenseToDenseCombiner16CanOpsBeCombinedEPKNS0_8CallNodeES4_'/>
+<use f='tvm/src/relay/transforms/combine_parallel_dense.cc' l='110' u='m' c='_ZN3tvm5relay28ParallelDenseToDenseCombiner16CanOpsBeCombinedEPKNS0_8CallNodeES4_'/>
+<use f='tvm/src/relay/transforms/combine_parallel_dense.cc' l='118' u='m' c='_ZN3tvm5relay28ParallelDenseToDenseCombiner14MakeCombinedOpERKSt6vectorIS2_IPKNS0_8CallNodeESaIS5_EESaIS7_EE'/>
+<use f='tvm/src/relay/transforms/combine_parallel_dense.cc' l='133' u='m' c='_ZN3tvm5relay28ParallelDenseToDenseCombiner15IsArgCompatibleEPKNS0_8CallNodeES4_m'/>
+<use f='tvm/src/relay/transforms/combine_parallel_dense.cc' l='134' u='m' c='_ZN3tvm5relay28ParallelDenseToDenseCombiner15IsArgCompatibleEPKNS0_8CallNodeES4_m'/>
+<use f='tvm/src/relay/transforms/combine_parallel_dense.cc' l='158' u='m' c='_ZN3tvm5relay28ParallelDenseToDenseCombiner32MakeCombinedCallFromFollowingOpsERKNS_9RelayExprERKSt6vectorIS5_IPKNS0_8CallNodeESaIS8_EESaISA_EEmm'/>
+<use f='tvm/src/relay/transforms/combine_parallel_dense.cc' l='163' u='m' c='_ZN3tvm5relay28ParallelDenseToDenseCombiner32MakeCombinedCallFromFollowingOpsERKNS_9RelayExprERKSt6vectorIS5_IPKNS0_8CallNodeESaIS8_EESaISA_EEmm'/>
+<use f='tvm/src/relay/transforms/combine_parallel_dense.cc' l='167' u='m' c='_ZN3tvm5relay28ParallelDenseToDenseCombiner32MakeCombinedCallFromFollowingOpsERKNS_9RelayExprERKSt6vectorIS5_IPKNS0_8CallNodeESaIS8_EESaISA_EEmm'/>
+<use f='tvm/src/relay/transforms/combine_parallel_dense.cc' l='172' u='m' c='_ZN3tvm5relay28ParallelDenseToDenseCombiner32MakeCombinedCallFromFollowingOpsERKNS_9RelayExprERKSt6vectorIS5_IPKNS0_8CallNodeESaIS8_EESaISA_EEmm'/>
+<use f='tvm/src/relay/transforms/combine_parallel_dense.cc' l='227' u='m' c='_ZN3tvm5relay28ParallelDenseToDenseCombiner15TransformWeightERKSt6vectorIS2_IPKNS0_8CallNodeESaIS5_EESaIS7_EE'/>
+<use f='tvm/src/relay/transforms/combine_parallel_op.cc' l='104' u='m' c='_ZN3tvm5relay17BranchGroupFinder10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/transforms/combine_parallel_op.cc' l='105' u='m' c='_ZN3tvm5relay17BranchGroupFinder10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/transforms/combine_parallel_op.cc' l='107' u='m' c='_ZN3tvm5relay17BranchGroupFinder10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/transforms/combine_parallel_op.cc' l='108' u='m' c='_ZN3tvm5relay17BranchGroupFinder10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/transforms/combine_parallel_op.cc' l='141' u='m' c='_ZN3tvm5relay18ParallelOpCombiner15CombineBranchesERKSt6vectorIS2_IPKNS0_8CallNodeESaIS5_EESaIS7_EE'/>
+<use f='tvm/src/relay/transforms/combine_parallel_op.cc' l='142' u='m' c='_ZN3tvm5relay18ParallelOpCombiner15CombineBranchesERKSt6vectorIS2_IPKNS0_8CallNodeESaIS5_EESaIS7_EE'/>
+<use f='tvm/src/relay/transforms/combine_parallel_op.cc' l='144' u='m' c='_ZN3tvm5relay18ParallelOpCombiner15CombineBranchesERKSt6vectorIS2_IPKNS0_8CallNodeESaIS5_EESaIS7_EE'/>
+<use f='tvm/src/relay/transforms/combine_parallel_op.cc' l='158' u='m' c='_ZN3tvm5relay18ParallelOpCombiner10CheckLevelERKSt6vectorIS2_IPKNS0_8CallNodeESaIS5_EESaIS7_EEmm'/>
+<use f='tvm/src/relay/transforms/combine_parallel_op.cc' l='158' u='m' c='_ZN3tvm5relay18ParallelOpCombiner10CheckLevelERKSt6vectorIS2_IPKNS0_8CallNodeESaIS5_EESaIS7_EEmm'/>
+<use f='tvm/src/relay/transforms/combine_parallel_op.cc' l='162' u='m' c='_ZN3tvm5relay18ParallelOpCombiner10CheckLevelERKSt6vectorIS2_IPKNS0_8CallNodeESaIS5_EESaIS7_EEmm'/>
+<use f='tvm/src/relay/transforms/combine_parallel_op.cc' l='165' u='m' c='_ZN3tvm5relay18ParallelOpCombiner10CheckLevelERKSt6vectorIS2_IPKNS0_8CallNodeESaIS5_EESaIS7_EEmm'/>
+<use f='tvm/src/relay/transforms/combine_parallel_op_batch.cc' l='74' u='m' c='_ZN3tvm5relay23ParallelOpBatchCombiner16CanOpsBeCombinedEPKNS0_8CallNodeES4_'/>
+<use f='tvm/src/relay/transforms/combine_parallel_op_batch.cc' l='74' u='m' c='_ZN3tvm5relay23ParallelOpBatchCombiner16CanOpsBeCombinedEPKNS0_8CallNodeES4_'/>
+<use f='tvm/src/relay/transforms/combine_parallel_op_batch.cc' l='79' u='m' c='_ZN3tvm5relay23ParallelOpBatchCombiner16CanOpsBeCombinedEPKNS0_8CallNodeES4_'/>
+<use f='tvm/src/relay/transforms/combine_parallel_op_batch.cc' l='80' u='m' c='_ZN3tvm5relay23ParallelOpBatchCombiner16CanOpsBeCombinedEPKNS0_8CallNodeES4_'/>
+<use f='tvm/src/relay/transforms/combine_parallel_op_batch.cc' l='81' u='m' c='_ZN3tvm5relay23ParallelOpBatchCombiner16CanOpsBeCombinedEPKNS0_8CallNodeES4_'/>
+<use f='tvm/src/relay/transforms/combine_parallel_op_batch.cc' l='100' u='m' c='_ZN3tvm5relay23ParallelOpBatchCombiner14MakeCombinedOpERKSt6vectorIS2_IPKNS0_8CallNodeESaIS5_EESaIS7_EE'/>
+<use f='tvm/src/relay/transforms/combine_parallel_op_batch.cc' l='104' u='m' c='_ZN3tvm5relay23ParallelOpBatchCombiner14MakeCombinedOpERKSt6vectorIS2_IPKNS0_8CallNodeESaIS5_EESaIS7_EE'/>
+<use f='tvm/src/relay/transforms/combine_parallel_op_batch.cc' l='115' u='m' c='_ZN3tvm5relay23ParallelOpBatchCombiner15IsArgCompatibleEPKNS0_8CallNodeES4_m'/>
+<use f='tvm/src/relay/transforms/combine_parallel_op_batch.cc' l='116' u='m' c='_ZN3tvm5relay23ParallelOpBatchCombiner15IsArgCompatibleEPKNS0_8CallNodeES4_m'/>
+<use f='tvm/src/relay/transforms/combine_parallel_op_batch.cc' l='132' u='m' c='_ZN3tvm5relay23ParallelOpBatchCombiner32MakeCombinedCallFromFollowingOpsERKNS_9RelayExprERKSt6vectorIS5_IPKNS0_8CallNodeESaIS8_EESaISA_EEmm'/>
+<use f='tvm/src/relay/transforms/combine_parallel_op_batch.cc' l='142' u='m' c='_ZN3tvm5relay23ParallelOpBatchCombiner32MakeCombinedCallFromFollowingOpsERKNS_9RelayExprERKSt6vectorIS5_IPKNS0_8CallNodeESaIS8_EESaISA_EEmm'/>
+<use f='tvm/src/relay/transforms/compiler_function_utils.cc' l='141' u='m' c='_ZN3tvm5relay9transform12_GLOBAL__N_112InnerInliner8Rewrite_EPKNS0_8CallNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/compiler_function_utils.cc' l='143' u='m' c='_ZN3tvm5relay9transform12_GLOBAL__N_112InnerInliner8Rewrite_EPKNS0_8CallNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/compiler_function_utils.cc' l='144' u='m' c='_ZN3tvm5relay9transform12_GLOBAL__N_112InnerInliner8Rewrite_EPKNS0_8CallNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/compiler_function_utils.cc' l='174' u='m' c='_ZN3tvm5relay9transform12_GLOBAL__N_112OuterInliner8Rewrite_EPKNS0_8CallNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/compiler_function_utils.cc' l='176' u='m' c='_ZN3tvm5relay9transform12_GLOBAL__N_112OuterInliner8Rewrite_EPKNS0_8CallNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/compiler_function_utils.cc' l='177' u='m' c='_ZN3tvm5relay9transform12_GLOBAL__N_112OuterInliner8Rewrite_EPKNS0_8CallNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/convert_layout.cc' l='79' c='_ZN3tvm5relay17convert_op_layout29ConvertTransformMemorizerNode18CallWithNewLayoutsERKNS0_4CallENS_5AttrsERKSt6vectorINS_9RelayExprESaIS8_EE'/>
+<use f='tvm/src/relay/transforms/convert_layout.cc' l='108' u='r' c='_ZN3tvm5relay17convert_op_layout29ConvertTransformMemorizerNode18CallWithNewLayoutsERKNS0_4CallENS_5AttrsERKSt6vectorINS_9RelayExprESaIS8_EE'/>
+<use f='tvm/src/relay/transforms/convert_sparse_conv2d.cc' l='53' u='m' c='_ZN3tvm5relay21Conv2dOpWeightVisitor10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/transforms/convert_sparse_conv2d.cc' l='58' c='_ZN3tvm5relay21Conv2dOpWeightVisitor10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/transforms/convert_sparse_conv2d.cc' l='96' u='m' c='_ZN3tvm5relay27Conv2dToSparseConv2dMutator8Rewrite_EPKNS0_8CallNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/convert_sparse_conv2d.cc' l='101' u='m' c='_ZN3tvm5relay27Conv2dToSparseConv2dMutator8Rewrite_EPKNS0_8CallNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/convert_sparse_conv2d.cc' l='204' u='m' c='_ZN3tvm5relay28Conv2dToSparseConv2dMutator28Rewrite_EPKNS0_8CallNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/convert_sparse_conv2d.cc' l='262' u='m' c='_ZN3tvm5relay28Conv2dToSparseConv2dMutator28Rewrite_EPKNS0_8CallNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/convert_sparse_dense.cc' l='53' u='m' c='_ZN3tvm5relay20DenseOpWeightVisitor10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/transforms/convert_sparse_dense.cc' l='58' c='_ZN3tvm5relay20DenseOpWeightVisitor10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/transforms/convert_sparse_dense.cc' l='93' u='m' c='_ZN3tvm5relay25DenseToSparseDenseMutator8Rewrite_EPKNS0_8CallNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/convert_sparse_dense.cc' l='98' u='m' c='_ZN3tvm5relay25DenseToSparseDenseMutator8Rewrite_EPKNS0_8CallNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/dead_code.cc' l='204' c='_ZN3tvm5relay12_GLOBAL__N_113PurityVisitor10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/transforms/defunctionalization.cc' l='120' u='m' c='_ZN3tvm5relay13DefuncMutator10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/transforms/defunctionalization.cc' l='121' u='m' c='_ZN3tvm5relay13DefuncMutator10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/transforms/defunctionalization.cc' l='147' u='m' c='_ZN3tvm5relay13DefuncMutator10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/transforms/defunctionalization.cc' l='159' c='_ZN3tvm5relay13DefuncMutator10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/transforms/defuse_ops.cc' l='64' u='m' c='_ZN3tvm5relay16DefuseOpsMutator10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/transforms/device_domains.cc' l='239' u='m' c='_ZN3tvm5relay9transform13DeviceDomains15DomainForCalleeERKNS0_4CallE'/>
+<use f='tvm/src/relay/transforms/device_domains.cc' l='247' u='m' c='_ZN3tvm5relay9transform13DeviceDomains15DomainForCalleeERKNS0_4CallE'/>
+<use f='tvm/src/relay/transforms/device_domains.cc' l='256' u='m' c='_ZN3tvm5relay9transform13DeviceDomains15DomainForCalleeERKNS0_4CallE'/>
+<use f='tvm/src/relay/transforms/device_domains.cc' l='259' u='m' c='_ZN3tvm5relay9transform13DeviceDomains15DomainForCalleeERKNS0_4CallE'/>
+<use f='tvm/src/relay/transforms/device_domains.cc' l='262' u='m' c='_ZN3tvm5relay9transform13DeviceDomains15DomainForCalleeERKNS0_4CallE'/>
+<use f='tvm/src/relay/transforms/device_domains.cc' l='267' u='m' c='_ZN3tvm5relay9transform13DeviceDomains15DomainForCalleeERKNS0_4CallE'/>
+<use f='tvm/src/relay/transforms/device_domains.cc' l='272' u='m' c='_ZN3tvm5relay9transform13DeviceDomains15DomainForCalleeERKNS0_4CallE'/>
+<use f='tvm/src/relay/transforms/device_domains.cc' l='284' u='m' c='_ZN3tvm5relay9transform13DeviceDomains15DomainForCalleeERKNS0_4CallE'/>
+<use f='tvm/src/relay/transforms/device_domains.cc' l='296' u='m' c='_ZN3tvm5relay9transform13DeviceDomains15DomainForCalleeERKNS0_4CallE'/>
+<use f='tvm/src/relay/transforms/device_planner.cc' l='499' u='m' c='_ZN3tvm5relay9transform12_GLOBAL__N_114DeviceAnalyzer10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/transforms/device_planner.cc' l='501' u='m' c='_ZN3tvm5relay9transform12_GLOBAL__N_114DeviceAnalyzer10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/transforms/device_planner.cc' l='502' c='_ZN3tvm5relay9transform12_GLOBAL__N_114DeviceAnalyzer10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/transforms/device_planner.cc' l='822' u='m' c='_ZN3tvm5relay9transform12_GLOBAL__N_115DeviceDefaulter10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/transforms/device_planner.cc' l='1086' u='m' c='_ZN3tvm5relay9transform12_GLOBAL__N_114DeviceCapturer10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/transforms/device_planner.cc' l='1087' u='m' c='_ZN3tvm5relay9transform12_GLOBAL__N_114DeviceCapturer10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/transforms/device_planner.cc' l='1088' u='m' c='_ZN3tvm5relay9transform12_GLOBAL__N_114DeviceCapturer10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/transforms/device_planner.cc' l='1096' u='m' c='_ZN3tvm5relay9transform12_GLOBAL__N_114DeviceCapturer10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/transforms/device_planner.cc' l='1097' u='m' c='_ZN3tvm5relay9transform12_GLOBAL__N_114DeviceCapturer10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/transforms/device_planner.cc' l='1103' u='r' c='_ZN3tvm5relay9transform12_GLOBAL__N_114DeviceCapturer10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/transforms/dynamic_to_static.cc' l='44' u='m' c='_ZN3tvm5relay22DynamicToStaticMutatorC1ENS_8IRModuleENS0_8FunctionE'/>
+<use f='tvm/src/relay/transforms/dynamic_to_static.cc' l='53' u='m' c='_ZN3tvm5relay22DynamicToStaticMutatorC1ENS_8IRModuleENS0_8FunctionE'/>
+<use f='tvm/src/relay/transforms/dynamic_to_static.cc' l='62' u='m' c='_ZN3tvm5relay22DynamicToStaticMutatorC1ENS_8IRModuleENS0_8FunctionE'/>
+<use f='tvm/src/relay/transforms/dynamic_to_static.cc' l='72' u='m' c='_ZN3tvm5relay22DynamicToStaticMutatorC1ENS_8IRModuleENS0_8FunctionE'/>
+<use f='tvm/src/relay/transforms/dynamic_to_static.cc' l='82' u='m' c='_ZN3tvm5relay22DynamicToStaticMutatorC1ENS_8IRModuleENS0_8FunctionE'/>
+<use f='tvm/src/relay/transforms/dynamic_to_static.cc' l='112' u='m' c='_ZN3tvm5relay22DynamicToStaticMutatorC1ENS_8IRModuleENS0_8FunctionE'/>
+<use f='tvm/src/relay/transforms/dynamic_to_static.cc' l='112' u='m' c='_ZN3tvm5relay22DynamicToStaticMutatorC1ENS_8IRModuleENS0_8FunctionE'/>
+<use f='tvm/src/relay/transforms/dynamic_to_static.cc' l='112' u='m' c='_ZN3tvm5relay22DynamicToStaticMutatorC1ENS_8IRModuleENS0_8FunctionE'/>
+<use f='tvm/src/relay/transforms/dynamic_to_static.cc' l='135' u='m' c='_ZN3tvm5relay22DynamicToStaticMutatorC1ENS_8IRModuleENS0_8FunctionE'/>
+<use f='tvm/src/relay/transforms/dynamic_to_static.cc' l='150' u='m' c='_ZN3tvm5relay22DynamicToStaticMutatorC1ENS_8IRModuleENS0_8FunctionE'/>
+<use f='tvm/src/relay/transforms/dynamic_to_static.cc' l='164' u='m' c='_ZN3tvm5relay22DynamicToStaticMutatorC1ENS_8IRModuleENS0_8FunctionE'/>
+<use f='tvm/src/relay/transforms/dynamic_to_static.cc' l='182' u='m' c='_ZN3tvm5relay22DynamicToStaticMutatorC1ENS_8IRModuleENS0_8FunctionE'/>
+<use f='tvm/src/relay/transforms/dynamic_to_static.cc' l='202' u='m' c='_ZN3tvm5relay22DynamicToStaticMutatorC1ENS_8IRModuleENS0_8FunctionE'/>
+<use f='tvm/src/relay/transforms/dynamic_to_static.cc' l='219' u='m' c='_ZN3tvm5relay22DynamicToStaticMutatorC1ENS_8IRModuleENS0_8FunctionE'/>
+<use f='tvm/src/relay/transforms/dynamic_to_static.cc' l='230' u='m' c='_ZN3tvm5relay22DynamicToStaticMutatorC1ENS_8IRModuleENS0_8FunctionE'/>
+<use f='tvm/src/relay/transforms/dynamic_to_static.cc' l='231' u='m' c='_ZN3tvm5relay22DynamicToStaticMutatorC1ENS_8IRModuleENS0_8FunctionE'/>
+<use f='tvm/src/relay/transforms/dynamic_to_static.cc' l='231' u='m' c='_ZN3tvm5relay22DynamicToStaticMutatorC1ENS_8IRModuleENS0_8FunctionE'/>
+<use f='tvm/src/relay/transforms/dynamic_to_static.cc' l='277' c='_ZN3tvm5relay22DynamicToStaticMutator11PrepareArgsEPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/transforms/eliminate_common_subexpr.cc' l='52' u='m' c='_ZN3tvm5relay23CommonSubexprEliminator8Rewrite_EPKNS0_8CallNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/eliminate_common_subexpr.cc' l='67' u='m' c='_ZN3tvm5relay23CommonSubexprEliminator8Rewrite_EPKNS0_8CallNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/eliminate_common_subexpr.cc' l='68' u='m' c='_ZN3tvm5relay23CommonSubexprEliminator8Rewrite_EPKNS0_8CallNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/eliminate_common_subexpr.cc' l='68' u='m' c='_ZN3tvm5relay23CommonSubexprEliminator8Rewrite_EPKNS0_8CallNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/eliminate_common_subexpr.cc' l='69' u='m' c='_ZN3tvm5relay23CommonSubexprEliminator8Rewrite_EPKNS0_8CallNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/eliminate_common_subexpr.cc' l='69' u='m' c='_ZN3tvm5relay23CommonSubexprEliminator8Rewrite_EPKNS0_8CallNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/eta_expand.cc' l='87' c='_ZN3tvm5relay10eta_expand11EtaExpander10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/transforms/fake_quantization_to_integer.cc' l='144' u='m' c='_ZN3tvm5relay17SubgraphExtractor10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/transforms/fake_quantization_to_integer.cc' l='148' u='m' c='_ZN3tvm5relay17SubgraphExtractor10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/transforms/fake_quantization_to_integer.cc' l='148' u='m' c='_ZN3tvm5relay17SubgraphExtractor10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/transforms/fake_quantization_to_integer.cc' l='155' u='m' c='_ZN3tvm5relay17SubgraphExtractor10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/transforms/fake_quantization_to_integer.cc' l='155' u='m' c='_ZN3tvm5relay17SubgraphExtractor10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/transforms/fake_quantization_to_integer.cc' l='156' u='m' c='_ZN3tvm5relay17SubgraphExtractor10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/transforms/fake_quantization_to_integer.cc' l='386' u='m' c='_ZN3tvm5relay20QATSubgraphExtractor10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/transforms/fake_quantization_to_integer.cc' l='386' u='m' c='_ZN3tvm5relay20QATSubgraphExtractor10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/transforms/fake_quantization_to_integer.cc' l='387' u='m' c='_ZN3tvm5relay20QATSubgraphExtractor10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/transforms/fake_quantization_to_integer.cc' l='390' c='_ZN3tvm5relay20QATSubgraphExtractor10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/transforms/fast_math.cc' l='45' u='m' c='_ZN3tvm5relay15FastMathMutator8Rewrite_EPKNS0_8CallNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/fast_math.cc' l='47' u='m' c='_ZN3tvm5relay15FastMathMutator8Rewrite_EPKNS0_8CallNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/fast_math.cc' l='49' u='m' c='_ZN3tvm5relay15FastMathMutator8Rewrite_EPKNS0_8CallNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/fast_math.cc' l='51' u='m' c='_ZN3tvm5relay15FastMathMutator8Rewrite_EPKNS0_8CallNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/first_order_gradient.cc' l='236' c='_ZN3tvm5relay19FirstOrderReverseAD10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/transforms/flatten_atrous_conv.cc' l='68' u='m' c='_ZN3tvm5relay32FlattenAtrousConvSubgraphMutator14MutateSubgraphERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/flatten_atrous_conv.cc' l='69' u='m' c='_ZN3tvm5relay32FlattenAtrousConvSubgraphMutator14MutateSubgraphERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/flatten_atrous_conv.cc' l='89' u='m' c='_ZN3tvm5relay32FlattenAtrousConvSubgraphMutator14MutateSubgraphERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/flatten_atrous_conv.cc' l='119' u='m' c='_ZN3tvm5relay32FlattenAtrousConvSubgraphMutator14MutateSubgraphERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/flatten_atrous_conv.cc' l='129' u='m' c='_ZN3tvm5relay32FlattenAtrousConvSubgraphMutator14MutateSubgraphERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/flatten_atrous_conv.cc' l='130' u='m' c='_ZN3tvm5relay32FlattenAtrousConvSubgraphMutator14MutateSubgraphERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/flatten_atrous_conv.cc' l='131' u='m' c='_ZN3tvm5relay32FlattenAtrousConvSubgraphMutator14MutateSubgraphERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/flatten_atrous_conv.cc' l='132' u='m' c='_ZN3tvm5relay32FlattenAtrousConvSubgraphMutator14MutateSubgraphERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/fold_constant.cc' l='155' u='m' c='_ZN3tvm5relay9transform12_GLOBAL__N_114ConstantFolder8Rewrite_EPKNS0_8CallNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/fold_constant.cc' l='196' u='m' c='_ZN3tvm5relay9transform12_GLOBAL__N_114ConstantFolder8Rewrite_EPKNS0_8CallNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/fold_constant.cc' l='196' u='m' c='_ZN3tvm5relay9transform12_GLOBAL__N_114ConstantFolder8Rewrite_EPKNS0_8CallNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/fold_constant.cc' l='287' u='m' c='_ZN3tvm5relay9transform12_GLOBAL__N_114ConstantFolder15EvaluateShapeOfERKNS0_4CallE'/>
+<use f='tvm/src/relay/transforms/fold_constant.cc' l='290' u='m' c='_ZN3tvm5relay9transform12_GLOBAL__N_114ConstantFolder15EvaluateShapeOfERKNS0_4CallE'/>
+<use f='tvm/src/relay/transforms/fold_constant.cc' l='338' u='m' c='_ZN3tvm5relay9transform12_GLOBAL__N_114ConstantFolder19EvaluateNdarraySizeERKNS0_4CallE'/>
+<use f='tvm/src/relay/transforms/fold_constant.cc' l='339' u='m' c='_ZN3tvm5relay9transform12_GLOBAL__N_114ConstantFolder19EvaluateNdarraySizeERKNS0_4CallE'/>
+<use f='tvm/src/relay/transforms/fold_explicit_padding.cc' l='226' u='m' c='_ZNK3tvm5relay19SimplifyExplicitPad8callbackERKNS_9RelayExprES4_RKNS_7runtime3MapINS0_9DFPatternENS5_5ArrayIS2_vEEvvEE'/>
+<use f='tvm/src/relay/transforms/fold_scale_axis.cc' l='289' u='m' c='_ZN3tvm5relay15fold_scale_axis11ForwardPrep10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/transforms/fold_scale_axis.cc' l='290' u='m' c='_ZN3tvm5relay15fold_scale_axis11ForwardPrep10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/transforms/fold_scale_axis.cc' l='291' u='m' c='_ZN3tvm5relay15fold_scale_axis11ForwardPrep10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/transforms/fold_scale_axis.cc' l='294' u='m' c='_ZN3tvm5relay15fold_scale_axis11ForwardPrep10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/transforms/fold_scale_axis.cc' l='295' u='m' c='_ZN3tvm5relay15fold_scale_axis11ForwardPrep10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/transforms/fold_scale_axis.cc' l='398' u='m' c='_ZN3tvm5relay15fold_scale_axis17AddSubForwardPrepERKNS0_4CallERKNS1_7MessageE'/>
+<use f='tvm/src/relay/transforms/fold_scale_axis.cc' l='399' u='m' c='_ZN3tvm5relay15fold_scale_axis17AddSubForwardPrepERKNS0_4CallERKNS1_7MessageE'/>
+<use f='tvm/src/relay/transforms/fold_scale_axis.cc' l='416' u='m' c='_ZN3tvm5relay15fold_scale_axis20AddSubForwardRewriteERKNS0_4CallERKNS_7runtime5ArrayINS_9RelayExprEvEERKNS1_7MessageE'/>
+<use f='tvm/src/relay/transforms/fold_scale_axis.cc' l='417' u='m' c='_ZN3tvm5relay15fold_scale_axis20AddSubForwardRewriteERKNS0_4CallERKNS_7runtime5ArrayINS_9RelayExprEvEERKNS1_7MessageE'/>
+<use f='tvm/src/relay/transforms/fold_scale_axis.cc' l='469' u='m' c='_ZN3tvm5relay15fold_scale_axis22MultiplyForwardRewriteERKNS0_4CallERKNS_7runtime5ArrayINS_9RelayExprEvEERKNS1_7MessageE'/>
+<use f='tvm/src/relay/transforms/fold_scale_axis.cc' l='470' u='m' c='_ZN3tvm5relay15fold_scale_axis22MultiplyForwardRewriteERKNS0_4CallERKNS_7runtime5ArrayINS_9RelayExprEvEERKNS1_7MessageE'/>
+<use f='tvm/src/relay/transforms/fold_scale_axis.cc' l='719' c='_ZN3tvm5relay15fold_scale_axis12BackwardPrep13GetInMessagesEPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/transforms/fold_scale_axis.cc' l='847' u='m' c='_ZN3tvm5relay15fold_scale_axis21ReluBackwardTransformERKNS0_4CallERKNS1_7MessageERKNS_9RelayExprERKNS1_19BackwardTransformerE'/>
+<use f='tvm/src/relay/transforms/fold_scale_axis.cc' l='864' u='m' c='_ZN3tvm5relay15fold_scale_axis18AddSubBackwardPrepERKNS0_4CallERKNS_7runtime5ArrayINS1_7MessageEvEE'/>
+<use f='tvm/src/relay/transforms/fold_scale_axis.cc' l='865' u='m' c='_ZN3tvm5relay15fold_scale_axis18AddSubBackwardPrepERKNS0_4CallERKNS_7runtime5ArrayINS1_7MessageEvEE'/>
+<use f='tvm/src/relay/transforms/fold_scale_axis.cc' l='884' u='m' c='_ZN3tvm5relay15fold_scale_axis23AddSubBackwardTransformERKNS0_4CallERKNS1_7MessageERKNS_9RelayExprERKNS1_19BackwardTransformerE'/>
+<use f='tvm/src/relay/transforms/fold_scale_axis.cc' l='885' u='m' c='_ZN3tvm5relay15fold_scale_axis23AddSubBackwardTransformERKNS0_4CallERKNS1_7MessageERKNS_9RelayExprERKNS1_19BackwardTransformerE'/>
+<use f='tvm/src/relay/transforms/fold_scale_axis.cc' l='890' u='m' c='_ZN3tvm5relay15fold_scale_axis23AddSubBackwardTransformERKNS0_4CallERKNS1_7MessageERKNS_9RelayExprERKNS1_19BackwardTransformerE'/>
+<use f='tvm/src/relay/transforms/fold_scale_axis.cc' l='891' u='m' c='_ZN3tvm5relay15fold_scale_axis23AddSubBackwardTransformERKNS0_4CallERKNS1_7MessageERKNS_9RelayExprERKNS1_19BackwardTransformerE'/>
+<use f='tvm/src/relay/transforms/fold_scale_axis.cc' l='897' u='m' c='_ZN3tvm5relay15fold_scale_axis23AddSubBackwardTransformERKNS0_4CallERKNS1_7MessageERKNS_9RelayExprERKNS1_19BackwardTransformerE'/>
+<use f='tvm/src/relay/transforms/fold_scale_axis.cc' l='898' u='m' c='_ZN3tvm5relay15fold_scale_axis23AddSubBackwardTransformERKNS0_4CallERKNS1_7MessageERKNS_9RelayExprERKNS1_19BackwardTransformerE'/>
+<use f='tvm/src/relay/transforms/fold_scale_axis.cc' l='902' u='m' c='_ZN3tvm5relay15fold_scale_axis23AddSubBackwardTransformERKNS0_4CallERKNS1_7MessageERKNS_9RelayExprERKNS1_19BackwardTransformerE'/>
+<use f='tvm/src/relay/transforms/fold_scale_axis.cc' l='903' u='m' c='_ZN3tvm5relay15fold_scale_axis23AddSubBackwardTransformERKNS0_4CallERKNS1_7MessageERKNS_9RelayExprERKNS1_19BackwardTransformerE'/>
+<use f='tvm/src/relay/transforms/fold_scale_axis.cc' l='912' u='m' c='_ZN3tvm5relay15fold_scale_axis23AddSubBackwardTransformERKNS0_4CallERKNS1_7MessageERKNS_9RelayExprERKNS1_19BackwardTransformerE'/>
+<use f='tvm/src/relay/transforms/fold_scale_axis.cc' l='913' u='m' c='_ZN3tvm5relay15fold_scale_axis23AddSubBackwardTransformERKNS0_4CallERKNS1_7MessageERKNS_9RelayExprERKNS1_19BackwardTransformerE'/>
+<use f='tvm/src/relay/transforms/fold_scale_axis.cc' l='941' u='m' c='_ZN3tvm5relay15fold_scale_axis25MultiplyBackwardTransformERKNS0_4CallERKNS1_7MessageERKNS_9RelayExprERKNS1_19BackwardTransformerE'/>
+<use f='tvm/src/relay/transforms/fold_scale_axis.cc' l='942' u='m' c='_ZN3tvm5relay15fold_scale_axis25MultiplyBackwardTransformERKNS0_4CallERKNS1_7MessageERKNS_9RelayExprERKNS1_19BackwardTransformerE'/>
+<use f='tvm/src/relay/transforms/fold_scale_axis.cc' l='943' u='m' c='_ZN3tvm5relay15fold_scale_axis25MultiplyBackwardTransformERKNS0_4CallERKNS1_7MessageERKNS_9RelayExprERKNS1_19BackwardTransformerE'/>
+<use f='tvm/src/relay/transforms/fold_scale_axis.cc' l='944' u='m' c='_ZN3tvm5relay15fold_scale_axis25MultiplyBackwardTransformERKNS0_4CallERKNS1_7MessageERKNS_9RelayExprERKNS1_19BackwardTransformerE'/>
+<use f='tvm/src/relay/transforms/fold_scale_axis.cc' l='949' u='m' c='_ZN3tvm5relay15fold_scale_axis25MultiplyBackwardTransformERKNS0_4CallERKNS1_7MessageERKNS_9RelayExprERKNS1_19BackwardTransformerE'/>
+<use f='tvm/src/relay/transforms/fold_scale_axis.cc' l='952' u='m' c='_ZN3tvm5relay15fold_scale_axis25MultiplyBackwardTransformERKNS0_4CallERKNS1_7MessageERKNS_9RelayExprERKNS1_19BackwardTransformerE'/>
+<use f='tvm/src/relay/transforms/fold_scale_axis.cc' l='956' u='m' c='_ZN3tvm5relay15fold_scale_axis25MultiplyBackwardTransformERKNS0_4CallERKNS1_7MessageERKNS_9RelayExprERKNS1_19BackwardTransformerE'/>
+<use f='tvm/src/relay/transforms/fold_scale_axis.cc' l='959' u='m' c='_ZN3tvm5relay15fold_scale_axis25MultiplyBackwardTransformERKNS0_4CallERKNS1_7MessageERKNS_9RelayExprERKNS1_19BackwardTransformerE'/>
+<use f='tvm/src/relay/transforms/fold_scale_axis.cc' l='1027' u='m' c='_ZN3tvm5relay15fold_scale_axis21ConvBackwardTransformERKNS0_4CallEPKT_RKNS1_7MessageERKNS_9RelayExprERKNS1_19BackwardTransformerE'/>
+<use f='tvm/src/relay/transforms/fold_scale_axis.cc' l='1028' u='m' c='_ZN3tvm5relay15fold_scale_axis21ConvBackwardTransformERKNS0_4CallEPKT_RKNS1_7MessageERKNS_9RelayExprERKNS1_19BackwardTransformerE'/>
+<use f='tvm/src/relay/transforms/fold_scale_axis.cc' l='1095' u='m' c='_ZN3tvm5relay15fold_scale_axis24BiasAddBackwardTransformERKNS0_4CallERKNS1_7MessageERKNS_9RelayExprERKNS1_19BackwardTransformerE'/>
+<use f='tvm/src/relay/transforms/fold_scale_axis.cc' l='1096' u='m' c='_ZN3tvm5relay15fold_scale_axis24BiasAddBackwardTransformERKNS0_4CallERKNS1_7MessageERKNS_9RelayExprERKNS1_19BackwardTransformerE'/>
+<use f='tvm/src/relay/transforms/fold_scale_axis.cc' l='1101' u='m' c='_ZN3tvm5relay15fold_scale_axis24BiasAddBackwardTransformERKNS0_4CallERKNS1_7MessageERKNS_9RelayExprERKNS1_19BackwardTransformerE'/>
+<use f='tvm/src/relay/transforms/fold_scale_axis.cc' l='1102' u='m' c='_ZN3tvm5relay15fold_scale_axis24BiasAddBackwardTransformERKNS0_4CallERKNS1_7MessageERKNS_9RelayExprERKNS1_19BackwardTransformerE'/>
+<use f='tvm/src/relay/transforms/fold_scale_axis.cc' l='1128' u='m' c='_ZN3tvm5relay15fold_scale_axis22DenseBackwardTransformERKNS0_4CallERKNS1_7MessageERKNS_9RelayExprERKNS1_19BackwardTransformerE'/>
+<use f='tvm/src/relay/transforms/fold_scale_axis.cc' l='1129' u='m' c='_ZN3tvm5relay15fold_scale_axis22DenseBackwardTransformERKNS0_4CallERKNS1_7MessageERKNS_9RelayExprERKNS1_19BackwardTransformerE'/>
+<use f='tvm/src/relay/transforms/forward_rewrite.cc' l='145' u='m' c='_ZN3tvm5relay15ForwardRewriter8Rewrite_EPKNS0_8CallNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/forward_rewrite.cc' l='146' u='m' c='_ZN3tvm5relay15ForwardRewriter8Rewrite_EPKNS0_8CallNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/forward_rewrite.cc' l='146' u='m' c='_ZN3tvm5relay15ForwardRewriter8Rewrite_EPKNS0_8CallNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/forward_rewrite.cc' l='150' u='m' c='_ZN3tvm5relay15ForwardRewriter8Rewrite_EPKNS0_8CallNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/fuse_ops.cc' l='261' u='m' c='_ZN3tvm5relay19IndexedForwardGraph7Creator10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/transforms/fuse_ops.cc' l='262' u='m' c='_ZN3tvm5relay19IndexedForwardGraph7Creator10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/transforms/fuse_ops.cc' l='269' u='m' c='_ZN3tvm5relay19IndexedForwardGraph7Creator10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/transforms/fuse_ops.cc' l='897' u='m' c='_ZN3tvm5relay11FuseMutator8Rewrite_EPKNS0_8CallNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/fuse_ops.cc' l='900' u='r' c='_ZN3tvm5relay11FuseMutator8Rewrite_EPKNS0_8CallNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/higher_order_gradient.cc' l='243' u='m' c='_ZN3tvm5relay9ReverseAD15VisitCheckpointEPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/transforms/higher_order_gradient.cc' l='274' c='_ZN3tvm5relay9ReverseAD10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/transforms/higher_order_gradient.cc' l='279' u='m' c='_ZN3tvm5relay9ReverseAD10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/transforms/higher_order_gradient.cc' l='291' u='m' c='_ZN3tvm5relay9ReverseAD10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/transforms/higher_order_gradient.cc' l='304' c='_ZN3tvm5relay9ReverseAD10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/transforms/inline.cc' l='68' u='m' c='_ZN3tvm5relay7Inliner10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/transforms/inline.cc' l='69' c='_ZN3tvm5relay7Inliner10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/transforms/lazy_gradient_init.cc' l='220' u='m' c='_ZN3tvm5relay23LazyGradientInitializer20CallGradCellFunctionEPKNS0_8CallNodeENS_9GlobalVarE'/>
+<use f='tvm/src/relay/transforms/lazy_gradient_init.cc' l='221' u='m' c='_ZN3tvm5relay23LazyGradientInitializer20CallGradCellFunctionEPKNS0_8CallNodeENS_9GlobalVarE'/>
+<use f='tvm/src/relay/transforms/lazy_gradient_init.cc' l='222' u='m' c='_ZN3tvm5relay23LazyGradientInitializer20CallGradCellFunctionEPKNS0_8CallNodeENS_9GlobalVarE'/>
+<use f='tvm/src/relay/transforms/lazy_gradient_init.cc' l='230' u='m' c='_ZN3tvm5relay23LazyGradientInitializer20CallGradCellFunctionEPKNS0_8CallNodeENS_9GlobalVarE'/>
+<use f='tvm/src/relay/transforms/lazy_gradient_init.cc' l='238' c='_ZN3tvm5relay23LazyGradientInitializer20CallGradCellFunctionEPKNS0_8CallNodeENS_9GlobalVarE'/>
+<use f='tvm/src/relay/transforms/lazy_gradient_init.cc' l='253' c='_ZN3tvm5relay23LazyGradientInitializer15CallPrimitiveOpEPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/transforms/legalize.cc' l='60' u='r' c='_ZN3tvm5relay8legalize9Legalizer8Rewrite_EPKNS0_8CallNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/legalize.cc' l='64' c='_ZN3tvm5relay8legalize9Legalizer8Rewrite_EPKNS0_8CallNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/merge_compiler_regions.cc' l='75' u='m' c='_ZN3tvm5relay21merge_compiler_region12RegionMerger10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/transforms/merge_compiler_regions.cc' l='81' u='m' c='_ZN3tvm5relay21merge_compiler_region12RegionMerger10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/transforms/merge_compiler_regions.cc' l='90' u='m' c='_ZN3tvm5relay21merge_compiler_region12RegionMerger10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/transforms/merge_compiler_regions.cc' l='146' u='m' c='_ZN3tvm5relay21merge_compiler_region16MergeAnnotations8Rewrite_EPKNS0_8CallNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/merge_compiler_regions.cc' l='147' u='m' c='_ZN3tvm5relay21merge_compiler_region16MergeAnnotations8Rewrite_EPKNS0_8CallNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/merge_compiler_regions.cc' l='152' u='m' c='_ZN3tvm5relay21merge_compiler_region16MergeAnnotations8Rewrite_EPKNS0_8CallNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/merge_compiler_regions.cc' l='153' u='m' c='_ZN3tvm5relay21merge_compiler_region16MergeAnnotations8Rewrite_EPKNS0_8CallNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/meta_schedule_layout_rewrite.cc' l='95' u='m' c='_ZN3tvm5relay23MetaScheduleFuncMutator10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/transforms/meta_schedule_layout_rewrite.cc' l='98' u='m' c='_ZN3tvm5relay23MetaScheduleFuncMutator10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/transforms/meta_schedule_layout_rewrite.cc' l='109' u='m' c='_ZN3tvm5relay23MetaScheduleFuncMutator10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/transforms/meta_schedule_layout_rewrite.cc' l='109' u='m' c='_ZN3tvm5relay23MetaScheduleFuncMutator10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/transforms/partial_eval.cc' l='574' u='m' c='_ZN3tvm5relay12partial_eval6AsFuncERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/partial_eval.cc' l='575' u='m' c='_ZN3tvm5relay12partial_eval6AsFuncERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/partial_eval.cc' l='596' u='m' c='_ZN3tvm5relay12partial_eval16PartialEvaluator9VisitExprERKNS_9RelayExprEPNS0_7LetListERKNS0_3VarE'/>
+<use f='tvm/src/relay/transforms/partial_eval.cc' l='597' u='m' c='_ZN3tvm5relay12partial_eval16PartialEvaluator9VisitExprERKNS_9RelayExprEPNS0_7LetListERKNS0_3VarE'/>
+<use f='tvm/src/relay/transforms/partial_eval.cc' l='715' u='m' c='_ZN3tvm5relay12partial_eval16PartialEvaluator10VisitExpr_EPKNS0_8CallNodeEPNS0_7LetListE'/>
+<use f='tvm/src/relay/transforms/partial_eval.cc' l='716' u='m' c='_ZN3tvm5relay12partial_eval16PartialEvaluator10VisitExpr_EPKNS0_8CallNodeEPNS0_7LetListE'/>
+<use f='tvm/src/relay/transforms/partial_eval.cc' l='721' c='_ZN3tvm5relay12partial_eval16PartialEvaluator10VisitExpr_EPKNS0_8CallNodeEPNS0_7LetListE'/>
+<use f='tvm/src/relay/transforms/partial_eval.cc' l='1064' u='m' c='_ZZN3tvm5relay12partial_eval16PartialEvaluator14RegisterFuncIdERKNS_9RelayExprEEN21RegisterFuncIdVisitor10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/transforms/partial_eval.cc' l='1067' u='m' c='_ZZN3tvm5relay12partial_eval16PartialEvaluator14RegisterFuncIdERKNS_9RelayExprEEN21RegisterFuncIdVisitor10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/transforms/partial_eval.cc' l='1154' u='m' c='_ZZN3tvm5relay12partial_eval15StripWithFuncIdERKNS_9RelayExprEEN22StripWithFuncIdMutator10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/transforms/partial_eval.cc' l='1155' u='m' c='_ZZN3tvm5relay12partial_eval15StripWithFuncIdERKNS_9RelayExprEEN22StripWithFuncIdMutator10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/transforms/partition_graph.cc' l='143' u='m' c='_ZN3tvm5relay12partitioning11Partitioner8Rewrite_EPKNS0_8CallNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/partition_graph.cc' l='146' u='m' c='_ZN3tvm5relay12partitioning11Partitioner8Rewrite_EPKNS0_8CallNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/partition_graph.cc' l='147' u='m' c='_ZN3tvm5relay12partitioning11Partitioner8Rewrite_EPKNS0_8CallNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/partition_graph.cc' l='152' u='m' c='_ZN3tvm5relay12partitioning11Partitioner8Rewrite_EPKNS0_8CallNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/partition_graph.cc' l='185' u='m' c='_ZN3tvm5relay12partitioning11Partitioner8Rewrite_EPKNS0_8CallNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/partition_graph.cc' l='194' u='m' c='_ZN3tvm5relay12partitioning11Partitioner8Rewrite_EPKNS0_8CallNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/partition_graph.cc' l='206' u='m' c='_ZN3tvm5relay12partitioning11Partitioner8Rewrite_EPKNS0_8CallNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/partition_graph.cc' l='307' u='m' c='_ZN3tvm5relay12partitioning11Partitioner16CreateRegionCallENS0_15AnnotatedRegionERKNS_7runtime5ArrayINS_9RelayExprEvEEPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/transforms/partition_graph.cc' l='365' u='m' c='_ZN3tvm5relay12partitioning11Partitioner14CreateFunctionENS0_15AnnotatedRegionEPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/transforms/partition_graph.cc' l='417' u='m' c='_ZZN3tvm5relay12partitioning24RemoveDefaultAnnotationsENS_8IRModuleEEN14DefaultRemover8Rewrite_EPKNS0_8CallNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/partition_graph.cc' l='459' u='m' c='_ZZN3tvm5relay12partitioning19FlattenTupleOutputsENS_8IRModuleEEN17TupleOutFlattener8Rewrite_EPKNS0_8CallNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/partition_graph.cc' l='460' u='m' c='_ZZN3tvm5relay12partitioning19FlattenTupleOutputsENS_8IRModuleEEN17TupleOutFlattener8Rewrite_EPKNS0_8CallNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/partition_graph.cc' l='551' u='r' c='_ZN3tvm5relay12partitioning18NameMangleExtFuncs8Rewrite_EPKNS0_8CallNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/simplify_expr.cc' l='95' u='m' c='_ZNK3tvm5relay16SimplifySameCast8CallbackERKNS_9RelayExprES4_RKNS_7runtime3MapINS0_9DFPatternENS5_5ArrayIS2_vEEvvEE'/>
+<use f='tvm/src/relay/transforms/simplify_expr.cc' l='202' u='m' c='_ZNK3tvm5relay17SimplifyTranspose8CallbackERKNS_9RelayExprES4_RKNS_7runtime3MapINS0_9DFPatternENS5_5ArrayIS2_vEEvvEE'/>
+<use f='tvm/src/relay/transforms/simplify_expr.cc' l='263' u='m' c='_ZNK3tvm5relay17SimplifyTranspose23GetRankChangeDescriptorERKNS0_4CallE'/>
+<use f='tvm/src/relay/transforms/simplify_expr.cc' l='266' u='m' c='_ZNK3tvm5relay17SimplifyTranspose23GetRankChangeDescriptorERKNS0_4CallE'/>
+<use f='tvm/src/relay/transforms/simplify_expr.cc' l='396' u='m' c='_ZNK3tvm5relay15FullElementwise8CallbackERKNS_9RelayExprES4_RKNS_7runtime3MapINS0_9DFPatternENS5_5ArrayIS2_vEEvvEE'/>
+<use f='tvm/src/relay/transforms/simplify_expr.cc' l='399' u='m' c='_ZNK3tvm5relay15FullElementwise8CallbackERKNS_9RelayExprES4_RKNS_7runtime3MapINS0_9DFPatternENS5_5ArrayIS2_vEEvvEE'/>
+<use f='tvm/src/relay/transforms/simplify_expr.cc' l='401' u='m' c='_ZNK3tvm5relay15FullElementwise8CallbackERKNS_9RelayExprES4_RKNS_7runtime3MapINS0_9DFPatternENS5_5ArrayIS2_vEEvvEE'/>
+<use f='tvm/src/relay/transforms/simplify_expr.cc' l='614' u='m' c='_ZNK3tvm5relay24EliminateIdentityRewrite8CallbackERKNS_9RelayExprES4_RKNS_7runtime3MapINS0_9DFPatternENS5_5ArrayIS2_vEEvvEE'/>
+<use f='tvm/src/relay/transforms/simplify_expr.cc' l='617' u='m' c='_ZNK3tvm5relay24EliminateIdentityRewrite8CallbackERKNS_9RelayExprES4_RKNS_7runtime3MapINS0_9DFPatternENS5_5ArrayIS2_vEEvvEE'/>
+<use f='tvm/src/relay/transforms/simplify_expr.cc' l='619' u='m' c='_ZNK3tvm5relay24EliminateIdentityRewrite8CallbackERKNS_9RelayExprES4_RKNS_7runtime3MapINS0_9DFPatternENS5_5ArrayIS2_vEEvvEE'/>
+<use f='tvm/src/relay/transforms/simplify_expr.cc' l='667' u='m' c='_ZNK3tvm5relay22SimplifyConsecutiveAdd8CallbackERKNS_9RelayExprES4_RKNS_7runtime3MapINS0_9DFPatternENS5_5ArrayIS2_vEEvvEE'/>
+<use f='tvm/src/relay/transforms/simplify_expr.cc' l='668' u='m' c='_ZNK3tvm5relay22SimplifyConsecutiveAdd8CallbackERKNS_9RelayExprES4_RKNS_7runtime3MapINS0_9DFPatternENS5_5ArrayIS2_vEEvvEE'/>
+<use f='tvm/src/relay/transforms/simplify_expr.cc' l='670' u='m' c='_ZNK3tvm5relay22SimplifyConsecutiveAdd8CallbackERKNS_9RelayExprES4_RKNS_7runtime3MapINS0_9DFPatternENS5_5ArrayIS2_vEEvvEE'/>
+<use f='tvm/src/relay/transforms/simplify_expr.cc' l='673' u='m' c='_ZNK3tvm5relay22SimplifyConsecutiveAdd8CallbackERKNS_9RelayExprES4_RKNS_7runtime3MapINS0_9DFPatternENS5_5ArrayIS2_vEEvvEE'/>
+<use f='tvm/src/relay/transforms/simplify_expr.cc' l='673' u='m' c='_ZNK3tvm5relay22SimplifyConsecutiveAdd8CallbackERKNS_9RelayExprES4_RKNS_7runtime3MapINS0_9DFPatternENS5_5ArrayIS2_vEEvvEE'/>
+<use f='tvm/src/relay/transforms/simplify_fc_transpose.cc' l='54' u='m' c='_ZN3tvm5relay18FCTransposeVisitor10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/transforms/simplify_fc_transpose.cc' l='57' u='m' c='_ZN3tvm5relay18FCTransposeVisitor10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/transforms/simplify_fc_transpose.cc' l='58' u='m' c='_ZN3tvm5relay18FCTransposeVisitor10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/transforms/simplify_fc_transpose.cc' l='64' c='_ZN3tvm5relay18FCTransposeVisitor10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/transforms/simplify_fc_transpose.cc' l='92' u='m' c='_ZN3tvm5relay18FCTransposeMutator8Rewrite_EPKNS0_8CallNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/simplify_fc_transpose.cc' l='93' u='m' c='_ZN3tvm5relay18FCTransposeMutator8Rewrite_EPKNS0_8CallNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/simplify_fc_transpose.cc' l='96' u='m' c='_ZN3tvm5relay18FCTransposeMutator8Rewrite_EPKNS0_8CallNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/simplify_inference.cc' l='198' u='m' c='_ZN3tvm5relay19InferenceSimplifier8Rewrite_EPKNS0_16TupleGetItemNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/simplify_inference.cc' l='198' u='m' c='_ZN3tvm5relay19InferenceSimplifier8Rewrite_EPKNS0_16TupleGetItemNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/simplify_inference.cc' l='198' u='m' c='_ZN3tvm5relay19InferenceSimplifier8Rewrite_EPKNS0_16TupleGetItemNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/simplify_inference.cc' l='199' u='m' c='_ZN3tvm5relay19InferenceSimplifier8Rewrite_EPKNS0_16TupleGetItemNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/simplify_inference.cc' l='199' u='m' c='_ZN3tvm5relay19InferenceSimplifier8Rewrite_EPKNS0_16TupleGetItemNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/simplify_inference.cc' l='199' u='m' c='_ZN3tvm5relay19InferenceSimplifier8Rewrite_EPKNS0_16TupleGetItemNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/simplify_inference.cc' l='201' u='m' c='_ZN3tvm5relay19InferenceSimplifier8Rewrite_EPKNS0_16TupleGetItemNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/simplify_inference.cc' l='209' u='m' c='_ZN3tvm5relay19InferenceSimplifier8Rewrite_EPKNS0_8CallNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/simplify_inference.cc' l='209' u='m' c='_ZN3tvm5relay19InferenceSimplifier8Rewrite_EPKNS0_8CallNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/simplify_inference.cc' l='212' u='m' c='_ZN3tvm5relay19InferenceSimplifier8Rewrite_EPKNS0_8CallNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/simplify_inference.cc' l='212' u='m' c='_ZN3tvm5relay19InferenceSimplifier8Rewrite_EPKNS0_8CallNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/simplify_inference.cc' l='212' u='m' c='_ZN3tvm5relay19InferenceSimplifier8Rewrite_EPKNS0_8CallNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/simplify_inference.cc' l='213' u='m' c='_ZN3tvm5relay19InferenceSimplifier8Rewrite_EPKNS0_8CallNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/simplify_inference.cc' l='216' u='m' c='_ZN3tvm5relay19InferenceSimplifier8Rewrite_EPKNS0_8CallNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/simplify_inference.cc' l='216' u='m' c='_ZN3tvm5relay19InferenceSimplifier8Rewrite_EPKNS0_8CallNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/simplify_inference.cc' l='216' u='m' c='_ZN3tvm5relay19InferenceSimplifier8Rewrite_EPKNS0_8CallNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/simplify_inference.cc' l='217' u='m' c='_ZN3tvm5relay19InferenceSimplifier8Rewrite_EPKNS0_8CallNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/simplify_inference.cc' l='220' u='m' c='_ZN3tvm5relay19InferenceSimplifier8Rewrite_EPKNS0_8CallNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/simplify_inference.cc' l='220' u='m' c='_ZN3tvm5relay19InferenceSimplifier8Rewrite_EPKNS0_8CallNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/simplify_inference.cc' l='220' u='m' c='_ZN3tvm5relay19InferenceSimplifier8Rewrite_EPKNS0_8CallNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/simplify_inference.cc' l='221' u='m' c='_ZN3tvm5relay19InferenceSimplifier8Rewrite_EPKNS0_8CallNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/simplify_inference.cc' l='224' u='m' c='_ZN3tvm5relay19InferenceSimplifier8Rewrite_EPKNS0_8CallNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/split_args.cc' l='40' u='m' c='_ZN3tvm5relay16ArgumentSplitter8Rewrite_EPKNS0_8CallNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/to_a_normal_form.cc' l='256' c='_ZN3tvm5relay12_GLOBAL__N_14Fill10VisitExpr_EPKNS0_8CallNodeERKNS0_3VarE'/>
+<use f='tvm/src/relay/transforms/to_cps.cc' l='237' u='m' c='_ZZN3tvm5relay5ToCPSERKNS0_8FunctionERKNS_8IRModuleEPSt13unordered_mapINS_9GlobalVarES8_NS_7runtime13ObjectPtrHashENS9_14ObjectPtrEqualESaISt4pairIKS81891021'/>
+<use f='tvm/src/relay/transforms/to_cps.cc' l='240' u='m' c='_ZZN3tvm5relay5ToCPSERKNS0_8FunctionERKNS_8IRModuleEPSt13unordered_mapINS_9GlobalVarES8_NS_7runtime13ObjectPtrHashENS9_14ObjectPtrEqualESaISt4pairIKS81891021'/>
+<use f='tvm/src/relay/transforms/to_cps.cc' l='252' u='m' c='_ZZN3tvm5relay5ToCPSERKNS0_8FunctionERKNS_8IRModuleEPSt13unordered_mapINS_9GlobalVarES8_NS_7runtime13ObjectPtrHashENS9_14ObjectPtrEqualESaISt4pairIKS81891021'/>
+<use f='tvm/src/relay/transforms/to_cps.cc' l='256' u='m' c='_ZZN3tvm5relay5ToCPSERKNS0_8FunctionERKNS_8IRModuleEPSt13unordered_mapINS_9GlobalVarES8_NS_7runtime13ObjectPtrHashENS9_14ObjectPtrEqualESaISt4pairIKS81891021'/>
+<use f='tvm/src/relay/transforms/to_mixed_precision.cc' l='362' c='_ZN3tvm5relay18MixedPrecisionPass8Rewrite_EPKNS0_8CallNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/to_mixed_precision.cc' l='385' u='r' c='_ZN3tvm5relay18MixedPrecisionPass8Rewrite_EPKNS0_8CallNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/type_infer.cc' l='562' c='_ZN3tvm5relay14TypeInferencer10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/transforms/type_infer.cc' l='875' u='r' c='_ZN3tvm5relay26SameTypedSubgraphExtractor10VisitExpr_EPKNS0_8CallNodeE'/>

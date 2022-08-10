@@ -1,0 +1,13 @@
+<dec f='tvm/src/runtime/rpc/rpc_session.h' l='234' type='void tvm::runtime::RPCSession::AsyncCopyFromRemote(DLTensor * remote_from, void * local_to_bytes, uint64_t nbytes, tvm::runtime::RPCSession::FAsyncCallback on_complete)'/>
+<doc f='tvm/src/runtime/rpc/rpc_session.h' l='224'>/*!
+   * \brief Asynchrous version of CopyFromRemote.
+   *
+   * \param remote_from The source host data.
+   * \param local_to_bytes The target array.
+   * \param nbytes The size of the memory in bytes.
+   * \param on_complete The callback to signal copy complete.
+   * \note All the allocated memory in remote_from, and local_to
+   *       must stay alive until on_compelete is called.
+   */</doc>
+<use f='tvm/src/runtime/rpc/rpc_endpoint.cc' l='426' u='c' c='_ZN3tvm7runtime11RPCEndpoint12EventHandler20HandleCopyFromRemoteEv'/>
+<def f='tvm/src/runtime/rpc/rpc_session.cc' l='68' ll='80' type='void tvm::runtime::RPCSession::AsyncCopyFromRemote(DLTensor * remote_from, void * local_to_bytes, uint64_t nbytes, RPCSession::FAsyncCallback callback)'/>

@@ -1,0 +1,19 @@
+<def f='tvm/include/tvm/topi/transform.h' l='1425' ll='1434' type='tvm::te::Tensor tvm::topi::matmul(const tvm::te::Tensor &amp; A, const tvm::te::Tensor &amp; B, bool trans_a = false, bool trans_b = false, std::string name = &quot;T_matmul&quot;, std::string tag = kMatMul)'/>
+<doc f='tvm/include/tvm/topi/transform.h' l='1410'>/*!
+ * \brief Creates an operation that calculates a matrix multiplication
+ *  (row-major notation):
+ *      A(i, k) * B(k, j), if trans_a == trans_b
+ *          the usual transposed combinations, otherwise
+ *
+ * \param A The matrix A
+ * \param B The matrix B
+ * \param trans_a Is A&apos;s layout transposed?
+ * \param trans_b Is B&apos;s layout transposed?
+ * \param name The name of the operation
+ * \param tag The tag to mark the operation
+ *
+ * \return A Tensor whose op member is the matmul operation
+ */</doc>
+<use f='tvm/src/topi/transform.cc' l='152' u='c'/>
+<use f='tvm/src/topi/transform.cc' l='155' u='c'/>
+<use f='tvm/src/topi/transform.cc' l='158' u='c'/>

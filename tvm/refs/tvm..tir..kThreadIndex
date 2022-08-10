@@ -1,0 +1,16 @@
+<dec f='tvm/include/tvm/tir/var.h' l='195' type='1'/>
+<use f='tvm/include/tvm/tir/var.h' l='321' c='_ZN3tvm3tir18IterVarType2StringENS0_11IterVarTypeE'/>
+<doc f='tvm/include/tvm/tir/var.h' l='188'>/*!
+   * \brief The IterVar itself is a thread-index
+   *  of a fixed thread launching group.
+   *  Note that this is already assumed to be parallelized.
+   *
+   *  Disallow: split/fuse/vectorize/parallel
+   */</doc>
+<use f='tvm/src/te/operation/scan_op.cc' l='266' u='r' c='_ZNK3tvm2te10ScanOpNode12BuildProvideERKNS0_5StageERKSt13unordered_mapINS_3tir7IterVarENS_5RangeESt4hashIS7_ESt8equal_toIS7_ESaISt4pairIKS7_S8_EEEb'/>
+<use f='tvm/src/te/schedule/schedule_lang.cc' l='174' u='r' c='_ZN3tvm2te5Stage4bindENS_3tir7IterVarES3_'/>
+<use f='tvm/src/te/schedule/schedule_lang.cc' l='294' u='r' c='_ZN3tvm2te5Stage7reorderERKNS_7runtime5ArrayINS_3tir7IterVarEvEE'/>
+<use f='tvm/src/te/tensor.cc' l='35' u='r' c='_ZN3tvm2te11thread_axisENS_5RangeENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<use f='tvm/src/tir/schedule/concrete_schedule.cc' l='522' u='r' c='_ZN3tvm3tir20ConcreteScheduleNode4BindERKNS0_6LoopRVERKNS_7runtime6StringE'/>
+<use f='tvm/src/tir/transforms/lower_opaque_block.cc' l='122' u='r' c='_ZN3tvm3tir16OpaqueBlockLower16MakeLaunchThreadENS_8PrimExprES2_NS0_3VarENS_7runtime6StringENS0_4StmtE'/>
+<use f='tvm/src/tir/transforms/unify_thread_binding.cc' l='143' u='r' c='_ZN3tvm3tir20ThreadBindingUnifier17EmitLaunchThreadsERKNS0_4StmtE'/>

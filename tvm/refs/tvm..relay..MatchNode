@@ -1,0 +1,104 @@
+<inh f='tvm/include/tvm/ir/expr.h' l='359' c='tvm::RelayExprNode'/>
+<def f='tvm/include/tvm/relay/adt.h' l='277' ll='314'/>
+<use f='tvm/include/tvm/relay/adt.h' l='299' c='_ZNK3tvm5relay9MatchNode12SEqualReduceEPKS1_NS_13SEqualReducerE'/>
+<use f='tvm/include/tvm/relay/adt.h' l='327' c='_ZNK3tvm5relay5MatchptEv'/>
+<use f='tvm/include/tvm/relay/adt.h' l='327' c='_ZNK3tvm5relay5MatchptEv'/>
+<use f='tvm/include/tvm/relay/adt.h' l='327' c='_ZNK3tvm5relay5Match3getEv'/>
+<use f='tvm/include/tvm/relay/adt.h' l='327'/>
+<use f='tvm/include/tvm/relay/adt.h' l='328' c='_ZN3tvm5relay5Match11CopyOnWriteEv'/>
+<use f='tvm/include/tvm/relay/adt.h' l='328' c='_ZN3tvm5relay5Match11CopyOnWriteEv'/>
+<use f='tvm/include/tvm/relay/adt.h' l='328' c='_ZN3tvm5relay5Match11CopyOnWriteEv'/>
+<use f='tvm/include/tvm/relay/expr_functor.h' l='112' c='_ZN3tvm5relay11ExprFunctorIFT_RKNS_9RelayExprEDpT0_EE10VisitExpr_EPKNS0_9MatchNodeES7_'/>
+<use f='tvm/include/tvm/relay/expr_functor.h' l='137' c='_ZN3tvm5relay11ExprFunctorIFT_RKNS_9RelayExprEDpT0_EE10InitVTableEv'/>
+<use f='tvm/include/tvm/relay/expr_functor.h' l='137' c='_ZN3tvm5relay11ExprFunctorIFT_RKNS_9RelayExprEDpT0_EE10InitVTableEv'/>
+<use f='tvm/include/tvm/relay/expr_functor.h' l='166' c='_ZN3tvm5relay11ExprVisitor10VisitExpr_EPKNS0_9MatchNodeE'/>
+<use f='tvm/include/tvm/relay/expr_functor.h' l='206' c='_ZN3tvm5relay11ExprMutator10VisitExpr_EPKNS0_9MatchNodeE'/>
+<use f='tvm/include/tvm/relay/expr_functor.h' l='380' c='_ZN3tvm5relay12ExprRewriter8Rewrite_EPKNS0_9MatchNodeERKNS_9RelayExprE'/>
+<use f='tvm/include/tvm/relay/expr_functor.h' l='401' c='_ZN3tvm5relay12ExprRewriter10InitVTableEv'/>
+<use f='tvm/include/tvm/relay/expr_functor.h' l='401' c='_ZN3tvm5relay12ExprRewriter10InitVTableEv'/>
+<size>64</size>
+<doc f='tvm/include/tvm/relay/adt.h' l='276'>/*! \brief Match container node. */</doc>
+<mbr r='tvm::relay::MatchNode::data' o='320' t='tvm::relay::Expr'/>
+<mbr r='tvm::relay::MatchNode::clauses' o='384' t='tvm::Array&lt;Clause&gt;'/>
+<mbr r='tvm::relay::MatchNode::complete' o='448' t='bool'/>
+<fun r='_ZN3tvm5relay9MatchNode10VisitAttrsEPNS_11AttrVisitorE'/>
+<fun r='_ZNK3tvm5relay9MatchNode12SEqualReduceEPKS1_NS_13SEqualReducerE'/>
+<fun r='_ZNK3tvm5relay9MatchNode11SHashReduceENS_12SHashReducerE'/>
+<smbr r='tvm::relay::MatchNode::_type_key' t='const char *const'/>
+<smbr r='tvm::relay::MatchNode::_type_final' t='const bool'/>
+<smbr r='tvm::relay::MatchNode::_type_child_slots' t='const int'/>
+<fun r='_ZN3tvm5relay9MatchNode16RuntimeTypeIndexEv'/>
+<fun r='_ZN3tvm5relay9MatchNode27_GetOrAllocRuntimeTypeIndexEv'/>
+<use f='tvm/src/printer/text_printer.h' l='167' c='_ZN3tvm5relay16RelayTextPrinter10VisitExpr_EPKNS0_9MatchNodeE'/>
+<size>64</size>
+<use f='tvm/src/parser/span_check.h' l='68' c='_ZN3tvm6parser11SpanChecker10VisitExpr_EPKNS_5relay9MatchNodeE'/>
+<size>64</size>
+<use f='tvm/src/parser/span_check.cc' l='69' c='_ZN3tvm6parser11SpanChecker10VisitExpr_EPKNS_5relay9MatchNodeE'/>
+<size>64</size>
+<use f='tvm/src/printer/relay_text_printer.cc' l='539' c='_ZN3tvm5relay16RelayTextPrinter10VisitExpr_EPKNS0_9MatchNodeE'/>
+<size>64</size>
+<use f='tvm/src/relay/analysis/dependency_graph.cc' l='181' c='_ZN3tvm5relay15DependencyGraph7Creator10VisitExpr_EPKNS0_9MatchNodeE'/>
+<size>64</size>
+<use f='tvm/src/relay/analysis/feature.cc' l='82' macro='1' c='_ZZN3tvm5relay13DetectFeatureERKNS_9RelayExprEEN15FeatureDetector10VisitExpr_EPKNS0_9MatchNodeE'/>
+<size>64</size>
+<use f='tvm/src/relay/backend/liveness_analysis.h' l='192' c='_ZN3tvm5relay9transform16ControlFlowGraph7Creator10VisitExpr_EPKNS0_9MatchNodeEPNS2_10BasicBlockE'/>
+<use f='tvm/src/relay/backend/liveness_analysis.h' l='215' c='_ZN3tvm5relay9transform15VarUseCollector10VisitExpr_EPKNS0_9MatchNodeE'/>
+<size>64</size>
+<use f='tvm/src/relay/backend/aot_executor_codegen.cc' l='731' c='_ZN3tvm5relay7backend18AOTExecutorCodegen10VisitExpr_EPKNS0_9MatchNodeE'/>
+<size>64</size>
+<use f='tvm/src/relay/backend/graph_executor_codegen.cc' l='527' c='_ZN3tvm5relay7backend20GraphExecutorCodegen10VisitExpr_EPKNS0_9MatchNodeE'/>
+<size>64</size>
+<use f='tvm/src/relay/backend/interpreter.cc' l='867' c='_ZN3tvm5relay11Interpreter10VisitExpr_EPKNS0_9MatchNodeE'/>
+<use f='tvm/src/relay/backend/interpreter.cc' l='1007' c='_ZN3tvm5relay23NeedsPreparationVisitor10VisitExpr_EPKNS0_9MatchNodeE'/>
+<size>64</size>
+<use f='tvm/src/relay/backend/liveness_analysis.cc' l='96' c='_ZN3tvm5relay9transform16ControlFlowGraph7Creator10VisitExpr_EPKNS0_7LetNodeEPNS2_10BasicBlockE'/>
+<use f='tvm/src/relay/backend/liveness_analysis.cc' l='96' c='_ZN3tvm5relay9transform16ControlFlowGraph7Creator10VisitExpr_EPKNS0_7LetNodeEPNS2_10BasicBlockE'/>
+<use f='tvm/src/relay/backend/liveness_analysis.cc' l='120' c='_ZN3tvm5relay9transform16ControlFlowGraph7Creator10VisitExpr_EPKNS0_9MatchNodeEPNS2_10BasicBlockE'/>
+<use f='tvm/src/relay/backend/liveness_analysis.cc' l='151' c='_ZN3tvm5relay9transform15VarUseCollector10VisitExpr_EPKNS0_9MatchNodeE'/>
+<size>64</size>
+<use f='tvm/src/relay/backend/vm/compiler.cc' l='410' c='_ZN3tvm5relay2vm18VMFunctionCompiler10VisitExpr_EPKNS0_9MatchNodeE'/>
+<size>64</size>
+<use f='tvm/src/relay/backend/vm/manifest_lifetimes.cc' l='214' c='_ZN3tvm5relay9transform15AliasEliminator10VisitExpr_EPKNS0_9MatchNodeE'/>
+<size>64</size>
+<use f='tvm/src/relay/collage/sub_graph.cc' l='429' c='_ZZN3tvm5relay7collage19SubExprKindAndLabelB5cxx11ERKNS_9RelayExprEEN7Visitor10VisitExpr_B5cxx11EPKNS0_9MatchNodeE'/>
+<size>64</size>
+<use f='tvm/src/relay/ir/adt.cc' l='134' c='_ZN3tvm5relay5MatchC1ENS_9RelayExprENS_7runtime5ArrayINS0_6ClauseEvEEbNS_4SpanE'/>
+<use f='tvm/src/relay/ir/adt.cc' l='134' c='_ZN3tvm5relay5MatchC1ENS_9RelayExprENS_7runtime5ArrayINS0_6ClauseEvEEbNS_4SpanE'/>
+<use f='tvm/src/relay/ir/adt.cc' l='165' c='_ZN3tvm5relay10WithFieldsENS0_5MatchENS_7runtime8OptionalINS_9RelayExprEEENS3_INS2_5ArrayINS0_6ClauseEvEEEENS3_INS_4BoolEEENS3_INS_4SpanEEE'/>
+<use f='tvm/src/relay/ir/adt.cc' l='174'/>
+<use f='tvm/src/relay/ir/adt.cc' l='174'/>
+<use f='tvm/src/relay/ir/adt.cc' l='174'/>
+<use f='tvm/src/relay/ir/adt.cc' l='182'/>
+<use f='tvm/src/relay/ir/adt.cc' l='183'/>
+<size>64</size>
+<use f='tvm/src/relay/ir/dataflow_matcher.cc' l='567' c='_ZN3tvm5relay14MatchExtractor10VisitExpr_EPKNS0_9MatchNodeE'/>
+<size>64</size>
+<use f='tvm/src/relay/ir/expr_functor.cc' l='269' c='_ZN3tvm5relay11ExprMutator10VisitExpr_EPKNS0_9MatchNodeE'/>
+<use f='tvm/src/relay/ir/expr_functor.cc' l='385' c='_ZN3tvm5relay11ExprVisitor10VisitExpr_EPKNS0_9MatchNodeE'/>
+<size>64</size>
+<use f='tvm/src/relay/ir/indexed_graph.cc' l='59' c='_ZZN3tvm5relay12RefToSummaryB5cxx11ERKNS_9RelayExprEEN7Visitor10VisitExpr_B5cxx11EPKNS0_9MatchNodeE'/>
+<use f='tvm/src/relay/ir/indexed_graph.cc' l='150' c='_ZZN3tvm5relay18CreateIndexedGraphERKNS_9RelayExprEEN7Creator10VisitExpr_EPKNS0_9MatchNodeE'/>
+<use f='tvm/src/relay/ir/indexed_graph.cc' l='291' c='_ZZN3tvm5relay18CreateIndexedGraphERKNS_9RelayExprEEN9Annotator10VisitExpr_EPKNS0_9MatchNodeE'/>
+<use f='tvm/src/relay/ir/indexed_graph.cc' l='368' c='_ZZN3tvm5relay18CreateIndexedGraphERKNS_9RelayExprEEN7Blocker10VisitExpr_EPKNS0_9MatchNodeE'/>
+<size>64</size>
+<use f='tvm/src/relay/transforms/capture_postdfsindex_in_spans.cc' l='100' c='_ZN3tvm5relay9transform12_GLOBAL__N_113SpansRewriter8Rewrite_EPKNS0_9MatchNodeERKNS_9RelayExprE'/>
+<size>64</size>
+<use f='tvm/src/relay/transforms/dead_code.cc' l='289' c='_ZN3tvm5relay12_GLOBAL__N_113PurityVisitor10VisitExpr_EPKNS0_9MatchNodeE'/>
+<size>64</size>
+<use f='tvm/src/relay/transforms/defunctionalization.cc' l='231' c='_ZN3tvm5relay13DefuncMutator12AddApplyCaseENS_9GlobalVarENS_8FuncTypeENS_11ConstructorERKNS_9RelayExprENS_7runtime5ArrayINS0_7PatternEvEE'/>
+<size>64</size>
+<use f='tvm/src/relay/transforms/device_planner.cc' l='638' c='_ZN3tvm5relay9transform12_GLOBAL__N_114DeviceAnalyzer10VisitExpr_EPKNS0_9MatchNodeE'/>
+<use f='tvm/src/relay/transforms/device_planner.cc' l='1174' c='_ZN3tvm5relay9transform12_GLOBAL__N_114DeviceCapturer10VisitExpr_EPKNS0_9MatchNodeE'/>
+<size>64</size>
+<use f='tvm/src/relay/transforms/fuse_ops.cc' l='365' c='_ZN3tvm5relay19IndexedForwardGraph7Creator10VisitExpr_EPKNS0_9MatchNodeE'/>
+<size>64</size>
+<use f='tvm/src/relay/transforms/partial_eval.cc' l='946' c='_ZN3tvm5relay12partial_eval16PartialEvaluator10VisitExpr_EPKNS0_9MatchNodeEPNS0_7LetListE'/>
+<size>64</size>
+<use f='tvm/src/relay/transforms/to_a_normal_form.cc' l='367' c='_ZN3tvm5relay12_GLOBAL__N_14Fill10VisitExpr_EPKNS0_9MatchNodeERKNS0_3VarE'/>
+<size>64</size>
+<use f='tvm/src/relay/transforms/to_cps.cc' l='190' c='_ZZN3tvm5relay5ToCPSERKNS0_8FunctionERKNS_8IRModuleEPSt13unordered_mapINS_9GlobalVarES8_NS_7runtime13ObjectPtrHashENS9_14ObjectPtrEqualESaISt4pairIKS814013644'/>
+<size>64</size>
+<use f='tvm/src/relay/transforms/type_infer.cc' l='327' c='_ZN3tvm5relay14TypeInferencer10VisitExpr_EPKNS0_9MatchNodeE'/>
+<use f='tvm/src/relay/transforms/type_infer.cc' l='678' c='_ZN3tvm5relay14TypeInferencer8Resolver10VisitExpr_EPKNS0_9MatchNodeE'/>
+<use f='tvm/src/relay/transforms/type_infer.cc' l='900' c='_ZN3tvm5relay26SameTypedSubgraphExtractor10VisitExpr_EPKNS0_9MatchNodeE'/>
+<size>64</size>

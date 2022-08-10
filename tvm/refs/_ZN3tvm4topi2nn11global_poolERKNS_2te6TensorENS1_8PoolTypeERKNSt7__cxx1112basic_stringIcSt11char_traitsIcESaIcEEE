@@ -1,0 +1,28 @@
+<def f='tvm/include/tvm/topi/nn/pooling.h' l='487' ll='489' type='tvm::te::Tensor tvm::topi::nn::global_pool(const tvm::te::Tensor &amp; x, tvm::topi::nn::PoolType pool_type, const std::string &amp; layout = &quot;NCHW&quot;)'/>
+<use f='tvm/src/relay/op/nn/pooling.cc' l='311' u='c' c='_ZN3tvm5relay19GlobalPool2DComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
+<doc f='tvm/include/tvm/topi/nn/pooling.h' l='462'>/*!
+ * \brief Perform global pooling on height and width dimension of data.
+ *        It decides the height and width dimension according to the layout string,
+ *        in which &apos;W&apos; and &apos;H&apos; means width and height respectively.
+ *        Width and height dimension cannot be split.
+ *        For example, NCHW, NCHW16c, ... are valid for global_pool,
+ *        while NCHW16w, NCHW16h are not.
+ *        See \a layout for more information of the layout string convention.
+ *
+ * \param x The input tensor represent as layout
+ * \param pool_type The type of pooling operator
+ * \param layout The input layout. global-pooling supports any layout as long as &apos;H&apos; and &apos;W&apos; appear.
+ *        The layout is supposed to be composed of upper cases, lower cases and (optional) numbers,
+ *        where upper case indicates a dimension and
+ *        the corresponding lower case (with factor size) indicates the sub-dimension.
+ *        For example, `NCHW16c` can describe a 5-D tensor of
+ *        [batch_size, channel, height, width, channel_block].
+ *        (in which factor size `16` will not be used in pooling but for other operators,
+ *        it can be used to decide the output shape).
+ *        Since pooling does not care about the factor size of
+ *        dimensions other than `H` and `W`, one can pass `NCHWc` as well.
+ *
+ * \return The output tensor in same layout with height and width dimension size of 1.
+ *         e.g., for NCHW, the output shape will be [batch, channel, 1, 1]
+ */</doc>
+<use f='tvm/src/topi/nn.cc' l='109' u='c'/>

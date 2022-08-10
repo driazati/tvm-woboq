@@ -1,0 +1,35 @@
+<use f='tvm/include/tvm/runtime/vm/executable.h' l='226' c='_ZNK3tvm7runtime2vm10Executable21GetVMFunctionWithNameERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<use f='tvm/include/tvm/runtime/vm/executable.h' l='279'/>
+<def f='tvm/include/tvm/runtime/vm/vm.h' l='77' ll='103'/>
+<use f='tvm/include/tvm/runtime/vm/vm.h' l='102' c='_ZN3tvm7runtime2vmlsERSoRKNS1_10VMFunctionE'/>
+<use f='tvm/include/tvm/runtime/vm/vm.h' l='183' c='_ZN3tvm7runtime2vm14VirtualMachine9PushFrameEllRKNS1_10VMFunctionE'/>
+<use f='tvm/include/tvm/runtime/vm/vm.h' l='218' c='_ZN3tvm7runtime2vm14VirtualMachine6InvokeERKNS1_10VMFunctionERKSt6vectorINS0_9ObjectRefESaIS7_EE'/>
+<use f='tvm/include/tvm/runtime/vm/vm.h' l='263' c='_ZN3tvm7runtime2vm14VirtualMachine12InvokeGlobalERKNS1_10VMFunctionERKSt6vectorINS0_9ObjectRefESaIS7_EE'/>
+<use f='tvm/include/tvm/runtime/vm/vm.h' l='324' c='_ZNK3tvm7runtime2vm14VirtualMachine21CheckAndGetVMFunctionERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<use f='tvm/src/relay/backend/vm/compiler.cc' l='246' c='_ZN3tvm5relay2vm18VMFunctionCompiler7CompileERKNS_9GlobalVarERKNS0_8FunctionE'/>
+<use f='tvm/src/relay/backend/vm/compiler.cc' l='287' c='_ZN3tvm5relay2vm18VMFunctionCompiler7CompileERKNS_9GlobalVarERKNS0_8FunctionE'/>
+<size>112</size>
+<doc f='tvm/include/tvm/runtime/vm/vm.h' l='71'>/*!
+ * \brief A representation of a Relay function in the VM.
+ *
+ * Contains metadata about the compiled function, as
+ * well as the compiled VM instructions.
+ */</doc>
+<mbr r='tvm::runtime::vm::VMFunction::name' o='0' t='std::string'/>
+<mbr r='tvm::runtime::vm::VMFunction::params' o='256' t='std::vector&lt;std::string&gt;'/>
+<mbr r='tvm::runtime::vm::VMFunction::instructions' o='448' t='std::vector&lt;Instruction&gt;'/>
+<mbr r='tvm::runtime::vm::VMFunction::register_file_size' o='640' t='tvm::runtime::vm::Index'/>
+<mbr r='tvm::runtime::vm::VMFunction::param_device_indexes' o='704' t='std::vector&lt;Index&gt;'/>
+<fun r='_ZN3tvm7runtime2vm10VMFunctionC1ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt6vectorIS8_SaIS8_EES9_INS1_11InstructionESaISC_EElS9_IlSaIlEE'/>
+<fun r='_ZN3tvm7runtime2vm10VMFunctionC1Ev'/>
+<use f='tvm/src/runtime/vm/executable.cc' l='112' c='_ZNK3tvm7runtime2vm10Executable21GetVMFunctionWithNameERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<use f='tvm/src/runtime/vm/executable.cc' l='1019' c='_ZN3tvm7runtime2vm10Executable15LoadCodeSectionEPN4dmlc6StreamE'/>
+<use f='tvm/src/runtime/vm/executable.cc' l='1020' c='_ZN3tvm7runtime2vm10Executable15LoadCodeSectionEPN4dmlc6StreamE'/>
+<size>112</size>
+<use f='tvm/src/runtime/vm/vm.cc' l='57' c='_ZN3tvm7runtime2vm15VMFunctionPrintERSoRKNS1_10VMFunctionE'/>
+<use f='tvm/src/runtime/vm/vm.cc' l='64' c='_ZN3tvm7runtime2vmlsERSoRKNS1_10VMFunctionE'/>
+<use f='tvm/src/runtime/vm/vm.cc' l='292' c='_ZNK3tvm7runtime2vm14VirtualMachine21CheckAndGetVMFunctionERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<use f='tvm/src/runtime/vm/vm.cc' l='331' c='_ZN3tvm7runtime2vm14VirtualMachine9PushFrameEllRKNS1_10VMFunctionE'/>
+<use f='tvm/src/runtime/vm/vm.cc' l='347' c='_ZN3tvm7runtime2vm14VirtualMachine12InvokeGlobalERKNS1_10VMFunctionERKSt6vectorINS0_9ObjectRefESaIS7_EE'/>
+<use f='tvm/src/runtime/vm/vm.cc' l='361' c='_ZN3tvm7runtime2vm14VirtualMachine6InvokeERKNS1_10VMFunctionERKSt6vectorINS0_9ObjectRefESaIS7_EE'/>
+<size>112</size>

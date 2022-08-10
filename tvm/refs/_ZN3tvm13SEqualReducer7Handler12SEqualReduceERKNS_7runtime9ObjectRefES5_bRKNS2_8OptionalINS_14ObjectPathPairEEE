@@ -1,0 +1,19 @@
+<dec f='tvm/include/tvm/node/structural_equal.h' l='144' type='bool tvm::SEqualReducer::Handler::SEqualReduce(const tvm::runtime::ObjectRef &amp; lhs, const tvm::runtime::ObjectRef &amp; rhs, bool map_free_vars, const Optional&lt;tvm::ObjectPathPair&gt; &amp; current_paths)'/>
+<doc f='tvm/include/tvm/node/structural_equal.h' l='132'>/*!
+     * \brief Reduce condition to equality of lhs and rhs.
+     *
+     * \param lhs The left operand.
+     * \param rhs The right operand.
+     * \param map_free_vars Whether do we allow remap variables if possible.
+     * \param current_paths Optional paths to `lhs` and `rhs` objects, for error traceability.
+     *
+     * \return false if there is an immediate failure, true otherwise.
+     * \note This function may save the equality condition of (lhs == rhs) in an internal
+     *       stack and try to resolve later.
+     */</doc>
+<use f='tvm/src/node/structural_equal.cc' l='82' u='c' c='_ZNK3tvm13SEqualReducerclERKNS_7runtime9ObjectRefES4_'/>
+<use f='tvm/src/node/structural_equal.cc' l='90' u='c' c='_ZN3tvm13SEqualReducer8DefEqualERKNS_7runtime9ObjectRefES4_'/>
+<use f='tvm/src/node/structural_equal.cc' l='175' u='c' c='_ZNK3tvm13SEqualReducer16ObjectAttrsEqualERKNS_7runtime9ObjectRefES4_bPKNS_14ObjectPathPairE'/>
+<use f='tvm/src/node/structural_equal.cc' l='182' u='c' c='_ZNK3tvm13SEqualReducer16ObjectAttrsEqualERKNS_7runtime9ObjectRefES4_bPKNS_14ObjectPathPairE'/>
+<ovr f='tvm/src/node/structural_equal.cc' l='206' c='_ZN3tvm21RemapVarSEqualHandler12SEqualReduceERKNS_7runtime9ObjectRefES4_bRKNS1_8OptionalINS_14ObjectPathPairEEE'/>
+<ovr f='tvm/src/tir/analysis/deep_equal.cc' l='36' c='_ZN3tvm3tir20DeepCmpSEqualHandler12SEqualReduceERKNS_7runtime9ObjectRefES5_bRKNS2_8OptionalINS_14ObjectPathPairEEE'/>

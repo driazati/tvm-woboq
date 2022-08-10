@@ -1,0 +1,19 @@
+<dec f='tvm/src/relay/op/call/call.h' l='78' type='tvm::relay::CallLoweredProps tvm::relay::GetCallLoweredProps(const tvm::relay::CallNode * call_node)'/>
+<use f='tvm/src/relay/analysis/call_graph.cc' l='72' u='c' c='_ZN3tvm5relay13CallGraphNode14AddToCallGraphERKNS_9GlobalVarERKNS0_8FunctionE'/>
+<doc f='tvm/src/relay/op/call/call.h' l='74'>/*!
+ * \brief Helper to extract the lowered function and its arguments from a Call(&quot;call_lowered&quot;, ...).
+ * Returns the null/empty \p CallLoweredProps if \p call_node is not in that form.
+ */</doc>
+<use f='tvm/src/relay/backend/aot_executor_codegen.cc' l='92' u='c' c='_ZN3tvm5relay7backend20AOTOnDemandAllocator21DeviceAwareVisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/backend/aot_executor_codegen.cc' l='614' u='c' c='_ZN3tvm5relay7backend18AOTExecutorCodegen10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/backend/graph_executor_codegen.cc' l='414' u='c' c='_ZN3tvm5relay7backend20GraphExecutorCodegen16GraphAddCallNodeEPKNS0_8CallNodeESt13unordered_mapINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEN411525254'/>
+<use f='tvm/src/relay/backend/graph_plan_memory.cc' l='364' u='c' c='_ZN3tvm5relay16StorageAllocator21DeviceAwareVisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/backend/interpreter.cc' l='705' u='c' c='_ZN3tvm5relay11Interpreter10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/backend/vm/compiler.cc' l='541' u='c' c='_ZN3tvm5relay2vm18VMFunctionCompiler21DeviceAwareVisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/backend/vm/removed_unused_funcs.cc' l='68' u='c' c='_ZN3tvm5relay2vm10CallTracer10VisitExpr_EPKNS0_8CallNodeE'/>
+<def f='tvm/src/relay/op/call/call.cc' l='98' ll='116' type='tvm::relay::CallLoweredProps tvm::relay::GetCallLoweredProps(const tvm::relay::CallNode * call_node)'/>
+<use f='tvm/src/relay/op/call/call.cc' l='119' u='c' c='_ZN3tvm5relay10GetAnyCallEPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/transforms/device_domains.cc' l='202' u='c' c='_ZN3tvm5relay9transform13DeviceDomains15DomainForCalleeERKNS0_4CallE'/>
+<use f='tvm/src/relay/transforms/device_planner.cc' l='382' u='c' c='_ZN3tvm5relay9transform12_GLOBAL__N_116RewriteOnDevices10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/transforms/memory_alloc.cc' l='124' u='c' c='_ZN3tvm5relay15DialectRewriter21DeviceAwareVisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/transforms/remove_standalone_reshapes.cc' l='71' u='c' c='_ZN3tvm5relay31RemoveStandaloneReshapesMutator8Rewrite_EPKNS0_8CallNodeERKNS_9RelayExprE'/>

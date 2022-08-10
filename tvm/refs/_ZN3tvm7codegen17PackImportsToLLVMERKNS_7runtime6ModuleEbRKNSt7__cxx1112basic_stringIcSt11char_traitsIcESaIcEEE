@@ -1,0 +1,14 @@
+<dec f='tvm/include/tvm/target/codegen.h' l='73' type='runtime::Module tvm::codegen::PackImportsToLLVM(const runtime::Module &amp; m, bool system_lib, const std::string &amp; target_triple)'/>
+<doc f='tvm/include/tvm/target/codegen.h' l='62'>/*!
+ * \brief Pack imported device library to a LLVM module.
+ *  Compile the LLVM module and link with the host library
+ *  will allow the DSO loader to automatically discover and import
+ *  the dependency from the shared library.
+ *
+ * \param m The host module with the imports.
+ * \param system_lib Whether expose as system library.
+ * \param target_triple LLVM target triple
+ * \return runtime::Module The generated LLVM module.
+ */</doc>
+<def f='tvm/src/target/codegen.cc' l='293' ll='313' type='runtime::Module tvm::codegen::PackImportsToLLVM(const runtime::Module &amp; mod, bool system_lib, const std::string &amp; llvm_target_string)'/>
+<use f='tvm/src/target/codegen.cc' l='320' u='r'/>

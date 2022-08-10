@@ -1,0 +1,13 @@
+<def f='tvm/src/tir/schedule/primitive/for_kind.cc' l='146' ll='174' type='void tvm::tir::ParallelizeComputation(const tvm::tir::ScheduleState &amp; self, const tvm::tir::StmtSRef &amp; loop_sref, tvm::tir::ForKind for_kind, Optional&lt;tvm::tir::IterVar&gt; thread_axis)'/>
+<use f='tvm/src/tir/schedule/primitive/for_kind.cc' l='177' u='c' c='_ZN3tvm3tir8ParallelENS0_13ScheduleStateERKNS0_8StmtSRefE'/>
+<use f='tvm/src/tir/schedule/primitive/for_kind.cc' l='181' u='c' c='_ZN3tvm3tir9VectorizeENS0_13ScheduleStateERKNS0_8StmtSRefE'/>
+<use f='tvm/src/tir/schedule/primitive/for_kind.cc' l='185' u='c' c='_ZN3tvm3tir4BindENS0_13ScheduleStateERKNS0_8StmtSRefERKNS0_7IterVarE'/>
+<doc f='tvm/src/tir/schedule/primitive/for_kind.cc' l='137'>/*!
+ * \brief The implementation of parallelizing/vectorizing/binding a given loop
+ * \param self The schedule state
+ * \param loop_sref The sref of the loop to be parallelized/vectorized/bound
+ * \param for_kind The type of the operation (only `kParallel`, `kVectorized` and `kThreadBinding`
+ * are allowed)
+ * \param thread_axis The thread axis that the input loop is bound to, which is defined only when
+ * `for_kind` is `kThreadBinding`
+ */</doc>

@@ -1,0 +1,19 @@
+<dec f='tvm/include/tvm/tir/stmt_functor.h' l='290' type='tvm::tir::Stmt tvm::tir::StmtMutator::VisitSeqStmt_(const tvm::tir::SeqStmtNode * op, bool flatten_before_visit, std::function&lt;Stmt (const Stmt &amp;)&gt; fmutate = nullptr)'/>
+<doc f='tvm/include/tvm/tir/stmt_functor.h' l='278'>/*!
+   * \brief Alternative advance method for SeqStmtNode.
+   *
+   *  This function can be called when a child class override
+   *  VisitStmt_(const SeqStmtNode*) to introduce
+   *  the special behavior to visit
+   *
+   * \param op The sequence.
+   * \param flatten_before_visit Whether to flatten the sequence before visit.
+   * \param fmutate The mutate function, can be nullptr, which defaults to Visit.
+   * \return The mutated result.
+   */</doc>
+<def f='tvm/src/tir/ir/stmt_functor.cc' l='458' ll='498' type='tvm::tir::Stmt tvm::tir::StmtMutator::VisitSeqStmt_(const tvm::tir::SeqStmtNode * op, bool flatten_before_visit, std::function&lt;Stmt (const Stmt &amp;)&gt; fmutate = nullptr)'/>
+<doc f='tvm/src/tir/ir/stmt_functor.cc' l='457'>// advanced visit function for seqstmt.</doc>
+<use f='tvm/src/tir/transforms/inject_virtual_thread.cc' l='395' u='c' c='_ZN3tvm3tir10VTInjector10VisitStmt_EPKNS0_11SeqStmtNodeE'/>
+<use f='tvm/src/tir/transforms/lift_attr_scope.cc' l='87' u='c' c='_ZN3tvm3tir15AttrScopeLifter10VisitStmt_EPKNS0_11SeqStmtNodeE'/>
+<use f='tvm/src/tir/transforms/remove_no_op.cc' l='114' u='c' c='_ZN3tvm3tir11NoOpRemover10VisitStmt_EPKNS0_11SeqStmtNodeE'/>
+<use f='tvm/src/tir/transforms/unroll_loop.cc' l='165' u='c' c='_ZN3tvm3tir12LoopUnroller10VisitStmt_EPKNS0_11SeqStmtNodeE'/>

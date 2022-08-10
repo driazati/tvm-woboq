@@ -1,0 +1,17 @@
+<dec f='tvm/include/tvm/ir/transform.h' l='450' type='tvm::IRModule tvm::transform::SequentialNode::operator()(tvm::IRModule mod, const tvm::transform::PassContext &amp; pass_ctx) const'/>
+<doc f='tvm/include/tvm/ir/transform.h' l='439'>/*!
+   * \brief Perform optimizations on a series of passes. The aforementioned
+   *        typical pass manager jobs could be done by it. This function could
+   *        be overloaded to focus on different metrics, i.e. performance,
+   *        memory footprint, etc.
+   *
+   * \param mod The module that these passes are applied on.
+   * \param pass_ctx The context that these passes execute on.
+   *
+   * \return Return the updated module.
+   */</doc>
+<inh f='tvm/include/tvm/ir/transform.h' l='355' c='_ZNK3tvm9transform8PassNodeclENS_8IRModuleERKNS0_11PassContextE'/>
+<def f='tvm/src/ir/transform.cc' l='441' ll='456' type='tvm::IRModule tvm::transform::SequentialNode::operator()(tvm::IRModule mod, const tvm::transform::PassContext &amp; pass_ctx) const'/>
+<doc f='tvm/src/ir/transform.cc' l='438'>// TODO(zhiics): we currently only sequentially execute each pass in
+// a Sequential without the consideration of their orders. The phase
+// ordering problem needs to be handled in the future.</doc>

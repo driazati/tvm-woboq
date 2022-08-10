@@ -1,0 +1,15 @@
+<def f='tvm/include/tvm/topi/reduction.h' l='65' ll='86' type='std::vector&lt;int&gt; tvm::topi::GetRealAxis(int ndim, const Array&lt;tvm::Integer&gt; &amp; axis)'/>
+<use f='tvm/include/tvm/topi/reduction.h' l='186' u='c' c='_ZN3tvm4topi10CommReduceERKNS_2te6TensorERKNS_7runtime5ArrayINS_7IntegerEvEESt8functionIFNS_8PrimExprESC_RKNS6_INS_3tir7IterVarEvEENS6_ISC_vEENS_4SpanEEEbb'/>
+<use f='tvm/include/tvm/topi/reduction.h' l='209' u='c' c='_ZN3tvm4topi13CommReduceIdxERKNS_2te6TensorERKNS_7runtime5ArrayINS_7IntegerEvEESt8functionIFNS6_INS_8PrimExprEvEESD_RKNS6_INS_3tir7IterVarEvEEPSC_EEbb'/>
+<doc f='tvm/include/tvm/topi/reduction.h' l='53'>/*!
+ * \brief Convert a reduction axis which could be empty or have negative
+ * elements into a real axis with valid dimension indices.
+ *
+ * \param ndim Number of dimensions in the target.
+ * \param axis The axis parameter.
+ *
+ * \return A non-empty sorted array of valid dimension indices, with no duplicates.
+ * If the input axis is empty, the result will be an axis including all dimensions.
+ * If any input element is negative, it will be treated as an offset from the
+ * last dimension (same as python indexing rules).
+ */</doc>

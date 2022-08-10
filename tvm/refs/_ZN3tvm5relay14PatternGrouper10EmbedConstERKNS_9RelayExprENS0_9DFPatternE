@@ -1,0 +1,16 @@
+<dec f='tvm/src/relay/ir/dataflow_matcher_impl.h' l='142' type='bool tvm::relay::PatternGrouper::EmbedConst(const tvm::relay::Expr &amp; expr, const tvm::relay::DFPattern pattern)'/>
+<doc f='tvm/src/relay/ir/dataflow_matcher_impl.h' l='131'>/*! \brief EmbedConst implements rules for embedding constants into partitioned functions or
+   * lifting them into the function arguments.
+   *
+   * The rules depend on what pattern the ConstantNode matched.
+   *
+   * The basic rules are:
+   *  If the constant matches ExprPattern(relay.const(*)) or a ConstantPattern(), embed the constant
+   * in the partitioned function. If the constant matched an AltPattern, recursively check the
+   * matched side of the pattern. For any other matching pattern (i.e, wildcard, VarPattern, etc),
+   * lift the constant into the arguments of the partitioned function.
+   */</doc>
+<use f='tvm/src/relay/ir/dataflow_matcher.cc' l='654' u='c' c='_ZN3tvm5relay14PatternGrouper11CreateGroupERKNS_9RelayExprE'/>
+<def f='tvm/src/relay/ir/dataflow_matcher.cc' l='758' ll='776' type='bool tvm::relay::PatternGrouper::EmbedConst(const tvm::relay::Expr &amp; expr, const tvm::relay::DFPattern pattern)'/>
+<use f='tvm/src/relay/ir/dataflow_matcher.cc' l='769' u='c' c='_ZN3tvm5relay14PatternGrouper10EmbedConstERKNS_9RelayExprENS0_9DFPatternE'/>
+<use f='tvm/src/relay/ir/dataflow_matcher.cc' l='771' u='c' c='_ZN3tvm5relay14PatternGrouper10EmbedConstERKNS_9RelayExprENS0_9DFPatternE'/>

@@ -1,0 +1,31 @@
+<dec f='tvm/include/tvm/ir/module.h' l='414' type='static std::pair&lt;IRModule, GlobalVar&gt; tvm::IRModule::FromExprInContext(const tvm::RelayExpr &amp; expr, const Map&lt;tvm::GlobalVar, tvm::BaseFunc&gt; &amp; global_funcs = {}, const Map&lt;tvm::GlobalTypeVar, tvm::TypeData&gt; &amp; type_definitions = {}, std::unordered_set&lt;String&gt; import_set = {})'/>
+<doc f='tvm/include/tvm/ir/module.h' l='389'>/*!
+   * \brief Constructs a module from a standalone expression \p expr.
+   *
+   * If \p expr is a function it will be bound directly. Otherwise a function over the free
+   * variables of \p expr (possibly none) with \p expr as body is created and bound.
+   *
+   * The function is bound to, in preference order:
+   *  - The &quot;global_symbol&quot; attribute of \p expr, if it is a function with that attribute.
+   *  - &apos;main&apos;
+   *  - A unique name derived from &apos;main&apos; if &apos;main&apos; is already bound in \p global_funcs.
+   *
+   * Additional global functions and type definitions may be included in the result module.
+   *
+   * See also \p FromExpr.
+   *
+   * \param expr The expression to set as the main function to the module.
+   * \param global_funcs The global function map. Default empty.
+   * \param type_definitions The global type definition map. Default empty.
+   * \param import_set Set of external modules already imported. Default empty.
+   *
+   * \returns A module with \p expr set as the main function, and the global var to which
+   * \p expr was bound (typcially &apos;main&apos;).
+   *
+   * TODO(mbs): Does import_set and the bound global var need to be exposed via ffi?
+   */</doc>
+<def f='tvm/src/ir/module.cc' l='381' ll='408' type='static std::pair&lt;IRModule, GlobalVar&gt; tvm::IRModule::FromExprInContext(const tvm::RelayExpr &amp; expr, const tvm::Map&lt;GlobalVar, BaseFunc&gt; &amp; global_funcs = {}, const tvm::Map&lt;GlobalTypeVar, TypeData&gt; &amp; type_definitions = {}, std::unordered_set&lt;String&gt; import_set = {})'/>
+<use f='tvm/src/ir/module.cc' l='412' u='c' c='_ZN3tvm8IRModule8FromExprERKNS_9RelayExprERKNS_7runtime3MapINS_9GlobalVarENS_8BaseFuncEvvEERKNS5_INS_13GlobalTypeVarENS_8TypeDataEvvEE'/>
+<use f='tvm/src/relay/backend/interpreter.cc' l='1053' u='c' c='_ZN3tvm5relay12EvalFunctionENS_8IRModuleENS_9RelayExprE8DLDeviceNS_6TargetE'/>
+<use f='tvm/src/relay/backend/interpreter.cc' l='1055' u='c' c='_ZN3tvm5relay12EvalFunctionENS_8IRModuleENS_9RelayExprE8DLDeviceNS_6TargetE'/>
+<use f='tvm/src/relay/backend/interpreter.cc' l='1114' u='c' c='_ZN3tvm5relay4EvalENS_9RelayExprENS_7runtime3MapINS_13GlobalTypeVarENS_8TypeDataEvvEESt13unordered_setINS2_6StringESt4hashIS8_ESt8equal_toIS8_ESaIS8_E2654602'/>

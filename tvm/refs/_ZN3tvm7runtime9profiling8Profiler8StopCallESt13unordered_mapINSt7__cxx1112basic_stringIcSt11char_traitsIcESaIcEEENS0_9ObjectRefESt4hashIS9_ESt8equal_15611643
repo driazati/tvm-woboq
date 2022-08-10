@@ -1,0 +1,10 @@
+<dec f='tvm/include/tvm/runtime/profiling.h' l='407' type='void tvm::runtime::profiling::Profiler::StopCall(std::unordered_map&lt;std::string, ObjectRef&gt; extra_metrics = {})'/>
+<doc f='tvm/include/tvm/runtime/profiling.h' l='403'>/*! \brief Stop the last `StartCall`.
+   * \param extra_metrics Optional additional profiling information to add to
+   * the frame (input sizes, allocations).
+   */</doc>
+<use f='tvm/src/runtime/graph_executor/debug/graph_executor_debug.cc' l='354' u='c' c='_ZN3tvm7runtime18GraphExecutorDebug7ProfileENS0_5ArrayINS0_9profiling15MetricCollectorEvEE'/>
+<def f='tvm/src/runtime/profiling.cc' l='146' ll='161' type='void tvm::runtime::profiling::Profiler::StopCall(std::unordered_map&lt;std::string, ObjectRef&gt; extra_metrics = {})'/>
+<use f='tvm/src/runtime/profiling.cc' l='166' u='c' c='_ZN3tvm7runtime9profiling8Profiler4StopEv'/>
+<use f='tvm/src/runtime/vm/profiler/vm.cc' l='146' u='c' c='_ZN3tvm7runtime2vm19VirtualMachineDebug10OpStopHookEv'/>
+<use f='tvm/src/runtime/vm/profiler/vm.cc' l='200' u='c' c='_ZN3tvm7runtime2vm19VirtualMachineDebug12InvokePackedElRKNS0_10PackedFuncEllRKSt6vectorINS0_9ObjectRefESaIS7_EE'/>

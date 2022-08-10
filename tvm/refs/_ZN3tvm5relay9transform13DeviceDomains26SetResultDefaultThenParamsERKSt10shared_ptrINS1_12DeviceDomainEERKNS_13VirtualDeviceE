@@ -1,0 +1,9 @@
+<dec f='tvm/src/relay/transforms/device_domains.h' l='290' type='void tvm::relay::transform::DeviceDomains::SetResultDefaultThenParams(const tvm::relay::transform::DeviceDomainPtr &amp; domain_maybe_higher_order, const tvm::VirtualDevice &amp; default_virtual_device)'/>
+<def f='tvm/src/relay/transforms/device_domains.cc' l='416' ll='426' type='void tvm::relay::transform::DeviceDomains::SetResultDefaultThenParams(const tvm::relay::transform::DeviceDomainPtr &amp; domain_maybe_higher_order, const tvm::VirtualDevice &amp; default_virtual_device)'/>
+<doc f='tvm/src/relay/transforms/device_domains.h' l='285'>/*!
+   * \brief If \p domain is higher-order default it&apos;s result domain to \p default_virtual_device.
+   * Then force all remaining \p VirtualDevices to the result domain (freshly defaulted or
+   * original). If \p domain is first-order same as \p SetDefault.
+   */</doc>
+<use f='tvm/src/relay/transforms/device_planner.cc' l='808' u='c' c='_ZN3tvm5relay9transform12_GLOBAL__N_115DeviceDefaulter10VisitExpr_EPKNS0_12FunctionNodeE'/>
+<use f='tvm/src/relay/transforms/device_planner.cc' l='831' u='c' c='_ZN3tvm5relay9transform12_GLOBAL__N_115DeviceDefaulter10VisitExpr_EPKNS0_8CallNodeE'/>

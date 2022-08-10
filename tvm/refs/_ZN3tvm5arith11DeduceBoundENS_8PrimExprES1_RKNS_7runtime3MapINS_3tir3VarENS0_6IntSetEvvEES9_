@@ -1,0 +1,20 @@
+<def f='tvm/src/arith/bound_deducer.cc' l='342' ll='353' type='tvm::arith::IntSet tvm::arith::DeduceBound(tvm::PrimExpr v, tvm::PrimExpr e, const Map&lt;tvm::tir::Var, tvm::arith::IntSet&gt; &amp; hint_map, const Map&lt;tvm::tir::Var, tvm::arith::IntSet&gt; &amp; relax_map)'/>
+<use f='tvm/src/arith/bound_deducer.cc' l='358' u='c'/>
+<doc f='tvm/src/arith/bound_deducer.cc' l='340'>// assuming e &gt;= 0, deduce the bound of variable from it.
+// return empty set to represent deduce failure.</doc>
+<dec f='tvm/include/tvm/arith/bound.h' l='56' type='tvm::arith::IntSet tvm::arith::DeduceBound(tvm::PrimExpr v, tvm::PrimExpr cond, const Map&lt;tvm::tir::Var, tvm::arith::IntSet&gt; &amp; hint_map, const Map&lt;tvm::tir::Var, tvm::arith::IntSet&gt; &amp; relax_map)'/>
+<doc f='tvm/include/tvm/arith/bound.h' l='41'>/*!
+ * \brief Deduce the bound of the target variable in a expression,
+ *  give the domain of each variables. Return undefined IntSet to
+ *  represent failure.
+ *
+ * \note The returned set may be smaller than set that
+ *       contains all possible values of v that satisfies the bound.
+ *
+ * \param v The target variable to be deduced.
+ * \param cond The conditional expression.
+ * \param hint_map The domain of variable, used to help deduce.
+ * \param relax_map The domain of each variable, used to relax the domain,
+ *        The deduce bound must implies e for all value in relax_map
+ * \return An integer set that always satisfies the condition.
+ */</doc>

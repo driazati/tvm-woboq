@@ -1,0 +1,42 @@
+<def f='tvm/include/tvm/runtime/profiling.h' l='364' ll='426'/>
+<size>216</size>
+<doc f='tvm/include/tvm/runtime/profiling.h' l='345'>/*! Runtime profiler for function and/or operator calls. Used in the graph
+ * runtime and VM to provide profiling information for all operators.
+ *
+ * Example usage:
+ * \code{.cpp}
+ * Device cpu, gpu;
+ * Profiler prof({cpu, gpu});
+ * my_gpu_kernel(); // do a warmup iteration
+ * prof.Start();
+ * prof.StartCall(&quot;my_gpu_kernel&quot;, gpu);
+ * my_gpu_kernel();
+ * prof.StopCall();
+ * prof.StartCall(&quot;my_cpu_function&quot;, cpu);
+ * my_cpu_function();
+ * prof.StopCall();
+ * prof.Stop();
+ * std::cout &lt;&lt; prof.Report &lt;&lt; std::endl; // print profiling report
+ * \endcode
+ */</doc>
+<fun r='_ZN3tvm7runtime9profiling8ProfilerC1ESt6vectorI8DLDeviceSaIS4_EES3_INS1_15MetricCollectorESaIS7_EESt13unordered_mapINS0_6StringENS0_9ObjectRefESt4hash8564856'/>
+<fun r='_ZN3tvm7runtime9profiling8Profiler5StartEv'/>
+<fun r='_ZN3tvm7runtime9profiling8Profiler4StopEv'/>
+<fun r='_ZN3tvm7runtime9profiling8Profiler9StartCallENS0_6StringE8DLDeviceSt13unordered_mapINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS0_9ObjectRef8712940'/>
+<fun r='_ZN3tvm7runtime9profiling8Profiler8StopCallESt13unordered_mapINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS0_9ObjectRefESt4hashIS9_ESt8equal_15611643'/>
+<fun r='_ZN3tvm7runtime9profiling8Profiler6ReportEv'/>
+<fun r='_ZNK3tvm7runtime9profiling8Profiler9IsRunningEv'/>
+<mbr r='tvm::runtime::profiling::Profiler::devs_' o='0' t='std::vector&lt;Device&gt;'/>
+<mbr r='tvm::runtime::profiling::Profiler::is_running_' o='192' t='bool'/>
+<mbr r='tvm::runtime::profiling::Profiler::calls_' o='256' t='std::vector&lt;CallFrame&gt;'/>
+<mbr r='tvm::runtime::profiling::Profiler::in_flight_' o='448' t='std::stack&lt;CallFrame&gt;'/>
+<mbr r='tvm::runtime::profiling::Profiler::collectors_' o='1088' t='std::vector&lt;MetricCollector&gt;'/>
+<mbr r='tvm::runtime::profiling::Profiler::configuration_' o='1280' t='std::unordered_map&lt;String, ObjectRef&gt;'/>
+<use f='tvm/src/runtime/vm/profiler/vm.h' l='58'/>
+<size>216</size>
+<use f='tvm/src/runtime/graph_executor/debug/graph_executor_debug.cc' l='318' c='_ZN3tvm7runtime18GraphExecutorDebug7ProfileENS0_5ArrayINS0_9profiling15MetricCollectorEvEE'/>
+<size>216</size>
+<use f='tvm/src/runtime/vm/profiler/vm.cc' l='61' c='_ZN3tvm7runtime2vm19VirtualMachineDebug11GetFunctionERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKNS0_9ObjectPtrINS0_6ObjectEEE'/>
+<use f='tvm/src/runtime/vm/profiler/vm.cc' l='63' c='_ZN3tvm7runtime2vm19VirtualMachineDebug11GetFunctionERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKNS0_9ObjectPtrINS0_6ObjectEEE'/>
+<use f='tvm/src/runtime/vm/profiler/vm.cc' l='76' c='_ZN3tvm7runtime2vm19VirtualMachineDebug11GetFunctionERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKNS0_9ObjectPtrINS0_6ObjectEEE'/>
+<size>216</size>

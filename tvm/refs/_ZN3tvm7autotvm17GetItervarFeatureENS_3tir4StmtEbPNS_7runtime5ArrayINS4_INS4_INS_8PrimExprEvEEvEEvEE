@@ -1,0 +1,30 @@
+<def f='tvm/src/autotvm/touch_extractor.cc' l='223' ll='297' type='void tvm::autotvm::GetItervarFeature(tvm::tir::Stmt stmt, bool take_log, Array&lt;Array&lt;Array&lt;tvm::PrimExpr&gt;&gt;&gt; * ret_feature)'/>
+<use f='tvm/src/autotvm/touch_extractor.cc' l='490' u='c'/>
+<doc f='tvm/src/autotvm/touch_extractor.cc' l='195'>/*!
+ * \brief Get axis-based feature for all axes
+ * \param stmt The statement to be extracted
+ * \param bool Whether take log for numerical feature
+ * \param ret_feature The buffer where the return value is stored
+ *
+ * \note The format of return value is
+ * ((
+ *   (&apos;_itervar_&apos;,  var),
+ *   (&apos;_attr_&apos;,     length, nest_level, topdown, bottomup, one_hot_annotation),
+ *   (&apos;_arith_&apos;,    add_ct, mul_ct, div_ct),
+ *   (&apos;data_vec_0&apos;, stride, mod, count, reuse, thread_count, thread_reuse),
+ *   (&apos;conv_0&apos;,     stride, mod, count, reuse, thread_count, thread_reuse),
+ * ),
+ * (
+ *   (&apos;_itervar_&apos;,    var2),
+ *   (&apos;_attr_&apos;,       length, nest_level, one_hot_annotation),
+ *   (&apos;_arith_&apos;,      add_ct, mul_ct, div_ct),
+ *   (&apos;kernel_vec_0&apos;, stride, mod, count, reuse, thread_count, thread_reuse),
+ *   (&apos;conv_1&apos;,       stride, mod, count, reuse, thread_count, thread_reuse),
+ * ))
+ *
+ * Itervars are sorted according to their first occurrence position in IR.
+ * Buffers touched by an itervar are sorted by their unique names.
+ *
+ * \note If you want to flatten these features as the input of your model,
+ * You can use the faster one GetItervarFeatureFlatten below.
+ */</doc>

@@ -1,0 +1,57 @@
+<dec f='tvm/include/tvm/target/compilation_config.h' l='99' type='Array&lt;tvm::Target&gt;'/>
+<offset>192</offset>
+<doc f='tvm/include/tvm/target/compilation_config.h' l='67'>/*!
+   * \brief Vector of all available \p Targets for partitioning or compiling primitive tensor
+   * operators (kernels). May contain a \p Target for the same device type as for the
+   * \p host_target, however the \p host_target should be used for all host computations and data.
+   * Each \p Target will have \p host_target as its &apos;host&apos;.
+   *
+   * Primitive targets must be unique by their kind name. In this way the
+   * \p FindPrimitiveTargetForKind method will find the unique target for the given kind name.
+   * This method is used when transitioning from an external codegen &quot;Compiler&quot; attribute value
+   * to the external codegen target representing that compiler.
+   *
+   * It is possible to have multiple primitive targets for the same device type. However given
+   * primitive targets left and right where:
+   *  - left appears before right in the array
+   *  - left-&gt;kind-&gt;device_type == right-&gt;kind-&gt;device_type
+   * then:
+   *  - right.IsExternalCodegenFor(left) must be true
+   * In this way the \p FindPrimitiveTargetForDeviceOrFail method will find the &apos;most general&apos;
+   * target for the requested device type. This method is used when transitioning from a device
+   * constraint to the target needed to compile for that device.
+   *
+   * In the homogeneous case primitive_targets will have just one entry, which will be pointer equal
+   * to optional_homogeneous_target.
+   *
+   * In the homogenous case where the &apos;host&apos; is the same device as used for compiling kernels it
+   * is *not* the case that optional_homogenous_target == host_target. This is because all
+   * primitive always have their host field set to the host_target. Ie, it is valid to have:
+   * \code
+   *   host_target=Target(&quot;llvm&quot;)
+   *   optional_homogenous_target=Target(&quot;llvm&quot;, host=host_target)
+   * \endcode
+   */</doc>
+<use f='tvm/src/relay/backend/build_module.cc' l='331' u='m' c='_ZN3tvm5relay7backend16RelayBuildModule12OptimizeImplENS_8IRModuleE'/>
+<use f='tvm/src/relay/backend/build_module.cc' l='430' u='r' c='_ZN3tvm5relay7backend16RelayBuildModule10BuildRelayENS_8IRModuleERKNS_7runtime6StringE'/>
+<use f='tvm/src/relay/backend/te_compiler.cc' l='1066' c='_ZN3tvm5relay3tec23UpdateMainWorkspaceSizeERKNS_8IRModuleERKNS_17CompilationConfigENS_7runtime3MapINS_9RelayExprENS0_7backend11StorageInfoEvvEE'/>
+<use f='tvm/src/relay/collage/gather_partition_specs.cc' l='184' c='_ZN3tvm5relay7collage20GatherPartitionSpecsERKNS_17CompilationConfigE'/>
+<use f='tvm/src/target/compilation_config.cc' l='34' u='a' c='_ZN3tvm21CompilationConfigNode10VisitAttrsEPNS_11AttrVisitorE'/>
+<use f='tvm/src/target/compilation_config.cc' l='44' u='m' c='_ZNK3tvm21CompilationConfigNode34FindPrimitiveTargetForDeviceOrFailE12DLDeviceType'/>
+<use f='tvm/src/target/compilation_config.cc' l='44' u='m' c='_ZNK3tvm21CompilationConfigNode34FindPrimitiveTargetForDeviceOrFailE12DLDeviceType'/>
+<use f='tvm/src/target/compilation_config.cc' l='46' u='m' c='_ZNK3tvm21CompilationConfigNode34FindPrimitiveTargetForDeviceOrFailE12DLDeviceType'/>
+<use f='tvm/src/target/compilation_config.cc' l='50' c='_ZNK3tvm21CompilationConfigNode34FindPrimitiveTargetForDeviceOrFailE12DLDeviceType'/>
+<use f='tvm/src/target/compilation_config.cc' l='66' u='m' c='_ZNK3tvm21CompilationConfigNode26FindPrimitiveTargetForKindERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<use f='tvm/src/target/compilation_config.cc' l='66' u='m' c='_ZNK3tvm21CompilationConfigNode26FindPrimitiveTargetForKindERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<use f='tvm/src/target/compilation_config.cc' l='68' u='m' c='_ZNK3tvm21CompilationConfigNode26FindPrimitiveTargetForKindERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<use f='tvm/src/target/compilation_config.cc' l='80' c='_ZNK3tvm21CompilationConfigNode15CanonicalTargetERKNS_6TargetE'/>
+<use f='tvm/src/target/compilation_config.cc' l='90' c='_ZNK3tvm21CompilationConfigNode15CanonicalTargetERKNS_6TargetE'/>
+<use f='tvm/src/target/compilation_config.cc' l='185' u='m' c='_ZN3tvm21CompilationConfigNode4InitERKNS_9transform11PassContextERKNS_7runtime5ArrayINS_6TargetEvEE'/>
+<use f='tvm/src/target/compilation_config.cc' l='186' u='m' c='_ZN3tvm21CompilationConfigNode4InitERKNS_9transform11PassContextERKNS_7runtime5ArrayINS_6TargetEvEE'/>
+<use f='tvm/src/target/compilation_config.cc' l='193' u='m' c='_ZN3tvm21CompilationConfigNode4InitERKNS_9transform11PassContextERKNS_7runtime5ArrayINS_6TargetEvEE'/>
+<use f='tvm/src/target/compilation_config.cc' l='195' u='m' c='_ZN3tvm21CompilationConfigNode4InitERKNS_9transform11PassContextERKNS_7runtime5ArrayINS_6TargetEvEE'/>
+<use f='tvm/src/target/compilation_config.cc' l='207' c='_ZN3tvm21CompilationConfigNode4InitERKNS_9transform11PassContextERKNS_7runtime5ArrayINS_6TargetEvEE'/>
+<use f='tvm/src/target/compilation_config.cc' l='215' c='_ZN3tvm21CompilationConfigNode4InitERKNS_9transform11PassContextERKNS_7runtime5ArrayINS_6TargetEvEE'/>
+<use f='tvm/src/target/compilation_config.cc' l='272' u='m' c='_ZN3tvm21CompilationConfigNode4InitERKNS_9transform11PassContextERKNS_7runtime5ArrayINS_6TargetEvEE'/>
+<use f='tvm/src/target/compilation_config.cc' l='272' u='m' c='_ZN3tvm21CompilationConfigNode4InitERKNS_9transform11PassContextERKNS_7runtime5ArrayINS_6TargetEvEE'/>
+<use f='tvm/src/target/compilation_config.cc' l='291'/>

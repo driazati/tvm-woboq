@@ -1,0 +1,12 @@
+<dec f='tvm/src/tir/transforms/common_subexpr_elim_tools.h' l='105' type='static tvm::tir::ComputationTable tvm::tir::ComputationsDoneBy::ComputationsDoneByChildrenOf(const tvm::tir::Stmt &amp; stmt, std::function&lt;bool (const PrimExpr &amp;)&gt; is_eligible_computation, std::function&lt;bool (const PrimExpr &amp;)&gt; can_contain_computations)'/>
+<use f='tvm/src/tir/transforms/common_subexpr_elim_tools.cc' l='410' u='c' c='_ZN3tvm3tir18ComputationsDoneBy9VisitStmtERKNS0_4StmtE'/>
+<def f='tvm/src/tir/transforms/common_subexpr_elim_tools.cc' l='553' ll='567' type='static tvm::tir::ComputationTable tvm::tir::ComputationsDoneBy::ComputationsDoneByChildrenOf(const tvm::tir::Stmt &amp; stmt, std::function&lt;bool (const PrimExpr &amp;)&gt; is_eligible_computation, std::function&lt;bool (const PrimExpr &amp;)&gt; can_contain_computations)'/>
+<doc f='tvm/src/tir/transforms/common_subexpr_elim_tools.cc' l='544'>/*!
+ * \brief Static method that returns the computations done by the children of a statement.
+ * \param stmt The statement to analyze.
+ * \param is_eligible_computation The predicate which decides if an expression is eligible for
+                                  being introduced in a new variable
+ * \param can_contain_computations The predicate which decides if an expression can contain an
+                                    eligible computation
+ * \return The hashtable contaning the (syntactic) computations done by children nodes of `stmt`
+ */</doc>

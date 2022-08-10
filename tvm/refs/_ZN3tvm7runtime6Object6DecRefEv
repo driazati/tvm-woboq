@@ -1,0 +1,15 @@
+<dec f='tvm/include/tvm/runtime/object.h' l='303' type='void tvm::runtime::Object::DecRef()'/>
+<use f='tvm/include/tvm/runtime/object.h' l='451' u='c' c='_ZN3tvm7runtime9ObjectPtr5resetEv'/>
+<def f='tvm/include/tvm/runtime/object.h' l='801' ll='808' type='void tvm::runtime::Object::DecRef()'/>
+<use f='tvm/include/tvm/runtime/ndarray.h' l='430' u='c' c='_ZN3tvm7runtime7NDArray9FFIDecRefEP8DLTensor'/>
+<use f='tvm/include/tvm/runtime/packed_func.h' l='1067' u='c' c='_ZN3tvm7runtime11TVMRetValue5ClearEv'/>
+<use f='tvm/include/tvm/runtime/packed_func.h' l='1074' u='c' c='_ZN3tvm7runtime11TVMRetValue5ClearEv'/>
+<use f='tvm/include/tvm/runtime/packed_func.h' l='1078' u='c' c='_ZN3tvm7runtime11TVMRetValue5ClearEv'/>
+<doc f='tvm/include/tvm/runtime/object.h' l='299'>/*!
+   * \brief developer function, decrease reference counter.
+   * \note The deleter will be called when ref_counter_ becomes zero.
+   */</doc>
+<use f='tvm/src/runtime/object_internal.h' l='56' u='c' c='_ZN3tvm7runtime14ObjectInternal10ObjectFreeEPv'/>
+<use f='tvm/src/runtime/ndarray.cc' l='104' u='c' c='_ZN3tvm7runtime7NDArray8Internal14DefaultDeleterEPNS0_6ObjectE'/>
+<use f='tvm/src/runtime/ndarray.cc' l='177' u='c' c='_ZN3tvm7runtime7NDArray8Internal20NDArrayDLPackDeleterEP15DLManagedTensor'/>
+<use f='tvm/src/runtime/vm/memory_manager.cc' l='57' u='c' c='_ZN3tvm7runtime2vm10StorageObj7DeleterEPNS0_6ObjectE'/>

@@ -1,0 +1,15 @@
+<dec f='tvm/include/tvm/runtime/device_api.h' l='173' type='void tvm::runtime::DeviceAPI::SyncStreamFromTo(tvm::Device dev, TVMStreamHandle event_src, TVMStreamHandle event_dst)'/>
+<doc f='tvm/include/tvm/runtime/device_api.h' l='161'>/*!
+   * \brief Synchronize 2 streams of execution.
+   *
+   * An event is created in event_src stream that the second then
+   * stream waits on.  Neither event_src or event_dst need to be of
+   * the same device ID as the device, but they must be of the same
+   * device type.
+   *
+   * \param dev The device of the streams.
+   * \param event_src The source stream to synchronize.
+   * \param event_dst The destination stream to synchronize.
+   */</doc>
+<def f='tvm/src/runtime/c_runtime_api.cc' l='197' ll='198' type='void tvm::runtime::DeviceAPI::SyncStreamFromTo(tvm::Device dev, TVMStreamHandle event_src, TVMStreamHandle event_dst)'/>
+<use f='tvm/src/runtime/c_runtime_api.cc' l='587' u='c' c='TVMStreamStreamSynchronize'/>

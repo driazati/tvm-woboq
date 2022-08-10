@@ -1,0 +1,14 @@
+<inh f='tvm/include/tvm/relay/expr_functor.h' l='282' c='tvm::relay::MixedModeMutator'/>
+<def f='tvm/src/relay/backend/vm/manifest_lifetimes.cc' l='142' ll='240'/>
+<use f='tvm/src/relay/backend/vm/manifest_lifetimes.cc' l='244' c='_ZN3tvm5relay9transform17ManifestLifetimesEv'/>
+<size>128</size>
+<doc f='tvm/src/relay/backend/vm/manifest_lifetimes.cc' l='136'>/*!
+ * \brief Helper class to eliminate variable aliasing. This pass anticipates the VM compiler&apos;s
+ * register aliasing behavior so as to avoid killing vars that point to the same register. An
+ * alternative approach would be to track aliasing within the VM compiler itself, so that kill
+ * instructions are only emitted when all aliases are killed.
+ */</doc>
+<fun r='_ZN3tvm5relay9transform15AliasEliminator10VisitExpr_EPKNS0_7LetNodeE'/>
+<fun r='_ZN3tvm5relay9transform15AliasEliminator10VisitExpr_EPKNS0_7VarNodeE'/>
+<fun r='_ZN3tvm5relay9transform15AliasEliminator10VisitExpr_EPKNS0_12FunctionNodeE'/>
+<fun r='_ZN3tvm5relay9transform15AliasEliminator10VisitExpr_EPKNS0_9MatchNodeE'/>

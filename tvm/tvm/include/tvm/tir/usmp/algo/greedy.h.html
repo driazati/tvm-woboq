@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>greedy.h source code [tvm/include/tvm/tir/usmp/algo/greedy.h] - Woboq Code Browser</title>
+<meta name="woboq:interestingDefinitions" content="tvm::tir::usmp::algo::GreedyBase "/>
+<link rel="stylesheet" href="../../../../../.././data/qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href="../../../../../.././data/kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src="../../../../../.././data/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="../../../../../.././data/jquery/jquery-ui.min.js"></script>
+<script>var file = 'tvm/include/tvm/tir/usmp/algo/greedy.h'; var root_path = '../../../../../..'; var data_path = '../../../../../.././data'; var ecma_script_api_version = 2;</script>
+<script src='../../../../../.././data/codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='../../../../..'>tvm</a>/<a href='../../../..'>include</a>/<a href='../../..'>tvm</a>/<a href='../..'>tir</a>/<a href='..'>usmp</a>/<a href='./'>algo</a>/<a href='greedy.h.html'>greedy.h</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td><i>/*</i></td></tr>
+<tr><th id="2">2</th><td><i> * Licensed to the Apache Software Foundation (ASF) under one</i></td></tr>
+<tr><th id="3">3</th><td><i> * or more contributor license agreements.  See the NOTICE file</i></td></tr>
+<tr><th id="4">4</th><td><i> * distributed with this work for additional information</i></td></tr>
+<tr><th id="5">5</th><td><i> * regarding copyright ownership.  The ASF licenses this file</i></td></tr>
+<tr><th id="6">6</th><td><i> * to you under the Apache License, Version 2.0 (the</i></td></tr>
+<tr><th id="7">7</th><td><i> * "License"); you may not use this file except in compliance</i></td></tr>
+<tr><th id="8">8</th><td><i> * with the License.  You may obtain a copy of the License at</i></td></tr>
+<tr><th id="9">9</th><td><i> *</i></td></tr>
+<tr><th id="10">10</th><td><i> *   <a href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a></i></td></tr>
+<tr><th id="11">11</th><td><i> *</i></td></tr>
+<tr><th id="12">12</th><td><i> * Unless required by applicable law or agreed to in writing,</i></td></tr>
+<tr><th id="13">13</th><td><i> * software distributed under the License is distributed on an</i></td></tr>
+<tr><th id="14">14</th><td><i> * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY</i></td></tr>
+<tr><th id="15">15</th><td><i> * KIND, either express or implied.  See the License for the</i></td></tr>
+<tr><th id="16">16</th><td><i> * specific language governing permissions and limitations</i></td></tr>
+<tr><th id="17">17</th><td><i> * under the License.</i></td></tr>
+<tr><th id="18">18</th><td><i> */</i></td></tr>
+<tr><th id="19">19</th><td></td></tr>
+<tr><th id="20">20</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="21">21</th><td><i class="doc"> * <span class="command">\file</span> <span class="verb">include/tvm/tir/usmp/algo/greedy.h</span></i></td></tr>
+<tr><th id="22">22</th><td><i class="doc"> * <span class="command">\brief</span> This header file contains helper methods used in greedy algorithms</i></td></tr>
+<tr><th id="23">23</th><td><i class="doc"> * for planning  memory for USMP</i></td></tr>
+<tr><th id="24">24</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="25">25</th><td><u>#pragma once</u></td></tr>
+<tr><th id="26">26</th><td><u>#include <a href="../../../arith/analyzer.h.html">&lt;tvm/arith/analyzer.h&gt;</a></u></td></tr>
+<tr><th id="27">27</th><td><u>#include <a href="../../../runtime/device_api.h.html">&lt;tvm/runtime/device_api.h&gt;</a></u></td></tr>
+<tr><th id="28">28</th><td><u>#include <a href="../../builtin.h.html">&lt;tvm/tir/builtin.h&gt;</a></u></td></tr>
+<tr><th id="29">29</th><td><u>#include <a href="../../function.h.html">&lt;tvm/tir/function.h&gt;</a></u></td></tr>
+<tr><th id="30">30</th><td><u>#include <a href="../../stmt_functor.h.html">&lt;tvm/tir/stmt_functor.h&gt;</a></u></td></tr>
+<tr><th id="31">31</th><td><u>#include <a href="../utils.h.html">&lt;tvm/tir/usmp/utils.h&gt;</a></u></td></tr>
+<tr><th id="32">32</th><td></td></tr>
+<tr><th id="33">33</th><td><u>#include <a href="../../../../../../include/c++/10/unordered_map.html">&lt;unordered_map&gt;</a></u></td></tr>
+<tr><th id="34">34</th><td><u>#include <a href="../../../../../../include/c++/10/vector.html">&lt;vector&gt;</a></u></td></tr>
+<tr><th id="35">35</th><td></td></tr>
+<tr><th id="36">36</th><td><b>namespace</b> <span class="namespace">tvm</span> {</td></tr>
+<tr><th id="37">37</th><td><b>namespace</b> <span class="namespace">tir</span> {</td></tr>
+<tr><th id="38">38</th><td><b>namespace</b> <span class="namespace">usmp</span> {</td></tr>
+<tr><th id="39">39</th><td><b>namespace</b> <span class="namespace">algo</span> {</td></tr>
+<tr><th id="40">40</th><td></td></tr>
+<tr><th id="41">41</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="42">42</th><td><i class="doc"> * <span class="command">\brief</span> This is the base class for Greedy Algorithms where the sorting</i></td></tr>
+<tr><th id="43">43</th><td><i class="doc"> * is specialized in the extended classes based on the greedy criteria.</i></td></tr>
+<tr><th id="44">44</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="45">45</th><td><b>class</b> <dfn class="type def" id="tvm::tir::usmp::algo::GreedyBase" title='tvm::tir::usmp::algo::GreedyBase' data-ref="tvm::tir::usmp::algo::GreedyBase" data-ref-filename="tvm..tir..usmp..algo..GreedyBase">GreedyBase</dfn> {</td></tr>
+<tr><th id="46">46</th><td> <b>public</b>:</td></tr>
+<tr><th id="47">47</th><td>  <dfn class="decl def fn" id="_ZN3tvm3tir4usmp4algo10GreedyBaseC1Ev" title='tvm::tir::usmp::algo::GreedyBase::GreedyBase' data-ref="_ZN3tvm3tir4usmp4algo10GreedyBaseC1Ev" data-ref-filename="_ZN3tvm3tir4usmp4algo10GreedyBaseC1Ev">GreedyBase</dfn>() {}</td></tr>
+<tr><th id="48">48</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="49">49</th><td><i class="doc">   * <span class="command">\brief</span> This function should be implemented by the extended classes to sort the BufferInfo</i></td></tr>
+<tr><th id="50">50</th><td><i class="doc">   * objects based on a criteria and then calling PostSortAllocation.</i></td></tr>
+<tr><th id="51">51</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="52">52</th><td>  <b>virtual</b> <a class="type" href="../../../runtime/container/map.h.html#tvm::runtime::Map" title='tvm::runtime::Map' data-ref="tvm::runtime::Map" data-ref-filename="tvm..runtime..Map">Map</a>&lt;<a class="type" href="../utils.h.html#tvm::tir::usmp::BufferInfo" title='tvm::tir::usmp::BufferInfo' data-ref="tvm::tir::usmp::BufferInfo" data-ref-filename="tvm..tir..usmp..BufferInfo">BufferInfo</a>, <a class="type" href="../utils.h.html#tvm::tir::usmp::PoolAllocation" title='tvm::tir::usmp::PoolAllocation' data-ref="tvm::tir::usmp::PoolAllocation" data-ref-filename="tvm..tir..usmp..PoolAllocation">PoolAllocation</a>&gt; <dfn class="virtual decl fn" id="_ZN3tvm3tir4usmp4algo10GreedyBase10PlanMemoryERKNS_7runtime5ArrayINS1_10BufferInfoEvEE" title='tvm::tir::usmp::algo::GreedyBase::PlanMemory' data-ref="_ZN3tvm3tir4usmp4algo10GreedyBase10PlanMemoryERKNS_7runtime5ArrayINS1_10BufferInfoEvEE" data-ref-filename="_ZN3tvm3tir4usmp4algo10GreedyBase10PlanMemoryERKNS_7runtime5ArrayINS1_10BufferInfoEvEE">PlanMemory</dfn>(<em>const</em> <a class="type" href="../../../runtime/container/array.h.html#tvm::runtime::Array" title='tvm::runtime::Array' data-ref="tvm::runtime::Array" data-ref-filename="tvm..runtime..Array">Array</a>&lt;<a class="type" href="../utils.h.html#tvm::tir::usmp::BufferInfo" title='tvm::tir::usmp::BufferInfo' data-ref="tvm::tir::usmp::BufferInfo" data-ref-filename="tvm..tir..usmp..BufferInfo">BufferInfo</a>&gt;&amp; <dfn class="local col1 decl" id="1buffer_info_arr" title='buffer_info_arr' data-type='const Array&lt;tvm::tir::usmp::BufferInfo&gt; &amp;' data-ref="1buffer_info_arr" data-ref-filename="1buffer_info_arr">buffer_info_arr</dfn>) = <var>0</var>;</td></tr>
+<tr><th id="53">53</th><td></td></tr>
+<tr><th id="54">54</th><td> <b>protected</b>:</td></tr>
+<tr><th id="55">55</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="56">56</th><td><i class="doc">   * <span class="command">\brief</span> Rounds up the offset to satisfy the alignement requirement</i></td></tr>
+<tr><th id="57">57</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="58">58</th><td>  <span class='typedef' title='size_t' data-type='unsigned long' data-ref="size_t" data-ref-filename="size_t">size_t</span> <a class="decl fn" href="../../../../../src/tir/usmp/algo/greedy.cc.html#_ZN3tvm3tir4usmp4algo10GreedyBase26round_up_to_byte_alignmentERKmRKi" title='tvm::tir::usmp::algo::GreedyBase::round_up_to_byte_alignment' data-ref="_ZN3tvm3tir4usmp4algo10GreedyBase26round_up_to_byte_alignmentERKmRKi" data-ref-filename="_ZN3tvm3tir4usmp4algo10GreedyBase26round_up_to_byte_alignmentERKmRKi" id="_ZN3tvm3tir4usmp4algo10GreedyBase26round_up_to_byte_alignmentERKmRKi">round_up_to_byte_alignment</a>(<em>const</em> <span class='typedef' title='size_t' data-type='unsigned long' data-ref="size_t" data-ref-filename="size_t">size_t</span>&amp; <dfn class="local col2 decl" id="2non_aligned_byte_offset" title='non_aligned_byte_offset' data-type='const size_t &amp;' data-ref="2non_aligned_byte_offset" data-ref-filename="2non_aligned_byte_offset">non_aligned_byte_offset</dfn>,</td></tr>
+<tr><th id="59">59</th><td>                                    <em>const</em> <em>int</em>&amp; <dfn class="local col3 decl" id="3byte_alignment" title='byte_alignment' data-type='const int &amp;' data-ref="3byte_alignment" data-ref-filename="3byte_alignment">byte_alignment</dfn>);</td></tr>
+<tr><th id="60">60</th><td></td></tr>
+<tr><th id="61">61</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="62">62</th><td><i class="doc">   * <span class="command">\brief</span> A helper function check whether a offset is valid given the constraints</i></td></tr>
+<tr><th id="63">63</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="64">64</th><td>  <em>bool</em> <a class="decl fn" href="../../../../../src/tir/usmp/algo/greedy.cc.html#_ZN3tvm3tir4usmp4algo10GreedyBase16IsValidPlacementERKNS_8PoolInfoERKmS8_" title='tvm::tir::usmp::algo::GreedyBase::IsValidPlacement' data-ref="_ZN3tvm3tir4usmp4algo10GreedyBase16IsValidPlacementERKNS_8PoolInfoERKmS8_" data-ref-filename="_ZN3tvm3tir4usmp4algo10GreedyBase16IsValidPlacementERKNS_8PoolInfoERKmS8_" id="_ZN3tvm3tir4usmp4algo10GreedyBase16IsValidPlacementERKNS_8PoolInfoERKmS8_">IsValidPlacement</a>(<em>const</em> <a class="type" href="../../../ir/memory_pools.h.html#tvm::PoolInfo" title='tvm::PoolInfo' data-ref="tvm::PoolInfo" data-ref-filename="tvm..PoolInfo">PoolInfo</a>&amp; <dfn class="local col4 decl" id="4candidate_pool" title='candidate_pool' data-type='const tvm::PoolInfo &amp;' data-ref="4candidate_pool" data-ref-filename="4candidate_pool">candidate_pool</dfn>, <em>const</em> <span class='typedef' title='size_t' data-type='unsigned long' data-ref="size_t" data-ref-filename="size_t">size_t</span>&amp; <dfn class="local col5 decl" id="5next_offset" title='next_offset' data-type='const size_t &amp;' data-ref="5next_offset" data-ref-filename="5next_offset">next_offset</dfn>,</td></tr>
+<tr><th id="65">65</th><td>                        <em>const</em> <span class='typedef' title='size_t' data-type='unsigned long' data-ref="size_t" data-ref-filename="size_t">size_t</span>&amp; <dfn class="local col6 decl" id="6size_bytes" title='size_bytes' data-type='const size_t &amp;' data-ref="6size_bytes" data-ref-filename="6size_bytes">size_bytes</dfn>);</td></tr>
+<tr><th id="66">66</th><td></td></tr>
+<tr><th id="67">67</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="68">68</th><td><i class="doc">   * <span class="command">\brief</span> Selects a pool for placement in the given set of ordered pool candidates</i></td></tr>
+<tr><th id="69">69</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="70">70</th><td>  <a class="type" href="../../../ir/memory_pools.h.html#tvm::PoolInfo" title='tvm::PoolInfo' data-ref="tvm::PoolInfo" data-ref-filename="tvm..PoolInfo">PoolInfo</a> <a class="decl fn" href="../../../../../src/tir/usmp/algo/greedy.cc.html#_ZN3tvm3tir4usmp4algo10GreedyBase19SelectPlacementPoolERKNS1_10BufferInfoERKSt13unordered_mapINS_8PoolInfoEmNS_7runtime13ObjectPtrHashENS9_14ObjectPtr5031534" title='tvm::tir::usmp::algo::GreedyBase::SelectPlacementPool' data-ref="_ZN3tvm3tir4usmp4algo10GreedyBase19SelectPlacementPoolERKNS1_10BufferInfoERKSt13unordered_mapINS_8PoolInfoEmNS_7runtime13ObjectPtrHashENS9_14ObjectPtr5031534" data-ref-filename="_ZN3tvm3tir4usmp4algo10GreedyBase19SelectPlacementPoolERKNS1_10BufferInfoERKSt13unordered_mapINS_8PoolInfoEmNS_7runtime13ObjectPtrHashENS9_14ObjectPtr5031534" id="_ZN3tvm3tir4usmp4algo10GreedyBase19SelectPlacementPoolERKNS1_10BufferInfoERKSt13unordered_mapINS_8PoolInfoEmNS_7runtime13ObjectPtrHashENS9_14ObjectPtr5031534">SelectPlacementPool</a>(</td></tr>
+<tr><th id="71">71</th><td>      <em>const</em> <a class="type" href="../utils.h.html#tvm::tir::usmp::BufferInfo" title='tvm::tir::usmp::BufferInfo' data-ref="tvm::tir::usmp::BufferInfo" data-ref-filename="tvm..tir..usmp..BufferInfo">BufferInfo</a>&amp; <dfn class="local col7 decl" id="7buf_info" title='buf_info' data-type='const tvm::tir::usmp::BufferInfo &amp;' data-ref="7buf_info" data-ref-filename="7buf_info">buf_info</dfn>,</td></tr>
+<tr><th id="72">72</th><td>      <em>const</em> <span class="namespace">std::</span><a class="type" href="../../../../../../include/c++/10/bits/unordered_map.h.html#std::unordered_map" title='std::unordered_map' data-ref="std::unordered_map" data-ref-filename="std..unordered_map">unordered_map</a>&lt;<a class="type" href="../../../ir/memory_pools.h.html#tvm::PoolInfo" title='tvm::PoolInfo' data-ref="tvm::PoolInfo" data-ref-filename="tvm..PoolInfo">PoolInfo</a>, <span class='typedef' title='size_t' data-type='unsigned long' data-ref="size_t" data-ref-filename="size_t">size_t</span>, ObjectPtrHash, ObjectPtrEqual&gt;&amp; <dfn class="local col8 decl" id="8pool_offsets" title='pool_offsets' data-type='const std::unordered_map&lt;PoolInfo, size_t, ObjectPtrHash, ObjectPtrEqual&gt; &amp;' data-ref="8pool_offsets" data-ref-filename="8pool_offsets">pool_offsets</dfn>);</td></tr>
+<tr><th id="73">73</th><td></td></tr>
+<tr><th id="74">74</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="75">75</th><td><i class="doc">   * <span class="command">\brief</span> This is the base allocation function that works on sorted BufferInfo objects based</i></td></tr>
+<tr><th id="76">76</th><td><i class="doc">   * on the greedy heuristic. The sorting algorithm has to be called before calling this.</i></td></tr>
+<tr><th id="77">77</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="78">78</th><td>  <a class="type" href="../../../runtime/container/map.h.html#tvm::runtime::Map" title='tvm::runtime::Map' data-ref="tvm::runtime::Map" data-ref-filename="tvm..runtime..Map">Map</a>&lt;<a class="type" href="../utils.h.html#tvm::tir::usmp::BufferInfo" title='tvm::tir::usmp::BufferInfo' data-ref="tvm::tir::usmp::BufferInfo" data-ref-filename="tvm..tir..usmp..BufferInfo">BufferInfo</a>, <a class="type" href="../utils.h.html#tvm::tir::usmp::PoolAllocation" title='tvm::tir::usmp::PoolAllocation' data-ref="tvm::tir::usmp::PoolAllocation" data-ref-filename="tvm..tir..usmp..PoolAllocation">PoolAllocation</a>&gt; <a class="decl fn" href="../../../../../src/tir/usmp/algo/greedy.cc.html#_ZN3tvm3tir4usmp4algo10GreedyBase18PostSortAllocationERKSt6vectorINS1_10BufferInfoESaIS5_EE" title='tvm::tir::usmp::algo::GreedyBase::PostSortAllocation' data-ref="_ZN3tvm3tir4usmp4algo10GreedyBase18PostSortAllocationERKSt6vectorINS1_10BufferInfoESaIS5_EE" data-ref-filename="_ZN3tvm3tir4usmp4algo10GreedyBase18PostSortAllocationERKSt6vectorINS1_10BufferInfoESaIS5_EE" id="_ZN3tvm3tir4usmp4algo10GreedyBase18PostSortAllocationERKSt6vectorINS1_10BufferInfoESaIS5_EE">PostSortAllocation</a>(</td></tr>
+<tr><th id="79">79</th><td>      <em>const</em> <span class="namespace">std::</span><a class="type" href="../../../../../../include/c++/10/bits/stl_vector.h.html#std::vector" title='std::vector' data-ref="std::vector" data-ref-filename="std..vector">vector</a>&lt;<a class="type" href="../utils.h.html#tvm::tir::usmp::BufferInfo" title='tvm::tir::usmp::BufferInfo' data-ref="tvm::tir::usmp::BufferInfo" data-ref-filename="tvm..tir..usmp..BufferInfo">BufferInfo</a>&gt;&amp; <dfn class="local col9 decl" id="9buffer_info_vec" title='buffer_info_vec' data-type='const std::vector&lt;BufferInfo&gt; &amp;' data-ref="9buffer_info_vec" data-ref-filename="9buffer_info_vec">buffer_info_vec</dfn>);</td></tr>
+<tr><th id="80">80</th><td>};</td></tr>
+<tr><th id="81">81</th><td></td></tr>
+<tr><th id="82">82</th><td>}  <i>// namespace algo</i></td></tr>
+<tr><th id="83">83</th><td>}  <i>// namespace usmp</i></td></tr>
+<tr><th id="84">84</th><td>}  <i>// namespace tir</i></td></tr>
+<tr><th id="85">85</th><td>}  <i>// namespace tvm</i></td></tr>
+<tr><th id="86">86</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated while processing <a href='../../../../../src/tir/usmp/algo/greedy.cc.html'>tvm/src/tir/usmp/algo/greedy.cc</a><br/>Generated on <em>2022-Aug-10</em> from project tvm revision <em>fae79bb</em><br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

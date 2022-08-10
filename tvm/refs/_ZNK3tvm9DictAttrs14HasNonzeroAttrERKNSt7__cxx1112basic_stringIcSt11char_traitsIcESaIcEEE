@@ -1,0 +1,24 @@
+<def f='tvm/include/tvm/ir/attrs.h' l='298' ll='300' type='bool tvm::DictAttrs::HasNonzeroAttr(const std::string &amp; attr_key) const'/>
+<use f='tvm/include/tvm/ir/function.h' l='132' u='c' c='_ZNK3tvm12BaseFuncNode14HasNonzeroAttrERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<use f='tvm/include/tvm/ir/module.h' l='117' u='c' c='_ZNK3tvm12IRModuleNode14HasNonzeroAttrERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<doc f='tvm/include/tvm/ir/attrs.h' l='279'>/*!
+   * \brief Check whether the function has an non-zero integer attr.
+   *
+   * This function can be used to check whether an optional
+   * attribute mark(e.g. inline) exists.
+   *
+   * \param attr_key The key to the attribute.
+   * \return The check result.
+   *
+   * \code
+   *
+   *  void HasNonzeroAttrExample(const BaseFunc&amp; f) {
+   *    if (f-&gt;HasNonzeroAttr(attr::kInline)) {
+   *      // inline the function.
+   *    }
+   *  }
+   *
+   * \endcode
+   */</doc>
+<use f='tvm/src/relay/backend/annotate_used_memory.cc' l='115' u='c' c='_ZN3tvm5relay7backend25AnnotateUsedMemoryMutator19PreVisitLetBinding_ERKNS0_3VarERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/op/call/call.cc' l='133' u='c' c='_ZN3tvm5relay13IsReshapeOnlyERKNS0_16CallLoweredPropsE'/>

@@ -1,0 +1,102 @@
+<inh f='tvm/include/tvm/tir/stmt.h' l='38' c='tvm::tir::StmtNode'/>
+<def f='tvm/include/tvm/tir/stmt.h' l='595' ll='665'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='632' c='_ZNK3tvm3tir17AllocateConstNode12SEqualReduceEPKS1_NS_13SEqualReducerE'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='681' c='_ZNK3tvm3tir13AllocateConstptEv'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='681' c='_ZNK3tvm3tir13AllocateConstptEv'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='681' c='_ZNK3tvm3tir13AllocateConst3getEv'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='681'/>
+<size>80</size>
+<doc f='tvm/include/tvm/tir/stmt.h' l='592'>/*!
+ * \brief Allocate a buffer that can be used in body.
+ */</doc>
+<mbr r='tvm::tir::AllocateConstNode::buffer_var' o='192' t='tvm::tir::Var'/>
+<mbr r='tvm::tir::AllocateConstNode::data' o='256' t='Optional&lt;runtime::NDArray&gt;'/>
+<mbr r='tvm::tir::AllocateConstNode::irmod_storage_idx' o='320' t='Optional&lt;tvm::Integer&gt;'/>
+<mbr r='tvm::tir::AllocateConstNode::dtype' o='384' t='tvm::DataType'/>
+<mbr r='tvm::tir::AllocateConstNode::extents' o='448' t='Array&lt;tvm::PrimExpr&gt;'/>
+<mbr r='tvm::tir::AllocateConstNode::body' o='512' t='tvm::tir::Stmt'/>
+<mbr r='tvm::tir::AllocateConstNode::annotations' o='576' t='Map&lt;tvm::runtime::String, tvm::runtime::ObjectRef&gt;'/>
+<fun r='_ZN3tvm3tir17AllocateConstNode10VisitAttrsEPNS_11AttrVisitorE'/>
+<fun r='_ZNK3tvm3tir17AllocateConstNode12SEqualReduceEPKS1_NS_13SEqualReducerE'/>
+<fun r='_ZNK3tvm3tir17AllocateConstNode11SHashReduceENS_12SHashReducerE'/>
+<fun r='_ZNK3tvm3tir17AllocateConstNode22ConstantAllocationSizeEv'/>
+<fun r='_ZN3tvm3tir17AllocateConstNode22ConstantAllocationSizeERKNS_7runtime5ArrayINS_8PrimExprEvEE'/>
+<smbr r='tvm::tir::AllocateConstNode::_type_key' t='const char *const'/>
+<smbr r='tvm::tir::AllocateConstNode::_type_has_method_sequal_reduce' t='const bool'/>
+<smbr r='tvm::tir::AllocateConstNode::_type_has_method_shash_reduce' t='const bool'/>
+<smbr r='tvm::tir::AllocateConstNode::_type_final' t='const bool'/>
+<smbr r='tvm::tir::AllocateConstNode::_type_child_slots' t='const int'/>
+<fun r='_ZN3tvm3tir17AllocateConstNode16RuntimeTypeIndexEv'/>
+<fun r='_ZN3tvm3tir17AllocateConstNode27_GetOrAllocRuntimeTypeIndexEv'/>
+<use f='tvm/include/tvm/tir/stmt_functor.h' l='91' c='_ZN3tvm3tir11StmtFunctorIFT_RKNS0_4StmtEDpT0_EE10VisitStmt_EPKNS0_17AllocateConstNodeES7_'/>
+<use f='tvm/include/tvm/tir/stmt_functor.h' l='119' c='_ZN3tvm3tir11StmtFunctorIFT_RKNS0_4StmtEDpT0_EE10InitVTableEv'/>
+<use f='tvm/include/tvm/tir/stmt_functor.h' l='119' c='_ZN3tvm3tir11StmtFunctorIFT_RKNS0_4StmtEDpT0_EE10InitVTableEv'/>
+<use f='tvm/include/tvm/tir/stmt_functor.h' l='163' c='_ZN3tvm3tir11StmtVisitor10VisitStmt_EPKNS0_17AllocateConstNodeE'/>
+<use f='tvm/include/tvm/tir/stmt_functor.h' l='265' c='_ZN3tvm3tir11StmtMutator10VisitStmt_EPKNS0_17AllocateConstNodeE'/>
+<size>80</size>
+<use f='tvm/src/printer/text_printer.h' l='355' c='_ZN3tvm3tir14TIRTextPrinter10VisitStmt_EPKNS0_17AllocateConstNodeE'/>
+<size>80</size>
+<use f='tvm/src/printer/tir_text_printer.cc' l='547' c='_ZN3tvm3tir14TIRTextPrinter10VisitStmt_EPKNS0_17AllocateConstNodeE'/>
+<size>80</size>
+<use f='tvm/src/printer/tvmscript_printer.cc' l='247' c='_ZN3tvm3tir16TVMScriptPrinter10VisitStmt_EPKNS0_17AllocateConstNodeE'/>
+<use f='tvm/src/printer/tvmscript_printer.cc' l='1112' c='_ZN3tvm3tir16TVMScriptPrinter10VisitStmt_EPKNS0_17AllocateConstNodeE'/>
+<size>80</size>
+<use f='tvm/include/tvm/tir/usmp/utils.h' l='283' c='_ZN3tvm3tir4usmp20CalculateExtentsSizeEPKNS0_17AllocateConstNodeE'/>
+<size>80</size>
+<use f='tvm/src/target/source/codegen_c.h' l='168' c='_ZN3tvm7codegen8CodeGenC10VisitStmt_EPKNS_3tir17AllocateConstNodeE'/>
+<size>80</size>
+<use f='tvm/src/target/llvm/codegen_llvm.h' l='220' c='_ZN3tvm7codegen11CodeGenLLVM10VisitStmt_EPKNS_3tir17AllocateConstNodeE'/>
+<size>80</size>
+<use f='tvm/src/target/llvm/codegen_llvm.cc' l='1549' c='_ZN3tvm7codegen11CodeGenLLVM10VisitStmt_EPKNS_3tir17AllocateConstNodeE'/>
+<size>80</size>
+<use f='tvm/src/target/source/codegen_c.cc' l='633' c='_ZN3tvm7codegen8CodeGenC10VisitStmt_EPKNS_3tir17AllocateConstNodeE'/>
+<size>80</size>
+<use f='tvm/src/tir/analysis/calculate_workspace.cc' l='75' c='_ZN3tvm3tir22CalculateConstantBytesERKNS0_8PrimFuncERKNS_7IntegerE'/>
+<size>80</size>
+<use f='tvm/src/tir/ir/stmt.cc' l='455' c='_ZN3tvm3tir13AllocateConstC1ENS0_3VarENS_7runtime8DataTypeENS3_5ArrayINS_8PrimExprEvEENS3_9ObjectRefENS0_4StmtENS3_3MapINS3_6StringES8_vvEENS_4SpanE'/>
+<use f='tvm/src/tir/ir/stmt.cc' l='455' c='_ZN3tvm3tir13AllocateConstC1ENS0_3VarENS_7runtime8DataTypeENS3_5ArrayINS_8PrimExprEvEENS3_9ObjectRefENS0_4StmtENS3_3MapINS3_6StringES8_vvEENS_4SpanE'/>
+<use f='tvm/src/tir/ir/stmt.cc' l='495'/>
+<use f='tvm/src/tir/ir/stmt.cc' l='495'/>
+<use f='tvm/src/tir/ir/stmt.cc' l='495'/>
+<use f='tvm/src/tir/ir/stmt.cc' l='498'/>
+<use f='tvm/src/tir/ir/stmt.cc' l='499'/>
+<size>80</size>
+<fun r='_ZN3tvm3tir17AllocateConstNode22ConstantAllocationSizeERKNS_7runtime5ArrayINS_8PrimExprEvEE'/>
+<use f='tvm/src/tir/ir/stmt_functor.cc' l='61' c='_ZN3tvm3tir11StmtVisitor10VisitStmt_EPKNS0_17AllocateConstNodeE'/>
+<use f='tvm/src/tir/ir/stmt_functor.cc' l='327' c='_ZN3tvm3tir11StmtMutator10VisitStmt_EPKNS0_17AllocateConstNodeE'/>
+<size>80</size>
+<use f='tvm/src/tir/transforms/extract_constants.cc' l='61' c='_ZN3tvm3tir10Applicator10VisitStmt_EPKNS0_17AllocateConstNodeE'/>
+<size>80</size>
+<use f='tvm/src/tir/transforms/plan_update_buffer_allocation_location.cc' l='127' c='_ZN3tvm3tir23BufferAllocationLocator10VisitStmt_EPKNS0_17AllocateConstNodeE'/>
+<size>80</size>
+<use f='tvm/src/tir/transforms/renew_defs.cc' l='94' c='_ZN3tvm3tir15RenewDefMutator10VisitStmt_EPKNS0_17AllocateConstNodeE'/>
+<use f='tvm/src/tir/transforms/renew_defs.cc' l='94' c='_ZN3tvm3tir15RenewDefMutator10VisitStmt_EPKNS0_17AllocateConstNodeE'/>
+<use f='tvm/src/tir/transforms/renew_defs.cc' l='94' c='_ZN3tvm3tir15RenewDefMutator10VisitStmt_EPKNS0_17AllocateConstNodeE'/>
+<size>80</size>
+<use f='tvm/src/tir/transforms/split_host_device.cc' l='109' c='_ZN3tvm3tir17VarUseDefAnalysis10VisitStmt_EPKNS0_17AllocateConstNodeE'/>
+<size>80</size>
+<use f='tvm/src/tir/transforms/storage_flatten.cc' l='541' c='_ZN3tvm3tir20BufferStrideLegalize10VisitStmt_EPKNS0_17AllocateConstNodeE'/>
+<use f='tvm/src/tir/transforms/storage_flatten.cc' l='943' c='_ZN3tvm3tir19BufferBindUnwrapper10VisitStmt_EPKNS0_17AllocateConstNodeE'/>
+<use f='tvm/src/tir/transforms/storage_flatten.cc' l='1430' c='_ZN3tvm3tir16StorageFlattener10VisitStmt_EPKNS0_17AllocateConstNodeE'/>
+<size>80</size>
+<use f='tvm/src/tir/transforms/storage_rewrite.cc' l='1172' c='_ZN3tvm3tir23VectorTypeAccessChecker10VisitStmt_EPKNS0_17AllocateConstNodeE'/>
+<use f='tvm/src/tir/transforms/storage_rewrite.cc' l='1549' c='_ZN3tvm3tir18VectorTypeRewriter10VisitStmt_EPKNS0_17AllocateConstNodeE'/>
+<use f='tvm/src/tir/transforms/storage_rewrite.cc' l='1551' c='_ZN3tvm3tir18VectorTypeRewriter10VisitStmt_EPKNS0_17AllocateConstNodeE'/>
+<size>80</size>
+<use f='tvm/src/tir/usmp/analysis/extract_buffer_info.cc' l='76' c='_ZN3tvm3tir4usmp19BufferInfoExtractor10VisitStmt_EPKNS0_17AllocateConstNodeE'/>
+<use f='tvm/src/tir/usmp/analysis/extract_buffer_info.cc' l='85' c='_ZN3tvm3tir4usmp19BufferInfoExtractor27RecordAllocateConstNodeInfoEPKNS0_17AllocateConstNodeE'/>
+<use f='tvm/src/tir/usmp/analysis/extract_buffer_info.cc' l='307' c='_ZN3tvm3tir4usmp19BufferInfoExtractor10VisitStmt_EPKNS0_17AllocateConstNodeE'/>
+<use f='tvm/src/tir/usmp/analysis/extract_buffer_info.cc' l='314' c='_ZN3tvm3tir4usmp19BufferInfoExtractor27RecordAllocateConstNodeInfoEPKNS0_17AllocateConstNodeE'/>
+<use f='tvm/src/tir/usmp/analysis/extract_buffer_info.cc' l='420' c='_ZN3tvm3tir4usmp19BufferInfoExtractor10VisitExpr_EPKNS0_7VarNodeE'/>
+<use f='tvm/src/tir/usmp/analysis/extract_buffer_info.cc' l='512' c='_ZN3tvm3tir4usmp19BufferInfoExtractorclERKNS0_8PrimFuncE'/>
+<use f='tvm/src/tir/usmp/analysis/extract_buffer_info.cc' l='590' c='_ZN3tvm3tir4usmp19BufferInfoExtractorclERKNS0_8PrimFuncE'/>
+<size>80</size>
+<use f='tvm/src/tir/usmp/transform/assign_pool_info.cc' l='85' c='_ZN3tvm3tir4usmp16PoolInfoAssigner10VisitStmt_EPKNS0_17AllocateConstNodeE'/>
+<use f='tvm/src/tir/usmp/transform/assign_pool_info.cc' l='146' c='_ZN3tvm3tir4usmp16PoolInfoAssigner10VisitStmt_EPKNS0_17AllocateConstNodeE'/>
+<size>80</size>
+<use f='tvm/src/tir/usmp/transform/convert_pool_allocations_to_offsets.cc' l='61' c='_ZN3tvm3tir4usmp31PoolAllocationToOffsetConverterC1ERKNS_8IRModuleERKNS_7runtime3MapINS0_4StmtENS1_14PoolAllocationEvvEEb'/>
+<use f='tvm/src/tir/usmp/transform/convert_pool_allocations_to_offsets.cc' l='102' c='_ZN3tvm3tir4usmp31PoolAllocationToOffsetConverter10VisitStmt_EPKNS0_17AllocateConstNodeE'/>
+<use f='tvm/src/tir/usmp/transform/convert_pool_allocations_to_offsets.cc' l='359' c='_ZN3tvm3tir4usmp31PoolAllocationToOffsetConverter10VisitStmt_EPKNS0_17AllocateConstNodeE'/>
+<size>80</size>
+<use f='tvm/src/tir/usmp/utils.cc' l='201' c='_ZN3tvm3tir4usmp20CalculateExtentsSizeEPKNS0_17AllocateConstNodeE'/>
+<size>80</size>

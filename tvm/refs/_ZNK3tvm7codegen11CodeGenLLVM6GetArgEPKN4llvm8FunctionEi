@@ -1,0 +1,14 @@
+<def f='tvm/src/target/llvm/codegen_llvm.h' l='456' ll='464' type='llvm::Argument * tvm::codegen::CodeGenLLVM::GetArg(const llvm::Function * function, int i) const'/>
+<doc f='tvm/src/target/llvm/codegen_llvm.h' l='445'>/*!
+   * \brief Get the `i`th argument to the given function, respecting LLVM API changes.
+   *
+   * NOTE: in LLVM &lt; 10.0, the underlying API returns a const llvm::Argument*. To provide a uniform
+   * API, const is removed here. Proper usage of LLVM APIs depends on having a non-const Argument*,
+   * so we take this appraoch here rather than adding const.
+   *
+   * \param function The function containing the arguments.
+   * \param i The index of the argument to retrieve.
+   * \return The retrieved argument.
+   */</doc>
+<use f='tvm/src/target/llvm/codegen_cpu.cc' l='1310' u='c' c='_ZN3tvm7codegen10CodeGenCPU14DefineMetadataENS_7runtime8metadata8MetadataE'/>
+<use f='tvm/src/target/llvm/codegen_cpu.cc' l='1313' u='c' c='_ZN3tvm7codegen10CodeGenCPU14DefineMetadataENS_7runtime8metadata8MetadataE'/>

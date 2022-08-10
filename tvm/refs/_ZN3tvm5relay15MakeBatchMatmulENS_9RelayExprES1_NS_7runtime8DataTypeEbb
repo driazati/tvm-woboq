@@ -1,0 +1,7 @@
+<dec f='tvm/src/relay/op/make_op.h' l='53' type='tvm::relay::Expr tvm::relay::MakeBatchMatmul(tvm::relay::Expr lhs, tvm::relay::Expr rhs, tvm::DataType out_dtype, bool transpose_a, bool transpose_b)'/>
+<def f='tvm/src/relay/op/nn/nn.cc' l='1064' ll='1072' type='tvm::relay::Expr tvm::relay::MakeBatchMatmul(tvm::relay::Expr tensor_a, tvm::relay::Expr tensor_b, tvm::DataType out_dtype, bool transpose_a, bool transpose_b)'/>
+<use f='tvm/src/relay/op/nn/nn.cc' l='1074' u='r'/>
+<doc f='tvm/src/relay/op/nn/nn.cc' l='1063'>// Positional relay function to create batch_matmul operator used by frontend FFI.</doc>
+<use f='tvm/src/relay/qnn/op/batch_matmul.cc' l='94' u='c' c='_ZN3tvm5relay3qnn20BatchMatmulFirstTermERKNS_9RelayExprES4_PKNS0_16BatchMatmulAttrsE'/>
+<use f='tvm/src/relay/transforms/combine_parallel_batch_matmul.cc' l='99' u='c' c='_ZN3tvm5relay27ParallelBatchMatmulCombiner14MakeCombinedOpERKSt6vectorIS2_IPKNS0_8CallNodeESaIS5_EESaIS7_EE'/>
+<use f='tvm/src/relay/transforms/combine_parallel_dense.cc' l='76' u='c' c='_ZN3tvm5relay28ParallelDenseToBatchCombiner14MakeCombinedOpERKSt6vectorIS2_IPKNS0_8CallNodeESaIS5_EESaIS7_EE'/>

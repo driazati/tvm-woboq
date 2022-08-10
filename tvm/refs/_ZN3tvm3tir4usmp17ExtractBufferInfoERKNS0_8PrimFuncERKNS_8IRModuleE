@@ -1,0 +1,12 @@
+<dec f='tvm/include/tvm/tir/usmp/analysis.h' l='43' type='tvm::tir::usmp::BufferInfoAnalysis tvm::tir::usmp::ExtractBufferInfo(const tvm::tir::PrimFunc &amp; main_func, const tvm::IRModule &amp; mod)'/>
+<def f='tvm/src/tir/usmp/analysis/extract_buffer_info.cc' l='619' ll='621' type='tvm::tir::usmp::BufferInfoAnalysis tvm::tir::usmp::ExtractBufferInfo(const tvm::tir::PrimFunc &amp; main_func, const tvm::IRModule &amp; mod)'/>
+<use f='tvm/src/tir/usmp/analysis/extract_buffer_info.cc' l='625' u='c'/>
+<doc f='tvm/include/tvm/tir/usmp/analysis.h' l='35'>/*!
+ * \brief Extract BufferInfo objects from a TIR IRModule
+ *
+ * This pass would extract the buffer information of allocate nodes
+ * including liveness conflict with other buffer info objects.
+ *
+ * \return A Map of BufferInfo objects and their associated Stmts
+ */</doc>
+<use f='tvm/src/tir/usmp/unified_static_memory_planner.cc' l='66' u='c' c='_ZN3tvm3tir4usmp10PlanMemoryERKNS_8IRModuleENS_7runtime6StringEbNS5_8OptionalIS6_EE'/>

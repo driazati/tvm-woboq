@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>pareto.h source code [tvm/src/contrib/ethosu/cascader/pareto.h] - Woboq Code Browser</title>
+<link rel="stylesheet" href="../../../../.././data/qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href="../../../../.././data/kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src="../../../../.././data/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="../../../../.././data/jquery/jquery-ui.min.js"></script>
+<script>var file = 'tvm/src/contrib/ethosu/cascader/pareto.h'; var root_path = '../../../../..'; var data_path = '../../../../.././data'; var ecma_script_api_version = 2;</script>
+<script src='../../../../.././data/codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='../../../..'>tvm</a>/<a href='../../..'>src</a>/<a href='../..'>contrib</a>/<a href='..'>ethosu</a>/<a href='./'>cascader</a>/<a href='pareto.h.html'>pareto.h</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td><i>/*</i></td></tr>
+<tr><th id="2">2</th><td><i> * Licensed to the Apache Software Foundation (ASF) under one</i></td></tr>
+<tr><th id="3">3</th><td><i> * or more contributor license agreements.  See the NOTICE file</i></td></tr>
+<tr><th id="4">4</th><td><i> * distributed with this work for additional information</i></td></tr>
+<tr><th id="5">5</th><td><i> * regarding copyright ownership.  The ASF licenses this file</i></td></tr>
+<tr><th id="6">6</th><td><i> * to you under the Apache License, Version 2.0 (the</i></td></tr>
+<tr><th id="7">7</th><td><i> * "License"); you may not use this file except in compliance</i></td></tr>
+<tr><th id="8">8</th><td><i> * with the License.  You may obtain a copy of the License at</i></td></tr>
+<tr><th id="9">9</th><td><i> *</i></td></tr>
+<tr><th id="10">10</th><td><i> *   <a href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a></i></td></tr>
+<tr><th id="11">11</th><td><i> *</i></td></tr>
+<tr><th id="12">12</th><td><i> * Unless required by applicable law or agreed to in writing,</i></td></tr>
+<tr><th id="13">13</th><td><i> * software distributed under the License is distributed on an</i></td></tr>
+<tr><th id="14">14</th><td><i> * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY</i></td></tr>
+<tr><th id="15">15</th><td><i> * KIND, either express or implied.  See the License for the</i></td></tr>
+<tr><th id="16">16</th><td><i> * specific language governing permissions and limitations</i></td></tr>
+<tr><th id="17">17</th><td><i> * under the License.</i></td></tr>
+<tr><th id="18">18</th><td><i> */</i></td></tr>
+<tr><th id="19">19</th><td></td></tr>
+<tr><th id="20">20</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="21">21</th><td><i class="doc"> * <span class="command">\file</span> <span class="verb">src/contrib/ethosu/cascader/pareto.h</span></i></td></tr>
+<tr><th id="22">22</th><td><i class="doc"> * <span class="command">\brief</span> Pareto optimisation functions for the NPU cascader</i></td></tr>
+<tr><th id="23">23</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="24">24</th><td><u>#<span data-ppcond="24">ifndef</span> <span class="macro" data-ref="_M/TVM_CONTRIB_ETHOSU_CASCADER_PARETO_H_">TVM_CONTRIB_ETHOSU_CASCADER_PARETO_H_</span></u></td></tr>
+<tr><th id="25">25</th><td><u>#define <dfn class="macro" id="_M/TVM_CONTRIB_ETHOSU_CASCADER_PARETO_H_" data-ref="_M/TVM_CONTRIB_ETHOSU_CASCADER_PARETO_H_">TVM_CONTRIB_ETHOSU_CASCADER_PARETO_H_</dfn></u></td></tr>
+<tr><th id="26">26</th><td></td></tr>
+<tr><th id="27">27</th><td><u>#include <a href="../../../../include/tvm/ir/expr.h.html">&lt;tvm/ir/expr.h&gt;</a></u></td></tr>
+<tr><th id="28">28</th><td><u>#include <a href="../../../../include/tvm/runtime/container/array.h.html">&lt;tvm/runtime/container/array.h&gt;</a></u></td></tr>
+<tr><th id="29">29</th><td></td></tr>
+<tr><th id="30">30</th><td><u>#include <a href="../../../../../include/c++/10/algorithm.html">&lt;algorithm&gt;</a></u></td></tr>
+<tr><th id="31">31</th><td><u>#include <a href="../../../../../include/c++/10/array.html">&lt;array&gt;</a></u></td></tr>
+<tr><th id="32">32</th><td><u>#include <a href="../../../../../include/c++/10/vector.html">&lt;vector&gt;</a></u></td></tr>
+<tr><th id="33">33</th><td></td></tr>
+<tr><th id="34">34</th><td><b>namespace</b> <span class="namespace">tvm</span> {</td></tr>
+<tr><th id="35">35</th><td><b>namespace</b> <span class="namespace">contrib</span> {</td></tr>
+<tr><th id="36">36</th><td><b>namespace</b> <span class="namespace">ethosu</span> {</td></tr>
+<tr><th id="37">37</th><td><b>namespace</b> <span class="namespace">cascader</span> {</td></tr>
+<tr><th id="38">38</th><td></td></tr>
+<tr><th id="39">39</th><td><b>class</b> <a class="type" href="plan.h.html#tvm::contrib::ethosu::cascader::Plan" title='tvm::contrib::ethosu::cascader::Plan' data-ref="tvm::contrib::ethosu::cascader::Plan" data-ref-filename="tvm..contrib..ethosu..cascader..Plan" id="tvm::contrib::ethosu::cascader::Plan">Plan</a>;</td></tr>
+<tr><th id="40">40</th><td><b>class</b> <a class="type" href="tensor_config.h.html#tvm::contrib::ethosu::cascader::MemoryRegion" title='tvm::contrib::ethosu::cascader::MemoryRegion' data-ref="tvm::contrib::ethosu::cascader::MemoryRegion" data-ref-filename="tvm..contrib..ethosu..cascader..MemoryRegion" id="tvm::contrib::ethosu::cascader::MemoryRegion">MemoryRegion</a>;</td></tr>
+<tr><th id="41">41</th><td><b>class</b> <a class="type" href="proposal.h.html#tvm::contrib::ethosu::cascader::Proposal" title='tvm::contrib::ethosu::cascader::Proposal' data-ref="tvm::contrib::ethosu::cascader::Proposal" data-ref-filename="tvm..contrib..ethosu..cascader..Proposal" id="tvm::contrib::ethosu::cascader::Proposal">Proposal</a>;</td></tr>
+<tr><th id="42">42</th><td></td></tr>
+<tr><th id="43">43</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="44">44</th><td><i class="doc"> * <span class="command">\brief</span> Determine the Pareto optimal points.</i></td></tr>
+<tr><th id="45">45</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">costs</span> The points as a vector of N-dimensional costs.</i></td></tr>
+<tr><th id="46">46</th><td><i class="doc"> * <span class="command">\return</span> A vector that is true where a point is Pareto optimal and false otherwise.</i></td></tr>
+<tr><th id="47">47</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="48">48</th><td><b>template</b> &lt;<em>int</em> N&gt;</td></tr>
+<tr><th id="49">49</th><td><span class="namespace">std::</span><a class="type" href="../../../../../include/c++/10/bits/stl_vector.h.html#std::vector" title='std::vector' data-ref="std::vector" data-ref-filename="std..vector">vector</a>&lt;<em>bool</em>&gt; <a class="decl fn" href="pareto.cc.html#_ZN3tvm7contrib6ethosu8cascader17GetParetoFrontierERKSt6vectorISt5arrayIfXT_EESaIS5_EE" title='tvm::contrib::ethosu::cascader::GetParetoFrontier' data-ref="_ZN3tvm7contrib6ethosu8cascader17GetParetoFrontierERKSt6vectorISt5arrayIfXT_EESaIS5_EE" data-ref-filename="_ZN3tvm7contrib6ethosu8cascader17GetParetoFrontierERKSt6vectorISt5arrayIfXT_EESaIS5_EE" id="_ZN3tvm7contrib6ethosu8cascader17GetParetoFrontierERKSt6vectorISt5arrayIfXT_EESaIS5_EE">GetParetoFrontier</a>(<em>const</em> <span class="namespace">std::</span><a class="type" href="../../../../../include/c++/10/bits/stl_vector.h.html#std::vector" title='std::vector' data-ref="std::vector" data-ref-filename="std..vector">vector</a>&lt;<span class="namespace">std::</span><a class="type" href="../../../../../include/c++/10/array.html#std::array" title='std::array' data-ref="std::array" data-ref-filename="std..array">array</a>&lt;<em>float</em>, <a class="tu ref" href="#N" title='N' data-ref="N" data-ref-filename="N">N</a>&gt;&gt;&amp; <dfn class="local col1 decl" id="1costs" title='costs' data-type='const std::vector&lt;std::array&lt;float, N&gt;&gt; &amp;' data-ref="1costs" data-ref-filename="1costs">costs</dfn>);</td></tr>
+<tr><th id="50">50</th><td></td></tr>
+<tr><th id="51">51</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="52">52</th><td><i class="doc"> * <span class="command">\brief</span> Evenly sample items from a vector to reduce its size.</i></td></tr>
+<tr><th id="53">53</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">vec</span> The vector to thin.</i></td></tr>
+<tr><th id="54">54</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">max_size</span> The maximum size of the thinned vector.</i></td></tr>
+<tr><th id="55">55</th><td><i class="doc"> * <span class="command">\return</span> The thinned vector.</i></td></tr>
+<tr><th id="56">56</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="57">57</th><td><b>template</b> &lt;<b>class</b> T&gt;</td></tr>
+<tr><th id="58">58</th><td><span class="namespace">std::</span><a class="type" href="../../../../../include/c++/10/bits/stl_vector.h.html#std::vector" title='std::vector' data-ref="std::vector" data-ref-filename="std..vector">vector</a>&lt;T&gt; <a class="decl fn" href="pareto.cc.html#_ZN3tvm7contrib6ethosu8cascader10ThinVectorERKSt6vectorIT_SaIS4_EEm" title='tvm::contrib::ethosu::cascader::ThinVector' data-ref="_ZN3tvm7contrib6ethosu8cascader10ThinVectorERKSt6vectorIT_SaIS4_EEm" data-ref-filename="_ZN3tvm7contrib6ethosu8cascader10ThinVectorERKSt6vectorIT_SaIS4_EEm" id="_ZN3tvm7contrib6ethosu8cascader10ThinVectorERKSt6vectorIT_SaIS4_EEm">ThinVector</a>(<em>const</em> <span class="namespace">std::</span><a class="type" href="../../../../../include/c++/10/bits/stl_vector.h.html#std::vector" title='std::vector' data-ref="std::vector" data-ref-filename="std..vector">vector</a>&lt;T&gt;&amp; <dfn class="local col2 decl" id="2vec" title='vec' data-type='const std::vector&lt;T&gt; &amp;' data-ref="2vec" data-ref-filename="2vec">vec</dfn>, <span class='typedef' title='size_t' data-type='unsigned long' data-ref="size_t" data-ref-filename="size_t">size_t</span> <dfn class="local col3 decl" id="3max_size" title='max_size' data-type='size_t' data-ref="3max_size" data-ref-filename="3max_size">max_size</dfn>);</td></tr>
+<tr><th id="59">59</th><td></td></tr>
+<tr><th id="60">60</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="61">61</th><td><i class="doc"> * <span class="command">\brief</span> Cull plans which are not Pareto optimal then thin them down.</i></td></tr>
+<tr><th id="62">62</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">plans</span> The plans to apply the Pareto culling to.</i></td></tr>
+<tr><th id="63">63</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">max_plans</span> The maximum number of plans after the culling.</i></td></tr>
+<tr><th id="64">64</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">disable_pareto_metric</span> Whether to only select from Pareto frontier or not.</i></td></tr>
+<tr><th id="65">65</th><td><i class="doc"> * <span class="command">\return</span> The culled plans.</i></td></tr>
+<tr><th id="66">66</th><td><i class="doc"> * <span class="command">\note</span> Plan Pareto-optimality is determined based upon a Plan's memory_usage</i></td></tr>
+<tr><th id="67">67</th><td><i class="doc"> * and cycles.</i></td></tr>
+<tr><th id="68">68</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="69">69</th><td><span class="namespace">std::</span><a class="type" href="../../../../../include/c++/10/bits/stl_vector.h.html#std::vector" title='std::vector' data-ref="std::vector" data-ref-filename="std..vector">vector</a>&lt;<a class="type" href="plan.h.html#tvm::contrib::ethosu::cascader::Plan" title='tvm::contrib::ethosu::cascader::Plan' data-ref="tvm::contrib::ethosu::cascader::Plan" data-ref-filename="tvm..contrib..ethosu..cascader..Plan">Plan</a>&gt; <a class="decl fn" href="pareto.cc.html#_ZN3tvm7contrib6ethosu8cascader15ParetoCullPlansESt6vectorINS2_4PlanESaIS4_EEmb" title='tvm::contrib::ethosu::cascader::ParetoCullPlans' data-ref="_ZN3tvm7contrib6ethosu8cascader15ParetoCullPlansESt6vectorINS2_4PlanESaIS4_EEmb" data-ref-filename="_ZN3tvm7contrib6ethosu8cascader15ParetoCullPlansESt6vectorINS2_4PlanESaIS4_EEmb" id="_ZN3tvm7contrib6ethosu8cascader15ParetoCullPlansESt6vectorINS2_4PlanESaIS4_EEmb">ParetoCullPlans</a>(<span class="namespace">std::</span><a class="type" href="../../../../../include/c++/10/bits/stl_vector.h.html#std::vector" title='std::vector' data-ref="std::vector" data-ref-filename="std..vector">vector</a>&lt;<a class="type" href="plan.h.html#tvm::contrib::ethosu::cascader::Plan" title='tvm::contrib::ethosu::cascader::Plan' data-ref="tvm::contrib::ethosu::cascader::Plan" data-ref-filename="tvm..contrib..ethosu..cascader..Plan">Plan</a>&gt; <dfn class="local col4 decl" id="4plans" title='plans' data-type='std::vector&lt;Plan&gt;' data-ref="4plans" data-ref-filename="4plans">plans</dfn>, <span class='typedef' title='size_t' data-type='unsigned long' data-ref="size_t" data-ref-filename="size_t">size_t</span> <dfn class="local col5 decl" id="5max_plans" title='max_plans' data-type='size_t' data-ref="5max_plans" data-ref-filename="5max_plans">max_plans</dfn>,</td></tr>
+<tr><th id="70">70</th><td>                                  <em>bool</em> <dfn class="local col6 decl" id="6disable_pareto_metric" title='disable_pareto_metric' data-type='bool' data-ref="6disable_pareto_metric" data-ref-filename="6disable_pareto_metric">disable_pareto_metric</dfn>);</td></tr>
+<tr><th id="71">71</th><td></td></tr>
+<tr><th id="72">72</th><td><span class="namespace">std::</span><a class="type" href="../../../../../include/c++/10/bits/stl_vector.h.html#std::vector" title='std::vector' data-ref="std::vector" data-ref-filename="std..vector">vector</a>&lt;<a class="type" href="proposal.h.html#tvm::contrib::ethosu::cascader::Proposal" title='tvm::contrib::ethosu::cascader::Proposal' data-ref="tvm::contrib::ethosu::cascader::Proposal" data-ref-filename="tvm..contrib..ethosu..cascader..Proposal">Proposal</a>&gt; <a class="decl fn" href="pareto.cc.html#_ZN3tvm7contrib6ethosu8cascader19ParetoCullProposalsESt6vectorINS2_8ProposalESaIS4_EEmb" title='tvm::contrib::ethosu::cascader::ParetoCullProposals' data-ref="_ZN3tvm7contrib6ethosu8cascader19ParetoCullProposalsESt6vectorINS2_8ProposalESaIS4_EEmb" data-ref-filename="_ZN3tvm7contrib6ethosu8cascader19ParetoCullProposalsESt6vectorINS2_8ProposalESaIS4_EEmb" id="_ZN3tvm7contrib6ethosu8cascader19ParetoCullProposalsESt6vectorINS2_8ProposalESaIS4_EEmb">ParetoCullProposals</a>(<span class="namespace">std::</span><a class="type" href="../../../../../include/c++/10/bits/stl_vector.h.html#std::vector" title='std::vector' data-ref="std::vector" data-ref-filename="std..vector">vector</a>&lt;<a class="type" href="proposal.h.html#tvm::contrib::ethosu::cascader::Proposal" title='tvm::contrib::ethosu::cascader::Proposal' data-ref="tvm::contrib::ethosu::cascader::Proposal" data-ref-filename="tvm..contrib..ethosu..cascader..Proposal">Proposal</a>&gt; <dfn class="local col7 decl" id="7proposals" title='proposals' data-type='std::vector&lt;Proposal&gt;' data-ref="7proposals" data-ref-filename="7proposals">proposals</dfn>, <span class='typedef' title='size_t' data-type='unsigned long' data-ref="size_t" data-ref-filename="size_t">size_t</span> <dfn class="local col8 decl" id="8max_proposals" title='max_proposals' data-type='size_t' data-ref="8max_proposals" data-ref-filename="8max_proposals">max_proposals</dfn>,</td></tr>
+<tr><th id="73">73</th><td>                                          <em>bool</em> <dfn class="local col9 decl" id="9disable_pareto_metric" title='disable_pareto_metric' data-type='bool' data-ref="9disable_pareto_metric" data-ref-filename="9disable_pareto_metric">disable_pareto_metric</dfn>);</td></tr>
+<tr><th id="74">74</th><td></td></tr>
+<tr><th id="75">75</th><td>}  <i>// namespace cascader</i></td></tr>
+<tr><th id="76">76</th><td>}  <i>// namespace ethosu</i></td></tr>
+<tr><th id="77">77</th><td>}  <i>// namespace contrib</i></td></tr>
+<tr><th id="78">78</th><td>}  <i>// namespace tvm</i></td></tr>
+<tr><th id="79">79</th><td></td></tr>
+<tr><th id="80">80</th><td><u>#<span data-ppcond="24">endif</span>  // TVM_CONTRIB_ETHOSU_CASCADER_PARETO_H_</u></td></tr>
+<tr><th id="81">81</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated while processing <a href='pareto.cc.html'>tvm/src/contrib/ethosu/cascader/pareto.cc</a><br/>Generated on <em>2022-Aug-10</em> from project tvm revision <em>fae79bb</em><br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

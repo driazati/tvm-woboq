@@ -1,0 +1,13 @@
+<def f='tvm/include/tvm/relay/expr_functor.h' l='301' type='tvm::relay::Expr tvm::relay::MixedModeMutator::Rewrite_(const tvm::relay::TupleNode * pre, const tvm::relay::Expr &amp; post)'/>
+<doc f='tvm/include/tvm/relay/expr_functor.h' l='293'>/*!
+   *  \brief Users should override Rewrite_ methods to implement their pass. Rewrite_ functions will
+   * be able to rewrite the op only with data about the original node `pre` and the same node with
+   * modified inputs `post` and should not recurse.
+   *
+   * \param pre The expression node before rewriting.
+   * \param post The expression with rewritten inputs.
+   */</doc>
+<ovr f='tvm/src/relay/transforms/forward_rewrite.cc' l='116' c='_ZN3tvm5relay15ForwardRewriter8Rewrite_EPKNS0_9TupleNodeERKNS_9RelayExprE'/>
+<ovr f='tvm/src/relay/transforms/fuse_ops.cc' l='918' c='_ZN3tvm5relay11FuseMutator8Rewrite_EPKNS0_9TupleNodeERKNS_9RelayExprE'/>
+<ovr f='tvm/src/relay/transforms/to_mixed_precision.cc' l='420' c='_ZN3tvm5relay18MixedPrecisionPass8Rewrite_EPKNS0_9TupleNodeERKNS_9RelayExprE'/>
+<ovr f='tvm/src/relay/transforms/type_infer.cc' l='642' c='_ZN3tvm5relay14TypeInferencer8Resolver8Rewrite_EPKNS0_9TupleNodeERKNS_9RelayExprE'/>

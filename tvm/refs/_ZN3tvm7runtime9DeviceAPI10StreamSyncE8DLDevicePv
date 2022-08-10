@@ -1,0 +1,17 @@
+<dec f='tvm/include/tvm/runtime/device_api.h' l='154' type='void tvm::runtime::DeviceAPI::StreamSync(tvm::Device dev, TVMStreamHandle stream)'/>
+<doc f='tvm/include/tvm/runtime/device_api.h' l='149'>/*!
+   * \brief Synchronize the stream
+   * \param dev The device to perform operation.
+   * \param stream The stream to be sync.
+   */</doc>
+<use f='tvm/src/runtime/c_runtime_api.cc' l='577' u='c' c='TVMSynchronize'/>
+<ovr f='tvm/src/runtime/cpu_device_api.cc' l='71' c='_ZN3tvm7runtime12CPUDeviceAPI10StreamSyncE8DLDevicePv'/>
+<use f='tvm/src/runtime/ndarray.cc' l='77' u='c' c='_ZN3tvm7runtime18ArrayCopyFromBytesEP8DLTensorPKvm'/>
+<use f='tvm/src/runtime/ndarray.cc' l='96' u='c' c='_ZN3tvm7runtime16ArrayCopyToBytesEPK8DLTensorPvm'/>
+<use f='tvm/src/runtime/profiling.cc' l='868' u='c' c='_ZN3tvm7runtime9profiling17WrapTimeEvaluatorENS0_10PackedFuncE8DLDeviceiiiiiS2_'/>
+<ovr f='tvm/src/runtime/rpc/rpc_device_api.cc' l='124' c='_ZN3tvm7runtime12RPCDeviceAPI10StreamSyncE8DLDevicePv'/>
+<use f='tvm/src/runtime/rpc/rpc_device_api.cc' l='126' u='c' c='_ZN3tvm7runtime12RPCDeviceAPI10StreamSyncE8DLDevicePv'/>
+<ovr f='tvm/src/runtime/rpc/rpc_endpoint.cc' l='1117' c='_ZN3tvm7runtime16RPCClientSession10StreamSyncE8DLDevicePv'/>
+<use f='tvm/src/runtime/rpc/rpc_local_session.cc' l='109' u='c' c='_ZN3tvm7runtime12LocalSession12CopyToRemoteEPvP8DLTensorm'/>
+<use f='tvm/src/runtime/rpc/rpc_local_session.cc' l='127' u='c' c='_ZN3tvm7runtime12LocalSession14CopyFromRemoteEP8DLTensorPvm'/>
+<use f='tvm/src/runtime/rpc/rpc_session.cc' l='89' u='c' c='_ZN3tvm7runtime10RPCSession15AsyncStreamWaitE8DLDevicePvSt8functionIFvNS0_7RPCCodeENS0_7TVMArgsEEE'/>

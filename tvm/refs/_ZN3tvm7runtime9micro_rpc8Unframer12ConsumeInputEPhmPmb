@@ -1,0 +1,20 @@
+<dec f='tvm/include/tvm/runtime/crt/rpc_common/framing.h' l='113' type='tvm_crt_error_t tvm::runtime::micro_rpc::Unframer::ConsumeInput(uint8_t * buffer, size_t buffer_size_bytes, size_t * bytes_filled, bool update_crc)'/>
+<doc f='tvm/include/tvm/runtime/crt/rpc_common/framing.h' l='94'>/*! \brief Unescape and consume input bytes, storing into buffer.
+   *
+   * \param buffer A buffer to fill with consumed, unescaped bytes.
+   * \param buffer_size_bytes Size of buffer, in bytes.
+   * \param bytes_filled A pointer to an accumulator to which is added the number of bytes written
+   *      to `buffer`.
+   * \param update_crc true when the CRC should be updated with the escaped bytes.
+   * \return
+   *     - kTvmErrorNoError if successful
+   *     - kTvmErrorFramingShortPacket if a start-of-packet escape code was encountered. If so,
+   *       *bytes_filled indicates the number of bytes before the Escape::kEscapeStart byte.
+   *     - kTvmErrorFramingInvalidEscape if an invalid escape sequence was seen.
+   *     - kTvmErrorWriteStreamShortWrite if the WriteStream passed to constructor&apos;s Write()
+   *       function returns 0.
+   *     - kTvmErrorWriteStreamShortWrite if the WriteStream passed to constructor&apos;s Write()
+   *       function returns an invalid positive number.
+   *     - Any negative value (i.e. with bits in kTvmErrorSystemErrorMask set) returned by the
+   *       WriteStream&apos;s Write() function.
+   */</doc>

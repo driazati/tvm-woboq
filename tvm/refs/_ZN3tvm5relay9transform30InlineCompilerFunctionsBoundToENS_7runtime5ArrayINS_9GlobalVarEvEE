@@ -1,0 +1,11 @@
+<dec f='tvm/src/relay/transforms/compiler_function_utils.h' l='146' type='tvm::transform::Pass tvm::relay::transform::InlineCompilerFunctionsBoundTo(Array&lt;tvm::relay::GlobalVar&gt; global_vars)'/>
+<doc f='tvm/src/relay/transforms/compiler_function_utils.h' l='138'>/*!
+ * \brief A pass to inline all global &quot;Compiler&quot; functions which are bound to a global var
+ * in \p global_vars. Both the global function and any calls to &quot;Composite&quot; functions it its body
+ * are inlined.
+ *
+ * This pass may be useful for external codegen which needs to undo partitioning based on
+ * properties of the entire partition.
+ */</doc>
+<def f='tvm/src/relay/transforms/compiler_function_utils.cc' l='265' ll='289' type='tvm::transform::Pass tvm::relay::transform::InlineCompilerFunctionsBoundTo(Array&lt;tvm::relay::GlobalVar&gt; global_vars)'/>
+<use f='tvm/src/relay/transforms/compiler_function_utils.cc' l='296' u='r'/>

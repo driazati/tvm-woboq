@@ -1,0 +1,20 @@
+<dec f='tvm/include/tvm/runtime/device_api.h' l='190' type='void * tvm::runtime::DeviceAPI::AllocWorkspace(tvm::Device dev, size_t nbytes, DLDataType type_hint = {})'/>
+<doc f='tvm/include/tvm/runtime/device_api.h' l='174'>/*!
+   * \brief Allocate temporal workspace for backend execution.
+   *
+   *  \note We have the following assumption about backend temporal
+   *   workspace allocation, and backend will optimize for such assumption:
+   *
+   *  - Only a few allocation will happen, and space will be released after use.
+   *  - The release order is usually in reverse order of allocate (stack style).
+   *  - Repeative pattern of same allocations over different runs.
+   *  - Workspace should not overlap between different threads(i.e. be threadlocal)
+   *
+   * \param dev The device of allocation.
+   * \param nbytes The size to be allocated.
+   * \param type_hint The type of elements. Only needed by certain backends such
+   * as OpenGL, as nbytes is sufficient for most backends.
+   */</doc>
+<def f='tvm/src/runtime/c_runtime_api.cc' l='143' ll='145' type='void * tvm::runtime::DeviceAPI::AllocWorkspace(tvm::Device dev, size_t size, DLDataType type_hint = {})'/>
+<use f='tvm/src/runtime/c_runtime_api.cc' l='441' u='c' c='TVMBackendAllocWorkspace'/>
+<ovr f='tvm/src/runtime/cpu_device_api.cc' l='95' c='_ZN3tvm7runtime12CPUDeviceAPI14AllocWorkspaceE8DLDevicem10DLDataType'/>

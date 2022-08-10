@@ -1,0 +1,12 @@
+<dec f='tvm/include/tvm/arith/bound.h' l='80' type='tvm::tir::Region tvm::arith::DomainTouched(const tvm::tir::Stmt &amp; body, const tir::Buffer &amp; buffer, bool consider_loads, bool consider_stores)'/>
+<def f='tvm/src/arith/domain_touched.cc' l='133' ll='136' type='tvm::tir::Region tvm::arith::DomainTouched(const tvm::tir::Stmt &amp; stmt, const tvm::tir::Buffer &amp; buffer, bool consider_loads, bool consider_stores)'/>
+<use f='tvm/src/arith/domain_touched.cc' l='165' u='r'/>
+<doc f='tvm/include/tvm/arith/bound.h' l='72'>/*!
+ * \brief Infer a regular domain that covers all the calls or provides within the given statement.
+ * \param body The given statement.
+ * \param buffer The buffer to check the access info.
+ * \param consider_loads If loads are considered.
+ * \param consider_stores If stores are considered.
+ * \return The domain that covers all the calls or provides within the given statement.
+ */</doc>
+<use f='tvm/src/tir/transforms/inject_prefetch.cc' l='50' u='c' c='_ZN3tvm3tir16PrefetchInjector10VisitStmt_EPKNS0_12AttrStmtNodeE'/>

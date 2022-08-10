@@ -1,0 +1,18 @@
+<def f='tvm/include/tvm/topi/elemwise.h' l='280' ll='297' type='tvm::te::Tensor tvm::topi::cast(const tvm::te::Tensor &amp; x, tvm::DataType type, std::string name = &quot;T_cast&quot;, std::string tag = kElementWise)'/>
+<doc f='tvm/include/tvm/topi/elemwise.h' l='268'>/*!
+ * \brief Cast each element of x to the given type. If expr is
+ * scalar and type is a corresponding vector type, a
+ * Broadcast is generated, otherwise a Cast is generated.
+ *
+ * \param x The input tensor
+ * \param type The type to cast to
+ * \param name The name of the operation
+ * \param tag The tag to mark the operation
+ *
+ * \return A Tensor whose op member is the cast operation
+ */</doc>
+<use f='tvm/src/relay/op/dyn/nn/pad.cc' l='80' u='c' c='_ZN3tvm5relay3dyn10PadComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
+<use f='tvm/src/relay/op/nn/pad.cc' l='179' u='c' c='_ZN3tvm5relay10PadComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
+<use f='tvm/src/relay/op/tensor/transform.cc' l='148' u='c' c='_ZN3tvm5relay11CastComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
+<use f='tvm/src/relay/op/tensor/transform.cc' l='195' u='c' c='_ZN3tvm5relay15CastLikeComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
+<use f='tvm/src/topi/elemwise.cc' l='127' u='c'/>

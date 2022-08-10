@@ -1,0 +1,172 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>threading_backend.h source code [tvm/include/tvm/runtime/threading_backend.h] - Woboq Code Browser</title>
+<meta name="woboq:interestingDefinitions" content="tvm::runtime::threading::ThreadGroup "/>
+<link rel="stylesheet" href="../../../.././data/qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href="../../../.././data/kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src="../../../.././data/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="../../../.././data/jquery/jquery-ui.min.js"></script>
+<script>var file = 'tvm/include/tvm/runtime/threading_backend.h'; var root_path = '../../../..'; var data_path = '../../../.././data'; var ecma_script_api_version = 2;</script>
+<script src='../../../.././data/codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='../../..'>tvm</a>/<a href='../..'>include</a>/<a href='..'>tvm</a>/<a href='./'>runtime</a>/<a href='threading_backend.h.html'>threading_backend.h</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td><i>/*</i></td></tr>
+<tr><th id="2">2</th><td><i> * Licensed to the Apache Software Foundation (ASF) under one</i></td></tr>
+<tr><th id="3">3</th><td><i> * or more contributor license agreements.  See the NOTICE file</i></td></tr>
+<tr><th id="4">4</th><td><i> * distributed with this work for additional information</i></td></tr>
+<tr><th id="5">5</th><td><i> * regarding copyright ownership.  The ASF licenses this file</i></td></tr>
+<tr><th id="6">6</th><td><i> * to you under the Apache License, Version 2.0 (the</i></td></tr>
+<tr><th id="7">7</th><td><i> * "License"); you may not use this file except in compliance</i></td></tr>
+<tr><th id="8">8</th><td><i> * with the License.  You may obtain a copy of the License at</i></td></tr>
+<tr><th id="9">9</th><td><i> *</i></td></tr>
+<tr><th id="10">10</th><td><i> *   <a href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a></i></td></tr>
+<tr><th id="11">11</th><td><i> *</i></td></tr>
+<tr><th id="12">12</th><td><i> * Unless required by applicable law or agreed to in writing,</i></td></tr>
+<tr><th id="13">13</th><td><i> * software distributed under the License is distributed on an</i></td></tr>
+<tr><th id="14">14</th><td><i> * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY</i></td></tr>
+<tr><th id="15">15</th><td><i> * KIND, either express or implied.  See the License for the</i></td></tr>
+<tr><th id="16">16</th><td><i> * specific language governing permissions and limitations</i></td></tr>
+<tr><th id="17">17</th><td><i> * under the License.</i></td></tr>
+<tr><th id="18">18</th><td><i> */</i></td></tr>
+<tr><th id="19">19</th><td></td></tr>
+<tr><th id="20">20</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="21">21</th><td><i class="doc"> * <span class="command">\file</span> <span class="verb">tvm/runtime/threading_backend.h</span></i></td></tr>
+<tr><th id="22">22</th><td><i class="doc"> * <span class="command">\brief</span> Utilities for manipulating thread pool threads.</i></td></tr>
+<tr><th id="23">23</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="24">24</th><td><u>#<span data-ppcond="24">ifndef</span> <span class="macro" data-ref="_M/TVM_RUNTIME_THREADING_BACKEND_H_">TVM_RUNTIME_THREADING_BACKEND_H_</span></u></td></tr>
+<tr><th id="25">25</th><td><u>#define <dfn class="macro" id="_M/TVM_RUNTIME_THREADING_BACKEND_H_" data-ref="_M/TVM_RUNTIME_THREADING_BACKEND_H_">TVM_RUNTIME_THREADING_BACKEND_H_</dfn></u></td></tr>
+<tr><th id="26">26</th><td></td></tr>
+<tr><th id="27">27</th><td><u>#include <a href="../../../../include/c++/10/functional.html">&lt;functional&gt;</a></u></td></tr>
+<tr><th id="28">28</th><td><u>#include <a href="../../../../include/c++/10/memory.html">&lt;memory&gt;</a></u></td></tr>
+<tr><th id="29">29</th><td><u>#include <a href="../../../../include/c++/10/vector.html">&lt;vector&gt;</a></u></td></tr>
+<tr><th id="30">30</th><td></td></tr>
+<tr><th id="31">31</th><td><u>#<span data-ppcond="31">if</span> defined(<span class="macro" data-ref="_M/__linux__">__linux__</span>) || defined(<span class="macro" data-ref="_M/__ANDROID__">__ANDROID__</span>)</u></td></tr>
+<tr><th id="32">32</th><td><u>#<span data-ppcond="32">if</span> defined(<span class="macro" data-ref="_M/__ANDROID__">__ANDROID__</span>)</u></td></tr>
+<tr><th id="33">33</th><td><u>#ifndef CPU_SET</u></td></tr>
+<tr><th id="34">34</th><td><u>#define CPU_SETSIZE 1024</u></td></tr>
+<tr><th id="35">35</th><td><u>#define __NCPUBITS (8 * sizeof(uint64_t))</u></td></tr>
+<tr><th id="36">36</th><td><b>typedef</b> <b>struct</b> {</td></tr>
+<tr><th id="37">37</th><td>  uint64_t __bits[CPU_SETSIZE / __NCPUBITS];</td></tr>
+<tr><th id="38">38</th><td>} cpu_set_t;</td></tr>
+<tr><th id="39">39</th><td></td></tr>
+<tr><th id="40">40</th><td><u>#define CPU_SET(cpu, cpusetp) \</u></td></tr>
+<tr><th id="41">41</th><td><u>  ((cpusetp)-&gt;__bits[(cpu) / __NCPUBITS] |= (1UL &lt;&lt; ((cpu) % __NCPUBITS)))</u></td></tr>
+<tr><th id="42">42</th><td><u>#define CPU_ZERO(cpusetp) memset((cpusetp), 0, sizeof(cpu_set_t))</u></td></tr>
+<tr><th id="43">43</th><td><u>#define CPU_ISSET(cpu, cpusetp)    \</u></td></tr>
+<tr><th id="44">44</th><td><u>  (1UL &lt;&lt; ((cpu) % __NCPUBITS)) == \</u></td></tr>
+<tr><th id="45">45</th><td><u>      ((cpusetp)-&gt;__bits[(cpu) / __NCPUBITS] &amp; (1UL &lt;&lt; ((cpu) % __NCPUBITS)))</u></td></tr>
+<tr><th id="46">46</th><td><u>#define CPU_EQUAL(left, right) (memcmp(&amp;left, &amp;right, sizeof(cpu_set_t)) == 0)</u></td></tr>
+<tr><th id="47">47</th><td></td></tr>
+<tr><th id="48">48</th><td><u>#endif</u></td></tr>
+<tr><th id="49">49</th><td><u>#<span data-ppcond="32">endif</span></u></td></tr>
+<tr><th id="50">50</th><td><u>#<span data-ppcond="31">endif</span></u></td></tr>
+<tr><th id="51">51</th><td></td></tr>
+<tr><th id="52">52</th><td><b>namespace</b> <span class="namespace">tvm</span> {</td></tr>
+<tr><th id="53">53</th><td><b>namespace</b> <span class="namespace">runtime</span> {</td></tr>
+<tr><th id="54">54</th><td><b>namespace</b> <span class="namespace">threading</span> {</td></tr>
+<tr><th id="55">55</th><td></td></tr>
+<tr><th id="56">56</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="57">57</th><td><i class="doc"> * <span class="command">\brief</span> A platform-agnostic abstraction for managing a collection of</i></td></tr>
+<tr><th id="58">58</th><td><i class="doc"> *        thread pool threads.</i></td></tr>
+<tr><th id="59">59</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="60">60</th><td><b>class</b> <dfn class="type def" id="tvm::runtime::threading::ThreadGroup" title='tvm::runtime::threading::ThreadGroup' data-ref="tvm::runtime::threading::ThreadGroup" data-ref-filename="tvm..runtime..threading..ThreadGroup">ThreadGroup</dfn> {</td></tr>
+<tr><th id="61">61</th><td> <b>public</b>:</td></tr>
+<tr><th id="62">62</th><td>  <b>class</b> <dfn class="type" id="tvm::runtime::threading::ThreadGroup::Impl" title='tvm::runtime::threading::ThreadGroup::Impl' data-ref="tvm::runtime::threading::ThreadGroup::Impl" data-ref-filename="tvm..runtime..threading..ThreadGroup..Impl">Impl</dfn>;</td></tr>
+<tr><th id="63">63</th><td></td></tr>
+<tr><th id="64">64</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="65">65</th><td><i class="doc">   * <span class="command">\brief</span> Creates a collection of threads which run a provided function.</i></td></tr>
+<tr><th id="66">66</th><td><i class="doc">   *</i></td></tr>
+<tr><th id="67">67</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">num_workers</span> The total number of worker threads in this group.</i></td></tr>
+<tr><th id="68">68</th><td><i class="doc">            Includes main thread if `exclude_worker0 = true`</i></td></tr>
+<tr><th id="69">69</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">worker_callback</span> A callback which is run in its own thread.</i></td></tr>
+<tr><th id="70">70</th><td><i class="doc">            Receives the worker_id as an argument.</i></td></tr>
+<tr><th id="71">71</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">exclude_worker0</span> Whether to use the main thread as a worker.</i></td></tr>
+<tr><th id="72">72</th><td><i class="doc">   *        If  `true`, worker0 will not be launched in a new thread and</i></td></tr>
+<tr><th id="73">73</th><td><i class="doc">   *        `worker_callback` will only be called for values &gt;= 1. This</i></td></tr>
+<tr><th id="74">74</th><td><i class="doc">   *        allows use of the main thread as a worker.</i></td></tr>
+<tr><th id="75">75</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="76">76</th><td>  <dfn class="decl fn" id="_ZN3tvm7runtime9threading11ThreadGroupC1EiSt8functionIFviEEb" title='tvm::runtime::threading::ThreadGroup::ThreadGroup' data-ref="_ZN3tvm7runtime9threading11ThreadGroupC1EiSt8functionIFviEEb" data-ref-filename="_ZN3tvm7runtime9threading11ThreadGroupC1EiSt8functionIFviEEb">ThreadGroup</dfn>(<em>int</em> <dfn class="local col1 decl" id="1num_workers" title='num_workers' data-type='int' data-ref="1num_workers" data-ref-filename="1num_workers">num_workers</dfn>, <span class="namespace">std::</span><a class="type" href="../../../../include/c++/10/bits/std_function.h.html#std::function" title='std::function' data-ref="std::function" data-ref-filename="std..function">function</a>&lt;<em>void</em>(<em>int</em>)&gt; <dfn class="local col2 decl" id="2worker_callback" title='worker_callback' data-type='std::function&lt;void (int)&gt;' data-ref="2worker_callback" data-ref-filename="2worker_callback">worker_callback</dfn>,</td></tr>
+<tr><th id="77">77</th><td>              <em>bool</em> <dfn class="local col3 decl" id="3exclude_worker0" title='exclude_worker0' data-type='bool' data-ref="3exclude_worker0" data-ref-filename="3exclude_worker0">exclude_worker0</dfn> = <b>false</b>);</td></tr>
+<tr><th id="78">78</th><td>  <dfn class="decl fn" id="_ZN3tvm7runtime9threading11ThreadGroupD1Ev" title='tvm::runtime::threading::ThreadGroup::~ThreadGroup' data-ref="_ZN3tvm7runtime9threading11ThreadGroupD1Ev" data-ref-filename="_ZN3tvm7runtime9threading11ThreadGroupD1Ev">~ThreadGroup</dfn>();</td></tr>
+<tr><th id="79">79</th><td></td></tr>
+<tr><th id="80">80</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="81">81</th><td><i class="doc">   * <span class="command">\brief</span> Blocks until all non-main threads in the pool finish.</i></td></tr>
+<tr><th id="82">82</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="83">83</th><td>  <em>void</em> <dfn class="decl fn" id="_ZN3tvm7runtime9threading11ThreadGroup4JoinEv" title='tvm::runtime::threading::ThreadGroup::Join' data-ref="_ZN3tvm7runtime9threading11ThreadGroup4JoinEv" data-ref-filename="_ZN3tvm7runtime9threading11ThreadGroup4JoinEv">Join</dfn>();</td></tr>
+<tr><th id="84">84</th><td></td></tr>
+<tr><th id="85">85</th><td>  <b>enum</b> <dfn class="type def" id="tvm::runtime::threading::ThreadGroup::AffinityMode" title='tvm::runtime::threading::ThreadGroup::AffinityMode' data-ref="tvm::runtime::threading::ThreadGroup::AffinityMode" data-ref-filename="tvm..runtime..threading..ThreadGroup..AffinityMode">AffinityMode</dfn> : <em>int</em> {</td></tr>
+<tr><th id="86">86</th><td>    <dfn class="enum" id="tvm::runtime::threading::ThreadGroup::kBig" title='tvm::runtime::threading::ThreadGroup::kBig' data-ref="tvm::runtime::threading::ThreadGroup::kBig" data-ref-filename="tvm..runtime..threading..ThreadGroup..kBig">kBig</dfn> = <var>1</var>,</td></tr>
+<tr><th id="87">87</th><td>    <dfn class="enum" id="tvm::runtime::threading::ThreadGroup::kLittle" title='tvm::runtime::threading::ThreadGroup::kLittle' data-ref="tvm::runtime::threading::ThreadGroup::kLittle" data-ref-filename="tvm..runtime..threading..ThreadGroup..kLittle">kLittle</dfn> = -<var>1</var>,</td></tr>
+<tr><th id="88">88</th><td>    <i>/*Different threads will get different affinities.*/</i></td></tr>
+<tr><th id="89">89</th><td>    <dfn class="enum" id="tvm::runtime::threading::ThreadGroup::kSpecifyOneCorePerThread" title='tvm::runtime::threading::ThreadGroup::kSpecifyOneCorePerThread' data-ref="tvm::runtime::threading::ThreadGroup::kSpecifyOneCorePerThread" data-ref-filename="tvm..runtime..threading..ThreadGroup..kSpecifyOneCorePerThread">kSpecifyOneCorePerThread</dfn> = -<var>2</var>,</td></tr>
+<tr><th id="90">90</th><td>    <i>/*All threads will get the same core group affinity.*/</i></td></tr>
+<tr><th id="91">91</th><td>    <dfn class="enum" id="tvm::runtime::threading::ThreadGroup::kSpecifyThreadShareAllCore" title='tvm::runtime::threading::ThreadGroup::kSpecifyThreadShareAllCore' data-ref="tvm::runtime::threading::ThreadGroup::kSpecifyThreadShareAllCore" data-ref-filename="tvm..runtime..threading..ThreadGroup..kSpecifyThreadShareAllCore">kSpecifyThreadShareAllCore</dfn> = -<var>3</var>,</td></tr>
+<tr><th id="92">92</th><td>  };</td></tr>
+<tr><th id="93">93</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="94">94</th><td><i class="doc">   * <span class="command">\brief</span> configure the CPU id affinity</i></td></tr>
+<tr><th id="95">95</th><td><i class="doc">   *</i></td></tr>
+<tr><th id="96">96</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">mode</span> The preferred CPU type (1 = big, -1 = little ...).</i></td></tr>
+<tr><th id="97">97</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">nthreads</span> The number of threads to use (0 = use all).</i></td></tr>
+<tr><th id="98">98</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">exclude_worker0</span> Whether to use the main thread as a worker.</i></td></tr>
+<tr><th id="99">99</th><td><i class="doc">   *        If  `true`, worker0 will not be launched in a new thread and</i></td></tr>
+<tr><th id="100">100</th><td><i class="doc">   *        `worker_callback` will only be called for values &gt;= 1. This</i></td></tr>
+<tr><th id="101">101</th><td><i class="doc">   *        allows use of the main thread as a worker.</i></td></tr>
+<tr><th id="102">102</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">cpus</span> A list of CPU used to set 'cpu affinity'.</i></td></tr>
+<tr><th id="103">103</th><td><i class="doc">   *</i></td></tr>
+<tr><th id="104">104</th><td><i class="doc">   * <span class="command">\return</span> The number of workers to use.</i></td></tr>
+<tr><th id="105">105</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="106">106</th><td>  <em>int</em> <dfn class="decl fn" id="_ZN3tvm7runtime9threading11ThreadGroup9ConfigureENS2_12AffinityModeEibSt6vectorIjSaIjEE" title='tvm::runtime::threading::ThreadGroup::Configure' data-ref="_ZN3tvm7runtime9threading11ThreadGroup9ConfigureENS2_12AffinityModeEibSt6vectorIjSaIjEE" data-ref-filename="_ZN3tvm7runtime9threading11ThreadGroup9ConfigureENS2_12AffinityModeEibSt6vectorIjSaIjEE">Configure</dfn>(<a class="type" href="#tvm::runtime::threading::ThreadGroup::AffinityMode" title='tvm::runtime::threading::ThreadGroup::AffinityMode' data-ref="tvm::runtime::threading::ThreadGroup::AffinityMode" data-ref-filename="tvm..runtime..threading..ThreadGroup..AffinityMode">AffinityMode</a> <dfn class="local col4 decl" id="4mode" title='mode' data-type='tvm::runtime::threading::ThreadGroup::AffinityMode' data-ref="4mode" data-ref-filename="4mode">mode</dfn>, <em>int</em> <dfn class="local col5 decl" id="5nthreads" title='nthreads' data-type='int' data-ref="5nthreads" data-ref-filename="5nthreads">nthreads</dfn>, <em>bool</em> <dfn class="local col6 decl" id="6exclude_worker0" title='exclude_worker0' data-type='bool' data-ref="6exclude_worker0" data-ref-filename="6exclude_worker0">exclude_worker0</dfn>,</td></tr>
+<tr><th id="107">107</th><td>                <span class="namespace">std::</span><a class="type" href="../../../../include/c++/10/bits/stl_vector.h.html#std::vector" title='std::vector' data-ref="std::vector" data-ref-filename="std..vector">vector</a>&lt;<em>unsigned</em> <em>int</em>&gt; <dfn class="local col7 decl" id="7cpus" title='cpus' data-type='std::vector&lt;unsigned int&gt;' data-ref="7cpus" data-ref-filename="7cpus">cpus</dfn> = <a class="ref fn" href="../../../../include/c++/10/bits/stl_vector.h.html#_ZNSt6vectorC1Ev" title='std::vector::vector&lt;_Tp, _Alloc&gt;' data-ref="_ZNSt6vectorC1Ev" data-ref-filename="_ZNSt6vectorC1Ev">{</a>});</td></tr>
+<tr><th id="108">108</th><td></td></tr>
+<tr><th id="109">109</th><td> <b>private</b>:</td></tr>
+<tr><th id="110">110</th><td>  <a class="type" href="#tvm::runtime::threading::ThreadGroup::Impl" title='tvm::runtime::threading::ThreadGroup::Impl' data-ref="tvm::runtime::threading::ThreadGroup::Impl" data-ref-filename="tvm..runtime..threading..ThreadGroup..Impl">Impl</a>* <dfn class="decl field" id="tvm::runtime::threading::ThreadGroup::impl_" title='tvm::runtime::threading::ThreadGroup::impl_' data-ref="tvm::runtime::threading::ThreadGroup::impl_" data-ref-filename="tvm..runtime..threading..ThreadGroup..impl_">impl_</dfn>;</td></tr>
+<tr><th id="111">111</th><td>};</td></tr>
+<tr><th id="112">112</th><td></td></tr>
+<tr><th id="113">113</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="114">114</th><td><i class="doc"> * <span class="command">\brief</span> Platform-agnostic no-op.</i></td></tr>
+<tr><th id="115">115</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="116">116</th><td><em>void</em> <dfn class="decl fn" id="_ZN3tvm7runtime9threading5YieldEv" title='tvm::runtime::threading::Yield' data-ref="_ZN3tvm7runtime9threading5YieldEv" data-ref-filename="_ZN3tvm7runtime9threading5YieldEv">Yield</dfn>();</td></tr>
+<tr><th id="117">117</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="118">118</th><td><i class="doc"> * <span class="command">\return</span> the maximum number of effective workers for this system.</i></td></tr>
+<tr><th id="119">119</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="120">120</th><td><em>int</em> <dfn class="decl fn" id="_ZN3tvm7runtime9threading14MaxConcurrencyEv" title='tvm::runtime::threading::MaxConcurrency' data-ref="_ZN3tvm7runtime9threading14MaxConcurrencyEv" data-ref-filename="_ZN3tvm7runtime9threading14MaxConcurrencyEv">MaxConcurrency</dfn>();</td></tr>
+<tr><th id="121">121</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="122">122</th><td><i class="doc"> * <span class="command">\brief</span> Setting the maximum number of available cores.</i></td></tr>
+<tr><th id="123">123</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="124">124</th><td><em>void</em> <dfn class="decl fn" id="_ZN3tvm7runtime9threading17SetMaxConcurrencyEi" title='tvm::runtime::threading::SetMaxConcurrency' data-ref="_ZN3tvm7runtime9threading17SetMaxConcurrencyEi" data-ref-filename="_ZN3tvm7runtime9threading17SetMaxConcurrencyEi">SetMaxConcurrency</dfn>(<em>int</em> <dfn class="local col8 decl" id="8value" title='value' data-type='int' data-ref="8value" data-ref-filename="8value">value</dfn>);</td></tr>
+<tr><th id="125">125</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="126">126</th><td><i class="doc"> * <span class="command">\brief</span> Reset the threads in the pool. All current threads are destroyed and</i></td></tr>
+<tr><th id="127">127</th><td><i class="doc"> * new ones are created.</i></td></tr>
+<tr><th id="128">128</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="129">129</th><td><i class="doc"> * Note that this does nothing when openmp is used.</i></td></tr>
+<tr><th id="130">130</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="131">131</th><td><em>void</em> <dfn class="decl fn" id="_ZN3tvm7runtime9threading15ResetThreadPoolEv" title='tvm::runtime::threading::ResetThreadPool' data-ref="_ZN3tvm7runtime9threading15ResetThreadPoolEv" data-ref-filename="_ZN3tvm7runtime9threading15ResetThreadPoolEv">ResetThreadPool</dfn>();</td></tr>
+<tr><th id="132">132</th><td></td></tr>
+<tr><th id="133">133</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="134">134</th><td><i class="doc"> * <span class="command">\brief</span> Configuring the CPU affinity mode for the working threads.</i></td></tr>
+<tr><th id="135">135</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">mode</span> The preferred CPU type (1 = big, -1 = little, -2 = kSpecifyOneCorePerThread,</i></td></tr>
+<tr><th id="136">136</th><td><i class="doc"> *  -3 = kSpecifyThreadShareAllCore).</i></td></tr>
+<tr><th id="137">137</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">nthreads</span> The number of threads to use (0 = use all).</i></td></tr>
+<tr><th id="138">138</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">cpus</span> A list of CPUs is used to set the 'cpu affinity' for the worker threads.</i></td></tr>
+<tr><th id="139">139</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="140">140</th><td><a class="macro" href="c_runtime_api.h.html#64" title="__attribute__((visibility(&quot;default&quot;)))" data-ref="_M/TVM_DLL">TVM_DLL</a> <em>void</em> <dfn class="decl fn" id="_ZN3tvm7runtime9threading9ConfigureENS1_11ThreadGroup12AffinityModeEiSt6vectorIjSaIjEE" title='tvm::runtime::threading::Configure' data-ref="_ZN3tvm7runtime9threading9ConfigureENS1_11ThreadGroup12AffinityModeEiSt6vectorIjSaIjEE" data-ref-filename="_ZN3tvm7runtime9threading9ConfigureENS1_11ThreadGroup12AffinityModeEiSt6vectorIjSaIjEE">Configure</dfn>(<span class="namespace">tvm::runtime::threading::</span><a class="type" href="#tvm::runtime::threading::ThreadGroup" title='tvm::runtime::threading::ThreadGroup' data-ref="tvm::runtime::threading::ThreadGroup" data-ref-filename="tvm..runtime..threading..ThreadGroup">ThreadGroup</a>::<a class="type" href="#tvm::runtime::threading::ThreadGroup::AffinityMode" title='tvm::runtime::threading::ThreadGroup::AffinityMode' data-ref="tvm::runtime::threading::ThreadGroup::AffinityMode" data-ref-filename="tvm..runtime..threading..ThreadGroup..AffinityMode">AffinityMode</a> <dfn class="local col9 decl" id="9mode" title='mode' data-type='tvm::runtime::threading::ThreadGroup::AffinityMode' data-ref="9mode" data-ref-filename="9mode">mode</dfn>, <em>int</em> <dfn class="local col0 decl" id="10nthreads" title='nthreads' data-type='int' data-ref="10nthreads" data-ref-filename="10nthreads">nthreads</dfn>,</td></tr>
+<tr><th id="141">141</th><td>                       <span class="namespace">std::</span><a class="type" href="../../../../include/c++/10/bits/stl_vector.h.html#std::vector" title='std::vector' data-ref="std::vector" data-ref-filename="std..vector">vector</a>&lt;<em>unsigned</em> <em>int</em>&gt; <dfn class="local col1 decl" id="11cpus" title='cpus' data-type='std::vector&lt;unsigned int&gt;' data-ref="11cpus" data-ref-filename="11cpus">cpus</dfn>);</td></tr>
+<tr><th id="142">142</th><td></td></tr>
+<tr><th id="143">143</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="144">144</th><td><i class="doc"> * <span class="command">\brief</span> Get the number of threads being used by the TVM runtime</i></td></tr>
+<tr><th id="145">145</th><td><i class="doc"> * <span class="command">\returns</span> The number of threads used.</i></td></tr>
+<tr><th id="146">146</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="147">147</th><td><a class="typedef" href="../../../../include/x86_64-linux-gnu/bits/stdint-intn.h.html#int32_t" title='int32_t' data-type='__int32_t' data-ref="int32_t" data-ref-filename="int32_t">int32_t</a> <dfn class="decl fn" id="_ZN3tvm7runtime9threading10NumThreadsEv" title='tvm::runtime::threading::NumThreads' data-ref="_ZN3tvm7runtime9threading10NumThreadsEv" data-ref-filename="_ZN3tvm7runtime9threading10NumThreadsEv">NumThreads</dfn>();</td></tr>
+<tr><th id="148">148</th><td></td></tr>
+<tr><th id="149">149</th><td>}  <i>// namespace threading</i></td></tr>
+<tr><th id="150">150</th><td>}  <i>// namespace runtime</i></td></tr>
+<tr><th id="151">151</th><td>}  <i>// namespace tvm</i></td></tr>
+<tr><th id="152">152</th><td></td></tr>
+<tr><th id="153">153</th><td><u>#<span data-ppcond="24">endif</span>  // TVM_RUNTIME_THREADING_BACKEND_H_</u></td></tr>
+<tr><th id="154">154</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated while processing <a href='../../../src/auto_scheduler/search_task.cc.html'>tvm/src/auto_scheduler/search_task.cc</a><br/>Generated on <em>2022-Aug-10</em> from project tvm revision <em>fae79bb</em><br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

@@ -1,0 +1,59 @@
+<inh f='tvm/include/tvm/tir/expr_functor.h' l='209' c='tvm::tir::ExprVisitor'/>
+<def f='tvm/src/tir/schedule/analysis/analysis.cc' l='1262' ll='1515'/>
+<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='1725' c='_ZN3tvm3tir12MatchReducerERKNS0_11CommReducerERKNS_8PrimExprES6_RKNS0_10BufferLoadEPS4_SA_'/>
+<size>88</size>
+<doc f='tvm/src/tir/schedule/analysis/analysis.cc' l='1238'>/*!
+ * \brief PrimExpr pattern matcher.
+ *
+ * It is different from the pattern matcher in arith/pattern_match.h, which is dedicated
+ * for compile-time constant patterns. This pattern matcher can work on dynamic user-specific
+ * patterns.
+ *
+ * The code below shows how to use the pattern matcher.
+ *
+ * \code
+ *
+ * Var x(&quot;x&quot;), y(&quot;y&quot;);
+ * // use PrimExpr to declare patterns, x, y are holes that can be filled with
+ * PatternMatcher pattern_matcher(x + y);
+ * // expr = C[i, j] + A[i, k] * B[k, j], which is the expr we want to match
+ * pattern_matcher.Match(expr);
+ *
+ * if (pattern_matcher.Success()) {
+ *   pattern_matcher.Eval(x) // C[i, j]
+ *   pattern_matcher.Eval(y) // A[i, k] * B[k, j]
+ * }
+ *
+ * \endcode
+ */</doc>
+<fun r='_ZN3tvm3tir14PatternMatcher10VisitExpr_EPKNS0_7VarNodeE'/>
+<fun r='_ZN3tvm3tir14PatternMatcher10VisitExpr_EPKNS0_8LoadNodeE'/>
+<fun r='_ZN3tvm3tir14PatternMatcher10VisitExpr_EPKNS0_7LetNodeE'/>
+<fun r='_ZN3tvm3tir14PatternMatcher10VisitExpr_EPKNS0_8CallNodeE'/>
+<fun r='_ZN3tvm3tir14PatternMatcher10VisitExpr_EPKNS0_7AddNodeE'/>
+<fun r='_ZN3tvm3tir14PatternMatcher10VisitExpr_EPKNS0_7SubNodeE'/>
+<fun r='_ZN3tvm3tir14PatternMatcher10VisitExpr_EPKNS0_7MulNodeE'/>
+<fun r='_ZN3tvm3tir14PatternMatcher10VisitExpr_EPKNS0_7DivNodeE'/>
+<fun r='_ZN3tvm3tir14PatternMatcher10VisitExpr_EPKNS0_7ModNodeE'/>
+<fun r='_ZN3tvm3tir14PatternMatcher10VisitExpr_EPKNS0_12FloorDivNodeE'/>
+<fun r='_ZN3tvm3tir14PatternMatcher10VisitExpr_EPKNS0_12FloorModNodeE'/>
+<fun r='_ZN3tvm3tir14PatternMatcher10VisitExpr_EPKNS0_7MinNodeE'/>
+<fun r='_ZN3tvm3tir14PatternMatcher10VisitExpr_EPKNS0_7MaxNodeE'/>
+<fun r='_ZN3tvm3tir14PatternMatcher10VisitExpr_EPKNS0_6EQNodeE'/>
+<fun r='_ZN3tvm3tir14PatternMatcher10VisitExpr_EPKNS0_6NENodeE'/>
+<fun r='_ZN3tvm3tir14PatternMatcher10VisitExpr_EPKNS0_6LTNodeE'/>
+<fun r='_ZN3tvm3tir14PatternMatcher10VisitExpr_EPKNS0_6LENodeE'/>
+<fun r='_ZN3tvm3tir14PatternMatcher10VisitExpr_EPKNS0_6GTNodeE'/>
+<fun r='_ZN3tvm3tir14PatternMatcher10VisitExpr_EPKNS0_6GENodeE'/>
+<fun r='_ZN3tvm3tir14PatternMatcher10VisitExpr_EPKNS0_7AndNodeE'/>
+<fun r='_ZN3tvm3tir14PatternMatcher10VisitExpr_EPKNS0_6OrNodeE'/>
+<fun r='_ZN3tvm3tir14PatternMatcher10VisitExpr_EPKNS0_8CastNodeE'/>
+<fun r='_ZN3tvm3tir14PatternMatcher10VisitExpr_EPKNS0_7NotNodeE'/>
+<fun r='_ZN3tvm3tir14PatternMatcher10VisitExpr_EPKNS0_10SelectNodeE'/>
+<fun r='_ZN3tvm3tir14PatternMatcher10VisitExpr_EPKNS0_8RampNodeE'/>
+<fun r='_ZN3tvm3tir14PatternMatcher10VisitExpr_EPKNS0_13BroadcastNodeE'/>
+<fun r='_ZN3tvm3tir14PatternMatcher10VisitExpr_EPKNS0_11ShuffleNodeE'/>
+<fun r='_ZN3tvm3tir14PatternMatcher10VisitExpr_EPKNS_10IntImmNodeE'/>
+<fun r='_ZN3tvm3tir14PatternMatcher10VisitExpr_EPKNS_12FloatImmNodeE'/>
+<fun r='_ZN3tvm3tir14PatternMatcher10VisitExpr_EPKNS0_13StringImmNodeE'/>
+<fun r='_ZN3tvm3tir14PatternMatcher10VisitExpr_EPKNS0_14BufferLoadNodeE'/>

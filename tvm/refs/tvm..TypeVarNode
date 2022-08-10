@@ -1,0 +1,58 @@
+<inh f='tvm/include/tvm/ir/type.h' l='74' c='tvm::TypeNode'/>
+<def f='tvm/include/tvm/ir/type.h' l='228' ll='256'/>
+<use f='tvm/include/tvm/ir/type.h' l='245' c='_ZNK3tvm11TypeVarNode12SEqualReduceEPKS0_NS_13SEqualReducerE'/>
+<use f='tvm/include/tvm/ir/type.h' l='272' c='_ZNK3tvm7TypeVarptEv'/>
+<use f='tvm/include/tvm/ir/type.h' l='272' c='_ZNK3tvm7TypeVarptEv'/>
+<use f='tvm/include/tvm/ir/type.h' l='272' c='_ZNK3tvm7TypeVar3getEv'/>
+<use f='tvm/include/tvm/ir/type.h' l='272'/>
+<size>40</size>
+<doc f='tvm/include/tvm/ir/type.h' l='210'>/*!
+ * \brief Type parameter in functions.
+ *
+ * A type variable can be viewed as template parameter in c++ template function.
+ *
+ * For example, in the following pesudo code,
+ * the TypeVar of f is TypeVar(&quot;n&quot;, kind=kShapeVar).
+ * This function can take in a Tensor with shape=(3, 3) and
+ * returns a Tensor with shape=(9,)
+ *
+ * \code
+ *
+ *  template&lt;i32 n&gt;
+ *  f(x : Tensor[i32, (n, n)]) -&gt; Tensor[i32, (n * n)]
+ *
+ * \endcode
+ * \sa TypeVar, TypeKind
+ */</doc>
+<mbr r='tvm::TypeVarNode::name_hint' o='192' t='tvm::runtime::String'/>
+<mbr r='tvm::TypeVarNode::kind' o='256' t='tvm::TypeKind'/>
+<fun r='_ZN3tvm11TypeVarNode10VisitAttrsEPNS_11AttrVisitorE'/>
+<fun r='_ZNK3tvm11TypeVarNode12SEqualReduceEPKS0_NS_13SEqualReducerE'/>
+<fun r='_ZNK3tvm11TypeVarNode11SHashReduceENS_12SHashReducerE'/>
+<smbr r='tvm::TypeVarNode::_type_key' t='const char *const'/>
+<smbr r='tvm::TypeVarNode::_type_final' t='const bool'/>
+<smbr r='tvm::TypeVarNode::_type_child_slots' t='const int'/>
+<fun r='_ZN3tvm11TypeVarNode16RuntimeTypeIndexEv'/>
+<fun r='_ZN3tvm11TypeVarNode27_GetOrAllocRuntimeTypeIndexEv'/>
+<use f='tvm/include/tvm/relay/type.h' l='50'/>
+<size>40</size>
+<use f='tvm/include/tvm/ir/type_functor.h' l='80' c='_ZN3tvm11TypeFunctorIFT_RKNS_4TypeEDpT0_EE10VisitType_EPKNS_11TypeVarNodeES6_'/>
+<use f='tvm/include/tvm/ir/type_functor.h' l='103' c='_ZN3tvm11TypeFunctorIFT_RKNS_4TypeEDpT0_EE10InitVTableEv'/>
+<use f='tvm/include/tvm/ir/type_functor.h' l='103' c='_ZN3tvm11TypeFunctorIFT_RKNS_4TypeEDpT0_EE10InitVTableEv'/>
+<use f='tvm/include/tvm/ir/type_functor.h' l='126' c='_ZN3tvm11TypeVisitor10VisitType_EPKNS_11TypeVarNodeE'/>
+<use f='tvm/include/tvm/ir/type_functor.h' l='146' c='_ZN3tvm11TypeMutator10VisitType_EPKNS_11TypeVarNodeE'/>
+<size>40</size>
+<use f='tvm/src/ir/type.cc' l='71' c='_ZN3tvm7TypeVarC1ENS_7runtime6StringENS_8TypeKindENS_4SpanE'/>
+<use f='tvm/src/ir/type.cc' l='71' c='_ZN3tvm7TypeVarC1ENS_7runtime6StringENS_8TypeKindENS_4SpanE'/>
+<use f='tvm/src/ir/type.cc' l='78'/>
+<use f='tvm/src/ir/type.cc' l='78'/>
+<use f='tvm/src/ir/type.cc' l='78'/>
+<use f='tvm/src/ir/type.cc' l='85'/>
+<use f='tvm/src/ir/type.cc' l='86'/>
+<size>40</size>
+<use f='tvm/src/ir/type_functor.cc' l='30' c='_ZN3tvm11TypeVisitor10VisitType_EPKNS_11TypeVarNodeE'/>
+<use f='tvm/src/ir/type_functor.cc' l='110' c='_ZN3tvm11TypeMutator10VisitType_EPKNS_11TypeVarNodeE'/>
+<use f='tvm/src/ir/type_functor.cc' l='125' c='_ZN3tvm11TypeMutator10VisitType_EPKNS_12FuncTypeNodeE'/>
+<use f='tvm/src/ir/type_functor.cc' l='125' c='_ZN3tvm11TypeMutator10VisitType_EPKNS_12FuncTypeNodeE'/>
+<use f='tvm/src/ir/type_functor.cc' l='206' c='_ZN3tvm10TypeBinder10VisitType_EPKNS_11TypeVarNodeE'/>
+<size>40</size>

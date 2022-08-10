@@ -1,0 +1,34 @@
+<def f='tvm/include/tvm/topi/nn/pooling.h' l='293' ll='301' type='tvm::te::Tensor tvm::topi::nn::pool_grad(const tvm::te::Tensor &amp; out_grad, const tvm::te::Tensor &amp; x, const Array&lt;tvm::PrimExpr&gt; &amp; kernel_size, const Array&lt;tvm::PrimExpr&gt; &amp; stride_size, const Array&lt;tvm::PrimExpr&gt; &amp; padding_size, tvm::topi::nn::PoolType pool_type, bool ceil_mode, const std::string &amp; layout = &quot;NCHW&quot;, bool count_include_pad = true)'/>
+<use f='tvm/src/relay/op/nn/pooling.cc' l='888' u='c' c='_ZN3tvm5relay17Pool2DGradComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
+<use f='tvm/src/relay/op/nn/pooling.cc' l='892' u='c' c='_ZN3tvm5relay17Pool2DGradComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
+<doc f='tvm/include/tvm/topi/nn/pooling.h' l='263'>/*!
+ * \brief Calculate gradient of pooling on height and width dimension of data.
+ *        It decides the height and width dimension according to the layout string,
+ *        in which &apos;W&apos; and &apos;H&apos; means width and height respectively.
+ *        Width and height dimension cannot be split.
+ *        For example, NCHW, NCHW16c, etc. are valid for pool,
+ *        while NCHW16w, NCHW16h are not.
+ *        See \a layout for more information of the layout string convention.
+ * \param out_grad The output gradient tensor.
+ * \param x The input tensor.
+ * \param kernel_size Vector of two ints: {kernel_height, kernel_width}
+ * \param stride_size Vector of two ints: {stride_height, stride_width}
+ * \param padding_size Vector of two ints: {padding_height, padding_width}
+ * \param pool_type The type of pooling operator
+ * \param ceil_mode Whether to use ceil when calculating the output size
+ * \param layout The input layout. Pooling supports any layout as long as &apos;H&apos; and &apos;W&apos; appear.
+ *        The layout is supposed to be composed of upper cases, lower cases and (optional) numbers,
+ *        where upper case indicates a dimension and
+ *        the corresponding lower case (with factor size) indicates the split dimension.
+ *        For example, NCHW16c can describe a 5-D tensor of
+ *        [batch_size, channel, height, width, channel_block].
+ *        (in which factor size `16` will not be used in pooling but for other operators,
+ *        it can be used to decide the output shape).
+ *        Since pooling does not care about the factor size of dimensions
+ *        other than `H` and `W`, one can pass `NCHWc` as well.
+ * \param  count_include_pad Whether include padding in the calculation when pool_type is &apos;avg&apos;
+ *
+ *
+ * \return The output tensor in the same layout
+ */</doc>
+<use f='tvm/src/topi/nn.cc' l='103' u='c'/>

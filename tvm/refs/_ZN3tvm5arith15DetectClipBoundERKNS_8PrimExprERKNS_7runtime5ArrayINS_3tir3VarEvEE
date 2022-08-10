@@ -1,0 +1,14 @@
+<def f='tvm/src/arith/detect_linear_equation.cc' l='246' ll='270' type='Array&lt;tvm::PrimExpr&gt; tvm::arith::DetectClipBound(const tvm::PrimExpr &amp; e, const Array&lt;tvm::tir::Var&gt; &amp; vars)'/>
+<use f='tvm/src/arith/detect_linear_equation.cc' l='276' u='c'/>
+<doc f='tvm/src/arith/detect_linear_equation.cc' l='244'>// Detect the lower and upper bound from the expression.
+// e must be connected by and.</doc>
+<dec f='tvm/include/tvm/arith/pattern.h' l='50' type='Array&lt;tvm::PrimExpr&gt; tvm::arith::DetectClipBound(const tvm::PrimExpr &amp; e, const Array&lt;tir::Var&gt; &amp; vars)'/>
+<doc f='tvm/include/tvm/arith/pattern.h' l='42'>/*!
+ * \brief Detect if expression corresponds to clip bound of the vars
+ *
+ * \param e The expression to be detected.
+ * \param vars List of variables to be used in detection.
+ * \return concat([min_value[i], max_value[i]]), None is returned if there is no min or max value
+ *          return empty if the e does not match the pattern.
+ */</doc>
+<use f='tvm/src/tir/transforms/inject_copy_intrin.cc' l='131' u='c' c='_ZN3tvm3tir18CopyIntrinInjector16MatchCopyPatternENS0_4StmtEPS2_PNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>

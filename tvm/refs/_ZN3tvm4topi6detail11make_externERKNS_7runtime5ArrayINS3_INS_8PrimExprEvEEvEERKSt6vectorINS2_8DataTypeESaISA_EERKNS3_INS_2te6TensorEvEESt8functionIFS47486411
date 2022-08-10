@@ -1,0 +1,22 @@
+<def f='tvm/include/tvm/topi/detail/extern.h' l='78' ll='104' type='Array&lt;tvm::te::Tensor&gt; tvm::topi::detail::make_extern(const Array&lt;Array&lt;tvm::PrimExpr&gt;&gt; &amp; out_shapes, const std::vector&lt;DataType&gt; &amp; out_types, const Array&lt;tvm::te::Tensor&gt; &amp; inputs, tvm::topi::detail::FExtern fextern, std::string name, std::string tag, ::tvm::Map&lt;String, ObjectRef&gt; attrs)'/>
+<use f='tvm/include/tvm/topi/contrib/cublas.h' l='50' u='c' c='_ZN3tvm4topi7contrib13cublas_matmulERKNS_2te6TensorES5_bb'/>
+<use f='tvm/include/tvm/topi/contrib/cublas.h' l='75' u='c' c='_ZN3tvm4topi7contrib19cublas_batch_matmulERKNS_2te6TensorES5_bb'/>
+<use f='tvm/include/tvm/topi/contrib/rocblas.h' l='49' u='c' c='_ZN3tvm4topi7contrib14rocblas_matmulERKNS_2te6TensorES5_bb'/>
+<use f='tvm/include/tvm/topi/contrib/rocblas.h' l='72' u='c' c='_ZN3tvm4topi7contrib20rocblas_batch_matmulERKNS_2te6TensorES5_bb'/>
+<doc f='tvm/include/tvm/topi/detail/extern.h' l='61'>/*!
+ * \brief Create tensors representing the result of invoking an external function.
+ * This function will create the necessary buffers to hold input and output tensor values.
+ *
+ * \param out_shapes An array where each element is the shape of the corresponding output tensor.
+ * \param out_types An array where each element is the dtype of the corresponding output tensor.
+ * \param inputs An array of input Tensors
+ * \param fextern A function that constructs an Expr representing the invocation of
+ * the external function given the input and output buffers.
+ * \param name The name of the operation
+ * \param tag The tag to mark the operation
+ * \param attrs The additional auxiliary attributes of the operation.
+ *
+ * \return An array of Tensors representing the outputs of the function invocation. There will
+ * be one output Tensor for each element of out_shapes, with dtype equal to the corresponding
+ * element of out_types.
+ */</doc>

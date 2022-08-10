@@ -1,0 +1,13 @@
+<dec f='tvm/include/tvm/node/reflection.h' l='132' type='bool tvm::ReflectionVTable::SEqualReduce(const tvm::runtime::Object * self, const tvm::runtime::Object * other, tvm::SEqualReducer equal) const'/>
+<doc f='tvm/include/tvm/node/reflection.h' l='125'>/*!
+   * \brief Dispatch the SEqualReduce function.
+   * \param self The pointer to the object.
+   * \param other The pointer to another object to be compared.
+   * \param equal The equality comparator.
+   * \return the result.
+   */</doc>
+<def f='tvm/src/node/structural_equal.cc' l='54' ll='63' type='bool tvm::ReflectionVTable::SEqualReduce(const tvm::runtime::Object * self, const tvm::runtime::Object * other, tvm::SEqualReducer equal) const'/>
+<use f='tvm/src/node/structural_equal.cc' l='366' u='c' c='_ZN3tvm21RemapVarSEqualHandler20DispatchSEqualReduceERKNS_7runtime9ObjectRefES4_bRKNS1_8OptionalINS_14ObjectPathPairEEE'/>
+<use f='tvm/src/node/structural_equal.cc' l='370' u='c' c='_ZN3tvm21RemapVarSEqualHandler20DispatchSEqualReduceERKNS_7runtime9ObjectRefES4_bRKNS1_8OptionalINS_14ObjectPathPairEEE'/>
+<doc f='tvm/src/node/structural_equal.cc' l='53'>// Define the dispatch function here since primary user is in this file.</doc>
+<use f='tvm/src/tir/analysis/deep_equal.cc' l='42' u='c' c='_ZN3tvm3tir20DeepCmpSEqualHandler12SEqualReduceERKNS_7runtime9ObjectRefES5_bRKNS2_8OptionalINS_14ObjectPathPairEEE'/>

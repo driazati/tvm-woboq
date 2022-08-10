@@ -1,0 +1,10 @@
+<dec f='tvm/src/relay/backend/utils.h' l='635' type='void tvm::relay::backend::UpdateAutoSchedulerOpWeights(const tvm::IRModule &amp; module)'/>
+<doc f='tvm/src/relay/backend/utils.h' l='628'>/*!
+ * \brief Call &quot;weight update callback&quot; to communicate op weights seen during Relay module
+ * lowering back to the auto scheduler.
+ * Op weights refer to the number of times each distinct op/workload appears in a given module.
+ * It is called &quot;use_count&quot; in TECompiler.
+ * \param IRModule after lowering by LowerTEPass.
+ */</doc>
+<def f='tvm/src/relay/backend/utils.cc' l='299' ll='310' type='void tvm::relay::backend::UpdateAutoSchedulerOpWeights(const tvm::IRModule &amp; module)'/>
+<use f='tvm/src/relay/backend/vm/compiler.cc' l='983' u='c' c='_ZN3tvm5relay2vm10VMCompiler9LowerImplENS_8IRModuleE'/>

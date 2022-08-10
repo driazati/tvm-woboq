@@ -1,0 +1,22 @@
+<dec f='tvm/include/tvm/target/compilation_config.h' l='156' type='tvm::VirtualDevice tvm::CompilationConfigNode::CanonicalVirtualDevice(const tvm::VirtualDevice &amp; virtual_device) const'/>
+<doc f='tvm/include/tvm/target/compilation_config.h' l='142'>/*!
+   * \brief Returns a \p VirtualDevice which is structurally equal to \p virtual_device on all its
+   * constrained fields, however:
+   * - If \p virtual_device has a device type but not a target, fill in a target using
+   *   \p FindPrimitiveTargetOrFail. This is the one place we allow targets to be defaulted
+   *   from device types alone.
+   * - If \p virtual_device has a target, also canonicalize it using \p CanonicalTarget.
+   * The returned object will be unique for the adjusted virtual device w.r.t. all other
+   * \p VirtualDevices returned by this method.
+   *
+   * We call the result the &apos;canonical&apos; \p VirtualDevice. Two canonical \p VirtualDevices are
+   * structurally equal if and only if they are pointer equal. In this way we can build maps
+   * from virtual devices using just pointer equality.
+   */</doc>
+<use f='tvm/src/relay/transforms/device_domains.cc' l='75' u='c' c='_ZN3tvm5relay9transform13DeviceDomains16ForVirtualDeviceERKNS_4TypeERKNS_13VirtualDeviceE'/>
+<use f='tvm/src/relay/transforms/device_domains.cc' l='125' u='c' c='_ZN3tvm5relay9transform13DeviceDomains10JoinOrNullERKSt10shared_ptrINS1_12DeviceDomainEES7_'/>
+<use f='tvm/src/relay/transforms/device_domains.cc' l='402' u='c' c='_ZN3tvm5relay9transform13DeviceDomains10SetDefaultESt10shared_ptrINS1_12DeviceDomainEERKNS_13VirtualDeviceE'/>
+<use f='tvm/src/relay/transforms/device_planner.cc' l='1051' u='c' c='_ZN3tvm5relay9transform12_GLOBAL__N_114DeviceCapturer10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/transforms/device_planner.cc' l='1053' u='c' c='_ZN3tvm5relay9transform12_GLOBAL__N_114DeviceCapturer10VisitExpr_EPKNS0_8CallNodeE'/>
+<def f='tvm/src/target/compilation_config.cc' l='99' ll='125' type='tvm::VirtualDevice tvm::CompilationConfigNode::CanonicalVirtualDevice(const tvm::VirtualDevice &amp; virtual_device) const'/>
+<use f='tvm/src/target/compilation_config.cc' l='263' u='c' c='_ZN3tvm21CompilationConfigNode4InitERKNS_9transform11PassContextERKNS_7runtime5ArrayINS_6TargetEvEE'/>

@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>auto_bind.h source code [tvm/src/meta_schedule/schedule_rule/auto_bind.h] - Woboq Code Browser</title>
+<link rel="stylesheet" href="../../../.././data/qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href="../../../.././data/kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src="../../../.././data/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="../../../.././data/jquery/jquery-ui.min.js"></script>
+<script>var file = 'tvm/src/meta_schedule/schedule_rule/auto_bind.h'; var root_path = '../../../..'; var data_path = '../../../.././data'; var ecma_script_api_version = 2;</script>
+<script src='../../../.././data/codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='../../..'>tvm</a>/<a href='../..'>src</a>/<a href='..'>meta_schedule</a>/<a href='./'>schedule_rule</a>/<a href='auto_bind.h.html'>auto_bind.h</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td><i>/*</i></td></tr>
+<tr><th id="2">2</th><td><i> * Licensed to the Apache Software Foundation (ASF) under one</i></td></tr>
+<tr><th id="3">3</th><td><i> * or more contributor license agreements.  See the NOTICE file</i></td></tr>
+<tr><th id="4">4</th><td><i> * distributed with this work for additional information</i></td></tr>
+<tr><th id="5">5</th><td><i> * regarding copyright ownership.  The ASF licenses this file</i></td></tr>
+<tr><th id="6">6</th><td><i> * to you under the Apache License, Version 2.0 (the</i></td></tr>
+<tr><th id="7">7</th><td><i> * "License"); you may not use this file except in compliance</i></td></tr>
+<tr><th id="8">8</th><td><i> * with the License.  You may obtain a copy of the License at</i></td></tr>
+<tr><th id="9">9</th><td><i> *</i></td></tr>
+<tr><th id="10">10</th><td><i> *   <a href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a></i></td></tr>
+<tr><th id="11">11</th><td><i> *</i></td></tr>
+<tr><th id="12">12</th><td><i> * Unless required by applicable law or agreed to in writing,</i></td></tr>
+<tr><th id="13">13</th><td><i> * software distributed under the License is distributed on an</i></td></tr>
+<tr><th id="14">14</th><td><i> * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY</i></td></tr>
+<tr><th id="15">15</th><td><i> * KIND, either express or implied.  See the License for the</i></td></tr>
+<tr><th id="16">16</th><td><i> * specific language governing permissions and limitations</i></td></tr>
+<tr><th id="17">17</th><td><i> * under the License.</i></td></tr>
+<tr><th id="18">18</th><td><i> */</i></td></tr>
+<tr><th id="19">19</th><td><u>#<span data-ppcond="19">ifndef</span> <span class="macro" data-ref="_M/TVM_META_SCHEDULE_SCHEDULE_RULE_AUTO_BIND_H_">TVM_META_SCHEDULE_SCHEDULE_RULE_AUTO_BIND_H_</span></u></td></tr>
+<tr><th id="20">20</th><td><u>#define <dfn class="macro" id="_M/TVM_META_SCHEDULE_SCHEDULE_RULE_AUTO_BIND_H_" data-ref="_M/TVM_META_SCHEDULE_SCHEDULE_RULE_AUTO_BIND_H_">TVM_META_SCHEDULE_SCHEDULE_RULE_AUTO_BIND_H_</dfn></u></td></tr>
+<tr><th id="21">21</th><td></td></tr>
+<tr><th id="22">22</th><td><u>#include <a href="../utils.h.html">"../utils.h"</a></u></td></tr>
+<tr><th id="23">23</th><td></td></tr>
+<tr><th id="24">24</th><td><b>namespace</b> <span class="namespace">tvm</span> {</td></tr>
+<tr><th id="25">25</th><td><b>namespace</b> <span class="namespace">meta_schedule</span> {</td></tr>
+<tr><th id="26">26</th><td></td></tr>
+<tr><th id="27">27</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="28">28</th><td><i class="doc"> * <span class="command">\brief</span> Bind the given block if it is not bound to blockIdx or threadIdx.</i></td></tr>
+<tr><th id="29">29</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">sch</span> The schedule.</i></td></tr>
+<tr><th id="30">30</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">block</span> The block to be bound.</i></td></tr>
+<tr><th id="31">31</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">max_threadblocks</span> The maximum number of threadblocks allowed.</i></td></tr>
+<tr><th id="32">32</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">max_threads</span> The maximum number of threads allowed.</i></td></tr>
+<tr><th id="33">33</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">get_factor</span> A function that returns the tiling factor.</i></td></tr>
+<tr><th id="34">34</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="35">35</th><td><em>void</em> <dfn class="decl fn" id="_ZN3tvm13meta_schedule18BindBlockThreadIdxERKNS_3tir8ScheduleERKNS1_7BlockRVEllSt8functionIFNS_8PrimExprElEE" title='tvm::meta_schedule::BindBlockThreadIdx' data-ref="_ZN3tvm13meta_schedule18BindBlockThreadIdxERKNS_3tir8ScheduleERKNS1_7BlockRVEllSt8functionIFNS_8PrimExprElEE" data-ref-filename="_ZN3tvm13meta_schedule18BindBlockThreadIdxERKNS_3tir8ScheduleERKNS1_7BlockRVEllSt8functionIFNS_8PrimExprElEE">BindBlockThreadIdx</dfn>(<em>const</em> <span class="namespace">tir::</span><a class="type" href="../../../include/tvm/tir/schedule/schedule.h.html#tvm::tir::Schedule" title='tvm::tir::Schedule' data-ref="tvm::tir::Schedule" data-ref-filename="tvm..tir..Schedule">Schedule</a>&amp; <dfn class="local col1 decl" id="1sch" title='sch' data-type='const tir::Schedule &amp;' data-ref="1sch" data-ref-filename="1sch">sch</dfn>, <em>const</em> <span class="namespace">tir::</span><a class="type" href="../../../include/tvm/tir/schedule/schedule.h.html#tvm::tir::BlockRV" title='tvm::tir::BlockRV' data-ref="tvm::tir::BlockRV" data-ref-filename="tvm..tir..BlockRV">BlockRV</a>&amp; <dfn class="local col2 decl" id="2block" title='block' data-type='const tir::BlockRV &amp;' data-ref="2block" data-ref-filename="2block">block</dfn>,</td></tr>
+<tr><th id="36">36</th><td>                        <a class="typedef" href="../../../../include/x86_64-linux-gnu/bits/stdint-intn.h.html#int64_t" title='int64_t' data-type='__int64_t' data-ref="int64_t" data-ref-filename="int64_t">int64_t</a> <dfn class="local col3 decl" id="3max_threadblocks" title='max_threadblocks' data-type='int64_t' data-ref="3max_threadblocks" data-ref-filename="3max_threadblocks">max_threadblocks</dfn>, <a class="typedef" href="../../../../include/x86_64-linux-gnu/bits/stdint-intn.h.html#int64_t" title='int64_t' data-type='__int64_t' data-ref="int64_t" data-ref-filename="int64_t">int64_t</a> <dfn class="local col4 decl" id="4max_threads_per_block" title='max_threads_per_block' data-type='int64_t' data-ref="4max_threads_per_block" data-ref-filename="4max_threads_per_block">max_threads_per_block</dfn>,</td></tr>
+<tr><th id="37">37</th><td>                        <span class="namespace">std::</span><a class="type" href="../../../../include/c++/10/bits/std_function.h.html#std::function" title='std::function' data-ref="std::function" data-ref-filename="std..function">function</a>&lt;<span class="namespace">tir::</span><a class="typedef" href="../../../include/tvm/tir/schedule/schedule.h.html#tvm::tir::ExprRV" title='tvm::tir::ExprRV' data-type='tvm::PrimExpr' data-ref="tvm::tir::ExprRV" data-ref-filename="tvm..tir..ExprRV">ExprRV</a>(<a class="typedef" href="../../../../include/x86_64-linux-gnu/bits/stdint-intn.h.html#int64_t" title='int64_t' data-type='__int64_t' data-ref="int64_t" data-ref-filename="int64_t">int64_t</a> <dfn class="local col6 decl" id="6max_extent" title='max_extent' data-type='int64_t' data-ref="6max_extent" data-ref-filename="6max_extent">max_extent</dfn>)&gt; <dfn class="local col5 decl" id="5get_factor" title='get_factor' data-type='std::function&lt;tir::ExprRV (int64_t)&gt;' data-ref="5get_factor" data-ref-filename="5get_factor">get_factor</dfn>);</td></tr>
+<tr><th id="38">38</th><td></td></tr>
+<tr><th id="39">39</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="40">40</th><td><i class="doc"> * <span class="command">\brief</span> Given candidates of thread_extents, make a sampler that use `sch-&gt;SampleCategorical`</i></td></tr>
+<tr><th id="41">41</th><td><i class="doc"> * to return a random thread extent.</i></td></tr>
+<tr><th id="42">42</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">sch</span> The schedule</i></td></tr>
+<tr><th id="43">43</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">thread_extents</span> The candidate thread extents.</i></td></tr>
+<tr><th id="44">44</th><td><i class="doc"> * <span class="command">\return</span> A sampler that returns a random thread extent.</i></td></tr>
+<tr><th id="45">45</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="46">46</th><td><span class="namespace">std::</span><a class="type" href="../../../../include/c++/10/bits/std_function.h.html#std::function" title='std::function' data-ref="std::function" data-ref-filename="std..function">function</a>&lt;<span class="namespace">tir::</span><a class="typedef" href="../../../include/tvm/tir/schedule/schedule.h.html#tvm::tir::ExprRV" title='tvm::tir::ExprRV' data-type='tvm::PrimExpr' data-ref="tvm::tir::ExprRV" data-ref-filename="tvm..tir..ExprRV">ExprRV</a>(<a class="typedef" href="../../../../include/x86_64-linux-gnu/bits/stdint-intn.h.html#int64_t" title='int64_t' data-type='__int64_t' data-ref="int64_t" data-ref-filename="int64_t">int64_t</a> <dfn class="local col7 decl" id="7max_extent" title='max_extent' data-type='int64_t' data-ref="7max_extent" data-ref-filename="7max_extent">max_extent</dfn>)&gt; <dfn class="decl fn" id="_ZN3tvm13meta_schedule17MakeFactorSamplerENS_3tir8ScheduleENS_7runtime5ArrayINS_7IntegerEvEE" title='tvm::meta_schedule::MakeFactorSampler' data-ref="_ZN3tvm13meta_schedule17MakeFactorSamplerENS_3tir8ScheduleENS_7runtime5ArrayINS_7IntegerEvEE" data-ref-filename="_ZN3tvm13meta_schedule17MakeFactorSamplerENS_3tir8ScheduleENS_7runtime5ArrayINS_7IntegerEvEE">MakeFactorSampler</dfn>(<span class="namespace">tir::</span><a class="type" href="../../../include/tvm/tir/schedule/schedule.h.html#tvm::tir::Schedule" title='tvm::tir::Schedule' data-ref="tvm::tir::Schedule" data-ref-filename="tvm..tir..Schedule">Schedule</a> <dfn class="local col8 decl" id="8sch" title='sch' data-type='tir::Schedule' data-ref="8sch" data-ref-filename="8sch">sch</dfn>,</td></tr>
+<tr><th id="47">47</th><td>                                                                 <a class="type" href="../../../include/tvm/runtime/container/array.h.html#tvm::runtime::Array" title='tvm::runtime::Array' data-ref="tvm::runtime::Array" data-ref-filename="tvm..runtime..Array">Array</a>&lt;<a class="type" href="../../../include/tvm/ir/expr.h.html#tvm::Integer" title='tvm::Integer' data-ref="tvm::Integer" data-ref-filename="tvm..Integer">Integer</a>&gt; <dfn class="local col9 decl" id="9thread_extents" title='thread_extents' data-type='Array&lt;tvm::Integer&gt;' data-ref="9thread_extents" data-ref-filename="9thread_extents">thread_extents</dfn>);</td></tr>
+<tr><th id="48">48</th><td></td></tr>
+<tr><th id="49">49</th><td>}  <i>// namespace meta_schedule</i></td></tr>
+<tr><th id="50">50</th><td>}  <i>// namespace tvm</i></td></tr>
+<tr><th id="51">51</th><td></td></tr>
+<tr><th id="52">52</th><td><u>#<span data-ppcond="19">endif</span>  // TVM_META_SCHEDULE_SCHEDULE_RULE_AUTO_BIND_H_</u></td></tr>
+<tr><th id="53">53</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated while processing <a href='../postproc/rewrite_unbound_block.cc.html'>tvm/src/meta_schedule/postproc/rewrite_unbound_block.cc</a><br/>Generated on <em>2022-Aug-10</em> from project tvm revision <em>fae79bb</em><br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

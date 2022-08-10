@@ -1,0 +1,87 @@
+<inh f='tvm/include/tvm/runtime/object.h' l='167' c='tvm::runtime::Object'/>
+<def f='tvm/include/tvm/tir/var.h' l='247' ll='293'/>
+<use f='tvm/include/tvm/tir/var.h' l='277' c='_ZNK3tvm3tir11IterVarNode12SEqualReduceEPKS1_NS_13SEqualReducerE'/>
+<use f='tvm/include/tvm/tir/var.h' l='310' c='_ZNK3tvm3tir7IterVarptEv'/>
+<use f='tvm/include/tvm/tir/var.h' l='310' c='_ZNK3tvm3tir7IterVarptEv'/>
+<use f='tvm/include/tvm/tir/var.h' l='310' c='_ZNK3tvm3tir7IterVar3getEv'/>
+<use f='tvm/include/tvm/tir/var.h' l='310'/>
+<use f='tvm/include/tvm/tir/var.h' l='311' c='_ZN3tvm3tir7IterVar11CopyOnWriteEv'/>
+<use f='tvm/include/tvm/tir/var.h' l='311' c='_ZN3tvm3tir7IterVar11CopyOnWriteEv'/>
+<use f='tvm/include/tvm/tir/var.h' l='311' c='_ZN3tvm3tir7IterVar11CopyOnWriteEv'/>
+<size>56</size>
+<doc f='tvm/include/tvm/tir/var.h' l='241'>/*!
+ * \brief An iteration variable representing an iteration
+ *  over a one dimensional interval.
+ *
+ *  The dtype of the extent of the `dom` of the IterVar must match the dtype of the internal Var.
+ */</doc>
+<mbr r='tvm::tir::IterVarNode::dom' o='128' t='tvm::Range'/>
+<mbr r='tvm::tir::IterVarNode::var' o='192' t='tvm::tir::Var'/>
+<mbr r='tvm::tir::IterVarNode::iter_type' o='256' t='tvm::tir::IterVarType'/>
+<mbr r='tvm::tir::IterVarNode::thread_tag' o='320' t='tvm::runtime::String'/>
+<mbr r='tvm::tir::IterVarNode::span' o='384' t='tvm::Span'/>
+<fun r='_ZN3tvm3tir11IterVarNode10VisitAttrsEPNS_11AttrVisitorE'/>
+<fun r='_ZNK3tvm3tir11IterVarNode12SEqualReduceEPKS1_NS_13SEqualReducerE'/>
+<fun r='_ZNK3tvm3tir11IterVarNode11SHashReduceENS_12SHashReducerE'/>
+<smbr r='tvm::tir::IterVarNode::_type_key' t='const char *const'/>
+<smbr r='tvm::tir::IterVarNode::_type_has_method_sequal_reduce' t='const bool'/>
+<smbr r='tvm::tir::IterVarNode::_type_has_method_shash_reduce' t='const bool'/>
+<smbr r='tvm::tir::IterVarNode::_type_final' t='const bool'/>
+<smbr r='tvm::tir::IterVarNode::_type_child_slots' t='const int'/>
+<fun r='_ZN3tvm3tir11IterVarNode16RuntimeTypeIndexEv'/>
+<fun r='_ZN3tvm3tir11IterVarNode27_GetOrAllocRuntimeTypeIndexEv'/>
+<use f='tvm/src/auto_scheduler/feature.cc' l='599' c='_ZN3tvm14auto_scheduler24PerStoreFeatureExtractor10VisitStmt_EPKNS_3tir12AttrStmtNodeE'/>
+<size>56</size>
+<use f='tvm/src/autotvm/feature_visitor.cc' l='65' c='_ZN3tvm7autotvm14FeatureVisitor10VisitStmt_EPKNS_3tir12AttrStmtNodeE'/>
+<size>56</size>
+<use f='tvm/src/contrib/hybrid/codegen_hybrid.cc' l='318' c='_ZN3tvm7contrib13CodeGenHybrid10VisitStmt_EPKNS_3tir12AttrStmtNodeE'/>
+<size>56</size>
+<use f='tvm/src/ir/expr.cc' l='43' c='_ZN3tvm8PrimExpr11FromObject_ENS_7runtime9ObjectRefE'/>
+<size>56</size>
+<use f='tvm/src/printer/text_printer.h' l='252' c='_ZN3tvm3tir13MetaCollector7CollectERKNS_7runtime9ObjectRefE'/>
+<use f='tvm/src/printer/text_printer.h' l='373' c='_ZN3tvm3tir14TIRTextPrinter12PrintIterVarEPKNS0_11IterVarNodeE'/>
+<size>56</size>
+<use f='tvm/src/printer/tir_text_printer.cc' l='63' c='_ZN3tvm3tir14TIRTextPrinter5PrintERKNS_7runtime9ObjectRefE'/>
+<use f='tvm/src/printer/tir_text_printer.cc' l='64' c='_ZN3tvm3tir14TIRTextPrinter5PrintERKNS_7runtime9ObjectRefE'/>
+<use f='tvm/src/printer/tir_text_printer.cc' l='199' c='_ZN3tvm3tir14TIRTextPrinter12PrintIterVarEPKNS0_11IterVarNodeE'/>
+<size>56</size>
+<use f='tvm/src/printer/tvmscript_printer.cc' l='265' c='_ZN3tvm3tir16TVMScriptPrinter12PrintIterVarEPKNS0_11IterVarNodeE'/>
+<use f='tvm/src/printer/tvmscript_printer.cc' l='699' c='_ZN3tvm3tir16TVMScriptPrinter5PrintERKNS_7runtime9ObjectRefE'/>
+<use f='tvm/src/printer/tvmscript_printer.cc' l='700' c='_ZN3tvm3tir16TVMScriptPrinter5PrintERKNS_7runtime9ObjectRefE'/>
+<use f='tvm/src/printer/tvmscript_printer.cc' l='974' c='_ZN3tvm3tir16TVMScriptPrinter10VisitStmt_EPKNS0_12AttrStmtNodeE'/>
+<use f='tvm/src/printer/tvmscript_printer.cc' l='1699' c='_ZN3tvm3tir16TVMScriptPrinter12PrintIterVarEPKNS0_11IterVarNodeE'/>
+<size>56</size>
+<use f='tvm/src/te/operation/tensorize.cc' l='122' c='_ZN3tvm2te23VerifyTensorizeLoopNestEPKNS0_13ComputeOpNodeERKNS0_5StageERKNS0_15ComputeLoopNestEm'/>
+<use f='tvm/src/te/operation/tensorize.cc' l='122' c='_ZN3tvm2te23VerifyTensorizeLoopNestEPKNS0_13ComputeOpNodeERKNS0_5StageERKNS0_15ComputeLoopNestEm'/>
+<size>56</size>
+<use f='tvm/src/tir/analysis/verify_gpu_code.cc' l='93' c='_ZN3tvm3tir15GPUCodeVerifier10VisitStmt_EPKNS0_12AttrStmtNodeE'/>
+<size>56</size>
+<use f='tvm/src/tir/ir/expr.cc' l='151' c='_ZN3tvm3tir7IterVarC1ENS_5RangeENS0_3VarENS0_11IterVarTypeENS_7runtime6StringENS_4SpanE'/>
+<use f='tvm/src/tir/ir/expr.cc' l='151' c='_ZN3tvm3tir7IterVarC1ENS_5RangeENS0_3VarENS0_11IterVarTypeENS_7runtime6StringENS_4SpanE'/>
+<use f='tvm/src/tir/ir/expr.cc' l='175'/>
+<use f='tvm/src/tir/ir/expr.cc' l='176'/>
+<use f='tvm/src/tir/ir/expr.cc' l='190'/>
+<use f='tvm/src/tir/ir/expr.cc' l='190'/>
+<use f='tvm/src/tir/ir/expr.cc' l='190'/>
+<size>56</size>
+<use f='tvm/src/tir/schedule/primitive/blockize_tensorize.cc' l='302' c='_ZN3tvm3tir17GenerateOuterInitERKNS0_4StmtERKNS0_12BlockRealizeERKSt6vectorIPKNS0_7ForNodeESaISA_EENS_7runtime6StringE'/>
+<use f='tvm/src/tir/schedule/primitive/blockize_tensorize.cc' l='302' c='_ZN3tvm3tir17GenerateOuterInitERKNS0_4StmtERKNS0_12BlockRealizeERKSt6vectorIPKNS0_7ForNodeESaISA_EENS_7runtime6StringE'/>
+<size>56</size>
+<use f='tvm/src/tir/transforms/hoist_expression.cc' l='255' c='_ZN3tvm3tir18HoistInfoCollector10VisitStmt_EPKNS0_12AttrStmtNodeE'/>
+<size>56</size>
+<use f='tvm/src/tir/transforms/loop_partition.cc' l='121' c='_ZN3tvm3tir17CandidateSelector10VisitStmt_EPKNS0_12AttrStmtNodeE'/>
+<use f='tvm/src/tir/transforms/loop_partition.cc' l='121' c='_ZN3tvm3tir17CandidateSelector10VisitStmt_EPKNS0_12AttrStmtNodeE'/>
+<use f='tvm/src/tir/transforms/loop_partition.cc' l='144' c='_ZN3tvm3tir17CandidateSelector10VisitStmt_EPKNS0_12AttrStmtNodeE'/>
+<use f='tvm/src/tir/transforms/loop_partition.cc' l='145' c='_ZN3tvm3tir17CandidateSelector10VisitStmt_EPKNS0_12AttrStmtNodeE'/>
+<use f='tvm/src/tir/transforms/loop_partition.cc' l='240' c='_ZN3tvm3tir15PartitionFinder10VisitStmt_EPKNS0_12AttrStmtNodeE'/>
+<use f='tvm/src/tir/transforms/loop_partition.cc' l='240' c='_ZN3tvm3tir15PartitionFinder10VisitStmt_EPKNS0_12AttrStmtNodeE'/>
+<use f='tvm/src/tir/transforms/loop_partition.cc' l='405' c='_ZN3tvm3tir15LoopPartitioner10VisitStmt_EPKNS0_12AttrStmtNodeE'/>
+<use f='tvm/src/tir/transforms/loop_partition.cc' l='405' c='_ZN3tvm3tir15LoopPartitioner10VisitStmt_EPKNS0_12AttrStmtNodeE'/>
+<size>56</size>
+<use f='tvm/src/tir/transforms/lower_cross_thread_reduction.cc' l='369' c='_ZN3tvm3tir23TransformReductionBlockEPKNS0_16BlockRealizeNodeERKNS_7runtime8OptionalINS0_6BufferEEERKS6_RKNS0_11CommReducerERKNS_8PrimExprERKSt6vector8114036'/>
+<use f='tvm/src/tir/transforms/lower_cross_thread_reduction.cc' l='369' c='_ZN3tvm3tir23TransformReductionBlockEPKNS0_16BlockRealizeNodeERKNS_7runtime8OptionalINS0_6BufferEEERKS6_RKNS0_11CommReducerERKNS_8PrimExprERKSt6vector8114036'/>
+<size>56</size>
+<use f='tvm/src/tir/transforms/narrow_datatype.cc' l='284' c='_ZN3tvm3tir16DataTypeRewriter10VisitStmt_EPKNS0_12AttrStmtNodeE'/>
+<use f='tvm/src/tir/transforms/narrow_datatype.cc' l='284' c='_ZN3tvm3tir16DataTypeRewriter10VisitStmt_EPKNS0_12AttrStmtNodeE'/>
+<use f='tvm/src/tir/transforms/narrow_datatype.cc' l='406'/>
+<size>56</size>

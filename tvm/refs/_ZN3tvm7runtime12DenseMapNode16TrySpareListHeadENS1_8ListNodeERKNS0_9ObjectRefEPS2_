@@ -1,0 +1,13 @@
+<use f='tvm/include/tvm/runtime/container/map.h' l='697' u='c' c='_ZN3tvm7runtime12DenseMapNode9TryInsertERKNS0_9ObjectRefEPNS1_8ListNodeE'/>
+<def f='tvm/include/tvm/runtime/container/map.h' l='739' ll='782' type='bool tvm::runtime::DenseMapNode::TrySpareListHead(tvm::runtime::DenseMapNode::ListNode target, const tvm::runtime::MapNode::key_type &amp; key, tvm::runtime::DenseMapNode::ListNode * result)'/>
+<doc f='tvm/include/tvm/runtime/container/map.h' l='728'>/*!
+   * \brief Spare an entry to be the head of a linked list.
+   * As described in B3, during insertion, it is possible that the entire linked list does not
+   * exist, but the slot of its head has been occupied by other linked lists. In this case, we need
+   * to spare the slot by moving away the elements to another valid empty one to make insertion
+   * possible.
+   * \param target The given entry to be spared
+   * \param key The indexing key
+   * \param result The linked-list entry constructed as the head
+   * \return A boolean, if actual insertion happens
+   */</doc>

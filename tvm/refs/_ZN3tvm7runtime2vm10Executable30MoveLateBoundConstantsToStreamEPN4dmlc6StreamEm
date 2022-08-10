@@ -1,0 +1,12 @@
+<dec f='tvm/include/tvm/runtime/vm/executable.h' l='122' type='void tvm::runtime::vm::Executable::MoveLateBoundConstantsToStream(dmlc::Stream * stream, size_t byte_limit)'/>
+<doc f='tvm/include/tvm/runtime/vm/executable.h' l='113'>/*!
+   * \brief Returns the late-bound constants for the executable (if any) as a byte-stream.
+   * Leaves the executable&apos;s late-bound constants map empty. Only constants who&apos;s byte
+   * tensor size is greater than or equal to \p byte_limit are marked as late-bound. \p byte_limit
+   * may be zero.
+   *
+   * Must be called before \p SaveToBinary and friends if late-bound constants are
+   * desired. Otherwise can be ignore.
+   */</doc>
+<def f='tvm/src/runtime/vm/executable.cc' l='303' ll='327' type='void tvm::runtime::vm::Executable::MoveLateBoundConstantsToStream(dmlc::Stream * stream, size_t byte_limit)'/>
+<use f='tvm/src/runtime/vm/executable.cc' l='332' u='c' c='_ZN3tvm7runtime2vm10Executable28MoveLateBoundConstantsToFileERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEm'/>

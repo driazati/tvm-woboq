@@ -1,0 +1,13 @@
+<dec f='tvm/include/tvm/runtime/vm/bytecode.h' l='264' type='static tvm::runtime::vm::Instruction tvm::runtime::vm::Instruction::AllocTensorReg(tvm::runtime::vm::RegName storage, tvm::runtime::vm::Index offset, tvm::runtime::vm::RegName shape_register, DLDataType dtype, tvm::runtime::vm::RegName dst)'/>
+<use f='tvm/src/relay/backend/vm/compiler.cc' l='599' u='c' c='_ZN3tvm5relay2vm18VMFunctionCompiler21DeviceAwareVisitExpr_EPKNS0_8CallNodeE'/>
+<doc f='tvm/include/tvm/runtime/vm/bytecode.h' l='255'>/*!
+   * \brief Construct an allocate tensor instruction with register.
+   * \param storage The storage to allocate out of.
+   * \param offset The offset into the storage to allocate from.
+   * \param shape_register The register containing the shape.
+   * \param dtype The dtype of the tensor.
+   * \param dst The destination register.
+   * \return The allocate tensor instruction.
+   */</doc>
+<def f='tvm/src/runtime/vm/bytecode.cc' l='328' ll='338' type='static tvm::runtime::vm::Instruction tvm::runtime::vm::Instruction::AllocTensorReg(tvm::runtime::vm::RegName storage, tvm::runtime::vm::RegName offset, tvm::runtime::vm::RegName shape_register, DLDataType dtype, tvm::runtime::vm::RegName dst)'/>
+<use f='tvm/src/runtime/vm/executable.cc' l='870' u='c' c='_ZN3tvm7runtime2vm22DeserializeInstructionERKNS1_23VMInstructionSerializerE'/>

@@ -1,0 +1,16 @@
+<dec f='tvm/include/tvm/te/schedule_pass.h' l='89' type='tvm::tir::Stmt tvm::te::ScheduleOps(tvm::te::Schedule s, Map&lt;tvm::tir::IterVar, tvm::Range&gt; dom_map, bool debug_keep_trivial_loop)'/>
+<doc f='tvm/include/tvm/te/schedule_pass.h' l='78'>/*!
+ * \brief Schedule s&apos; dependent operations.
+ *
+ * \param s The schedule to be realized
+ * \param dom_map The domain of each iter vars.
+ * \param debug_keep_trivial_loop Whether keep trivial loops with extent of 1 during lowering.
+ *                                This is a debug feature for dataflow/axis analysis.
+ *                                Note: If this is true, The lowered IR may be incorrect,
+ *                                because we will also delete the init part of reduction
+ * \return the result Stmt
+ */</doc>
+<use f='tvm/src/driver/driver_api.cc' l='272' u='c' c='_ZN3tvm16ScheduleToModuleENS_2te8ScheduleERKNS_7runtime5ArrayINS2_9ObjectRefEvEERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKSt13unordered_7538976'/>
+<def f='tvm/src/te/schedule/schedule_ops.cc' l='360' ll='427' type='tvm::tir::Stmt tvm::te::ScheduleOps(tvm::te::Schedule sch, Map&lt;tvm::tir::IterVar, tvm::Range&gt; dom_map_, bool debug_keep_trivial_loop)'/>
+<use f='tvm/src/te/schedule/schedule_ops.cc' l='431' u='c'/>
+<use f='tvm/src/te/schedule/schedule_ops.cc' l='433' u='c'/>

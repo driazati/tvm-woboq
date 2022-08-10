@@ -1,0 +1,125 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>on_device.h source code [tvm/include/tvm/relay/attrs/on_device.h] - Woboq Code Browser</title>
+<meta name="woboq:interestingDefinitions" content="tvm::relay::OnDeviceAttrs "/>
+<link rel="stylesheet" href="../../../../.././data/qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href="../../../../.././data/kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src="../../../../.././data/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="../../../../.././data/jquery/jquery-ui.min.js"></script>
+<script>var file = 'tvm/include/tvm/relay/attrs/on_device.h'; var root_path = '../../../../..'; var data_path = '../../../../.././data'; var ecma_script_api_version = 2;</script>
+<script src='../../../../.././data/codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='../../../..'>tvm</a>/<a href='../../..'>include</a>/<a href='../..'>tvm</a>/<a href='..'>relay</a>/<a href='./'>attrs</a>/<a href='on_device.h.html'>on_device.h</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td><i>/*</i></td></tr>
+<tr><th id="2">2</th><td><i> * Licensed to the Apache Software Foundation (ASF) under one</i></td></tr>
+<tr><th id="3">3</th><td><i> * or more contributor license agreements.  See the NOTICE file</i></td></tr>
+<tr><th id="4">4</th><td><i> * distributed with this work for additional information</i></td></tr>
+<tr><th id="5">5</th><td><i> * regarding copyright ownership.  The ASF licenses this file</i></td></tr>
+<tr><th id="6">6</th><td><i> * to you under the Apache License, Version 2.0 (the</i></td></tr>
+<tr><th id="7">7</th><td><i> * "License"); you may not use this file except in compliance</i></td></tr>
+<tr><th id="8">8</th><td><i> * with the License.  You may obtain a copy of the License at</i></td></tr>
+<tr><th id="9">9</th><td><i> *</i></td></tr>
+<tr><th id="10">10</th><td><i> *   <a href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a></i></td></tr>
+<tr><th id="11">11</th><td><i> *</i></td></tr>
+<tr><th id="12">12</th><td><i> * Unless required by applicable law or agreed to in writing,</i></td></tr>
+<tr><th id="13">13</th><td><i> * software distributed under the License is distributed on an</i></td></tr>
+<tr><th id="14">14</th><td><i> * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY</i></td></tr>
+<tr><th id="15">15</th><td><i> * KIND, either express or implied.  See the License for the</i></td></tr>
+<tr><th id="16">16</th><td><i> * specific language governing permissions and limitations</i></td></tr>
+<tr><th id="17">17</th><td><i> * under the License.</i></td></tr>
+<tr><th id="18">18</th><td><i> */</i></td></tr>
+<tr><th id="19">19</th><td></td></tr>
+<tr><th id="20">20</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="21">21</th><td><i class="doc"> * <span class="command">\file</span> <span class="verb">tvm/relay/attrs/on_device.h</span></i></td></tr>
+<tr><th id="22">22</th><td><i class="doc"> * <span class="command">\brief</span> Attribute for the "on_device" annotation (ie operator).</i></td></tr>
+<tr><th id="23">23</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="24">24</th><td><u>#<span data-ppcond="24">ifndef</span> <span class="macro" data-ref="_M/TVM_RELAY_ATTRS_ON_DEVICE_H_">TVM_RELAY_ATTRS_ON_DEVICE_H_</span></u></td></tr>
+<tr><th id="25">25</th><td><u>#define <dfn class="macro" id="_M/TVM_RELAY_ATTRS_ON_DEVICE_H_" data-ref="_M/TVM_RELAY_ATTRS_ON_DEVICE_H_">TVM_RELAY_ATTRS_ON_DEVICE_H_</dfn></u></td></tr>
+<tr><th id="26">26</th><td></td></tr>
+<tr><th id="27">27</th><td><u>#include <a href="../../ir/attrs.h.html">&lt;tvm/ir/attrs.h&gt;</a></u></td></tr>
+<tr><th id="28">28</th><td><u>#include <a href="../../target/virtual_device.h.html">&lt;tvm/target/virtual_device.h&gt;</a></u></td></tr>
+<tr><th id="29">29</th><td></td></tr>
+<tr><th id="30">30</th><td><u>#include <a href="../../../../../include/c++/10/string.html">&lt;string&gt;</a></u></td></tr>
+<tr><th id="31">31</th><td></td></tr>
+<tr><th id="32">32</th><td><b>namespace</b> <span class="namespace">tvm</span> {</td></tr>
+<tr><th id="33">33</th><td><b>namespace</b> <span class="namespace">relay</span> {</td></tr>
+<tr><th id="34">34</th><td></td></tr>
+<tr><th id="35">35</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="36">36</th><td><i class="doc"> * <span class="command">\brief</span> Attributes for the "on_device" annotation (ie operator).</i></td></tr>
+<tr><th id="37">37</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="38">38</th><td><i class="doc"> * The Relay call:</i></td></tr>
+<tr><th id="39">39</th><td><i class="doc"> * <span class="command">\code</span></i></td></tr>
+<tr><th id="40">40</th><td><i class="doc"> *<span class="verb">   on_device(sub_expr, virtual_device=S)</span></i></td></tr>
+<tr><th id="41">41</th><td><i class="doc"><span class="verb"></span> * \endcode</i></td></tr>
+<tr><th id="42">42</th><td><i class="doc"> * constrains<span class="command"> \p</span> <span class="arg">sub_expr</span> to execute and store its result on the<span class="command"> \p</span> <span class="arg">VirtualDevice</span><span class="command"> \p</span> <span class="arg">S.</span></i></td></tr>
+<tr><th id="43">43</th><td><i class="doc"> * However the annotation itself may appear in an expression to be executed and stored on a</i></td></tr>
+<tr><th id="44">44</th><td><i class="doc"> * different<span class="command"> \p</span> <span class="arg">VirtualDevice.</span> If so the compiler will automatically insert a "device_copy" call to</i></td></tr>
+<tr><th id="45">45</th><td><i class="doc"> * mediate the transition between<span class="command"> \p</span> <span class="arg">VirtualDevices.</span></i></td></tr>
+<tr><th id="46">46</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="47">47</th><td><i class="doc"> * E.g.: Assuming %x and %y reside on the GPU and %z on the CPU then:</i></td></tr>
+<tr><th id="48">48</th><td><i class="doc"> * <span class="command">\code</span></i></td></tr>
+<tr><th id="49">49</th><td><i class="doc"> *<span class="verb">   multiply(on_device(add(%x, %y), virtual_device=GPU), %z)</span></i></td></tr>
+<tr><th id="50">50</th><td><i class="doc"><span class="verb"></span> * \endcode</i></td></tr>
+<tr><th id="51">51</th><td><i class="doc"> * indicates the<span class="command"> \p</span> <span class="arg">add</span> should execute on the GPU but the<span class="command"> \p</span> <span class="arg">multiply</span> should execute on the CPU.</i></td></tr>
+<tr><th id="52">52</th><td><i class="doc"> * The compiler will rewrite this to:</i></td></tr>
+<tr><th id="53">53</th><td><i class="doc"> * <span class="command">\code</span></i></td></tr>
+<tr><th id="54">54</th><td><i class="doc"> *<span class="verb">   multiply(device_copy(add(%x, %y), src_virtual_device=GPU, dst_virtual_device=CPU), %z)</span></i></td></tr>
+<tr><th id="55">55</th><td><i class="doc"><span class="verb"></span> * \endcode</i></td></tr>
+<tr><th id="56">56</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="57">57</th><td><i class="doc"> * The<span class="command"> \p</span> <span class="arg">constraint_body</span> (default true) and<span class="command"> \p</span> <span class="arg">constraint_result</span> (default false) fields can be</i></td></tr>
+<tr><th id="58">58</th><td><i class="doc"> * used by passes for finer-grained control over how the<span class="command"> \p</span> <span class="arg">VirtualDevice</span> constraint should be</i></td></tr>
+<tr><th id="59">59</th><td><i class="doc"> * applied.</i></td></tr>
+<tr><th id="60">60</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="61">61</th><td><b>struct</b> <dfn class="type def" id="tvm::relay::OnDeviceAttrs" title='tvm::relay::OnDeviceAttrs' data-ref="tvm::relay::OnDeviceAttrs" data-ref-filename="tvm..relay..OnDeviceAttrs">OnDeviceAttrs</dfn> : <b>public</b> <span class="namespace">tvm::</span><a class="type" href="../../ir/attrs.h.html#tvm::AttrsNode" title='tvm::AttrsNode' data-ref="tvm::AttrsNode" data-ref-filename="tvm..AttrsNode">AttrsNode</a>&lt;<a class="type" href="#tvm::relay::OnDeviceAttrs" title='tvm::relay::OnDeviceAttrs' data-ref="tvm::relay::OnDeviceAttrs" data-ref-filename="tvm..relay..OnDeviceAttrs">OnDeviceAttrs</a>&gt; {</td></tr>
+<tr><th id="62">62</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="63">63</th><td><i class="doc">   * <span class="command">\brief</span> The<span class="command"> \p</span> <span class="arg">VirtualDevice</span> to constraint to apply to the body, result, or both body and result</i></td></tr>
+<tr><th id="64">64</th><td><i class="doc">   * of the "on_device" call.</i></td></tr>
+<tr><th id="65">65</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="66">66</th><td>  <a class="type" href="../../target/virtual_device.h.html#tvm::VirtualDevice" title='tvm::VirtualDevice' data-ref="tvm::VirtualDevice" data-ref-filename="tvm..VirtualDevice">VirtualDevice</a> <dfn class="decl field" id="tvm::relay::OnDeviceAttrs::virtual_device" title='tvm::relay::OnDeviceAttrs::virtual_device' data-ref="tvm::relay::OnDeviceAttrs::virtual_device" data-ref-filename="tvm..relay..OnDeviceAttrs..virtual_device">virtual_device</dfn> = <a class="type" href="../../target/virtual_device.h.html#tvm::VirtualDevice" title='tvm::VirtualDevice' data-ref="tvm::VirtualDevice" data-ref-filename="tvm..VirtualDevice">VirtualDevice</a>::<a class="ref fn" href="../../target/virtual_device.h.html#_ZN3tvm13VirtualDevice18FullyUnconstrainedEv" title='tvm::VirtualDevice::FullyUnconstrained' data-ref="_ZN3tvm13VirtualDevice18FullyUnconstrainedEv" data-ref-filename="_ZN3tvm13VirtualDevice18FullyUnconstrainedEv">FullyUnconstrained</a>();</td></tr>
+<tr><th id="67">67</th><td></td></tr>
+<tr><th id="68">68</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="69">69</th><td><i class="doc">   * <span class="command">\brief</span> If false (the default), the result of the "on_device" call is not constrained to be</i></td></tr>
+<tr><th id="70">70</th><td><i class="doc">   *<span class="command"> \p</span> <span class="arg">virtual_device.</span></i></td></tr>
+<tr><th id="71">71</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="72">72</th><td>  <em>bool</em> <dfn class="decl field" id="tvm::relay::OnDeviceAttrs::constrain_result" title='tvm::relay::OnDeviceAttrs::constrain_result' data-ref="tvm::relay::OnDeviceAttrs::constrain_result" data-ref-filename="tvm..relay..OnDeviceAttrs..constrain_result">constrain_result</dfn> = <b>false</b>;</td></tr>
+<tr><th id="73">73</th><td></td></tr>
+<tr><th id="74">74</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="75">75</th><td><i class="doc">   * <span class="command">\brief</span> If true (the default), the body of the "on_device" call is constrained to be<span class="command"> \p</span></i></td></tr>
+<tr><th id="76">76</th><td><i class="doc">   * <span class="arg">virtual_device.</span></i></td></tr>
+<tr><th id="77">77</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="78">78</th><td>  <em>bool</em> <dfn class="decl field" id="tvm::relay::OnDeviceAttrs::constrain_body" title='tvm::relay::OnDeviceAttrs::constrain_body' data-ref="tvm::relay::OnDeviceAttrs::constrain_body" data-ref-filename="tvm..relay..OnDeviceAttrs..constrain_body">constrain_body</dfn> = <b>true</b>;</td></tr>
+<tr><th id="79">79</th><td></td></tr>
+<tr><th id="80">80</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="81">81</th><td><i class="doc">   * <span class="command">\brief</span> Returns true if both the body and result are constrained.</i></td></tr>
+<tr><th id="82">82</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="83">83</th><td>  <em>bool</em> <dfn class="decl def fn" id="_ZNK3tvm5relay13OnDeviceAttrs8is_fixedEv" title='tvm::relay::OnDeviceAttrs::is_fixed' data-ref="_ZNK3tvm5relay13OnDeviceAttrs8is_fixedEv" data-ref-filename="_ZNK3tvm5relay13OnDeviceAttrs8is_fixedEv">is_fixed</dfn>() <em>const</em> { <b>return</b> <a class="member field" href="#tvm::relay::OnDeviceAttrs::constrain_result" title='tvm::relay::OnDeviceAttrs::constrain_result' data-ref="tvm::relay::OnDeviceAttrs::constrain_result" data-ref-filename="tvm..relay..OnDeviceAttrs..constrain_result">constrain_result</a> &amp;&amp; <a class="member field" href="#tvm::relay::OnDeviceAttrs::constrain_body" title='tvm::relay::OnDeviceAttrs::constrain_body' data-ref="tvm::relay::OnDeviceAttrs::constrain_body" data-ref-filename="tvm..relay..OnDeviceAttrs..constrain_body">constrain_body</a>; }</td></tr>
+<tr><th id="84">84</th><td></td></tr>
+<tr><th id="85">85</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="86">86</th><td><i class="doc">   * <span class="command">\brief</span> Returns true only the body is constrained (the 'normal' case).</i></td></tr>
+<tr><th id="87">87</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="88">88</th><td>  <em>bool</em> <dfn class="decl def fn" id="_ZNK3tvm5relay13OnDeviceAttrs9is_normalEv" title='tvm::relay::OnDeviceAttrs::is_normal' data-ref="_ZNK3tvm5relay13OnDeviceAttrs9is_normalEv" data-ref-filename="_ZNK3tvm5relay13OnDeviceAttrs9is_normalEv">is_normal</dfn>() <em>const</em> { <b>return</b> !<a class="member field" href="#tvm::relay::OnDeviceAttrs::constrain_result" title='tvm::relay::OnDeviceAttrs::constrain_result' data-ref="tvm::relay::OnDeviceAttrs::constrain_result" data-ref-filename="tvm..relay..OnDeviceAttrs..constrain_result">constrain_result</a> &amp;&amp; <a class="member field" href="#tvm::relay::OnDeviceAttrs::constrain_body" title='tvm::relay::OnDeviceAttrs::constrain_body' data-ref="tvm::relay::OnDeviceAttrs::constrain_body" data-ref-filename="tvm..relay..OnDeviceAttrs..constrain_body">constrain_body</a>; }</td></tr>
+<tr><th id="89">89</th><td></td></tr>
+<tr><th id="90">90</th><td>  <a class="macro" href="../../ir/attrs.h.html#66" title="static constexpr const char* _type_key = &quot;relay.attrs.OnDeviceAttrs&quot;; static const constexpr bool _type_final = true; static const constexpr int _type_child_slots = 0; static_assert(!::tvm::BaseAttrsNode::_type_final, &quot;ParentObj marked as final&quot;); static uint32_t RuntimeTypeIndex() { static_assert(OnDeviceAttrs::_type_child_slots == 0 || ::tvm::BaseAttrsNode::_type_child_slots == 0 || OnDeviceAttrs::_type_child_slots &lt; ::tvm::BaseAttrsNode::_type_child_slots, &quot;Need to set _type_child_slots when parent specifies it.&quot;); if (OnDeviceAttrs::_type_index != ::tvm::runtime::TypeIndex::kDynamic) { return OnDeviceAttrs::_type_index; } return _GetOrAllocRuntimeTypeIndex(); } static uint32_t _GetOrAllocRuntimeTypeIndex() { static uint32_t tindex = Object::GetOrAllocRuntimeTypeIndex( OnDeviceAttrs::_type_key, OnDeviceAttrs::_type_index, ::tvm::BaseAttrsNode::_GetOrAllocRuntimeTypeIndex(), OnDeviceAttrs::_type_child_slots, OnDeviceAttrs::_type_child_slots_can_overflow); return tindex; } template &lt;typename FVisit&gt; void _tvm_VisitAttrs(FVisit&amp; _tvm_fvisit)" data-ref="_M/TVM_DECLARE_ATTRS">TVM_DECLARE_ATTRS</a>(<a class="ref fn fake" href="../../../../../include/c++/10/bits/basic_string.h.html#_ZNSt7__cxx1112basic_stringC1EPKT_RKT1_" title='std::basic_string::basic_string&lt;_CharT, _Traits, _Alloc&gt;' data-ref="_ZNSt7__cxx1112basic_stringC1EPKT_RKT1_" data-ref-filename="_ZNSt7__cxx1112basic_stringC1EPKT_RKT1_"></a><a class="type" href="#tvm::relay::OnDeviceAttrs" title='tvm::relay::OnDeviceAttrs' data-ref="tvm::relay::OnDeviceAttrs" data-ref-filename="tvm..relay..OnDeviceAttrs">OnDeviceAttrs</a>, <q>"relay.attrs.OnDeviceAttrs"</q>) {</td></tr>
+<tr><th id="91">91</th><td>    <a class="macro" href="../../ir/attrs.h.html#76" title="_tvm_fvisit(&quot;virtual_device&quot;, &amp;virtual_device)" data-ref="_M/TVM_ATTR_FIELD">TVM_ATTR_FIELD</a>(<a class="member field" href="#tvm::relay::OnDeviceAttrs::virtual_device" title='tvm::relay::OnDeviceAttrs::virtual_device' data-ref="tvm::relay::OnDeviceAttrs::virtual_device" data-ref-filename="tvm..relay..OnDeviceAttrs..virtual_device">virtual_device</a>)</td></tr>
+<tr><th id="92">92</th><td>        .describe(<q>"The (virtual) device to constrain to."</q>)</td></tr>
+<tr><th id="93">93</th><td>        .set_default(<a class="type" href="../../target/virtual_device.h.html#tvm::VirtualDevice" title='tvm::VirtualDevice' data-ref="tvm::VirtualDevice" data-ref-filename="tvm..VirtualDevice">VirtualDevice</a>::<a class="ref fn" href="../../target/virtual_device.h.html#_ZN3tvm13VirtualDevice18FullyUnconstrainedEv" title='tvm::VirtualDevice::FullyUnconstrained' data-ref="_ZN3tvm13VirtualDevice18FullyUnconstrainedEv" data-ref-filename="_ZN3tvm13VirtualDevice18FullyUnconstrainedEv">FullyUnconstrained</a>());</td></tr>
+<tr><th id="94">94</th><td>    <a class="macro" href="../../ir/attrs.h.html#76" title="_tvm_fvisit(&quot;constrain_result&quot;, &amp;constrain_result)" data-ref="_M/TVM_ATTR_FIELD">TVM_ATTR_FIELD</a>(<a class="member field" href="#tvm::relay::OnDeviceAttrs::constrain_result" title='tvm::relay::OnDeviceAttrs::constrain_result' data-ref="tvm::relay::OnDeviceAttrs::constrain_result" data-ref-filename="tvm..relay..OnDeviceAttrs..constrain_result">constrain_result</a>)</td></tr>
+<tr><th id="95">95</th><td>        .describe(<q>"Whether the constraint applies to the overall expression"</q>)</td></tr>
+<tr><th id="96">96</th><td>        .set_default(<b>false</b>);</td></tr>
+<tr><th id="97">97</th><td>    <a class="macro" href="../../ir/attrs.h.html#76" title="_tvm_fvisit(&quot;constrain_body&quot;, &amp;constrain_body)" data-ref="_M/TVM_ATTR_FIELD">TVM_ATTR_FIELD</a>(<a class="member field" href="#tvm::relay::OnDeviceAttrs::constrain_body" title='tvm::relay::OnDeviceAttrs::constrain_body' data-ref="tvm::relay::OnDeviceAttrs::constrain_body" data-ref-filename="tvm..relay..OnDeviceAttrs..constrain_body">constrain_body</a>)</td></tr>
+<tr><th id="98">98</th><td>        .describe(<q>"Whether the constraint applies to the body sub-expression."</q>)</td></tr>
+<tr><th id="99">99</th><td>        .set_default(<b>true</b>);</td></tr>
+<tr><th id="100">100</th><td>  }</td></tr>
+<tr><th id="101">101</th><td>};</td></tr>
+<tr><th id="102">102</th><td></td></tr>
+<tr><th id="103">103</th><td>}  <i>// namespace relay</i></td></tr>
+<tr><th id="104">104</th><td>}  <i>// namespace tvm</i></td></tr>
+<tr><th id="105">105</th><td></td></tr>
+<tr><th id="106">106</th><td><u>#<span data-ppcond="24">endif</span>  // TVM_RELAY_ATTRS_ON_DEVICE_H_</u></td></tr>
+<tr><th id="107">107</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated while processing <a href='../../../../src/relay/analysis/feature.cc.html'>tvm/src/relay/analysis/feature.cc</a><br/>Generated on <em>2022-Aug-10</em> from project tvm revision <em>fae79bb</em><br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

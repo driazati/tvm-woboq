@@ -1,0 +1,30 @@
+<dec f='tvm/include/tvm/runtime/module.h' l='64' type='tvm::runtime::PackedFunc tvm::runtime::Module::GetFunction(const std::string &amp; name, bool query_imports = false)'/>
+<def f='tvm/include/tvm/runtime/packed_func.h' l='1937' ll='1939' type='tvm::runtime::PackedFunc tvm::runtime::Module::GetFunction(const std::string &amp; name, bool query_imports = false)'/>
+<doc f='tvm/include/tvm/runtime/module.h' l='55'>/*!
+   * \brief Get packed function from current module by name.
+   *
+   * \param name The name of the function.
+   * \param query_imports Whether also query dependency modules.
+   * \return The result function.
+   *  This function will return PackedFunc(nullptr) if function do not exist.
+   * \note Implemented in packed_func.cc
+   */</doc>
+<use f='tvm/src/relay/backend/build_module.cc' l='108' u='c' c='_ZN3tvm5relay7backend15ExecutorCodegen8CallFuncERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEDpT0_'/>
+<use f='tvm/src/relay/backend/build_module.cc' l='113' u='c' c='_ZN3tvm5relay7backend15ExecutorCodegen8CallFuncERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEDpT_'/>
+<use f='tvm/src/relay/backend/build_module.cc' l='467' u='c' c='_ZN3tvm5relay7backend16RelayBuildModule10BuildRelayENS_8IRModuleERKNS_7runtime6StringE'/>
+<use f='tvm/src/relay/backend/interpreter.cc' l='417' u='c' c='_ZN3tvm5relay11Interpreter15TIRToPackedFuncERKNS_9GlobalVarERKNS_7runtime5ArrayIS2_vEENS_6TargetE'/>
+<use f='tvm/src/relay/backend/te_compiler.cc' l='165' u='c' c='_ZN3tvm5relay3tec14TECompilerImpl3JITERKNS1_9CCacheKeyE'/>
+<use f='tvm/src/runtime/aot_executor/aot_executor.cc' l='164' u='c' c='_ZN3tvm7runtime11AotExecutor3RunEv'/>
+<use f='tvm/src/runtime/const_loader_module.cc' l='85' u='c' c='_ZN3tvm7runtime21ConstLoaderModuleNode11GetFunctionERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKNS0_9ObjectPtrINS0_6ObjectEEE'/>
+<use f='tvm/src/runtime/const_loader_module.cc' l='129' u='c' c='_ZN3tvm7runtime21ConstLoaderModuleNode13InitSubModuleERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<use f='tvm/src/runtime/graph_executor/graph_executor.cc' l='332' u='c' c='_ZN3tvm7runtime13GraphExecutor24DefaultLookupLinkedParamENS0_7TVMArgsEPNS0_11TVMRetValueE'/>
+<use f='tvm/src/runtime/graph_executor/graph_executor.cc' l='560' u='c' c='_ZN3tvm7runtime13GraphExecutor11CreateTVMOpERKNS0_10TVMOpParamERKSt6vectorI8DLTensorSaIS6_EE'/>
+<use f='tvm/src/runtime/module.cc' l='115' u='c' c='_ZN3tvm7runtime10ModuleNode14GetFuncFromEnvERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<use f='tvm/src/runtime/profiling.cc' l='793' u='c' c='_ZN3tvm7runtime9profiling15ProfileFunctionENS0_6ModuleENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiiiNS0_5ArrayINS1_15MetricCollectorEvEE'/>
+<use f='tvm/src/runtime/rpc/rpc_module.cc' l='386' u='c'/>
+<use f='tvm/src/runtime/vm/vm.cc' l='446' u='c' c='_ZN3tvm7runtime2vm14VirtualMachine14LoadExecutableERKNS0_9ObjectPtrINS1_10ExecutableEEE'/>
+<use f='tvm/src/target/llvm/llvm_module.cc' l='531' u='c' c='_ZN3tvm7codegen27CreateLLVMCrtMetadataModuleERKNS_7runtime5ArrayINS1_6ModuleEvEENS_6TargetENS_5relay7RuntimeE'/>
+<use f='tvm/src/target/metadata_module.cc' l='55' u='c' c='_ZN3tvm7codegenL23CreateCrtMetadataModuleENS_7runtime6ModuleENS_6TargetENS_5relay7RuntimeENS4_8ExecutorENS4_7backend23ExecutorCodegenMetadataENS1_5Arr9893529'/>
+<use f='tvm/src/target/metadata_module.cc' l='211' u='c' c='_ZN3tvm7codegen20CreateMetadataModuleERKSt13unordered_mapINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS_7runtime7NDArrayESt4hashIS7_ESt8equal6263688'/>
+<use f='tvm/src/target/metadata_module.cc' l='212' u='c' c='_ZN3tvm7codegen20CreateMetadataModuleERKSt13unordered_mapINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS_7runtime7NDArrayESt4hashIS7_ESt8equal6263688'/>
+<use f='tvm/src/target/source/source_module.cc' l='938' u='c' c='_ZN3tvm7codegen30CreateCSourceCrtMetadataModuleERKNS_7runtime5ArrayINS1_6ModuleEvEENS_6TargetENS_5relay7RuntimeENS8_7backend23ExecutorCodegenMetadataE13615150'/>

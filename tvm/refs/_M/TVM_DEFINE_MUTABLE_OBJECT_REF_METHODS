@@ -1,0 +1,68 @@
+<dec f='tvm/include/tvm/runtime/object.h' l='744'/>
+<doc f='tvm/include/tvm/runtime/object.h' l='736'>/*
+ * \brief Define object reference methods of whose content is mutable.
+ * \param TypeName The object type name
+ * \param ParentType The parent type of the objectref
+ * \param ObjectName The type name of the object.
+ * \note We recommend making objects immutable when possible.
+ *       This macro is only reserved for objects that stores runtime states.
+ */</doc>
+<use f='tvm/include/tvm/auto_scheduler/measure.h' l='232' u='c'/>
+<use f='tvm/include/tvm/auto_scheduler/measure.h' l='260' u='c'/>
+<use f='tvm/include/tvm/auto_scheduler/measure.h' l='293' u='c'/>
+<use f='tvm/include/tvm/auto_scheduler/measure.h' l='335' u='c'/>
+<use f='tvm/include/tvm/auto_scheduler/measure.h' l='401' u='c'/>
+<use f='tvm/include/tvm/auto_scheduler/measure.h' l='455' u='c'/>
+<use f='tvm/include/tvm/auto_scheduler/measure.h' l='536' u='c'/>
+<use f='tvm/include/tvm/auto_scheduler/search_policy.h' l='83' u='c'/>
+<use f='tvm/include/tvm/auto_scheduler/search_policy.h' l='111' u='c'/>
+<use f='tvm/include/tvm/auto_scheduler/search_policy.h' l='200' u='c'/>
+<use f='tvm/include/tvm/auto_scheduler/cost_model.h' l='88' u='c'/>
+<use f='tvm/include/tvm/auto_scheduler/cost_model.h' l='159' u='c'/>
+<use f='tvm/include/tvm/auto_scheduler/measure_record.h' l='64' u='c'/>
+<use f='tvm/include/tvm/auto_scheduler/measure_record.h' l='113' u='c'/>
+<use f='tvm/src/auto_scheduler/search_policy/empty_policy.h' l='71' u='c'/>
+<use f='tvm/src/auto_scheduler/search_policy/sketch_policy.h' l='197' u='c'/>
+<use f='tvm/src/auto_scheduler/search_policy/sketch_policy.h' l='230' u='c'/>
+<use f='tvm/src/contrib/ethosu/cascader/graph.h' l='164' u='c'/>
+<use f='tvm/src/contrib/ethosu/cascader/graph.h' l='251' u='c'/>
+<use f='tvm/src/contrib/ethosu/cascader/tensor_config.h' l='205' u='c'/>
+<use f='tvm/src/contrib/ethosu/cascader/parts/ethosu.h' l='111' u='c'/>
+<use f='tvm/src/contrib/ethosu/cascader/parts/inline.h' l='72' u='c'/>
+<use f='tvm/include/tvm/ir/memory_pools.h' l='219' u='c'/>
+<use f='tvm/include/tvm/ir/memory_pools.h' l='241' u='c'/>
+<use f='tvm/include/tvm/ir/memory_pools.h' l='280' u='c'/>
+<use f='tvm/include/tvm/ir/memory_pools.h' l='312' u='c'/>
+<use f='tvm/include/tvm/ir/memory_pools.h' l='334' u='c'/>
+<use f='tvm/include/tvm/ir/memory_pools.h' l='356' u='c'/>
+<use f='tvm/include/tvm/tir/schedule/block_scope.h' l='116' u='c'/>
+<use f='tvm/include/tvm/tir/schedule/state.h' l='203' u='c'/>
+<use f='tvm/include/tvm/tir/schedule/schedule.h' l='681' u='c'/>
+<use f='tvm/include/tvm/meta_schedule/cost_model.h' l='168' u='c'/>
+<use f='tvm/include/tvm/meta_schedule/feature_extractor.h' l='120' u='c'/>
+<use f='tvm/include/tvm/meta_schedule/search_strategy.h' l='245' u='c'/>
+<use f='tvm/include/tvm/meta_schedule/mutator.h' l='146' u='c'/>
+<use f='tvm/include/tvm/meta_schedule/postproc.h' l='164' u='c'/>
+<use f='tvm/include/tvm/meta_schedule/schedule_rule.h' l='258' u='c'/>
+<use f='tvm/include/tvm/meta_schedule/measure_callback.h' l='143' u='c'/>
+<use f='tvm/include/tvm/runtime/metadata_base.h' l='56' u='c'/>
+<use f='tvm/include/tvm/runtime/metadata_base.h' l='210' u='c'/>
+<use f='tvm/include/tvm/runtime/metadata.h' l='79' u='c'/>
+<use f='tvm/include/tvm/runtime/metadata.h' l='104' u='c'/>
+<use f='tvm/include/tvm/runtime/metadata.h' l='134' u='c'/>
+<use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling.h' l='117' u='c'/>
+<use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling_tensor_core.cc' l='96' u='c'/>
+<use f='tvm/include/tvm/runtime/profiling.h' l='142' u='c'/>
+<use f='tvm/include/tvm/runtime/profiling.h' l='173' u='c'/>
+<use f='tvm/include/tvm/runtime/profiling.h' l='326' u='c'/>
+<use f='tvm/include/tvm/tir/usmp/utils.h' l='124' u='c'/>
+<use f='tvm/include/tvm/tir/usmp/utils.h' l='163' u='c'/>
+<use f='tvm/include/tvm/tir/usmp/utils.h' l='196' u='c'/>
+<use f='tvm/include/tvm/tir/usmp/utils.h' l='235' u='c'/>
+<use f='tvm/src/relay/backend/utils.h' l='129' u='c'/>
+<use f='tvm/src/relay/backend/utils.h' l='207' u='c'/>
+<use f='tvm/include/tvm/relay/op_strategy.h' l='124' u='c'/>
+<use f='tvm/include/tvm/relay/op_strategy.h' l='156' u='c'/>
+<use f='tvm/src/relay/backend/contrib/ethosu/utils.h' l='86' u='c'/>
+<use f='tvm/src/relay/backend/contrib/ethosu/utils.h' l='132' u='c'/>
+<use f='tvm/include/tvm/runtime/vm/memory_manager.h' l='140' u='c'/>

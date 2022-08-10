@@ -1,0 +1,11 @@
+<dec f='tvm/3rdparty/dmlc-core/include/dmlc/io.h' l='57' type='static dmlc::Stream * dmlc::Stream::Create(const char * uri, const char *const flag, bool allow_null = false)'/>
+<doc f='tvm/3rdparty/dmlc-core/include/dmlc/io.h' l='47'>/*!
+   * \brief generic factory function
+   *  create an stream, the stream will close the underlying files upon deletion
+   *
+   * \param uri the uri of the input currently we support
+   *            hdfs://, s3://, and file:// by default file:// will be used
+   * \param flag can be &quot;w&quot;, &quot;r&quot;, &quot;a&quot;
+   * \param allow_null whether NULL can be returned, or directly report error
+   * \return the created stream, can be NULL when allow_null == true and file do not exist
+   */</doc>

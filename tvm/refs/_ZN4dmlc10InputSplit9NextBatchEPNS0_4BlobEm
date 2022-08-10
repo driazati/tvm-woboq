@@ -1,0 +1,20 @@
+<def f='tvm/3rdparty/dmlc-core/include/dmlc/io.h' l='230' ll='232' type='bool dmlc::InputSplit::NextBatch(dmlc::InputSplit::Blob * out_chunk, size_t n_records)'/>
+<doc f='tvm/3rdparty/dmlc-core/include/dmlc/io.h' l='211'>/*!
+   * \brief get a chunk of memory that can contain multiple records,
+   *  with hint for how many records is needed,
+   *  the caller needs to parse the content of the resulting chunk,
+   *  for text file, out_chunk can contain data of multiple lines
+   *  for recordio, out_chunk can contain multiple records(including headers)
+   *
+   *  This function ensures there won&apos;t be partial record in the chunk
+   *  caller can modify the memory content of out_chunk,
+   *  the memory is valid until next call to NextRecord, NextChunk or NextBatch
+   *
+   *
+   * \param out_chunk used to store the result
+   * \param n_records used as a hint for how many records should be returned, may be ignored
+   * \return true if we can successfully get next record
+   *     false if we reached end of split
+   * \sa InputSplit::Create for definition of record
+   * \sa RecordIOChunkReader to parse recordio content from out_chunk
+   */</doc>

@@ -1,0 +1,21 @@
+<def f='tvm/3rdparty/dmlc-core/include/dmlc/optional.h' l='360' ll='383' type='std::istream &amp; dmlc::operator&gt;&gt;(std::istream &amp; is, optional&lt;bool&gt; &amp; t)'/>
+<doc f='tvm/3rdparty/dmlc-core/include/dmlc/optional.h' l='340'>/*! \brief specialization of &apos;&gt;&gt;&apos; istream parsing for optional&lt;bool&gt;
+ *
+ * Permits use of generic parameter FieldEntry&lt;DType&gt; class to create
+ * FieldEntry&lt;optional&lt;bool&gt;&gt; without explicit specialization.
+ *
+ *  \code
+ *    dmlc::optional&lt;bool&gt; x;
+ *    std::string s1 = &quot;true&quot;;
+ *    std::istringstream is1(s1);
+ *    s1 &gt;&gt; x;  // x == optional&lt;bool&gt;(true)
+ *
+ *    std::string s2 = &quot;None&quot;;
+ *    std::istringstream is2(s2);
+ *    s2 &gt;&gt; x;  // x == optional&lt;bool&gt;()
+ *  \endcode
+ *
+ *  \param is input stream
+ *  \param t target optional&lt;bool&gt; object
+ *  \return input stream
+ */</doc>

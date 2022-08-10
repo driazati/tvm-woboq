@@ -1,0 +1,33 @@
+<def f='tvm/include/tvm/ir/error.h' l='112' ll='182'/>
+<size>136</size>
+<doc f='tvm/include/tvm/ir/error.h' l='92'>/*!
+ * \brief An abstraction around how errors are stored and reported.
+ * Designed to be opaque to users, so we can support a robust and simpler
+ * error reporting mode, as well as a more complex mode.
+ *
+ * The first mode is the most accurate: we report a Relay error at a specific
+ * Span, and then render the error message directly against a textual representation
+ * of the program, highlighting the exact lines in which it occurs. This mode is not
+ * implemented in this PR and will not work.
+ *
+ * The second mode is a general-purpose mode, which attempts to annotate the program&apos;s
+ * textual format with errors.
+ *
+ * The final mode represents the old mode, if we report an error that has no span or
+ * expression, we will default to throwing an exception with a textual representation
+ * of the error and no indication of where it occurred in the original program.
+ *
+ * The latter mode is not ideal, and the goal of the new error reporting machinery is
+ * to avoid ever reporting errors in this style.
+ */</doc>
+<fun r='_ZN3tvm13ErrorReporterC1Ev'/>
+<fun r='_ZN3tvm13ErrorReporter6ReportERKNS_12CompileErrorE'/>
+<fun r='_ZN3tvm13ErrorReporter8ReportAtERKNS_9GlobalVarERKNS_7runtime9ObjectRefERNSt7__cxx1118basic_stringstreamIcSt11char_traitsIcESaIcEEE'/>
+<fun r='_ZN3tvm13ErrorReporter8ReportAtERKNS_9GlobalVarERKNS_7runtime9ObjectRefERKNS_12CompileErrorE'/>
+<fun r='_ZN3tvm13ErrorReporter12RenderErrorsERKNS_8IRModuleEb'/>
+<fun r='_ZN3tvm13ErrorReporter9AnyErrorsEv'/>
+<mbr r='tvm::ErrorReporter::errors_' o='0' t='std::vector&lt;CompileError&gt;'/>
+<mbr r='tvm::ErrorReporter::node_to_error_' o='192' t='std::unordered_map&lt;ObjectRef, std::vector&lt;size_t&gt;, ObjectPtrHash, ObjectPtrEqual&gt;'/>
+<mbr r='tvm::ErrorReporter::node_to_gv_' o='640' t='std::unordered_map&lt;ObjectRef, GlobalVar, ObjectPtrHash, ObjectPtrEqual&gt;'/>
+<use f='tvm/src/relay/backend/vm/compiler.h' l='70'/>
+<size>136</size>

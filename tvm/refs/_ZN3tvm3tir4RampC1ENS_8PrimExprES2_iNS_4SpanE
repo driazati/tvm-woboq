@@ -1,0 +1,17 @@
+<dec f='tvm/include/tvm/tir/expr.h' l='818' type='void tvm::tir::Ramp::Ramp(tvm::PrimExpr base, tvm::PrimExpr stride, int lanes, tvm::Span span = tvm::Span())'/>
+<use f='tvm/src/tir/transforms/ir_utils.h' l='123' u='c' c='_ZN3tvm3tir13AddressOffsetENS0_3VarENS_7runtime8DataTypeENS_8PrimExprE'/>
+<use f='tvm/src/target/llvm/codegen_hexagon.cc' l='391' u='c' c='_ZN3tvm7codegen14CodeGenHexagon16VectorLookupLoadENS_3tir6BufferENS_7runtime8DataTypeENS4_5ArrayINS_8PrimExprEvEE'/>
+<use f='tvm/src/tir/ir/buffer.cc' l='331' u='c' c='_ZN3tvm3tir12BufferOffsetEPKNS0_10BufferNodeENS_7runtime5ArrayINS_8PrimExprEvEENS4_8DataTypeE'/>
+<use f='tvm/src/tir/ir/buffer.cc' l='410' u='c' c='_ZNK3tvm3tir6Buffer5vloadENS_7runtime5ArrayINS_8PrimExprEvEENS2_8DataTypeE'/>
+<use f='tvm/src/tir/ir/buffer.cc' l='427' u='c' c='_ZNK3tvm3tir6Buffer6vstoreENS_7runtime5ArrayINS_8PrimExprEvEES4_'/>
+<def f='tvm/src/tir/ir/expr.cc' l='719' ll='734' type='void tvm::tir::Ramp::Ramp(tvm::PrimExpr base, tvm::PrimExpr stride, int lanes, tvm::Span span = tvm::Span())'/>
+<use f='tvm/src/tir/ir/expr.cc' l='738' u='c'/>
+<doc f='tvm/src/tir/ir/expr.cc' l='718'>// Ramp</doc>
+<use f='tvm/src/tir/ir/expr_functor.cc' l='273' u='c' c='_ZN3tvm3tir11ExprMutator10VisitExpr_EPKNS0_8RampNodeE'/>
+<use f='tvm/src/tir/transforms/lower_warp_memory.cc' l='366' u='c' c='_ZN3tvm3tir18WarpAccessRewriter17SplitIndexByGroupERKNS_8PrimExprE'/>
+<use f='tvm/src/tir/transforms/narrow_datatype.cc' l='347' u='c' c='_ZN3tvm3tir16DataTypeRewriter10VisitExpr_EPKNS0_8RampNodeE'/>
+<use f='tvm/src/tir/transforms/vectorize_loop.cc' l='163' u='c' c='_ZN3tvm3tir10VectorizerC1ENS0_3VarEi'/>
+<use f='tvm/src/tir/transforms/vectorize_loop.cc' l='198' u='c' c='_ZN3tvm3tir10Vectorizer10VisitExpr_EPKNS0_7MulNodeE'/>
+<use f='tvm/src/tir/transforms/vectorize_loop.cc' l='201' u='c' c='_ZN3tvm3tir10Vectorizer10VisitExpr_EPKNS0_7MulNodeE'/>
+<use f='tvm/src/tir/transforms/vectorize_loop.cc' l='238' u='c' c='_ZN3tvm3tir10Vectorizer10VisitExpr_EPKNS0_8RampNodeE'/>
+<use f='tvm/src/tir/transforms/vectorize_loop.cc' l='247' u='c' c='_ZN3tvm3tir10Vectorizer10VisitExpr_EPKNS0_8RampNodeE'/>

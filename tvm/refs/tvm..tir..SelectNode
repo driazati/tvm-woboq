@@ -1,0 +1,127 @@
+<inh f='tvm/include/tvm/ir/expr.h' l='85' c='tvm::PrimExprNode'/>
+<def f='tvm/include/tvm/tir/expr.h' l='552' ll='583'/>
+<use f='tvm/include/tvm/tir/expr.h' l='569' c='_ZNK3tvm3tir10SelectNode12SEqualReduceEPKS1_NS_13SEqualReducerE'/>
+<use f='tvm/include/tvm/tir/expr.h' l='593' c='_ZNK3tvm3tir6SelectptEv'/>
+<use f='tvm/include/tvm/tir/expr.h' l='593' c='_ZNK3tvm3tir6SelectptEv'/>
+<use f='tvm/include/tvm/tir/expr.h' l='593' c='_ZNK3tvm3tir6Select3getEv'/>
+<use f='tvm/include/tvm/tir/expr.h' l='593'/>
+<size>56</size>
+<doc f='tvm/include/tvm/tir/expr.h' l='545'>/*!
+ * \brief return true_value if condition is true, otherwise return false_value.
+ * \note Both true_value and false_value could be evaluated
+ *       regardless of the condition value.
+ *       Do not use it to guard against out of bound access,
+ *       please use if_then_else instead.
+ */</doc>
+<mbr r='tvm::tir::SelectNode::condition' o='256' t='tvm::PrimExpr'/>
+<mbr r='tvm::tir::SelectNode::true_value' o='320' t='tvm::PrimExpr'/>
+<mbr r='tvm::tir::SelectNode::false_value' o='384' t='tvm::PrimExpr'/>
+<fun r='_ZN3tvm3tir10SelectNode10VisitAttrsEPNS_11AttrVisitorE'/>
+<fun r='_ZNK3tvm3tir10SelectNode12SEqualReduceEPKS1_NS_13SEqualReducerE'/>
+<fun r='_ZNK3tvm3tir10SelectNode11SHashReduceENS_12SHashReducerE'/>
+<smbr r='tvm::tir::SelectNode::_type_key' t='const char *const'/>
+<smbr r='tvm::tir::SelectNode::_type_final' t='const bool'/>
+<smbr r='tvm::tir::SelectNode::_type_child_slots' t='const int'/>
+<fun r='_ZN3tvm3tir10SelectNode16RuntimeTypeIndexEv'/>
+<fun r='_ZN3tvm3tir10SelectNode27_GetOrAllocRuntimeTypeIndexEv'/>
+<use f='tvm/include/tvm/tir/expr_functor.h' l='146' c='_ZN3tvm3tir11ExprFunctorIFT_RKNS_8PrimExprEDpT0_EE10VisitExpr_EPKNS0_10SelectNodeES7_'/>
+<use f='tvm/include/tvm/tir/expr_functor.h' l='191' c='_ZN3tvm3tir11ExprFunctorIFT_RKNS_8PrimExprEDpT0_EE10InitVTableEv'/>
+<use f='tvm/include/tvm/tir/expr_functor.h' l='191' c='_ZN3tvm3tir11ExprFunctorIFT_RKNS_8PrimExprEDpT0_EE10InitVTableEv'/>
+<use f='tvm/include/tvm/tir/expr_functor.h' l='243' c='_ZN3tvm3tir11ExprVisitor10VisitExpr_EPKNS0_10SelectNodeE'/>
+<use f='tvm/include/tvm/tir/expr_functor.h' l='290' c='_ZN3tvm3tir11ExprMutator10VisitExpr_EPKNS0_10SelectNodeE'/>
+<size>56</size>
+<use f='tvm/src/arith/pattern_match.h' l='463' c='_ZNK3tvm5arith11PSelectExpr6Match_ERKNS_7runtime9ObjectRefE'/>
+<use f='tvm/src/arith/pattern_match.h' l='463' c='_ZNK3tvm5arith11PSelectExpr6Match_ERKNS_7runtime9ObjectRefE'/>
+<use f='tvm/src/arith/ir_mutator_with_analyzer.h' l='59' c='_ZN3tvm5arith21IRMutatorWithAnalyzer10VisitExpr_EPKNS_3tir10SelectNodeE'/>
+<use f='tvm/src/arith/rewrite_simplify.h' l='72' c='_ZN3tvm5arith17RewriteSimplifier4Impl10VisitExpr_EPKNS_3tir10SelectNodeE'/>
+<size>56</size>
+<use f='tvm/src/arith/const_int_bound.cc' l='315' c='_ZN3tvm5arith21ConstIntBoundAnalyzer4Impl10VisitExpr_EPKNS_3tir10SelectNodeE'/>
+<size>56</size>
+<use f='tvm/src/arith/int_set.cc' l='456' c='_ZN3tvm5arith20IntervalSetEvaluator10VisitExpr_EPKNS_3tir10SelectNodeE'/>
+<size>56</size>
+<use f='tvm/src/arith/ir_mutator_with_analyzer.cc' l='177' c='_ZN3tvm5arith21IRMutatorWithAnalyzer10VisitExpr_EPKNS_3tir10SelectNodeE'/>
+<size>56</size>
+<use f='tvm/src/arith/modular_set.cc' l='215' c='_ZN3tvm5arith18ModularSetAnalyzer4Impl10VisitExpr_EPKNS_3tir10SelectNodeE'/>
+<size>56</size>
+<use f='tvm/src/arith/rewrite_simplify.cc' l='1615' c='_ZN3tvm5arith17RewriteSimplifier4Impl10VisitExpr_EPKNS_3tir10SelectNodeE'/>
+<use f='tvm/src/arith/rewrite_simplify.cc' l='1617' c='_ZN3tvm5arith17RewriteSimplifier4Impl10VisitExpr_EPKNS_3tir10SelectNodeE'/>
+<size>56</size>
+<use f='tvm/src/auto_scheduler/compute_dag.cc' l='152' c='_ZN3tvm14auto_scheduler19ReadAccessExtractor10VisitExpr_EPKNS_3tir10SelectNodeE'/>
+<use f='tvm/src/auto_scheduler/compute_dag.cc' l='609' c='_ZN3tvm14auto_scheduler13FlopEstimator10VisitExpr_EPKNS_3tir10SelectNodeE'/>
+<use f='tvm/src/auto_scheduler/compute_dag.cc' l='1282' c='_ZNK3tvm14auto_scheduler10ComputeDAG8PrintDAGEb'/>
+<use f='tvm/src/auto_scheduler/compute_dag.cc' l='1283' c='_ZNK3tvm14auto_scheduler10ComputeDAG8PrintDAGEb'/>
+<size>56</size>
+<use f='tvm/src/auto_scheduler/feature.cc' l='289' c='_ZN3tvm14auto_scheduler13MathOpCounter10VisitExpr_EPKNS_3tir10SelectNodeE'/>
+<size>56</size>
+<use f='tvm/src/contrib/hybrid/codegen_hybrid.h' l='115' c='_ZN3tvm7contrib13CodeGenHybrid10VisitExpr_EPKNS_3tir10SelectNodeERSo'/>
+<use f='tvm/src/contrib/hybrid/codegen_hybrid.cc' l='301' c='_ZN3tvm7contrib13CodeGenHybrid10VisitExpr_EPKNS_3tir10SelectNodeERSo'/>
+<size>56</size>
+<use f='tvm/src/ir/attr_functor.h' l='107' c='_ZN3tvm11AttrFunctorIFT_RKNS_7runtime9ObjectRefEDpT0_EE10VisitAttr_EPKNS_3tir10SelectNodeES7_'/>
+<use f='tvm/src/ir/attr_functor.h' l='141' c='_ZN3tvm11AttrFunctorIFT_RKNS_7runtime9ObjectRefEDpT0_EE10InitVTableEv'/>
+<use f='tvm/src/ir/attr_functor.h' l='141' c='_ZN3tvm11AttrFunctorIFT_RKNS_7runtime9ObjectRefEDpT0_EE10InitVTableEv'/>
+<size>56</size>
+<use f='tvm/src/printer/text_printer.h' l='334' c='_ZN3tvm3tir14TIRTextPrinter10VisitExpr_EPKNS0_10SelectNodeE'/>
+<size>56</size>
+<use f='tvm/src/meta_schedule/feature_extractor/per_store_feature.cc' l='263' c='_ZZN3tvm3tir9transform28SimplifyForFeatureExtractionEvEN10Simplifier10VisitExpr_EPKNS0_10SelectNodeE'/>
+<use f='tvm/src/meta_schedule/feature_extractor/per_store_feature.cc' l='553' c='_ZZN3tvm3tir6group17Feature8ArithOpsC1EPKNS0_15BufferStoreNodeElEN14ArithOpCounter10VisitExpr_EPKNS0_10SelectNodeE'/>
+<size>56</size>
+<use f='tvm/src/printer/tir_text_printer.cc' l='370' c='_ZN3tvm3tir14TIRTextPrinter10VisitExpr_EPKNS0_10SelectNodeE'/>
+<size>56</size>
+<use f='tvm/src/printer/tvmscript_printer.cc' l='225' c='_ZN3tvm3tir16TVMScriptPrinter10VisitExpr_EPKNS0_10SelectNodeEPNS0_14ExprPrecedenceE'/>
+<use f='tvm/src/printer/tvmscript_printer.cc' l='824' c='_ZN3tvm3tir16TVMScriptPrinter10VisitExpr_EPKNS0_10SelectNodeEPNS0_14ExprPrecedenceE'/>
+<size>56</size>
+<use f='tvm/src/target/source/codegen_c.h' l='149' c='_ZN3tvm7codegen8CodeGenC10VisitExpr_EPKNS_3tir10SelectNodeERSo'/>
+<size>56</size>
+<use f='tvm/src/target/llvm/codegen_llvm.h' l='205' c='_ZN3tvm7codegen11CodeGenLLVM10VisitExpr_EPKNS_3tir10SelectNodeE'/>
+<size>56</size>
+<use f='tvm/src/target/llvm/codegen_llvm.cc' l='1247' c='_ZN3tvm7codegen11CodeGenLLVM10VisitExpr_EPKNS_3tir10SelectNodeE'/>
+<size>56</size>
+<use f='tvm/src/target/source/codegen_opencl.h' l='75' c='_ZN3tvm7codegen13CodeGenOpenCL10VisitExpr_EPKNS_3tir10SelectNodeERSo'/>
+<size>56</size>
+<use f='tvm/src/target/source/codegen_c.cc' l='821' c='_ZN3tvm7codegen8CodeGenC10VisitExpr_EPKNS_3tir10SelectNodeERSo'/>
+<size>56</size>
+<use f='tvm/src/target/source/codegen_cuda.h' l='64' c='_ZN3tvm7codegen11CodeGenCUDA10VisitExpr_EPKNS_3tir10SelectNodeERSo'/>
+<use f='tvm/src/target/source/codegen_cuda.cc' l='1130' c='_ZN3tvm7codegen11CodeGenCUDA10VisitExpr_EPKNS_3tir10SelectNodeERSo'/>
+<size>56</size>
+<use f='tvm/src/target/source/codegen_opencl.cc' l='543' c='_ZN3tvm7codegen13CodeGenOpenCL10VisitExpr_EPKNS_3tir10SelectNodeERSo'/>
+<size>56</size>
+<use f='tvm/src/target/stackvm/codegen_stackvm.h' l='131' c='_ZN3tvm7codegen14CodeGenStackVM10VisitExpr_EPKNS_3tir10SelectNodeE'/>
+<use f='tvm/src/target/stackvm/codegen_stackvm.cc' l='507' c='_ZN3tvm7codegen14CodeGenStackVM10VisitExpr_EPKNS_3tir10SelectNodeE'/>
+<size>56</size>
+<use f='tvm/src/te/autodiff/ad_simplify.cc' l='218' c='_ZN3tvm2te23NonzeroConditionFunctor10VisitExpr_EPKNS_3tir10SelectNodeE'/>
+<use f='tvm/src/te/autodiff/ad_simplify.cc' l='389' c='_ZN3tvm2te30FactorOutAtomicFormulasFunctor10VisitExpr_EPKNS_3tir10SelectNodeE'/>
+<use f='tvm/src/te/autodiff/ad_simplify.cc' l='403' c='_ZN3tvm2te30FactorOutAtomicFormulasFunctor10VisitExpr_EPKNS_3tir7NotNodeE'/>
+<use f='tvm/src/te/autodiff/ad_simplify.cc' l='403' c='_ZN3tvm2te30FactorOutAtomicFormulasFunctor10VisitExpr_EPKNS_3tir7NotNodeE'/>
+<use f='tvm/src/te/autodiff/ad_simplify.cc' l='900' c='_ZN3tvm2te34RemoveRedundantInequalitiesMutator10VisitExpr_EPKNS_3tir10SelectNodeE'/>
+<size>56</size>
+<use f='tvm/src/te/autodiff/jacobian.cc' l='265' c='_ZN3tvm2te15JacobianMutator10VisitExpr_EPKNS_3tir10SelectNodeE'/>
+<size>56</size>
+<use f='tvm/src/tir/analysis/estimate_flops.cc' l='161' c='_ZN3tvm3tir13FlopEstimator10VisitExpr_EPKNS0_10SelectNodeE'/>
+<size>56</size>
+<use f='tvm/src/tir/ir/expr.cc' l='611' c='_ZN3tvm3tir6SelectC1ENS_8PrimExprES2_S2_NS_4SpanE'/>
+<use f='tvm/src/tir/ir/expr.cc' l='611' c='_ZN3tvm3tir6SelectC1ENS_8PrimExprES2_S2_NS_4SpanE'/>
+<use f='tvm/src/tir/ir/expr.cc' l='625'/>
+<use f='tvm/src/tir/ir/expr.cc' l='625'/>
+<use f='tvm/src/tir/ir/expr.cc' l='625'/>
+<use f='tvm/src/tir/ir/expr.cc' l='628'/>
+<use f='tvm/src/tir/ir/expr.cc' l='629'/>
+<size>56</size>
+<use f='tvm/src/tir/ir/expr_functor.cc' l='102' c='_ZN3tvm3tir11ExprVisitor10VisitExpr_EPKNS0_10SelectNodeE'/>
+<use f='tvm/src/tir/ir/expr_functor.cc' l='255' c='_ZN3tvm3tir11ExprMutator10VisitExpr_EPKNS0_10SelectNodeE'/>
+<size>56</size>
+<use f='tvm/src/tir/schedule/ir_comparator.h' l='77' c='_ZN3tvm3tir19TensorizeComparator10VisitExpr_EPKNS0_10SelectNodeERKNS_8PrimExprE'/>
+<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='1390' c='_ZN3tvm3tir14PatternMatcher10VisitExpr_EPKNS0_10SelectNodeE'/>
+<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='1391' c='_ZN3tvm3tir14PatternMatcher10VisitExpr_EPKNS0_10SelectNodeE'/>
+<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='1797' c='_ZN3tvm3tir13HasIfThenElseERKNS0_4StmtE'/>
+<size>56</size>
+<use f='tvm/src/tir/schedule/ir_comparator.cc' l='196' c='_ZN3tvm3tir19TensorizeComparator10VisitExpr_EPKNS0_10SelectNodeERKNS_8PrimExprE'/>
+<use f='tvm/src/tir/schedule/ir_comparator.cc' l='197' c='_ZN3tvm3tir19TensorizeComparator10VisitExpr_EPKNS0_10SelectNodeERKNS_8PrimExprE'/>
+<size>56</size>
+<use f='tvm/src/tir/transforms/narrow_datatype.cc' l='316' c='_ZN3tvm3tir16DataTypeRewriter10VisitExpr_EPKNS0_10SelectNodeE'/>
+<size>56</size>
+<use f='tvm/src/tir/transforms/rewrite_unsafe_select.cc' l='40' c='_ZN3tvm3tir18UnsafeExprDetector10VisitExpr_EPKNS0_10SelectNodeE'/>
+<use f='tvm/src/tir/transforms/rewrite_unsafe_select.cc' l='118' c='_ZN3tvm3tir20UnsafeSelectRewriter10VisitExpr_EPKNS0_10SelectNodeE'/>
+<use f='tvm/src/tir/transforms/rewrite_unsafe_select.cc' l='120' c='_ZN3tvm3tir20UnsafeSelectRewriter10VisitExpr_EPKNS0_10SelectNodeE'/>
+<size>56</size>
+<use f='tvm/src/tir/transforms/vectorize_loop.cc' l='265' c='_ZN3tvm3tir10Vectorizer10VisitExpr_EPKNS0_10SelectNodeE'/>
+<size>56</size>

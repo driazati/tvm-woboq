@@ -1,0 +1,76 @@
+<use f='tvm/include/tvm/te/schedule.h' l='71' c='_ZNK3tvm2te5StageptEv'/>
+<use f='tvm/include/tvm/te/schedule.h' l='76' c='_ZN3tvm2te5StageptEv'/>
+<use f='tvm/include/tvm/te/schedule.h' l='309'/>
+<inh f='tvm/include/tvm/runtime/object.h' l='167' c='tvm::runtime::Object'/>
+<def f='tvm/include/tvm/te/schedule.h' l='492' ll='595'/>
+<use f='tvm/include/tvm/te/schedule.h' l='940' c='_ZNK3tvm2te5StageptEv'/>
+<use f='tvm/include/tvm/te/schedule.h' l='940' c='_ZNK3tvm2te5StageptEv'/>
+<use f='tvm/include/tvm/te/schedule.h' l='941' c='_ZN3tvm2te5StageptEv'/>
+<use f='tvm/include/tvm/te/schedule.h' l='941' c='_ZN3tvm2te5StageptEv'/>
+<size>176</size>
+<doc f='tvm/include/tvm/te/schedule.h' l='477'>/*!
+ * \brief represents a stage.
+ *
+ *  relations form a Directed acylic hypergraph in bipartite manner.
+ *  With each node is represented by a IterVar,
+ *  and each hyper-edge is represented by a IterVarRelation.
+ *  The relations connects the IterVars in the graph.
+ *
+ *  Besides typical stage that corresponds to operations.
+ *  There is also group stage, which groups stages together.
+ *  Each stage&apos;s group(given by group) represent an constraint,
+ *  the stage can only be attached to stages within the group.
+ *
+ *  The group stage node can be attached to IterVars as in normal stage.
+ */</doc>
+<mbr r='tvm::te::StageNode::op' o='128' t='tvm::te::Operation'/>
+<mbr r='tvm::te::StageNode::origin_op' o='192' t='tvm::te::Operation'/>
+<mbr r='tvm::te::StageNode::all_iter_vars' o='256' t='Array&lt;tvm::tir::IterVar&gt;'/>
+<mbr r='tvm::te::StageNode::leaf_iter_vars' o='320' t='Array&lt;tvm::tir::IterVar&gt;'/>
+<mbr r='tvm::te::StageNode::env_threads' o='384' t='Array&lt;tvm::tir::IterVar&gt;'/>
+<mbr r='tvm::te::StageNode::store_predicate' o='448' t='tvm::PrimExpr'/>
+<mbr r='tvm::te::StageNode::relations' o='512' t='Array&lt;tvm::te::IterVarRelation&gt;'/>
+<mbr r='tvm::te::StageNode::iter_var_attrs' o='576' t='Map&lt;tvm::tir::IterVar, tvm::te::IterVarAttr&gt;'/>
+<mbr r='tvm::te::StageNode::attach_type' o='640' t='tvm::te::AttachType'/>
+<mbr r='tvm::te::StageNode::attach_ivar' o='704' t='tvm::tir::IterVar'/>
+<mbr r='tvm::te::StageNode::attach_stage' o='768' t='tvm::te::Stage'/>
+<mbr r='tvm::te::StageNode::scope' o='832' t='std::string'/>
+<mbr r='tvm::te::StageNode::is_output' o='1088' t='bool'/>
+<mbr r='tvm::te::StageNode::double_buffer' o='1096' t='bool'/>
+<mbr r='tvm::te::StageNode::rolling_buffer' o='1104' t='bool'/>
+<mbr r='tvm::te::StageNode::layout_transforms' o='1152' t='Array&lt;tvm::tir::IndexMap&gt;'/>
+<mbr r='tvm::te::StageNode::axis_separators' o='1216' t='Array&lt;tvm::IntImm&gt;'/>
+<mbr r='tvm::te::StageNode::group' o='1280' t='tvm::te::Stage'/>
+<mbr r='tvm::te::StageNode::num_child_stages' o='1344' t='int'/>
+<fun r='_ZN3tvm2te9StageNode10VisitAttrsEPNS_11AttrVisitorE'/>
+<smbr r='tvm::te::StageNode::_type_key' t='const char *const'/>
+<smbr r='tvm::te::StageNode::_type_final' t='const bool'/>
+<smbr r='tvm::te::StageNode::_type_child_slots' t='const int'/>
+<fun r='_ZN3tvm2te9StageNode16RuntimeTypeIndexEv'/>
+<fun r='_ZN3tvm2te9StageNode27_GetOrAllocRuntimeTypeIndexEv'/>
+<use f='tvm/src/te/schedule/schedule_lang.cc' l='70' c='_ZN3tvm2te11SplitHelperEPNS0_9StageNodeENS_3tir7IterVarENS_8PrimExprES5_PS4_S6_'/>
+<use f='tvm/src/te/schedule/schedule_lang.cc' l='95' c='_ZN3tvm2te5StageC1ENS0_9OperationE'/>
+<use f='tvm/src/te/schedule/schedule_lang.cc' l='113' c='_ZNK3tvm2te5Stage12is_scheduledEv'/>
+<use f='tvm/src/te/schedule/schedule_lang.cc' l='171' c='_ZN3tvm2te5Stage4bindENS_3tir7IterVarES3_'/>
+<use f='tvm/src/te/schedule/schedule_lang.cc' l='197' c='_ZN3tvm2te5Stage11env_threadsENS_7runtime5ArrayINS_3tir7IterVarEvEE'/>
+<use f='tvm/src/te/schedule/schedule_lang.cc' l='214' c='_ZN3tvm2te5Stage19set_store_predicateENS_8PrimExprE'/>
+<use f='tvm/src/te/schedule/schedule_lang.cc' l='232' c='_ZN3tvm2te5Stage4fuseENS_3tir7IterVarES3_PS3_'/>
+<use f='tvm/src/te/schedule/schedule_lang.cc' l='274' c='_ZN3tvm2te5Stage4fuseERKNS_7runtime5ArrayINS_3tir7IterVarEvEEPS5_'/>
+<use f='tvm/src/te/schedule/schedule_lang.cc' l='291' c='_ZN3tvm2te5Stage7reorderERKNS_7runtime5ArrayINS_3tir7IterVarEvEE'/>
+<use f='tvm/src/te/schedule/schedule_lang.cc' l='327' c='_ZN3tvm2te17UpdateIterVarAttrEPNS0_9StageNodeENS_3tir7IterVarET_b'/>
+<use f='tvm/src/te/schedule/schedule_lang.cc' l='345' c='_ZN3tvm2te15SetAttrIterTypeEPNS0_9StageNodeENS_3tir7IterVarENS3_11IterVarTypeE'/>
+<use f='tvm/src/te/schedule/schedule_lang.cc' l='392' c='_ZN3tvm2te5Stage8prefetchERKNS0_6TensorENS_3tir7IterVarENS_8PrimExprE'/>
+<use f='tvm/src/te/schedule/schedule_lang.cc' l='410' c='_ZN3tvm2te5Stage13storage_alignENS_3tir7IterVarEii'/>
+<use f='tvm/src/te/schedule/schedule_lang.cc' l='422' c='_ZN3tvm2te5Stage13double_bufferEv'/>
+<use f='tvm/src/te/schedule/schedule_lang.cc' l='429' c='_ZN3tvm2te5Stage14rolling_bufferEv'/>
+<use f='tvm/src/te/schedule/schedule_lang.cc' l='437' c='_ZN3tvm2te5Stage16transform_layoutERKNS_7runtime5ArrayINS_3tir3VarEvEERKNS3_INS_8PrimExprEvEEPNS3_INS4_7IterVarEvEE'/>
+<use f='tvm/src/te/schedule/schedule_lang.cc' l='504' c='_ZN3tvm2te5Stage19set_axis_separatorsERKNS_7runtime5ArrayINS_6IntImmEvEE'/>
+<use f='tvm/src/te/schedule/schedule_lang.cc' l='510' c='_ZN3tvm2te9CopyStageERKNS0_5StageE'/>
+<use f='tvm/src/te/schedule/schedule_lang.cc' l='510' c='_ZN3tvm2te9CopyStageERKNS0_5StageE'/>
+<use f='tvm/src/te/schedule/schedule_lang.cc' l='632' c='_ZN3tvm2te8Schedule12create_groupERKNS_7runtime5ArrayINS0_6TensorEvEES7_b'/>
+<use f='tvm/src/te/schedule/schedule_lang.cc' l='843'/>
+<use f='tvm/src/te/schedule/schedule_lang.cc' l='843'/>
+<use f='tvm/src/te/schedule/schedule_lang.cc' l='843'/>
+<use f='tvm/src/te/schedule/schedule_lang.cc' l='854'/>
+<use f='tvm/src/te/schedule/schedule_lang.cc' l='855'/>
+<size>176</size>

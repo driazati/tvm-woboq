@@ -1,0 +1,11 @@
+<dec f='tvm/3rdparty/dlpack/include/dlpack/dlpack.h' l='183' type='void (*)(struct DLManagedTensor *)'/>
+<offset>448</offset>
+<doc f='tvm/3rdparty/dlpack/include/dlpack/dlpack.h' l='178'>/*! \brief Destructor signature void (*)(void*) - this should be called
+   *   to destruct manager_ctx which holds the DLManagedTensor. It can be NULL
+   *   if there is no way for the caller to provide a reasonable destructor.
+   *   The destructors deletes the argument self as well.
+   */</doc>
+<use f='tvm/src/runtime/ndarray.cc' l='119' u='r' c='_ZN3tvm7runtime7NDArray8Internal13DLPackDeleterEPNS0_6ObjectE'/>
+<use f='tvm/src/runtime/ndarray.cc' l='120' u='r' c='_ZN3tvm7runtime7NDArray8Internal13DLPackDeleterEPNS0_6ObjectE'/>
+<use f='tvm/src/runtime/ndarray.cc' l='172' u='w' c='_ZN3tvm7runtime7NDArray8Internal8ToDLPackEPNS1_9ContainerE'/>
+<use f='tvm/src/runtime/ndarray.cc' l='368' u='r' c='TVMDLManagedTensorCallDeleter'/>

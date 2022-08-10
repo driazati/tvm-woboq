@@ -1,0 +1,13 @@
+<dec f='tvm/include/tvm/te/schedule.h' l='432' type='tvm::te::Schedule tvm::te::Schedule::normalize_for_feature_extraction()'/>
+<doc f='tvm/include/tvm/te/schedule.h' l='423'>/*!
+   * \brief Normalize the schedule for feature extraction in auto-scheduler.
+   * This is similar to `Schedule::normalize`, but we do aggressive simplification
+   * to the TE compute with const_matrix=True for faster compilation and feature extraction.
+   * The resulted schedule may be wrong, but it is good enough for feature extraction
+   * purposes.
+   *
+   * \return A normalized schedule, can be same as current one.
+   */</doc>
+<use f='tvm/src/auto_scheduler/compute_dag.cc' l='1332' u='c' c='_ZNK3tvm14auto_scheduler10ComputeDAG10InferBoundERKNS0_5StateE'/>
+<use f='tvm/src/auto_scheduler/feature.cc' l='1367' u='c' c='_ZN3tvm14auto_scheduler29GetPerStoreFeaturesWorkerFuncERKNS0_10SearchTaskERKNS0_5StateEiPSt6vectorIfSaIfEEPSt6atomicIiE'/>
+<def f='tvm/src/te/schedule/schedule_dataflow_rewrite.cc' l='750' ll='756' type='tvm::te::Schedule tvm::te::Schedule::normalize_for_feature_extraction()'/>

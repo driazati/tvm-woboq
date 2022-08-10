@@ -1,0 +1,7 @@
+<def f='tvm/include/tvm/runtime/object.h' l='247' ll='248' type='void tvm::runtime::Object::Object(const tvm::runtime::Object &amp; other)'/>
+<doc f='tvm/include/tvm/runtime/object.h' l='242'>// Override the copy and assign constructors to do nothing.
+  // This is to make sure only contents, but not deleter and ref_counter
+  // are copied when a child class copies itself.
+  // This will enable us to use make_object&lt;ObjectClass&gt;(*obj_ptr)
+  // to copy an existing object.</doc>
+<doc f='tvm/include/tvm/runtime/object.h' l='247'>// NOLINT(*)</doc>

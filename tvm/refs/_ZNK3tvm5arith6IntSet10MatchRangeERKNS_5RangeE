@@ -1,0 +1,12 @@
+<dec f='tvm/include/tvm/arith/int_set.h' l='112' type='bool tvm::arith::IntSet::MatchRange(const tvm::Range &amp; r) const'/>
+<doc f='tvm/include/tvm/arith/int_set.h' l='106'>/*!
+   * \brief Try to match IntSet with range r.
+   *
+   * \note It is guanrateed that IntSet::FromRange(r).MatchRange(r) == true
+   * \return true if we can prove they are the same.
+   */</doc>
+<def f='tvm/src/arith/int_set.cc' l='838' ll='846' type='bool tvm::arith::IntSet::MatchRange(const tvm::Range &amp; b) const'/>
+<use f='tvm/src/te/schedule/message_passing.cc' l='371' u='c' c='_ZN3tvm2te12PassUpDomainEPKNS0_9SplitNodeERKSt13unordered_mapINS_3tir7IterVarENS_5RangeESt4hashIS6_ESt8equal_toIS6_ESaISt4pairIKS6_S7_EEERKNS_5arith6IntSetESM_PSK_'/>
+<use f='tvm/src/te/schedule/message_passing.cc' l='371' u='c' c='_ZN3tvm2te12PassUpDomainEPKNS0_9SplitNodeERKSt13unordered_mapINS_3tir7IterVarENS_5RangeESt4hashIS6_ESt8equal_toIS6_ESaISt4pairIKS6_S7_EEERKNS_5arith6IntSetESM_PSK_'/>
+<use f='tvm/src/te/schedule/message_passing.cc' l='391' u='c' c='_ZN3tvm2te12PassUpDomainEPKNS0_8FuseNodeERKSt13unordered_mapINS_3tir7IterVarENS_5RangeESt4hashIS6_ESt8equal_toIS6_ESaISt4pairIKS6_S7_EEERKNS_5arith6IntSetEPSK_SN_'/>
+<use f='tvm/src/te/schedule/message_passing.cc' l='434' u='c' c='_ZN3tvm2te12PassUpDomainEPKNS0_10RebaseNodeERKSt13unordered_mapINS_3tir7IterVarENS_5RangeESt4hashIS6_ESt8equal_toIS6_ESaISt4pairIKS6_S7_EEERKNS_5arith6IntSetEPSK_'/>

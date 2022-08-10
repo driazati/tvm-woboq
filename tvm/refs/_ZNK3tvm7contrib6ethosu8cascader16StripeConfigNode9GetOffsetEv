@@ -1,0 +1,10 @@
+<def f='tvm/src/contrib/ethosu/cascader/stripe_config.h' l='109' type='std::vector&lt;int&gt; tvm::contrib::ethosu::cascader::StripeConfigNode::GetOffset() const'/>
+<doc f='tvm/src/contrib/ethosu/cascader/stripe_config.h' l='101'>/*!
+   * \brief Get the offset of the stripe config.
+   * \return The offset of the stripe config.
+   * \note The offset refers to the offset of the first stripe
+   * from the first element of the tensor. For example, in a slice operation
+   * which only returns the second (4, 8) half of a (8, 8) tensor, the offset
+   * would need to be [4, 0].
+   */</doc>
+<use f='tvm/src/contrib/ethosu/cascader/stripe_config.cc' l='64' u='c' c='_ZN3tvm7contrib6ethosu8cascader12CountStripesERKNS2_12StripeConfigEb'/>

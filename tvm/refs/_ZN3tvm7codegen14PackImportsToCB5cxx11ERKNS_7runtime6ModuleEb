@@ -1,0 +1,13 @@
+<dec f='tvm/include/tvm/target/codegen.h' l='60' type='std::string tvm::codegen::PackImportsToC(const runtime::Module &amp; m, bool system_lib)'/>
+<doc f='tvm/include/tvm/target/codegen.h' l='50'>/*!
+ * \brief Pack imported device library to a C file.
+ *  Compile the C file and link with the host library
+ *  will allow the DSO loader to automatically discover and import
+ *  the dependency from the shared library.
+ *
+ * \param m The host module with the imports.
+ * \param system_lib Whether expose as system library.
+ * \return cstr The C string representation of the file.
+ */</doc>
+<def f='tvm/src/target/codegen.cc' l='244' ll='291' type='std::string tvm::codegen::PackImportsToC(const runtime::Module &amp; mod, bool system_lib)'/>
+<use f='tvm/src/target/codegen.cc' l='318' u='r'/>

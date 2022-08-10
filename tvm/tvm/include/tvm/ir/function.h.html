@@ -1,0 +1,214 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>function.h source code [tvm/include/tvm/ir/function.h] - Woboq Code Browser</title>
+<meta name="woboq:interestingDefinitions" content="tvm::BaseFunc,tvm::BaseFuncNode,tvm::CallingConv "/>
+<link rel="stylesheet" href="../../../.././data/qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href="../../../.././data/kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src="../../../.././data/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="../../../.././data/jquery/jquery-ui.min.js"></script>
+<script>var file = 'tvm/include/tvm/ir/function.h'; var root_path = '../../../..'; var data_path = '../../../.././data'; var ecma_script_api_version = 2;</script>
+<script src='../../../.././data/codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='../../..'>tvm</a>/<a href='../..'>include</a>/<a href='..'>tvm</a>/<a href='./'>ir</a>/<a href='function.h.html'>function.h</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td><i>/*</i></td></tr>
+<tr><th id="2">2</th><td><i> * Licensed to the Apache Software Foundation (ASF) under one</i></td></tr>
+<tr><th id="3">3</th><td><i> * or more contributor license agreements.  See the NOTICE file</i></td></tr>
+<tr><th id="4">4</th><td><i> * distributed with this work for additional information</i></td></tr>
+<tr><th id="5">5</th><td><i> * regarding copyright ownership.  The ASF licenses this file</i></td></tr>
+<tr><th id="6">6</th><td><i> * to you under the Apache License, Version 2.0 (the</i></td></tr>
+<tr><th id="7">7</th><td><i> * "License"); you may not use this file except in compliance</i></td></tr>
+<tr><th id="8">8</th><td><i> * with the License.  You may obtain a copy of the License at</i></td></tr>
+<tr><th id="9">9</th><td><i> *</i></td></tr>
+<tr><th id="10">10</th><td><i> *   <a href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a></i></td></tr>
+<tr><th id="11">11</th><td><i> *</i></td></tr>
+<tr><th id="12">12</th><td><i> * Unless required by applicable law or agreed to in writing,</i></td></tr>
+<tr><th id="13">13</th><td><i> * software distributed under the License is distributed on an</i></td></tr>
+<tr><th id="14">14</th><td><i> * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY</i></td></tr>
+<tr><th id="15">15</th><td><i> * KIND, either express or implied.  See the License for the</i></td></tr>
+<tr><th id="16">16</th><td><i> * specific language governing permissions and limitations</i></td></tr>
+<tr><th id="17">17</th><td><i> * under the License.</i></td></tr>
+<tr><th id="18">18</th><td><i> */</i></td></tr>
+<tr><th id="19">19</th><td></td></tr>
+<tr><th id="20">20</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="21">21</th><td><i class="doc"> * <span class="command">\file</span> <span class="verb">tvm/ir/function.h</span></i></td></tr>
+<tr><th id="22">22</th><td><i class="doc"> * <span class="command">\brief</span> Function nodes.</i></td></tr>
+<tr><th id="23">23</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="24">24</th><td><u>#<span data-ppcond="24">ifndef</span> <span class="macro" data-ref="_M/TVM_IR_FUNCTION_H_">TVM_IR_FUNCTION_H_</span></u></td></tr>
+<tr><th id="25">25</th><td><u>#define <dfn class="macro" id="_M/TVM_IR_FUNCTION_H_" data-ref="_M/TVM_IR_FUNCTION_H_">TVM_IR_FUNCTION_H_</dfn></u></td></tr>
+<tr><th id="26">26</th><td></td></tr>
+<tr><th id="27">27</th><td><u>#include <a href="attrs.h.html">&lt;tvm/ir/attrs.h&gt;</a></u></td></tr>
+<tr><th id="28">28</th><td><u>#include <a href="expr.h.html">&lt;tvm/ir/expr.h&gt;</a></u></td></tr>
+<tr><th id="29">29</th><td><u>#include <a href="../runtime/container/array.h.html">&lt;tvm/runtime/container/array.h&gt;</a></u></td></tr>
+<tr><th id="30">30</th><td><u>#include <a href="../runtime/container/map.h.html">&lt;tvm/runtime/container/map.h&gt;</a></u></td></tr>
+<tr><th id="31">31</th><td><u>#include <a href="../runtime/container/string.h.html">&lt;tvm/runtime/container/string.h&gt;</a></u></td></tr>
+<tr><th id="32">32</th><td></td></tr>
+<tr><th id="33">33</th><td><u>#include <a href="../../../../include/c++/10/string.html">&lt;string&gt;</a></u></td></tr>
+<tr><th id="34">34</th><td><u>#include <a href="../../../../include/c++/10/type_traits.html">&lt;type_traits&gt;</a></u></td></tr>
+<tr><th id="35">35</th><td></td></tr>
+<tr><th id="36">36</th><td><b>namespace</b> <span class="namespace">tvm</span> {</td></tr>
+<tr><th id="37">37</th><td></td></tr>
+<tr><th id="38">38</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="39">39</th><td><i class="doc"> * <span class="command">\brief</span> Possible Calling conventions.</i></td></tr>
+<tr><th id="40">40</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="41">41</th><td><i class="doc"> *  NOTE: The calling convention also implies</i></td></tr>
+<tr><th id="42">42</th><td><i class="doc"> *  the way we implement the function during lowering.</i></td></tr>
+<tr><th id="43">43</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="44">44</th><td><b>enum</b> <b>class</b> <dfn class="type def" id="tvm::CallingConv" title='tvm::CallingConv' data-ref="tvm::CallingConv" data-ref-filename="tvm..CallingConv">CallingConv</dfn> : <em>int</em> {</td></tr>
+<tr><th id="45">45</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="46">46</th><td><i class="doc">   * <span class="command">\brief</span> Default calling convention.</i></td></tr>
+<tr><th id="47">47</th><td><i class="doc">   *</i></td></tr>
+<tr><th id="48">48</th><td><i class="doc">   * - Uses the native calling convention of the target.</i></td></tr>
+<tr><th id="49">49</th><td><i class="doc">   * - Implementation: specified by the native target.</i></td></tr>
+<tr><th id="50">50</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="51">51</th><td>  <dfn class="enum" id="tvm::CallingConv::kDefault" title='tvm::CallingConv::kDefault' data-ref="tvm::CallingConv::kDefault" data-ref-filename="tvm..CallingConv..kDefault">kDefault</dfn> = <var>0</var>,</td></tr>
+<tr><th id="52">52</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="53">53</th><td><i class="doc">   * <span class="command">\brief</span> PackedFunc that exposes a CPackedFunc signature.</i></td></tr>
+<tr><th id="54">54</th><td><i class="doc">   *</i></td></tr>
+<tr><th id="55">55</th><td><i class="doc">   * - Calling by PackedFunc calling convention.</i></td></tr>
+<tr><th id="56">56</th><td><i class="doc">   * - Implementation: Expose a function with the CPackedFunc signature.</i></td></tr>
+<tr><th id="57">57</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="58">58</th><td>  <dfn class="enum" id="tvm::CallingConv::kCPackedFunc" title='tvm::CallingConv::kCPackedFunc' data-ref="tvm::CallingConv::kCPackedFunc" data-ref-filename="tvm..CallingConv..kCPackedFunc">kCPackedFunc</dfn> = <var>1</var>,</td></tr>
+<tr><th id="59">59</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="60">60</th><td><i class="doc">   * <span class="command">\brief</span> Device kernel launch</i></td></tr>
+<tr><th id="61">61</th><td><i class="doc">   *</i></td></tr>
+<tr><th id="62">62</th><td><i class="doc">   * - Call by PackedFunc calling convention.</i></td></tr>
+<tr><th id="63">63</th><td><i class="doc">   * - Implementation: defined by device runtime(e.g. runtime/cuda)</i></td></tr>
+<tr><th id="64">64</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="65">65</th><td>  <dfn class="enum" id="tvm::CallingConv::kDeviceKernelLaunch" title='tvm::CallingConv::kDeviceKernelLaunch' data-ref="tvm::CallingConv::kDeviceKernelLaunch" data-ref-filename="tvm..CallingConv..kDeviceKernelLaunch">kDeviceKernelLaunch</dfn> = <var>2</var>,</td></tr>
+<tr><th id="66">66</th><td>};</td></tr>
+<tr><th id="67">67</th><td></td></tr>
+<tr><th id="68">68</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="69">69</th><td><i class="doc"> * <span class="command">\brief</span> Base node of all functions.</i></td></tr>
+<tr><th id="70">70</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="71">71</th><td><i class="doc"> * We support several variants of functions throughout the stack.</i></td></tr>
+<tr><th id="72">72</th><td><i class="doc"> * All of the functions share the same type system(via checked_type)</i></td></tr>
+<tr><th id="73">73</th><td><i class="doc"> * to support cross variant calls.</i></td></tr>
+<tr><th id="74">74</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="75">75</th><td><i class="doc"> * <span class="command">\sa</span> BaseFunc</i></td></tr>
+<tr><th id="76">76</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="77">77</th><td><b>class</b> <dfn class="type def" id="tvm::BaseFuncNode" title='tvm::BaseFuncNode' data-ref="tvm::BaseFuncNode" data-ref-filename="tvm..BaseFuncNode">BaseFuncNode</dfn> : <b>public</b> <a class="type" href="expr.h.html#tvm::RelayExprNode" title='tvm::RelayExprNode' data-ref="tvm::RelayExprNode" data-ref-filename="tvm..RelayExprNode">RelayExprNode</a> {</td></tr>
+<tr><th id="78">78</th><td> <b>public</b>:</td></tr>
+<tr><th id="79">79</th><td>  <i class="doc">/*! <span class="command">\brief</span> Additional attributes storing the meta-data */</i></td></tr>
+<tr><th id="80">80</th><td>  <a class="type" href="attrs.h.html#tvm::DictAttrs" title='tvm::DictAttrs' data-ref="tvm::DictAttrs" data-ref-filename="tvm..DictAttrs">DictAttrs</a> <dfn class="decl field" id="tvm::BaseFuncNode::attrs" title='tvm::BaseFuncNode::attrs' data-ref="tvm::BaseFuncNode::attrs" data-ref-filename="tvm..BaseFuncNode..attrs">attrs</dfn>;</td></tr>
+<tr><th id="81">81</th><td></td></tr>
+<tr><th id="82">82</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="83">83</th><td><i class="doc">   * <span class="command">\brief</span> Get a function attribute.</i></td></tr>
+<tr><th id="84">84</th><td><i class="doc">   *</i></td></tr>
+<tr><th id="85">85</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">attr_key</span> The attribute key.</i></td></tr>
+<tr><th id="86">86</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">default_value</span> The default value if the key does not exist, defaults to nullptr.</i></td></tr>
+<tr><th id="87">87</th><td><i class="doc">   *</i></td></tr>
+<tr><th id="88">88</th><td><i class="doc">   * <span class="command">\return</span> The result</i></td></tr>
+<tr><th id="89">89</th><td><i class="doc">   *</i></td></tr>
+<tr><th id="90">90</th><td><i class="doc">   * <span class="command">\tparam</span> <span class="arg">TOBjectRef</span> the expected object type.</i></td></tr>
+<tr><th id="91">91</th><td><i class="doc">   * <span class="command">\throw</span> Error if the key exists but the value does not match TObjectRef</i></td></tr>
+<tr><th id="92">92</th><td><i class="doc">   *</i></td></tr>
+<tr><th id="93">93</th><td><i class="doc">   * <span class="command">\code</span></i></td></tr>
+<tr><th id="94">94</th><td><i class="doc">   *<span class="verb"></span></i></td></tr>
+<tr><th id="95">95</th><td><i class="doc"><span class="verb"></span>   *<span class="verb">  void GetAttrExample(const BaseFunc&amp; f) {</span></i></td></tr>
+<tr><th id="96">96</th><td><i class="doc"><span class="verb"></span>   *<span class="verb">    auto value = f-&gt;GetAttr&lt;Integer&gt;("AttrKey", 0);</span></i></td></tr>
+<tr><th id="97">97</th><td><i class="doc"><span class="verb"></span>   *<span class="verb">  }</span></i></td></tr>
+<tr><th id="98">98</th><td><i class="doc"><span class="verb"></span>   *<span class="verb"></span></i></td></tr>
+<tr><th id="99">99</th><td><i class="doc"><span class="verb"></span>   * \endcode</i></td></tr>
+<tr><th id="100">100</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="101">101</th><td>  <b>template</b> &lt;<b>typename</b> TObjectRef&gt;</td></tr>
+<tr><th id="102">102</th><td>  <a class="type" href="../runtime/container/optional.h.html#tvm::runtime::Optional" title='tvm::runtime::Optional' data-ref="tvm::runtime::Optional" data-ref-filename="tvm..runtime..Optional">Optional</a>&lt;TObjectRef&gt; <dfn class="decl def fn" id="_ZNK3tvm12BaseFuncNode7GetAttrERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS_7runtime8OptionalIT_EE" title='tvm::BaseFuncNode::GetAttr' data-ref="_ZNK3tvm12BaseFuncNode7GetAttrERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS_7runtime8OptionalIT_EE" data-ref-filename="_ZNK3tvm12BaseFuncNode7GetAttrERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS_7runtime8OptionalIT_EE">GetAttr</dfn>(</td></tr>
+<tr><th id="103">103</th><td>      <em>const</em> <span class="namespace">std::</span><a class="typedef" href="../../../../include/c++/10/bits/stringfwd.h.html#std::string" title='std::string' data-type='basic_string&lt;char&gt;' data-ref="std::string" data-ref-filename="std..string">string</a>&amp; <dfn class="local col8 decl" id="16268attr_key" title='attr_key' data-type='const std::string &amp;' data-ref="16268attr_key" data-ref-filename="16268attr_key">attr_key</dfn>,</td></tr>
+<tr><th id="104">104</th><td>      <a class="type" href="../runtime/container/optional.h.html#tvm::runtime::Optional" title='tvm::runtime::Optional' data-ref="tvm::runtime::Optional" data-ref-filename="tvm..runtime..Optional">Optional</a>&lt;TObjectRef&gt; <dfn class="local col9 decl" id="16269default_value" title='default_value' data-type='Optional&lt;TObjectRef&gt;' data-ref="16269default_value" data-ref-filename="16269default_value">default_value</dfn> = <a class="type" href="../runtime/container/optional.h.html#tvm::runtime::Optional" title='tvm::runtime::Optional' data-ref="tvm::runtime::Optional" data-ref-filename="tvm..runtime..Optional">Optional</a>&lt;TObjectRef&gt;(<b>nullptr</b>)) <em>const</em> {</td></tr>
+<tr><th id="105">105</th><td>    <b>return</b> <a class="member field" href="#tvm::BaseFuncNode::attrs" title='tvm::BaseFuncNode::attrs' data-ref="tvm::BaseFuncNode::attrs" data-ref-filename="tvm..BaseFuncNode..attrs">attrs</a>.GetAttr(<a class="local col8 ref" href="#16268attr_key" title='attr_key' data-ref="16268attr_key" data-ref-filename="16268attr_key">attr_key</a>, <a class="local col9 ref" href="#16269default_value" title='default_value' data-ref="16269default_value" data-ref-filename="16269default_value">default_value</a>);</td></tr>
+<tr><th id="106">106</th><td>  }</td></tr>
+<tr><th id="107">107</th><td>  <i>// variant that uses TObjectRef to enable implicit conversion to default value.</i></td></tr>
+<tr><th id="108">108</th><td>  <b>template</b> &lt;<b>typename</b> TObjectRef&gt;</td></tr>
+<tr><th id="109">109</th><td>  <a class="type" href="../runtime/container/optional.h.html#tvm::runtime::Optional" title='tvm::runtime::Optional' data-ref="tvm::runtime::Optional" data-ref-filename="tvm..runtime..Optional">Optional</a>&lt;TObjectRef&gt; <dfn class="decl def fn" id="_ZNK3tvm12BaseFuncNode7GetAttrERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEET_" title='tvm::BaseFuncNode::GetAttr' data-ref="_ZNK3tvm12BaseFuncNode7GetAttrERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEET_" data-ref-filename="_ZNK3tvm12BaseFuncNode7GetAttrERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEET_">GetAttr</dfn>(<em>const</em> <span class="namespace">std::</span><a class="typedef" href="../../../../include/c++/10/bits/stringfwd.h.html#std::string" title='std::string' data-type='basic_string&lt;char&gt;' data-ref="std::string" data-ref-filename="std..string">string</a>&amp; <dfn class="local col0 decl" id="16270attr_key" title='attr_key' data-type='const std::string &amp;' data-ref="16270attr_key" data-ref-filename="16270attr_key">attr_key</dfn>, TObjectRef <dfn class="local col1 decl" id="16271default_value" title='default_value' data-type='TObjectRef' data-ref="16271default_value" data-ref-filename="16271default_value">default_value</dfn>) <em>const</em> {</td></tr>
+<tr><th id="110">110</th><td>    <b>return</b> GetAttr&lt;TObjectRef&gt;(<a class="local col0 ref" href="#16270attr_key" title='attr_key' data-ref="16270attr_key" data-ref-filename="16270attr_key">attr_key</a>, <a class="type" href="../runtime/container/optional.h.html#tvm::runtime::Optional" title='tvm::runtime::Optional' data-ref="tvm::runtime::Optional" data-ref-filename="tvm..runtime..Optional">Optional</a>&lt;TObjectRef&gt;(<a class="local col1 ref" href="#16271default_value" title='default_value' data-ref="16271default_value" data-ref-filename="16271default_value">default_value</a>));</td></tr>
+<tr><th id="111">111</th><td>  }</td></tr>
+<tr><th id="112">112</th><td></td></tr>
+<tr><th id="113">113</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="114">114</th><td><i class="doc">   * <span class="command">\brief</span> Check whether the function has an non-zero integer attr.</i></td></tr>
+<tr><th id="115">115</th><td><i class="doc">   *</i></td></tr>
+<tr><th id="116">116</th><td><i class="doc">   * This function can be used to check whether an optional</i></td></tr>
+<tr><th id="117">117</th><td><i class="doc">   * attribute mark(e.g. inline) exists.</i></td></tr>
+<tr><th id="118">118</th><td><i class="doc">   *</i></td></tr>
+<tr><th id="119">119</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">attr_key</span> The key to the attribute.</i></td></tr>
+<tr><th id="120">120</th><td><i class="doc">   * <span class="command">\return</span> The check result.</i></td></tr>
+<tr><th id="121">121</th><td><i class="doc">   *</i></td></tr>
+<tr><th id="122">122</th><td><i class="doc">   * <span class="command">\code</span></i></td></tr>
+<tr><th id="123">123</th><td><i class="doc">   *<span class="verb"></span></i></td></tr>
+<tr><th id="124">124</th><td><i class="doc"><span class="verb"></span>   *<span class="verb">  void HasNonzeroAttrExample(const BaseFunc&amp; f) {</span></i></td></tr>
+<tr><th id="125">125</th><td><i class="doc"><span class="verb"></span>   *<span class="verb">    if (f-&gt;HasNonzeroAttr(attr::kInline)) {</span></i></td></tr>
+<tr><th id="126">126</th><td><i class="doc"><span class="verb"></span>   *<span class="verb">      // inline the function.</span></i></td></tr>
+<tr><th id="127">127</th><td><i class="doc"><span class="verb"></span>   *<span class="verb">    }</span></i></td></tr>
+<tr><th id="128">128</th><td><i class="doc"><span class="verb"></span>   *<span class="verb">  }</span></i></td></tr>
+<tr><th id="129">129</th><td><i class="doc"><span class="verb"></span>   *<span class="verb"></span></i></td></tr>
+<tr><th id="130">130</th><td><i class="doc"><span class="verb"></span>   * \endcode</i></td></tr>
+<tr><th id="131">131</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="132">132</th><td>  <em>bool</em> <dfn class="decl def fn" id="_ZNK3tvm12BaseFuncNode14HasNonzeroAttrERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE" title='tvm::BaseFuncNode::HasNonzeroAttr' data-ref="_ZNK3tvm12BaseFuncNode14HasNonzeroAttrERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE" data-ref-filename="_ZNK3tvm12BaseFuncNode14HasNonzeroAttrERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE">HasNonzeroAttr</dfn>(<em>const</em> <span class="namespace">std::</span><a class="typedef" href="../../../../include/c++/10/bits/stringfwd.h.html#std::string" title='std::string' data-type='basic_string&lt;char&gt;' data-ref="std::string" data-ref-filename="std..string">string</a>&amp; <dfn class="local col2 decl" id="16272attr_key" title='attr_key' data-type='const std::string &amp;' data-ref="16272attr_key" data-ref-filename="16272attr_key">attr_key</dfn>) <em>const</em> { <b>return</b> <a class="member field" href="#tvm::BaseFuncNode::attrs" title='tvm::BaseFuncNode::attrs' data-ref="tvm::BaseFuncNode::attrs" data-ref-filename="tvm..BaseFuncNode..attrs">attrs</a>.<a class="ref fn" href="attrs.h.html#_ZNK3tvm9DictAttrs14HasNonzeroAttrERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE" title='tvm::DictAttrs::HasNonzeroAttr' data-ref="_ZNK3tvm9DictAttrs14HasNonzeroAttrERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE" data-ref-filename="_ZNK3tvm9DictAttrs14HasNonzeroAttrERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE">HasNonzeroAttr</a>(<a class="local col2 ref" href="#16272attr_key" title='attr_key' data-ref="16272attr_key" data-ref-filename="16272attr_key">attr_key</a>); }</td></tr>
+<tr><th id="133">133</th><td></td></tr>
+<tr><th id="134">134</th><td>  <em>static</em> <b>constexpr</b> <em>const</em> <em>char</em>* <dfn class="decl" id="tvm::BaseFuncNode::_type_key" title='tvm::BaseFuncNode::_type_key' data-ref="tvm::BaseFuncNode::_type_key" data-ref-filename="tvm..BaseFuncNode.._type_key">_type_key</dfn> = <q>"BaseFunc"</q>;</td></tr>
+<tr><th id="135">135</th><td>  <em>static</em> <b>constexpr</b> <em>const</em> <a class="typedef" href="../../../../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint32_t" title='uint32_t' data-type='__uint32_t' data-ref="uint32_t" data-ref-filename="uint32_t">uint32_t</a> <dfn class="decl" id="tvm::BaseFuncNode::_type_child_slots" title='tvm::BaseFuncNode::_type_child_slots' data-ref="tvm::BaseFuncNode::_type_child_slots" data-ref-filename="tvm..BaseFuncNode.._type_child_slots">_type_child_slots</dfn> = <var>2</var>;</td></tr>
+<tr><th id="136">136</th><td>  <a class="macro" href="../runtime/object.h.html#648" title="static_assert(!RelayExprNode::_type_final, &quot;ParentObj marked as final&quot;); static uint32_t RuntimeTypeIndex() { static_assert(BaseFuncNode::_type_child_slots == 0 || RelayExprNode::_type_child_slots == 0 || BaseFuncNode::_type_child_slots &lt; RelayExprNode::_type_child_slots, &quot;Need to set _type_child_slots when parent specifies it.&quot;); if (BaseFuncNode::_type_index != ::tvm::runtime::TypeIndex::kDynamic) { return BaseFuncNode::_type_index; } return _GetOrAllocRuntimeTypeIndex(); } static uint32_t _GetOrAllocRuntimeTypeIndex() { static uint32_t tindex = Object::GetOrAllocRuntimeTypeIndex( BaseFuncNode::_type_key, BaseFuncNode::_type_index, RelayExprNode::_GetOrAllocRuntimeTypeIndex(), BaseFuncNode::_type_child_slots, BaseFuncNode::_type_child_slots_can_overflow); return tindex; }" data-ref="_M/TVM_DECLARE_BASE_OBJECT_INFO">TVM_DECLARE_BASE_OBJECT_INFO</a>(<a class="ref fn fake" href="../../../../include/c++/10/bits/basic_string.h.html#_ZNSt7__cxx1112basic_stringC1EPKT_RKT1_" title='std::basic_string::basic_string&lt;_CharT, _Traits, _Alloc&gt;' data-ref="_ZNSt7__cxx1112basic_stringC1EPKT_RKT1_" data-ref-filename="_ZNSt7__cxx1112basic_stringC1EPKT_RKT1_"></a><a class="type" href="#tvm::BaseFuncNode" title='tvm::BaseFuncNode' data-ref="tvm::BaseFuncNode" data-ref-filename="tvm..BaseFuncNode">BaseFuncNode</a>, <a class="type" href="expr.h.html#tvm::RelayExprNode" title='tvm::RelayExprNode' data-ref="tvm::RelayExprNode" data-ref-filename="tvm..RelayExprNode">RelayExprNode</a>);</td></tr>
+<tr><th id="137">137</th><td>};</td></tr>
+<tr><th id="138">138</th><td></td></tr>
+<tr><th id="139">139</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="140">140</th><td><i class="doc"> * <span class="command">\brief</span> Managed reference to BaseFuncNode.</i></td></tr>
+<tr><th id="141">141</th><td><i class="doc"> * <span class="command">\sa</span> BaseFuncNode</i></td></tr>
+<tr><th id="142">142</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="143">143</th><td><b>class</b> <dfn class="type def" id="tvm::BaseFunc" title='tvm::BaseFunc' data-ref="tvm::BaseFunc" data-ref-filename="tvm..BaseFunc">BaseFunc</dfn> : <b>public</b> <a class="type" href="expr.h.html#tvm::RelayExpr" title='tvm::RelayExpr' data-ref="tvm::RelayExpr" data-ref-filename="tvm..RelayExpr">RelayExpr</a> {</td></tr>
+<tr><th id="144">144</th><td> <b>public</b>:</td></tr>
+<tr><th id="145">145</th><td>  <a class="macro" href="../runtime/object.h.html#713" title="BaseFunc() = default; explicit BaseFunc(::tvm::runtime::ObjectPtr&lt;::tvm::runtime::Object&gt; n) : RelayExpr(n) {} BaseFunc(const BaseFunc&amp; other) = default; BaseFunc(BaseFunc&amp;&amp; other) = default; BaseFunc&amp; operator=(const BaseFunc&amp; other) = default; BaseFunc&amp; operator=(BaseFunc&amp;&amp; other) = default;; const BaseFuncNode* operator-&gt;() const { return static_cast&lt;const BaseFuncNode*&gt;(data_.get()); } const BaseFuncNode* get() const { return operator-&gt;(); } using ContainerType = BaseFuncNode;" data-ref="_M/TVM_DEFINE_OBJECT_REF_METHODS">TVM_DEFINE_OBJECT_REF_METHODS</a>(<dfn class="decl def fn" id="_ZN3tvm8BaseFuncC1Ev" title='tvm::BaseFunc::BaseFunc' data-ref="_ZN3tvm8BaseFuncC1Ev" data-ref-filename="_ZN3tvm8BaseFuncC1Ev"><dfn class="decl def fn" id="_ZN3tvm8BaseFuncC1ENS_7runtime9ObjectPtrINS1_6ObjectEEE" title='tvm::BaseFunc::BaseFunc' data-ref="_ZN3tvm8BaseFuncC1ENS_7runtime9ObjectPtrINS1_6ObjectEEE" data-ref-filename="_ZN3tvm8BaseFuncC1ENS_7runtime9ObjectPtrINS1_6ObjectEEE"><dfn class="decl def fn" id="_ZN3tvm8BaseFuncC1ERKS0_" title='tvm::BaseFunc::BaseFunc' data-ref="_ZN3tvm8BaseFuncC1ERKS0_" data-ref-filename="_ZN3tvm8BaseFuncC1ERKS0_"><a class="type" href="#tvm::BaseFunc" title='tvm::BaseFunc' data-ref="tvm::BaseFunc" data-ref-filename="tvm..BaseFunc"><dfn class="decl def fn" id="_ZN3tvm8BaseFuncC1EOS0_" title='tvm::BaseFunc::BaseFunc' data-ref="_ZN3tvm8BaseFuncC1EOS0_" data-ref-filename="_ZN3tvm8BaseFuncC1EOS0_"><a class="type" href="#tvm::BaseFunc" title='tvm::BaseFunc' data-ref="tvm::BaseFunc" data-ref-filename="tvm..BaseFunc"><a class="type" href="#tvm::BaseFunc" title='tvm::BaseFunc' data-ref="tvm::BaseFunc" data-ref-filename="tvm..BaseFunc"><a class="type" href="#tvm::BaseFunc" title='tvm::BaseFunc' data-ref="tvm::BaseFunc" data-ref-filename="tvm..BaseFunc"><a class="type" href="#tvm::BaseFunc" title='tvm::BaseFunc' data-ref="tvm::BaseFunc" data-ref-filename="tvm..BaseFunc"><a class="type" href="#tvm::BaseFunc" title='tvm::BaseFunc' data-ref="tvm::BaseFunc" data-ref-filename="tvm..BaseFunc">BaseFunc</a></a></a></a></a></dfn></a></dfn></dfn></dfn>, <a class="type" href="expr.h.html#tvm::RelayExpr" title='tvm::RelayExpr' data-ref="tvm::RelayExpr" data-ref-filename="tvm..RelayExpr">RelayExpr</a>, <a class="type" href="#tvm::BaseFuncNode" title='tvm::BaseFuncNode' data-ref="tvm::BaseFuncNode" data-ref-filename="tvm..BaseFuncNode">BaseFuncNode</a>);</td></tr>
+<tr><th id="146">146</th><td>};</td></tr>
+<tr><th id="147">147</th><td></td></tr>
+<tr><th id="148">148</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="149">149</th><td><i class="doc"> * <span class="command">\brief</span> Generic attribute names that can be attached to any function.</i></td></tr>
+<tr><th id="150">150</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="151">151</th><td><i class="doc"> * <span class="command">\sa</span> tvm::tir::attr, tvm::relay::attr</i></td></tr>
+<tr><th id="152">152</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="153">153</th><td><b>namespace</b> <span class="namespace">attr</span> {</td></tr>
+<tr><th id="154">154</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="155">155</th><td><i class="doc"> * <span class="command">\brief</span> Indicates the special calling convention.</i></td></tr>
+<tr><th id="156">156</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="157">157</th><td><i class="doc"> * Type: Integer</i></td></tr>
+<tr><th id="158">158</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="159">159</th><td><i class="doc"> * <span class="command">\sa</span> tvm::CallingConv</i></td></tr>
+<tr><th id="160">160</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="161">161</th><td><b>constexpr</b> <em>const</em> <em>char</em>* <dfn class="decl def" id="tvm::attr::kCallingConv" title='tvm::attr::kCallingConv' data-ref="tvm::attr::kCallingConv" data-ref-filename="tvm..attr..kCallingConv">kCallingConv</dfn> = <q>"calling_conv"</q>;</td></tr>
+<tr><th id="162">162</th><td></td></tr>
+<tr><th id="163">163</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="164">164</th><td><i class="doc"> * <span class="command">\brief</span> Compilation target of the function.</i></td></tr>
+<tr><th id="165">165</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="166">166</th><td><i class="doc"> * Type: Target</i></td></tr>
+<tr><th id="167">167</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="168">168</th><td><i class="doc"> * <span class="command">\sa</span> tvm::Target</i></td></tr>
+<tr><th id="169">169</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="170">170</th><td><b>constexpr</b> <em>const</em> <em>char</em>* <dfn class="decl def" id="tvm::attr::kTarget" title='tvm::attr::kTarget' data-ref="tvm::attr::kTarget" data-ref-filename="tvm..attr..kTarget">kTarget</dfn> = <q>"target"</q>;</td></tr>
+<tr><th id="171">171</th><td></td></tr>
+<tr><th id="172">172</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="173">173</th><td><i class="doc"> * <span class="command">\brief</span> Global linker symbol of the function in generated code.</i></td></tr>
+<tr><th id="174">174</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="175">175</th><td><i class="doc"> *  This option forces the code generator to name the</i></td></tr>
+<tr><th id="176">176</th><td><i class="doc"> *  function with the given.</i></td></tr>
+<tr><th id="177">177</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="178">178</th><td><i class="doc"> *  For example, we could set a global_symbol of a function</i></td></tr>
+<tr><th id="179">179</th><td><i class="doc"> *  early to make sure that we can always refer to it by</i></td></tr>
+<tr><th id="180">180</th><td><i class="doc"> *  the symbol name in the generated DLL.</i></td></tr>
+<tr><th id="181">181</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="182">182</th><td><i class="doc"> *  We should not set the attribute for local functions,</i></td></tr>
+<tr><th id="183">183</th><td><i class="doc"> *  so that the compiler can freely rename them.</i></td></tr>
+<tr><th id="184">184</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="185">185</th><td><i class="doc"> *  A unique global symbol will be automatically assigned</i></td></tr>
+<tr><th id="186">186</th><td><i class="doc"> *  to each function in the module before the target code</i></td></tr>
+<tr><th id="187">187</th><td><i class="doc"> *  generation phase.</i></td></tr>
+<tr><th id="188">188</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="189">189</th><td><i class="doc"> * Type: String</i></td></tr>
+<tr><th id="190">190</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="191">191</th><td><b>constexpr</b> <em>const</em> <em>char</em>* <dfn class="decl def" id="tvm::attr::kGlobalSymbol" title='tvm::attr::kGlobalSymbol' data-ref="tvm::attr::kGlobalSymbol" data-ref-filename="tvm..attr..kGlobalSymbol">kGlobalSymbol</dfn> = <q>"global_symbol"</q>;</td></tr>
+<tr><th id="192">192</th><td></td></tr>
+<tr><th id="193">193</th><td>}  <i>// namespace attr</i></td></tr>
+<tr><th id="194">194</th><td>}  <i>// namespace tvm</i></td></tr>
+<tr><th id="195">195</th><td><u>#<span data-ppcond="24">endif</span>  // TVM_IR_FUNCTION_H_</u></td></tr>
+<tr><th id="196">196</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated while processing <a href='../../../src/arith/analyzer.cc.html'>tvm/src/arith/analyzer.cc</a><br/>Generated on <em>2022-Aug-10</em> from project tvm revision <em>fae79bb</em><br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

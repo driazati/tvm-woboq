@@ -1,0 +1,17 @@
+<dec f='tvm/include/tvm/tir/schedule/schedule.h' l='363' type='void tvm::tir::ScheduleNode::Vectorize(const tvm::tir::LoopRV &amp; loop_rv)'/>
+<doc f='tvm/include/tvm/tir/schedule/schedule.h' l='354'>/*!
+   * \brief Vectorize the input loop. It requires:
+   * 1) The scope block that the loop is in should have stage-pipeline property
+   * 2) All the blocks under the loop are complete blocks or reduction blocks, and have affine
+   * bindings
+   * 3) For each block under the loop, the loop can only be contained in data-parallel block iters&apos;
+   * bindings
+   * \param loop_rv The loop to be vectorized
+   */</doc>
+<use f='tvm/src/meta_schedule/postproc/rewrite_cooperative_fetch.cc' l='158' u='c' c='_ZN3tvm13meta_schedule27RewriteCooperativeFetchNode5ApplyERKNS_3tir8ScheduleE'/>
+<use f='tvm/src/meta_schedule/postproc/rewrite_cooperative_fetch.cc' l='173' u='c' c='_ZN3tvm13meta_schedule27RewriteCooperativeFetchNode5ApplyERKNS_3tir8ScheduleE'/>
+<use f='tvm/src/meta_schedule/postproc/rewrite_parallel_vectorize_unroll.cc' l='333' u='c' c='_ZN3tvm3tir16RewriteVectorizeERKNS0_8ScheduleEmPNS_7runtime5ArrayINS0_6LoopRVEvEE'/>
+<use f='tvm/src/meta_schedule/postproc/rewrite_tensorize.cc' l='55' u='c' c='_ZN3tvm13meta_schedule24CollectTensorizationJobsERKNS_3tir8ScheduleERKNS_7runtime6StringEPKNS1_12PrimFuncNodeEbPSt6vectorISt5tupleIJS6_S6_St8functionI311476'/>
+<ovr f='tvm/src/tir/schedule/concrete_schedule.cc' l='508' c='_ZN3tvm3tir20ConcreteScheduleNode9VectorizeERKNS0_6LoopRVE'/>
+<use f='tvm/src/tir/schedule/primitive/for_kind.cc' l='231' u='c' c='_ZN3tvm3tir15VectorizeTraits23UnpackedApplyToScheduleENS0_8ScheduleENS0_6LoopRVE'/>
+<use f='tvm/src/tir/schedule/schedule.cc' l='174' u='a'/>

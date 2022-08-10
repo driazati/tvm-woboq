@@ -1,0 +1,253 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>op_attr_types.h source code [tvm/include/tvm/relay/op_attr_types.h] - Woboq Code Browser</title>
+<meta name="woboq:interestingDefinitions" content="tvm::relay::AnyCodegenStrategy,tvm::relay::OpPatternKind "/>
+<link rel="stylesheet" href="../../../.././data/qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href="../../../.././data/kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src="../../../.././data/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="../../../.././data/jquery/jquery-ui.min.js"></script>
+<script>var file = 'tvm/include/tvm/relay/op_attr_types.h'; var root_path = '../../../..'; var data_path = '../../../.././data'; var ecma_script_api_version = 2;</script>
+<script src='../../../.././data/codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='../../..'>tvm</a>/<a href='../..'>include</a>/<a href='..'>tvm</a>/<a href='./'>relay</a>/<a href='op_attr_types.h.html'>op_attr_types.h</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td><i>/*</i></td></tr>
+<tr><th id="2">2</th><td><i> * Licensed to the Apache Software Foundation (ASF) under one</i></td></tr>
+<tr><th id="3">3</th><td><i> * or more contributor license agreements.  See the NOTICE file</i></td></tr>
+<tr><th id="4">4</th><td><i> * distributed with this work for additional information</i></td></tr>
+<tr><th id="5">5</th><td><i> * regarding copyright ownership.  The ASF licenses this file</i></td></tr>
+<tr><th id="6">6</th><td><i> * to you under the Apache License, Version 2.0 (the</i></td></tr>
+<tr><th id="7">7</th><td><i> * "License"); you may not use this file except in compliance</i></td></tr>
+<tr><th id="8">8</th><td><i> * with the License.  You may obtain a copy of the License at</i></td></tr>
+<tr><th id="9">9</th><td><i> *</i></td></tr>
+<tr><th id="10">10</th><td><i> *   <a href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a></i></td></tr>
+<tr><th id="11">11</th><td><i> *</i></td></tr>
+<tr><th id="12">12</th><td><i> * Unless required by applicable law or agreed to in writing,</i></td></tr>
+<tr><th id="13">13</th><td><i> * software distributed under the License is distributed on an</i></td></tr>
+<tr><th id="14">14</th><td><i> * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY</i></td></tr>
+<tr><th id="15">15</th><td><i> * KIND, either express or implied.  See the License for the</i></td></tr>
+<tr><th id="16">16</th><td><i> * specific language governing permissions and limitations</i></td></tr>
+<tr><th id="17">17</th><td><i> * under the License.</i></td></tr>
+<tr><th id="18">18</th><td><i> */</i></td></tr>
+<tr><th id="19">19</th><td></td></tr>
+<tr><th id="20">20</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="21">21</th><td><i class="doc"> * <span class="command">\file</span> <span class="verb">tvm/relay/op_attr_types.h</span></i></td></tr>
+<tr><th id="22">22</th><td><i class="doc"> * <span class="command">\brief</span> The Expr and related elements in DataFlow construction.</i></td></tr>
+<tr><th id="23">23</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="24">24</th><td><u>#<span data-ppcond="24">ifndef</span> <span class="macro" data-ref="_M/TVM_RELAY_OP_ATTR_TYPES_H_">TVM_RELAY_OP_ATTR_TYPES_H_</span></u></td></tr>
+<tr><th id="25">25</th><td><u>#define <dfn class="macro" id="_M/TVM_RELAY_OP_ATTR_TYPES_H_" data-ref="_M/TVM_RELAY_OP_ATTR_TYPES_H_">TVM_RELAY_OP_ATTR_TYPES_H_</dfn></u></td></tr>
+<tr><th id="26">26</th><td></td></tr>
+<tr><th id="27">27</th><td><u>#include <a href="expr.h.html">&lt;tvm/relay/expr.h&gt;</a></u></td></tr>
+<tr><th id="28">28</th><td><u>#include <a href="type.h.html">&lt;tvm/relay/type.h&gt;</a></u></td></tr>
+<tr><th id="29">29</th><td><u>#include <a href="../target/generic_func.h.html">&lt;tvm/target/generic_func.h&gt;</a></u></td></tr>
+<tr><th id="30">30</th><td><u>#include <a href="../target/target.h.html">&lt;tvm/target/target.h&gt;</a></u></td></tr>
+<tr><th id="31">31</th><td><u>#include <a href="../te/schedule.h.html">&lt;tvm/te/schedule.h&gt;</a></u></td></tr>
+<tr><th id="32">32</th><td><u>#include <a href="../te/tensor.h.html">&lt;tvm/te/tensor.h&gt;</a></u></td></tr>
+<tr><th id="33">33</th><td><u>#include <a href="../tir/data_layout.h.html">&lt;tvm/tir/data_layout.h&gt;</a></u></td></tr>
+<tr><th id="34">34</th><td></td></tr>
+<tr><th id="35">35</th><td><u>#include <a href="../../../../include/c++/10/string.html">&lt;string&gt;</a></u></td></tr>
+<tr><th id="36">36</th><td></td></tr>
+<tr><th id="37">37</th><td><b>namespace</b> <span class="namespace">tvm</span> {</td></tr>
+<tr><th id="38">38</th><td><b>namespace</b> <span class="namespace">relay</span> {</td></tr>
+<tr><th id="39">39</th><td></td></tr>
+<tr><th id="40">40</th><td><b>using</b> <span class="namespace">tir::</span>BijectiveLayoutNode;</td></tr>
+<tr><th id="41">41</th><td><b>using</b> <span class="namespace">tir::</span>Layout;</td></tr>
+<tr><th id="42">42</th><td><b>using</b> <span class="namespace">tir::</span>LayoutAxis;</td></tr>
+<tr><th id="43">43</th><td></td></tr>
+<tr><th id="44">44</th><td><i class="doc">/*! <span class="command">\brief</span> operator pattern used in graph fusion */</i></td></tr>
+<tr><th id="45">45</th><td><b>enum</b> <dfn class="type def" id="tvm::relay::OpPatternKind" title='tvm::relay::OpPatternKind' data-ref="tvm::relay::OpPatternKind" data-ref-filename="tvm..relay..OpPatternKind">OpPatternKind</dfn> {</td></tr>
+<tr><th id="46">46</th><td>  <i>// Elementwise operation</i></td></tr>
+<tr><th id="47">47</th><td>  <dfn class="enum" id="tvm::relay::kElemWise" title='tvm::relay::kElemWise' data-ref="tvm::relay::kElemWise" data-ref-filename="tvm..relay..kElemWise">kElemWise</dfn> = <var>0</var>,</td></tr>
+<tr><th id="48">48</th><td>  <i>// Broadcasting operator, can always map output axis to the input in order.</i></td></tr>
+<tr><th id="49">49</th><td><i>  // for example :code:`out[i, ax1, j, ax2] = input[i, j]`.</i></td></tr>
+<tr><th id="50">50</th><td><i>  // Note that the axis need to be in order so transpose is not a bcast operator.</i></td></tr>
+<tr><th id="51">51</th><td>  <dfn class="enum" id="tvm::relay::kBroadcast" title='tvm::relay::kBroadcast' data-ref="tvm::relay::kBroadcast" data-ref-filename="tvm..relay..kBroadcast">kBroadcast</dfn> = <var>1</var>,</td></tr>
+<tr><th id="52">52</th><td>  <i>// Injective operator, can always injectively map output axis to a single input axis.</i></td></tr>
+<tr><th id="53">53</th><td><i>  // All injective operator can still be safely fused to injective and reduction.</i></td></tr>
+<tr><th id="54">54</th><td>  <dfn class="enum" id="tvm::relay::kInjective" title='tvm::relay::kInjective' data-ref="tvm::relay::kInjective" data-ref-filename="tvm..relay..kInjective">kInjective</dfn> = <var>2</var>,</td></tr>
+<tr><th id="55">55</th><td>  <i>// Communicative reduction operator.</i></td></tr>
+<tr><th id="56">56</th><td>  <dfn class="enum" id="tvm::relay::kCommReduce" title='tvm::relay::kCommReduce' data-ref="tvm::relay::kCommReduce" data-ref-filename="tvm..relay..kCommReduce">kCommReduce</dfn> = <var>3</var>,</td></tr>
+<tr><th id="57">57</th><td>  <i>// Complex operation, can still fuse elemwise operations into its output.</i></td></tr>
+<tr><th id="58">58</th><td><i>  // but cannot chain another complex op</i></td></tr>
+<tr><th id="59">59</th><td>  <dfn class="enum" id="tvm::relay::kOutEWiseFusable" title='tvm::relay::kOutEWiseFusable' data-ref="tvm::relay::kOutEWiseFusable" data-ref-filename="tvm..relay..kOutEWiseFusable">kOutEWiseFusable</dfn> = <var>4</var>,</td></tr>
+<tr><th id="60">60</th><td>  <i>// The pattern for tuple nodes. Can fuse into subsequent injective ops,</i></td></tr>
+<tr><th id="61">61</th><td><i>  // but treated specially</i></td></tr>
+<tr><th id="62">62</th><td>  <dfn class="enum" id="tvm::relay::kTuple" title='tvm::relay::kTuple' data-ref="tvm::relay::kTuple" data-ref-filename="tvm..relay..kTuple">kTuple</dfn> = <var>7</var>,</td></tr>
+<tr><th id="63">63</th><td>  <i>// Opaque operation, cannot fuse anything.</i></td></tr>
+<tr><th id="64">64</th><td>  <dfn class="enum" id="tvm::relay::kOpaque" title='tvm::relay::kOpaque' data-ref="tvm::relay::kOpaque" data-ref-filename="tvm..relay..kOpaque">kOpaque</dfn> = <var>8</var></td></tr>
+<tr><th id="65">65</th><td>};</td></tr>
+<tr><th id="66">66</th><td></td></tr>
+<tr><th id="67">67</th><td><i class="doc">/*! <span class="command">\brief</span> the operator pattern */</i></td></tr>
+<tr><th id="68">68</th><td><b>using</b> <dfn class="typedef" id="tvm::relay::TOpPattern" title='tvm::relay::TOpPattern' data-type='int' data-ref="tvm::relay::TOpPattern" data-ref-filename="tvm..relay..TOpPattern">TOpPattern</dfn> = <em>int</em>;</td></tr>
+<tr><th id="69">69</th><td></td></tr>
+<tr><th id="70">70</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="71">71</th><td><i class="doc"> * <span class="command">\brief</span> Whether operator is stateful or contain internal state.</i></td></tr>
+<tr><th id="72">72</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="73">73</th><td><i class="doc"> * All the primitive ops we registered so far are pure.</i></td></tr>
+<tr><th id="74">74</th><td><i class="doc"> * This attribute is left for potential future compatible reasons.</i></td></tr>
+<tr><th id="75">75</th><td><i class="doc"> * We can always work around the stateful ops by adding an additional</i></td></tr>
+<tr><th id="76">76</th><td><i class="doc"> * handle argument and return it.</i></td></tr>
+<tr><th id="77">77</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="78">78</th><td><b>using</b> <dfn class="typedef" id="tvm::relay::TOpIsStateful" title='tvm::relay::TOpIsStateful' data-type='bool' data-ref="tvm::relay::TOpIsStateful" data-ref-filename="tvm..relay..TOpIsStateful">TOpIsStateful</dfn> = <em>bool</em>;</td></tr>
+<tr><th id="79">79</th><td></td></tr>
+<tr><th id="80">80</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="81">81</th><td><i class="doc"> * <span class="command">\brief</span> Mark the operator as non-computational.</i></td></tr>
+<tr><th id="82">82</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="83">83</th><td><b>using</b> <dfn class="typedef" id="tvm::relay::TNonComputational" title='tvm::relay::TNonComputational' data-type='bool' data-ref="tvm::relay::TNonComputational" data-ref-filename="tvm..relay..TNonComputational">TNonComputational</dfn> = <em>bool</em>;</td></tr>
+<tr><th id="84">84</th><td></td></tr>
+<tr><th id="85">85</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="86">86</th><td><i class="doc"> * <span class="command">\brief</span> Mark the operator as reshape op of its first input</i></td></tr>
+<tr><th id="87">87</th><td><i class="doc"> *        and can be turned into a nop when the first input and output</i></td></tr>
+<tr><th id="88">88</th><td><i class="doc"> *        shares the same piece of memory.</i></td></tr>
+<tr><th id="89">89</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="90">90</th><td><b>using</b> <dfn class="typedef" id="tvm::relay::TReshapeOp" title='tvm::relay::TReshapeOp' data-type='bool' data-ref="tvm::relay::TReshapeOp" data-ref-filename="tvm..relay..TReshapeOp">TReshapeOp</dfn> = <em>bool</em>;</td></tr>
+<tr><th id="91">91</th><td></td></tr>
+<tr><th id="92">92</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="93">93</th><td><i class="doc"> * <span class="command">\brief</span> Mark the operator whether output shape is data dependent.</i></td></tr>
+<tr><th id="94">94</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="95">95</th><td><b>using</b> <dfn class="typedef" id="tvm::relay::TShapeDataDependent" title='tvm::relay::TShapeDataDependent' data-type='Array&lt;tvm::Integer&gt;' data-ref="tvm::relay::TShapeDataDependent" data-ref-filename="tvm..relay..TShapeDataDependent">TShapeDataDependent</dfn> = <a class="type" href="../runtime/container/array.h.html#tvm::runtime::Array" title='tvm::runtime::Array' data-ref="tvm::runtime::Array" data-ref-filename="tvm..runtime..Array">Array</a>&lt;<a class="type" href="../ir/expr.h.html#tvm::Integer" title='tvm::Integer' data-ref="tvm::Integer" data-ref-filename="tvm..Integer">Integer</a>&gt;;</td></tr>
+<tr><th id="96">96</th><td></td></tr>
+<tr><th id="97">97</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="98">98</th><td><i class="doc"> * <span class="command">\brief</span> Computation description interface.</i></td></tr>
+<tr><th id="99">99</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="100">100</th><td><i class="doc"> * <span class="command">\note</span> This function have a special convention</i></td></tr>
+<tr><th id="101">101</th><td><i class="doc"> *  for functions with tuple input/output.</i></td></tr>
+<tr><th id="102">102</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="103">103</th><td><i class="doc"> *  So far we restrict tuple support to the following case:</i></td></tr>
+<tr><th id="104">104</th><td><i class="doc"> *  - Function which takes a single tuple as input.</i></td></tr>
+<tr><th id="105">105</th><td><i class="doc"> *  - Function which outputs a single tuple.</i></td></tr>
+<tr><th id="106">106</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="107">107</th><td><i class="doc"> *  In both cases, the tuple is flattened as array.</i></td></tr>
+<tr><th id="108">108</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="109">109</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">attrs</span> The attribute of the primitive</i></td></tr>
+<tr><th id="110">110</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">inputs</span> The input tensors.</i></td></tr>
+<tr><th id="111">111</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">out_type</span> The output type information</i></td></tr>
+<tr><th id="112">112</th><td><i class="doc"> &amp;                 these are always placeholders.</i></td></tr>
+<tr><th id="113">113</th><td><i class="doc"> * <span class="command">\return</span> The output compute description of the operator.</i></td></tr>
+<tr><th id="114">114</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="115">115</th><td><b>using</b> <dfn class="typedef" id="tvm::relay::FTVMCompute" title='tvm::relay::FTVMCompute' data-type='runtime::TypedPackedFunc&lt;Array&lt;te::Tensor&gt; (const Attrs &amp;, const Array&lt;te::Tensor&gt; &amp;, const Type &amp;)&gt;' data-ref="tvm::relay::FTVMCompute" data-ref-filename="tvm..relay..FTVMCompute">FTVMCompute</dfn> = <span class="namespace">runtime::</span><a class="type" href="../runtime/packed_func.h.html#tvm::runtime::TypedPackedFunc" title='tvm::runtime::TypedPackedFunc' data-ref="tvm::runtime::TypedPackedFunc" data-ref-filename="tvm..runtime..TypedPackedFunc">TypedPackedFunc</a>&lt;<a class="type" href="../runtime/container/array.h.html#tvm::runtime::Array" title='tvm::runtime::Array' data-ref="tvm::runtime::Array" data-ref-filename="tvm..runtime..Array">Array</a>&lt;<span class="namespace">te::</span><a class="type" href="../te/tensor.h.html#tvm::te::Tensor" title='tvm::te::Tensor' data-ref="tvm::te::Tensor" data-ref-filename="tvm..te..Tensor">Tensor</a>&gt;(</td></tr>
+<tr><th id="116">116</th><td>    <em>const</em> <a class="type" href="../ir/attrs.h.html#tvm::Attrs" title='tvm::Attrs' data-ref="tvm::Attrs" data-ref-filename="tvm..Attrs">Attrs</a>&amp; <dfn class="local col8 decl" id="158attrs" title='attrs' data-type='const tvm::Attrs &amp;' data-ref="158attrs" data-ref-filename="158attrs">attrs</dfn>, <em>const</em> <a class="type" href="../runtime/container/array.h.html#tvm::runtime::Array" title='tvm::runtime::Array' data-ref="tvm::runtime::Array" data-ref-filename="tvm..runtime..Array">Array</a>&lt;<span class="namespace">te::</span><a class="type" href="../te/tensor.h.html#tvm::te::Tensor" title='tvm::te::Tensor' data-ref="tvm::te::Tensor" data-ref-filename="tvm..te..Tensor">Tensor</a>&gt;&amp; <dfn class="local col9 decl" id="159inputs" title='inputs' data-type='const Array&lt;te::Tensor&gt; &amp;' data-ref="159inputs" data-ref-filename="159inputs">inputs</dfn>, <em>const</em> <a class="typedef" href="type.h.html#tvm::relay::Type" title='tvm::relay::Type' data-type='tvm::Type' data-ref="tvm::relay::Type" data-ref-filename="tvm..relay..Type">Type</a>&amp; <dfn class="local col0 decl" id="160out_type" title='out_type' data-type='const tvm::relay::Type &amp;' data-ref="160out_type" data-ref-filename="160out_type">out_type</dfn>)&gt;;</td></tr>
+<tr><th id="117">117</th><td></td></tr>
+<tr><th id="118">118</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="119">119</th><td><i class="doc"> * <span class="command">\brief</span> Build the computation schedule for</i></td></tr>
+<tr><th id="120">120</th><td><i class="doc"> *  op whose root is at current op.</i></td></tr>
+<tr><th id="121">121</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="122">122</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">attrs</span> The attribute of the node.</i></td></tr>
+<tr><th id="123">123</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">outs</span> The output tensors.</i></td></tr>
+<tr><th id="124">124</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">target</span> The build target.</i></td></tr>
+<tr><th id="125">125</th><td><i class="doc"> * <span class="command">\return</span> schedule The computation schedule.</i></td></tr>
+<tr><th id="126">126</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="127">127</th><td><b>using</b> <dfn class="typedef" id="tvm::relay::FTVMSchedule" title='tvm::relay::FTVMSchedule' data-type='runtime::TypedPackedFunc&lt;te::Schedule (const Attrs &amp;, const Array&lt;te::Tensor&gt; &amp;, const Target &amp;)&gt;' data-ref="tvm::relay::FTVMSchedule" data-ref-filename="tvm..relay..FTVMSchedule">FTVMSchedule</dfn> = <span class="namespace">runtime::</span><a class="type" href="../runtime/packed_func.h.html#tvm::runtime::TypedPackedFunc" title='tvm::runtime::TypedPackedFunc' data-ref="tvm::runtime::TypedPackedFunc" data-ref-filename="tvm..runtime..TypedPackedFunc">TypedPackedFunc</a>&lt;<span class="namespace">te::</span><a class="type" href="../te/schedule.h.html#tvm::te::Schedule" title='tvm::te::Schedule' data-ref="tvm::te::Schedule" data-ref-filename="tvm..te..Schedule">Schedule</a>(</td></tr>
+<tr><th id="128">128</th><td>    <em>const</em> <a class="type" href="../ir/attrs.h.html#tvm::Attrs" title='tvm::Attrs' data-ref="tvm::Attrs" data-ref-filename="tvm..Attrs">Attrs</a>&amp; <dfn class="local col1 decl" id="161attrs" title='attrs' data-type='const tvm::Attrs &amp;' data-ref="161attrs" data-ref-filename="161attrs">attrs</dfn>, <em>const</em> <a class="type" href="../runtime/container/array.h.html#tvm::runtime::Array" title='tvm::runtime::Array' data-ref="tvm::runtime::Array" data-ref-filename="tvm..runtime..Array">Array</a>&lt;<span class="namespace">te::</span><a class="type" href="../te/tensor.h.html#tvm::te::Tensor" title='tvm::te::Tensor' data-ref="tvm::te::Tensor" data-ref-filename="tvm..te..Tensor">Tensor</a>&gt;&amp; <dfn class="local col2 decl" id="162outs" title='outs' data-type='const Array&lt;te::Tensor&gt; &amp;' data-ref="162outs" data-ref-filename="162outs">outs</dfn>, <em>const</em> <a class="type" href="../target/target.h.html#tvm::Target" title='tvm::Target' data-ref="tvm::Target" data-ref-filename="tvm..Target">Target</a>&amp; <dfn class="local col3 decl" id="163target" title='target' data-type='const tvm::Target &amp;' data-ref="163target" data-ref-filename="163target">target</dfn>)&gt;;</td></tr>
+<tr><th id="129">129</th><td></td></tr>
+<tr><th id="130">130</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="131">131</th><td><i class="doc"> * <span class="command">\brief</span> Generate the strategy of operators. This function is a generic</i></td></tr>
+<tr><th id="132">132</th><td><i class="doc"> * function and can be re-defined for different targets.</i></td></tr>
+<tr><th id="133">133</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="134">134</th><td><i class="doc"> * The function signature of generic function is:</i></td></tr>
+<tr><th id="135">135</th><td><i class="doc"> *   OpStrategy(const Attrs&amp; attrs, const Array&lt;Tensor&gt;&amp; inputs,</i></td></tr>
+<tr><th id="136">136</th><td><i class="doc"> *              const Type&amp; out_type, const Target&amp; target)</i></td></tr>
+<tr><th id="137">137</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="138">138</th><td><b>using</b> <dfn class="typedef" id="tvm::relay::FTVMStrategy" title='tvm::relay::FTVMStrategy' data-type='tvm::GenericFunc' data-ref="tvm::relay::FTVMStrategy" data-ref-filename="tvm..relay..FTVMStrategy">FTVMStrategy</dfn> = <a class="type" href="../target/generic_func.h.html#tvm::GenericFunc" title='tvm::GenericFunc' data-ref="tvm::GenericFunc" data-ref-filename="tvm..GenericFunc">GenericFunc</a>;</td></tr>
+<tr><th id="139">139</th><td></td></tr>
+<tr><th id="140">140</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="141">141</th><td><i class="doc"> * <span class="command">\brief</span> Alternate the layout of operators or replace the</i></td></tr>
+<tr><th id="142">142</th><td><i class="doc"> *  operator with other expressions. This function will be invoked</i></td></tr>
+<tr><th id="143">143</th><td><i class="doc"> *  in AlterOpLayout pass.</i></td></tr>
+<tr><th id="144">144</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">attrs</span> The attribute of the original node.</i></td></tr>
+<tr><th id="145">145</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">args</span> The input symbols of the original node.</i></td></tr>
+<tr><th id="146">146</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">tinfos</span> An array of placeholders, use for getting the inferred shape</i></td></tr>
+<tr><th id="147">147</th><td><i class="doc"> *               and dtype of the inputs.</i></td></tr>
+<tr><th id="148">148</th><td><i class="doc"> * <span class="command">\return</span> new_expr The modified expression.</i></td></tr>
+<tr><th id="149">149</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="150">150</th><td><b>using</b> <dfn class="typedef" id="tvm::relay::FTVMAlterOpLayout" title='tvm::relay::FTVMAlterOpLayout' data-type='runtime::TypedPackedFunc&lt;Expr (const Attrs &amp;, const Array&lt;Expr&gt; &amp;, const Array&lt;te::Tensor&gt; &amp;, const Type &amp;)&gt;' data-ref="tvm::relay::FTVMAlterOpLayout" data-ref-filename="tvm..relay..FTVMAlterOpLayout">FTVMAlterOpLayout</dfn> =</td></tr>
+<tr><th id="151">151</th><td>    <span class="namespace">runtime::</span><a class="type" href="../runtime/packed_func.h.html#tvm::runtime::TypedPackedFunc" title='tvm::runtime::TypedPackedFunc' data-ref="tvm::runtime::TypedPackedFunc" data-ref-filename="tvm..runtime..TypedPackedFunc">TypedPackedFunc</a>&lt;<a class="typedef" href="expr.h.html#tvm::relay::Expr" title='tvm::relay::Expr' data-type='tvm::RelayExpr' data-ref="tvm::relay::Expr" data-ref-filename="tvm..relay..Expr">Expr</a>(<em>const</em> <a class="type" href="../ir/attrs.h.html#tvm::Attrs" title='tvm::Attrs' data-ref="tvm::Attrs" data-ref-filename="tvm..Attrs">Attrs</a>&amp; <dfn class="local col4 decl" id="164attrs" title='attrs' data-type='const tvm::Attrs &amp;' data-ref="164attrs" data-ref-filename="164attrs">attrs</dfn>, <em>const</em> <a class="type" href="../runtime/container/array.h.html#tvm::runtime::Array" title='tvm::runtime::Array' data-ref="tvm::runtime::Array" data-ref-filename="tvm..runtime..Array">Array</a>&lt;<a class="typedef" href="expr.h.html#tvm::relay::Expr" title='tvm::relay::Expr' data-type='tvm::RelayExpr' data-ref="tvm::relay::Expr" data-ref-filename="tvm..relay..Expr">Expr</a>&gt;&amp; <dfn class="local col5 decl" id="165args" title='args' data-type='const Array&lt;tvm::relay::Expr&gt; &amp;' data-ref="165args" data-ref-filename="165args">args</dfn>,</td></tr>
+<tr><th id="152">152</th><td>                                  <em>const</em> <a class="type" href="../runtime/container/array.h.html#tvm::runtime::Array" title='tvm::runtime::Array' data-ref="tvm::runtime::Array" data-ref-filename="tvm..runtime..Array">Array</a>&lt;<span class="namespace">te::</span><a class="type" href="../te/tensor.h.html#tvm::te::Tensor" title='tvm::te::Tensor' data-ref="tvm::te::Tensor" data-ref-filename="tvm..te..Tensor">Tensor</a>&gt;&amp; <dfn class="local col6 decl" id="166tinfos" title='tinfos' data-type='const Array&lt;te::Tensor&gt; &amp;' data-ref="166tinfos" data-ref-filename="166tinfos">tinfos</dfn>, <em>const</em> <a class="typedef" href="type.h.html#tvm::relay::Type" title='tvm::relay::Type' data-type='tvm::Type' data-ref="tvm::relay::Type" data-ref-filename="tvm..relay..Type">Type</a>&amp; <dfn class="local col7 decl" id="167out_type" title='out_type' data-type='const tvm::relay::Type &amp;' data-ref="167out_type" data-ref-filename="167out_type">out_type</dfn>)&gt;;</td></tr>
+<tr><th id="153">153</th><td></td></tr>
+<tr><th id="154">154</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="155">155</th><td><i class="doc"> * <span class="command">\brief</span> Convert the layout of operators or replace the</i></td></tr>
+<tr><th id="156">156</th><td><i class="doc"> *  operator with other expressions. This function will be invoked</i></td></tr>
+<tr><th id="157">157</th><td><i class="doc"> *  in ConvertLayout pass.</i></td></tr>
+<tr><th id="158">158</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">attrs</span> The attribute of the original node.</i></td></tr>
+<tr><th id="159">159</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">inputs</span> The input symbols of the original node.</i></td></tr>
+<tr><th id="160">160</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">tinfos</span> An array of placeholders, use for getting the inferred shape</i></td></tr>
+<tr><th id="161">161</th><td><i class="doc"> *               and dtype of the inputs.</i></td></tr>
+<tr><th id="162">162</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">desired_layouts</span> Specify an array of desired layouts for each input.</i></td></tr>
+<tr><th id="163">163</th><td><i class="doc"> *                        For example a conv2d op: Array("NHWC", "OHWI"), this</i></td></tr>
+<tr><th id="164">164</th><td><i class="doc"> *                        specifies the desired layout for data then kernel.</i></td></tr>
+<tr><th id="165">165</th><td><i class="doc"> * <span class="command">\return</span> new_expr The modified expression.</i></td></tr>
+<tr><th id="166">166</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="167">167</th><td><b>using</b> <dfn class="typedef" id="tvm::relay::FTVMConvertOpLayout" title='tvm::relay::FTVMConvertOpLayout' data-type='runtime::TypedPackedFunc&lt;Expr (const Attrs &amp;, const Array&lt;Expr&gt; &amp;, const Array&lt;te::Tensor&gt; &amp;, const Array&lt;String&gt; &amp;)&gt;' data-ref="tvm::relay::FTVMConvertOpLayout" data-ref-filename="tvm..relay..FTVMConvertOpLayout">FTVMConvertOpLayout</dfn> = <span class="namespace">runtime::</span><a class="type" href="../runtime/packed_func.h.html#tvm::runtime::TypedPackedFunc" title='tvm::runtime::TypedPackedFunc' data-ref="tvm::runtime::TypedPackedFunc" data-ref-filename="tvm..runtime..TypedPackedFunc">TypedPackedFunc</a>&lt;<a class="typedef" href="expr.h.html#tvm::relay::Expr" title='tvm::relay::Expr' data-type='tvm::RelayExpr' data-ref="tvm::relay::Expr" data-ref-filename="tvm..relay..Expr">Expr</a>(</td></tr>
+<tr><th id="168">168</th><td>    <em>const</em> <a class="type" href="../ir/attrs.h.html#tvm::Attrs" title='tvm::Attrs' data-ref="tvm::Attrs" data-ref-filename="tvm..Attrs">Attrs</a>&amp; <dfn class="local col8 decl" id="168attrs" title='attrs' data-type='const tvm::Attrs &amp;' data-ref="168attrs" data-ref-filename="168attrs">attrs</dfn>, <em>const</em> <a class="type" href="../runtime/container/array.h.html#tvm::runtime::Array" title='tvm::runtime::Array' data-ref="tvm::runtime::Array" data-ref-filename="tvm..runtime..Array">Array</a>&lt;<a class="typedef" href="expr.h.html#tvm::relay::Expr" title='tvm::relay::Expr' data-type='tvm::RelayExpr' data-ref="tvm::relay::Expr" data-ref-filename="tvm..relay..Expr">Expr</a>&gt;&amp; <dfn class="local col9 decl" id="169args" title='args' data-type='const Array&lt;tvm::relay::Expr&gt; &amp;' data-ref="169args" data-ref-filename="169args">args</dfn>, <em>const</em> <a class="type" href="../runtime/container/array.h.html#tvm::runtime::Array" title='tvm::runtime::Array' data-ref="tvm::runtime::Array" data-ref-filename="tvm..runtime..Array">Array</a>&lt;<span class="namespace">te::</span><a class="type" href="../te/tensor.h.html#tvm::te::Tensor" title='tvm::te::Tensor' data-ref="tvm::te::Tensor" data-ref-filename="tvm..te..Tensor">Tensor</a>&gt;&amp; <dfn class="local col0 decl" id="170tinfos" title='tinfos' data-type='const Array&lt;te::Tensor&gt; &amp;' data-ref="170tinfos" data-ref-filename="170tinfos">tinfos</dfn>,</td></tr>
+<tr><th id="169">169</th><td>    <em>const</em> <a class="type" href="../runtime/container/array.h.html#tvm::runtime::Array" title='tvm::runtime::Array' data-ref="tvm::runtime::Array" data-ref-filename="tvm..runtime..Array">Array</a>&lt;String&gt;&amp; <dfn class="local col1 decl" id="171desired_layouts" title='desired_layouts' data-type='const Array&lt;tvm::runtime::String&gt; &amp;' data-ref="171desired_layouts" data-ref-filename="171desired_layouts">desired_layouts</dfn>)&gt;;</td></tr>
+<tr><th id="170">170</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="171">171</th><td><i class="doc"> * <span class="command">\brief</span> Legalizes an expression with another expression. This function will be</i></td></tr>
+<tr><th id="172">172</th><td><i class="doc"> *  invoked in Legalize pass. It is a target-dependent pass.</i></td></tr>
+<tr><th id="173">173</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">attrs</span> The attribute of the original node.</i></td></tr>
+<tr><th id="174">174</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">args</span> The input symbols of the original node.</i></td></tr>
+<tr><th id="175">175</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">arg_types</span> An array of placeholders, use for getting the inferred shape</i></td></tr>
+<tr><th id="176">176</th><td><i class="doc"> *               and dtype of the inputs.</i></td></tr>
+<tr><th id="177">177</th><td><i class="doc"> * <span class="command">\return</span> new_expr The modified expression.</i></td></tr>
+<tr><th id="178">178</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="179">179</th><td><b>using</b> <dfn class="typedef" id="tvm::relay::FTVMLegalize" title='tvm::relay::FTVMLegalize' data-type='runtime::TypedPackedFunc&lt;Expr (const Attrs &amp;, const Array&lt;Expr&gt; &amp;, const Array&lt;tvm::relay::Type&gt; &amp;)&gt;' data-ref="tvm::relay::FTVMLegalize" data-ref-filename="tvm..relay..FTVMLegalize">FTVMLegalize</dfn> = <span class="namespace">runtime::</span><a class="type" href="../runtime/packed_func.h.html#tvm::runtime::TypedPackedFunc" title='tvm::runtime::TypedPackedFunc' data-ref="tvm::runtime::TypedPackedFunc" data-ref-filename="tvm..runtime..TypedPackedFunc">TypedPackedFunc</a>&lt;<a class="typedef" href="expr.h.html#tvm::relay::Expr" title='tvm::relay::Expr' data-type='tvm::RelayExpr' data-ref="tvm::relay::Expr" data-ref-filename="tvm..relay..Expr">Expr</a>(<em>const</em> <a class="type" href="../ir/attrs.h.html#tvm::Attrs" title='tvm::Attrs' data-ref="tvm::Attrs" data-ref-filename="tvm..Attrs">Attrs</a>&amp; <dfn class="local col2 decl" id="172attrs" title='attrs' data-type='const tvm::Attrs &amp;' data-ref="172attrs" data-ref-filename="172attrs">attrs</dfn>, <em>const</em> <a class="type" href="../runtime/container/array.h.html#tvm::runtime::Array" title='tvm::runtime::Array' data-ref="tvm::runtime::Array" data-ref-filename="tvm..runtime..Array">Array</a>&lt;<a class="typedef" href="expr.h.html#tvm::relay::Expr" title='tvm::relay::Expr' data-type='tvm::RelayExpr' data-ref="tvm::relay::Expr" data-ref-filename="tvm..relay..Expr">Expr</a>&gt;&amp; <dfn class="local col3 decl" id="173args" title='args' data-type='const Array&lt;tvm::relay::Expr&gt; &amp;' data-ref="173args" data-ref-filename="173args">args</dfn>,</td></tr>
+<tr><th id="180">180</th><td>                                                   <em>const</em> <a class="type" href="../runtime/container/array.h.html#tvm::runtime::Array" title='tvm::runtime::Array' data-ref="tvm::runtime::Array" data-ref-filename="tvm..runtime..Array">Array</a>&lt;<span class="namespace">tvm::relay::</span><a class="typedef" href="type.h.html#tvm::relay::Type" title='tvm::relay::Type' data-type='tvm::Type' data-ref="tvm::relay::Type" data-ref-filename="tvm..relay..Type">Type</a>&gt;&amp; <dfn class="local col4 decl" id="174arg_types" title='arg_types' data-type='const Array&lt;tvm::relay::Type&gt; &amp;' data-ref="174arg_types" data-ref-filename="174arg_types">arg_types</dfn>)&gt;;</td></tr>
+<tr><th id="181">181</th><td></td></tr>
+<tr><th id="182">182</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="183">183</th><td><i class="doc"> * <span class="command">\brief</span> Annotates an expression to indicate if an op should be compiled using</i></td></tr>
+<tr><th id="184">184</th><td><i class="doc"> * the given compiler/target.</i></td></tr>
+<tr><th id="185">185</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">expr</span> The original expr.</i></td></tr>
+<tr><th id="186">186</th><td><i class="doc"> * <span class="command">\return</span> true if this op should be registered to invoke a specific compiler</i></td></tr>
+<tr><th id="187">187</th><td><i class="doc"> * for codegen, otherwise, false.</i></td></tr>
+<tr><th id="188">188</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="189">189</th><td><b>using</b> <dfn class="typedef" id="tvm::relay::FTVMAnnotateTarget" title='tvm::relay::FTVMAnnotateTarget' data-type='runtime::TypedPackedFunc&lt;bool (const Expr &amp;)&gt;' data-ref="tvm::relay::FTVMAnnotateTarget" data-ref-filename="tvm..relay..FTVMAnnotateTarget">FTVMAnnotateTarget</dfn> = <span class="namespace">runtime::</span><a class="type" href="../runtime/packed_func.h.html#tvm::runtime::TypedPackedFunc" title='tvm::runtime::TypedPackedFunc' data-ref="tvm::runtime::TypedPackedFunc" data-ref-filename="tvm..runtime..TypedPackedFunc">TypedPackedFunc</a>&lt;<em>bool</em>(<em>const</em> <a class="typedef" href="expr.h.html#tvm::relay::Expr" title='tvm::relay::Expr' data-type='tvm::RelayExpr' data-ref="tvm::relay::Expr" data-ref-filename="tvm..relay..Expr">Expr</a>&amp; <dfn class="local col5 decl" id="175expr" title='expr' data-type='const tvm::relay::Expr &amp;' data-ref="175expr" data-ref-filename="175expr">expr</dfn>)&gt;;</td></tr>
+<tr><th id="190">190</th><td></td></tr>
+<tr><th id="191">191</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="192">192</th><td><i class="doc"> * <span class="command">\brief</span> Forward rewriting rule for a specific op.</i></td></tr>
+<tr><th id="193">193</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="194">194</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">ref_call</span> The reference old call type to be rewritten.</i></td></tr>
+<tr><th id="195">195</th><td><i class="doc"> *                 We can make use of the op and type information.</i></td></tr>
+<tr><th id="196">196</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">new_args</span> The new arguments (some of them could be TempExpr).</i></td></tr>
+<tr><th id="197">197</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">ctx</span>  Optional context information about ref_call.</i></td></tr>
+<tr><th id="198">198</th><td><i class="doc"> * <span class="command">\return</span> The rewriten result call, can also return nullptr,</i></td></tr>
+<tr><th id="199">199</th><td><i class="doc"> *         which indicate the rewriter should use the default fallback</i></td></tr>
+<tr><th id="200">200</th><td><i class="doc"> *         rule that realizes all its input and compose the call.</i></td></tr>
+<tr><th id="201">201</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="202">202</th><td><i class="doc"> * <span class="command">\note</span> When we register the function, we can register</i></td></tr>
+<tr><th id="203">203</th><td><i class="doc"> *       a different signature with ctx to be a specific node type.</i></td></tr>
+<tr><th id="204">204</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="205">205</th><td><b>using</b> <dfn class="typedef" id="tvm::relay::FForwardRewrite" title='tvm::relay::FForwardRewrite' data-type='runtime::TypedPackedFunc&lt;Expr (const Call &amp;, const Array&lt;Expr&gt; &amp;, const ObjectRef &amp;)&gt;' data-ref="tvm::relay::FForwardRewrite" data-ref-filename="tvm..relay..FForwardRewrite">FForwardRewrite</dfn> = <span class="namespace">runtime::</span><a class="type" href="../runtime/packed_func.h.html#tvm::runtime::TypedPackedFunc" title='tvm::runtime::TypedPackedFunc' data-ref="tvm::runtime::TypedPackedFunc" data-ref-filename="tvm..runtime..TypedPackedFunc">TypedPackedFunc</a>&lt;<a class="typedef" href="expr.h.html#tvm::relay::Expr" title='tvm::relay::Expr' data-type='tvm::RelayExpr' data-ref="tvm::relay::Expr" data-ref-filename="tvm..relay..Expr">Expr</a>(</td></tr>
+<tr><th id="206">206</th><td>    <em>const</em> <a class="type" href="expr.h.html#tvm::relay::Call" title='tvm::relay::Call' data-ref="tvm::relay::Call" data-ref-filename="tvm..relay..Call">Call</a>&amp; <dfn class="local col6 decl" id="176ref_call" title='ref_call' data-type='const tvm::relay::Call &amp;' data-ref="176ref_call" data-ref-filename="176ref_call">ref_call</dfn>, <em>const</em> <a class="type" href="../runtime/container/array.h.html#tvm::runtime::Array" title='tvm::runtime::Array' data-ref="tvm::runtime::Array" data-ref-filename="tvm..runtime..Array">Array</a>&lt;<a class="typedef" href="expr.h.html#tvm::relay::Expr" title='tvm::relay::Expr' data-type='tvm::RelayExpr' data-ref="tvm::relay::Expr" data-ref-filename="tvm..relay..Expr">Expr</a>&gt;&amp; <dfn class="local col7 decl" id="177new_args" title='new_args' data-type='const Array&lt;tvm::relay::Expr&gt; &amp;' data-ref="177new_args" data-ref-filename="177new_args">new_args</dfn>, <em>const</em> ObjectRef&amp; <dfn class="local col8 decl" id="178ctx" title='ctx' data-type='const tvm::runtime::ObjectRef &amp;' data-ref="178ctx" data-ref-filename="178ctx">ctx</dfn>)&gt;;</td></tr>
+<tr><th id="207">207</th><td></td></tr>
+<tr><th id="208">208</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="209">209</th><td><i class="doc"> * <span class="command">\brief</span> Gradient for a specific op.</i></td></tr>
+<tr><th id="210">210</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="211">211</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">orig_call</span> the original Expr.</i></td></tr>
+<tr><th id="212">212</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">output_grad</span> the gradient of the Expr.</i></td></tr>
+<tr><th id="213">213</th><td><i class="doc"> * <span class="command">\return</span> the gradient for each parameters.</i></td></tr>
+<tr><th id="214">214</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="215">215</th><td><b>using</b> <dfn class="typedef" id="tvm::relay::FPrimalGradient" title='tvm::relay::FPrimalGradient' data-type='runtime::TypedPackedFunc&lt;tvm::Array&lt;Expr&gt; (const Expr &amp;, const Expr &amp;)&gt;' data-ref="tvm::relay::FPrimalGradient" data-ref-filename="tvm..relay..FPrimalGradient">FPrimalGradient</dfn> =</td></tr>
+<tr><th id="216">216</th><td>    <span class="namespace">runtime::</span><a class="type" href="../runtime/packed_func.h.html#tvm::runtime::TypedPackedFunc" title='tvm::runtime::TypedPackedFunc' data-ref="tvm::runtime::TypedPackedFunc" data-ref-filename="tvm..runtime..TypedPackedFunc">TypedPackedFunc</a>&lt;<span class="namespace">tvm::</span><a class="type" href="../runtime/container/array.h.html#tvm::runtime::Array" title='tvm::runtime::Array' data-ref="tvm::runtime::Array" data-ref-filename="tvm..runtime..Array">Array</a>&lt;<a class="typedef" href="expr.h.html#tvm::relay::Expr" title='tvm::relay::Expr' data-type='tvm::RelayExpr' data-ref="tvm::relay::Expr" data-ref-filename="tvm..relay..Expr">Expr</a>&gt;(<em>const</em> <a class="typedef" href="expr.h.html#tvm::relay::Expr" title='tvm::relay::Expr' data-type='tvm::RelayExpr' data-ref="tvm::relay::Expr" data-ref-filename="tvm..relay..Expr">Expr</a>&amp; <dfn class="local col9 decl" id="179orig_call" title='orig_call' data-type='const tvm::relay::Expr &amp;' data-ref="179orig_call" data-ref-filename="179orig_call">orig_call</dfn>, <em>const</em> <a class="typedef" href="expr.h.html#tvm::relay::Expr" title='tvm::relay::Expr' data-type='tvm::RelayExpr' data-ref="tvm::relay::Expr" data-ref-filename="tvm..relay..Expr">Expr</a>&amp; <dfn class="local col0 decl" id="180output_grad" title='output_grad' data-type='const tvm::relay::Expr &amp;' data-ref="180output_grad" data-ref-filename="180output_grad">output_grad</dfn>)&gt;;</td></tr>
+<tr><th id="217">217</th><td></td></tr>
+<tr><th id="218">218</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="219">219</th><td><i class="doc"> * <span class="command">\brief</span> The codegeneration strategy for dynamic dimensions.</i></td></tr>
+<tr><th id="220">220</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="221">221</th><td><b>enum</b> <dfn class="type def" id="tvm::relay::AnyCodegenStrategy" title='tvm::relay::AnyCodegenStrategy' data-ref="tvm::relay::AnyCodegenStrategy" data-ref-filename="tvm..relay..AnyCodegenStrategy">AnyCodegenStrategy</dfn> {</td></tr>
+<tr><th id="222">222</th><td>  <i class="doc">/*! <span class="command">\brief</span> The default strategy of using completely variable dimensions. */</i></td></tr>
+<tr><th id="223">223</th><td>  <dfn class="enum" id="tvm::relay::kVariableDimensions" title='tvm::relay::kVariableDimensions' data-ref="tvm::relay::kVariableDimensions" data-ref-filename="tvm..relay..kVariableDimensions">kVariableDimensions</dfn></td></tr>
+<tr><th id="224">224</th><td>};</td></tr>
+<tr><th id="225">225</th><td></td></tr>
+<tr><th id="226">226</th><td><i class="doc">/*! <span class="command">\brief</span> A runtime representation of shape. */</i></td></tr>
+<tr><th id="227">227</th><td><b>using</b> <dfn class="typedef" id="tvm::relay::Shape" title='tvm::relay::Shape' data-type='Array&lt;tvm::relay::IndexExpr&gt;' data-ref="tvm::relay::Shape" data-ref-filename="tvm..relay..Shape">Shape</dfn> = <a class="type" href="../runtime/container/array.h.html#tvm::runtime::Array" title='tvm::runtime::Array' data-ref="tvm::runtime::Array" data-ref-filename="tvm..runtime..Array">Array</a>&lt;<a class="typedef" href="base.h.html#tvm::relay::IndexExpr" title='tvm::relay::IndexExpr' data-type='::tvm::PrimExpr' data-ref="tvm::relay::IndexExpr" data-ref-filename="tvm..relay..IndexExpr">IndexExpr</a>&gt;;</td></tr>
+<tr><th id="228">228</th><td></td></tr>
+<tr><th id="229">229</th><td><b>using</b> <dfn class="typedef" id="tvm::relay::FShapeFunc" title='tvm::relay::FShapeFunc' data-type='runtime::TypedPackedFunc&lt;Array&lt;te::Tensor&gt; (const Attrs &amp;, const Array&lt;te::Tensor&gt; &amp;, const Array&lt;IndexExpr&gt; &amp;)&gt;' data-ref="tvm::relay::FShapeFunc" data-ref-filename="tvm..relay..FShapeFunc">FShapeFunc</dfn> = <span class="namespace">runtime::</span><a class="type" href="../runtime/packed_func.h.html#tvm::runtime::TypedPackedFunc" title='tvm::runtime::TypedPackedFunc' data-ref="tvm::runtime::TypedPackedFunc" data-ref-filename="tvm..runtime..TypedPackedFunc">TypedPackedFunc</a>&lt;<a class="type" href="../runtime/container/array.h.html#tvm::runtime::Array" title='tvm::runtime::Array' data-ref="tvm::runtime::Array" data-ref-filename="tvm..runtime..Array">Array</a>&lt;<span class="namespace">te::</span><a class="type" href="../te/tensor.h.html#tvm::te::Tensor" title='tvm::te::Tensor' data-ref="tvm::te::Tensor" data-ref-filename="tvm..te..Tensor">Tensor</a>&gt;(</td></tr>
+<tr><th id="230">230</th><td>    <em>const</em> <a class="type" href="../ir/attrs.h.html#tvm::Attrs" title='tvm::Attrs' data-ref="tvm::Attrs" data-ref-filename="tvm..Attrs">Attrs</a>&amp; <dfn class="local col1 decl" id="181attrs" title='attrs' data-type='const tvm::Attrs &amp;' data-ref="181attrs" data-ref-filename="181attrs">attrs</dfn>, <em>const</em> <a class="type" href="../runtime/container/array.h.html#tvm::runtime::Array" title='tvm::runtime::Array' data-ref="tvm::runtime::Array" data-ref-filename="tvm..runtime..Array">Array</a>&lt;<span class="namespace">te::</span><a class="type" href="../te/tensor.h.html#tvm::te::Tensor" title='tvm::te::Tensor' data-ref="tvm::te::Tensor" data-ref-filename="tvm..te..Tensor">Tensor</a>&gt;&amp; <dfn class="local col2 decl" id="182inputs" title='inputs' data-type='const Array&lt;te::Tensor&gt; &amp;' data-ref="182inputs" data-ref-filename="182inputs">inputs</dfn>, <em>const</em> <a class="type" href="../runtime/container/array.h.html#tvm::runtime::Array" title='tvm::runtime::Array' data-ref="tvm::runtime::Array" data-ref-filename="tvm..runtime..Array">Array</a>&lt;<a class="typedef" href="base.h.html#tvm::relay::IndexExpr" title='tvm::relay::IndexExpr' data-type='::tvm::PrimExpr' data-ref="tvm::relay::IndexExpr" data-ref-filename="tvm..relay..IndexExpr">IndexExpr</a>&gt;&amp; <dfn class="local col3 decl" id="183out_ndims" title='out_ndims' data-type='const Array&lt;tvm::relay::IndexExpr&gt; &amp;' data-ref="183out_ndims" data-ref-filename="183out_ndims">out_ndims</dfn>)&gt;;</td></tr>
+<tr><th id="231">231</th><td></td></tr>
+<tr><th id="232">232</th><td>}  <i>// namespace relay</i></td></tr>
+<tr><th id="233">233</th><td>}  <i>// namespace tvm</i></td></tr>
+<tr><th id="234">234</th><td><u>#<span data-ppcond="24">endif</span>  // TVM_RELAY_OP_ATTR_TYPES_H_</u></td></tr>
+<tr><th id="235">235</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated while processing <a href='../../../src/ir/module.cc.html'>tvm/src/ir/module.cc</a><br/>Generated on <em>2022-Aug-10</em> from project tvm revision <em>fae79bb</em><br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

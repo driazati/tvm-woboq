@@ -1,0 +1,10 @@
+<dec f='tvm/src/relay/transforms/device_domains.h' l='209' type='bool tvm::relay::transform::DeviceDomains::CollapseOrFalse(const tvm::relay::transform::DeviceDomainPtr &amp; first_order_domain, const tvm::relay::transform::DeviceDomainPtr &amp; higher_order_domain)'/>
+<def f='tvm/src/relay/transforms/device_domains.cc' l='160' ll='170' type='bool tvm::relay::transform::DeviceDomains::CollapseOrFalse(const tvm::relay::transform::DeviceDomainPtr &amp; first_order_domain, const tvm::relay::transform::DeviceDomainPtr &amp; higher_order_domain)'/>
+<use f='tvm/src/relay/transforms/device_domains.cc' l='176' u='c' c='_ZN3tvm5relay9transform13DeviceDomains21UnifyCollapsedOrFalseERKSt10shared_ptrINS1_12DeviceDomainEES7_'/>
+<doc f='tvm/src/relay/transforms/device_domains.h' l='202'>/*
+   * \brief Force all domains in \p higher_order_domain to unify with \p first_order_domain.
+   * This can be used to handle functions within tuples, references and ADTs since we don&apos;t
+   * attempt to track anything beyond &apos;the device&apos; for expressions of those first-order types.
+   *
+   * Returns false if any unification fails.
+   */</doc>

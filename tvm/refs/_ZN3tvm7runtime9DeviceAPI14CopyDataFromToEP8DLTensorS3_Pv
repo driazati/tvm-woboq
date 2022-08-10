@@ -1,0 +1,20 @@
+<dec f='tvm/include/tvm/runtime/device_api.h' l='133' type='void tvm::runtime::DeviceAPI::CopyDataFromTo(DLTensor * from, DLTensor * to, TVMStreamHandle stream)'/>
+<doc f='tvm/include/tvm/runtime/device_api.h' l='125'>/*!
+   * \brief copy data from one place to another
+   * \note This API is designed to support special memory with shape dependent layout.
+   *       We pass in DLTensor* with shape information to support these cases.
+   * \param from The source array.
+   * \param to The target array.
+   * \param stream Optional stream object.
+   */</doc>
+<def f='tvm/src/runtime/c_runtime_api.cc' l='174' ll='183' type='void tvm::runtime::DeviceAPI::CopyDataFromTo(DLTensor * from, DLTensor * to, TVMStreamHandle stream)'/>
+<use f='tvm/src/runtime/c_runtime_api.cc' l='628' u='c' c='TVMDeviceCopyDataFromTo'/>
+<use f='tvm/src/runtime/ndarray.cc' l='75' u='c' c='_ZN3tvm7runtime18ArrayCopyFromBytesEP8DLTensorPKvm'/>
+<use f='tvm/src/runtime/ndarray.cc' l='94' u='c' c='_ZN3tvm7runtime16ArrayCopyToBytesEPK8DLTensorPvm'/>
+<use f='tvm/src/runtime/ndarray.cc' l='282' u='c' c='_ZN3tvm7runtime7NDArray10CopyFromToEPK8DLTensorPS2_Pv'/>
+<ovr f='tvm/src/runtime/rpc/rpc_device_api.cc' l='80' c='_ZN3tvm7runtime12RPCDeviceAPI14CopyDataFromToEP8DLTensorS3_Pv'/>
+<use f='tvm/src/runtime/rpc/rpc_device_api.cc' l='94' u='c' c='_ZN3tvm7runtime12RPCDeviceAPI14CopyDataFromToEP8DLTensorS3_Pv'/>
+<use f='tvm/src/runtime/rpc/rpc_endpoint.cc' l='922' u='c' c='_ZN3tvm7runtime18RPCCopyAmongRemoteEPNS0_10RPCSessionENS0_7TVMArgsEPNS0_11TVMRetValueE'/>
+<ovr f='tvm/src/runtime/rpc/rpc_endpoint.cc' l='1105' c='_ZN3tvm7runtime16RPCClientSession14CopyDataFromToEP8DLTensorS3_Pv'/>
+<use f='tvm/src/runtime/rpc/rpc_local_session.cc' l='106' u='c' c='_ZN3tvm7runtime12LocalSession12CopyToRemoteEPvP8DLTensorm'/>
+<use f='tvm/src/runtime/rpc/rpc_local_session.cc' l='124' u='c' c='_ZN3tvm7runtime12LocalSession14CopyFromRemoteEP8DLTensorPvm'/>

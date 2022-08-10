@@ -1,0 +1,256 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>combine_parallel_op.h source code [tvm/src/relay/transforms/combine_parallel_op.h] - Woboq Code Browser</title>
+<meta name="woboq:interestingDefinitions" content="tvm::relay::BranchGroupFinder,tvm::relay::ParallelOpCombiner "/>
+<link rel="stylesheet" href="../../../.././data/qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href="../../../.././data/kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src="../../../.././data/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="../../../.././data/jquery/jquery-ui.min.js"></script>
+<script>var file = 'tvm/src/relay/transforms/combine_parallel_op.h'; var root_path = '../../../..'; var data_path = '../../../.././data'; var ecma_script_api_version = 2;</script>
+<script src='../../../.././data/codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='../../..'>tvm</a>/<a href='../..'>src</a>/<a href='..'>relay</a>/<a href='./'>transforms</a>/<a href='combine_parallel_op.h.html'>combine_parallel_op.h</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td><i>/*</i></td></tr>
+<tr><th id="2">2</th><td><i> * Licensed to the Apache Software Foundation (ASF) under one</i></td></tr>
+<tr><th id="3">3</th><td><i> * or more contributor license agreements.  See the NOTICE file</i></td></tr>
+<tr><th id="4">4</th><td><i> * distributed with this work for additional information</i></td></tr>
+<tr><th id="5">5</th><td><i> * regarding copyright ownership.  The ASF licenses this file</i></td></tr>
+<tr><th id="6">6</th><td><i> * to you under the Apache License, Version 2.0 (the</i></td></tr>
+<tr><th id="7">7</th><td><i> * "License"); you may not use this file except in compliance</i></td></tr>
+<tr><th id="8">8</th><td><i> * with the License.  You may obtain a copy of the License at</i></td></tr>
+<tr><th id="9">9</th><td><i> *</i></td></tr>
+<tr><th id="10">10</th><td><i> *   <a href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a></i></td></tr>
+<tr><th id="11">11</th><td><i> *</i></td></tr>
+<tr><th id="12">12</th><td><i> * Unless required by applicable law or agreed to in writing,</i></td></tr>
+<tr><th id="13">13</th><td><i> * software distributed under the License is distributed on an</i></td></tr>
+<tr><th id="14">14</th><td><i> * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY</i></td></tr>
+<tr><th id="15">15</th><td><i> * KIND, either express or implied.  See the License for the</i></td></tr>
+<tr><th id="16">16</th><td><i> * specific language governing permissions and limitations</i></td></tr>
+<tr><th id="17">17</th><td><i> * under the License.</i></td></tr>
+<tr><th id="18">18</th><td><i> */</i></td></tr>
+<tr><th id="19">19</th><td></td></tr>
+<tr><th id="20">20</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="21">21</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="22">22</th><td><i class="doc"> * <span class="command">\file</span> <span class="verb">combine_parallel_op.h</span></i></td></tr>
+<tr><th id="23">23</th><td><i class="doc"> * <span class="command">\brief</span> Abstract class to combine parallel ops and their successive element-wise ops.</i></td></tr>
+<tr><th id="24">24</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="25">25</th><td><u>#<span data-ppcond="25">ifndef</span> <span class="macro" data-ref="_M/TVM_RELAY_TRANSFORMS_COMBINE_PARALLEL_OP_H_">TVM_RELAY_TRANSFORMS_COMBINE_PARALLEL_OP_H_</span></u></td></tr>
+<tr><th id="26">26</th><td><u>#define <dfn class="macro" id="_M/TVM_RELAY_TRANSFORMS_COMBINE_PARALLEL_OP_H_" data-ref="_M/TVM_RELAY_TRANSFORMS_COMBINE_PARALLEL_OP_H_">TVM_RELAY_TRANSFORMS_COMBINE_PARALLEL_OP_H_</dfn></u></td></tr>
+<tr><th id="27">27</th><td></td></tr>
+<tr><th id="28">28</th><td><u>#include <a href="../../../include/tvm/relay/analysis.h.html">&lt;tvm/relay/analysis.h&gt;</a></u></td></tr>
+<tr><th id="29">29</th><td><u>#include <a href="../../../include/tvm/relay/attrs/nn.h.html">&lt;tvm/relay/attrs/nn.h&gt;</a></u></td></tr>
+<tr><th id="30">30</th><td><u>#include <a href="../../../include/tvm/relay/attrs/transform.h.html">&lt;tvm/relay/attrs/transform.h&gt;</a></u></td></tr>
+<tr><th id="31">31</th><td><u>#include <a href="../../../include/tvm/relay/expr_functor.h.html">&lt;tvm/relay/expr_functor.h&gt;</a></u></td></tr>
+<tr><th id="32">32</th><td><u>#include <a href="../../../include/tvm/relay/op_attr_types.h.html">&lt;tvm/relay/op_attr_types.h&gt;</a></u></td></tr>
+<tr><th id="33">33</th><td><u>#include <a href="../../../include/tvm/relay/transform.h.html">&lt;tvm/relay/transform.h&gt;</a></u></td></tr>
+<tr><th id="34">34</th><td></td></tr>
+<tr><th id="35">35</th><td><u>#include <a href="../../../../include/c++/10/string.html">&lt;string&gt;</a></u></td></tr>
+<tr><th id="36">36</th><td><u>#include <a href="../../../../include/c++/10/unordered_map.html">&lt;unordered_map&gt;</a></u></td></tr>
+<tr><th id="37">37</th><td><u>#include <a href="../../../../include/c++/10/unordered_set.html">&lt;unordered_set&gt;</a></u></td></tr>
+<tr><th id="38">38</th><td><u>#include <a href="../../../../include/c++/10/vector.html">&lt;vector&gt;</a></u></td></tr>
+<tr><th id="39">39</th><td></td></tr>
+<tr><th id="40">40</th><td><u>#include <a href="expr_subst.h.html">"./expr_subst.h"</a></u></td></tr>
+<tr><th id="41">41</th><td><u>#include <a href="pattern_utils.h.html">"pattern_utils.h"</a></u></td></tr>
+<tr><th id="42">42</th><td></td></tr>
+<tr><th id="43">43</th><td><b>namespace</b> <span class="namespace">tvm</span> {</td></tr>
+<tr><th id="44">44</th><td><b>namespace</b> <span class="namespace">relay</span> {</td></tr>
+<tr><th id="45">45</th><td></td></tr>
+<tr><th id="46">46</th><td><b>using</b> <dfn class="typedef" id="tvm::relay::Branch" title='tvm::relay::Branch' data-type='std::vector&lt;const CallNode *&gt;' data-ref="tvm::relay::Branch" data-ref-filename="tvm..relay..Branch">Branch</dfn> = <span class="namespace">std::</span><a class="type" href="../../../../include/c++/10/bits/stl_vector.h.html#std::vector" title='std::vector' data-ref="std::vector" data-ref-filename="std..vector">vector</a>&lt;<em>const</em> <a class="type" href="../../../include/tvm/relay/expr.h.html#tvm::relay::CallNode" title='tvm::relay::CallNode' data-ref="tvm::relay::CallNode" data-ref-filename="tvm..relay..CallNode">CallNode</a>*&gt;;</td></tr>
+<tr><th id="47">47</th><td><b>using</b> <dfn class="typedef" id="tvm::relay::Group" title='tvm::relay::Group' data-type='std::vector&lt;Branch&gt;' data-ref="tvm::relay::Group" data-ref-filename="tvm..relay..Group">Group</dfn> = <span class="namespace">std::</span><a class="type" href="../../../../include/c++/10/bits/stl_vector.h.html#std::vector" title='std::vector' data-ref="std::vector" data-ref-filename="std..vector">vector</a>&lt;<a class="typedef" href="#tvm::relay::Branch" title='tvm::relay::Branch' data-type='std::vector&lt;const CallNode *&gt;' data-ref="tvm::relay::Branch" data-ref-filename="tvm..relay..Branch">Branch</a>&gt;;</td></tr>
+<tr><th id="48">48</th><td><b>using</b> <dfn class="typedef" id="tvm::relay::FIsSupportedOp" title='tvm::relay::FIsSupportedOp' data-type='std::function&lt;bool (const CallNode *)&gt;' data-ref="tvm::relay::FIsSupportedOp" data-ref-filename="tvm..relay..FIsSupportedOp">FIsSupportedOp</dfn> = <span class="namespace">std::</span><a class="type" href="../../../../include/c++/10/bits/std_function.h.html#std::function" title='std::function' data-ref="std::function" data-ref-filename="std..function">function</a>&lt;<em>bool</em>(<em>const</em> <a class="type" href="../../../include/tvm/relay/expr.h.html#tvm::relay::CallNode" title='tvm::relay::CallNode' data-ref="tvm::relay::CallNode" data-ref-filename="tvm..relay..CallNode">CallNode</a>* <dfn class="local col3 decl" id="3n" title='n' data-type='const tvm::relay::CallNode *' data-ref="3n" data-ref-filename="3n">n</dfn>)&gt;;</td></tr>
+<tr><th id="49">49</th><td><b>using</b> <dfn class="typedef" id="tvm::relay::FAreCompatibleOps" title='tvm::relay::FAreCompatibleOps' data-type='std::function&lt;bool (const CallNode *, const CallNode *)&gt;' data-ref="tvm::relay::FAreCompatibleOps" data-ref-filename="tvm..relay..FAreCompatibleOps">FAreCompatibleOps</dfn> = <span class="namespace">std::</span><a class="type" href="../../../../include/c++/10/bits/std_function.h.html#std::function" title='std::function' data-ref="std::function" data-ref-filename="std..function">function</a>&lt;<em>bool</em>(<em>const</em> <a class="type" href="../../../include/tvm/relay/expr.h.html#tvm::relay::CallNode" title='tvm::relay::CallNode' data-ref="tvm::relay::CallNode" data-ref-filename="tvm..relay..CallNode">CallNode</a>* <dfn class="local col4 decl" id="4a" title='a' data-type='const tvm::relay::CallNode *' data-ref="4a" data-ref-filename="4a">a</dfn>, <em>const</em> <a class="type" href="../../../include/tvm/relay/expr.h.html#tvm::relay::CallNode" title='tvm::relay::CallNode' data-ref="tvm::relay::CallNode" data-ref-filename="tvm..relay..CallNode">CallNode</a>* <dfn class="local col5 decl" id="5b" title='b' data-type='const tvm::relay::CallNode *' data-ref="5b" data-ref-filename="5b">b</dfn>)&gt;;</td></tr>
+<tr><th id="50">50</th><td><b>using</b> <dfn class="typedef" id="tvm::relay::ExprSubstMap" title='tvm::relay::ExprSubstMap' data-type='std::unordered_map&lt;Expr, Expr, ObjectPtrHash, ObjectPtrEqual&gt;' data-ref="tvm::relay::ExprSubstMap" data-ref-filename="tvm..relay..ExprSubstMap">ExprSubstMap</dfn> = <span class="namespace">std::</span><a class="type" href="../../../../include/c++/10/bits/unordered_map.h.html#std::unordered_map" title='std::unordered_map' data-ref="std::unordered_map" data-ref-filename="std..unordered_map">unordered_map</a>&lt;<a class="typedef" href="../../../include/tvm/relay/expr.h.html#tvm::relay::Expr" title='tvm::relay::Expr' data-type='tvm::RelayExpr' data-ref="tvm::relay::Expr" data-ref-filename="tvm..relay..Expr">Expr</a>, <a class="typedef" href="../../../include/tvm/relay/expr.h.html#tvm::relay::Expr" title='tvm::relay::Expr' data-type='tvm::RelayExpr' data-ref="tvm::relay::Expr" data-ref-filename="tvm..relay..Expr">Expr</a>, ObjectPtrHash, ObjectPtrEqual&gt;;</td></tr>
+<tr><th id="51">51</th><td></td></tr>
+<tr><th id="52">52</th><td><i>/*</i></td></tr>
+<tr><th id="53">53</th><td><i> * Class to find parallel branches starting with op that are</i></td></tr>
+<tr><th id="54">54</th><td><i> * grouped if they are able to be combined. They are eligible to</i></td></tr>
+<tr><th id="55">55</th><td><i> * be combined if they have the same input data.</i></td></tr>
+<tr><th id="56">56</th><td><i> * Op can be followed by zero or more elemwise or broadcast ops,</i></td></tr>
+<tr><th id="57">57</th><td><i> * which are included in the group.</i></td></tr>
+<tr><th id="58">58</th><td><i> * Intermediate nodes have exactly one successor. It is possible that branches meet at a point,</i></td></tr>
+<tr><th id="59">59</th><td><i> * which should be handled in ParallelOpCombiner.</i></td></tr>
+<tr><th id="60">60</th><td><i> *</i></td></tr>
+<tr><th id="61">61</th><td><i> *        data</i></td></tr>
+<tr><th id="62">62</th><td><i> *       /    \</i></td></tr>
+<tr><th id="63">63</th><td><i> *     op      op</i></td></tr>
+<tr><th id="64">64</th><td><i> *     |        |</i></td></tr>
+<tr><th id="65">65</th><td><i> * elem-wise elem-wise</i></td></tr>
+<tr><th id="66">66</th><td><i> *     |        |</i></td></tr>
+<tr><th id="67">67</th><td><i> */</i></td></tr>
+<tr><th id="68">68</th><td><b>class</b> <dfn class="type def" id="tvm::relay::BranchGroupFinder" title='tvm::relay::BranchGroupFinder' data-ref="tvm::relay::BranchGroupFinder" data-ref-filename="tvm..relay..BranchGroupFinder">BranchGroupFinder</dfn> : <b>private</b> <a class="type" href="../../../include/tvm/relay/expr_functor.h.html#tvm::relay::ExprVisitor" title='tvm::relay::ExprVisitor' data-ref="tvm::relay::ExprVisitor" data-ref-filename="tvm..relay..ExprVisitor">ExprVisitor</a> {</td></tr>
+<tr><th id="69">69</th><td> <b>public</b>:</td></tr>
+<tr><th id="70">70</th><td>  <i>/*</i></td></tr>
+<tr><th id="71">71</th><td><i>   * \brief Constructor</i></td></tr>
+<tr><th id="72">72</th><td><i>   * \param op The op that indicates the start of each group</i></td></tr>
+<tr><th id="73">73</th><td><i>   * \param fis_supported_op function that returns true if op</i></td></tr>
+<tr><th id="74">74</th><td><i>   *                         is supported for combining</i></td></tr>
+<tr><th id="75">75</th><td><i>   * \param fare_compatible_ops function that returns true if</i></td></tr>
+<tr><th id="76">76</th><td><i>   *                            two ops are compatible for combining</i></td></tr>
+<tr><th id="77">77</th><td><i>   */</i></td></tr>
+<tr><th id="78">78</th><td>  <dfn class="decl fn" id="_ZN3tvm5relay17BranchGroupFinderC1ERKNS_2OpESt8functionIFbPKNS0_8CallNodeEEES5_IFbS8_S8_EE" title='tvm::relay::BranchGroupFinder::BranchGroupFinder' data-ref="_ZN3tvm5relay17BranchGroupFinderC1ERKNS_2OpESt8functionIFbPKNS0_8CallNodeEEES5_IFbS8_S8_EE" data-ref-filename="_ZN3tvm5relay17BranchGroupFinderC1ERKNS_2OpESt8functionIFbPKNS0_8CallNodeEEES5_IFbS8_S8_EE">BranchGroupFinder</dfn>(<em>const</em> <a class="typedef" href="../../../include/tvm/relay/op.h.html#tvm::relay::Op" title='tvm::relay::Op' data-type='tvm::Op' data-ref="tvm::relay::Op" data-ref-filename="tvm..relay..Op">Op</a>&amp; <dfn class="local col6 decl" id="6op" title='op' data-type='const tvm::relay::Op &amp;' data-ref="6op" data-ref-filename="6op">op</dfn>, <a class="typedef" href="#tvm::relay::FIsSupportedOp" title='tvm::relay::FIsSupportedOp' data-type='std::function&lt;bool (const CallNode *)&gt;' data-ref="tvm::relay::FIsSupportedOp" data-ref-filename="tvm..relay..FIsSupportedOp">FIsSupportedOp</a> <dfn class="local col7 decl" id="7fis_supported_op" title='fis_supported_op' data-type='tvm::relay::FIsSupportedOp' data-ref="7fis_supported_op" data-ref-filename="7fis_supported_op">fis_supported_op</dfn>,</td></tr>
+<tr><th id="79">79</th><td>                    <a class="typedef" href="#tvm::relay::FAreCompatibleOps" title='tvm::relay::FAreCompatibleOps' data-type='std::function&lt;bool (const CallNode *, const CallNode *)&gt;' data-ref="tvm::relay::FAreCompatibleOps" data-ref-filename="tvm..relay..FAreCompatibleOps">FAreCompatibleOps</a> <dfn class="local col8 decl" id="8fare_compatible_ops" title='fare_compatible_ops' data-type='tvm::relay::FAreCompatibleOps' data-ref="8fare_compatible_ops" data-ref-filename="8fare_compatible_ops">fare_compatible_ops</dfn>);</td></tr>
+<tr><th id="80">80</th><td></td></tr>
+<tr><th id="81">81</th><td>  <i>/*</i></td></tr>
+<tr><th id="82">82</th><td><i>   * \brief Finds all groups that can be combined.</i></td></tr>
+<tr><th id="83">83</th><td><i>   * \param expr Relay expression that represents function</i></td></tr>
+<tr><th id="84">84</th><td><i>   *             to look at for groups to be combined</i></td></tr>
+<tr><th id="85">85</th><td><i>   * \return Vector of groups which can be combined.</i></td></tr>
+<tr><th id="86">86</th><td><i>   */</i></td></tr>
+<tr><th id="87">87</th><td>  <span class="namespace">std::</span><a class="type" href="../../../../include/c++/10/bits/stl_vector.h.html#std::vector" title='std::vector' data-ref="std::vector" data-ref-filename="std..vector">vector</a>&lt;<a class="typedef" href="#tvm::relay::Group" title='tvm::relay::Group' data-type='std::vector&lt;Branch&gt;' data-ref="tvm::relay::Group" data-ref-filename="tvm..relay..Group">Group</a>&gt; <dfn class="decl fn" id="_ZN3tvm5relay17BranchGroupFinder4FindERKNS_9RelayExprE" title='tvm::relay::BranchGroupFinder::Find' data-ref="_ZN3tvm5relay17BranchGroupFinder4FindERKNS_9RelayExprE" data-ref-filename="_ZN3tvm5relay17BranchGroupFinder4FindERKNS_9RelayExprE">Find</dfn>(<em>const</em> <a class="typedef" href="../../../include/tvm/relay/expr.h.html#tvm::relay::Expr" title='tvm::relay::Expr' data-type='tvm::RelayExpr' data-ref="tvm::relay::Expr" data-ref-filename="tvm..relay..Expr">Expr</a>&amp; <dfn class="local col9 decl" id="9expr" title='expr' data-type='const tvm::relay::Expr &amp;' data-ref="9expr" data-ref-filename="9expr">expr</dfn>);</td></tr>
+<tr><th id="88">88</th><td></td></tr>
+<tr><th id="89">89</th><td> <b>private</b>:</td></tr>
+<tr><th id="90">90</th><td>  <i>/* \brief Cache the op for finding parallel branches */</i></td></tr>
+<tr><th id="91">91</th><td>  <em>const</em> <a class="typedef" href="../../../include/tvm/relay/op.h.html#tvm::relay::Op" title='tvm::relay::Op' data-type='tvm::Op' data-ref="tvm::relay::Op" data-ref-filename="tvm..relay..Op">Op</a>&amp; <dfn class="decl field" id="tvm::relay::BranchGroupFinder::cached_op_" title='tvm::relay::BranchGroupFinder::cached_op_' data-ref="tvm::relay::BranchGroupFinder::cached_op_" data-ref-filename="tvm..relay..BranchGroupFinder..cached_op_">cached_op_</dfn>;</td></tr>
+<tr><th id="92">92</th><td></td></tr>
+<tr><th id="93">93</th><td>  <i>/* \brief function to return true if op is eligible to be combined,</i></td></tr>
+<tr><th id="94">94</th><td><i>   *         false otherwise</i></td></tr>
+<tr><th id="95">95</th><td><i>   */</i></td></tr>
+<tr><th id="96">96</th><td>  <a class="typedef" href="#tvm::relay::FIsSupportedOp" title='tvm::relay::FIsSupportedOp' data-type='std::function&lt;bool (const CallNode *)&gt;' data-ref="tvm::relay::FIsSupportedOp" data-ref-filename="tvm..relay..FIsSupportedOp">FIsSupportedOp</a> <dfn class="decl field" id="tvm::relay::BranchGroupFinder::fis_supported_op_" title='tvm::relay::BranchGroupFinder::fis_supported_op_' data-ref="tvm::relay::BranchGroupFinder::fis_supported_op_" data-ref-filename="tvm..relay..BranchGroupFinder..fis_supported_op_">fis_supported_op_</dfn>;</td></tr>
+<tr><th id="97">97</th><td></td></tr>
+<tr><th id="98">98</th><td>  <i>/* \brief function to return true if two parallel ops are eligible</i></td></tr>
+<tr><th id="99">99</th><td><i>   *         to be combined, false otherwise</i></td></tr>
+<tr><th id="100">100</th><td><i>   */</i></td></tr>
+<tr><th id="101">101</th><td>  <a class="typedef" href="#tvm::relay::FAreCompatibleOps" title='tvm::relay::FAreCompatibleOps' data-type='std::function&lt;bool (const CallNode *, const CallNode *)&gt;' data-ref="tvm::relay::FAreCompatibleOps" data-ref-filename="tvm..relay..FAreCompatibleOps">FAreCompatibleOps</a> <dfn class="decl field" id="tvm::relay::BranchGroupFinder::fare_compatible_ops_" title='tvm::relay::BranchGroupFinder::fare_compatible_ops_' data-ref="tvm::relay::BranchGroupFinder::fare_compatible_ops_" data-ref-filename="tvm..relay..BranchGroupFinder..fare_compatible_ops_">fare_compatible_ops_</dfn>;</td></tr>
+<tr><th id="102">102</th><td></td></tr>
+<tr><th id="103">103</th><td>  <i>/* \brief ops that are on the first (logically, leftmost) branch</i></td></tr>
+<tr><th id="104">104</th><td><i>   *         of parallel ops and are eligible to be combined</i></td></tr>
+<tr><th id="105">105</th><td><i>   */</i></td></tr>
+<tr><th id="106">106</th><td>  <span class="namespace">std::</span><a class="type" href="../../../../include/c++/10/bits/unordered_set.h.html#std::unordered_set" title='std::unordered_set' data-ref="std::unordered_set" data-ref-filename="std..unordered_set">unordered_set</a>&lt;<a class="typedef" href="../../../include/tvm/relay/expr.h.html#tvm::relay::Expr" title='tvm::relay::Expr' data-type='tvm::RelayExpr' data-ref="tvm::relay::Expr" data-ref-filename="tvm..relay..Expr">Expr</a>, ObjectPtrHash, ObjectPtrEqual&gt; <dfn class="decl field" id="tvm::relay::BranchGroupFinder::op_roots_" title='tvm::relay::BranchGroupFinder::op_roots_' data-ref="tvm::relay::BranchGroupFinder::op_roots_" data-ref-filename="tvm..relay..BranchGroupFinder..op_roots_">op_roots_</dfn>;</td></tr>
+<tr><th id="107">107</th><td></td></tr>
+<tr><th id="108">108</th><td>  <i>/* \brief map of Expr to CallNodes that follow it  */</i></td></tr>
+<tr><th id="109">109</th><td>  <span class="namespace">std::</span><a class="type" href="../../../../include/c++/10/bits/unordered_map.h.html#std::unordered_map" title='std::unordered_map' data-ref="std::unordered_map" data-ref-filename="std..unordered_map">unordered_map</a>&lt;<a class="typedef" href="../../../include/tvm/relay/expr.h.html#tvm::relay::Expr" title='tvm::relay::Expr' data-type='tvm::RelayExpr' data-ref="tvm::relay::Expr" data-ref-filename="tvm..relay..Expr">Expr</a>, <span class="namespace">std::</span><a class="type" href="../../../../include/c++/10/bits/stl_vector.h.html#std::vector" title='std::vector' data-ref="std::vector" data-ref-filename="std..vector">vector</a>&lt;<em>const</em> <a class="type" href="../../../include/tvm/relay/expr.h.html#tvm::relay::CallNode" title='tvm::relay::CallNode' data-ref="tvm::relay::CallNode" data-ref-filename="tvm..relay..CallNode">CallNode</a>*&gt;, ObjectPtrHash, ObjectPtrEqual&gt;</td></tr>
+<tr><th id="110">110</th><td>      <dfn class="decl field" id="tvm::relay::BranchGroupFinder::children_map_" title='tvm::relay::BranchGroupFinder::children_map_' data-ref="tvm::relay::BranchGroupFinder::children_map_" data-ref-filename="tvm..relay..BranchGroupFinder..children_map_">children_map_</dfn>;</td></tr>
+<tr><th id="111">111</th><td></td></tr>
+<tr><th id="112">112</th><td>  <i>/*</i></td></tr>
+<tr><th id="113">113</th><td><i>   * \brief Creates new branch from op and its children that have</i></td></tr>
+<tr><th id="114">114</th><td><i>   *        elementwise or broadcast patterns</i></td></tr>
+<tr><th id="115">115</th><td><i>   * \return New branch</i></td></tr>
+<tr><th id="116">116</th><td><i>   */</i></td></tr>
+<tr><th id="117">117</th><td>  <a class="typedef" href="#tvm::relay::Branch" title='tvm::relay::Branch' data-type='std::vector&lt;const CallNode *&gt;' data-ref="tvm::relay::Branch" data-ref-filename="tvm..relay..Branch">Branch</a> <dfn class="decl fn" id="_ZN3tvm5relay17BranchGroupFinder12CreateBranchEPKNS0_8CallNodeE" title='tvm::relay::BranchGroupFinder::CreateBranch' data-ref="_ZN3tvm5relay17BranchGroupFinder12CreateBranchEPKNS0_8CallNodeE" data-ref-filename="_ZN3tvm5relay17BranchGroupFinder12CreateBranchEPKNS0_8CallNodeE">CreateBranch</dfn>(<em>const</em> <a class="type" href="../../../include/tvm/relay/expr.h.html#tvm::relay::CallNode" title='tvm::relay::CallNode' data-ref="tvm::relay::CallNode" data-ref-filename="tvm..relay..CallNode">CallNode</a>* <dfn class="local col0 decl" id="10op" title='op' data-type='const tvm::relay::CallNode *' data-ref="10op" data-ref-filename="10op">op</dfn>);</td></tr>
+<tr><th id="118">118</th><td></td></tr>
+<tr><th id="119">119</th><td>  <i>/*</i></td></tr>
+<tr><th id="120">120</th><td><i>   * \brief Expression visitor function</i></td></tr>
+<tr><th id="121">121</th><td><i>   */</i></td></tr>
+<tr><th id="122">122</th><td>  <em>void</em> <dfn class="virtual decl fn" id="_ZN3tvm5relay17BranchGroupFinder10VisitExpr_EPKNS0_8CallNodeE" title='tvm::relay::BranchGroupFinder::VisitExpr_' data-ref="_ZN3tvm5relay17BranchGroupFinder10VisitExpr_EPKNS0_8CallNodeE" data-ref-filename="_ZN3tvm5relay17BranchGroupFinder10VisitExpr_EPKNS0_8CallNodeE">VisitExpr_</dfn>(<em>const</em> <a class="type" href="../../../include/tvm/relay/expr.h.html#tvm::relay::CallNode" title='tvm::relay::CallNode' data-ref="tvm::relay::CallNode" data-ref-filename="tvm..relay..CallNode">CallNode</a>* <dfn class="local col1 decl" id="11n" title='n' data-type='const tvm::relay::CallNode *' data-ref="11n" data-ref-filename="11n">n</dfn>) final;</td></tr>
+<tr><th id="123">123</th><td>};</td></tr>
+<tr><th id="124">124</th><td></td></tr>
+<tr><th id="125">125</th><td><i>/*</i></td></tr>
+<tr><th id="126">126</th><td><i> * Abstract class to find and combine parallel ops and the elementwise ops that follow.</i></td></tr>
+<tr><th id="127">127</th><td><i> */</i></td></tr>
+<tr><th id="128">128</th><td><b>class</b> <dfn class="type def" id="tvm::relay::ParallelOpCombiner" title='tvm::relay::ParallelOpCombiner' data-ref="tvm::relay::ParallelOpCombiner" data-ref-filename="tvm..relay..ParallelOpCombiner">ParallelOpCombiner</dfn> {</td></tr>
+<tr><th id="129">129</th><td> <b>public</b>:</td></tr>
+<tr><th id="130">130</th><td>  <i class="doc">/*! <span class="command">\brief</span> virtual destructor */</i></td></tr>
+<tr><th id="131">131</th><td>  <b>virtual</b> <dfn class="virtual decl def fn" id="_ZN3tvm5relay18ParallelOpCombinerD1Ev" title='tvm::relay::ParallelOpCombiner::~ParallelOpCombiner' data-ref="_ZN3tvm5relay18ParallelOpCombinerD1Ev" data-ref-filename="_ZN3tvm5relay18ParallelOpCombinerD1Ev">~ParallelOpCombiner</dfn>() {}</td></tr>
+<tr><th id="132">132</th><td>  <i>/*</i></td></tr>
+<tr><th id="133">133</th><td><i>   * \brief Constructor.</i></td></tr>
+<tr><th id="134">134</th><td><i>   * \param op_name name of op to combine</i></td></tr>
+<tr><th id="135">135</th><td><i>   * \param min_num_branches min number of parallel branches beginning with op</i></td></tr>
+<tr><th id="136">136</th><td><i>   *                         to start combining</i></td></tr>
+<tr><th id="137">137</th><td><i>   */</i></td></tr>
+<tr><th id="138">138</th><td>  <b>explicit</b> <dfn class="decl fn" id="_ZN3tvm5relay18ParallelOpCombinerC1ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEm" title='tvm::relay::ParallelOpCombiner::ParallelOpCombiner' data-ref="_ZN3tvm5relay18ParallelOpCombinerC1ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEm" data-ref-filename="_ZN3tvm5relay18ParallelOpCombinerC1ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEm">ParallelOpCombiner</dfn>(<em>const</em> <span class="namespace">std::</span><a class="typedef" href="../../../../include/c++/10/bits/stringfwd.h.html#std::string" title='std::string' data-type='basic_string&lt;char&gt;' data-ref="std::string" data-ref-filename="std..string">string</a>&amp; <dfn class="local col2 decl" id="12op_name" title='op_name' data-type='const std::string &amp;' data-ref="12op_name" data-ref-filename="12op_name">op_name</dfn>, <a class="typedef" href="../../../../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint64_t" title='uint64_t' data-type='__uint64_t' data-ref="uint64_t" data-ref-filename="uint64_t">uint64_t</a> <dfn class="local col3 decl" id="13min_num_branches" title='min_num_branches' data-type='uint64_t' data-ref="13min_num_branches" data-ref-filename="13min_num_branches">min_num_branches</dfn>);</td></tr>
+<tr><th id="139">139</th><td></td></tr>
+<tr><th id="140">140</th><td>  <i>/*</i></td></tr>
+<tr><th id="141">141</th><td><i>   * \brief Combines ops and following elementwise or broadcast ops</i></td></tr>
+<tr><th id="142">142</th><td><i>   * \param expr function to modify</i></td></tr>
+<tr><th id="143">143</th><td><i>   * \return new function with combined ops</i></td></tr>
+<tr><th id="144">144</th><td><i>   */</i></td></tr>
+<tr><th id="145">145</th><td>  <a class="typedef" href="../../../include/tvm/relay/expr.h.html#tvm::relay::Expr" title='tvm::relay::Expr' data-type='tvm::RelayExpr' data-ref="tvm::relay::Expr" data-ref-filename="tvm..relay..Expr">Expr</a> <dfn class="decl fn" id="_ZN3tvm5relay18ParallelOpCombiner7CombineERKNS_9RelayExprE" title='tvm::relay::ParallelOpCombiner::Combine' data-ref="_ZN3tvm5relay18ParallelOpCombiner7CombineERKNS_9RelayExprE" data-ref-filename="_ZN3tvm5relay18ParallelOpCombiner7CombineERKNS_9RelayExprE">Combine</dfn>(<em>const</em> <a class="typedef" href="../../../include/tvm/relay/expr.h.html#tvm::relay::Expr" title='tvm::relay::Expr' data-type='tvm::RelayExpr' data-ref="tvm::relay::Expr" data-ref-filename="tvm..relay..Expr">Expr</a>&amp; <dfn class="local col4 decl" id="14expr" title='expr' data-type='const tvm::relay::Expr &amp;' data-ref="14expr" data-ref-filename="14expr">expr</dfn>);</td></tr>
+<tr><th id="146">146</th><td></td></tr>
+<tr><th id="147">147</th><td> <b>protected</b>:</td></tr>
+<tr><th id="148">148</th><td>  <i>/*</i></td></tr>
+<tr><th id="149">149</th><td><i>   * \brief Checks if node is supported to be combined</i></td></tr>
+<tr><th id="150">150</th><td><i>   * \param n node in question</i></td></tr>
+<tr><th id="151">151</th><td><i>   * \return True if the op represented by n is supported to be the root of a branch</i></td></tr>
+<tr><th id="152">152</th><td><i>   *         to be combined. False otherwise.</i></td></tr>
+<tr><th id="153">153</th><td><i>   */</i></td></tr>
+<tr><th id="154">154</th><td>  <b>virtual</b> <em>bool</em> <dfn class="virtual decl fn" id="_ZN3tvm5relay18ParallelOpCombiner13IsSupportedOpEPKNS0_8CallNodeE" title='tvm::relay::ParallelOpCombiner::IsSupportedOp' data-ref="_ZN3tvm5relay18ParallelOpCombiner13IsSupportedOpEPKNS0_8CallNodeE" data-ref-filename="_ZN3tvm5relay18ParallelOpCombiner13IsSupportedOpEPKNS0_8CallNodeE">IsSupportedOp</dfn>(<em>const</em> <a class="type" href="../../../include/tvm/relay/expr.h.html#tvm::relay::CallNode" title='tvm::relay::CallNode' data-ref="tvm::relay::CallNode" data-ref-filename="tvm..relay..CallNode">CallNode</a>* <dfn class="local col5 decl" id="15n" title='n' data-type='const tvm::relay::CallNode *' data-ref="15n" data-ref-filename="15n">n</dfn>) = <var>0</var>;</td></tr>
+<tr><th id="155">155</th><td></td></tr>
+<tr><th id="156">156</th><td>  <i>/*</i></td></tr>
+<tr><th id="157">157</th><td><i>   * \brief Checks if two ops can be combined</i></td></tr>
+<tr><th id="158">158</th><td><i>   * \param a node a</i></td></tr>
+<tr><th id="159">159</th><td><i>   * \param b node b</i></td></tr>
+<tr><th id="160">160</th><td><i>   * \return True if a and b can be combined. False otherwise.</i></td></tr>
+<tr><th id="161">161</th><td><i>   */</i></td></tr>
+<tr><th id="162">162</th><td>  <b>virtual</b> <em>bool</em> <dfn class="virtual decl fn" id="_ZN3tvm5relay18ParallelOpCombiner16CanOpsBeCombinedEPKNS0_8CallNodeES4_" title='tvm::relay::ParallelOpCombiner::CanOpsBeCombined' data-ref="_ZN3tvm5relay18ParallelOpCombiner16CanOpsBeCombinedEPKNS0_8CallNodeES4_" data-ref-filename="_ZN3tvm5relay18ParallelOpCombiner16CanOpsBeCombinedEPKNS0_8CallNodeES4_">CanOpsBeCombined</dfn>(<em>const</em> <a class="type" href="../../../include/tvm/relay/expr.h.html#tvm::relay::CallNode" title='tvm::relay::CallNode' data-ref="tvm::relay::CallNode" data-ref-filename="tvm..relay..CallNode">CallNode</a>* <dfn class="local col6 decl" id="16a" title='a' data-type='const tvm::relay::CallNode *' data-ref="16a" data-ref-filename="16a">a</dfn>, <em>const</em> <a class="type" href="../../../include/tvm/relay/expr.h.html#tvm::relay::CallNode" title='tvm::relay::CallNode' data-ref="tvm::relay::CallNode" data-ref-filename="tvm..relay..CallNode">CallNode</a>* <dfn class="local col7 decl" id="17b" title='b' data-type='const tvm::relay::CallNode *' data-ref="17b" data-ref-filename="17b">b</dfn>) = <var>0</var>;</td></tr>
+<tr><th id="163">163</th><td></td></tr>
+<tr><th id="164">164</th><td>  <i>/*</i></td></tr>
+<tr><th id="165">165</th><td><i>   * \brief Makes combined op from parallel ops in branches. This usually involves</i></td></tr>
+<tr><th id="166">166</th><td><i>   *        concatenating or stacking inputs, then creating a new call.</i></td></tr>
+<tr><th id="167">167</th><td><i>   * \param branches branches that are to be combined</i></td></tr>
+<tr><th id="168">168</th><td><i>   * \return new call with branches combined.</i></td></tr>
+<tr><th id="169">169</th><td><i>   */</i></td></tr>
+<tr><th id="170">170</th><td>  <b>virtual</b> <a class="type" href="../../../include/tvm/relay/expr.h.html#tvm::relay::Call" title='tvm::relay::Call' data-ref="tvm::relay::Call" data-ref-filename="tvm..relay..Call">Call</a> <dfn class="virtual decl fn" id="_ZN3tvm5relay18ParallelOpCombiner14MakeCombinedOpERKSt6vectorIS2_IPKNS0_8CallNodeESaIS5_EESaIS7_EE" title='tvm::relay::ParallelOpCombiner::MakeCombinedOp' data-ref="_ZN3tvm5relay18ParallelOpCombiner14MakeCombinedOpERKSt6vectorIS2_IPKNS0_8CallNodeESaIS5_EESaIS7_EE" data-ref-filename="_ZN3tvm5relay18ParallelOpCombiner14MakeCombinedOpERKSt6vectorIS2_IPKNS0_8CallNodeESaIS5_EESaIS7_EE">MakeCombinedOp</dfn>(<em>const</em> <a class="typedef" href="#tvm::relay::Group" title='tvm::relay::Group' data-type='std::vector&lt;Branch&gt;' data-ref="tvm::relay::Group" data-ref-filename="tvm..relay..Group">Group</a>&amp; <dfn class="local col8 decl" id="18branches" title='branches' data-type='const tvm::relay::Group &amp;' data-ref="18branches" data-ref-filename="18branches">branches</dfn>) = <var>0</var>;</td></tr>
+<tr><th id="171">171</th><td></td></tr>
+<tr><th id="172">172</th><td>  <i>/*</i></td></tr>
+<tr><th id="173">173</th><td><i>   * \brief Checks if argument of op following combined ops are able to be combined</i></td></tr>
+<tr><th id="174">174</th><td><i>   * \param a node a</i></td></tr>
+<tr><th id="175">175</th><td><i>   * \param b node b</i></td></tr>
+<tr><th id="176">176</th><td><i>   * \param index index of argument in question</i></td></tr>
+<tr><th id="177">177</th><td><i>   * \return True if argument of a and b and index can be combined</i></td></tr>
+<tr><th id="178">178</th><td><i>   */</i></td></tr>
+<tr><th id="179">179</th><td>  <b>virtual</b> <em>bool</em> <dfn class="virtual decl fn" id="_ZN3tvm5relay18ParallelOpCombiner15IsArgCompatibleEPKNS0_8CallNodeES4_m" title='tvm::relay::ParallelOpCombiner::IsArgCompatible' data-ref="_ZN3tvm5relay18ParallelOpCombiner15IsArgCompatibleEPKNS0_8CallNodeES4_m" data-ref-filename="_ZN3tvm5relay18ParallelOpCombiner15IsArgCompatibleEPKNS0_8CallNodeES4_m">IsArgCompatible</dfn>(<em>const</em> <a class="type" href="../../../include/tvm/relay/expr.h.html#tvm::relay::CallNode" title='tvm::relay::CallNode' data-ref="tvm::relay::CallNode" data-ref-filename="tvm..relay..CallNode">CallNode</a>* <dfn class="local col9 decl" id="19a" title='a' data-type='const tvm::relay::CallNode *' data-ref="19a" data-ref-filename="19a">a</dfn>, <em>const</em> <a class="type" href="../../../include/tvm/relay/expr.h.html#tvm::relay::CallNode" title='tvm::relay::CallNode' data-ref="tvm::relay::CallNode" data-ref-filename="tvm..relay..CallNode">CallNode</a>* <dfn class="local col0 decl" id="20b" title='b' data-type='const tvm::relay::CallNode *' data-ref="20b" data-ref-filename="20b">b</dfn>, <span class='typedef' title='size_t' data-type='unsigned long' data-ref="size_t" data-ref-filename="size_t">size_t</span> <dfn class="local col1 decl" id="21index" title='index' data-type='size_t' data-ref="21index" data-ref-filename="21index">index</dfn>) = <var>0</var>;</td></tr>
+<tr><th id="180">180</th><td></td></tr>
+<tr><th id="181">181</th><td>  <i>/*</i></td></tr>
+<tr><th id="182">182</th><td><i>   * \brief Create combined call from ops that follow the initial combined op at the depth-th level.</i></td></tr>
+<tr><th id="183">183</th><td><i>   *        This usually involves concatenating or stacking inputs, then creating a new call.</i></td></tr>
+<tr><th id="184">184</th><td><i>   *        Only called if IsArgCompatbile returns true for each arg.</i></td></tr>
+<tr><th id="185">185</th><td><i>   * \param data combined op</i></td></tr>
+<tr><th id="186">186</th><td><i>   * \param branches branches of parallel ops to be combined</i></td></tr>
+<tr><th id="187">187</th><td><i>   * \param depth depth at which to combine ops</i></td></tr>
+<tr><th id="188">188</th><td><i>   * \param parent_index index of arg that corresponds to original input that was shared among</i></td></tr>
+<tr><th id="189">189</th><td><i>   *                     all combined ops</i></td></tr>
+<tr><th id="190">190</th><td><i>   * \return new combined call</i></td></tr>
+<tr><th id="191">191</th><td><i>   */</i></td></tr>
+<tr><th id="192">192</th><td>  <b>virtual</b> <a class="type" href="../../../include/tvm/relay/expr.h.html#tvm::relay::Call" title='tvm::relay::Call' data-ref="tvm::relay::Call" data-ref-filename="tvm..relay..Call">Call</a> <dfn class="virtual decl fn" id="_ZN3tvm5relay18ParallelOpCombiner32MakeCombinedCallFromFollowingOpsERKNS_9RelayExprERKSt6vectorIS5_IPKNS0_8CallNodeESaIS8_EESaISA_EEmm" title='tvm::relay::ParallelOpCombiner::MakeCombinedCallFromFollowingOps' data-ref="_ZN3tvm5relay18ParallelOpCombiner32MakeCombinedCallFromFollowingOpsERKNS_9RelayExprERKSt6vectorIS5_IPKNS0_8CallNodeESaIS8_EESaISA_EEmm" data-ref-filename="_ZN3tvm5relay18ParallelOpCombiner32MakeCombinedCallFromFollowingOpsERKNS_9RelayExprERKSt6vectorIS5_IPKNS0_8CallNodeESaIS8_EESaISA_EEmm">MakeCombinedCallFromFollowingOps</dfn>(<em>const</em> <a class="typedef" href="../../../include/tvm/relay/expr.h.html#tvm::relay::Expr" title='tvm::relay::Expr' data-type='tvm::RelayExpr' data-ref="tvm::relay::Expr" data-ref-filename="tvm..relay..Expr">Expr</a>&amp; <dfn class="local col2 decl" id="22data" title='data' data-type='const tvm::relay::Expr &amp;' data-ref="22data" data-ref-filename="22data">data</dfn>, <em>const</em> <a class="typedef" href="#tvm::relay::Group" title='tvm::relay::Group' data-type='std::vector&lt;Branch&gt;' data-ref="tvm::relay::Group" data-ref-filename="tvm..relay..Group">Group</a>&amp; <dfn class="local col3 decl" id="23branches" title='branches' data-type='const tvm::relay::Group &amp;' data-ref="23branches" data-ref-filename="23branches">branches</dfn>,</td></tr>
+<tr><th id="193">193</th><td>                                                <span class='typedef' title='size_t' data-type='unsigned long' data-ref="size_t" data-ref-filename="size_t">size_t</span> <dfn class="local col4 decl" id="24depth" title='depth' data-type='size_t' data-ref="24depth" data-ref-filename="24depth">depth</dfn>, <span class='typedef' title='size_t' data-type='unsigned long' data-ref="size_t" data-ref-filename="size_t">size_t</span> <dfn class="local col5 decl" id="25parent_index" title='parent_index' data-type='size_t' data-ref="25parent_index" data-ref-filename="25parent_index">parent_index</dfn>) = <var>0</var>;</td></tr>
+<tr><th id="194">194</th><td></td></tr>
+<tr><th id="195">195</th><td>  <i>/*</i></td></tr>
+<tr><th id="196">196</th><td><i>   * \brief Updates map of expr to substitute with combined expr. This usually involves</i></td></tr>
+<tr><th id="197">197</th><td><i>   *        slicing or splitting data.</i></td></tr>
+<tr><th id="198">198</th><td><i>   * \param data combined op</i></td></tr>
+<tr><th id="199">199</th><td><i>   * \param branches branches of parallel ops to be combined</i></td></tr>
+<tr><th id="200">200</th><td><i>   * \param depth depth at which to substitute</i></td></tr>
+<tr><th id="201">201</th><td><i>   * \param subst_map map of Expr to replace with Expr to replace it with</i></td></tr>
+<tr><th id="202">202</th><td><i>   */</i></td></tr>
+<tr><th id="203">203</th><td>  <b>virtual</b> <em>void</em> <dfn class="virtual decl fn" id="_ZN3tvm5relay18ParallelOpCombiner17UpdateGroupOutputERKNS_9RelayExprERKSt6vectorIS5_IPKNS0_8CallNodeESaIS8_EESaISA_EEmPSt13unordered_mapIS2_S2_NS_7run12190914" title='tvm::relay::ParallelOpCombiner::UpdateGroupOutput' data-ref="_ZN3tvm5relay18ParallelOpCombiner17UpdateGroupOutputERKNS_9RelayExprERKSt6vectorIS5_IPKNS0_8CallNodeESaIS8_EESaISA_EEmPSt13unordered_mapIS2_S2_NS_7run12190914" data-ref-filename="_ZN3tvm5relay18ParallelOpCombiner17UpdateGroupOutputERKNS_9RelayExprERKSt6vectorIS5_IPKNS0_8CallNodeESaIS8_EESaISA_EEmPSt13unordered_mapIS2_S2_NS_7run12190914">UpdateGroupOutput</dfn>(<em>const</em> <a class="typedef" href="../../../include/tvm/relay/expr.h.html#tvm::relay::Expr" title='tvm::relay::Expr' data-type='tvm::RelayExpr' data-ref="tvm::relay::Expr" data-ref-filename="tvm..relay..Expr">Expr</a>&amp; <dfn class="local col6 decl" id="26data" title='data' data-type='const tvm::relay::Expr &amp;' data-ref="26data" data-ref-filename="26data">data</dfn>, <em>const</em> <a class="typedef" href="#tvm::relay::Group" title='tvm::relay::Group' data-type='std::vector&lt;Branch&gt;' data-ref="tvm::relay::Group" data-ref-filename="tvm..relay..Group">Group</a>&amp; <dfn class="local col7 decl" id="27branches" title='branches' data-type='const tvm::relay::Group &amp;' data-ref="27branches" data-ref-filename="27branches">branches</dfn>, <span class='typedef' title='size_t' data-type='unsigned long' data-ref="size_t" data-ref-filename="size_t">size_t</span> <dfn class="local col8 decl" id="28depth" title='depth' data-type='size_t' data-ref="28depth" data-ref-filename="28depth">depth</dfn>,</td></tr>
+<tr><th id="204">204</th><td>                                 <a class="typedef" href="#tvm::relay::ExprSubstMap" title='tvm::relay::ExprSubstMap' data-type='std::unordered_map&lt;Expr, Expr, ObjectPtrHash, ObjectPtrEqual&gt;' data-ref="tvm::relay::ExprSubstMap" data-ref-filename="tvm..relay..ExprSubstMap">ExprSubstMap</a>* <dfn class="local col9 decl" id="29subst_map" title='subst_map' data-type='tvm::relay::ExprSubstMap *' data-ref="29subst_map" data-ref-filename="29subst_map">subst_map</dfn>) = <var>0</var>;</td></tr>
+<tr><th id="205">205</th><td></td></tr>
+<tr><th id="206">206</th><td> <b>private</b>:</td></tr>
+<tr><th id="207">207</th><td>  <i>/* \brief Cache the op to be combined */</i></td></tr>
+<tr><th id="208">208</th><td>  <em>const</em> <a class="typedef" href="../../../include/tvm/relay/op.h.html#tvm::relay::Op" title='tvm::relay::Op' data-type='tvm::Op' data-ref="tvm::relay::Op" data-ref-filename="tvm..relay..Op">Op</a>&amp; <dfn class="decl field" id="tvm::relay::ParallelOpCombiner::cached_op_" title='tvm::relay::ParallelOpCombiner::cached_op_' data-ref="tvm::relay::ParallelOpCombiner::cached_op_" data-ref-filename="tvm..relay..ParallelOpCombiner..cached_op_">cached_op_</dfn>;</td></tr>
+<tr><th id="209">209</th><td></td></tr>
+<tr><th id="210">210</th><td>  <i>/* \brief minimum number of parallel branches to combine */</i></td></tr>
+<tr><th id="211">211</th><td>  <a class="typedef" href="../../../../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint64_t" title='uint64_t' data-type='__uint64_t' data-ref="uint64_t" data-ref-filename="uint64_t">uint64_t</a> <dfn class="decl field" id="tvm::relay::ParallelOpCombiner::min_num_branches_" title='tvm::relay::ParallelOpCombiner::min_num_branches_' data-ref="tvm::relay::ParallelOpCombiner::min_num_branches_" data-ref-filename="tvm..relay..ParallelOpCombiner..min_num_branches_">min_num_branches_</dfn>;</td></tr>
+<tr><th id="212">212</th><td></td></tr>
+<tr><th id="213">213</th><td>  <i>/* \brief map of Expr to Expr to substitute it with after running pass */</i></td></tr>
+<tr><th id="214">214</th><td>  <a class="typedef" href="#tvm::relay::ExprSubstMap" title='tvm::relay::ExprSubstMap' data-type='std::unordered_map&lt;Expr, Expr, ObjectPtrHash, ObjectPtrEqual&gt;' data-ref="tvm::relay::ExprSubstMap" data-ref-filename="tvm..relay..ExprSubstMap">ExprSubstMap</a> <dfn class="decl field" id="tvm::relay::ParallelOpCombiner::subst_map_" title='tvm::relay::ParallelOpCombiner::subst_map_' data-ref="tvm::relay::ParallelOpCombiner::subst_map_" data-ref-filename="tvm..relay..ParallelOpCombiner..subst_map_">subst_map_</dfn>;</td></tr>
+<tr><th id="215">215</th><td></td></tr>
+<tr><th id="216">216</th><td>  <i>/*</i></td></tr>
+<tr><th id="217">217</th><td><i>   * \brief Combine parallel branches and updates subst_map_ with Exprs</i></td></tr>
+<tr><th id="218">218</th><td><i>   *        to be substituted</i></td></tr>
+<tr><th id="219">219</th><td><i>   * \param branches branches to be combined</i></td></tr>
+<tr><th id="220">220</th><td><i>   */</i></td></tr>
+<tr><th id="221">221</th><td>  <em>void</em> <dfn class="decl fn" id="_ZN3tvm5relay18ParallelOpCombiner15CombineBranchesERKSt6vectorIS2_IPKNS0_8CallNodeESaIS5_EESaIS7_EE" title='tvm::relay::ParallelOpCombiner::CombineBranches' data-ref="_ZN3tvm5relay18ParallelOpCombiner15CombineBranchesERKSt6vectorIS2_IPKNS0_8CallNodeESaIS5_EESaIS7_EE" data-ref-filename="_ZN3tvm5relay18ParallelOpCombiner15CombineBranchesERKSt6vectorIS2_IPKNS0_8CallNodeESaIS5_EESaIS7_EE">CombineBranches</dfn>(<em>const</em> <a class="typedef" href="#tvm::relay::Group" title='tvm::relay::Group' data-type='std::vector&lt;Branch&gt;' data-ref="tvm::relay::Group" data-ref-filename="tvm..relay..Group">Group</a>&amp; <dfn class="local col0 decl" id="30branches" title='branches' data-type='const tvm::relay::Group &amp;' data-ref="30branches" data-ref-filename="30branches">branches</dfn>);</td></tr>
+<tr><th id="222">222</th><td></td></tr>
+<tr><th id="223">223</th><td>  <i>/*</i></td></tr>
+<tr><th id="224">224</th><td><i>   * \brief Combine parallel branches and updates subst_map_ with Exprs</i></td></tr>
+<tr><th id="225">225</th><td><i>   *        to be substituted</i></td></tr>
+<tr><th id="226">226</th><td><i>   * \param branches parallel branches to potentially be combined</i></td></tr>
+<tr><th id="227">227</th><td><i>   * \param depth depth at which to look at op</i></td></tr>
+<tr><th id="228">228</th><td><i>   * \param parent_index index of arg that corresponds to original input that was shared among</i></td></tr>
+<tr><th id="229">229</th><td><i>   *                     all combined ops</i></td></tr>
+<tr><th id="230">230</th><td><i>   * \return true if parallel ops at depth can be combined, false otherwise</i></td></tr>
+<tr><th id="231">231</th><td><i>   */</i></td></tr>
+<tr><th id="232">232</th><td>  <em>bool</em> <dfn class="decl fn" id="_ZN3tvm5relay18ParallelOpCombiner10CheckLevelERKSt6vectorIS2_IPKNS0_8CallNodeESaIS5_EESaIS7_EEmm" title='tvm::relay::ParallelOpCombiner::CheckLevel' data-ref="_ZN3tvm5relay18ParallelOpCombiner10CheckLevelERKSt6vectorIS2_IPKNS0_8CallNodeESaIS5_EESaIS7_EEmm" data-ref-filename="_ZN3tvm5relay18ParallelOpCombiner10CheckLevelERKSt6vectorIS2_IPKNS0_8CallNodeESaIS5_EESaIS7_EEmm">CheckLevel</dfn>(<em>const</em> <a class="typedef" href="#tvm::relay::Group" title='tvm::relay::Group' data-type='std::vector&lt;Branch&gt;' data-ref="tvm::relay::Group" data-ref-filename="tvm..relay..Group">Group</a>&amp; <dfn class="local col1 decl" id="31branches" title='branches' data-type='const tvm::relay::Group &amp;' data-ref="31branches" data-ref-filename="31branches">branches</dfn>, <span class='typedef' title='size_t' data-type='unsigned long' data-ref="size_t" data-ref-filename="size_t">size_t</span> <dfn class="local col2 decl" id="32depth" title='depth' data-type='size_t' data-ref="32depth" data-ref-filename="32depth">depth</dfn>, <span class='typedef' title='size_t' data-type='unsigned long' data-ref="size_t" data-ref-filename="size_t">size_t</span> <dfn class="local col3 decl" id="33parent_index" title='parent_index' data-type='size_t' data-ref="33parent_index" data-ref-filename="33parent_index">parent_index</dfn>);</td></tr>
+<tr><th id="233">233</th><td>};</td></tr>
+<tr><th id="234">234</th><td></td></tr>
+<tr><th id="235">235</th><td>}  <i>// namespace relay</i></td></tr>
+<tr><th id="236">236</th><td>}  <i>// namespace tvm</i></td></tr>
+<tr><th id="237">237</th><td><u>#<span data-ppcond="25">endif</span>  // TVM_RELAY_TRANSFORMS_COMBINE_PARALLEL_OP_H_</u></td></tr>
+<tr><th id="238">238</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated while processing <a href='combine_parallel_batch_matmul.cc.html'>tvm/src/relay/transforms/combine_parallel_batch_matmul.cc</a><br/>Generated on <em>2022-Aug-10</em> from project tvm revision <em>fae79bb</em><br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

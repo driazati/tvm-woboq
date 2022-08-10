@@ -1,0 +1,16 @@
+<dec f='tvm/src/target/llvm/codegen_llvm.h' l='389' type='llvm::Function * tvm::codegen::CodeGenLLVM::GetIntrinsicDecl(llvm::Intrinsic::ID id, llvm::Type * ret_type, llvm::ArrayRef&lt;llvm::Type *&gt; arg_types)'/>
+<doc f='tvm/src/target/llvm/codegen_llvm.h' l='377'>/*!
+   * \brief Get the declaration of the LLVM intrinsic based on the intrinsic
+   *        id, and the type of the actual call.
+   *
+   * \param id The intrinsic id.
+   * \param ret_type The call return type.
+   * \param arg_types The types of the call arguments.
+   *
+   * \return Return the llvm::Function pointer, or nullptr if the declaration
+   *         could not be generated (e.g. if the argument/return types do not
+   *         match).
+   */</doc>
+<def f='tvm/src/target/llvm/codegen_llvm.cc' l='875' ll='939' type='llvm::Function * tvm::codegen::CodeGenLLVM::GetIntrinsicDecl(llvm::Intrinsic::ID id, llvm::Type * ret_type, llvm::ArrayRef&lt;llvm::Type *&gt; arg_types)'/>
+<use f='tvm/src/target/llvm/codegen_llvm.cc' l='974' u='c' c='_ZN3tvm7codegen11CodeGenLLVM15CreateIntrinsicEPKNS_3tir8CallNodeE'/>
+<use f='tvm/src/target/llvm/codegen_nvptx.cc' l='258' u='c' c='_ZN3tvm7codegen12CodeGenNVPTX15CreateIntrinsicEPKNS_3tir8CallNodeE'/>

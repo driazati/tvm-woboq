@@ -1,0 +1,14 @@
+<dec f='tvm/include/tvm/runtime/vm/executable.h' l='219' type='void tvm::runtime::vm::Executable::SetLib(const runtime::Module &amp; lib)'/>
+<use f='tvm/src/relay/backend/vm/compiler.cc' l='1205' u='c' c='_ZN3tvm5relay2vm10VMCompiler7CodegenEv'/>
+<doc f='tvm/include/tvm/runtime/vm/executable.h' l='209'>/*!
+   * \brief Set the `lib` module in an executable.
+   *
+   * This allows us to do partial initialization in the case of (de|ser)ialization cases.
+   * This method also ensures correct initialization of library ensuring we only Import a
+   * single library.
+   *
+   * NB: This also provides some abstraction over how libraries are stored as there are plans
+   * to iterate on the way runtime::Module works in the backend of the compiler.
+   */</doc>
+<def f='tvm/src/runtime/vm/executable.cc' l='718' ll='727' type='void tvm::runtime::vm::Executable::SetLib(const runtime::Module &amp; lib)'/>
+<use f='tvm/src/runtime/vm/executable.cc' l='735' u='c' c='_ZN3tvm7runtime2vm10Executable4LoadERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS0_6ModuleE'/>

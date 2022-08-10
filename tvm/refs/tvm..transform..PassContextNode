@@ -1,0 +1,39 @@
+<inh f='tvm/include/tvm/runtime/object.h' l='167' c='tvm::runtime::Object'/>
+<def f='tvm/include/tvm/ir/transform.h' l='78' ll='139'/>
+<use f='tvm/include/tvm/ir/transform.h' l='162' c='_ZNK3tvm9transform11PassContextptEv'/>
+<use f='tvm/include/tvm/ir/transform.h' l='164' c='_ZNK3tvm9transform11PassContextptEv'/>
+<use f='tvm/include/tvm/ir/transform.h' l='170' c='_ZN3tvm9transform11PassContextptEv'/>
+<use f='tvm/include/tvm/ir/transform.h' l='172' c='_ZN3tvm9transform11PassContextptEv'/>
+<use f='tvm/include/tvm/ir/transform.h' l='251'/>
+<size>64</size>
+<doc f='tvm/include/tvm/ir/transform.h' l='73'>/*!
+ * \brief PassContextNode contains the information that a pass can rely on,
+ * such as analysis results.
+ * \sa PassContext
+ */</doc>
+<mbr r='tvm::transform::PassContextNode::opt_level' o='128' t='int'/>
+<mbr r='tvm::transform::PassContextNode::required_pass' o='192' t='Array&lt;tvm::runtime::String&gt;'/>
+<mbr r='tvm::transform::PassContextNode::disabled_pass' o='256' t='Array&lt;tvm::runtime::String&gt;'/>
+<mbr r='tvm::transform::PassContextNode::diag_ctx' o='320' t='Optional&lt;tvm::DiagnosticContext&gt;'/>
+<mbr r='tvm::transform::PassContextNode::config' o='384' t='Map&lt;tvm::runtime::String, tvm::runtime::ObjectRef&gt;'/>
+<mbr r='tvm::transform::PassContextNode::instruments' o='448' t='Array&lt;instrument::PassInstrument&gt;'/>
+<fun r='_ZN3tvm9transform15PassContextNodeC1Ev'/>
+<fun r='_ZNK3tvm9transform15PassContextNode9GetConfigERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS_7runtime8OptionalIT_EE'/>
+<fun r='_ZNK3tvm9transform15PassContextNode9GetConfigERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEET_'/>
+<fun r='_ZN3tvm9transform15PassContextNode10VisitAttrsEPNS_11AttrVisitorE'/>
+<smbr r='tvm::transform::PassContextNode::_type_key' t='const char *const'/>
+<smbr r='tvm::transform::PassContextNode::_type_has_method_sequal_reduce' t='const bool'/>
+<smbr r='tvm::transform::PassContextNode::_type_final' t='const bool'/>
+<smbr r='tvm::transform::PassContextNode::_type_child_slots' t='const int'/>
+<fun r='_ZN3tvm9transform15PassContextNode16RuntimeTypeIndexEv'/>
+<fun r='_ZN3tvm9transform15PassContextNode27_GetOrAllocRuntimeTypeIndexEv'/>
+<use f='tvm/include/tvm/relay/transform.h' l='48'/>
+<size>64</size>
+<use f='tvm/src/ir/transform.cc' l='54' c='_ZN3tvm9transform27PassContextThreadLocalEntryC1Ev'/>
+<use f='tvm/src/ir/transform.cc' l='183' c='_ZN3tvm9transform11PassContext6CreateEv'/>
+<use f='tvm/src/ir/transform.cc' l='537'/>
+<use f='tvm/src/ir/transform.cc' l='537'/>
+<use f='tvm/src/ir/transform.cc' l='537'/>
+<use f='tvm/src/ir/transform.cc' l='557'/>
+<use f='tvm/src/ir/transform.cc' l='558'/>
+<size>64</size>

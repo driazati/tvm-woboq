@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>hexdump.h source code [tvm/src/support/hexdump.h] - Woboq Code Browser</title>
+<link rel="stylesheet" href="../../.././data/qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href="../../.././data/kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src="../../.././data/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="../../.././data/jquery/jquery-ui.min.js"></script>
+<script>var file = 'tvm/src/support/hexdump.h'; var root_path = '../../..'; var data_path = '../../.././data'; var ecma_script_api_version = 2;</script>
+<script src='../../.././data/codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='../..'>tvm</a>/<a href='..'>src</a>/<a href='./'>support</a>/<a href='hexdump.h.html'>hexdump.h</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td><i>/*</i></td></tr>
+<tr><th id="2">2</th><td><i> * Licensed to the Apache Software Foundation (ASF) under one</i></td></tr>
+<tr><th id="3">3</th><td><i> * or more contributor license agreements.  See the NOTICE file</i></td></tr>
+<tr><th id="4">4</th><td><i> * distributed with this work for additional information</i></td></tr>
+<tr><th id="5">5</th><td><i> * regarding copyright ownership.  The ASF licenses this file</i></td></tr>
+<tr><th id="6">6</th><td><i> * to you under the Apache License, Version 2.0 (the</i></td></tr>
+<tr><th id="7">7</th><td><i> * "License"); you may not use this file except in compliance</i></td></tr>
+<tr><th id="8">8</th><td><i> * with the License.  You may obtain a copy of the License at</i></td></tr>
+<tr><th id="9">9</th><td><i> *</i></td></tr>
+<tr><th id="10">10</th><td><i> *   <a href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a></i></td></tr>
+<tr><th id="11">11</th><td><i> *</i></td></tr>
+<tr><th id="12">12</th><td><i> * Unless required by applicable law or agreed to in writing,</i></td></tr>
+<tr><th id="13">13</th><td><i> * software distributed under the License is distributed on an</i></td></tr>
+<tr><th id="14">14</th><td><i> * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY</i></td></tr>
+<tr><th id="15">15</th><td><i> * KIND, either express or implied.  See the License for the</i></td></tr>
+<tr><th id="16">16</th><td><i> * specific language governing permissions and limitations</i></td></tr>
+<tr><th id="17">17</th><td><i> * under the License.</i></td></tr>
+<tr><th id="18">18</th><td><i> */</i></td></tr>
+<tr><th id="19">19</th><td></td></tr>
+<tr><th id="20">20</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="21">21</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="22">22</th><td><i class="doc"> * <span class="command">\file</span> <span class="verb">support/hexdump.h</span></i></td></tr>
+<tr><th id="23">23</th><td><i class="doc"> * <span class="command">\brief</span> Print hex representation of BLOBs.</i></td></tr>
+<tr><th id="24">24</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="25">25</th><td><u>#<span data-ppcond="25">ifndef</span> <span class="macro" data-ref="_M/TVM_SUPPORT_HEXDUMP_H_">TVM_SUPPORT_HEXDUMP_H_</span></u></td></tr>
+<tr><th id="26">26</th><td><u>#define <dfn class="macro" id="_M/TVM_SUPPORT_HEXDUMP_H_" data-ref="_M/TVM_SUPPORT_HEXDUMP_H_">TVM_SUPPORT_HEXDUMP_H_</dfn></u></td></tr>
+<tr><th id="27">27</th><td></td></tr>
+<tr><th id="28">28</th><td><u>#include <a href="../../../include/c++/10/iomanip.html">&lt;iomanip&gt;</a></u></td></tr>
+<tr><th id="29">29</th><td><u>#include <a href="../../../include/c++/10/sstream.html">&lt;sstream&gt;</a></u></td></tr>
+<tr><th id="30">30</th><td><u>#include <a href="../../../include/c++/10/string.html">&lt;string&gt;</a></u></td></tr>
+<tr><th id="31">31</th><td></td></tr>
+<tr><th id="32">32</th><td><b>namespace</b> <span class="namespace">tvm</span> {</td></tr>
+<tr><th id="33">33</th><td><b>namespace</b> <span class="namespace">support</span> {</td></tr>
+<tr><th id="34">34</th><td></td></tr>
+<tr><th id="35">35</th><td><i class="doc">/*! <span class="command">\brief</span> generate a hexdump of some binary data.</i></td></tr>
+<tr><th id="36">36</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">s</span> Binary data to print.</i></td></tr>
+<tr><th id="37">37</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">os</span> stream that receives the hexdump.</i></td></tr>
+<tr><th id="38">38</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="39">39</th><td><em>void</em> <a class="decl fn" href="hexdump.cc.html#_ZN3tvm7support7HexDumpERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERSo" title='tvm::support::HexDump' data-ref="_ZN3tvm7support7HexDumpERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERSo" data-ref-filename="_ZN3tvm7support7HexDumpERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERSo" id="_ZN3tvm7support7HexDumpERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERSo">HexDump</a>(<em>const</em> <span class="namespace">std::</span><a class="typedef" href="../../../include/c++/10/bits/stringfwd.h.html#std::string" title='std::string' data-type='basic_string&lt;char&gt;' data-ref="std::string" data-ref-filename="std..string">string</a>&amp; <dfn class="local col1 decl" id="1s" title='s' data-type='const std::string &amp;' data-ref="1s" data-ref-filename="1s">s</dfn>, <span class="namespace">std::</span><a class="typedef" href="../../../include/c++/10/iosfwd.html#std::ostream" title='std::ostream' data-type='basic_ostream&lt;char&gt;' data-ref="std::ostream" data-ref-filename="std..ostream">ostream</a>&amp; <dfn class="local col2 decl" id="2os" title='os' data-type='std::ostream &amp;' data-ref="2os" data-ref-filename="2os">os</dfn>);</td></tr>
+<tr><th id="40">40</th><td></td></tr>
+<tr><th id="41">41</th><td><i class="doc">/*! <span class="command">\brief</span> return a string containing a hexdump of the data in s */</i></td></tr>
+<tr><th id="42">42</th><td><b>inline</b> <span class="namespace">std::</span><a class="typedef" href="../../../include/c++/10/bits/stringfwd.h.html#std::string" title='std::string' data-type='basic_string&lt;char&gt;' data-ref="std::string" data-ref-filename="std..string">string</a> <dfn class="decl def fn" id="_ZN3tvm7support7HexDumpERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE" title='tvm::support::HexDump' data-ref="_ZN3tvm7support7HexDumpERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE" data-ref-filename="_ZN3tvm7support7HexDumpERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE">HexDump</dfn>(<em>const</em> <span class="namespace">std::</span><a class="typedef" href="../../../include/c++/10/bits/stringfwd.h.html#std::string" title='std::string' data-type='basic_string&lt;char&gt;' data-ref="std::string" data-ref-filename="std..string">string</a>&amp; <dfn class="local col3 decl" id="3s" title='s' data-type='const std::string &amp;' data-ref="3s" data-ref-filename="3s">s</dfn>) {</td></tr>
+<tr><th id="43">43</th><td>  <span class="namespace">std::</span><a class="typedef" href="../../../include/c++/10/iosfwd.html#std::stringstream" title='std::stringstream' data-type='basic_stringstream&lt;char&gt;' data-ref="std::stringstream" data-ref-filename="std..stringstream">stringstream</a> <a class="ref fn fake" href="../../../include/c++/10/sstream.html#_ZNSt7__cxx1118basic_stringstreamC1Ev" title='std::basic_stringstream::basic_stringstream&lt;_CharT, _Traits, _Alloc&gt;' data-ref="_ZNSt7__cxx1118basic_stringstreamC1Ev" data-ref-filename="_ZNSt7__cxx1118basic_stringstreamC1Ev"></a><dfn class="local col4 decl" id="4ss" title='ss' data-type='std::stringstream' data-ref="4ss" data-ref-filename="4ss">ss</dfn>;</td></tr>
+<tr><th id="44">44</th><td>  <a class="ref fn" href="hexdump.cc.html#_ZN3tvm7support7HexDumpERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERSo" title='tvm::support::HexDump' data-ref="_ZN3tvm7support7HexDumpERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERSo" data-ref-filename="_ZN3tvm7support7HexDumpERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERSo">HexDump</a>(<a class="local col3 ref" href="#3s" title='s' data-ref="3s" data-ref-filename="3s">s</a>, <span class='refarg'><a class="local col4 ref" href="#4ss" title='ss' data-ref="4ss" data-ref-filename="4ss">ss</a></span>);</td></tr>
+<tr><th id="45">45</th><td>  <b>return</b> <a class="local col4 ref" href="#4ss" title='ss' data-ref="4ss" data-ref-filename="4ss">ss</a>.<a class="ref fn" href="../../../include/c++/10/sstream.html#_ZNKSt7__cxx1118basic_stringstream3strEv" title='std::basic_stringstream::str' data-ref="_ZNKSt7__cxx1118basic_stringstream3strEv" data-ref-filename="_ZNKSt7__cxx1118basic_stringstream3strEv">str</a>();</td></tr>
+<tr><th id="46">46</th><td>}</td></tr>
+<tr><th id="47">47</th><td></td></tr>
+<tr><th id="48">48</th><td>}  <i>// namespace support</i></td></tr>
+<tr><th id="49">49</th><td>}  <i>// namespace tvm</i></td></tr>
+<tr><th id="50">50</th><td><u>#<span data-ppcond="25">endif</span>  // TVM_SUPPORT_HEXDUMP_H_</u></td></tr>
+<tr><th id="51">51</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated while processing <a href='hexdump.cc.html'>tvm/src/support/hexdump.cc</a><br/>Generated on <em>2022-Aug-10</em> from project tvm revision <em>fae79bb</em><br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

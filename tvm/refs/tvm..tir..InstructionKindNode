@@ -1,0 +1,40 @@
+<inh f='tvm/include/tvm/runtime/object.h' l='167' c='tvm::runtime::Object'/>
+<def f='tvm/include/tvm/tir/schedule/instruction.h' l='89' ll='129'/>
+<use f='tvm/include/tvm/tir/schedule/instruction.h' l='143' c='_ZNK3tvm3tir15InstructionKindptEv'/>
+<use f='tvm/include/tvm/tir/schedule/instruction.h' l='143' c='_ZNK3tvm3tir15InstructionKindptEv'/>
+<use f='tvm/include/tvm/tir/schedule/instruction.h' l='143' c='_ZNK3tvm3tir15InstructionKind3getEv'/>
+<use f='tvm/include/tvm/tir/schedule/instruction.h' l='143'/>
+<use f='tvm/include/tvm/tir/schedule/instruction.h' l='275' c='_ZNK3tvm3tir23InstructionKindRegEntry11get_mutableEv'/>
+<use f='tvm/include/tvm/tir/schedule/instruction.h' l='276' c='_ZNK3tvm3tir23InstructionKindRegEntry11get_mutableEv'/>
+<size>64</size>
+<doc f='tvm/include/tvm/tir/schedule/instruction.h' l='77'>/*!
+ * \brief Kind of an instruction, e.g. Split, Reorder, etc.
+ * Besides the name, every kind of instruction has its own properties, including:
+ * 1) A boolean indicating if the instruction is pure, i.e. change nothing in the schedule state
+ * 2) A functor that applies the instruction to a TensorIR schedule
+ * 3) A functor that converts the instruction to a statement in python syntax
+ * 4) A functor that serialize its attributes to JSON
+ * 5) A functor that deserialize its attributes from JSON
+ *
+ * Unlike `tvm::OpNode`, `InstructionKindNode` doesn&apos;t support unstructured properties,
+ * mainly because there is no such usecase yet to add any other property.
+ */</doc>
+<mbr r='tvm::tir::InstructionKindNode::name' o='128' t='tvm::runtime::String'/>
+<mbr r='tvm::tir::InstructionKindNode::is_pure' o='192' t='bool'/>
+<mbr r='tvm::tir::InstructionKindNode::f_apply_to_schedule' o='256' t='tvm::tir::FInstructionApply'/>
+<mbr r='tvm::tir::InstructionKindNode::f_as_python' o='320' t='tvm::tir::FInstructionAsPython'/>
+<mbr r='tvm::tir::InstructionKindNode::f_attrs_as_json' o='384' t='tvm::tir::FInstructionAttrsAsJSON'/>
+<mbr r='tvm::tir::InstructionKindNode::f_attrs_from_json' o='448' t='tvm::tir::FInstructionAttrsFromJSON'/>
+<fun r='_ZN3tvm3tir19InstructionKindNode10VisitAttrsEPNS_11AttrVisitorE'/>
+<fun r='_ZNK3tvm3tir19InstructionKindNode10IsPostprocEv'/>
+<smbr r='tvm::tir::InstructionKindNode::_type_key' t='const char *const'/>
+<smbr r='tvm::tir::InstructionKindNode::_type_final' t='const bool'/>
+<smbr r='tvm::tir::InstructionKindNode::_type_child_slots' t='const int'/>
+<fun r='_ZN3tvm3tir19InstructionKindNode16RuntimeTypeIndexEv'/>
+<fun r='_ZN3tvm3tir19InstructionKindNode27_GetOrAllocRuntimeTypeIndexEv'/>
+<use f='tvm/src/tir/schedule/instruction.cc' l='48' c='_ZN3tvm3tir23InstructionKindRegEntryC1Ej'/>
+<use f='tvm/src/tir/schedule/instruction.cc' l='97'/>
+<use f='tvm/src/tir/schedule/instruction.cc' l='97'/>
+<use f='tvm/src/tir/schedule/instruction.cc' l='97'/>
+<size>64</size>
+<fun r='_ZNK3tvm3tir19InstructionKindNode10IsPostprocEv'/>

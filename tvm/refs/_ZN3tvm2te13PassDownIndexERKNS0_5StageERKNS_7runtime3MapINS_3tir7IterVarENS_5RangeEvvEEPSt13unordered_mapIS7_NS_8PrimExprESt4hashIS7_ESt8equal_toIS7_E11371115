@@ -1,0 +1,13 @@
+<dec f='tvm/src/te/schedule/message_passing.h' l='73' type='void tvm::te::PassDownIndex(const tvm::te::Stage &amp; stage, const Map&lt;tvm::tir::IterVar, tvm::Range&gt; &amp; dom_map, std::unordered_map&lt;IterVar, PrimExpr&gt; * p_state, bool allow_missing = false)'/>
+<doc f='tvm/src/te/schedule/message_passing.h' l='64'>/*!
+ * \param Downward inference of index of each IterVar.
+ *  given index assignement of roots.
+ *
+ * \param stage The stage to operate on.
+ * \param dom_map The domain map of each iteration variable&apos;s domain.
+ * \param p_state The index state of each IterVar.
+ * \param allow_missing Whether allow missing value.
+ */</doc>
+<def f='tvm/src/te/schedule/message_passing.cc' l='300' ll='365' type='void tvm::te::PassDownIndex(const tvm::te::Stage &amp; stage, const Map&lt;tvm::tir::IterVar, tvm::Range&gt; &amp; dom_map, std::unordered_map&lt;IterVar, PrimExpr&gt; * p_state, bool allow_missing = false)'/>
+<use f='tvm/src/te/schedule/schedule_dataflow_rewrite.cc' l='333' u='c' c='_ZN3tvm2te22CacheWriteWithReLayoutENS0_8ScheduleERKNS_7runtime5ArrayINS0_6TensorEvEERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<use f='tvm/src/te/schedule/schedule_dataflow_rewrite.cc' l='416' u='c' c='_ZN3tvm2te28CacheWriteWithReLayoutTensorENS0_8ScheduleERKNS_7runtime5ArrayINS0_6TensorEvEERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>

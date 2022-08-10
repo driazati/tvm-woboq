@@ -1,0 +1,11 @@
+<dec f='tvm/include/tvm/runtime/ndarray.h' l='92' type='void tvm::runtime::NDArray::CopyFrom(const DLTensor * other)'/>
+<def f='tvm/include/tvm/runtime/ndarray.h' l='378' ll='381' type='void tvm::runtime::NDArray::CopyFrom(const DLTensor * other)'/>
+<doc f='tvm/include/tvm/runtime/ndarray.h' l='86'>/*!
+   * \brief Copy data content from another array.
+   * \param other The source array to be copied from.
+   * \note The copy may happen asynchronously if it involves a GPU context.
+   *       TVMSynchronize is necessary.
+   */</doc>
+<use f='tvm/src/runtime/aot_executor/aot_executor.cc' l='203' u='c' c='_ZN3tvm7runtime11AotExecutor8SetInputEiP8DLTensor'/>
+<use f='tvm/src/runtime/graph_executor/graph_executor.cc' l='159' u='c' c='_ZN3tvm7runtime13GraphExecutor8SetInputEiP8DLTensor'/>
+<use f='tvm/src/runtime/ndarray.cc' l='232' u='c' c='_ZN3tvm7runtime7NDArray15NewFromDLTensorEP8DLTensorRK8DLDevice'/>

@@ -1,0 +1,16 @@
+<dec f='tvm/include/tvm/arith/analyzer.h' l='502' type='bool tvm::arith::Analyzer::CanProveLess(const tvm::PrimExpr &amp; expr, int64_t upper_bound)'/>
+<def f='tvm/src/arith/analyzer.cc' l='96' ll='103' type='bool tvm::arith::Analyzer::CanProveLess(const tvm::PrimExpr &amp; expr, int64_t upper_bound)'/>
+<doc f='tvm/include/tvm/arith/analyzer.h' l='490'>/*!
+   * \brief Whether can we prove expr &lt; val.
+
+   *  Non-negative proof is very useful in integer analysis
+   *  to lower divisions and mods given difference in trunc and ceil mode.
+   *
+   * \param expr The expression.
+   * \param upper_bound The upper bound.
+   * \return Whether we can prove it.
+   *
+   * \note Analyzer will call into sub-analyzers to get the result.
+   */</doc>
+<use f='tvm/src/arith/rewrite_simplify.h' l='123' u='c' c='_ZN3tvm5arith17RewriteSimplifier4Impl12CanProveLessERKNS_8PrimExprEl'/>
+<use f='tvm/src/arith/iter_affine_map.cc' l='796' u='c' c='_ZN3tvm5arith15IterMapRewriter12TryFuseItersENS0_11IterSumExprENS0_12IterMapLevelE'/>

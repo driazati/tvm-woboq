@@ -1,0 +1,29 @@
+<dec f='tvm/3rdparty/dmlc-core/include/dmlc/io.h' l='293' type='static dmlc::InputSplit * dmlc::InputSplit::Create(const char * uri, const char * index_uri, unsigned int part_index, unsigned int num_parts, const char * type, const bool shuffle = false, const int seed = 0, const size_t batch_size = 256, const bool recurse_directories = false)'/>
+<doc f='tvm/3rdparty/dmlc-core/include/dmlc/io.h' l='265'>/*!
+   * \brief factory function:
+   *  create input split given a uri for input and index
+   * \param uri the uri of the input, can contain hdfs prefix
+   * \param index_uri the uri of the index, can contain hdfs prefix
+   * \param part_index the part id of current input
+   * \param num_parts total number of splits
+   * \param type type of record
+   *   List of possible types: &quot;text&quot;, &quot;recordio&quot;, &quot;indexed_recordio&quot;
+   *     - &quot;text&quot;:
+   *         text file, each line is treated as a record
+   *         input split will split on &apos;\\n&apos; or &apos;\\r&apos;
+   *     - &quot;recordio&quot;:
+   *         binary recordio file, see recordio.h
+   *     - &quot;indexed_recordio&quot;:
+   *         binary recordio file with index, see recordio.h
+   * \param shuffle whether to shuffle the output from the InputSplit,
+   *                supported only by &quot;indexed_recordio&quot; type.
+   *                Defaults to &quot;false&quot;
+   * \param seed random seed to use in conjunction with the &quot;shuffle&quot;
+   *             option. Defaults to 0
+   * \param batch_size a hint to InputSplit what is the intended number
+   *                   of examples return per batch. Used only by
+   *                   &quot;indexed_recordio&quot; type
+   * \param recurse_directories whether to recursively traverse directories
+   * \return a new input split
+   * \sa InputSplit::Type
+   */</doc>

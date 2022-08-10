@@ -1,0 +1,37 @@
+<dec f='tvm/include/tvm/runtime/profiling.h' l='253' type='tvm::runtime::String tvm::runtime::profiling::ReportNode::AsJSON() const'/>
+<doc f='tvm/include/tvm/runtime/profiling.h' l='221'>/*! \brief Convert this report to JSON.
+   *
+   * Output JSON will be of this format:
+   * \code
+   *  {
+   *    &quot;calls&quot;: [
+   *      {
+   *        &quot;Duration (us)&quot;: {
+   *          &quot;microseconds&quot;: 12.3
+   *        },
+   *        &quot;Name&quot;: &quot;fused_dense&quot;,
+   *        &quot;Count&quot;: {
+   *          &quot;count&quot;: 1
+   *        },
+   *        &quot;Percent&quot;: {
+   *          &quot;percent&quot;: 10.3
+   *        }
+   *      }
+   *    ],
+   *    &quot;device_metrics&quot;: {
+   *      &quot;cpu&quot;: {
+   *        &quot;Duration (us)&quot;: {
+   *          &quot;microseconds&quot;: 334.2
+   *        },
+   *        &quot;Percent&quot;: {
+   *          &quot;percent&quot;: 100
+   *        }
+   *      }
+   *    }
+   *  }
+   * \endcode
+   */</doc>
+<use f='tvm/src/runtime/graph_executor/debug/graph_executor_debug.cc' l='447' u='c' c='_ZN3tvm7runtime18GraphExecutorDebug11GetFunctionERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKNS0_9ObjectPtrINS0_6ObjectEEE'/>
+<def f='tvm/src/runtime/profiling.cc' l='309' ll='371' type='tvm::runtime::String tvm::runtime::profiling::ReportNode::AsJSON() const'/>
+<use f='tvm/src/runtime/profiling.cc' l='782' u='c'/>
+<use f='tvm/src/runtime/vm/profiler/vm.cc' l='86' u='c' c='_ZN3tvm7runtime2vm19VirtualMachineDebug11GetFunctionERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKNS0_9ObjectPtrINS0_6ObjectEEE'/>

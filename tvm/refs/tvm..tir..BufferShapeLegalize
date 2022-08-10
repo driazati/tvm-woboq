@@ -1,0 +1,17 @@
+<inh f='tvm/include/tvm/tir/stmt_functor.h' l='315' c='tvm::tir::StmtExprMutator'/>
+<def f='tvm/src/tir/transforms/storage_flatten.cc' l='63' ll='383'/>
+<use f='tvm/src/tir/transforms/storage_flatten.cc' l='71' c='_ZN3tvm3tir19BufferShapeLegalize4PassEv'/>
+<size>200</size>
+<doc f='tvm/src/tir/transforms/storage_flatten.cc' l='55'>/* Make buffer realize extents and buffer shapes consistent
+ *
+ * For external buffers, verify that the extents of BufferRealize
+ * nodes match the shape of the external buffer.  For internal
+ * buffers, rewrite the shape of the Buffer objects to match the
+ * extent of the BufferRealize, and rewrite indices of
+ * BufferLoad/BufferStore nodes to match.
+ */</doc>
+<fun r='_ZN3tvm3tir19BufferShapeLegalize10VisitExpr_EPKNS0_7VarNodeE'/>
+<fun r='_ZN3tvm3tir19BufferShapeLegalize10VisitStmt_EPKNS0_17BufferRealizeNodeE'/>
+<fun r='_ZN3tvm3tir19BufferShapeLegalize10VisitStmt_EPKNS0_15BufferStoreNodeE'/>
+<fun r='_ZN3tvm3tir19BufferShapeLegalize10VisitExpr_EPKNS0_14BufferLoadNodeE'/>
+<fun r='_ZN3tvm3tir19BufferShapeLegalize10VisitStmt_EPKNS0_12AttrStmtNodeE'/>

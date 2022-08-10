@@ -1,0 +1,16 @@
+<def f='tvm/src/contrib/ethosu/cascader/tensor_config.h' l='108' type='tvm::contrib::ethosu::cascader::TensorConfigState tvm::contrib::ethosu::cascader::TensorConfigNode::GetState() const'/>
+<doc f='tvm/src/contrib/ethosu/cascader/tensor_config.h' l='99'>/*!
+   * \return The state of the TensorConfig.
+   * \note The TensorConfigState is only used as part of the Plan generation algorithm. For a Plan
+   * to be &apos;closed&apos; (and therefore not subject to any further merging), all the TensorConfigs that
+   * describe Plan input or output Tensors must be in the &apos;BOUNDARY&apos; state with the rest being
+   * &apos;INTERIOR&apos;. If any of the input or output tensors are described by an &apos;INTERIOR&apos; TensorConfig,
+   * then the Plan is &apos;open&apos; and should be merged with other &apos;open&apos; Plans until the result becomes
+   * &apos;closed&apos;.
+   */</doc>
+<use f='tvm/src/contrib/ethosu/cascader/plan_generator.cc' l='289' u='c' c='_ZN3tvm7contrib6ethosu8cascader22GetInteriorMemoryUsageERKSt6vectorINS2_12TensorConfigESaIS4_EERKS4_RKNS2_12MemoryRegionE'/>
+<use f='tvm/src/contrib/ethosu/cascader/plan_generator.cc' l='294' u='c' c='_ZN3tvm7contrib6ethosu8cascader22GetInteriorMemoryUsageERKSt6vectorINS2_12TensorConfigESaIS4_EERKS4_RKNS2_12MemoryRegionE'/>
+<use f='tvm/src/contrib/ethosu/cascader/plan_generator.cc' l='382' u='c' c='_ZN3tvm7contrib6ethosu8cascader19GenerateSinglePlansERKNS2_4PartERKSt6vectorINS2_12StripeConfigESaIS7_EERKSt13unordered_mapINS2_6TensorES6_INS2_12Memo4994141'/>
+<use f='tvm/src/contrib/ethosu/cascader/plan_generator.cc' l='391' u='c' c='_ZN3tvm7contrib6ethosu8cascader19GenerateSinglePlansERKNS2_4PartERKSt6vectorINS2_12StripeConfigESaIS7_EERKSt13unordered_mapINS2_6TensorES6_INS2_12Memo4994141'/>
+<use f='tvm/src/contrib/ethosu/cascader/plan_generator.cc' l='497' u='c' c='_ZN3tvm7contrib6ethosu8cascader18GenerateGraphPlansERKNS2_13CascaderGraphERKSt13unordered_mapINS2_6TensorESt6vectorINS2_12MemoryRegionESaIS9_EENS_7run1070765'/>
+<use f='tvm/src/contrib/ethosu/cascader/proposal_generator.cc' l='47' u='c' c='_ZN3tvm7contrib6ethosu8cascader22GetPlanBoundaryConfigsERKNS2_4PlanE'/>

@@ -1,0 +1,23 @@
+<dec f='tvm/include/tvm/tir/schedule/schedule.h' l='451' type='void tvm::tir::ScheduleNode::ReverseComputeAt(const tvm::tir::BlockRV &amp; block_rv, const tvm::tir::LoopRV &amp; loop_rv, bool preserve_unit_loops)'/>
+<doc f='tvm/include/tvm/tir/schedule/schedule.h' l='436'>/*!
+   * \brief Move a consumer block under the specific loop, and regenerate the
+   * loops induced by the block so that the buffer region consumed by the consumer block could
+   * cover those regions produced by its producer blocks under the given loop. It requires:
+   * 1) `block` and `loop` are under the same scope, `loop` is not the ancestor of `block`
+   * 2) The scope block has stage-pipeline property
+   * 3) The subtree of the scope block, where the given block is in, satisfies the compact dataflow
+   * condition. i.e. all the blocks in the scope block&apos;s subtree must be either complete block or
+   * reduction block
+   * 4) All the producers of the block are under the given loop
+   *
+   * \param block_rv The block to be moved
+   * \param loop_rv The loop where the block to be moved under
+   * \param preserve_unit_loops Whether to keep the trivial loops whose extents are 1
+   */</doc>
+<use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling.cc' l='135' u='c' c='_ZNK3tvm13meta_schedule20MultiLevelTilingNode13AddWriteReuseENS0_5StateE'/>
+<use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling.cc' l='156' u='c' c='_ZNK3tvm13meta_schedule20MultiLevelTilingNode13AddWriteReuseENS0_5StateE'/>
+<use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling_tensor_core.cc' l='241' u='c' c='_ZNK3tvm13meta_schedule30MultiLevelTilingTensorCoreNode23AddWriteReuseTensorCoreENS0_15TensorCoreStateE'/>
+<use f='tvm/src/meta_schedule/schedule_rule/winograd.cc' l='210' u='c'/>
+<ovr f='tvm/src/tir/schedule/concrete_schedule.cc' l='588' c='_ZN3tvm3tir20ConcreteScheduleNode16ReverseComputeAtERKNS0_7BlockRVERKNS0_6LoopRVEb'/>
+<use f='tvm/src/tir/schedule/primitive/compute_at.cc' l='706' u='c' c='_ZN3tvm3tir22ReverseComputeAtTraits23UnpackedApplyToScheduleENS0_8ScheduleENS0_7BlockRVENS0_6LoopRVENS_4BoolE'/>
+<use f='tvm/src/tir/schedule/schedule.cc' l='191' u='a'/>

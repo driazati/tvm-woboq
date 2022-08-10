@@ -1,0 +1,20 @@
+<def f='tvm/include/tvm/runtime/ndarray.h' l='264' ll='288'/>
+<ovr f='tvm/include/tvm/runtime/ndarray.h' l='294' c='tvm::runtime::NDArray::Container'/>
+<use f='tvm/include/tvm/runtime/ndarray.h' l='294'/>
+<use f='tvm/include/tvm/runtime/ndarray.h' l='418' c='_ZN3tvm7runtime7NDArray17FFIDataFromHandleEP8DLTensor'/>
+<use f='tvm/include/tvm/runtime/ndarray.h' l='424' c='_ZN3tvm7runtime7NDArray12FFIGetHandleERKNS0_9ObjectRefE'/>
+<use f='tvm/include/tvm/runtime/ndarray.h' l='430' c='_ZN3tvm7runtime7NDArray9FFIDecRefEP8DLTensor'/>
+<use f='tvm/include/tvm/runtime/ndarray.h' l='434' c='_ZN3tvm7runtime28TVMArrayHandleToObjectHandleEP8DLTensor'/>
+<size>64</size>
+<doc f='tvm/include/tvm/runtime/ndarray.h' l='257'>/*!
+ * \brief The container base structure
+ *        contains all the fields except for the Object header.
+ *
+ * \note We explicitly declare this structure in order to pass
+ *       PackedFunc argument using ContainerBase*.
+ */</doc>
+<mbr r='tvm::runtime::NDArray::ContainerBase::dl_tensor' o='0' t='DLTensor'/>
+<mbr r='tvm::runtime::NDArray::ContainerBase::manager_ctx' o='384' t='void *'/>
+<mbr r='tvm::runtime::NDArray::ContainerBase::shape_' o='448' t='tvm::runtime::ShapeTuple'/>
+<use f='tvm/src/runtime/ndarray.cc' l='162' c='_ZN3tvm7runtime7NDArray8Internal8ToDLPackEP8DLTensor'/>
+<size>64</size>

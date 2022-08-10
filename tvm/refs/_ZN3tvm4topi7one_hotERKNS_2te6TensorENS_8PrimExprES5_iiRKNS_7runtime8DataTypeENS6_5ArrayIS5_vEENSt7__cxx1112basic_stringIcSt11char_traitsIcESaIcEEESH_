@@ -1,0 +1,18 @@
+<def f='tvm/include/tvm/topi/transform.h' l='1814' ll='1849' type='tvm::te::Tensor tvm::topi::one_hot(const tvm::te::Tensor &amp; indices, const tvm::PrimExpr on_value, const tvm::PrimExpr off_value, int depth, int axis, const tvm::DataType &amp; dtype, Array&lt;tvm::PrimExpr&gt; oshape = Array&lt;tvm::PrimExpr&gt;(), const std::string name = &quot;T_one_hot&quot;, const std::string tag = kInjective)'/>
+<doc f='tvm/include/tvm/topi/transform.h' l='1800'>/*!
+ * \brief Returns a one-hot tensor where the locations repsented by indices take value on_value,
+    other locations take value off_value.
+ * \param indices locations to set to on_value.
+ * \param on_value value that locations represented by indices take on.
+ * \param off_value value that other locations take on.
+ * \param depth depth of the one-hot dimension.
+ * \param axis axis to fill.
+ * \param dtype data type of the output tensor.
+ * \param oshape shape of the output tensor.
+ * \param name output tensor name.
+ * \param tag output tensor tag.
+ * \return one-hot tensor.
+ */</doc>
+<use f='tvm/src/relay/op/dyn/tensor/transform.cc' l='358' u='c' c='_ZN3tvm5relay3dyn13OneHotComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
+<use f='tvm/src/relay/op/tensor/transform.cc' l='3771' u='c' c='_ZN3tvm5relay13OneHotComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
+<use f='tvm/src/topi/transform.cc' l='212' u='c'/>

@@ -1,0 +1,136 @@
+<inh f='tvm/include/tvm/tir/stmt.h' l='38' c='tvm::tir::StmtNode'/>
+<def f='tvm/include/tvm/tir/stmt.h' l='722' ll='747'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='739' c='_ZNK3tvm3tir11SeqStmtNode12SEqualReduceEPKS1_NS_13SEqualReducerE'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='795' c='_ZNK3tvm3tir7SeqStmt9FlattenerclEmRKNS0_4StmtE'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='813' c='_ZNK3tvm3tir7SeqStmtptEv'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='813' c='_ZNK3tvm3tir7SeqStmtptEv'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='813' c='_ZNK3tvm3tir7SeqStmt3getEv'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='813'/>
+<use f='tvm/include/tvm/tir/op.h' l='901' c='_ZN3tvm3tir8is_no_opERKNS0_4StmtE'/>
+<size>32</size>
+<doc f='tvm/include/tvm/tir/stmt.h' l='718'>/*!
+ * \brief The container of seq statement.
+ *        Represent a sequence of statements.
+ */</doc>
+<mbr r='tvm::tir::SeqStmtNode::seq' o='192' t='Array&lt;tvm::tir::Stmt&gt;'/>
+<fun r='_ZNK3tvm3tir11SeqStmtNode4sizeEv'/>
+<fun r='_ZNK3tvm3tir11SeqStmtNodeixEm'/>
+<fun r='_ZN3tvm3tir11SeqStmtNode10VisitAttrsEPNS_11AttrVisitorE'/>
+<fun r='_ZNK3tvm3tir11SeqStmtNode12SEqualReduceEPKS1_NS_13SEqualReducerE'/>
+<fun r='_ZNK3tvm3tir11SeqStmtNode11SHashReduceENS_12SHashReducerE'/>
+<smbr r='tvm::tir::SeqStmtNode::_type_key' t='const char *const'/>
+<smbr r='tvm::tir::SeqStmtNode::_type_final' t='const bool'/>
+<smbr r='tvm::tir::SeqStmtNode::_type_child_slots' t='const int'/>
+<fun r='_ZN3tvm3tir11SeqStmtNode16RuntimeTypeIndexEv'/>
+<fun r='_ZN3tvm3tir11SeqStmtNode27_GetOrAllocRuntimeTypeIndexEv'/>
+<use f='tvm/include/tvm/tir/stmt_functor.h' l='100' c='_ZN3tvm3tir11StmtFunctorIFT_RKNS0_4StmtEDpT0_EE10VisitStmt_EPKNS0_11SeqStmtNodeES7_'/>
+<use f='tvm/include/tvm/tir/stmt_functor.h' l='126' c='_ZN3tvm3tir11StmtFunctorIFT_RKNS0_4StmtEDpT0_EE10InitVTableEv'/>
+<use f='tvm/include/tvm/tir/stmt_functor.h' l='126' c='_ZN3tvm3tir11StmtFunctorIFT_RKNS0_4StmtEDpT0_EE10InitVTableEv'/>
+<use f='tvm/include/tvm/tir/stmt_functor.h' l='172' c='_ZN3tvm3tir11StmtVisitor10VisitStmt_EPKNS0_11SeqStmtNodeE'/>
+<use f='tvm/include/tvm/tir/stmt_functor.h' l='274' c='_ZN3tvm3tir11StmtMutator10VisitStmt_EPKNS0_11SeqStmtNodeE'/>
+<use f='tvm/include/tvm/tir/stmt_functor.h' l='290' c='_ZN3tvm3tir11StmtMutator13VisitSeqStmt_EPKNS0_11SeqStmtNodeEbSt8functionIFNS0_4StmtERKS6_EE'/>
+<size>32</size>
+<use f='tvm/src/contrib/hybrid/codegen_hybrid.h' l='133' c='_ZN3tvm7contrib13CodeGenHybrid10VisitStmt_EPKNS_3tir11SeqStmtNodeE'/>
+<use f='tvm/src/contrib/hybrid/codegen_hybrid.cc' l='411' c='_ZN3tvm7contrib13CodeGenHybrid10VisitStmt_EPKNS_3tir11SeqStmtNodeE'/>
+<size>32</size>
+<use f='tvm/src/printer/text_printer.h' l='358' c='_ZN3tvm3tir14TIRTextPrinter10VisitStmt_EPKNS0_11SeqStmtNodeE'/>
+<use f='tvm/src/tir/schedule/utils.h' l='190' c='_ZN3tvm3tir7AsArrayERKNS0_4StmtE'/>
+<use f='tvm/src/tir/schedule/utils.h' l='202' c='_ZN3tvm3tir12IsSingleStmtERKNS0_4StmtE'/>
+<size>32</size>
+<use f='tvm/src/printer/tir_text_printer.cc' l='473' c='_ZN3tvm3tir14TIRTextPrinter10VisitStmt_EPKNS0_12AttrStmtNodeE'/>
+<use f='tvm/src/printer/tir_text_printer.cc' l='539' c='_ZN3tvm3tir14TIRTextPrinter10VisitStmt_EPKNS0_12AllocateNodeE'/>
+<use f='tvm/src/printer/tir_text_printer.cc' l='552' c='_ZN3tvm3tir14TIRTextPrinter10VisitStmt_EPKNS0_17AllocateConstNodeE'/>
+<use f='tvm/src/printer/tir_text_printer.cc' l='564' c='_ZN3tvm3tir14TIRTextPrinter10VisitStmt_EPKNS0_14DeclBufferNodeE'/>
+<use f='tvm/src/printer/tir_text_printer.cc' l='581' c='_ZN3tvm3tir14TIRTextPrinter10VisitStmt_EPKNS0_11SeqStmtNodeE'/>
+<use f='tvm/src/printer/tir_text_printer.cc' l='838' c='_ZN3tvm3tir14TIRTextPrinter9PrintBodyERKNS0_4StmtEb'/>
+<size>32</size>
+<use f='tvm/src/printer/tvmscript_printer.cc' l='250' c='_ZN3tvm3tir16TVMScriptPrinter10VisitStmt_EPKNS0_11SeqStmtNodeE'/>
+<use f='tvm/src/printer/tvmscript_printer.cc' l='1194' c='_ZN3tvm3tir16TVMScriptPrinter10VisitStmt_EPKNS0_11SeqStmtNodeE'/>
+<use f='tvm/src/printer/tvmscript_printer.cc' l='1494' c='_ZN3tvm3tir16TVMScriptPrinter9PrintBodyERKNS0_4StmtE'/>
+<size>32</size>
+<use f='tvm/src/target/source/codegen_c.h' l='167' c='_ZN3tvm7codegen8CodeGenC10VisitStmt_EPKNS_3tir11SeqStmtNodeE'/>
+<size>32</size>
+<use f='tvm/src/target/llvm/codegen_llvm.h' l='224' c='_ZN3tvm7codegen11CodeGenLLVM10VisitStmt_EPKNS_3tir11SeqStmtNodeE'/>
+<size>32</size>
+<use f='tvm/src/target/llvm/codegen_llvm.cc' l='1659' c='_ZN3tvm7codegen11CodeGenLLVM10VisitStmt_EPKNS_3tir11SeqStmtNodeE'/>
+<size>32</size>
+<use f='tvm/src/target/source/codegen_c.cc' l='950' c='_ZN3tvm7codegen8CodeGenC10VisitStmt_EPKNS_3tir11SeqStmtNodeE'/>
+<size>32</size>
+<use f='tvm/src/target/stackvm/codegen_stackvm.h' l='147' c='_ZN3tvm7codegen14CodeGenStackVM10VisitStmt_EPKNS_3tir11SeqStmtNodeE'/>
+<use f='tvm/src/target/stackvm/codegen_stackvm.cc' l='444' c='_ZN3tvm7codegen14CodeGenStackVM10VisitStmt_EPKNS_3tir11SeqStmtNodeE'/>
+<size>32</size>
+<use f='tvm/src/tir/analysis/estimate_flops.cc' l='173' c='_ZN3tvm3tir13FlopEstimator10VisitStmt_EPKNS0_11SeqStmtNodeE'/>
+<size>32</size>
+<use f='tvm/src/tir/contrib/ethosu/passes.cc' l='204' c='_ZN3tvm3tir7contrib6ethosu28CopyComputeReorderingMutator10VisitStmt_EPKNS0_11SeqStmtNodeE'/>
+<use f='tvm/src/tir/contrib/ethosu/passes.cc' l='314' c='_ZN3tvm3tir7contrib6ethosu27MergeConstantsInfoExtractor10VisitStmt_EPKNS0_11SeqStmtNodeE'/>
+<use f='tvm/src/tir/contrib/ethosu/passes.cc' l='475' c='_ZN3tvm3tir7contrib6ethosu21MergeConstantsMutator10VisitStmt_EPKNS0_11SeqStmtNodeE'/>
+<size>32</size>
+<use f='tvm/src/tir/ir/stmt.cc' l='623' c='_ZN3tvm3tir7SeqStmtC1ENS_7runtime5ArrayINS0_4StmtEvEENS_4SpanE'/>
+<use f='tvm/src/tir/ir/stmt.cc' l='633'/>
+<use f='tvm/src/tir/ir/stmt.cc' l='633'/>
+<use f='tvm/src/tir/ir/stmt.cc' l='633'/>
+<use f='tvm/src/tir/ir/stmt.cc' l='636'/>
+<use f='tvm/src/tir/ir/stmt.cc' l='637'/>
+<size>32</size>
+<use f='tvm/src/tir/ir/stmt_functor.cc' l='121' c='_ZN3tvm3tir11StmtVisitor10VisitStmt_EPKNS0_11SeqStmtNodeE'/>
+<use f='tvm/src/tir/ir/stmt_functor.cc' l='446' c='_ZN3tvm3tir11StmtMutator10VisitStmt_EPKNS0_11SeqStmtNodeE'/>
+<use f='tvm/src/tir/ir/stmt_functor.cc' l='458' c='_ZN3tvm3tir11StmtMutator13VisitSeqStmt_EPKNS0_11SeqStmtNodeEbSt8functionIFNS0_4StmtERKS6_EE'/>
+<use f='tvm/src/tir/ir/stmt_functor.cc' l='465' c='_ZN3tvm3tir11StmtMutator13VisitSeqStmt_EPKNS0_11SeqStmtNodeEbSt8functionIFNS0_4StmtERKS6_EE'/>
+<use f='tvm/src/tir/ir/stmt_functor.cc' l='470' c='_ZN3tvm3tir11StmtMutator13VisitSeqStmt_EPKNS0_11SeqStmtNodeEbSt8functionIFNS0_4StmtERKS6_EE'/>
+<use f='tvm/src/tir/ir/stmt_functor.cc' l='492' c='_ZN3tvm3tir11StmtMutator13VisitSeqStmt_EPKNS0_11SeqStmtNodeEbSt8functionIFNS0_4StmtERKS6_EE'/>
+<size>32</size>
+<use f='tvm/src/tir/schedule/ir_comparator.h' l='50' c='_ZN3tvm3tir19TensorizeComparator10VisitStmt_EPKNS0_11SeqStmtNodeERKNS0_4StmtE'/>
+<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='2203' c='_ZN3tvm3tir23GetTensorizeLoopMappingERKNS0_13ScheduleStateERKNS0_8StmtSRefERKNS0_8PrimFuncE'/>
+<size>32</size>
+<use f='tvm/src/tir/schedule/analysis/verify.cc' l='106' c='_ZN3tvm3tir16SRefTreeVerifier10VisitStmt_EPKNS0_11SeqStmtNodeE'/>
+<size>32</size>
+<use f='tvm/src/tir/schedule/ir_comparator.cc' l='99' c='_ZN3tvm3tir19TensorizeComparator10VisitStmt_EPKNS0_11SeqStmtNodeERKNS0_4StmtE'/>
+<use f='tvm/src/tir/schedule/ir_comparator.cc' l='100' c='_ZN3tvm3tir19TensorizeComparator10VisitStmt_EPKNS0_11SeqStmtNodeERKNS0_4StmtE'/>
+<size>32</size>
+<use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='301' c='_ZN3tvm3tir16InsertCacheStageERKNS0_4StmtEiS3_'/>
+<use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='302' c='_ZN3tvm3tir16InsertCacheStageERKNS0_4StmtEiS3_'/>
+<use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='302' c='_ZN3tvm3tir16InsertCacheStageERKNS0_4StmtEiS3_'/>
+<use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='395' c='_ZN3tvm3tir16CacheLocDetector6DetectERKNS0_13ScheduleStateERKNS0_8StmtSRefES7_PNS0_14CacheStageInfoE'/>
+<use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='415' c='_ZN3tvm3tir16CacheLocDetector10VisitStmt_EPKNS0_11SeqStmtNodeE'/>
+<size>32</size>
+<use f='tvm/src/tir/schedule/primitive/decompose_padding.cc' l='393' c='_ZN3tvm3tir29DecomposePaddingBlockReplacer10VisitStmt_EPKNS0_11SeqStmtNodeE'/>
+<size>32</size>
+<use f='tvm/src/tir/schedule/primitive/reduction.cc' l='89' c='_ZN3tvm3tir31DecomposeReductionBlockReplacer10VisitStmt_EPKNS0_11SeqStmtNodeE'/>
+<use f='tvm/src/tir/schedule/primitive/reduction.cc' l='984' c='_ZN3tvm3tir13BlockReplacer10VisitStmt_EPKNS0_11SeqStmtNodeE'/>
+<size>32</size>
+<use f='tvm/src/tir/schedule/state.cc' l='149' c='_ZN3tvm3tir21SetSeqIndexInChildrenEPNS0_17ScheduleStateNodeEPKNS0_11SeqStmtNodeE'/>
+<use f='tvm/src/tir/schedule/state.cc' l='379' c='_ZN3tvm3tir18BlockInfoCollector10VisitStmt_EPKNS0_11SeqStmtNodeE'/>
+<use f='tvm/src/tir/schedule/state.cc' l='466' c='_ZN3tvm3tir12StateCreator10VisitStmt_EPKNS0_11SeqStmtNodeE'/>
+<use f='tvm/src/tir/schedule/state.cc' l='767' c='_ZN3tvm3tir11SRefUpdater10VisitStmt_EPKNS0_11SeqStmtNodeE'/>
+<use f='tvm/src/tir/schedule/state.cc' l='838' c='_ZN3tvm3tir13ChildReplacer10VisitStmt_EPKNS0_11SeqStmtNodeE'/>
+<use f='tvm/src/tir/schedule/state.cc' l='864' c='_ZN3tvm3tir13ChildReplacer10VisitStmt_EPKNS0_11SeqStmtNodeE'/>
+<size>32</size>
+<use f='tvm/src/tir/schedule/transform.cc' l='211' c='_ZN3tvm3tir20LeafBlockRemovalPlanERKNS0_13ScheduleStateERKNS0_8StmtSRefEPNS0_4StmtES8_'/>
+<use f='tvm/src/tir/schedule/transform.cc' l='223' c='_ZN3tvm3tir20LeafBlockRemovalPlanERKNS0_13ScheduleStateERKNS0_8StmtSRefEPNS0_4StmtES8_'/>
+<use f='tvm/src/tir/schedule/transform.cc' l='232' c='_ZN3tvm3tir20LeafBlockRemovalPlanERKNS0_13ScheduleStateERKNS0_8StmtSRefEPNS0_4StmtES8_'/>
+<size>32</size>
+<use f='tvm/src/tir/transforms/hoist_expression.cc' l='348' c='_ZN3tvm3tir18HoistInfoCollector10VisitStmt_EPKNS0_11SeqStmtNodeE'/>
+<size>32</size>
+<use f='tvm/src/tir/transforms/inject_software_pipeline.cc' l='1059' c='_ZN3tvm3tir17software_pipeline16PipelineInjector10VisitStmt_EPKNS0_7ForNodeE'/>
+<use f='tvm/src/tir/transforms/inject_software_pipeline.cc' l='1059' c='_ZN3tvm3tir17software_pipeline16PipelineInjector10VisitStmt_EPKNS0_7ForNodeE'/>
+<use f='tvm/src/tir/transforms/inject_software_pipeline.cc' l='1075' c='_ZN3tvm3tir17software_pipeline16PipelineInjector10VisitStmt_EPKNS0_7ForNodeE'/>
+<use f='tvm/src/tir/transforms/inject_software_pipeline.cc' l='1083' c='_ZN3tvm3tir17software_pipeline16PipelineInjector10VisitStmt_EPKNS0_7ForNodeE'/>
+<size>32</size>
+<use f='tvm/src/tir/transforms/inject_virtual_thread.cc' l='386' c='_ZN3tvm3tir10VTInjector10VisitStmt_EPKNS0_11SeqStmtNodeE'/>
+<size>32</size>
+<use f='tvm/src/tir/transforms/ir_utils.cc' l='62' c='_ZN3tvm3tir9MergeNestERKSt6vectorINS0_4StmtESaIS2_EES2_'/>
+<use f='tvm/src/tir/transforms/ir_utils.cc' l='63' c='_ZN3tvm3tir9MergeNestERKSt6vectorINS0_4StmtESaIS2_EES2_'/>
+<size>32</size>
+<use f='tvm/src/tir/transforms/lift_attr_scope.cc' l='74' c='_ZN3tvm3tir15AttrScopeLifter10VisitStmt_EPKNS0_11SeqStmtNodeE'/>
+<use f='tvm/src/tir/transforms/lift_attr_scope.cc' l='90' c='_ZN3tvm3tir15AttrScopeLifter10VisitStmt_EPKNS0_11SeqStmtNodeE'/>
+<size>32</size>
+<use f='tvm/src/tir/transforms/loop_partition.cc' l='153' c='_ZN3tvm3tir17CandidateSelector10VisitStmt_EPKNS0_11SeqStmtNodeE'/>
+<size>32</size>
+<use f='tvm/src/tir/transforms/lower_cross_thread_reduction.cc' l='217' c='_ZN3tvm3tir20InThreadReducerMaker10VisitStmt_EPKNS0_11SeqStmtNodeE'/>
+<use f='tvm/src/tir/transforms/lower_cross_thread_reduction.cc' l='466' c='_ZNK3tvm3tir31CrossThreadReductionTransformer33CheckCanApplyCrossThreadReductionEPKNS0_9BlockNodeERKSt6vectorIPKNS0_7ForNodeESaIS8_EE'/>
+<size>32</size>
+<use f='tvm/src/tir/transforms/remove_no_op.cc' l='113' c='_ZN3tvm3tir11NoOpRemover10VisitStmt_EPKNS0_11SeqStmtNodeE'/>
+<use f='tvm/src/tir/transforms/remove_no_op.cc' l='115' c='_ZN3tvm3tir11NoOpRemover10VisitStmt_EPKNS0_11SeqStmtNodeE'/>
+<size>32</size>
+<use f='tvm/src/tir/transforms/unroll_loop.cc' l='151' c='_ZN3tvm3tir12LoopUnroller10VisitStmt_EPKNS0_11SeqStmtNodeE'/>
+<size>32</size>

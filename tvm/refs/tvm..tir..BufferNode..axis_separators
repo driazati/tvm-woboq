@@ -1,0 +1,56 @@
+<dec f='tvm/include/tvm/tir/buffer.h' l='73' type='Array&lt;tvm::IntImm&gt;'/>
+<use f='tvm/include/tvm/tir/buffer.h' l='106' u='a' c='_ZN3tvm3tir10BufferNode10VisitAttrsEPNS_11AttrVisitorE'/>
+<use f='tvm/include/tvm/tir/buffer.h' l='120' u='r' c='_ZNK3tvm3tir10BufferNode12SEqualReduceEPKS1_NS_13SEqualReducerE'/>
+<use f='tvm/include/tvm/tir/buffer.h' l='120' u='r' c='_ZNK3tvm3tir10BufferNode12SEqualReduceEPKS1_NS_13SEqualReducerE'/>
+<use f='tvm/include/tvm/tir/buffer.h' l='131' u='r' c='_ZNK3tvm3tir10BufferNode11SHashReduceENS_12SHashReducerE'/>
+<offset>320</offset>
+<doc f='tvm/include/tvm/tir/buffer.h' l='65'>/*!
+   * \brief Separators between input axes when generating flattened output axes
+   *
+   * For buffers representing flat 1-d memory (e.g. any buffer in
+   * RAM), this should be an empty array.  For buffers representing
+   * non-flat memory, each entry in axis_separators should be the
+   * first input axis that is part of a new flattened axis.
+   */</doc>
+<use f='tvm/src/printer/tir_text_printer.cc' l='248' u='m' c='_ZN3tvm3tir14TIRTextPrinter14BufferNode2DocEPKNS0_10BufferNodeENS_3DocE'/>
+<use f='tvm/src/printer/tir_text_printer.cc' l='249' u='r' c='_ZN3tvm3tir14TIRTextPrinter14BufferNode2DocEPKNS0_10BufferNodeENS_3DocE'/>
+<use f='tvm/src/printer/tvmscript_printer.cc' l='507' u='m' c='_ZN3tvm3tir16TVMScriptPrinter22AllocBufferDeclarationERKNS0_6BufferE'/>
+<use f='tvm/src/printer/tvmscript_printer.cc' l='508' u='r' c='_ZN3tvm3tir16TVMScriptPrinter22AllocBufferDeclarationERKNS0_6BufferE'/>
+<use f='tvm/src/printer/tvmscript_printer.cc' l='614' u='m' c='_ZN3tvm3tir16TVMScriptPrinter14IsSimpleBufferERKNS0_6BufferE'/>
+<use f='tvm/src/te/schedule/schedule_postproc_to_primfunc.cc' l='348' u='w' c='_ZN3tvm2te27AxisSeparatorsAttrUnwrapper17GetRemappedBufferENS_3tir6BufferE'/>
+<use f='tvm/src/tir/contrib/ethosu/passes.cc' l='557' u='r' c='_ZN3tvm3tir7contrib6ethosu21MergeConstantsMutator15MakeNewCopyArgsERKNS0_4StmtERKNS0_6BufferEi'/>
+<use f='tvm/src/tir/ir/buffer.cc' l='277' u='m' c='_ZNK3tvm3tir10BufferNode10ElemOffsetENS_7runtime5ArrayINS_8PrimExprEvEE'/>
+<use f='tvm/src/tir/ir/buffer.cc' l='282' u='m' c='_ZNK3tvm3tir10BufferNode10ElemOffsetENS_7runtime5ArrayINS_8PrimExprEvEE'/>
+<use f='tvm/src/tir/ir/buffer.cc' l='289' u='m' c='_ZNK3tvm3tir10BufferNode10ElemOffsetENS_7runtime5ArrayINS_8PrimExprEvEE'/>
+<use f='tvm/src/tir/ir/buffer.cc' l='290' u='m' c='_ZNK3tvm3tir10BufferNode10ElemOffsetENS_7runtime5ArrayINS_8PrimExprEvEE'/>
+<use f='tvm/src/tir/ir/buffer.cc' l='342' u='m' c='_ZNK3tvm3tir6Buffer18GetFlattenedBufferEv'/>
+<use f='tvm/src/tir/ir/buffer.cc' l='343' u='m' c='_ZNK3tvm3tir6Buffer18GetFlattenedBufferEv'/>
+<use f='tvm/src/tir/ir/buffer.cc' l='344' u='m' c='_ZNK3tvm3tir6Buffer18GetFlattenedBufferEv'/>
+<use f='tvm/src/tir/ir/buffer.cc' l='347' u='m' c='_ZNK3tvm3tir6Buffer18GetFlattenedBufferEv'/>
+<use f='tvm/src/tir/ir/buffer.cc' l='348' u='m' c='_ZNK3tvm3tir6Buffer18GetFlattenedBufferEv'/>
+<use f='tvm/src/tir/ir/buffer.cc' l='351' u='m' c='_ZNK3tvm3tir6Buffer18GetFlattenedBufferEv'/>
+<use f='tvm/src/tir/ir/buffer.cc' l='351' u='m' c='_ZNK3tvm3tir6Buffer18GetFlattenedBufferEv'/>
+<use f='tvm/src/tir/ir/buffer.cc' l='363' c='_ZNK3tvm3tir6Buffer18GetFlattenedBufferEv'/>
+<use f='tvm/src/tir/ir/buffer.cc' l='372' u='m' c='_ZNK3tvm3tir6Buffer18GetFlattenedBufferEv'/>
+<use f='tvm/src/tir/ir/buffer.cc' l='375' u='m' c='_ZNK3tvm3tir6Buffer18GetFlattenedBufferEv'/>
+<use f='tvm/src/tir/ir/buffer.cc' l='376' u='m' c='_ZNK3tvm3tir6Buffer18GetFlattenedBufferEv'/>
+<use f='tvm/src/tir/ir/buffer.cc' l='385' u='m' c='_ZNK3tvm3tir6Buffer18GetFlattenedBufferEv'/>
+<use f='tvm/src/tir/ir/buffer.cc' l='386' u='m' c='_ZNK3tvm3tir6Buffer18GetFlattenedBufferEv'/>
+<use f='tvm/src/tir/ir/buffer.cc' l='393' u='w' c='_ZNK3tvm3tir6Buffer18GetFlattenedBufferEv'/>
+<use f='tvm/src/tir/ir/buffer.cc' l='564' u='w' c='_ZN3tvm3tir6BufferC1ENS0_3VarENS_7runtime8DataTypeENS3_5ArrayINS_8PrimExprEvEES7_S6_NS3_6StringEiiNS0_10BufferTypeENS5_INS_6IntImmEvEENS_4SpanE'/>
+<use f='tvm/src/tir/schedule/primitive/layout_transformation.cc' l='476' u='w' c='_ZN3tvm3tir26BufferAxisSeparatorMutator22VisitMatchBufferRegionERKNS0_17MatchBufferRegionE'/>
+<use f='tvm/src/tir/schedule/primitive/layout_transformation.cc' l='476' u='r' c='_ZN3tvm3tir26BufferAxisSeparatorMutator22VisitMatchBufferRegionERKNS0_17MatchBufferRegionE'/>
+<use f='tvm/src/tir/schedule/primitive/layout_transformation.cc' l='509' u='w' c='_ZN3tvm3tir16SetAxisSeparatorENS0_13ScheduleStateERKNS0_8StmtSRefEiNS0_15BufferIndexTypeERKNS_7runtime5ArrayINS_6IntImmEvEE'/>
+<use f='tvm/src/tir/transforms/bf16_legalize.cc' l='339' u='r' c='_ZN3tvm3tir17BF16LowerRewriter17GetRemappedBufferENS0_6BufferE'/>
+<use f='tvm/src/tir/transforms/ir_utils.cc' l='175' u='r' c='_ZN3tvm3tir12IRConvertSSA17GetRemappedBufferENS0_6BufferE'/>
+<use f='tvm/src/tir/transforms/lower_thread_allreduce.cc' l='149' u='r' c='_ZN3tvm3tir22ThreadAllreduceBuilder10VisitExpr_EPKNS0_14BufferLoadNodeE'/>
+<use f='tvm/src/tir/transforms/lower_thread_allreduce.cc' l='186' u='r' c='_ZN3tvm3tir22ThreadAllreduceBuilder10VisitStmt_EPKNS0_15BufferStoreNodeE'/>
+<use f='tvm/src/tir/transforms/storage_flatten.cc' l='1503' u='r' c='_ZN3tvm3tir16StorageFlattener10VisitStmt_EPKNS0_17BufferRealizeNodeE'/>
+<use f='tvm/src/tir/transforms/storage_flatten.cc' l='1685' c='_ZN3tvm3tir16StorageFlattener14FlattenExtentsERKT_'/>
+<use f='tvm/src/tir/transforms/storage_flatten.cc' l='1695' u='r' c='_ZN3tvm3tir16StorageFlattener14FlattenExtentsERKT_'/>
+<use f='tvm/src/tir/transforms/storage_rewrite.cc' l='118' u='m' c='_ZN3tvm3tir25LinearAccessPatternFinder10VisitStmt_EPKNS0_15BufferStoreNodeE'/>
+<use f='tvm/src/tir/transforms/storage_rewrite.cc' l='122' u='m' c='_ZN3tvm3tir25LinearAccessPatternFinder10VisitStmt_EPKNS0_15BufferStoreNodeE'/>
+<use f='tvm/src/tir/transforms/storage_rewrite.cc' l='145' u='m' c='_ZN3tvm3tir25LinearAccessPatternFinder10VisitExpr_EPKNS0_14BufferLoadNodeE'/>
+<use f='tvm/src/tir/transforms/storage_rewrite.cc' l='149' u='m' c='_ZN3tvm3tir25LinearAccessPatternFinder10VisitExpr_EPKNS0_14BufferLoadNodeE'/>
+<use f='tvm/src/tir/transforms/storage_rewrite.cc' l='459' u='r' c='_ZN3tvm3tir19StoragePlanRewriter11RemapBufferENS0_6BufferENS0_3VarE'/>
+<use f='tvm/src/tir/usmp/transform/convert_pool_allocations_to_offsets.cc' l='412' u='r' c='_ZN3tvm3tir4usmp31PoolAllocationToOffsetConverter17GetRemappedBufferENS0_6BufferE'/>

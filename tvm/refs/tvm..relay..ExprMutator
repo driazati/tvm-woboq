@@ -1,0 +1,126 @@
+<inh f='tvm/include/tvm/relay/expr_functor.h' l='68' c='tvm::relay::ExprFunctor'/>
+<def f='tvm/include/tvm/relay/expr_functor.h' l='184' ll='222'/>
+<ovr f='tvm/include/tvm/relay/expr_functor.h' l='282' c='tvm::relay::MixedModeMutator'/>
+<use f='tvm/include/tvm/relay/expr_functor.h' l='282'/>
+<ovr f='tvm/src/relay/transforms/auto_scheduler_layout_rewrite.h' l='37' c='tvm::relay::AutoSchedulerLayoutRewriter'/>
+<use f='tvm/src/relay/transforms/auto_scheduler_layout_rewrite.h' l='37'/>
+<size>64</size>
+<doc f='tvm/include/tvm/relay/expr_functor.h' l='177'>/*!
+ * \brief A wrapper around ExprFunctor which functionally updates the AST.
+ *
+ * ExprMutator treats Expr as dataflow graph, and only Mutate each Expr once.
+ * The mutated results are memoized in a map and reused so that
+ * local transformation on the dataflow preserves the graph structure.
+ */</doc>
+<fun r='_ZN3tvm5relay11ExprMutator6MutateERKNS_9RelayExprE'/>
+<fun r='_ZN3tvm5relay11ExprMutator9VisitExprERKNS_9RelayExprE'/>
+<fun r='_ZN3tvm5relay11ExprMutator10VisitExpr_EPKNS0_7VarNodeE'/>
+<fun r='_ZN3tvm5relay11ExprMutator10VisitExpr_EPKNS0_12ConstantNodeE'/>
+<fun r='_ZN3tvm5relay11ExprMutator10VisitExpr_EPKNS_13GlobalVarNodeE'/>
+<fun r='_ZN3tvm5relay11ExprMutator10VisitExpr_EPKNS_6OpNodeE'/>
+<fun r='_ZN3tvm5relay11ExprMutator10VisitExpr_EPKNS0_9TupleNodeE'/>
+<fun r='_ZN3tvm5relay11ExprMutator10VisitExpr_EPKNS0_12FunctionNodeE'/>
+<fun r='_ZN3tvm5relay11ExprMutator10VisitExpr_EPKNS0_8CallNodeE'/>
+<fun r='_ZN3tvm5relay11ExprMutator10VisitExpr_EPKNS0_7LetNodeE'/>
+<fun r='_ZN3tvm5relay11ExprMutator10VisitExpr_EPKNS0_6IfNodeE'/>
+<fun r='_ZN3tvm5relay11ExprMutator10VisitExpr_EPKNS0_16TupleGetItemNodeE'/>
+<fun r='_ZN3tvm5relay11ExprMutator10VisitExpr_EPKNS0_13RefCreateNodeE'/>
+<fun r='_ZN3tvm5relay11ExprMutator10VisitExpr_EPKNS0_11RefReadNodeE'/>
+<fun r='_ZN3tvm5relay11ExprMutator10VisitExpr_EPKNS0_12RefWriteNodeE'/>
+<fun r='_ZN3tvm5relay11ExprMutator10VisitExpr_EPKNS_15ConstructorNodeE'/>
+<fun r='_ZN3tvm5relay11ExprMutator10VisitExpr_EPKNS0_9MatchNodeE'/>
+<fun r='_ZN3tvm5relay11ExprMutator9VisitTypeERKNS_4TypeE'/>
+<fun r='_ZN3tvm5relay11ExprMutator11VisitClauseERKNS0_6ClauseE'/>
+<fun r='_ZN3tvm5relay11ExprMutator12VisitPatternERKNS0_7PatternE'/>
+<mbr r='tvm::relay::ExprMutator::memo_' o='64' t='std::unordered_map&lt;Expr, Expr, ObjectPtrHash, ObjectPtrEqual&gt;'/>
+<ovr f='tvm/src/ir/module.cc' l='313' c='tvm::Renamer'/>
+<use f='tvm/src/ir/module.cc' l='313'/>
+<size>64</size>
+<ovr f='tvm/src/parser/meta_ref.cc' l='66' c='tvm::parser::MetaRefExpander'/>
+<use f='tvm/src/parser/meta_ref.cc' l='66'/>
+<size>64</size>
+<ovr f='tvm/src/relay/analysis/util.cc' l='445' c='TypeSubstMutator'/>
+<use f='tvm/src/relay/analysis/util.cc' l='445' c='_ZN3tvm5relay9TypeSubstERKNS_9RelayExprERKNS_7runtime3MapINS_7TypeVarENS_4TypeEvvEE'/>
+<size>64</size>
+<ovr f='tvm/src/relay/transforms/device_aware_visitors.h' l='308' c='tvm::relay::transform::DeviceAwareExprMutator'/>
+<use f='tvm/src/relay/transforms/device_aware_visitors.h' l='308'/>
+<size>64</size>
+<ovr f='tvm/src/relay/transforms/meta_schedule_layout_rewrite.h' l='28' c='tvm::relay::MetaScheduleLayoutRewriter'/>
+<use f='tvm/src/relay/transforms/meta_schedule_layout_rewrite.h' l='28'/>
+<size>64</size>
+<ovr f='tvm/src/relay/backend/vm/manifest_lifetimes.cc' l='41' c='tvm::relay::transform::KillInserter'/>
+<use f='tvm/src/relay/backend/vm/manifest_lifetimes.cc' l='41'/>
+<size>64</size>
+<ovr f='tvm/src/relay/collage/sub_graph.cc' l='45' c='tvm::relay::collage::(anonymousnamespace)::Rewriter'/>
+<use f='tvm/src/relay/collage/sub_graph.cc' l='45'/>
+<ovr f='tvm/src/relay/collage/sub_graph.cc' l='57' c='tvm::relay::collage::(anonymousnamespace)::Extractor'/>
+<use f='tvm/src/relay/collage/sub_graph.cc' l='57'/>
+<size>64</size>
+<ovr f='tvm/src/relay/ir/dataflow_matcher.cc' l='516' c='tvm::relay::MatchExtractor'/>
+<use f='tvm/src/relay/ir/dataflow_matcher.cc' l='516'/>
+<size>64</size>
+<ovr f='tvm/src/relay/quantize/calibrate.cc' l='146' c='tvm::relay::quantize::StatsCollector'/>
+<use f='tvm/src/relay/quantize/calibrate.cc' l='146'/>
+<size>64</size>
+<ovr f='tvm/src/relay/transforms/auto_scheduler_layout_rewrite.cc' l='56' c='tvm::relay::FuncMutator'/>
+<use f='tvm/src/relay/transforms/auto_scheduler_layout_rewrite.cc' l='56'/>
+<use f='tvm/src/relay/transforms/auto_scheduler_layout_rewrite.cc' l='60' c='_ZN3tvm5relay11FuncMutatorC1ERKSt5dequeINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS8_EESC_'/>
+<size>64</size>
+<ovr f='tvm/src/relay/transforms/canonicalize_cast.cc' l='64' c='tvm::relay::CastCanonicalizer'/>
+<use f='tvm/src/relay/transforms/canonicalize_cast.cc' l='64'/>
+<size>64</size>
+<ovr f='tvm/src/relay/transforms/dead_code.cc' l='447' c='tvm::relay::(anonymousnamespace)::EliminatorMutator'/>
+<use f='tvm/src/relay/transforms/dead_code.cc' l='447'/>
+<size>64</size>
+<ovr f='tvm/src/relay/transforms/defunctionalization.cc' l='100' c='tvm::relay::DefuncMutator'/>
+<use f='tvm/src/relay/transforms/defunctionalization.cc' l='100'/>
+<size>64</size>
+<ovr f='tvm/src/relay/transforms/defuse_ops.cc' l='40' c='tvm::relay::DefuseOpsMutator'/>
+<use f='tvm/src/relay/transforms/defuse_ops.cc' l='40'/>
+<ovr f='tvm/src/relay/transforms/defuse_ops.cc' l='42' c='tvm::relay::DefuseOpsMutator::FuncBodyMutator'/>
+<use f='tvm/src/relay/transforms/defuse_ops.cc' l='42'/>
+<use f='tvm/src/relay/transforms/defuse_ops.cc' l='45' c='_ZN3tvm5relay16DefuseOpsMutator15FuncBodyMutatorC1ESt13unordered_mapINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS_9RelayExprESt4hashIS9_ESt815357971'/>
+<size>64</size>
+<ovr f='tvm/src/relay/transforms/device_planner.cc' l='325' c='tvm::relay::transform::(anonymousnamespace)::RewriteOnDevices'/>
+<use f='tvm/src/relay/transforms/device_planner.cc' l='325'/>
+<ovr f='tvm/src/relay/transforms/device_planner.cc' l='907' c='tvm::relay::transform::(anonymousnamespace)::DeviceCapturer'/>
+<use f='tvm/src/relay/transforms/device_planner.cc' l='907'/>
+<size>64</size>
+<ovr f='tvm/src/relay/transforms/eta_expand.cc' l='58' c='tvm::relay::eta_expand::EtaExpander'/>
+<use f='tvm/src/relay/transforms/eta_expand.cc' l='58'/>
+<size>64</size>
+<ovr f='tvm/src/relay/transforms/expr_subst.cc' l='32' c='tvm::relay::ExprSubstituter'/>
+<use f='tvm/src/relay/transforms/expr_subst.cc' l='32'/>
+<size>64</size>
+<ovr f='tvm/src/relay/transforms/fake_quantization_to_integer.cc' l='164' c='tvm::relay::SubgraphMutator'/>
+<use f='tvm/src/relay/transforms/fake_quantization_to_integer.cc' l='164'/>
+<ovr f='tvm/src/relay/transforms/fake_quantization_to_integer.cc' l='405' c='tvm::relay::QATSubgraphMutator'/>
+<use f='tvm/src/relay/transforms/fake_quantization_to_integer.cc' l='405'/>
+<size>64</size>
+<ovr f='tvm/src/relay/transforms/higher_order_gradient.cc' l='200' c='tvm::relay::ReverseAD'/>
+<use f='tvm/src/relay/transforms/higher_order_gradient.cc' l='200'/>
+<ovr f='tvm/src/relay/transforms/higher_order_gradient.cc' l='221' c='Remapper'/>
+<use f='tvm/src/relay/transforms/higher_order_gradient.cc' l='221' c='_ZN3tvm5relay9ReverseAD5RemapERKNS_9RelayExprE'/>
+<size>64</size>
+<ovr f='tvm/src/relay/transforms/inline.cc' l='53' c='tvm::relay::Inliner'/>
+<use f='tvm/src/relay/transforms/inline.cc' l='53'/>
+<size>64</size>
+<ovr f='tvm/src/relay/transforms/lazy_gradient_init.cc' l='74' c='tvm::relay::LazyGradientInitializer'/>
+<use f='tvm/src/relay/transforms/lazy_gradient_init.cc' l='74'/>
+<size>64</size>
+<ovr f='tvm/src/relay/transforms/meta_schedule_layout_rewrite.cc' l='82' c='tvm::relay::MetaScheduleFuncMutator'/>
+<use f='tvm/src/relay/transforms/meta_schedule_layout_rewrite.cc' l='82'/>
+<size>64</size>
+<ovr f='tvm/src/relay/transforms/partial_eval.cc' l='1090' c='AnnotateFuncIdMutator'/>
+<use f='tvm/src/relay/transforms/partial_eval.cc' l='1090' c='_ZN3tvm5relay12partial_eval16PartialEvaluator14AnnotateFuncIdERKNS_9RelayExprE'/>
+<ovr f='tvm/src/relay/transforms/partial_eval.cc' l='1133' c='RemapMutator'/>
+<use f='tvm/src/relay/transforms/partial_eval.cc' l='1133' c='_ZN3tvm5relay12partial_eval5RemapERKNS_9RelayExprE'/>
+<ovr f='tvm/src/relay/transforms/partial_eval.cc' l='1151' c='StripWithFuncIdMutator'/>
+<use f='tvm/src/relay/transforms/partial_eval.cc' l='1151' c='_ZN3tvm5relay12partial_eval15StripWithFuncIdERKNS_9RelayExprE'/>
+<size>64</size>
+<ovr f='tvm/src/relay/transforms/to_graph_normal_form.cc' l='52' c='tvm::relay::GNF'/>
+<use f='tvm/src/relay/transforms/to_graph_normal_form.cc' l='52'/>
+<size>64</size>
+<ovr f='tvm/src/relay/transforms/type_infer.cc' l='861' c='tvm::relay::SameTypedSubgraphExtractor'/>
+<use f='tvm/src/relay/transforms/type_infer.cc' l='861'/>
+<size>64</size>

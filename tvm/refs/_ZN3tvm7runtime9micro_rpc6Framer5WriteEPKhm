@@ -1,0 +1,13 @@
+<dec f='tvm/include/tvm/runtime/crt/rpc_common/framing.h' l='163' type='tvm_crt_error_t tvm::runtime::micro_rpc::Framer::Write(const uint8_t * payload, size_t payload_size_bytes)'/>
+<doc f='tvm/include/tvm/runtime/crt/rpc_common/framing.h' l='151'>/*! \brief Frame and write a full packet.
+   * \param payload The entire packet payload.
+   * \param payload_size_bytes Number of bytes in the packet.
+   * \return
+   *     - kTvmErrorNoError when no error occurs
+   *     - kTvmErrorWriteStreamShortWrite if the WriteStream passed to constructor&apos;s Write()
+   *       function returns 0.
+   *     - kTvmErrorWriteStreamShortWrite if the WriteStream passed to constructor&apos;s Write()
+   *       function returns an invalid positive number.
+   *     - Any negative value (i.e. with bits in kTvmErrorSystemErrorMask set) returned by the
+   *       WriteStream&apos;s Write() function.
+   */</doc>

@@ -1,0 +1,8 @@
+<dec f='tvm/src/relay/op/memory/memory.h' l='37' type='tvm::relay::Expr tvm::relay::AllocStorage(tvm::relay::Expr size, tvm::relay::Expr alignment, tvm::VirtualDevice virtual_device, tvm::DataType dtype_hint)'/>
+<def f='tvm/src/relay/op/memory/memory.cc' l='53' ll='59' type='tvm::relay::Expr tvm::relay::AllocStorage(tvm::relay::Expr size, tvm::relay::Expr alignment, tvm::VirtualDevice virtual_device, tvm::DataType dtype_hint)'/>
+<use f='tvm/src/relay/op/memory/memory.cc' l='61' u='r'/>
+<doc f='tvm/src/relay/op/memory/memory.cc' l='50'>// The passing value in attrs and args doesn&apos;t seem super great.
+// We should consider a better solution, i.e the type relation
+// being able to see the arguments as well?</doc>
+<use f='tvm/src/relay/transforms/memory_alloc.cc' l='263' u='c' c='_ZN3tvm5relay15DialectRewriter20MakeStaticAllocationEPNS0_7LetListERKNS_10TensorTypeERKNS_13VirtualDeviceENS_7runtime6StringE'/>
+<use f='tvm/src/relay/transforms/memory_alloc.cc' l='369' u='c' c='_ZN3tvm5relay15DialectRewriter13DynamicInvokeEPNS0_7LetListERKNS_9RelayExprERKNS0_5TupleERKNS0_16CallLoweredAttrsERKSt6vectorINS_10TensorTypeESaISE_EE10676354'/>

@@ -1,0 +1,11 @@
+<def f='tvm/src/tir/schedule/utils.h' l='227' ll='232' type='runtime::ThreadScope tvm::tir::GetThreadScope(const tvm::tir::ForNode * loop)'/>
+<doc f='tvm/src/tir/schedule/utils.h' l='222'>/*!
+ * \brief Get the thread scope bound to the specific loop
+ * \param loop The loop to be inspected
+ * \return The thread scope bound to the loop
+ */</doc>
+<use f='tvm/src/meta_schedule/postproc/rewrite_reduction_block.cc' l='46' u='c' c='_ZN3tvm3tir20ReductionBlockFinder10VisitStmt_EPKNS0_7ForNodeE'/>
+<use f='tvm/src/meta_schedule/postproc/rewrite_unbound_block.cc' l='43' u='c' c='_ZN3tvm3tir18UnboundBlockFinder10VisitStmt_EPKNS0_7ForNodeE'/>
+<use f='tvm/src/meta_schedule/postproc/verify_gpu_code.cc' l='43' u='c' c='_ZN3tvm3tir19ThreadExtentChecker10VisitStmt_EPKNS0_7ForNodeE'/>
+<use f='tvm/src/meta_schedule/schedule_rule/auto_bind.cc' l='49' u='c' c='_ZN3tvm13meta_schedule18BindBlockThreadIdxERKNS_3tir8ScheduleERKNS1_7BlockRVEllSt8functionIFNS_8PrimExprElEE'/>
+<use f='tvm/src/meta_schedule/schedule_rule/cross_thread_reduction.cc' l='132' u='c' c='_ZN3tvm13meta_schedule24CrossThreadReductionNode13InThreadScopeERKNS_3tir8ScheduleERKNS2_7BlockRVE'/>

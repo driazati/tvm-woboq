@@ -1,0 +1,110 @@
+<inh f='tvm/include/tvm/node/structural_equal.h' l='38' c='tvm::BaseValueEqual'/>
+<def f='tvm/include/tvm/node/structural_equal.h' l='103' ll='114'/>
+<use f='tvm/include/tvm/ir/attrs.h' l='799' c='_ZN3tvm6detail26AttrTriggerNonDefaultEntry11set_defaultERKT_'/>
+<size>1</size>
+<doc f='tvm/include/tvm/node/structural_equal.h' l='81'>/*!
+ * \brief Content-aware structural equality comparator for objects.
+ *
+ *  The structural equality is recursively defined in the DAG of IR nodes via SEqual.
+ *  There are two kinds of nodes:
+ *
+ *  - Graph node: a graph node in lhs can only be mapped as equal to
+ *    one and only one graph node in rhs.
+ *  - Normal node: equality is recursively defined without the restriction
+ *    of graph nodes.
+ *
+ *  Vars(tir::Var, TypeVar) and non-constant relay expression nodes are graph nodes.
+ *  For example, it means that `%1 = %x + %y; %1 + %1` is not structurally equal
+ *  to `%1 = %x + %y; %2 = %x + %y; %1 + %2` in relay.
+ *
+ *  A var-type node(e.g. tir::Var, TypeVar) can be mapped as equal to another var
+ *  with the same type if one of the following condition holds:
+ *
+ *  - They appear in a same definition point(e.g. function argument).
+ *  - They points to the same VarNode via the same_as relation.
+ *  - They appear in a same usage point, and map_free_vars is set to be True.
+ */</doc>
+<fun r='_ZNK3tvm15StructuralEqualclERKNS_7runtime9ObjectRefES4_'/>
+<use f='tvm/src/arith/iter_affine_map.cc' l='440'/>
+<use f='tvm/src/arith/iter_affine_map.cc' l='443'/>
+<size>1</size>
+<use f='tvm/src/arith/solve_linear_inequality.cc' l='105' c='_ZN3tvm5arith13AddInequalityEPSt6vectorINS_8PrimExprESaIS2_EERKS2_PNS0_8AnalyzerE'/>
+<use f='tvm/src/arith/solve_linear_inequality.cc' l='177' c='_ZN3tvm5arith12MoveEqualityEPSt6vectorINS_8PrimExprESaIS2_EES5_S5_'/>
+<size>1</size>
+<use f='tvm/include/tvm/target/virtual_device.h' l='362'/>
+<size>1</size>
+<use f='tvm/include/tvm/meta_schedule/database.h' l='97' c='_ZNK3tvm13meta_schedule13WorkloadEqualclERKNS0_8WorkloadES4_'/>
+<size>1</size>
+<use f='tvm/src/meta_schedule/search_strategy/evolutionary_search.cc' l='51' c='_ZNK3tvm13meta_schedule11IRModuleSet9ItemEqualclERKNS1_4ItemES5_'/>
+<size>1</size>
+<use f='tvm/src/relay/transforms/pattern_utils.h' l='120' c='_ZN3tvm5relay24MatchBroadcastToLeftAxesEPKNS_14TensorTypeNodeES3_RKNS_7runtime5ArrayINS_7IntegerEvEEPNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/pattern_utils.h' l='399' c='_ZN3tvm5relay13IsEqualScalarERKNS_9RelayExprES3_'/>
+<size>1</size>
+<use f='tvm/src/relay/analysis/type_solver.cc' l='164' c='_ZN3tvm5relay10TypeSolver7Unifier17VisitTypeDefault_EPKNS_7runtime6ObjectERKNS_4TypeE'/>
+<use f='tvm/src/relay/analysis/type_solver.cc' l='225' c='_ZN3tvm5relay10TypeSolver7Unifier10VisitType_EPKNS_14TensorTypeNodeERKNS_4TypeE'/>
+<size>1</size>
+<use f='tvm/src/relay/backend/te_compiler_cache.h' l='252' c='_ZNK3tvm5relay3tec13CCacheKeyNode5EqualEPKS2_'/>
+<size>1</size>
+<use f='tvm/src/relay/backend/vm/lambda_lift.cc' l='206' c='_ZN3tvm5relay2vm12LambdaLifter21DeviceAwareVisitExpr_EPKNS0_12FunctionNodeE'/>
+<size>1</size>
+<use f='tvm/src/relay/collage/candidate_function_cache.h' l='72'/>
+<size>1</size>
+<use f='tvm/src/relay/collage/candidate_partition_index.cc' l='105' c='_ZN3tvm5relay7collage23CandidatePartitionIndex29IsCompatibleWithVirtualDeviceERKNS1_18CandidatePartitionE'/>
+<size>1</size>
+<use f='tvm/src/relay/collage/sub_graph.cc' l='557' c='_ZNK3tvm5relay7collage14NestedSubGraph18TriviallyUnionableERKS2_'/>
+<size>1</size>
+<use f='tvm/src/relay/ir/dataflow_matcher.cc' l='170' c='_ZN3tvm5relay16DFPatternMatcher15VisitDFPattern_EPKNS0_15AttrPatternNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/ir/dataflow_matcher.cc' l='357' c='_ZN3tvm5relay16DFPatternMatcher15VisitDFPattern_EPKNS0_15ExprPatternNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/ir/dataflow_matcher.cc' l='469' c='_ZN3tvm5relay16DFPatternMatcher15VisitDFPattern_EPKNS0_15TypePatternNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/ir/dataflow_matcher.cc' l='475' c='_ZN3tvm5relay16DFPatternMatcher15VisitDFPattern_EPKNS0_16ShapePatternNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/ir/dataflow_matcher.cc' l='483' c='_ZN3tvm5relay16DFPatternMatcher15VisitDFPattern_EPKNS0_19DataTypePatternNodeERKNS_9RelayExprE'/>
+<size>1</size>
+<use f='tvm/src/relay/transforms/combine_parallel_batch_matmul.cc' l='59' c='_ZN3tvm5relay27ParallelBatchMatmulCombiner16CanOpsBeCombinedEPKNS0_8CallNodeES4_'/>
+<size>1</size>
+<use f='tvm/src/relay/transforms/combine_parallel_conv2d.cc' l='61' c='_ZN3tvm5relay22ParallelConv2DCombiner16CanOpsBeCombinedEPKNS0_8CallNodeES4_'/>
+<use f='tvm/src/relay/transforms/combine_parallel_conv2d.cc' l='114' c='_ZN3tvm5relay22ParallelConv2DCombiner15IsArgCompatibleEPKNS0_8CallNodeES4_m'/>
+<size>1</size>
+<use f='tvm/src/relay/transforms/combine_parallel_dense.cc' l='80' c='_ZN3tvm5relay28ParallelDenseToBatchCombiner16CanOpsBeCombinedEPKNS0_8CallNodeES4_'/>
+<use f='tvm/src/relay/transforms/combine_parallel_dense.cc' l='106' c='_ZN3tvm5relay28ParallelDenseToDenseCombiner16CanOpsBeCombinedEPKNS0_8CallNodeES4_'/>
+<use f='tvm/src/relay/transforms/combine_parallel_dense.cc' l='132' c='_ZN3tvm5relay28ParallelDenseToDenseCombiner15IsArgCompatibleEPKNS0_8CallNodeES4_m'/>
+<size>1</size>
+<use f='tvm/src/relay/transforms/combine_parallel_op.cc' l='153' c='_ZN3tvm5relay18ParallelOpCombiner10CheckLevelERKSt6vectorIS2_IPKNS0_8CallNodeESaIS5_EESaIS7_EEmm'/>
+<size>1</size>
+<use f='tvm/src/relay/transforms/combine_parallel_op_batch.cc' l='78' c='_ZN3tvm5relay23ParallelOpBatchCombiner16CanOpsBeCombinedEPKNS0_8CallNodeES4_'/>
+<use f='tvm/src/relay/transforms/combine_parallel_op_batch.cc' l='114' c='_ZN3tvm5relay23ParallelOpBatchCombiner15IsArgCompatibleEPKNS0_8CallNodeES4_m'/>
+<size>1</size>
+<use f='tvm/src/relay/transforms/defunctionalization.cc' l='178'/>
+<size>1</size>
+<use f='tvm/src/relay/transforms/eliminate_common_subexpr.cc' l='50' c='_ZN3tvm5relay23CommonSubexprEliminator8Rewrite_EPKNS0_8CallNodeERKNS_9RelayExprE'/>
+<size>1</size>
+<use f='tvm/src/relay/transforms/fold_scale_axis.cc' l='866' c='_ZN3tvm5relay15fold_scale_axis18AddSubBackwardPrepERKNS0_4CallERKNS_7runtime5ArrayINS1_7MessageEvEE'/>
+<use f='tvm/src/relay/transforms/fold_scale_axis.cc' l='892' c='_ZN3tvm5relay15fold_scale_axis23AddSubBackwardTransformERKNS0_4CallERKNS1_7MessageERKNS_9RelayExprERKNS1_19BackwardTransformerE'/>
+<use f='tvm/src/relay/transforms/fold_scale_axis.cc' l='1097' c='_ZN3tvm5relay15fold_scale_axis24BiasAddBackwardTransformERKNS0_4CallERKNS1_7MessageERKNS_9RelayExprERKNS1_19BackwardTransformerE'/>
+<size>1</size>
+<use f='tvm/src/relay/transforms/fuse_ops.cc' l='170'/>
+<size>1</size>
+<use f='tvm/src/relay/transforms/lazy_gradient_init.cc' l='221' c='_ZN3tvm5relay23LazyGradientInitializer20CallGradCellFunctionEPKNS0_8CallNodeENS_9GlobalVarE'/>
+<size>1</size>
+<use f='tvm/src/relay/transforms/simplify_expr.cc' l='404' c='_ZNK3tvm5relay15FullElementwise8CallbackERKNS_9RelayExprES4_RKNS_7runtime3MapINS0_9DFPatternENS5_5ArrayIS2_vEEvvEE'/>
+<use f='tvm/src/relay/transforms/simplify_expr.cc' l='633' c='_ZNK3tvm5relay24EliminateIdentityRewrite8CallbackERKNS_9RelayExprES4_RKNS_7runtime3MapINS0_9DFPatternENS5_5ArrayIS2_vEEvvEE'/>
+<size>1</size>
+<use f='tvm/src/target/compilation_config.cc' l='87' c='_ZNK3tvm21CompilationConfigNode15CanonicalTargetERKNS_6TargetE'/>
+<use f='tvm/src/target/compilation_config.cc' l='91' c='_ZNK3tvm21CompilationConfigNode15CanonicalTargetERKNS_6TargetE'/>
+<use f='tvm/src/target/compilation_config.cc' l='188' c='_ZN3tvm21CompilationConfigNode4InitERKNS_9transform11PassContextERKNS_7runtime5ArrayINS_6TargetEvEE'/>
+<size>1</size>
+<use f='tvm/src/te/autodiff/ad_simplify.cc' l='416' c='_ZN3tvm2te30FactorOutAtomicFormulasFunctor10VisitExpr_EPKNS_3tir7AndNodeE'/>
+<use f='tvm/src/te/autodiff/ad_simplify.cc' l='441' c='_ZN3tvm2te30FactorOutAtomicFormulasFunctor10VisitExpr_EPKNS_3tir6OrNodeE'/>
+<use f='tvm/src/te/autodiff/ad_simplify.cc' l='443' c='_ZN3tvm2te30FactorOutAtomicFormulasFunctor10VisitExpr_EPKNS_3tir6OrNodeE'/>
+<use f='tvm/src/te/autodiff/ad_simplify.cc' l='447' c='_ZN3tvm2te30FactorOutAtomicFormulasFunctor10VisitExpr_EPKNS_3tir6OrNodeE'/>
+<size>1</size>
+<use f='tvm/src/te/operation/compute_op.cc' l='61' c='_ZN3tvm2te11ReduceEqualEPKNS_3tir10ReduceNodeES4_'/>
+<size>1</size>
+<use f='tvm/src/te/operation/tensorize.cc' l='319' c='_ZN3tvm2te19VerifyTensorizeBodyEPKNS0_13ComputeOpNodeERKNS0_5StageERKSt13unordered_mapINS_3tir7IterVarENS_8PrimExprESt4hashIS9_ESt8equal_toIS9_ESaISt413878024'/>
+<size>1</size>
+<use f='tvm/src/tir/transforms/combine_context_call.cc' l='64' c='_ZN3tvm3tir19ContextCallCombiner10VisitStmt_EPKNS0_12AttrStmtNodeE'/>
+<use f='tvm/src/tir/transforms/combine_context_call.cc' l='77' c='_ZN3tvm3tir19ContextCallCombiner10VisitStmt_EPKNS0_7ForNodeE'/>
+<use f='tvm/src/tir/transforms/combine_context_call.cc' l='91' c='_ZN3tvm3tir19ContextCallCombiner12BuildContextERKSt13unordered_mapINS_8PrimExprENS0_3VarENS_14StructuralHashENS_15StructuralEqualESaISt4pairIKS3_S4_EEENS0_4StmtE'/>
+<use f='tvm/src/tir/transforms/combine_context_call.cc' l='98'/>
+<size>1</size>
+<use f='tvm/src/tir/transforms/inject_software_pipeline.cc' l='761' c='_ZNK3tvm3tir17software_pipeline16PipelineRewriter30CompletePipelineLoopStatementsERKSt6vectorINS2_18RewrittenBlockInfoESaIS4_EERKSt3mapIiNS2_15AsyncSt4088785'/>
+<size>1</size>

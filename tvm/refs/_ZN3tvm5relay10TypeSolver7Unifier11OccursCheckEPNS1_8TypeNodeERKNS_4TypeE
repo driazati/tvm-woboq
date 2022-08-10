@@ -1,0 +1,9 @@
+<use f='tvm/src/relay/analysis/type_solver.cc' l='118' u='c' c='_ZN3tvm5relay10TypeSolver7Unifier5UnifyERKNS_4TypeES5_bb'/>
+<use f='tvm/src/relay/analysis/type_solver.cc' l='125' u='c' c='_ZN3tvm5relay10TypeSolver7Unifier5UnifyERKNS_4TypeES5_bb'/>
+<def f='tvm/src/relay/analysis/type_solver.cc' l='155' ll='158' type='bool tvm::relay::TypeSolver::Unifier::OccursCheck(tvm::relay::TypeSolver::TypeNode * lhs, const tvm::relay::Type &amp; t)'/>
+<doc f='tvm/src/relay/analysis/type_solver.cc' l='149'>// Checks whether lhs (taken to be a type var) occurs in t, meaning
+  // there is a recursive equality constraint, which should be rejected.
+  // N.b.: A tautology like ?a = ?a is okay and should be checked for
+  // *before* calling this method
+  //
+  // See: https://en.wikipedia.org/wiki/Occurs_check</doc>

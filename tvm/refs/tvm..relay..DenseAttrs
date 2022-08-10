@@ -1,0 +1,53 @@
+<inh f='tvm/include/tvm/ir/attrs.h' l='834' c='tvm::AttrsNode'/>
+<def f='tvm/include/tvm/relay/attrs/nn.h' l='1077' ll='1091'/>
+<use f='tvm/include/tvm/relay/attrs/nn.h' l='1077'/>
+<size>56</size>
+<doc f='tvm/include/tvm/relay/attrs/nn.h' l='1076'>/*! \brief Attributes for dense operator */</doc>
+<mbr r='tvm::relay::DenseAttrs::units' o='192' t='tvm::relay::IndexExpr'/>
+<mbr r='tvm::relay::DenseAttrs::auto_scheduler_rewritten_layout' o='256' t='tvm::String'/>
+<mbr r='tvm::relay::DenseAttrs::meta_schedule_original_shape' o='320' t='Array&lt;tvm::PrimExpr&gt;'/>
+<mbr r='tvm::relay::DenseAttrs::out_dtype' o='384' t='tvm::DataType'/>
+<smbr r='tvm::relay::DenseAttrs::_type_key' t='const char *const'/>
+<smbr r='tvm::relay::DenseAttrs::_type_final' t='const bool'/>
+<smbr r='tvm::relay::DenseAttrs::_type_child_slots' t='const int'/>
+<fun r='_ZN3tvm5relay10DenseAttrs16RuntimeTypeIndexEv'/>
+<fun r='_ZN3tvm5relay10DenseAttrs27_GetOrAllocRuntimeTypeIndexEv'/>
+<fun r='_ZN3tvm5relay10DenseAttrs15_tvm_VisitAttrsERT_'/>
+<use f='tvm/src/relay/op/nn/nn.cc' l='202'/>
+<use f='tvm/src/relay/op/nn/nn.cc' l='202'/>
+<use f='tvm/src/relay/op/nn/nn.cc' l='202'/>
+<use f='tvm/src/relay/op/nn/nn.cc' l='206' c='_ZN3tvm5relay9MakeDenseENS_9RelayExprES1_NS_8PrimExprENS_7runtime8DataTypeE'/>
+<use f='tvm/src/relay/op/nn/nn.cc' l='230'/>
+<use f='tvm/src/relay/op/nn/nn.cc' l='236'/>
+<use f='tvm/src/relay/op/nn/nn.cc' l='298'/>
+<size>56</size>
+<use f='tvm/src/relay/qnn/op/dense.cc' l='48' c='_ZN3tvm5relay3qnn11QnnDenseRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/src/relay/qnn/op/dense.cc' l='73' c='_ZN3tvm5relay3qnn11QnnDenseRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/src/relay/qnn/op/dense.cc' l='79' c='_ZN3tvm5relay3qnn18MakeQuantizedDenseENS_9RelayExprES2_S2_S2_S2_S2_NS_8PrimExprENS_7runtime8DataTypeE'/>
+<use f='tvm/src/relay/qnn/op/dense.cc' l='88' c='_ZN3tvm5relay3qnn14DenseFirstTermERKNS_9RelayExprES4_PKNS0_10DenseAttrsE'/>
+<use f='tvm/src/relay/qnn/op/dense.cc' l='173' c='_ZN3tvm5relay3qnn20QnnDenseCanonicalizeERKNS_5AttrsERKNS_7runtime5ArrayINS_9RelayExprEvEERKNS6_INS_4TypeEvEE'/>
+<use f='tvm/src/relay/qnn/op/dense.cc' l='213'/>
+<size>56</size>
+<use f='tvm/src/relay/quantize/realize.cc' l='244' c='_ZN3tvm5relay8quantize12DenseRealizeERKNS0_4CallERKNS_7runtime5ArrayINS_9RelayExprEvEERKNS5_9ObjectRefE'/>
+<use f='tvm/src/relay/quantize/realize.cc' l='245' c='_ZN3tvm5relay8quantize12DenseRealizeERKNS0_4CallERKNS_7runtime5ArrayINS_9RelayExprEvEERKNS5_9ObjectRefE'/>
+<size>56</size>
+<use f='tvm/src/relay/transforms/auto_scheduler_layout_rewrite.cc' l='92' c='_ZN3tvm5relay11FuncMutator10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/transforms/auto_scheduler_layout_rewrite.cc' l='174'/>
+<use f='tvm/src/relay/transforms/auto_scheduler_layout_rewrite.cc' l='175'/>
+<size>56</size>
+<use f='tvm/src/relay/transforms/combine_parallel_dense.cc' l='73' c='_ZN3tvm5relay28ParallelDenseToBatchCombiner14MakeCombinedOpERKSt6vectorIS2_IPKNS0_8CallNodeESaIS5_EESaIS7_EE'/>
+<use f='tvm/src/relay/transforms/combine_parallel_dense.cc' l='81' c='_ZN3tvm5relay28ParallelDenseToBatchCombiner16CanOpsBeCombinedEPKNS0_8CallNodeES4_'/>
+<use f='tvm/src/relay/transforms/combine_parallel_dense.cc' l='82' c='_ZN3tvm5relay28ParallelDenseToBatchCombiner16CanOpsBeCombinedEPKNS0_8CallNodeES4_'/>
+<use f='tvm/src/relay/transforms/combine_parallel_dense.cc' l='107' c='_ZN3tvm5relay28ParallelDenseToDenseCombiner16CanOpsBeCombinedEPKNS0_8CallNodeES4_'/>
+<use f='tvm/src/relay/transforms/combine_parallel_dense.cc' l='108' c='_ZN3tvm5relay28ParallelDenseToDenseCombiner16CanOpsBeCombinedEPKNS0_8CallNodeES4_'/>
+<use f='tvm/src/relay/transforms/combine_parallel_dense.cc' l='123' c='_ZN3tvm5relay28ParallelDenseToDenseCombiner14MakeCombinedOpERKSt6vectorIS2_IPKNS0_8CallNodeESaIS5_EESaIS7_EE'/>
+<use f='tvm/src/relay/transforms/combine_parallel_dense.cc' l='125' c='_ZN3tvm5relay28ParallelDenseToDenseCombiner14MakeCombinedOpERKSt6vectorIS2_IPKNS0_8CallNodeESaIS5_EESaIS7_EE'/>
+<size>56</size>
+<use f='tvm/src/relay/transforms/meta_schedule_layout_rewrite.cc' l='105' c='_ZN3tvm5relay23MetaScheduleFuncMutator10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/transforms/meta_schedule_layout_rewrite.cc' l='105' c='_ZN3tvm5relay23MetaScheduleFuncMutator10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/transforms/meta_schedule_layout_rewrite.cc' l='105' c='_ZN3tvm5relay23MetaScheduleFuncMutator10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/transforms/meta_schedule_layout_rewrite.cc' l='105' c='_ZN3tvm5relay23MetaScheduleFuncMutator10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/transforms/meta_schedule_layout_rewrite.cc' l='163'/>
+<size>56</size>
+<use f='tvm/src/relay/transforms/to_mixed_precision.cc' l='139' c='_ZNK3tvm5relay18MixedPrecisionPass11GetNewAttrsEPKNS0_8CallNodeERKNS_7runtime8DataTypeE'/>
+<size>56</size>

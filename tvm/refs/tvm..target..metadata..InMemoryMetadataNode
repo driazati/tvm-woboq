@@ -1,0 +1,26 @@
+<inh f='tvm/src/target/metadata.h' l='44' c='tvm::target::metadata::VisitableMetadataNode'/>
+<def f='tvm/src/target/metadata.h' l='114' ll='189'/>
+<use f='tvm/src/target/metadata.h' l='117' c='_ZN3tvm6target8metadata20InMemoryMetadataNodeC1Ev'/>
+<size>272</size>
+<doc f='tvm/src/target/metadata.h' l='107'>/*!
+ * \brief Subclass of MetadataNode which also owns the backing C structures.
+ *
+ * This class (and other InMemory subclasses) are used during compilation to instantiate Metadata
+ * instances whose storage lives outside of .rodata. This class exists because the Module returned
+ * from tvm.relay.build must also be ready to run inference.
+ */</doc>
+<fun r='_ZN3tvm6target8metadata20InMemoryMetadataNodeC1Ev'/>
+<fun r='_ZN3tvm6target8metadata20InMemoryMetadataNodeC1ElRKSt6vectorINS_7runtime8metadata10TensorInfoESaIS6_EESA_SA_RKS3_INS_12ConstantInfoESaISB_EENS4_6StringE'/>
+<fun r='_ZN3tvm6target8metadata20InMemoryMetadataNodeD1Ev'/>
+<mbr r='tvm::target::metadata::InMemoryMetadataNode::inputs_' o='256' t='::std::unique_ptr&lt;struct TVMTensorInfo[]&gt;'/>
+<mbr r='tvm::target::metadata::InMemoryMetadataNode::inputs_objs_' o='320' t='std::vector&lt; ::tvm::runtime::metadata::TensorInfo&gt;'/>
+<mbr r='tvm::target::metadata::InMemoryMetadataNode::outputs_' o='512' t='::std::unique_ptr&lt;struct TVMTensorInfo[]&gt;'/>
+<mbr r='tvm::target::metadata::InMemoryMetadataNode::outputs_objs_' o='576' t='std::vector&lt; ::tvm::runtime::metadata::TensorInfo&gt;'/>
+<mbr r='tvm::target::metadata::InMemoryMetadataNode::workspace_pools_' o='768' t='::std::unique_ptr&lt;struct TVMTensorInfo[]&gt;'/>
+<mbr r='tvm::target::metadata::InMemoryMetadataNode::workspace_pools_objs_' o='832' t='std::vector&lt; ::tvm::runtime::metadata::TensorInfo&gt;'/>
+<mbr r='tvm::target::metadata::InMemoryMetadataNode::constant_pools_' o='1024' t='::std::unique_ptr&lt;struct TVMConstantInfo[]&gt;'/>
+<mbr r='tvm::target::metadata::InMemoryMetadataNode::constant_pools_objs_' o='1088' t='std::vector&lt; ::tvm::ConstantInfo&gt;'/>
+<mbr r='tvm::target::metadata::InMemoryMetadataNode::mod_name_' o='1280' t='::std::string'/>
+<mbr r='tvm::target::metadata::InMemoryMetadataNode::storage_' o='1536' t='struct ::TVMMetadata'/>
+<use f='tvm/src/target/metadata_module.cc' l='137' c='_ZN3tvm7codegenL15ConvertMetaDataENS_5relay7backend23ExecutorCodegenMetadataE'/>
+<size>272</size>

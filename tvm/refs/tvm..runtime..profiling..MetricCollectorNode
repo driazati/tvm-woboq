@@ -1,0 +1,31 @@
+<inh f='tvm/include/tvm/runtime/object.h' l='167' c='tvm::runtime::Object'/>
+<def f='tvm/include/tvm/runtime/profiling.h' l='296' ll='321'/>
+<use f='tvm/include/tvm/runtime/profiling.h' l='326' c='_ZNK3tvm7runtime9profiling15MetricCollectorptEv'/>
+<use f='tvm/include/tvm/runtime/profiling.h' l='326' c='_ZNK3tvm7runtime9profiling15MetricCollectorptEv'/>
+<use f='tvm/include/tvm/runtime/profiling.h' l='326'/>
+<size>24</size>
+<doc f='tvm/include/tvm/runtime/profiling.h' l='278'>/*! \brief Interface for user defined profiling metric collection.
+ *
+ * Users can register their own collector by registering a packed function with
+ * the name &quot;runtime.profiling.metrics.my_collector_name&quot; where
+ * &quot;my_collector_name&quot; is the name of their collector. This function should
+ * take an Array of Device as input which contains the devices the collector
+ * will be run on.
+ *
+ * `MetricCollectorNode`s will be called in the following fashion.
+ * \code
+ * MetricCollector mc;
+ * for (auto op : model) {
+ *   auto o = mc.Start();
+ *   op();
+ *   auto metrics = mc.Stop(o); // metrics are added the profiling report
+ * }
+ * \endcode
+ */</doc>
+<fun r='_ZN3tvm7runtime9profiling19MetricCollectorNode4InitENS0_5ArrayINS1_13DeviceWrapperEvEE'/>
+<fun r='_ZN3tvm7runtime9profiling19MetricCollectorNode5StartE8DLDevice'/>
+<fun r='_ZN3tvm7runtime9profiling19MetricCollectorNode4StopENS0_9ObjectRefE'/>
+<fun r='_ZN3tvm7runtime9profiling19MetricCollectorNodeD1Ev'/>
+<smbr r='tvm::runtime::profiling::MetricCollectorNode::_type_key' t='const char *const'/>
+<fun r='_ZN3tvm7runtime9profiling19MetricCollectorNode16RuntimeTypeIndexEv'/>
+<fun r='_ZN3tvm7runtime9profiling19MetricCollectorNode27_GetOrAllocRuntimeTypeIndexEv'/>

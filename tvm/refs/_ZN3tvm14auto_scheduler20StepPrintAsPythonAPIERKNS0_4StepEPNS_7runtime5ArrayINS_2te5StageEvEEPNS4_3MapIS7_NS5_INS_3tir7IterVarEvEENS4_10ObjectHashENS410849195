@@ -1,0 +1,12 @@
+<dec f='tvm/include/tvm/auto_scheduler/transform_step.h' l='242' type='tvm::runtime::String tvm::auto_scheduler::StepPrintAsPythonAPI(const tvm::auto_scheduler::Step &amp; step, Array&lt;te::Stage&gt; * stages, tvm::auto_scheduler::StageToAxesMap * stage_to_axes, te::Schedule * schedule, const Array&lt;tvm::auto_scheduler::Step&gt; &amp; transform_steps)'/>
+<doc f='tvm/include/tvm/auto_scheduler/transform_step.h' l='233'>/*!
+ * \brief Print a general step as equivalent python schedule API with runtime dynamic dispatching.
+ * \param step The step to be printed as python API.
+ * \param stages The list of current stages
+ * \param stage_to_axes A map that maps stage ot all its iterators.
+ * \param schedule A mutable point to the current schedule
+ * \param transform_steps An array of all history transform steps.
+ * \return Python schedule code.
+ */</doc>
+<use f='tvm/src/auto_scheduler/compute_dag.cc' l='1244' u='c' c='_ZNK3tvm14auto_scheduler10ComputeDAG18PrintStepsAsPythonERKNS_7runtime5ArrayINS0_4StepEvEE'/>
+<def f='tvm/src/auto_scheduler/transform_step.cc' l='287' ll='322' type='tvm::runtime::String tvm::auto_scheduler::StepPrintAsPythonAPI(const tvm::auto_scheduler::Step &amp; step, Array&lt;te::Stage&gt; * stages, tvm::auto_scheduler::StageToAxesMap * stage_to_axes, te::Schedule * schedule, const Array&lt;tvm::auto_scheduler::Step&gt; &amp; transform_steps)'/>

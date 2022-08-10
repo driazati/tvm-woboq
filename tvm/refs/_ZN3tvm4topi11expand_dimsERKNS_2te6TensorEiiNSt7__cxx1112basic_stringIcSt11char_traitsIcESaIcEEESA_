@@ -1,0 +1,16 @@
+<def f='tvm/include/tvm/topi/transform.h' l='147' ll='183' type='tvm::te::Tensor tvm::topi::expand_dims(const tvm::te::Tensor &amp; x, int axis, int num_newaxis = 1, std::string name = &quot;T_expand_dims&quot;, std::string tag = kBroadcast)'/>
+<doc f='tvm/include/tvm/topi/transform.h' l='135'>/*!
+ * \brief Creates an operation to insert new dimensions of length 1
+ *
+ * \param x The input tensor
+ * \param axis The index of the first new dimension (allows negative
+ * indices as offsets from the last dimension)
+ * \param num_newaxis The number of new dimensions to insert
+ * \param name The name of the operation
+ * \param tag The tag to mark the operation
+ *
+ * \return A Tensor whose op member is the dim expansion operation
+ */</doc>
+<use f='tvm/include/tvm/topi/nn/bias_add.h' l='53' u='c' c='_ZN3tvm4topi2nn8bias_addERKNS_2te6TensorES5_i'/>
+<use f='tvm/src/relay/op/tensor/transform.cc' l='288' u='c' c='_ZN3tvm5relay17ExpandDimsComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
+<use f='tvm/src/topi/transform.cc' l='37' u='c'/>

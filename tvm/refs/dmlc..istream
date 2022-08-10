@@ -1,0 +1,21 @@
+<inh f='include/c++/10/bits/istream.tcc' l='1048' c='std::basic_istream'/>
+<def f='tvm/3rdparty/dmlc-core/include/dmlc/io.h' l='389' ll='442'/>
+<size>384</size>
+<doc f='tvm/3rdparty/dmlc-core/include/dmlc/io.h' l='376'>/*!
+ * \brief a std::istream class that can can wrap Stream objects,
+ *  can use istream with that output to underlying Stream
+ *
+ * Usage example:
+ * \code
+ *
+ *   Stream *fs = Stream::Create(&quot;hdfs:///test.txt&quot;, &quot;r&quot;);
+ *   dmlc::istream is(fs);
+ *   is &gt;&gt; mydata;
+ *   delete fs;
+ * \endcode
+ */</doc>
+<fun r='_ZN4dmlc7istreamC1EPNS_6StreamEm'/>
+<fun r='_ZN4dmlc7istreamD1Ev'/>
+<fun r='_ZN4dmlc7istream10set_streamEPNS_6StreamE'/>
+<fun r='_ZNK4dmlc7istream10bytes_readEv'/>
+<mbr r='dmlc::istream::buf_' o='128' t='dmlc::istream::InBuf'/>

@@ -1,0 +1,15 @@
+<dec f='tvm/include/tvm/relay/dataflow_matcher.h' l='107' type='tvm::relay::Expr tvm::relay::PartitionPattern(tvm::relay::DFPattern pattern, tvm::relay::Expr expr, Map&lt;tvm::runtime::String, tvm::runtime::ObjectRef&gt; attrs, tvm::runtime::PackedFunc check)'/>
+<doc f='tvm/include/tvm/relay/dataflow_matcher.h' l='96'>/*!
+ * \brief Partition all matches of a DFPattern inside an Expr into separate Function calls
+ *
+ * \param pattern The pattern to match
+ * \param expr The expression to patition
+ * \param attrs A set of parameter names and values to apply to the partitioned function
+ * \param check A callback function for checking more complicated properties of the matched
+ * expressions, returns true if the match is accepted and false otherwise
+ *
+ * \return Return the paritioned Expr.
+ */</doc>
+<def f='tvm/src/relay/ir/dataflow_matcher.cc' l='910' ll='913' type='tvm::relay::Expr tvm::relay::PartitionPattern(tvm::relay::DFPattern pattern, tvm::relay::Expr expr, Map&lt;tvm::runtime::String, tvm::runtime::ObjectRef&gt; attrs, tvm::runtime::PackedFunc check)'/>
+<use f='tvm/src/relay/ir/dataflow_matcher.cc' l='917' u='c'/>
+<use f='tvm/src/relay/transforms/merge_composite.cc' l='55' u='c' c='_ZN3tvm5relay15merge_composite14MergeCompositeERKNS0_8FunctionERKNS_7runtime5ArrayINS5_6StringEvEERKNS6_INS0_9DFPatternEvEERKSt6vectorINS5_10PackedFun16038819'/>

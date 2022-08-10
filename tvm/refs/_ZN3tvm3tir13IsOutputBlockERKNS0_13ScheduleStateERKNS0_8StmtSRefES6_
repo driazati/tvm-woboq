@@ -1,0 +1,11 @@
+<dec f='tvm/src/tir/schedule/analysis.h' l='195' type='bool tvm::tir::IsOutputBlock(const tvm::tir::ScheduleState &amp; self, const tvm::tir::StmtSRef &amp; block_sref, const tvm::tir::StmtSRef &amp; scope_root_sref)'/>
+<doc f='tvm/src/tir/schedule/analysis.h' l='187'>/*!
+ * \brief Check if the block is an output block, i.e. the block writes to at least a buffer that is
+ * not allocated under the current scope
+ * \param self The schedule state
+ * \param block_sref The block to be checked
+ * \param scope_root_sref The scope root of the block
+ * \return A boolean flag indicating if the block is an output block
+ */</doc>
+<def f='tvm/src/tir/schedule/analysis/analysis.cc' l='502' ll='517' type='bool tvm::tir::IsOutputBlock(const tvm::tir::ScheduleState &amp; self, const tvm::tir::StmtSRef &amp; block_sref, const tvm::tir::StmtSRef &amp; scope_root_sref)'/>
+<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='534' u='c' c='_ZN3tvm3tir19CheckNotOutputBlockERKNS0_13ScheduleStateERKNS0_8StmtSRefES6_'/>

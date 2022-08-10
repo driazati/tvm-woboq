@@ -1,0 +1,13 @@
+<use f='tvm/src/relay/transforms/transform_layout.h' l='115' u='c' c='_ZN3tvm5relay18TransformMemorizer9TransformENS_9RelayExprERKNS_3tir6LayoutES6_'/>
+<def f='tvm/src/relay/transforms/transform_layout.h' l='132' ll='161' type='tvm::relay::Expr tvm::relay::TransformMemorizer::TransformHelper(tvm::relay::Expr raw, tvm::tir::Layout src_layout, tvm::tir::Layout dst_layout)'/>
+<doc f='tvm/src/relay/transforms/transform_layout.h' l='121'>/*
+   * \brief Helper to transform the layouts.
+   * \param expr The initial expr.
+   * \param src_layout The source layout.
+   * \param dst_layout The dest layout.
+   * \return The new expr with the dst layout.
+   * \note It performs following 2 operations
+   *       1) If src_layout ndim is smaller then dst_layout, expand_dim is inserted to match the dim
+   *          size. For example, src_layout = C, dst_layout = NCHW16c. The src is expanded to NHWC.
+   *       2) Call layout transform with new src layout.
+   */</doc>

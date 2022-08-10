@@ -1,0 +1,19 @@
+<dec f='tvm/3rdparty/dmlc-core/include/dmlc/io.h' l='261' type='static dmlc::InputSplit * dmlc::InputSplit::Create(const char * uri, unsigned int part_index, unsigned int num_parts, const char * type)'/>
+<doc f='tvm/3rdparty/dmlc-core/include/dmlc/io.h' l='243'>/*!
+   * \brief factory function:
+   *  create input split given a uri
+   * \param uri the uri of the input, can contain hdfs prefix
+   * \param part_index the part id of current input
+   * \param num_parts total number of splits
+   * \param type type of record
+   *   List of possible types: &quot;text&quot;, &quot;recordio&quot;, &quot;indexed_recordio&quot;
+   *     - &quot;text&quot;:
+   *         text file, each line is treated as a record
+   *         input split will split on &apos;\\n&apos; or &apos;\\r&apos;
+   *     - &quot;recordio&quot;:
+   *         binary recordio file, see recordio.h
+   *     - &quot;indexed_recordio&quot;:
+   *         binary recordio file with index, see recordio.h
+   * \return a new input split
+   * \sa InputSplit::Type
+   */</doc>

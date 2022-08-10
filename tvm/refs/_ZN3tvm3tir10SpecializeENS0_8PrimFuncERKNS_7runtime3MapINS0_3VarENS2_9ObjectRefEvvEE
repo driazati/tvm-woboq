@@ -1,0 +1,42 @@
+<dec f='tvm/include/tvm/tir/function.h' l='282' type='tvm::tir::PrimFunc tvm::tir::Specialize(tvm::tir::PrimFunc func, const Map&lt;tvm::tir::Var, tvm::runtime::ObjectRef&gt; &amp; param_map)'/>
+<doc f='tvm/include/tvm/tir/function.h' l='244'>/*
+ * \brief Specialize parameters of PrimFunc.
+ * \param func The PrimFunc to be specialized.
+ * \param param_map The mapping from function params to the instance.
+ * \return The new function with parameter specialized.
+ * \note We can define a Meta TIR function with symbolic shape:
+ *
+ * \code
+ *  @T.prim_func
+ *  def mem_copy(a: T.handle, b: T.handle, m: T.int32, n: T.int32) -&gt; None:
+ *      A = T.match_buffer(a, (m, n), &quot;float32&quot;)
+ *      B = T.match_buffer(b, (m, n), &quot;float32&quot;)
+ *      for i, j in T.grid(m, n):
+ *          with T.block():
+ *              vi, vj = T.axis.remap(&quot;SS&quot;, [i, j])
+ *              B[vi, vj] = A[vi, vj]
+ * \endcode
+ *
+ * Then we can make it specialized with given shapes or buffers.
+ *
+ * \code
+ *  a, _, m, n = mem_copy.params
+ *  func = mem_copy.specialize({a: tir.decl_buffer((16, 16))})
+ *  # or
+ *  func = mem_copy.specialize({n: 16, m: 16})
+ * \endcode
+ *
+ * \code {.language-id}
+ *  @T.prim_func
+ *  def mem_copy_16_16(a: T.handle, b: T.handle) -&gt; None:
+ *      A = T.match_buffer(a, (16, 16), &quot;float32&quot;)
+ *      B = T.match_buffer(b, (16, 16), &quot;float32&quot;)
+ *      for i, j in T.grid(16, 16):
+ *          with T.block():
+ *              vi, vj = T.axis.remap(&quot;SS&quot;, [i, j])
+ *              B[vi, vj] = A[vi, vj]
+ * \endcode
+ */</doc>
+<def f='tvm/src/tir/ir/specialize.cc' l='356' ll='372' type='tvm::tir::PrimFunc tvm::tir::Specialize(tvm::tir::PrimFunc func, const Map&lt;tvm::tir::Var, tvm::runtime::ObjectRef&gt; &amp; param_map)'/>
+<use f='tvm/src/tir/ir/specialize.cc' l='376' u='r'/>
+<doc f='tvm/src/tir/ir/specialize.cc' l='354'>/**************** Implementation ****************/</doc>

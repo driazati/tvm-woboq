@@ -1,0 +1,45 @@
+<dec f='tvm/include/tvm/runtime/data_type.h' l='286' type='std::string tvm::runtime::DLDataType2String(DLDataType t)'/>
+<def f='tvm/include/tvm/runtime/data_type.h' l='332' ll='337' type='std::string tvm::runtime::DLDataType2String(DLDataType t)'/>
+<use f='tvm/include/tvm/runtime/packed_func.h' l='674' u='c' c='_ZNK3tvm7runtime11TVMArgValuecvNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEv'/>
+<use f='tvm/include/tvm/runtime/packed_func.h' l='832' u='c' c='_ZNK3tvm7runtime11TVMRetValuecvNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEEv'/>
+<doc f='tvm/include/tvm/runtime/data_type.h' l='281'>/*!
+ * \brief convert a TVM type to string.
+ * \param t The type to be converted.
+ * \return The corresponding tvm type in string.
+ */</doc>
+<use f='tvm/src/meta_schedule/arg_info.cc' l='123' u='c' c='_ZNK3tvm13meta_schedule14TensorInfoNode6AsJSONEv'/>
+<use f='tvm/src/node/serialization.cc' l='44' u='c' c='_ZN3tvm11Type2StringB5cxx11ERKNS_7runtime8DataTypeE'/>
+<use f='tvm/src/printer/relay_text_printer.cc' l='662' u='c' c='_ZN3tvm5relay16RelayTextPrinter10PrintDTypeENS_7runtime8DataTypeE'/>
+<use f='tvm/src/printer/relay_text_printer.cc' l='824' u='c' c='_ZN3tvm5relay16RelayTextPrinter11AttrPrinter5VisitEPKcPNS_7runtime8DataTypeE'/>
+<use f='tvm/src/printer/tir_text_printer.cc' l='738' u='c' c='_ZN3tvm3tir14TIRTextPrinter10PrintDTypeENS_7runtime8DataTypeE'/>
+<use f='tvm/src/printer/tvmscript_printer.cc' l='380' u='c' c='_ZN3tvm3tir16TVMScriptPrinter10PrintDTypeENS_7runtime8DataTypeE'/>
+<use f='tvm/src/printer/tvmscript_printer.cc' l='401' u='c' c='_ZNK3tvm3tir16TVMScriptPrinter16PrintConstScalarENS_7runtime8DataTypeEPKT_'/>
+<use f='tvm/src/printer/tvmscript_printer.cc' l='1270' u='c' c='_ZN3tvm3tir16TVMScriptPrinter10VisitType_EPKNS_12PrimTypeNodeE'/>
+<use f='tvm/src/relay/transforms/pattern_utils.h' l='460' u='c' c='_ZN3tvm5relayL8ToScalarERKNS_7runtime7NDArrayEm'/>
+<use f='tvm/src/relay/analysis/util.cc' l='335' u='c' c='_ZN3tvm5relay14DtypeCollector10VisitType_EPKNS_14TensorTypeNodeE'/>
+<use f='tvm/src/relay/backend/vm/compiler.cc' l='218' u='c' c='_ZN3tvm5relay2vm18ToAllocTensorShapeENS_7runtime7NDArrayE'/>
+<use f='tvm/src/relay/backend/vm/compiler.cc' l='221' u='c' c='_ZN3tvm5relay2vm18ToAllocTensorShapeENS_7runtime7NDArrayE'/>
+<use f='tvm/src/relay/backend/vm/compiler.cc' l='614' u='c' c='_ZN3tvm5relay2vm18VMFunctionCompiler21DeviceAwareVisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/backend/vm/compiler.cc' l='635' u='c' c='_ZN3tvm5relay2vm18VMFunctionCompiler21DeviceAwareVisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/op/memory/memory.cc' l='124' u='c' c='_ZN3tvm5relay14FromConstShapeENS0_8ConstantE'/>
+<use f='tvm/src/relay/op/memory/memory.cc' l='127' u='c' c='_ZN3tvm5relay14FromConstShapeENS0_8ConstantE'/>
+<use f='tvm/src/relay/transforms/to_mixed_precision.cc' l='338' u='c' c='_ZN3tvm5relay18MixedPrecisionPass8Rewrite_EPKNS0_8CallNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/runtime/contrib/sort/sort.cc' l='222' u='c'/>
+<use f='tvm/src/runtime/contrib/sort/sort.cc' l='223' u='c'/>
+<use f='tvm/src/runtime/contrib/sort/sort.cc' l='317' u='c'/>
+<use f='tvm/src/runtime/contrib/sort/sort.cc' l='318' u='c'/>
+<use f='tvm/src/runtime/contrib/sort/sort.cc' l='422' u='c'/>
+<use f='tvm/src/runtime/contrib/sort/sort.cc' l='423' u='c'/>
+<use f='tvm/src/runtime/debug.cc' l='52' u='c' c='_ZN3tvm7runtime13AppendNDArrayERSoRKNS0_7NDArrayERK8DLDeviceb'/>
+<use f='tvm/src/runtime/file_utils.cc' l='41' u='c' c='_ZNK3tvm7runtime12FunctionInfo4SaveEPN4dmlc10JSONWriterE'/>
+<use f='tvm/src/runtime/graph_executor/graph_executor.cc' l='419' u='c' c='_ZN3tvm7runtime13GraphExecutor12SetupStorageEv'/>
+<use f='tvm/src/runtime/graph_executor/graph_executor.cc' l='419' u='c' c='_ZN3tvm7runtime13GraphExecutor12SetupStorageEv'/>
+<use f='tvm/src/runtime/vm/bytecode.cc' l='621' u='c' c='_ZN3tvm7runtime2vm16InstructionPrintERSoRKNS1_11InstructionE'/>
+<use f='tvm/src/runtime/vm/profiler/vm.cc' l='134' u='c' c='_ZN3tvm7runtime2vm19VirtualMachineDebug11OpStartHookENS1_11InstructionE'/>
+<use f='tvm/src/runtime/vm/vm.cc' l='516' u='c' c='_ZNK3tvm7runtime2vm14VirtualMachine13LoadScalarIntEl'/>
+<use f='tvm/src/runtime/vm/vm.cc' l='735' u='c' c='_ZN3tvm7runtime2vm14VirtualMachine7RunLoopEv'/>
+<use f='tvm/src/support/scalars.cc' l='64' u='c' c='_ZN3tvm7support15IntImmToNDArrayERKNS_6IntImmE'/>
+<use f='tvm/src/support/scalars.cc' l='82' u='c' c='_ZN3tvm7support17FloatImmToNDArrayERKNS_8FloatImmE'/>
+<use f='tvm/src/support/scalars.cc' l='121' u='c' c='_ZN3tvm7support21NDArrayScalarToStringB5cxx11ERKNS_7runtime7NDArrayE'/>
+<use f='tvm/src/support/scalars.cc' l='137' u='c' c='_ZN3tvm7support14IntImmToStringB5cxx11ERKNS_6IntImmE'/>
+<use f='tvm/src/support/scalars.cc' l='151' u='c' c='_ZN3tvm7support16FloatImmToStringB5cxx11ERKNS_8FloatImmE'/>

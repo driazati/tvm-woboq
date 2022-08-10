@@ -1,0 +1,12 @@
+<dec f='tvm/include/tvm/auto_scheduler/feature.h' l='71' type='void tvm::auto_scheduler::GetPerStoreFeaturesFromStates(const Array&lt;tvm::auto_scheduler::State&gt; &amp; states, const tvm::auto_scheduler::SearchTask &amp; task, int skip_first_n_feature_extraction, int max_n_bufs, std::vector&lt;std::vector&lt;float&gt;&gt; * features)'/>
+<def f='tvm/src/auto_scheduler/feature.cc' l='1414' ll='1427' type='void tvm::auto_scheduler::GetPerStoreFeaturesFromStates(const Array&lt;tvm::auto_scheduler::State&gt; &amp; states, const tvm::auto_scheduler::SearchTask &amp; task, int skip_first_n_feature_extraction, int max_n_bufs, std::vector&lt;std::vector&lt;float&gt;&gt; * features)'/>
+<use f='tvm/src/auto_scheduler/feature.cc' l='1714' u='c'/>
+<doc f='tvm/include/tvm/auto_scheduler/feature.h' l='62'>/*!
+ * \brief Get per-store feature from states of the same task
+ * \param states The input states
+ * \param task The same search task for all states
+ * \param skip_first_n_feature_extraction Skip feature extraction for the first n states
+ * \param max_n_bufs The maximum number of extracted buffers for one statement
+ * \param features The returned feature vector. The innermost vector contains the
+ * feature vectors for all BufferStoreNode statements
+ */</doc>

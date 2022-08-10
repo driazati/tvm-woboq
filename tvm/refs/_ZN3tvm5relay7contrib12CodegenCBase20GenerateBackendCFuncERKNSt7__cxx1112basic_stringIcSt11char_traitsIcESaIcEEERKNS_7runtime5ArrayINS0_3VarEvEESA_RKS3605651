@@ -1,0 +1,33 @@
+<def f='tvm/src/relay/backend/contrib/codegen_c/codegen_c.h' l='162' ll='256' type='void tvm::relay::contrib::CodegenCBase::GenerateBackendCFunc(const std::string &amp; func_name, const Array&lt;tvm::relay::Var&gt; &amp; args, const std::string &amp; const_arr_name, const std::vector&lt;Output&gt; &amp; outs, bool pass_dl_tensor = false)'/>
+<use f='tvm/src/relay/backend/contrib/codegen_c/codegen_c.h' l='336' u='c' c='_ZN3tvm5relay7contrib12CodegenCBase7JitImplERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKNS_7runtime5ArrayINS0_3VarEvEERKSt6vectorIS8_SaIS85945552'/>
+<doc f='tvm/src/relay/backend/contrib/codegen_c/codegen_c.h' l='131'>/*!
+   * \brief Gerenate C code for the external function.
+   *
+   * \param func_name The name of the external function.
+   * \param args arguments to the external function.
+   *
+   * \code
+   *
+   * Array&lt;NDArray&gt; foo_consts;
+   *
+   * // An example code for the generated C function.
+   * int foo_wrapper_(DLTensor* arg0,
+   *                              DLTensor* arg1,
+   *                              DLTensor* out) {
+   *   foo_((float*)(arg0-&gt;data),
+   *        (float*)(arg1-&gt;data),
+   *        (float*)(out-&gt;data));
+   *   return 0;
+   * }
+   *
+   * TVM_DLL_EXPORT_TYPED_FUNC(foo, foo_wrapper_);
+   *
+   * int foo_init_wrapper_(Array&lt;NDArray&gt; arr) {
+   *   foo_consts = arr;
+   *   return 0;
+   * }
+   *
+   * TVM_DLL_EXPORT_TYPED_FUNC(__init_foo, foo_init_wrapper_);
+   *
+   * \endcode
+   */</doc>

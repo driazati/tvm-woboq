@@ -1,0 +1,17 @@
+<dec f='tvm/src/relay/transforms/device_aware_visitors.h' l='112' type='std::unordered_map&lt;Var, VirtualDevice, runtime::ObjectPtrHash, runtime::ObjectPtrEqual&gt;'/>
+<offset>256</offset>
+<doc f='tvm/src/relay/transforms/device_aware_visitors.h' l='104'>/*!
+   * \brief A map from in-scope local variables to their \p VirtualDevices. We may assume the
+   * variable is only ever bound to a value stored on this \p VirtualDevice at runtime.
+   *
+   * Note: We&apos;re playing it safe and keying by object refs here just in case the Relay expression
+   * being rewritten has no module or other global to keep it alive.
+   */</doc>
+<use f='tvm/src/relay/transforms/device_aware_visitors.cc' l='57' u='m' c='_ZNK3tvm5relay9transform20LexicalOnDeviceMixin16GetVirtualDeviceERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/device_aware_visitors.cc' l='58' u='m' c='_ZNK3tvm5relay9transform20LexicalOnDeviceMixin16GetVirtualDeviceERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/device_aware_visitors.cc' l='114' u='m' c='_ZN3tvm5relay9transform20LexicalOnDeviceMixin12PushBoundVarENS0_3VarERKNS_13VirtualDeviceE'/>
+<use f='tvm/src/relay/transforms/device_aware_visitors.cc' l='114' u='m' c='_ZN3tvm5relay9transform20LexicalOnDeviceMixin12PushBoundVarENS0_3VarERKNS_13VirtualDeviceE'/>
+<use f='tvm/src/relay/transforms/device_aware_visitors.cc' l='115' u='m' c='_ZN3tvm5relay9transform20LexicalOnDeviceMixin12PushBoundVarENS0_3VarERKNS_13VirtualDeviceE'/>
+<use f='tvm/src/relay/transforms/device_aware_visitors.cc' l='119' u='m' c='_ZN3tvm5relay9transform20LexicalOnDeviceMixin11PopBoundVarERKNS0_3VarE'/>
+<use f='tvm/src/relay/transforms/device_aware_visitors.cc' l='120' u='m' c='_ZN3tvm5relay9transform20LexicalOnDeviceMixin11PopBoundVarERKNS0_3VarE'/>
+<use f='tvm/src/relay/transforms/device_aware_visitors.cc' l='123' u='m' c='_ZN3tvm5relay9transform20LexicalOnDeviceMixin11PopBoundVarERKNS0_3VarE'/>

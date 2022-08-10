@@ -1,0 +1,12 @@
+<dec f='tvm/include/tvm/target/compilation_config.h' l='171' type='void tvm::CompilationConfigNode::Init(const transform::PassContext &amp; pass_ctx, const Array&lt;tvm::Target&gt; &amp; raw_targets)'/>
+<doc f='tvm/include/tvm/target/compilation_config.h' l='162'>/*!
+   * \brief Sets the primitive targets, the host target, the default primitive virtual device, and
+   * the host virtual device given:
+   *  - the vector of &apos;raw&apos; targets (in any order) supplied by one of the TVM entry points.
+   *  - any &quot;relay.fallback_device_type&quot; attribute on \p pass_ctx.
+   *  - whether the LLVM backend is available.
+   * Will look for a suitable host target in the given primitive targets, but if none found may
+   * reuse a raw target or create a default CPU target.
+   */</doc>
+<def f='tvm/src/target/compilation_config.cc' l='127' ll='273' type='void tvm::CompilationConfigNode::Init(const transform::PassContext &amp; pass_ctx, const Array&lt;tvm::Target&gt; &amp; raw_targets)'/>
+<use f='tvm/src/target/compilation_config.cc' l='303' u='c' c='_ZN3tvm17CompilationConfigC1ERKNS_9transform11PassContextERKNS_7runtime5ArrayINS_6TargetEvEE'/>

@@ -1,0 +1,13 @@
+<dec f='tvm/include/tvm/auto_scheduler/search_policy.h' l='153' type='tvm::auto_scheduler::State tvm::auto_scheduler::SearchPolicyNode::Search(int num_measure_trials, int early_stopping, int num_measures_per_round, tvm::auto_scheduler::ProgramMeasurer measurer)'/>
+<use f='tvm/src/auto_scheduler/auto_schedule.cc' l='57' u='c' c='_ZN3tvm14auto_scheduler12AutoScheduleENS0_12SearchPolicyENS0_13TuningOptionsE'/>
+<doc f='tvm/include/tvm/auto_scheduler/search_policy.h' l='144'>/*!
+   * \brief Do schedule search for a task. Takes the SearchTask as input and returns the best state
+   * found during the search.
+   * \param num_measure_trials The number of total measurement trials.
+   * \param early_stopping Stops the tuning early if no improvement after n measurements.
+   * \param num_measures_per_round  The number of programs to be measured at each search round.
+   * \param measurer A ProgramMeasurer to build and measure programs
+   * \return The best state found.
+   */</doc>
+<ovr f='tvm/src/auto_scheduler/search_policy/empty_policy.cc' l='53' c='_ZN3tvm14auto_scheduler15EmptyPolicyNode6SearchEiiiNS0_15ProgramMeasurerE'/>
+<ovr f='tvm/src/auto_scheduler/search_policy/sketch_policy.cc' l='159' c='_ZN3tvm14auto_scheduler16SketchPolicyNode6SearchEiiiNS0_15ProgramMeasurerE'/>

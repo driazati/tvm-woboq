@@ -1,0 +1,14 @@
+<def f='tvm/include/tvm/topi/detail/extern.h' l='143' ll='145' type='tvm::PrimExpr tvm::topi::detail::call_packed(Array&lt;tvm::PrimExpr&gt; args)'/>
+<use f='tvm/include/tvm/topi/contrib/cublas.h' l='53' u='c' c='_ZN3tvm4topi7contrib13cublas_matmulERKNS_2te6TensorES5_bb'/>
+<use f='tvm/include/tvm/topi/contrib/cublas.h' l='78' u='c' c='_ZN3tvm4topi7contrib19cublas_batch_matmulERKNS_2te6TensorES5_bb'/>
+<use f='tvm/include/tvm/topi/contrib/rocblas.h' l='52' u='c' c='_ZN3tvm4topi7contrib14rocblas_matmulERKNS_2te6TensorES5_bb'/>
+<use f='tvm/include/tvm/topi/contrib/rocblas.h' l='75' u='c' c='_ZN3tvm4topi7contrib20rocblas_batch_matmulERKNS_2te6TensorES5_bb'/>
+<doc f='tvm/include/tvm/topi/detail/extern.h' l='134'>/*!
+ * \brief Construct an Expr representing the invocation of a PackedFunc
+ *
+ * \param args An array containing the registered name of the PackedFunc followed
+ * by the arguments to pass to the PackedFunc when called. The first element of the
+ * array must be a constant string expression.
+ *
+ * \return An expression representing the invocation
+ */</doc>

@@ -1,0 +1,132 @@
+<inh f='tvm/include/tvm/runtime/object.h' l='167' c='tvm::runtime::Object'/>
+<def f='tvm/include/tvm/ir/module.h' l='56' ll='354'/>
+<use f='tvm/include/tvm/ir/module.h' l='130' c='_ZNK3tvm12IRModuleNode12SEqualReduceEPKS0_NS_13SEqualReducerE'/>
+<use f='tvm/include/tvm/ir/module.h' l='383' c='_ZNK3tvm8IRModuleptEv'/>
+<use f='tvm/include/tvm/ir/module.h' l='386' c='_ZNK3tvm8IRModuleptEv'/>
+<use f='tvm/include/tvm/ir/module.h' l='443'/>
+<use f='tvm/include/tvm/ir/module.h' l='449' c='_ZN3tvm8IRModule11CopyOnWriteEv'/>
+<use f='tvm/include/tvm/ir/module.h' l='449' c='_ZN3tvm8IRModule11CopyOnWriteEv'/>
+<use f='tvm/include/tvm/ir/module.h' l='449' c='_ZN3tvm8IRModule11CopyOnWriteEv'/>
+<size>176</size>
+<doc f='tvm/include/tvm/ir/module.h' l='46'>/*!
+ * \brief IRModule that holds functions and type definitions.
+ *
+ *  IRModule is the basic unit for all IR transformations across the stack.
+ *
+ *  Many operations require access to the global IRModule.
+ *  We pass the IRModule by value in a functional style as an explicit argument,
+ *  but we mutate the Module while optimizing programs.
+ * \sa IRModule
+ */</doc>
+<mbr r='tvm::IRModuleNode::functions' o='128' t='Map&lt;tvm::GlobalVar, tvm::BaseFunc&gt;'/>
+<mbr r='tvm::IRModuleNode::type_definitions' o='192' t='Map&lt;tvm::GlobalTypeVar, tvm::TypeData&gt;'/>
+<mbr r='tvm::IRModuleNode::source_map' o='256' t='parser::SourceMap'/>
+<mbr r='tvm::IRModuleNode::attrs' o='320' t='tvm::DictAttrs'/>
+<fun r='_ZNK3tvm12IRModuleNode7GetAttrERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS_7runtime8OptionalIT_EE'/>
+<fun r='_ZNK3tvm12IRModuleNode7GetAttrERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEET_'/>
+<fun r='_ZNK3tvm12IRModuleNode14HasNonzeroAttrERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<fun r='_ZN3tvm12IRModuleNodeC1Ev'/>
+<fun r='_ZN3tvm12IRModuleNode10VisitAttrsEPNS_11AttrVisitorE'/>
+<fun r='_ZNK3tvm12IRModuleNode12SEqualReduceEPKS0_NS_13SEqualReducerE'/>
+<fun r='_ZNK3tvm12IRModuleNode11SHashReduceENS_12SHashReducerE'/>
+<fun r='_ZN3tvm12IRModuleNode3AddERKNS_9GlobalVarERKNS_8BaseFuncEb'/>
+<fun r='_ZN3tvm12IRModuleNode12AddUncheckedERKNS_9GlobalVarERKNS_8BaseFuncE'/>
+<fun r='_ZN3tvm12IRModuleNode10AddTypeDefERKNS_13GlobalTypeVarERKNS_8TypeDataEb'/>
+<fun r='_ZN3tvm12IRModuleNode19AddTypeDefUncheckedERKNS_13GlobalTypeVarERKNS_8TypeDataEb'/>
+<fun r='_ZN3tvm12IRModuleNode6UpdateERKNS_9GlobalVarERKNS_8BaseFuncE'/>
+<fun r='_ZN3tvm12IRModuleNode13UpdateTypeDefERKNS_13GlobalTypeVarERKNS_8TypeDataE'/>
+<fun r='_ZN3tvm12IRModuleNode6RemoveERKNS_9GlobalVarE'/>
+<fun r='_ZNK3tvm12IRModuleNode16ContainGlobalVarERKNS_7runtime6StringE'/>
+<fun r='_ZNK3tvm12IRModuleNode20ContainGlobalTypeVarERKNS_7runtime6StringE'/>
+<fun r='_ZNK3tvm12IRModuleNode12GetGlobalVarERKNS_7runtime6StringE'/>
+<fun r='_ZNK3tvm12IRModuleNode13GetGlobalVarsEv'/>
+<fun r='_ZNK3tvm12IRModuleNode16GetGlobalTypeVarERKNS_7runtime6StringE'/>
+<fun r='_ZNK3tvm12IRModuleNode17GetGlobalTypeVarsEv'/>
+<fun r='_ZNK3tvm12IRModuleNode14GetConstructorERKNS_7runtime6StringES4_'/>
+<fun r='_ZNK3tvm12IRModuleNode6LookupERKNS_9GlobalVarE'/>
+<fun r='_ZNK3tvm12IRModuleNode6LookupERKNS_7runtime6StringE'/>
+<fun r='_ZNK3tvm12IRModuleNode13LookupTypeDefERKNS_13GlobalTypeVarE'/>
+<fun r='_ZNK3tvm12IRModuleNode13LookupTypeDefERKNS_7runtime6StringE'/>
+<fun r='_ZN3tvm12IRModuleNode9LookupTagEi'/>
+<fun r='_ZN3tvm12IRModuleNode6UpdateERKNS_8IRModuleE'/>
+<fun r='_ZN3tvm12IRModuleNode11ShallowCopyEv'/>
+<fun r='_ZN3tvm12IRModuleNode6ImportERKNS_7runtime6StringE'/>
+<fun r='_ZN3tvm12IRModuleNode13ImportFromStdERKNS_7runtime6StringE'/>
+<fun r='_ZNK3tvm12IRModuleNode20ShouldLinkParametersEv'/>
+<fun r='_ZNK3tvm12IRModuleNode7ImportsEv'/>
+<smbr r='tvm::IRModuleNode::_type_key' t='const char *const'/>
+<smbr r='tvm::IRModuleNode::_type_has_method_sequal_reduce' t='const bool'/>
+<smbr r='tvm::IRModuleNode::_type_has_method_shash_reduce' t='const bool'/>
+<smbr r='tvm::IRModuleNode::_type_final' t='const bool'/>
+<smbr r='tvm::IRModuleNode::_type_child_slots' t='const int'/>
+<fun r='_ZN3tvm12IRModuleNode16RuntimeTypeIndexEv'/>
+<fun r='_ZN3tvm12IRModuleNode27_GetOrAllocRuntimeTypeIndexEv'/>
+<fun r='_ZN3tvm12IRModuleNode20RegisterConstructorsERKNS_13GlobalTypeVarERKNS_8TypeDataE'/>
+<fun r='_ZN3tvm12IRModuleNode13GetUniqueNameERKNS_7runtime6StringE'/>
+<mbr r='tvm::IRModuleNode::global_var_map_' o='384' t='Map&lt;tvm::runtime::String, tvm::GlobalVar&gt;'/>
+<mbr r='tvm::IRModuleNode::global_type_var_map_' o='448' t='Map&lt;tvm::runtime::String, tvm::GlobalTypeVar&gt;'/>
+<mbr r='tvm::IRModuleNode::constructor_tag_map_' o='512' t='std::unordered_map&lt;int32_t, Constructor&gt;'/>
+<mbr r='tvm::IRModuleNode::import_set_' o='960' t='std::unordered_set&lt;String&gt;'/>
+<use f='tvm/src/ir/module.cc' l='49' c='_ZN3tvm8IRModuleC1ENS_7runtime3MapINS_9GlobalVarENS_8BaseFuncEvvEENS2_INS_13GlobalTypeVarENS_8TypeDataEvvEESt13unordered_setINS1_6StringESt4hashISA_ES11083656'/>
+<use f='tvm/src/ir/module.cc' l='76' c='_ZNK3tvm12IRModuleNode12SEqualReduceEPKS0_NS_13SEqualReducerE'/>
+<use f='tvm/src/ir/module.cc' l='447'/>
+<use f='tvm/src/ir/module.cc' l='447'/>
+<use f='tvm/src/ir/module.cc' l='447'/>
+<use f='tvm/src/ir/module.cc' l='466'/>
+<use f='tvm/src/ir/module.cc' l='546'/>
+<use f='tvm/src/ir/module.cc' l='547'/>
+<size>176</size>
+<fun r='_ZNK3tvm12IRModuleNode12SEqualReduceEPKS0_NS_13SEqualReducerE'/>
+<fun r='_ZNK3tvm12IRModuleNode11SHashReduceENS_12SHashReducerE'/>
+<fun r='_ZNK3tvm12IRModuleNode16ContainGlobalVarERKNS_7runtime6StringE'/>
+<fun r='_ZNK3tvm12IRModuleNode20ContainGlobalTypeVarERKNS_7runtime6StringE'/>
+<fun r='_ZNK3tvm12IRModuleNode12GetGlobalVarERKNS_7runtime6StringE'/>
+<fun r='_ZNK3tvm12IRModuleNode13GetGlobalVarsEv'/>
+<fun r='_ZNK3tvm12IRModuleNode16GetGlobalTypeVarERKNS_7runtime6StringE'/>
+<fun r='_ZNK3tvm12IRModuleNode14GetConstructorERKNS_7runtime6StringES4_'/>
+<fun r='_ZNK3tvm12IRModuleNode17GetGlobalTypeVarsEv'/>
+<fun r='_ZN3tvm12IRModuleNode3AddERKNS_9GlobalVarERKNS_8BaseFuncEb'/>
+<fun r='_ZN3tvm12IRModuleNode12AddUncheckedERKNS_9GlobalVarERKNS_8BaseFuncE'/>
+<fun r='_ZN3tvm12IRModuleNode20RegisterConstructorsERKNS_13GlobalTypeVarERKNS_8TypeDataE'/>
+<fun r='_ZN3tvm12IRModuleNode10AddTypeDefERKNS_13GlobalTypeVarERKNS_8TypeDataEb'/>
+<fun r='_ZN3tvm12IRModuleNode19AddTypeDefUncheckedERKNS_13GlobalTypeVarERKNS_8TypeDataEb'/>
+<fun r='_ZN3tvm12IRModuleNode6UpdateERKNS_9GlobalVarERKNS_8BaseFuncE'/>
+<fun r='_ZN3tvm12IRModuleNode13UpdateTypeDefERKNS_13GlobalTypeVarERKNS_8TypeDataE'/>
+<fun r='_ZN3tvm12IRModuleNode6RemoveERKNS_9GlobalVarE'/>
+<fun r='_ZNK3tvm12IRModuleNode6LookupERKNS_9GlobalVarE'/>
+<fun r='_ZNK3tvm12IRModuleNode6LookupERKNS_7runtime6StringE'/>
+<fun r='_ZNK3tvm12IRModuleNode13LookupTypeDefERKNS_13GlobalTypeVarE'/>
+<fun r='_ZNK3tvm12IRModuleNode13LookupTypeDefERKNS_7runtime6StringE'/>
+<fun r='_ZN3tvm12IRModuleNode9LookupTagEi'/>
+<fun r='_ZN3tvm12IRModuleNode13GetUniqueNameERKNS_7runtime6StringE'/>
+<fun r='_ZN3tvm12IRModuleNode6UpdateERKNS_8IRModuleE'/>
+<fun r='_ZN3tvm12IRModuleNode11ShallowCopyEv'/>
+<fun r='_ZN3tvm12IRModuleNode6ImportERKNS_7runtime6StringE'/>
+<fun r='_ZN3tvm12IRModuleNode13ImportFromStdERKNS_7runtime6StringE'/>
+<fun r='_ZNK3tvm12IRModuleNode20ShouldLinkParametersEv'/>
+<fun r='_ZNK3tvm12IRModuleNode7ImportsEv'/>
+<use f='tvm/src/printer/text_printer.h' l='448' c='_ZN3tvm11TextPrinter10PrintFinalERKNS_7runtime9ObjectRefE'/>
+<size>176</size>
+<use f='tvm/src/printer/relay_text_printer.cc' l='133' c='_ZN3tvm5relay16RelayTextPrinter5PrintERKNS_7runtime9ObjectRefEbb'/>
+<size>176</size>
+<use f='tvm/src/printer/tir_text_printer.cc' l='59' c='_ZN3tvm3tir14TIRTextPrinter5PrintERKNS_7runtime9ObjectRefE'/>
+<size>176</size>
+<use f='tvm/src/printer/tvmscript_printer.cc' l='691' c='_ZN3tvm3tir16TVMScriptPrinter5PrintERKNS_7runtime9ObjectRefE'/>
+<use f='tvm/src/printer/tvmscript_printer.cc' l='1890' c='_ZN3tvm3tir11AsTVMScriptERKNS_7runtime9ObjectRefERKNS1_6StringEb'/>
+<use f='tvm/src/printer/tvmscript_printer.cc' l='1901' c='_ZN3tvm3tir25AsTVMScriptWithDiagnosticERKNS_7runtime9ObjectRefERKNS1_6StringEbNS1_15TypedPackedFuncIFNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS0_4StmtEEEE'/>
+<size>176</size>
+<use f='tvm/src/tir/analysis/estimate_flops.cc' l='213'/>
+<size>176</size>
+<use f='tvm/src/tir/ir/transform.cc' l='92' c='_ZNK3tvm3tir9transform16PrimFuncPassNodeclENS_8IRModuleERKNS_9transform11PassContextE'/>
+<size>176</size>
+<use f='tvm/src/tir/schedule/primitive/layout_transformation.cc' l='177' c='_ZN3tvm3tir15TransformLayoutENS0_13ScheduleStateERKNS0_8StmtSRefEiNS0_15BufferIndexTypeERKNS0_8IndexMapE'/>
+<use f='tvm/src/tir/schedule/primitive/layout_transformation.cc' l='520' c='_ZN3tvm3tir16SetAxisSeparatorENS0_13ScheduleStateERKNS0_8StmtSRefEiNS0_15BufferIndexTypeERKNS_7runtime5ArrayINS_6IntImmEvEE'/>
+<size>176</size>
+<use f='tvm/src/tir/schedule/state.cc' l='1037' c='_ZN3tvm3tir17ScheduleStateNode7ReplaceERKNS0_8StmtSRefERKNS0_4StmtERKNS_7runtime3MapINS0_5BlockESA_vvEE'/>
+<size>176</size>
+<use f='tvm/src/tir/transforms/make_packed_api.cc' l='345' c='_ZN3tvm3tir9transform13MakePackedAPIEi'/>
+<size>176</size>
+<use f='tvm/src/tir/transforms/make_unpacked_api.cc' l='95' c='_ZN3tvm3tir9transform15MakeUnpackedAPIEv'/>
+<size>176</size>
+<use f='tvm/src/tir/transforms/split_host_device.cc' l='367' c='_ZN3tvm3tir9transform15SplitHostDeviceEv'/>
+<size>176</size>

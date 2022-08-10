@@ -1,0 +1,13 @@
+<dec f='tvm/src/tir/transforms/common_subexpr_elim.h' l='58' type='static tvm::tir::Stmt tvm::tir::CommonSubexpressionEliminator::PerformCSE(const tvm::tir::Stmt &amp; stmt, const tvm::tir::Context &amp; context_init, bool identify_equiv_terms)'/>
+<def f='tvm/src/tir/transforms/common_subexpr_elim.cc' l='205' ll='212' type='static tvm::tir::Stmt tvm::tir::CommonSubexpressionEliminator::PerformCSE(const tvm::tir::Stmt &amp; stmt, const tvm::tir::Context &amp; context_init, bool identify_equiv_terms)'/>
+<use f='tvm/src/tir/transforms/common_subexpr_elim.cc' l='649' u='c' c='_ZN3tvm3tir9transform20CommonSubexprElimTIREbb'/>
+<doc f='tvm/src/tir/transforms/common_subexpr_elim.cc' l='196'>/*!
+ * \brief Toplevel (static) method that performs Common Subexpression Elimination on
+          a given statement (which should be the body of a PrimFunc). This method should be
+          called for each PrimFunc definition.
+ * \param stmt The statement of the function being analyzed, on which we want to perform CSE
+ * \param context_init The initial context, which should contain the formal parameters
+                          of the function being analyzed
+ * \return A new statement where CSE has been performed
+ */</doc>
+<doc f='tvm/src/tir/transforms/common_subexpr_elim.h' l='57'>// Toplevel (static) function</doc>

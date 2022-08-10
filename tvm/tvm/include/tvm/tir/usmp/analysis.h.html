@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>analysis.h source code [tvm/include/tvm/tir/usmp/analysis.h] - Woboq Code Browser</title>
+<link rel="stylesheet" href="../../../../.././data/qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href="../../../../.././data/kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src="../../../../.././data/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="../../../../.././data/jquery/jquery-ui.min.js"></script>
+<script>var file = 'tvm/include/tvm/tir/usmp/analysis.h'; var root_path = '../../../../..'; var data_path = '../../../../.././data'; var ecma_script_api_version = 2;</script>
+<script src='../../../../.././data/codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='../../../..'>tvm</a>/<a href='../../..'>include</a>/<a href='../..'>tvm</a>/<a href='..'>tir</a>/<a href='./'>usmp</a>/<a href='analysis.h.html'>analysis.h</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td><i>/*</i></td></tr>
+<tr><th id="2">2</th><td><i> * Licensed to the Apache Software Foundation (ASF) under one</i></td></tr>
+<tr><th id="3">3</th><td><i> * or more contributor license agreements.  See the NOTICE file</i></td></tr>
+<tr><th id="4">4</th><td><i> * distributed with this work for additional information</i></td></tr>
+<tr><th id="5">5</th><td><i> * regarding copyright ownership.  The ASF licenses this file</i></td></tr>
+<tr><th id="6">6</th><td><i> * to you under the Apache License, Version 2.0 (the</i></td></tr>
+<tr><th id="7">7</th><td><i> * "License"); you may not use this file except in compliance</i></td></tr>
+<tr><th id="8">8</th><td><i> * with the License.  You may obtain a copy of the License at</i></td></tr>
+<tr><th id="9">9</th><td><i> *</i></td></tr>
+<tr><th id="10">10</th><td><i> *   <a href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a></i></td></tr>
+<tr><th id="11">11</th><td><i> *</i></td></tr>
+<tr><th id="12">12</th><td><i> * Unless required by applicable law or agreed to in writing,</i></td></tr>
+<tr><th id="13">13</th><td><i> * software distributed under the License is distributed on an</i></td></tr>
+<tr><th id="14">14</th><td><i> * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY</i></td></tr>
+<tr><th id="15">15</th><td><i> * KIND, either express or implied.  See the License for the</i></td></tr>
+<tr><th id="16">16</th><td><i> * specific language governing permissions and limitations</i></td></tr>
+<tr><th id="17">17</th><td><i> * under the License.</i></td></tr>
+<tr><th id="18">18</th><td><i> */</i></td></tr>
+<tr><th id="19">19</th><td></td></tr>
+<tr><th id="20">20</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="21">21</th><td><i class="doc"> * <span class="command">\file</span> <span class="verb">tir/usmp/analysis.h</span></i></td></tr>
+<tr><th id="22">22</th><td><i class="doc"> * <span class="command">\brief</span> The analysis passes for TIR-based Unified Static Memory Planner</i></td></tr>
+<tr><th id="23">23</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="24">24</th><td></td></tr>
+<tr><th id="25">25</th><td><u>#<span data-ppcond="25">ifndef</span> <span class="macro" data-ref="_M/TVM_TIR_USMP_ANALYSIS_H_">TVM_TIR_USMP_ANALYSIS_H_</span></u></td></tr>
+<tr><th id="26">26</th><td><u>#define <dfn class="macro" id="_M/TVM_TIR_USMP_ANALYSIS_H_" data-ref="_M/TVM_TIR_USMP_ANALYSIS_H_">TVM_TIR_USMP_ANALYSIS_H_</dfn></u></td></tr>
+<tr><th id="27">27</th><td></td></tr>
+<tr><th id="28">28</th><td><u>#include <a href="../function.h.html">&lt;tvm/tir/function.h&gt;</a></u></td></tr>
+<tr><th id="29">29</th><td><u>#include <a href="utils.h.html">&lt;tvm/tir/usmp/utils.h&gt;</a></u></td></tr>
+<tr><th id="30">30</th><td></td></tr>
+<tr><th id="31">31</th><td><b>namespace</b> <span class="namespace">tvm</span> {</td></tr>
+<tr><th id="32">32</th><td><b>namespace</b> <span class="namespace">tir</span> {</td></tr>
+<tr><th id="33">33</th><td><b>namespace</b> <span class="namespace">usmp</span> {</td></tr>
+<tr><th id="34">34</th><td></td></tr>
+<tr><th id="35">35</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="36">36</th><td><i class="doc"> * <span class="command">\brief</span> Extract BufferInfo objects from a TIR IRModule</i></td></tr>
+<tr><th id="37">37</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="38">38</th><td><i class="doc"> * This pass would extract the buffer information of allocate nodes</i></td></tr>
+<tr><th id="39">39</th><td><i class="doc"> * including liveness conflict with other buffer info objects.</i></td></tr>
+<tr><th id="40">40</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="41">41</th><td><i class="doc"> * <span class="command">\return</span> A Map of BufferInfo objects and their associated Stmts</i></td></tr>
+<tr><th id="42">42</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="43">43</th><td><a class="type" href="utils.h.html#tvm::tir::usmp::BufferInfoAnalysis" title='tvm::tir::usmp::BufferInfoAnalysis' data-ref="tvm::tir::usmp::BufferInfoAnalysis" data-ref-filename="tvm..tir..usmp..BufferInfoAnalysis">BufferInfoAnalysis</a> <a class="decl fn" href="../../../../src/tir/usmp/analysis/extract_buffer_info.cc.html#_ZN3tvm3tir4usmp17ExtractBufferInfoERKNS0_8PrimFuncERKNS_8IRModuleE" title='tvm::tir::usmp::ExtractBufferInfo' data-ref="_ZN3tvm3tir4usmp17ExtractBufferInfoERKNS0_8PrimFuncERKNS_8IRModuleE" data-ref-filename="_ZN3tvm3tir4usmp17ExtractBufferInfoERKNS0_8PrimFuncERKNS_8IRModuleE" id="_ZN3tvm3tir4usmp17ExtractBufferInfoERKNS0_8PrimFuncERKNS_8IRModuleE">ExtractBufferInfo</a>(<em>const</em> <a class="type" href="../function.h.html#tvm::tir::PrimFunc" title='tvm::tir::PrimFunc' data-ref="tvm::tir::PrimFunc" data-ref-filename="tvm..tir..PrimFunc">PrimFunc</a>&amp; <dfn class="local col1 decl" id="1main_func" title='main_func' data-type='const tvm::tir::PrimFunc &amp;' data-ref="1main_func" data-ref-filename="1main_func">main_func</dfn>, <em>const</em> <a class="type" href="../../ir/module.h.html#tvm::IRModule" title='tvm::IRModule' data-ref="tvm::IRModule" data-ref-filename="tvm..IRModule">IRModule</a>&amp; <dfn class="local col2 decl" id="2mod" title='mod' data-type='const tvm::IRModule &amp;' data-ref="2mod" data-ref-filename="2mod">mod</dfn>);</td></tr>
+<tr><th id="44">44</th><td></td></tr>
+<tr><th id="45">45</th><td>}  <i>// namespace usmp</i></td></tr>
+<tr><th id="46">46</th><td>}  <i>// namespace tir</i></td></tr>
+<tr><th id="47">47</th><td>}  <i>// namespace tvm</i></td></tr>
+<tr><th id="48">48</th><td></td></tr>
+<tr><th id="49">49</th><td><u>#<span data-ppcond="25">endif</span>  // TVM_TIR_USMP_ANALYSIS_H_</u></td></tr>
+<tr><th id="50">50</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated while processing <a href='../../../../src/tir/usmp/analysis/extract_buffer_info.cc.html'>tvm/src/tir/usmp/analysis/extract_buffer_info.cc</a><br/>Generated on <em>2022-Aug-10</em> from project tvm revision <em>fae79bb</em><br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

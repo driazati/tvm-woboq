@@ -1,0 +1,171 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>compiler_function_utils.h source code [tvm/src/relay/transforms/compiler_function_utils.h] - Woboq Code Browser</title>
+<meta name="woboq:interestingDefinitions" content="tvm::relay::transform::ExistingGlobalSymbolCache,tvm::relay::transform::GlobalSymbolCache "/>
+<link rel="stylesheet" href="../../../.././data/qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href="../../../.././data/kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src="../../../.././data/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="../../../.././data/jquery/jquery-ui.min.js"></script>
+<script>var file = 'tvm/src/relay/transforms/compiler_function_utils.h'; var root_path = '../../../..'; var data_path = '../../../.././data'; var ecma_script_api_version = 2;</script>
+<script src='../../../.././data/codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='../../..'>tvm</a>/<a href='../..'>src</a>/<a href='..'>relay</a>/<a href='./'>transforms</a>/<a href='compiler_function_utils.h.html'>compiler_function_utils.h</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td><i>/*</i></td></tr>
+<tr><th id="2">2</th><td><i> * Licensed to the Apache Software Foundation (ASF) under one</i></td></tr>
+<tr><th id="3">3</th><td><i> * or more contributor license agreements.  See the NOTICE file</i></td></tr>
+<tr><th id="4">4</th><td><i> * distributed with this work for additional information</i></td></tr>
+<tr><th id="5">5</th><td><i> * regarding copyright ownership.  The ASF licenses this file</i></td></tr>
+<tr><th id="6">6</th><td><i> * to you under the Apache License, Version 2.0 (the</i></td></tr>
+<tr><th id="7">7</th><td><i> * "License"); you may not use this file except in compliance</i></td></tr>
+<tr><th id="8">8</th><td><i> * with the License.  You may obtain a copy of the License at</i></td></tr>
+<tr><th id="9">9</th><td><i> *</i></td></tr>
+<tr><th id="10">10</th><td><i> *   <a href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a></i></td></tr>
+<tr><th id="11">11</th><td><i> *</i></td></tr>
+<tr><th id="12">12</th><td><i> * Unless required by applicable law or agreed to in writing,</i></td></tr>
+<tr><th id="13">13</th><td><i> * software distributed under the License is distributed on an</i></td></tr>
+<tr><th id="14">14</th><td><i> * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY</i></td></tr>
+<tr><th id="15">15</th><td><i> * KIND, either express or implied.  See the License for the</i></td></tr>
+<tr><th id="16">16</th><td><i> * specific language governing permissions and limitations</i></td></tr>
+<tr><th id="17">17</th><td><i> * under the License.</i></td></tr>
+<tr><th id="18">18</th><td><i> */</i></td></tr>
+<tr><th id="19">19</th><td></td></tr>
+<tr><th id="20">20</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="21">21</th><td><i class="doc"> * <span class="command">\file</span> <span class="verb">src/relay/transforms/compiler_function_utils.h</span></i></td></tr>
+<tr><th id="22">22</th><td><i class="doc"> * <span class="command">\brief</span> Helper passes for working with functions with the "Compiler" attribute.</i></td></tr>
+<tr><th id="23">23</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="24">24</th><td><i class="doc"> * Those wishing to use the "RelayToTIR" custom pass machinery to do IRModule-at-a-time external</i></td></tr>
+<tr><th id="25">25</th><td><i class="doc"> * codegen may find the following helpers useful:</i></td></tr>
+<tr><th id="26">26</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="27">27</th><td><i class="doc"> *  - The<span class="command"> \p</span> <span class="arg">OutlineCompilerFunctionsWithExistingGlobalSymbols</span> pass will lift inline functions with</i></td></tr>
+<tr><th id="28">28</th><td><i class="doc"> *    a matching "Compiler" attribute to be global functions, using the "global_symbol" attribute</i></td></tr>
+<tr><th id="29">29</th><td><i class="doc"> *    already assigned. Can be used before custom lowering.</i></td></tr>
+<tr><th id="30">30</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="31">31</th><td><i class="doc"> *    Note that ideally "Compiler" attributed functions would be made global functions as early as</i></td></tr>
+<tr><th id="32">32</th><td><i class="doc"> *    possible and would stay that way. However, the GraphExecutorCodegen and AOTExecutorCodegen</i></td></tr>
+<tr><th id="33">33</th><td><i class="doc"> *    assume the entire model can be represented by a single 'main' function, and the Inline pass</i></td></tr>
+<tr><th id="34">34</th><td><i class="doc"> *    is run to respect that assumption. So this pass is mostly just to undo that Pass after modules</i></td></tr>
+<tr><th id="35">35</th><td><i class="doc"> *    have passed through the 'codegen' keyhole.</i></td></tr>
+<tr><th id="36">36</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="37">37</th><td><i class="doc"> *    See also OutlineCompilerFunctionsMutator in src/relay/backend/contrib/ethosu/codegen.cc.</i></td></tr>
+<tr><th id="38">38</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="39">39</th><td><i class="doc"> *  - (The<span class="command"> \p</span> <span class="arg">OutlineCompilerFunctions</span> pass is a more general version of the above which can use</i></td></tr>
+<tr><th id="40">40</th><td><i class="doc"> *    a custom cache to both allocate "global_symbol" names and ensure two structurally equal</i></td></tr>
+<tr><th id="41">41</th><td><i class="doc"> *    functions are assigned the same name, and thus lowered only once. This is used by Collage</i></td></tr>
+<tr><th id="42">42</th><td><i class="doc"> *    when preparing the optimally partitioned IRModule).</i></td></tr>
+<tr><th id="43">43</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="44">44</th><td><i class="doc"> *  - The<span class="command"> \p</span> <span class="arg">MarkCompilerFunctionsAsExtern</span> pass will update the attributes of global functions</i></td></tr>
+<tr><th id="45">45</th><td><i class="doc"> *    with a matching "Compiler" attribute to have just the "Extern" attribute. That will signal</i></td></tr>
+<tr><th id="46">46</th><td><i class="doc"> *    the function has been dealt with. However calls to such functions will be left unchanged.</i></td></tr>
+<tr><th id="47">47</th><td><i class="doc"> *    Can be used after lowering to cleanup the IRModule.</i></td></tr>
+<tr><th id="48">48</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="49">49</th><td><i class="doc"> *  - The<span class="command"> \p</span> <span class="arg">InlineCompilerFunctions</span> pass can selectively inline global functions with a matching</i></td></tr>
+<tr><th id="50">50</th><td><i class="doc"> *    "Compiler" attribute who's name appears in the given set. Obviously it's more sensible to</i></td></tr>
+<tr><th id="51">51</th><td><i class="doc"> *    not create that function in the first place, however some external codegen have rules to</i></td></tr>
+<tr><th id="52">52</th><td><i class="doc"> *    accept or reject partitionings based on the overall partitioned function body. This pass</i></td></tr>
+<tr><th id="53">53</th><td><i class="doc"> *    can be used do the legwork, and will take care to not only inline the outer "Compiler"</i></td></tr>
+<tr><th id="54">54</th><td><i class="doc"> *    annotated funcition, but also any "Composite" annotated functions in its body.</i></td></tr>
+<tr><th id="55">55</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="56">56</th><td></td></tr>
+<tr><th id="57">57</th><td><u>#<span data-ppcond="57">ifndef</span> <span class="macro" data-ref="_M/TVM_RELAY_TRANSFORMS_COMPILER_FUNCTION_UTILS_H_">TVM_RELAY_TRANSFORMS_COMPILER_FUNCTION_UTILS_H_</span></u></td></tr>
+<tr><th id="58">58</th><td><u>#define <dfn class="macro" id="_M/TVM_RELAY_TRANSFORMS_COMPILER_FUNCTION_UTILS_H_" data-ref="_M/TVM_RELAY_TRANSFORMS_COMPILER_FUNCTION_UTILS_H_">TVM_RELAY_TRANSFORMS_COMPILER_FUNCTION_UTILS_H_</dfn></u></td></tr>
+<tr><th id="59">59</th><td></td></tr>
+<tr><th id="60">60</th><td><u>#include <a href="../../../../include/c++/10/memory.html">&lt;memory&gt;</a></u></td></tr>
+<tr><th id="61">61</th><td><u>#include <a href="../../../../include/c++/10/string.html">&lt;string&gt;</a></u></td></tr>
+<tr><th id="62">62</th><td><u>#include <a href="../../../../include/c++/10/unordered_map.html">&lt;unordered_map&gt;</a></u></td></tr>
+<tr><th id="63">63</th><td></td></tr>
+<tr><th id="64">64</th><td><u>#include <a href="../../../include/tvm/ir/transform.h.html">"tvm/ir/transform.h"</a></u></td></tr>
+<tr><th id="65">65</th><td><u>#include <a href="../../../include/tvm/relay/function.h.html">"tvm/relay/function.h"</a></u></td></tr>
+<tr><th id="66">66</th><td></td></tr>
+<tr><th id="67">67</th><td><b>namespace</b> <span class="namespace">tvm</span> {</td></tr>
+<tr><th id="68">68</th><td><b>namespace</b> <span class="namespace">relay</span> {</td></tr>
+<tr><th id="69">69</th><td><b>namespace</b> <span class="namespace">transform</span> {</td></tr>
+<tr><th id="70">70</th><td></td></tr>
+<tr><th id="71">71</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="72">72</th><td><i class="doc"> * <span class="command">\brief</span> Abstract class representing a cache of unique global vars keyed by functions. This can</i></td></tr>
+<tr><th id="73">73</th><td><i class="doc"> * be used to ensure structurally equal functions are assigned the same global var object, and</i></td></tr>
+<tr><th id="74">74</th><td><i class="doc"> * thus lowered at most once.</i></td></tr>
+<tr><th id="75">75</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="76">76</th><td><b>class</b> <dfn class="type def" id="tvm::relay::transform::GlobalSymbolCache" title='tvm::relay::transform::GlobalSymbolCache' data-ref="tvm::relay::transform::GlobalSymbolCache" data-ref-filename="tvm..relay..transform..GlobalSymbolCache">GlobalSymbolCache</dfn> {</td></tr>
+<tr><th id="77">77</th><td> <b>public</b>:</td></tr>
+<tr><th id="78">78</th><td>  <b>virtual</b> <dfn class="virtual decl fn" id="_ZN3tvm5relay9transform17GlobalSymbolCacheD1Ev" title='tvm::relay::transform::GlobalSymbolCache::~GlobalSymbolCache' data-ref="_ZN3tvm5relay9transform17GlobalSymbolCacheD1Ev" data-ref-filename="_ZN3tvm5relay9transform17GlobalSymbolCacheD1Ev">~GlobalSymbolCache</dfn>();</td></tr>
+<tr><th id="79">79</th><td>  <b>virtual</b> <a class="typedef" href="../../../include/tvm/relay/expr.h.html#tvm::relay::GlobalVar" title='tvm::relay::GlobalVar' data-type='tvm::GlobalVar' data-ref="tvm::relay::GlobalVar" data-ref-filename="tvm..relay..GlobalVar">GlobalVar</a> <dfn class="virtual decl fn" id="_ZN3tvm5relay9transform17GlobalSymbolCache15GetGlobalSymbolERKNS0_8FunctionE" title='tvm::relay::transform::GlobalSymbolCache::GetGlobalSymbol' data-ref="_ZN3tvm5relay9transform17GlobalSymbolCache15GetGlobalSymbolERKNS0_8FunctionE" data-ref-filename="_ZN3tvm5relay9transform17GlobalSymbolCache15GetGlobalSymbolERKNS0_8FunctionE">GetGlobalSymbol</dfn>(<em>const</em> <a class="type" href="../../../include/tvm/relay/function.h.html#tvm::relay::Function" title='tvm::relay::Function' data-ref="tvm::relay::Function" data-ref-filename="tvm..relay..Function">Function</a>&amp; <dfn class="local col1 decl" id="1function" title='function' data-type='const tvm::relay::Function &amp;' data-ref="1function" data-ref-filename="1function">function</dfn>) = <var>0</var>;</td></tr>
+<tr><th id="80">80</th><td>};</td></tr>
+<tr><th id="81">81</th><td></td></tr>
+<tr><th id="82">82</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="83">83</th><td><i class="doc"> * <span class="command">\brief</span> A<span class="command"> \p</span> <span class="arg">GlobalSymbolCache</span> that requires every "Compiler" attributed function to already</i></td></tr>
+<tr><th id="84">84</th><td><i class="doc"> * have a "global_symbol" attribute.</i></td></tr>
+<tr><th id="85">85</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="86">86</th><td><b>class</b> <dfn class="type def" id="tvm::relay::transform::ExistingGlobalSymbolCache" title='tvm::relay::transform::ExistingGlobalSymbolCache' data-ref="tvm::relay::transform::ExistingGlobalSymbolCache" data-ref-filename="tvm..relay..transform..ExistingGlobalSymbolCache">ExistingGlobalSymbolCache</dfn> : <b>public</b> <a class="type" href="#tvm::relay::transform::GlobalSymbolCache" title='tvm::relay::transform::GlobalSymbolCache' data-ref="tvm::relay::transform::GlobalSymbolCache" data-ref-filename="tvm..relay..transform..GlobalSymbolCache">GlobalSymbolCache</a> {</td></tr>
+<tr><th id="87">87</th><td> <b>public</b>:</td></tr>
+<tr><th id="88">88</th><td>  <dfn class="decl def fn" id="_ZN3tvm5relay9transform25ExistingGlobalSymbolCacheC1Ev" title='tvm::relay::transform::ExistingGlobalSymbolCache::ExistingGlobalSymbolCache' data-ref="_ZN3tvm5relay9transform25ExistingGlobalSymbolCacheC1Ev" data-ref-filename="_ZN3tvm5relay9transform25ExistingGlobalSymbolCacheC1Ev">ExistingGlobalSymbolCache</dfn>() = <b>default</b>;</td></tr>
+<tr><th id="89">89</th><td></td></tr>
+<tr><th id="90">90</th><td>  <a class="typedef" href="../../../include/tvm/relay/expr.h.html#tvm::relay::GlobalVar" title='tvm::relay::GlobalVar' data-type='tvm::GlobalVar' data-ref="tvm::relay::GlobalVar" data-ref-filename="tvm..relay..GlobalVar">GlobalVar</a> <dfn class="virtual decl fn" id="_ZN3tvm5relay9transform25ExistingGlobalSymbolCache15GetGlobalSymbolERKNS0_8FunctionE" title='tvm::relay::transform::ExistingGlobalSymbolCache::GetGlobalSymbol' data-ref="_ZN3tvm5relay9transform25ExistingGlobalSymbolCache15GetGlobalSymbolERKNS0_8FunctionE" data-ref-filename="_ZN3tvm5relay9transform25ExistingGlobalSymbolCache15GetGlobalSymbolERKNS0_8FunctionE">GetGlobalSymbol</dfn>(<em>const</em> <a class="type" href="../../../include/tvm/relay/function.h.html#tvm::relay::Function" title='tvm::relay::Function' data-ref="tvm::relay::Function" data-ref-filename="tvm..relay..Function">Function</a>&amp; <dfn class="local col2 decl" id="2function" title='function' data-type='const tvm::relay::Function &amp;' data-ref="2function" data-ref-filename="2function">function</dfn>) final;</td></tr>
+<tr><th id="91">91</th><td></td></tr>
+<tr><th id="92">92</th><td> <b>private</b>:</td></tr>
+<tr><th id="93">93</th><td>  <i class="doc">/*! <span class="command">\brief</span> Maps already seen global symbol names to their corresponding GlobalVar objects. */</i></td></tr>
+<tr><th id="94">94</th><td>  <span class="namespace">std::</span><a class="type" href="../../../../include/c++/10/bits/unordered_map.h.html#std::unordered_map" title='std::unordered_map' data-ref="std::unordered_map" data-ref-filename="std..unordered_map">unordered_map</a>&lt;<span class="namespace">std::</span><a class="typedef" href="../../../../include/c++/10/bits/stringfwd.h.html#std::string" title='std::string' data-type='basic_string&lt;char&gt;' data-ref="std::string" data-ref-filename="std..string">string</a>, <a class="typedef" href="../../../include/tvm/relay/expr.h.html#tvm::relay::GlobalVar" title='tvm::relay::GlobalVar' data-type='tvm::GlobalVar' data-ref="tvm::relay::GlobalVar" data-ref-filename="tvm..relay..GlobalVar">GlobalVar</a>&gt; <dfn class="decl field" id="tvm::relay::transform::ExistingGlobalSymbolCache::global_vars_" title='tvm::relay::transform::ExistingGlobalSymbolCache::global_vars_' data-ref="tvm::relay::transform::ExistingGlobalSymbolCache::global_vars_" data-ref-filename="tvm..relay..transform..ExistingGlobalSymbolCache..global_vars_">global_vars_</dfn>;</td></tr>
+<tr><th id="95">95</th><td>};</td></tr>
+<tr><th id="96">96</th><td></td></tr>
+<tr><th id="97">97</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="98">98</th><td><i class="doc"> * <span class="command">\brief</span> A pass to outline all let-bound and literal functions in direct call positions which have</i></td></tr>
+<tr><th id="99">99</th><td><i class="doc"> * a "Compiler" attribute. The given<span class="command"> \p</span> <span class="arg">GlobalSymbolCache</span> is used to determine a unique global</i></td></tr>
+<tr><th id="100">100</th><td><i class="doc"> * symbol for each function, which is also assigned to the "global_symbol" attribute of the new</i></td></tr>
+<tr><th id="101">101</th><td><i class="doc"> * global function.</i></td></tr>
+<tr><th id="102">102</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="103">103</th><td><i class="doc"> * At most one function with the same global symbol is outlined.</i></td></tr>
+<tr><th id="104">104</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="105">105</th><td><i class="doc"> * If<span class="command"> \p</span> <span class="arg">compiler_filter</span> is non-empty only functions with that as their attribute value are</i></td></tr>
+<tr><th id="106">106</th><td><i class="doc"> * outlined.</i></td></tr>
+<tr><th id="107">107</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="108">108</th><td><span class="namespace">tvm::transform::</span><a class="type" href="../../../include/tvm/ir/transform.h.html#tvm::transform::Pass" title='tvm::transform::Pass' data-ref="tvm::transform::Pass" data-ref-filename="tvm..transform..Pass">Pass</a> <dfn class="decl fn" id="_ZN3tvm5relay9transform24OutlineCompilerFunctionsESt10shared_ptrINS1_17GlobalSymbolCacheEENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE" title='tvm::relay::transform::OutlineCompilerFunctions' data-ref="_ZN3tvm5relay9transform24OutlineCompilerFunctionsESt10shared_ptrINS1_17GlobalSymbolCacheEENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE" data-ref-filename="_ZN3tvm5relay9transform24OutlineCompilerFunctionsESt10shared_ptrINS1_17GlobalSymbolCacheEENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE">OutlineCompilerFunctions</dfn>(<span class="namespace">std::</span><a class="type" href="../../../../include/c++/10/bits/shared_ptr_base.h.html#std::shared_ptr" title='std::shared_ptr' data-ref="std::shared_ptr" data-ref-filename="std..shared_ptr">shared_ptr</a>&lt;<a class="type" href="#tvm::relay::transform::GlobalSymbolCache" title='tvm::relay::transform::GlobalSymbolCache' data-ref="tvm::relay::transform::GlobalSymbolCache" data-ref-filename="tvm..relay..transform..GlobalSymbolCache">GlobalSymbolCache</a>&gt; <dfn class="local col3 decl" id="3cache" title='cache' data-type='std::shared_ptr&lt;GlobalSymbolCache&gt;' data-ref="3cache" data-ref-filename="3cache">cache</dfn>,</td></tr>
+<tr><th id="109">109</th><td>                                              <span class="namespace">std::</span><a class="typedef" href="../../../../include/c++/10/bits/stringfwd.h.html#std::string" title='std::string' data-type='basic_string&lt;char&gt;' data-ref="std::string" data-ref-filename="std..string">string</a> <dfn class="local col4 decl" id="4compiler_filter" title='compiler_filter' data-type='std::string' data-ref="4compiler_filter" data-ref-filename="4compiler_filter">compiler_filter</dfn> = <a class="ref fn fake" href="../../../../include/c++/10/bits/basic_string.h.html#_ZNSt7__cxx1112basic_stringC1EPKT_RKT1_" title='std::basic_string::basic_string&lt;_CharT, _Traits, _Alloc&gt;' data-ref="_ZNSt7__cxx1112basic_stringC1EPKT_RKT1_" data-ref-filename="_ZNSt7__cxx1112basic_stringC1EPKT_RKT1_"></a><q>""</q>);</td></tr>
+<tr><th id="110">110</th><td></td></tr>
+<tr><th id="111">111</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="112">112</th><td><i class="doc"> * <span class="command">\brief</span> A pass to outline all let-bound and literal functions in direct call positions which have</i></td></tr>
+<tr><th id="113">113</th><td><i class="doc"> * a "Compiler" attribute. The functions are bound to unique global vars according to their</i></td></tr>
+<tr><th id="114">114</th><td><i class="doc"> * existing "global_symbol" attribute. At most one function with the same global symbol is outlined.</i></td></tr>
+<tr><th id="115">115</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="116">116</th><td><i class="doc"> * If<span class="command"> \p</span> <span class="arg">compiler_filter</span> is non-empty only functions with that as their attribute value are</i></td></tr>
+<tr><th id="117">117</th><td><i class="doc"> * outlined.</i></td></tr>
+<tr><th id="118">118</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="119">119</th><td><i class="doc"> * This pass may be useful for external codegen using the "RelayToTIR" custom pass mechanism</i></td></tr>
+<tr><th id="120">120</th><td><i class="doc"> * to prepare the IRModule before custom lowering.</i></td></tr>
+<tr><th id="121">121</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="122">122</th><td><span class="namespace">tvm::transform::</span><a class="type" href="../../../include/tvm/ir/transform.h.html#tvm::transform::Pass" title='tvm::transform::Pass' data-ref="tvm::transform::Pass" data-ref-filename="tvm..transform..Pass">Pass</a> <dfn class="decl fn" id="_ZN3tvm5relay9transform49OutlineCompilerFunctionsWithExistingGlobalSymbolsENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE" title='tvm::relay::transform::OutlineCompilerFunctionsWithExistingGlobalSymbols' data-ref="_ZN3tvm5relay9transform49OutlineCompilerFunctionsWithExistingGlobalSymbolsENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE" data-ref-filename="_ZN3tvm5relay9transform49OutlineCompilerFunctionsWithExistingGlobalSymbolsENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE">OutlineCompilerFunctionsWithExistingGlobalSymbols</dfn>(</td></tr>
+<tr><th id="123">123</th><td>    <span class="namespace">std::</span><a class="typedef" href="../../../../include/c++/10/bits/stringfwd.h.html#std::string" title='std::string' data-type='basic_string&lt;char&gt;' data-ref="std::string" data-ref-filename="std..string">string</a> <dfn class="local col5 decl" id="5compiler_filter" title='compiler_filter' data-type='std::string' data-ref="5compiler_filter" data-ref-filename="5compiler_filter">compiler_filter</dfn> = <a class="ref fn fake" href="../../../../include/c++/10/bits/basic_string.h.html#_ZNSt7__cxx1112basic_stringC1EPKT_RKT1_" title='std::basic_string::basic_string&lt;_CharT, _Traits, _Alloc&gt;' data-ref="_ZNSt7__cxx1112basic_stringC1EPKT_RKT1_" data-ref-filename="_ZNSt7__cxx1112basic_stringC1EPKT_RKT1_"></a><q>""</q>);</td></tr>
+<tr><th id="124">124</th><td></td></tr>
+<tr><th id="125">125</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="126">126</th><td><i class="doc"> * <span class="command">\brief</span> A pass to mark all global functions which have a "Compiler" attribute matching</i></td></tr>
+<tr><th id="127">127</th><td><i class="doc"> * compiler_filter as 'extern' by replacing all attributes with a single "Extern" attribute.</i></td></tr>
+<tr><th id="128">128</th><td><i class="doc"> * Calls to such functions are not changed.</i></td></tr>
+<tr><th id="129">129</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="130">130</th><td><i class="doc"> * If<span class="command"> \p</span> <span class="arg">compiler_filter</span> is non-empty only functions with that as their attribute value are</i></td></tr>
+<tr><th id="131">131</th><td><i class="doc"> * outlined.</i></td></tr>
+<tr><th id="132">132</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="133">133</th><td><i class="doc"> * This pass may be useful for external codegen using the "RelayToTIR" custom pass mechanism to</i></td></tr>
+<tr><th id="134">134</th><td><i class="doc"> * cleanup the IRModule after custom lowering.</i></td></tr>
+<tr><th id="135">135</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="136">136</th><td><span class="namespace">tvm::transform::</span><a class="type" href="../../../include/tvm/ir/transform.h.html#tvm::transform::Pass" title='tvm::transform::Pass' data-ref="tvm::transform::Pass" data-ref-filename="tvm..transform..Pass">Pass</a> <dfn class="decl fn" id="_ZN3tvm5relay9transform29MarkCompilerFunctionsAsExternENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE" title='tvm::relay::transform::MarkCompilerFunctionsAsExtern' data-ref="_ZN3tvm5relay9transform29MarkCompilerFunctionsAsExternENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE" data-ref-filename="_ZN3tvm5relay9transform29MarkCompilerFunctionsAsExternENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE">MarkCompilerFunctionsAsExtern</dfn>(<span class="namespace">std::</span><a class="typedef" href="../../../../include/c++/10/bits/stringfwd.h.html#std::string" title='std::string' data-type='basic_string&lt;char&gt;' data-ref="std::string" data-ref-filename="std..string">string</a> <dfn class="local col6 decl" id="6compiler_filter" title='compiler_filter' data-type='std::string' data-ref="6compiler_filter" data-ref-filename="6compiler_filter">compiler_filter</dfn> = <a class="ref fn fake" href="../../../../include/c++/10/bits/basic_string.h.html#_ZNSt7__cxx1112basic_stringC1EPKT_RKT1_" title='std::basic_string::basic_string&lt;_CharT, _Traits, _Alloc&gt;' data-ref="_ZNSt7__cxx1112basic_stringC1EPKT_RKT1_" data-ref-filename="_ZNSt7__cxx1112basic_stringC1EPKT_RKT1_"></a><q>""</q>);</td></tr>
+<tr><th id="137">137</th><td></td></tr>
+<tr><th id="138">138</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="139">139</th><td><i class="doc"> * <span class="command">\brief</span> A pass to inline all global "Compiler" functions which are bound to a global var</i></td></tr>
+<tr><th id="140">140</th><td><i class="doc"> * in<span class="command"> \p</span> <span class="arg">global_vars.</span> Both the global function and any calls to "Composite" functions it its body</i></td></tr>
+<tr><th id="141">141</th><td><i class="doc"> * are inlined.</i></td></tr>
+<tr><th id="142">142</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="143">143</th><td><i class="doc"> * This pass may be useful for external codegen which needs to undo partitioning based on</i></td></tr>
+<tr><th id="144">144</th><td><i class="doc"> * properties of the entire partition.</i></td></tr>
+<tr><th id="145">145</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="146">146</th><td><span class="namespace">tvm::transform::</span><a class="type" href="../../../include/tvm/ir/transform.h.html#tvm::transform::Pass" title='tvm::transform::Pass' data-ref="tvm::transform::Pass" data-ref-filename="tvm..transform..Pass">Pass</a> <dfn class="decl fn" id="_ZN3tvm5relay9transform30InlineCompilerFunctionsBoundToENS_7runtime5ArrayINS_9GlobalVarEvEE" title='tvm::relay::transform::InlineCompilerFunctionsBoundTo' data-ref="_ZN3tvm5relay9transform30InlineCompilerFunctionsBoundToENS_7runtime5ArrayINS_9GlobalVarEvEE" data-ref-filename="_ZN3tvm5relay9transform30InlineCompilerFunctionsBoundToENS_7runtime5ArrayINS_9GlobalVarEvEE">InlineCompilerFunctionsBoundTo</dfn>(<a class="type" href="../../../include/tvm/runtime/container/array.h.html#tvm::runtime::Array" title='tvm::runtime::Array' data-ref="tvm::runtime::Array" data-ref-filename="tvm..runtime..Array">Array</a>&lt;<a class="typedef" href="../../../include/tvm/relay/expr.h.html#tvm::relay::GlobalVar" title='tvm::relay::GlobalVar' data-type='tvm::GlobalVar' data-ref="tvm::relay::GlobalVar" data-ref-filename="tvm..relay..GlobalVar">GlobalVar</a>&gt; <dfn class="local col7 decl" id="7global_vars" title='global_vars' data-type='Array&lt;tvm::relay::GlobalVar&gt;' data-ref="7global_vars" data-ref-filename="7global_vars">global_vars</dfn>);</td></tr>
+<tr><th id="147">147</th><td></td></tr>
+<tr><th id="148">148</th><td>}  <i>// namespace transform</i></td></tr>
+<tr><th id="149">149</th><td>}  <i>// namespace relay</i></td></tr>
+<tr><th id="150">150</th><td>}  <i>// namespace tvm</i></td></tr>
+<tr><th id="151">151</th><td></td></tr>
+<tr><th id="152">152</th><td><u>#<span data-ppcond="57">endif</span>  // TVM_RELAY_TRANSFORMS_COMPILER_FUNCTION_UTILS_H_</u></td></tr>
+<tr><th id="153">153</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated while processing <a href='../backend/contrib/codegen_c/codegen.cc.html'>tvm/src/relay/backend/contrib/codegen_c/codegen.cc</a><br/>Generated on <em>2022-Aug-10</em> from project tvm revision <em>fae79bb</em><br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

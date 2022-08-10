@@ -1,0 +1,18 @@
+<dec f='tvm/src/target/llvm/codegen_llvm.h' l='125' type='void tvm::codegen::CodeGenLLVM::Init(const std::string &amp; module_name, tvm::codegen::LLVMTarget * llvm_target, bool system_lib, bool dynamic_lookup, bool target_c_runtime)'/>
+<use f='tvm/src/target/llvm/codegen_amdgpu.cc' l='259' u='c' c='_ZN3tvm7codegen11BuildAMDGPUENS_8IRModuleENS_6TargetE'/>
+<doc f='tvm/src/target/llvm/codegen_llvm.h' l='114'>/*!
+   * \brief Initialize the code generator with given context
+   * \param module_name The name of the module.
+   * \param tm Target machine model
+   * \param ctx The context.
+   * \param system_lib Whether to insert system library registration.
+   * \param dynamic_lookup Whether dynamically lookup runtime function
+   *                       or use the runtime function table passed by caller.
+   * \param target_c_runtime If true, generate a module to be executed by the C runtime. In practice
+   *                       this option influences whether global ctors are used.
+   */</doc>
+<ovr f='tvm/src/target/llvm/codegen_cpu.cc' l='73' c='_ZN3tvm7codegen10CodeGenCPU4InitERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEPNS0_10LLVMTargetEbbb'/>
+<use f='tvm/src/target/llvm/codegen_cpu.cc' l='75' u='c' c='_ZN3tvm7codegen10CodeGenCPU4InitERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEPNS0_10LLVMTargetEbbb'/>
+<def f='tvm/src/target/llvm/codegen_llvm.cc' l='124' ll='146' type='void tvm::codegen::CodeGenLLVM::Init(const std::string &amp; module_name, tvm::codegen::LLVMTarget * llvm_target, bool system_lib, bool dynamic_lookup, bool target_c_runtime)'/>
+<use f='tvm/src/target/llvm/codegen_nvptx.cc' l='308' u='c' c='_ZN3tvm7codegen10BuildNVPTXENS_8IRModuleENS_6TargetE'/>
+<use f='tvm/src/target/llvm/llvm_module.cc' l='311' u='c' c='_ZN3tvm7codegen14LLVMModuleNode4InitERKNS_8IRModuleERKNS_6TargetE'/>

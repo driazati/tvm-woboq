@@ -1,0 +1,10 @@
+<dec f='tvm/src/target/datatype/registry.h' l='130' type='const runtime::PackedFunc * tvm::datatype::GetCastLowerFunc(const std::string &amp; target, uint8_t type_code, uint8_t src_type_code)'/>
+<doc f='tvm/src/target/datatype/registry.h' l='123'>/*!
+ * \brief Get lowering function for Cast ops
+ * \param target The target we are lowering to, e.g. &quot;llvm&quot;
+ * \param type_code The datatype being cast to
+ * \param src_type_code The datatype being cast from
+ * \return Lowering function for Cast ops for the provided target, type, and source type
+ */</doc>
+<def f='tvm/src/target/datatype/registry.cc' l='70' ll='92' type='const runtime::PackedFunc * tvm::datatype::GetCastLowerFunc(const std::string &amp; target, uint8_t type_code, uint8_t src_type_code)'/>
+<use f='tvm/src/tir/transforms/lower_custom_datatypes.cc' l='55' u='c' c='_ZN3tvm3tir22CustomDatatypesLowerer10VisitExpr_EPKNS0_8CastNodeE'/>

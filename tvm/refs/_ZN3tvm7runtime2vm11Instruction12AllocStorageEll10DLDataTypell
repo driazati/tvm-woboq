@@ -1,0 +1,13 @@
+<dec f='tvm/include/tvm/runtime/vm/bytecode.h' l='362' type='static tvm::runtime::vm::Instruction tvm::runtime::vm::Instruction::AllocStorage(tvm::runtime::vm::RegName size, tvm::runtime::vm::Index alignment, DLDataType dtype_hint, tvm::runtime::vm::Index device_index, tvm::runtime::vm::RegName dst)'/>
+<use f='tvm/src/relay/backend/vm/compiler.cc' l='623' u='c' c='_ZN3tvm5relay2vm18VMFunctionCompiler21DeviceAwareVisitExpr_EPKNS0_8CallNodeE'/>
+<doc f='tvm/include/tvm/runtime/vm/bytecode.h' l='353'>/*!
+   * \brief Allocate a storage block.
+   * \param size The size of the allocation.
+   * \param alignment The allocation&apos;s alignment.
+   * \param dtype_hint The data type hint for the allocator.
+   * \param device_index The index of the device to allocate on.
+   * \param dst The destination to place the storage.
+   * \return The alloc storage instruction.
+   */</doc>
+<def f='tvm/src/runtime/vm/bytecode.cc' l='340' ll='350' type='static tvm::runtime::vm::Instruction tvm::runtime::vm::Instruction::AllocStorage(tvm::runtime::vm::RegName size, tvm::runtime::vm::Index alignment, DLDataType dtype_hint, tvm::runtime::vm::Index device_index, tvm::runtime::vm::RegName dst)'/>
+<use f='tvm/src/runtime/vm/executable.cc' l='910' u='c' c='_ZN3tvm7runtime2vm22DeserializeInstructionERKNS1_23VMInstructionSerializerE'/>

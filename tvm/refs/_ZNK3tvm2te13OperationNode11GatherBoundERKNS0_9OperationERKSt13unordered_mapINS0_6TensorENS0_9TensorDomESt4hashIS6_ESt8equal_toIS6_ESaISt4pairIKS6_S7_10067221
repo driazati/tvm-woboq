@@ -1,0 +1,15 @@
+<dec f='tvm/include/tvm/te/operation.h' l='119' type='void tvm::te::OperationNode::GatherBound(const tvm::te::Operation &amp; self, const std::unordered_map&lt;Tensor, TensorDom&gt; &amp; tensor_dom, std::unordered_map&lt;IterVar, Range&gt; * out_dom_map) const'/>
+<doc f='tvm/include/tvm/te/operation.h' l='111'>/*!
+   * \brief Gather the bound from output tensor.
+   *  Set the range of each root_iter_vars in the op to out_dom_map
+   *
+   * \param self The reference to self.
+   * \param tensor_dom Domain map of Tensor-&gt;access set of each dimension.
+   * \param out_dom_map The output domain map of each IterVar to be setted.
+   */</doc>
+<ovr f='tvm/src/te/operation/compute_op.cc' l='245' c='_ZNK3tvm2te17BaseComputeOpNode11GatherBoundERKNS0_9OperationERKSt13unordered_mapINS0_6TensorENS0_9TensorDomESt4hashIS6_ESt8equal_toIS6_ESaISt4pairIKS61753125'/>
+<ovr f='tvm/src/te/operation/extern_op.cc' l='121' c='_ZNK3tvm2te12ExternOpNode11GatherBoundERKNS0_9OperationERKSt13unordered_mapINS0_6TensorENS0_9TensorDomESt4hashIS6_ESt8equal_toIS6_ESaISt4pairIKS6_S7_E16036303'/>
+<ovr f='tvm/src/te/operation/hybrid_op.cc' l='136' c='_ZNK3tvm2te12HybridOpNode11GatherBoundERKNS0_9OperationERKSt13unordered_mapINS0_6TensorENS0_9TensorDomESt4hashIS6_ESt8equal_toIS6_ESaISt4pairIKS6_S7_E1366769'/>
+<ovr f='tvm/src/te/operation/placeholder_op.cc' l='82' c='_ZNK3tvm2te17PlaceholderOpNode11GatherBoundERKNS0_9OperationERKSt13unordered_mapINS0_6TensorENS0_9TensorDomESt4hashIS6_ESt8equal_toIS6_ESaISt4pairIKS65457632'/>
+<ovr f='tvm/src/te/operation/scan_op.cc' l='195' c='_ZNK3tvm2te10ScanOpNode11GatherBoundERKNS0_9OperationERKSt13unordered_mapINS0_6TensorENS0_9TensorDomESt4hashIS6_ESt8equal_toIS6_ESaISt4pairIKS6_S7_EEE8410255'/>
+<use f='tvm/src/te/schedule/bound.cc' l='204' u='c' c='_ZN3tvm2te14InferRootBoundERKNS0_5StageERKNS0_12GraphContextEPSt13unordered_mapINS_3tir7IterVarENS_5RangeESt4hashIS9_ESt8equal_toIS9_ESaISt4pairIKS9_SA_EEE'/>

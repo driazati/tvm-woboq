@@ -1,0 +1,51 @@
+<dec f='tvm/include/tvm/ir/diagnostic.h' l='209' type='void tvm::DiagnosticContext::EmitFatal(const tvm::Diagnostic &amp; diagnostic)'/>
+<doc f='tvm/include/tvm/ir/diagnostic.h' l='202'>/*! \brief Emit a diagnostic and then immediately attempt to render all errors.
+   *
+   * \param diagnostic The diagnostic to emit.
+   *
+   * Note: this will raise an exception if you would like to instead continue execution
+   * use the Emit method instead.
+   */</doc>
+<def f='tvm/src/ir/diagnostic.cc' l='142' ll='145' type='void tvm::DiagnosticContext::EmitFatal(const tvm::Diagnostic &amp; diagnostic)'/>
+<doc f='tvm/src/ir/diagnostic.cc' l='141'>/*! \brief Emit a diagnostic. */</doc>
+<use f='tvm/src/parser/tokenizer.h' l='357' u='c' c='_ZN3tvm6parser9Tokenizer12TokenizeAttrEv'/>
+<use f='tvm/src/parser/tokenizer.h' l='363' u='c' c='_ZN3tvm6parser9Tokenizer12TokenizeAttrEv'/>
+<use f='tvm/src/parser/tokenizer.h' l='386' u='c' c='_ZN3tvm6parser9Tokenizer12TokenizeOnceEv'/>
+<use f='tvm/src/parser/parser.cc' l='398' u='c' c='_ZN3tvm6parser6Parser7ConsumeERKNS0_9TokenTypeE'/>
+<use f='tvm/src/parser/parser.cc' l='697' u='c' c='_ZN3tvm6parser6Parser13ParseSequenceENS0_9TokenTypeES2_S2_St8functionIFT_vEES3_IFbvEE'/>
+<use f='tvm/src/parser/parser.cc' l='831' u='c' c='_ZN3tvm6parser6Parser12ParseTypeDefEv'/>
+<use f='tvm/src/parser/parser.cc' l='1222' u='c' c='_ZN3tvm6parser6Parser12ParsePatternEv'/>
+<use f='tvm/src/parser/parser.cc' l='1459' u='c' c='_ZN3tvm6parser6Parser13ParseCallArgsENS_9RelayExprE'/>
+<use f='tvm/src/parser/parser.cc' l='1521' u='c' c='_ZN3tvm6parser6Parser5GetOpERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKNS_4SpanE'/>
+<use f='tvm/src/parser/parser.cc' l='1653' u='c' c='_ZN3tvm6parser6Parser15ParseAtomicExprEv'/>
+<use f='tvm/src/parser/parser.cc' l='1768' u='c' c='_ZN3tvm6parser6Parser21ParseNonPrimitiveTypeERKNS0_5TokenE'/>
+<use f='tvm/src/parser/parser.cc' l='1830' u='c' c='_ZN3tvm6parser6Parser9ParseTypeEv'/>
+<use f='tvm/src/relay/analysis/kind_check.cc' l='52' u='c' c='_ZN3tvm5relay11KindChecker9EmitFatalENS_10DiagnosticE'/>
+<use f='tvm/src/relay/op/contrib/ethosu/binary_elementwise.cc' l='75' u='c' c='_ZN3tvm5relay2op7contrib6ethosu26EthosuBinaryElementwiseRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/src/relay/op/contrib/ethosu/common.cc' l='127' u='c' c='_ZN3tvm5relay2op7contrib6ethosu13CheckDataTypeERKNS_12TypeReporterERKNS_7runtime8DataTypeERKSt16initializer_listIS8_ERKNS7_6StringESH_SH_'/>
+<use f='tvm/src/relay/op/contrib/ethosu/common.cc' l='154' u='c' c='_ZN3tvm5relay2op7contrib6ethosu18CheckUpscaleMethodERKNS_12TypeReporterERKNS_7runtime6StringERKSt16initializer_listIS8_ESA_SA_'/>
+<use f='tvm/src/relay/op/contrib/ethosu/common.cc' l='173' u='c' c='_ZN3tvm5relay2op7contrib6ethosu18CheckDataTypeMatchERKNS_12TypeReporterERKNS_7runtime8DataTypeESA_RKNS7_6StringESD_SD_SD_'/>
+<use f='tvm/src/relay/op/contrib/ethosu/identity.cc' l='52' u='c' c='_ZN3tvm5relay2op7contrib6ethosu17EthosuIdentityRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/src/relay/op/contrib/ethosu/pooling.cc' l='50' u='c' c='_ZN3tvm5relay2op7contrib6ethosu16EthosuPoolingRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/src/relay/op/contrib/ethosu/unary_elementwise.cc' l='50' u='c' c='_ZN3tvm5relay2op7contrib6ethosu25EthosuUnaryElementwiseRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/src/relay/op/nn/nn.cc' l='65' u='c' c='_ZN3tvm5relay10BiasAddRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/src/relay/op/nn/nn.cc' l='422' u='c' c='_ZN3tvm5relay10SoftmaxRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/src/relay/op/nn/nn.cc' l='1228' u='c' c='_ZN3tvm5relay10NLLLossRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/src/relay/op/nn/nn.cc' l='1236' u='c' c='_ZN3tvm5relay10NLLLossRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/src/relay/op/nn/nn.cc' l='1244' u='c' c='_ZN3tvm5relay10NLLLossRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/src/relay/op/nn/nn.cc' l='1254' u='c' c='_ZN3tvm5relay10NLLLossRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/src/relay/op/nn/nn.cc' l='1260' u='c' c='_ZN3tvm5relay10NLLLossRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/src/relay/op/random/kernel.cc' l='102' u='c' c='_ZN3tvm5relay10UniformRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/src/relay/op/random/kernel.cc' l='149' u='c' c='_ZN3tvm5relay9NormalRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/src/relay/op/tensor/math.cc' l='43' u='c' c='_ZN3tvm5relay9EinsumRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/src/relay/op/tensor/math.cc' l='54' u='c' c='_ZN3tvm5relay9EinsumRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/src/relay/op/tensor/transform.h' l='55' u='c' c='_ZN3tvm5relay14ConcatenateRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/src/relay/op/tensor/transform.h' l='66' u='c' c='_ZN3tvm5relay14ConcatenateRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/src/relay/op/tensor/transform.cc' l='63' u='c' c='_ZN3tvm5relay16SlidingWindowRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/src/relay/transforms/first_order_gradient.cc' l='51' u='c' c='_ZN3tvm5relay12MultiFactoryERKNS_4TypeET_NS_17DiagnosticContextE'/>
+<use f='tvm/src/relay/transforms/first_order_gradient.cc' l='65' u='c' c='_ZN3tvm5relay16MultiFactoryLikeERKNS_9RelayExprERKNS_4TypeET_T0_NS_17DiagnosticContextE'/>
+<use f='tvm/src/relay/transforms/first_order_gradient.cc' l='147' u='c' c='_ZN3tvm5relay19FirstOrderReverseAD10VisitExpr_EPKNS_6OpNodeE'/>
+<use f='tvm/src/relay/transforms/first_order_gradient.cc' l='162' u='c' c='_ZN3tvm5relay19FirstOrderReverseAD10VisitExpr_EPKNS_6OpNodeE'/>
+<use f='tvm/src/relay/transforms/first_order_gradient.cc' l='207' u='c' c='_ZN3tvm5relay19FirstOrderReverseAD10VisitExpr_EPKNS0_9TupleNodeE'/>
+<use f='tvm/src/relay/transforms/first_order_gradient.cc' l='281' u='c' c='_ZN3tvm5relay9transform18FirstOrderGradientEv'/>
+<use f='tvm/src/relay/transforms/type_infer.cc' l='192' u='c' c='_ZN3tvm5relay14TypeInferencer9EmitFatalERKNS_10DiagnosticE'/>

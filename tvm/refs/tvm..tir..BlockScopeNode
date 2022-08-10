@@ -1,0 +1,45 @@
+<inh f='tvm/include/tvm/runtime/object.h' l='167' c='tvm::runtime::Object'/>
+<def f='tvm/include/tvm/tir/schedule/block_scope.h' l='207' ll='249'/>
+<use f='tvm/include/tvm/tir/schedule/block_scope.h' l='267' c='_ZNK3tvm3tir10BlockScopeptEv'/>
+<use f='tvm/include/tvm/tir/schedule/block_scope.h' l='267' c='_ZNK3tvm3tir10BlockScopeptEv'/>
+<use f='tvm/include/tvm/tir/schedule/block_scope.h' l='267' c='_ZNK3tvm3tir10BlockScope3getEv'/>
+<use f='tvm/include/tvm/tir/schedule/block_scope.h' l='267'/>
+<size>192</size>
+<doc f='tvm/include/tvm/tir/schedule/block_scope.h' l='194'>/*!
+ * \brief An object with 1-to-1 correspondence with each block reference in the sref tree.
+ * This data structure is used to track the producer-consumer dependencies between blocks.
+ * For example even leaf nodes have a scope node, even though they have no dependencies.
+ *
+ * Glossary:
+ * - Block scope: A contiguous subtree of the sref tree, rooted at each block sref,
+ * whose components are:
+ *   - scope root: a block sref
+ *   - internal srefs: loop srefs
+ *   - scope leaves: block srefs
+ * - Child block: The scope leaf blocks under the scope root or a specific internal sref
+ */</doc>
+<mbr r='tvm::tir::BlockScopeNode::src2deps' o='128' t='std::unordered_map&lt;StmtSRef, Array&lt;Dependency&gt;, ObjectPtrHash, ObjectPtrEqual&gt;'/>
+<mbr r='tvm::tir::BlockScopeNode::dst2deps' o='576' t='std::unordered_map&lt;StmtSRef, Array&lt;Dependency&gt;, ObjectPtrHash, ObjectPtrEqual&gt;'/>
+<mbr r='tvm::tir::BlockScopeNode::buffer_writers' o='1024' t='std::unordered_map&lt;Buffer, Array&lt;StmtSRef&gt;, ObjectPtrHash, ObjectPtrEqual&gt;'/>
+<mbr r='tvm::tir::BlockScopeNode::stage_pipeline' o='1472' t='bool'/>
+<fun r='_ZN3tvm3tir14BlockScopeNode10VisitAttrsEPNS_11AttrVisitorE'/>
+<smbr r='tvm::tir::BlockScopeNode::_type_key' t='const char *const'/>
+<smbr r='tvm::tir::BlockScopeNode::_type_final' t='const bool'/>
+<smbr r='tvm::tir::BlockScopeNode::_type_child_slots' t='const int'/>
+<fun r='_ZN3tvm3tir14BlockScopeNode16RuntimeTypeIndexEv'/>
+<fun r='_ZN3tvm3tir14BlockScopeNode27_GetOrAllocRuntimeTypeIndexEv'/>
+<fun r='_ZNK3tvm3tir14BlockScopeNode12GetDepsBySrcERKNS0_8StmtSRefE'/>
+<fun r='_ZNK3tvm3tir14BlockScopeNode12GetDepsByDstERKNS0_8StmtSRefE'/>
+<use f='tvm/src/tir/schedule/block_scope.cc' l='36' c='_ZN3tvm3tir13AddDependencyEPNS0_14BlockScopeNodeERKNS0_8StmtSRefES5_NS0_7DepKindE'/>
+<use f='tvm/src/tir/schedule/block_scope.cc' l='72' c='_ZN3tvm3tir10BlockScopeC1Ev'/>
+<use f='tvm/src/tir/schedule/block_scope.cc' l='75' c='_ZN3tvm3tir10BlockScopeC1ERKNS_7runtime5ArrayINS0_8StmtSRefEvEE'/>
+<use f='tvm/src/tir/schedule/block_scope.cc' l='75' c='_ZN3tvm3tir10BlockScopeC1ERKNS_7runtime5ArrayINS0_8StmtSRefEvEE'/>
+<use f='tvm/src/tir/schedule/block_scope.cc' l='142'/>
+<use f='tvm/src/tir/schedule/block_scope.cc' l='142'/>
+<use f='tvm/src/tir/schedule/block_scope.cc' l='142'/>
+<size>192</size>
+<fun r='_ZNK3tvm3tir14BlockScopeNode12GetDepsBySrcERKNS0_8StmtSRefE'/>
+<fun r='_ZNK3tvm3tir14BlockScopeNode12GetDepsByDstERKNS0_8StmtSRefE'/>
+<use f='tvm/src/tir/schedule/concrete_schedule.cc' l='146' c='_ZN3tvm3tir14ScheduleCopier4CopyERKSt13unordered_mapINS0_8StmtSRefENS0_9BlockInfoENS_7runtime13ObjectPtrHashENS5_14ObjectPtrEqualESaISt4pairIKS3_S4_EEE'/>
+<use f='tvm/src/tir/schedule/concrete_schedule.cc' l='146' c='_ZN3tvm3tir14ScheduleCopier4CopyERKSt13unordered_mapINS0_8StmtSRefENS0_9BlockInfoENS_7runtime13ObjectPtrHashENS5_14ObjectPtrEqualESaISt4pairIKS3_S4_EEE'/>
+<size>192</size>

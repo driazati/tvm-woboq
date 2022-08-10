@@ -1,0 +1,34 @@
+<dec f='tvm/include/tvm/tir/stmt.h' l='584' type='void tvm::tir::Allocate::Allocate(tvm::tir::Var buffer_var, tvm::DataType dtype, Array&lt;tvm::PrimExpr&gt; extents, tvm::PrimExpr condition, tvm::tir::Stmt body, Map&lt;tvm::runtime::String, tvm::runtime::ObjectRef&gt; annotations = Map&lt;tvm::runtime::String, tvm::runtime::ObjectRef&gt;(), tvm::Span span = tvm::Span())'/>
+<use f='tvm/src/relay/backend/aot_executor_codegen.cc' l='773' u='c' c='_ZN3tvm5relay7backend18AOTExecutorCodegen14CreateMainFuncENS_7runtime6StringEj'/>
+<use f='tvm/src/te/operation/cross_thread_reduction.cc' l='224' u='c' c='_ZN3tvm2te24MakeCrossThreadReductionEPKNS0_13ComputeOpNodeERKNS0_5StageERKSt13unordered_mapINS_3tir7IterVarENS_5RangeESt4hashIS9_ESt8equal_toIS9_ESaISt4pairIKS9_SA_EEEb'/>
+<use f='tvm/src/te/operation/cross_thread_reduction.cc' l='227' u='c' c='_ZN3tvm2te24MakeCrossThreadReductionEPKNS0_13ComputeOpNodeERKNS0_5StageERKSt13unordered_mapINS_3tir7IterVarENS_5RangeESt4hashIS9_ESt8equal_toIS9_ESaISt4pairIKS9_SA_EEEb'/>
+<use f='tvm/src/tir/contrib/ethosu/passes.cc' l='143' u='c' c='_ZN3tvm3tir7contrib6ethosu21HoistAllocatesMutatorclENS0_8PrimFuncE'/>
+<use f='tvm/src/tir/contrib/ethosu/passes.cc' l='439' u='c' c='_ZN3tvm3tir7contrib6ethosu21MergeConstantsMutator19RewritePrimFuncBodyENS0_4StmtE'/>
+<use f='tvm/src/tir/contrib/ethosu/passes.cc' l='459' u='c' c='_ZN3tvm3tir7contrib6ethosu21MergeConstantsMutator19RewritePrimFuncBodyENS0_4StmtE'/>
+<def f='tvm/src/tir/ir/stmt.cc' l='364' ll='390' type='void tvm::tir::Allocate::Allocate(tvm::tir::Var buffer_var, tvm::DataType dtype, Array&lt;tvm::PrimExpr&gt; extents, tvm::PrimExpr condition, tvm::tir::Stmt body, Map&lt;tvm::runtime::String, tvm::runtime::ObjectRef&gt; annotations = Map&lt;tvm::runtime::String, tvm::runtime::ObjectRef&gt;(), tvm::Span span = tvm::Span())'/>
+<use f='tvm/src/tir/ir/stmt.cc' l='410' u='c'/>
+<doc f='tvm/src/tir/ir/stmt.cc' l='363'>// Allocate</doc>
+<use f='tvm/src/tir/transforms/bf16_legalize.cc' l='192' u='c' c='_ZN3tvm3tir17BF16LowerRewriter10VisitStmt_EPKNS0_12AllocateNodeE'/>
+<use f='tvm/src/tir/transforms/inject_double_buffer.cc' l='122' u='c' c='_ZN3tvm3tir20DoubleBufferInjector10VisitStmt_EPKNS0_12AllocateNodeE'/>
+<use f='tvm/src/tir/transforms/inject_virtual_thread.cc' l='439' u='c' c='_ZN3tvm3tir10VTInjector10VisitStmt_EPKNS0_12AllocateNodeE'/>
+<use f='tvm/src/tir/transforms/ir_utils.cc' l='211' u='c' c='_ZN3tvm3tir12IRConvertSSA10VisitStmt_EPKNS0_12AllocateNodeE'/>
+<use f='tvm/src/tir/transforms/lift_attr_scope.cc' l='58' u='c' c='_ZN3tvm3tir15AttrScopeLifter10VisitStmt_EPKNS0_12AllocateNodeE'/>
+<use f='tvm/src/tir/transforms/lower_custom_datatypes.cc' l='99' u='c' c='_ZN3tvm3tir22CustomDatatypesLowerer10VisitStmt_EPKNS0_12AllocateNodeE'/>
+<use f='tvm/src/tir/transforms/lower_opaque_block.cc' l='60' u='c' c='_ZN3tvm3tir16OpaqueBlockLower10VisitStmt_EPKNS0_16BlockRealizeNodeE'/>
+<use f='tvm/src/tir/transforms/lower_thread_allreduce.cc' l='56' u='c' c='_ZN3tvm3tir34UpdatePointerStorageScopeAllReduce10VisitStmt_EPKNS0_12AllocateNodeE'/>
+<use f='tvm/src/tir/transforms/lower_thread_allreduce.cc' l='106' u='c' c='_ZN3tvm3tir22ThreadAllreduceBuilder10VisitStmt_EPKNS0_12AllocateNodeE'/>
+<use f='tvm/src/tir/transforms/lower_thread_allreduce.cc' l='461' u='c' c='_ZN3tvm3tir22ThreadAllreduceBuilder13MakeAllreduceEPKNS0_8CallNodeE'/>
+<use f='tvm/src/tir/transforms/lower_thread_allreduce.cc' l='499' u='c' c='_ZN3tvm3tir22ThreadAllreduceBuilder13MakeAllreduceEPKNS0_8CallNodeE'/>
+<use f='tvm/src/tir/transforms/lower_thread_allreduce.cc' l='509' u='c' c='_ZN3tvm3tir22ThreadAllreduceBuilder13MakeAllreduceEPKNS0_8CallNodeE'/>
+<use f='tvm/src/tir/transforms/lower_warp_memory.cc' l='255' u='c' c='_ZN3tvm3tir18WarpAccessRewriter7RewriteEPKNS0_12AllocateNodeE'/>
+<use f='tvm/src/tir/transforms/merge_dynamic_shared_memory_allocations.cc' l='296' u='c' c='_ZN3tvm3tir27DynamicSharedMemoryRewriter10VisitStmt_EPKNS0_12AttrStmtNodeE'/>
+<use f='tvm/src/tir/transforms/storage_flatten.cc' l='1426' u='c' c='_ZN3tvm3tir16StorageFlattener10VisitStmt_EPKNS0_12AllocateNodeE'/>
+<use f='tvm/src/tir/transforms/storage_flatten.cc' l='1520' u='c' c='_ZN3tvm3tir16StorageFlattener10VisitStmt_EPKNS0_17BufferRealizeNodeE'/>
+<use f='tvm/src/tir/transforms/storage_rewrite.cc' l='660' u='c' c='_ZN3tvm3tir19StoragePlanRewriter15PrepareNewAllocEv'/>
+<use f='tvm/src/tir/transforms/storage_rewrite.cc' l='709' u='c' c='_ZN3tvm3tir19StoragePlanRewriter15PrepareNewAllocEv'/>
+<use f='tvm/src/tir/transforms/storage_rewrite.cc' l='753' u='c' c='_ZN3tvm3tir19StoragePlanRewriter17NewAllocTagMergedEPNS1_12StorageEntryE'/>
+<use f='tvm/src/tir/transforms/storage_rewrite.cc' l='1546' u='c' c='_ZN3tvm3tir18VectorTypeRewriter10VisitStmt_EPKNS0_12AllocateNodeE'/>
+<use f='tvm/src/tir/transforms/update_pointer_storage_scope.cc' l='63' u='c' c='_ZN3tvm3tir25UpdatePointerStorageScope10VisitStmt_EPKNS0_12AllocateNodeE'/>
+<use f='tvm/src/tir/transforms/vectorize_loop.cc' l='564' u='c' c='_ZN3tvm3tir10Vectorizer10VisitStmt_EPKNS0_12AllocateNodeE'/>
+<use f='tvm/src/tir/usmp/transform/assign_pool_info.cc' l='142' u='c' c='_ZN3tvm3tir4usmp16PoolInfoAssigner10VisitStmt_EPKNS0_12AllocateNodeE'/>
+<use f='tvm/src/tir/usmp/transform/create_io_allocates.cc' l='191' u='c' c='_ZN3tvm3tir4usmp17IOAllocateCreatorclEv'/>

@@ -1,0 +1,53 @@
+<inh f='tvm/include/tvm/runtime/object.h' l='167' c='tvm::runtime::Object'/>
+<def f='tvm/include/tvm/tir/stmt.h' l='1105' ll='1130'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='1117' c='_ZNK3tvm3tir16BufferRegionNode12SEqualReduceEPKS1_NS_13SEqualReducerE'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='1155' c='_ZNK3tvm3tir12BufferRegionptEv'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='1155' c='_ZNK3tvm3tir12BufferRegionptEv'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='1155' c='_ZNK3tvm3tir12BufferRegion3getEv'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='1155'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='1156' c='_ZN3tvm3tir12BufferRegion11CopyOnWriteEv'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='1156' c='_ZN3tvm3tir12BufferRegion11CopyOnWriteEv'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='1156' c='_ZN3tvm3tir12BufferRegion11CopyOnWriteEv'/>
+<size>32</size>
+<doc f='tvm/include/tvm/tir/stmt.h' l='1102'>/*!
+ * \brief Representing the region of multi-dimensional buffer access.
+ */</doc>
+<mbr r='tvm::tir::BufferRegionNode::buffer' o='128' t='tvm::tir::Buffer'/>
+<mbr r='tvm::tir::BufferRegionNode::region' o='192' t='Array&lt;tvm::Range&gt;'/>
+<fun r='_ZN3tvm3tir16BufferRegionNode10VisitAttrsEPNS_11AttrVisitorE'/>
+<fun r='_ZNK3tvm3tir16BufferRegionNode12SEqualReduceEPKS1_NS_13SEqualReducerE'/>
+<fun r='_ZNK3tvm3tir16BufferRegionNode11SHashReduceENS_12SHashReducerE'/>
+<smbr r='tvm::tir::BufferRegionNode::_type_key' t='const char *const'/>
+<smbr r='tvm::tir::BufferRegionNode::_type_has_method_sequal_reduce' t='const bool'/>
+<smbr r='tvm::tir::BufferRegionNode::_type_has_method_shash_reduce' t='const bool'/>
+<smbr r='tvm::tir::BufferRegionNode::_type_final' t='const bool'/>
+<smbr r='tvm::tir::BufferRegionNode::_type_child_slots' t='const int'/>
+<fun r='_ZN3tvm3tir16BufferRegionNode16RuntimeTypeIndexEv'/>
+<fun r='_ZN3tvm3tir16BufferRegionNode27_GetOrAllocRuntimeTypeIndexEv'/>
+<use f='tvm/src/printer/text_printer.h' l='380' c='_ZN3tvm3tir14TIRTextPrinter17PrintBufferRegionEPKNS0_16BufferRegionNodeE'/>
+<size>32</size>
+<use f='tvm/src/printer/tir_text_printer.cc' l='73' c='_ZN3tvm3tir14TIRTextPrinter5PrintERKNS_7runtime9ObjectRefE'/>
+<use f='tvm/src/printer/tir_text_printer.cc' l='74' c='_ZN3tvm3tir14TIRTextPrinter5PrintERKNS_7runtime9ObjectRefE'/>
+<use f='tvm/src/printer/tir_text_printer.cc' l='271' c='_ZN3tvm3tir14TIRTextPrinter17PrintBufferRegionEPKNS0_16BufferRegionNodeE'/>
+<size>32</size>
+<use f='tvm/src/printer/tvmscript_printer.cc' l='279' c='_ZN3tvm3tir16TVMScriptPrinter17PrintBufferRegionEPKNS0_16BufferRegionNodeE'/>
+<use f='tvm/src/printer/tvmscript_printer.cc' l='703' c='_ZN3tvm3tir16TVMScriptPrinter5PrintERKNS_7runtime9ObjectRefE'/>
+<use f='tvm/src/printer/tvmscript_printer.cc' l='704' c='_ZN3tvm3tir16TVMScriptPrinter5PrintERKNS_7runtime9ObjectRefE'/>
+<use f='tvm/src/printer/tvmscript_printer.cc' l='1755' c='_ZN3tvm3tir16TVMScriptPrinter17PrintBufferRegionEPKNS0_16BufferRegionNodeE'/>
+<size>32</size>
+<use f='tvm/src/tir/analysis/device_constraint_utils.cc' l='367' c='_ZN3tvm3tir12_GLOBAL__N_129ApplyDeviceConstraintsMutator9VisitItemEPKNS0_16BufferRegionNodeE'/>
+<size>32</size>
+<use f='tvm/src/tir/ir/stmt.cc' l='813' c='_ZN3tvm3tir12BufferRegionC1ENS0_6BufferENS_7runtime5ArrayINS_5RangeEvEE'/>
+<use f='tvm/src/tir/ir/stmt.cc' l='813' c='_ZN3tvm3tir12BufferRegionC1ENS0_6BufferENS_7runtime5ArrayINS_5RangeEvEE'/>
+<use f='tvm/src/tir/ir/stmt.cc' l='844'/>
+<use f='tvm/src/tir/ir/stmt.cc' l='844'/>
+<use f='tvm/src/tir/ir/stmt.cc' l='844'/>
+<use f='tvm/src/tir/ir/stmt.cc' l='847'/>
+<use f='tvm/src/tir/ir/stmt.cc' l='848'/>
+<size>32</size>
+<use f='tvm/src/tir/schedule/transform.cc' l='50' c='_ZN3tvm3tir13ReplaceBufferENS_7runtime5ArrayINS0_12BufferRegionEvEERKNS0_6BufferES7_'/>
+<use f='tvm/src/tir/schedule/transform.cc' l='50' c='_ZN3tvm3tir13ReplaceBufferENS_7runtime5ArrayINS0_12BufferRegionEvEERKNS0_6BufferES7_'/>
+<size>32</size>
+<use f='tvm/src/tir/transforms/compact_buffer_region.cc' l='562' c='_ZNK3tvm3tir15BufferCompactor20RewriteBufferRegionsEPNS_7runtime5ArrayINS0_12BufferRegionEvEE'/>
+<use f='tvm/src/tir/transforms/compact_buffer_region.cc' l='574' c='_ZNK3tvm3tir15BufferCompactor19RewriteMatchBuffersEPNS_7runtime5ArrayINS0_17MatchBufferRegionEvEE'/>
+<size>32</size>

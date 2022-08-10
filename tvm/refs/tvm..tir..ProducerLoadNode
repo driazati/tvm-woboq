@@ -1,0 +1,99 @@
+<inh f='tvm/include/tvm/ir/expr.h' l='85' c='tvm::PrimExprNode'/>
+<def f='tvm/include/tvm/tir/expr.h' l='671' ll='698'/>
+<use f='tvm/include/tvm/tir/expr.h' l='685' c='_ZNK3tvm3tir16ProducerLoadNode12SEqualReduceEPKS1_NS_13SEqualReducerE'/>
+<use f='tvm/include/tvm/tir/expr.h' l='708' c='_ZNK3tvm3tir12ProducerLoadptEv'/>
+<use f='tvm/include/tvm/tir/expr.h' l='708' c='_ZNK3tvm3tir12ProducerLoadptEv'/>
+<use f='tvm/include/tvm/tir/expr.h' l='708' c='_ZNK3tvm3tir12ProducerLoad3getEv'/>
+<use f='tvm/include/tvm/tir/expr.h' l='708'/>
+<size>48</size>
+<doc f='tvm/include/tvm/tir/expr.h' l='662'>/*!
+ * \brief Load value from the result produced by the producer.
+ *
+ * \note This node only appears in high-level DSLs that are built on top of the TIR.
+ *       It should not appear in a valid TIR PrimFunc. A high-level DSL needs to lower
+ *       this node before TIR transformations.
+ *
+ * \sa ProducerLoad, DataProducerNode
+ */</doc>
+<mbr r='tvm::tir::ProducerLoadNode::producer' o='256' t='tvm::tir::DataProducer'/>
+<mbr r='tvm::tir::ProducerLoadNode::indices' o='320' t='Array&lt;tvm::PrimExpr&gt;'/>
+<fun r='_ZN3tvm3tir16ProducerLoadNode10VisitAttrsEPNS_11AttrVisitorE'/>
+<fun r='_ZNK3tvm3tir16ProducerLoadNode12SEqualReduceEPKS1_NS_13SEqualReducerE'/>
+<fun r='_ZNK3tvm3tir16ProducerLoadNode11SHashReduceENS_12SHashReducerE'/>
+<smbr r='tvm::tir::ProducerLoadNode::_type_key' t='const char *const'/>
+<smbr r='tvm::tir::ProducerLoadNode::_type_final' t='const bool'/>
+<smbr r='tvm::tir::ProducerLoadNode::_type_child_slots' t='const int'/>
+<fun r='_ZN3tvm3tir16ProducerLoadNode16RuntimeTypeIndexEv'/>
+<fun r='_ZN3tvm3tir16ProducerLoadNode27_GetOrAllocRuntimeTypeIndexEv'/>
+<use f='tvm/include/tvm/tir/expr_functor.h' l='122' c='_ZN3tvm3tir11ExprFunctorIFT_RKNS_8PrimExprEDpT0_EE10VisitExpr_EPKNS0_16ProducerLoadNodeES7_'/>
+<use f='tvm/include/tvm/tir/expr_functor.h' l='168' c='_ZN3tvm3tir11ExprFunctorIFT_RKNS_8PrimExprEDpT0_EE10InitVTableEv'/>
+<use f='tvm/include/tvm/tir/expr_functor.h' l='168' c='_ZN3tvm3tir11ExprFunctorIFT_RKNS_8PrimExprEDpT0_EE10InitVTableEv'/>
+<use f='tvm/include/tvm/tir/expr_functor.h' l='220' c='_ZN3tvm3tir11ExprVisitor10VisitExpr_EPKNS0_16ProducerLoadNodeE'/>
+<use f='tvm/include/tvm/tir/expr_functor.h' l='267' c='_ZN3tvm3tir11ExprMutator10VisitExpr_EPKNS0_16ProducerLoadNodeE'/>
+<size>48</size>
+<use f='tvm/src/auto_scheduler/compute_dag.cc' l='141' c='_ZN3tvm14auto_scheduler19ReadAccessExtractor10VisitExpr_EPKNS_3tir16ProducerLoadNodeE'/>
+<use f='tvm/src/auto_scheduler/compute_dag.cc' l='604' c='_ZN3tvm14auto_scheduler13FlopEstimator10VisitExpr_EPKNS_3tir16ProducerLoadNodeE'/>
+<use f='tvm/src/auto_scheduler/compute_dag.cc' l='743' c='_ZN3tvm14auto_scheduler13IndexRewriter10VisitExpr_EPKNS_3tir16ProducerLoadNodeE'/>
+<size>48</size>
+<use f='tvm/src/contrib/hybrid/codegen_hybrid.h' l='95' c='_ZN3tvm7contrib13CodeGenHybrid10VisitExpr_EPKNS_3tir16ProducerLoadNodeERSo'/>
+<use f='tvm/src/contrib/hybrid/codegen_hybrid.cc' l='209' c='_ZN3tvm7contrib13CodeGenHybrid10VisitExpr_EPKNS_3tir16ProducerLoadNodeERSo'/>
+<size>48</size>
+<use f='tvm/src/printer/text_printer.h' l='336' c='_ZN3tvm3tir14TIRTextPrinter10VisitExpr_EPKNS0_16ProducerLoadNodeE'/>
+<size>48</size>
+<use f='tvm/src/printer/tir_text_printer.cc' l='383' c='_ZN3tvm3tir14TIRTextPrinter10VisitExpr_EPKNS0_16ProducerLoadNodeE'/>
+<size>48</size>
+<use f='tvm/src/printer/tvmscript_printer.cc' l='229' c='_ZN3tvm3tir16TVMScriptPrinter10VisitExpr_EPKNS0_16ProducerLoadNodeEPNS0_14ExprPrecedenceE'/>
+<use f='tvm/src/printer/tvmscript_printer.cc' l='832' c='_ZN3tvm3tir16TVMScriptPrinter10VisitExpr_EPKNS0_16ProducerLoadNodeEPNS0_14ExprPrecedenceE'/>
+<size>48</size>
+<use f='tvm/src/te/autodiff/ad_simplify.cc' l='265' c='_ZN3tvm2te23NonzeroConditionFunctor10VisitExpr_EPKNS_3tir16ProducerLoadNodeE'/>
+<use f='tvm/src/te/autodiff/ad_simplify.cc' l='1031' c='_ZN3tvm2te18TrySimplifyComputeERKNS_8PrimExprES3_RKNS_7runtime5ArrayINS_3tir3VarEvEERKNS4_3MapIS7_NS_5RangeEvvEE'/>
+<size>48</size>
+<use f='tvm/src/te/autodiff/ad_utils.cc' l='136' c='_ZN3tvm2te27InlineImmediateTensorAccessERKNS_8PrimExprE'/>
+<use f='tvm/src/te/autodiff/ad_utils.cc' l='136' c='_ZN3tvm2te27InlineImmediateTensorAccessERKNS_8PrimExprE'/>
+<use f='tvm/src/te/autodiff/ad_utils.cc' l='165' c='_ZN3tvm2te20InlineTensorsMutator10VisitExpr_EPKNS_3tir16ProducerLoadNodeE'/>
+<size>48</size>
+<use f='tvm/src/te/autodiff/jacobian.cc' l='81' c='_ZN3tvm2te15JacobianMutator10VisitExpr_EPKNS_3tir16ProducerLoadNodeE'/>
+<size>48</size>
+<use f='tvm/src/te/operation/compute_op.cc' l='159' c='_ZNK3tvm2te13ComputeOpNode12InputTensorsEv'/>
+<use f='tvm/src/te/operation/compute_op.cc' l='207' c='_ZNK3tvm2te13ComputeOpNode17PropBoundToInputsERKNS0_9OperationEPNS_5arith8AnalyzerERKSt13unordered_mapIPKNS_3tir7VarNodeENS5_6IntSetESt4hashISC_ESt8eq10941970'/>
+<size>48</size>
+<use f='tvm/src/te/operation/create_primfunc.cc' l='40' c='_ZN3tvm3tir27ProducerToBufferTransformer10VisitExpr_EPKNS0_16ProducerLoadNodeE'/>
+<size>48</size>
+<use f='tvm/src/te/operation/hybrid_op.cc' l='91' c='_ZNK3tvm2te12HybridOpNode12InputTensorsEv'/>
+<size>48</size>
+<use f='tvm/src/te/operation/op_utils.cc' l='224' c='_ZN3tvm2te14TensorReplacer10VisitExpr_EPKNS_3tir16ProducerLoadNodeE'/>
+<use f='tvm/src/te/operation/op_utils.cc' l='226' c='_ZN3tvm2te14TensorReplacer10VisitExpr_EPKNS_3tir16ProducerLoadNodeE'/>
+<size>48</size>
+<use f='tvm/src/te/operation/tensorize.cc' l='159' c='_ZN3tvm2te19TensorIntrinMatcher10VisitExpr_EPKNS_3tir16ProducerLoadNodeE'/>
+<use f='tvm/src/te/operation/tensorize.cc' l='161' c='_ZN3tvm2te19TensorIntrinMatcher10VisitExpr_EPKNS_3tir16ProducerLoadNodeE'/>
+<size>48</size>
+<use f='tvm/src/te/schedule/auto_inline_elem_wise.cc' l='42' c='_ZN3tvm2te16ElemWiseDetector10VisitExpr_EPKNS_3tir16ProducerLoadNodeE'/>
+<size>48</size>
+<use f='tvm/src/te/schedule/graph.cc' l='241' c='_ZN3tvm2te13GetReachGraphERKNS_7runtime5ArrayINS0_9OperationEvEE'/>
+<use f='tvm/src/te/schedule/graph.cc' l='329' c='_ZN3tvm2te20ScanFixPointAnalysisERKNS0_9OperationE'/>
+<size>48</size>
+<use f='tvm/src/te/schedule/operation_inline.cc' l='45' c='_ZN3tvm2te16OperationInliner10VisitExpr_EPKNS_3tir16ProducerLoadNodeE'/>
+<use f='tvm/src/te/schedule/operation_inline.cc' l='47' c='_ZN3tvm2te16OperationInliner10VisitExpr_EPKNS_3tir16ProducerLoadNodeE'/>
+<size>48</size>
+<use f='tvm/src/te/schedule/schedule_dataflow_rewrite.cc' l='929' c='_ZN3tvm2te8Schedule7rfactorERKNS0_6TensorERKNS_3tir7IterVarEi'/>
+<size>48</size>
+<use f='tvm/src/te/schedule/schedule_ops.cc' l='285' c='_ZN3tvm2te16SchedulePostProc10VisitExpr_EPKNS_3tir16ProducerLoadNodeE'/>
+<use f='tvm/src/te/schedule/schedule_ops.cc' l='287' c='_ZN3tvm2te16SchedulePostProc10VisitExpr_EPKNS_3tir16ProducerLoadNodeE'/>
+<size>48</size>
+<use f='tvm/src/te/schedule/schedule_postproc_to_primfunc.cc' l='127' c='_ZN3tvm2te20TensorToBufferMapper10VisitExpr_EPKNS_3tir16ProducerLoadNodeE'/>
+<use f='tvm/src/te/schedule/schedule_postproc_to_primfunc.cc' l='129' c='_ZN3tvm2te20TensorToBufferMapper10VisitExpr_EPKNS_3tir16ProducerLoadNodeE'/>
+<size>48</size>
+<use f='tvm/src/tir/ir/expr.cc' l='1021' c='_ZN3tvm3tir6ReduceC1ENS0_11CommReducerENS_7runtime5ArrayINS_8PrimExprEvEENS4_INS0_7IterVarEvEES5_iS6_NS_4SpanE'/>
+<use f='tvm/src/tir/ir/expr.cc' l='1121' c='_ZN3tvm3tir12ProducerLoadC1ENS0_12DataProducerENS_7runtime5ArrayINS_8PrimExprEvEENS_4SpanE'/>
+<use f='tvm/src/tir/ir/expr.cc' l='1121' c='_ZN3tvm3tir12ProducerLoadC1ENS0_12DataProducerENS_7runtime5ArrayINS_8PrimExprEvEENS_4SpanE'/>
+<use f='tvm/src/tir/ir/expr.cc' l='1134'/>
+<use f='tvm/src/tir/ir/expr.cc' l='1134'/>
+<use f='tvm/src/tir/ir/expr.cc' l='1134'/>
+<use f='tvm/src/tir/ir/expr.cc' l='1137'/>
+<use f='tvm/src/tir/ir/expr.cc' l='1138'/>
+<size>48</size>
+<use f='tvm/src/tir/ir/expr_functor.cc' l='45' c='_ZN3tvm3tir11ExprVisitor10VisitExpr_EPKNS0_16ProducerLoadNodeE'/>
+<use f='tvm/src/tir/ir/expr_functor.cc' l='143' c='_ZN3tvm3tir11ExprMutator10VisitExpr_EPKNS0_16ProducerLoadNodeE'/>
+<size>48</size>
+<use f='tvm/src/tir/transforms/storage_flatten.cc' l='1612' c='_ZN3tvm3tir16StorageFlattener10VisitExpr_EPKNS0_16ProducerLoadNodeE'/>
+<size>48</size>

@@ -1,0 +1,20 @@
+<def f='tvm/include/tvm/topi/nn/pooling.h' l='507' ll='658' type='tvm::te::Tensor tvm::topi::nn::pool_impl_nd(const tvm::te::Tensor &amp; x, const Array&lt;tvm::PrimExpr&gt; &amp; kernel_size, const Array&lt;tvm::PrimExpr&gt; &amp; stride_size, const Array&lt;tvm::PrimExpr&gt; &amp; dilation_size, const Array&lt;tvm::PrimExpr&gt; &amp; padding_size, tvm::topi::nn::PoolType pool_type, bool ceil_mode, const std::vector&lt;int&gt; &amp; axis, bool count_include_pad)'/>
+<use f='tvm/include/tvm/topi/nn/pooling.h' l='697' u='c' c='_ZN3tvm4topi2nn6pool1dERKNS_2te6TensorERKNS_7runtime5ArrayINS_8PrimExprEvEESB_SB_SB_NS1_8PoolTypeEbRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEb'/>
+<use f='tvm/include/tvm/topi/nn/pooling.h' l='738' u='c' c='_ZN3tvm4topi2nn6pool2dERKNS_2te6TensorERKNS_7runtime5ArrayINS_8PrimExprEvEESB_SB_SB_NS1_8PoolTypeEbRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEb'/>
+<use f='tvm/include/tvm/topi/nn/pooling.h' l='781' u='c' c='_ZN3tvm4topi2nn6pool3dERKNS_2te6TensorERKNS_7runtime5ArrayINS_8PrimExprEvEESB_SB_SB_NS1_8PoolTypeEbRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEb'/>
+<doc f='tvm/include/tvm/topi/nn/pooling.h' l='491'>/*!
+ * \brief Perform pooling on N-dimension of data.
+ *
+ * \param x The input tensor
+ * \param kernel_size Vector of N ints
+ * \param stride_size Vector of N ints
+ * \param dilation_size Vector of N ints
+ * \param padding_size Vector of N*2 ints [head_pad_d1, head_pad_d2, ...,
+ *        head_pad_dN, tail_pad_d1, tail_pad_d2, ..., tail_pad_dN]
+ * \param pool_type The type of pooling operator
+ * \param ceil_mode Whether to use ceil when calculating the output size
+ * \param axis Vector of indices for the N dimensions
+ * \param count_include_pad Whether include padding in the calculation
+ *
+ * \return The output tensor in same layout order
+ */</doc>

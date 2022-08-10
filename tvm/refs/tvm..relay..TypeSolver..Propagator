@@ -1,0 +1,17 @@
+<inh f='tvm/include/tvm/ir/type_functor.h' l='50' c='tvm::TypeFunctor'/>
+<def f='tvm/src/relay/analysis/type_solver.cc' l='391' ll='452'/>
+<use f='tvm/src/relay/analysis/type_solver.cc' l='471' c='_ZN3tvm5relay10TypeSolver6Merger5MergeEPNS1_8TypeNodeES4_'/>
+<use f='tvm/src/relay/analysis/type_solver.cc' l='576' c='_ZN3tvm5relay10TypeSolver13AddConstraintERKNS_14TypeConstraintERKNS_4SpanE'/>
+<size>24</size>
+<doc f='tvm/src/relay/analysis/type_solver.cc' l='388'>// It ends up being more compact to simply have TypeFunctor&lt;void(const Type&amp;) than
+// a TypeVisitor because we can use the default case to dispense with
+// most of the overrides.</doc>
+<fun r='_ZN3tvm5relay10TypeSolver10PropagatorC1EPS1_PKSt13unordered_setIPNS1_12RelationNodeESt4hashIS6_ESt8equal_toIS6_ESaIS6_EE'/>
+<fun r='_ZN3tvm5relay10TypeSolver10Propagator9PropagateERKNS_4TypeE'/>
+<fun r='_ZN3tvm5relay10TypeSolver10Propagator12UpdateRelSetERKNS_4TypeE'/>
+<fun r='_ZN3tvm5relay10TypeSolver10Propagator17VisitTypeDefault_EPKNS_7runtime6ObjectE'/>
+<fun r='_ZN3tvm5relay10TypeSolver10Propagator10VisitType_EPKNS_13TupleTypeNodeE'/>
+<fun r='_ZN3tvm5relay10TypeSolver10Propagator10VisitType_EPKNS_12FuncTypeNodeE'/>
+<fun r='_ZN3tvm5relay10TypeSolver10Propagator10VisitType_EPKNS_12TypeCallNodeE'/>
+<mbr r='tvm::relay::TypeSolver::Propagator::solver_' o='64' t='tvm::relay::TypeSolver *'/>
+<mbr r='tvm::relay::TypeSolver::Propagator::rels_' o='128' t='const std::unordered_set&lt;RelationNode *&gt; *'/>

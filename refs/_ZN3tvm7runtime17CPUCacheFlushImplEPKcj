@@ -1,9 +1,0 @@
-<def f='tvm/runtime/rpc/rpc_module.cc' l='326' ll='355' type='void tvm::runtime::CPUCacheFlushImpl(const char * addr, unsigned int len)'/>
-<use f='tvm/runtime/rpc/rpc_module.cc' l='359' u='c' c='_ZN3tvm7runtime13CPUCacheFlushEiRKNS0_7TVMArgsE'/>
-<doc f='tvm/runtime/rpc/rpc_module.cc' l='319'>/*
- * When we are in the tuning of TVM, we will make TVM occupy
- * the cache fully and doesn&apos;t flush it during iteration.
- * This has problems then in e2e testing, since arrays that
- * we assume exist in cache (ie. weights) are evicted during e2e runs,
- * which leads to lower performance.
- */</doc>

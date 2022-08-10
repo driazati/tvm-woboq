@@ -1,0 +1,16 @@
+<dec f='tvm/include/tvm/tir/schedule/schedule.h' l='402' type='tvm::tir::BlockRV tvm::tir::ScheduleNode::CacheWrite(const tvm::tir::BlockRV &amp; block_rv, int write_buffer_index, const tvm::runtime::String &amp; storage_scope)'/>
+<doc f='tvm/include/tvm/tir/schedule/schedule.h' l='393'>/*!
+   * \brief Create a block that writes a buffer region into a write cache. It requires:
+   * 1) There is only one block who writes the target buffer.
+   * 2) The scope block have stage-pipeline property.
+   * \param block_rv The producer of the buffer
+   * \param write_buffer_index The index of the buffer in block&apos;s write region
+   * \param storage_scope The target storage scope
+   * \return The cache stage block.
+   */</doc>
+<use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling.cc' l='150' u='c' c='_ZNK3tvm13meta_schedule20MultiLevelTilingNode13AddWriteReuseENS0_5StateE'/>
+<use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling_tensor_core.cc' l='240' u='c' c='_ZNK3tvm13meta_schedule30MultiLevelTilingTensorCoreNode23AddWriteReuseTensorCoreENS0_15TensorCoreStateE'/>
+<use f='tvm/src/meta_schedule/schedule_rule/winograd.cc' l='208' u='c'/>
+<ovr f='tvm/src/tir/schedule/concrete_schedule.cc' l='547' c='_ZN3tvm3tir20ConcreteScheduleNode10CacheWriteERKNS0_7BlockRVEiRKNS_7runtime6StringE'/>
+<use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='1207' u='c' c='_ZN3tvm3tir16CacheWriteTraits23UnpackedApplyToScheduleENS0_8ScheduleENS0_7BlockRVENS_7IntegerENS_7runtime6StringE'/>
+<use f='tvm/src/tir/schedule/schedule.cc' l='181' u='a'/>

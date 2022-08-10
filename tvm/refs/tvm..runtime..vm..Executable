@@ -1,0 +1,107 @@
+<inh f='tvm/include/tvm/runtime/module.h' l='113' c='tvm::runtime::ModuleNode'/>
+<def f='tvm/include/tvm/runtime/vm/executable.h' l='57' ll='356'/>
+<use f='tvm/include/tvm/runtime/vm/vm.h' l='179' c='_ZN3tvm7runtime2vm14VirtualMachine14LoadExecutableERKNS0_9ObjectPtrINS1_10ExecutableEEE'/>
+<use f='tvm/include/tvm/runtime/vm/vm.h' l='356'/>
+<use f='tvm/src/runtime/vm/profiler/vm.h' l='47' c='_ZN3tvm7runtime2vm19VirtualMachineDebug14LoadExecutableERKNS0_9ObjectPtrINS1_10ExecutableEEE'/>
+<use f='tvm/src/relay/backend/vm/compiler.h' l='166'/>
+<use f='tvm/src/relay/backend/vm/compiler.cc' l='900' c='_ZN3tvm5relay2vm10VMCompiler5SetupERKNS_7runtime5ArrayINS_6TargetEvEE'/>
+<size>464</size>
+<doc f='tvm/include/tvm/runtime/vm/executable.h' l='45'>/*!
+ * \brief The executable emitted by the VM compiler.
+ *
+ * The executable contains information (e.g. data in different memory regions)
+ * to run in a virtual machine.
+ *
+ *  - Global section, containing all globals.
+ *  - Constant section, storing the constant pool.
+ *  - Primitive name section, containing the function name of the primitive ops
+ *  used by the virtual machine.
+ *  - Code section, handling the VM functions and bytecode.
+ */</doc>
+<fun r='_ZN3tvm7runtime2vm10Executable11GetFunctionERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKNS0_9ObjectPtrINS0_6ObjectEEE'/>
+<fun r='_ZN3tvm7runtime2vm10Executable12SaveToBinaryEPN4dmlc6StreamE'/>
+<fun r='_ZN3tvm7runtime2vm10Executable10SaveToFileERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESA_'/>
+<fun r='_ZN3tvm7runtime2vm10Executable4SaveEv'/>
+<fun r='_ZN3tvm7runtime2vm10Executable4LoadERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS0_6ModuleE'/>
+<fun r='_ZN3tvm7runtime2vm10Executable30MoveLateBoundConstantsToStreamEPN4dmlc6StreamEm'/>
+<fun r='_ZN3tvm7runtime2vm10Executable28MoveLateBoundConstantsToFileERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEm'/>
+<fun r='_ZN3tvm7runtime2vm10Executable32LoadLateBoundConstantsFromStreamEPN4dmlc6StreamE'/>
+<fun r='_ZN3tvm7runtime2vm10Executable30LoadLateBoundConstantsFromFileERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<fun r='_ZNK3tvm7runtime2vm10Executable11GetBytecodeB5cxx11Ev'/>
+<fun r='_ZNK3tvm7runtime2vm10Executable12GetConstantsB5cxx11Ev'/>
+<fun r='_ZNK3tvm7runtime2vm10Executable17GetVirtualDevicesB5cxx11Ev'/>
+<fun r='_ZNK3tvm7runtime2vm10Executable13GetPrimitivesB5cxx11Ev'/>
+<fun r='_ZNK3tvm7runtime2vm10Executable5StatsB5cxx11Ev'/>
+<fun r='_ZNK3tvm7runtime2vm10Executable6GetLibEv'/>
+<fun r='_ZN3tvm7runtime2vm10Executable6SetLibERKNS0_6ModuleE'/>
+<fun r='_ZNK3tvm7runtime2vm10Executable21GetVMFunctionWithNameERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<fun r='_ZNK3tvm7runtime2vm10Executable16GetFunctionArityENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<fun r='_ZNK3tvm7runtime2vm10Executable24GetFunctionParameterNameENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEj'/>
+<fun r='_ZN3tvm7runtime2vm10ExecutableD1Ev'/>
+<fun r='_ZNK3tvm7runtime2vm10Executable8type_keyEv'/>
+<mbr r='tvm::runtime::vm::Executable::virtual_devices' o='1152' t='std::vector&lt;Device&gt;'/>
+<mbr r='tvm::runtime::vm::Executable::host_device_index' o='1344' t='int'/>
+<mbr r='tvm::runtime::vm::Executable::constants' o='1408' t='std::vector&lt;ObjectRef&gt;'/>
+<mbr r='tvm::runtime::vm::Executable::late_bound_constant_names' o='1600' t='std::vector&lt;String&gt;'/>
+<mbr r='tvm::runtime::vm::Executable::global_map' o='1792' t='std::unordered_map&lt;std::string, Index&gt;'/>
+<mbr r='tvm::runtime::vm::Executable::primitive_map' o='2240' t='std::unordered_map&lt;std::string, Index&gt;'/>
+<mbr r='tvm::runtime::vm::Executable::op_attrs' o='2688' t='std::map&lt;Index, Map&lt;String, ObjectRef&gt;&gt;'/>
+<mbr r='tvm::runtime::vm::Executable::functions' o='3072' t='std::vector&lt;VMFunction&gt;'/>
+<mbr r='tvm::runtime::vm::Executable::const_device_indexes' o='3264' t='std::vector&lt;Index&gt;'/>
+<fun r='_ZN3tvm7runtime2vm10Executable25SaveVirtualDevicesSectionEPN4dmlc6StreamE'/>
+<fun r='_ZN3tvm7runtime2vm10Executable17SaveGlobalSectionEPN4dmlc6StreamE'/>
+<fun r='_ZN3tvm7runtime2vm10Executable19SaveConstantSectionEPN4dmlc6StreamE'/>
+<fun r='_ZN3tvm7runtime2vm10Executable19LoadConstantSectionEPN4dmlc6StreamE'/>
+<fun r='_ZN3tvm7runtime2vm10Executable20SavePrimitiveOpNamesEPN4dmlc6StreamE'/>
+<fun r='_ZN3tvm7runtime2vm10Executable15SaveCodeSectionEPN4dmlc6StreamE'/>
+<fun r='_ZN3tvm7runtime2vm10Executable25LoadVirtualDevicesSectionEPN4dmlc6StreamE'/>
+<fun r='_ZN3tvm7runtime2vm10Executable17LoadGlobalSectionEPN4dmlc6StreamE'/>
+<fun r='_ZN3tvm7runtime2vm10Executable20LoadPrimitiveOpNamesEPN4dmlc6StreamE'/>
+<fun r='_ZN3tvm7runtime2vm10Executable15LoadCodeSectionEPN4dmlc6StreamE'/>
+<mbr r='tvm::runtime::vm::Executable::code_' o='3456' t='std::string'/>
+<use f='tvm/src/runtime/vm/executable.cc' l='90' c='_ZN3tvm7runtime2vm10Executable11GetFunctionERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKNS0_9ObjectPtrINS0_6ObjectEEE'/>
+<use f='tvm/src/runtime/vm/executable.cc' l='730' c='_ZN3tvm7runtime2vm10Executable4LoadERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS0_6ModuleE'/>
+<use f='tvm/src/runtime/vm/executable.cc' l='1069'/>
+<use f='tvm/src/runtime/vm/executable.cc' l='1076'/>
+<use f='tvm/src/runtime/vm/executable.cc' l='1091'/>
+<use f='tvm/src/runtime/vm/executable.cc' l='1098'/>
+<size>464</size>
+<fun r='_ZN3tvm7runtime2vm10Executable11GetFunctionERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKNS0_9ObjectPtrINS0_6ObjectEEE'/>
+<fun r='_ZNK3tvm7runtime2vm10Executable21GetVMFunctionWithNameERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<fun r='_ZNK3tvm7runtime2vm10Executable16GetFunctionArityENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<fun r='_ZNK3tvm7runtime2vm10Executable24GetFunctionParameterNameENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEj'/>
+<fun r='_ZNK3tvm7runtime2vm10Executable11GetBytecodeB5cxx11Ev'/>
+<fun r='_ZNK3tvm7runtime2vm10Executable12GetConstantsB5cxx11Ev'/>
+<fun r='_ZNK3tvm7runtime2vm10Executable17GetVirtualDevicesB5cxx11Ev'/>
+<fun r='_ZNK3tvm7runtime2vm10Executable13GetPrimitivesB5cxx11Ev'/>
+<fun r='_ZNK3tvm7runtime2vm10Executable5StatsB5cxx11Ev'/>
+<fun r='_ZN3tvm7runtime2vm10Executable4SaveEv'/>
+<fun r='_ZN3tvm7runtime2vm10Executable25SaveVirtualDevicesSectionEPN4dmlc6StreamE'/>
+<fun r='_ZN3tvm7runtime2vm10Executable30MoveLateBoundConstantsToStreamEPN4dmlc6StreamEm'/>
+<fun r='_ZN3tvm7runtime2vm10Executable28MoveLateBoundConstantsToFileERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEm'/>
+<fun r='_ZN3tvm7runtime2vm10Executable32LoadLateBoundConstantsFromStreamEPN4dmlc6StreamE'/>
+<fun r='_ZN3tvm7runtime2vm10Executable30LoadLateBoundConstantsFromFileERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<fun r='_ZN3tvm7runtime2vm10Executable17SaveGlobalSectionEPN4dmlc6StreamE'/>
+<fun r='_ZN3tvm7runtime2vm10Executable19SaveConstantSectionEPN4dmlc6StreamE'/>
+<fun r='_ZN3tvm7runtime2vm10Executable19LoadConstantSectionEPN4dmlc6StreamE'/>
+<fun r='_ZN3tvm7runtime2vm10Executable20SavePrimitiveOpNamesEPN4dmlc6StreamE'/>
+<fun r='_ZN3tvm7runtime2vm10Executable15SaveCodeSectionEPN4dmlc6StreamE'/>
+<fun r='_ZNK3tvm7runtime2vm10Executable6GetLibEv'/>
+<fun r='_ZN3tvm7runtime2vm10Executable6SetLibERKNS0_6ModuleE'/>
+<fun r='_ZN3tvm7runtime2vm10Executable4LoadERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS0_6ModuleE'/>
+<fun r='_ZN3tvm7runtime2vm10Executable25LoadVirtualDevicesSectionEPN4dmlc6StreamE'/>
+<fun r='_ZN3tvm7runtime2vm10Executable17LoadGlobalSectionEPN4dmlc6StreamE'/>
+<fun r='_ZN3tvm7runtime2vm10Executable20LoadPrimitiveOpNamesEPN4dmlc6StreamE'/>
+<fun r='_ZN3tvm7runtime2vm10Executable15LoadCodeSectionEPN4dmlc6StreamE'/>
+<fun r='_ZN3tvm7runtime2vm10Executable12SaveToBinaryEPN4dmlc6StreamE'/>
+<fun r='_ZN3tvm7runtime2vm10Executable10SaveToFileERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESA_'/>
+<use f='tvm/src/runtime/vm/profiler/vm.cc' l='93' c='_ZN3tvm7runtime2vm19VirtualMachineDebug14LoadExecutableERKNS0_9ObjectPtrINS1_10ExecutableEEE'/>
+<use f='tvm/src/runtime/vm/profiler/vm.cc' l='204' c='_ZN3tvm7runtime2vm25CreateVirtualMachineDebugEPNS1_10ExecutableE'/>
+<use f='tvm/src/runtime/vm/profiler/vm.cc' l='206' c='_ZN3tvm7runtime2vm25CreateVirtualMachineDebugEPNS1_10ExecutableE'/>
+<use f='tvm/src/runtime/vm/profiler/vm.cc' l='212'/>
+<size>464</size>
+<use f='tvm/src/runtime/vm/vm.cc' l='428' c='_ZN3tvm7runtime2vm14VirtualMachine14LoadExecutableERKNS0_9ObjectPtrINS1_10ExecutableEEE'/>
+<use f='tvm/src/runtime/vm/vm.cc' l='828' c='_ZN3tvm7runtime2vm20CreateVirtualMachineEPNS1_10ExecutableE'/>
+<use f='tvm/src/runtime/vm/vm.cc' l='830' c='_ZN3tvm7runtime2vm20CreateVirtualMachineEPNS1_10ExecutableE'/>
+<use f='tvm/src/runtime/vm/vm.cc' l='836'/>
+<size>464</size>

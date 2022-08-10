@@ -1,0 +1,28 @@
+<inh f='tvm/include/tvm/tir/stmt_functor.h' l='315' c='tvm::tir::StmtExprMutator'/>
+<def f='tvm/src/tir/schedule/transform.h' l='105' ll='144'/>
+<size>88</size>
+<doc f='tvm/src/tir/schedule/transform.h' l='97'>/*!
+ * \brief A helper mutator which recursively replaces the old buffer with the new buffer and
+ * collects the block sref reuse information for the following replacement.
+ *
+ * If the buffer to be replaced in used as the source in `match_buffers`, depending the specific
+ * use cases, the target buffers in `match_buffers` may also need to be mutated. In this
+ * case, this class should be subclassed to explicitly handle `match_buffers`.
+ */</doc>
+<fun r='_ZN3tvm3tir20ReplaceBufferMutatorC1ERKNS0_6BufferES2_PNS_7runtime3MapINS0_5BlockES7_vvEE'/>
+<fun r='_ZN3tvm3tir20ReplaceBufferMutator10VisitExpr_EPKNS0_7VarNodeE'/>
+<fun r='_ZN3tvm3tir20ReplaceBufferMutator17VisitBufferAccessET_'/>
+<fun r='_ZN3tvm3tir20ReplaceBufferMutator10VisitStmt_EPKNS0_15BufferStoreNodeE'/>
+<fun r='_ZN3tvm3tir20ReplaceBufferMutator10VisitExpr_EPKNS0_14BufferLoadNodeE'/>
+<fun r='_ZN3tvm3tir20ReplaceBufferMutator22VisitMatchBufferRegionERKNS0_17MatchBufferRegionE'/>
+<fun r='_ZN3tvm3tir20ReplaceBufferMutator10VisitStmt_EPKNS0_9BlockNodeE'/>
+<mbr r='tvm::tir::ReplaceBufferMutator::buffer_var_map_' o='192' t='std::unordered_map&lt;const VarNode *, Buffer&gt;'/>
+<mbr r='tvm::tir::ReplaceBufferMutator::block_sref_reuse_' o='640' t='Map&lt;tvm::tir::Block, tvm::tir::Block&gt; *'/>
+<ovr f='tvm/src/tir/schedule/primitive/block_annotate.cc' l='204' c='tvm::tir::StorageScopeMutator'/>
+<use f='tvm/src/tir/schedule/primitive/block_annotate.cc' l='204'/>
+<use f='tvm/src/tir/schedule/primitive/block_annotate.cc' l='224' c='_ZN3tvm3tir19StorageScopeMutatorC1ERKNS0_6BufferES2_NS_7runtime6StringEPNS5_3MapINS0_5BlockES8_vvEE'/>
+<size>88</size>
+<ovr f='tvm/src/tir/schedule/primitive/layout_transformation.cc' l='458' c='tvm::tir::BufferAxisSeparatorMutator'/>
+<use f='tvm/src/tir/schedule/primitive/layout_transformation.cc' l='458'/>
+<use f='tvm/src/tir/schedule/primitive/layout_transformation.cc' l='469' c='_ZN3tvm3tir26BufferAxisSeparatorMutatorC1ERKNS0_6BufferES2_PNS_7runtime3MapINS0_5BlockES7_vvEE'/>
+<size>88</size>

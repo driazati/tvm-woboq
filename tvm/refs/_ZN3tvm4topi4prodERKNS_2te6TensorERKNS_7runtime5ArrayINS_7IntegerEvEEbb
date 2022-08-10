@@ -1,0 +1,16 @@
+<def f='tvm/include/tvm/topi/reduction.h' l='568' ll='571' type='tvm::te::Tensor tvm::topi::prod(const tvm::te::Tensor &amp; data, const Array&lt;tvm::Integer&gt; &amp; axis, bool keepdims = false, bool atleast1d = false)'/>
+<doc f='tvm/include/tvm/topi/reduction.h' l='555'>/*!
+ * \brief Creates product operation over given axis.
+ *
+ * \param data The input tensor
+ * \param axis The axis to do product over. If axis is empty, the
+ * operation will do the product over all elements of the array.
+ * \param keepdims If this is set to true, the axes which are reduced are
+ * left in the result as dimensions with size one. This enables the result
+ * to broadcast correctly against the input array.
+ * \param atleast1d Whether the output need to be atleast1d.
+ *
+ * \return A Tensor whose op member is the prod operation
+ */</doc>
+<use f='tvm/src/relay/op/tensor/reduce.cc' l='577' u='r' c='_ZN3tvm5relay11ProdComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
+<use f='tvm/src/topi/reduction.cc' l='56' u='c'/>

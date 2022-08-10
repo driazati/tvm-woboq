@@ -1,0 +1,53 @@
+<def f='tvm/include/tvm/topi/nn.h' l='155' ll='246' type='tvm::te::Tensor tvm::topi::pad(const tvm::te::Tensor &amp; t, const tvm::Array&lt;tvm::PrimExpr&gt; &amp; pad_before, tvm::Array&lt;tvm::PrimExpr&gt; pad_after = tvm::Array&lt;tvm::PrimExpr&gt;(), tvm::PrimExpr pad_value = tvm::PrimExpr(), std::string name = &quot;T_pad&quot;, std::string tag = kElementWise, std::string pad_mode = &quot;constant&quot;, const Array&lt;tvm::PrimExpr&gt; * dyn_output_shape = nullptr)'/>
+<use f='tvm/include/tvm/topi/nn.h' l='286' u='c' c='_ZN3tvm4topi11conv2d_nchwERKNS_2te6TensorES4_iiiiNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESA_'/>
+<use f='tvm/include/tvm/topi/nn.h' l='329' u='c' c='_ZN3tvm4topi11conv2d_hwcnERKNS_2te6TensorES4_iiiiNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESA_'/>
+<use f='tvm/include/tvm/topi/nn.h' l='376' u='c' c='_ZN3tvm4topi21depthwise_conv2d_nchwERKNS_2te6TensorES4_iiiiNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESA_'/>
+<use f='tvm/include/tvm/topi/nn.h' l='405' u='c' c='_ZN3tvm4topi21depthwise_conv2d_nhwcERKNS_2te6TensorES4_iiiiNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESA_'/>
+<use f='tvm/include/tvm/topi/nn.h' l='456' u='c' c='_ZN3tvm4topi18group_conv2d_ngchwERKNS_2te6TensorES4_iiiiNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESA_'/>
+<use f='tvm/include/tvm/topi/nn.h' l='511' u='c' c='_ZN3tvm4topi17space_to_batch_ndERKNS_2te6TensorERKNS_7runtime5ArrayINS_7IntegerEvEERKNS6_INS_8PrimExprEvEESE_SB_NSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESK_'/>
+<use f='tvm/src/relay/op/dyn/nn/pad.cc' l='94' u='c' c='_ZN3tvm5relay3dyn10PadComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
+<doc f='tvm/include/tvm/topi/nn.h' l='116'>/*!
+ * \brief Creates an operation that performs padding
+ *
+ * \param t The input tensor
+ * \param pad_before An Array of Expr describing the padding before the
+ * respective iterator
+ * \param pad_after An Array of Expr describing the padding after the
+ * respective iterator
+ * \param pad_value The value to fill padding elements with
+ * \param pad_mode Padding type to use.
+ * &quot;constant&quot; pads with constant_value;
+ * &quot;edge&quot; pads using the edge values of the input array;
+ * &quot;reflect&quot; pads by reflecting values with respect to the edges.
+ * \param dyn_output_shape Output shape of the pad op, default nullptr.
+ * You only need to pass this in if the shape was evaluated dynamically.
+ * \param name The name of the operation
+ * \param tag The tag to mark the operation
+ *
+ * \return A Tensor whose op member is the padding operation
+ *
+ * \note
+ *  The pad_after Array must either be empty or have the same length as
+ *  pad_before
+ *  When pad_after is empty, it takes the same values as pad_before (symmetric
+ *  padding)
+ *  The pad Array applies from the leading dimensions and skips missing
+ *  trailing dimensions:
+ *
+ *      pad(t(i, j, k), {1}, {0}) returns the equivalent operation for
+ *          the following pseudocode:
+ *              for i in [1, t.shape[0] + 2]:
+ *                  for i in [1, t.shape[0] + 2]:
+ *                      for i in [1, t.shape[0] + 2]:
+ *                         name(i,j,k) =
+ *                             (1 &lt;= i &lt;= t.shape[0] + 1) ?
+ *                                 t(i-1, j, k) : 0;
+ *
+ *
+ */</doc>
+<use f='tvm/src/relay/op/nn/pad.cc' l='181' u='c' c='_ZN3tvm5relay10PadComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
+<use f='tvm/include/tvm/topi/nn/pooling.h' l='123' u='c' c='_ZN3tvm4topi2nn14pool_grad_implERKNS_2te6TensorES5_RKNS_7runtime5ArrayINS_8PrimExprEvEESB_SB_NS1_8PoolTypeEbmmb'/>
+<use f='tvm/include/tvm/topi/nn/pooling.h' l='570' u='c' c='_ZN3tvm4topi2nn12pool_impl_ndERKNS_2te6TensorERKNS_7runtime5ArrayINS_8PrimExprEvEESB_SB_SB_NS1_8PoolTypeEbRKSt6vectorIiSaIiEEb'/>
+<use f='tvm/include/tvm/topi/nn/pooling.h' l='586' u='c' c='_ZN3tvm4topi2nn12pool_impl_ndERKNS_2te6TensorERKNS_7runtime5ArrayINS_8PrimExprEvEESB_SB_SB_NS1_8PoolTypeEbRKSt6vectorIiSaIiEEb'/>
+<use f='tvm/include/tvm/topi/nn/local_response_norm.h' l='64' u='c' c='_ZN3tvm4topi2nn3lrnERKNS_2te6TensorEiifffNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESB_'/>
+<use f='tvm/src/topi/nn.cc' l='57' u='c'/>

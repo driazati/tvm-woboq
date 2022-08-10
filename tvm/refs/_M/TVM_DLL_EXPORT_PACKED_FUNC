@@ -1,0 +1,20 @@
+<dec f='tvm/include/tvm/runtime/packed_func.h' l='1130'/>
+<doc f='tvm/include/tvm/runtime/packed_func.h' l='1111'>/*!
+ * \brief Export a function with the PackedFunc signature
+ *        as a PackedFunc that can be loaded by LibraryModule.
+ *
+ * \param ExportName The symbol name to be exported.
+ * \param Function The function with PackedFunc signature.
+ * \sa PackedFunc
+ *
+ * \code
+ *
+ * void AddOne_(TVMArgs args, TVMRetValue* rv) {
+ *   int value = args[0];
+ *   *rv = value + 1;
+ * }
+ * // Expose the function as &quot;AddOne&quot;
+ * TVM_DLL_EXPORT_PACKED_FUNC(AddOne, AddOne_);
+ *
+ * \endcode
+ */</doc>

@@ -1,0 +1,35 @@
+<inh f='tvm/include/tvm/runtime/object.h' l='167' c='tvm::runtime::Object'/>
+<def f='tvm/include/tvm/tir/data_layout.h' l='98' ll='117'/>
+<use f='tvm/include/tvm/tir/data_layout.h' l='147' c='_ZN3tvm3tir6LayoutptEv'/>
+<use f='tvm/include/tvm/tir/data_layout.h' l='147' c='_ZN3tvm3tir6LayoutptEv'/>
+<use f='tvm/include/tvm/tir/data_layout.h' l='289' c='_ZNK3tvm3tir6LayoutptEv'/>
+<use f='tvm/include/tvm/tir/data_layout.h' l='289' c='_ZNK3tvm3tir6LayoutptEv'/>
+<use f='tvm/include/tvm/tir/data_layout.h' l='289' c='_ZNK3tvm3tir6Layout3getEv'/>
+<use f='tvm/include/tvm/tir/data_layout.h' l='289'/>
+<size>32</size>
+<doc f='tvm/include/tvm/tir/data_layout.h' l='88'>/*!
+ * \brief Layout is to describe how data is organized within an N-dimention tensor.
+ *  It is composed of upper cases, lower cases and numbers,
+ *  where upper case indicates a primal axis and
+ *  the corresponding lower case with factor size indicates the subordinate axis.
+ *  For example, NCHW16c can describe a 5-D tensor of
+ *  [batch_size, channel, height, width, channel_block].
+ *  Here subordinate axis channel_block=16 is the factor size of the primal axis C (channel).
+ *  Layout for scalar is defined, while both its name and axes have size 0.
+ */</doc>
+<mbr r='tvm::tir::LayoutNode::name' o='128' t='tvm::runtime::String'/>
+<mbr r='tvm::tir::LayoutNode::axes' o='192' t='Array&lt;tir::IterVar&gt;'/>
+<fun r='_ZN3tvm3tir10LayoutNode10VisitAttrsEPNS_11AttrVisitorE'/>
+<smbr r='tvm::tir::LayoutNode::_type_key' t='const char *const'/>
+<smbr r='tvm::tir::LayoutNode::_type_final' t='const bool'/>
+<smbr r='tvm::tir::LayoutNode::_type_child_slots' t='const int'/>
+<fun r='_ZN3tvm3tir10LayoutNode16RuntimeTypeIndexEv'/>
+<fun r='_ZN3tvm3tir10LayoutNode27_GetOrAllocRuntimeTypeIndexEv'/>
+<use f='tvm/src/tir/ir/data_layout.cc' l='37'/>
+<use f='tvm/src/tir/ir/data_layout.cc' l='37'/>
+<use f='tvm/src/tir/ir/data_layout.cc' l='37'/>
+<use f='tvm/src/tir/ir/data_layout.cc' l='75' c='_ZN3tvm3tir6LayoutC1ERKNS_7runtime5ArrayINS0_7IterVarEvEE'/>
+<use f='tvm/src/tir/ir/data_layout.cc' l='96' c='_ZN3tvm3tir6LayoutC1ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<use f='tvm/src/tir/ir/data_layout.cc' l='201'/>
+<use f='tvm/src/tir/ir/data_layout.cc' l='202'/>
+<size>32</size>

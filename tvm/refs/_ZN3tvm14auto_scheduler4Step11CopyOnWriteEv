@@ -1,0 +1,18 @@
+<dec f='tvm/include/tvm/auto_scheduler/transform_step.h' l='199' type='tvm::auto_scheduler::StepNode * tvm::auto_scheduler::Step::CopyOnWrite()'/>
+<doc f='tvm/include/tvm/auto_scheduler/transform_step.h' l='185'>/*!
+   * \brief CopyOnWrite function for Step.
+   * This works almost the same as a normal ObjectRef.CopyOnWrite(), but can dispatch to different
+   * steps.
+   * \return A base StepNode pointer, need to cast to its real StepNode type before doing any
+   * modifications.
+   * \code
+   *
+   *  SplitStep ref;
+   *  StepNode* mutable_ref = ref.CopyOnWrite();
+   *  dynamic_cast&lt;SplitStepNode*&gt;(mutable_ref)-&gt;... = ...;
+   *
+   * \endcode
+   */</doc>
+<use f='tvm/src/auto_scheduler/compute_dag.cc' l='1000' u='c' c='_ZNK3tvm14auto_scheduler10ComputeDAG13RewriteLayoutEPNS_7runtime5ArrayINS0_4StepEvEENS0_19LayoutRewriteOptionE'/>
+<use f='tvm/src/auto_scheduler/compute_dag.cc' l='1005' u='c' c='_ZNK3tvm14auto_scheduler10ComputeDAG13RewriteLayoutEPNS_7runtime5ArrayINS0_4StepEvEENS0_19LayoutRewriteOptionE'/>
+<def f='tvm/src/auto_scheduler/transform_step.cc' l='125' ll='175' type='tvm::auto_scheduler::StepNode * tvm::auto_scheduler::Step::CopyOnWrite()'/>

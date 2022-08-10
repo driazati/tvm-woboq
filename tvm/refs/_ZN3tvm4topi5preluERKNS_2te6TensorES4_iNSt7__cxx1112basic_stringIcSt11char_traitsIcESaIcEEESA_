@@ -1,0 +1,14 @@
+<def f='tvm/include/tvm/topi/nn.h' l='100' ll='114' type='tvm::te::Tensor tvm::topi::prelu(const tvm::te::Tensor &amp; x, const tvm::te::Tensor &amp; slope, const int axis = 1, std::string name = &quot;T_prelu&quot;, std::string tag = kBroadcast)'/>
+<doc f='tvm/include/tvm/topi/nn.h' l='89'>/*!
+ * \brief Creates an operation that performs a parametric rectified linear unit
+ *
+ * \param x The input data tensor
+ * \param slope The channel-wise slope tensor
+ * \param axis The axis where the channel data needs to be applied
+ * \param name The name of the operation
+ * \param tag The tag to mark the operation
+ *
+ * \return A Tensor whose op member is the parametric relu operation
+ */</doc>
+<use f='tvm/src/relay/op/nn/nn.cc' l='405' u='c'/>
+<use f='tvm/src/topi/nn.cc' l='53' u='c'/>

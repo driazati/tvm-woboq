@@ -1,0 +1,12 @@
+<dec f='tvm/include/tvm/arith/int_set.h' l='214' type='Array&lt;tvm::arith::IntSet&gt; tvm::arith::EvalSet(const Array&lt;tvm::Range&gt; &amp; region, const Map&lt;tvm::tir::Var, tvm::arith::IntSet&gt; &amp; dom_map)'/>
+<doc f='tvm/include/tvm/arith/int_set.h' l='207'>/*!
+ * \brief Same as EvalSet, but takes Array&lt;Range&gt;
+ *
+ * \param region The range to be evaluated.
+ * \param dom_map The domain of each variable.
+ * \return An array of integer sets that can cover all the possible values.
+ */</doc>
+<def f='tvm/src/arith/int_set.cc' l='989' ll='999' type='Array&lt;tvm::arith::IntSet&gt; tvm::arith::EvalSet(const Array&lt;tvm::Range&gt; &amp; region, const Map&lt;tvm::tir::Var, tvm::arith::IntSet&gt; &amp; dom_map)'/>
+<use f='tvm/src/tir/schedule/primitive/blockize_tensorize.cc' l='399' u='c' c='_ZN3tvm3tir14EvalSetRegionsERKNS_7runtime5ArrayINS0_12BufferRegionEvEERKNS1_3MapINS0_3VarENS_5arith6IntSetEvvEE'/>
+<use f='tvm/src/tir/schedule/primitive/compute_at.cc' l='366' u='c' c='_ZN3tvm3tir18RelaxBufferRegionsERKNS_7runtime3MapINS0_3VarENS_8PrimExprEvvEERKNS1_5ArrayINS0_12BufferRegionEvEERKNS0_8StmtSRefESF_PSt13unordered_mapIP12813344'/>
+<use f='tvm/src/tir/schedule/state.cc' l='53' u='c' c='_ZN3tvm3tir23AnalyzeRegionUpperBoundERKNS0_12BufferRegionERKNS_8PrimExprERKNS0_8StmtSRefES9_PNS_5arith8AnalyzerE'/>

@@ -1,0 +1,20 @@
+<def f='tvm/include/tvm/runtime/packed_func.h' l='953' ll='959' type='void tvm::runtime::TVMRetValue::MoveToCHost(TVMValue * ret_value, int * ret_type_code)'/>
+<doc f='tvm/include/tvm/runtime/packed_func.h' l='944'>/*!
+   * \brief Move the value back to front-end via C API.
+   *  This marks the current container as null.
+   *  The managed resources are moved to the front-end.
+   *  The front end should take charge in managing them.
+   *
+   * \param ret_value The return value.
+   * \param ret_type_code The return type code.
+   */</doc>
+<use f='tvm/src/runtime/c_runtime_api.cc' l='394' u='c' c='TVMModLoadFromFile'/>
+<use f='tvm/src/runtime/c_runtime_api.cc' l='414' u='c' c='TVMModGetFunction'/>
+<use f='tvm/src/runtime/c_runtime_api.cc' l='496' u='c' c='TVMFuncCall'/>
+<use f='tvm/src/runtime/c_runtime_api.cc' l='523' u='c' c='TVMFuncCreateFromCFunc'/>
+<use f='tvm/src/runtime/c_runtime_api.cc' l='539' u='c' c='TVMFuncCreateFromCFunc'/>
+<use f='tvm/src/runtime/c_runtime_api.cc' l='595' u='c' c='TVMCbArgToReturn'/>
+<use f='tvm/src/runtime/registry.cc' l='208' u='c' c='TVMFuncGetGlobal'/>
+<use f='tvm/src/runtime/rpc/rpc_local_session.cc' l='41' u='c' c='_ZN3tvm7runtime12LocalSession11GetFunctionERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<use f='tvm/src/runtime/rpc/rpc_local_session.cc' l='62' u='c' c='_ZN3tvm7runtime12LocalSession12EncodeReturnENS0_11TVMRetValueERKSt8functionIFvNS0_7TVMArgsEEE'/>
+<use f='tvm/src/runtime/rpc/rpc_local_session.cc' l='70' u='c' c='_ZN3tvm7runtime12LocalSession12EncodeReturnENS0_11TVMRetValueERKSt8functionIFvNS0_7TVMArgsEEE'/>

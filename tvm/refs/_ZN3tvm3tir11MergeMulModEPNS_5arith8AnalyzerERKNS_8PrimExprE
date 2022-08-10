@@ -1,0 +1,9 @@
+<def f='tvm/src/tir/ir/buffer.cc' l='182' ll='247' type='tvm::PrimExpr tvm::tir::MergeMulMod(arith::Analyzer * analyzer, const tvm::PrimExpr &amp; base)'/>
+<use f='tvm/src/tir/ir/buffer.cc' l='302' u='c' c='_ZNK3tvm3tir10BufferNode10ElemOffsetENS_7runtime5ArrayINS_8PrimExprEvEE'/>
+<doc f='tvm/src/tir/ir/buffer.cc' l='175'>// Searches for this types of expr:
+//   (a1 + a2 + ... + aj + c / (k1 * k2 * ... * ki) * k1 * ... * kt-1 ) * kt * ... * ki
+//   + c % (k1 * k2 * ... * ki)
+// and simplifies to (a1 + a2 + ... + aj) * kt * ... * ki + c
+// The search will be performed repeatively until no pattern is found.
+// Return: a pair with (false, Expr()) if cannot be optimized.
+//         a pair with (true, optimized_expr) if can be optimized</doc>

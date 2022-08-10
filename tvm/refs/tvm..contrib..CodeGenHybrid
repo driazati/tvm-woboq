@@ -1,0 +1,124 @@
+<inh f='tvm/include/tvm/tir/expr_functor.h' l='87' c='tvm::tir::ExprFunctor'/>
+<inh f='tvm/include/tvm/tir/stmt_functor.h' l='57' c='tvm::tir::StmtFunctor'/>
+<def f='tvm/src/contrib/hybrid/codegen_hybrid.h' l='50' ll='173'/>
+<use f='tvm/src/contrib/hybrid/codegen_hybrid.cc' l='98' c='_ZN3tvm7contrib15PrintBinaryExprEPKT_PKcRSoPNS0_13CodeGenHybridE'/>
+<use f='tvm/src/contrib/hybrid/codegen_hybrid.cc' l='119' c='_ZN3tvm7contrib21PrintBinaryIntrinsitcEPKNS_3tir8CallNodeEPKcRSoPNS0_13CodeGenHybridE'/>
+<use f='tvm/src/contrib/hybrid/codegen_hybrid.cc' l='529'/>
+<size>560</size>
+<doc f='tvm/src/contrib/hybrid/codegen_hybrid.h' l='44'>/*!
+ * \brief A base class to generate Hybrid Script.
+ *
+ * **NOTE** CodeGenHybrid does not aim at generating Python scripts consumed by Python2/3.
+ * For runtime support, please refer the decorator in ``tvm/python/hybrid/api.py``.
+ */</doc>
+<fun r='_ZN3tvm7contrib13CodeGenHybrid8DumpStmtERKNS_3tir4StmtERKNS_7runtime5ArrayINS6_9ObjectRefEvEERKNS7_INS_2te6TensorEvEERKNSt7__cxx1112basic_stringIcSt1115587276'/>
+<fun r='_ZN3tvm7contrib13CodeGenHybrid6FinishB5cxx11Ev'/>
+<fun r='_ZN3tvm7contrib13CodeGenHybrid15ReserveKeywordsEv'/>
+<fun r='_ZN3tvm7contrib13CodeGenHybrid9PrintStmtERKNS_3tir4StmtE'/>
+<fun r='_ZN3tvm7contrib13CodeGenHybrid9PrintExprERKNS_8PrimExprERSo'/>
+<fun r='_ZN3tvm7contrib13CodeGenHybrid9PrintExprB5cxx11ERKNS_8PrimExprE'/>
+<fun r='_ZN3tvm7contrib13CodeGenHybrid10VisitExpr_EPKNS_3tir7VarNodeERSo'/>
+<fun r='_ZN3tvm7contrib13CodeGenHybrid10VisitExpr_EPKNS_3tir8LoadNodeERSo'/>
+<fun r='_ZN3tvm7contrib13CodeGenHybrid10VisitExpr_EPKNS_3tir14BufferLoadNodeERSo'/>
+<fun r='_ZN3tvm7contrib13CodeGenHybrid10VisitExpr_EPKNS_3tir7LetNodeERSo'/>
+<fun r='_ZN3tvm7contrib13CodeGenHybrid10VisitExpr_EPKNS_3tir8CallNodeERSo'/>
+<fun r='_ZN3tvm7contrib13CodeGenHybrid10VisitExpr_EPKNS_3tir16ProducerLoadNodeERSo'/>
+<fun r='_ZN3tvm7contrib13CodeGenHybrid10VisitExpr_EPKNS_3tir7AddNodeERSo'/>
+<fun r='_ZN3tvm7contrib13CodeGenHybrid10VisitExpr_EPKNS_3tir7SubNodeERSo'/>
+<fun r='_ZN3tvm7contrib13CodeGenHybrid10VisitExpr_EPKNS_3tir7MulNodeERSo'/>
+<fun r='_ZN3tvm7contrib13CodeGenHybrid10VisitExpr_EPKNS_3tir7DivNodeERSo'/>
+<fun r='_ZN3tvm7contrib13CodeGenHybrid10VisitExpr_EPKNS_3tir7ModNodeERSo'/>
+<fun r='_ZN3tvm7contrib13CodeGenHybrid10VisitExpr_EPKNS_3tir12FloorDivNodeERSo'/>
+<fun r='_ZN3tvm7contrib13CodeGenHybrid10VisitExpr_EPKNS_3tir12FloorModNodeERSo'/>
+<fun r='_ZN3tvm7contrib13CodeGenHybrid10VisitExpr_EPKNS_3tir7MinNodeERSo'/>
+<fun r='_ZN3tvm7contrib13CodeGenHybrid10VisitExpr_EPKNS_3tir7MaxNodeERSo'/>
+<fun r='_ZN3tvm7contrib13CodeGenHybrid10VisitExpr_EPKNS_3tir6EQNodeERSo'/>
+<fun r='_ZN3tvm7contrib13CodeGenHybrid10VisitExpr_EPKNS_3tir6NENodeERSo'/>
+<fun r='_ZN3tvm7contrib13CodeGenHybrid10VisitExpr_EPKNS_3tir6LTNodeERSo'/>
+<fun r='_ZN3tvm7contrib13CodeGenHybrid10VisitExpr_EPKNS_3tir6LENodeERSo'/>
+<fun r='_ZN3tvm7contrib13CodeGenHybrid10VisitExpr_EPKNS_3tir6GTNodeERSo'/>
+<fun r='_ZN3tvm7contrib13CodeGenHybrid10VisitExpr_EPKNS_3tir6GENodeERSo'/>
+<fun r='_ZN3tvm7contrib13CodeGenHybrid10VisitExpr_EPKNS_3tir7AndNodeERSo'/>
+<fun r='_ZN3tvm7contrib13CodeGenHybrid10VisitExpr_EPKNS_3tir6OrNodeERSo'/>
+<fun r='_ZN3tvm7contrib13CodeGenHybrid10VisitExpr_EPKNS_3tir8CastNodeERSo'/>
+<fun r='_ZN3tvm7contrib13CodeGenHybrid10VisitExpr_EPKNS_3tir7NotNodeERSo'/>
+<fun r='_ZN3tvm7contrib13CodeGenHybrid10VisitExpr_EPKNS_3tir10SelectNodeERSo'/>
+<fun r='_ZN3tvm7contrib13CodeGenHybrid10VisitExpr_EPKNS_3tir8RampNodeERSo'/>
+<fun r='_ZN3tvm7contrib13CodeGenHybrid10VisitExpr_EPKNS_3tir13BroadcastNodeERSo'/>
+<fun r='_ZN3tvm7contrib13CodeGenHybrid10VisitExpr_EPKNS_10IntImmNodeERSo'/>
+<fun r='_ZN3tvm7contrib13CodeGenHybrid10VisitExpr_EPKNS_12FloatImmNodeERSo'/>
+<fun r='_ZN3tvm7contrib13CodeGenHybrid10VisitExpr_EPKNS_3tir13StringImmNodeERSo'/>
+<fun r='_ZN3tvm7contrib13CodeGenHybrid10VisitStmt_EPKNS_3tir11LetStmtNodeE'/>
+<fun r='_ZN3tvm7contrib13CodeGenHybrid10VisitStmt_EPKNS_3tir9StoreNodeE'/>
+<fun r='_ZN3tvm7contrib13CodeGenHybrid10VisitStmt_EPKNS_3tir15BufferStoreNodeE'/>
+<fun r='_ZN3tvm7contrib13CodeGenHybrid10VisitStmt_EPKNS_3tir17ProducerStoreNodeE'/>
+<fun r='_ZN3tvm7contrib13CodeGenHybrid10VisitStmt_EPKNS_3tir7ForNodeE'/>
+<fun r='_ZN3tvm7contrib13CodeGenHybrid10VisitStmt_EPKNS_3tir14IfThenElseNodeE'/>
+<fun r='_ZN3tvm7contrib13CodeGenHybrid10VisitStmt_EPKNS_3tir12AllocateNodeE'/>
+<fun r='_ZN3tvm7contrib13CodeGenHybrid10VisitStmt_EPKNS_3tir19ProducerRealizeNodeE'/>
+<fun r='_ZN3tvm7contrib13CodeGenHybrid10VisitStmt_EPKNS_3tir12AttrStmtNodeE'/>
+<fun r='_ZN3tvm7contrib13CodeGenHybrid10VisitStmt_EPKNS_3tir14AssertStmtNodeE'/>
+<fun r='_ZN3tvm7contrib13CodeGenHybrid10VisitStmt_EPKNS_3tir12EvaluateNodeE'/>
+<fun r='_ZN3tvm7contrib13CodeGenHybrid10VisitStmt_EPKNS_3tir11SeqStmtNodeE'/>
+<fun r='_ZN3tvm7contrib13CodeGenHybrid9PrintTypeENS_7runtime8DataTypeERSo'/>
+<mbr r='tvm::contrib::CodeGenHybrid::indent_' o='128' t='int'/>
+<mbr r='tvm::contrib::CodeGenHybrid::tab_' o='160' t='const int'/>
+<fun r='_ZN3tvm7contrib13CodeGenHybrid11PrintIndentEv'/>
+<mbr r='tvm::contrib::CodeGenHybrid::ids_allocated_' o='192' t='std::map&lt;std::string, int&gt;'/>
+<mbr r='tvm::contrib::CodeGenHybrid::id_map_' o='576' t='std::map&lt;std::pair&lt;const Object *, int&gt;, std::string&gt;'/>
+<mbr r='tvm::contrib::CodeGenHybrid::binds_' o='960' t='std::map&lt;const VarNode *, std::string&gt;'/>
+<fun r='_ZN3tvm7contrib13CodeGenHybrid13GetUniqueNameENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<mbr r='tvm::contrib::CodeGenHybrid::stream' o='1344' t='std::stringstream'/>
+<fun r='_ZN3tvm7contrib13CodeGenHybrid8GetVarIDB5cxx11EPKNS_3tir7VarNodeE'/>
+<fun r='_ZN3tvm7contrib13CodeGenHybrid11GetTensorIDB5cxx11ERKNS_2te6TensorE'/>
+<fun r='_ZN3tvm7contrib13CodeGenHybrid13GetUniqueNameENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<fun r='_ZN3tvm7contrib13CodeGenHybrid6FinishB5cxx11Ev'/>
+<fun r='_ZN3tvm7contrib13CodeGenHybrid9PrintTypeENS_7runtime8DataTypeERSo'/>
+<fun r='_ZN3tvm7contrib13CodeGenHybrid10VisitExpr_EPKNS_10IntImmNodeERSo'/>
+<fun r='_ZN3tvm7contrib13CodeGenHybrid10VisitExpr_EPKNS_12FloatImmNodeERSo'/>
+<fun r='_ZN3tvm7contrib13CodeGenHybrid10VisitExpr_EPKNS_3tir13StringImmNodeERSo'/>
+<fun r='_ZN3tvm7contrib13CodeGenHybrid10VisitExpr_EPKNS_3tir8CastNodeERSo'/>
+<fun r='_ZN3tvm7contrib13CodeGenHybrid10VisitExpr_EPKNS_3tir7VarNodeERSo'/>
+<fun r='_ZN3tvm7contrib13CodeGenHybrid10VisitExpr_EPKNS_3tir7AddNodeERSo'/>
+<fun r='_ZN3tvm7contrib13CodeGenHybrid10VisitExpr_EPKNS_3tir7SubNodeERSo'/>
+<fun r='_ZN3tvm7contrib13CodeGenHybrid10VisitExpr_EPKNS_3tir7MulNodeERSo'/>
+<fun r='_ZN3tvm7contrib13CodeGenHybrid10VisitExpr_EPKNS_3tir7DivNodeERSo'/>
+<fun r='_ZN3tvm7contrib13CodeGenHybrid10VisitExpr_EPKNS_3tir12FloorDivNodeERSo'/>
+<fun r='_ZN3tvm7contrib13CodeGenHybrid10VisitExpr_EPKNS_3tir7ModNodeERSo'/>
+<fun r='_ZN3tvm7contrib13CodeGenHybrid10VisitExpr_EPKNS_3tir12FloorModNodeERSo'/>
+<fun r='_ZN3tvm7contrib13CodeGenHybrid10VisitExpr_EPKNS_3tir7MinNodeERSo'/>
+<fun r='_ZN3tvm7contrib13CodeGenHybrid10VisitExpr_EPKNS_3tir7MaxNodeERSo'/>
+<fun r='_ZN3tvm7contrib13CodeGenHybrid10VisitExpr_EPKNS_3tir6EQNodeERSo'/>
+<fun r='_ZN3tvm7contrib13CodeGenHybrid10VisitExpr_EPKNS_3tir6NENodeERSo'/>
+<fun r='_ZN3tvm7contrib13CodeGenHybrid10VisitExpr_EPKNS_3tir6LTNodeERSo'/>
+<fun r='_ZN3tvm7contrib13CodeGenHybrid10VisitExpr_EPKNS_3tir6LENodeERSo'/>
+<fun r='_ZN3tvm7contrib13CodeGenHybrid10VisitExpr_EPKNS_3tir6GTNodeERSo'/>
+<fun r='_ZN3tvm7contrib13CodeGenHybrid10VisitExpr_EPKNS_3tir6GENodeERSo'/>
+<fun r='_ZN3tvm7contrib13CodeGenHybrid10VisitExpr_EPKNS_3tir7AndNodeERSo'/>
+<fun r='_ZN3tvm7contrib13CodeGenHybrid10VisitExpr_EPKNS_3tir6OrNodeERSo'/>
+<fun r='_ZN3tvm7contrib13CodeGenHybrid10VisitExpr_EPKNS_3tir7NotNodeERSo'/>
+<fun r='_ZN3tvm7contrib13CodeGenHybrid10VisitExpr_EPKNS_3tir16ProducerLoadNodeERSo'/>
+<fun r='_ZN3tvm7contrib13CodeGenHybrid10VisitExpr_EPKNS_3tir8CallNodeERSo'/>
+<fun r='_ZN3tvm7contrib13CodeGenHybrid10VisitExpr_EPKNS_3tir8LoadNodeERSo'/>
+<fun r='_ZN3tvm7contrib13CodeGenHybrid10VisitStmt_EPKNS_3tir9StoreNodeE'/>
+<fun r='_ZN3tvm7contrib13CodeGenHybrid10VisitExpr_EPKNS_3tir14BufferLoadNodeERSo'/>
+<fun r='_ZN3tvm7contrib13CodeGenHybrid10VisitStmt_EPKNS_3tir15BufferStoreNodeE'/>
+<fun r='_ZN3tvm7contrib13CodeGenHybrid10VisitExpr_EPKNS_3tir7LetNodeERSo'/>
+<fun r='_ZN3tvm7contrib13CodeGenHybrid10VisitStmt_EPKNS_3tir12AllocateNodeE'/>
+<fun r='_ZN3tvm7contrib13CodeGenHybrid10VisitExpr_EPKNS_3tir8RampNodeERSo'/>
+<fun r='_ZN3tvm7contrib13CodeGenHybrid10VisitExpr_EPKNS_3tir13BroadcastNodeERSo'/>
+<fun r='_ZN3tvm7contrib13CodeGenHybrid10VisitExpr_EPKNS_3tir10SelectNodeERSo'/>
+<fun r='_ZN3tvm7contrib13CodeGenHybrid10VisitStmt_EPKNS_3tir11LetStmtNodeE'/>
+<fun r='_ZN3tvm7contrib13CodeGenHybrid10VisitStmt_EPKNS_3tir12AttrStmtNodeE'/>
+<fun r='_ZN3tvm7contrib13CodeGenHybrid10VisitStmt_EPKNS_3tir19ProducerRealizeNodeE'/>
+<fun r='_ZN3tvm7contrib13CodeGenHybrid10VisitStmt_EPKNS_3tir14AssertStmtNodeE'/>
+<fun r='_ZN3tvm7contrib13CodeGenHybrid10VisitStmt_EPKNS_3tir17ProducerStoreNodeE'/>
+<fun r='_ZN3tvm7contrib13CodeGenHybrid10VisitStmt_EPKNS_3tir7ForNodeE'/>
+<fun r='_ZN3tvm7contrib13CodeGenHybrid10VisitStmt_EPKNS_3tir14IfThenElseNodeE'/>
+<fun r='_ZN3tvm7contrib13CodeGenHybrid10VisitStmt_EPKNS_3tir11SeqStmtNodeE'/>
+<fun r='_ZN3tvm7contrib13CodeGenHybrid10VisitStmt_EPKNS_3tir12EvaluateNodeE'/>
+<fun r='_ZN3tvm7contrib13CodeGenHybrid11PrintIndentEv'/>
+<fun r='_ZN3tvm7contrib13CodeGenHybrid8GetVarIDB5cxx11EPKNS_3tir7VarNodeE'/>
+<fun r='_ZN3tvm7contrib13CodeGenHybrid11GetTensorIDB5cxx11ERKNS_2te6TensorE'/>
+<fun r='_ZN3tvm7contrib13CodeGenHybrid15ReserveKeywordsEv'/>
+<fun r='_ZN3tvm7contrib13CodeGenHybrid8DumpStmtERKNS_3tir4StmtERKNS_7runtime5ArrayINS6_9ObjectRefEvEERKNS7_INS_2te6TensorEvEERKNSt7__cxx1112basic_stringIcSt1115587276'/>

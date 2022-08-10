@@ -1,0 +1,29 @@
+<dec f='tvm/include/tvm/tir/schedule/schedule.h' l='434' type='void tvm::tir::ScheduleNode::ComputeAt(const tvm::tir::BlockRV &amp; block_rv, const tvm::tir::LoopRV &amp; loop_rv, bool preserve_unit_loops)'/>
+<doc f='tvm/include/tvm/tir/schedule/schedule.h' l='418'>/*!
+   * \brief Move a producer block under the specific loop, and regenerate the
+   * loops induced by the block so that the buffer region produced by the producer block could
+   * cover those regions consumed by its consumer blocks under the given loop. It requires:
+   * 1) `block` and `loop` are under the same scope, `loop` is not the ancestor of `block`
+   * 2) The scope block has stage-pipeline property
+   * 3) The subtree of the scope block, where the given block is in, satisfies the compact dataflow
+   * condition. i.e. all the blocks in the scope block&apos;s subtree must be either complete block or
+   * reduction block
+   * 4) The block is not an output block with regard to the scope block, i.e. the buffers written by
+   * the block are allocated under the scope block
+   * 5) All the consumers of the block are under the given loop
+   * \param block_rv The block to be moved
+   * \param loop_rv The loop where the block to be moved under
+   * \param preserve_unit_loops Whether to keep the trivial loops whose extents are 1
+   */</doc>
+<use f='tvm/src/meta_schedule/schedule_rule/cross_thread_reduction.cc' l='102' u='c' c='_ZN3tvm13meta_schedule24CrossThreadReductionNode5ApplyERKNS_3tir8ScheduleERKNS2_7BlockRVE'/>
+<use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling.cc' l='249' u='c' c='_ZNK3tvm13meta_schedule20MultiLevelTilingNode12AddReadReuseENS0_5StateE'/>
+<use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling_tensor_core.cc' l='259' u='c' c='_ZNK3tvm13meta_schedule30MultiLevelTilingTensorCoreNode22AddReadReuseTensorCoreENS0_15TensorCoreStateE'/>
+<use f='tvm/src/meta_schedule/schedule_rule/random_compute_location.cc' l='103' u='c' c='_ZN3tvm13meta_schedule25RandomComputeLocationNode17RandomlyComputeAtERKNS_3tir8ScheduleERKNS2_7BlockRVE'/>
+<use f='tvm/src/meta_schedule/schedule_rule/winograd.cc' l='120' u='c'/>
+<use f='tvm/src/meta_schedule/schedule_rule/winograd.cc' l='122' u='c'/>
+<use f='tvm/src/meta_schedule/schedule_rule/winograd.cc' l='145' u='c'/>
+<use f='tvm/src/meta_schedule/schedule_rule/winograd.cc' l='193' u='c'/>
+<use f='tvm/src/meta_schedule/schedule_rule/winograd.cc' l='211' u='c'/>
+<ovr f='tvm/src/tir/schedule/concrete_schedule.cc' l='569' c='_ZN3tvm3tir20ConcreteScheduleNode9ComputeAtERKNS0_7BlockRVERKNS0_6LoopRVEb'/>
+<use f='tvm/src/tir/schedule/primitive/compute_at.cc' l='679' u='c' c='_ZN3tvm3tir15ComputeAtTraits23UnpackedApplyToScheduleENS0_8ScheduleENS0_7BlockRVENS0_6LoopRVENS_4BoolE'/>
+<use f='tvm/src/tir/schedule/schedule.cc' l='189' u='a'/>

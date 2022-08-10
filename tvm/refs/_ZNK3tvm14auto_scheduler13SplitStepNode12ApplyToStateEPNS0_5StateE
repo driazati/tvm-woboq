@@ -1,0 +1,11 @@
+<dec f='tvm/include/tvm/auto_scheduler/transform_step.h' l='524' type='Array&lt;tvm::auto_scheduler::Iterator&gt; tvm::auto_scheduler::SplitStepNode::ApplyToState(tvm::auto_scheduler::State * state) const'/>
+<doc f='tvm/include/tvm/auto_scheduler/transform_step.h' l='517'>/*!
+   * \brief Apply the current step to State.
+   * \param state A mutable pointer to state, which will be updated.
+   * \return The iterator results after split.
+   * \note If we do split on an iterator which has stages attached at it(by compute_at), the inner
+   * most iterator of split results will become the new attach point.
+   */</doc>
+<use f='tvm/src/auto_scheduler/loop_state.cc' l='284' u='c' c='_ZN3tvm14auto_scheduler5State5splitEiRKNS0_8IteratorERKNS_7runtime5ArrayINS5_8OptionalINS_7IntegerEEEvEEb'/>
+<use f='tvm/src/auto_scheduler/transform_step.cc' l='228' u='c' c='_ZN3tvm14auto_scheduler16StepApplyToStateERKNS0_4StepEPNS0_5StateERKNS0_10ComputeDAGE'/>
+<def f='tvm/src/auto_scheduler/transform_step.cc' l='1025' ll='1027' type='Array&lt;tvm::auto_scheduler::Iterator&gt; tvm::auto_scheduler::SplitStepNode::ApplyToState(tvm::auto_scheduler::State * state) const'/>

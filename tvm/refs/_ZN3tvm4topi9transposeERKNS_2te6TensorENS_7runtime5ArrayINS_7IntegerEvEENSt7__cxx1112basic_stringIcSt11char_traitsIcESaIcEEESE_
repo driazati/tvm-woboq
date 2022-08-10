@@ -1,0 +1,16 @@
+<def f='tvm/include/tvm/topi/transform.h' l='196' ll='239' type='tvm::te::Tensor tvm::topi::transpose(const tvm::te::Tensor &amp; x, Array&lt;tvm::Integer&gt; axes, std::string name = &quot;T_transpose&quot;, std::string tag = kInjective)'/>
+<doc f='tvm/include/tvm/topi/transform.h' l='185'>/*!
+ * \brief Permute the dimensions of an array
+ *
+ * \param x The input tensor
+ * \param axes The indices of the permutation. If this is empty,
+ * the dimensions will be reversed.
+ * \param name The name of the operation
+ * \param tag The tag to mark the operation
+ *
+ * \return A Tensor whose op member is the transpose operation
+ */</doc>
+<use f='tvm/include/tvm/topi/nn.h' l='560' u='c' c='_ZN3tvm4topi17space_to_batch_ndERKNS_2te6TensorERKNS_7runtime5ArrayINS_7IntegerEvEERKNS6_INS_8PrimExprEvEESE_SB_NSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESK_'/>
+<use f='tvm/include/tvm/topi/nn.h' l='619' u='c' c='_ZN3tvm4topi17batch_to_space_ndERKNS_2te6TensorERKNS_7runtime5ArrayINS_7IntegerEvEERKNS6_INS_8PrimExprEvEESE_NSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESK_'/>
+<use f='tvm/src/relay/op/tensor/transform.cc' l='576' u='c' c='_ZN3tvm5relay16TransposeComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
+<use f='tvm/src/topi/transform.cc' l='41' u='c'/>

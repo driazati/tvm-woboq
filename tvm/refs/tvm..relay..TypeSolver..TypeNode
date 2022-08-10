@@ -1,0 +1,45 @@
+<def f='tvm/src/relay/analysis/type_solver.h' l='119' ll='146'/>
+<use f='tvm/src/relay/analysis/type_solver.h' l='123'/>
+<use f='tvm/src/relay/analysis/type_solver.h' l='131' c='_ZN3tvm5relay10TypeSolver8TypeNode8FindRootEv'/>
+<use f='tvm/src/relay/analysis/type_solver.h' l='135' c='_ZN3tvm5relay10TypeSolver8TypeNode8FindRootEv'/>
+<use f='tvm/src/relay/analysis/type_solver.h' l='139' c='_ZN3tvm5relay10TypeSolver8TypeNode8FindRootEv'/>
+<use f='tvm/src/relay/analysis/type_solver.h' l='140' c='_ZN3tvm5relay10TypeSolver8TypeNode8FindRootEv'/>
+<use f='tvm/src/relay/analysis/type_solver.h' l='157'/>
+<use f='tvm/src/relay/analysis/type_solver.h' l='165'/>
+<use f='tvm/src/relay/analysis/type_solver.h' l='171'/>
+<use f='tvm/src/relay/analysis/type_solver.h' l='190' c='_ZN3tvm5relay10TypeSolver11GetTypeNodeERKNS_4TypeE'/>
+<use f='tvm/src/relay/analysis/type_solver.h' l='195' c='_ZN3tvm5relay10TypeSolver11GetTypeNodeERKNS_4TypeE'/>
+<use f='tvm/src/relay/analysis/type_solver.h' l='195' c='_ZN3tvm5relay10TypeSolver11GetTypeNodeERKNS_4TypeE'/>
+<use f='tvm/src/relay/analysis/type_solver.h' l='218' c='_ZN3tvm5relay10TypeSolver11MergeFromToEPNS1_8TypeNodeES3_'/>
+<use f='tvm/src/relay/analysis/type_solver.h' l='218' c='_ZN3tvm5relay10TypeSolver11MergeFromToEPNS1_8TypeNodeES3_'/>
+<use f='tvm/src/relay/analysis/type_solver.cc' l='81' c='_ZN3tvm5relay10TypeSolver13OccursCheckerC1EPS1_PNS1_8TypeNodeE'/>
+<use f='tvm/src/relay/analysis/type_solver.cc' l='91' c='_ZN3tvm5relay10TypeSolver13OccursChecker10VisitType_EPKNS_18IncompleteTypeNodeE'/>
+<use f='tvm/src/relay/analysis/type_solver.cc' l='97'/>
+<use f='tvm/src/relay/analysis/type_solver.cc' l='109' c='_ZN3tvm5relay10TypeSolver7Unifier5UnifyERKNS_4TypeES5_bb'/>
+<use f='tvm/src/relay/analysis/type_solver.cc' l='110' c='_ZN3tvm5relay10TypeSolver7Unifier5UnifyERKNS_4TypeES5_bb'/>
+<use f='tvm/src/relay/analysis/type_solver.cc' l='141' c='_ZN3tvm5relay10TypeSolver7Unifier5UnifyERKNS_4TypeES5_bb'/>
+<use f='tvm/src/relay/analysis/type_solver.cc' l='155' c='_ZN3tvm5relay10TypeSolver7Unifier11OccursCheckEPNS1_8TypeNodeERKNS_4TypeE'/>
+<use f='tvm/src/relay/analysis/type_solver.cc' l='400' c='_ZN3tvm5relay10TypeSolver10Propagator12UpdateRelSetERKNS_4TypeE'/>
+<use f='tvm/src/relay/analysis/type_solver.cc' l='462' c='_ZN3tvm5relay10TypeSolver6Merger5MergeEPNS1_8TypeNodeES4_'/>
+<use f='tvm/src/relay/analysis/type_solver.cc' l='462' c='_ZN3tvm5relay10TypeSolver6Merger5MergeEPNS1_8TypeNodeES4_'/>
+<use f='tvm/src/relay/analysis/type_solver.cc' l='479' c='_ZN3tvm5relay10TypeSolver6Merger13TransferLinksERKNS_4TypeE'/>
+<use f='tvm/src/relay/analysis/type_solver.cc' l='523'/>
+<use f='tvm/src/relay/analysis/type_solver.cc' l='538' c='_ZN3tvm5relay10TypeSolverD1Ev'/>
+<use f='tvm/src/relay/analysis/type_solver.cc' l='547' c='_ZN3tvm5relay10TypeSolver11MergeFromToEPNS1_8TypeNodeES3_'/>
+<use f='tvm/src/relay/analysis/type_solver.cc' l='547' c='_ZN3tvm5relay10TypeSolver11MergeFromToEPNS1_8TypeNodeES3_'/>
+<use f='tvm/src/relay/analysis/type_solver.cc' l='570' c='_ZN3tvm5relay10TypeSolver13AddConstraintERKNS_14TypeConstraintERKNS_4SpanE'/>
+<use f='tvm/src/relay/analysis/type_solver.cc' l='570' c='_ZN3tvm5relay10TypeSolver13AddConstraintERKNS_14TypeConstraintERKNS_4SpanE'/>
+<use f='tvm/src/relay/analysis/type_solver.cc' l='571' c='_ZN3tvm5relay10TypeSolver13AddConstraintERKNS_14TypeConstraintERKNS_4SpanE'/>
+<size>72</size>
+<doc f='tvm/src/relay/analysis/type_solver.h' l='111'>/*!
+   * \brief type node struct
+   *  TypeNode implements a union-find data structure(via parent)
+   *  that can unifies the same types to the name resolved_type.
+   *
+   *  It also contains collection of links to related Relations,
+   *  which is stored in rel_set.
+   */</doc>
+<mbr r='tvm::relay::TypeSolver::TypeNode::resolved_type' o='0' t='tvm::relay::Type'/>
+<mbr r='tvm::relay::TypeSolver::TypeNode::parent' o='64' t='tvm::relay::TypeSolver::TypeNode *'/>
+<mbr r='tvm::relay::TypeSolver::TypeNode::rel_set' o='128' t='std::unordered_set&lt;RelationNode *&gt;'/>
+<fun r='_ZN3tvm5relay10TypeSolver8TypeNode8FindRootEv'/>

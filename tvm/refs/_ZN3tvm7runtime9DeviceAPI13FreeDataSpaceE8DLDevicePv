@@ -1,0 +1,19 @@
+<dec f='tvm/include/tvm/runtime/device_api.h' l='124' type='void tvm::runtime::DeviceAPI::FreeDataSpace(tvm::Device dev, void * ptr)'/>
+<doc f='tvm/include/tvm/runtime/device_api.h' l='119'>/*!
+   * \brief Free a data space on device.
+   * \param dev The device device to perform operation.
+   * \param ptr The data space.
+   */</doc>
+<use f='tvm/src/runtime/vm/naive_allocator.h' l='50' u='c' c='_ZN3tvm7runtime2vm14NaiveAllocator4FreeERKNS1_6BufferE'/>
+<use f='tvm/src/runtime/c_runtime_api.cc' l='191' u='c' c='_ZN3tvm7runtime9DeviceAPI13FreeWorkspaceE8DLDevicePv'/>
+<use f='tvm/src/runtime/c_runtime_api.cc' l='619' u='c' c='TVMDeviceFreeDataSpace'/>
+<ovr f='tvm/src/runtime/cpu_device_api.cc' l='63' c='_ZN3tvm7runtime12CPUDeviceAPI13FreeDataSpaceE8DLDevicePv'/>
+<use f='tvm/src/runtime/ndarray.cc' l='107' u='c' c='_ZN3tvm7runtime7NDArray8Internal14DefaultDeleterEPNS0_6ObjectE'/>
+<ovr f='tvm/src/runtime/rpc/rpc_device_api.cc' l='69' c='_ZN3tvm7runtime12RPCDeviceAPI13FreeDataSpaceE8DLDevicePv'/>
+<use f='tvm/src/runtime/rpc/rpc_device_api.cc' l='73' u='c' c='_ZN3tvm7runtime12RPCDeviceAPI13FreeDataSpaceE8DLDevicePv'/>
+<use f='tvm/src/runtime/rpc/rpc_endpoint.cc' l='907' u='c' c='_ZN3tvm7runtime14RPCDevFreeDataEPNS0_10RPCSessionENS0_7TVMArgsEPNS0_11TVMRetValueE'/>
+<ovr f='tvm/src/runtime/rpc/rpc_endpoint.cc' l='1101' c='_ZN3tvm7runtime16RPCClientSession13FreeDataSpaceE8DLDevicePv'/>
+<use f='tvm/src/runtime/vm/pooled_allocator.h' l='91' u='c' c='_ZN3tvm7runtime2vm15PooledAllocator10ReleaseAllEv'/>
+<use f='tvm/src/runtime/workspace_pool.cc' l='60' u='c' c='_ZN3tvm7runtime13WorkspacePool4Pool5AllocE8DLDevicePNS0_9DeviceAPIEm'/>
+<use f='tvm/src/runtime/workspace_pool.cc' l='79' u='c' c='_ZN3tvm7runtime13WorkspacePool4Pool5AllocE8DLDevicePNS0_9DeviceAPIEm'/>
+<use f='tvm/src/runtime/workspace_pool.cc' l='119' u='c' c='_ZN3tvm7runtime13WorkspacePool4Pool7ReleaseE8DLDevicePNS0_9DeviceAPIE'/>

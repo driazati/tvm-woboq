@@ -1,0 +1,25 @@
+<dec f='tvm/include/tvm/runtime/vm/vm.h' l='167' type='tvm::runtime::PackedFunc tvm::runtime::vm::VirtualMachine::GetFunction(const std::string &amp; name, const ObjectPtr&lt;tvm::runtime::Object&gt; &amp; sptr_to_self)'/>
+<doc f='tvm/include/tvm/runtime/vm/vm.h' l='150'>/*!
+   * \brief Get a PackedFunc from module.
+   *
+   *  The PackedFunc may not be fully initialized,
+   *  there might still be first time running overhead when
+   *  executing the function on certain devices.
+   *  For benchmarking, use prepare to eliminate
+   *
+   * \param name the name of the function.
+   * \param sptr_to_self The shared_ptr that points to this module node.
+   *
+   * \return PackedFunc(nullptr) when it is not available.
+   *
+   * \note The function will always remain valid.
+   *   If the function needs resource from the module(e.g. late linking),
+   *   it should capture sptr_to_self.
+   */</doc>
+<ovr f='tvm/src/runtime/vm/profiler/vm.cc' l='45' c='_ZN3tvm7runtime2vm19VirtualMachineDebug11GetFunctionERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKNS0_9ObjectPtrINS0_6ObjectEEE'/>
+<use f='tvm/src/runtime/vm/profiler/vm.cc' l='66' u='c' c='_ZN3tvm7runtime2vm19VirtualMachineDebug11GetFunctionERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKNS0_9ObjectPtrINS0_6ObjectEEE'/>
+<use f='tvm/src/runtime/vm/profiler/vm.cc' l='89' u='c' c='_ZN3tvm7runtime2vm19VirtualMachineDebug11GetFunctionERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKNS0_9ObjectPtrINS0_6ObjectEEE'/>
+<inh f='tvm/include/tvm/runtime/module.h' l='139' c='_ZN3tvm7runtime10ModuleNode11GetFunctionERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKNS0_9ObjectPtrINS0_6ObjectEEE'/>
+<def f='tvm/src/runtime/vm/vm.cc' l='130' ll='237' type='tvm::runtime::PackedFunc tvm::runtime::vm::VirtualMachine::GetFunction(const std::string &amp; name, const ObjectPtr&lt;tvm::runtime::Object&gt; &amp; sptr_to_self)'/>
+<use f='tvm/src/runtime/vm/vm.cc' l='154' u='c' c='_ZN3tvm7runtime2vm14VirtualMachine11GetFunctionERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKNS0_9ObjectPtrINS0_6ObjectEEE'/>
+<use f='tvm/src/runtime/vm/vm.cc' l='163' u='c' c='_ZN3tvm7runtime2vm14VirtualMachine11GetFunctionERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKNS0_9ObjectPtrINS0_6ObjectEEE'/>

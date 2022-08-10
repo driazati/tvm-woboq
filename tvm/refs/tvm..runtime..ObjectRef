@@ -1,0 +1,918 @@
+<use f='tvm/include/tvm/runtime/object.h' l='493'/>
+<def f='tvm/include/tvm/runtime/object.h' l='511' ll='610'/>
+<use f='tvm/include/tvm/runtime/object.h' l='522' c='_ZNK3tvm7runtime9ObjectRef7same_asERKS1_'/>
+<use f='tvm/include/tvm/runtime/object.h' l='528' c='_ZNK3tvm7runtime9ObjectRefeqERKS1_'/>
+<use f='tvm/include/tvm/runtime/object.h' l='534' c='_ZNK3tvm7runtime9ObjectRefneERKS1_'/>
+<use f='tvm/include/tvm/runtime/object.h' l='540' c='_ZNK3tvm7runtime9ObjectRefltERKS1_'/>
+<use f='tvm/include/tvm/runtime/object.h' l='584' c='_ZN3tvm7runtime9ObjectRef15DowncastNoCheckES1_'/>
+<use f='tvm/include/tvm/runtime/object.h' l='592' c='_ZN3tvm7runtime9ObjectRef17FFIClearAfterMoveEPS1_'/>
+<use f='tvm/include/tvm/runtime/object.h' l='600' c='_ZN3tvm7runtime9ObjectRef10GetDataPtrERKS1_'/>
+<use f='tvm/include/tvm/runtime/object.h' l='625' c='_ZNK3tvm7runtime13ObjectPtrHashclERKNS0_9ObjectRefE'/>
+<use f='tvm/include/tvm/runtime/object.h' l='635' c='_ZNK3tvm7runtime14ObjectPtrEqualclERKNS0_9ObjectRefES4_'/>
+<use f='tvm/include/tvm/runtime/object.h' l='635' c='_ZNK3tvm7runtime14ObjectPtrEqualclERKNS0_9ObjectRefES4_'/>
+<use f='tvm/include/tvm/runtime/container/base.h' l='46' c='_ZNK3tvm7runtime10ObjectHashclERKNS0_9ObjectRefE'/>
+<use f='tvm/include/tvm/runtime/container/base.h' l='57' c='_ZNK3tvm7runtime11ObjectEqualclERKNS0_9ObjectRefES4_'/>
+<use f='tvm/include/tvm/runtime/container/base.h' l='57' c='_ZNK3tvm7runtime11ObjectEqualclERKNS0_9ObjectRefES4_'/>
+<ovr f='tvm/include/tvm/runtime/container/optional.h' l='51' c='tvm::runtime::Optional'/>
+<use f='tvm/include/tvm/runtime/container/optional.h' l='51'/>
+<use f='tvm/include/tvm/runtime/container/optional.h' l='66' c='_ZN3tvm7runtime8OptionalC1ENS0_9ObjectPtrINS0_6ObjectEEE'/>
+<use f='tvm/include/tvm/runtime/container/optional.h' l='78' c='_ZN3tvm7runtime8OptionalC1ET_'/>
+<ovr f='tvm/include/tvm/runtime/container/string.h' l='124' c='tvm::runtime::String'/>
+<use f='tvm/include/tvm/runtime/container/string.h' l='124'/>
+<use f='tvm/include/tvm/runtime/container/string.h' l='152' c='_ZN3tvm7runtime6StringC1EDn'/>
+<use f='tvm/include/tvm/runtime/container/string.h' l='289' c='_ZN3tvm7runtime6StringC1ENS0_9ObjectPtrINS0_6ObjectEEE'/>
+<use f='tvm/include/tvm/runtime/container/string.h' l='482' c='_ZNK3tvm7runtime10ObjectHashclERKNS0_9ObjectRefE'/>
+<use f='tvm/include/tvm/runtime/container/string.h' l='489' c='_ZNK3tvm7runtime11ObjectEqualclERKNS0_9ObjectRefES4_'/>
+<use f='tvm/include/tvm/runtime/container/string.h' l='489' c='_ZNK3tvm7runtime11ObjectEqualclERKNS0_9ObjectRefES4_'/>
+<ovr f='tvm/include/tvm/node/object_path.h' l='122' c='tvm::ObjectPath'/>
+<use f='tvm/include/tvm/node/object_path.h' l='127' c='_ZN3tvm10ObjectPathC1ENS_7runtime9ObjectPtrINS1_6ObjectEEE'/>
+<use f='tvm/include/tvm/runtime/container/array.h' l='38'/>
+<use f='tvm/include/tvm/runtime/container/array.h' l='48' c='_ZNK3tvm7runtime9ArrayNode2atEl'/>
+<use f='tvm/include/tvm/runtime/container/array.h' l='51' c='_ZNK3tvm7runtime9ArrayNode5beginEv'/>
+<use f='tvm/include/tvm/runtime/container/array.h' l='51' c='_ZNK3tvm7runtime9ArrayNode5beginEv'/>
+<use f='tvm/include/tvm/runtime/container/array.h' l='54' c='_ZNK3tvm7runtime9ArrayNode3endEv'/>
+<use f='tvm/include/tvm/runtime/container/array.h' l='64' c='_ZN3tvm7runtime9ArrayNode7SetItemElNS0_9ObjectRefE'/>
+<use f='tvm/include/tvm/runtime/container/array.h' l='76' c='_ZN3tvm7runtime9ArrayNode8CopyFromElPS1_'/>
+<use f='tvm/include/tvm/runtime/container/array.h' l='77' c='_ZN3tvm7runtime9ArrayNode8CopyFromElPS1_'/>
+<use f='tvm/include/tvm/runtime/container/array.h' l='80' c='_ZN3tvm7runtime9ArrayNode8CopyFromElPS1_'/>
+<use f='tvm/include/tvm/runtime/container/array.h' l='95' c='_ZN3tvm7runtime9ArrayNode8MoveFromElPS1_'/>
+<use f='tvm/include/tvm/runtime/container/array.h' l='96' c='_ZN3tvm7runtime9ArrayNode8MoveFromElPS1_'/>
+<use f='tvm/include/tvm/runtime/container/array.h' l='99' c='_ZN3tvm7runtime9ArrayNode8MoveFromElPS1_'/>
+<use f='tvm/include/tvm/runtime/container/array.h' l='111' c='_ZN3tvm7runtime9ArrayNode14CreateRepeatedElRKNS0_9ObjectRefE'/>
+<use f='tvm/include/tvm/runtime/container/array.h' l='113' c='_ZN3tvm7runtime9ArrayNode14CreateRepeatedElRKNS0_9ObjectRefE'/>
+<use f='tvm/include/tvm/runtime/container/array.h' l='115' c='_ZN3tvm7runtime9ArrayNode14CreateRepeatedElRKNS0_9ObjectRefE'/>
+<use f='tvm/include/tvm/runtime/container/array.h' l='129' c='_ZNK3tvm7runtime9ArrayNode12MutableBeginEv'/>
+<use f='tvm/include/tvm/runtime/container/array.h' l='130' c='_ZNK3tvm7runtime9ArrayNode12MutableBeginEv'/>
+<use f='tvm/include/tvm/runtime/container/array.h' l='134' c='_ZNK3tvm7runtime9ArrayNode10MutableEndEv'/>
+<use f='tvm/include/tvm/runtime/container/array.h' l='143' c='_ZN3tvm7runtime9ArrayNode5EmptyEl'/>
+<use f='tvm/include/tvm/runtime/container/array.h' l='159' c='_ZN3tvm7runtime9ArrayNode9InitRangeElT_S2_'/>
+<use f='tvm/include/tvm/runtime/container/array.h' l='161' c='_ZN3tvm7runtime9ArrayNode9InitRangeElT_S2_'/>
+<use f='tvm/include/tvm/runtime/container/array.h' l='162' c='_ZN3tvm7runtime9ArrayNode9InitRangeElT_S2_'/>
+<use f='tvm/include/tvm/runtime/container/array.h' l='175' c='_ZN3tvm7runtime9ArrayNode16MoveElementsLeftElll'/>
+<use f='tvm/include/tvm/runtime/container/array.h' l='176' c='_ZN3tvm7runtime9ArrayNode16MoveElementsLeftElll'/>
+<use f='tvm/include/tvm/runtime/container/array.h' l='191' c='_ZN3tvm7runtime9ArrayNode17MoveElementsRightElll'/>
+<use f='tvm/include/tvm/runtime/container/array.h' l='192' c='_ZN3tvm7runtime9ArrayNode17MoveElementsRightElll'/>
+<use f='tvm/include/tvm/runtime/container/array.h' l='205' c='_ZN3tvm7runtime9ArrayNode9EnlargeByElRKNS0_9ObjectRefE'/>
+<use f='tvm/include/tvm/runtime/container/array.h' l='205' c='_ZN3tvm7runtime9ArrayNode9EnlargeByElRKNS0_9ObjectRefE'/>
+<use f='tvm/include/tvm/runtime/container/array.h' l='206' c='_ZN3tvm7runtime9ArrayNode9EnlargeByElRKNS0_9ObjectRefE'/>
+<use f='tvm/include/tvm/runtime/container/array.h' l='208' c='_ZN3tvm7runtime9ArrayNode9EnlargeByElRKNS0_9ObjectRefE'/>
+<use f='tvm/include/tvm/runtime/container/array.h' l='220' c='_ZN3tvm7runtime9ArrayNode8ShrinkByEl'/>
+<use f='tvm/include/tvm/runtime/container/array.h' l='241'/>
+<ovr f='tvm/include/tvm/runtime/container/array.h' l='270' c='tvm::runtime::Array'/>
+<use f='tvm/include/tvm/runtime/container/array.h' l='270'/>
+<use f='tvm/include/tvm/runtime/container/array.h' l='283' c='_ZN3tvm7runtime5ArrayC1EONS0_5ArrayIT_NSt9enable_ifIXsr3std10is_base_ofINS0_9ObjectRefES3_EE5valueEvE4typeEEE'/>
+<use f='tvm/include/tvm/runtime/container/array.h' l='291' c='_ZN3tvm7runtime5ArrayC1ERKNS0_5ArrayIT_NSt9enable_ifIXsr3std10is_base_ofINS0_9ObjectRefES3_EE5valueEvE4typeEEE'/>
+<use f='tvm/include/tvm/runtime/container/array.h' l='299' c='_ZN3tvm7runtime5ArrayC1ENS0_9ObjectPtrINS0_6ObjectEEE'/>
+<use f='tvm/include/tvm/runtime/container/array.h' l='359' c='_ZN3tvm7runtime5Array14ValueConverter7convertERKNS0_9ObjectRefE'/>
+<use f='tvm/include/tvm/runtime/container/array.h' l='362'/>
+<use f='tvm/include/tvm/runtime/container/array.h' l='363'/>
+<use f='tvm/include/tvm/runtime/container/array.h' l='454' c='_ZN3tvm7runtime5Array6insertENS0_11IterAdapterINS1_14ValueConverterEPKNS0_9ObjectRefEEERKT_'/>
+<use f='tvm/include/tvm/runtime/container/array.h' l='590' c='_ZN3tvm7runtime5Array13MutateByApplyETL0__'/>
+<use f='tvm/include/tvm/runtime/container/array.h' l='647' c='_ZN3tvm7runtime5Array6AssignETL0__S2_'/>
+<use f='tvm/include/tvm/runtime/container/array.h' l='649' c='_ZN3tvm7runtime5Array6AssignETL0__S2_'/>
+<ovr f='tvm/include/tvm/node/structural_equal.h' l='74' c='tvm::ObjectPathPair'/>
+<use f='tvm/include/tvm/node/structural_equal.h' l='78' c='_ZN3tvm14ObjectPathPairC1ENS_7runtime9ObjectPtrINS1_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/runtime/container/shape_tuple.h' l='81' c='tvm::runtime::ShapeTuple'/>
+<use f='tvm/include/tvm/runtime/container/shape_tuple.h' l='81'/>
+<use f='tvm/include/tvm/runtime/container/shape_tuple.h' l='163' c='_ZN3tvm7runtime10ShapeTupleC1ENS0_9ObjectPtrINS0_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/runtime/ndarray.h' l='59' c='tvm::runtime::NDArray'/>
+<use f='tvm/include/tvm/runtime/ndarray.h' l='59'/>
+<use f='tvm/include/tvm/runtime/ndarray.h' l='73' c='_ZN3tvm7runtime7NDArrayC1ENS0_9ObjectPtrINS0_6ObjectEEE'/>
+<use f='tvm/include/tvm/runtime/ndarray.h' l='247' c='_ZN3tvm7runtime7NDArray12FFIGetHandleERKNS0_9ObjectRefE'/>
+<use f='tvm/include/tvm/runtime/ndarray.h' l='421' c='_ZN3tvm7runtime7NDArray12FFIGetHandleERKNS0_9ObjectRefE'/>
+<use f='tvm/include/tvm/runtime/container/map.h' l='177'/>
+<use f='tvm/include/tvm/runtime/container/map.h' l='179'/>
+<use f='tvm/include/tvm/runtime/container/map.h' l='181'/>
+<use f='tvm/include/tvm/runtime/container/map.h' l='181'/>
+<use f='tvm/include/tvm/runtime/container/map.h' l='689' c='_ZN3tvm7runtime12DenseMapNode9TryInsertERKNS0_9ObjectRefEPNS1_8ListNodeE'/>
+<use f='tvm/include/tvm/runtime/container/map.h' l='722' c='_ZN3tvm7runtime12DenseMapNode9TryInsertERKNS0_9ObjectRefEPNS1_8ListNodeE'/>
+<use f='tvm/include/tvm/runtime/container/map.h' l='778' c='_ZN3tvm7runtime12DenseMapNode16TrySpareListHeadENS1_8ListNodeERKNS0_9ObjectRefEPS2_'/>
+<ovr f='tvm/include/tvm/runtime/container/map.h' l='1268' c='tvm::runtime::Map'/>
+<use f='tvm/include/tvm/runtime/container/map.h' l='1268'/>
+<use f='tvm/include/tvm/runtime/container/map.h' l='1286' c='_ZN3tvm7runtime3MapC1ERKNS0_3MapIT_T0_NSt9enable_ifIXsr3std10is_base_ofINS0_9ObjectRefES3_EE5valueEvE4typeENS5_IXsr3std10is_base_ofIS6_S4_EE5valueEvE4typeEEE'/>
+<use f='tvm/include/tvm/runtime/container/map.h' l='1309' c='_ZN3tvm7runtime3MapC1ENS0_9ObjectPtrINS0_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/runtime/module.h' l='50' c='tvm::runtime::Module'/>
+<use f='tvm/include/tvm/runtime/module.h' l='50'/>
+<use f='tvm/include/tvm/runtime/module.h' l='54' c='_ZN3tvm7runtime6ModuleC1ENS0_9ObjectPtrINS0_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/runtime/packed_func.h' l='138' c='tvm::runtime::PackedFunc'/>
+<use f='tvm/include/tvm/runtime/packed_func.h' l='138'/>
+<use f='tvm/include/tvm/runtime/packed_func.h' l='141' c='_ZN3tvm7runtime10PackedFuncC1EDn'/>
+<use f='tvm/include/tvm/runtime/packed_func.h' l='182' c='_ZN3tvm7runtime10PackedFuncC1ENS0_9ObjectPtrINS0_6ObjectEEE'/>
+<use f='tvm/include/tvm/runtime/packed_func.h' l='481' c='_ZN3tvm7runtime17ObjectTypeCheckerINS0_5ArrayIT_NSt9enable_ifIXsr3std10is_base_ofINS0_9ObjectRefES3_EE5valueEvE4typeEEEE19CheckAndGetMismatchEPKNS0_6ObjectE'/>
+<use f='tvm/include/tvm/runtime/packed_func.h' l='493' c='_ZN3tvm7runtime17ObjectTypeCheckerINS0_5ArrayIT_NSt9enable_ifIXsr3std10is_base_ofINS0_9ObjectRefES3_EE5valueEvE4typeEEEE5CheckEPKNS0_6ObjectE'/>
+<use f='tvm/include/tvm/node/reflection.h' l='65' c='_ZN3tvm11AttrVisitor5VisitEPKcPNS_7runtime9ObjectRefE'/>
+<use f='tvm/include/tvm/node/repr_printer.h' l='55' c='_ZN3tvm4DumpERKNS_7runtime9ObjectRefE'/>
+<use f='tvm/include/tvm/node/repr_printer.h' l='69' c='_ZN3tvm7runtimelsERSoRKNS0_9ObjectRefE'/>
+<ovr f='tvm/include/tvm/ir/span.h' l='62' c='tvm::SourceName'/>
+<use f='tvm/include/tvm/ir/span.h' l='72' c='_ZN3tvm10SourceNameC1ENS_7runtime9ObjectPtrINS1_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/ir/span.h' l='115' c='tvm::Span'/>
+<use f='tvm/include/tvm/ir/span.h' l='122' c='_ZN3tvm4SpanC1ENS_7runtime9ObjectPtrINS1_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/ir/type.h' l='93' c='tvm::Type'/>
+<use f='tvm/include/tvm/ir/type.h' l='95' c='_ZN3tvm4TypeC1ENS_7runtime9ObjectPtrINS1_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/ir/expr.h' l='68' c='tvm::BaseExpr'/>
+<use f='tvm/include/tvm/ir/expr.h' l='70' c='_ZN3tvm8BaseExprC1ENS_7runtime9ObjectPtrINS1_6ObjectEEE'/>
+<use f='tvm/include/tvm/ir/expr.h' l='133' c='_ZN3tvm8PrimExpr11FromObject_ENS_7runtime9ObjectRefE'/>
+<ovr f='tvm/include/tvm/ir/expr.h' l='711' c='tvm::Range'/>
+<use f='tvm/include/tvm/ir/expr.h' l='732' c='_ZN3tvm5RangeC1ENS_7runtime9ObjectPtrINS1_6ObjectEEE'/>
+<use f='tvm/include/tvm/ir/expr.h' l='773' c='_ZN3tvm7runtime24PackedFuncValueConverterINS_8PrimExprEE4FromERKNS0_12TVMPODValue_E'/>
+<ovr f='tvm/include/tvm/tir/var.h' l='301' c='tvm::tir::IterVar'/>
+<use f='tvm/include/tvm/tir/var.h' l='310' c='_ZN3tvm3tir7IterVarC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/tir/buffer.h' l='160' c='tvm::tir::Buffer'/>
+<use f='tvm/include/tvm/tir/buffer.h' l='225' c='_ZN3tvm3tir6BufferC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/tir/buffer.h' l='293' c='tvm::tir::DataProducer'/>
+<use f='tvm/include/tvm/tir/buffer.h' l='295' c='_ZN3tvm3tir12DataProducerC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/tir/expr.h' l='1057' c='tvm::tir::CommReducer'/>
+<use f='tvm/include/tvm/tir/expr.h' l='1062' c='_ZN3tvm3tir11CommReducerC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/arith/int_set.h' l='68' c='tvm::arith::IntSet'/>
+<use f='tvm/include/tvm/arith/int_set.h' l='150' c='_ZN3tvm5arith6IntSetC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/arith/analyzer.h' l='98' c='tvm::arith::ConstIntBound'/>
+<use f='tvm/include/tvm/arith/analyzer.h' l='109' c='_ZN3tvm5arith13ConstIntBoundC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/arith/analyzer.h' l='204' c='tvm::arith::ModularSet'/>
+<use f='tvm/include/tvm/arith/analyzer.h' l='208' c='_ZN3tvm5arith10ModularSetC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/ir/attrs.h' l='128' c='tvm::AttrFieldInfo'/>
+<use f='tvm/include/tvm/ir/attrs.h' l='130' c='_ZN3tvm13AttrFieldInfoC1ENS_7runtime9ObjectPtrINS1_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/ir/attrs.h' l='190' c='tvm::Attrs'/>
+<use f='tvm/include/tvm/ir/attrs.h' l='192' c='_ZN3tvm5AttrsC1ENS_7runtime9ObjectPtrINS1_6ObjectEEE'/>
+<use f='tvm/include/tvm/ir/attrs.h' l='234' c='_ZN3tvm9DictAttrsC1ENS_7runtime3MapINS1_6StringENS1_9ObjectRefEvvEE'/>
+<use f='tvm/include/tvm/runtime/container/adt.h' l='36'/>
+<use f='tvm/include/tvm/runtime/container/adt.h' l='74'/>
+<ovr f='tvm/include/tvm/runtime/container/adt.h' l='78' c='tvm::runtime::ADT'/>
+<use f='tvm/include/tvm/runtime/container/adt.h' l='78'/>
+<use f='tvm/include/tvm/runtime/container/adt.h' l='86' c='_ZN3tvm7runtime3ADTC1EiSt6vectorINS0_9ObjectRefESaIS3_EE'/>
+<use f='tvm/include/tvm/runtime/container/adt.h' l='98' c='_ZN3tvm7runtime3ADTC1EiT_S2_'/>
+<use f='tvm/include/tvm/runtime/container/adt.h' l='110' c='_ZN3tvm7runtime3ADTC1EiSt16initializer_listINS0_9ObjectRefEE'/>
+<use f='tvm/include/tvm/runtime/container/adt.h' l='118' c='_ZNK3tvm7runtime3ADTixEm'/>
+<use f='tvm/include/tvm/runtime/container/adt.h' l='142' c='_ZN3tvm7runtime3ADTC1ENS0_9ObjectPtrINS0_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/parser/source_map.h' l='66' c='tvm::parser::Source'/>
+<use f='tvm/include/tvm/parser/source_map.h' l='71' c='_ZN3tvm6parser6SourceC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/parser/source_map.h' l='97' c='tvm::parser::SourceMap'/>
+<use f='tvm/include/tvm/parser/source_map.h' l='113' c='_ZN3tvm6parser9SourceMapC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/ir/module.h' l='360' c='tvm::IRModule'/>
+<use f='tvm/include/tvm/ir/module.h' l='381' c='_ZN3tvm8IRModuleC1ENS_7runtime9ObjectPtrINS1_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/ir/diagnostic.h' l='80' c='tvm::Diagnostic'/>
+<use f='tvm/include/tvm/ir/diagnostic.h' l='90' c='_ZN3tvm10DiagnosticC1ENS_7runtime9ObjectPtrINS1_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/ir/diagnostic.h' l='152' c='tvm::DiagnosticRenderer'/>
+<use f='tvm/include/tvm/ir/diagnostic.h' l='165' c='_ZN3tvm18DiagnosticRendererC1ENS_7runtime9ObjectPtrINS1_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/ir/diagnostic.h' l='192' c='tvm::DiagnosticContext'/>
+<use f='tvm/include/tvm/ir/diagnostic.h' l='219' c='_ZN3tvm17DiagnosticContextC1ENS_7runtime9ObjectPtrINS1_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/ir/env_func.h' l='72' c='tvm::EnvFunc'/>
+<use f='tvm/include/tvm/ir/env_func.h' l='75' c='_ZN3tvm7EnvFuncC1ENS_7runtime9ObjectPtrINS1_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/ir/env_func.h' l='116' c='tvm::TypedEnvFunc'/>
+<use f='tvm/include/tvm/ir/env_func.h' l='121' c='_ZN3tvm12TypedEnvFuncIFT_DpT0_EEC1ENS_7runtime9ObjectPtrINS6_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/ir/type_relation.h' l='145' c='tvm::TypeReporter'/>
+<use f='tvm/include/tvm/ir/type_relation.h' l='148' c='_ZN3tvm12TypeReporterC1ENS_7runtime9ObjectPtrINS1_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/tir/stmt.h' l='57' c='tvm::tir::Stmt'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='59' c='_ZN3tvm3tir4StmtC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='158' c='_ZN3tvm3tir8AttrStmtC1ENS_7runtime9ObjectRefENS2_6StringENS_8PrimExprENS0_4StmtENS_4SpanE'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='585' c='_ZN3tvm3tir8AllocateC1ENS0_3VarENS_7runtime8DataTypeENS3_5ArrayINS_8PrimExprEvEES6_NS0_4StmtENS3_3MapINS3_6StringENS3_9ObjectRefEvvEENS_4SpanE'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='585' c='_ZN3tvm3tir8AllocateC1ENS0_3VarENS_7runtime8DataTypeENS3_5ArrayINS_8PrimExprEvEES6_NS0_4StmtENS3_3MapINS3_6StringENS3_9ObjectRefEvvEENS_4SpanE'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='678' c='_ZN3tvm3tir13AllocateConstC1ENS0_3VarENS_7runtime8DataTypeENS3_5ArrayINS_8PrimExprEvEENS3_9ObjectRefENS0_4StmtENS3_3MapINS3_6StringES8_vvEENS_4SpanE'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='679' c='_ZN3tvm3tir13AllocateConstC1ENS0_3VarENS_7runtime8DataTypeENS3_5ArrayINS_8PrimExprEvEENS3_9ObjectRefENS0_4StmtENS3_3MapINS3_6StringES8_vvEENS_4SpanE'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='679' c='_ZN3tvm3tir13AllocateConstC1ENS0_3VarENS_7runtime8DataTypeENS3_5ArrayINS_8PrimExprEvEENS3_9ObjectRefENS0_4StmtENS3_3MapINS3_6StringES8_vvEENS_4SpanE'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='1005' c='_ZN3tvm3tir3ForC1ENS0_3VarENS_8PrimExprES3_NS0_7ForKindENS0_4StmtENS_7runtime8OptionalINS0_7IterVarEEENS6_3MapINS6_6StringENS6_9ObjectRefEvvEENS_4SpanE'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='1005' c='_ZN3tvm3tir3ForC1ENS0_3VarENS_8PrimExprES3_NS0_7ForKindENS0_4StmtENS_7runtime8OptionalINS0_7IterVarEEENS6_3MapINS6_6StringENS6_9ObjectRefEvvEENS_4SpanE'/>
+<ovr f='tvm/include/tvm/tir/stmt.h' l='1136' c='tvm::tir::BufferRegion'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='1155' c='_ZN3tvm3tir12BufferRegionC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/tir/stmt.h' l='1199' c='tvm::tir::MatchBufferRegion'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='1203' c='_ZN3tvm3tir17MatchBufferRegionC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='1301' c='_ZN3tvm3tir5BlockC1ENS_7runtime5ArrayINS0_7IterVarEvEENS3_INS0_12BufferRegionEvEES7_NS2_6StringENS0_4StmtENS2_8OptionalIS9_EENS3_INS0_6BufferEvEENS3_I7879093'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='1301' c='_ZN3tvm3tir5BlockC1ENS_7runtime5ArrayINS0_7IterVarEvEENS3_INS0_12BufferRegionEvEES7_NS2_6StringENS0_4StmtENS2_8OptionalIS9_EENS3_INS0_6BufferEvEENS3_I7879093'/>
+<size>8</size>
+<doc f='tvm/include/tvm/runtime/object.h' l='510'>/*! \brief Base class of all object reference */</doc>
+<fun r='_ZN3tvm7runtime9ObjectRefC1Ev'/>
+<fun r='_ZN3tvm7runtime9ObjectRefC1ENS0_9ObjectPtrINS0_6ObjectEEE'/>
+<fun r='_ZNK3tvm7runtime9ObjectRef7same_asERKS1_'/>
+<fun r='_ZNK3tvm7runtime9ObjectRefeqERKS1_'/>
+<fun r='_ZNK3tvm7runtime9ObjectRefneERKS1_'/>
+<fun r='_ZNK3tvm7runtime9ObjectRefltERKS1_'/>
+<fun r='_ZNK3tvm7runtime9ObjectRef7definedEv'/>
+<fun r='_ZNK3tvm7runtime9ObjectRef3getEv'/>
+<fun r='_ZNK3tvm7runtime9ObjectRefptEv'/>
+<fun r='_ZNK3tvm7runtime9ObjectRef6uniqueEv'/>
+<fun r='_ZNK3tvm7runtime9ObjectRef9use_countEv'/>
+<fun r='_ZNK3tvm7runtime9ObjectRef2asEv'/>
+<smbr r='tvm::runtime::ObjectRef::_type_is_nullable' t='const bool'/>
+<mbr r='tvm::runtime::ObjectRef::data_' o='0' t='ObjectPtr&lt;tvm::runtime::Object&gt;'/>
+<fun r='_ZNK3tvm7runtime9ObjectRef11get_mutableEv'/>
+<fun r='_ZN3tvm7runtime9ObjectRef15DowncastNoCheckES1_'/>
+<fun r='_ZN3tvm7runtime9ObjectRef17FFIClearAfterMoveEPS1_'/>
+<fun r='_ZN3tvm7runtime9ObjectRef10GetDataPtrERKS1_'/>
+<fun r='_ZNK3tvm7runtime9ObjectRef2asEv'/>
+<ovr f='tvm/include/tvm/ir/instrument.h' l='149' c='tvm::instrument::PassInstrument'/>
+<use f='tvm/include/tvm/ir/instrument.h' l='151' c='_ZN3tvm10instrument14PassInstrumentC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/ir/transform.h' l='154' c='tvm::transform::PassContext'/>
+<use f='tvm/include/tvm/ir/transform.h' l='157' c='_ZN3tvm9transform11PassContextC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/ir/transform.h' l='311' c='tvm::transform::PassInfo'/>
+<use f='tvm/include/tvm/ir/transform.h' l='321' c='_ZN3tvm9transform8PassInfoC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/ir/transform.h' l='363' c='tvm::transform::Pass'/>
+<use f='tvm/include/tvm/ir/transform.h' l='392' c='_ZN3tvm9transform4PassC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/tir/function.h' l='214' c='tvm::tir::TensorIntrin'/>
+<use f='tvm/include/tvm/tir/function.h' l='241' c='_ZN3tvm3tir12TensorIntrinC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<size>8</size>
+<ovr f='tvm/include/tvm/te/tensor.h' l='47' c='tvm::te::Operation'/>
+<use f='tvm/include/tvm/te/tensor.h' l='51' c='_ZN3tvm2te9OperationC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<size>8</size>
+<ovr f='tvm/include/tvm/arith/int_solver.h' l='93' c='tvm::arith::IntGroupBounds'/>
+<use f='tvm/include/tvm/arith/int_solver.h' l='135' c='_ZN3tvm5arith14IntGroupBoundsC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/arith/int_solver.h' l='181' c='tvm::arith::IntConstraints'/>
+<use f='tvm/include/tvm/arith/int_solver.h' l='192' c='_ZN3tvm5arith14IntConstraintsC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/arith/int_solver.h' l='244' c='tvm::arith::IntConstraintsTransform'/>
+<use f='tvm/include/tvm/arith/int_solver.h' l='268' c='_ZN3tvm5arith23IntConstraintsTransformC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<size>8</size>
+<ovr f='tvm/include/tvm/arith/iter_affine_map.h' l='130' c='tvm::arith::IterMark'/>
+<use f='tvm/include/tvm/arith/iter_affine_map.h' l='139' c='_ZN3tvm5arith8IterMarkC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/arith/iter_affine_map.h' l='309' c='tvm::arith::IterMapResult'/>
+<size>8</size>
+<ovr f='tvm/include/tvm/te/tensor_intrin.h' l='93' c='tvm::te::TensorIntrin'/>
+<use f='tvm/include/tvm/te/tensor_intrin.h' l='98' c='_ZN3tvm2te12TensorIntrinC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/te/tensor_intrin.h' l='135' c='tvm::te::TensorIntrinCall'/>
+<use f='tvm/include/tvm/te/tensor_intrin.h' l='140' c='_ZN3tvm2te16TensorIntrinCallC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/tir/index_map.h' l='154' c='tvm::tir::IndexMap'/>
+<use f='tvm/include/tvm/tir/index_map.h' l='191' c='_ZN3tvm3tir8IndexMapC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/te/schedule.h' l='58' c='tvm::te::Stage'/>
+<use f='tvm/include/tvm/te/schedule.h' l='61' c='_ZN3tvm2te5StageC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/te/schedule.h' l='317' c='tvm::te::Schedule'/>
+<use f='tvm/include/tvm/te/schedule.h' l='320' c='_ZN3tvm2te8ScheduleC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/te/schedule.h' l='452' c='tvm::te::IterVarRelation'/>
+<use f='tvm/include/tvm/te/schedule.h' l='455' c='_ZN3tvm2te15IterVarRelationC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/te/schedule.h' l='466' c='tvm::te::IterVarAttr'/>
+<use f='tvm/include/tvm/te/schedule.h' l='469' c='_ZN3tvm2te11IterVarAttrC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/te/schedule.h' l='912' c='tvm::te::SpecializedCondition'/>
+<use f='tvm/include/tvm/te/schedule.h' l='926' c='_ZN3tvm2te20SpecializedConditionC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/auto_scheduler/transform_step.h' l='144' c='tvm::auto_scheduler::Iterator'/>
+<use f='tvm/include/tvm/auto_scheduler/transform_step.h' l='157' c='_ZN3tvm14auto_scheduler8IteratorC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/auto_scheduler/transform_step.h' l='183' c='tvm::auto_scheduler::Step'/>
+<use f='tvm/include/tvm/auto_scheduler/transform_step.h' l='201' c='_ZN3tvm14auto_scheduler4StepC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/auto_scheduler/loop_state.h' l='124' c='tvm::auto_scheduler::Stage'/>
+<use f='tvm/include/tvm/auto_scheduler/loop_state.h' l='142' c='_ZN3tvm14auto_scheduler5StageC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/auto_scheduler/loop_state.h' l='180' c='tvm::auto_scheduler::AttachMap'/>
+<use f='tvm/include/tvm/auto_scheduler/loop_state.h' l='216' c='_ZN3tvm14auto_scheduler9AttachMapC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/auto_scheduler/loop_state.h' l='272' c='tvm::auto_scheduler::State'/>
+<use f='tvm/include/tvm/auto_scheduler/loop_state.h' l='448' c='_ZN3tvm14auto_scheduler5StateC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/auto_scheduler/compute_dag.h' l='89' c='tvm::auto_scheduler::AccessAnalyzer'/>
+<use f='tvm/include/tvm/auto_scheduler/compute_dag.h' l='165' c='_ZN3tvm14auto_scheduler14AccessAnalyzerC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/auto_scheduler/compute_dag.h' l='219' c='tvm::auto_scheduler::ComputeDAG'/>
+<use f='tvm/include/tvm/auto_scheduler/compute_dag.h' l='309' c='_ZN3tvm14auto_scheduler10ComputeDAGC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/target/target_kind.h' l='140' c='tvm::TargetKind'/>
+<use f='tvm/include/tvm/target/target_kind.h' l='152' c='_ZN3tvm10TargetKindC1ENS_7runtime9ObjectPtrINS1_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/target/target.h' l='181' c='tvm::Target'/>
+<use f='tvm/include/tvm/target/target.h' l='194' c='_ZN3tvm6TargetC1ERKNS_7runtime3MapINS1_6StringENS1_9ObjectRefEvvEE'/>
+<use f='tvm/include/tvm/target/target.h' l='211' c='_ZN3tvm6TargetC1ENS_7runtime9ObjectPtrINS1_6ObjectEEE'/>
+<use f='tvm/include/tvm/target/target.h' l='245' c='_ZN3tvm6TargetC1ENS_10TargetKindENS_7runtime8OptionalINS2_9ObjectRefEEENS2_6StringENS2_5ArrayIS6_vEENS2_3MapIS6_S4_vvEE'/>
+<use f='tvm/include/tvm/target/target.h' l='246' c='_ZN3tvm6TargetC1ENS_10TargetKindENS_7runtime8OptionalINS2_9ObjectRefEEENS2_6StringENS2_5ArrayIS6_vEENS2_3MapIS6_S4_vvEE'/>
+<ovr f='tvm/include/tvm/auto_scheduler/search_task.h' l='86' c='tvm::auto_scheduler::HardwareParams'/>
+<use f='tvm/include/tvm/auto_scheduler/search_task.h' l='103' c='_ZN3tvm14auto_scheduler14HardwareParamsC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/auto_scheduler/search_task.h' l='148' c='tvm::auto_scheduler::SearchTask'/>
+<use f='tvm/include/tvm/auto_scheduler/search_task.h' l='165' c='_ZN3tvm14auto_scheduler10SearchTaskC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/auto_scheduler/measure.h' l='104' c='tvm::auto_scheduler::MeasureInput'/>
+<use f='tvm/include/tvm/auto_scheduler/measure.h' l='113' c='_ZN3tvm14auto_scheduler12MeasureInputC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/auto_scheduler/measure.h' l='146' c='tvm::auto_scheduler::BuildResult'/>
+<use f='tvm/include/tvm/auto_scheduler/measure.h' l='158' c='_ZN3tvm14auto_scheduler11BuildResultC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/auto_scheduler/measure.h' l='194' c='tvm::auto_scheduler::MeasureResult'/>
+<use f='tvm/include/tvm/auto_scheduler/measure.h' l='207' c='_ZN3tvm14auto_scheduler13MeasureResultC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/auto_scheduler/measure.h' l='230' c='tvm::auto_scheduler::MeasureCallback'/>
+<use f='tvm/include/tvm/auto_scheduler/measure.h' l='232' c='_ZN3tvm14auto_scheduler15MeasureCallbackC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/auto_scheduler/measure.h' l='291' c='tvm::auto_scheduler::ProgramBuilder'/>
+<use f='tvm/include/tvm/auto_scheduler/measure.h' l='293' c='_ZN3tvm14auto_scheduler14ProgramBuilderC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/auto_scheduler/measure.h' l='333' c='tvm::auto_scheduler::ProgramRunner'/>
+<use f='tvm/include/tvm/auto_scheduler/measure.h' l='335' c='_ZN3tvm14auto_scheduler13ProgramRunnerC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/auto_scheduler/measure.h' l='520' c='tvm::auto_scheduler::ProgramMeasurer'/>
+<use f='tvm/include/tvm/auto_scheduler/measure.h' l='536' c='_ZN3tvm14auto_scheduler15ProgramMeasurerC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/auto_scheduler/search_policy.h' l='81' c='tvm::auto_scheduler::SearchCallback'/>
+<use f='tvm/include/tvm/auto_scheduler/search_policy.h' l='83' c='_ZN3tvm14auto_scheduler14SearchCallbackC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/auto_scheduler/search_policy.h' l='198' c='tvm::auto_scheduler::SearchPolicy'/>
+<use f='tvm/include/tvm/auto_scheduler/search_policy.h' l='200' c='_ZN3tvm14auto_scheduler12SearchPolicyC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/auto_scheduler/auto_schedule.h' l='72' c='tvm::auto_scheduler::TuningOptions'/>
+<use f='tvm/include/tvm/auto_scheduler/auto_schedule.h' l='89' c='_ZN3tvm14auto_scheduler13TuningOptionsC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<size>8</size>
+<use f='tvm/include/tvm/te/operation.h' l='264' c='_ZN3tvm2te9ComputeOpC1ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_NS_7runtime3MapINS8_6StringENS8_9ObjectRefEvvEENS8_5ArrayINS_3tir7IterVa14126749'/>
+<use f='tvm/include/tvm/te/operation.h' l='401' c='_ZN3tvm2te6ScanOpC1ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_NS_7runtime3MapINS8_6StringENS8_9ObjectRefEvvEENS_3tir7IterVarENS8_5ArrayIN10627940'/>
+<use f='tvm/include/tvm/te/operation.h' l='462' c='_ZN3tvm2te8ExternOpC1ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_NS_7runtime3MapINS8_6StringENS8_9ObjectRefEvvEENS8_5ArrayINS0_6TensorEvEE7497917'/>
+<use f='tvm/include/tvm/te/operation.h' l='527' c='_ZN3tvm2te8HybridOpC1ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_NS_7runtime3MapINS8_6StringENS8_9ObjectRefEvvEENS8_5ArrayINS0_6TensorEvEESF_NS_3tir4StmtE'/>
+<ovr f='tvm/include/tvm/tir/data_layout.h' l='123' c='tvm::tir::Layout'/>
+<use f='tvm/include/tvm/tir/data_layout.h' l='289' c='_ZN3tvm3tir6LayoutC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/tir/data_layout.h' l='330' c='tvm::tir::BijectiveLayout'/>
+<use f='tvm/include/tvm/tir/data_layout.h' l='348' c='_ZN3tvm3tir15BijectiveLayoutC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/relay/base.h' l='112' c='tvm::relay::Id'/>
+<use f='tvm/include/tvm/relay/base.h' l='120' c='_ZN3tvm5relay2IdC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/target/virtual_device.h' l='261' c='tvm::VirtualDevice'/>
+<use f='tvm/include/tvm/target/virtual_device.h' l='336' c='_ZN3tvm13VirtualDeviceC1ENS_7runtime9ObjectPtrINS1_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/relay/adt.h' l='63' c='tvm::relay::Pattern'/>
+<use f='tvm/include/tvm/relay/adt.h' l='66' c='_ZN3tvm5relay7PatternC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/relay/adt.h' l='253' c='tvm::relay::Clause'/>
+<use f='tvm/include/tvm/relay/adt.h' l='262' c='_ZN3tvm5relay6ClauseC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<use f='tvm/src/auto_scheduler/compute_dag.cc' l='917' c='_ZNK3tvm14auto_scheduler10ComputeDAG13RewriteLayoutEPNS_7runtime5ArrayINS0_4StepEvEENS0_19LayoutRewriteOptionE'/>
+<use f='tvm/src/auto_scheduler/compute_dag.cc' l='921' c='_ZNK3tvm14auto_scheduler10ComputeDAG13RewriteLayoutEPNS_7runtime5ArrayINS0_4StepEvEENS0_19LayoutRewriteOptionE'/>
+<size>8</size>
+<ovr f='tvm/include/tvm/auto_scheduler/cost_model.h' l='86' c='tvm::auto_scheduler::CostModel'/>
+<use f='tvm/include/tvm/auto_scheduler/cost_model.h' l='88' c='_ZN3tvm14auto_scheduler9CostModelC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<size>8</size>
+<ovr f='tvm/include/tvm/auto_scheduler/measure_record.h' l='105' c='tvm::auto_scheduler::RecordReader'/>
+<use f='tvm/include/tvm/auto_scheduler/measure_record.h' l='113' c='_ZN3tvm14auto_scheduler12RecordReaderC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<size>8</size>
+<use f='tvm/src/auto_scheduler/search_policy/sketch_policy.h' l='194' c='_ZN3tvm14auto_scheduler12SketchPolicyC1ENS0_10SearchTaskENS0_9CostModelENS_7runtime3MapINS4_6StringENS4_9ObjectRefEvvEEiiNS4_8OptionalINS4_5ArrayINS0_11363786'/>
+<size>8</size>
+<use f='tvm/src/auto_scheduler/search_policy/sketch_policy.cc' l='73' c='_ZN3tvm14auto_scheduler12SketchPolicyC1ENS0_10SearchTaskENS0_9CostModelENS_7runtime3MapINS4_6StringENS4_9ObjectRefEvvEEiiNS4_8OptionalINS4_5ArrayINS0_11363786'/>
+<size>8</size>
+<ovr f='tvm/src/contrib/ethosu/cascader/block_config.h' l='89' c='tvm::contrib::ethosu::cascader::BlockConfig'/>
+<use f='tvm/src/contrib/ethosu/cascader/block_config.h' l='94' c='_ZN3tvm7contrib6ethosu8cascader11BlockConfigC1ENS_7runtime9ObjectPtrINS4_6ObjectEEE'/>
+<size>8</size>
+<ovr f='tvm/src/contrib/ethosu/cascader/propagator.h' l='125' c='tvm::contrib::ethosu::cascader::Propagator'/>
+<use f='tvm/src/contrib/ethosu/cascader/propagator.h' l='129' c='_ZN3tvm7contrib6ethosu8cascader10PropagatorC1ENS_7runtime9ObjectPtrINS4_6ObjectEEE'/>
+<ovr f='tvm/src/contrib/ethosu/cascader/graph.h' l='89' c='tvm::contrib::ethosu::cascader::PerformanceInfo'/>
+<use f='tvm/src/contrib/ethosu/cascader/graph.h' l='101' c='_ZN3tvm7contrib6ethosu8cascader15PerformanceInfoC1ENS_7runtime9ObjectPtrINS4_6ObjectEEE'/>
+<ovr f='tvm/src/contrib/ethosu/cascader/graph.h' l='160' c='tvm::contrib::ethosu::cascader::Tensor'/>
+<use f='tvm/src/contrib/ethosu/cascader/graph.h' l='164' c='_ZN3tvm7contrib6ethosu8cascader6TensorC1ENS_7runtime9ObjectPtrINS4_6ObjectEEE'/>
+<ovr f='tvm/src/contrib/ethosu/cascader/graph.h' l='249' c='tvm::contrib::ethosu::cascader::Part'/>
+<use f='tvm/src/contrib/ethosu/cascader/graph.h' l='251' c='_ZN3tvm7contrib6ethosu8cascader4PartC1ENS_7runtime9ObjectPtrINS4_6ObjectEEE'/>
+<ovr f='tvm/src/contrib/ethosu/cascader/graph.h' l='322' c='tvm::contrib::ethosu::cascader::CascaderGraph'/>
+<use f='tvm/src/contrib/ethosu/cascader/graph.h' l='326' c='_ZN3tvm7contrib6ethosu8cascader13CascaderGraphC1ENS_7runtime9ObjectPtrINS4_6ObjectEEE'/>
+<ovr f='tvm/src/contrib/ethosu/cascader/stripe_config.h' l='165' c='tvm::contrib::ethosu::cascader::StripeConfig'/>
+<use f='tvm/src/contrib/ethosu/cascader/stripe_config.h' l='177' c='_ZN3tvm7contrib6ethosu8cascader12StripeConfigC1ENS_7runtime9ObjectPtrINS4_6ObjectEEE'/>
+<ovr f='tvm/src/contrib/ethosu/cascader/tensor_config.h' l='66' c='tvm::contrib::ethosu::cascader::MemoryRegion'/>
+<use f='tvm/src/contrib/ethosu/cascader/tensor_config.h' l='81' c='_ZN3tvm7contrib6ethosu8cascader12MemoryRegionC1ENS_7runtime9ObjectPtrINS4_6ObjectEEE'/>
+<ovr f='tvm/src/contrib/ethosu/cascader/tensor_config.h' l='193' c='tvm::contrib::ethosu::cascader::TensorConfig'/>
+<use f='tvm/src/contrib/ethosu/cascader/tensor_config.h' l='205' c='_ZN3tvm7contrib6ethosu8cascader12TensorConfigC1ENS_7runtime9ObjectPtrINS4_6ObjectEEE'/>
+<ovr f='tvm/src/contrib/ethosu/cascader/cascader_options.h' l='72' c='tvm::contrib::ethosu::cascader::CascaderOptions'/>
+<use f='tvm/src/contrib/ethosu/cascader/cascader_options.h' l='80' c='_ZN3tvm7contrib6ethosu8cascader15CascaderOptionsC1ENS_7runtime9ObjectPtrINS4_6ObjectEEE'/>
+<size>8</size>
+<ovr f='tvm/src/contrib/ethosu/cascader/plan.h' l='110' c='tvm::contrib::ethosu::cascader::Plan'/>
+<use f='tvm/src/contrib/ethosu/cascader/plan.h' l='133' c='_ZN3tvm7contrib6ethosu8cascader4PlanC1ENS_7runtime9ObjectPtrINS4_6ObjectEEE'/>
+<ovr f='tvm/src/contrib/ethosu/cascader/proposal.h' l='91' c='tvm::contrib::ethosu::cascader::Proposal'/>
+<use f='tvm/src/contrib/ethosu/cascader/proposal.h' l='97' c='_ZN3tvm7contrib6ethosu8cascader8ProposalC1ENS_7runtime9ObjectPtrINS4_6ObjectEEE'/>
+<size>8</size>
+<ovr f='tvm/include/tvm/relay/executor.h' l='125' c='tvm::relay::Executor'/>
+<use f='tvm/include/tvm/relay/executor.h' l='134' c='_ZN3tvm5relay8Executor6CreateENS_7runtime6StringENS2_3MapIS3_NS2_9ObjectRefEvvEE'/>
+<use f='tvm/include/tvm/relay/executor.h' l='150' c='_ZN3tvm5relay8ExecutorC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/relay/runtime.h' l='123' c='tvm::relay::Runtime'/>
+<use f='tvm/include/tvm/relay/runtime.h' l='134' c='_ZN3tvm5relay7Runtime6CreateENS_7runtime6StringENS2_3MapIS3_NS2_9ObjectRefEvvEE'/>
+<use f='tvm/include/tvm/relay/runtime.h' l='150' c='_ZN3tvm5relay7RuntimeC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<size>8</size>
+<ovr f='tvm/include/tvm/ir/affine_type.h' l='54' c='tvm::AffineType'/>
+<use f='tvm/include/tvm/ir/affine_type.h' l='56' c='_ZN3tvm10AffineTypeC1ENS_7runtime9ObjectPtrINS1_6ObjectEEE'/>
+<size>8</size>
+<use f='tvm/src/ir/attrs.cc' l='50' c='_ZN3tvm9DictAttrsC1ENS_7runtime3MapINS1_6StringENS1_9ObjectRefEvvEE'/>
+<size>8</size>
+<use f='tvm/src/ir/expr.cc' l='41' c='_ZN3tvm8PrimExpr11FromObject_ENS_7runtime9ObjectRefE'/>
+<size>8</size>
+<ovr f='tvm/include/tvm/ir/memory_pools.h' l='133' c='tvm::PoolInfo'/>
+<use f='tvm/include/tvm/ir/memory_pools.h' l='143' c='_ZN3tvm8PoolInfoC1ENS_7runtime9ObjectPtrINS1_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/ir/memory_pools.h' l='210' c='tvm::PoolInfoProperties'/>
+<use f='tvm/include/tvm/ir/memory_pools.h' l='219' c='_ZN3tvm18PoolInfoPropertiesC1ENS_7runtime9ObjectPtrINS1_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/ir/memory_pools.h' l='276' c='tvm::ConstantInfo'/>
+<use f='tvm/include/tvm/ir/memory_pools.h' l='280' c='_ZN3tvm12ConstantInfoC1ENS_7runtime9ObjectPtrINS1_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/ir/memory_pools.h' l='331' c='tvm::WorkspaceMemoryPools'/>
+<use f='tvm/include/tvm/ir/memory_pools.h' l='334' c='_ZN3tvm20WorkspaceMemoryPoolsC1ENS_7runtime9ObjectPtrINS1_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/ir/memory_pools.h' l='353' c='tvm::ConstantMemoryPools'/>
+<use f='tvm/include/tvm/ir/memory_pools.h' l='356' c='_ZN3tvm19ConstantMemoryPoolsC1ENS_7runtime9ObjectPtrINS1_6ObjectEEE'/>
+<size>8</size>
+<ovr f='tvm/include/tvm/target/generic_func.h' l='43' c='tvm::GenericFunc'/>
+<use f='tvm/include/tvm/target/generic_func.h' l='46' c='_ZN3tvm11GenericFuncC1ENS_7runtime9ObjectPtrINS1_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/target/compilation_config.h' l='191' c='tvm::CompilationConfig'/>
+<use f='tvm/include/tvm/target/compilation_config.h' l='200' c='_ZN3tvm17CompilationConfigC1ENS_7runtime9ObjectPtrINS1_6ObjectEEE'/>
+<size>8</size>
+<ovr f='tvm/src/ir/op.cc' l='202' c='tvm::Op2ObjectPtr'/>
+<use f='tvm/src/runtime/object_internal.h' l='92' c='_ZN3tvm7runtime14ObjectInternal13MoveObjectPtrEPNS0_9ObjectRefE'/>
+<size>8</size>
+<ovr f='tvm/include/tvm/meta_schedule/arg_info.h' l='50' c='tvm::meta_schedule::ArgInfo'/>
+<use f='tvm/include/tvm/meta_schedule/arg_info.h' l='50'/>
+<use f='tvm/include/tvm/meta_schedule/arg_info.h' l='57' c='_ZN3tvm13meta_schedule7ArgInfo8FromJSONERKNS_7runtime9ObjectRefE'/>
+<use f='tvm/include/tvm/meta_schedule/arg_info.h' l='72' c='_ZN3tvm13meta_schedule7ArgInfoC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<use f='tvm/include/tvm/meta_schedule/arg_info.h' l='115' c='_ZN3tvm13meta_schedule10TensorInfo8FromJSONERKNS_7runtime9ObjectRefE'/>
+<ovr f='tvm/include/tvm/tir/schedule/instruction.h' l='135' c='tvm::tir::InstructionKind'/>
+<use f='tvm/include/tvm/tir/schedule/instruction.h' l='135'/>
+<use f='tvm/include/tvm/tir/schedule/instruction.h' l='143' c='_ZN3tvm3tir15InstructionKindC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/tir/schedule/instruction.h' l='192' c='tvm::tir::Instruction'/>
+<use f='tvm/include/tvm/tir/schedule/instruction.h' l='192'/>
+<use f='tvm/include/tvm/tir/schedule/instruction.h' l='201' c='_ZN3tvm3tir11InstructionC1ENS0_15InstructionKindENS_7runtime5ArrayINS3_9ObjectRefEvEES6_S6_'/>
+<use f='tvm/include/tvm/tir/schedule/instruction.h' l='201' c='_ZN3tvm3tir11InstructionC1ENS0_15InstructionKindENS_7runtime5ArrayINS3_9ObjectRefEvEES6_S6_'/>
+<use f='tvm/include/tvm/tir/schedule/instruction.h' l='202' c='_ZN3tvm3tir11InstructionC1ENS0_15InstructionKindENS_7runtime5ArrayINS3_9ObjectRefEvEES6_S6_'/>
+<use f='tvm/include/tvm/tir/schedule/instruction.h' l='204' c='_ZN3tvm3tir11InstructionC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/tir/schedule/trace.h' l='141' c='tvm::tir::Trace'/>
+<use f='tvm/include/tvm/tir/schedule/trace.h' l='141'/>
+<use f='tvm/include/tvm/tir/schedule/trace.h' l='150' c='_ZN3tvm3tir5TraceC1ENS_7runtime5ArrayINS0_11InstructionEvEENS2_3MapIS4_NS2_9ObjectRefEvvEE'/>
+<use f='tvm/include/tvm/tir/schedule/trace.h' l='156' c='_ZN3tvm3tir5Trace19ApplyJSONToScheduleENS_7runtime9ObjectRefENS0_8ScheduleE'/>
+<use f='tvm/include/tvm/tir/schedule/trace.h' l='158' c='_ZN3tvm3tir5TraceC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/meta_schedule/database.h' l='65' c='tvm::meta_schedule::Workload'/>
+<use f='tvm/include/tvm/meta_schedule/database.h' l='65'/>
+<use f='tvm/include/tvm/meta_schedule/database.h' l='84' c='_ZN3tvm13meta_schedule8Workload8FromJSONERKNS_7runtime9ObjectRefE'/>
+<use f='tvm/include/tvm/meta_schedule/database.h' l='86' c='_ZN3tvm13meta_schedule8WorkloadC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/meta_schedule/database.h' l='144' c='tvm::meta_schedule::TuningRecord'/>
+<use f='tvm/include/tvm/meta_schedule/database.h' l='144'/>
+<use f='tvm/include/tvm/meta_schedule/database.h' l='163' c='_ZN3tvm13meta_schedule12TuningRecord8FromJSONERKNS_7runtime9ObjectRefERKNS0_8WorkloadE'/>
+<use f='tvm/include/tvm/meta_schedule/database.h' l='164' c='_ZN3tvm13meta_schedule12TuningRecordC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/meta_schedule/database.h' l='314' c='tvm::meta_schedule::Database'/>
+<use f='tvm/include/tvm/meta_schedule/database.h' l='314'/>
+<use f='tvm/include/tvm/meta_schedule/database.h' l='340' c='_ZN3tvm13meta_schedule8DatabaseC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/meta_schedule/apply_history_best.h' l='85' c='tvm::meta_schedule::ApplyHistoryBest'/>
+<use f='tvm/include/tvm/meta_schedule/apply_history_best.h' l='85'/>
+<use f='tvm/include/tvm/meta_schedule/apply_history_best.h' l='101' c='_ZN3tvm13meta_schedule16ApplyHistoryBestC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/meta_schedule/builder.h' l='60' c='tvm::meta_schedule::BuilderInput'/>
+<use f='tvm/include/tvm/meta_schedule/builder.h' l='60'/>
+<use f='tvm/include/tvm/meta_schedule/builder.h' l='70' c='_ZN3tvm13meta_schedule12BuilderInputC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/meta_schedule/builder.h' l='94' c='tvm::meta_schedule::BuilderResult'/>
+<use f='tvm/include/tvm/meta_schedule/builder.h' l='94'/>
+<use f='tvm/include/tvm/meta_schedule/builder.h' l='102' c='_ZN3tvm13meta_schedule13BuilderResultC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/meta_schedule/builder.h' l='131' c='tvm::meta_schedule::Builder'/>
+<use f='tvm/include/tvm/meta_schedule/builder.h' l='131'/>
+<use f='tvm/include/tvm/meta_schedule/builder.h' l='139' c='_ZN3tvm13meta_schedule7BuilderC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/tir/schedule/block_scope.h' l='102' c='tvm::tir::StmtSRef'/>
+<use f='tvm/include/tvm/tir/schedule/block_scope.h' l='116' c='_ZN3tvm3tir8StmtSRefC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/tir/schedule/block_scope.h' l='187' c='tvm::tir::Dependency'/>
+<use f='tvm/include/tvm/tir/schedule/block_scope.h' l='191' c='_ZN3tvm3tir10DependencyC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/tir/schedule/block_scope.h' l='255' c='tvm::tir::BlockScope'/>
+<use f='tvm/include/tvm/tir/schedule/block_scope.h' l='267' c='_ZN3tvm3tir10BlockScopeC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/tir/schedule/state.h' l='190' c='tvm::tir::ScheduleState'/>
+<use f='tvm/include/tvm/tir/schedule/state.h' l='203' c='_ZN3tvm3tir13ScheduleStateC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/tir/schedule/schedule.h' l='62' c='tvm::tir::BlockRV'/>
+<use f='tvm/include/tvm/tir/schedule/schedule.h' l='62'/>
+<use f='tvm/include/tvm/tir/schedule/schedule.h' l='66' c='_ZN3tvm3tir7BlockRVC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/tir/schedule/schedule.h' l='83' c='tvm::tir::LoopRV'/>
+<use f='tvm/include/tvm/tir/schedule/schedule.h' l='83'/>
+<use f='tvm/include/tvm/tir/schedule/schedule.h' l='87' c='_ZN3tvm3tir6LoopRVC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/tir/schedule/schedule.h' l='649' c='tvm::tir::Schedule'/>
+<use f='tvm/include/tvm/tir/schedule/schedule.h' l='649'/>
+<use f='tvm/include/tvm/tir/schedule/schedule.h' l='681' c='_ZN3tvm3tir8ScheduleC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/meta_schedule/measure_candidate.h' l='53' c='tvm::meta_schedule::MeasureCandidate'/>
+<use f='tvm/include/tvm/meta_schedule/measure_candidate.h' l='53'/>
+<use f='tvm/include/tvm/meta_schedule/measure_candidate.h' l='61' c='_ZN3tvm13meta_schedule16MeasureCandidateC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/meta_schedule/runner.h' l='58' c='tvm::meta_schedule::RunnerInput'/>
+<use f='tvm/include/tvm/meta_schedule/runner.h' l='58'/>
+<use f='tvm/include/tvm/meta_schedule/runner.h' l='67' c='_ZN3tvm13meta_schedule11RunnerInputC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/meta_schedule/runner.h' l='91' c='tvm::meta_schedule::RunnerResult'/>
+<use f='tvm/include/tvm/meta_schedule/runner.h' l='91'/>
+<use f='tvm/include/tvm/meta_schedule/runner.h' l='99' c='_ZN3tvm13meta_schedule12RunnerResultC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/meta_schedule/runner.h' l='155' c='tvm::meta_schedule::RunnerFuture'/>
+<use f='tvm/include/tvm/meta_schedule/runner.h' l='155'/>
+<use f='tvm/include/tvm/meta_schedule/runner.h' l='166' c='_ZN3tvm13meta_schedule12RunnerFutureC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/meta_schedule/runner.h' l='199' c='tvm::meta_schedule::Runner'/>
+<use f='tvm/include/tvm/meta_schedule/runner.h' l='199'/>
+<use f='tvm/include/tvm/meta_schedule/runner.h' l='209' c='_ZN3tvm13meta_schedule6RunnerC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/meta_schedule/cost_model.h' l='152' c='tvm::meta_schedule::CostModel'/>
+<use f='tvm/include/tvm/meta_schedule/cost_model.h' l='152'/>
+<use f='tvm/include/tvm/meta_schedule/cost_model.h' l='168' c='_ZN3tvm13meta_schedule9CostModelC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/meta_schedule/extracted_task.h' l='71' c='tvm::meta_schedule::ExtractedTask'/>
+<use f='tvm/include/tvm/meta_schedule/extracted_task.h' l='71'/>
+<use f='tvm/include/tvm/meta_schedule/extracted_task.h' l='75' c='_ZN3tvm13meta_schedule13ExtractedTaskC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/meta_schedule/feature_extractor.h' l='95' c='tvm::meta_schedule::FeatureExtractor'/>
+<use f='tvm/include/tvm/meta_schedule/feature_extractor.h' l='95'/>
+<use f='tvm/include/tvm/meta_schedule/feature_extractor.h' l='120' c='_ZN3tvm13meta_schedule16FeatureExtractorC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/meta_schedule/search_strategy.h' l='189' c='tvm::meta_schedule::SearchStrategy'/>
+<use f='tvm/include/tvm/meta_schedule/search_strategy.h' l='189'/>
+<use f='tvm/include/tvm/meta_schedule/search_strategy.h' l='245' c='_ZN3tvm13meta_schedule14SearchStrategyC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/meta_schedule/mutator.h' l='110' c='tvm::meta_schedule::Mutator'/>
+<use f='tvm/include/tvm/meta_schedule/mutator.h' l='110'/>
+<use f='tvm/include/tvm/meta_schedule/mutator.h' l='146' c='_ZN3tvm13meta_schedule7MutatorC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/meta_schedule/postproc.h' l='105' c='tvm::meta_schedule::Postproc'/>
+<use f='tvm/include/tvm/meta_schedule/postproc.h' l='105'/>
+<use f='tvm/include/tvm/meta_schedule/postproc.h' l='164' c='_ZN3tvm13meta_schedule8PostprocC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/meta_schedule/schedule_rule.h' l='112' c='tvm::meta_schedule::ScheduleRule'/>
+<use f='tvm/include/tvm/meta_schedule/schedule_rule.h' l='112'/>
+<use f='tvm/include/tvm/meta_schedule/schedule_rule.h' l='151' c='_ZN3tvm13meta_schedule12ScheduleRule16MultiLevelTilingENS_7runtime6StringENS2_8OptionalINS2_5ArrayIS3_vEEEENS4_INS_7IntegerEEENS4_INS5_IS8_vEEEENS4_IN16529610'/>
+<use f='tvm/include/tvm/meta_schedule/schedule_rule.h' l='152' c='_ZN3tvm13meta_schedule12ScheduleRule16MultiLevelTilingENS_7runtime6StringENS2_8OptionalINS2_5ArrayIS3_vEEEENS4_INS_7IntegerEEENS4_INS5_IS8_vEEEENS4_IN16529610'/>
+<use f='tvm/include/tvm/meta_schedule/schedule_rule.h' l='174' c='_ZN3tvm13meta_schedule12ScheduleRule26MultiLevelTilingWithIntrinENS_7runtime6StringES3_NS2_8OptionalINS2_5ArrayIS3_vEEEENS4_INS_7IntegerEEENS4_INS5_IS4465841'/>
+<use f='tvm/include/tvm/meta_schedule/schedule_rule.h' l='174' c='_ZN3tvm13meta_schedule12ScheduleRule26MultiLevelTilingWithIntrinENS_7runtime6StringES3_NS2_8OptionalINS2_5ArrayIS3_vEEEENS4_INS_7IntegerEEENS4_INS5_IS4465841'/>
+<use f='tvm/include/tvm/meta_schedule/schedule_rule.h' l='198' c='_ZN3tvm13meta_schedule12ScheduleRule26MultiLevelTilingTensorCoreENS_7runtime5ArrayINS2_3MapINS2_6StringES5_vvEEvEES5_NS2_8OptionalINS3_IS5_vEEEENS8_IN15317790'/>
+<use f='tvm/include/tvm/meta_schedule/schedule_rule.h' l='199' c='_ZN3tvm13meta_schedule12ScheduleRule26MultiLevelTilingTensorCoreENS_7runtime5ArrayINS2_3MapINS2_6StringES5_vvEEvEES5_NS2_8OptionalINS3_IS5_vEEEENS8_IN15317790'/>
+<use f='tvm/include/tvm/meta_schedule/schedule_rule.h' l='258' c='_ZN3tvm13meta_schedule12ScheduleRuleC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/meta_schedule/space_generator.h' l='130' c='tvm::meta_schedule::SpaceGenerator'/>
+<use f='tvm/include/tvm/meta_schedule/space_generator.h' l='130'/>
+<use f='tvm/include/tvm/meta_schedule/space_generator.h' l='157' c='_ZN3tvm13meta_schedule14SpaceGeneratorC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/meta_schedule/tune_context.h' l='129' c='tvm::meta_schedule::TuneContext'/>
+<use f='tvm/include/tvm/meta_schedule/tune_context.h' l='129'/>
+<use f='tvm/include/tvm/meta_schedule/tune_context.h' l='156' c='_ZN3tvm13meta_schedule11TuneContextC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/meta_schedule/measure_callback.h' l='113' c='tvm::meta_schedule::MeasureCallback'/>
+<use f='tvm/include/tvm/meta_schedule/measure_callback.h' l='113'/>
+<use f='tvm/include/tvm/meta_schedule/measure_callback.h' l='143' c='_ZN3tvm13meta_schedule15MeasureCallbackC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/meta_schedule/profiler.h' l='81' c='tvm::meta_schedule::Profiler'/>
+<use f='tvm/include/tvm/meta_schedule/profiler.h' l='81'/>
+<use f='tvm/include/tvm/meta_schedule/profiler.h' l='84' c='_ZN3tvm13meta_schedule8ProfilerC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/meta_schedule/task_scheduler.h' l='204' c='tvm::meta_schedule::TaskScheduler'/>
+<use f='tvm/include/tvm/meta_schedule/task_scheduler.h' l='204'/>
+<use f='tvm/include/tvm/meta_schedule/task_scheduler.h' l='285' c='_ZN3tvm13meta_schedule13TaskSchedulerC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<use f='tvm/include/tvm/node/serialization.h' l='39' c='_ZN3tvm8SaveJSONB5cxx11ERKNS_7runtime9ObjectRefE'/>
+<use f='tvm/include/tvm/node/serialization.h' l='48' c='_ZN3tvm8LoadJSONENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<ovr f='tvm/src/printer/doc.h' l='53' c='tvm::DocAtom'/>
+<use f='tvm/src/printer/doc.h' l='55' c='_ZN3tvm7DocAtomC1ENS_7runtime9ObjectPtrINS1_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/runtime/metadata_base.h' l='54' c='tvm::runtime::metadata::MetadataBase'/>
+<use f='tvm/include/tvm/runtime/metadata_base.h' l='54'/>
+<use f='tvm/include/tvm/runtime/metadata_base.h' l='56' c='_ZN3tvm7runtime8metadata12MetadataBaseC1ENS0_9ObjectPtrINS0_6ObjectEEE'/>
+<use f='tvm/include/tvm/runtime/metadata_base.h' l='178' c='_ZN3tvm7runtime8metadata17MetadataArrayNodeC1ENS0_5ArrayINS0_9ObjectRefEvEENS1_12MetadataKindEPKc'/>
+<use f='tvm/include/tvm/runtime/metadata_base.h' l='193'/>
+<use f='tvm/include/tvm/runtime/metadata_base.h' l='208' c='_ZN3tvm7runtime8metadata13MetadataArrayC1ENS0_5ArrayINS0_9ObjectRefEvEENS1_12MetadataKindEPKc'/>
+<ovr f='tvm/src/tir/schedule/analysis.h' l='717' c='tvm::tir::TensorizeInfo'/>
+<use f='tvm/src/tir/schedule/analysis.h' l='719' c='_ZN3tvm3tir13TensorizeInfoC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<ovr f='tvm/src/tir/schedule/analysis.h' l='762' c='tvm::tir::AutoTensorizeMappingInfo'/>
+<use f='tvm/src/tir/schedule/analysis.h' l='764' c='_ZN3tvm3tir24AutoTensorizeMappingInfoC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<size>8</size>
+<use f='tvm/src/meta_schedule/arg_info.cc' l='67' c='_ZN3tvm13meta_schedule7ArgInfo8FromJSONERKNS_7runtime9ObjectRefE'/>
+<use f='tvm/src/meta_schedule/arg_info.cc' l='128' c='_ZN3tvm13meta_schedule10TensorInfo8FromJSONERKNS_7runtime9ObjectRefE'/>
+<size>8</size>
+<use f='tvm/src/meta_schedule/database/database.cc' l='49' c='_ZN3tvm13meta_schedule8Workload8FromJSONERKNS_7runtime9ObjectRefE'/>
+<use f='tvm/src/meta_schedule/database/database.cc' l='115' c='_ZN3tvm13meta_schedule12TuningRecord8FromJSONERKNS_7runtime9ObjectRefERKNS0_8WorkloadE'/>
+<use f='tvm/src/meta_schedule/database/database.cc' l='129' c='_ZN3tvm13meta_schedule12TuningRecord8FromJSONERKNS_7runtime9ObjectRefERKNS0_8WorkloadE'/>
+<use f='tvm/src/meta_schedule/database/database.cc' l='136' c='_ZN3tvm13meta_schedule12TuningRecord8FromJSONERKNS_7runtime9ObjectRefERKNS0_8WorkloadE'/>
+<use f='tvm/src/meta_schedule/database/database.cc' l='143' c='_ZN3tvm13meta_schedule12TuningRecord8FromJSONERKNS_7runtime9ObjectRefERKNS0_8WorkloadE'/>
+<size>8</size>
+<use f='tvm/src/meta_schedule/database/json_database.cc' l='178' c='_ZN3tvm13meta_schedule8Database12JSONDatabaseENS_7runtime6StringES3_b'/>
+<use f='tvm/src/meta_schedule/database/json_database.cc' l='190' c='_ZN3tvm13meta_schedule8Database12JSONDatabaseENS_7runtime6StringES3_b'/>
+<use f='tvm/src/meta_schedule/database/json_database.cc' l='196' c='_ZN3tvm13meta_schedule8Database12JSONDatabaseENS_7runtime6StringES3_b'/>
+<size>8</size>
+<ovr f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling.h' l='113' c='tvm::meta_schedule::State'/>
+<use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling.h' l='117' c='_ZN3tvm13meta_schedule5StateC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling.cc' l='279' c='_ZN3tvm13meta_schedule12ScheduleRule16MultiLevelTilingENS_7runtime6StringENS2_8OptionalINS2_5ArrayIS3_vEEEENS4_INS_7IntegerEEENS4_INS5_IS8_vEEEENS4_IN16529610'/>
+<use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling.cc' l='280' c='_ZN3tvm13meta_schedule12ScheduleRule16MultiLevelTilingENS_7runtime6StringENS2_8OptionalINS2_5ArrayIS3_vEEEENS4_INS_7IntegerEEENS4_INS5_IS8_vEEEENS4_IN16529610'/>
+<size>8</size>
+<use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling_tensor_core.cc' l='418' c='_ZN3tvm13meta_schedule12ScheduleRule26MultiLevelTilingTensorCoreENS_7runtime5ArrayINS2_3MapINS2_6StringES5_vvEEvEES5_NS2_8OptionalINS3_IS5_vEEEENS8_IN15317790'/>
+<use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling_tensor_core.cc' l='418' c='_ZN3tvm13meta_schedule12ScheduleRule26MultiLevelTilingTensorCoreENS_7runtime5ArrayINS2_3MapINS2_6StringES5_vvEEvEES5_NS2_8OptionalINS3_IS5_vEEEENS8_IN15317790'/>
+<size>8</size>
+<use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling_with_intrin.cc' l='87' c='_ZN3tvm13meta_schedule12ScheduleRule26MultiLevelTilingWithIntrinENS_7runtime6StringES3_NS2_8OptionalINS2_5ArrayIS3_vEEEENS4_INS_7IntegerEEENS4_INS5_IS4465841'/>
+<use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling_with_intrin.cc' l='87' c='_ZN3tvm13meta_schedule12ScheduleRule26MultiLevelTilingWithIntrinENS_7runtime6StringES3_NS2_8OptionalINS2_5ArrayIS3_vEEEENS4_INS_7IntegerEEENS4_INS5_IS4465841'/>
+<size>8</size>
+<use f='tvm/src/node/reflection.cc' l='78' c='_ZN3tvm10AttrGetter5VisitEPKcPNS_7runtime9ObjectRefE'/>
+<use f='tvm/src/node/reflection.cc' l='129' c='_ZN3tvm7AttrDir5VisitEPKcPNS_7runtime9ObjectRefE'/>
+<use f='tvm/src/node/reflection.cc' l='301' c='_ZN3tvm12_GLOBAL__N_126GetAttrKeyByAddressVisitor5VisitEPKcPNS_7runtime9ObjectRefE'/>
+<size>8</size>
+<use f='tvm/src/node/repr_printer.cc' l='54' c='_ZN3tvm4DumpERKNS_7runtime9ObjectRefE'/>
+<use f='tvm/src/node/repr_printer.cc' l='56' c='_ZN3tvm4DumpEPKNS_7runtime6ObjectE'/>
+<use f='tvm/src/node/repr_printer.cc' l='58'/>
+<size>8</size>
+<ovr f='tvm/include/tvm/runtime/profiling.h' l='86' c='tvm::runtime::Timer'/>
+<use f='tvm/include/tvm/runtime/profiling.h' l='86'/>
+<use f='tvm/include/tvm/runtime/profiling.h' l='142' c='_ZN3tvm7runtime5TimerC1ENS0_9ObjectPtrINS0_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/runtime/profiling.h' l='170' c='tvm::runtime::profiling::DeviceWrapper'/>
+<use f='tvm/include/tvm/runtime/profiling.h' l='170'/>
+<use f='tvm/include/tvm/runtime/profiling.h' l='173' c='_ZN3tvm7runtime9profiling13DeviceWrapperC1ENS0_9ObjectPtrINS0_6ObjectEEE'/>
+<use f='tvm/include/tvm/runtime/profiling.h' l='187'/>
+<use f='tvm/include/tvm/runtime/profiling.h' l='195'/>
+<use f='tvm/include/tvm/runtime/profiling.h' l='200'/>
+<ovr f='tvm/include/tvm/runtime/profiling.h' l='259' c='tvm::runtime::profiling::Report'/>
+<use f='tvm/include/tvm/runtime/profiling.h' l='259'/>
+<use f='tvm/include/tvm/runtime/profiling.h' l='266' c='_ZN3tvm7runtime9profiling6ReportC1ENS0_5ArrayINS0_3MapINS0_6StringENS0_9ObjectRefEvvEEvEENS4_IS5_S7_vvEES7_'/>
+<use f='tvm/include/tvm/runtime/profiling.h' l='267' c='_ZN3tvm7runtime9profiling6ReportC1ENS0_5ArrayINS0_3MapINS0_6StringENS0_9ObjectRefEvvEEvEENS4_IS5_S7_vvEES7_'/>
+<use f='tvm/include/tvm/runtime/profiling.h' l='268' c='_ZN3tvm7runtime9profiling6ReportC1ENS0_5ArrayINS0_3MapINS0_6StringENS0_9ObjectRefEvvEEvEENS4_IS5_S7_vvEES7_'/>
+<use f='tvm/include/tvm/runtime/profiling.h' l='275' c='_ZN3tvm7runtime9profiling6ReportC1ENS0_9ObjectPtrINS0_6ObjectEEE'/>
+<use f='tvm/include/tvm/runtime/profiling.h' l='309' c='_ZN3tvm7runtime9profiling19MetricCollectorNode5StartE8DLDevice'/>
+<use f='tvm/include/tvm/runtime/profiling.h' l='315' c='_ZN3tvm7runtime9profiling19MetricCollectorNode4StopENS0_9ObjectRefE'/>
+<use f='tvm/include/tvm/runtime/profiling.h' l='315' c='_ZN3tvm7runtime9profiling19MetricCollectorNode4StopENS0_9ObjectRefE'/>
+<ovr f='tvm/include/tvm/runtime/profiling.h' l='324' c='tvm::runtime::profiling::MetricCollector'/>
+<use f='tvm/include/tvm/runtime/profiling.h' l='324'/>
+<use f='tvm/include/tvm/runtime/profiling.h' l='326' c='_ZN3tvm7runtime9profiling15MetricCollectorC1ENS0_9ObjectPtrINS0_6ObjectEEE'/>
+<use f='tvm/include/tvm/runtime/profiling.h' l='338'/>
+<use f='tvm/include/tvm/runtime/profiling.h' l='342'/>
+<use f='tvm/include/tvm/runtime/profiling.h' l='380' c='_ZN3tvm7runtime9profiling8ProfilerC1ESt6vectorI8DLDeviceSaIS4_EES3_INS1_15MetricCollectorESaIS7_EESt13unordered_mapINS0_6StringENS0_9ObjectRefESt4hash8564856'/>
+<use f='tvm/include/tvm/runtime/profiling.h' l='402' c='_ZN3tvm7runtime9profiling8Profiler9StartCallENS0_6StringE8DLDeviceSt13unordered_mapINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS0_9ObjectRef8712940'/>
+<use f='tvm/include/tvm/runtime/profiling.h' l='407' c='_ZN3tvm7runtime9profiling8Profiler8StopCallESt13unordered_mapINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS0_9ObjectRefESt4hashIS9_ESt8equal_15611643'/>
+<use f='tvm/include/tvm/runtime/profiling.h' l='425'/>
+<ovr f='tvm/src/node/structural_hash.cc' l='286' c='tvm::RefToObjectPtr'/>
+<use f='tvm/src/node/structural_hash.cc' l='287' c='_ZN3tvm14RefToObjectPtr3GetERKNS_7runtime9ObjectRefE'/>
+<size>8</size>
+<use f='tvm/src/parser/token.h' l='352'/>
+<ovr f='tvm/src/parser/token.h' l='369' c='tvm::parser::Token'/>
+<use f='tvm/src/parser/token.h' l='371' c='_ZN3tvm6parser5TokenC1ENS_4SpanENS0_9TokenTypeENS_7runtime9ObjectRefE'/>
+<use f='tvm/src/parser/token.h' l='371' c='_ZN3tvm6parser5TokenC1ENS_4SpanENS0_9TokenTypeENS_7runtime9ObjectRefE'/>
+<use f='tvm/src/parser/token.h' l='376' c='_ZNK3tvm6parser5Token10ToMetadataEv'/>
+<use f='tvm/src/parser/token.h' l='377' c='_ZN3tvm6parser5TokenC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<use f='tvm/src/parser/token.h' l='380' c='_ZN3tvm6parser5TokenC1ENS_4SpanENS0_9TokenTypeENS_7runtime9ObjectRefE'/>
+<use f='tvm/src/parser/token.h' l='371' c='_ZN3tvm6parser5TokenC1ENS_4SpanENS0_9TokenTypeENS_7runtime9ObjectRefE'/>
+<use f='tvm/src/parser/token.h' l='397' c='_ZNK3tvm6parser5Token10ToMetadataEv'/>
+<use f='tvm/src/parser/token.h' l='399' c='_ZNK3tvm6parser5Token10ToMetadataEv'/>
+<use f='tvm/src/parser/token.h' l='401' c='_ZNK3tvm6parser5Token10ToMetadataEv'/>
+<size>8</size>
+<use f='tvm/src/printer/relay_text_printer.cc' l='829' c='_ZN3tvm5relay16RelayTextPrinter11AttrPrinter5VisitEPKcPNS_7runtime9ObjectRefE'/>
+<size>8</size>
+<ovr f='tvm/src/relay/analysis/annotated_region_set.h' l='105' c='tvm::relay::AnnotatedRegion'/>
+<use f='tvm/src/relay/analysis/annotated_region_set.h' l='116' c='_ZN3tvm5relay15AnnotatedRegionC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<ovr f='tvm/src/relay/analysis/annotated_region_set.h' l='201' c='tvm::relay::AnnotatedRegionSet'/>
+<use f='tvm/src/relay/analysis/annotated_region_set.h' l='218' c='_ZN3tvm5relay18AnnotatedRegionSetC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<size>8</size>
+<ovr f='tvm/src/relay/analysis/call_graph.h' l='197' c='tvm::relay::CallGraph'/>
+<use f='tvm/src/relay/analysis/call_graph.h' l='216' c='_ZN3tvm5relay9CallGraphC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<size>8</size>
+<ovr f='tvm/include/tvm/tir/usmp/utils.h' l='119' c='tvm::tir::usmp::BufferInfo'/>
+<use f='tvm/include/tvm/tir/usmp/utils.h' l='124' c='_ZN3tvm3tir4usmp10BufferInfoC1ENS_7runtime9ObjectPtrINS3_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/tir/usmp/utils.h' l='160' c='tvm::tir::usmp::BufferInfoAnalysis'/>
+<use f='tvm/include/tvm/tir/usmp/utils.h' l='163' c='_ZN3tvm3tir4usmp18BufferInfoAnalysisC1ENS_7runtime9ObjectPtrINS3_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/tir/usmp/utils.h' l='193' c='tvm::tir::usmp::PoolAllocation'/>
+<use f='tvm/include/tvm/tir/usmp/utils.h' l='196' c='_ZN3tvm3tir4usmp14PoolAllocationC1ENS_7runtime9ObjectPtrINS3_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/tir/usmp/utils.h' l='231' c='tvm::tir::usmp::AllocatedPoolInfo'/>
+<use f='tvm/include/tvm/tir/usmp/utils.h' l='235' c='_ZN3tvm3tir4usmp17AllocatedPoolInfoC1ENS_7runtime9ObjectPtrINS3_6ObjectEEE'/>
+<ovr f='tvm/src/relay/backend/utils.h' l='118' c='tvm::relay::backend::ExecutorCodegenMetadata'/>
+<use f='tvm/src/relay/backend/utils.h' l='129' c='_ZN3tvm5relay7backend23ExecutorCodegenMetadataC1ENS_7runtime9ObjectPtrINS3_6ObjectEEE'/>
+<ovr f='tvm/src/relay/backend/utils.h' l='155' c='tvm::relay::backend::StorageInfo'/>
+<use f='tvm/src/relay/backend/utils.h' l='159' c='_ZN3tvm5relay7backend11StorageInfoC1ENS_7runtime9ObjectPtrINS3_6ObjectEEE'/>
+<ovr f='tvm/src/relay/backend/utils.h' l='176' c='tvm::relay::backend::StaticMemoryPlan'/>
+<use f='tvm/src/relay/backend/utils.h' l='179' c='_ZN3tvm5relay7backend16StaticMemoryPlanC1ENS_7runtime9ObjectPtrINS3_6ObjectEEE'/>
+<ovr f='tvm/src/relay/backend/utils.h' l='201' c='tvm::relay::backend::FunctionInfo'/>
+<use f='tvm/src/relay/backend/utils.h' l='207' c='_ZN3tvm5relay7backend12FunctionInfoC1ENS_7runtime9ObjectPtrINS3_6ObjectEEE'/>
+<size>8</size>
+<ovr f='tvm/include/tvm/relay/op_strategy.h' l='65' c='tvm::relay::OpImplementation'/>
+<use f='tvm/include/tvm/relay/op_strategy.h' l='86' c='_ZN3tvm5relay16OpImplementationC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/relay/op_strategy.h' l='112' c='tvm::relay::OpSpecialization'/>
+<use f='tvm/include/tvm/relay/op_strategy.h' l='124' c='_ZN3tvm5relay16OpSpecializationC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/relay/op_strategy.h' l='144' c='tvm::relay::OpStrategy'/>
+<use f='tvm/include/tvm/relay/op_strategy.h' l='156' c='_ZN3tvm5relay10OpStrategyC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<ovr f='tvm/src/relay/transforms/infer_layout_utils.h' l='94' c='tvm::relay::InferCorrectLayoutOutput'/>
+<use f='tvm/src/relay/transforms/infer_layout_utils.h' l='104' c='_ZN3tvm5relay24InferCorrectLayoutOutputC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<ovr f='tvm/src/relay/backend/te_compiler_cache.h' l='70' c='tvm::relay::tec::LoweredOutput'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.h' l='74' c='_ZN3tvm5relay3tec13LoweredOutputC1ENS_7runtime9ObjectPtrINS3_6ObjectEEE'/>
+<ovr f='tvm/src/relay/backend/te_compiler_cache.h' l='113' c='tvm::relay::tec::CCacheKey'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.h' l='116' c='_ZN3tvm5relay3tec9CCacheKeyC1ENS_7runtime9ObjectPtrINS3_6ObjectEEE'/>
+<ovr f='tvm/src/relay/backend/te_compiler_cache.h' l='170' c='tvm::relay::tec::CachedFunc'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.h' l='179' c='_ZN3tvm5relay3tec10CachedFuncC1ENS_7runtime9ObjectPtrINS3_6ObjectEEE'/>
+<ovr f='tvm/src/relay/backend/te_compiler_cache.h' l='201' c='tvm::relay::tec::CCacheValue'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.h' l='204' c='_ZN3tvm5relay3tec11CCacheValueC1ENS_7runtime9ObjectPtrINS3_6ObjectEEE'/>
+<ovr f='tvm/src/relay/backend/te_compiler.h' l='138' c='tvm::relay::tec::TECompiler'/>
+<use f='tvm/src/relay/backend/te_compiler.h' l='141' c='_ZN3tvm5relay3tec10TECompilerC1ENS_7runtime9ObjectPtrINS3_6ObjectEEE'/>
+<size>8</size>
+<ovr f='tvm/src/relay/backend/contrib/ethosu/utils.h' l='82' c='tvm::relay::contrib::ethosu::BaseAddress'/>
+<use f='tvm/src/relay/backend/contrib/ethosu/utils.h' l='86' c='_ZN3tvm5relay7contrib6ethosu11BaseAddressC1ENS_7runtime9ObjectPtrINS4_6ObjectEEE'/>
+<ovr f='tvm/src/relay/backend/contrib/ethosu/utils.h' l='128' c='tvm::relay::contrib::ethosu::CompilationArtifact'/>
+<use f='tvm/src/relay/backend/contrib/ethosu/utils.h' l='132' c='_ZN3tvm5relay7contrib6ethosu19CompilationArtifactC1ENS_7runtime9ObjectPtrINS4_6ObjectEEE'/>
+<size>8</size>
+<use f='tvm/src/relay/backend/executor.cc' l='44' c='_ZN3tvm5relay8Executor6CreateENS_7runtime6StringENS2_3MapIS3_NS2_9ObjectRefEvvEE'/>
+<size>8</size>
+<ovr f='tvm/include/tvm/runtime/container/closure.h' l='44' c='tvm::runtime::Closure'/>
+<use f='tvm/include/tvm/runtime/container/closure.h' l='44'/>
+<use f='tvm/include/tvm/runtime/container/closure.h' l='46' c='_ZN3tvm7runtime7ClosureC1ENS0_9ObjectPtrINS0_6ObjectEEE'/>
+<use f='tvm/include/tvm/relay/interpreter.h' l='76' c='_ZN3tvm5relay18InterpreterClosureC1ENS_7runtime3MapINS0_3VarENS2_9ObjectRefEvvEENS0_8FunctionE'/>
+<ovr f='tvm/include/tvm/relay/interpreter.h' l='99' c='tvm::relay::RecClosure'/>
+<use f='tvm/include/tvm/relay/interpreter.h' l='102' c='_ZN3tvm5relay10RecClosureC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/relay/interpreter.h' l='116' c='tvm::relay::RefValue'/>
+<use f='tvm/include/tvm/relay/interpreter.h' l='118' c='_ZN3tvm5relay8RefValueC1ENS_7runtime9ObjectRefE'/>
+<use f='tvm/include/tvm/relay/interpreter.h' l='119' c='_ZN3tvm5relay8RefValueC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/relay/interpreter.h' l='140' c='tvm::relay::ConstructorValue'/>
+<use f='tvm/include/tvm/relay/interpreter.h' l='142' c='_ZN3tvm5relay16ConstructorValueC1EiNS_7runtime5ArrayINS2_9ObjectRefEvEENS_11ConstructorE'/>
+<use f='tvm/include/tvm/relay/interpreter.h' l='144' c='_ZN3tvm5relay16ConstructorValueC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<use f='tvm/src/relay/backend/interpreter.cc' l='128' c='_ZN3tvm5relay18InterpreterClosureC1ENS_7runtime3MapINS0_3VarENS2_9ObjectRefEvvEENS0_8FunctionE'/>
+<use f='tvm/src/relay/backend/interpreter.cc' l='162' c='_ZN3tvm5relay8RefValueC1ENS_7runtime9ObjectRefE'/>
+<use f='tvm/src/relay/backend/interpreter.cc' l='180' c='_ZN3tvm5relay16ConstructorValueC1EiNS_7runtime5ArrayINS2_9ObjectRefEvEENS_11ConstructorE'/>
+<ovr f='tvm/src/relay/backend/interpreter.cc' l='273' c='tvm::relay::InterpreterState'/>
+<use f='tvm/src/relay/backend/interpreter.cc' l='275'/>
+<use f='tvm/src/relay/backend/interpreter.cc' l='280' c='_ZN3tvm5relay16InterpreterStateC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<size>8</size>
+<use f='tvm/src/relay/backend/runtime.cc' l='44' c='_ZN3tvm5relay7Runtime6CreateENS_7runtime6StringENS2_3MapIS3_NS2_9ObjectRefEvvEE'/>
+<size>8</size>
+<use f='tvm/include/tvm/runtime/vm/executable.h' l='263'/>
+<use f='tvm/include/tvm/runtime/vm/executable.h' l='277'/>
+<ovr f='tvm/include/tvm/runtime/vm/memory_manager.h' l='136' c='tvm::runtime::vm::Storage'/>
+<use f='tvm/include/tvm/runtime/vm/memory_manager.h' l='136'/>
+<use f='tvm/include/tvm/runtime/vm/memory_manager.h' l='140' c='_ZN3tvm7runtime2vm7StorageC1ENS0_9ObjectPtrINS0_6ObjectEEE'/>
+<use f='tvm/include/tvm/runtime/vm/vm.h' l='57'/>
+<use f='tvm/include/tvm/runtime/vm/vm.h' l='67' c='_ZN3tvm7runtime2vm9VMClosureC1EmSt6vectorINS0_9ObjectRefESaIS4_EE'/>
+<use f='tvm/include/tvm/runtime/vm/vm.h' l='123'/>
+<use f='tvm/include/tvm/runtime/vm/vm.h' l='196' c='_ZN3tvm7runtime2vm14VirtualMachine13WriteRegisterElRKNS0_9ObjectRefE'/>
+<use f='tvm/include/tvm/runtime/vm/vm.h' l='203' c='_ZNK3tvm7runtime2vm14VirtualMachine12ReadRegisterEl'/>
+<use f='tvm/include/tvm/runtime/vm/vm.h' l='218' c='_ZN3tvm7runtime2vm14VirtualMachine6InvokeERKNS1_10VMFunctionERKSt6vectorINS0_9ObjectRefESaIS7_EE'/>
+<use f='tvm/include/tvm/runtime/vm/vm.h' l='218' c='_ZN3tvm7runtime2vm14VirtualMachine6InvokeERKNS1_10VMFunctionERKSt6vectorINS0_9ObjectRefESaIS7_EE'/>
+<use f='tvm/include/tvm/runtime/vm/vm.h' l='227' c='_ZN3tvm7runtime2vm14VirtualMachine6InvokeERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKSt6vectorINS0_9ObjectRefESaISC_EE'/>
+<use f='tvm/include/tvm/runtime/vm/vm.h' l='227' c='_ZN3tvm7runtime2vm14VirtualMachine6InvokeERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKSt6vectorINS0_9ObjectRefESaISC_EE'/>
+<use f='tvm/include/tvm/runtime/vm/vm.h' l='241' c='_ZN3tvm7runtime2vm14VirtualMachine12InvokePackedElRKNS0_10PackedFuncEllRKSt6vectorINS0_9ObjectRefESaIS7_EE'/>
+<use f='tvm/include/tvm/runtime/vm/vm.h' l='263' c='_ZN3tvm7runtime2vm14VirtualMachine12InvokeGlobalERKNS1_10VMFunctionERKSt6vectorINS0_9ObjectRefESaIS7_EE'/>
+<use f='tvm/include/tvm/runtime/vm/vm.h' l='339' c='_ZN3tvm7runtime2vm14VirtualMachine23SetInputTensorWithIndexERSt6vectorINS0_9ObjectRefESaIS4_EERKNS0_11TVMArgValueEi8DLDevice'/>
+<use f='tvm/include/tvm/runtime/vm/vm.h' l='354'/>
+<use f='tvm/include/tvm/runtime/vm/vm.h' l='358'/>
+<use f='tvm/include/tvm/runtime/vm/vm.h' l='371'/>
+<use f='tvm/src/runtime/vm/profiler/vm.h' l='53' c='_ZN3tvm7runtime2vm19VirtualMachineDebug12InvokePackedElRKNS0_10PackedFuncEllRKSt6vectorINS0_9ObjectRefESaIS7_EE'/>
+<size>8</size>
+<ovr f='tvm/src/relay/collage/cost_estimator.h' l='61' c='tvm::relay::collage::CostEstimator'/>
+<use f='tvm/src/relay/collage/cost_estimator.h' l='64' c='_ZN3tvm5relay7collage13CostEstimatorC1ENS_7runtime9ObjectPtrINS3_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/relay/dataflow_pattern.h' l='50' c='tvm::relay::DFPattern'/>
+<use f='tvm/include/tvm/relay/dataflow_pattern.h' l='67' c='_ZNK3tvm5relay9DFPattern7HasAttrERKNS_7runtime3MapINS2_6StringENS2_9ObjectRefEvvEE'/>
+<use f='tvm/include/tvm/relay/dataflow_pattern.h' l='77' c='_ZN3tvm5relay9DFPatternC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/relay/dataflow_matcher.h' l='67' c='tvm::relay::DFPatternCallback'/>
+<use f='tvm/include/tvm/relay/dataflow_matcher.h' l='71' c='_ZN3tvm5relay17DFPatternCallbackC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<ovr f='tvm/src/relay/collage/sub_graph.h' l='140' c='tvm::relay::collage::NestedSubGraph'/>
+<use f='tvm/src/relay/collage/sub_graph.h' l='174' c='_ZN3tvm5relay7collage14NestedSubGraphC1ENS_7runtime9ObjectPtrINS3_6ObjectEEE'/>
+<ovr f='tvm/src/relay/collage/sub_graph.h' l='373' c='tvm::relay::collage::SubGraph'/>
+<use f='tvm/src/relay/collage/sub_graph.h' l='428' c='_ZN3tvm5relay7collage8SubGraphC1ENS_7runtime9ObjectPtrINS3_6ObjectEEE'/>
+<ovr f='tvm/src/relay/collage/candidate_partition.h' l='117' c='tvm::relay::collage::CandidatePartition'/>
+<use f='tvm/src/relay/collage/candidate_partition.h' l='120' c='_ZN3tvm5relay7collage18CandidatePartitionC1ENS_7runtime6StringENS1_8SubGraphENS3_9ObjectRefENS1_4CostE'/>
+<use f='tvm/src/relay/collage/candidate_partition.h' l='160' c='_ZN3tvm5relay7collage18CandidatePartitionC1ENS_7runtime9ObjectPtrINS3_6ObjectEEE'/>
+<ovr f='tvm/src/relay/collage/combiner_rule.h' l='63' c='tvm::relay::collage::SimpleCombinerRule'/>
+<use f='tvm/src/relay/collage/combiner_rule.h' l='67' c='_ZN3tvm5relay7collage18SimpleCombinerRuleC1ENS_7runtime9ObjectPtrINS3_6ObjectEEE'/>
+<ovr f='tvm/src/relay/collage/combiner_rule.h' l='128' c='tvm::relay::collage::CombinerRule'/>
+<use f='tvm/src/relay/collage/combiner_rule.h' l='132' c='_ZN3tvm5relay7collage12CombinerRuleC1ENS_7runtime9ObjectPtrINS3_6ObjectEEE'/>
+<ovr f='tvm/src/relay/collage/partition_rule.h' l='195' c='tvm::relay::collage::PartitionRule'/>
+<use f='tvm/src/relay/collage/partition_rule.h' l='199' c='_ZN3tvm5relay7collage13PartitionRuleC1ENS_7runtime9ObjectPtrINS3_6ObjectEEE'/>
+<ovr f='tvm/src/relay/collage/partition_spec.h' l='108' c='tvm::relay::collage::PartitionSpec'/>
+<use f='tvm/src/relay/collage/partition_spec.h' l='113' c='_ZN3tvm5relay7collage13PartitionSpecC1ENS_7runtime9ObjectPtrINS3_6ObjectEEE'/>
+<use f='tvm/src/relay/collage/candidate_partition.cc' l='209' c='_ZN3tvm5relay7collage18CandidatePartitionC1ENS_7runtime6StringENS1_8SubGraphENS3_9ObjectRefENS1_4CostE'/>
+<size>8</size>
+<use f='tvm/src/relay/ir/dataflow_pattern.cc' l='348' c='_ZNK3tvm5relay9DFPattern7HasAttrERKNS_7runtime3MapINS2_6StringENS2_9ObjectRefEvvEE'/>
+<size>8</size>
+<ovr f='tvm/src/relay/qnn/op/requantize_config.h' l='89' c='tvm::relay::qnn::RequantizeConfig'/>
+<use f='tvm/src/relay/qnn/op/requantize_config.h' l='92' c='_ZN3tvm5relay3qnn16RequantizeConfigC1ENS_7runtime9ObjectPtrINS3_6ObjectEEE'/>
+<size>8</size>
+<ovr f='tvm/src/relay/quantize/quantize.h' l='106' c='tvm::relay::quantize::QConfig'/>
+<use f='tvm/src/relay/quantize/quantize.h' l='109' c='_ZN3tvm5relay8quantize7QConfigC1ENS_7runtime9ObjectPtrINS3_6ObjectEEE'/>
+<size>8</size>
+<ovr f='tvm/src/relay/transforms/transform_layout.h' l='86' c='tvm::relay::TransformMemorizer'/>
+<use f='tvm/src/relay/transforms/transform_layout.h' l='89' c='_ZN3tvm5relay18TransformMemorizerC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<ovr f='tvm/src/relay/transforms/transform_layout.h' l='201' c='tvm::relay::LayoutAlternatedExpr'/>
+<use f='tvm/src/relay/transforms/transform_layout.h' l='204' c='_ZN3tvm5relay20LayoutAlternatedExprC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<size>8</size>
+<ovr f='tvm/src/relay/transforms/fold_scale_axis.cc' l='101' c='tvm::relay::fold_scale_axis::Message'/>
+<use f='tvm/src/relay/transforms/fold_scale_axis.cc' l='111' c='_ZN3tvm5relay15fold_scale_axis7MessageC1ENS_7runtime9ObjectPtrINS3_6ObjectEEE'/>
+<ovr f='tvm/src/relay/transforms/fold_scale_axis.cc' l='784' c='tvm::relay::fold_scale_axis::BackwardTransformer'/>
+<use f='tvm/src/relay/transforms/fold_scale_axis.cc' l='787' c='_ZN3tvm5relay15fold_scale_axis19BackwardTransformerC1ENS_7runtime9ObjectPtrINS3_6ObjectEEE'/>
+<size>8</size>
+<ovr f='tvm/src/relay/transforms/partial_eval.cc' l='134' c='tvm::relay::partial_eval::Static'/>
+<use f='tvm/src/relay/transforms/partial_eval.cc' l='137' c='_ZN3tvm5relay12partial_eval6StaticC1ENS_7runtime9ObjectPtrINS3_6ObjectEEE'/>
+<ovr f='tvm/src/relay/transforms/partial_eval.cc' l='162' c='tvm::relay::partial_eval::PStatic'/>
+<use f='tvm/src/relay/transforms/partial_eval.cc' l='164' c='_ZN3tvm5relay12partial_eval7PStaticC1ENS_7runtime9ObjectPtrINS3_6ObjectEEE'/>
+<ovr f='tvm/src/relay/transforms/partial_eval.cc' l='254' c='tvm::relay::partial_eval::Fuel'/>
+<use f='tvm/src/relay/transforms/partial_eval.cc' l='257' c='_ZN3tvm5relay12partial_eval4FuelC1ENS_7runtime9ObjectPtrINS3_6ObjectEEE'/>
+<size>8</size>
+<use f='tvm/src/runtime/container.cc' l='41'/>
+<use f='tvm/src/runtime/container.cc' l='46'/>
+<use f='tvm/src/runtime/container.cc' l='49'/>
+<use f='tvm/src/runtime/container.cc' l='74'/>
+<use f='tvm/src/runtime/container.cc' l='80'/>
+<use f='tvm/src/runtime/container.cc' l='86'/>
+<use f='tvm/src/runtime/container.cc' l='94'/>
+<use f='tvm/src/runtime/container.cc' l='104'/>
+<use f='tvm/src/runtime/container.cc' l='127'/>
+<use f='tvm/src/runtime/container.cc' l='127'/>
+<use f='tvm/src/runtime/container.cc' l='129'/>
+<use f='tvm/src/runtime/container.cc' l='131'/>
+<use f='tvm/src/runtime/container.cc' l='134'/>
+<use f='tvm/src/runtime/container.cc' l='134'/>
+<use f='tvm/src/runtime/container.cc' l='171'/>
+<size>8</size>
+<use f='tvm/include/tvm/runtime/debug.h' l='46' c='_ZN3tvm7runtime19AppendRuntimeObjectERSoRKNS0_9ObjectRefERK8DLDeviceb'/>
+<use f='tvm/include/tvm/runtime/debug.h' l='48' c='_ZN3tvm7runtime20RuntimeObject2StringB5cxx11ERKNS0_9ObjectRefERK8DLDeviceb'/>
+<use f='tvm/src/runtime/debug.cc' l='109' c='_ZN3tvm7runtime19AppendRuntimeObjectERSoRKNS0_9ObjectRefERK8DLDeviceb'/>
+<use f='tvm/src/runtime/debug.cc' l='120' c='_ZN3tvm7runtime20RuntimeObject2StringB5cxx11ERKNS0_9ObjectRefERK8DLDeviceb'/>
+<size>8</size>
+<use f='tvm/src/runtime/graph_executor/graph_executor.h' l='55'/>
+<use f='tvm/src/runtime/graph_executor/graph_executor.h' l='76'/>
+<use f='tvm/src/runtime/graph_executor/graph_executor.h' l='77'/>
+<use f='tvm/src/runtime/graph_executor/debug/graph_executor_debug.cc' l='342' c='_ZN3tvm7runtime18GraphExecutorDebug7ProfileENS0_5ArrayINS0_9profiling15MetricCollectorEvEE'/>
+<size>8</size>
+<use f='tvm/src/runtime/graph_executor/graph_executor.cc' l='680' c='_ZN3tvm7runtime13GraphExecutor11GetFunctionERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKNS0_9ObjectPtrINS0_6ObjectEEE'/>
+<size>8</size>
+<use f='tvm/src/runtime/metadata.cc' l='55' c='_ZN3tvm7runtime8metadata13MetadataArrayC1ENS0_5ArrayINS0_9ObjectRefEvEENS1_12MetadataKindEPKc'/>
+<size>8</size>
+<use f='tvm/src/runtime/object.cc' l='230'/>
+<size>8</size>
+<use f='tvm/src/runtime/profiling.cc' l='110' c='_ZN3tvm7runtime9profiling8ProfilerC1ESt6vectorI8DLDeviceSaIS4_EES3_INS1_15MetricCollectorESaIS7_EESt13unordered_mapINS0_6StringENS0_9ObjectRefESt4hash8564856'/>
+<use f='tvm/src/runtime/profiling.cc' l='124' c='_ZN3tvm7runtime9profiling8ProfilerC1ESt6vectorI8DLDeviceSaIS4_EES3_INS1_15MetricCollectorESaIS7_EESt13unordered_mapINS0_6StringENS0_9ObjectRefESt4hash8564856'/>
+<use f='tvm/src/runtime/profiling.cc' l='135' c='_ZN3tvm7runtime9profiling8Profiler9StartCallENS0_6StringE8DLDeviceSt13unordered_mapINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS0_9ObjectRef8712940'/>
+<use f='tvm/src/runtime/profiling.cc' l='136' c='_ZN3tvm7runtime9profiling8Profiler9StartCallENS0_6StringE8DLDeviceSt13unordered_mapINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS0_9ObjectRef8712940'/>
+<use f='tvm/src/runtime/profiling.cc' l='138' c='_ZN3tvm7runtime9profiling8Profiler9StartCallENS0_6StringE8DLDeviceSt13unordered_mapINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS0_9ObjectRef8712940'/>
+<use f='tvm/src/runtime/profiling.cc' l='146' c='_ZN3tvm7runtime9profiling8Profiler8StopCallESt13unordered_mapINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS0_9ObjectRefESt4hashIS9_ESt8equal_15611643'/>
+<use f='tvm/src/runtime/profiling.cc' l='287' c='_ZN3tvm7runtime9profiling12_GLOBAL__N_114metric_as_jsonERSoNS0_9ObjectRefE'/>
+<use f='tvm/src/runtime/profiling.cc' l='376' c='_ZN3tvm7runtime9profiling15AggregateMetricERKSt6vectorINS0_9ObjectRefESaIS3_EE'/>
+<use f='tvm/src/runtime/profiling.cc' l='376' c='_ZN3tvm7runtime9profiling15AggregateMetricERKSt6vectorINS0_9ObjectRefESaIS3_EE'/>
+<use f='tvm/src/runtime/profiling.cc' l='383' c='_ZN3tvm7runtime9profiling15AggregateMetricERKSt6vectorINS0_9ObjectRefESaIS3_EE'/>
+<use f='tvm/src/runtime/profiling.cc' l='389' c='_ZN3tvm7runtime9profiling15AggregateMetricERKSt6vectorINS0_9ObjectRefESaIS3_EE'/>
+<use f='tvm/src/runtime/profiling.cc' l='395' c='_ZN3tvm7runtime9profiling15AggregateMetricERKSt6vectorINS0_9ObjectRefESaIS3_EE'/>
+<use f='tvm/src/runtime/profiling.cc' l='401' c='_ZN3tvm7runtime9profiling15AggregateMetricERKSt6vectorINS0_9ObjectRefESaIS3_EE'/>
+<use f='tvm/src/runtime/profiling.cc' l='405' c='_ZN3tvm7runtime9profiling15AggregateMetricERKSt6vectorINS0_9ObjectRefESaIS3_EE'/>
+<use f='tvm/src/runtime/profiling.cc' l='414' c='_ZN3tvm7runtime9profiling15AggregateMetricERKSt6vectorINS0_9ObjectRefESaIS3_EE'/>
+<use f='tvm/src/runtime/profiling.cc' l='430' c='_ZN3tvm7runtime9profilingL12print_metricENS0_9ObjectRefE'/>
+<use f='tvm/src/runtime/profiling.cc' l='461' c='_ZNK3tvm7runtime9profiling10ReportNode7AsTableEbbb'/>
+<use f='tvm/src/runtime/profiling.cc' l='485' c='_ZNK3tvm7runtime9profiling10ReportNode7AsTableEbbb'/>
+<use f='tvm/src/runtime/profiling.cc' l='493' c='_ZNK3tvm7runtime9profiling10ReportNode7AsTableEbbb'/>
+<use f='tvm/src/runtime/profiling.cc' l='497' c='_ZNK3tvm7runtime9profiling10ReportNode7AsTableEbbb'/>
+<use f='tvm/src/runtime/profiling.cc' l='519' c='_ZNK3tvm7runtime9profiling10ReportNode7AsTableEbbb'/>
+<use f='tvm/src/runtime/profiling.cc' l='519' c='_ZNK3tvm7runtime9profiling10ReportNode7AsTableEbbb'/>
+<use f='tvm/src/runtime/profiling.cc' l='527' c='_ZNK3tvm7runtime9profiling10ReportNode7AsTableEbbb'/>
+<use f='tvm/src/runtime/profiling.cc' l='536' c='_ZNK3tvm7runtime9profiling10ReportNode7AsTableEbbb'/>
+<use f='tvm/src/runtime/profiling.cc' l='543' c='_ZNK3tvm7runtime9profiling10ReportNode7AsTableEbbb'/>
+<use f='tvm/src/runtime/profiling.cc' l='550' c='_ZNK3tvm7runtime9profiling10ReportNode7AsTableEbbb'/>
+<use f='tvm/src/runtime/profiling.cc' l='563' c='_ZNK3tvm7runtime9profiling10ReportNode7AsTableEbbb'/>
+<use f='tvm/src/runtime/profiling.cc' l='648' c='_ZN3tvm7runtime9profiling8Profiler6ReportEv'/>
+<use f='tvm/src/runtime/profiling.cc' l='650' c='_ZN3tvm7runtime9profiling8Profiler6ReportEv'/>
+<use f='tvm/src/runtime/profiling.cc' l='652' c='_ZN3tvm7runtime9profiling8Profiler6ReportEv'/>
+<use f='tvm/src/runtime/profiling.cc' l='653' c='_ZN3tvm7runtime9profiling8Profiler6ReportEv'/>
+<use f='tvm/src/runtime/profiling.cc' l='664' c='_ZN3tvm7runtime9profiling8Profiler6ReportEv'/>
+<use f='tvm/src/runtime/profiling.cc' l='675' c='_ZN3tvm7runtime9profiling8Profiler6ReportEv'/>
+<use f='tvm/src/runtime/profiling.cc' l='680' c='_ZN3tvm7runtime9profiling8Profiler6ReportEv'/>
+<use f='tvm/src/runtime/profiling.cc' l='688' c='_ZN3tvm7runtime9profiling6ReportC1ENS0_5ArrayINS0_3MapINS0_6StringENS0_9ObjectRefEvvEEvEENS4_IS5_S7_vvEES7_'/>
+<use f='tvm/src/runtime/profiling.cc' l='689' c='_ZN3tvm7runtime9profiling6ReportC1ENS0_5ArrayINS0_3MapINS0_6StringENS0_9ObjectRefEvvEEvEENS4_IS5_S7_vvEES7_'/>
+<use f='tvm/src/runtime/profiling.cc' l='690' c='_ZN3tvm7runtime9profiling6ReportC1ENS0_5ArrayINS0_3MapINS0_6StringENS0_9ObjectRefEvvEEvEENS4_IS5_S7_vvEES7_'/>
+<use f='tvm/src/runtime/profiling.cc' l='698' c='_ZN3tvm7runtime9profiling13parse_metricsEPN4dmlc10JSONReaderE'/>
+<use f='tvm/src/runtime/profiling.cc' l='701' c='_ZN3tvm7runtime9profiling13parse_metricsEPN4dmlc10JSONReaderE'/>
+<use f='tvm/src/runtime/profiling.cc' l='703' c='_ZN3tvm7runtime9profiling13parse_metricsEPN4dmlc10JSONReaderE'/>
+<use f='tvm/src/runtime/profiling.cc' l='709' c='_ZN3tvm7runtime9profiling13parse_metricsEPN4dmlc10JSONReaderE'/>
+<use f='tvm/src/runtime/profiling.cc' l='713' c='_ZN3tvm7runtime9profiling13parse_metricsEPN4dmlc10JSONReaderE'/>
+<use f='tvm/src/runtime/profiling.cc' l='717' c='_ZN3tvm7runtime9profiling13parse_metricsEPN4dmlc10JSONReaderE'/>
+<use f='tvm/src/runtime/profiling.cc' l='721' c='_ZN3tvm7runtime9profiling13parse_metricsEPN4dmlc10JSONReaderE'/>
+<use f='tvm/src/runtime/profiling.cc' l='744' c='_ZN3tvm7runtime9profiling6Report8FromJSONENS0_6StringE'/>
+<use f='tvm/src/runtime/profiling.cc' l='745' c='_ZN3tvm7runtime9profiling6Report8FromJSONENS0_6StringE'/>
+<use f='tvm/src/runtime/profiling.cc' l='746' c='_ZN3tvm7runtime9profiling6Report8FromJSONENS0_6StringE'/>
+<use f='tvm/src/runtime/profiling.cc' l='805' c='_ZN3tvm7runtime9profiling15ProfileFunctionENS0_6ModuleENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiiiNS0_5ArrayINS1_15MetricCollectorEvEE'/>
+<use f='tvm/src/runtime/profiling.cc' l='807' c='_ZN3tvm7runtime9profiling15ProfileFunctionENS0_6ModuleENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiiiNS0_5ArrayINS1_15MetricCollectorEvEE'/>
+<use f='tvm/src/runtime/profiling.cc' l='810' c='_ZN3tvm7runtime9profiling15ProfileFunctionENS0_6ModuleENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiiiNS0_5ArrayINS1_15MetricCollectorEvEE'/>
+<use f='tvm/src/runtime/profiling.cc' l='823' c='_ZN3tvm7runtime9profiling15ProfileFunctionENS0_6ModuleENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiiiNS0_5ArrayINS1_15MetricCollectorEvEE'/>
+<use f='tvm/src/runtime/profiling.cc' l='912'/>
+<use f='tvm/src/runtime/profiling.cc' l='913'/>
+<use f='tvm/src/runtime/profiling.cc' l='914'/>
+<use f='tvm/src/runtime/profiling.cc' l='919'/>
+<use f='tvm/src/runtime/profiling.cc' l='923'/>
+<use f='tvm/src/runtime/profiling.cc' l='927'/>
+<use f='tvm/src/runtime/profiling.cc' l='931'/>
+<size>8</size>
+<use f='tvm/src/runtime/rpc/rpc_endpoint.cc' l='178' c='_ZN3tvm7runtime11RPCEndpoint12EventHandler17ValidateArgumentsEPK8TVMValuePKii'/>
+<size>8</size>
+<use f='tvm/src/runtime/vm/executable.cc' l='786' c='_ZN3tvm7runtime2vm10Executable20LoadPrimitiveOpNamesEPN4dmlc6StreamE'/>
+<use f='tvm/src/runtime/vm/executable.cc' l='790' c='_ZN3tvm7runtime2vm10Executable20LoadPrimitiveOpNamesEPN4dmlc6StreamE'/>
+<size>8</size>
+<use f='tvm/src/runtime/vm/profiler/vm.cc' l='151' c='_ZN3tvm7runtime2vm19VirtualMachineDebug12InvokePackedElRKNS0_10PackedFuncEllRKSt6vectorINS0_9ObjectRefESaIS7_EE'/>
+<use f='tvm/src/runtime/vm/profiler/vm.cc' l='157' c='_ZN3tvm7runtime2vm19VirtualMachineDebug12InvokePackedElRKNS0_10PackedFuncEllRKSt6vectorINS0_9ObjectRefESaIS7_EE'/>
+<use f='tvm/src/runtime/vm/profiler/vm.cc' l='179' c='_ZN3tvm7runtime2vm19VirtualMachineDebug12InvokePackedElRKNS0_10PackedFuncEllRKSt6vectorINS0_9ObjectRefESaIS7_EE'/>
+<size>8</size>
+<use f='tvm/src/runtime/vm/vm.cc' l='50' c='_ZN3tvm7runtime2vm9VMClosureC1EmSt6vectorINS0_9ObjectRefESaIS4_EE'/>
+<use f='tvm/src/runtime/vm/vm.cc' l='69' c='_ZN3tvm7runtime2vm6CopyToENS0_9ObjectRefERK8DLDevice'/>
+<use f='tvm/src/runtime/vm/vm.cc' l='69' c='_ZN3tvm7runtime2vm6CopyToENS0_9ObjectRefERK8DLDevice'/>
+<use f='tvm/src/runtime/vm/vm.cc' l='88' c='_ZN3tvm7runtime2vm6CopyToENS0_9ObjectRefERK8DLDevice'/>
+<use f='tvm/src/runtime/vm/vm.cc' l='146' c='_ZN3tvm7runtime2vm14VirtualMachine11GetFunctionERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKNS0_9ObjectPtrINS0_6ObjectEEE'/>
+<use f='tvm/src/runtime/vm/vm.cc' l='169' c='_ZN3tvm7runtime2vm14VirtualMachine11GetFunctionERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKNS0_9ObjectPtrINS0_6ObjectEEE'/>
+<use f='tvm/src/runtime/vm/vm.cc' l='244' c='_ZN3tvm7runtime2vm14VirtualMachine8SetInputENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS0_7TVMArgsEi'/>
+<use f='tvm/src/runtime/vm/vm.cc' l='303' c='_ZN3tvm7runtime2vm14VirtualMachine23CreateInputsOrCheckSizeERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEm'/>
+<use f='tvm/src/runtime/vm/vm.cc' l='308' c='_ZN3tvm7runtime2vm14VirtualMachine23SetInputTensorWithIndexERSt6vectorINS0_9ObjectRefESaIS4_EERKNS0_11TVMArgValueEi8DLDevice'/>
+<use f='tvm/src/runtime/vm/vm.cc' l='347' c='_ZN3tvm7runtime2vm14VirtualMachine12InvokeGlobalERKNS1_10VMFunctionERKSt6vectorINS0_9ObjectRefESaIS7_EE'/>
+<use f='tvm/src/runtime/vm/vm.cc' l='361' c='_ZN3tvm7runtime2vm14VirtualMachine6InvokeERKNS1_10VMFunctionERKSt6vectorINS0_9ObjectRefESaIS7_EE'/>
+<use f='tvm/src/runtime/vm/vm.cc' l='361' c='_ZN3tvm7runtime2vm14VirtualMachine6InvokeERKNS1_10VMFunctionERKSt6vectorINS0_9ObjectRefESaIS7_EE'/>
+<use f='tvm/src/runtime/vm/vm.cc' l='374' c='_ZN3tvm7runtime2vm14VirtualMachine6InvokeERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKSt6vectorINS0_9ObjectRefESaISC_EE'/>
+<use f='tvm/src/runtime/vm/vm.cc' l='374' c='_ZN3tvm7runtime2vm14VirtualMachine6InvokeERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKSt6vectorINS0_9ObjectRefESaISC_EE'/>
+<use f='tvm/src/runtime/vm/vm.cc' l='384' c='_ZN3tvm7runtime2vm14VirtualMachine12InvokePackedElRKNS0_10PackedFuncEllRKSt6vectorINS0_9ObjectRefESaIS7_EE'/>
+<use f='tvm/src/runtime/vm/vm.cc' l='483' c='_ZN3tvm7runtime2vm14VirtualMachine13WriteRegisterElRKNS0_9ObjectRefE'/>
+<use f='tvm/src/runtime/vm/vm.cc' l='487' c='_ZNK3tvm7runtime2vm14VirtualMachine12ReadRegisterEl'/>
+<use f='tvm/src/runtime/vm/vm.cc' l='533' c='_ZN3tvm7runtime2vm14VirtualMachine7RunLoopEv'/>
+<use f='tvm/src/runtime/vm/vm.cc' l='575' c='_ZN3tvm7runtime2vm14VirtualMachine7RunLoopEv'/>
+<use f='tvm/src/runtime/vm/vm.cc' l='587' c='_ZN3tvm7runtime2vm14VirtualMachine7RunLoopEv'/>
+<use f='tvm/src/runtime/vm/vm.cc' l='620' c='_ZN3tvm7runtime2vm14VirtualMachine7RunLoopEv'/>
+<use f='tvm/src/runtime/vm/vm.cc' l='708' c='_ZN3tvm7runtime2vm14VirtualMachine7RunLoopEv'/>
+<use f='tvm/src/runtime/vm/vm.cc' l='712' c='_ZN3tvm7runtime2vm14VirtualMachine7RunLoopEv'/>
+<use f='tvm/src/runtime/vm/vm.cc' l='718' c='_ZN3tvm7runtime2vm14VirtualMachine7RunLoopEv'/>
+<use f='tvm/src/runtime/vm/vm.cc' l='817' c='_ZN3tvm7runtime2vm14VirtualMachine7RunLoopEv'/>
+<size>8</size>
+<ovr f='tvm/include/tvm/script/printer/doc.h' l='66' c='tvm::script::printer::Doc'/>
+<use f='tvm/include/tvm/script/printer/doc.h' l='72' c='_ZN3tvm6script7printer3DocC1ENS_7runtime9ObjectPtrINS3_6ObjectEEE'/>
+<use f='tvm/include/tvm/script/printer/doc.h' l='238' c='_ZN3tvm6script7printer10LiteralDocC1ENS_7runtime9ObjectRefE'/>
+<use f='tvm/include/tvm/script/printer/doc.h' l='244' c='_ZN3tvm6script7printer10LiteralDoc4NoneEv'/>
+<size>8</size>
+<use f='tvm/src/script/printer/doc.cc' l='49' c='_ZN3tvm6script7printer10LiteralDocC1ENS_7runtime9ObjectRefE'/>
+<size>8</size>
+<use f='tvm/src/support/ffi_testing.cc' l='117'/>
+<size>8</size>
+<ovr f='tvm/include/tvm/target/tag.h' l='70' c='tvm::TargetTag'/>
+<use f='tvm/include/tvm/target/tag.h' l='90' c='_ZN3tvm9TargetTag6AddTagENS_7runtime6StringENS1_3MapIS2_NS1_9ObjectRefEvvEEb'/>
+<use f='tvm/include/tvm/target/tag.h' l='92' c='_ZN3tvm9TargetTagC1ENS_7runtime9ObjectPtrINS1_6ObjectEEE'/>
+<use f='tvm/src/target/tag.cc' l='63' c='_ZN3tvm9TargetTag6AddTagENS_7runtime6StringENS1_3MapIS2_NS1_9ObjectRefEvvEEb'/>
+<size>8</size>
+<use f='tvm/src/target/target.cc' l='587' c='_ZN3tvm6TargetC1ERKNS_7runtime3MapINS1_6StringENS1_9ObjectRefEvvEE'/>
+<use f='tvm/src/target/target.cc' l='604' c='_ZN3tvm6TargetC1ENS_10TargetKindENS_7runtime8OptionalINS2_9ObjectRefEEENS2_6StringENS2_5ArrayIS6_vEENS2_3MapIS6_S4_vvEE'/>
+<use f='tvm/src/target/target.cc' l='605' c='_ZN3tvm6TargetC1ENS_10TargetKindENS_7runtime8OptionalINS2_9ObjectRefEEENS2_6StringENS2_5ArrayIS6_vEENS2_3MapIS6_S4_vvEE'/>
+<size>8</size>
+<ovr f='tvm/include/tvm/target/target_info.h' l='63' c='tvm::MemoryInfo'/>
+<use f='tvm/include/tvm/target/target_info.h' l='65' c='_ZN3tvm10MemoryInfoC1ENS_7runtime9ObjectPtrINS1_6ObjectEEE'/>
+<size>8</size>
+<use f='tvm/src/te/operation/compute_op.cc' l='129' c='_ZN3tvm2te9ComputeOpC1ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_NS_7runtime3MapINS8_6StringENS8_9ObjectRefEvvEENS8_5ArrayINS_3tir7IterVa14126749'/>
+<use f='tvm/src/te/operation/compute_op.cc' l='132' c='_ZN3tvm2te9ComputeOpC1ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_NS_7runtime3MapINS8_6StringENS8_9ObjectRefEvvEENS8_5ArrayINS_3tir7IterVa14126749'/>
+<size>8</size>
+<use f='tvm/src/te/operation/extern_op.cc' l='53' c='_ZN3tvm2te8ExternOpC1ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_NS_7runtime3MapINS8_6StringENS8_9ObjectRefEvvEENS8_5ArrayINS0_6TensorEvEE7497917'/>
+<use f='tvm/src/te/operation/extern_op.cc' l='57' c='_ZN3tvm2te8ExternOpC1ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_NS_7runtime3MapINS8_6StringENS8_9ObjectRefEvvEENS8_5ArrayINS0_6TensorEvEE7497917'/>
+<size>8</size>
+<use f='tvm/src/te/operation/hybrid_op.cc' l='60' c='_ZN3tvm2te8HybridOpC1ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_NS_7runtime3MapINS8_6StringENS8_9ObjectRefEvvEENS8_5ArrayINS0_6TensorEvEESF_NS_3tir4StmtE'/>
+<use f='tvm/src/te/operation/hybrid_op.cc' l='63' c='_ZN3tvm2te8HybridOpC1ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_NS_7runtime3MapINS8_6StringENS8_9ObjectRefEvvEENS8_5ArrayINS0_6TensorEvEESF_NS_3tir4StmtE'/>
+<size>8</size>
+<use f='tvm/src/te/operation/scan_op.cc' l='58' c='_ZN3tvm2te6ScanOpC1ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_NS_7runtime3MapINS8_6StringENS8_9ObjectRefEvvEENS_3tir7IterVarENS8_5ArrayIN10627940'/>
+<use f='tvm/src/te/operation/scan_op.cc' l='62' c='_ZN3tvm2te6ScanOpC1ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_NS_7runtime3MapINS8_6StringENS8_9ObjectRefEvvEENS_3tir7IterVarENS8_5ArrayIN10627940'/>
+<size>8</size>
+<use f='tvm/src/te/schedule/schedule_lang.cc' l='203' c='_ZN3tvm2te5Stage11env_threadsENS_7runtime5ArrayINS_3tir7IterVarEvEE'/>
+<use f='tvm/src/te/schedule/schedule_lang.cc' l='307' c='_ZN3tvm2te5Stage7reorderERKNS_7runtime5ArrayINS_3tir7IterVarEvEE'/>
+<size>8</size>
+<use f='tvm/src/tir/ir/stmt.cc' l='73' c='_ZN3tvm3tir8AttrStmtC1ENS_7runtime9ObjectRefENS2_6StringENS_8PrimExprENS0_4StmtENS_4SpanE'/>
+<use f='tvm/src/tir/ir/stmt.cc' l='142' c='_ZN3tvm3tir3ForC1ENS0_3VarENS_8PrimExprES3_NS0_7ForKindENS0_4StmtENS_7runtime8OptionalINS0_7IterVarEEENS6_3MapINS6_6StringENS6_9ObjectRefEvvEENS_4SpanE'/>
+<use f='tvm/src/tir/ir/stmt.cc' l='365' c='_ZN3tvm3tir8AllocateC1ENS0_3VarENS_7runtime8DataTypeENS3_5ArrayINS_8PrimExprEvEES6_NS0_4StmtENS3_3MapINS3_6StringENS3_9ObjectRefEvvEENS_4SpanE'/>
+<use f='tvm/src/tir/ir/stmt.cc' l='440' c='_ZN3tvm3tir13AllocateConstC1ENS0_3VarENS_7runtime8DataTypeENS3_5ArrayINS_8PrimExprEvEENS3_9ObjectRefENS0_4StmtENS3_3MapINS3_6StringES8_vvEENS_4SpanE'/>
+<use f='tvm/src/tir/ir/stmt.cc' l='440' c='_ZN3tvm3tir13AllocateConstC1ENS0_3VarENS_7runtime8DataTypeENS3_5ArrayINS_8PrimExprEvEENS3_9ObjectRefENS0_4StmtENS3_3MapINS3_6StringES8_vvEENS_4SpanE'/>
+<use f='tvm/src/tir/ir/stmt.cc' l='932' c='_ZN3tvm3tir5BlockC1ENS_7runtime5ArrayINS0_7IterVarEvEENS3_INS0_12BufferRegionEvEES7_NS2_6StringENS0_4StmtENS2_8OptionalIS9_EENS3_INS0_6BufferEvEENS3_I7879093'/>
+<size>8</size>
+<use f='tvm/src/tir/schedule/instruction.cc' l='29' c='_ZN3tvm3tir11InstructionC1ENS0_15InstructionKindENS_7runtime5ArrayINS3_9ObjectRefEvEES6_S6_'/>
+<use f='tvm/src/tir/schedule/instruction.cc' l='29' c='_ZN3tvm3tir11InstructionC1ENS0_15InstructionKindENS_7runtime5ArrayINS3_9ObjectRefEvEES6_S6_'/>
+<use f='tvm/src/tir/schedule/instruction.cc' l='30' c='_ZN3tvm3tir11InstructionC1ENS0_15InstructionKindENS_7runtime5ArrayINS3_9ObjectRefEvEES6_S6_'/>
+<size>8</size>
+<use f='tvm/src/tir/schedule/trace.cc' l='28' c='_ZN3tvm3tir5TraceC1ENS_7runtime5ArrayINS0_11InstructionEvEENS2_3MapIS4_NS2_9ObjectRefEvvEE'/>
+<use f='tvm/src/tir/schedule/trace.cc' l='330' c='_ZN3tvm3tir5Trace19ApplyJSONToScheduleENS_7runtime9ObjectRefENS0_8ScheduleE'/>
+<use f='tvm/src/tir/schedule/trace.cc' l='331' c='_ZN3tvm3tir5Trace19ApplyJSONToScheduleENS_7runtime9ObjectRefENS0_8ScheduleE'/>
+<use f='tvm/src/tir/schedule/trace.cc' l='332' c='_ZN3tvm3tir5Trace19ApplyJSONToScheduleENS_7runtime9ObjectRefENS0_8ScheduleE'/>
+<use f='tvm/src/tir/schedule/trace.cc' l='340' c='_ZN3tvm3tir5Trace19ApplyJSONToScheduleENS_7runtime9ObjectRefENS0_8ScheduleE'/>
+<use f='tvm/src/tir/schedule/trace.cc' l='341' c='_ZN3tvm3tir5Trace19ApplyJSONToScheduleENS_7runtime9ObjectRefENS0_8ScheduleE'/>
+<use f='tvm/src/tir/schedule/trace.cc' l='349' c='_ZN3tvm3tir5Trace19ApplyJSONToScheduleENS_7runtime9ObjectRefENS0_8ScheduleE'/>
+<use f='tvm/src/tir/schedule/trace.cc' l='350' c='_ZN3tvm3tir5Trace19ApplyJSONToScheduleENS_7runtime9ObjectRefENS0_8ScheduleE'/>
+<use f='tvm/src/tir/schedule/trace.cc' l='352' c='_ZN3tvm3tir5Trace19ApplyJSONToScheduleENS_7runtime9ObjectRefENS0_8ScheduleE'/>
+<use f='tvm/src/tir/schedule/trace.cc' l='369' c='_ZN3tvm3tir5Trace19ApplyJSONToScheduleENS_7runtime9ObjectRefENS0_8ScheduleE'/>
+<use f='tvm/src/tir/schedule/trace.cc' l='369' c='_ZN3tvm3tir5Trace19ApplyJSONToScheduleENS_7runtime9ObjectRefENS0_8ScheduleE'/>
+<use f='tvm/src/tir/schedule/trace.cc' l='371' c='_ZN3tvm3tir5Trace19ApplyJSONToScheduleENS_7runtime9ObjectRefENS0_8ScheduleE'/>
+<use f='tvm/src/tir/schedule/trace.cc' l='373' c='_ZN3tvm3tir5Trace19ApplyJSONToScheduleENS_7runtime9ObjectRefENS0_8ScheduleE'/>
+<use f='tvm/src/tir/schedule/trace.cc' l='374' c='_ZN3tvm3tir5Trace19ApplyJSONToScheduleENS_7runtime9ObjectRefENS0_8ScheduleE'/>
+<use f='tvm/src/tir/schedule/trace.cc' l='385' c='_ZN3tvm3tir5Trace19ApplyJSONToScheduleENS_7runtime9ObjectRefENS0_8ScheduleE'/>
+<use f='tvm/src/tir/schedule/trace.cc' l='389' c='_ZN3tvm3tir5Trace19ApplyJSONToScheduleENS_7runtime9ObjectRefENS0_8ScheduleE'/>
+<use f='tvm/src/tir/schedule/trace.cc' l='390' c='_ZN3tvm3tir5Trace19ApplyJSONToScheduleENS_7runtime9ObjectRefENS0_8ScheduleE'/>
+<use f='tvm/src/tir/schedule/trace.cc' l='405' c='_ZN3tvm3tir5Trace19ApplyJSONToScheduleENS_7runtime9ObjectRefENS0_8ScheduleE'/>
+<size>8</size>

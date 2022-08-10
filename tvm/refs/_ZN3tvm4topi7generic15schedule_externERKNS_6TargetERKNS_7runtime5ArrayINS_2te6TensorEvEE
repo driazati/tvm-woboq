@@ -1,0 +1,12 @@
+<def f='tvm/include/tvm/topi/generic/extern.h' l='48' ll='64' type='tvm::te::Schedule tvm::topi::generic::schedule_extern(const tvm::Target &amp; target, const Array&lt;tvm::te::Tensor&gt; &amp; outs)'/>
+<use f='tvm/include/tvm/topi/cuda/dense.h' l='90' u='c' c='_ZN3tvm4topi4cuda14schedule_denseERKNS_6TargetERKNS_7runtime5ArrayINS_2te6TensorEvEE'/>
+<use f='tvm/include/tvm/topi/rocm/dense.h' l='90' u='c' c='_ZN3tvm4topi4rocm14schedule_denseERKNS_6TargetERKNS_7runtime5ArrayINS_2te6TensorEvEE'/>
+<use f='tvm/src/topi/schedule.cc' l='68' u='c'/>
+<doc f='tvm/include/tvm/topi/generic/extern.h' l='40'>/*!
+ * \brief Schedule an extern op followed by injective operations
+ *
+ * \param target The target to generate a schedule for.
+ * \param outs The output tensors.
+ *
+ * \return A schedule for the op.
+ */</doc>

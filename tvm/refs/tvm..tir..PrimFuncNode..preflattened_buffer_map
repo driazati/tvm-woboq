@@ -1,0 +1,44 @@
+<dec f='tvm/include/tvm/tir/function.h' l='110' type='Map&lt;tir::Var, tvm::tir::Buffer&gt;'/>
+<use f='tvm/include/tvm/tir/function.h' l='117' u='a' c='_ZN3tvm3tir12PrimFuncNode10VisitAttrsEPNS_11AttrVisitorE'/>
+<use f='tvm/include/tvm/tir/function.h' l='126' u='r' c='_ZNK3tvm3tir12PrimFuncNode12SEqualReduceEPKS1_NS_13SEqualReducerE'/>
+<use f='tvm/include/tvm/tir/function.h' l='126' u='r' c='_ZNK3tvm3tir12PrimFuncNode12SEqualReduceEPKS1_NS_13SEqualReducerE'/>
+<use f='tvm/include/tvm/tir/function.h' l='134' u='r' c='_ZNK3tvm3tir12PrimFuncNode11SHashReduceENS_12SHashReducerE'/>
+<offset>640</offset>
+<doc f='tvm/include/tvm/tir/function.h' l='94'>/*! \brief The buffer map prior to flattening.
+   *
+   * This contains the buffers as they exists prior to flattening, and
+   * is used for validating an input tensor passed into the packed
+   * API.  Any buffer that is present in `buffer_map` but not present
+   * in `preflattened_buffer_map` is assumed to be the same before
+   * and after flattening (e.g. a 1-d tensor that is backed by 1-d
+   * flat memory).
+   *
+   * TODO(Lunderberg): Remove preflattened_buffer_map, and instead
+   * declare each flattened buffer as aliasing the original tensor
+   * shape.  This should include improving the StmtExprMutator to
+   * provide easier interactions with Buffer objects, so that the
+   * bookkeeping of relationships between buffers doesn&apos;t need to be
+   * repeated across several transforms.
+   */</doc>
+<use f='tvm/src/printer/tir_text_printer.cc' l='155' u='m' c='_ZN3tvm3tir14TIRTextPrinter13PrintPrimFuncERKNS0_8PrimFuncE'/>
+<use f='tvm/src/printer/tir_text_printer.cc' l='158' c='_ZN3tvm3tir14TIRTextPrinter13PrintPrimFuncERKNS0_8PrimFuncE'/>
+<use f='tvm/src/printer/tvmscript_printer.cc' l='1585' u='m' c='_ZN3tvm3tir16TVMScriptPrinter13PrintPrimFuncERKNS0_8PrimFuncE'/>
+<use f='tvm/src/printer/tvmscript_printer.cc' l='1586' u='m' c='_ZN3tvm3tir16TVMScriptPrinter13PrintPrimFuncERKNS0_8PrimFuncE'/>
+<use f='tvm/src/tir/analysis/device_constraint_utils.cc' l='213' u='m' c='_ZN3tvm3tir12_GLOBAL__N_129ApplyDeviceConstraintsMutator7RewriteERKNS0_8PrimFuncERKNS_8FuncTypeERKNS_7runtime5ArrayINS_13VirtualDeviceEvEE'/>
+<use f='tvm/src/tir/analysis/device_constraint_utils.cc' l='214' u='m' c='_ZN3tvm3tir12_GLOBAL__N_129ApplyDeviceConstraintsMutator7RewriteERKNS0_8PrimFuncERKNS_8FuncTypeERKNS_7runtime5ArrayINS_13VirtualDeviceEvEE'/>
+<use f='tvm/src/tir/analysis/device_constraint_utils.cc' l='233' u='m' c='_ZN3tvm3tir12_GLOBAL__N_129ApplyDeviceConstraintsMutator7RewriteERKNS0_8PrimFuncERKNS_8FuncTypeERKNS_7runtime5ArrayINS_13VirtualDeviceEvEE'/>
+<use f='tvm/src/tir/contrib/ethosu/passes.cc' l='150' u='r' c='_ZN3tvm3tir7contrib6ethosu21HoistAllocatesMutatorclENS0_8PrimFuncE'/>
+<use f='tvm/src/tir/contrib/ethosu/passes.cc' l='404' u='w' c='_ZN3tvm3tir7contrib6ethosu21MergeConstantsMutatorclENS0_8PrimFuncERKNS_7runtime3MapINS_6IntImmENS5_7NDArrayEvvEE'/>
+<use f='tvm/src/tir/ir/function.cc' l='45' u='w' c='_ZN3tvm3tir8PrimFuncC1ENS_7runtime5ArrayINS0_3VarEvEENS0_4StmtENS_4TypeENS2_3MapIS4_NS0_6BufferEvvEENS2_8OptionalISA_EENS_9DictAttrsENS_4SpanE'/>
+<use f='tvm/src/tir/transforms/bf16_legalize.cc' l='297' c='_ZN3tvm3tir17BF16LowerRewriter12AlterBuffersEPNS0_12PrimFuncNodeE'/>
+<use f='tvm/src/tir/transforms/bf16_legalize.cc' l='320' u='w' c='_ZN3tvm3tir17BF16LowerRewriter12AlterBuffersEPNS0_12PrimFuncNodeE'/>
+<use f='tvm/src/tir/transforms/flatten_buffer.cc' l='40' u='r' c='_ZN3tvm3tir15BufferFlattener7FlattenENS0_8PrimFuncE'/>
+<use f='tvm/src/tir/transforms/flatten_buffer.cc' l='44' u='w' c='_ZN3tvm3tir15BufferFlattener7FlattenENS0_8PrimFuncE'/>
+<use f='tvm/src/tir/transforms/legalize_packed_calls.cc' l='77' u='m' c='_ZN3tvm3tir19PackedCallLegalizer10VisitStmt_EPKNS0_12EvaluateNodeE'/>
+<use f='tvm/src/tir/transforms/legalize_packed_calls.cc' l='79' u='m' c='_ZN3tvm3tir19PackedCallLegalizer10VisitStmt_EPKNS0_12EvaluateNodeE'/>
+<use f='tvm/src/tir/transforms/make_packed_api.cc' l='227' u='m' c='_ZN3tvm3tir13MakePackedAPIEONS0_8PrimFuncEi'/>
+<use f='tvm/src/tir/transforms/make_packed_api.cc' l='228' u='m' c='_ZN3tvm3tir13MakePackedAPIEONS0_8PrimFuncEi'/>
+<use f='tvm/src/tir/transforms/storage_flatten.cc' l='1315' u='r' c='_ZN3tvm3tir16StorageFlattener4PassEib'/>
+<use f='tvm/src/tir/transforms/storage_flatten.cc' l='1319' u='w' c='_ZN3tvm3tir16StorageFlattener4PassEib'/>
+<use f='tvm/src/tir/usmp/transform/assign_pool_info.cc' l='170' u='r' c='_ZN3tvm3tir4usmp16PoolInfoAssignerclEv'/>
+<use f='tvm/src/tir/usmp/transform/create_io_allocates.cc' l='200' u='r' c='_ZN3tvm3tir4usmp17IOAllocateCreatorclEv'/>

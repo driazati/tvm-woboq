@@ -1,0 +1,42 @@
+<inh f='tvm/include/tvm/runtime/object.h' l='167' c='tvm::runtime::Object'/>
+<def f='tvm/include/tvm/ir/env_func.h' l='41' ll='66'/>
+<use f='tvm/include/tvm/ir/env_func.h' l='52' c='_ZNK3tvm11EnvFuncNode12SEqualReduceEPKS0_NS_13SEqualReducerE'/>
+<use f='tvm/include/tvm/ir/env_func.h' l='77' c='_ZNK3tvm7EnvFuncptEv'/>
+<use f='tvm/include/tvm/ir/env_func.h' l='77' c='_ZNK3tvm7EnvFuncptEv'/>
+<use f='tvm/include/tvm/ir/env_func.h' l='85' c='_ZNK3tvm7EnvFuncclEDpOT_'/>
+<use f='tvm/include/tvm/ir/env_func.h' l='97'/>
+<use f='tvm/include/tvm/ir/env_func.h' l='132' c='_ZNK3tvm12TypedEnvFuncIFT_DpT0_EEptEv'/>
+<use f='tvm/include/tvm/ir/env_func.h' l='132' c='_ZNK3tvm12TypedEnvFuncIFT_DpT0_EEptEv'/>
+<use f='tvm/include/tvm/ir/env_func.h' l='139' c='_ZNK3tvm12TypedEnvFuncIFT_DpT0_EEclES3_'/>
+<use f='tvm/include/tvm/ir/env_func.h' l='145'/>
+<size>32</size>
+<doc f='tvm/include/tvm/ir/env_func.h' l='33'>/*!
+ * \brief A serializable function backed by TVM&apos;s global environment.
+ *
+ * This is a wrapper to enable serializable global PackedFunc.
+ * An EnvFunc is saved by its name in the global registry
+ * under the assumption that the same function is registered during load.
+ * \sa EnvFunc
+ */</doc>
+<mbr r='tvm::EnvFuncNode::name' o='128' t='tvm::runtime::String'/>
+<mbr r='tvm::EnvFuncNode::func' o='192' t='runtime::PackedFunc'/>
+<fun r='_ZN3tvm11EnvFuncNodeC1Ev'/>
+<fun r='_ZN3tvm11EnvFuncNode10VisitAttrsEPNS_11AttrVisitorE'/>
+<fun r='_ZNK3tvm11EnvFuncNode12SEqualReduceEPKS0_NS_13SEqualReducerE'/>
+<fun r='_ZNK3tvm11EnvFuncNode11SHashReduceENS_12SHashReducerE'/>
+<smbr r='tvm::EnvFuncNode::_type_key' t='const char *const'/>
+<smbr r='tvm::EnvFuncNode::_type_has_method_sequal_reduce' t='const bool'/>
+<smbr r='tvm::EnvFuncNode::_type_has_method_shash_reduce' t='const bool'/>
+<smbr r='tvm::EnvFuncNode::_type_final' t='const bool'/>
+<smbr r='tvm::EnvFuncNode::_type_child_slots' t='const int'/>
+<fun r='_ZN3tvm11EnvFuncNode16RuntimeTypeIndexEv'/>
+<fun r='_ZN3tvm11EnvFuncNode27_GetOrAllocRuntimeTypeIndexEv'/>
+<use f='tvm/src/ir/env_func.cc' l='34'/>
+<use f='tvm/src/ir/env_func.cc' l='35'/>
+<use f='tvm/src/ir/env_func.cc' l='42' c='_ZN3tvm13CreateEnvNodeERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<use f='tvm/src/ir/env_func.cc' l='42' c='_ZN3tvm13CreateEnvNodeERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<use f='tvm/src/ir/env_func.cc' l='62'/>
+<use f='tvm/src/ir/env_func.cc' l='62'/>
+<use f='tvm/src/ir/env_func.cc' l='62'/>
+<use f='tvm/src/ir/env_func.cc' l='65'/>
+<size>32</size>

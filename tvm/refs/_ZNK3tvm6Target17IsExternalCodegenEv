@@ -1,0 +1,13 @@
+<dec f='tvm/include/tvm/target/target.h' l='226' type='bool tvm::Target::IsExternalCodegen() const'/>
+<doc f='tvm/include/tvm/target/target.h' l='220'>/*!
+   * \brief Returns true if \p this target represents an external codegen. If so,
+   * \p this-&gt;kind-&gt;name can be used as the &quot;Compiler&quot; attribute on partitioned functions,
+   * and can be used to retrieve a partitioning pattern table using
+   * \p get_pattern_table.
+   */</doc>
+<use f='tvm/src/relay/collage/gather_partition_specs.cc' l='187' u='c' c='_ZN3tvm5relay7collage20GatherPartitionSpecsERKNS_17CompilationConfigE'/>
+<use f='tvm/src/relay/collage/partition_rule.cc' l='178' u='c' c='_ZNK3tvm5relay7collage26PrimitivePartitionRuleNode13AllCandidatesERKNS1_13DataflowGraphERKNS1_13PartitionSpecE'/>
+<use f='tvm/src/relay/collage/utils.cc' l='35' u='c' c='_ZN3tvm5relay7collage11GetSpecNameERKNS_6TargetE'/>
+<def f='tvm/src/target/target.cc' l='615' ll='622' type='bool tvm::Target::IsExternalCodegen() const'/>
+<use f='tvm/src/target/target.cc' l='625' u='c' c='_ZNK3tvm6Target20IsExternalCodegenForERKS0_'/>
+<use f='tvm/src/target/target.cc' l='626' u='c' c='_ZNK3tvm6Target20IsExternalCodegenForERKS0_'/>

@@ -1,0 +1,17 @@
+<def f='tvm/3rdparty/dmlc-core/include/dmlc/strtonum.h' l='497' ll='510' type='double dmlc::stod(const std::string &amp; value, size_t * pos = nullptr)'/>
+<use f='tvm/3rdparty/dmlc-core/include/dmlc/parameter.h' l='1091' u='c' c='_ZNK4dmlc9parameter10FieldEntryIdE3SetEPvRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<doc f='tvm/3rdparty/dmlc-core/include/dmlc/strtonum.h' l='482'>/*!
+ * \brief A faster implementation of stod(). See documentation of std::stod()
+ *        for more information. This function will test for overflow and
+ *        invalid arguments.
+ * TODO: the current version does not support hex number
+ * TODO: the current version does not handle long decimals: you may only have
+ *       up to 19 digits after the decimal point, and you cannot have too many
+ *       digits before the decimal point either.
+ * \param value The string to convert into double
+ * \param pos If not null, it will store the number of characters processed
+ * \return Converted value, in double type
+ * \throw std::out_of_range If the converted value would fall out of the range
+ *                          of the double type
+ * \throw std::invalid_argument If no conversion could be performed
+ */</doc>

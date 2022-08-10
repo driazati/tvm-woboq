@@ -1,0 +1,53 @@
+<inh f='tvm/include/tvm/runtime/object.h' l='167' c='tvm::runtime::Object'/>
+<def f='tvm/include/tvm/tir/expr.h' l='1005' ll='1051'/>
+<use f='tvm/include/tvm/tir/expr.h' l='1035' c='_ZNK3tvm3tir15CommReducerNode12SEqualReduceEPKS1_NS_13SEqualReducerE'/>
+<use f='tvm/include/tvm/tir/expr.h' l='1062' c='_ZNK3tvm3tir11CommReducerptEv'/>
+<use f='tvm/include/tvm/tir/expr.h' l='1062' c='_ZNK3tvm3tir11CommReducerptEv'/>
+<use f='tvm/include/tvm/tir/expr.h' l='1062' c='_ZNK3tvm3tir11CommReducer3getEv'/>
+<use f='tvm/include/tvm/tir/expr.h' l='1062'/>
+<size>56</size>
+<doc f='tvm/include/tvm/tir/expr.h' l='1001'>/*!
+ * \brief A commutative reducer node to represent a commutative
+ *  binary operator with identity element
+ */</doc>
+<mbr r='tvm::tir::CommReducerNode::lhs' o='128' t='Array&lt;tvm::tir::Var&gt;'/>
+<mbr r='tvm::tir::CommReducerNode::rhs' o='192' t='Array&lt;tvm::tir::Var&gt;'/>
+<mbr r='tvm::tir::CommReducerNode::result' o='256' t='Array&lt;tvm::PrimExpr&gt;'/>
+<mbr r='tvm::tir::CommReducerNode::identity_element' o='320' t='Array&lt;tvm::PrimExpr&gt;'/>
+<fun r='_ZNK3tvm3tir15CommReducerNodeclENS_7runtime5ArrayINS_8PrimExprEvEES5_'/>
+<mbr r='tvm::tir::CommReducerNode::span' o='384' t='tvm::Span'/>
+<fun r='_ZN3tvm3tir15CommReducerNode10VisitAttrsEPNS_11AttrVisitorE'/>
+<fun r='_ZNK3tvm3tir15CommReducerNode12SEqualReduceEPKS1_NS_13SEqualReducerE'/>
+<fun r='_ZNK3tvm3tir15CommReducerNode11SHashReduceENS_12SHashReducerE'/>
+<smbr r='tvm::tir::CommReducerNode::_type_key' t='const char *const'/>
+<smbr r='tvm::tir::CommReducerNode::_type_has_method_sequal_reduce' t='const bool'/>
+<smbr r='tvm::tir::CommReducerNode::_type_has_method_shash_reduce' t='const bool'/>
+<smbr r='tvm::tir::CommReducerNode::_type_final' t='const bool'/>
+<smbr r='tvm::tir::CommReducerNode::_type_child_slots' t='const int'/>
+<fun r='_ZN3tvm3tir15CommReducerNode16RuntimeTypeIndexEv'/>
+<fun r='_ZN3tvm3tir15CommReducerNode27_GetOrAllocRuntimeTypeIndexEv'/>
+<use f='tvm/src/printer/tvmscript_printer.cc' l='281' c='_ZN3tvm3tir16TVMScriptPrinter16PrintCommReducerEPKNS0_15CommReducerNodeE'/>
+<use f='tvm/src/printer/tvmscript_printer.cc' l='647' c='_ZN3tvm3tir16TVMScriptPrinter16PrintCommReducerEPKNS0_15CommReducerNodeE'/>
+<use f='tvm/src/printer/tvmscript_printer.cc' l='707' c='_ZN3tvm3tir16TVMScriptPrinter5PrintERKNS_7runtime9ObjectRefE'/>
+<use f='tvm/src/printer/tvmscript_printer.cc' l='708' c='_ZN3tvm3tir16TVMScriptPrinter5PrintERKNS_7runtime9ObjectRefE'/>
+<size>56</size>
+<use f='tvm/src/te/operation/compute_op.cc' l='305' c='_ZN3tvm2te13MakeReductionEPKNS0_13ComputeOpNodeERKNS_7runtime5ArrayINS0_6TensorEvEEPNS_3tir4StmtESC_'/>
+<use f='tvm/src/te/operation/compute_op.cc' l='305' c='_ZN3tvm2te13MakeReductionEPKNS0_13ComputeOpNodeERKNS_7runtime5ArrayINS0_6TensorEvEEPNS_3tir4StmtESC_'/>
+<size>56</size>
+<use f='tvm/src/te/operation/cross_thread_reduction.cc' l='143' c='_ZN3tvm2te24MakeCrossThreadReductionEPKNS0_13ComputeOpNodeERKNS0_5StageERKSt13unordered_mapINS_3tir7IterVarENS_5RangeESt4hashIS9_ESt8equal_toIS9_ESaISt4pairIKS9_SA_EEEb'/>
+<use f='tvm/src/te/operation/cross_thread_reduction.cc' l='143' c='_ZN3tvm2te24MakeCrossThreadReductionEPKNS0_13ComputeOpNodeERKNS0_5StageERKSt13unordered_mapINS_3tir7IterVarENS_5RangeESt4hashIS9_ESt8equal_toIS9_ESaISt4pairIKS9_SA_EEEb'/>
+<size>56</size>
+<use f='tvm/src/tir/ir/expr.cc' l='963' c='_ZN3tvm3tir11CommReducerC1ENS_7runtime5ArrayINS0_3VarEvEES5_NS3_INS_8PrimExprEvEES7_NS_4SpanE'/>
+<use f='tvm/src/tir/ir/expr.cc' l='995'/>
+<use f='tvm/src/tir/ir/expr.cc' l='995'/>
+<use f='tvm/src/tir/ir/expr.cc' l='995'/>
+<use f='tvm/src/tir/ir/expr.cc' l='998'/>
+<use f='tvm/src/tir/ir/expr.cc' l='999'/>
+<size>56</size>
+<fun r='_ZNK3tvm3tir15CommReducerNodeclENS_7runtime5ArrayINS_8PrimExprEvEES5_'/>
+<use f='tvm/src/tir/transforms/lower_thread_allreduce.cc' l='75' c='_ZN3tvm3tir22ThreadAllreduceBuilder10VisitStmt_EPKNS0_12AttrStmtNodeE'/>
+<use f='tvm/src/tir/transforms/lower_thread_allreduce.cc' l='75' c='_ZN3tvm3tir22ThreadAllreduceBuilder10VisitStmt_EPKNS0_12AttrStmtNodeE'/>
+<use f='tvm/src/tir/transforms/lower_thread_allreduce.cc' l='212' c='_ZN3tvm3tir22ThreadAllreduceBuilder13MakeAllreduceEPKNS0_8CallNodeE'/>
+<use f='tvm/src/tir/transforms/lower_thread_allreduce.cc' l='517' c='_ZN3tvm3tir22ThreadAllreduceBuilder16MakeBufAllreduceEPKNS0_15CommReducerNodeERKSt6vectorINS_7runtime8DataTypeESaIS7_EERKNS6_5ArrayINS0_6BufferEvEENS_8PrimExprESH_iii'/>
+<use f='tvm/src/tir/transforms/lower_thread_allreduce.cc' l='728'/>
+<size>56</size>

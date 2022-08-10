@@ -1,0 +1,18 @@
+<dec f='tvm/src/relay/transforms/device_domains.h' l='247' type='tvm::relay::transform::DeviceDomainPtr tvm::relay::transform::DeviceDomains::DomainForCallee(const tvm::relay::Call &amp; call)'/>
+<def f='tvm/src/relay/transforms/device_domains.cc' l='193' ll='313' type='tvm::relay::transform::DeviceDomainPtr tvm::relay::transform::DeviceDomains::DomainForCallee(const tvm::relay::Call &amp; call)'/>
+<doc f='tvm/src/relay/transforms/device_domains.h' l='234'>/*!
+   * \brief Returns the domain representing the callee (ie &apos;op&apos;) in \p call expression. If the
+   * callee is a primitive or special operation we handle it specially. Otherwise defers to \p
+   * DomainFor(call-&gt;op).
+   *
+   * This special handling is needed:
+   * - To handle the &quot;on_device&quot; and &quot;device_copy&quot; ops which constrain devices to the given
+   * devices.
+   * - To handle some special ops which constrain devices to the CPU.
+   * - To allow the same primitive to be called on different devices at different call sites.
+   * Since each call to the op can have a different domain we index the ops by the call expression
+   * rather than the op itself.
+   */</doc>
+<use f='tvm/src/relay/transforms/device_planner.cc' l='496' u='c' c='_ZN3tvm5relay9transform12_GLOBAL__N_114DeviceAnalyzer10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/transforms/device_planner.cc' l='821' u='c' c='_ZN3tvm5relay9transform12_GLOBAL__N_115DeviceDefaulter10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/transforms/device_planner.cc' l='1067' u='c' c='_ZN3tvm5relay9transform12_GLOBAL__N_114DeviceCapturer10VisitExpr_EPKNS0_8CallNodeE'/>

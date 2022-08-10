@@ -1,0 +1,17 @@
+<dec f='tvm/include/tvm/tir/schedule/trace.h' l='106' type='void tvm::tir::TraceNode::ApplyToSchedule(tvm::tir::Schedule sch, bool remove_postproc, tvm::tir::FTraceDecisionProvider decision_provider = nullptr) const'/>
+<use f='tvm/src/meta_schedule/utils.h' l='277' u='c' c='_ZN3tvm13meta_schedule18ThreadedTraceApply5ApplyERKNS_8IRModuleERKNS_3tir5TraceEPl'/>
+<use f='tvm/src/meta_schedule/apply_history_best.cc' l='139' u='c' c='_ZN3tvm13meta_schedule20ApplyHistoryBestNode5QueryENS_7runtime6StringENS_8IRModuleENS_6TargetENS2_8OptionalINS2_5ArrayIS4_vEEEENS2_15TypedPackedFuncIF892736'/>
+<doc f='tvm/include/tvm/tir/schedule/trace.h' l='98'>/*!
+   * \brief Apply the trace to a TensorIR schedule
+   * \param sch The schedule to be applied onto
+   * \param remove_postproc If postprocessing instructions are removed
+   * \param decision_provider A callback that allows users to mutate decisions on the fly
+   * when applying instructions.
+   * \sa FTraceDecisionProvider
+   */</doc>
+<use f='tvm/src/meta_schedule/database/database.cc' l='91' u='c' c='_ZNK3tvm13meta_schedule16TuningRecordNode18AsMeasureCandidateEv'/>
+<use f='tvm/src/meta_schedule/mutator/mutate_compute_location.cc' l='106' u='c' c='_ZN3tvm13meta_schedule25MutateComputeLocationNode14FindCandidatesERKNS_3tir5TraceEPl'/>
+<use f='tvm/src/meta_schedule/mutator/mutate_parallel.cc' l='256' u='c' c='_ZN3tvm13meta_schedule18MutateParallelNode5ApplyERKNS_3tir5TraceEPl'/>
+<def f='tvm/src/tir/schedule/trace.cc' l='248' ll='268' type='void tvm::tir::TraceNode::ApplyToSchedule(tvm::tir::Schedule sch, bool remove_postproc, runtime::TypedPackedFunc&lt;ObjectRef (const Instruction &amp;, const Array&lt;ObjectRef&gt; &amp;, const Array&lt;ObjectRef&gt; &amp;, const Optional&lt;ObjectRef&gt; &amp;)&gt; decision_provider = nullptr) const'/>
+<use f='tvm/src/tir/schedule/trace.cc' l='536' u='a'/>
+<doc f='tvm/src/tir/schedule/trace.cc' l='246'>/**************** Interfacing with InstructionKind ****************/</doc>

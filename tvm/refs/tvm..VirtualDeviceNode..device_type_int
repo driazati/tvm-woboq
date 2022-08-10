@@ -1,0 +1,17 @@
+<dec f='tvm/include/tvm/target/virtual_device.h' l='179' type='int'/>
+<use f='tvm/include/tvm/target/virtual_device.h' l='182' u='r' c='_ZNK3tvm17VirtualDeviceNode11device_typeEv'/>
+<use f='tvm/include/tvm/target/virtual_device.h' l='241' u='a' c='_ZN3tvm17VirtualDeviceNode15_tvm_VisitAttrsERT_'/>
+<offset>192</offset>
+<doc f='tvm/include/tvm/target/virtual_device.h' l='168'>/*!
+   * \brief The \p DLDeviceType (represented as an int) of the virtual device. If \p target is
+   * known then this will be equal to \p target-&gt;kind-&gt;device_type. If \p target is null then the
+   * target is to be determined later.
+   *
+   * This is needed to support the legacy &quot;on_device&quot; and &quot;device_copy&quot; calls which only allow
+   * a \p DLDeviceTypes (as an integer) to be given.
+   *
+   * kInvalidDeviceType denotes unconstrained. An int since the DLDeviceType enum representation
+   * is not fixed. Private to discourage further int vs DLDeviceType confusion.
+   */</doc>
+<doc f='tvm/include/tvm/target/virtual_device.h' l='179'>/* actually DLDeviceType */</doc>
+<use f='tvm/src/target/virtual_device.cc' l='75' u='w' c='_ZN3tvm13VirtualDeviceC1E12DLDeviceTypeiNS_6TargetENS_7runtime6StringE'/>

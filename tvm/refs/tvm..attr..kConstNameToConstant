@@ -1,0 +1,14 @@
+<def f='tvm/include/tvm/ir/module.h' l='545' type='const char *const'/>
+<doc f='tvm/include/tvm/ir/module.h' l='537'>/*!
+ * \brief All the named runtime::NDArrays accumulated during compilation by external codegen.
+ * Generally the associated runtime::Module will indicate it requires bindings for these names,
+ * and during module initialization these bindings will be recovered from a ConstLoaderModule.
+ * See also kConstantsArray above, which is the analog for PrimFuncs.
+ *
+ * Type: Map&lt;String, runtime::NDArray&gt;
+ */</doc>
+<use f='tvm/src/relay/backend/aot_executor_codegen.cc' l='1179' u='r' c='_ZN3tvm5relay7backend18AOTExecutorCodegen7CodegenENS_8IRModuleENS0_8FunctionENS_7runtime6StringE'/>
+<use f='tvm/src/relay/backend/contrib/codegen_c/codegen.cc' l='382' u='r' c='_ZN3tvm5relay7contrib13CCompilerImplEv'/>
+<use f='tvm/src/relay/backend/contrib/codegen_c/codegen.cc' l='389' u='r' c='_ZN3tvm5relay7contrib13CCompilerImplEv'/>
+<use f='tvm/src/relay/backend/graph_executor_codegen.cc' l='270' u='r' c='_ZN3tvm5relay7backend20GraphExecutorCodegen7CodegenENS_8IRModuleENS0_8FunctionENS_7runtime6StringE'/>
+<use f='tvm/src/relay/backend/vm/compiler.cc' l='1177' u='r' c='_ZN3tvm5relay2vm10VMCompiler7CodegenEv'/>

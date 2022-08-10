@@ -1,0 +1,92 @@
+<inh f='tvm/include/tvm/tir/stmt_functor.h' l='57' c='tvm::tir::StmtFunctor'/>
+<inh f='tvm/include/tvm/tir/expr_functor.h' l='87' c='tvm::tir::ExprFunctor'/>
+<inh f='tvm/include/tvm/ir/type_functor.h' l='50' c='tvm::TypeFunctor'/>
+<def f='tvm/src/printer/text_printer.h' l='276' ll='406'/>
+<use f='tvm/src/printer/text_printer.h' l='442'/>
+<size>288</size>
+<fun r='_ZN3tvm3tir14TIRTextPrinterC1EbPNS_19TextMetaDataContextE'/>
+<fun r='_ZN3tvm3tir14TIRTextPrinter5PrintERKNS_7runtime9ObjectRefE'/>
+<fun r='_ZN3tvm3tir14TIRTextPrinter10GetVarNameENS0_3VarEPNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<mbr r='tvm::tir::TIRTextPrinter::show_meta_' o='192' t='bool'/>
+<mbr r='tvm::tir::TIRTextPrinter::meta_' o='256' t='tvm::TextMetaDataContext *'/>
+<mbr r='tvm::tir::TIRTextPrinter::meta_collector_' o='320' t='tvm::tir::MetaCollector'/>
+<mbr r='tvm::tir::TIRTextPrinter::memo_var_' o='512' t='std::unordered_map&lt;Var, Doc, ObjectPtrHash, ObjectPtrEqual&gt;'/>
+<mbr r='tvm::tir::TIRTextPrinter::memo_buf_' o='960' t='std::unordered_map&lt;Buffer, Doc, ObjectPtrHash, ObjectPtrEqual&gt;'/>
+<mbr r='tvm::tir::TIRTextPrinter::memo_producer_' o='1408' t='std::unordered_map&lt;DataProducer, Doc, ObjectPtrHash, ObjectPtrEqual&gt;'/>
+<mbr r='tvm::tir::TIRTextPrinter::name_alloc_map_' o='1856' t='std::unordered_map&lt;std::string, int&gt;'/>
+<fun r='_ZN3tvm3tir14TIRTextPrinter10VisitExpr_EPKNS_10IntImmNodeE'/>
+<fun r='_ZN3tvm3tir14TIRTextPrinter10VisitExpr_EPKNS_12FloatImmNodeE'/>
+<fun r='_ZN3tvm3tir14TIRTextPrinter10VisitExpr_EPKNS0_13StringImmNodeE'/>
+<fun r='_ZN3tvm3tir14TIRTextPrinter10VisitExpr_EPKNS0_8CastNodeE'/>
+<fun r='_ZN3tvm3tir14TIRTextPrinter10VisitExpr_EPKNS0_7VarNodeE'/>
+<fun r='_ZN3tvm3tir14TIRTextPrinter10VisitExpr_EPKNS0_7AddNodeE'/>
+<fun r='_ZN3tvm3tir14TIRTextPrinter10VisitExpr_EPKNS0_7SubNodeE'/>
+<fun r='_ZN3tvm3tir14TIRTextPrinter10VisitExpr_EPKNS0_7MulNodeE'/>
+<fun r='_ZN3tvm3tir14TIRTextPrinter10VisitExpr_EPKNS0_7DivNodeE'/>
+<fun r='_ZN3tvm3tir14TIRTextPrinter10VisitExpr_EPKNS0_7ModNodeE'/>
+<fun r='_ZN3tvm3tir14TIRTextPrinter10VisitExpr_EPKNS0_12FloorDivNodeE'/>
+<fun r='_ZN3tvm3tir14TIRTextPrinter10VisitExpr_EPKNS0_12FloorModNodeE'/>
+<fun r='_ZN3tvm3tir14TIRTextPrinter10VisitExpr_EPKNS0_7MinNodeE'/>
+<fun r='_ZN3tvm3tir14TIRTextPrinter10VisitExpr_EPKNS0_7MaxNodeE'/>
+<fun r='_ZN3tvm3tir14TIRTextPrinter10VisitExpr_EPKNS0_6EQNodeE'/>
+<fun r='_ZN3tvm3tir14TIRTextPrinter10VisitExpr_EPKNS0_6NENodeE'/>
+<fun r='_ZN3tvm3tir14TIRTextPrinter10VisitExpr_EPKNS0_6LTNodeE'/>
+<fun r='_ZN3tvm3tir14TIRTextPrinter10VisitExpr_EPKNS0_6LENodeE'/>
+<fun r='_ZN3tvm3tir14TIRTextPrinter10VisitExpr_EPKNS0_6GTNodeE'/>
+<fun r='_ZN3tvm3tir14TIRTextPrinter10VisitExpr_EPKNS0_6GENodeE'/>
+<fun r='_ZN3tvm3tir14TIRTextPrinter10VisitExpr_EPKNS0_7AndNodeE'/>
+<fun r='_ZN3tvm3tir14TIRTextPrinter10VisitExpr_EPKNS0_6OrNodeE'/>
+<fun r='_ZN3tvm3tir14TIRTextPrinter10VisitExpr_EPKNS0_7NotNodeE'/>
+<fun r='_ZN3tvm3tir14TIRTextPrinter10VisitExpr_EPKNS0_10SelectNodeE'/>
+<fun r='_ZN3tvm3tir14TIRTextPrinter10VisitExpr_EPKNS0_14BufferLoadNodeE'/>
+<fun r='_ZN3tvm3tir14TIRTextPrinter10VisitExpr_EPKNS0_16ProducerLoadNodeE'/>
+<fun r='_ZN3tvm3tir14TIRTextPrinter10VisitExpr_EPKNS0_8LoadNodeE'/>
+<fun r='_ZN3tvm3tir14TIRTextPrinter10VisitExpr_EPKNS0_8RampNodeE'/>
+<fun r='_ZN3tvm3tir14TIRTextPrinter10VisitExpr_EPKNS0_13BroadcastNodeE'/>
+<fun r='_ZN3tvm3tir14TIRTextPrinter10VisitExpr_EPKNS0_7LetNodeE'/>
+<fun r='_ZN3tvm3tir14TIRTextPrinter10VisitExpr_EPKNS0_8CallNodeE'/>
+<fun r='_ZN3tvm3tir14TIRTextPrinter10VisitExpr_EPKNS0_11ShuffleNodeE'/>
+<fun r='_ZN3tvm3tir14TIRTextPrinter10VisitExpr_EPKNS0_10ReduceNodeE'/>
+<fun r='_ZN3tvm3tir14TIRTextPrinter17VisitExprDefault_EPKNS_7runtime6ObjectE'/>
+<fun r='_ZN3tvm3tir14TIRTextPrinter10VisitStmt_EPKNS0_11LetStmtNodeE'/>
+<fun r='_ZN3tvm3tir14TIRTextPrinter10VisitStmt_EPKNS0_12AttrStmtNodeE'/>
+<fun r='_ZN3tvm3tir14TIRTextPrinter10VisitStmt_EPKNS0_14AssertStmtNodeE'/>
+<fun r='_ZN3tvm3tir14TIRTextPrinter10VisitStmt_EPKNS0_9StoreNodeE'/>
+<fun r='_ZN3tvm3tir14TIRTextPrinter10VisitStmt_EPKNS0_15BufferStoreNodeE'/>
+<fun r='_ZN3tvm3tir14TIRTextPrinter10VisitStmt_EPKNS0_17ProducerStoreNodeE'/>
+<fun r='_ZN3tvm3tir14TIRTextPrinter10VisitStmt_EPKNS0_17BufferRealizeNodeE'/>
+<fun r='_ZN3tvm3tir14TIRTextPrinter10VisitStmt_EPKNS0_19ProducerRealizeNodeE'/>
+<fun r='_ZN3tvm3tir14TIRTextPrinter10VisitStmt_EPKNS0_12AllocateNodeE'/>
+<fun r='_ZN3tvm3tir14TIRTextPrinter10VisitStmt_EPKNS0_17AllocateConstNodeE'/>
+<fun r='_ZN3tvm3tir14TIRTextPrinter10VisitStmt_EPKNS0_14DeclBufferNodeE'/>
+<fun r='_ZN3tvm3tir14TIRTextPrinter10VisitStmt_EPKNS0_14IfThenElseNodeE'/>
+<fun r='_ZN3tvm3tir14TIRTextPrinter10VisitStmt_EPKNS0_11SeqStmtNodeE'/>
+<fun r='_ZN3tvm3tir14TIRTextPrinter10VisitStmt_EPKNS0_12EvaluateNodeE'/>
+<fun r='_ZN3tvm3tir14TIRTextPrinter10VisitStmt_EPKNS0_7ForNodeE'/>
+<fun r='_ZN3tvm3tir14TIRTextPrinter10VisitStmt_EPKNS0_9WhileNodeE'/>
+<fun r='_ZN3tvm3tir14TIRTextPrinter10VisitStmt_EPKNS0_12PrefetchNodeE'/>
+<fun r='_ZN3tvm3tir14TIRTextPrinter10VisitStmt_EPKNS0_16BlockRealizeNodeE'/>
+<fun r='_ZN3tvm3tir14TIRTextPrinter17VisitStmtDefault_EPKNS_7runtime6ObjectE'/>
+<fun r='_ZN3tvm3tir14TIRTextPrinter10VisitType_EPKNS_12PrimTypeNodeE'/>
+<fun r='_ZN3tvm3tir14TIRTextPrinter10VisitType_EPKNS_15PointerTypeNodeE'/>
+<fun r='_ZN3tvm3tir14TIRTextPrinter10VisitType_EPKNS_13TupleTypeNodeE'/>
+<fun r='_ZN3tvm3tir14TIRTextPrinter13PrintIRModuleERKNS_8IRModuleE'/>
+<fun r='_ZN3tvm3tir14TIRTextPrinter13PrintPrimFuncERKNS0_8PrimFuncE'/>
+<fun r='_ZN3tvm3tir14TIRTextPrinter10PrintArrayEPKNS_7runtime9ArrayNodeE'/>
+<fun r='_ZN3tvm3tir14TIRTextPrinter12PrintIterVarEPKNS0_11IterVarNodeE'/>
+<fun r='_ZN3tvm3tir14TIRTextPrinter10PrintRangeEPKNS_9RangeNodeE'/>
+<fun r='_ZN3tvm3tir14TIRTextPrinter11PrintBufferEPKNS0_10BufferNodeE'/>
+<fun r='_ZN3tvm3tir14TIRTextPrinter13PrintProducerEPKNS0_16DataProducerNodeE'/>
+<fun r='_ZN3tvm3tir14TIRTextPrinter14BufferNode2DocEPKNS0_10BufferNodeENS_3DocE'/>
+<fun r='_ZN3tvm3tir14TIRTextPrinter20DataProducerNode2DocEPKNS0_16DataProducerNodeENS_3DocE'/>
+<fun r='_ZN3tvm3tir14TIRTextPrinter11PrintStringEPKNS_7runtime9StringObjE'/>
+<fun r='_ZN3tvm3tir14TIRTextPrinter17PrintBufferRegionEPKNS0_16BufferRegionNodeE'/>
+<fun r='_ZN3tvm3tir14TIRTextPrinter10PrintDTypeENS_7runtime8DataTypeE'/>
+<fun r='_ZN3tvm3tir14TIRTextPrinter16PrintConstScalarENS_7runtime8DataTypeERKT_'/>
+<fun r='_ZN3tvm3tir14TIRTextPrinter13GetUniqueNameENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<fun r='_ZN3tvm3tir14TIRTextPrinter8AllocVarERKNS0_3VarE'/>
+<fun r='_ZN3tvm3tir14TIRTextPrinter10AllocConstERKNS0_13AllocateConstE'/>
+<fun r='_ZN3tvm3tir14TIRTextPrinter8AllocBufERKNS0_6BufferE'/>
+<fun r='_ZN3tvm3tir14TIRTextPrinter13AllocProducerERKNS0_12DataProducerE'/>
+<fun r='_ZN3tvm3tir14TIRTextPrinter8PrintSepERKSt6vectorINS_3DocESaIS3_EERKS3_'/>
+<fun r='_ZN3tvm3tir14TIRTextPrinter9PrintBodyERKNS0_4StmtEb'/>

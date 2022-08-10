@@ -1,0 +1,12 @@
+<dec f='tvm/include/tvm/tir/usmp/algorithms.h' l='54' type='Map&lt;tvm::tir::usmp::BufferInfo, tvm::tir::usmp::PoolAllocation&gt; tvm::tir::usmp::algo::GreedyByConflicts(const Array&lt;tvm::tir::usmp::BufferInfo&gt; &amp; buffer_info_arr, const tvm::Integer &amp; memory_pressure)'/>
+<def f='tvm/src/tir/usmp/algo/greedy.cc' l='213' ll='216' type='Map&lt;tvm::tir::usmp::BufferInfo, tvm::tir::usmp::PoolAllocation&gt; tvm::tir::usmp::algo::GreedyByConflicts(const Array&lt;tvm::tir::usmp::BufferInfo&gt; &amp; buffer_info_arr, const tvm::Integer &amp; memory_pressure)'/>
+<use f='tvm/src/tir/usmp/algo/greedy.cc' l='225' u='c'/>
+<doc f='tvm/include/tvm/tir/usmp/algorithms.h' l='46'>/*!
+ * \brief The Greedy-by-Conflicts algorithm to plan memory
+ *
+ * This will perform a greedy algorithm in deciding the offsets
+ * within provided Pools, using the number of liveness conflicts of the buffer.
+ *
+ * \return A Map of BufferInfo objects and their associated PoolAllocation
+ */</doc>
+<use f='tvm/src/tir/usmp/unified_static_memory_planner.cc' l='54' u='r'/>

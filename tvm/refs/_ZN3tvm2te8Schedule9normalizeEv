@@ -1,0 +1,12 @@
+<dec f='tvm/include/tvm/te/schedule.h' l='421' type='tvm::te::Schedule tvm::te::Schedule::normalize()'/>
+<doc f='tvm/include/tvm/te/schedule.h' l='413'>/*!
+   * \brief Normalize the schedule.
+   *  This is needed before bound inference.
+   *  Insert necessary RebaseNode to make sure all leaf_iter_vars
+   *  are in form [0, extent)
+   *
+   * \return A normalized schedule, can be same as current one.
+   */</doc>
+<use f='tvm/src/driver/driver_api.cc' l='265' u='c' c='_ZN3tvm16ScheduleToModuleENS_2te8ScheduleERKNS_7runtime5ArrayINS2_9ObjectRefEvEERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKSt13unordered_7538976'/>
+<def f='tvm/src/te/schedule/schedule_dataflow_rewrite.cc' l='742' ll='748' type='tvm::te::Schedule tvm::te::Schedule::normalize()'/>
+<use f='tvm/src/te/schedule/schedule_lang.cc' l='994' u='a'/>

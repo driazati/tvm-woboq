@@ -1,0 +1,23 @@
+<dec f='tvm/include/tvm/tir/index_map.h' l='112' type='Array&lt;tvm::Range&gt; tvm::tir::IndexMapNode::MapRanges(const Array&lt;tvm::Range&gt; &amp; ranges, arith::Analyzer * analyzer = nullptr) const'/>
+<doc f='tvm/include/tvm/tir/index_map.h' l='96'>/*! \brief Map a memory range to the output space
+   *
+   * If contiguous memory locations in the input space are not
+   * necessarily contiguous in the output space (e.g. `lambda i:
+   * [8*(i%8) + (i//8)]`), then this will return the smallest range
+   * such that all valid indices are contained within the given range.
+   *
+   * \param ranges The ranges in the input space.  Should contain one
+   * value for each variable in `initial_indices`.
+   *
+   * \param analyzer An optional analyzer to be used to simplify the
+   * resulting expressions.  If null, will use a fresh analyzer.
+   *
+   * \returns The ranges in the output space.  Contains one value for
+   * each expression in `final_indices`.
+   */</doc>
+<use f='tvm/src/te/schedule/message_passing.cc' l='196' u='c' c='_ZN3tvm2te14PassDownDomainERKNS0_5StageEPSt13unordered_mapINS_3tir7IterVarENS_5RangeESt4hashIS6_ESt8equal_toIS6_ESaISt4pairIKS6_S7_EEEPNS_5arith8AnalyzerEb'/>
+<use f='tvm/src/te/schedule/schedule_lang.cc' l='470' u='c' c='_ZN3tvm2te5Stage16transform_layoutERKNS_7runtime5ArrayINS_3tir3VarEvEERKNS3_INS_8PrimExprEvEEPNS3_INS4_7IterVarEvEE'/>
+<use f='tvm/src/tir/ir/index_map.cc' l='101' u='c' c='_ZNK3tvm3tir8IndexMap20NonSurjectiveInverseENS_7runtime5ArrayINS_5RangeEvEE'/>
+<def f='tvm/src/tir/ir/index_map.cc' l='188' ll='214' type='Array&lt;tvm::Range&gt; tvm::tir::IndexMapNode::MapRanges(const Array&lt;tvm::Range&gt; &amp; ranges, arith::Analyzer * analyzer = nullptr) const'/>
+<use f='tvm/src/tir/ir/index_map.cc' l='224' u='c' c='_ZNK3tvm3tir12IndexMapNode8MapShapeERKNS_7runtime5ArrayINS_8PrimExprEvEEPNS_5arith8AnalyzerE'/>
+<use f='tvm/src/tir/transforms/storage_flatten.cc' l='1240' u='c' c='_ZN3tvm3tir21ApplyLayoutTransforms10VisitStmt_EPKNS0_17BufferRealizeNodeE'/>

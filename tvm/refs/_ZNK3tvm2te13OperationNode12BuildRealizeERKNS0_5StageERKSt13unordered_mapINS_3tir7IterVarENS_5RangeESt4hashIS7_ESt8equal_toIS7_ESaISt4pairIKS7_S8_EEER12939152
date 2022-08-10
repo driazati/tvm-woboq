@@ -1,0 +1,16 @@
+<dec f='tvm/include/tvm/te/operation.h' l='131' type='tvm::tir::Stmt tvm::te::OperationNode::BuildRealize(const tvm::te::Stage &amp; stage, const std::unordered_map&lt;IterVar, Range&gt; &amp; realize_map, const tvm::tir::Stmt &amp; body, tvm::runtime::String storage_scope = &quot;&quot;) const'/>
+<doc f='tvm/include/tvm/te/operation.h' l='122'>/*!
+   * \brief Build the Realize statement that realizes
+   *   the op&apos;s output tensors.
+   * \param stage the op&apos;s stage.
+   * \param realize_map The realization domain map of the operators.
+   * \param body The body that is going to get
+   * \param storage_scope The storage scope associated with this realization
+   * \return A realization statement that wraps body.
+   */</doc>
+<ovr f='tvm/src/te/operation/compute_op.cc' l='261' c='_ZNK3tvm2te17BaseComputeOpNode12BuildRealizeERKNS0_5StageERKSt13unordered_mapINS_3tir7IterVarENS_5RangeESt4hashIS7_ESt8equal_toIS7_ESaISt4pairIKS7_S8_15811504'/>
+<ovr f='tvm/src/te/operation/extern_op.cc' l='125' c='_ZNK3tvm2te12ExternOpNode12BuildRealizeERKNS0_5StageERKSt13unordered_mapINS_3tir7IterVarENS_5RangeESt4hashIS7_ESt8equal_toIS7_ESaISt4pairIKS7_S8_EEERK26302'/>
+<ovr f='tvm/src/te/operation/hybrid_op.cc' l='145' c='_ZNK3tvm2te12HybridOpNode12BuildRealizeERKNS0_5StageERKSt13unordered_mapINS_3tir7IterVarENS_5RangeESt4hashIS7_ESt8equal_toIS7_ESaISt4pairIKS7_S8_EEERK10091118'/>
+<ovr f='tvm/src/te/operation/placeholder_op.cc' l='86' c='_ZNK3tvm2te17PlaceholderOpNode12BuildRealizeERKNS0_5StageERKSt13unordered_mapINS_3tir7IterVarENS_5RangeESt4hashIS7_ESt8equal_toIS7_ESaISt4pairIKS7_S8_13179119'/>
+<ovr f='tvm/src/te/operation/scan_op.cc' l='236' c='_ZNK3tvm2te10ScanOpNode12BuildRealizeERKNS0_5StageERKSt13unordered_mapINS_3tir7IterVarENS_5RangeESt4hashIS7_ESt8equal_toIS7_ESaISt4pairIKS7_S8_EEERKNS15698446'/>
+<use f='tvm/src/te/schedule/schedule_ops.cc' l='83' u='c' c='_ZN3tvm2te12MakePipelineERKNS0_5StageERKSt13unordered_mapINS_3tir7IterVarENS_5RangeESt4hashIS6_ESt8equal_toIS6_ESaISt4pairIKS6_S7_EEENS5_4StmtEb'/>

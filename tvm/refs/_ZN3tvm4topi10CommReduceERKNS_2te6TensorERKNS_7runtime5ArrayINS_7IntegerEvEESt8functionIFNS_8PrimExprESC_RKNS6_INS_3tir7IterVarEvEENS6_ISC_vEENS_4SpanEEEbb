@@ -1,0 +1,20 @@
+<def f='tvm/include/tvm/topi/reduction.h' l='182' ll='190' type='tvm::te::Tensor tvm::topi::CommReduce(const tvm::te::Tensor &amp; data, const Array&lt;tvm::Integer&gt; &amp; axis, tvm::topi::FReduce func, bool keepdims, bool atleast1d)'/>
+<use f='tvm/include/tvm/topi/reduction.h' l='328' u='c' c='_ZN3tvm4topi3sumERKNS_2te6TensorERKNS_7runtime5ArrayINS_7IntegerEvEEbb'/>
+<use f='tvm/include/tvm/topi/reduction.h' l='374' u='c' c='_ZN3tvm4topi3allERKNS_2te6TensorERKNS_7runtime5ArrayINS_7IntegerEvEEbb'/>
+<use f='tvm/include/tvm/topi/reduction.h' l='393' u='c' c='_ZN3tvm4topi3anyERKNS_2te6TensorERKNS_7runtime5ArrayINS_7IntegerEvEEbb'/>
+<use f='tvm/include/tvm/topi/reduction.h' l='412' u='c' c='_ZN3tvm4topi3minERKNS_2te6TensorERKNS_7runtime5ArrayINS_7IntegerEvEEbb'/>
+<use f='tvm/include/tvm/topi/reduction.h' l='431' u='c' c='_ZN3tvm4topi3maxERKNS_2te6TensorERKNS_7runtime5ArrayINS_7IntegerEvEEbb'/>
+<use f='tvm/include/tvm/topi/reduction.h' l='570' u='c' c='_ZN3tvm4topi4prodERKNS_2te6TensorERKNS_7runtime5ArrayINS_7IntegerEvEEbb'/>
+<doc f='tvm/include/tvm/topi/reduction.h' l='169'>/*!
+ * \brief Create a reduction operation.
+ *
+ * \param data The input tensor.
+ * \param axis The axes along which the reduction is performed.
+ * \param func The reduction function eg. tvm::sum
+ * \param keepdims If this is set to true, the axes which are reduced are
+ * left in the result as dimensions with size one. This enables the result
+ * to broadcast correctly against the input array.
+ * \param atleast1d Whether the output need to be atleast1d.
+ *
+ * \return The result tensor.
+ */</doc>

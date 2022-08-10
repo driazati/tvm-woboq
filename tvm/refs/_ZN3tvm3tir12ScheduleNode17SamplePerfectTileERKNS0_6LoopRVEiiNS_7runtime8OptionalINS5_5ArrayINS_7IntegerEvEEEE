@@ -1,0 +1,17 @@
+<dec f='tvm/include/tvm/tir/schedule/schedule.h' l='235' type='Array&lt;tvm::tir::ExprRV&gt; tvm::tir::ScheduleNode::SamplePerfectTile(const tvm::tir::LoopRV &amp; loop_rv, int n, int max_innermost_factor, Optional&lt;Array&lt;tvm::Integer&gt;&gt; decision = NullOpt)'/>
+<doc f='tvm/include/tvm/tir/schedule/schedule.h' l='227'>/*!
+   * \brief Sample the factors to perfect tile a specific loop
+   * \param loop_rv The loop to be tiled
+   * \param n The number of tiles to be sampled
+   * \param max_innermost_factor The maximum tile size allowed to be sampled in the innermost loop
+   * \param decision The sampling decision
+   * \return A list of length `n`, the random perfect tile sizes sampled
+   */</doc>
+<use f='tvm/src/meta_schedule/schedule_rule/add_rfactor.cc' l='92' u='c' c='_ZN3tvm13meta_schedule14AddRFactorNode5ApplyERKNS_3tir8ScheduleERKNS2_7BlockRVE'/>
+<use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling.cc' l='191' u='c' c='_ZNK3tvm13meta_schedule20MultiLevelTilingNode12TileLoopNestENS0_5StateE'/>
+<use f='tvm/src/meta_schedule/schedule_rule/winograd.cc' l='50' u='c' c='_ZN3tvm13meta_schedule16ScheduleDataPackENS_3tir8ScheduleENS1_7BlockRVE'/>
+<use f='tvm/src/meta_schedule/schedule_rule/winograd.cc' l='54' u='c' c='_ZN3tvm13meta_schedule16ScheduleDataPackENS_3tir8ScheduleENS1_7BlockRVE'/>
+<use f='tvm/src/meta_schedule/schedule_rule/winograd.cc' l='100' u='c' c='_ZN3tvm13meta_schedule20ScheduleDataPackNCHWENS_3tir8ScheduleENS1_7BlockRVE'/>
+<ovr f='tvm/src/tir/schedule/concrete_schedule.cc' l='244' c='_ZN3tvm3tir20ConcreteScheduleNode17SamplePerfectTileERKNS0_6LoopRVEiiNS_7runtime8OptionalINS5_5ArrayINS_7IntegerEvEEEE'/>
+<use f='tvm/src/tir/schedule/primitive/sampling.cc' l='427' u='c' c='_ZN3tvm3tir23SamplePerfectTileTraits23UnpackedApplyToScheduleENS0_8ScheduleENS0_6LoopRVENS_7IntegerES4_NS_7runtime8OptionalINS5_5ArrayIS4_vEEEE'/>
+<use f='tvm/src/tir/schedule/schedule.cc' l='129' u='a'/>

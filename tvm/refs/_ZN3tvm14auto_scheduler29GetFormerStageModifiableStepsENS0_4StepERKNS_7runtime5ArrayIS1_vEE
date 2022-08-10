@@ -1,0 +1,9 @@
+<def f='tvm/src/auto_scheduler/transform_step.cc' l='1476' ll='1506' type='Array&lt;tvm::auto_scheduler::Step&gt; tvm::auto_scheduler::GetFormerStageModifiableSteps(tvm::auto_scheduler::Step current_step, const Array&lt;tvm::auto_scheduler::Step&gt; &amp; transform_steps)'/>
+<use f='tvm/src/auto_scheduler/transform_step.cc' l='1547' u='c' c='_ZNK3tvm14auto_scheduler17CacheReadStepNode12ApplyToStateEPNS0_5StateERKNS0_10ComputeDAGE'/>
+<use f='tvm/src/auto_scheduler/transform_step.cc' l='1657' u='c' c='_ZNK3tvm14auto_scheduler18CacheWriteStepNode12ApplyToStateEPNS0_5StateERKNS0_10ComputeDAGE'/>
+<use f='tvm/src/auto_scheduler/transform_step.cc' l='1787' u='c' c='_ZNK3tvm14auto_scheduler15RfactorStepNode12ApplyToStateEPNS0_5StateERKNS0_10ComputeDAGE'/>
+<doc f='tvm/src/auto_scheduler/transform_step.cc' l='1471'>/*!
+ * \brief Common part for steps that add new stages(e.g. CacheReadStep, CacheWriteStep,
+ * RfactorStep). This will return all steps that can change the number of stages in a ComputeDAG,
+ * and stop by the current step.
+ */</doc>

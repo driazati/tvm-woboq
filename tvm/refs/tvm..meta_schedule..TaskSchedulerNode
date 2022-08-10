@@ -1,0 +1,70 @@
+<inh f='tvm/include/tvm/runtime/object.h' l='167' c='tvm::runtime::Object'/>
+<def f='tvm/include/tvm/meta_schedule/task_scheduler.h' l='74' ll='139'/>
+<ovr f='tvm/include/tvm/meta_schedule/task_scheduler.h' l='144' c='tvm::meta_schedule::PyTaskSchedulerNode'/>
+<use f='tvm/include/tvm/meta_schedule/task_scheduler.h' l='144'/>
+<use f='tvm/include/tvm/meta_schedule/task_scheduler.h' l='285' c='_ZNK3tvm13meta_schedule13TaskSchedulerptEv'/>
+<use f='tvm/include/tvm/meta_schedule/task_scheduler.h' l='285' c='_ZNK3tvm13meta_schedule13TaskSchedulerptEv'/>
+<use f='tvm/include/tvm/meta_schedule/task_scheduler.h' l='285' c='_ZNK3tvm13meta_schedule13TaskScheduler3getEv'/>
+<use f='tvm/include/tvm/meta_schedule/task_scheduler.h' l='285'/>
+<size>88</size>
+<doc f='tvm/include/tvm/meta_schedule/task_scheduler.h' l='38'>/*!
+ * \brief The abstract interface of task schedulers.
+ * \note The relationship between SpaceGenerator and other classes are as follows:
+      ┌──────────────────────────────────────────────────────────────┐
+   ┌──┴───────────────────────────────────────────────────────────┐  │
+┌──┴────────────────── Tune Context ───────────────────────────┐  │  │
+│                ┌─────────────────────┐                       │  │  │
+│                │                     │   Generate            │  │  │
+│                │   Space Generator   ├──────────────┐        │  │  │
+│                │                     │              │        │  │  │
+│                └─────────────────────┘              ▼        │  │  │
+│                                                Design Space  │  │  │
+│                ┌─────────────────────┐              │        │  │  │
+│      Generate  │                     │   Pretuning  │        │  │  │
+│    ┌───────────┤   Search Strategy   │◄─────────────┘        │  │  │
+│    │           │                     │                       │  ├──┘
+│    │           └─────────────────────┘                       ├──┘
+└────┼─────────────────────────────────────────────────────────┘
+     │
+     │
+┌────┼──────────────── Managed By Task Scheduler ─────────────────────┐
+│    │                                 ┌───────────┐                  │
+│    │                      Send to    │           │  Send to         │
+│    ▼                  ┌─────────────►│  Builder  ├──────────┐       │
+│ Measure Candidate     │   Builder    │           │  Runner  │       │
+│    │                  │              └───────────┘          │       │
+│    │     ┌────────────┴────────┐                            │       │
+│    │     │                     │     ┌───────────┐          │       │
+│    └────►│   Task Scheduler    │     │           │          │       │
+│          │                     │     │  Runner   │◄─────────┘       │
+│          └─────────────────────┘     │           │                  │
+│                   ▲                  └─────┬─────┘                  │
+│                   │                        │                        │
+│                   └───  Runner Future ◄────┘                        │
+└─────────────────────────────────────────────────────────────────────┘
+*/</doc>
+<mbr r='tvm::meta_schedule::TaskSchedulerNode::tasks' o='192' t='Array&lt;tvm::meta_schedule::TuneContext&gt;'/>
+<mbr r='tvm::meta_schedule::TaskSchedulerNode::builder' o='256' t='tvm::meta_schedule::Builder'/>
+<mbr r='tvm::meta_schedule::TaskSchedulerNode::runner' o='320' t='tvm::meta_schedule::Runner'/>
+<mbr r='tvm::meta_schedule::TaskSchedulerNode::database' o='384' t='Optional&lt;tvm::meta_schedule::Database&gt;'/>
+<mbr r='tvm::meta_schedule::TaskSchedulerNode::cost_model' o='448' t='Optional&lt;tvm::meta_schedule::CostModel&gt;'/>
+<mbr r='tvm::meta_schedule::TaskSchedulerNode::measure_callbacks' o='512' t='Array&lt;tvm::meta_schedule::MeasureCallback&gt;'/>
+<mbr r='tvm::meta_schedule::TaskSchedulerNode::max_trials' o='576' t='int'/>
+<mbr r='tvm::meta_schedule::TaskSchedulerNode::num_trials_already' o='608' t='int'/>
+<mbr r='tvm::meta_schedule::TaskSchedulerNode::logging_func' o='640' t='tvm::runtime::PackedFunc'/>
+<fun r='_ZN3tvm13meta_schedule17TaskSchedulerNodeD1Ev'/>
+<fun r='_ZN3tvm13meta_schedule17TaskSchedulerNode10VisitAttrsEPNS_11AttrVisitorE'/>
+<fun r='_ZN3tvm13meta_schedule17TaskSchedulerNode4TuneEv'/>
+<fun r='_ZN3tvm13meta_schedule17TaskSchedulerNode14InitializeTaskEi'/>
+<fun r='_ZN3tvm13meta_schedule17TaskSchedulerNode9TouchTaskEi'/>
+<fun r='_ZN3tvm13meta_schedule17TaskSchedulerNode15JoinRunningTaskEi'/>
+<fun r='_ZN3tvm13meta_schedule17TaskSchedulerNode10NextTaskIdEv'/>
+<smbr r='tvm::meta_schedule::TaskSchedulerNode::_type_key' t='const char *const'/>
+<fun r='_ZN3tvm13meta_schedule17TaskSchedulerNode16RuntimeTypeIndexEv'/>
+<fun r='_ZN3tvm13meta_schedule17TaskSchedulerNode27_GetOrAllocRuntimeTypeIndexEv'/>
+<ovr f='tvm/src/meta_schedule/task_scheduler/gradient_based.cc' l='33' c='tvm::meta_schedule::GradientBasedNode'/>
+<use f='tvm/src/meta_schedule/task_scheduler/gradient_based.cc' l='33'/>
+<size>88</size>
+<ovr f='tvm/src/meta_schedule/task_scheduler/round_robin.cc' l='25' c='tvm::meta_schedule::RoundRobinNode'/>
+<use f='tvm/src/meta_schedule/task_scheduler/round_robin.cc' l='25'/>
+<size>88</size>

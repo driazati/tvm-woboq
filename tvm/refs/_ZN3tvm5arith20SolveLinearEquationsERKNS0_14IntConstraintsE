@@ -1,0 +1,15 @@
+<dec f='tvm/include/tvm/arith/int_solver.h' l='301' type='tvm::arith::IntConstraintsTransform tvm::arith::SolveLinearEquations(const tvm::arith::IntConstraints &amp; system_to_solve)'/>
+<doc f='tvm/include/tvm/arith/int_solver.h' l='291'>/*!
+ * \brief Solve linear equations.
+ * \param system_to_solve the variables to solve, their ranges, and a list of equations.
+ * \return  A new linear system, with less variables (if \p system_to_solve is NOT of full rank),
+ *          or no variable (if \p system_to_solve is of full rank),
+ *          or an empty linear system (if \p system_to_solve is unsolvable).
+ *          It also provides the ranges of the variables in the new system,
+ *          as well as inequalities inferred from the \p system_to_solve.
+ *          You can get the mapping from the original variables to the solution via ret-&gt;src_to_dst.
+ */</doc>
+<def f='tvm/src/arith/solve_linear_equation.cc' l='266' ll='455' type='tvm::arith::IntConstraintsTransform tvm::arith::SolveLinearEquations(const tvm::arith::IntConstraints &amp; system_to_solve)'/>
+<use f='tvm/src/arith/solve_linear_equation.cc' l='459' u='c'/>
+<use f='tvm/src/arith/solve_linear_equation.cc' l='462' u='c'/>
+<use f='tvm/src/te/autodiff/ad_simplify.cc' l='787' u='c' c='_ZN3tvm2te14SimplifyDomainERKNS_5arith14IntConstraintsEb'/>

@@ -1,0 +1,11 @@
+<def f='tvm/src/te/autodiff/ad_simplify.cc' l='484' ll='487' type='tvm::te::FactorOutAtomicFormulasResult tvm::te::FactorOutAtomicFormulas(const tvm::PrimExpr &amp; e)'/>
+<use f='tvm/src/te/autodiff/ad_simplify.cc' l='754' u='c' c='_ZN3tvm2te35EliminateDivModFromDomainConditionsERKNS_5arith14IntConstraintsE'/>
+<use f='tvm/src/te/autodiff/ad_simplify.cc' l='799' u='c' c='_ZN3tvm2te23SimplifyReductionDomainERKNS_8PrimExprERKNS_7runtime3MapINS_3tir3VarENS_5RangeEvvEE'/>
+<use f='tvm/src/te/autodiff/ad_simplify.cc' l='850' u='c' c='_ZN3tvm2te30LiftConditionsThroughReductionERKNS_8PrimExprERKNS_7runtime5ArrayINS_3tir7IterVarEvEESA_'/>
+<use f='tvm/src/te/autodiff/ad_simplify.cc' l='910' u='c' c='_ZN3tvm2te34RemoveRedundantInequalitiesMutator10VisitExpr_EPKNS_3tir10SelectNodeE'/>
+<use f='tvm/src/te/autodiff/ad_simplify.cc' l='930' u='c' c='_ZN3tvm2te34RemoveRedundantInequalitiesMutator10VisitExpr_EPKNS_3tir8CallNodeE'/>
+<use f='tvm/src/te/autodiff/ad_simplify.cc' l='954' u='c' c='_ZN3tvm2te34RemoveRedundantInequalitiesMutator10VisitExpr_EPKNS_3tir10ReduceNodeE'/>
+<use f='tvm/src/te/autodiff/ad_simplify.cc' l='1003' u='c' c='_ZN3tvm2te18TrySimplifyComputeERKNS_8PrimExprES3_RKNS_7runtime5ArrayINS_3tir3VarEvEERKNS4_3MapIS7_NS_5RangeEvvEE'/>
+<doc f='tvm/src/te/autodiff/ad_simplify.cc' l='481'>// Transform the given formula into a conjunction of atomic formulas (represented as an array)
+// and a non-atomic residual. Atomic formulas are consts, calls, variables and comparisons (a &lt;= b,
+// etc), i.e. formulas which are not logical operators (||, &amp;&amp;, !) on the top level.</doc>

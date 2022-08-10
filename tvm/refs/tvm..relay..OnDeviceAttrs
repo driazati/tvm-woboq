@@ -1,0 +1,47 @@
+<inh f='tvm/include/tvm/ir/attrs.h' l='834' c='tvm::AttrsNode'/>
+<def f='tvm/include/tvm/relay/attrs/on_device.h' l='61' ll='101'/>
+<use f='tvm/include/tvm/relay/attrs/on_device.h' l='61'/>
+<size>40</size>
+<doc f='tvm/include/tvm/relay/attrs/on_device.h' l='35'>/*!
+ * \brief Attributes for the &quot;on_device&quot; annotation (ie operator).
+ *
+ * The Relay call:
+ * \code
+ *   on_device(sub_expr, virtual_device=S)
+ * \endcode
+ * constrains \p sub_expr to execute and store its result on the \p VirtualDevice \p S.
+ * However the annotation itself may appear in an expression to be executed and stored on a
+ * different \p VirtualDevice. If so the compiler will automatically insert a &quot;device_copy&quot; call to
+ * mediate the transition between \p VirtualDevices.
+ *
+ * E.g.: Assuming %x and %y reside on the GPU and %z on the CPU then:
+ * \code
+ *   multiply(on_device(add(%x, %y), virtual_device=GPU), %z)
+ * \endcode
+ * indicates the \p add should execute on the GPU but the \p multiply should execute on the CPU.
+ * The compiler will rewrite this to:
+ * \code
+ *   multiply(device_copy(add(%x, %y), src_virtual_device=GPU, dst_virtual_device=CPU), %z)
+ * \endcode
+ *
+ * The \p constraint_body (default true) and \p constraint_result (default false) fields can be
+ * used by passes for finer-grained control over how the \p VirtualDevice constraint should be
+ * applied.
+ */</doc>
+<mbr r='tvm::relay::OnDeviceAttrs::virtual_device' o='192' t='tvm::VirtualDevice'/>
+<mbr r='tvm::relay::OnDeviceAttrs::constrain_result' o='256' t='bool'/>
+<mbr r='tvm::relay::OnDeviceAttrs::constrain_body' o='264' t='bool'/>
+<fun r='_ZNK3tvm5relay13OnDeviceAttrs8is_fixedEv'/>
+<fun r='_ZNK3tvm5relay13OnDeviceAttrs9is_normalEv'/>
+<smbr r='tvm::relay::OnDeviceAttrs::_type_key' t='const char *const'/>
+<smbr r='tvm::relay::OnDeviceAttrs::_type_final' t='const bool'/>
+<smbr r='tvm::relay::OnDeviceAttrs::_type_child_slots' t='const int'/>
+<fun r='_ZN3tvm5relay13OnDeviceAttrs16RuntimeTypeIndexEv'/>
+<fun r='_ZN3tvm5relay13OnDeviceAttrs27_GetOrAllocRuntimeTypeIndexEv'/>
+<fun r='_ZN3tvm5relay13OnDeviceAttrs15_tvm_VisitAttrsERT_'/>
+<use f='tvm/src/relay/op/memory/on_device.cc' l='40'/>
+<use f='tvm/src/relay/op/memory/on_device.cc' l='40'/>
+<use f='tvm/src/relay/op/memory/on_device.cc' l='40'/>
+<use f='tvm/src/relay/op/memory/on_device.cc' l='49' c='_ZN3tvm5relay8OnDeviceENS_9RelayExprENS_13VirtualDeviceEbb'/>
+<use f='tvm/src/relay/op/memory/on_device.cc' l='131' c='_ZN3tvm5relay16GetOnDevicePropsEPKNS0_8CallNodeE'/>
+<size>40</size>

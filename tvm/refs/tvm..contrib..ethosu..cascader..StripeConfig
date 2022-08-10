@@ -1,0 +1,112 @@
+<use f='tvm/src/contrib/ethosu/cascader/propagator.h' l='86' c='_ZNK3tvm7contrib6ethosu8cascader14PropagatorNode9propagateERKNS2_12StripeConfigE'/>
+<use f='tvm/src/contrib/ethosu/cascader/propagator.h' l='86' c='_ZNK3tvm7contrib6ethosu8cascader14PropagatorNode9propagateERKNS2_12StripeConfigE'/>
+<use f='tvm/src/contrib/ethosu/cascader/graph.h' l='192' c='_ZN3tvm7contrib6ethosu8cascader8PartNode27CalculateInputStripeConfigsERKNS2_12StripeConfigE'/>
+<use f='tvm/src/contrib/ethosu/cascader/graph.h' l='192' c='_ZN3tvm7contrib6ethosu8cascader8PartNode27CalculateInputStripeConfigsERKNS2_12StripeConfigE'/>
+<use f='tvm/src/contrib/ethosu/cascader/graph.h' l='205' c='_ZN3tvm7contrib6ethosu8cascader8PartNode18GetPerformanceInfoERKNS2_12StripeConfigENS2_10BufferModeE'/>
+<use f='tvm/src/contrib/ethosu/cascader/stripe_config.h' l='117'/>
+<inh f='tvm/include/tvm/runtime/object.h' l='511' c='tvm::runtime::ObjectRef'/>
+<def f='tvm/src/contrib/ethosu/cascader/stripe_config.h' l='165' ll='178'/>
+<use f='tvm/src/contrib/ethosu/cascader/stripe_config.h' l='175' c='_ZNK3tvm7contrib6ethosu8cascader12StripeConfigeqERKS3_'/>
+<use f='tvm/src/contrib/ethosu/cascader/stripe_config.h' l='177' c='_ZN3tvm7contrib6ethosu8cascader12StripeConfigC1ERKS3_'/>
+<use f='tvm/src/contrib/ethosu/cascader/stripe_config.h' l='177' c='_ZN3tvm7contrib6ethosu8cascader12StripeConfigC1EOS3_'/>
+<use f='tvm/src/contrib/ethosu/cascader/stripe_config.h' l='177' c='_ZN3tvm7contrib6ethosu8cascader12StripeConfigaSERKS3_'/>
+<use f='tvm/src/contrib/ethosu/cascader/stripe_config.h' l='177' c='_ZN3tvm7contrib6ethosu8cascader12StripeConfigaSERKS3_'/>
+<use f='tvm/src/contrib/ethosu/cascader/stripe_config.h' l='177' c='_ZN3tvm7contrib6ethosu8cascader12StripeConfigaSEOS3_'/>
+<use f='tvm/src/contrib/ethosu/cascader/stripe_config.h' l='177' c='_ZN3tvm7contrib6ethosu8cascader12StripeConfigaSEOS3_'/>
+<use f='tvm/src/contrib/ethosu/cascader/stripe_config.h' l='204' c='_ZN3tvm7contrib6ethosu8cascader12CountStripesERKNS2_12StripeConfigEb'/>
+<use f='tvm/src/contrib/ethosu/cascader/stripe_config.h' l='217'/>
+<use f='tvm/src/contrib/ethosu/cascader/stripe_config.h' l='218' c='_ZNKSt8equal_toIN3tvm7contrib6ethosu8cascader12StripeConfigEEclERKS4_S7_'/>
+<use f='tvm/src/contrib/ethosu/cascader/stripe_config.h' l='219' c='_ZNKSt8equal_toIN3tvm7contrib6ethosu8cascader12StripeConfigEEclERKS4_S7_'/>
+<use f='tvm/src/contrib/ethosu/cascader/stripe_config.h' l='226'/>
+<use f='tvm/src/contrib/ethosu/cascader/stripe_config.h' l='228' c='_ZNKSt4hashIN3tvm7contrib6ethosu8cascader12StripeConfigEEclERKS4_'/>
+<use f='tvm/src/contrib/ethosu/cascader/tensor_config.h' l='141' c='_ZNK3tvm7contrib6ethosu8cascader16TensorConfigNode16GetStripeConfigsEv'/>
+<use f='tvm/src/contrib/ethosu/cascader/tensor_config.h' l='177'/>
+<use f='tvm/src/contrib/ethosu/cascader/tensor_config.h' l='196' c='_ZN3tvm7contrib6ethosu8cascader12TensorConfigC1ERKNS2_6TensorERKNS2_12MemoryRegionENS2_17TensorConfigStateENS2_10BufferModeERKSt6vectorINS2_12StripeConfigESaISD_EEbS9_'/>
+<size>8</size>
+<doc f='tvm/src/contrib/ethosu/cascader/stripe_config.h' l='139'>/*!
+ * \brief An object to describe how a tensor should be computed as a series
+ of n-dimensional tiles, or &apos;stripes&apos;.
+ * \note The StripeConfig is a verbose way of specifying how to tile a tensor.
+ * We can imagine taking a 2D tensor of size (12, 12) and wanting to compute
+ * it in tiles of (4, 4). The tile is referred to as a stripe here to generalize
+ * this to n-dimensional tiles.
+ *
+ * The size of that stripe in each axis is the &apos;shape&apos;. The strides is how far
+ * you should move between stripes, so also (4, 4) for a simple non-overlappping
+ * tiling. However, we explore some overlapping scheduling options so shape != strides
+ * in general. Note that the striding may be fractional, for instance (1.5, 1.5).
+ * This means the first stripe should begin at (floor(1.5*0), 0) = (0, 0), the second
+ * at (floor(1.5*1), 0) = (1, 0), and the third at (floor(1.5*2), 0) = (3, 0). This results
+ * in slightly irregular striding where &apos;strides&apos; should be interpreted as the average
+ * striding value.
+ *
+ * The &apos;extent&apos; is simply (12, 12), the region over which we&apos;re conducting our tiling.
+ *
+ * The &apos;order&apos; tells us which axis to iterate over first and which second and the
+ * &apos;stripes&apos; tells us how many stripes we need to compute in each of those axes.
+ *
+ * Finally, the &apos;offset&apos; tells us where to start the first stripe. In this simple
+ * case the offset is just (0, 0), but in something like a slice operation we
+ * may want to start part way through a tensor.
+ */</doc>
+<fun r='_ZN3tvm7contrib6ethosu8cascader12StripeConfigC1ERKSt6vectorIiSaIiEES8_RKS4_IfSaIfEES8_S8_S8_'/>
+<fun r='_ZNK3tvm7contrib6ethosu8cascader12StripeConfigeqERKS3_'/>
+<fun r='_ZN3tvm7contrib6ethosu8cascader12StripeConfigC1Ev'/>
+<fun r='_ZN3tvm7contrib6ethosu8cascader12StripeConfigC1ENS_7runtime9ObjectPtrINS4_6ObjectEEE'/>
+<fun r='_ZN3tvm7contrib6ethosu8cascader12StripeConfigC1ERKS3_'/>
+<fun r='_ZN3tvm7contrib6ethosu8cascader12StripeConfigC1EOS3_'/>
+<fun r='_ZNK3tvm7contrib6ethosu8cascader12StripeConfig3getEv'/>
+<use f='tvm/src/contrib/ethosu/cascader/graph.cc' l='116' c='_ZN3tvm7contrib6ethosu8cascader8PartNode27CalculateInputStripeConfigsERKNS2_12StripeConfigE'/>
+<use f='tvm/src/contrib/ethosu/cascader/graph.cc' l='117' c='_ZN3tvm7contrib6ethosu8cascader8PartNode27CalculateInputStripeConfigsERKNS2_12StripeConfigE'/>
+<use f='tvm/src/contrib/ethosu/cascader/graph.cc' l='118' c='_ZN3tvm7contrib6ethosu8cascader8PartNode27CalculateInputStripeConfigsERKNS2_12StripeConfigE'/>
+<use f='tvm/src/contrib/ethosu/cascader/graph.cc' l='140'/>
+<use f='tvm/src/contrib/ethosu/cascader/graph.cc' l='142'/>
+<use f='tvm/src/contrib/ethosu/cascader/graph.cc' l='149'/>
+<size>8</size>
+<use f='tvm/src/contrib/ethosu/cascader/parts/ethosu.h' l='46' c='_ZN3tvm7contrib6ethosu8cascader14EthosuPartNode14GetBlockConfigERKNS2_12StripeConfigE'/>
+<use f='tvm/src/contrib/ethosu/cascader/parts/ethosu.h' l='59' c='_ZN3tvm7contrib6ethosu8cascader14EthosuPartNode18GetPerformanceInfoERKNS2_12StripeConfigENS2_10BufferModeE'/>
+<use f='tvm/src/contrib/ethosu/cascader/parts/ethosu.h' l='84' c='_ZN3tvm7contrib6ethosu8cascader14EthosuPartNode13CalculateCostERKNS2_11BlockConfigERKNS2_12StripeConfigE'/>
+<use f='tvm/src/contrib/ethosu/cascader/parts/ethosu.cc' l='53' c='_ZN3tvm7contrib6ethosu8cascader14EthosuPartNode12GetBytesReadERKSt6vectorIiSaIiEES8_'/>
+<use f='tvm/src/contrib/ethosu/cascader/parts/ethosu.cc' l='74' c='_ZN3tvm7contrib6ethosu8cascader14EthosuPartNode13CalculateCostERKNS2_11BlockConfigERKNS2_12StripeConfigE'/>
+<use f='tvm/src/contrib/ethosu/cascader/parts/ethosu.cc' l='94' c='_ZN3tvm7contrib6ethosu8cascader14EthosuPartNode14GetBlockConfigERKNS2_12StripeConfigE'/>
+<use f='tvm/src/contrib/ethosu/cascader/parts/ethosu.cc' l='111' c='_ZN3tvm7contrib6ethosu8cascader14EthosuPartNode18GetPerformanceInfoERKNS2_12StripeConfigENS2_10BufferModeE'/>
+<use f='tvm/src/contrib/ethosu/cascader/parts/ethosu.cc' l='198'/>
+<size>8</size>
+<use f='tvm/src/contrib/ethosu/cascader/parts/inline.h' l='47' c='_ZN3tvm7contrib6ethosu8cascader14InlinePartNode18GetPerformanceInfoERKNS2_12StripeConfigENS2_10BufferModeE'/>
+<use f='tvm/src/contrib/ethosu/cascader/parts/inline.cc' l='34' c='_ZN3tvm7contrib6ethosu8cascader14InlinePartNode18GetPerformanceInfoERKNS2_12StripeConfigENS2_10BufferModeE'/>
+<use f='tvm/src/contrib/ethosu/cascader/plan_generator.h' l='58' c='_ZN3tvm7contrib6ethosu8cascader27GenerateOutputStripeConfigsERKNS2_4PartEibb'/>
+<use f='tvm/src/contrib/ethosu/cascader/plan_generator.h' l='74' c='_ZN3tvm7contrib6ethosu8cascader19GenerateSinglePlansERKNS2_4PartERKSt6vectorINS2_12StripeConfigESaIS7_EERKSt13unordered_mapINS2_6TensorES6_INS2_12Memo4994141'/>
+<use f='tvm/src/contrib/ethosu/cascader/plan_generator.cc' l='108' c='_ZN3tvm7contrib6ethosu8cascader27GenerateOutputStripeConfigsERKNS2_4PartEibb'/>
+<use f='tvm/src/contrib/ethosu/cascader/plan_generator.cc' l='113' c='_ZN3tvm7contrib6ethosu8cascader27GenerateOutputStripeConfigsERKNS2_4PartEibb'/>
+<use f='tvm/src/contrib/ethosu/cascader/plan_generator.cc' l='175' c='_ZN3tvm7contrib6ethosu8cascader27GenerateOutputStripeConfigsERKNS2_4PartEibb'/>
+<use f='tvm/src/contrib/ethosu/cascader/plan_generator.cc' l='198' c='_ZN3tvm7contrib6ethosu8cascader27GenerateOutputStripeConfigsERKNS2_4PartEibb'/>
+<use f='tvm/src/contrib/ethosu/cascader/plan_generator.cc' l='214' c='_ZN3tvm7contrib6ethosu8cascader27GenerateOutputStripeConfigsERKNS2_4PartEibb'/>
+<use f='tvm/src/contrib/ethosu/cascader/plan_generator.cc' l='220' c='_ZN3tvm7contrib6ethosu8cascader23GetPossibleInputConfigsERKNS2_12StripeConfigERKNS2_6TensorERKSt6vectorINS2_12MemoryRegionESaISA_EERKNS2_15CascaderOptionsE'/>
+<use f='tvm/src/contrib/ethosu/cascader/plan_generator.cc' l='250' c='_ZN3tvm7contrib6ethosu8cascader8CanBoundERKNS2_12StripeConfigE'/>
+<use f='tvm/src/contrib/ethosu/cascader/plan_generator.cc' l='262' c='_ZN3tvm7contrib6ethosu8cascader24GetPossibleOutputConfigsERKNS2_12StripeConfigERKNS2_6TensorERKSt6vectorINS2_12MemoryRegionESaISA_EERKNS2_15CascaderOptionsE'/>
+<use f='tvm/src/contrib/ethosu/cascader/plan_generator.cc' l='341' c='_ZN3tvm7contrib6ethosu8cascader19GenerateSinglePlansERKNS2_4PartERKSt6vectorINS2_12StripeConfigESaIS7_EERKSt13unordered_mapINS2_6TensorES6_INS2_12Memo4994141'/>
+<use f='tvm/src/contrib/ethosu/cascader/plan_generator.cc' l='459' c='_ZN3tvm7contrib6ethosu8cascader18GenerateGraphPlansERKNS2_13CascaderGraphERKSt13unordered_mapINS2_6TensorESt6vectorINS2_12MemoryRegionESaIS9_EENS_7run1070765'/>
+<use f='tvm/src/contrib/ethosu/cascader/plan_generator.cc' l='478' c='_ZN3tvm7contrib6ethosu8cascader18GenerateGraphPlansERKNS2_13CascaderGraphERKSt13unordered_mapINS2_6TensorESt6vectorINS2_12MemoryRegionESaIS9_EENS_7run1070765'/>
+<use f='tvm/src/contrib/ethosu/cascader/plan_generator.cc' l='486' c='_ZN3tvm7contrib6ethosu8cascader18GenerateGraphPlansERKNS2_13CascaderGraphERKSt13unordered_mapINS2_6TensorESt6vectorINS2_12MemoryRegionESaIS9_EENS_7run1070765'/>
+<use f='tvm/src/contrib/ethosu/cascader/plan_generator.cc' l='563'/>
+<use f='tvm/src/contrib/ethosu/cascader/plan_generator.cc' l='565'/>
+<use f='tvm/src/contrib/ethosu/cascader/plan_generator.cc' l='570'/>
+<use f='tvm/src/contrib/ethosu/cascader/plan_generator.cc' l='572'/>
+<size>8</size>
+<use f='tvm/src/contrib/ethosu/cascader/propagator.cc' l='63' c='_ZNK3tvm7contrib6ethosu8cascader14PropagatorNode9propagateERKNS2_12StripeConfigE'/>
+<use f='tvm/src/contrib/ethosu/cascader/propagator.cc' l='63' c='_ZNK3tvm7contrib6ethosu8cascader14PropagatorNode9propagateERKNS2_12StripeConfigE'/>
+<use f='tvm/src/contrib/ethosu/cascader/propagator.cc' l='101' c='_ZNK3tvm7contrib6ethosu8cascader14PropagatorNode9propagateERKNS2_12StripeConfigE'/>
+<use f='tvm/src/contrib/ethosu/cascader/propagator.cc' l='115'/>
+<size>8</size>
+<use f='tvm/src/contrib/ethosu/cascader/stripe_config.cc' l='60' c='_ZN3tvm7contrib6ethosu8cascader12CountStripesERKNS2_12StripeConfigEb'/>
+<use f='tvm/src/contrib/ethosu/cascader/stripe_config.cc' l='104'/>
+<use f='tvm/src/contrib/ethosu/cascader/stripe_config.cc' l='153' c='_ZNK3tvm7contrib6ethosu8cascader12StripeConfigeqERKS3_'/>
+<use f='tvm/src/contrib/ethosu/cascader/stripe_config.cc' l='170'/>
+<size>8</size>
+<fun r='_ZN3tvm7contrib6ethosu8cascader12StripeConfigC1ERKSt6vectorIiSaIiEES8_RKS4_IfSaIfEES8_S8_S8_'/>
+<fun r='_ZNK3tvm7contrib6ethosu8cascader12StripeConfigeqERKS3_'/>
+<use f='tvm/src/contrib/ethosu/cascader/tensor_config.cc' l='62' c='_ZN3tvm7contrib6ethosu8cascader16TensorConfigNode10VisitAttrsEPNS_11AttrVisitorE'/>
+<use f='tvm/src/contrib/ethosu/cascader/tensor_config.cc' l='133' c='_ZN3tvm7contrib6ethosu8cascader12TensorConfigC1ERKNS2_6TensorERKNS2_12MemoryRegionENS2_17TensorConfigStateENS2_10BufferModeERKSt6vectorINS2_12StripeConfigESaISD_EEbS9_'/>
+<use f='tvm/src/contrib/ethosu/cascader/tensor_config.cc' l='162'/>
+<use f='tvm/src/contrib/ethosu/cascader/tensor_config.cc' l='166'/>
+<size>8</size>

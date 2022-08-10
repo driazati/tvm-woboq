@@ -1,0 +1,29 @@
+<inh f='tvm/include/tvm/runtime/object.h' l='167' c='tvm::runtime::Object'/>
+<def f='tvm/src/relay/collage/cost_estimator.h' l='48' ll='59'/>
+<use f='tvm/src/relay/collage/cost_estimator.h' l='64' c='_ZNK3tvm5relay7collage13CostEstimatorptEv'/>
+<use f='tvm/src/relay/collage/cost_estimator.h' l='64' c='_ZNK3tvm5relay7collage13CostEstimatorptEv'/>
+<use f='tvm/src/relay/collage/cost_estimator.h' l='64' c='_ZNK3tvm5relay7collage13CostEstimator3getEv'/>
+<use f='tvm/src/relay/collage/cost_estimator.h' l='64'/>
+<size>24</size>
+<doc f='tvm/src/relay/collage/cost_estimator.h' l='36'>/*!
+ * \brief An (abstract) estimator for the cost of executing &quot;main&quot; in an \p IRModule representing
+ * a candidate partition, using the given target for lowering and codegen.
+ *
+ * Generally the implementation will compile to a \p runtime::Module (possibly on a target-specific
+ * worker if cross-compilation is not available), repeatedly invoke &quot;main&quot; with random data until
+ * measure variance is acceptable (on a target-specific worker), and return the summarized costs.
+ *
+ * If using a TVM native \p Target, it is possible compilation will itself invoke TVM tuning.
+ *
+ * TODO(mbs): Actually, currently not abstract so can get some local measurements.
+ */</doc>
+<fun r='_ZNK3tvm5relay7collage17CostEstimatorNode8EstimateERKNS_8IRModuleERKNS_6TargetE'/>
+<smbr r='tvm::relay::collage::CostEstimatorNode::_type_key' t='const char *const'/>
+<fun r='_ZN3tvm5relay7collage17CostEstimatorNode16RuntimeTypeIndexEv'/>
+<fun r='_ZN3tvm5relay7collage17CostEstimatorNode27_GetOrAllocRuntimeTypeIndexEv'/>
+<use f='tvm/src/relay/collage/cost_estimator.cc' l='36' c='_ZN3tvm5relay7collage13CostEstimatorC1Ev'/>
+<size>24</size>
+<fun r='_ZNK3tvm5relay7collage17CostEstimatorNode8EstimateERKNS_8IRModuleERKNS_6TargetE'/>
+<ovr f='tvm/src/relay/collage/mock_cost_estimator.h' l='48' c='tvm::relay::collage::MockCostEstimatorNode'/>
+<use f='tvm/src/relay/collage/mock_cost_estimator.h' l='48'/>
+<size>24</size>

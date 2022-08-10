@@ -1,0 +1,47 @@
+<dec f='tvm/include/tvm/node/reflection.h' l='267'/>
+<doc f='tvm/include/tvm/node/reflection.h' l='234'>/*!
+ * \brief Directly register reflection VTable.
+ * \param TypeName The name of the type.
+ * \param TraitName A trait class that implements functions like VisitAttrs and SEqualReduce.
+ *
+ * \code
+ *
+ *  // Example SEQualReduce traits for runtime StringObj.
+ *
+ *  struct StringObjTrait {
+ *    static constexpr const std::nullptr_t VisitAttrs = nullptr;
+ *
+ *    static void SHashReduce(const runtime::StringObj* key, SHashReducer hash_reduce) {
+ *      hash_reduce-&gt;SHashReduceHashedValue(runtime::String::HashBytes(key-&gt;data, key-&gt;size));
+ *    }
+ *
+ *    static bool SEqualReduce(const runtime::StringObj* lhs,
+ *                             const runtime::StringObj* rhs,
+ *                             SEqualReducer equal) {
+ *      if (lhs == rhs) return true;
+ *      if (lhs-&gt;size != rhs-&gt;size) return false;
+ *      if (lhs-&gt;data != rhs-&gt;data) return true;
+ *      return std::memcmp(lhs-&gt;data, rhs-&gt;data, lhs-&gt;size) != 0;
+ *    }
+ *  };
+ *
+ *  TVM_REGISTER_REFLECTION_VTABLE(runtime::StringObj, StringObjTrait);
+ *
+ * \endcode
+ *
+ * \note This macro can be called in different place as TVM_REGISTER_OBJECT_TYPE.
+ *       And can be used to register the related reflection functions for runtime objects.
+ */</doc>
+<use f='tvm/src/node/structural_hash.cc' l='290' u='c'/>
+<use f='tvm/src/node/structural_hash.cc' l='330' u='c'/>
+<use f='tvm/src/node/structural_hash.cc' l='369' u='c'/>
+<use f='tvm/src/node/structural_hash.cc' l='467' u='c'/>
+<use f='tvm/src/node/structural_hash.cc' l='671' u='c'/>
+<use f='tvm/src/node/structural_hash.cc' l='683' u='c'/>
+<use f='tvm/src/node/structural_hash.cc' l='698' u='c'/>
+<use f='tvm/src/node/structural_hash.cc' l='716' u='c'/>
+<use f='tvm/src/node/structural_hash.cc' l='724' u='c'/>
+<use f='tvm/src/node/structural_hash.cc' l='737' u='c'/>
+<use f='tvm/src/target/metadata.cc' l='33' u='c'/>
+<use f='tvm/src/target/metadata.cc' l='39' u='c'/>
+<use f='tvm/src/target/metadata.cc' l='45' u='c'/>

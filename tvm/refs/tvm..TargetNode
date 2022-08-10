@@ -1,0 +1,77 @@
+<inh f='tvm/include/tvm/runtime/object.h' l='167' c='tvm::runtime::Object'/>
+<def f='tvm/include/tvm/target/target.h' l='46' ll='175'/>
+<use f='tvm/include/tvm/target/target.h' l='162' c='_ZNK3tvm10TargetNode12SEqualReduceEPKS0_NS_13SEqualReducerE'/>
+<use f='tvm/include/tvm/target/target.h' l='211' c='_ZNK3tvm6TargetptEv'/>
+<use f='tvm/include/tvm/target/target.h' l='211' c='_ZNK3tvm6TargetptEv'/>
+<use f='tvm/include/tvm/target/target.h' l='211' c='_ZNK3tvm6Target3getEv'/>
+<use f='tvm/include/tvm/target/target.h' l='211'/>
+<size>96</size>
+<doc f='tvm/include/tvm/target/target.h' l='42'>/*!
+ * \brief Compilation target.
+ * \sa Target
+ */</doc>
+<mbr r='tvm::TargetNode::kind' o='128' t='tvm::TargetKind'/>
+<mbr r='tvm::TargetNode::host' o='192' t='Optional&lt;tvm::runtime::ObjectRef&gt;'/>
+<mbr r='tvm::TargetNode::tag' o='256' t='tvm::runtime::String'/>
+<mbr r='tvm::TargetNode::keys' o='320' t='Array&lt;tvm::runtime::String&gt;'/>
+<mbr r='tvm::TargetNode::attrs' o='384' t='Map&lt;tvm::runtime::String, tvm::runtime::ObjectRef&gt;'/>
+<mbr r='tvm::TargetNode::features' o='448' t='Map&lt;tvm::runtime::String, tvm::runtime::ObjectRef&gt;'/>
+<fun r='_ZNK3tvm10TargetNode3strB5cxx11Ev'/>
+<fun r='_ZNK3tvm10TargetNode6ExportEv'/>
+<fun r='_ZNK3tvm10TargetNode7GetHostEv'/>
+<fun r='_ZNK3tvm10TargetNode13ToDebugStringEv'/>
+<fun r='_ZN3tvm10TargetNode10VisitAttrsEPNS_11AttrVisitorE'/>
+<fun r='_ZNK3tvm10TargetNode7GetAttrERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS_7runtime8OptionalIT_EE'/>
+<fun r='_ZNK3tvm10TargetNode7GetAttrERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEET_'/>
+<fun r='_ZNK3tvm10TargetNode10GetFeatureERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS_7runtime8OptionalIT_EE'/>
+<fun r='_ZNK3tvm10TargetNode10GetFeatureERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEET_'/>
+<fun r='_ZNK3tvm10TargetNode7GetKeysB5cxx11Ev'/>
+<fun r='_ZNK3tvm10TargetNode7GetLibsB5cxx11Ev'/>
+<fun r='_ZNK3tvm10TargetNode12SEqualReduceEPKS0_NS_13SEqualReducerE'/>
+<fun r='_ZNK3tvm10TargetNode11SHashReduceENS_12SHashReducerE'/>
+<smbr r='tvm::TargetNode::_type_key' t='const char *const'/>
+<smbr r='tvm::TargetNode::_type_has_method_sequal_reduce' t='const bool'/>
+<smbr r='tvm::TargetNode::_type_has_method_shash_reduce' t='const bool'/>
+<smbr r='tvm::TargetNode::_type_final' t='const bool'/>
+<smbr r='tvm::TargetNode::_type_child_slots' t='const int'/>
+<fun r='_ZN3tvm10TargetNode16RuntimeTypeIndexEv'/>
+<fun r='_ZN3tvm10TargetNode27_GetOrAllocRuntimeTypeIndexEv'/>
+<mbr r='tvm::TargetNode::str_repr_' o='512' t='std::string'/>
+<use f='tvm/src/printer/tir_text_printer.cc' l='75' c='_ZN3tvm3tir14TIRTextPrinter5PrintERKNS_7runtime9ObjectRefE'/>
+<use f='tvm/src/printer/tir_text_printer.cc' l='76' c='_ZN3tvm3tir14TIRTextPrinter5PrintERKNS_7runtime9ObjectRefE'/>
+<size>96</size>
+<use f='tvm/src/printer/tvmscript_printer.cc' l='283' c='_ZN3tvm3tir16TVMScriptPrinter11PrintTargetEPKNS_10TargetNodeE'/>
+<use f='tvm/src/printer/tvmscript_printer.cc' l='709' c='_ZN3tvm3tir16TVMScriptPrinter5PrintERKNS_7runtime9ObjectRefE'/>
+<use f='tvm/src/printer/tvmscript_printer.cc' l='710' c='_ZN3tvm3tir16TVMScriptPrinter5PrintERKNS_7runtime9ObjectRefE'/>
+<use f='tvm/src/printer/tvmscript_printer.cc' l='1830' c='_ZN3tvm3tir16TVMScriptPrinter11PrintTargetEPKNS_10TargetNodeE'/>
+<size>96</size>
+<use f='tvm/src/target/target.cc' l='46'/>
+<use f='tvm/src/target/target.cc' l='46'/>
+<use f='tvm/src/target/target.cc' l='46'/>
+<use f='tvm/src/target/target.cc' l='64' c='_ZN3tvm14TargetInternal8WithHostERKNS_6TargetES3_'/>
+<use f='tvm/src/target/target.cc' l='64' c='_ZN3tvm14TargetInternal8WithHostERKNS_6TargetES3_'/>
+<use f='tvm/src/target/target.cc' l='70' c='_ZN3tvm14TargetInternal11QueryDeviceEiPKNS_10TargetNodeE'/>
+<use f='tvm/src/target/target.cc' l='430' c='_ZN3tvm14TargetInternal9ParseTypeERKNS_7runtime9ObjectRefERKNS_14TargetKindNode13ValueTypeInfoE'/>
+<use f='tvm/src/target/target.cc' l='599' c='_ZN3tvm6TargetC1ES0_S0_'/>
+<use f='tvm/src/target/target.cc' l='599' c='_ZN3tvm6TargetC1ES0_S0_'/>
+<use f='tvm/src/target/target.cc' l='606' c='_ZN3tvm6TargetC1ENS_10TargetKindENS_7runtime8OptionalINS2_9ObjectRefEEENS2_6StringENS2_5ArrayIS6_vEENS2_3MapIS6_S4_vvEE'/>
+<use f='tvm/src/target/target.cc' l='665' c='_ZNK3tvm10TargetNode7GetHostEv'/>
+<use f='tvm/src/target/target.cc' l='707' c='_ZNK3tvm10TargetNode12SEqualReduceEPKS0_NS_13SEqualReducerE'/>
+<use f='tvm/src/target/target.cc' l='844' c='_ZN3tvm14TargetInternal10FromConfigENS_7runtime3MapINS1_6StringENS1_9ObjectRefEvvEE'/>
+<use f='tvm/src/target/target.cc' l='844' c='_ZN3tvm14TargetInternal10FromConfigENS_7runtime3MapINS1_6StringENS1_9ObjectRefEvvEE'/>
+<use f='tvm/src/target/target.cc' l='971' c='_ZN3tvm14TargetInternal11QueryDeviceEiPKNS_10TargetNodeE'/>
+<use f='tvm/src/target/target.cc' l='1048'/>
+<size>96</size>
+<fun r='_ZNK3tvm10TargetNode3strB5cxx11Ev'/>
+<fun r='_ZNK3tvm10TargetNode7GetKeysB5cxx11Ev'/>
+<fun r='_ZNK3tvm10TargetNode7GetLibsB5cxx11Ev'/>
+<fun r='_ZNK3tvm10TargetNode6ExportEv'/>
+<fun r='_ZNK3tvm10TargetNode7GetHostEv'/>
+<fun r='_ZNK3tvm10TargetNode13ToDebugStringEv'/>
+<fun r='_ZNK3tvm10TargetNode12SEqualReduceEPKS0_NS_13SEqualReducerE'/>
+<fun r='_ZNK3tvm10TargetNode11SHashReduceENS_12SHashReducerE'/>
+<use f='tvm/src/tir/transforms/lower_thread_allreduce.cc' l='64' c='_ZN3tvm3tir22ThreadAllreduceBuilderC1EPKNS_10TargetNodeE'/>
+<use f='tvm/src/tir/transforms/lower_thread_allreduce.cc' l='721'/>
+<use f='tvm/src/tir/transforms/lower_thread_allreduce.cc' l='752' c='_ZN3tvm3tir9transform20LowerThreadAllreduceEv'/>
+<use f='tvm/src/tir/transforms/lower_thread_allreduce.cc' l='752' c='_ZN3tvm3tir9transform20LowerThreadAllreduceEv'/>
+<size>96</size>

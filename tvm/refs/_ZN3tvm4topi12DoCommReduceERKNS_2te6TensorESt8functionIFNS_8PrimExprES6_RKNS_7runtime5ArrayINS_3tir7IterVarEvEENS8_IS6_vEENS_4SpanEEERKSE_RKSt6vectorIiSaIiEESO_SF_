@@ -1,0 +1,16 @@
+<def f='tvm/include/tvm/topi/reduction.h' l='139' ll='167' type='tvm::te::Tensor tvm::topi::DoCommReduce(const tvm::te::Tensor &amp; data, tvm::topi::FReduce func, const Array&lt;tvm::PrimExpr&gt; &amp; target_shape, const std::vector&lt;int&gt; &amp; reduce_axes, const std::vector&lt;int&gt; &amp; squeeze_axes, tvm::Span span = tvm::Span())'/>
+<use f='tvm/include/tvm/topi/reduction.h' l='188' u='c' c='_ZN3tvm4topi10CommReduceERKNS_2te6TensorERKNS_7runtime5ArrayINS_7IntegerEvEESt8functionIFNS_8PrimExprESC_RKNS6_INS_3tir7IterVarEvEENS6_ISC_vEENS_4SpanEEEbb'/>
+<use f='tvm/include/tvm/topi/reduction.h' l='355' u='c' c='_ZN3tvm4topi12collapse_sumERKNS_2te6TensorENS_7runtime5ArrayINS_8PrimExprEvEE'/>
+<doc f='tvm/include/tvm/topi/reduction.h' l='126'>/*!
+ * \brief Create a reduction operation.
+ *
+ * \param data The input tensor.
+ * \param func The reduction function eg. tvm::sum
+ * \param target_shape The output Tensor shape.
+ * \param reduce_axes The real axes along which the reduction is performed.
+ * \param squeeze_axes The real axes to squeeze. Unsqueezed, reduced axes will
+ *                     have shape 1 in the output tensor.
+ * \param span The location of this reducer in the source.
+ *
+ * \return The result tensor.
+ */</doc>

@@ -1,0 +1,54 @@
+<inh f='tvm/include/tvm/relay/expr_functor.h' l='199' c='_ZN3tvm5relay11ExprMutator10VisitExpr_EPKNS0_7LetNodeE'/>
+<def f='tvm/src/relay/backend/vm/manifest_lifetimes.cc' l='98' ll='129' type='tvm::relay::Expr tvm::relay::transform::KillInserter::VisitExpr_(const tvm::relay::LetNode * let_node)'/>
+<doc f='tvm/src/relay/backend/vm/manifest_lifetimes.cc' l='45'>// Limitations
+  // -----------
+  // (1) For simplicity, we only insert kills when visiting Let bindings, and always emit the kill
+  // as a single subsequent binding. This is slightly inaccurate; for example, if the condition of
+  // an If is dead after the test, we can immediately kill the condition in each branch:
+  //   let %x = if (%dead_cond) {
+  //     let %_0 = memory.kill(%dead_cond);
+  //     ...
+  //   } else {
+  //     let %_1 = memory.kill(%dead_cond);
+  //     ...
+  //   }
+  // as opposed to:
+  //   let %x = if (%dead_cond) ...
+  //   let %_0 = memory.kill(%dead_cond);
+  //
+  // (2) Killed variables are calculated as live in - live out, which misses variables that are
+  // actually dead but not in a live-in set. Example:
+  //   @f(%x: int, %y: int, %c: bool) {
+  //     let %w = if (%c) {
+  //       let %z = %y + %y;
+  //       %z
+  //     } else {
+  //       %y
+  //     };
+  //     %w
+  //   }
+  // After inserting kills:
+  //   @f(%x: int, %y: int, %c: bool) {
+  //     /* %x is always dead, so never in any live in or live out set */
+  //     let %w = if (%c) {
+  //       let %z = %y + %y;
+  //       let %_0 = memory.kill(%y);
+  //       %z
+  //     } else {
+  //       %y
+  //       /* %y is dead at this point */
+  //     };
+  //     let %_1 = memory.kill(%c);
+  //     /* no kill for %y since it&apos;s not in the live-in of %w AND %w isn&apos;t a let binding */
+  //     %w
+  //   }
+  //
+  // (3) When the result expr of an If branch is a variable, and this expr is the last use of the
+  // var, we cannot &quot;kill&quot; the var since it is being returned. The VM compiler also emits a Move
+  // instruction to merge the branch results, which creates another ObjectRef to the Object held
+  // by the var. The var is also not in the subsequent live-in (since it is indeed dead by this
+  // point), so it won&apos;t be killed. An example can be seen in the previous code block for (2), where
+  // %y is not killed if the else-branch is taken (and indeed it can be killed, as %w is mapped to
+  // a new register and holds a fresh reference to the object referenced by %y).
+  //
+  // However, these limitations are unlikely to cause large leaks in practice.</doc>

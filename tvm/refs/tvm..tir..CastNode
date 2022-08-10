@@ -1,0 +1,129 @@
+<inh f='tvm/include/tvm/ir/expr.h' l='85' c='tvm::PrimExprNode'/>
+<def f='tvm/include/tvm/tir/expr.h' l='88' ll='110'/>
+<use f='tvm/include/tvm/tir/expr.h' l='99' c='_ZNK3tvm3tir8CastNode12SEqualReduceEPKS1_NS_13SEqualReducerE'/>
+<use f='tvm/include/tvm/tir/expr.h' l='119' c='_ZNK3tvm3tir4CastptEv'/>
+<use f='tvm/include/tvm/tir/expr.h' l='119' c='_ZNK3tvm3tir4CastptEv'/>
+<use f='tvm/include/tvm/tir/expr.h' l='119' c='_ZNK3tvm3tir4Cast3getEv'/>
+<use f='tvm/include/tvm/tir/expr.h' l='119'/>
+<size>40</size>
+<doc f='tvm/include/tvm/tir/expr.h' l='84'>/*!
+ * \brief Cast value from one data type to another.
+ * \note The lanes of value should keep fixed.
+ */</doc>
+<mbr r='tvm::tir::CastNode::value' o='256' t='tvm::PrimExpr'/>
+<fun r='_ZN3tvm3tir8CastNode10VisitAttrsEPNS_11AttrVisitorE'/>
+<fun r='_ZNK3tvm3tir8CastNode12SEqualReduceEPKS1_NS_13SEqualReducerE'/>
+<fun r='_ZNK3tvm3tir8CastNode11SHashReduceENS_12SHashReducerE'/>
+<smbr r='tvm::tir::CastNode::_type_key' t='const char *const'/>
+<smbr r='tvm::tir::CastNode::_type_final' t='const bool'/>
+<smbr r='tvm::tir::CastNode::_type_child_slots' t='const int'/>
+<fun r='_ZN3tvm3tir8CastNode16RuntimeTypeIndexEv'/>
+<fun r='_ZN3tvm3tir8CastNode27_GetOrAllocRuntimeTypeIndexEv'/>
+<use f='tvm/include/tvm/tir/expr_functor.h' l='144' c='_ZN3tvm3tir11ExprFunctorIFT_RKNS_8PrimExprEDpT0_EE10VisitExpr_EPKNS0_8CastNodeES7_'/>
+<use f='tvm/include/tvm/tir/expr_functor.h' l='189' c='_ZN3tvm3tir11ExprFunctorIFT_RKNS_8PrimExprEDpT0_EE10InitVTableEv'/>
+<use f='tvm/include/tvm/tir/expr_functor.h' l='189' c='_ZN3tvm3tir11ExprFunctorIFT_RKNS_8PrimExprEDpT0_EE10InitVTableEv'/>
+<use f='tvm/include/tvm/tir/expr_functor.h' l='241' c='_ZN3tvm3tir11ExprVisitor10VisitExpr_EPKNS0_8CastNodeE'/>
+<use f='tvm/include/tvm/tir/expr_functor.h' l='288' c='_ZN3tvm3tir11ExprMutator10VisitExpr_EPKNS0_8CastNodeE'/>
+<size>40</size>
+<use f='tvm/src/arith/pattern_match.h' l='520' c='_ZNK3tvm5arith9PCastExpr6Match_ERKNS_7runtime9ObjectRefE'/>
+<use f='tvm/src/arith/pattern_match.h' l='520' c='_ZNK3tvm5arith9PCastExpr6Match_ERKNS_7runtime9ObjectRefE'/>
+<use f='tvm/src/arith/rewrite_simplify.h' l='75' c='_ZN3tvm5arith17RewriteSimplifier4Impl10VisitExpr_EPKNS_3tir8CastNodeE'/>
+<use f='tvm/src/arith/canonical_simplify.cc' l='604' c='_ZN3tvm5arith19CanonicalSimplifier4Impl10VisitExpr_EPKNS_3tir8CastNodeE'/>
+<use f='tvm/src/arith/canonical_simplify.cc' l='1254' c='_ZN3tvm5arith19CanonicalSimplifier4Impl10VisitExpr_EPKNS_3tir8CastNodeE'/>
+<size>40</size>
+<use f='tvm/src/arith/const_int_bound.cc' l='179' c='_ZN3tvm5arith21ConstIntBoundAnalyzer4Impl10VisitExpr_EPKNS_3tir8CastNodeE'/>
+<use f='tvm/src/arith/const_int_bound.cc' l='678' c='_ZN3tvm5arith21ConstIntBoundAnalyzer4Impl15FindCeilLog2ArgEPKNS_3tir8CastNodeE'/>
+<size>40</size>
+<use f='tvm/src/arith/int_set.cc' l='462' c='_ZN3tvm5arith20IntervalSetEvaluator10VisitExpr_EPKNS_3tir8CastNodeE'/>
+<size>40</size>
+<use f='tvm/src/arith/modular_set.cc' l='138' c='_ZN3tvm5arith18ModularSetAnalyzer4Impl10VisitExpr_EPKNS_3tir8CastNodeE'/>
+<size>40</size>
+<use f='tvm/src/arith/rewrite_simplify.cc' l='1689' c='_ZN3tvm5arith17RewriteSimplifier4Impl10VisitExpr_EPKNS_3tir8CastNodeE'/>
+<use f='tvm/src/arith/rewrite_simplify.cc' l='1691' c='_ZN3tvm5arith17RewriteSimplifier4Impl10VisitExpr_EPKNS_3tir8CastNodeE'/>
+<size>40</size>
+<use f='tvm/src/auto_scheduler/compute_dag.cc' l='606' c='_ZN3tvm14auto_scheduler13FlopEstimator10VisitExpr_EPKNS_3tir8CastNodeE'/>
+<size>40</size>
+<use f='tvm/src/contrib/hybrid/codegen_hybrid.h' l='113' c='_ZN3tvm7contrib13CodeGenHybrid10VisitExpr_EPKNS_3tir8CastNodeERSo'/>
+<use f='tvm/src/contrib/hybrid/codegen_hybrid.cc' l='129' c='_ZN3tvm7contrib13CodeGenHybrid10VisitExpr_EPKNS_3tir8CastNodeERSo'/>
+<size>40</size>
+<use f='tvm/src/ir/attr_functor.h' l='105' c='_ZN3tvm11AttrFunctorIFT_RKNS_7runtime9ObjectRefEDpT0_EE10VisitAttr_EPKNS_3tir8CastNodeES7_'/>
+<use f='tvm/src/ir/attr_functor.h' l='139' c='_ZN3tvm11AttrFunctorIFT_RKNS_7runtime9ObjectRefEDpT0_EE10InitVTableEv'/>
+<use f='tvm/src/ir/attr_functor.h' l='139' c='_ZN3tvm11AttrFunctorIFT_RKNS_7runtime9ObjectRefEDpT0_EE10InitVTableEv'/>
+<size>40</size>
+<use f='tvm/src/printer/text_printer.h' l='314' c='_ZN3tvm3tir14TIRTextPrinter10VisitExpr_EPKNS0_8CastNodeE'/>
+<size>40</size>
+<use f='tvm/src/printer/tir_text_printer.cc' l='307' c='_ZN3tvm3tir14TIRTextPrinter10VisitExpr_EPKNS0_8CastNodeE'/>
+<size>40</size>
+<use f='tvm/src/printer/tvmscript_printer.cc' l='205' c='_ZN3tvm3tir16TVMScriptPrinter10VisitExpr_EPKNS0_8CastNodeEPNS0_14ExprPrecedenceE'/>
+<use f='tvm/src/printer/tvmscript_printer.cc' l='742' c='_ZN3tvm3tir16TVMScriptPrinter10VisitExpr_EPKNS0_8CastNodeEPNS0_14ExprPrecedenceE'/>
+<size>40</size>
+<use f='tvm/src/target/source/codegen_c.h' l='147' c='_ZN3tvm7codegen8CodeGenC10VisitExpr_EPKNS_3tir8CastNodeERSo'/>
+<size>40</size>
+<use f='tvm/src/target/llvm/codegen_llvm.h' l='185' c='_ZN3tvm7codegen11CodeGenLLVM10VisitExpr_EPKNS_3tir8CastNodeE'/>
+<size>40</size>
+<use f='tvm/src/target/llvm/codegen_llvm.cc' l='1117' c='_ZN3tvm7codegen11CodeGenLLVM10VisitExpr_EPKNS_3tir8CastNodeE'/>
+<size>40</size>
+<use f='tvm/src/target/llvm/codegen_x86_64.cc' l='80' c='_ZN3tvm7codegen13CodeGenX86_6410VisitExpr_EPKNS_3tir8CastNodeE'/>
+<use f='tvm/src/target/llvm/codegen_x86_64.cc' l='87' c='_ZN3tvm7codegen13CodeGenX86_6410VisitExpr_EPKNS_3tir8CastNodeE'/>
+<size>40</size>
+<use f='tvm/src/target/source/codegen_opencl.h' l='65' c='_ZN3tvm7codegen13CodeGenOpenCL10VisitExpr_EPKNS_3tir8CastNodeERSo'/>
+<size>40</size>
+<use f='tvm/src/target/source/codegen_c.cc' l='443' c='_ZN3tvm7codegen8CodeGenC10VisitExpr_EPKNS_3tir8CastNodeERSo'/>
+<size>40</size>
+<use f='tvm/src/target/source/codegen_cuda.h' l='68' c='_ZN3tvm7codegen11CodeGenCUDA10VisitExpr_EPKNS_3tir8CastNodeERSo'/>
+<use f='tvm/src/target/source/codegen_cuda.cc' l='582' c='_ZN3tvm7codegen11CodeGenCUDA10VisitExpr_EPKNS_3tir8CastNodeERSo'/>
+<size>40</size>
+<use f='tvm/src/target/source/codegen_opencl.cc' l='369' c='_ZN3tvm7codegen13CodeGenOpenCL10VisitExpr_EPKNS_3tir8CastNodeERSo'/>
+<size>40</size>
+<use f='tvm/src/target/stackvm/codegen_stackvm.h' l='129' c='_ZN3tvm7codegen14CodeGenStackVM10VisitExpr_EPKNS_3tir8CastNodeE'/>
+<use f='tvm/src/target/stackvm/codegen_stackvm.cc' l='342' c='_ZN3tvm7codegen14CodeGenStackVM10VisitExpr_EPKNS_3tir8CastNodeE'/>
+<size>40</size>
+<use f='tvm/src/te/autodiff/ad_simplify.cc' l='123' c='_ZN3tvm2te14is_const_valueERKNS_8PrimExprET_'/>
+<use f='tvm/src/te/autodiff/ad_simplify.cc' l='123' c='_ZN3tvm2te14is_const_valueERKNS_8PrimExprET_'/>
+<use f='tvm/src/te/autodiff/ad_simplify.cc' l='213' c='_ZN3tvm2te23NonzeroConditionFunctor10VisitExpr_EPKNS_3tir8CastNodeE'/>
+<size>40</size>
+<use f='tvm/src/te/autodiff/jacobian.cc' l='255' c='_ZN3tvm2te15JacobianMutator10VisitExpr_EPKNS_3tir8CastNodeE'/>
+<size>40</size>
+<use f='tvm/src/tir/analysis/estimate_flops.cc' l='171' c='_ZN3tvm3tir13FlopEstimator10VisitExpr_EPKNS0_8CastNodeE'/>
+<size>40</size>
+<use f='tvm/src/tir/ir/expr.cc' l='217' c='_ZN3tvm3tir4CastC1ENS_7runtime8DataTypeENS_8PrimExprENS_4SpanE'/>
+<use f='tvm/src/tir/ir/expr.cc' l='217' c='_ZN3tvm3tir4CastC1ENS_7runtime8DataTypeENS_8PrimExprENS_4SpanE'/>
+<use f='tvm/src/tir/ir/expr.cc' l='228'/>
+<use f='tvm/src/tir/ir/expr.cc' l='228'/>
+<use f='tvm/src/tir/ir/expr.cc' l='228'/>
+<use f='tvm/src/tir/ir/expr.cc' l='231'/>
+<use f='tvm/src/tir/ir/expr.cc' l='232'/>
+<size>40</size>
+<use f='tvm/src/tir/ir/expr_functor.cc' l='98' c='_ZN3tvm3tir11ExprVisitor10VisitExpr_EPKNS0_8CastNodeE'/>
+<use f='tvm/src/tir/ir/expr_functor.cc' l='237' c='_ZN3tvm3tir11ExprMutator10VisitExpr_EPKNS0_8CastNodeE'/>
+<size>40</size>
+<use f='tvm/src/tir/schedule/ir_comparator.h' l='74' c='_ZN3tvm3tir19TensorizeComparator10VisitExpr_EPKNS0_8CastNodeERKNS_8PrimExprE'/>
+<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='1362' c='_ZN3tvm3tir14PatternMatcher10VisitExpr_EPKNS0_8CastNodeE'/>
+<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='1363' c='_ZN3tvm3tir14PatternMatcher10VisitExpr_EPKNS0_8CastNodeE'/>
+<size>40</size>
+<use f='tvm/src/tir/schedule/ir_comparator.cc' l='177' c='_ZN3tvm3tir19TensorizeComparator10VisitExpr_EPKNS0_8CastNodeERKNS_8PrimExprE'/>
+<use f='tvm/src/tir/schedule/ir_comparator.cc' l='178' c='_ZN3tvm3tir19TensorizeComparator10VisitExpr_EPKNS0_8CastNodeERKNS_8PrimExprE'/>
+<size>40</size>
+<use f='tvm/src/tir/transforms/bf16_legalize.cc' l='108' c='_ZN3tvm3tir27BF16CastEliminationRewriter10VisitExpr_EPKNS0_8CastNodeE'/>
+<use f='tvm/src/tir/transforms/bf16_legalize.cc' l='113' c='_ZN3tvm3tir27BF16CastEliminationRewriter10VisitExpr_EPKNS0_8CastNodeE'/>
+<use f='tvm/src/tir/transforms/bf16_legalize.cc' l='152' c='_ZN3tvm3tir17BF16LowerRewriter10VisitExpr_EPKNS0_8CastNodeE'/>
+<size>40</size>
+<use f='tvm/src/tir/transforms/inject_copy_intrin.cc' l='83' c='_ZN3tvm3tir18CopyIntrinInjector16MatchCopyPatternENS0_4StmtEPS2_PNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<use f='tvm/src/tir/transforms/inject_copy_intrin.cc' l='83' c='_ZN3tvm3tir18CopyIntrinInjector16MatchCopyPatternENS0_4StmtEPS2_PNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<size>40</size>
+<use f='tvm/src/tir/transforms/lower_custom_datatypes.cc' l='47' c='_ZN3tvm3tir22CustomDatatypesLowerer10VisitExpr_EPKNS0_8CastNodeE'/>
+<size>40</size>
+<use f='tvm/src/tir/transforms/lower_intrin.cc' l='241' c='_ZN3tvm3tir14IntrinInjecter17SwapBroadcastCastERKNS_8PrimExprE'/>
+<use f='tvm/src/tir/transforms/lower_intrin.cc' l='241' c='_ZN3tvm3tir14IntrinInjecter17SwapBroadcastCastERKNS_8PrimExprE'/>
+<size>40</size>
+<use f='tvm/src/tir/transforms/lower_thread_allreduce.cc' l='234' c='_ZN3tvm3tir22ThreadAllreduceBuilder13MakeAllreduceEPKNS0_8CallNodeE'/>
+<size>40</size>
+<use f='tvm/src/tir/transforms/narrow_datatype.cc' l='156' c='_ZN3tvm3tir15DataTypeVisitor10VisitExpr_EPKNS0_8CastNodeE'/>
+<use f='tvm/src/tir/transforms/narrow_datatype.cc' l='370' c='_ZN3tvm3tir16DataTypeRewriter10VisitExpr_EPKNS0_8CastNodeE'/>
+<use f='tvm/src/tir/transforms/narrow_datatype.cc' l='373' c='_ZN3tvm3tir16DataTypeRewriter10VisitExpr_EPKNS0_8CastNodeE'/>
+<use f='tvm/src/tir/transforms/narrow_datatype.cc' l='373' c='_ZN3tvm3tir16DataTypeRewriter10VisitExpr_EPKNS0_8CastNodeE'/>
+<size>40</size>
+<use f='tvm/src/tir/transforms/rewrite_unsafe_select.cc' l='93' c='_ZN3tvm3tir18UnsafeExprDetector10VisitExpr_EPKNS0_8CastNodeE'/>
+<size>40</size>
+<use f='tvm/src/tir/transforms/vectorize_loop.cc' l='276' c='_ZN3tvm3tir10Vectorizer10VisitExpr_EPKNS0_8CastNodeE'/>
+<size>40</size>

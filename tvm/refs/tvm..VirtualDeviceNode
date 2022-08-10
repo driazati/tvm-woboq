@@ -1,0 +1,152 @@
+<inh f='tvm/include/tvm/ir/attrs.h' l='834' c='tvm::AttrsNode'/>
+<def f='tvm/include/tvm/target/virtual_device.h' l='166' ll='256'/>
+<use f='tvm/include/tvm/target/virtual_device.h' l='166'/>
+<use f='tvm/include/tvm/target/virtual_device.h' l='336' c='_ZNK3tvm13VirtualDeviceptEv'/>
+<use f='tvm/include/tvm/target/virtual_device.h' l='336' c='_ZNK3tvm13VirtualDeviceptEv'/>
+<use f='tvm/include/tvm/target/virtual_device.h' l='336' c='_ZNK3tvm13VirtualDevice3getEv'/>
+<use f='tvm/include/tvm/target/virtual_device.h' l='336'/>
+<size>48</size>
+<doc f='tvm/include/tvm/target/virtual_device.h' l='47'>/*!
+ * \brief Describes at compile time the constraints on where data is to be stored at runtime
+ * down to the (virtual) device and memory scope level, and how to compile code to compute that
+ * data. Used by the \p PlanDevices pass to collect and solve (virtual) device constraints for
+ * the whole Relay program.
+ *
+ * Is a quadruple of:
+ * - A \p device_type (\p DLDeviceType). May be \p kInvalidDeviceType if unconstrained.
+ * - A \p virtual_device_id (\p int). This allows us to distinguish distinct devices
+ *   with the same \p Target, for example in a multi-GPU system. May be -1 if unconstrained.
+ *   See &quot;Virtual Devices&quot; below.
+ * - A \p target (\p Target) describing how to compile code for the intended device. May be null
+ *   if unconstrained.
+ * - A \p memory_scope (\p MemoryScope, which is currently just \p String) describing which memory
+ *   area is to be used to hold data. May be &quot;&quot; if unconstrained. See &quot;Memory Scopes and Devices&quot;
+ *   below.
+ *
+ * Some or all of these fields may be unconstrained, signaling that device planning is free to
+ * choose a value consistent with the whole program. However if a \p target is given then the \p
+ * device_type must equal \p target-&gt;kind-&gt;device_type.
+ *
+ * Note that currently we assume if a function returns its result on a particular (virtual) device
+ * then the function body is also executed on that device. See the overview comment in
+ * src/relay/transforms/device_planner.cc for more details.
+ *
+ * By &apos;data&apos; we include both tensors and additional supporting datastructures such as shapes,
+ * Relay ADT items (including tuples), Relay references, and Relay closures. Typically non-tensor
+ * data must reside on a &apos;CPU&apos;-like host device with good support for scalars.
+ *
+ * By &apos;execution&apos; we include both (fused) primitive operators, and all the Relay expressions
+ * surrounding them which coordinates data and control flow. Again, typically non-primitive
+ * operators must be executed on a &apos;CPU&apos;-like device with good support for control flow.
+ *
+ * Since TVM targets such a wide range of systems it is not possible for \p VirtualDevice to impose
+ * much semantics on these fields, particularly for \p virtual_device_id and \p memory_scope.
+ * Instead we assume downstream passes and codegen will interpret an validate these fields
+ * appropriately.
+ *
+ * Targets vs Devices
+ * ------------------
+ * Generally \p Targets (a compile-time only datastructue) describe compiler options for a specific
+ * microarchitecture and toolchain, while \p Devices (a runtime datastructure also available at
+ * compile time) describe a physical device on the target system. Obviously the target must agree
+ * with the device&apos;s microarchitecture, but we otherwise don&apos;t impose any constraints between them:
+ *  - It&apos;s ok to use different \p Targets for the same \p Device, eg to squeeze some extra perf
+ *    out of a particular primitive using particular compiler flags.
+ *  - It&apos;s ok to use the same \p Target for multiple \p Devices, eg if we have multiple CPUs.
+ *
+ * Traditionally TVM assumes at most one \p Target per \p DLDeviceType. We are moving away from that
+ * assumption.
+ *
+ * Virtual vs Physical Devices
+ * ---------------------------
+ * The \p virtual_device_id may be used by downstream passes or the runtime to help decide which
+ * \p device_id to use for a particular physical runtime \p Device. For example:
+ *  - Some runtimes may support passing in an array of actual `device` specifications, and the
+ *    \p virtual_device_id can be used at runtime as an index into that array.
+ *  - Some runtimes may support dynamically allocating computations to physical devices. On these
+ *    systems a large space of \p virtual_device_ids could be used at compile time, even though
+ *    at runtime only a few physical devices will be present.
+ *
+ * The \p virtual_device_id may also be left unconstrained if not needed.
+ *
+ * Memory Scopes and Devices
+ * -------------------------
+ * Multi-device systems can have complex memory hierarchies. For example
+ * \code
+ * (kDLCPU, 0, &quot;llvm&quot;, &quot;global&quot;)
+ * \endcode
+ * and
+ * \code
+ * (kDLCPU, 1, &quot;llvm&quot;, &quot;global&quot;)
+ * \endcode
+ * could denote:
+ * - The same memory area accessible from two separate CPUs without any CPU affinity;
+ * - Distinct memory areas in a NUMA architecture for which cross-device access is handled
+ *   by the memory system;
+ * - Outright distinct memory areas, where one device cannot directly address the memory of
+ *   another.
+ *
+ * Similarly:
+ * \code
+ * (kDLCPU, 0, &quot;llvm&quot;, &quot;global&quot;)
+ * \endcode
+ * and
+ * \code
+ * (kDLCUDA, 0, &quot;cuda&quot;, &quot;host&quot;)
+ * \endcode
+ * could denote the same memory area, but with very different access costs.
+ *
+ * Furthermore, not all memory scopes are accessible to all devices, and it is possible for
+ * a memory scope to only be accessible to a device when code is compiled with particular
+ * \p Target options.
+ *
+ * \p VirtualDevices themselves have no system-level understanding. Currently the \p PlanDevices
+ * pass will simply insert &quot;device_copy&quot; operators wherever \p VirtualDevices are not exactly
+ * pointwise equal. We may revisit this in the future as the work on memory pools matures.
+ *
+ * Joining and Defaulting
+ * ----------------------
+ * It is possible to &apos;join&apos; two \p VirtualDevices to yield the most constrained \p VirtualDevice
+ * which agrees with both join arguments. Eg:
+ * \code
+ * Join((kDLCPU, -1, &quot;llvm&quot;, &quot;&quot;), (kInvalidDeviceType, 3, null, &quot;global))
+ *   =&gt; (kDLCPU, 3, &quot;llvm&quot;, &quot;global&quot;)
+ * Join((kDLCPU, -1, &quot;llvm&quot;, &quot;&quot;), (kInvalidDeviceType, 3, null, &quot;local))
+ *   =&gt; null (no join possible)
+ * \endcode
+ *
+ * Related to &apos;join&apos; is &apos;default&apos;, which only takes constrained fields from the rhs when the
+ * lhs is unconstrained:
+ * \code
+ * Default(kDLCPU, -1, &quot;llvm&quot;, &quot;local&quot;), (kDLCPU, 3, null, &quot;global&quot;))
+ *   =&gt; (kDLCPU, 3, &quot;llvm&quot;, &quot;local&quot;)
+ * \endcode
+ *
+ * These operations are needed during device planning.
+ */</doc>
+<mbr r='tvm::VirtualDeviceNode::device_type_int' o='192' t='int'/>
+<fun r='_ZNK3tvm17VirtualDeviceNode11device_typeEv'/>
+<mbr r='tvm::VirtualDeviceNode::virtual_device_id' o='224' t='int'/>
+<mbr r='tvm::VirtualDeviceNode::target' o='256' t='tvm::Target'/>
+<mbr r='tvm::VirtualDeviceNode::memory_scope' o='320' t='tvm::MemoryScope'/>
+<fun r='_ZNK3tvm17VirtualDeviceNode20IsFullyUnconstrainedEv'/>
+<fun r='_ZNK3tvm17VirtualDeviceNode18IsFullyConstrainedEv'/>
+<fun r='_ZNK3tvm17VirtualDeviceNode8ToDeviceEv'/>
+<smbr r='tvm::VirtualDeviceNode::_type_key' t='const char *const'/>
+<smbr r='tvm::VirtualDeviceNode::_type_final' t='const bool'/>
+<smbr r='tvm::VirtualDeviceNode::_type_child_slots' t='const int'/>
+<fun r='_ZN3tvm17VirtualDeviceNode16RuntimeTypeIndexEv'/>
+<fun r='_ZN3tvm17VirtualDeviceNode27_GetOrAllocRuntimeTypeIndexEv'/>
+<fun r='_ZN3tvm17VirtualDeviceNode15_tvm_VisitAttrsERT_'/>
+<use f='tvm/src/parser/parser.cc' l='1096' c='_ZN3tvm6parser6Parser16ParseFunctionDefEv'/>
+<use f='tvm/src/parser/parser.cc' l='1137' c='_ZN3tvm6parser6Parser16ParseFunctionDefEv'/>
+<size>48</size>
+<use f='tvm/src/printer/relay_text_printer.cc' l='898' c='_ZN3tvm5relay16RelayTextPrinter19PrintAttributeValueERKNS_7runtime9ObjectRefEb'/>
+<size>48</size>
+<use f='tvm/src/target/virtual_device.cc' l='31'/>
+<use f='tvm/src/target/virtual_device.cc' l='31'/>
+<use f='tvm/src/target/virtual_device.cc' l='31'/>
+<use f='tvm/src/target/virtual_device.cc' l='34'/>
+<use f='tvm/src/target/virtual_device.cc' l='35'/>
+<use f='tvm/src/target/virtual_device.cc' l='74' c='_ZN3tvm13VirtualDeviceC1E12DLDeviceTypeiNS_6TargetENS_7runtime6StringE'/>
+<size>48</size>

@@ -1,0 +1,44 @@
+<def f='tvm/include/tvm/tir/schedule/state.h' l='43' ll='61'/>
+<use f='tvm/include/tvm/tir/schedule/state.h' l='94'/>
+<use f='tvm/include/tvm/tir/schedule/state.h' l='144' c='_ZNK3tvm3tir17ScheduleStateNode12GetBlockInfoERKNS0_8StmtSRefE'/>
+<size>16</size>
+<doc f='tvm/include/tvm/tir/schedule/state.h' l='36'>/*!
+ * \brief The information about a TensorIR block, it contains two categories of information
+ * 1) Info on the block scope rooted at a specific block, including dependency tracking,
+ * flags indicating if the scope is a stage pipeline, etc.
+ * 2) Info on the block itself, including if the block has a quasi-affine binding, if the regions it
+ * reads are completely covered by their producers, etc.
+ */</doc>
+<mbr r='tvm::tir::BlockInfo::scope' o='0' t='tvm::tir::BlockScope'/>
+<mbr r='tvm::tir::BlockInfo::affine_binding' o='64' t='bool'/>
+<mbr r='tvm::tir::BlockInfo::region_cover' o='72' t='bool'/>
+<fun r='_ZN3tvm3tir9BlockInfoC1Ev'/>
+<fun r='_ZN3tvm3tir9BlockInfoC1ENS0_10BlockScopeEbb'/>
+<use f='tvm/src/tir/schedule/analysis/verify.cc' l='158' c='_ZN3tvm3tir17VerifyCachedFlagsERKNS0_13ScheduleStateE'/>
+<use f='tvm/src/tir/schedule/analysis/verify.cc' l='164' c='_ZN3tvm3tir17VerifyCachedFlagsERKNS0_13ScheduleStateE'/>
+<size>16</size>
+<use f='tvm/src/tir/schedule/concrete_schedule.cc' l='140' c='_ZN3tvm3tir14ScheduleCopier4CopyERKSt13unordered_mapINS0_8StmtSRefENS0_9BlockInfoENS_7runtime13ObjectPtrHashENS5_14ObjectPtrEqualESaISt4pairIKS3_S4_EEE'/>
+<use f='tvm/src/tir/schedule/concrete_schedule.cc' l='140' c='_ZN3tvm3tir14ScheduleCopier4CopyERKSt13unordered_mapINS0_8StmtSRefENS0_9BlockInfoENS_7runtime13ObjectPtrHashENS5_14ObjectPtrEqualESaISt4pairIKS3_S4_EEE'/>
+<use f='tvm/src/tir/schedule/concrete_schedule.cc' l='141' c='_ZN3tvm3tir14ScheduleCopier4CopyERKSt13unordered_mapINS0_8StmtSRefENS0_9BlockInfoENS_7runtime13ObjectPtrHashENS5_14ObjectPtrEqualESaISt4pairIKS3_S4_EEE'/>
+<use f='tvm/src/tir/schedule/concrete_schedule.cc' l='144' c='_ZN3tvm3tir14ScheduleCopier4CopyERKSt13unordered_mapINS0_8StmtSRefENS0_9BlockInfoENS_7runtime13ObjectPtrHashENS5_14ObjectPtrEqualESaISt4pairIKS3_S4_EEE'/>
+<use f='tvm/src/tir/schedule/concrete_schedule.cc' l='145' c='_ZN3tvm3tir14ScheduleCopier4CopyERKSt13unordered_mapINS0_8StmtSRefENS0_9BlockInfoENS_7runtime13ObjectPtrHashENS5_14ObjectPtrEqualESaISt4pairIKS3_S4_EEE'/>
+<size>16</size>
+<use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='1029' c='_ZN3tvm3tir9CacheReadENS0_13ScheduleStateERKNS0_8StmtSRefEiRKNS_7runtime6StringE'/>
+<use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='1086' c='_ZN3tvm3tir10CacheWriteENS0_13ScheduleStateERKNS0_8StmtSRefEiRKNS_7runtime6StringE'/>
+<use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='1159' c='_ZN3tvm3tir7ReIndexENS0_13ScheduleStateERKNS0_8StmtSRefEiNS0_15BufferIndexTypeE'/>
+<size>16</size>
+<use f='tvm/src/tir/schedule/primitive/compute_at.cc' l='621' c='_ZN3tvm3tir31ComputeAtOrReverseComputeAtImplENS0_13ScheduleStateERKNS0_8StmtSRefES4_bPNS_5arith8AnalyzerEb'/>
+<size>16</size>
+<use f='tvm/src/tir/schedule/primitive/decompose_padding.cc' l='492' c='_ZN3tvm3tir20DecomposePaddingImplENS0_13ScheduleStateERKNS0_8StmtSRefES4_b'/>
+<size>16</size>
+<use f='tvm/src/tir/schedule/primitive/reduction.cc' l='1100' c='_ZN3tvm3tir7RFactorENS0_13ScheduleStateERKNS0_8StmtSRefEi'/>
+<size>16</size>
+<use f='tvm/src/tir/schedule/state.cc' l='208' c='_ZN3tvm3tir18BlockInfoCollector13MakeBlockInfoENS0_8StmtSRefE'/>
+<use f='tvm/src/tir/schedule/state.cc' l='208' c='_ZN3tvm3tir18BlockInfoCollector13MakeBlockInfoENS0_8StmtSRefE'/>
+<use f='tvm/src/tir/schedule/state.cc' l='228' c='_ZN3tvm3tir18BlockInfoCollector32CheckRegionCoverAndStagePipelineERKNS0_9BlockInfoERKNS0_8StmtSRefERKNS_7runtime5ArrayIS5_vEE'/>
+<use f='tvm/src/tir/schedule/state.cc' l='775' c='_ZN3tvm3tir11SRefUpdater15UpdateBlockInfoERKNS0_8StmtSRefE'/>
+<use f='tvm/src/tir/schedule/state.cc' l='778' c='_ZN3tvm3tir11SRefUpdater15UpdateBlockInfoERKNS0_8StmtSRefE'/>
+<use f='tvm/src/tir/schedule/state.cc' l='781' c='_ZN3tvm3tir11SRefUpdater15UpdateBlockInfoERKNS0_8StmtSRefE'/>
+<use f='tvm/src/tir/schedule/state.cc' l='1082' c='_ZNK3tvm3tir17ScheduleStateNode12GetBlockInfoERKNS0_8StmtSRefE'/>
+<use f='tvm/src/tir/schedule/state.cc' l='1096' c='_ZN3tvm3tir14GetCachedFlagsERKNS0_13ScheduleStateERKNS0_8StmtSRefE'/>
+<size>16</size>

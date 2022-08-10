@@ -1,0 +1,12 @@
+<dec f='tvm/include/tvm/runtime/vm/bytecode.h' l='387' type='static tvm::runtime::vm::Instruction tvm::runtime::vm::Instruction::DeviceCopy(tvm::runtime::vm::RegName src, tvm::runtime::vm::Index src_device_index, tvm::runtime::vm::Index dst_device_index, tvm::runtime::vm::RegName dst)'/>
+<use f='tvm/src/relay/backend/vm/compiler.cc' l='552' u='c' c='_ZN3tvm5relay2vm18VMFunctionCompiler21DeviceAwareVisitExpr_EPKNS0_8CallNodeE'/>
+<doc f='tvm/include/tvm/runtime/vm/bytecode.h' l='379'>/*!
+   * \brief Copy tensor cross different devices.
+   * \param src The source register.
+   * \param src_device_index The index of the device holding the tensor in the source register.
+   * \param dst_device_index The index of the device to hold the tensor in the destination register.
+   * \param dst The destination register to store the copied tensor.
+   * \return The device copy instruction.
+   */</doc>
+<def f='tvm/src/runtime/vm/bytecode.cc' l='369' ll='378' type='static tvm::runtime::vm::Instruction tvm::runtime::vm::Instruction::DeviceCopy(tvm::runtime::vm::RegName src, tvm::runtime::vm::Index src_device_index, tvm::runtime::vm::Index dst_device_index, tvm::runtime::vm::RegName dst)'/>
+<use f='tvm/src/runtime/vm/executable.cc' l='984' u='c' c='_ZN3tvm7runtime2vm22DeserializeInstructionERKNS1_23VMInstructionSerializerE'/>

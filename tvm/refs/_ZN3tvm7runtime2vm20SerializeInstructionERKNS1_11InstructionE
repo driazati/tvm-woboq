@@ -1,0 +1,21 @@
+<dec f='tvm/src/runtime/vm/executable.cc' l='54' type='tvm::runtime::vm::VMInstructionSerializer tvm::runtime::vm::SerializeInstruction(const tvm::runtime::vm::Instruction &amp; instr)'/>
+<use f='tvm/src/runtime/vm/executable.cc' l='153' u='c' c='_ZNK3tvm7runtime2vm10Executable11GetBytecodeB5cxx11Ev'/>
+<def f='tvm/src/runtime/vm/executable.cc' l='510' ll='676' type='tvm::runtime::vm::VMInstructionSerializer tvm::runtime::vm::SerializeInstruction(const tvm::runtime::vm::Instruction &amp; instr)'/>
+<use f='tvm/src/runtime/vm/executable.cc' l='689' u='c' c='_ZN3tvm7runtime2vm10Executable15SaveCodeSectionEPN4dmlc6StreamE'/>
+<doc f='tvm/src/runtime/vm/executable.cc' l='53'>// Helper to serialize a vm instruction.</doc>
+<doc f='tvm/src/runtime/vm/executable.cc' l='494'>// Serialize a virtual machine instruction. It creates a list that contains the
+// hash, opcode, and all fields of an instruction.
+//
+// For example, the function signature used to create an `AllocTensor`
+// instruction is:
+//   Instruction AllocTensor(std::vector&lt;Index&gt; shape, DLDataType dtype, RegName dst)
+//
+// The serialized form will be:
+//   `hash 5 dtype.code dtype.bits dtype.lanes ndim dst_register val1 val2 ... valn`
+//
+// where hash is the hash of serialized instruction that is computed internally
+// by the `VMInstructionExecutable`. It is used for sanity check before decoding.
+// 5 shows opcode of `AllocTensor`, `(dtype.code dtype.bits dtype.lanes)`
+// represents a `DLDataType`, `ndim` is the number of dimensions, `dst_register`
+// is the destination register, and the rest of it together indicates the shape
+// of the tensor to be allocated.</doc>

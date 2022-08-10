@@ -1,0 +1,16 @@
+<def f='tvm/include/tvm/topi/transform.h' l='575' ll='637' type='Array&lt;tvm::te::Tensor&gt; tvm::topi::split(const tvm::te::Tensor &amp; x, Array&lt;tvm::PrimExpr&gt; split_indices, int axis, std::string name = &quot;T_split&quot;, std::string tag = kInjective)'/>
+<use f='tvm/include/tvm/topi/transform.h' l='882' u='c' c='_ZN3tvm4topi14split_sectionsERKNS_2te6TensorEiiNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESA_'/>
+<doc f='tvm/include/tvm/topi/transform.h' l='563'>/*!
+ * \brief Split a tensor into multiple sub-tensors
+ *
+ * \param x The input tensor
+ * \param split_indices The indices to split the input at. This must be in ascending
+ * order.
+ * \param axis The axis to split along.
+ * \param name The name of the operation
+ * \param tag The tag to mark the operation
+ *
+ * \return A Tensor whose op member is the split operation
+ */</doc>
+<use f='tvm/src/relay/op/tensor/transform.cc' l='3076' u='c' c='_ZN3tvm5relay12SplitComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
+<use f='tvm/src/topi/transform.cc' l='85' u='c'/>

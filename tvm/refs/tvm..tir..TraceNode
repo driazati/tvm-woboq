@@ -1,0 +1,57 @@
+<inh f='tvm/include/tvm/runtime/object.h' l='167' c='tvm::runtime::Object'/>
+<def f='tvm/include/tvm/tir/schedule/trace.h' l='58' ll='135'/>
+<use f='tvm/include/tvm/tir/schedule/trace.h' l='158' c='_ZNK3tvm3tir5TraceptEv'/>
+<use f='tvm/include/tvm/tir/schedule/trace.h' l='158' c='_ZNK3tvm3tir5TraceptEv'/>
+<use f='tvm/include/tvm/tir/schedule/trace.h' l='158' c='_ZNK3tvm3tir5Trace3getEv'/>
+<use f='tvm/include/tvm/tir/schedule/trace.h' l='158'/>
+<size>32</size>
+<doc f='tvm/include/tvm/tir/schedule/trace.h' l='43'>/*!
+ * \brief An execution trace of a scheduling program
+ *
+ * A trace has two parts:
+ * 1) The instructions invoked so far in the program execution
+ * 2) The random decisions made upon those instructions, if any
+ *
+ * A trace can be serialized to:
+ * 1) Roundtrippable JSON format: can be saved to file and loaded back
+ * 2) Python syntax: allows users to copy-paste the trace to reproduce the scheduling process
+ *
+ * A trace can be applied to a TensorIR schedule by re-applying all its instructions possibly with
+ * their decisions accordingly. Re-sampling is invoked if a sampling instruction doesn&apos;t have its
+ * corresponding decision; Otherwise the existing decision will be reused accordingly.
+ */</doc>
+<mbr r='tvm::tir::TraceNode::insts' o='128' t='Array&lt;tvm::tir::Instruction&gt;'/>
+<mbr r='tvm::tir::TraceNode::decisions' o='192' t='Map&lt;tvm::tir::Instruction, tvm::runtime::ObjectRef&gt;'/>
+<fun r='_ZN3tvm3tir9TraceNode10VisitAttrsEPNS_11AttrVisitorE'/>
+<smbr r='tvm::tir::TraceNode::_type_key' t='const char *const'/>
+<smbr r='tvm::tir::TraceNode::_type_final' t='const bool'/>
+<smbr r='tvm::tir::TraceNode::_type_child_slots' t='const int'/>
+<fun r='_ZN3tvm3tir9TraceNode16RuntimeTypeIndexEv'/>
+<fun r='_ZN3tvm3tir9TraceNode27_GetOrAllocRuntimeTypeIndexEv'/>
+<fun r='_ZNK3tvm3tir9TraceNode11GetDecisionERKNS0_11InstructionE'/>
+<fun r='_ZN3tvm3tir9TraceNode6AppendENS0_11InstructionE'/>
+<fun r='_ZN3tvm3tir9TraceNode6AppendENS0_11InstructionENS_7runtime9ObjectRefE'/>
+<fun r='_ZN3tvm3tir9TraceNode3PopEv'/>
+<fun r='_ZNK3tvm3tir9TraceNode15ApplyToScheduleENS0_8ScheduleEbNS_7runtime15TypedPackedFuncIFNS3_9ObjectRefERKNS0_11InstructionERKNS3_5ArrayIS5_vEESC_RKNS3_8OptionalIS5_EEEEE'/>
+<fun r='_ZNK3tvm3tir9TraceNode6AsJSONEb'/>
+<fun r='_ZNK3tvm3tir9TraceNode8AsPythonEb'/>
+<fun r='_ZNK3tvm3tir9TraceNode12WithDecisionENS0_11InstructionENS_7runtime9ObjectRefEb'/>
+<fun r='_ZNK3tvm3tir9TraceNode10SimplifiedEb'/>
+<use f='tvm/src/tir/schedule/trace.cc' l='26' c='_ZN3tvm3tir5TraceC1Ev'/>
+<use f='tvm/src/tir/schedule/trace.cc' l='29' c='_ZN3tvm3tir5TraceC1ENS_7runtime5ArrayINS0_11InstructionEvEENS2_3MapIS4_NS2_9ObjectRefEvvEE'/>
+<use f='tvm/src/tir/schedule/trace.cc' l='29' c='_ZN3tvm3tir5TraceC1ENS_7runtime5ArrayINS0_11InstructionEvEENS2_3MapIS4_NS2_9ObjectRefEvvEE'/>
+<use f='tvm/src/tir/schedule/trace.cc' l='476'/>
+<use f='tvm/src/tir/schedule/trace.cc' l='477'/>
+<use f='tvm/src/tir/schedule/trace.cc' l='517'/>
+<use f='tvm/src/tir/schedule/trace.cc' l='517'/>
+<use f='tvm/src/tir/schedule/trace.cc' l='517'/>
+<size>32</size>
+<fun r='_ZNK3tvm3tir9TraceNode11GetDecisionERKNS0_11InstructionE'/>
+<fun r='_ZN3tvm3tir9TraceNode6AppendENS0_11InstructionE'/>
+<fun r='_ZN3tvm3tir9TraceNode6AppendENS0_11InstructionENS_7runtime9ObjectRefE'/>
+<fun r='_ZN3tvm3tir9TraceNode3PopEv'/>
+<fun r='_ZNK3tvm3tir9TraceNode15ApplyToScheduleENS0_8ScheduleEbNS_7runtime15TypedPackedFuncIFNS3_9ObjectRefERKNS0_11InstructionERKNS3_5ArrayIS5_vEESC_RKNS3_8OptionalIS5_EEEEE'/>
+<fun r='_ZNK3tvm3tir9TraceNode6AsJSONEb'/>
+<fun r='_ZNK3tvm3tir9TraceNode8AsPythonEb'/>
+<fun r='_ZNK3tvm3tir9TraceNode12WithDecisionENS0_11InstructionENS_7runtime9ObjectRefEb'/>
+<fun r='_ZNK3tvm3tir9TraceNode10SimplifiedEb'/>

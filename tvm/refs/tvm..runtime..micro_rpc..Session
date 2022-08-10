@@ -1,0 +1,46 @@
+<def f='tvm/include/tvm/runtime/crt/rpc_common/session.h' l='60' ll='237'/>
+<use f='tvm/include/tvm/runtime/crt/rpc_common/session.h' l='187' c='_ZN3tvm7runtime9micro_rpc7Session15SessionReceiverC1EPS2_'/>
+<use f='tvm/include/tvm/runtime/crt/rpc_common/session.h' l='195'/>
+<use f='tvm/src/runtime/micro/micro_session.cc' l='386'/>
+<size>64</size>
+<doc f='tvm/include/tvm/runtime/crt/rpc_common/session.h' l='51'>/*!
+ * \brief CRT communication session management class.
+ * Assumes the following properties provided by the underlying transport:
+ *  - in-order delivery.
+ *  - reliable delivery.
+ *
+ * Specifically, designed for use with UARTs. Will probably work over semihosting, USB, and TCP;
+ * will probably not work reliably enough over UDP.
+ */</doc>
+<smbr r='tvm::runtime::micro_rpc::Session::kInvalidNonce' t='const uint8_t'/>
+<fun r='_ZN3tvm7runtime9micro_rpc7SessionC1EPNS1_6FramerEPNS1_11FrameBufferEPFvPvNS1_11MessageTypeES6_ES7_'/>
+<fun r='_ZN3tvm7runtime9micro_rpc7Session10InitializeEh'/>
+<fun r='_ZN3tvm7runtime9micro_rpc7Session16TerminateSessionEv'/>
+<fun r='_ZN3tvm7runtime9micro_rpc7Session12StartSessionEv'/>
+<fun r='_ZN3tvm7runtime9micro_rpc7Session8ReceiverEv'/>
+<fun r='_ZN3tvm7runtime9micro_rpc7Session11SendMessageENS1_11MessageTypeEPKhm'/>
+<fun r='_ZN3tvm7runtime9micro_rpc7Session12StartMessageENS1_11MessageTypeEm'/>
+<fun r='_ZN3tvm7runtime9micro_rpc7Session13SendBodyChunkEPKhm'/>
+<fun r='_ZN3tvm7runtime9micro_rpc7Session13FinishMessageEv'/>
+<fun r='_ZNK3tvm7runtime9micro_rpc7Session13IsEstablishedEv'/>
+<fun r='_ZN3tvm7runtime9micro_rpc7Session18ClearReceiveBufferEv'/>
+<smbr r='tvm::runtime::micro_rpc::Session::kVersion' t='const uint8_t'/>
+<fun r='_ZN3tvm7runtime9micro_rpc7Session15RegenerateNonceEv'/>
+<fun r='_ZN3tvm7runtime9micro_rpc7Session12SendInternalENS1_11MessageTypeEPKhm'/>
+<fun r='_ZN3tvm7runtime9micro_rpc7Session21SendSessionStartReplyERKNS1_13SessionHeaderE'/>
+<fun r='_ZN3tvm7runtime9micro_rpc7Session23ProcessStartSessionInitERKNS1_13SessionHeaderE'/>
+<fun r='_ZN3tvm7runtime9micro_rpc7Session24ProcessStartSessionReplyERKNS1_13SessionHeaderE'/>
+<fun r='_ZN3tvm7runtime9micro_rpc7Session27OnSessionEstablishedMessageEv'/>
+<fun r='_ZN3tvm7runtime9micro_rpc7Session26OnSessionTerminatedMessageEv'/>
+<fun r='_ZN3tvm7runtime9micro_rpc7Session12SetSessionIdEhh'/>
+<fun r='_ZN3tvm7runtime9micro_rpc7Session14InitiatorNonceEt'/>
+<fun r='_ZN3tvm7runtime9micro_rpc7Session14ResponderNonceEt'/>
+<mbr r='tvm::runtime::micro_rpc::Session::local_nonce_' o='0' t='uint8_t'/>
+<mbr r='tvm::runtime::micro_rpc::Session::session_id_' o='16' t='uint16_t'/>
+<mbr r='tvm::runtime::micro_rpc::Session::state_' o='32' t='tvm::runtime::micro_rpc::Session::State'/>
+<mbr r='tvm::runtime::micro_rpc::Session::receiver_' o='64' t='tvm::runtime::micro_rpc::Session::SessionReceiver'/>
+<mbr r='tvm::runtime::micro_rpc::Session::framer_' o='192' t='tvm::runtime::micro_rpc::Framer *'/>
+<mbr r='tvm::runtime::micro_rpc::Session::receive_buffer_' o='256' t='tvm::runtime::micro_rpc::FrameBuffer *'/>
+<mbr r='tvm::runtime::micro_rpc::Session::receive_buffer_has_complete_message_' o='320' t='bool'/>
+<mbr r='tvm::runtime::micro_rpc::Session::message_received_func_' o='384' t='tvm::runtime::micro_rpc::Session::MessageReceivedFunc'/>
+<mbr r='tvm::runtime::micro_rpc::Session::message_received_func_context_' o='448' t='void *'/>

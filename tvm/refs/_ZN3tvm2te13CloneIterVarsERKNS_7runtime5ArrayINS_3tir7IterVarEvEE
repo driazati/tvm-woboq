@@ -1,0 +1,12 @@
+<dec f='tvm/src/te/autodiff/ad_utils.h' l='45' type='std::pair&lt;Array&lt;IterVar&gt;, Map&lt;Var, PrimExpr&gt;&gt; tvm::te::CloneIterVars(const Array&lt;tvm::tir::IterVar&gt; &amp; vars)'/>
+<use f='tvm/src/te/autodiff/ad_simplify.cc' l='1100' u='c' c='_ZN3tvm2te30ReductionAsTensorAccessMutator10VisitExpr_EPKNS_3tir10ReduceNodeE'/>
+<doc f='tvm/src/te/autodiff/ad_utils.h' l='39'>/*!
+ * \brief Clone iter vars and return both the new vars and the substitution from old to new.
+ *
+ * \param vars The original iter vars.
+ * \return A pair containing the array of new iter vars and the map from old vars to new ones.
+ */</doc>
+<def f='tvm/src/te/autodiff/ad_utils.cc' l='37' ll='46' type='std::pair&lt;Array&lt;IterVar&gt;, Map&lt;Var, PrimExpr&gt;&gt; tvm::te::CloneIterVars(const Array&lt;tvm::tir::IterVar&gt; &amp; vars)'/>
+<use f='tvm/src/te/autodiff/ad_utils.cc' l='52' u='c' c='_ZN3tvm2te14CloneReductionERKNS_8PrimExprE'/>
+<use f='tvm/src/te/autodiff/ad_utils.cc' l='76' u='c' c='_ZN3tvm2te18ComputeOpFromExprsERKNS_7runtime5ArrayINS_8PrimExprEvEERKNS2_INS_3tir7IterVarEvEERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESJ_13417500'/>
+<use f='tvm/src/te/autodiff/jacobian.cc' l='322' u='c' c='_ZN3tvm2te8JacobianERKNS0_6TensorES3_'/>

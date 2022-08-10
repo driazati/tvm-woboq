@@ -1,0 +1,11 @@
+<dec f='tvm/src/tir/schedule/analysis.h' l='350' type='tvm::tir::StmtSRef tvm::tir::GetSRefLowestCommonAncestor(const Array&lt;tvm::tir::StmtSRef&gt; &amp; srefs)'/>
+<doc f='tvm/src/tir/schedule/analysis.h' l='344'>/*!
+ * \brief Get the lowest common ancestor of an array of blocks or loops on the sref tree
+ * \param srefs The block srefs or loop srefs whose lowest common ancestor is to be queried
+ * \return The lowest common ancestor of the input block srefs or loop srefs
+ * \note The input array is required to have at least one sref
+ */</doc>
+<use f='tvm/src/meta_schedule/schedule_rule/cross_thread_reduction.cc' l='208' u='c' c='_ZN3tvm13meta_schedule24CrossThreadReductionNode28GetComputeTargetLoopAndBlockERKNS_3tir8ScheduleERKNS2_7BlockRVE'/>
+<def f='tvm/src/tir/schedule/analysis/analysis.cc' l='919' ll='937' type='tvm::tir::StmtSRef tvm::tir::GetSRefLowestCommonAncestor(const Array&lt;tvm::tir::StmtSRef&gt; &amp; srefs)'/>
+<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='965' u='c' c='_ZN3tvm3tir22CollectComputeLocationERKNS0_13ScheduleStateERKNS0_8StmtSRefE'/>
+<use f='tvm/src/tir/schedule/primitive/decompose_padding.cc' l='501' u='c' c='_ZN3tvm3tir20DecomposePaddingImplENS0_13ScheduleStateERKNS0_8StmtSRefES4_b'/>

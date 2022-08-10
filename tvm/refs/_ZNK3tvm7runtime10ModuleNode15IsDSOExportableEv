@@ -1,0 +1,26 @@
+<dec f='tvm/include/tvm/runtime/module.h' l='209' type='bool tvm::runtime::ModuleNode::IsDSOExportable() const'/>
+<doc f='tvm/include/tvm/runtime/module.h' l='195'>/*!
+   * \brief Returns true if this module is &apos;DSO exportable&apos;.
+   *
+   * A DSO exportable module (eg a CSourceModuleNode of type_key &apos;c&apos;) can be incorporated into the
+   * final runtime artifact (ie shared library) by compilation and/or linking using the external
+   * compiler (llvm, nvcc, etc). DSO exportable modules must implement SaveToFile.
+   *
+   * By contrast, non-DSO exportable modules (eg CUDAModuleNode of type_key &apos;cuda&apos;) typically must
+   * be incorporated into the final runtime artifact by being serialized as data into the
+   * artifact, then deserialized at runtime. Non-DSO exportable modules must implement SaveToBinary,
+   * and have a matching deserializer registered as &apos;runtime.module.loadbinary_&lt;type_key&gt;&apos;.
+   *
+   * The default implementation returns false.
+   */</doc>
+<def f='tvm/src/runtime/module.cc' l='137' type='bool tvm::runtime::ModuleNode::IsDSOExportable() const'/>
+<use f='tvm/src/runtime/module.cc' l='205' u='c'/>
+<ovr f='tvm/src/runtime/static_library.cc' l='65' c='_ZNK3tvm7runtime12_GLOBAL__N_117StaticLibraryNode15IsDSOExportableEv'/>
+<use f='tvm/src/target/codegen.cc' l='71' u='c' c='_ZN3tvm7codegen16ModuleSerializer15SerializeModuleEPN4dmlc6StreamE'/>
+<use f='tvm/src/target/codegen.cc' l='87' u='c' c='_ZN3tvm7codegen16ModuleSerializer15SerializeModuleEPN4dmlc6StreamE'/>
+<use f='tvm/src/target/codegen.cc' l='150' u='c' c='_ZN3tvm7codegen16ModuleSerializer17CreateModuleIndexEv'/>
+<use f='tvm/src/target/codegen.cc' l='177' u='c' c='_ZN3tvm7codegen16ModuleSerializer17CreateModuleIndexEv'/>
+<ovr f='tvm/src/target/llvm/llvm_module.cc' l='103' c='_ZNK3tvm7codegen14LLVMModuleNode15IsDSOExportableEv'/>
+<use f='tvm/src/target/metadata_module.cc' l='231' u='c' c='_ZN3tvm7codegen20CreateMetadataModuleERKSt13unordered_mapINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS_7runtime7NDArrayESt4hashIS7_ESt8equal6263688'/>
+<ovr f='tvm/src/target/source/source_module.cc' l='132' c='_ZNK3tvm7codegen17CSourceModuleNode15IsDSOExportableEv'/>
+<ovr f='tvm/src/target/source/source_module.cc' l='202' c='_ZNK3tvm7codegen28CSourceCrtMetadataModuleNode15IsDSOExportableEv'/>

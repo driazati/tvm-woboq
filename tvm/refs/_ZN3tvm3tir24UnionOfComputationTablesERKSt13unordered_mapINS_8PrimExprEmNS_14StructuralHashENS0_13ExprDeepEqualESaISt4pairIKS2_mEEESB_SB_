@@ -1,0 +1,16 @@
+<def f='tvm/src/tir/transforms/common_subexpr_elim_tools.cc' l='140' ll='148' type='tvm::tir::ComputationTable tvm::tir::UnionOfComputationTables(const tvm::tir::ComputationTable &amp; table1, const tvm::tir::ComputationTable &amp; table2, const tvm::tir::ComputationTable &amp; table3)'/>
+<use f='tvm/src/tir/transforms/common_subexpr_elim_tools.cc' l='246' u='c' c='_ZN3tvm3tir30BuildTableForThreeChildrenNodeERKSt13unordered_mapINS_8PrimExprEmNS_14StructuralHashENS0_13ExprDeepEqualESaISt4pairIKS2_mEEESB_SB_'/>
+<doc f='tvm/src/tir/transforms/common_subexpr_elim_tools.cc' l='126'>/*!
+ * \brief Does the union of three tables of computations.
+ * \param table1 One of the three tables, which won&apos;t change.
+ * \param table2 One of the three tables, which won&apos;t change.
+ * \param table3 One of the three tables, which won&apos;t change.
+ * \note We don&apos;t need (at least yet) to have a function working for N tables, even if this
+ *       function for 3 tables seems at first glance redundant with the one for 2 tables defined
+ *       just above. The reason is that in order to do the union for N tables, we need to know how
+ *       to do it for two. That&apos;s because we would compute for N tables using the associativity
+ *       of the union : T1 U T2 U T3 ... U Tn = ((T1 U T2) U T3) ... U Tn
+ *       Therefore, we need one for 2 tables anyway. And as the one for N (N&gt;=3) would only be used
+ *       (at least for now) for N=3, there is at the moment no need for such a generic union over
+ *       N tables.
+ */</doc>

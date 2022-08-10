@@ -1,0 +1,12 @@
+<dec f='tvm/include/tvm/tir/schedule/block_scope.h' l='214' type='std::unordered_map&lt;StmtSRef, Array&lt;Dependency&gt;, ObjectPtrHash, ObjectPtrEqual&gt;'/>
+<offset>128</offset>
+<doc f='tvm/include/tvm/tir/schedule/block_scope.h' l='209'>/*!
+   * \brief Lookup table for the `src` of dependencies
+   * \note We intentionally didn&apos;t use tvm::Map as the data structure, because we need the values
+   * inside to be mutable so that they could be further maintained properly during transformations.
+   */</doc>
+<use f='tvm/src/tir/schedule/block_scope.cc' l='39' u='m' c='_ZN3tvm3tir13AddDependencyEPNS0_14BlockScopeNodeERKNS0_8StmtSRefES5_NS0_7DepKindE'/>
+<use f='tvm/src/tir/schedule/block_scope.cc' l='121' u='m' c='_ZNK3tvm3tir14BlockScopeNode12GetDepsBySrcERKNS0_8StmtSRefE'/>
+<use f='tvm/src/tir/schedule/block_scope.cc' l='122' u='m' c='_ZNK3tvm3tir14BlockScopeNode12GetDepsBySrcERKNS0_8StmtSRefE'/>
+<use f='tvm/src/tir/schedule/concrete_schedule.cc' l='147' u='w' c='_ZN3tvm3tir14ScheduleCopier4CopyERKSt13unordered_mapINS0_8StmtSRefENS0_9BlockInfoENS_7runtime13ObjectPtrHashENS5_14ObjectPtrEqualESaISt4pairIKS3_S4_EEE'/>
+<use f='tvm/src/tir/schedule/concrete_schedule.cc' l='147' u='r' c='_ZN3tvm3tir14ScheduleCopier4CopyERKSt13unordered_mapINS0_8StmtSRefENS0_9BlockInfoENS_7runtime13ObjectPtrHashENS5_14ObjectPtrEqualESaISt4pairIKS3_S4_EEE'/>

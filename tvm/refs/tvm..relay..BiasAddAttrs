@@ -1,0 +1,33 @@
+<inh f='tvm/include/tvm/ir/attrs.h' l='834' c='tvm::AttrsNode'/>
+<def f='tvm/include/tvm/relay/attrs/nn.h' l='42' ll='48'/>
+<use f='tvm/include/tvm/relay/attrs/nn.h' l='42'/>
+<size>32</size>
+<doc f='tvm/include/tvm/relay/attrs/nn.h' l='35'>/*!
+ * \brief Add a 1D Tensor to an axis of a data.
+ *
+ * \note bias_add is a special add operator that is in nn
+ *   and enables automatic derivation of bias&apos;s shape.
+ *   You can directly use add for more generalized case.
+ */</doc>
+<mbr r='tvm::relay::BiasAddAttrs::axis' o='192' t='int'/>
+<smbr r='tvm::relay::BiasAddAttrs::_type_key' t='const char *const'/>
+<smbr r='tvm::relay::BiasAddAttrs::_type_final' t='const bool'/>
+<smbr r='tvm::relay::BiasAddAttrs::_type_child_slots' t='const int'/>
+<fun r='_ZN3tvm5relay12BiasAddAttrs16RuntimeTypeIndexEv'/>
+<fun r='_ZN3tvm5relay12BiasAddAttrs27_GetOrAllocRuntimeTypeIndexEv'/>
+<fun r='_ZN3tvm5relay12BiasAddAttrs15_tvm_VisitAttrsERT_'/>
+<use f='tvm/src/relay/op/nn/nn.cc' l='50'/>
+<use f='tvm/src/relay/op/nn/nn.cc' l='50'/>
+<use f='tvm/src/relay/op/nn/nn.cc' l='50'/>
+<use f='tvm/src/relay/op/nn/nn.cc' l='58' c='_ZN3tvm5relay10BiasAddRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/src/relay/op/nn/nn.cc' l='58' c='_ZN3tvm5relay10BiasAddRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/src/relay/op/nn/nn.cc' l='80' c='_ZN3tvm5relay11MakeBiasAddENS_9RelayExprES1_i'/>
+<use f='tvm/src/relay/op/nn/nn.cc' l='92'/>
+<use f='tvm/src/relay/op/nn/nn.cc' l='101'/>
+<size>32</size>
+<use f='tvm/src/relay/transforms/canonicalize_ops.cc' l='45' c='_ZN3tvm5relay17BiasAddSimplifier8Rewrite_EPKNS0_8CallNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/canonicalize_ops.cc' l='45' c='_ZN3tvm5relay17BiasAddSimplifier8Rewrite_EPKNS0_8CallNodeERKNS_9RelayExprE'/>
+<size>32</size>
+<use f='tvm/src/relay/transforms/fold_scale_axis.cc' l='1080' c='_ZN3tvm5relay15fold_scale_axis19BiasAddBackwardPrepERKNS0_4CallERKNS_7runtime5ArrayINS1_7MessageEvEE'/>
+<use f='tvm/src/relay/transforms/fold_scale_axis.cc' l='1080' c='_ZN3tvm5relay15fold_scale_axis19BiasAddBackwardPrepERKNS0_4CallERKNS_7runtime5ArrayINS1_7MessageEvEE'/>
+<size>32</size>

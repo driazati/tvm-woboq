@@ -1,0 +1,21 @@
+<dec f='tvm/include/tvm/runtime/crt/rpc_common/framing.h' l='202' type='tvm_crt_error_t tvm::runtime::micro_rpc::Framer::WritePayloadChunk(const uint8_t * payload_chunk, size_t payload_chunk_size_bytes)'/>
+<doc f='tvm/include/tvm/runtime/crt/rpc_common/framing.h' l='182'>/*! \brief Write payload data to the wire.
+   *
+   * When transmitting payloads that are too large to be buffered, call this function after calling
+   * StartPacket to escape and transmit framed payloads. This function can be called multiple times
+   * for a single packet.
+   *
+   * \param payload_chunk A piece of the packet payload.
+   * \param payload_chunk_size_bytes Number of valid bytes in payload_chunk.
+   * \return
+   *     - kTvmErrorNoError when no error occurs
+   *     - kTvmErrorFramingInvalidState when StartPacket() has not been called.
+   *     - kTvmErrorFramingPayloadOverflow when more bytes were requested to be written than were
+   *       declared in the payload_size_bytes parameter given to StartPacket().
+   *     - kTvmErrorWriteStreamShortWrite if the WriteStream passed to constructor&apos;s Write()
+   *       function returns 0.
+   *     - kTvmErrorWriteStreamShortWrite if the WriteStream passed to constructor&apos;s Write()
+   *       function returns an invalid positive number.
+   *     - Any negative value (i.e. with bits in kTvmErrorSystemErrorMask set) returned by the
+   *       WriteStream&apos;s Write() function.
+   */</doc>

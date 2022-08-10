@@ -1,0 +1,176 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>instrument.h source code [tvm/include/tvm/ir/instrument.h] - Woboq Code Browser</title>
+<meta name="woboq:interestingDefinitions" content="tvm::instrument::PassInstrument,tvm::instrument::PassInstrumentNode "/>
+<link rel="stylesheet" href="../../../.././data/qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href="../../../.././data/kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src="../../../.././data/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="../../../.././data/jquery/jquery-ui.min.js"></script>
+<script>var file = 'tvm/include/tvm/ir/instrument.h'; var root_path = '../../../..'; var data_path = '../../../.././data'; var ecma_script_api_version = 2;</script>
+<script src='../../../.././data/codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='../../..'>tvm</a>/<a href='../..'>include</a>/<a href='..'>tvm</a>/<a href='./'>ir</a>/<a href='instrument.h.html'>instrument.h</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td><i>/*</i></td></tr>
+<tr><th id="2">2</th><td><i> * Licensed to the Apache Software Foundation (ASF) under one</i></td></tr>
+<tr><th id="3">3</th><td><i> * or more contributor license agreements.  See the NOTICE file</i></td></tr>
+<tr><th id="4">4</th><td><i> * distributed with this work for additional information</i></td></tr>
+<tr><th id="5">5</th><td><i> * regarding copyright ownership.  The ASF licenses this file</i></td></tr>
+<tr><th id="6">6</th><td><i> * to you under the Apache License, Version 2.0 (the</i></td></tr>
+<tr><th id="7">7</th><td><i> * "License"); you may not use this file except in compliance</i></td></tr>
+<tr><th id="8">8</th><td><i> * with the License.  You may obtain a copy of the License at</i></td></tr>
+<tr><th id="9">9</th><td><i> *</i></td></tr>
+<tr><th id="10">10</th><td><i> *   <a href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a></i></td></tr>
+<tr><th id="11">11</th><td><i> *</i></td></tr>
+<tr><th id="12">12</th><td><i> * Unless required by applicable law or agreed to in writing,</i></td></tr>
+<tr><th id="13">13</th><td><i> * software distributed under the License is distributed on an</i></td></tr>
+<tr><th id="14">14</th><td><i> * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY</i></td></tr>
+<tr><th id="15">15</th><td><i> * KIND, either express or implied.  See the License for the</i></td></tr>
+<tr><th id="16">16</th><td><i> * specific language governing permissions and limitations</i></td></tr>
+<tr><th id="17">17</th><td><i> * under the License.</i></td></tr>
+<tr><th id="18">18</th><td><i> */</i></td></tr>
+<tr><th id="19">19</th><td></td></tr>
+<tr><th id="20">20</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="21">21</th><td><i class="doc"> * <span class="command">\file</span> <span class="verb">tvm/ir/instrument.h</span></i></td></tr>
+<tr><th id="22">22</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="23">23</th><td><i class="doc"> * This file introduces a pass instrument infrastructure, inspired by LLVM and MLIR.</i></td></tr>
+<tr><th id="24">24</th><td><i class="doc"> * It inserts instrumentation points around passes.</i></td></tr>
+<tr><th id="25">25</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="26">26</th><td><u>#<span data-ppcond="26">ifndef</span> <span class="macro" data-ref="_M/TVM_IR_INSTRUMENT_H_">TVM_IR_INSTRUMENT_H_</span></u></td></tr>
+<tr><th id="27">27</th><td><u>#define <dfn class="macro" id="_M/TVM_IR_INSTRUMENT_H_" data-ref="_M/TVM_IR_INSTRUMENT_H_">TVM_IR_INSTRUMENT_H_</dfn></u></td></tr>
+<tr><th id="28">28</th><td></td></tr>
+<tr><th id="29">29</th><td><u>#include <a href="../node/reflection.h.html">&lt;tvm/node/reflection.h&gt;</a></u></td></tr>
+<tr><th id="30">30</th><td><u>#include <a href="../runtime/container/string.h.html">&lt;tvm/runtime/container/string.h&gt;</a></u></td></tr>
+<tr><th id="31">31</th><td></td></tr>
+<tr><th id="32">32</th><td><u>#include <a href="../../../../include/c++/10/utility.html">&lt;utility&gt;</a></u></td></tr>
+<tr><th id="33">33</th><td><u>#include <a href="../../../../include/c++/10/vector.html">&lt;vector&gt;</a></u></td></tr>
+<tr><th id="34">34</th><td></td></tr>
+<tr><th id="35">35</th><td><b>namespace</b> <span class="namespace">tvm</span> {</td></tr>
+<tr><th id="36">36</th><td></td></tr>
+<tr><th id="37">37</th><td><b>class</b> <a class="type" href="module.h.html#tvm::IRModule" title='tvm::IRModule' data-ref="tvm::IRModule" data-ref-filename="tvm..IRModule" id="tvm::IRModule">IRModule</a>;</td></tr>
+<tr><th id="38">38</th><td></td></tr>
+<tr><th id="39">39</th><td><i>// Forward class for PassInstrumentNode methods</i></td></tr>
+<tr><th id="40">40</th><td><b>namespace</b> <span class="namespace">transform</span> {</td></tr>
+<tr><th id="41">41</th><td><b>class</b> <a class="type" href="transform.h.html#tvm::transform::PassInfo" title='tvm::transform::PassInfo' data-ref="tvm::transform::PassInfo" data-ref-filename="tvm..transform..PassInfo" id="tvm::transform::PassInfo">PassInfo</a>;</td></tr>
+<tr><th id="42">42</th><td>}  <i>// namespace transform</i></td></tr>
+<tr><th id="43">43</th><td></td></tr>
+<tr><th id="44">44</th><td><b>namespace</b> <span class="namespace">instrument</span> {</td></tr>
+<tr><th id="45">45</th><td></td></tr>
+<tr><th id="46">46</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="47">47</th><td><i class="doc"> * <span class="command">\brief</span> PassInstrumentNode forms an instrument implementation.</i></td></tr>
+<tr><th id="48">48</th><td><i class="doc"> * It provides API for users to register callbacks at different instrumentation points.</i></td></tr>
+<tr><th id="49">49</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="50">50</th><td><i class="doc"> * Within a PassContext, call sequence of a PassInstrument implementation is like:</i></td></tr>
+<tr><th id="51">51</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="52">52</th><td><i class="doc"> *   with PassContext(instruments=[pi]):  # pi = a PassInstrument implementation</i></td></tr>
+<tr><th id="53">53</th><td><i class="doc"> *       pi.EnterPassContext()</i></td></tr>
+<tr><th id="54">54</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="55">55</th><td><i class="doc"> *       if pi.ShouldRun(Pass1):</i></td></tr>
+<tr><th id="56">56</th><td><i class="doc"> *           pi.RunBeforePass()</i></td></tr>
+<tr><th id="57">57</th><td><i class="doc"> *           Pass1()</i></td></tr>
+<tr><th id="58">58</th><td><i class="doc"> *           pi.RunAfterPass()</i></td></tr>
+<tr><th id="59">59</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="60">60</th><td><i class="doc"> *       if pi.ShouldRun(Pass2):</i></td></tr>
+<tr><th id="61">61</th><td><i class="doc"> *           pi.RunBeforePass()</i></td></tr>
+<tr><th id="62">62</th><td><i class="doc"> *           Pass2()</i></td></tr>
+<tr><th id="63">63</th><td><i class="doc"> *           pi.RunAfterPass()</i></td></tr>
+<tr><th id="64">64</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="65">65</th><td><i class="doc"> *       pi.ExitPassContext()</i></td></tr>
+<tr><th id="66">66</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="67">67</th><td><i class="doc"> * `EnterPassContext` and `ExitPassContext` are only called once when entering/exiting a</i></td></tr>
+<tr><th id="68">68</th><td><i class="doc"> * PassContext. `ShouldRun`, `RunBeforePass` and `RunAfterPass` are called multiple times depending</i></td></tr>
+<tr><th id="69">69</th><td><i class="doc"> * on how many passes.</i></td></tr>
+<tr><th id="70">70</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="71">71</th><td><i class="doc"> * If there are multiple pass instrumentations provided, the instrument points are the same.</i></td></tr>
+<tr><th id="72">72</th><td><i class="doc"> * PassInstrument implementations' callbacks are called in order:</i></td></tr>
+<tr><th id="73">73</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="74">74</th><td><i class="doc"> *   with PassContext(instruments=[pi1, pi2]):  # pi1, pi2 = two distinct PassInstrument impls</i></td></tr>
+<tr><th id="75">75</th><td><i class="doc"> *       pi.EnterPassContext() for pi in instruments</i></td></tr>
+<tr><th id="76">76</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="77">77</th><td><i class="doc"> *       should_run = all([pi.ShoudRun(Pass1) for pi in instruments)])</i></td></tr>
+<tr><th id="78">78</th><td><i class="doc"> *       if (should_run)</i></td></tr>
+<tr><th id="79">79</th><td><i class="doc"> *           pi.RunBeforePass() for pi in instruments</i></td></tr>
+<tr><th id="80">80</th><td><i class="doc"> *           Pass1()</i></td></tr>
+<tr><th id="81">81</th><td><i class="doc"> *           pi.RunAfterPass()  for pi in instruments</i></td></tr>
+<tr><th id="82">82</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="83">83</th><td><i class="doc"> *       should_run = all([pi.ShouldRun(Pass2) for pi in instruments)])</i></td></tr>
+<tr><th id="84">84</th><td><i class="doc"> *       if (should_run)</i></td></tr>
+<tr><th id="85">85</th><td><i class="doc"> *           pi.RunBeforePass() for pi in instruments</i></td></tr>
+<tr><th id="86">86</th><td><i class="doc"> *           Pass2()</i></td></tr>
+<tr><th id="87">87</th><td><i class="doc"> *           pi.RunAfterPass() for pi in instruments</i></td></tr>
+<tr><th id="88">88</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="89">89</th><td><i class="doc"> *       pi.ExitPassContext() for pi in instruments</i></td></tr>
+<tr><th id="90">90</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="91">91</th><td><i class="doc"> * Note:</i></td></tr>
+<tr><th id="92">92</th><td><i class="doc"> *   1. Assume there is no dependency between PassInstrument implementations in `instruments` .</i></td></tr>
+<tr><th id="93">93</th><td><i class="doc"> *   2. `EnterPassContext` and `ExitPassContext` have `with` behavior (see PassContext and its FFI):</i></td></tr>
+<tr><th id="94">94</th><td><i class="doc"> *        If there is any exception raised in `ShouldRun()`, `RunBeforePass()`, `RunAfterPass()` and</i></td></tr>
+<tr><th id="95">95</th><td><i class="doc"> *        `Pass()`, `ExitPassContext()` is still called.</i></td></tr>
+<tr><th id="96">96</th><td><i class="doc"> *   3. In mutiple PassInstrument instances scenario, callbacks are called in order:</i></td></tr>
+<tr><th id="97">97</th><td><i class="doc"> *        If one throws exceptions, remainings will not be called.</i></td></tr>
+<tr><th id="98">98</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="99">99</th><td><i class="doc"> * <span class="command">\sa</span> PassInstrument</i></td></tr>
+<tr><th id="100">100</th><td><i class="doc"> * <span class="command">\sa</span> src/ir/transform.cc</i></td></tr>
+<tr><th id="101">101</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="102">102</th><td><b>class</b> <dfn class="type def" id="tvm::instrument::PassInstrumentNode" title='tvm::instrument::PassInstrumentNode' data-ref="tvm::instrument::PassInstrumentNode" data-ref-filename="tvm..instrument..PassInstrumentNode">PassInstrumentNode</dfn> : <b>public</b> Object {</td></tr>
+<tr><th id="103">103</th><td> <b>public</b>:</td></tr>
+<tr><th id="104">104</th><td>  <i class="doc">/*! <span class="command">\brief</span> Name of this pass instrument object. */</i></td></tr>
+<tr><th id="105">105</th><td>  String <dfn class="decl field" id="tvm::instrument::PassInstrumentNode::name" title='tvm::instrument::PassInstrumentNode::name' data-ref="tvm::instrument::PassInstrumentNode::name" data-ref-filename="tvm..instrument..PassInstrumentNode..name">name</dfn>;</td></tr>
+<tr><th id="106">106</th><td></td></tr>
+<tr><th id="107">107</th><td>  <b>virtual</b> <dfn class="virtual decl def fn" id="_ZN3tvm10instrument18PassInstrumentNodeD1Ev" title='tvm::instrument::PassInstrumentNode::~PassInstrumentNode' data-ref="_ZN3tvm10instrument18PassInstrumentNodeD1Ev" data-ref-filename="_ZN3tvm10instrument18PassInstrumentNodeD1Ev">~PassInstrumentNode</dfn>() {}</td></tr>
+<tr><th id="108">108</th><td></td></tr>
+<tr><th id="109">109</th><td>  <i class="doc">/*! <span class="command">\brief</span> Instrument when entering PassContext. Called once within a PassContext. */</i></td></tr>
+<tr><th id="110">110</th><td>  <b>virtual</b> <em>void</em> <dfn class="virtual decl fn" id="_ZNK3tvm10instrument18PassInstrumentNode16EnterPassContextEv" title='tvm::instrument::PassInstrumentNode::EnterPassContext' data-ref="_ZNK3tvm10instrument18PassInstrumentNode16EnterPassContextEv" data-ref-filename="_ZNK3tvm10instrument18PassInstrumentNode16EnterPassContextEv">EnterPassContext</dfn>() <em>const</em> = <var>0</var>;</td></tr>
+<tr><th id="111">111</th><td></td></tr>
+<tr><th id="112">112</th><td>  <i class="doc">/*! <span class="command">\brief</span> Instrument when exiting PassContext. Called once within a PassContext. */</i></td></tr>
+<tr><th id="113">113</th><td>  <b>virtual</b> <em>void</em> <dfn class="virtual decl fn" id="_ZNK3tvm10instrument18PassInstrumentNode15ExitPassContextEv" title='tvm::instrument::PassInstrumentNode::ExitPassContext' data-ref="_ZNK3tvm10instrument18PassInstrumentNode15ExitPassContextEv" data-ref-filename="_ZNK3tvm10instrument18PassInstrumentNode15ExitPassContextEv">ExitPassContext</dfn>() <em>const</em> = <var>0</var>;</td></tr>
+<tr><th id="114">114</th><td></td></tr>
+<tr><th id="115">115</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="116">116</th><td><i class="doc">   * <span class="command">\brief</span> Determine whether to run the pass or not. Called multiple times depend on number of</i></td></tr>
+<tr><th id="117">117</th><td><i class="doc">   *        passes.</i></td></tr>
+<tr><th id="118">118</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">mod</span> The module that an optimization pass runs on.</i></td></tr>
+<tr><th id="119">119</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">info</span> The pass information.</i></td></tr>
+<tr><th id="120">120</th><td><i class="doc">   *</i></td></tr>
+<tr><th id="121">121</th><td><i class="doc">   * <span class="command">\return</span> true to run the pass; false to skip the pass.</i></td></tr>
+<tr><th id="122">122</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="123">123</th><td>  <b>virtual</b> <em>bool</em> <dfn class="virtual decl fn" id="_ZNK3tvm10instrument18PassInstrumentNode9ShouldRunERKNS_8IRModuleERKNS_9transform8PassInfoE" title='tvm::instrument::PassInstrumentNode::ShouldRun' data-ref="_ZNK3tvm10instrument18PassInstrumentNode9ShouldRunERKNS_8IRModuleERKNS_9transform8PassInfoE" data-ref-filename="_ZNK3tvm10instrument18PassInstrumentNode9ShouldRunERKNS_8IRModuleERKNS_9transform8PassInfoE">ShouldRun</dfn>(<em>const</em> <a class="type" href="module.h.html#tvm::IRModule" title='tvm::IRModule' data-ref="tvm::IRModule" data-ref-filename="tvm..IRModule">IRModule</a>&amp; <dfn class="local col5 decl" id="15mod" title='mod' data-type='const tvm::IRModule &amp;' data-ref="15mod" data-ref-filename="15mod">mod</dfn>, <em>const</em> <span class="namespace">transform::</span><a class="type" href="transform.h.html#tvm::transform::PassInfo" title='tvm::transform::PassInfo' data-ref="tvm::transform::PassInfo" data-ref-filename="tvm..transform..PassInfo">PassInfo</a>&amp; <dfn class="local col6 decl" id="16info" title='info' data-type='const transform::PassInfo &amp;' data-ref="16info" data-ref-filename="16info">info</dfn>) <em>const</em> = <var>0</var>;</td></tr>
+<tr><th id="124">124</th><td></td></tr>
+<tr><th id="125">125</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="126">126</th><td><i class="doc">   * <span class="command">\brief</span> Instrument before pass run. Called multiple times depend on number of passes.</i></td></tr>
+<tr><th id="127">127</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">mod</span> The module that an optimization pass runs on.</i></td></tr>
+<tr><th id="128">128</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">info</span> The pass information.</i></td></tr>
+<tr><th id="129">129</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="130">130</th><td>  <b>virtual</b> <em>void</em> <dfn class="virtual decl fn" id="_ZNK3tvm10instrument18PassInstrumentNode13RunBeforePassERKNS_8IRModuleERKNS_9transform8PassInfoE" title='tvm::instrument::PassInstrumentNode::RunBeforePass' data-ref="_ZNK3tvm10instrument18PassInstrumentNode13RunBeforePassERKNS_8IRModuleERKNS_9transform8PassInfoE" data-ref-filename="_ZNK3tvm10instrument18PassInstrumentNode13RunBeforePassERKNS_8IRModuleERKNS_9transform8PassInfoE">RunBeforePass</dfn>(<em>const</em> <a class="type" href="module.h.html#tvm::IRModule" title='tvm::IRModule' data-ref="tvm::IRModule" data-ref-filename="tvm..IRModule">IRModule</a>&amp; <dfn class="local col7 decl" id="17mod" title='mod' data-type='const tvm::IRModule &amp;' data-ref="17mod" data-ref-filename="17mod">mod</dfn>, <em>const</em> <span class="namespace">transform::</span><a class="type" href="transform.h.html#tvm::transform::PassInfo" title='tvm::transform::PassInfo' data-ref="tvm::transform::PassInfo" data-ref-filename="tvm..transform..PassInfo">PassInfo</a>&amp; <dfn class="local col8 decl" id="18info" title='info' data-type='const transform::PassInfo &amp;' data-ref="18info" data-ref-filename="18info">info</dfn>) <em>const</em> = <var>0</var>;</td></tr>
+<tr><th id="131">131</th><td></td></tr>
+<tr><th id="132">132</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="133">133</th><td><i class="doc">   * <span class="command">\brief</span> Instrument after pass run. Called multiple time depend on number of passes.</i></td></tr>
+<tr><th id="134">134</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">mod</span> The module that an optimization pass runs on.</i></td></tr>
+<tr><th id="135">135</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">info</span> The pass information.</i></td></tr>
+<tr><th id="136">136</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="137">137</th><td>  <b>virtual</b> <em>void</em> <dfn class="virtual decl fn" id="_ZNK3tvm10instrument18PassInstrumentNode12RunAfterPassERKNS_8IRModuleERKNS_9transform8PassInfoE" title='tvm::instrument::PassInstrumentNode::RunAfterPass' data-ref="_ZNK3tvm10instrument18PassInstrumentNode12RunAfterPassERKNS_8IRModuleERKNS_9transform8PassInfoE" data-ref-filename="_ZNK3tvm10instrument18PassInstrumentNode12RunAfterPassERKNS_8IRModuleERKNS_9transform8PassInfoE">RunAfterPass</dfn>(<em>const</em> <a class="type" href="module.h.html#tvm::IRModule" title='tvm::IRModule' data-ref="tvm::IRModule" data-ref-filename="tvm..IRModule">IRModule</a>&amp; <dfn class="local col9 decl" id="19mod" title='mod' data-type='const tvm::IRModule &amp;' data-ref="19mod" data-ref-filename="19mod">mod</dfn>, <em>const</em> <span class="namespace">transform::</span><a class="type" href="transform.h.html#tvm::transform::PassInfo" title='tvm::transform::PassInfo' data-ref="tvm::transform::PassInfo" data-ref-filename="tvm..transform..PassInfo">PassInfo</a>&amp; <dfn class="local col0 decl" id="20info" title='info' data-type='const transform::PassInfo &amp;' data-ref="20info" data-ref-filename="20info">info</dfn>) <em>const</em> = <var>0</var>;</td></tr>
+<tr><th id="138">138</th><td></td></tr>
+<tr><th id="139">139</th><td>  <em>void</em> <dfn class="decl def fn" id="_ZN3tvm10instrument18PassInstrumentNode10VisitAttrsEPNS_11AttrVisitorE" title='tvm::instrument::PassInstrumentNode::VisitAttrs' data-ref="_ZN3tvm10instrument18PassInstrumentNode10VisitAttrsEPNS_11AttrVisitorE" data-ref-filename="_ZN3tvm10instrument18PassInstrumentNode10VisitAttrsEPNS_11AttrVisitorE">VisitAttrs</dfn>(<a class="type" href="../node/reflection.h.html#tvm::AttrVisitor" title='tvm::AttrVisitor' data-ref="tvm::AttrVisitor" data-ref-filename="tvm..AttrVisitor">AttrVisitor</a>* <dfn class="local col1 decl" id="21v" title='v' data-type='tvm::AttrVisitor *' data-ref="21v" data-ref-filename="21v">v</dfn>) { <a class="local col1 ref" href="#21v" title='v' data-ref="21v" data-ref-filename="21v">v</a>-&gt;<a class="virtual ref fn" href="../node/reflection.h.html#_ZN3tvm11AttrVisitor5VisitEPKcPNS_7runtime9ObjectRefE" title='tvm::AttrVisitor::Visit' data-ref="_ZN3tvm11AttrVisitor5VisitEPKcPNS_7runtime9ObjectRefE" data-ref-filename="_ZN3tvm11AttrVisitor5VisitEPKcPNS_7runtime9ObjectRefE">Visit</a>(<q>"name"</q>, &amp;<a class="member field" href="#tvm::instrument::PassInstrumentNode::name" title='tvm::instrument::PassInstrumentNode::name' data-ref="tvm::instrument::PassInstrumentNode::name" data-ref-filename="tvm..instrument..PassInstrumentNode..name">name</a>); }</td></tr>
+<tr><th id="140">140</th><td></td></tr>
+<tr><th id="141">141</th><td>  <em>static</em> <b>constexpr</b> <em>const</em> <em>char</em>* <dfn class="decl" id="tvm::instrument::PassInstrumentNode::_type_key" title='tvm::instrument::PassInstrumentNode::_type_key' data-ref="tvm::instrument::PassInstrumentNode::_type_key" data-ref-filename="tvm..instrument..PassInstrumentNode.._type_key">_type_key</dfn> = <q>"instrument.PassInstrument"</q>;</td></tr>
+<tr><th id="142">142</th><td>  <a class="macro" href="../runtime/object.h.html#648" title="static_assert(!Object::_type_final, &quot;ParentObj marked as final&quot;); static uint32_t RuntimeTypeIndex() { static_assert(PassInstrumentNode::_type_child_slots == 0 || Object::_type_child_slots == 0 || PassInstrumentNode::_type_child_slots &lt; Object::_type_child_slots, &quot;Need to set _type_child_slots when parent specifies it.&quot;); if (PassInstrumentNode::_type_index != ::tvm::runtime::TypeIndex::kDynamic) { return PassInstrumentNode::_type_index; } return _GetOrAllocRuntimeTypeIndex(); } static uint32_t _GetOrAllocRuntimeTypeIndex() { static uint32_t tindex = Object::GetOrAllocRuntimeTypeIndex( PassInstrumentNode::_type_key, PassInstrumentNode::_type_index, Object::_GetOrAllocRuntimeTypeIndex(), PassInstrumentNode::_type_child_slots, PassInstrumentNode::_type_child_slots_can_overflow); return tindex; }" data-ref="_M/TVM_DECLARE_BASE_OBJECT_INFO">TVM_DECLARE_BASE_OBJECT_INFO</a>(<a class="ref fn fake" href="../../../../include/c++/10/bits/basic_string.h.html#_ZNSt7__cxx1112basic_stringC1EPKT_RKT1_" title='std::basic_string::basic_string&lt;_CharT, _Traits, _Alloc&gt;' data-ref="_ZNSt7__cxx1112basic_stringC1EPKT_RKT1_" data-ref-filename="_ZNSt7__cxx1112basic_stringC1EPKT_RKT1_"></a><a class="type" href="#tvm::instrument::PassInstrumentNode" title='tvm::instrument::PassInstrumentNode' data-ref="tvm::instrument::PassInstrumentNode" data-ref-filename="tvm..instrument..PassInstrumentNode">PassInstrumentNode</a>, <a class="type" href="../runtime/object.h.html#tvm::runtime::Object" title='tvm::runtime::Object' data-ref="tvm::runtime::Object" data-ref-filename="tvm..runtime..Object">Object</a>);</td></tr>
+<tr><th id="143">143</th><td>};</td></tr>
+<tr><th id="144">144</th><td></td></tr>
+<tr><th id="145">145</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="146">146</th><td><i class="doc"> * <span class="command">\brief</span> Managed reference class for PassInstrumentNode</i></td></tr>
+<tr><th id="147">147</th><td><i class="doc"> * <span class="command">\sa</span> PassInstrumentNode</i></td></tr>
+<tr><th id="148">148</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="149">149</th><td><b>class</b> <dfn class="type def" id="tvm::instrument::PassInstrument" title='tvm::instrument::PassInstrument' data-ref="tvm::instrument::PassInstrument" data-ref-filename="tvm..instrument..PassInstrument">PassInstrument</dfn> : <b>public</b> ObjectRef {</td></tr>
+<tr><th id="150">150</th><td> <b>public</b>:</td></tr>
+<tr><th id="151">151</th><td>  <a class="macro" href="../runtime/object.h.html#713" title="PassInstrument() = default; explicit PassInstrument(::tvm::runtime::ObjectPtr&lt;::tvm::runtime::Object&gt; n) : ObjectRef(n) {} PassInstrument(const PassInstrument&amp; other) = default; PassInstrument(PassInstrument&amp;&amp; other) = default; PassInstrument&amp; operator=(const PassInstrument&amp; other) = default; PassInstrument&amp; operator=(PassInstrument&amp;&amp; other) = default;; const PassInstrumentNode* operator-&gt;() const { return static_cast&lt;const PassInstrumentNode*&gt;(data_.get()); } const PassInstrumentNode* get() const { return operator-&gt;(); } using ContainerType = PassInstrumentNode;" data-ref="_M/TVM_DEFINE_OBJECT_REF_METHODS">TVM_DEFINE_OBJECT_REF_METHODS</a>(<dfn class="decl def fn" id="_ZN3tvm10instrument14PassInstrumentC1Ev" title='tvm::instrument::PassInstrument::PassInstrument' data-ref="_ZN3tvm10instrument14PassInstrumentC1Ev" data-ref-filename="_ZN3tvm10instrument14PassInstrumentC1Ev"><dfn class="decl def fn" id="_ZN3tvm10instrument14PassInstrumentC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE" title='tvm::instrument::PassInstrument::PassInstrument' data-ref="_ZN3tvm10instrument14PassInstrumentC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE" data-ref-filename="_ZN3tvm10instrument14PassInstrumentC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE"><dfn class="decl def fn" id="_ZN3tvm10instrument14PassInstrumentC1ERKS1_" title='tvm::instrument::PassInstrument::PassInstrument' data-ref="_ZN3tvm10instrument14PassInstrumentC1ERKS1_" data-ref-filename="_ZN3tvm10instrument14PassInstrumentC1ERKS1_"><a class="type" href="#tvm::instrument::PassInstrument" title='tvm::instrument::PassInstrument' data-ref="tvm::instrument::PassInstrument" data-ref-filename="tvm..instrument..PassInstrument"><dfn class="decl def fn" id="_ZN3tvm10instrument14PassInstrumentC1EOS1_" title='tvm::instrument::PassInstrument::PassInstrument' data-ref="_ZN3tvm10instrument14PassInstrumentC1EOS1_" data-ref-filename="_ZN3tvm10instrument14PassInstrumentC1EOS1_"><a class="type" href="#tvm::instrument::PassInstrument" title='tvm::instrument::PassInstrument' data-ref="tvm::instrument::PassInstrument" data-ref-filename="tvm..instrument..PassInstrument"><a class="type" href="#tvm::instrument::PassInstrument" title='tvm::instrument::PassInstrument' data-ref="tvm::instrument::PassInstrument" data-ref-filename="tvm..instrument..PassInstrument"><a class="type" href="#tvm::instrument::PassInstrument" title='tvm::instrument::PassInstrument' data-ref="tvm::instrument::PassInstrument" data-ref-filename="tvm..instrument..PassInstrument"><a class="type" href="#tvm::instrument::PassInstrument" title='tvm::instrument::PassInstrument' data-ref="tvm::instrument::PassInstrument" data-ref-filename="tvm..instrument..PassInstrument"><a class="type" href="#tvm::instrument::PassInstrument" title='tvm::instrument::PassInstrument' data-ref="tvm::instrument::PassInstrument" data-ref-filename="tvm..instrument..PassInstrument">PassInstrument</a></a></a></a></a></dfn></a></dfn></dfn></dfn>, <a class="type" href="../runtime/object.h.html#tvm::runtime::ObjectRef" title='tvm::runtime::ObjectRef' data-ref="tvm::runtime::ObjectRef" data-ref-filename="tvm..runtime..ObjectRef">ObjectRef</a>, <a class="type" href="#tvm::instrument::PassInstrumentNode" title='tvm::instrument::PassInstrumentNode' data-ref="tvm::instrument::PassInstrumentNode" data-ref-filename="tvm..instrument..PassInstrumentNode">PassInstrumentNode</a>);</td></tr>
+<tr><th id="152">152</th><td>};</td></tr>
+<tr><th id="153">153</th><td></td></tr>
+<tr><th id="154">154</th><td>}  <i>// namespace instrument</i></td></tr>
+<tr><th id="155">155</th><td>}  <i>// namespace tvm</i></td></tr>
+<tr><th id="156">156</th><td></td></tr>
+<tr><th id="157">157</th><td><u>#<span data-ppcond="26">endif</span>  // TVM_IR_INSTRUMENT_H_</u></td></tr>
+<tr><th id="158">158</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated while processing <a href='../../../src/arith/canonical_simplify.cc.html'>tvm/src/arith/canonical_simplify.cc</a><br/>Generated on <em>2022-Aug-10</em> from project tvm revision <em>fae79bb</em><br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

@@ -1,0 +1,17 @@
+<dec f='tvm/src/te/schedule/operation_inline.h' l='44' type='tvm::tir::Stmt tvm::te::Inline(tvm::tir::Stmt stmt, tvm::te::Operation op, Array&lt;tvm::tir::Var&gt; args, tvm::PrimExpr body)'/>
+<use f='tvm/src/te/autodiff/ad_utils.cc' l='145' u='c' c='_ZN3tvm2te27InlineImmediateTensorAccessERKNS_8PrimExprE'/>
+<doc f='tvm/src/te/schedule/operation_inline.h' l='33'>/*!
+ * \brief inline all calls of f in stmt.
+ *
+ * \param stmt The statement to apply inline optimization.
+ * \param op The op to be inlined.
+ * \param args The arguments variable of the function.
+ * \param body The definition body of the function.
+ * \return The result stmt
+ *
+ * \note All the passes in this file uses SSA form and outputs SSA form.
+ */</doc>
+<def f='tvm/src/te/schedule/operation_inline.cc' l='83' ll='88' type='tvm::tir::Stmt tvm::te::Inline(tvm::tir::Stmt stmt, tvm::te::Operation f, Array&lt;tvm::tir::Var&gt; args, tvm::PrimExpr body)'/>
+<use f='tvm/src/te/schedule/schedule_dataflow_rewrite.cc' l='584' u='c' c='_ZN3tvm2te12InjectInlineEPNS0_12ScheduleNodeEb'/>
+<use f='tvm/src/te/schedule/schedule_dataflow_rewrite.cc' l='601' u='c' c='_ZN3tvm2te12InjectInlineEPNS0_12ScheduleNodeEb'/>
+<use f='tvm/src/te/schedule/schedule_dataflow_rewrite.cc' l='614' u='c' c='_ZN3tvm2te12InjectInlineEPNS0_12ScheduleNodeEb'/>

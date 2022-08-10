@@ -1,0 +1,12 @@
+<dec f='tvm/include/tvm/tir/schedule/schedule.h' l='616' type='void tvm::tir::ScheduleNode::SetAxisSeparator(const tvm::tir::BlockRV &amp; block_rv, int buffer_index, tvm::tir::BufferIndexType buffer_index_type, const Array&lt;tvm::IntImm&gt; &amp; axis_separators)'/>
+<doc f='tvm/include/tvm/tir/schedule/schedule.h' l='608'>/*!
+   * \brief Set the axis separator of a buffer, where the buffer is specified by a block and a read
+   * or write index
+   * \param block_rv The block that accesses the target buffer.
+   * \param buffer_index The index of the buffer in block&apos;s read or write region.
+   * \param buffer_index_type The type of the buffer index, kRead or kWrite.
+   * \param axis_separators The axis separator of the buffer
+   */</doc>
+<ovr f='tvm/src/tir/schedule/concrete_schedule.cc' l='772' c='_ZN3tvm3tir20ConcreteScheduleNode16SetAxisSeparatorERKNS0_7BlockRVEiNS0_15BufferIndexTypeERKNS_7runtime5ArrayINS_6IntImmEvEE'/>
+<use f='tvm/src/tir/schedule/primitive/layout_transformation.cc' l='641' u='c' c='_ZN3tvm3tir22SetAxisSeparatorTraits23UnpackedApplyToScheduleENS0_8ScheduleENS0_7BlockRVENS_7IntegerES4_NS_7runtime5ArrayINS_6IntImmEvEE'/>
+<use f='tvm/src/tir/schedule/schedule.cc' l='260' u='c'/>

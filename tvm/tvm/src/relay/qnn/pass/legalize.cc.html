@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>legalize.cc source code [tvm/src/relay/qnn/pass/legalize.cc] - Woboq Code Browser</title>
+<link rel="stylesheet" href="../../../../.././data/qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href="../../../../.././data/kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src="../../../../.././data/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="../../../../.././data/jquery/jquery-ui.min.js"></script>
+<script>var file = 'tvm/src/relay/qnn/pass/legalize.cc'; var root_path = '../../../../..'; var data_path = '../../../../.././data'; var ecma_script_api_version = 2;</script>
+<script src='../../../../.././data/codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='../../../..'>tvm</a>/<a href='../../..'>src</a>/<a href='../..'>relay</a>/<a href='..'>qnn</a>/<a href='./'>pass</a>/<a href='legalize.cc.html'>legalize.cc</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td><i>/*</i></td></tr>
+<tr><th id="2">2</th><td><i> * Licensed to the Apache Software Foundation (ASF) under one</i></td></tr>
+<tr><th id="3">3</th><td><i> * or more contributor license agreements.  See the NOTICE file</i></td></tr>
+<tr><th id="4">4</th><td><i> * distributed with this work for additional information</i></td></tr>
+<tr><th id="5">5</th><td><i> * regarding copyright ownership.  The ASF licenses this file</i></td></tr>
+<tr><th id="6">6</th><td><i> * to you under the Apache License, Version 2.0 (the</i></td></tr>
+<tr><th id="7">7</th><td><i> * "License"); you may not use this file except in compliance</i></td></tr>
+<tr><th id="8">8</th><td><i> * with the License.  You may obtain a copy of the License at</i></td></tr>
+<tr><th id="9">9</th><td><i> *</i></td></tr>
+<tr><th id="10">10</th><td><i> *   <a href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a></i></td></tr>
+<tr><th id="11">11</th><td><i> *</i></td></tr>
+<tr><th id="12">12</th><td><i> * Unless required by applicable law or agreed to in writing,</i></td></tr>
+<tr><th id="13">13</th><td><i> * software distributed under the License is distributed on an</i></td></tr>
+<tr><th id="14">14</th><td><i> * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY</i></td></tr>
+<tr><th id="15">15</th><td><i> * KIND, either express or implied.  See the License for the</i></td></tr>
+<tr><th id="16">16</th><td><i> * specific language governing permissions and limitations</i></td></tr>
+<tr><th id="17">17</th><td><i> * under the License.</i></td></tr>
+<tr><th id="18">18</th><td><i> */</i></td></tr>
+<tr><th id="19">19</th><td></td></tr>
+<tr><th id="20">20</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="21">21</th><td><i class="doc"> * <span class="command">\file</span> <span class="verb">relay/qnn/pass/legalize.cc</span></i></td></tr>
+<tr><th id="22">22</th><td><i class="doc"> * <span class="command">\brief</span> The Legalize wrapper for QNN.</i></td></tr>
+<tr><th id="23">23</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="24">24</th><td></td></tr>
+<tr><th id="25">25</th><td><u>#include <a href="../../../../include/tvm/relay/qnn/transform.h.html">&lt;tvm/relay/qnn/transform.h&gt;</a></u></td></tr>
+<tr><th id="26">26</th><td></td></tr>
+<tr><th id="27">27</th><td><b>namespace</b> <span class="namespace">tvm</span> {</td></tr>
+<tr><th id="28">28</th><td><b>namespace</b> <span class="namespace">relay</span> {</td></tr>
+<tr><th id="29">29</th><td><b>namespace</b> <span class="namespace">qnn</span> {</td></tr>
+<tr><th id="30">30</th><td></td></tr>
+<tr><th id="31">31</th><td><b>namespace</b> <span class="namespace">transform</span> {</td></tr>
+<tr><th id="32">32</th><td></td></tr>
+<tr><th id="33">33</th><td>Pass <dfn class="decl def fn" id="_ZN3tvm5relay3qnn9transform8LegalizeEv" title='tvm::relay::qnn::transform::Legalize' data-ref="_ZN3tvm5relay3qnn9transform8LegalizeEv" data-ref-filename="_ZN3tvm5relay3qnn9transform8LegalizeEv">Legalize</dfn>() {</td></tr>
+<tr><th id="34">34</th><td>  <a class="type" href="../../../../include/tvm/runtime/container/array.h.html#tvm::runtime::Array" title='tvm::runtime::Array' data-ref="tvm::runtime::Array" data-ref-filename="tvm..runtime..Array">Array</a>&lt;Pass&gt; <a class="ref fn fake" href="../../../../include/tvm/runtime/container/array.h.html#_ZN3tvm7runtime5ArrayC1Ev" title='tvm::runtime::Array::Array&lt;type-parameter-0-0, type-parameter-0-1&gt;' data-ref="_ZN3tvm7runtime5ArrayC1Ev" data-ref-filename="_ZN3tvm7runtime5ArrayC1Ev"></a><dfn class="local col1 decl" id="1pass_seqs" title='pass_seqs' data-type='Array&lt;tvm::relay::transform::Pass&gt;' data-ref="1pass_seqs" data-ref-filename="1pass_seqs">pass_seqs</dfn>;</td></tr>
+<tr><th id="35">35</th><td>  <a class="local col1 ref" href="#1pass_seqs" title='pass_seqs' data-ref="1pass_seqs" data-ref-filename="1pass_seqs">pass_seqs</a>.<a class="ref fn" href="../../../../include/tvm/runtime/container/array.h.html#_ZN3tvm7runtime5Array9push_backERKT_" title='tvm::runtime::Array::push_back' data-ref="_ZN3tvm7runtime5Array9push_backERKT_" data-ref-filename="_ZN3tvm7runtime5Array9push_backERKT_">push_back</a>(<span class="namespace">relay::transform::</span><a class="ref fn" href="../../../../include/tvm/relay/transform.h.html#_ZN3tvm5relay9transform8LegalizeERKNS_7runtime6StringE" title='tvm::relay::transform::Legalize' data-ref="_ZN3tvm5relay9transform8LegalizeERKNS_7runtime6StringE" data-ref-filename="_ZN3tvm5relay9transform8LegalizeERKNS_7runtime6StringE">Legalize</a>(<a class="ref fn fake" href="../../../../include/tvm/runtime/container/string.h.html#_ZN3tvm7runtime6StringC1EPKc" title='tvm::runtime::String::String' data-ref="_ZN3tvm7runtime6StringC1EPKc" data-ref-filename="_ZN3tvm7runtime6StringC1EPKc"></a><q>"FTVMQnnLegalize"</q>));</td></tr>
+<tr><th id="36">36</th><td>  <a class="local col1 ref" href="#1pass_seqs" title='pass_seqs' data-ref="1pass_seqs" data-ref-filename="1pass_seqs">pass_seqs</a>.<a class="ref fn" href="../../../../include/tvm/runtime/container/array.h.html#_ZN3tvm7runtime5Array9push_backERKT_" title='tvm::runtime::Array::push_back' data-ref="_ZN3tvm7runtime5Array9push_backERKT_" data-ref-filename="_ZN3tvm7runtime5Array9push_backERKT_">push_back</a>(<span class="namespace">relay::transform::</span><a class="ref fn" href="../../../../include/tvm/relay/transform.h.html#_ZN3tvm5relay9transform8LegalizeERKNS_7runtime6StringE" title='tvm::relay::transform::Legalize' data-ref="_ZN3tvm5relay9transform8LegalizeERKNS_7runtime6StringE" data-ref-filename="_ZN3tvm5relay9transform8LegalizeERKNS_7runtime6StringE">Legalize</a>(<a class="ref fn fake" href="../../../../include/tvm/runtime/container/string.h.html#_ZN3tvm7runtime6StringC1EPKc" title='tvm::runtime::String::String' data-ref="_ZN3tvm7runtime6StringC1EPKc" data-ref-filename="_ZN3tvm7runtime6StringC1EPKc"></a><q>"FTVMQnnCanonicalize"</q>));</td></tr>
+<tr><th id="37">37</th><td>  <span class="namespace">relay::transform::</span><a class="typedef" href="../../../../include/tvm/relay/transform.h.html#tvm::relay::transform::Pass" title='tvm::relay::transform::Pass' data-type='tvm::transform::Pass' data-ref="tvm::relay::transform::Pass" data-ref-filename="tvm..relay..transform..Pass">Pass</a> <dfn class="local col2 decl" id="2seq" title='seq' data-type='relay::transform::Pass' data-ref="2seq" data-ref-filename="2seq">seq</dfn> = <a class="ref fn fake" href="../../../../include/tvm/ir/transform.h.html#392" title='tvm::transform::Pass::Pass' data-ref="_ZN3tvm9transform4PassC1EOS1_" data-ref-filename="_ZN3tvm9transform4PassC1EOS1_"></a><span class="namespace">relay::transform::</span><a class="typedef" href="../../../../include/tvm/relay/transform.h.html#tvm::relay::transform::Sequential" title='tvm::relay::transform::Sequential' data-type='tvm::transform::Sequential' data-ref="tvm::relay::transform::Sequential" data-ref-filename="tvm..relay..transform..Sequential">Sequential</a><a class="ref fn" href="../../../../include/tvm/ir/transform.h.html#_ZN3tvm9transform10SequentialC1ENS_7runtime5ArrayINS0_4PassEvEENS2_6StringE" title='tvm::transform::Sequential::Sequential' data-ref="_ZN3tvm9transform10SequentialC1ENS_7runtime5ArrayINS0_4PassEvEENS2_6StringE" data-ref-filename="_ZN3tvm9transform10SequentialC1ENS_7runtime5ArrayINS0_4PassEvEENS2_6StringE">(</a><a class="ref fn fake" href="../../../../include/tvm/runtime/container/array.h.html#_ZN3tvm7runtime5ArrayC1ERKNS0_5ArrayIT_NSt9enable_ifIXsr3std10is_base_ofINS0_9ObjectRefES3_EE5valueEvE4typeEEE" title='tvm::runtime::Array::Array&lt;type-parameter-0-0, type-parameter-0-1&gt;' data-ref="_ZN3tvm7runtime5ArrayC1ERKNS0_5ArrayIT_NSt9enable_ifIXsr3std10is_base_ofINS0_9ObjectRefES3_EE5valueEvE4typeEEE" data-ref-filename="_ZN3tvm7runtime5ArrayC1ERKNS0_5ArrayIT_NSt9enable_ifIXsr3std10is_base_ofINS0_9ObjectRefES3_EE5valueEvE4typeEEE"></a><a class="local col1 ref" href="#1pass_seqs" title='pass_seqs' data-ref="1pass_seqs" data-ref-filename="1pass_seqs">pass_seqs</a>);</td></tr>
+<tr><th id="38">38</th><td>  <b>return</b> <a class="ref fn fake" href="../../../../include/tvm/ir/transform.h.html#392" title='tvm::transform::Pass::Pass' data-ref="_ZN3tvm9transform4PassC1EOS1_" data-ref-filename="_ZN3tvm9transform4PassC1EOS1_"></a><a class="local col2 ref" href="#2seq" title='seq' data-ref="2seq" data-ref-filename="2seq">seq</a>;</td></tr>
+<tr><th id="39">39</th><td>}</td></tr>
+<tr><th id="40">40</th><td></td></tr>
+<tr><th id="41">41</th><td><a class="macro" href="../../../../include/tvm/runtime/registry.h.html#339" title="static __attribute__((unused)) ::tvm::runtime::Registry&amp; __mk_TVM0 = ::tvm::runtime::Registry::Register(&quot;relay.qnn._transform.Legalize&quot;)" data-ref="_M/TVM_REGISTER_GLOBAL">TVM_REGISTER_GLOBAL</a>(<a class="ref fn fake" href="../../../../../include/c++/10/bits/basic_string.h.html#_ZNSt7__cxx1112basic_stringC1EPKT_RKT1_" title='std::basic_string::basic_string&lt;_CharT, _Traits, _Alloc&gt;' data-ref="_ZNSt7__cxx1112basic_stringC1EPKT_RKT1_" data-ref-filename="_ZNSt7__cxx1112basic_stringC1EPKT_RKT1_"></a><q>"relay.qnn._transform.Legalize"</q>).<a class="ref fn" href="../../../../include/tvm/runtime/registry.h.html#_ZN3tvm7runtime8Registry14set_body_typedET_" title='tvm::runtime::Registry::set_body_typed' data-ref="_ZN3tvm7runtime8Registry14set_body_typedET_" data-ref-filename="_ZN3tvm7runtime8Registry14set_body_typedET_">set_body_typed</a>(<a class="ref fn" href="#_ZN3tvm5relay3qnn9transform8LegalizeEv" title='tvm::relay::qnn::transform::Legalize' data-ref="_ZN3tvm5relay3qnn9transform8LegalizeEv" data-ref-filename="_ZN3tvm5relay3qnn9transform8LegalizeEv">Legalize</a>);</td></tr>
+<tr><th id="42">42</th><td></td></tr>
+<tr><th id="43">43</th><td>}  <i>// namespace transform</i></td></tr>
+<tr><th id="44">44</th><td></td></tr>
+<tr><th id="45">45</th><td>}  <i>// namespace qnn</i></td></tr>
+<tr><th id="46">46</th><td>}  <i>// namespace relay</i></td></tr>
+<tr><th id="47">47</th><td>}  <i>// namespace tvm</i></td></tr>
+<tr><th id="48">48</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated on <em>2022-Aug-10</em> from project tvm revision <em>fae79bb</em><br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

@@ -1,0 +1,14 @@
+<dec f='tvm/src/relay/op/contrib/ethosu/common.h' l='109' type='void tvm::relay::op::contrib::ethosu::CheckDataTypeMatch(const tvm::relay::TypeReporter &amp; reporter, const tvm::DataType &amp; data_type, const tvm::DataType &amp; data_type2, const tvm::runtime::String &amp; operator_name, const tvm::runtime::String &amp; tensor_name, const tvm::runtime::String &amp; tensor_name2, const tvm::runtime::String &amp; operator_type = &quot;&quot;)'/>
+<use f='tvm/src/relay/op/contrib/ethosu/binary_elementwise.cc' l='56' u='c' c='_ZN3tvm5relay2op7contrib6ethosu26EthosuBinaryElementwiseRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/src/relay/op/contrib/ethosu/binary_elementwise.cc' l='66' u='c' c='_ZN3tvm5relay2op7contrib6ethosu26EthosuBinaryElementwiseRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<doc f='tvm/src/relay/op/contrib/ethosu/common.h' l='99'>/*! \brief Check the data type matches that of the second data type provided. Raise a type inference
+ * error if not.
+ * \param reporter The infer type reporter.
+ * \param data_type The data type to check.
+ * \param data_type2 The second data type to check.
+ * \param operator_name The name of the operator to report.
+ * \param tensor_name The name of the tensor to report e.g. &quot;ifm&quot;, &quot;ofm&quot;.
+ * \param tensor_name2 The name of the second tensor to report e.g. &quot;ifm2&quot;.
+ * \param operator_type The type of the operator to report e.g. &quot;ADD&quot; for binary_elementwise.
+ */</doc>
+<def f='tvm/src/relay/op/contrib/ethosu/common.cc' l='157' ll='174' type='void tvm::relay::op::contrib::ethosu::CheckDataTypeMatch(const tvm::relay::TypeReporter &amp; reporter, const tvm::DataType &amp; data_type, const tvm::DataType &amp; data_type2, const tvm::runtime::String &amp; operator_name, const tvm::runtime::String &amp; tensor_name, const tvm::runtime::String &amp; tensor_name2, const tvm::runtime::String &amp; operator_type = &quot;&quot;)'/>

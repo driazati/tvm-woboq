@@ -1,0 +1,13 @@
+<dec f='tvm/include/tvm/runtime/vm/executable.h' l='99' type='TVMByteArray tvm::runtime::vm::Executable::Save()'/>
+<doc f='tvm/include/tvm/runtime/vm/executable.h' l='90'>/*!
+   * \brief Serialize the executable into global section, constant section, and
+   * code section. This object must outlive the returned byte array.
+   *
+   * Late-bound constants (if any) must have already been saved by \p
+   * MoveLateBoundConstantsToBinary.
+   *
+   * \return The binary representation of the VM.
+   */</doc>
+<use f='tvm/src/runtime/vm/executable.cc' l='74' u='c' c='_ZN3tvm7runtime2vm10Executable11GetFunctionERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKNS0_9ObjectPtrINS0_6ObjectEEE'/>
+<def f='tvm/src/runtime/vm/executable.cc' l='269' ll='296' type='TVMByteArray tvm::runtime::vm::Executable::Save()'/>
+<use f='tvm/src/runtime/vm/executable.cc' l='1030' u='c' c='_ZN3tvm7runtime2vm10Executable12SaveToBinaryEPN4dmlc6StreamE'/>

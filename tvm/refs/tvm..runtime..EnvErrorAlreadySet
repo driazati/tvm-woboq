@@ -1,0 +1,54 @@
+<inh f='tvm/3rdparty/dmlc-core/include/dmlc/logging.h' l='29' c='dmlc::Error'/>
+<def f='tvm/include/tvm/runtime/logging.h' l='214' ll='221'/>
+<size>16</size>
+<doc f='tvm/include/tvm/runtime/logging.h' l='205'>/*!
+ * \brief Error message already set in frontend env.
+ *
+ *  This error can be thrown by EnvCheckSignals to indicate
+ *  that there is an error set in the frontend environment(e.g.
+ *  python interpreter). The TVM FFI should catch this error
+ *  and return a proper code tell the frontend caller about
+ *  this fact.
+ */</doc>
+<fun r='_ZN3tvm7runtime18EnvErrorAlreadySetC1ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<use f='tvm/src/runtime/c_runtime_api.cc' l='396' macro='1' c='TVMModLoadFromFile'/>
+<use f='tvm/src/runtime/c_runtime_api.cc' l='402' macro='1' c='TVMModImport'/>
+<use f='tvm/src/runtime/c_runtime_api.cc' l='419' macro='1' c='TVMModGetFunction'/>
+<use f='tvm/src/runtime/c_runtime_api.cc' l='427' macro='1' c='TVMBackendGetFuncFromEnv'/>
+<use f='tvm/src/runtime/c_runtime_api.cc' l='498' macro='1' c='TVMFuncCall'/>
+<use f='tvm/src/runtime/c_runtime_api.cc' l='506' macro='1' c='TVMCFuncSetReturn'/>
+<use f='tvm/src/runtime/c_runtime_api.cc' l='542' macro='1' c='TVMFuncCreateFromCFunc'/>
+<use f='tvm/src/runtime/c_runtime_api.cc' l='551' macro='1' c='TVMStreamCreate'/>
+<use f='tvm/src/runtime/c_runtime_api.cc' l='560' macro='1' c='TVMStreamFree'/>
+<use f='tvm/src/runtime/c_runtime_api.cc' l='569' macro='1' c='TVMSetStream'/>
+<use f='tvm/src/runtime/c_runtime_api.cc' l='578' macro='1' c='TVMSynchronize'/>
+<use f='tvm/src/runtime/c_runtime_api.cc' l='588' macro='1' c='TVMStreamStreamSynchronize'/>
+<use f='tvm/src/runtime/c_runtime_api.cc' l='596' macro='1' c='TVMCbArgToReturn'/>
+<use f='tvm/src/runtime/c_runtime_api.cc' l='603' macro='1' c='TVMDeviceAllocDataSpace'/>
+<use f='tvm/src/runtime/c_runtime_api.cc' l='614' macro='1' c='TVMDeviceAllocDataSpaceWithScope'/>
+<use f='tvm/src/runtime/c_runtime_api.cc' l='620' macro='1' c='TVMDeviceFreeDataSpace'/>
+<use f='tvm/src/runtime/c_runtime_api.cc' l='629' macro='1' c='TVMDeviceCopyDataFromTo'/>
+<size>16</size>
+<use f='tvm/src/runtime/ndarray.cc' l='318' macro='1' c='TVMArrayGetTypeIndex'/>
+<use f='tvm/src/runtime/ndarray.cc' l='334' macro='1' c='TVMArrayAlloc'/>
+<use f='tvm/src/runtime/ndarray.cc' l='347' macro='1' c='TVMArrayFree'/>
+<use f='tvm/src/runtime/ndarray.cc' l='353' macro='1' c='TVMArrayCopyFromTo'/>
+<use f='tvm/src/runtime/ndarray.cc' l='359' macro='1' c='TVMArrayFromDLPack'/>
+<use f='tvm/src/runtime/ndarray.cc' l='365' macro='1' c='TVMArrayToDLPack'/>
+<use f='tvm/src/runtime/ndarray.cc' l='373' macro='1' c='TVMArrayCopyFromBytes'/>
+<use f='tvm/src/runtime/ndarray.cc' l='379' macro='1' c='TVMArrayCopyToBytes'/>
+<size>16</size>
+<use f='tvm/src/runtime/object.cc' l='244' macro='1' c='TVMObjectGetTypeIndex'/>
+<use f='tvm/src/runtime/object.cc' l='250' macro='1' c='TVMObjectRetain'/>
+<use f='tvm/src/runtime/object.cc' l='256' macro='1' c='TVMObjectFree'/>
+<use f='tvm/src/runtime/object.cc' l='263' macro='1' c='TVMObjectDerivedFrom'/>
+<use f='tvm/src/runtime/object.cc' l='269' macro='1' c='TVMObjectTypeKey2Index'/>
+<use f='tvm/src/runtime/object.cc' l='277' macro='1' c='TVMObjectTypeIndex2Key'/>
+<size>16</size>
+<use f='tvm/src/runtime/registry.cc' l='158' c='_ZN3tvm7runtime15EnvCAPIRegistry12CheckSignalsEv'/>
+<use f='tvm/src/runtime/registry.cc' l='197' macro='1' c='TVMFuncRegisterGlobal'/>
+<use f='tvm/src/runtime/registry.cc' l='213' macro='1' c='TVMFuncGetGlobal'/>
+<use f='tvm/src/runtime/registry.cc' l='226' macro='1' c='TVMFuncListGlobalNames'/>
+<use f='tvm/src/runtime/registry.cc' l='232' macro='1' c='TVMFuncRemoveGlobal'/>
+<use f='tvm/src/runtime/registry.cc' l='238' macro='1' c='TVMBackendRegisterEnvCAPI'/>
+<size>16</size>

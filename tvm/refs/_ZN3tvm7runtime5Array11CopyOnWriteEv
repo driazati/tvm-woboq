@@ -1,0 +1,26 @@
+<def f='tvm/include/tvm/runtime/container/array.h' l='661' ll='669' type='tvm::runtime::ArrayNode * tvm::runtime::Array::CopyOnWrite()'/>
+<doc f='tvm/include/tvm/runtime/container/array.h' l='653'>/*!
+   * \brief Copy on write semantics
+   *  Do nothing if current handle is the unique copy of the array.
+   *  Otherwise make a new copy of the array to ensure the current handle
+   *  hold a unique copy.
+   *
+   * \return Handle to the internal node container(which ganrantees to be unique)
+   */</doc>
+<use f='tvm/src/auto_scheduler/compute_dag.cc' l='1076' u='c' c='_ZNK3tvm14auto_scheduler10ComputeDAG13RewriteLayoutEPNS_7runtime5ArrayINS0_4StepEvEENS0_19LayoutRewriteOptionE'/>
+<use f='tvm/src/auto_scheduler/compute_dag.cc' l='1107' u='c' c='_ZNK3tvm14auto_scheduler10ComputeDAG13RewriteLayoutEPNS_7runtime5ArrayINS0_4StepEvEENS0_19LayoutRewriteOptionE'/>
+<use f='tvm/src/te/schedule/schedule_dataflow_rewrite.cc' l='472' u='c' c='_ZN3tvm2te20RebaseNonZeroMinLoopEPNS0_12ScheduleNodeE'/>
+<use f='tvm/src/te/schedule/schedule_dataflow_rewrite.cc' l='766' u='c' c='_ZN3tvm2te8Schedule7rfactorERKNS0_6TensorERKNS_3tir7IterVarEi'/>
+<use f='tvm/src/te/schedule/schedule_lang.cc' l='177' u='c' c='_ZN3tvm2te5Stage4bindENS_3tir7IterVarES3_'/>
+<use f='tvm/src/te/schedule/schedule_lang.cc' l='178' u='c' c='_ZN3tvm2te5Stage4bindENS_3tir7IterVarES3_'/>
+<use f='tvm/src/te/schedule/schedule_lang.cc' l='300' u='c' c='_ZN3tvm2te5Stage7reorderERKNS_7runtime5ArrayINS_3tir7IterVarEvEE'/>
+<use f='tvm/src/te/schedule/schedule_lang.cc' l='301' u='c' c='_ZN3tvm2te5Stage7reorderERKNS_7runtime5ArrayINS_3tir7IterVarEvEE'/>
+<use f='tvm/src/te/schedule/schedule_lang.cc' l='330' u='c' c='_ZN3tvm2te17UpdateIterVarAttrEPNS0_9StageNodeENS_3tir7IterVarET_b'/>
+<use f='tvm/src/te/schedule/schedule_lang.cc' l='331' u='c' c='_ZN3tvm2te17UpdateIterVarAttrEPNS0_9StageNodeENS_3tir7IterVarET_b'/>
+<use f='tvm/src/te/schedule/schedule_lang.cc' l='393' u='c' c='_ZN3tvm2te5Stage8prefetchERKNS0_6TensorENS_3tir7IterVarENS_8PrimExprE'/>
+<use f='tvm/src/te/schedule/schedule_lang.cc' l='394' u='c' c='_ZN3tvm2te5Stage8prefetchERKNS0_6TensorENS_3tir7IterVarENS_8PrimExprE'/>
+<use f='tvm/src/te/schedule/schedule_lang.cc' l='457' u='c' c='_ZN3tvm2te5Stage16transform_layoutERKNS_7runtime5ArrayINS_3tir3VarEvEERKNS3_INS_8PrimExprEvEEPNS3_INS4_7IterVarEvEE'/>
+<use f='tvm/src/te/schedule/schedule_lang.cc' l='457' u='c' c='_ZN3tvm2te5Stage16transform_layoutERKNS_7runtime5ArrayINS_3tir3VarEvEERKNS3_INS_8PrimExprEvEEPNS3_INS4_7IterVarEvEE'/>
+<use f='tvm/src/tir/ir/expr.cc' l='943' u='c' c='_ZN3tvm3tir11CommReducerC1ENS_7runtime5ArrayINS0_3VarEvEES5_NS3_INS_8PrimExprEvEES7_NS_4SpanE'/>
+<use f='tvm/src/tir/ir/expr.cc' l='944' u='c' c='_ZN3tvm3tir11CommReducerC1ENS_7runtime5ArrayINS0_3VarEvEES5_NS3_INS_8PrimExprEvEES7_NS_4SpanE'/>
+<use f='tvm/src/tir/ir/expr.cc' l='958' u='c' c='_ZN3tvm3tir11CommReducerC1ENS_7runtime5ArrayINS0_3VarEvEES5_NS3_INS_8PrimExprEvEES7_NS_4SpanE'/>

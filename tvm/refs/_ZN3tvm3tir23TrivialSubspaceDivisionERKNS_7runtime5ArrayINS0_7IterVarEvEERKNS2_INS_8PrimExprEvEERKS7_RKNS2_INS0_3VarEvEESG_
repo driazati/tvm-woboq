@@ -1,0 +1,17 @@
+<def f='tvm/src/tir/schedule/primitive/blockize_tensorize.cc' l='86' ll='136' type='Array&lt;Array&lt;arith::IterMark&gt;&gt; tvm::tir::TrivialSubspaceDivision(const Array&lt;tvm::tir::IterVar&gt; &amp; iter_vars, const Array&lt;tvm::PrimExpr&gt; &amp; bindings, const tvm::PrimExpr &amp; predicate, const Array&lt;tvm::tir::Var&gt; &amp; outer_iters, const Array&lt;tvm::tir::Var&gt; &amp; inner_iters)'/>
+<use f='tvm/src/tir/schedule/primitive/blockize_tensorize.cc' l='178' u='c' c='_ZN3tvm3tir14SubspaceDivideERKNS0_12BlockRealizeERKNS0_8StmtSRefES6_PSt6vectorIPKNS0_7ForNodeESaISA_EEPNS_5arith8AnalyzerE'/>
+<doc f='tvm/src/tir/schedule/primitive/blockize_tensorize.cc' l='71'>/*!
+ * \brief Detect if bindings are a trivial case of the subspace division where we can divide the
+ * block iter bindings into two categories:
+ *   1. The binding covers no inner loop vars.
+ *   2. The binding covers only inner loop vars.
+ *
+ * The bindings are not required to be quasi-affine.
+ *
+ * \param iter_vars The input iterators
+ * \param bindings The values of iter_vars
+ * \param predicate The predicate constraint on the input iterators.
+ * \param outer_iters The iters of the outer space
+ * \param inner_iters The iters of the inner space
+ * \return The result of the subspace division.
+ */</doc>

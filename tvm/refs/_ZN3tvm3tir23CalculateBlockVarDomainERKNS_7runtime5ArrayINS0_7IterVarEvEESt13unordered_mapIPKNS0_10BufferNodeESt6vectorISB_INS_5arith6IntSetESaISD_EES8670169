@@ -1,0 +1,10 @@
+<def f='tvm/src/tir/schedule/primitive/compute_at.cc' l='461' ll='510' type='std::vector&lt;BlockVarDomainInfo&gt; tvm::tir::CalculateBlockVarDomain(const Array&lt;tvm::tir::IterVar&gt; &amp; iter_vars, std::unordered_map&lt;const BufferNode *, std::vector&lt;NDIntSet&gt;&gt; provided_regions, std::unordered_map&lt;const BufferNode *, std::vector&lt;NDIntSet&gt;&gt; required_regions, arith::Analyzer * analyzer)'/>
+<use f='tvm/src/tir/schedule/primitive/compute_at.cc' l='606' u='c' c='_ZN3tvm3tir31ComputeAtOrReverseComputeAtImplENS0_13ScheduleStateERKNS0_8StmtSRefES4_bPNS_5arith8AnalyzerEb'/>
+<doc f='tvm/src/tir/schedule/primitive/compute_at.cc' l='453'>/*!
+ * \brief Calculate the domain of block vars to cover the required region
+ * \param iter_vars The list of block vars to cover the required region
+ * \param provided_regions The region provided by one iteration instance of the block vars
+ * \param required_regions The region required to be covered
+ * \param analyzer The arithmetic analyzer
+ * \return A list of iteration domain info corresponding to the given list of block vars
+ */</doc>

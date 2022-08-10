@@ -1,0 +1,65 @@
+<inh f='tvm/include/tvm/relay/dataflow_pattern_functor.h' l='55' c='tvm::relay::DFPatternFunctor'/>
+<def f='tvm/src/relay/ir/dataflow_matcher_impl.h' l='42' ll='87'/>
+<use f='tvm/src/relay/ir/dataflow_matcher_impl.h' l='147'/>
+<use f='tvm/src/relay/collage/sub_graph.h' l='62' c='_ZN3tvm5relay7collage17MatcherToIndexSetERKNS0_16DFPatternMatcherE'/>
+<size>104</size>
+<fun r='_ZN3tvm5relay16DFPatternMatcherC1EPKNS0_12IndexedGraphINS_9RelayExprEEE'/>
+<fun r='_ZN3tvm5relay16DFPatternMatcher5MatchERKNS0_9DFPatternERKNS_9RelayExprE'/>
+<fun r='_ZN3tvm5relay16DFPatternMatcher7GetMemoEv'/>
+<fun r='_ZNK3tvm5relay16DFPatternMatcher12expr_to_nodeERKNS_9RelayExprE'/>
+<fun r='_ZNK3tvm5relay16DFPatternMatcher13index_to_nodeEm'/>
+<fun r='_ZNK3tvm5relay16DFPatternMatcher4sizeEv'/>
+<fun r='_ZNK3tvm5relay16DFPatternMatcher4memoEv'/>
+<fun r='_ZNK3tvm5relay16DFPatternMatcher10expr_graphEv'/>
+<fun r='_ZN3tvm5relay16DFPatternMatcher14VisitDFPatternERKNS0_9DFPatternERKNS_9RelayExprE'/>
+<fun r='_ZN3tvm5relay16DFPatternMatcher15VisitDFPattern_EPKNS0_14AltPatternNodeERKNS_9RelayExprE'/>
+<fun r='_ZN3tvm5relay16DFPatternMatcher15VisitDFPattern_EPKNS0_15AttrPatternNodeERKNS_9RelayExprE'/>
+<fun r='_ZN3tvm5relay16DFPatternMatcher15VisitDFPattern_EPKNS0_15CallPatternNodeERKNS_9RelayExprE'/>
+<fun r='_ZN3tvm5relay16DFPatternMatcher15VisitDFPattern_EPKNS0_19ConstantPatternNodeERKNS_9RelayExprE'/>
+<fun r='_ZN3tvm5relay16DFPatternMatcher15VisitDFPattern_EPKNS0_19DataTypePatternNodeERKNS_9RelayExprE'/>
+<fun r='_ZN3tvm5relay16DFPatternMatcher15VisitDFPattern_EPKNS0_20DominatorPatternNodeERKNS_9RelayExprE'/>
+<fun r='_ZN3tvm5relay16DFPatternMatcher15VisitDFPattern_EPKNS0_15ExprPatternNodeERKNS_9RelayExprE'/>
+<fun r='_ZN3tvm5relay16DFPatternMatcher15VisitDFPattern_EPKNS0_19FunctionPatternNodeERKNS_9RelayExprE'/>
+<fun r='_ZN3tvm5relay16DFPatternMatcher15VisitDFPattern_EPKNS0_13IfPatternNodeERKNS_9RelayExprE'/>
+<fun r='_ZN3tvm5relay16DFPatternMatcher15VisitDFPattern_EPKNS0_14LetPatternNodeERKNS_9RelayExprE'/>
+<fun r='_ZN3tvm5relay16DFPatternMatcher15VisitDFPattern_EPKNS0_16ShapePatternNodeERKNS_9RelayExprE'/>
+<fun r='_ZN3tvm5relay16DFPatternMatcher15VisitDFPattern_EPKNS0_23TupleGetItemPatternNodeERKNS_9RelayExprE'/>
+<fun r='_ZN3tvm5relay16DFPatternMatcher15VisitDFPattern_EPKNS0_16TuplePatternNodeERKNS_9RelayExprE'/>
+<fun r='_ZN3tvm5relay16DFPatternMatcher15VisitDFPattern_EPKNS0_15TypePatternNodeERKNS_9RelayExprE'/>
+<fun r='_ZN3tvm5relay16DFPatternMatcher15VisitDFPattern_EPKNS0_14VarPatternNodeERKNS_9RelayExprE'/>
+<fun r='_ZN3tvm5relay16DFPatternMatcher15VisitDFPattern_EPKNS0_19WildcardPatternNodeERKNS_9RelayExprE'/>
+<fun r='_ZN3tvm5relay16DFPatternMatcher8ClearMapEm'/>
+<fun r='_ZN3tvm5relay16DFPatternMatcher11MatchesPathEPKNS0_20DominatorPatternNodeERKNS_9RelayExprE'/>
+<fun r='_ZN3tvm5relay16DFPatternMatcher15DominatesParentEPKNS0_20DominatorPatternNodeERKNS_9RelayExprE'/>
+<mbr r='tvm::relay::DFPatternMatcher::expr_graph_' o='64' t='const IndexedGraph&lt;tvm::relay::Expr&gt; *'/>
+<mbr r='tvm::relay::DFPatternMatcher::memo_' o='128' t='std::unordered_map&lt;DFPattern, Array&lt;Expr&gt;, ObjectPtrHash, ObjectPtrEqual&gt;'/>
+<mbr r='tvm::relay::DFPatternMatcher::matched_nodes_' o='576' t='std::vector&lt;DFPattern&gt;'/>
+<mbr r='tvm::relay::DFPatternMatcher::memoize_' o='768' t='bool'/>
+<use f='tvm/src/relay/collage/partition_rule.cc' l='84' c='_ZNK3tvm5relay7collage26DFPatternPartitionRuleNode13AllCandidatesERKNS1_13DataflowGraphERKNS1_13PartitionSpecE'/>
+<size>104</size>
+<use f='tvm/src/relay/collage/sub_graph.cc' l='458' c='_ZN3tvm5relay7collage17MatcherToIndexSetERKNS0_16DFPatternMatcherE'/>
+<size>104</size>
+<use f='tvm/src/relay/ir/dataflow_matcher.cc' l='509' c='_ZN3tvm5relay12MatchPatternENS0_9DFPatternENS_9RelayExprE'/>
+<use f='tvm/src/relay/ir/dataflow_matcher.cc' l='585' c='_ZN3tvm5relay14PatternGrouper12GroupMatchesERKNS0_9DFPatternERKNS_9RelayExprE'/>
+<size>104</size>
+<fun r='_ZN3tvm5relay16DFPatternMatcher5MatchERKNS0_9DFPatternERKNS_9RelayExprE'/>
+<fun r='_ZN3tvm5relay16DFPatternMatcher8ClearMapEm'/>
+<fun r='_ZN3tvm5relay16DFPatternMatcher14VisitDFPatternERKNS0_9DFPatternERKNS_9RelayExprE'/>
+<fun r='_ZN3tvm5relay16DFPatternMatcher15VisitDFPattern_EPKNS0_14AltPatternNodeERKNS_9RelayExprE'/>
+<fun r='_ZN3tvm5relay16DFPatternMatcher15VisitDFPattern_EPKNS0_15AttrPatternNodeERKNS_9RelayExprE'/>
+<fun r='_ZN3tvm5relay16DFPatternMatcher15VisitDFPattern_EPKNS0_15CallPatternNodeERKNS_9RelayExprE'/>
+<fun r='_ZN3tvm5relay16DFPatternMatcher11MatchesPathEPKNS0_20DominatorPatternNodeERKNS_9RelayExprE'/>
+<fun r='_ZN3tvm5relay16DFPatternMatcher15DominatesParentEPKNS0_20DominatorPatternNodeERKNS_9RelayExprE'/>
+<fun r='_ZN3tvm5relay16DFPatternMatcher15VisitDFPattern_EPKNS0_20DominatorPatternNodeERKNS_9RelayExprE'/>
+<fun r='_ZN3tvm5relay16DFPatternMatcher15VisitDFPattern_EPKNS0_15ExprPatternNodeERKNS_9RelayExprE'/>
+<fun r='_ZN3tvm5relay16DFPatternMatcher15VisitDFPattern_EPKNS0_19FunctionPatternNodeERKNS_9RelayExprE'/>
+<fun r='_ZN3tvm5relay16DFPatternMatcher15VisitDFPattern_EPKNS0_23TupleGetItemPatternNodeERKNS_9RelayExprE'/>
+<fun r='_ZN3tvm5relay16DFPatternMatcher15VisitDFPattern_EPKNS0_16TuplePatternNodeERKNS_9RelayExprE'/>
+<fun r='_ZN3tvm5relay16DFPatternMatcher15VisitDFPattern_EPKNS0_13IfPatternNodeERKNS_9RelayExprE'/>
+<fun r='_ZN3tvm5relay16DFPatternMatcher15VisitDFPattern_EPKNS0_14LetPatternNodeERKNS_9RelayExprE'/>
+<fun r='_ZN3tvm5relay16DFPatternMatcher15VisitDFPattern_EPKNS0_15TypePatternNodeERKNS_9RelayExprE'/>
+<fun r='_ZN3tvm5relay16DFPatternMatcher15VisitDFPattern_EPKNS0_16ShapePatternNodeERKNS_9RelayExprE'/>
+<fun r='_ZN3tvm5relay16DFPatternMatcher15VisitDFPattern_EPKNS0_19DataTypePatternNodeERKNS_9RelayExprE'/>
+<fun r='_ZN3tvm5relay16DFPatternMatcher15VisitDFPattern_EPKNS0_14VarPatternNodeERKNS_9RelayExprE'/>
+<fun r='_ZN3tvm5relay16DFPatternMatcher15VisitDFPattern_EPKNS0_19ConstantPatternNodeERKNS_9RelayExprE'/>
+<fun r='_ZN3tvm5relay16DFPatternMatcher15VisitDFPattern_EPKNS0_19WildcardPatternNodeERKNS_9RelayExprE'/>

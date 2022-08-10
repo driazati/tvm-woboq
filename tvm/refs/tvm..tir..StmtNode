@@ -1,0 +1,125 @@
+<inh f='tvm/include/tvm/runtime/object.h' l='167' c='tvm::runtime::Object'/>
+<def f='tvm/include/tvm/tir/stmt.h' l='38' ll='54'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='59' c='_ZNK3tvm3tir4StmtptEv'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='59' c='_ZNK3tvm3tir4StmtptEv'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='59' c='_ZNK3tvm3tir4Stmt3getEv'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='59'/>
+<ovr f='tvm/include/tvm/tir/stmt.h' l='65' c='tvm::tir::LetStmtNode'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='65'/>
+<ovr f='tvm/include/tvm/tir/stmt.h' l='117' c='tvm::tir::AttrStmtNode'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='117'/>
+<ovr f='tvm/include/tvm/tir/stmt.h' l='166' c='tvm::tir::AssertStmtNode'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='166'/>
+<ovr f='tvm/include/tvm/tir/stmt.h' l='229' c='tvm::tir::StoreNode'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='229'/>
+<ovr f='tvm/include/tvm/tir/stmt.h' l='286' c='tvm::tir::BufferStoreNode'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='286'/>
+<ovr f='tvm/include/tvm/tir/stmt.h' l='341' c='tvm::tir::BufferRealizeNode'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='341'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='375' c='_ZN3tvm3tir17BufferRealizeNodeC1ENS0_6BufferENS_7runtime5ArrayINS_5RangeEvEENS_8PrimExprENS0_4StmtENS_4SpanE'/>
+<ovr f='tvm/include/tvm/tir/stmt.h' l='404' c='tvm::tir::ProducerStoreNode'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='404'/>
+<ovr f='tvm/include/tvm/tir/stmt.h' l='458' c='tvm::tir::ProducerRealizeNode'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='458'/>
+<ovr f='tvm/include/tvm/tir/stmt.h' l='513' c='tvm::tir::AllocateNode'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='513'/>
+<ovr f='tvm/include/tvm/tir/stmt.h' l='595' c='tvm::tir::AllocateConstNode'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='595'/>
+<ovr f='tvm/include/tvm/tir/stmt.h' l='685' c='tvm::tir::DeclBufferNode'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='685'/>
+<ovr f='tvm/include/tvm/tir/stmt.h' l='722' c='tvm::tir::SeqStmtNode'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='722'/>
+<ovr f='tvm/include/tvm/tir/stmt.h' l='819' c='tvm::tir::IfThenElseNode'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='819'/>
+<ovr f='tvm/include/tvm/tir/stmt.h' l='868' c='tvm::tir::EvaluateNode'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='868'/>
+<ovr f='tvm/include/tvm/tir/stmt.h' l='939' c='tvm::tir::ForNode'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='939'/>
+<ovr f='tvm/include/tvm/tir/stmt.h' l='1021' c='tvm::tir::WhileNode'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='1021'/>
+<ovr f='tvm/include/tvm/tir/stmt.h' l='1061' c='tvm::tir::PrefetchNode'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='1061'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='1085' c='_ZN3tvm3tir12PrefetchNodeC1ENS0_6BufferENS_7runtime5ArrayINS_5RangeEvEENS_4SpanE'/>
+<ovr f='tvm/include/tvm/tir/stmt.h' l='1227' c='tvm::tir::BlockNode'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='1227'/>
+<ovr f='tvm/include/tvm/tir/stmt.h' l='1311' c='tvm::tir::BlockRealizeNode'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='1311'/>
+<size>24</size>
+<doc f='tvm/include/tvm/tir/stmt.h' l='37'>/*! \brief Base node of all statements. */</doc>
+<mbr r='tvm::tir::StmtNode::span' o='128' t='tvm::Span'/>
+<fun r='_ZN3tvm3tir8StmtNodeC1Ev'/>
+<fun r='_ZN3tvm3tir8StmtNodeC1ENS_4SpanE'/>
+<smbr r='tvm::tir::StmtNode::_type_key' t='const char *const'/>
+<smbr r='tvm::tir::StmtNode::_type_has_method_sequal_reduce' t='const bool'/>
+<smbr r='tvm::tir::StmtNode::_type_has_method_shash_reduce' t='const bool'/>
+<smbr r='tvm::tir::StmtNode::_type_child_slots' t='const uint32_t'/>
+<fun r='_ZN3tvm3tir8StmtNode16RuntimeTypeIndexEv'/>
+<fun r='_ZN3tvm3tir8StmtNode27_GetOrAllocRuntimeTypeIndexEv'/>
+<use f='tvm/include/tvm/tir/schedule/block_scope.h' l='56'/>
+<use f='tvm/include/tvm/tir/schedule/block_scope.h' l='111' c='_ZN3tvm3tir8StmtSRefC1EPKNS0_8StmtNodeEPNS0_12StmtSRefNodeEl'/>
+<use f='tvm/include/tvm/tir/schedule/state.h' l='96'/>
+<use f='tvm/include/tvm/tir/schedule/schedule.h' l='193' c='_ZNK3tvm3tir12ScheduleNode7GetSRefEPKNS0_8StmtNodeE'/>
+<use f='tvm/src/printer/text_printer.h' l='255' c='_ZN3tvm3tir13MetaCollector7CollectERKNS_7runtime9ObjectRefE'/>
+<use f='tvm/src/printer/text_printer.h' l='452' c='_ZN3tvm11TextPrinter10PrintFinalERKNS_7runtime9ObjectRefE'/>
+<use f='tvm/src/tir/schedule/analysis.h' l='65' c='_ZN3tvm3tir15GetRootPrimFuncERKNS_8IRModuleEPKNS0_8StmtNodeEPNS_9GlobalVarE'/>
+<size>24</size>
+<use f='tvm/src/printer/tir_text_printer.cc' l='49' c='_ZN3tvm3tir14TIRTextPrinter5PrintERKNS_7runtime9ObjectRefE'/>
+<size>24</size>
+<use f='tvm/src/printer/tvmscript_printer.cc' l='682' c='_ZN3tvm3tir16TVMScriptPrinter5PrintERKNS_7runtime9ObjectRefE'/>
+<size>24</size>
+<use f='tvm/src/tir/analysis/buffer_access_lca_detector.cc' l='74'/>
+<use f='tvm/src/tir/analysis/buffer_access_lca_detector.cc' l='77' c='_ZN3tvm3tir11LCADetector9ScopeInfoC1EPKS2_PKNS0_8StmtNodeEi'/>
+<size>24</size>
+<use f='tvm/src/tir/analysis/estimate_flops.cc' l='215'/>
+<size>24</size>
+<use f='tvm/src/tir/ir/stmt_functor.cc' l='593' c='_ZN3tvm3tir14PostOrderVisitERKNS_7runtime9ObjectRefESt8functionIFvS4_EE'/>
+<use f='tvm/src/tir/ir/stmt_functor.cc' l='789' c='_ZZN3tvm3tir13PreOrderVisitERKNS_7runtime9ObjectRefERKSt8functionIFbS4_EEEN15PreOrderVisitor9VisitStmtERKNS0_4StmtE'/>
+<use f='tvm/src/tir/ir/stmt_functor.cc' l='803' c='_ZN3tvm3tir13PreOrderVisitERKNS_7runtime9ObjectRefERKSt8functionIFbS4_EE'/>
+<use f='tvm/src/tir/ir/stmt_functor.cc' l='825'/>
+<size>24</size>
+<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='30' c='_ZN3tvm3tir15GetRootPrimFuncERKNS_8IRModuleEPKNS0_8StmtNodeEPNS_9GlobalVarE'/>
+<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='1097' c='_ZN3tvm3tir21ProducerConsumerSplit4FindERKNS0_13ScheduleStateERKNS_7runtime5ArrayINS0_4StmtEvEERKNS6_INS0_8StmtSRefEvEESE_PSt13unordered_mapIPKNS0_9Bl15702090'/>
+<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='1098' c='_ZN3tvm3tir21ProducerConsumerSplit4FindERKNS0_13ScheduleStateERKNS_7runtime5ArrayINS0_4StmtEvEERKNS6_INS0_8StmtSRefEvEESE_PSt13unordered_mapIPKNS0_9Bl15702090'/>
+<size>24</size>
+<use f='tvm/src/tir/schedule/analysis/verify.cc' l='153' c='_ZN3tvm3tir17VerifyCachedFlagsERKNS0_13ScheduleStateE'/>
+<size>24</size>
+<use f='tvm/src/tir/schedule/block_scope.cc' l='46' c='_ZN3tvm3tir8StmtSRefC1EPKNS0_8StmtNodeEPNS0_12StmtSRefNodeEl'/>
+<size>24</size>
+<use f='tvm/src/tir/schedule/concrete_schedule.cc' l='158' c='_ZN3tvm3tir14ScheduleCopier4CopyERKSt13unordered_mapIPKNS0_8StmtNodeENS0_8StmtSRefESt4hashIS5_ESt8equal_toIS5_ESaISt4pairIKS5_S6_EEE'/>
+<use f='tvm/src/tir/schedule/concrete_schedule.cc' l='158' c='_ZN3tvm3tir14ScheduleCopier4CopyERKSt13unordered_mapIPKNS0_8StmtNodeENS0_8StmtSRefESt4hashIS5_ESt8equal_toIS5_ESaISt4pairIKS5_S6_EEE'/>
+<use f='tvm/src/tir/schedule/concrete_schedule.cc' l='159' c='_ZN3tvm3tir14ScheduleCopier4CopyERKSt13unordered_mapIPKNS0_8StmtNodeENS0_8StmtSRefESt4hashIS5_ESt8equal_toIS5_ESaISt4pairIKS5_S6_EEE'/>
+<use f='tvm/src/tir/schedule/concrete_schedule.cc' l='162' c='_ZN3tvm3tir14ScheduleCopier4CopyERKSt13unordered_mapIPKNS0_8StmtNodeENS0_8StmtSRefESt4hashIS5_ESt8equal_toIS5_ESaISt4pairIKS5_S6_EEE'/>
+<size>24</size>
+<use f='tvm/src/tir/schedule/primitive/loop_transformation.cc' l='729' c='_ZZN3tvm3tir11AddUnitLoopENS0_13ScheduleStateENS0_8StmtSRefEEN14NewLoopCreatorC1EPKNS0_8StmtNodeE'/>
+<use f='tvm/src/tir/schedule/primitive/loop_transformation.cc' l='740' c='_ZN3tvm3tir11AddUnitLoopENS0_13ScheduleStateENS0_8StmtSRefE'/>
+<size>24</size>
+<use f='tvm/src/tir/schedule/schedule.cc' l='32' c='_ZNK3tvm3tir12ScheduleNode7GetSRefEPKNS0_8StmtNodeE'/>
+<use f='tvm/src/tir/schedule/schedule.cc' l='104'/>
+<size>24</size>
+<use f='tvm/src/tir/schedule/state.cc' l='166' c='_ZN3tvm3tir10UpdateSRefEPNS0_17ScheduleStateNodeEPNS0_12StmtSRefNodeEPKNS0_8StmtNodeE'/>
+<use f='tvm/src/tir/schedule/state.cc' l='168' c='_ZN3tvm3tir10UpdateSRefEPNS0_17ScheduleStateNodeEPNS0_12StmtSRefNodeEPKNS0_8StmtNodeE'/>
+<use f='tvm/src/tir/schedule/state.cc' l='195' c='_ZN3tvm3tir18BlockInfoCollector8PushSRefEPKNS0_8StmtNodeE'/>
+<use f='tvm/src/tir/schedule/state.cc' l='390'/>
+<use f='tvm/src/tir/schedule/state.cc' l='432' c='_ZN3tvm3tir12StateCreator8PushSRefEPKNS0_8StmtNodeE'/>
+<use f='tvm/src/tir/schedule/state.cc' l='523'/>
+<use f='tvm/src/tir/schedule/state.cc' l='590'/>
+<use f='tvm/src/tir/schedule/state.cc' l='808' c='_ZN3tvm3tir13ChildReplacer7ReplaceEPKNS0_8StmtNodeES4_RKNS0_4StmtEib'/>
+<use f='tvm/src/tir/schedule/state.cc' l='808' c='_ZN3tvm3tir13ChildReplacer7ReplaceEPKNS0_8StmtNodeES4_RKNS0_4StmtEib'/>
+<use f='tvm/src/tir/schedule/state.cc' l='822' c='_ZN3tvm3tir13ChildReplacerC1EPKNS0_8StmtNodeERKNS0_4StmtEi'/>
+<use f='tvm/src/tir/schedule/state.cc' l='844' c='_ZN3tvm3tir13ChildReplacer10VisitStmt_EPKNS0_11SeqStmtNodeE'/>
+<use f='tvm/src/tir/schedule/state.cc' l='872' c='_ZN3tvm3tir13ChildReplacer19CopyOnWriteAndVisitEPKNS0_8StmtNodeE'/>
+<use f='tvm/src/tir/schedule/state.cc' l='893'/>
+<use f='tvm/src/tir/schedule/state.cc' l='906' c='_ZN3tvm3tir17ScheduleStateNode7ReplaceERKNS0_8StmtSRefERKNS0_4StmtERKNS_7runtime3MapINS0_5BlockESA_vvEE'/>
+<use f='tvm/src/tir/schedule/state.cc' l='1002' c='_ZN3tvm3tir17ScheduleStateNode7ReplaceERKNS0_8StmtSRefERKNS0_4StmtERKNS_7runtime3MapINS0_5BlockESA_vvEE'/>
+<use f='tvm/src/tir/schedule/state.cc' l='1003' c='_ZN3tvm3tir17ScheduleStateNode7ReplaceERKNS0_8StmtSRefERKNS0_4StmtERKNS_7runtime3MapINS0_5BlockESA_vvEE'/>
+<size>24</size>
+<use f='tvm/src/tir/schedule/transform.cc' l='207' c='_ZN3tvm3tir20LeafBlockRemovalPlanERKNS0_13ScheduleStateERKNS0_8StmtSRefEPNS0_4StmtES8_'/>
+<size>24</size>
+<use f='tvm/src/tir/transforms/hoist_expression.cc' l='523'/>
+<size>24</size>
+<use f='tvm/src/tir/transforms/lower_cross_thread_reduction.cc' l='465' c='_ZNK3tvm3tir31CrossThreadReductionTransformer33CheckCanApplyCrossThreadReductionEPKNS0_9BlockNodeERKSt6vectorIPKNS0_7ForNodeESaIS8_EE'/>
+<use f='tvm/src/tir/transforms/lower_cross_thread_reduction.cc' l='612'/>
+<size>24</size>
+<use f='tvm/src/tir/transforms/plan_update_buffer_allocation_location.cc' l='47' c='_ZN3tvm3tir23BufferAllocationLocatorC1ERKNS0_8PrimFuncE'/>
+<use f='tvm/src/tir/transforms/plan_update_buffer_allocation_location.cc' l='166'/>
+<size>24</size>

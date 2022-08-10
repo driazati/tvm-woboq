@@ -1,0 +1,15 @@
+<dec f='tvm/src/te/schedule/graph.h' l='125' type='Map&lt;tvm::tir::IterVar, tvm::PrimExpr&gt; tvm::te::ScanFixPointAnalysis(const tvm::te::Operation &amp; scan)'/>
+<doc f='tvm/src/te/schedule/graph.h' l='114'>/*!
+ * \brief Analyze each spatial dimension of scan&apos;s result.
+ *  Give check on whether each dimension is fix point,
+ *  An axis is a fixed point if it only refers back to itself in recursion
+ *  and it is not used in axis of other recursion field.
+ *
+ *  next_state[t, ..., axis, ...] = f(prev_state[t-1, ...,axis,...]
+ *
+ * \param scan The scan node.
+ * \return Map of spatial_axis -&gt; IntImm
+ */</doc>
+<use f='tvm/src/te/operation/scan_op.cc' l='216' u='c' c='_ZNK3tvm2te10ScanOpNode11GatherBoundERKNS0_9OperationERKSt13unordered_mapINS0_6TensorENS0_9TensorDomESt4hashIS6_ESt8equal_toIS6_ESaISt4pairIKS6_S7_EEE8410255'/>
+<def f='tvm/src/te/schedule/graph.cc' l='278' ll='402' type='Map&lt;tvm::tir::IterVar, tvm::PrimExpr&gt; tvm::te::ScanFixPointAnalysis(const tvm::te::Operation &amp; scan_op)'/>
+<use f='tvm/src/te/schedule/graph.cc' l='415' u='r'/>

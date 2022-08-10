@@ -1,0 +1,20 @@
+<def f='tvm/include/tvm/topi/transform.h' l='769' ll='799' type='tvm::te::Tensor tvm::topi::strided_slice_with_axes(const tvm::te::Tensor &amp; x, const Array&lt;tvm::Integer&gt; &amp; begin, const Array&lt;tvm::Integer&gt; &amp; end, const Array&lt;tvm::Integer&gt; &amp; strides, const Array&lt;tvm::Integer&gt; &amp; axes, std::string slice_mode = &quot;end&quot;, std::string name = &quot;T_strided_slice_with_axes&quot;, std::string tag = kInjective)'/>
+<use f='tvm/include/tvm/topi/transform.h' l='839' u='c' c='_ZN3tvm4topi13strided_sliceERKNS_2te6TensorERKNS_7runtime5ArrayINS_7IntegerEvEESA_SA_NSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESG_SG_'/>
+<doc f='tvm/include/tvm/topi/transform.h' l='753'>/*!
+ * \brief strided_slice of a tensor
+ *
+ * \param x The input tensor
+ * \param begin The indices to begin with in the slicing
+ * \param end Indicies indicating end of the slice
+ * \param strides Specifies the stride values, it can be negative
+ * in that case, the input tensor will be reversed in that particular axis
+ * \param axes Axes along which slicing is applied. When it is specified, the length of begin, end,
+ * strides, and axes argument must be equal
+ * \param slice_mode Specifies the slice mode
+ * \param name The name of the operation
+ * \param tag The tag to mark the operation
+ *
+ * \return A Tensor whose op member is the sstrided_slice operation
+ */</doc>
+<use f='tvm/src/relay/op/tensor/transform.cc' l='2860' u='c' c='_ZN3tvm5relay19StridedSliceComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
+<use f='tvm/src/topi/transform.cc' l='192' u='c'/>

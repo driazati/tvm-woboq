@@ -1,0 +1,17 @@
+<def f='tvm/src/target/source/ptx.cc' l='317' ll='349' type='void tvm::codegen::ptx::CheckMMAConfigValidity(int m, int n, int k, tvm::codegen::ptx::LayoutType layout_a, tvm::codegen::ptx::LayoutType layout_b, tvm::codegen::ptx::DataType dtype_a, tvm::codegen::ptx::DataType dtype_b, tvm::codegen::ptx::DataType dtype_c, const std::string &amp; bit_op, bool sparse, bool saturate)'/>
+<use f='tvm/src/target/source/ptx.cc' l='537' u='c' c='_ZN3tvm7codegen16PrintMMAAssemblyERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES8_S8_S8_S8_S8_S8_S8_S8_S8_S8_S8_S8_S8_S8_S8_bb'/>
+<doc f='tvm/src/target/source/ptx.cc' l='302'>/*!
+ * \brief Check whether the given configuration is valid for MMA computation.
+ * \param m The M in mMnNkK of MMA instructions.
+ * \param n The N in mMnNkK of MMA instructions.
+ * \param k The K in mMnNkK of MMA instructions.
+ * \param layout_a The layout of multiplicand A (row/col).
+ * \param layout_b The layout of multiplicand B (row/col).
+ * \param dtype_a The data type of multiplicand A.
+ * \param dtype_b The data type of multiplicand B.
+ * \param dtype_c The data type of accumulator C.
+ * \param bit_op The bit operator for 1-bit MMA computation, can be &quot;xor&quot;/&quot;and&quot; or &quot;&quot;(if it&apos;s not
+ * 1-bit MMA).
+ * \param sparse Whether it&apos;s Sparse MMA or not.
+ * \param saturate Whether saturate output or not.
+ */</doc>

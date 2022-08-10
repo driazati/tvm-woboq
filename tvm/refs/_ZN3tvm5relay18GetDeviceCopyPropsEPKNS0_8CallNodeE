@@ -1,0 +1,16 @@
+<dec f='tvm/src/relay/op/memory/device_copy.h' l='73' type='tvm::relay::DeviceCopyProps tvm::relay::GetDeviceCopyProps(const tvm::relay::CallNode * call_node)'/>
+<doc f='tvm/src/relay/op/memory/device_copy.h' l='68'>/*!
+ * \brief Returns the body expression, source, and destination \p VirtualDevices for \p call_node
+ * if it is a &quot;device_copy&quot; CallNode. Otherwise returns the null expression and unconstrained
+ * virtual device.
+ */</doc>
+<use f='tvm/src/relay/backend/aot_executor_codegen.cc' l='613' u='c' c='_ZN3tvm5relay7backend18AOTExecutorCodegen10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/backend/graph_executor_codegen.cc' l='413' u='c' c='_ZN3tvm5relay7backend20GraphExecutorCodegen16GraphAddCallNodeEPKNS0_8CallNodeESt13unordered_mapINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEN411525254'/>
+<use f='tvm/src/relay/backend/interpreter.cc' l='704' u='c' c='_ZN3tvm5relay11Interpreter10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/backend/vm/compiler.cc' l='540' u='c' c='_ZN3tvm5relay2vm18VMFunctionCompiler21DeviceAwareVisitExpr_EPKNS0_8CallNodeE'/>
+<def f='tvm/src/relay/op/memory/device_copy.cc' l='95' ll='113' type='tvm::relay::DeviceCopyProps tvm::relay::GetDeviceCopyProps(const tvm::relay::CallNode * call_node)'/>
+<use f='tvm/src/relay/op/memory/device_copy.cc' l='117' u='c' c='_ZN3tvm5relay18GetDeviceCopyPropsERKNS_9RelayExprE'/>
+<doc f='tvm/src/relay/op/memory/device_copy.cc' l='94'>// Get device copy props for original device copy op</doc>
+<use f='tvm/src/relay/transforms/device_domains.cc' l='201' u='c' c='_ZN3tvm5relay9transform13DeviceDomains15DomainForCalleeERKNS0_4CallE'/>
+<use f='tvm/src/relay/transforms/device_planner.cc' l='1048' u='c' c='_ZN3tvm5relay9transform12_GLOBAL__N_114DeviceCapturer10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/transforms/memory_alloc.cc' l='123' u='c' c='_ZN3tvm5relay15DialectRewriter21DeviceAwareVisitExpr_EPKNS0_8CallNodeE'/>

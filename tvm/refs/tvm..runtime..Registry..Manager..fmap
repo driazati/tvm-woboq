@@ -1,0 +1,16 @@
+<dec f='tvm/src/runtime/registry.cc' l='45' type='std::unordered_map&lt;std::string, Registry *&gt;'/>
+<use f='tvm/src/runtime/registry.cc' l='68' u='m' c='_ZN3tvm7runtime8Registry8RegisterERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEb'/>
+<use f='tvm/src/runtime/registry.cc' l='74' u='m' c='_ZN3tvm7runtime8Registry8RegisterERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEb'/>
+<use f='tvm/src/runtime/registry.cc' l='81' u='m' c='_ZN3tvm7runtime8Registry6RemoveERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<use f='tvm/src/runtime/registry.cc' l='82' u='m' c='_ZN3tvm7runtime8Registry6RemoveERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<use f='tvm/src/runtime/registry.cc' l='83' u='m' c='_ZN3tvm7runtime8Registry6RemoveERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<use f='tvm/src/runtime/registry.cc' l='90' u='m' c='_ZN3tvm7runtime8Registry3GetERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<use f='tvm/src/runtime/registry.cc' l='91' u='m' c='_ZN3tvm7runtime8Registry3GetERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<use f='tvm/src/runtime/registry.cc' l='99' u='m' c='_ZN3tvm7runtime8Registry9ListNamesB5cxx11Ev'/>
+<use f='tvm/src/runtime/registry.cc' l='100' c='_ZN3tvm7runtime8Registry9ListNamesB5cxx11Ev'/>
+<offset>0</offset>
+<doc f='tvm/src/runtime/registry.cc' l='40'>// map storing the functions.
+  // We deliberately used raw pointer.
+  // This is because PackedFunc can contain callbacks into the host language (Python) and the
+  // resource can become invalid because of indeterministic order of destruction and forking.
+  // The resources will only be recycled during program exit.</doc>

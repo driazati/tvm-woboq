@@ -1,0 +1,21 @@
+<dec f='tvm/src/contrib/ethosu/cascader/plan.h' l='131' type='tvm::contrib::ethosu::cascader::Plan tvm::contrib::ethosu::cascader::Plan::Merge(const tvm::contrib::ethosu::cascader::Plan &amp; other) const'/>
+<doc f='tvm/src/contrib/ethosu/cascader/plan.h' l='116'>/*!
+   * \brief Merge two Plans which share an &apos;open&apos; TensorConfig.
+   * \param other The Plan to merge with.
+   * \return The merged Plan.
+   * \note The current Plan is referred to as the &apos;upper Plan&apos; and the other Plan as the &apos;lower
+   * Plan&apos;. The &apos;open&apos; output config of the upper Plan must be an &apos;open&apos; input config of the lower
+   * Plan. The Tensor referenced by these configs is the Tensor on which the two Plans will be
+   * merged. The merge process does the following:
+   *
+   * The tensor config maps will be merged with TensorConfigs from the upper Plan taking priority.
+   * The open configs will be merged with the TensorConfigs that are being merged having been
+   * removed. The output config will be that of the lower Plan. The part groups will be merged. The
+   * interior region is necessarily the same for both the upper and lower Plan. The cycles and
+   * memory usage will be summed.
+   */</doc>
+<def f='tvm/src/contrib/ethosu/cascader/plan.cc' l='66' ll='84' type='tvm::contrib::ethosu::cascader::Plan tvm::contrib::ethosu::cascader::Plan::Merge(const tvm::contrib::ethosu::cascader::Plan &amp; other) const'/>
+<use f='tvm/src/contrib/ethosu/cascader/plan.cc' l='97' u='a'/>
+<use f='tvm/src/contrib/ethosu/cascader/plan.cc' l='102' u='c'/>
+<use f='tvm/src/contrib/ethosu/cascader/plan.cc' l='104' u='c'/>
+<use f='tvm/src/contrib/ethosu/cascader/plan_generator.cc' l='508' u='c' c='_ZN3tvm7contrib6ethosu8cascader18GenerateGraphPlansERKNS2_13CascaderGraphERKSt13unordered_mapINS2_6TensorESt6vectorINS2_12MemoryRegionESaIS9_EENS_7run1070765'/>

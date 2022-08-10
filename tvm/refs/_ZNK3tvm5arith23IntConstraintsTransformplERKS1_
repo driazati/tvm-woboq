@@ -1,0 +1,12 @@
+<dec f='tvm/include/tvm/arith/int_solver.h' l='266' type='tvm::arith::IntConstraintsTransform tvm::arith::IntConstraintsTransform::operator+(const tvm::arith::IntConstraintsTransform &amp; other) const'/>
+<def f='tvm/src/arith/int_constraints.cc' l='260' ll='278' type='tvm::arith::IntConstraintsTransform tvm::arith::IntConstraintsTransform::operator+(const tvm::arith::IntConstraintsTransform &amp; other) const'/>
+<doc f='tvm/include/tvm/arith/int_solver.h' l='259'>/*!
+   * \brief Chain-compose two IntConstraintsTransform together.
+   *        this-&gt;dst must be the same as other-&gt;src.
+   * @param other another IntConstraintsTransform whose src is same as this-&gt;dst.
+   * @return composed IntConstraintsTransform(this-&gt;src, other-&gt;dst)
+   *         with its variables and ranges are properly modified.
+   */</doc>
+<use f='tvm/src/te/autodiff/ad_simplify.cc' l='780' u='c' c='_ZN3tvm2te14SimplifyDomainERKNS_5arith14IntConstraintsEb'/>
+<use f='tvm/src/te/autodiff/ad_simplify.cc' l='787' u='c' c='_ZN3tvm2te14SimplifyDomainERKNS_5arith14IntConstraintsEb'/>
+<use f='tvm/src/te/autodiff/ad_simplify.cc' l='788' u='c' c='_ZN3tvm2te14SimplifyDomainERKNS_5arith14IntConstraintsEb'/>

@@ -1,0 +1,19 @@
+<dec f='tvm/src/tir/transforms/common_subexpr_elim.h' l='85' type='static bool tvm::tir::CommonSubexpressionEliminator::CanContainEligibleComputations(const tvm::PrimExpr &amp; expr)'/>
+<def f='tvm/src/tir/transforms/common_subexpr_elim.cc' l='113' ll='121' type='static bool tvm::tir::CommonSubexpressionEliminator::CanContainEligibleComputations(const tvm::PrimExpr &amp; expr)'/>
+<use f='tvm/src/tir/transforms/common_subexpr_elim.cc' l='237' u='r' c='_ZN3tvm3tir29CommonSubexpressionEliminator9VisitExprERKNS_8PrimExprE'/>
+<use f='tvm/src/tir/transforms/common_subexpr_elim.cc' l='288' u='r' c='_ZN3tvm3tir29CommonSubexpressionEliminator9VisitExprERKNS_8PrimExprE'/>
+<use f='tvm/src/tir/transforms/common_subexpr_elim.cc' l='317' u='r' c='_ZN3tvm3tir29CommonSubexpressionEliminator9VisitExprERKNS_8PrimExprE'/>
+<use f='tvm/src/tir/transforms/common_subexpr_elim.cc' l='337' u='r' c='_ZN3tvm3tir29CommonSubexpressionEliminator9VisitExprERKNS_8PrimExprE'/>
+<use f='tvm/src/tir/transforms/common_subexpr_elim.cc' l='417' u='r' c='_ZN3tvm3tir29CommonSubexpressionEliminator9VisitStmtERKNS0_4StmtE'/>
+<use f='tvm/src/tir/transforms/common_subexpr_elim.cc' l='468' u='r' c='_ZN3tvm3tir29CommonSubexpressionEliminator9VisitStmtERKNS0_4StmtE'/>
+<use f='tvm/src/tir/transforms/common_subexpr_elim.cc' l='498' u='r' c='_ZN3tvm3tir29CommonSubexpressionEliminator9VisitStmtERKNS0_4StmtE'/>
+<use f='tvm/src/tir/transforms/common_subexpr_elim.cc' l='518' u='r' c='_ZN3tvm3tir29CommonSubexpressionEliminator9VisitStmtERKNS0_4StmtE'/>
+<doc f='tvm/src/tir/transforms/common_subexpr_elim.cc' l='104'>/*!
+ * \brief Predicate used (when considering eligible computations) for only diving into
+          expressions that are allowed to contain eligible computations. Customize this predicate
+          if you want to make it forbidden to rewrite inside a specific node, like inside
+          a Load node for instance.
+ * \param expr The expression to check
+ * \return Whether `expr` can contain some eligible computations or not, and therefore
+             if recursing inside `expr` is necessary.
+ */</doc>

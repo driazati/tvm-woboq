@@ -1,0 +1,19 @@
+<def f='tvm/include/tvm/node/structural_equal.h' l='230' ll='233' type='bool tvm::SEqualReducer::operator()(const tvm::runtime::ObjectRef &amp; lhs, const tvm::runtime::ObjectRef &amp; rhs, const tvm::ObjectPathPair &amp; paths) const'/>
+<doc f='tvm/include/tvm/node/structural_equal.h' l='215'>/*!
+   * \brief Reduce condition to comparison of two objects.
+   *
+   * Like `operator()`, but with an additional `paths` parameter that specifies explicit object
+   * paths for `lhs` and `rhs`. This is useful for implementing SEqualReduce() methods for container
+   * objects like Array and Map, or other custom objects that store nested objects that are not
+   * simply attributes.
+   *
+   * Can only be called when `IsPathTracingEnabled()` is `true`.
+   *
+   * \param lhs The left operand.
+   * \param rhs The right operand.
+   * \param paths Object paths for `lhs` and `rhs`.
+   * \return the immediate check result.
+   */</doc>
+<use f='tvm/src/node/structural_hash.cc' l='419' u='c' c='_ZN3tvm14ArrayNodeTrait18SEqualReduceTracedEPKNS_7runtime9ArrayNodeES4_RKNS_13SEqualReducerE'/>
+<use f='tvm/src/node/structural_hash.cc' l='594' u='c' c='_ZN3tvm12MapNodeTrait25SEqualReduceTracedForOMapEPKNS_7runtime7MapNodeES4_RKNS_13SEqualReducerE'/>
+<use f='tvm/src/node/structural_hash.cc' l='629' u='c' c='_ZN3tvm12MapNodeTrait25SEqualReduceTracedForSMapEPKNS_7runtime7MapNodeES4_RKNS_13SEqualReducerE'/>

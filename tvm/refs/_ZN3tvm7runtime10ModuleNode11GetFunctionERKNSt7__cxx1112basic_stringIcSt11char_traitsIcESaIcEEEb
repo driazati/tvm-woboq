@@ -1,0 +1,17 @@
+<dec f='tvm/include/tvm/runtime/module.h' l='175' type='tvm::runtime::PackedFunc tvm::runtime::ModuleNode::GetFunction(const std::string &amp; name, bool query_imports = false)'/>
+<use f='tvm/include/tvm/runtime/packed_func.h' l='1938' u='c' c='_ZN3tvm7runtime6Module11GetFunctionERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEb'/>
+<doc f='tvm/include/tvm/runtime/module.h' l='166'>/*!
+   * \brief Get packed function from current module by name.
+   *
+   * \param name The name of the function.
+   * \param query_imports Whether also query dependency modules.
+   * \return The result function.
+   *  This function will return PackedFunc(nullptr) if function do not exist.
+   * \note Implemented in packed_func.cc
+   */</doc>
+<use f='tvm/src/runtime/aot_executor/aot_executor.cc' l='41' u='c' c='_ZN3tvm7runtime11AotExecutorC1ENS0_6ModuleERKSt6vectorI8DLDeviceSaIS4_EE'/>
+<use f='tvm/src/runtime/c_runtime_api.cc' l='408' u='c' c='TVMModGetFunction'/>
+<def f='tvm/src/runtime/module.cc' l='64' ll='77' type='tvm::runtime::PackedFunc tvm::runtime::ModuleNode::GetFunction(const std::string &amp; name, bool query_imports = false)'/>
+<use f='tvm/src/runtime/module.cc' l='70' u='c' c='_ZN3tvm7runtime10ModuleNode11GetFunctionERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEb'/>
+<use f='tvm/src/runtime/module.cc' l='140' u='c' c='_ZN3tvm7runtime10ModuleNode18ImplementsFunctionERKNS0_6StringEb'/>
+<use f='tvm/src/runtime/rpc/rpc_module.cc' l='417' u='c'/>

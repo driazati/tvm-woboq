@@ -1,0 +1,27 @@
+<inh f='tvm/include/tvm/runtime/object.h' l='167' c='tvm::runtime::Object'/>
+<def f='tvm/include/tvm/tir/schedule/block_scope.h' l='164' ll='181'/>
+<use f='tvm/include/tvm/tir/schedule/block_scope.h' l='191' c='_ZNK3tvm3tir10DependencyptEv'/>
+<use f='tvm/include/tvm/tir/schedule/block_scope.h' l='191' c='_ZNK3tvm3tir10DependencyptEv'/>
+<use f='tvm/include/tvm/tir/schedule/block_scope.h' l='191' c='_ZNK3tvm3tir10Dependency3getEv'/>
+<use f='tvm/include/tvm/tir/schedule/block_scope.h' l='191'/>
+<size>40</size>
+<doc f='tvm/include/tvm/tir/schedule/block_scope.h' l='159'>/*!
+ * \brief A tuple (src, dst, kind) representing certain types of dependency.
+ * For example, (A, B, kRAW) means block B depends on block A, and the dependency kind is
+ * read-after-write, which means block B reads the result written by block A.
+ */</doc>
+<mbr r='tvm::tir::DependencyNode::src' o='128' t='tvm::tir::StmtSRef'/>
+<mbr r='tvm::tir::DependencyNode::dst' o='192' t='tvm::tir::StmtSRef'/>
+<mbr r='tvm::tir::DependencyNode::kind' o='256' t='tvm::tir::DepKind'/>
+<fun r='_ZN3tvm3tir14DependencyNode10VisitAttrsEPNS_11AttrVisitorE'/>
+<smbr r='tvm::tir::DependencyNode::_type_key' t='const char *const'/>
+<smbr r='tvm::tir::DependencyNode::_type_final' t='const bool'/>
+<smbr r='tvm::tir::DependencyNode::_type_child_slots' t='const int'/>
+<fun r='_ZN3tvm3tir14DependencyNode16RuntimeTypeIndexEv'/>
+<fun r='_ZN3tvm3tir14DependencyNode27_GetOrAllocRuntimeTypeIndexEv'/>
+<use f='tvm/src/tir/schedule/block_scope.cc' l='65' c='_ZN3tvm3tir10DependencyC1ENS0_8StmtSRefES2_NS0_7DepKindE'/>
+<use f='tvm/src/tir/schedule/block_scope.cc' l='65' c='_ZN3tvm3tir10DependencyC1ENS0_8StmtSRefES2_NS0_7DepKindE'/>
+<use f='tvm/src/tir/schedule/block_scope.cc' l='141'/>
+<use f='tvm/src/tir/schedule/block_scope.cc' l='141'/>
+<use f='tvm/src/tir/schedule/block_scope.cc' l='141'/>
+<size>40</size>

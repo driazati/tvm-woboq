@@ -1,0 +1,190 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>c_backend_api.h source code [tvm/include/tvm/runtime/c_backend_api.h] - Woboq Code Browser</title>
+<link rel="stylesheet" href="../../../.././data/qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href="../../../.././data/kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src="../../../.././data/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="../../../.././data/jquery/jquery-ui.min.js"></script>
+<script>var file = 'tvm/include/tvm/runtime/c_backend_api.h'; var root_path = '../../../..'; var data_path = '../../../.././data'; var ecma_script_api_version = 2;</script>
+<script src='../../../.././data/codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='../../..'>tvm</a>/<a href='../..'>include</a>/<a href='..'>tvm</a>/<a href='./'>runtime</a>/<a href='c_backend_api.h.html'>c_backend_api.h</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td><i>/*</i></td></tr>
+<tr><th id="2">2</th><td><i> * Licensed to the Apache Software Foundation (ASF) under one</i></td></tr>
+<tr><th id="3">3</th><td><i> * or more contributor license agreements.  See the NOTICE file</i></td></tr>
+<tr><th id="4">4</th><td><i> * distributed with this work for additional information</i></td></tr>
+<tr><th id="5">5</th><td><i> * regarding copyright ownership.  The ASF licenses this file</i></td></tr>
+<tr><th id="6">6</th><td><i> * to you under the Apache License, Version 2.0 (the</i></td></tr>
+<tr><th id="7">7</th><td><i> * "License"); you may not use this file except in compliance</i></td></tr>
+<tr><th id="8">8</th><td><i> * with the License.  You may obtain a copy of the License at</i></td></tr>
+<tr><th id="9">9</th><td><i> *</i></td></tr>
+<tr><th id="10">10</th><td><i> *   <a href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a></i></td></tr>
+<tr><th id="11">11</th><td><i> *</i></td></tr>
+<tr><th id="12">12</th><td><i> * Unless required by applicable law or agreed to in writing,</i></td></tr>
+<tr><th id="13">13</th><td><i> * software distributed under the License is distributed on an</i></td></tr>
+<tr><th id="14">14</th><td><i> * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY</i></td></tr>
+<tr><th id="15">15</th><td><i> * KIND, either express or implied.  See the License for the</i></td></tr>
+<tr><th id="16">16</th><td><i> * specific language governing permissions and limitations</i></td></tr>
+<tr><th id="17">17</th><td><i> * under the License.</i></td></tr>
+<tr><th id="18">18</th><td><i> */</i></td></tr>
+<tr><th id="19">19</th><td></td></tr>
+<tr><th id="20">20</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="21">21</th><td><i class="doc"> * <span class="command">\file</span> <span class="verb">tvm/runtime/c_backend_api.h</span></i></td></tr>
+<tr><th id="22">22</th><td><i class="doc"> * <span class="command">\brief</span> TVM runtime backend API.</i></td></tr>
+<tr><th id="23">23</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="24">24</th><td><i class="doc"> *  The functions defined in this header are intended to be</i></td></tr>
+<tr><th id="25">25</th><td><i class="doc"> *  used by compiled tvm operators, usually user do not need to use these</i></td></tr>
+<tr><th id="26">26</th><td><i class="doc"> *  function directly.</i></td></tr>
+<tr><th id="27">27</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="28">28</th><td><u>#<span data-ppcond="28">ifndef</span> <span class="macro" data-ref="_M/TVM_RUNTIME_C_BACKEND_API_H_">TVM_RUNTIME_C_BACKEND_API_H_</span></u></td></tr>
+<tr><th id="29">29</th><td><u>#define <dfn class="macro" id="_M/TVM_RUNTIME_C_BACKEND_API_H_" data-ref="_M/TVM_RUNTIME_C_BACKEND_API_H_">TVM_RUNTIME_C_BACKEND_API_H_</dfn></u></td></tr>
+<tr><th id="30">30</th><td></td></tr>
+<tr><th id="31">31</th><td><u>#include <a href="c_runtime_api.h.html">&lt;tvm/runtime/c_runtime_api.h&gt;</a></u></td></tr>
+<tr><th id="32">32</th><td></td></tr>
+<tr><th id="33">33</th><td><u>#<span data-ppcond="33">ifdef</span> <span class="macro" data-ref="_M/__cplusplus">__cplusplus</span></u></td></tr>
+<tr><th id="34">34</th><td><b>extern</b> <q>"C"</q> {</td></tr>
+<tr><th id="35">35</th><td><u>#<span data-ppcond="33">endif</span></u></td></tr>
+<tr><th id="36">36</th><td></td></tr>
+<tr><th id="37">37</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="38">38</th><td><i class="doc"> * <span class="command">\brief</span> Signature for backend functions exported as DLL.</i></td></tr>
+<tr><th id="39">39</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="40">40</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">args</span> The arguments</i></td></tr>
+<tr><th id="41">41</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">type_codes</span> The type codes of the arguments</i></td></tr>
+<tr><th id="42">42</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">num_args</span> Number of arguments.</i></td></tr>
+<tr><th id="43">43</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">out_ret_value</span> The output value of the the return value.</i></td></tr>
+<tr><th id="44">44</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">out_ret_tcode</span> The output type code of the return value.</i></td></tr>
+<tr><th id="45">45</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">resource_handle</span> Pointer to associated resource.</i></td></tr>
+<tr><th id="46">46</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="47">47</th><td><i class="doc"> * <span class="command">\return</span> 0 if success, -1 if failure happens, set error via TVMAPISetLastError.</i></td></tr>
+<tr><th id="48">48</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="49">49</th><td><b>typedef</b> <em>int</em> (*<dfn class="typedef" id="TVMBackendPackedCFunc" title='TVMBackendPackedCFunc' data-type='int (*)(TVMValue *, int *, int, TVMValue *, int *, void *)' data-ref="TVMBackendPackedCFunc" data-ref-filename="TVMBackendPackedCFunc">TVMBackendPackedCFunc</dfn>)(<a class="typedef" href="c_runtime_api.h.html#TVMValue" title='TVMValue' data-type='union TVMValue' data-ref="TVMValue" data-ref-filename="TVMValue">TVMValue</a>* <dfn class="local col1 decl" id="1args" title='args' data-type='TVMValue *' data-ref="1args" data-ref-filename="1args">args</dfn>, <em>int</em>* <dfn class="local col2 decl" id="2type_codes" title='type_codes' data-type='int *' data-ref="2type_codes" data-ref-filename="2type_codes">type_codes</dfn>, <em>int</em> <dfn class="local col3 decl" id="3num_args" title='num_args' data-type='int' data-ref="3num_args" data-ref-filename="3num_args">num_args</dfn>,</td></tr>
+<tr><th id="50">50</th><td>                                     <a class="typedef" href="c_runtime_api.h.html#TVMValue" title='TVMValue' data-type='union TVMValue' data-ref="TVMValue" data-ref-filename="TVMValue">TVMValue</a>* <dfn class="local col4 decl" id="4out_ret_value" title='out_ret_value' data-type='TVMValue *' data-ref="4out_ret_value" data-ref-filename="4out_ret_value">out_ret_value</dfn>, <em>int</em>* <dfn class="local col5 decl" id="5out_ret_tcode" title='out_ret_tcode' data-type='int *' data-ref="5out_ret_tcode" data-ref-filename="5out_ret_tcode">out_ret_tcode</dfn>,</td></tr>
+<tr><th id="51">51</th><td>                                     <em>void</em>* <dfn class="local col6 decl" id="6resource_handle" title='resource_handle' data-type='void *' data-ref="6resource_handle" data-ref-filename="6resource_handle">resource_handle</dfn>);</td></tr>
+<tr><th id="52">52</th><td></td></tr>
+<tr><th id="53">53</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="54">54</th><td><i class="doc"> * <span class="command">\brief</span> Backend function for modules to get function</i></td></tr>
+<tr><th id="55">55</th><td><i class="doc"> *  from its environment mod_node (its imports and global function).</i></td></tr>
+<tr><th id="56">56</th><td><i class="doc"> *  The user do should not call TVMFuncFree on func.</i></td></tr>
+<tr><th id="57">57</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="58">58</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">mod_node</span> The module handle.</i></td></tr>
+<tr><th id="59">59</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">func_name</span> The name of the function.</i></td></tr>
+<tr><th id="60">60</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">out</span> The result function.</i></td></tr>
+<tr><th id="61">61</th><td><i class="doc"> * <span class="command">\return</span> 0 when no error is thrown, -1 when failure happens</i></td></tr>
+<tr><th id="62">62</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="63">63</th><td><a class="macro" href="c_runtime_api.h.html#64" title="__attribute__((visibility(&quot;default&quot;)))" data-ref="_M/TVM_DLL">TVM_DLL</a> <em>int</em> <a class="decl fn" href="../../../src/runtime/c_runtime_api.cc.html#TVMBackendGetFuncFromEnv" title='TVMBackendGetFuncFromEnv' data-ref="TVMBackendGetFuncFromEnv" data-ref-filename="TVMBackendGetFuncFromEnv" id="TVMBackendGetFuncFromEnv">TVMBackendGetFuncFromEnv</a>(<em>void</em>* <dfn class="local col7 decl" id="7mod_node" title='mod_node' data-type='void *' data-ref="7mod_node" data-ref-filename="7mod_node">mod_node</dfn>, <em>const</em> <em>char</em>* <dfn class="local col8 decl" id="8func_name" title='func_name' data-type='const char *' data-ref="8func_name" data-ref-filename="8func_name">func_name</dfn>, <a class="typedef" href="c_runtime_api.h.html#TVMFunctionHandle" title='TVMFunctionHandle' data-type='void *' data-ref="TVMFunctionHandle" data-ref-filename="TVMFunctionHandle">TVMFunctionHandle</a>* <dfn class="local col9 decl" id="9out" title='out' data-type='TVMFunctionHandle *' data-ref="9out" data-ref-filename="9out">out</dfn>);</td></tr>
+<tr><th id="64">64</th><td></td></tr>
+<tr><th id="65">65</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="66">66</th><td><i class="doc"> * <span class="command">\brief</span> Backend function to register system-wide library symbol.</i></td></tr>
+<tr><th id="67">67</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="68">68</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">name</span> The name of the symbol</i></td></tr>
+<tr><th id="69">69</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">ptr</span> The symbol address.</i></td></tr>
+<tr><th id="70">70</th><td><i class="doc"> * <span class="command">\return</span> 0 when no error is thrown, -1 when failure happens</i></td></tr>
+<tr><th id="71">71</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="72">72</th><td><a class="macro" href="c_runtime_api.h.html#64" title="__attribute__((visibility(&quot;default&quot;)))" data-ref="_M/TVM_DLL">TVM_DLL</a> <em>int</em> <dfn class="decl fn" id="TVMBackendRegisterSystemLibSymbol" title='TVMBackendRegisterSystemLibSymbol' data-ref="TVMBackendRegisterSystemLibSymbol" data-ref-filename="TVMBackendRegisterSystemLibSymbol">TVMBackendRegisterSystemLibSymbol</dfn>(<em>const</em> <em>char</em>* <dfn class="local col0 decl" id="10name" title='name' data-type='const char *' data-ref="10name" data-ref-filename="10name">name</dfn>, <em>void</em>* <dfn class="local col1 decl" id="11ptr" title='ptr' data-type='void *' data-ref="11ptr" data-ref-filename="11ptr">ptr</dfn>);</td></tr>
+<tr><th id="73">73</th><td></td></tr>
+<tr><th id="74">74</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="75">75</th><td><i class="doc"> * <span class="command">\brief</span> Backend function to allocate temporal workspace.</i></td></tr>
+<tr><th id="76">76</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="77">77</th><td><i class="doc"> * <span class="command">\note</span> The result allocated space is ensured to be aligned to kTempAllocaAlignment.</i></td></tr>
+<tr><th id="78">78</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="79">79</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">nbytes</span> The size of the space requested.</i></td></tr>
+<tr><th id="80">80</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">device_type</span> The device type which the space will be allocated.</i></td></tr>
+<tr><th id="81">81</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">device_id</span> The device id which the space will be allocated.</i></td></tr>
+<tr><th id="82">82</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">dtype_code_hint</span> The type code of the array elements. Only used in</i></td></tr>
+<tr><th id="83">83</th><td><i class="doc"> * certain backends such as OpenGL.</i></td></tr>
+<tr><th id="84">84</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">dtype_bits_hint</span> The type bits of the array elements. Only used in</i></td></tr>
+<tr><th id="85">85</th><td><i class="doc"> * certain backends such as OpenGL.</i></td></tr>
+<tr><th id="86">86</th><td><i class="doc"> * <span class="command">\return</span> nullptr when error is thrown, a valid ptr if success</i></td></tr>
+<tr><th id="87">87</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="88">88</th><td><a class="macro" href="c_runtime_api.h.html#64" title="__attribute__((visibility(&quot;default&quot;)))" data-ref="_M/TVM_DLL">TVM_DLL</a> <em>void</em>* <a class="decl fn" href="../../../src/runtime/c_runtime_api.cc.html#TVMBackendAllocWorkspace" title='TVMBackendAllocWorkspace' data-ref="TVMBackendAllocWorkspace" data-ref-filename="TVMBackendAllocWorkspace" id="TVMBackendAllocWorkspace">TVMBackendAllocWorkspace</a>(<em>int</em> <dfn class="local col2 decl" id="12device_type" title='device_type' data-type='int' data-ref="12device_type" data-ref-filename="12device_type">device_type</dfn>, <em>int</em> <dfn class="local col3 decl" id="13device_id" title='device_id' data-type='int' data-ref="13device_id" data-ref-filename="13device_id">device_id</dfn>, <a class="typedef" href="../../../../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint64_t" title='uint64_t' data-type='__uint64_t' data-ref="uint64_t" data-ref-filename="uint64_t">uint64_t</a> <dfn class="local col4 decl" id="14nbytes" title='nbytes' data-type='uint64_t' data-ref="14nbytes" data-ref-filename="14nbytes">nbytes</dfn>,</td></tr>
+<tr><th id="89">89</th><td>                                       <em>int</em> <dfn class="local col5 decl" id="15dtype_code_hint" title='dtype_code_hint' data-type='int' data-ref="15dtype_code_hint" data-ref-filename="15dtype_code_hint">dtype_code_hint</dfn>, <em>int</em> <dfn class="local col6 decl" id="16dtype_bits_hint" title='dtype_bits_hint' data-type='int' data-ref="16dtype_bits_hint" data-ref-filename="16dtype_bits_hint">dtype_bits_hint</dfn>);</td></tr>
+<tr><th id="90">90</th><td></td></tr>
+<tr><th id="91">91</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="92">92</th><td><i class="doc"> * <span class="command">\brief</span> Backend function to free temporal workspace.</i></td></tr>
+<tr><th id="93">93</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="94">94</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">ptr</span> The result allocated space pointer.</i></td></tr>
+<tr><th id="95">95</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">device_type</span> The device type which the space will be allocated.</i></td></tr>
+<tr><th id="96">96</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">device_id</span> The device id which the space will be allocated.</i></td></tr>
+<tr><th id="97">97</th><td><i class="doc"> * <span class="command">\return</span> 0 when no error is thrown, -1 when failure happens</i></td></tr>
+<tr><th id="98">98</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="99">99</th><td><i class="doc"> * <span class="command">\sa</span> TVMBackendAllocWorkspace</i></td></tr>
+<tr><th id="100">100</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="101">101</th><td><a class="macro" href="c_runtime_api.h.html#64" title="__attribute__((visibility(&quot;default&quot;)))" data-ref="_M/TVM_DLL">TVM_DLL</a> <em>int</em> <a class="decl fn" href="../../../src/runtime/c_runtime_api.cc.html#TVMBackendFreeWorkspace" title='TVMBackendFreeWorkspace' data-ref="TVMBackendFreeWorkspace" data-ref-filename="TVMBackendFreeWorkspace" id="TVMBackendFreeWorkspace">TVMBackendFreeWorkspace</a>(<em>int</em> <dfn class="local col7 decl" id="17device_type" title='device_type' data-type='int' data-ref="17device_type" data-ref-filename="17device_type">device_type</dfn>, <em>int</em> <dfn class="local col8 decl" id="18device_id" title='device_id' data-type='int' data-ref="18device_id" data-ref-filename="18device_id">device_id</dfn>, <em>void</em>* <dfn class="local col9 decl" id="19ptr" title='ptr' data-type='void *' data-ref="19ptr" data-ref-filename="19ptr">ptr</dfn>);</td></tr>
+<tr><th id="102">102</th><td></td></tr>
+<tr><th id="103">103</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="104">104</th><td><i class="doc"> * <span class="command">\brief</span> Backend function to register execution environment(e.g. python)</i></td></tr>
+<tr><th id="105">105</th><td><i class="doc"> *        specific C APIs.</i></td></tr>
+<tr><th id="106">106</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="107">107</th><td><i class="doc"> * <span class="command">\note</span>  We only register the C API function when absolutely necessary (e.g. when signal handler</i></td></tr>
+<tr><th id="108">108</th><td><i class="doc"> *  cannot trap back into python). In most cases we should use the PackedFunc FFI.</i></td></tr>
+<tr><th id="109">109</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="110">110</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">name</span> The name of the symbol</i></td></tr>
+<tr><th id="111">111</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">ptr</span> The symbol address.</i></td></tr>
+<tr><th id="112">112</th><td><i class="doc"> * <span class="command">\return</span> 0 when no error is thrown, -1 when failure happens</i></td></tr>
+<tr><th id="113">113</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="114">114</th><td><a class="macro" href="c_runtime_api.h.html#64" title="__attribute__((visibility(&quot;default&quot;)))" data-ref="_M/TVM_DLL">TVM_DLL</a> <em>int</em> <dfn class="decl fn" id="TVMBackendRegisterEnvCAPI" title='TVMBackendRegisterEnvCAPI' data-ref="TVMBackendRegisterEnvCAPI" data-ref-filename="TVMBackendRegisterEnvCAPI">TVMBackendRegisterEnvCAPI</dfn>(<em>const</em> <em>char</em>* <dfn class="local col0 decl" id="20name" title='name' data-type='const char *' data-ref="20name" data-ref-filename="20name">name</dfn>, <em>void</em>* <dfn class="local col1 decl" id="21ptr" title='ptr' data-type='void *' data-ref="21ptr" data-ref-filename="21ptr">ptr</dfn>);</td></tr>
+<tr><th id="115">115</th><td></td></tr>
+<tr><th id="116">116</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="117">117</th><td><i class="doc"> * <span class="command">\brief</span> Environment for TVM parallel task.</i></td></tr>
+<tr><th id="118">118</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="119">119</th><td><b>typedef</b> <b>struct</b> {</td></tr>
+<tr><th id="120">120</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="121">121</th><td><i class="doc">   * <span class="command">\brief</span> Auxiliary used for synchronization</i></td></tr>
+<tr><th id="122">122</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="123">123</th><td>  <em>void</em>* <dfn class="decl field" id="(anonymous)::sync_handle" title='(anonymous struct)::sync_handle' data-ref="(anonymous)::sync_handle" data-ref-filename="(anonymous)..sync_handle">sync_handle</dfn>;</td></tr>
+<tr><th id="124">124</th><td>  <i class="doc">/*! <span class="command">\brief</span> total amount of task */</i></td></tr>
+<tr><th id="125">125</th><td>  <a class="typedef" href="../../../../include/x86_64-linux-gnu/bits/stdint-intn.h.html#int32_t" title='int32_t' data-type='__int32_t' data-ref="int32_t" data-ref-filename="int32_t">int32_t</a> <dfn class="decl field" id="(anonymous)::num_task" title='(anonymous struct)::num_task' data-ref="(anonymous)::num_task" data-ref-filename="(anonymous)..num_task">num_task</dfn>;</td></tr>
+<tr><th id="126">126</th><td>} <dfn class="typedef" id="TVMParallelGroupEnv" title='TVMParallelGroupEnv' data-type='struct TVMParallelGroupEnv' data-ref="TVMParallelGroupEnv" data-ref-filename="TVMParallelGroupEnv">TVMParallelGroupEnv</dfn>;</td></tr>
+<tr><th id="127">127</th><td></td></tr>
+<tr><th id="128">128</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="129">129</th><td><i class="doc"> * <span class="command">\brief</span> The callback function to execute a parallel lambda</i></td></tr>
+<tr><th id="130">130</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">task_id</span> the task id of the function.</i></td></tr>
+<tr><th id="131">131</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">penv</span> The parallel environment backs the execution.</i></td></tr>
+<tr><th id="132">132</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">cdata</span> The supporting closure data.</i></td></tr>
+<tr><th id="133">133</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="134">134</th><td><b>typedef</b> <em>int</em> (*<dfn class="typedef" id="FTVMParallelLambda" title='FTVMParallelLambda' data-type='int (*)(int, TVMParallelGroupEnv *, void *)' data-ref="FTVMParallelLambda" data-ref-filename="FTVMParallelLambda">FTVMParallelLambda</dfn>)(<em>int</em> <dfn class="local col2 decl" id="22task_id" title='task_id' data-type='int' data-ref="22task_id" data-ref-filename="22task_id">task_id</dfn>, <a class="typedef" href="#TVMParallelGroupEnv" title='TVMParallelGroupEnv' data-type='struct TVMParallelGroupEnv' data-ref="TVMParallelGroupEnv" data-ref-filename="TVMParallelGroupEnv">TVMParallelGroupEnv</a>* <dfn class="local col3 decl" id="23penv" title='penv' data-type='TVMParallelGroupEnv *' data-ref="23penv" data-ref-filename="23penv">penv</dfn>, <em>void</em>* <dfn class="local col4 decl" id="24cdata" title='cdata' data-type='void *' data-ref="24cdata" data-ref-filename="24cdata">cdata</dfn>);</td></tr>
+<tr><th id="135">135</th><td></td></tr>
+<tr><th id="136">136</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="137">137</th><td><i class="doc"> * <span class="command">\brief</span> Backend function for running parallel jobs.</i></td></tr>
+<tr><th id="138">138</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="139">139</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">flambda</span> The parallel function to be launched.</i></td></tr>
+<tr><th id="140">140</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">cdata</span> The closure data.</i></td></tr>
+<tr><th id="141">141</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">num_task</span> Number of tasks to launch, can be 0, means launch</i></td></tr>
+<tr><th id="142">142</th><td><i class="doc"> *           with all available threads.</i></td></tr>
+<tr><th id="143">143</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="144">144</th><td><i class="doc"> * <span class="command">\return</span> 0 when no error is thrown, -1 when failure happens</i></td></tr>
+<tr><th id="145">145</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="146">146</th><td><a class="macro" href="c_runtime_api.h.html#64" title="__attribute__((visibility(&quot;default&quot;)))" data-ref="_M/TVM_DLL">TVM_DLL</a> <em>int</em> <dfn class="decl fn" id="TVMBackendParallelLaunch" title='TVMBackendParallelLaunch' data-ref="TVMBackendParallelLaunch" data-ref-filename="TVMBackendParallelLaunch">TVMBackendParallelLaunch</dfn>(<a class="typedef" href="#FTVMParallelLambda" title='FTVMParallelLambda' data-type='int (*)(int, TVMParallelGroupEnv *, void *)' data-ref="FTVMParallelLambda" data-ref-filename="FTVMParallelLambda">FTVMParallelLambda</a> <dfn class="local col5 decl" id="25flambda" title='flambda' data-type='FTVMParallelLambda' data-ref="25flambda" data-ref-filename="25flambda">flambda</dfn>, <em>void</em>* <dfn class="local col6 decl" id="26cdata" title='cdata' data-type='void *' data-ref="26cdata" data-ref-filename="26cdata">cdata</dfn>, <em>int</em> <dfn class="local col7 decl" id="27num_task" title='num_task' data-type='int' data-ref="27num_task" data-ref-filename="27num_task">num_task</dfn>);</td></tr>
+<tr><th id="147">147</th><td></td></tr>
+<tr><th id="148">148</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="149">149</th><td><i class="doc"> * <span class="command">\brief</span> BSP barrrier between parallel threads</i></td></tr>
+<tr><th id="150">150</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">task_id</span> the task id of the function.</i></td></tr>
+<tr><th id="151">151</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">penv</span> The parallel environment backs the execution.</i></td></tr>
+<tr><th id="152">152</th><td><i class="doc"> * <span class="command">\return</span> 0 when no error is thrown, -1 when failure happens</i></td></tr>
+<tr><th id="153">153</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="154">154</th><td><a class="macro" href="c_runtime_api.h.html#64" title="__attribute__((visibility(&quot;default&quot;)))" data-ref="_M/TVM_DLL">TVM_DLL</a> <em>int</em> <dfn class="decl fn" id="TVMBackendParallelBarrier" title='TVMBackendParallelBarrier' data-ref="TVMBackendParallelBarrier" data-ref-filename="TVMBackendParallelBarrier">TVMBackendParallelBarrier</dfn>(<em>int</em> <dfn class="local col8 decl" id="28task_id" title='task_id' data-type='int' data-ref="28task_id" data-ref-filename="28task_id">task_id</dfn>, <a class="typedef" href="#TVMParallelGroupEnv" title='TVMParallelGroupEnv' data-type='struct TVMParallelGroupEnv' data-ref="TVMParallelGroupEnv" data-ref-filename="TVMParallelGroupEnv">TVMParallelGroupEnv</a>* <dfn class="local col9 decl" id="29penv" title='penv' data-type='TVMParallelGroupEnv *' data-ref="29penv" data-ref-filename="29penv">penv</dfn>);</td></tr>
+<tr><th id="155">155</th><td></td></tr>
+<tr><th id="156">156</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="157">157</th><td><i class="doc"> * <span class="command">\brief</span> Simple static initialization function.</i></td></tr>
+<tr><th id="158">158</th><td><i class="doc"> *  Run f once and set handle to be not null.</i></td></tr>
+<tr><th id="159">159</th><td><i class="doc"> *  This function is mainly used for test purpose.</i></td></tr>
+<tr><th id="160">160</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="161">161</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">handle</span> A global address to indicate f</i></td></tr>
+<tr><th id="162">162</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">f</span> The function to be run</i></td></tr>
+<tr><th id="163">163</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">cdata</span> The closure data to pass to the function.</i></td></tr>
+<tr><th id="164">164</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">nbytes</span> Number of bytes in the closure data.</i></td></tr>
+<tr><th id="165">165</th><td><i class="doc"> * <span class="command">\return</span> 0 when no error is thrown, -1 when failure happens</i></td></tr>
+<tr><th id="166">166</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="167">167</th><td><a class="macro" href="c_runtime_api.h.html#64" title="__attribute__((visibility(&quot;default&quot;)))" data-ref="_M/TVM_DLL">TVM_DLL</a> <em>int</em> <a class="decl fn" href="../../../src/runtime/c_runtime_api.cc.html#TVMBackendRunOnce" title='TVMBackendRunOnce' data-ref="TVMBackendRunOnce" data-ref-filename="TVMBackendRunOnce" id="TVMBackendRunOnce">TVMBackendRunOnce</a>(<em>void</em>** <dfn class="local col0 decl" id="30handle" title='handle' data-type='void **' data-ref="30handle" data-ref-filename="30handle">handle</dfn>, <em>int</em> (*<dfn class="local col1 decl" id="31f" title='f' data-type='int (*)(void *)' data-ref="31f" data-ref-filename="31f">f</dfn>)(<em>void</em>*), <em>void</em>* <dfn class="local col2 decl" id="32cdata" title='cdata' data-type='void *' data-ref="32cdata" data-ref-filename="32cdata">cdata</dfn>, <em>int</em> <dfn class="local col3 decl" id="33nbytes" title='nbytes' data-type='int' data-ref="33nbytes" data-ref-filename="33nbytes">nbytes</dfn>);</td></tr>
+<tr><th id="168">168</th><td></td></tr>
+<tr><th id="169">169</th><td><u>#<span data-ppcond="169">ifdef</span> <span class="macro" data-ref="_M/__cplusplus">__cplusplus</span></u></td></tr>
+<tr><th id="170">170</th><td>}  <i>// TVM_EXTERN_C</i></td></tr>
+<tr><th id="171">171</th><td><u>#<span data-ppcond="169">endif</span></u></td></tr>
+<tr><th id="172">172</th><td><u>#<span data-ppcond="28">endif</span>  // TVM_RUNTIME_C_BACKEND_API_H_</u></td></tr>
+<tr><th id="173">173</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated while processing <a href='../../../src/runtime/c_runtime_api.cc.html'>tvm/src/runtime/c_runtime_api.cc</a><br/>Generated on <em>2022-Aug-10</em> from project tvm revision <em>fae79bb</em><br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

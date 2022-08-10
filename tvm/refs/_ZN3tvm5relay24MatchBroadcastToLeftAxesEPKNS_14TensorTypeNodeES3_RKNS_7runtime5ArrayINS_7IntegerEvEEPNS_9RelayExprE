@@ -1,0 +1,23 @@
+<def f='tvm/src/relay/transforms/pattern_utils.h' l='117' ll='149' type='bool tvm::relay::MatchBroadcastToLeftAxes(const tvm::relay::TensorTypeNode * tlhs, const tvm::relay::TensorTypeNode * trhs, const Array&lt;tvm::Integer&gt; &amp; lhs_axes, tvm::relay::Expr * rhs_value = nullptr)'/>
+<doc f='tvm/src/relay/transforms/pattern_utils.h' l='105'>/*!
+ * \brief Try to match lhs and rhs via broadcasting rule, such that:
+ *
+ * rhs matches the dimension of lhs specified by lhs_axes
+ * rhs&apos;s value equals 1 on rest of dimensions.
+ *
+ * \param tlhs The type of left operand (data)
+ * \param trhs The type right operand (bias)
+ * \param lhs_axes The axes on lhs to match.
+ * \param rhs_value A squeezed version of rhs which only contains matched dimension.
+ * \return Whether match is successful.
+ */</doc>
+<use f='tvm/src/relay/transforms/fold_scale_axis.cc' l='402' u='c' c='_ZN3tvm5relay15fold_scale_axis17AddSubForwardPrepERKNS0_4CallERKNS1_7MessageE'/>
+<use f='tvm/src/relay/transforms/fold_scale_axis.cc' l='404' u='c' c='_ZN3tvm5relay15fold_scale_axis17AddSubForwardPrepERKNS0_4CallERKNS1_7MessageE'/>
+<use f='tvm/src/relay/transforms/fold_scale_axis.cc' l='422' u='c' c='_ZN3tvm5relay15fold_scale_axis20AddSubForwardRewriteERKNS0_4CallERKNS_7runtime5ArrayINS_9RelayExprEvEERKNS1_7MessageE'/>
+<use f='tvm/src/relay/transforms/fold_scale_axis.cc' l='433' u='c' c='_ZN3tvm5relay15fold_scale_axis20AddSubForwardRewriteERKNS0_4CallERKNS_7runtime5ArrayINS_9RelayExprEvEERKNS1_7MessageE'/>
+<use f='tvm/src/relay/transforms/fold_scale_axis.cc' l='475' u='c' c='_ZN3tvm5relay15fold_scale_axis22MultiplyForwardRewriteERKNS0_4CallERKNS_7runtime5ArrayINS_9RelayExprEvEERKNS1_7MessageE'/>
+<use f='tvm/src/relay/transforms/fold_scale_axis.cc' l='481' u='c' c='_ZN3tvm5relay15fold_scale_axis22MultiplyForwardRewriteERKNS0_4CallERKNS_7runtime5ArrayINS_9RelayExprEvEERKNS1_7MessageE'/>
+<use f='tvm/src/relay/transforms/fold_scale_axis.cc' l='867' u='c' c='_ZN3tvm5relay15fold_scale_axis18AddSubBackwardPrepERKNS0_4CallERKNS_7runtime5ArrayINS1_7MessageEvEE'/>
+<use f='tvm/src/relay/transforms/fold_scale_axis.cc' l='870' u='c' c='_ZN3tvm5relay15fold_scale_axis18AddSubBackwardPrepERKNS0_4CallERKNS_7runtime5ArrayINS1_7MessageEvEE'/>
+<use f='tvm/src/relay/transforms/fold_scale_axis.cc' l='950' u='c' c='_ZN3tvm5relay15fold_scale_axis25MultiplyBackwardTransformERKNS0_4CallERKNS1_7MessageERKNS_9RelayExprERKNS1_19BackwardTransformerE'/>
+<use f='tvm/src/relay/transforms/fold_scale_axis.cc' l='957' u='c' c='_ZN3tvm5relay15fold_scale_axis25MultiplyBackwardTransformERKNS0_4CallERKNS1_7MessageERKNS_9RelayExprERKNS1_19BackwardTransformerE'/>

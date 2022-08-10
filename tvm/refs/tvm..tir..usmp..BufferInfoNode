@@ -1,0 +1,61 @@
+<inh f='tvm/include/tvm/runtime/object.h' l='167' c='tvm::runtime::Object'/>
+<def f='tvm/include/tvm/tir/usmp/utils.h' l='71' ll='117'/>
+<use f='tvm/include/tvm/tir/usmp/utils.h' l='94' c='_ZNK3tvm3tir4usmp14BufferInfoNode12SEqualReduceEPKS2_NS_13SEqualReducerE'/>
+<use f='tvm/include/tvm/tir/usmp/utils.h' l='124' c='_ZNK3tvm3tir4usmp10BufferInfoptEv'/>
+<use f='tvm/include/tvm/tir/usmp/utils.h' l='124' c='_ZNK3tvm3tir4usmp10BufferInfoptEv'/>
+<use f='tvm/include/tvm/tir/usmp/utils.h' l='124'/>
+<size>64</size>
+<doc f='tvm/include/tvm/tir/usmp/utils.h' l='62'>/*!
+ * \brief Describes an abstract memory buffer that will get allocated inside a pool.
+ * The actual memory buffer in represented by PoolAllocationNode after static memory planning.
+ *
+ * See also for relay-level counterparts:
+ * relay::StorageToken (graph_plan_memory.cc)
+ * relay::backend::StorageInfoNode (relay/backend/utils.h)
+ * Region (python/tvm/relay/transform/memory_plan.py)
+ */</doc>
+<mbr r='tvm::tir::usmp::BufferInfoNode::name_hint' o='128' t='tvm::runtime::String'/>
+<mbr r='tvm::tir::usmp::BufferInfoNode::size_bytes' o='192' t='tvm::Integer'/>
+<mbr r='tvm::tir::usmp::BufferInfoNode::pool_candidates' o='256' t='Array&lt;tvm::PoolInfo&gt;'/>
+<mbr r='tvm::tir::usmp::BufferInfoNode::alignment' o='320' t='tvm::Integer'/>
+<mbr r='tvm::tir::usmp::BufferInfoNode::conflicts' o='384' t='Array&lt;tvm::runtime::ObjectRef&gt;'/>
+<mbr r='tvm::tir::usmp::BufferInfoNode::kind' o='448' t='tvm::tir::usmp::BufferInfoKind'/>
+<fun r='_ZN3tvm3tir4usmp14BufferInfoNode10VisitAttrsEPNS_11AttrVisitorE'/>
+<fun r='_ZNK3tvm3tir4usmp14BufferInfoNode12SEqualReduceEPKS2_NS_13SEqualReducerE'/>
+<fun r='_ZNK3tvm3tir4usmp14BufferInfoNode11SHashReduceENS_12SHashReducerE'/>
+<fun r='_ZN3tvm3tir4usmp14BufferInfoNode12SetConflictsENS_7runtime5ArrayINS3_9ObjectRefEvEE'/>
+<smbr r='tvm::tir::usmp::BufferInfoNode::_type_key' t='const char *const'/>
+<smbr r='tvm::tir::usmp::BufferInfoNode::_type_final' t='const bool'/>
+<smbr r='tvm::tir::usmp::BufferInfoNode::_type_child_slots' t='const int'/>
+<fun r='_ZN3tvm3tir4usmp14BufferInfoNode16RuntimeTypeIndexEv'/>
+<fun r='_ZN3tvm3tir4usmp14BufferInfoNode27_GetOrAllocRuntimeTypeIndexEv'/>
+<use f='tvm/src/tir/usmp/algo/hill_climb.cc' l='58'/>
+<use f='tvm/src/tir/usmp/algo/hill_climb.cc' l='91' c='_ZN3tvm3tir4usmp4algo18HillClimbAllocator6greedyERKSt6vectorINS1_10BufferInfoESaIS5_EE'/>
+<use f='tvm/src/tir/usmp/algo/hill_climb.cc' l='93' c='_ZN3tvm3tir4usmp4algo18HillClimbAllocator6greedyERKSt6vectorINS1_10BufferInfoESaIS5_EE'/>
+<use f='tvm/src/tir/usmp/algo/hill_climb.cc' l='93' c='_ZN3tvm3tir4usmp4algo18HillClimbAllocator6greedyERKSt6vectorINS1_10BufferInfoESaIS5_EE'/>
+<use f='tvm/src/tir/usmp/algo/hill_climb.cc' l='128' c='_ZN3tvm3tir4usmp4algo18HillClimbAllocator6greedyERKSt6vectorINS1_10BufferInfoESaIS5_EE'/>
+<use f='tvm/src/tir/usmp/algo/hill_climb.cc' l='141' c='_ZN3tvm3tir4usmp4algo18HillClimbAllocator12find_highestEPSt13unordered_mapIPKNS1_14BufferInfoNodeENS1_14PoolAllocationESt4hashIS7_ESt8equal_toIS7_ESaISt4pairIKS7_S8_EEE'/>
+<use f='tvm/src/tir/usmp/algo/hill_climb.cc' l='157' c='_ZN3tvm3tir4usmp4algo18HillClimbAllocator22collect_neighbor_listsEPKNS1_14BufferInfoNodeEPSt6vectorIS6_SaIS6_EESA_RKT_'/>
+<use f='tvm/src/tir/usmp/algo/hill_climb.cc' l='158' c='_ZN3tvm3tir4usmp4algo18HillClimbAllocator22collect_neighbor_listsEPKNS1_14BufferInfoNodeEPSt6vectorIS6_SaIS6_EESA_RKT_'/>
+<use f='tvm/src/tir/usmp/algo/hill_climb.cc' l='159' c='_ZN3tvm3tir4usmp4algo18HillClimbAllocator22collect_neighbor_listsEPKNS1_14BufferInfoNodeEPSt6vectorIS6_SaIS6_EESA_RKT_'/>
+<use f='tvm/src/tir/usmp/algo/hill_climb.cc' l='162' c='_ZN3tvm3tir4usmp4algo18HillClimbAllocator22collect_neighbor_listsEPKNS1_14BufferInfoNodeEPSt6vectorIS6_SaIS6_EESA_RKT_'/>
+<use f='tvm/src/tir/usmp/algo/hill_climb.cc' l='169' c='_ZN3tvm3tir4usmp4algo18HillClimbAllocator22collect_neighbor_listsEPKNS1_14BufferInfoNodeEPSt6vectorIS6_SaIS6_EESA_RKT_'/>
+<use f='tvm/src/tir/usmp/algo/hill_climb.cc' l='197' c='_ZN3tvm3tir4usmp4algo18HillClimbAllocator10PlanMemoryERKNS_7runtime5ArrayINS1_10BufferInfoEvEE'/>
+<use f='tvm/src/tir/usmp/algo/hill_climb.cc' l='199' c='_ZN3tvm3tir4usmp4algo18HillClimbAllocator10PlanMemoryERKNS_7runtime5ArrayINS1_10BufferInfoEvEE'/>
+<use f='tvm/src/tir/usmp/algo/hill_climb.cc' l='220' c='_ZN3tvm3tir4usmp4algo18HillClimbAllocator10PlanMemoryERKNS_7runtime5ArrayINS1_10BufferInfoEvEE'/>
+<use f='tvm/src/tir/usmp/algo/hill_climb.cc' l='221' c='_ZN3tvm3tir4usmp4algo18HillClimbAllocator10PlanMemoryERKNS_7runtime5ArrayINS1_10BufferInfoEvEE'/>
+<use f='tvm/src/tir/usmp/algo/hill_climb.cc' l='265' c='_ZN3tvm3tir4usmp4algo18HillClimbAllocator10PlanMemoryERKNS_7runtime5ArrayINS1_10BufferInfoEvEE'/>
+<use f='tvm/src/tir/usmp/algo/hill_climb.cc' l='278' c='_ZN3tvm3tir4usmp4algo18HillClimbAllocator10PlanMemoryERKNS_7runtime5ArrayINS1_10BufferInfoEvEE'/>
+<use f='tvm/src/tir/usmp/algo/hill_climb.cc' l='279' c='_ZN3tvm3tir4usmp4algo18HillClimbAllocator10PlanMemoryERKNS_7runtime5ArrayINS1_10BufferInfoEvEE'/>
+<use f='tvm/src/tir/usmp/algo/hill_climb.cc' l='280' c='_ZN3tvm3tir4usmp4algo18HillClimbAllocator10PlanMemoryERKNS_7runtime5ArrayINS1_10BufferInfoEvEE'/>
+<use f='tvm/src/tir/usmp/algo/hill_climb.cc' l='293' c='_ZN3tvm3tir4usmp4algo18HillClimbAllocator10PlanMemoryERKNS_7runtime5ArrayINS1_10BufferInfoEvEE'/>
+<use f='tvm/src/tir/usmp/algo/hill_climb.cc' l='294' c='_ZN3tvm3tir4usmp4algo18HillClimbAllocator10PlanMemoryERKNS_7runtime5ArrayINS1_10BufferInfoEvEE'/>
+<size>64</size>
+<use f='tvm/src/tir/usmp/utils.cc' l='41' c='_ZN3tvm3tir4usmp10BufferInfoC1ENS_7runtime6StringENS_7IntegerENS3_5ArrayINS_8PoolInfoEvEES5_NS1_14BufferInfoKindE'/>
+<use f='tvm/src/tir/usmp/utils.cc' l='54'/>
+<use f='tvm/src/tir/usmp/utils.cc' l='54'/>
+<use f='tvm/src/tir/usmp/utils.cc' l='54'/>
+<use f='tvm/src/tir/usmp/utils.cc' l='67'/>
+<use f='tvm/src/tir/usmp/utils.cc' l='68'/>
+<size>64</size>
+<fun r='_ZN3tvm3tir4usmp14BufferInfoNode12SetConflictsENS_7runtime5ArrayINS3_9ObjectRefEvEE'/>

@@ -1,0 +1,123 @@
+<use f='tvm/include/tvm/runtime/container/map.h' l='297'/>
+<use f='tvm/include/tvm/runtime/container/map.h' l='509'/>
+<inh f='tvm/include/tvm/runtime/container/map.h' l='174' c='tvm::runtime::MapNode'/>
+<def f='tvm/include/tvm/runtime/container/map.h' l='571' ll='1117'/>
+<use f='tvm/include/tvm/runtime/container/map.h' l='837' c='_ZN3tvm7runtime12DenseMapNode5EmptyEjm'/>
+<use f='tvm/include/tvm/runtime/container/map.h' l='839' c='_ZN3tvm7runtime12DenseMapNode5EmptyEjm'/>
+<use f='tvm/include/tvm/runtime/container/map.h' l='839' c='_ZN3tvm7runtime12DenseMapNode5EmptyEjm'/>
+<use f='tvm/include/tvm/runtime/container/map.h' l='855' c='_ZN3tvm7runtime12DenseMapNode8CopyFromEPS1_'/>
+<use f='tvm/include/tvm/runtime/container/map.h' l='855' c='_ZN3tvm7runtime12DenseMapNode8CopyFromEPS1_'/>
+<use f='tvm/include/tvm/runtime/container/map.h' l='856' c='_ZN3tvm7runtime12DenseMapNode8CopyFromEPS1_'/>
+<use f='tvm/include/tvm/runtime/container/map.h' l='856' c='_ZN3tvm7runtime12DenseMapNode8CopyFromEPS1_'/>
+<use f='tvm/include/tvm/runtime/container/map.h' l='884' c='_ZN3tvm7runtime12DenseMapNode17InsertMaybeReHashERKSt4pairINS0_9ObjectRefES3_EPNS0_9ObjectPtrINS0_6ObjectEEE'/>
+<use f='tvm/include/tvm/runtime/container/map.h' l='884' c='_ZN3tvm7runtime12DenseMapNode17InsertMaybeReHashERKSt4pairINS0_9ObjectRefES3_EPNS0_9ObjectPtrINS0_6ObjectEEE'/>
+<use f='tvm/include/tvm/runtime/container/map.h' l='1003' c='_ZN3tvm7runtime12DenseMapNode8ListNodeC1EmPKS1_'/>
+<use f='tvm/include/tvm/runtime/container/map.h' l='1043' c='_ZN3tvm7runtime12DenseMapNode8ListNode10MoveToNextEPKS1_h'/>
+<use f='tvm/include/tvm/runtime/container/map.h' l='1055' c='_ZN3tvm7runtime12DenseMapNode8ListNode10MoveToNextEPKS1_'/>
+<use f='tvm/include/tvm/runtime/container/map.h' l='1057' c='_ZNK3tvm7runtime12DenseMapNode8ListNode8FindPrevEPKS1_'/>
+<use f='tvm/include/tvm/runtime/container/map.h' l='1067' c='_ZNK3tvm7runtime12DenseMapNode8ListNode12GetNextEmptyEPKS1_PhPS2_'/>
+<use f='tvm/include/tvm/runtime/container/map.h' l='1136' c='_ZNK3tvm7runtime7MapNode8iteratorptEv'/>
+<use f='tvm/include/tvm/runtime/container/map.h' l='1136' c='_ZN3tvm7runtime7MapNode8iteratorppEv'/>
+<use f='tvm/include/tvm/runtime/container/map.h' l='1136' c='_ZN3tvm7runtime7MapNode8iteratormmEv'/>
+<use f='tvm/include/tvm/runtime/container/map.h' l='1136' c='_ZNK3tvm7runtime7MapNode5countERKNS0_9ObjectRefE'/>
+<use f='tvm/include/tvm/runtime/container/map.h' l='1136' c='_ZNK3tvm7runtime7MapNode2atERKNS0_9ObjectRefE'/>
+<use f='tvm/include/tvm/runtime/container/map.h' l='1122' c='_ZN3tvm7runtime7MapNode2atERKNS0_9ObjectRefE'/>
+<use f='tvm/include/tvm/runtime/container/map.h' l='1136' c='_ZNK3tvm7runtime7MapNode5beginEv'/>
+<use f='tvm/include/tvm/runtime/container/map.h' l='1136' c='_ZNK3tvm7runtime7MapNode3endEv'/>
+<use f='tvm/include/tvm/runtime/container/map.h' l='1136' c='_ZNK3tvm7runtime7MapNode4findERKNS0_9ObjectRefE'/>
+<use f='tvm/include/tvm/runtime/container/map.h' l='1122' c='_ZN3tvm7runtime7MapNode5eraseERKNS1_8iteratorE'/>
+<use f='tvm/include/tvm/runtime/container/map.h' l='1205' c='_ZN3tvm7runtime7MapNode8CopyFromEPS1_'/>
+<size>48</size>
+<doc f='tvm/include/tvm/runtime/container/map.h' l='513'>/*! \brief A specialization of hash map that implements the idea of array-based hash map.
+ * Another reference implementation can be found [1].
+ *
+ * A. Overview
+ *
+ * DenseMapNode did several improvements over traditional separate chaining hash,
+ * in terms of cache locality, memory footprints and data organization.
+ *
+ * A1. Implicit linked list. For better cache locality, instead of using linked list
+ * explicitly for each bucket, we store list data into a single array that spans contiguously
+ * in memory, and then carefully design access patterns to make sure most of them fall into
+ * a single cache line.
+ *
+ * A2. 1-byte metadata. There is only 1 byte overhead for each slot in the array to indexing and
+ * traversal. This can be divided in 3 parts.
+ * 1) Reserved code: (0b11111111)_2 indicates a slot is empty; (0b11111110)_2 indicates protected,
+ * which means the slot is empty but not allowed to be written.
+ * 2) If not empty or protected, the highest bit is used to indicate whether data in the slot is
+ * head of a linked list.
+ * 3) The rest 7 bits are used as the &quot;next pointer&quot; (i.e. pointer to the next element). On 64-bit
+ * architecture, an ordinary pointer can take up to 8 bytes, which is not acceptable overhead when
+ * dealing with 16-byte ObjectRef pairs. Based on a commonly noticed fact that the lists are
+ * relatively short (length &lt;= 3) in hash maps, we follow [1]&apos;s idea that only allows the pointer to
+ * be one of the 126 possible values, i.e. if the next element of i-th slot is (i + x)-th element,
+ * then x must be one of the 126 pre-defined values.
+ *
+ * A3. Data blocking. We organize the array in the way that every 16 elements forms a data block.
+ * The 16-byte metadata of those 16 elements are stored together, followed by the real data, i.e.
+ * 16 key-value pairs.
+ *
+ * B. Implementation details
+ *
+ * B1. Power-of-2 table size and Fibonacci Hashing. We use power-of-two as table size to avoid
+ * modulo for more efficient arithmetics. To make the hash-to-slot mapping distribute more evenly,
+ * we use the Fibonacci Hashing [2] trick.
+ *
+ * B2. Traverse a linked list in the array.
+ * 1) List head. Assume Fibonacci Hashing maps a given key to slot i, if metadata at slot i
+ * indicates that it is list head, then we found the head; otherwise the list is empty. No probing
+ * is done in this procedure. 2) Next element. To find the next element of a non-empty slot i, we
+ * look at the last 7 bits of the metadata at slot i. If they are all zeros, then it is the end of
+ * list; otherwise, we know that the next element is (i + candidates[the-last-7-bits]).
+ *
+ * B3. InsertMaybeReHash an element. Following B2, we first traverse the linked list to see if this
+ * element is in the linked list, and if not, we put it at the end by probing the next empty
+ * position in one of the 126 candidate positions. If the linked list does not even exist, but the
+ * slot for list head has been occupied by another linked list, we should find this intruder another
+ * place.
+ *
+ * B4. Quadratic probing with triangle numbers. In open address hashing, it is provable that probing
+ * with triangle numbers can traverse power-of-2-sized table [3]. In our algorithm, we follow the
+ * suggestion in [1] that also use triangle numbers for &quot;next pointer&quot; as well as sparing for list
+ * head.
+ *
+ * [1] https://github.com/skarupke/flat_hash_map
+ * [2] https://programmingpraxis.com/2018/06/19/fibonacci-hash/
+ * [3] https://fgiesen.wordpress.com/2015/02/22/triangular-numbers-mod-2n/
+ */</doc>
+<smbr r='tvm::runtime::DenseMapNode::kBlockCap' t='const int'/>
+<smbr r='tvm::runtime::DenseMapNode::kMaxLoadFactor' t='const double'/>
+<smbr r='tvm::runtime::DenseMapNode::kEmptySlot' t='const uint8_t'/>
+<smbr r='tvm::runtime::DenseMapNode::kProtectedSlot' t='const uint8_t'/>
+<smbr r='tvm::runtime::DenseMapNode::kNumJumpDists' t='const int'/>
+<fun r='_ZN3tvm7runtime12DenseMapNodeD1Ev'/>
+<fun r='_ZNK3tvm7runtime12DenseMapNode5countERKNS0_9ObjectRefE'/>
+<fun r='_ZNK3tvm7runtime12DenseMapNode2atERKNS0_9ObjectRefE'/>
+<fun r='_ZN3tvm7runtime12DenseMapNode2atERKNS0_9ObjectRefE'/>
+<fun r='_ZNK3tvm7runtime12DenseMapNode4findERKNS0_9ObjectRefE'/>
+<fun r='_ZN3tvm7runtime12DenseMapNode5eraseERKNS0_7MapNode8iteratorE'/>
+<fun r='_ZNK3tvm7runtime12DenseMapNode5beginEv'/>
+<fun r='_ZNK3tvm7runtime12DenseMapNode3endEv'/>
+<fun r='_ZNK3tvm7runtime12DenseMapNode6SearchERKNS0_9ObjectRefE'/>
+<fun r='_ZNK3tvm7runtime12DenseMapNode2AtERKNS0_9ObjectRefE'/>
+<fun r='_ZN3tvm7runtime12DenseMapNode9TryInsertERKNS0_9ObjectRefEPNS1_8ListNodeE'/>
+<fun r='_ZN3tvm7runtime12DenseMapNode16TrySpareListHeadENS1_8ListNodeERKNS0_9ObjectRefEPS2_'/>
+<fun r='_ZN3tvm7runtime12DenseMapNode5EraseERKNS1_8ListNodeE'/>
+<fun r='_ZN3tvm7runtime12DenseMapNode5ResetEv'/>
+<fun r='_ZN3tvm7runtime12DenseMapNode13ReleaseMemoryEv'/>
+<fun r='_ZN3tvm7runtime12DenseMapNode5EmptyEjm'/>
+<fun r='_ZN3tvm7runtime12DenseMapNode8CopyFromEPS1_'/>
+<fun r='_ZN3tvm7runtime12DenseMapNode17InsertMaybeReHashERKSt4pairINS0_9ObjectRefES3_EPNS0_9ObjectPtrINS0_6ObjectEEE'/>
+<fun r='_ZNK3tvm7runtime12DenseMapNode6IsFullEv'/>
+<fun r='_ZNK3tvm7runtime12DenseMapNode6IncItrEm'/>
+<fun r='_ZNK3tvm7runtime12DenseMapNode6DecItrEm'/>
+<fun r='_ZNK3tvm7runtime12DenseMapNode8DeRefItrEm'/>
+<fun r='_ZNK3tvm7runtime12DenseMapNode13IndexFromHashEm'/>
+<fun r='_ZNK3tvm7runtime12DenseMapNode11GetListHeadEm'/>
+<fun r='_ZN3tvm7runtime12DenseMapNode13CalcNumBlocksEm'/>
+<fun r='_ZN3tvm7runtime12DenseMapNode13CalcTableSizeEmPjPm'/>
+<fun r='_ZN3tvm7runtime12DenseMapNode7FibHashEmj'/>
+<mbr r='tvm::runtime::DenseMapNode::fib_shift_' o='256' t='uint32_t'/>
+<mbr r='tvm::runtime::DenseMapNode::data_' o='320' t='tvm::runtime::DenseMapNode::Block *'/>
+<smbr r='tvm::runtime::DenseMapNode::kNextProbeLocation' t='const uint64_t[126]'/>

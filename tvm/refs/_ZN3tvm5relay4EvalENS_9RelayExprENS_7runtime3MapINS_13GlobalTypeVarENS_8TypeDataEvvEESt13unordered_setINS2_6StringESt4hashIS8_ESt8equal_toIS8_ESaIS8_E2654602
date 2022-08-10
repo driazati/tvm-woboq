@@ -1,0 +1,17 @@
+<dec f='tvm/include/tvm/relay/interpreter.h' l='190' type='tvm::runtime::ObjectRef tvm::relay::Eval(tvm::relay::Expr expr, Map&lt;tvm::relay::GlobalTypeVar, tvm::relay::TypeData&gt; type_definitions, std::unordered_set&lt;String&gt; import_set, tvm::Device device, tvm::Target target, Map&lt;tvm::runtime::String, tvm::runtime::ObjectRef&gt; attrs = {})'/>
+<def f='tvm/src/relay/backend/interpreter.cc' l='1106' ll='1127' type='tvm::runtime::ObjectRef tvm::relay::Eval(tvm::relay::Expr expr, Map&lt;tvm::relay::GlobalTypeVar, tvm::relay::TypeData&gt; type_definitions, std::unordered_set&lt;String&gt; import_set, tvm::Device device, tvm::Target target, Map&lt;tvm::runtime::String, tvm::runtime::ObjectRef&gt; attrs = {})'/>
+<doc f='tvm/include/tvm/relay/interpreter.h' l='177'>/*!
+ * \brief Evaluates \p expr and returns its result.
+ *
+ * This function is intended to support TVM constant evaluation.
+ *
+ * \param expr An expression to evaluate.
+ * \param type_definitions Global type definitions which \p expr may references.
+ * \param import_set Already imported external modules.
+ * \param device The device on which all primitives will be executed.
+ * \param target The compiler target flag for compiling primitives.
+ * \param attrs Attributes for the expression to be evaluated with
+ * @return The object representing the result.
+ */</doc>
+<use f='tvm/src/relay/transforms/fold_constant.cc' l='271' u='c' c='_ZN3tvm5relay9transform12_GLOBAL__N_114ConstantFolder13ConstEvaluateERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/partial_eval.cc' l='902' u='c' c='_ZN3tvm5relay12partial_eval16PartialEvaluator13ConstEvaluateERKNS_9RelayExprEPNS0_7LetListE'/>

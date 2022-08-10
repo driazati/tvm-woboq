@@ -1,0 +1,20 @@
+<def f='tvm/include/tvm/topi/transform.h' l='68' ll='133' type='tvm::te::Tensor tvm::topi::sliding_window(const tvm::te::Tensor &amp; x, int axis, Array&lt;tvm::Integer&gt; window_shape, Array&lt;tvm::Integer&gt; strides, std::string name = &quot;T_sliding_window&quot;, std::string tag = &quot;&quot;)'/>
+<doc f='tvm/include/tvm/topi/transform.h' l='51'>/*!
+ * \brief Creates an operation to slide a window over the input x.
+ *
+ * \param x The input tensor.
+ * \param axis What axis the window begins sliding over. Window will be slid
+ * over this axis and all following axes. The axis value determines the window
+ * shape (and thus, the number of strides): window shape and strides must both
+ * be of length `data.ndim-axis`.
+ * \param window_shape The window shape to form over the input. Window shape
+ * must be of length `data.ndim-axis`.
+ * \param strides How to stride the window along each dimension. Strides must be
+ * of length `data.ndim-axis`.
+ * \param name The name of the operation
+ * \param tag The tag to mark the operation
+ *
+ * \return A Tensor whose op member is the sliding_window operation
+ */</doc>
+<use f='tvm/src/relay/op/tensor/transform.cc' l='104' u='c' c='_ZN3tvm5relay20SlidingWindowComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
+<use f='tvm/src/topi/transform.cc' l='58' u='c'/>

@@ -1,0 +1,14 @@
+<dec f='tvm/include/tvm/ir/transform.h' l='437' type='void tvm::transform::SequentialNode::ResolveDependency(const tvm::IRModule &amp; mod)'/>
+<doc f='tvm/include/tvm/ir/transform.h' l='425'>/*!
+   * \brief Resolve the pass dependency. It globs all required passes by
+   *        a given pass and executes them.
+   *
+   * \param mod The module that an optimization pass runs on.
+   *
+   * \return The updated module after resolving pass dependencies.
+   *
+   * TODO(zhiics) Build a dependency graph among the passes using provided
+   * metadata, i.e. required_passes. Likely, we can have a data structure, i.e.
+   * PassInfo, to store the relevant information including the parent passes.
+   */</doc>
+<def f='tvm/src/ir/transform.cc' l='416' ll='423' type='void tvm::transform::SequentialNode::ResolveDependency(const tvm::IRModule &amp; mod)'/>

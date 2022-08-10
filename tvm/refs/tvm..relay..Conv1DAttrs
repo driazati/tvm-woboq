@@ -1,0 +1,36 @@
+<inh f='tvm/include/tvm/ir/attrs.h' l='834' c='tvm::AttrsNode'/>
+<def f='tvm/include/tvm/relay/attrs/nn.h' l='51' ll='114'/>
+<use f='tvm/include/tvm/relay/attrs/nn.h' l='51'/>
+<size>104</size>
+<doc f='tvm/include/tvm/relay/attrs/nn.h' l='50'>/*! \brief Attributes used in 1D convolution operators */</doc>
+<mbr r='tvm::relay::Conv1DAttrs::strides' o='192' t='Array&lt;tvm::relay::IndexExpr&gt;'/>
+<mbr r='tvm::relay::Conv1DAttrs::padding' o='256' t='Array&lt;tvm::relay::IndexExpr&gt;'/>
+<mbr r='tvm::relay::Conv1DAttrs::dilation' o='320' t='Array&lt;tvm::relay::IndexExpr&gt;'/>
+<mbr r='tvm::relay::Conv1DAttrs::groups' o='384' t='int'/>
+<mbr r='tvm::relay::Conv1DAttrs::channels' o='448' t='tvm::relay::IndexExpr'/>
+<mbr r='tvm::relay::Conv1DAttrs::kernel_size' o='512' t='Array&lt;tvm::relay::IndexExpr&gt;'/>
+<mbr r='tvm::relay::Conv1DAttrs::data_layout' o='576' t='tvm::String'/>
+<mbr r='tvm::relay::Conv1DAttrs::kernel_layout' o='640' t='tvm::String'/>
+<mbr r='tvm::relay::Conv1DAttrs::out_layout' o='704' t='tvm::String'/>
+<mbr r='tvm::relay::Conv1DAttrs::out_dtype' o='768' t='tvm::DataType'/>
+<smbr r='tvm::relay::Conv1DAttrs::_type_key' t='const char *const'/>
+<smbr r='tvm::relay::Conv1DAttrs::_type_final' t='const bool'/>
+<smbr r='tvm::relay::Conv1DAttrs::_type_child_slots' t='const int'/>
+<fun r='_ZN3tvm5relay11Conv1DAttrs16RuntimeTypeIndexEv'/>
+<fun r='_ZN3tvm5relay11Conv1DAttrs27_GetOrAllocRuntimeTypeIndexEv'/>
+<fun r='_ZN3tvm5relay11Conv1DAttrs15_tvm_VisitAttrsERT_'/>
+<use f='tvm/src/relay/op/nn/convolution.cc' l='55'/>
+<use f='tvm/src/relay/op/nn/convolution.cc' l='55'/>
+<use f='tvm/src/relay/op/nn/convolution.cc' l='55'/>
+<use f='tvm/src/relay/op/nn/convolution.cc' l='66' c='_ZN3tvm5relay9Conv1DRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/src/relay/op/nn/convolution.cc' l='152'/>
+<use f='tvm/src/relay/op/nn/convolution.cc' l='170'/>
+<use f='tvm/src/relay/op/nn/convolution.cc' l='176'/>
+<size>104</size>
+<use f='tvm/src/relay/quantize/realize.cc' l='215' c='_ZN3tvm5relay8quantize13Conv1dRealizeERKNS0_4CallERKNS_7runtime5ArrayINS_9RelayExprEvEERKNS5_9ObjectRefE'/>
+<use f='tvm/src/relay/quantize/realize.cc' l='216' c='_ZN3tvm5relay8quantize13Conv1dRealizeERKNS0_4CallERKNS_7runtime5ArrayINS_9RelayExprEvEERKNS5_9ObjectRefE'/>
+<size>104</size>
+<use f='tvm/src/relay/transforms/fold_explicit_padding.cc' l='255' c='_ZNK3tvm5relay19SimplifyExplicitPad8callbackERKNS_9RelayExprES4_RKNS_7runtime3MapINS0_9DFPatternENS5_5ArrayIS2_vEEvvEE'/>
+<size>104</size>
+<use f='tvm/src/relay/transforms/to_mixed_precision.cc' l='119' c='_ZNK3tvm5relay18MixedPrecisionPass11GetNewAttrsEPKNS0_8CallNodeERKNS_7runtime8DataTypeE'/>
+<size>104</size>

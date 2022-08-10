@@ -1,0 +1,55 @@
+<inh f='tvm/include/tvm/ir/expr.h' l='49' c='tvm::BaseExprNode'/>
+<def f='tvm/include/tvm/ir/expr.h' l='359' ll='425'/>
+<use f='tvm/include/tvm/ir/expr.h' l='433' c='_ZNK3tvm9RelayExprptEv'/>
+<use f='tvm/include/tvm/ir/expr.h' l='433' c='_ZNK3tvm9RelayExprptEv'/>
+<use f='tvm/include/tvm/ir/expr.h' l='433' c='_ZNK3tvm9RelayExpr3getEv'/>
+<use f='tvm/include/tvm/ir/expr.h' l='433'/>
+<ovr f='tvm/include/tvm/ir/expr.h' l='445' c='tvm::GlobalVarNode'/>
+<use f='tvm/include/tvm/ir/expr.h' l='445'/>
+<ovr f='tvm/include/tvm/ir/adt.h' l='47' c='tvm::ConstructorNode'/>
+<use f='tvm/include/tvm/ir/adt.h' l='47'/>
+<ovr f='tvm/include/tvm/ir/function.h' l='77' c='tvm::BaseFuncNode'/>
+<use f='tvm/include/tvm/ir/function.h' l='77'/>
+<ovr f='tvm/include/tvm/ir/op.h' l='58' c='tvm::OpNode'/>
+<use f='tvm/include/tvm/ir/op.h' l='58'/>
+<size>40</size>
+<doc f='tvm/include/tvm/ir/expr.h' l='350'>/*!
+ * \brief Base node of all non-primitive expressions.
+ *
+ * RelayExpr supports tensor types, functions and ADT as
+ * first class citizens. The life-cycle of the corresponding
+ * objects are implicitly managed by the language.
+ *
+ * \sa RelayExpr
+ */</doc>
+<mbr r='tvm::RelayExprNode::checked_type_' o='192' t='tvm::Type'/>
+<fun r='_ZNK3tvm13RelayExprNode12checked_typeEv'/>
+<fun r='_ZNK3tvm13RelayExprNode7type_asEv'/>
+<mbr r='tvm::RelayExprNode::virtual_device_' o='256' t='tvm::runtime::ObjectRef'/>
+<fun r='_ZNK3tvm13RelayExprNode14virtual_deviceEv'/>
+<smbr r='tvm::RelayExprNode::_type_key' t='const char *const'/>
+<smbr r='tvm::RelayExprNode::_type_child_slots' t='const uint32_t'/>
+<fun r='_ZN3tvm13RelayExprNode16RuntimeTypeIndexEv'/>
+<fun r='_ZN3tvm13RelayExprNode27_GetOrAllocRuntimeTypeIndexEv'/>
+<fun r='_ZNK3tvm13RelayExprNode12checked_typeEv'/>
+<fun r='_ZNK3tvm13RelayExprNode7type_asEv'/>
+<use f='tvm/include/tvm/relay/expr.h' l='55'/>
+<ovr f='tvm/include/tvm/relay/expr.h' l='72' c='tvm::relay::ConstantNode'/>
+<ovr f='tvm/include/tvm/relay/expr.h' l='124' c='tvm::relay::TupleNode'/>
+<ovr f='tvm/include/tvm/relay/expr.h' l='189' c='tvm::relay::VarNode'/>
+<ovr f='tvm/include/tvm/relay/expr.h' l='283' c='tvm::relay::CallNode'/>
+<ovr f='tvm/include/tvm/relay/expr.h' l='405' c='tvm::relay::LetNode'/>
+<ovr f='tvm/include/tvm/relay/expr.h' l='492' c='tvm::relay::IfNode'/>
+<ovr f='tvm/include/tvm/relay/expr.h' l='555' c='tvm::relay::TupleGetItemNode'/>
+<ovr f='tvm/include/tvm/relay/expr.h' l='609' c='tvm::relay::RefCreateNode'/>
+<ovr f='tvm/include/tvm/relay/expr.h' l='659' c='tvm::relay::RefReadNode'/>
+<ovr f='tvm/include/tvm/relay/expr.h' l='709' c='tvm::relay::RefWriteNode'/>
+<ovr f='tvm/include/tvm/relay/expr.h' l='775' c='tvm::relay::TempExprNode'/>
+<ovr f='tvm/include/tvm/relay/adt.h' l='277' c='tvm::relay::MatchNode'/>
+<size>40</size>
+<use f='tvm/src/ir/module.cc' l='460'/>
+<size>40</size>
+<use f='tvm/src/relay/ir/base.cc' l='45'/>
+<size>40</size>
+<use f='tvm/src/relay/transforms/to_mixed_precision.cc' l='109'/>
+<size>40</size>

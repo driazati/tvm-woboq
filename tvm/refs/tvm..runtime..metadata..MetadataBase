@@ -1,0 +1,60 @@
+<inh f='tvm/include/tvm/runtime/object.h' l='511' c='tvm::runtime::ObjectRef'/>
+<def f='tvm/include/tvm/runtime/metadata_base.h' l='54' ll='57'/>
+<use f='tvm/include/tvm/runtime/metadata_base.h' l='56' c='_ZN3tvm7runtime8metadata12MetadataBaseC1ERKS2_'/>
+<use f='tvm/include/tvm/runtime/metadata_base.h' l='56' c='_ZN3tvm7runtime8metadata12MetadataBaseC1EOS2_'/>
+<use f='tvm/include/tvm/runtime/metadata_base.h' l='56' c='_ZN3tvm7runtime8metadata12MetadataBaseaSERKS2_'/>
+<use f='tvm/include/tvm/runtime/metadata_base.h' l='56' c='_ZN3tvm7runtime8metadata12MetadataBaseaSERKS2_'/>
+<use f='tvm/include/tvm/runtime/metadata_base.h' l='56' c='_ZN3tvm7runtime8metadata12MetadataBaseaSEOS2_'/>
+<use f='tvm/include/tvm/runtime/metadata_base.h' l='56' c='_ZN3tvm7runtime8metadata12MetadataBaseaSEOS2_'/>
+<ovr f='tvm/include/tvm/runtime/metadata_base.h' l='206' c='tvm::runtime::metadata::MetadataArray'/>
+<use f='tvm/include/tvm/runtime/metadata_base.h' l='206'/>
+<use f='tvm/include/tvm/runtime/metadata_base.h' l='210' c='_ZN3tvm7runtime8metadata13MetadataArrayC1ENS0_9ObjectPtrINS0_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/runtime/metadata.h' l='76' c='tvm::runtime::metadata::Metadata'/>
+<use f='tvm/include/tvm/runtime/metadata.h' l='76'/>
+<use f='tvm/include/tvm/runtime/metadata.h' l='79' c='_ZN3tvm7runtime8metadata8MetadataC1ENS0_9ObjectPtrINS0_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/runtime/metadata.h' l='101' c='tvm::runtime::metadata::TensorInfo'/>
+<use f='tvm/include/tvm/runtime/metadata.h' l='101'/>
+<use f='tvm/include/tvm/runtime/metadata.h' l='104' c='_ZN3tvm7runtime8metadata10TensorInfoC1ENS0_9ObjectPtrINS0_6ObjectEEE'/>
+<ovr f='tvm/include/tvm/runtime/metadata.h' l='131' c='tvm::runtime::metadata::ConstantInfoMetadata'/>
+<use f='tvm/include/tvm/runtime/metadata.h' l='131'/>
+<use f='tvm/include/tvm/runtime/metadata.h' l='134' c='_ZN3tvm7runtime8metadata20ConstantInfoMetadataC1ENS0_9ObjectPtrINS0_6ObjectEEE'/>
+<size>8</size>
+<doc f='tvm/include/tvm/runtime/metadata_base.h' l='53'>/*! \brief Reference class for the common MetadataBaseNode class. */</doc>
+<fun r='_ZN3tvm7runtime8metadata12MetadataBaseC1Ev'/>
+<fun r='_ZN3tvm7runtime8metadata12MetadataBaseC1ERKS2_'/>
+<fun r='_ZN3tvm7runtime8metadata12MetadataBaseC1EOS2_'/>
+<fun r='_ZN3tvm7runtime8metadata12MetadataBaseC1ENS0_9ObjectPtrINS0_6ObjectEEE'/>
+<use f='tvm/src/runtime/metadata.cc' l='56' c='_ZN3tvm7runtime8metadata13MetadataArrayC1ENS0_5ArrayINS0_9ObjectRefEvEENS1_12MetadataKindEPKc'/>
+<use f='tvm/src/runtime/metadata.cc' l='65' c='_ZN3tvm7runtime8metadata8MetadataC1EPK11TVMMetadata'/>
+<use f='tvm/src/runtime/metadata.cc' l='71' c='_ZN3tvm7runtime8metadata10TensorInfoC1EPK13TVMTensorInfo'/>
+<use f='tvm/src/runtime/metadata.cc' l='77' c='_ZN3tvm7runtime8metadata20ConstantInfoMetadataC1EPK15TVMConstantInfo'/>
+<size>8</size>
+<use f='tvm/src/target/metadata_utils.h' l='109' c='_ZN3tvm7codegen8metadata27DiscoverComplexTypesVisitorC1EPSt6vectorINS_7runtime8metadata12MetadataBaseESaIS6_EE'/>
+<use f='tvm/src/target/metadata_utils.h' l='129' c='_ZN3tvm7codegen8metadata27DiscoverComplexTypesVisitor8DiscoverENS_7runtime8metadata12MetadataBaseE'/>
+<use f='tvm/src/target/metadata_utils.h' l='134' c='_ZN3tvm7codegen8metadata27DiscoverComplexTypesVisitor16DiscoverInstanceENS_7runtime8metadata12MetadataBaseE'/>
+<use f='tvm/src/target/metadata_utils.h' l='136'/>
+<use f='tvm/src/target/llvm/codegen_cpu.cc' l='1045' c='_ZN3tvm7codegen19MetadataTypeDefiner17VisitMetadataBaseENS_7runtime8metadata12MetadataBaseE'/>
+<use f='tvm/src/target/llvm/codegen_cpu.cc' l='1099' c='_ZN3tvm7codegen19MetadataTypeDefiner10DefineTypeENS_7runtime8metadata12MetadataBaseE'/>
+<use f='tvm/src/target/llvm/codegen_cpu.cc' l='1110'/>
+<use f='tvm/src/target/llvm/codegen_cpu.cc' l='1164' c='_ZN3tvm7codegen22MetadataSerializerLLVM13VisitMetadataENS_7runtime8metadata12MetadataBaseE'/>
+<use f='tvm/src/target/llvm/codegen_cpu.cc' l='1221' c='_ZN3tvm7codegen22MetadataSerializerLLVM10VisitArrayEPKNS_7runtime8metadata17MetadataArrayNodeE'/>
+<use f='tvm/src/target/llvm/codegen_cpu.cc' l='1246' c='_ZN3tvm7codegen22MetadataSerializerLLVM5VisitEPKcPNS_7runtime9ObjectRefE'/>
+<use f='tvm/src/target/llvm/codegen_cpu.cc' l='1246' c='_ZN3tvm7codegen22MetadataSerializerLLVM5VisitEPKcPNS_7runtime9ObjectRefE'/>
+<use f='tvm/src/target/llvm/codegen_cpu.cc' l='1250' c='_ZN3tvm7codegen22MetadataSerializerLLVM9SerializeENS_7runtime8metadata12MetadataBaseE'/>
+<use f='tvm/src/target/llvm/codegen_cpu.cc' l='1284' c='_ZN3tvm7codegen10CodeGenCPU14DefineMetadataENS_7runtime8metadata8MetadataE'/>
+<size>8</size>
+<use f='tvm/src/target/metadata_utils.cc' l='56' c='_ZN3tvm7codegen8metadata21DiscoverArraysVisitor5VisitEPKcPNS_7runtime9ObjectRefE'/>
+<use f='tvm/src/target/metadata_utils.cc' l='66' c='_ZN3tvm7codegen8metadata21DiscoverArraysVisitor5VisitEPKcPNS_7runtime9ObjectRefE'/>
+<use f='tvm/src/target/metadata_utils.cc' l='66' c='_ZN3tvm7codegen8metadata21DiscoverArraysVisitor5VisitEPKcPNS_7runtime9ObjectRefE'/>
+<use f='tvm/src/target/metadata_utils.cc' l='98' c='_ZN3tvm7codegen8metadata27DiscoverComplexTypesVisitor12DiscoverTypeENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<use f='tvm/src/target/metadata_utils.cc' l='103' c='_ZN3tvm7codegen8metadata27DiscoverComplexTypesVisitor16DiscoverInstanceENS_7runtime8metadata12MetadataBaseE'/>
+<use f='tvm/src/target/metadata_utils.cc' l='119' c='_ZN3tvm7codegen8metadata27DiscoverComplexTypesVisitor5VisitEPKcPNS_7runtime9ObjectRefE'/>
+<use f='tvm/src/target/metadata_utils.cc' l='137' c='_ZN3tvm7codegen8metadata27DiscoverComplexTypesVisitor5VisitEPKcPNS_7runtime9ObjectRefE'/>
+<use f='tvm/src/target/metadata_utils.cc' l='138' c='_ZN3tvm7codegen8metadata27DiscoverComplexTypesVisitor5VisitEPKcPNS_7runtime9ObjectRefE'/>
+<use f='tvm/src/target/metadata_utils.cc' l='147' c='_ZN3tvm7codegen8metadata27DiscoverComplexTypesVisitor8DiscoverENS_7runtime8metadata12MetadataBaseE'/>
+<size>8</size>
+<use f='tvm/src/target/source/source_module.cc' l='763' c='_ZN3tvm7codegen18MetadataSerializer10VisitArrayENS_7runtime8metadata13MetadataArrayE'/>
+<use f='tvm/src/target/source/source_module.cc' l='763' c='_ZN3tvm7codegen18MetadataSerializer10VisitArrayENS_7runtime8metadata13MetadataArrayE'/>
+<use f='tvm/src/target/source/source_module.cc' l='795' c='_ZN3tvm7codegen18MetadataSerializer5VisitEPKcPNS_7runtime9ObjectRefE'/>
+<use f='tvm/src/target/source/source_module.cc' l='795' c='_ZN3tvm7codegen18MetadataSerializer5VisitEPKcPNS_7runtime9ObjectRefE'/>
+<size>8</size>

@@ -1,0 +1,11 @@
+<def f='tvm/include/tvm/topi/einsum.h' l='446' ll='612' type='std::tuple&lt;std::string, std::string&gt; tvm::topi::ParseEinsumInput(std::string subscripts, const std::vector&lt;Array&lt;PrimExpr&gt;&gt; &amp; operands)'/>
+<use f='tvm/include/tvm/topi/einsum.h' l='624' u='c' c='_ZN3tvm4topi16NumpyEinsumShapeENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKSt6vectorINS_7runtime5ArrayINS_8PrimExprEvEESaISB_EE'/>
+<doc f='tvm/include/tvm/topi/einsum.h' l='437'>/*!
+ * \brief Parse the input subscripts into a vector of strings.
+ * \param subscripts input subscripts.
+ * \param operands operand tensors.
+ *
+ * \return vector of strings, vector[0] represents the input part, vector[1] represents the output.
+ * if no output, the vector[1] is NULL.
+ * &quot;ab, bc -&gt; ac&quot; =&gt; [&quot;ab,bc&quot;, &quot;ac&quot;]
+ */</doc>

@@ -1,0 +1,19 @@
+<def f='tvm/include/tvm/topi/transform.h' l='255' ll='308' type='tvm::te::Tensor tvm::topi::reverse_sequence(const tvm::te::Tensor &amp; x, const tvm::te::Tensor &amp; seq_lengths, int seq_axis = 1, int batch_axis = 0, std::string name = &quot;T_reverse_sequence&quot;, std::string tag = kInjective)'/>
+<doc f='tvm/include/tvm/topi/transform.h' l='241'>/*!
+ * \brief Reverse the tensor for variable length slices.
+ * Input is first sliced along batch axis and then elements are reversed along seq axis.
+ *
+ * \param x The input tensor
+ * \param seq_lengths A 1D Tensor with length x.dims[batch_axis]. Optional Tensor() can be passed.
+ * If not defined batch axis is ignored and tensor is reversed along seq_axis.
+ * \param seq_axis The axis along which the elements will be reveresed
+ * \param batch_axis The axis along which the tensor will be sliced
+ * \param name The name of the operation
+ * \param tag The tag to mark the operation
+ *
+ * \return A Tensor whose op member is the reverse_sequence operation
+ */</doc>
+<use f='tvm/src/relay/op/tensor/transform.cc' l='2085' u='c' c='_ZN3tvm5relay14ReverseComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
+<use f='tvm/src/relay/op/tensor/transform.cc' l='2166' u='c' c='_ZN3tvm5relay22ReverseSequenceComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
+<use f='tvm/src/topi/transform.cc' l='46' u='c'/>
+<use f='tvm/src/topi/transform.cc' l='50' u='c'/>

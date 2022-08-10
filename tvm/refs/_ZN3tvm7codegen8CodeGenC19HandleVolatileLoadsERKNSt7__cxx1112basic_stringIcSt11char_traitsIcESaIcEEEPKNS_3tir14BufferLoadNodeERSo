@@ -1,0 +1,12 @@
+<def f='tvm/src/target/source/codegen_c.h' l='217' ll='221' type='void tvm::codegen::CodeGenC::HandleVolatileLoads(const std::string &amp; value, const tvm::tir::BufferLoadNode * op, std::ostream &amp; os)'/>
+<doc f='tvm/src/target/source/codegen_c.h' l='209'>/*!
+   * \brief Handle volatile loads.
+   *
+   * This is to workaround a bug in CUDA cuda_fp16.h. Volatile accesses
+   * to shared memory are required for reductions. However, __half class
+   * does not implement volatile member functions. CUDA codegen will cast
+   * away volatile qualifier from CUDA __half types.
+   */</doc>
+<use f='tvm/src/target/source/codegen_c.cc' l='682' u='c' c='_ZN3tvm7codegen8CodeGenC10VisitExpr_EPKNS_3tir14BufferLoadNodeERSo'/>
+<use f='tvm/src/target/source/codegen_c.cc' l='698' u='c' c='_ZN3tvm7codegen8CodeGenC10VisitExpr_EPKNS_3tir14BufferLoadNodeERSo'/>
+<ovr f='tvm/src/target/source/codegen_cuda.cc' l='1285' c='_ZN3tvm7codegen11CodeGenCUDA19HandleVolatileLoadsERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEPKNS_3tir14BufferLoadNodeERSo'/>

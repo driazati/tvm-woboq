@@ -1,0 +1,37 @@
+<dec f='tvm/src/contrib/ethosu/cascader/propagator.h' l='86' type='tvm::contrib::ethosu::cascader::StripeConfig tvm::contrib::ethosu::cascader::PropagatorNode::propagate(const tvm::contrib::ethosu::cascader::StripeConfig &amp; stripe_config) const'/>
+<doc f='tvm/src/contrib/ethosu/cascader/propagator.h' l='53'>/*!
+   * \brief Propagate a StripeConfig through the transform and offset matrices.
+   * \param stripe_config The StripeConfig to propagate.
+   * \return The transformed StripeConfig.
+   * \note The propagation proceeds as follows:
+   *
+   * Both the stripe shape and extent have 1 appended to them (so they pick up
+   * constant factors from the affine transform) and are then multiplied by the
+   * transform matrix. The result is then ceil-rounded and has the trailing 1
+   * stripped to give the new shape and extent.
+   *
+   * The strides has 0 appended to it (so it doesn&apos;t pick up constant factors)
+   * and is then multiplied by the transform matrix. The trailing 0 is stripped.
+   *
+   * For the remaining three values we introduce the concept of the &apos;binarized&apos;
+   * transform matrix. This is the transform matrix but with every non-zero element
+   * set to 1. It represents how axes get re-ordered as part of the propagation.
+   *
+   * [2,   0,   0, 1]            [1, 0, 0, 1]
+   * [0,   0, 0.4, 2]  binarize  [0, 0, 1, 1]
+   * [0, 1.5,   0, 0]   ----&gt;    [0, 1, 0, 0]
+   * [0,   0,   0, 1]            [0, 0, 0, 1]
+   *
+   * The order has 0 appended to it and is multiplied by the &apos;binarized&apos; transform
+   * matrix. The trailing 0 is then stripped.
+   *
+   * The stripes has 0 appended to it and multiplied by the &apos;binarized&apos; transform
+   * matrix. The trailing 0 is then stripped and any remaining 0 elements that
+   * were introduced by the transform are set instead to 1.
+   *
+   * The stripe offset is multiplied by the &apos;binarized&apos; transform matrix and is
+   * then summed with the propagator offset.
+   */</doc>
+<use f='tvm/src/contrib/ethosu/cascader/graph.cc' l='120' u='c' c='_ZN3tvm7contrib6ethosu8cascader8PartNode27CalculateInputStripeConfigsERKNS2_12StripeConfigE'/>
+<def f='tvm/src/contrib/ethosu/cascader/propagator.cc' l='63' ll='102' type='tvm::contrib::ethosu::cascader::StripeConfig tvm::contrib::ethosu::cascader::PropagatorNode::propagate(const tvm::contrib::ethosu::cascader::StripeConfig &amp; stripe_config) const'/>
+<use f='tvm/src/contrib/ethosu/cascader/propagator.cc' l='116' u='c'/>

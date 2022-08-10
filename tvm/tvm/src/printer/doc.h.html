@@ -1,0 +1,186 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>doc.h source code [tvm/src/printer/doc.h] - Woboq Code Browser</title>
+<meta name="woboq:interestingDefinitions" content="tvm::Doc,tvm::DocAtom,tvm::DocAtomNode "/>
+<link rel="stylesheet" href="../../.././data/qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href="../../.././data/kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src="../../.././data/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="../../.././data/jquery/jquery-ui.min.js"></script>
+<script>var file = 'tvm/src/printer/doc.h'; var root_path = '../../..'; var data_path = '../../.././data'; var ecma_script_api_version = 2;</script>
+<script src='../../.././data/codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='../..'>tvm</a>/<a href='..'>src</a>/<a href='./'>printer</a>/<a href='doc.h.html'>doc.h</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td><i>/*</i></td></tr>
+<tr><th id="2">2</th><td><i> * Licensed to the Apache Software Foundation (ASF) under one</i></td></tr>
+<tr><th id="3">3</th><td><i> * or more contributor license agreements.  See the NOTICE file</i></td></tr>
+<tr><th id="4">4</th><td><i> * distributed with this work for additional information</i></td></tr>
+<tr><th id="5">5</th><td><i> * regarding copyright ownership.  The ASF licenses this file</i></td></tr>
+<tr><th id="6">6</th><td><i> * to you under the Apache License, Version 2.0 (the</i></td></tr>
+<tr><th id="7">7</th><td><i> * "License"); you may not use this file except in compliance</i></td></tr>
+<tr><th id="8">8</th><td><i> * with the License.  You may obtain a copy of the License at</i></td></tr>
+<tr><th id="9">9</th><td><i> *</i></td></tr>
+<tr><th id="10">10</th><td><i> *   <a href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a></i></td></tr>
+<tr><th id="11">11</th><td><i> *</i></td></tr>
+<tr><th id="12">12</th><td><i> * Unless required by applicable law or agreed to in writing,</i></td></tr>
+<tr><th id="13">13</th><td><i> * software distributed under the License is distributed on an</i></td></tr>
+<tr><th id="14">14</th><td><i> * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY</i></td></tr>
+<tr><th id="15">15</th><td><i> * KIND, either express or implied.  See the License for the</i></td></tr>
+<tr><th id="16">16</th><td><i> * specific language governing permissions and limitations</i></td></tr>
+<tr><th id="17">17</th><td><i> * under the License.</i></td></tr>
+<tr><th id="18">18</th><td><i> */</i></td></tr>
+<tr><th id="19">19</th><td></td></tr>
+<tr><th id="20">20</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="21">21</th><td><i class="doc"> * <span class="command">\file</span> <span class="verb">tvm/printer/doc.h</span></i></td></tr>
+<tr><th id="22">22</th><td><i class="doc"> * <span class="command">\brief</span> Doc ADT used for pretty printing.</i></td></tr>
+<tr><th id="23">23</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="24">24</th><td><i class="doc"> *  Reference: Philip Wadler. A Prettier Printer. Journal of Functional Programming'98</i></td></tr>
+<tr><th id="25">25</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="26">26</th><td><u>#<span data-ppcond="26">ifndef</span> <span class="macro" data-ref="_M/TVM_PRINTER_DOC_H_">TVM_PRINTER_DOC_H_</span></u></td></tr>
+<tr><th id="27">27</th><td><u>#define <dfn class="macro" id="_M/TVM_PRINTER_DOC_H_" data-ref="_M/TVM_PRINTER_DOC_H_">TVM_PRINTER_DOC_H_</dfn></u></td></tr>
+<tr><th id="28">28</th><td></td></tr>
+<tr><th id="29">29</th><td><u>#include <a href="../../include/tvm/node/node.h.html">&lt;tvm/node/node.h&gt;</a></u></td></tr>
+<tr><th id="30">30</th><td><u>#include <a href="../../include/tvm/runtime/data_type.h.html">&lt;tvm/runtime/data_type.h&gt;</a></u></td></tr>
+<tr><th id="31">31</th><td><u>#include <a href="../../include/tvm/runtime/object.h.html">&lt;tvm/runtime/object.h&gt;</a></u></td></tr>
+<tr><th id="32">32</th><td></td></tr>
+<tr><th id="33">33</th><td><u>#include <a href="../../../include/c++/10/string.html">&lt;string&gt;</a></u></td></tr>
+<tr><th id="34">34</th><td><u>#include <a href="../../../include/c++/10/type_traits.html">&lt;type_traits&gt;</a></u></td></tr>
+<tr><th id="35">35</th><td><u>#include <a href="../../../include/c++/10/vector.html">&lt;vector&gt;</a></u></td></tr>
+<tr><th id="36">36</th><td></td></tr>
+<tr><th id="37">37</th><td><b>namespace</b> <span class="namespace">tvm</span> {</td></tr>
+<tr><th id="38">38</th><td></td></tr>
+<tr><th id="39">39</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="40">40</th><td><i class="doc"> * <span class="command">\brief</span> Doc atom node for the ADT.</i></td></tr>
+<tr><th id="41">41</th><td><i class="doc"> * <span class="command">\sa</span> DocAtom</i></td></tr>
+<tr><th id="42">42</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="43">43</th><td><b>class</b> <dfn class="type def" id="tvm::DocAtomNode" title='tvm::DocAtomNode' data-ref="tvm::DocAtomNode" data-ref-filename="tvm..DocAtomNode">DocAtomNode</dfn> : <b>public</b> Object {</td></tr>
+<tr><th id="44">44</th><td> <b>public</b>:</td></tr>
+<tr><th id="45">45</th><td>  <em>static</em> <b>constexpr</b> <em>const</em> <em>char</em>* <dfn class="decl" id="tvm::DocAtomNode::_type_key" title='tvm::DocAtomNode::_type_key' data-ref="tvm::DocAtomNode::_type_key" data-ref-filename="tvm..DocAtomNode.._type_key">_type_key</dfn> = <q>"printer.DocAtom"</q>;</td></tr>
+<tr><th id="46">46</th><td>  <a class="macro" href="../../include/tvm/runtime/object.h.html#648" title="static_assert(!Object::_type_final, &quot;ParentObj marked as final&quot;); static uint32_t RuntimeTypeIndex() { static_assert(DocAtomNode::_type_child_slots == 0 || Object::_type_child_slots == 0 || DocAtomNode::_type_child_slots &lt; Object::_type_child_slots, &quot;Need to set _type_child_slots when parent specifies it.&quot;); if (DocAtomNode::_type_index != ::tvm::runtime::TypeIndex::kDynamic) { return DocAtomNode::_type_index; } return _GetOrAllocRuntimeTypeIndex(); } static uint32_t _GetOrAllocRuntimeTypeIndex() { static uint32_t tindex = Object::GetOrAllocRuntimeTypeIndex( DocAtomNode::_type_key, DocAtomNode::_type_index, Object::_GetOrAllocRuntimeTypeIndex(), DocAtomNode::_type_child_slots, DocAtomNode::_type_child_slots_can_overflow); return tindex; }" data-ref="_M/TVM_DECLARE_BASE_OBJECT_INFO">TVM_DECLARE_BASE_OBJECT_INFO</a>(<a class="ref fn fake" href="../../../include/c++/10/bits/basic_string.h.html#_ZNSt7__cxx1112basic_stringC1EPKT_RKT1_" title='std::basic_string::basic_string&lt;_CharT, _Traits, _Alloc&gt;' data-ref="_ZNSt7__cxx1112basic_stringC1EPKT_RKT1_" data-ref-filename="_ZNSt7__cxx1112basic_stringC1EPKT_RKT1_"></a><a class="type" href="#tvm::DocAtomNode" title='tvm::DocAtomNode' data-ref="tvm::DocAtomNode" data-ref-filename="tvm..DocAtomNode">DocAtomNode</a>, <a class="type" href="../../include/tvm/runtime/object.h.html#tvm::runtime::Object" title='tvm::runtime::Object' data-ref="tvm::runtime::Object" data-ref-filename="tvm..runtime..Object">Object</a>);</td></tr>
+<tr><th id="47">47</th><td>};</td></tr>
+<tr><th id="48">48</th><td></td></tr>
+<tr><th id="49">49</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="50">50</th><td><i class="doc"> * <span class="command">\brief</span> Managed reference to DocAtomNode.</i></td></tr>
+<tr><th id="51">51</th><td><i class="doc"> * <span class="command">\sa</span> DocAtomNode.</i></td></tr>
+<tr><th id="52">52</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="53">53</th><td><b>class</b> <dfn class="type def" id="tvm::DocAtom" title='tvm::DocAtom' data-ref="tvm::DocAtom" data-ref-filename="tvm..DocAtom">DocAtom</dfn> : <b>public</b> ObjectRef {</td></tr>
+<tr><th id="54">54</th><td> <b>public</b>:</td></tr>
+<tr><th id="55">55</th><td>  <a class="macro" href="../../include/tvm/runtime/object.h.html#713" title="DocAtom() = default; explicit DocAtom(::tvm::runtime::ObjectPtr&lt;::tvm::runtime::Object&gt; n) : ObjectRef(n) {} DocAtom(const DocAtom&amp; other) = default; DocAtom(DocAtom&amp;&amp; other) = default; DocAtom&amp; operator=(const DocAtom&amp; other) = default; DocAtom&amp; operator=(DocAtom&amp;&amp; other) = default;; const DocAtomNode* operator-&gt;() const { return static_cast&lt;const DocAtomNode*&gt;(data_.get()); } const DocAtomNode* get() const { return operator-&gt;(); } using ContainerType = DocAtomNode;" data-ref="_M/TVM_DEFINE_OBJECT_REF_METHODS">TVM_DEFINE_OBJECT_REF_METHODS</a>(<dfn class="decl def fn" id="_ZN3tvm7DocAtomC1Ev" title='tvm::DocAtom::DocAtom' data-ref="_ZN3tvm7DocAtomC1Ev" data-ref-filename="_ZN3tvm7DocAtomC1Ev"><dfn class="decl def fn" id="_ZN3tvm7DocAtomC1ENS_7runtime9ObjectPtrINS1_6ObjectEEE" title='tvm::DocAtom::DocAtom' data-ref="_ZN3tvm7DocAtomC1ENS_7runtime9ObjectPtrINS1_6ObjectEEE" data-ref-filename="_ZN3tvm7DocAtomC1ENS_7runtime9ObjectPtrINS1_6ObjectEEE"><dfn class="decl def fn" id="_ZN3tvm7DocAtomC1ERKS0_" title='tvm::DocAtom::DocAtom' data-ref="_ZN3tvm7DocAtomC1ERKS0_" data-ref-filename="_ZN3tvm7DocAtomC1ERKS0_"><a class="type" href="#tvm::DocAtom" title='tvm::DocAtom' data-ref="tvm::DocAtom" data-ref-filename="tvm..DocAtom"><dfn class="decl def fn" id="_ZN3tvm7DocAtomC1EOS0_" title='tvm::DocAtom::DocAtom' data-ref="_ZN3tvm7DocAtomC1EOS0_" data-ref-filename="_ZN3tvm7DocAtomC1EOS0_"><a class="type" href="#tvm::DocAtom" title='tvm::DocAtom' data-ref="tvm::DocAtom" data-ref-filename="tvm..DocAtom"><a class="type" href="#tvm::DocAtom" title='tvm::DocAtom' data-ref="tvm::DocAtom" data-ref-filename="tvm..DocAtom"><a class="type" href="#tvm::DocAtom" title='tvm::DocAtom' data-ref="tvm::DocAtom" data-ref-filename="tvm..DocAtom"><a class="type" href="#tvm::DocAtom" title='tvm::DocAtom' data-ref="tvm::DocAtom" data-ref-filename="tvm..DocAtom"><a class="type" href="#tvm::DocAtom" title='tvm::DocAtom' data-ref="tvm::DocAtom" data-ref-filename="tvm..DocAtom">DocAtom</a></a></a></a></a></dfn></a></dfn></dfn></dfn>, <a class="type" href="../../include/tvm/runtime/object.h.html#tvm::runtime::ObjectRef" title='tvm::runtime::ObjectRef' data-ref="tvm::runtime::ObjectRef" data-ref-filename="tvm..runtime..ObjectRef">ObjectRef</a>, <a class="type" href="#tvm::DocAtomNode" title='tvm::DocAtomNode' data-ref="tvm::DocAtomNode" data-ref-filename="tvm..DocAtomNode">DocAtomNode</a>);</td></tr>
+<tr><th id="56">56</th><td>};</td></tr>
+<tr><th id="57">57</th><td></td></tr>
+<tr><th id="58">58</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="59">59</th><td><i class="doc"> * <span class="command">\brief</span> Stream-like interface for Doc DSL.</i></td></tr>
+<tr><th id="60">60</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="61">61</th><td><i class="doc"> * The Doc DSL de-couples the layout decision from the printing decision.</i></td></tr>
+<tr><th id="62">62</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="63">63</th><td><i class="doc"> * The layout(code formating) decisions include:</i></td></tr>
+<tr><th id="64">64</th><td><i class="doc"> * - Change indentation.</i></td></tr>
+<tr><th id="65">65</th><td><i class="doc"> * - Break single line into multiple ones(subjected to future improvements).</i></td></tr>
+<tr><th id="66">66</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="67">67</th><td><b>class</b> <dfn class="type def" id="tvm::Doc" title='tvm::Doc' data-ref="tvm::Doc" data-ref-filename="tvm..Doc">Doc</dfn> {</td></tr>
+<tr><th id="68">68</th><td> <b>public</b>:</td></tr>
+<tr><th id="69">69</th><td>  <i class="doc">/*! <span class="command">\brief</span> default constructor */</i></td></tr>
+<tr><th id="70">70</th><td>  <dfn class="decl def fn" id="_ZN3tvm3DocC1Ev" title='tvm::Doc::Doc' data-ref="_ZN3tvm3DocC1Ev" data-ref-filename="_ZN3tvm3DocC1Ev">Doc</dfn>() {}</td></tr>
+<tr><th id="71">71</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="72">72</th><td><i class="doc">   * <span class="command">\brief</span> Append right to the end of the current doc stream.</i></td></tr>
+<tr><th id="73">73</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">right</span> The doc to be appended.</i></td></tr>
+<tr><th id="74">74</th><td><i class="doc">   * <span class="command">\return</span> reference to self.</i></td></tr>
+<tr><th id="75">75</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="76">76</th><td>  <a class="type" href="#tvm::Doc" title='tvm::Doc' data-ref="tvm::Doc" data-ref-filename="tvm..Doc">Doc</a>&amp; <dfn class="decl fn" id="_ZN3tvm3DoclsERKS0_" title='tvm::Doc::operator&lt;&lt;' data-ref="_ZN3tvm3DoclsERKS0_" data-ref-filename="_ZN3tvm3DoclsERKS0_"><b>operator</b>&lt;&lt;</dfn>(<em>const</em> <a class="type" href="#tvm::Doc" title='tvm::Doc' data-ref="tvm::Doc" data-ref-filename="tvm..Doc">Doc</a>&amp; <dfn class="local col8 decl" id="598right" title='right' data-type='const tvm::Doc &amp;' data-ref="598right" data-ref-filename="598right">right</dfn>);</td></tr>
+<tr><th id="77">77</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="78">78</th><td><i class="doc">   * <span class="command">\brief</span> Append right to the end of the current doc stream.</i></td></tr>
+<tr><th id="79">79</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">right</span> The doc to be appended.</i></td></tr>
+<tr><th id="80">80</th><td><i class="doc">   * <span class="command">\return</span> reference to self.</i></td></tr>
+<tr><th id="81">81</th><td><i class="doc">   * <span class="command">\note</span> pass by value to allow copy elison optimization.</i></td></tr>
+<tr><th id="82">82</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="83">83</th><td>  <a class="type" href="#tvm::Doc" title='tvm::Doc' data-ref="tvm::Doc" data-ref-filename="tvm..Doc">Doc</a>&amp; <dfn class="decl fn" id="_ZN3tvm3DoclsENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE" title='tvm::Doc::operator&lt;&lt;' data-ref="_ZN3tvm3DoclsENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE" data-ref-filename="_ZN3tvm3DoclsENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE"><b>operator</b>&lt;&lt;</dfn>(<span class="namespace">std::</span><a class="typedef" href="../../../include/c++/10/bits/stringfwd.h.html#std::string" title='std::string' data-type='basic_string&lt;char&gt;' data-ref="std::string" data-ref-filename="std..string">string</a> <dfn class="local col9 decl" id="599right" title='right' data-type='std::string' data-ref="599right" data-ref-filename="599right">right</dfn>);</td></tr>
+<tr><th id="84">84</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="85">85</th><td><i class="doc">   * <span class="command">\brief</span> Append right to the end of the current doc stream.</i></td></tr>
+<tr><th id="86">86</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">right</span> The doc to be appended.</i></td></tr>
+<tr><th id="87">87</th><td><i class="doc">   * <span class="command">\return</span> reference to self.</i></td></tr>
+<tr><th id="88">88</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="89">89</th><td>  <a class="type" href="#tvm::Doc" title='tvm::Doc' data-ref="tvm::Doc" data-ref-filename="tvm..Doc">Doc</a>&amp; <dfn class="decl fn" id="_ZN3tvm3DoclsERKNS_7DocAtomE" title='tvm::Doc::operator&lt;&lt;' data-ref="_ZN3tvm3DoclsERKNS_7DocAtomE" data-ref-filename="_ZN3tvm3DoclsERKNS_7DocAtomE"><b>operator</b>&lt;&lt;</dfn>(<em>const</em> <a class="type" href="#tvm::DocAtom" title='tvm::DocAtom' data-ref="tvm::DocAtom" data-ref-filename="tvm..DocAtom">DocAtom</a>&amp; <dfn class="local col0 decl" id="600right" title='right' data-type='const tvm::DocAtom &amp;' data-ref="600right" data-ref-filename="600right">right</dfn>);</td></tr>
+<tr><th id="90">90</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="91">91</th><td><i class="doc">   * <span class="command">\brief</span> Convert value to string via std::ostreamstream</i></td></tr>
+<tr><th id="92">92</th><td><i class="doc">   *        the append to the current doc stream.</i></td></tr>
+<tr><th id="93">93</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">right</span> The doc to be appended.</i></td></tr>
+<tr><th id="94">94</th><td><i class="doc">   * <span class="command">\tparam</span> <span class="arg">T</span> the type of the value.</i></td></tr>
+<tr><th id="95">95</th><td><i class="doc">   * <span class="command">\return</span> reference to self.</i></td></tr>
+<tr><th id="96">96</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="97">97</th><td>  <b>template</b> &lt;<b>typename</b> T, <b>typename</b> = <b>typename</b> <span class="namespace">std::</span><a class="type" href="../../../include/c++/10/type_traits.html#std::enable_if" title='std::enable_if' data-ref="std::enable_if" data-ref-filename="std..enable_if">enable_if</a>&lt;!<span class="namespace">std::</span><a class="type" href="../../../include/c++/10/type_traits.html#std::is_class" title='std::is_class' data-ref="std::is_class" data-ref-filename="std..is_class">is_class</a>&lt;T&gt;::value&gt;::type&gt;</td></tr>
+<tr><th id="98">98</th><td>  <a class="type" href="#tvm::Doc" title='tvm::Doc' data-ref="tvm::Doc" data-ref-filename="tvm..Doc">Doc</a>&amp; <dfn class="decl def fn" id="_ZN3tvm3DoclsERKT_" title='tvm::Doc::operator&lt;&lt;' data-ref="_ZN3tvm3DoclsERKT_" data-ref-filename="_ZN3tvm3DoclsERKT_"><b>operator</b>&lt;&lt;</dfn>(<em>const</em> T&amp; <dfn class="local col1 decl" id="601value" title='value' data-type='const T &amp;' data-ref="601value" data-ref-filename="601value">value</dfn>) {</td></tr>
+<tr><th id="99">99</th><td>    <span class="namespace">std::</span><a class="typedef" href="../../../include/c++/10/iosfwd.html#std::ostringstream" title='std::ostringstream' data-type='basic_ostringstream&lt;char&gt;' data-ref="std::ostringstream" data-ref-filename="std..ostringstream">ostringstream</a> <a class="ref fn fake" href="../../../include/c++/10/sstream.html#_ZNSt7__cxx1119basic_ostringstreamC1Ev" title='std::basic_ostringstream::basic_ostringstream&lt;_CharT, _Traits, _Alloc&gt;' data-ref="_ZNSt7__cxx1119basic_ostringstreamC1Ev" data-ref-filename="_ZNSt7__cxx1119basic_ostringstreamC1Ev"></a><dfn class="local col2 decl" id="602os" title='os' data-type='std::ostringstream' data-ref="602os" data-ref-filename="602os">os</dfn>;</td></tr>
+<tr><th id="100">100</th><td>    <a class="local col2 ref" href="#602os" title='os' data-ref="602os" data-ref-filename="602os">os</a> &lt;&lt; <a class="local col1 ref" href="#601value" title='value' data-ref="601value" data-ref-filename="601value">value</a>;</td></tr>
+<tr><th id="101">101</th><td>    <b>return</b> *<b>this</b> <a class="member fn" href="#_ZN3tvm3DoclsENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE" title='tvm::Doc::operator&lt;&lt;' data-ref="_ZN3tvm3DoclsENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE" data-ref-filename="_ZN3tvm3DoclsENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE">&lt;&lt;</a> <a class="local col2 ref" href="#602os" title='os' data-ref="602os" data-ref-filename="602os">os</a>.<a class="ref fn" href="../../../include/c++/10/sstream.html#_ZNKSt7__cxx1119basic_ostringstream3strEv" title='std::basic_ostringstream::str' data-ref="_ZNKSt7__cxx1119basic_ostringstream3strEv" data-ref-filename="_ZNKSt7__cxx1119basic_ostringstream3strEv">str</a>();</td></tr>
+<tr><th id="102">102</th><td>  }</td></tr>
+<tr><th id="103">103</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="104">104</th><td><i class="doc">   * <span class="command">\brief</span> Convert the doc stream into string.</i></td></tr>
+<tr><th id="105">105</th><td><i class="doc">   * <span class="command">\return</span> The string representation.</i></td></tr>
+<tr><th id="106">106</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="107">107</th><td>  <span class="namespace">std::</span><a class="typedef" href="../../../include/c++/10/bits/stringfwd.h.html#std::string" title='std::string' data-type='basic_string&lt;char&gt;' data-ref="std::string" data-ref-filename="std..string">string</a> <dfn class="decl fn" id="_ZN3tvm3Doc3strB5cxx11Ev" title='tvm::Doc::str' data-ref="_ZN3tvm3Doc3strB5cxx11Ev" data-ref-filename="_ZN3tvm3Doc3strB5cxx11Ev">str</dfn>();</td></tr>
+<tr><th id="108">108</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="109">109</th><td><i class="doc">   * <span class="command">\brief</span> Create a doc that represents text content.</i></td></tr>
+<tr><th id="110">110</th><td><i class="doc">   * <span class="command">\return</span> The created doc.</i></td></tr>
+<tr><th id="111">111</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="112">112</th><td>  <em>static</em> <a class="type" href="#tvm::Doc" title='tvm::Doc' data-ref="tvm::Doc" data-ref-filename="tvm..Doc">Doc</a> <dfn class="decl fn" id="_ZN3tvm3Doc4TextENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE" title='tvm::Doc::Text' data-ref="_ZN3tvm3Doc4TextENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE" data-ref-filename="_ZN3tvm3Doc4TextENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE">Text</dfn>(<span class="namespace">std::</span><a class="typedef" href="../../../include/c++/10/bits/stringfwd.h.html#std::string" title='std::string' data-type='basic_string&lt;char&gt;' data-ref="std::string" data-ref-filename="std..string">string</a> <dfn class="local col3 decl" id="603value" title='value' data-type='std::string' data-ref="603value" data-ref-filename="603value">value</dfn>);</td></tr>
+<tr><th id="113">113</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="114">114</th><td><i class="doc">   * <span class="command">\brief</span> Create a doc that represents raw text(can have new lines)</i></td></tr>
+<tr><th id="115">115</th><td><i class="doc">   * <span class="command">\return</span> The created doc.</i></td></tr>
+<tr><th id="116">116</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="117">117</th><td>  <em>static</em> <a class="type" href="#tvm::Doc" title='tvm::Doc' data-ref="tvm::Doc" data-ref-filename="tvm..Doc">Doc</a> <dfn class="decl fn" id="_ZN3tvm3Doc7RawTextENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE" title='tvm::Doc::RawText' data-ref="_ZN3tvm3Doc7RawTextENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE" data-ref-filename="_ZN3tvm3Doc7RawTextENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE">RawText</dfn>(<span class="namespace">std::</span><a class="typedef" href="../../../include/c++/10/bits/stringfwd.h.html#std::string" title='std::string' data-type='basic_string&lt;char&gt;' data-ref="std::string" data-ref-filename="std..string">string</a> <dfn class="local col4 decl" id="604value" title='value' data-type='std::string' data-ref="604value" data-ref-filename="604value">value</dfn>);</td></tr>
+<tr><th id="118">118</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="119">119</th><td><i class="doc">   * <span class="command">\brief</span> Create a doc that represents a new line.</i></td></tr>
+<tr><th id="120">120</th><td><i class="doc">   * <span class="command">\return</span> The created doc.</i></td></tr>
+<tr><th id="121">121</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="122">122</th><td>  <em>static</em> <a class="type" href="#tvm::Doc" title='tvm::Doc' data-ref="tvm::Doc" data-ref-filename="tvm..Doc">Doc</a> <dfn class="decl fn" id="_ZN3tvm3Doc7NewLineEi" title='tvm::Doc::NewLine' data-ref="_ZN3tvm3Doc7NewLineEi" data-ref-filename="_ZN3tvm3Doc7NewLineEi">NewLine</dfn>(<em>int</em> <dfn class="local col5 decl" id="605indent" title='indent' data-type='int' data-ref="605indent" data-ref-filename="605indent">indent</dfn> = <var>0</var>);</td></tr>
+<tr><th id="123">123</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="124">124</th><td><i class="doc">   * <span class="command">\brief</span> Create a new doc that adds indentation to everyline of the doc.</i></td></tr>
+<tr><th id="125">125</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">indent</span> The indent to be added.</i></td></tr>
+<tr><th id="126">126</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">doc</span> The doc to be indented.</i></td></tr>
+<tr><th id="127">127</th><td><i class="doc">   * <span class="command">\return</span> The created doc.</i></td></tr>
+<tr><th id="128">128</th><td><i class="doc">   * <span class="command">\note</span> pass by value to allow copy elison optimization.</i></td></tr>
+<tr><th id="129">129</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="130">130</th><td>  <em>static</em> <a class="type" href="#tvm::Doc" title='tvm::Doc' data-ref="tvm::Doc" data-ref-filename="tvm..Doc">Doc</a> <dfn class="decl fn" id="_ZN3tvm3Doc6IndentEiS0_" title='tvm::Doc::Indent' data-ref="_ZN3tvm3Doc6IndentEiS0_" data-ref-filename="_ZN3tvm3Doc6IndentEiS0_">Indent</dfn>(<em>int</em> <dfn class="local col6 decl" id="606indent" title='indent' data-type='int' data-ref="606indent" data-ref-filename="606indent">indent</dfn>, <a class="type" href="#tvm::Doc" title='tvm::Doc' data-ref="tvm::Doc" data-ref-filename="tvm..Doc">Doc</a> <dfn class="local col7 decl" id="607doc" title='doc' data-type='tvm::Doc' data-ref="607doc" data-ref-filename="607doc">doc</dfn>);</td></tr>
+<tr><th id="131">131</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="132">132</th><td><i class="doc">   * <span class="command">\brief</span> Create a Doc that represents a string literal.</i></td></tr>
+<tr><th id="133">133</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">value</span> The content of the string literal.</i></td></tr>
+<tr><th id="134">134</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">quote</span> The quote in the literal.</i></td></tr>
+<tr><th id="135">135</th><td><i class="doc">   * <span class="command">\return</span> The created doc.</i></td></tr>
+<tr><th id="136">136</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="137">137</th><td>  <em>static</em> <a class="type" href="#tvm::Doc" title='tvm::Doc' data-ref="tvm::Doc" data-ref-filename="tvm..Doc">Doc</a> <dfn class="decl fn" id="_ZN3tvm3Doc10StrLiteralERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES6_" title='tvm::Doc::StrLiteral' data-ref="_ZN3tvm3Doc10StrLiteralERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES6_" data-ref-filename="_ZN3tvm3Doc10StrLiteralERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES6_">StrLiteral</dfn>(<em>const</em> <span class="namespace">std::</span><a class="typedef" href="../../../include/c++/10/bits/stringfwd.h.html#std::string" title='std::string' data-type='basic_string&lt;char&gt;' data-ref="std::string" data-ref-filename="std..string">string</a>&amp; <dfn class="local col8 decl" id="608value" title='value' data-type='const std::string &amp;' data-ref="608value" data-ref-filename="608value">value</dfn>, <span class="namespace">std::</span><a class="typedef" href="../../../include/c++/10/bits/stringfwd.h.html#std::string" title='std::string' data-type='basic_string&lt;char&gt;' data-ref="std::string" data-ref-filename="std..string">string</a> <dfn class="local col9 decl" id="609quote" title='quote' data-type='std::string' data-ref="609quote" data-ref-filename="609quote">quote</dfn> = <a class="ref fn fake" href="../../../include/c++/10/bits/basic_string.h.html#_ZNSt7__cxx1112basic_stringC1EPKT_RKT1_" title='std::basic_string::basic_string&lt;_CharT, _Traits, _Alloc&gt;' data-ref="_ZNSt7__cxx1112basic_stringC1EPKT_RKT1_" data-ref-filename="_ZNSt7__cxx1112basic_stringC1EPKT_RKT1_"></a><q>"\""</q>);</td></tr>
+<tr><th id="138">138</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="139">139</th><td><i class="doc">   * <span class="command">\brief</span> Create a Doc that represents a boolean literal in python syntax.</i></td></tr>
+<tr><th id="140">140</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">value</span> The bool value.</i></td></tr>
+<tr><th id="141">141</th><td><i class="doc">   * <span class="command">\return</span> The created doc.</i></td></tr>
+<tr><th id="142">142</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="143">143</th><td>  <em>static</em> <a class="type" href="#tvm::Doc" title='tvm::Doc' data-ref="tvm::Doc" data-ref-filename="tvm..Doc">Doc</a> <dfn class="decl fn" id="_ZN3tvm3Doc13PyBoolLiteralEb" title='tvm::Doc::PyBoolLiteral' data-ref="_ZN3tvm3Doc13PyBoolLiteralEb" data-ref-filename="_ZN3tvm3Doc13PyBoolLiteralEb">PyBoolLiteral</dfn>(<em>bool</em> <dfn class="local col0 decl" id="610value" title='value' data-type='bool' data-ref="610value" data-ref-filename="610value">value</dfn>);</td></tr>
+<tr><th id="144">144</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="145">145</th><td><i class="doc">   * <span class="command">\brief</span> Enclose body by brace and add indent.</i></td></tr>
+<tr><th id="146">146</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">body</span> The body</i></td></tr>
+<tr><th id="147">147</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">open</span> The open brace.</i></td></tr>
+<tr><th id="148">148</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">close</span> The close brace.</i></td></tr>
+<tr><th id="149">149</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">indent</span> amount of indentation.</i></td></tr>
+<tr><th id="150">150</th><td><i class="doc">   * <span class="command">\return</span> The created doc.</i></td></tr>
+<tr><th id="151">151</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="152">152</th><td>  <em>static</em> <a class="type" href="#tvm::Doc" title='tvm::Doc' data-ref="tvm::Doc" data-ref-filename="tvm..Doc">Doc</a> <dfn class="decl fn" id="_ZN3tvm3Doc5BraceENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKS0_S6_i" title='tvm::Doc::Brace' data-ref="_ZN3tvm3Doc5BraceENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKS0_S6_i" data-ref-filename="_ZN3tvm3Doc5BraceENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKS0_S6_i">Brace</dfn>(<span class="namespace">std::</span><a class="typedef" href="../../../include/c++/10/bits/stringfwd.h.html#std::string" title='std::string' data-type='basic_string&lt;char&gt;' data-ref="std::string" data-ref-filename="std..string">string</a> <dfn class="local col1 decl" id="611open" title='open' data-type='std::string' data-ref="611open" data-ref-filename="611open">open</dfn>, <em>const</em> <a class="type" href="#tvm::Doc" title='tvm::Doc' data-ref="tvm::Doc" data-ref-filename="tvm..Doc">Doc</a>&amp; <dfn class="local col2 decl" id="612body" title='body' data-type='const tvm::Doc &amp;' data-ref="612body" data-ref-filename="612body">body</dfn>, <span class="namespace">std::</span><a class="typedef" href="../../../include/c++/10/bits/stringfwd.h.html#std::string" title='std::string' data-type='basic_string&lt;char&gt;' data-ref="std::string" data-ref-filename="std..string">string</a> <dfn class="local col3 decl" id="613close" title='close' data-type='std::string' data-ref="613close" data-ref-filename="613close">close</dfn>, <em>int</em> <dfn class="local col4 decl" id="614indent" title='indent' data-type='int' data-ref="614indent" data-ref-filename="614indent">indent</dfn> = <var>2</var>);</td></tr>
+<tr><th id="153">153</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="154">154</th><td><i class="doc">   * <span class="command">\brief</span> Create a doc by concatenating  together with separator.</i></td></tr>
+<tr><th id="155">155</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">vec</span> The docs to be concatenated.</i></td></tr>
+<tr><th id="156">156</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">sep</span> The seperator.</i></td></tr>
+<tr><th id="157">157</th><td><i class="doc">   * <span class="command">\return</span> The created doc.</i></td></tr>
+<tr><th id="158">158</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="159">159</th><td>  <em>static</em> <a class="type" href="#tvm::Doc" title='tvm::Doc' data-ref="tvm::Doc" data-ref-filename="tvm..Doc">Doc</a> <dfn class="decl fn" id="_ZN3tvm3Doc6ConcatERKSt6vectorIS0_SaIS0_EERKS0_" title='tvm::Doc::Concat' data-ref="_ZN3tvm3Doc6ConcatERKSt6vectorIS0_SaIS0_EERKS0_" data-ref-filename="_ZN3tvm3Doc6ConcatERKSt6vectorIS0_SaIS0_EERKS0_">Concat</dfn>(<em>const</em> <span class="namespace">std::</span><a class="type" href="../../../include/c++/10/bits/stl_vector.h.html#std::vector" title='std::vector' data-ref="std::vector" data-ref-filename="std..vector">vector</a>&lt;<a class="type" href="#tvm::Doc" title='tvm::Doc' data-ref="tvm::Doc" data-ref-filename="tvm..Doc">Doc</a>&gt;&amp; <dfn class="local col5 decl" id="615vec" title='vec' data-type='const std::vector&lt;Doc&gt; &amp;' data-ref="615vec" data-ref-filename="615vec">vec</dfn>, <em>const</em> <a class="type" href="#tvm::Doc" title='tvm::Doc' data-ref="tvm::Doc" data-ref-filename="tvm..Doc">Doc</a>&amp; <dfn class="local col6 decl" id="616sep" title='sep' data-type='const tvm::Doc &amp;' data-ref="616sep" data-ref-filename="616sep">sep</dfn> = <a class="member fn" href="#_ZN3tvm3Doc4TextENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE" title='tvm::Doc::Text' data-ref="_ZN3tvm3Doc4TextENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE" data-ref-filename="_ZN3tvm3Doc4TextENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE">Text</a>(<a class="ref fn fake" href="../../../include/c++/10/bits/basic_string.h.html#_ZNSt7__cxx1112basic_stringC1EPKT_RKT1_" title='std::basic_string::basic_string&lt;_CharT, _Traits, _Alloc&gt;' data-ref="_ZNSt7__cxx1112basic_stringC1EPKT_RKT1_" data-ref-filename="_ZNSt7__cxx1112basic_stringC1EPKT_RKT1_"></a><q>", "</q>));</td></tr>
+<tr><th id="160">160</th><td></td></tr>
+<tr><th id="161">161</th><td> <b>private</b>:</td></tr>
+<tr><th id="162">162</th><td>  <i class="doc">/*! <span class="command">\brief</span> Internal doc stream. */</i></td></tr>
+<tr><th id="163">163</th><td>  <span class="namespace">std::</span><a class="type" href="../../../include/c++/10/bits/stl_vector.h.html#std::vector" title='std::vector' data-ref="std::vector" data-ref-filename="std..vector">vector</a>&lt;<a class="type" href="#tvm::DocAtom" title='tvm::DocAtom' data-ref="tvm::DocAtom" data-ref-filename="tvm..DocAtom">DocAtom</a>&gt; <dfn class="decl field" id="tvm::Doc::stream_" title='tvm::Doc::stream_' data-ref="tvm::Doc::stream_" data-ref-filename="tvm..Doc..stream_">stream_</dfn>;</td></tr>
+<tr><th id="164">164</th><td>};</td></tr>
+<tr><th id="165">165</th><td></td></tr>
+<tr><th id="166">166</th><td>}  <i>// namespace tvm</i></td></tr>
+<tr><th id="167">167</th><td><u>#<span data-ppcond="26">endif</span>  // TVM_PRINTER_DOC_H_</u></td></tr>
+<tr><th id="168">168</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated while processing <a href='../meta_schedule/apply_history_best.cc.html'>tvm/src/meta_schedule/apply_history_best.cc</a><br/>Generated on <em>2022-Aug-10</em> from project tvm revision <em>fae79bb</em><br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

@@ -1,0 +1,62 @@
+<dec f='tvm/include/tvm/runtime/object.h' l='785'/>
+<use f='tvm/include/tvm/ir/expr.h' l='480' u='c'/>
+<use f='tvm/include/tvm/tir/var.h' l='311' u='c'/>
+<use f='tvm/include/tvm/tir/buffer.h' l='226' u='c'/>
+<use f='tvm/include/tvm/tir/expr.h' l='659' u='c'/>
+<use f='tvm/include/tvm/ir/attrs.h' l='303' u='c'/>
+<use f='tvm/include/tvm/ir/module.h' l='449' u='c'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='327' u='c'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='391' u='c'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='589' u='c'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='1008' u='c'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='1156' u='c'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='1305' u='c'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='1354' u='c'/>
+<doc f='tvm/include/tvm/runtime/object.h' l='766'>/*!
+ * \brief Define CopyOnWrite function in an ObjectRef.
+ * \param ObjectName The Type of the Node.
+ *
+ *  CopyOnWrite will generate a unique copy of the internal node.
+ *  The node will be copied if it is referenced by multiple places.
+ *  The function returns the raw pointer to the node to allow modification
+ *  of the content.
+ *
+ * \code
+ *
+ *  MyCOWObjectRef ref, ref2;
+ *  ref2 = ref;
+ *  ref.CopyOnWrite()-&gt;value = new_value;
+ *  assert(ref2-&gt;value == old_value);
+ *  assert(ref-&gt;value == new_value);
+ *
+ * \endcode
+ */</doc>
+<use f='tvm/src/arith/interval_set.h' l='113' u='c'/>
+<use f='tvm/include/tvm/tir/function.h' l='189' u='c'/>
+<use f='tvm/src/arith/canonical_simplify.cc' l='216' u='c'/>
+<use f='tvm/src/arith/canonical_simplify.cc' l='526' u='c'/>
+<use f='tvm/include/tvm/arith/iter_affine_map.h' l='140' u='c'/>
+<use f='tvm/include/tvm/arith/iter_affine_map.h' l='211' u='c'/>
+<use f='tvm/include/tvm/arith/iter_affine_map.h' l='259' u='c'/>
+<use f='tvm/include/tvm/auto_scheduler/loop_state.h' l='143' u='c'/>
+<use f='tvm/include/tvm/auto_scheduler/loop_state.h' l='217' u='c'/>
+<use f='tvm/include/tvm/auto_scheduler/loop_state.h' l='449' u='c'/>
+<use f='tvm/include/tvm/auto_scheduler/compute_dag.h' l='310' u='c'/>
+<use f='tvm/include/tvm/auto_scheduler/search_task.h' l='104' u='c'/>
+<use f='tvm/include/tvm/te/operation.h' l='268' u='c'/>
+<use f='tvm/include/tvm/relay/expr.h' l='110' u='c'/>
+<use f='tvm/include/tvm/relay/expr.h' l='167' u='c'/>
+<use f='tvm/include/tvm/relay/expr.h' l='264' u='c'/>
+<use f='tvm/include/tvm/relay/expr.h' l='377' u='c'/>
+<use f='tvm/include/tvm/relay/expr.h' l='465' u='c'/>
+<use f='tvm/include/tvm/relay/expr.h' l='539' u='c'/>
+<use f='tvm/include/tvm/relay/expr.h' l='594' u='c'/>
+<use f='tvm/include/tvm/relay/expr.h' l='645' u='c'/>
+<use f='tvm/include/tvm/relay/expr.h' l='695' u='c'/>
+<use f='tvm/include/tvm/relay/expr.h' l='750' u='c'/>
+<use f='tvm/include/tvm/relay/adt.h' l='263' u='c'/>
+<use f='tvm/include/tvm/relay/adt.h' l='328' u='c'/>
+<use f='tvm/include/tvm/relay/function.h' l='120' u='c'/>
+<use f='tvm/include/tvm/relay/executor.h' l='151' u='c'/>
+<use f='tvm/include/tvm/relay/dataflow_pattern.h' l='224' u='c'/>
+<use f='tvm/src/relay/collage/candidate_partition.h' l='161' u='c'/>

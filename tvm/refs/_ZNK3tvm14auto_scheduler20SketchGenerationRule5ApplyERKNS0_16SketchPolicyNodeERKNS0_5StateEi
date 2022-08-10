@@ -1,0 +1,21 @@
+<dec f='tvm/src/auto_scheduler/search_policy/sketch_policy_rules.h' l='77' type='std::vector&lt;std::pair&lt;State, int&gt;&gt; tvm::auto_scheduler::SketchGenerationRule::Apply(const tvm::auto_scheduler::SketchPolicyNode &amp; policy, const tvm::auto_scheduler::State &amp; state, int stage_id) const'/>
+<doc f='tvm/src/auto_scheduler/search_policy/sketch_policy_rules.h' l='69'>/*!
+   * \brief Apply function of this rule.
+   * \param policy The SketchPolicyNode of this rule, some information may be used during
+   * the rule applying.
+   * \param state The original state to apply this rule.
+   * \param stage_id The index of the next stage to apply this rule.
+   * \return The state after applying this rule, and index of the next stage.
+   */</doc>
+<use f='tvm/src/auto_scheduler/search_policy/sketch_policy.cc' l='343' u='c' c='_ZN3tvm14auto_scheduler16SketchPolicyNode16GenerateSketchesEv'/>
+<ovr f='tvm/src/auto_scheduler/search_policy/sketch_policy_rules.cc' l='51' c='_ZNK3tvm14auto_scheduler13RuleSkipStage5ApplyERKNS0_16SketchPolicyNodeERKNS0_5StateEi'/>
+<ovr f='tvm/src/auto_scheduler/search_policy/sketch_policy_rules.cc' l='85' c='_ZNK3tvm14auto_scheduler16RuleAlwaysInline5ApplyERKNS0_16SketchPolicyNodeERKNS0_5StateEi'/>
+<ovr f='tvm/src/auto_scheduler/search_policy/sketch_policy_rules.cc' l='101' c='_ZNK3tvm14auto_scheduler20RuleMultiLevelTiling5ApplyERKNS0_16SketchPolicyNodeERKNS0_5StateEi'/>
+<ovr f='tvm/src/auto_scheduler/search_policy/sketch_policy_rules.cc' l='126' c='_ZNK3tvm14auto_scheduler30RuleMultiLevelTilingWithFusion5ApplyERKNS0_16SketchPolicyNodeERKNS0_5StateEi'/>
+<ovr f='tvm/src/auto_scheduler/search_policy/sketch_policy_rules.cc' l='188' c='_ZNK3tvm14auto_scheduler16RuleAddCacheRead5ApplyERKNS0_16SketchPolicyNodeERKNS0_5StateEi'/>
+<ovr f='tvm/src/auto_scheduler/search_policy/sketch_policy_rules.cc' l='227' c='_ZNK3tvm14auto_scheduler17RuleAddCacheWrite5ApplyERKNS0_16SketchPolicyNodeERKNS0_5StateEi'/>
+<ovr f='tvm/src/auto_scheduler/search_policy/sketch_policy_rules.cc' l='245' c='_ZNK3tvm14auto_scheduler14RuleAddRfactor5ApplyERKNS0_16SketchPolicyNodeERKNS0_5StateEi'/>
+<ovr f='tvm/src/auto_scheduler/search_policy/sketch_policy_rules.cc' l='294' c='_ZNK3tvm14auto_scheduler34RuleSimplifyComputeWithConstTensor5ApplyERKNS0_16SketchPolicyNodeERKNS0_5StateEi'/>
+<ovr f='tvm/src/auto_scheduler/search_policy/sketch_policy_rules.cc' l='367' c='_ZNK3tvm14auto_scheduler24RuleCrossThreadReduction5ApplyERKNS0_16SketchPolicyNodeERKNS0_5StateEi'/>
+<ovr f='tvm/src/auto_scheduler/search_policy/sketch_policy_rules.cc' l='445' c='_ZNK3tvm14auto_scheduler29RuleSpecialComputeLocationGPU5ApplyERKNS0_16SketchPolicyNodeERKNS0_5StateEi'/>
+<ovr f='tvm/src/auto_scheduler/search_policy/sketch_policy_rules.cc' l='479' c='_ZNK3tvm14auto_scheduler16RuleCustomSketch5ApplyERKNS0_16SketchPolicyNodeERKNS0_5StateEi'/>

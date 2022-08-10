@@ -1,0 +1,27 @@
+<dec f='tvm/include/tvm/arith/iter_affine_map.h' l='379' type='Map&lt;tvm::tir::Var, tvm::PrimExpr&gt; tvm::arith::InverseAffineIterMap(const Array&lt;tvm::arith::IterSumExpr&gt; &amp; iter_map, const Array&lt;tvm::PrimExpr&gt; outputs)'/>
+<doc f='tvm/include/tvm/arith/iter_affine_map.h' l='359'>/*!
+ * \brief Apply the inverse of the affine transformation to the outputs.
+ *
+ * Similar to the back-propagation, starting from the outputs, it visits the DAG of the expressions
+ * in reverse topology order and applies the inverse of the affine transformation until it reaches
+ * the input. The affine iter map is required to be bijective.
+ *
+ * For example, iter_map = [l0 // 16, l0 % 16], outputs = [output_0, output_1],
+ * the affine transformation specified by `iter_map` will be applied to `outputs` and the result
+ * will be {l0: ((output_0*16) + output_1)}.
+ *
+ * The range of `outputs` should be the same as the output range of the affine transmation.
+ *
+ * \sa DetectIterMap
+ *
+ * \param iter_map The bijective affine iter map.
+ * \param outputs The outputs of the affine transformation.
+ *
+ * \return The map from the input to the transformed result.
+ */</doc>
+<def f='tvm/src/arith/iter_affine_map.cc' l='2222' ll='2226' type='Map&lt;tvm::tir::Var, tvm::PrimExpr&gt; tvm::arith::InverseAffineIterMap(const Array&lt;tvm::arith::IterSumExpr&gt; &amp; iter_map, const Array&lt;tvm::PrimExpr&gt; outputs)'/>
+<use f='tvm/src/arith/iter_affine_map.cc' l='2228' u='r'/>
+<use f='tvm/src/tir/ir/index_map.cc' l='87' u='c' c='_ZNK3tvm3tir8IndexMap20NonSurjectiveInverseENS_7runtime5ArrayINS_5RangeEvEE'/>
+<use f='tvm/src/tir/ir/index_map.cc' l='149' u='c' c='_ZNK3tvm3tir8IndexMap7InverseENS_7runtime5ArrayINS_5RangeEvEE'/>
+<use f='tvm/src/tir/schedule/primitive/compute_inline.cc' l='588' u='c' c='_ZN3tvm3tir21ReverseComputeInliner20CreateInverseMappingENS_7runtime5ArrayINS_8PrimExprEvEE'/>
+<use f='tvm/src/tir/schedule/primitive/layout_transformation.cc' l='420' u='c' c='_ZN3tvm3tir20TransformBlockLayoutENS0_13ScheduleStateERKNS0_8StmtSRefERKNS0_8IndexMapE'/>

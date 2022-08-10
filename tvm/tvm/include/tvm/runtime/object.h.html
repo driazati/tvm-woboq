@@ -1,0 +1,925 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>object.h source code [tvm/include/tvm/runtime/object.h] - Woboq Code Browser</title>
+<meta name="woboq:interestingDefinitions" content="tvm::runtime::Object,tvm::runtime::ObjectPtr,tvm::runtime::ObjectPtrEqual,tvm::runtime::ObjectPtrHash,tvm::runtime::ObjectRef,tvm::runtime::TypeIndex "/>
+<link rel="stylesheet" href="../../../.././data/qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href="../../../.././data/kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src="../../../.././data/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="../../../.././data/jquery/jquery-ui.min.js"></script>
+<script>var file = 'tvm/include/tvm/runtime/object.h'; var root_path = '../../../..'; var data_path = '../../../.././data'; var ecma_script_api_version = 2;</script>
+<script src='../../../.././data/codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='../../..'>tvm</a>/<a href='../..'>include</a>/<a href='..'>tvm</a>/<a href='./'>runtime</a>/<a href='object.h.html'>object.h</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td><i>/*</i></td></tr>
+<tr><th id="2">2</th><td><i> * Licensed to the Apache Software Foundation (ASF) under one</i></td></tr>
+<tr><th id="3">3</th><td><i> * or more contributor license agreements.  See the NOTICE file</i></td></tr>
+<tr><th id="4">4</th><td><i> * distributed with this work for additional information</i></td></tr>
+<tr><th id="5">5</th><td><i> * regarding copyright ownership.  The ASF licenses this file</i></td></tr>
+<tr><th id="6">6</th><td><i> * to you under the Apache License, Version 2.0 (the</i></td></tr>
+<tr><th id="7">7</th><td><i> * "License"); you may not use this file except in compliance</i></td></tr>
+<tr><th id="8">8</th><td><i> * with the License.  You may obtain a copy of the License at</i></td></tr>
+<tr><th id="9">9</th><td><i> *</i></td></tr>
+<tr><th id="10">10</th><td><i> *   <a href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a></i></td></tr>
+<tr><th id="11">11</th><td><i> *</i></td></tr>
+<tr><th id="12">12</th><td><i> * Unless required by applicable law or agreed to in writing,</i></td></tr>
+<tr><th id="13">13</th><td><i> * software distributed under the License is distributed on an</i></td></tr>
+<tr><th id="14">14</th><td><i> * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY</i></td></tr>
+<tr><th id="15">15</th><td><i> * KIND, either express or implied.  See the License for the</i></td></tr>
+<tr><th id="16">16</th><td><i> * specific language governing permissions and limitations</i></td></tr>
+<tr><th id="17">17</th><td><i> * under the License.</i></td></tr>
+<tr><th id="18">18</th><td><i> */</i></td></tr>
+<tr><th id="19">19</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="20">20</th><td><i class="doc"> * <span class="command">\file</span> <span class="verb">tvm/runtime/object.h</span></i></td></tr>
+<tr><th id="21">21</th><td><i class="doc"> * <span class="command">\brief</span> A managed object in the TVM runtime.</i></td></tr>
+<tr><th id="22">22</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="23">23</th><td><u>#<span data-ppcond="23">ifndef</span> <span class="macro" data-ref="_M/TVM_RUNTIME_OBJECT_H_">TVM_RUNTIME_OBJECT_H_</span></u></td></tr>
+<tr><th id="24">24</th><td><u>#define <dfn class="macro" id="_M/TVM_RUNTIME_OBJECT_H_" data-ref="_M/TVM_RUNTIME_OBJECT_H_">TVM_RUNTIME_OBJECT_H_</dfn></u></td></tr>
+<tr><th id="25">25</th><td></td></tr>
+<tr><th id="26">26</th><td><u>#include <a href="c_runtime_api.h.html">&lt;tvm/runtime/c_runtime_api.h&gt;</a></u></td></tr>
+<tr><th id="27">27</th><td><u>#include <a href="logging.h.html">&lt;tvm/runtime/logging.h&gt;</a></u></td></tr>
+<tr><th id="28">28</th><td></td></tr>
+<tr><th id="29">29</th><td><u>#include <a href="../../../../include/c++/10/string.html">&lt;string&gt;</a></u></td></tr>
+<tr><th id="30">30</th><td><u>#include <a href="../../../../include/c++/10/type_traits.html">&lt;type_traits&gt;</a></u></td></tr>
+<tr><th id="31">31</th><td><u>#include <a href="../../../../include/c++/10/utility.html">&lt;utility&gt;</a></u></td></tr>
+<tr><th id="32">32</th><td></td></tr>
+<tr><th id="33">33</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="34">34</th><td><i class="doc"> * <span class="command">\brief</span> Whether or not use atomic reference counter.</i></td></tr>
+<tr><th id="35">35</th><td><i class="doc"> *  If the reference counter is not atomic,</i></td></tr>
+<tr><th id="36">36</th><td><i class="doc"> *  an object cannot be owned by multiple threads.</i></td></tr>
+<tr><th id="37">37</th><td><i class="doc"> *  We can, however, move an object across threads</i></td></tr>
+<tr><th id="38">38</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="39">39</th><td><u>#<span data-ppcond="39">ifndef</span> <span class="macro" data-ref="_M/TVM_OBJECT_ATOMIC_REF_COUNTER">TVM_OBJECT_ATOMIC_REF_COUNTER</span></u></td></tr>
+<tr><th id="40">40</th><td><u>#define <dfn class="macro" id="_M/TVM_OBJECT_ATOMIC_REF_COUNTER" data-ref="_M/TVM_OBJECT_ATOMIC_REF_COUNTER">TVM_OBJECT_ATOMIC_REF_COUNTER</dfn> 1</u></td></tr>
+<tr><th id="41">41</th><td><u>#<span data-ppcond="39">endif</span></u></td></tr>
+<tr><th id="42">42</th><td></td></tr>
+<tr><th id="43">43</th><td><u>#<span data-ppcond="43">if</span> <a class="macro" href="#40" title="1" data-ref="_M/TVM_OBJECT_ATOMIC_REF_COUNTER">TVM_OBJECT_ATOMIC_REF_COUNTER</a></u></td></tr>
+<tr><th id="44">44</th><td><u>#include <a href="../../../../include/c++/10/atomic.html">&lt;atomic&gt;</a></u></td></tr>
+<tr><th id="45">45</th><td><u>#<span data-ppcond="43">endif</span>  // TVM_OBJECT_ATOMIC_REF_COUNTER</u></td></tr>
+<tr><th id="46">46</th><td></td></tr>
+<tr><th id="47">47</th><td><b>namespace</b> <span class="namespace">tvm</span> {</td></tr>
+<tr><th id="48">48</th><td><b>namespace</b> <span class="namespace">runtime</span> {</td></tr>
+<tr><th id="49">49</th><td></td></tr>
+<tr><th id="50">50</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="51">51</th><td><i class="doc"> * <span class="command">\brief</span> Namespace for the list of type index.</i></td></tr>
+<tr><th id="52">52</th><td><i class="doc"> * <span class="command">\note</span> Use struct so that we have to use TypeIndex::ENumName to refer to</i></td></tr>
+<tr><th id="53">53</th><td><i class="doc"> *       the constant, but still able to use enum.</i></td></tr>
+<tr><th id="54">54</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="55">55</th><td><b>struct</b> <dfn class="type def" id="tvm::runtime::TypeIndex" title='tvm::runtime::TypeIndex' data-ref="tvm::runtime::TypeIndex" data-ref-filename="tvm..runtime..TypeIndex">TypeIndex</dfn> {</td></tr>
+<tr><th id="56">56</th><td>  <b>enum</b> {</td></tr>
+<tr><th id="57">57</th><td>    <i class="doc">/*! <span class="command">\brief</span> Root object type. */</i></td></tr>
+<tr><th id="58">58</th><td>    <dfn class="enum" id="tvm::runtime::TypeIndex::kRoot" title='tvm::runtime::TypeIndex::kRoot' data-ref="tvm::runtime::TypeIndex::kRoot" data-ref-filename="tvm..runtime..TypeIndex..kRoot">kRoot</dfn> = <var>0</var>,</td></tr>
+<tr><th id="59">59</th><td>    <i>// Standard static index assignments,</i></td></tr>
+<tr><th id="60">60</th><td><i>    // Frontends can take benefit of these constants.</i></td></tr>
+<tr><th id="61">61</th><td>    <i class="doc">/*! <span class="command">\brief</span> runtime::Module. */</i></td></tr>
+<tr><th id="62">62</th><td>    <dfn class="enum" id="tvm::runtime::TypeIndex::kRuntimeModule" title='tvm::runtime::TypeIndex::kRuntimeModule' data-ref="tvm::runtime::TypeIndex::kRuntimeModule" data-ref-filename="tvm..runtime..TypeIndex..kRuntimeModule">kRuntimeModule</dfn> = <var>1</var>,</td></tr>
+<tr><th id="63">63</th><td>    <i class="doc">/*! <span class="command">\brief</span> runtime::NDArray. */</i></td></tr>
+<tr><th id="64">64</th><td>    <dfn class="enum" id="tvm::runtime::TypeIndex::kRuntimeNDArray" title='tvm::runtime::TypeIndex::kRuntimeNDArray' data-ref="tvm::runtime::TypeIndex::kRuntimeNDArray" data-ref-filename="tvm..runtime..TypeIndex..kRuntimeNDArray">kRuntimeNDArray</dfn> = <var>2</var>,</td></tr>
+<tr><th id="65">65</th><td>    <i class="doc">/*! <span class="command">\brief</span> runtime::String. */</i></td></tr>
+<tr><th id="66">66</th><td>    <dfn class="enum" id="tvm::runtime::TypeIndex::kRuntimeString" title='tvm::runtime::TypeIndex::kRuntimeString' data-ref="tvm::runtime::TypeIndex::kRuntimeString" data-ref-filename="tvm..runtime..TypeIndex..kRuntimeString">kRuntimeString</dfn> = <var>3</var>,</td></tr>
+<tr><th id="67">67</th><td>    <i class="doc">/*! <span class="command">\brief</span> runtime::Array. */</i></td></tr>
+<tr><th id="68">68</th><td>    <dfn class="enum" id="tvm::runtime::TypeIndex::kRuntimeArray" title='tvm::runtime::TypeIndex::kRuntimeArray' data-ref="tvm::runtime::TypeIndex::kRuntimeArray" data-ref-filename="tvm..runtime..TypeIndex..kRuntimeArray">kRuntimeArray</dfn> = <var>4</var>,</td></tr>
+<tr><th id="69">69</th><td>    <i class="doc">/*! <span class="command">\brief</span> runtime::Map. */</i></td></tr>
+<tr><th id="70">70</th><td>    <dfn class="enum" id="tvm::runtime::TypeIndex::kRuntimeMap" title='tvm::runtime::TypeIndex::kRuntimeMap' data-ref="tvm::runtime::TypeIndex::kRuntimeMap" data-ref-filename="tvm..runtime..TypeIndex..kRuntimeMap">kRuntimeMap</dfn> = <var>5</var>,</td></tr>
+<tr><th id="71">71</th><td>    <i class="doc">/*! <span class="command">\brief</span> runtime::ShapeTuple. */</i></td></tr>
+<tr><th id="72">72</th><td>    <dfn class="enum" id="tvm::runtime::TypeIndex::kRuntimeShapeTuple" title='tvm::runtime::TypeIndex::kRuntimeShapeTuple' data-ref="tvm::runtime::TypeIndex::kRuntimeShapeTuple" data-ref-filename="tvm..runtime..TypeIndex..kRuntimeShapeTuple">kRuntimeShapeTuple</dfn> = <var>6</var>,</td></tr>
+<tr><th id="73">73</th><td>    <i class="doc">/*! <span class="command">\brief</span> runtime::PackedFunc. */</i></td></tr>
+<tr><th id="74">74</th><td>    <dfn class="enum" id="tvm::runtime::TypeIndex::kRuntimePackedFunc" title='tvm::runtime::TypeIndex::kRuntimePackedFunc' data-ref="tvm::runtime::TypeIndex::kRuntimePackedFunc" data-ref-filename="tvm..runtime..TypeIndex..kRuntimePackedFunc">kRuntimePackedFunc</dfn> = <var>7</var>,</td></tr>
+<tr><th id="75">75</th><td>    <i>// static assignments that may subject to change.</i></td></tr>
+<tr><th id="76">76</th><td>    <dfn class="enum" id="tvm::runtime::TypeIndex::kRuntimeClosure" title='tvm::runtime::TypeIndex::kRuntimeClosure' data-ref="tvm::runtime::TypeIndex::kRuntimeClosure" data-ref-filename="tvm..runtime..TypeIndex..kRuntimeClosure">kRuntimeClosure</dfn>,</td></tr>
+<tr><th id="77">77</th><td>    <dfn class="enum" id="tvm::runtime::TypeIndex::kRuntimeADT" title='tvm::runtime::TypeIndex::kRuntimeADT' data-ref="tvm::runtime::TypeIndex::kRuntimeADT" data-ref-filename="tvm..runtime..TypeIndex..kRuntimeADT">kRuntimeADT</dfn>,</td></tr>
+<tr><th id="78">78</th><td>    <dfn class="enum" id="tvm::runtime::TypeIndex::kStaticIndexEnd" title='tvm::runtime::TypeIndex::kStaticIndexEnd' data-ref="tvm::runtime::TypeIndex::kStaticIndexEnd" data-ref-filename="tvm..runtime..TypeIndex..kStaticIndexEnd">kStaticIndexEnd</dfn>,</td></tr>
+<tr><th id="79">79</th><td>    <i class="doc">/*! <span class="command">\brief</span> Type index is allocated during runtime. */</i></td></tr>
+<tr><th id="80">80</th><td>    <dfn class="enum" id="tvm::runtime::TypeIndex::kDynamic" title='tvm::runtime::TypeIndex::kDynamic' data-ref="tvm::runtime::TypeIndex::kDynamic" data-ref-filename="tvm..runtime..TypeIndex..kDynamic">kDynamic</dfn> = <a class="enum" href="#tvm::runtime::TypeIndex::kStaticIndexEnd" title='tvm::runtime::TypeIndex::kStaticIndexEnd' data-ref="tvm::runtime::TypeIndex::kStaticIndexEnd" data-ref-filename="tvm..runtime..TypeIndex..kStaticIndexEnd">kStaticIndexEnd</a></td></tr>
+<tr><th id="81">81</th><td>  };</td></tr>
+<tr><th id="82">82</th><td>};  <i>// namespace TypeIndex</i></td></tr>
+<tr><th id="83">83</th><td></td></tr>
+<tr><th id="84">84</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="85">85</th><td><i class="doc"> * <span class="command">\brief</span> base class of all object containers.</i></td></tr>
+<tr><th id="86">86</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="87">87</th><td><i class="doc"> * Sub-class of objects should declare the following static constexpr fields:</i></td></tr>
+<tr><th id="88">88</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="89">89</th><td><i class="doc"> * - _type_index:</i></td></tr>
+<tr><th id="90">90</th><td><i class="doc"> *      Static type index of the object, if assigned to TypeIndex::kDynamic</i></td></tr>
+<tr><th id="91">91</th><td><i class="doc"> *      the type index will be assigned during runtime.</i></td></tr>
+<tr><th id="92">92</th><td><i class="doc"> *      Runtime type index can be accessed by ObjectType::TypeIndex();</i></td></tr>
+<tr><th id="93">93</th><td><i class="doc"> * - _type_key:</i></td></tr>
+<tr><th id="94">94</th><td><i class="doc"> *       The unique string identifier of the type.</i></td></tr>
+<tr><th id="95">95</th><td><i class="doc"> * - _type_final:</i></td></tr>
+<tr><th id="96">96</th><td><i class="doc"> *       Whether the type is terminal type(there is no subclass of the type in the object system).</i></td></tr>
+<tr><th id="97">97</th><td><i class="doc"> *       This field is automatically set by macro TVM_DECLARE_FINAL_OBJECT_INFO</i></td></tr>
+<tr><th id="98">98</th><td><i class="doc"> *       It is still OK to sub-class a terminal object type T and construct it using make_object.</i></td></tr>
+<tr><th id="99">99</th><td><i class="doc"> *       But IsInstance check will only show that the object type is T(instead of the sub-class).</i></td></tr>
+<tr><th id="100">100</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="101">101</th><td><i class="doc"> * The following two fields are necessary for base classes that can be sub-classed.</i></td></tr>
+<tr><th id="102">102</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="103">103</th><td><i class="doc"> * - _type_child_slots:</i></td></tr>
+<tr><th id="104">104</th><td><i class="doc"> *       Number of reserved type index slots for child classes.</i></td></tr>
+<tr><th id="105">105</th><td><i class="doc"> *       Used for runtime optimization for type checking in IsInstance.</i></td></tr>
+<tr><th id="106">106</th><td><i class="doc"> *       If an object's type_index is within range of [type_index, type_index + _type_child_slots]</i></td></tr>
+<tr><th id="107">107</th><td><i class="doc"> *       Then the object can be quickly decided as sub-class of the current object class.</i></td></tr>
+<tr><th id="108">108</th><td><i class="doc"> *       If not, a fallback mechanism is used to check the global type table.</i></td></tr>
+<tr><th id="109">109</th><td><i class="doc"> *       Recommendation: set to estimate number of children needed.</i></td></tr>
+<tr><th id="110">110</th><td><i class="doc"> * - _type_child_slots_can_overflow:</i></td></tr>
+<tr><th id="111">111</th><td><i class="doc"> *       Whether we can add additional child classes even if the number of child classes</i></td></tr>
+<tr><th id="112">112</th><td><i class="doc"> *       exceeds the _type_child_slots. A fallback mechanism to check global type table will be</i></td></tr>
+<tr><th id="113">113</th><td><i class="doc"> * used. Recommendation: set to false for optimal runtime speed if we know exact number of children.</i></td></tr>
+<tr><th id="114">114</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="115">115</th><td><i class="doc"> * Two macros are used to declare helper functions in the object:</i></td></tr>
+<tr><th id="116">116</th><td><i class="doc"> * - Use TVM_DECLARE_BASE_OBJECT_INFO for object classes that can be sub-classed.</i></td></tr>
+<tr><th id="117">117</th><td><i class="doc"> * - Use TVM_DECLARE_FINAL_OBJECT_INFO for object classes that cannot be sub-classed.</i></td></tr>
+<tr><th id="118">118</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="119">119</th><td><i class="doc"> * New objects can be created using make_object function.</i></td></tr>
+<tr><th id="120">120</th><td><i class="doc"> * Which will automatically populate the type_index and deleter of the object.</i></td></tr>
+<tr><th id="121">121</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="122">122</th><td><i class="doc"> * <span class="command">\sa</span> make_object</i></td></tr>
+<tr><th id="123">123</th><td><i class="doc"> * <span class="command">\sa</span> ObjectPtr</i></td></tr>
+<tr><th id="124">124</th><td><i class="doc"> * <span class="command">\sa</span> ObjectRef</i></td></tr>
+<tr><th id="125">125</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="126">126</th><td><i class="doc"> * <span class="command">\code</span></i></td></tr>
+<tr><th id="127">127</th><td><i class="doc"> *<span class="verb"></span></i></td></tr>
+<tr><th id="128">128</th><td><i class="doc"><span class="verb"></span> *<span class="verb">  // Create a base object</span></i></td></tr>
+<tr><th id="129">129</th><td><i class="doc"><span class="verb"></span> *<span class="verb">  class BaseObj : public Object {</span></i></td></tr>
+<tr><th id="130">130</th><td><i class="doc"><span class="verb"></span> *<span class="verb">   public:</span></i></td></tr>
+<tr><th id="131">131</th><td><i class="doc"><span class="verb"></span> *<span class="verb">    // object fields</span></i></td></tr>
+<tr><th id="132">132</th><td><i class="doc"><span class="verb"></span> *<span class="verb">    int field0;</span></i></td></tr>
+<tr><th id="133">133</th><td><i class="doc"><span class="verb"></span> *<span class="verb"></span></i></td></tr>
+<tr><th id="134">134</th><td><i class="doc"><span class="verb"></span> *<span class="verb">    // object properties</span></i></td></tr>
+<tr><th id="135">135</th><td><i class="doc"><span class="verb"></span> *<span class="verb">    static constexpr const uint32_t _type_index = TypeIndex::kDynamic;</span></i></td></tr>
+<tr><th id="136">136</th><td><i class="doc"><span class="verb"></span> *<span class="verb">    static constexpr const char* _type_key = "test.BaseObj";</span></i></td></tr>
+<tr><th id="137">137</th><td><i class="doc"><span class="verb"></span> *<span class="verb">    TVM_DECLARE_BASE_OBJECT_INFO(BaseObj, Object);</span></i></td></tr>
+<tr><th id="138">138</th><td><i class="doc"><span class="verb"></span> *<span class="verb">  };</span></i></td></tr>
+<tr><th id="139">139</th><td><i class="doc"><span class="verb"></span> *<span class="verb"></span></i></td></tr>
+<tr><th id="140">140</th><td><i class="doc"><span class="verb"></span> *<span class="verb">  class LeafObj : public BaseObj {</span></i></td></tr>
+<tr><th id="141">141</th><td><i class="doc"><span class="verb"></span> *<span class="verb">   public:</span></i></td></tr>
+<tr><th id="142">142</th><td><i class="doc"><span class="verb"></span> *<span class="verb">    // fields</span></i></td></tr>
+<tr><th id="143">143</th><td><i class="doc"><span class="verb"></span> *<span class="verb">    int child_field0;</span></i></td></tr>
+<tr><th id="144">144</th><td><i class="doc"><span class="verb"></span> *<span class="verb">    // object properties</span></i></td></tr>
+<tr><th id="145">145</th><td><i class="doc"><span class="verb"></span> *<span class="verb">    static constexpr const uint32_t _type_index = TypeIndex::kDynamic;</span></i></td></tr>
+<tr><th id="146">146</th><td><i class="doc"><span class="verb"></span> *<span class="verb">    static constexpr const char* _type_key = "test.LeafObj";</span></i></td></tr>
+<tr><th id="147">147</th><td><i class="doc"><span class="verb"></span> *<span class="verb">    TVM_DECLARE_BASE_OBJECT_INFO(LeafObj, Object);</span></i></td></tr>
+<tr><th id="148">148</th><td><i class="doc"><span class="verb"></span> *<span class="verb">  };</span></i></td></tr>
+<tr><th id="149">149</th><td><i class="doc"><span class="verb"></span> *<span class="verb"></span></i></td></tr>
+<tr><th id="150">150</th><td><i class="doc"><span class="verb"></span> *<span class="verb">  // The following code should be put into a cc file.</span></i></td></tr>
+<tr><th id="151">151</th><td><i class="doc"><span class="verb"></span> *<span class="verb">  TVM_REGISTER_OBJECT_TYPE(BaseObj);</span></i></td></tr>
+<tr><th id="152">152</th><td><i class="doc"><span class="verb"></span> *<span class="verb">  TVM_REGISTER_OBJECT_TYPE(LeafObj);</span></i></td></tr>
+<tr><th id="153">153</th><td><i class="doc"><span class="verb"></span> *<span class="verb"></span></i></td></tr>
+<tr><th id="154">154</th><td><i class="doc"><span class="verb"></span> *<span class="verb">  // Usage example.</span></i></td></tr>
+<tr><th id="155">155</th><td><i class="doc"><span class="verb"></span> *<span class="verb">  void TestObjects() {</span></i></td></tr>
+<tr><th id="156">156</th><td><i class="doc"><span class="verb"></span> *<span class="verb">    // create an object</span></i></td></tr>
+<tr><th id="157">157</th><td><i class="doc"><span class="verb"></span> *<span class="verb">    ObjectRef leaf_ref(make_object&lt;LeafObj&gt;());</span></i></td></tr>
+<tr><th id="158">158</th><td><i class="doc"><span class="verb"></span> *<span class="verb">    // cast to a specific instance</span></i></td></tr>
+<tr><th id="159">159</th><td><i class="doc"><span class="verb"></span> *<span class="verb">    const LeafObj* leaf_ptr = leaf_ref.as&lt;LeafObj&gt;();</span></i></td></tr>
+<tr><th id="160">160</th><td><i class="doc"><span class="verb"></span> *<span class="verb">    ICHECK(leaf_ptr != nullptr);</span></i></td></tr>
+<tr><th id="161">161</th><td><i class="doc"><span class="verb"></span> *<span class="verb">    // can also cast to the base class.</span></i></td></tr>
+<tr><th id="162">162</th><td><i class="doc"><span class="verb"></span> *<span class="verb">    ICHECK(leaf_ref.as&lt;BaseObj&gt;() != nullptr);</span></i></td></tr>
+<tr><th id="163">163</th><td><i class="doc"><span class="verb"></span> *<span class="verb">  }</span></i></td></tr>
+<tr><th id="164">164</th><td><i class="doc"><span class="verb"></span> *<span class="verb"></span></i></td></tr>
+<tr><th id="165">165</th><td><i class="doc"><span class="verb"></span> * \endcode</i></td></tr>
+<tr><th id="166">166</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="167">167</th><td><b>class</b> <a class="macro" href="c_runtime_api.h.html#64" title="__attribute__((visibility(&quot;default&quot;)))" data-ref="_M/TVM_DLL">TVM_DLL</a> <dfn class="type def" id="tvm::runtime::Object" title='tvm::runtime::Object' data-ref="tvm::runtime::Object" data-ref-filename="tvm..runtime..Object">Object</dfn> {</td></tr>
+<tr><th id="168">168</th><td> <b>public</b>:</td></tr>
+<tr><th id="169">169</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="170">170</th><td><i class="doc">   * <span class="command">\brief</span> Object deleter</i></td></tr>
+<tr><th id="171">171</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">self</span> pointer to the Object.</i></td></tr>
+<tr><th id="172">172</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="173">173</th><td>  <b>typedef</b> <em>void</em> (*<dfn class="typedef" id="tvm::runtime::Object::FDeleter" title='tvm::runtime::Object::FDeleter' data-type='void (*)(tvm::runtime::Object *)' data-ref="tvm::runtime::Object::FDeleter" data-ref-filename="tvm..runtime..Object..FDeleter">FDeleter</dfn>)(<a class="type" href="#tvm::runtime::Object" title='tvm::runtime::Object' data-ref="tvm::runtime::Object" data-ref-filename="tvm..runtime..Object">Object</a>* <dfn class="local col0 decl" id="8960self" title='self' data-type='tvm::runtime::Object *' data-ref="8960self" data-ref-filename="8960self">self</dfn>);</td></tr>
+<tr><th id="174">174</th><td>  <i class="doc">/*! <span class="command">\return</span> The internal runtime type index of the object. */</i></td></tr>
+<tr><th id="175">175</th><td>  <a class="typedef" href="../../../../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint32_t" title='uint32_t' data-type='__uint32_t' data-ref="uint32_t" data-ref-filename="uint32_t">uint32_t</a> <dfn class="decl def fn" id="_ZNK3tvm7runtime6Object10type_indexEv" title='tvm::runtime::Object::type_index' data-ref="_ZNK3tvm7runtime6Object10type_indexEv" data-ref-filename="_ZNK3tvm7runtime6Object10type_indexEv">type_index</dfn>() <em>const</em> { <b>return</b> <a class="member field" href="#tvm::runtime::Object::type_index_" title='tvm::runtime::Object::type_index_' data-ref="tvm::runtime::Object::type_index_" data-ref-filename="tvm..runtime..Object..type_index_">type_index_</a>; }</td></tr>
+<tr><th id="176">176</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="177">177</th><td><i class="doc">   * <span class="command">\return</span> the type key of the object.</i></td></tr>
+<tr><th id="178">178</th><td><i class="doc">   * <span class="command">\note</span> this operation is expensive, can be used for error reporting.</i></td></tr>
+<tr><th id="179">179</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="180">180</th><td>  <span class="namespace">std::</span><a class="typedef" href="../../../../include/c++/10/bits/stringfwd.h.html#std::string" title='std::string' data-type='basic_string&lt;char&gt;' data-ref="std::string" data-ref-filename="std..string">string</a> <dfn class="decl def fn" id="_ZNK3tvm7runtime6Object10GetTypeKeyB5cxx11Ev" title='tvm::runtime::Object::GetTypeKey' data-ref="_ZNK3tvm7runtime6Object10GetTypeKeyB5cxx11Ev" data-ref-filename="_ZNK3tvm7runtime6Object10GetTypeKeyB5cxx11Ev">GetTypeKey</dfn>() <em>const</em> { <b>return</b> <a class="member fn" href="#_ZN3tvm7runtime6Object13TypeIndex2KeyB5cxx11Ej" title='tvm::runtime::Object::TypeIndex2Key' data-ref="_ZN3tvm7runtime6Object13TypeIndex2KeyB5cxx11Ej" data-ref-filename="_ZN3tvm7runtime6Object13TypeIndex2KeyB5cxx11Ej">TypeIndex2Key</a>(<a class="member field" href="#tvm::runtime::Object::type_index_" title='tvm::runtime::Object::type_index_' data-ref="tvm::runtime::Object::type_index_" data-ref-filename="tvm..runtime..Object..type_index_">type_index_</a>); }</td></tr>
+<tr><th id="181">181</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="182">182</th><td><i class="doc">   * <span class="command">\return</span> A hash value of the return of GetTypeKey.</i></td></tr>
+<tr><th id="183">183</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="184">184</th><td>  <span class='typedef' title='size_t' data-type='unsigned long' data-ref="size_t" data-ref-filename="size_t">size_t</span> <dfn class="decl def fn" id="_ZNK3tvm7runtime6Object14GetTypeKeyHashEv" title='tvm::runtime::Object::GetTypeKeyHash' data-ref="_ZNK3tvm7runtime6Object14GetTypeKeyHashEv" data-ref-filename="_ZNK3tvm7runtime6Object14GetTypeKeyHashEv">GetTypeKeyHash</dfn>() <em>const</em> { <b>return</b> <a class="member fn" href="#_ZN3tvm7runtime6Object17TypeIndex2KeyHashEj" title='tvm::runtime::Object::TypeIndex2KeyHash' data-ref="_ZN3tvm7runtime6Object17TypeIndex2KeyHashEj" data-ref-filename="_ZN3tvm7runtime6Object17TypeIndex2KeyHashEj">TypeIndex2KeyHash</a>(<a class="member field" href="#tvm::runtime::Object::type_index_" title='tvm::runtime::Object::type_index_' data-ref="tvm::runtime::Object::type_index_" data-ref-filename="tvm..runtime..Object..type_index_">type_index_</a>); }</td></tr>
+<tr><th id="185">185</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="186">186</th><td><i class="doc">   * Check if the object is an instance of TargetType.</i></td></tr>
+<tr><th id="187">187</th><td><i class="doc">   * <span class="command">\tparam</span> <span class="arg">TargetType</span> The target type to be checked.</i></td></tr>
+<tr><th id="188">188</th><td><i class="doc">   * <span class="command">\return</span> Whether the target type is true.</i></td></tr>
+<tr><th id="189">189</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="190">190</th><td>  <b>template</b> &lt;<b>typename</b> TargetType&gt;</td></tr>
+<tr><th id="191">191</th><td>  <b>inline</b> <em>bool</em> <a class="decl fn" href="#_ZNK3tvm7runtime6Object10IsInstanceEv" title='tvm::runtime::Object::IsInstance' data-ref="_ZNK3tvm7runtime6Object10IsInstanceEv" data-ref-filename="_ZNK3tvm7runtime6Object10IsInstanceEv">IsInstance</a>() <em>const</em>;</td></tr>
+<tr><th id="192">192</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="193">193</th><td><i class="doc">   * <span class="command">\return</span> Whether the cell has only one reference</i></td></tr>
+<tr><th id="194">194</th><td><i class="doc">   * <span class="command">\note</span> We use stl style naming to be consistent with known API in shared_ptr.</i></td></tr>
+<tr><th id="195">195</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="196">196</th><td>  <b>inline</b> <em>bool</em> <a class="decl fn" href="#_ZNK3tvm7runtime6Object6uniqueEv" title='tvm::runtime::Object::unique' data-ref="_ZNK3tvm7runtime6Object6uniqueEv" data-ref-filename="_ZNK3tvm7runtime6Object6uniqueEv">unique</a>() <em>const</em>;</td></tr>
+<tr><th id="197">197</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="198">198</th><td><i class="doc">   * <span class="command">\brief</span> Get the type key of the corresponding index from runtime.</i></td></tr>
+<tr><th id="199">199</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">tindex</span> The type index.</i></td></tr>
+<tr><th id="200">200</th><td><i class="doc">   * <span class="command">\return</span> the result.</i></td></tr>
+<tr><th id="201">201</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="202">202</th><td>  <em>static</em> <span class="namespace">std::</span><a class="typedef" href="../../../../include/c++/10/bits/stringfwd.h.html#std::string" title='std::string' data-type='basic_string&lt;char&gt;' data-ref="std::string" data-ref-filename="std..string">string</a> <dfn class="decl fn" id="_ZN3tvm7runtime6Object13TypeIndex2KeyB5cxx11Ej" title='tvm::runtime::Object::TypeIndex2Key' data-ref="_ZN3tvm7runtime6Object13TypeIndex2KeyB5cxx11Ej" data-ref-filename="_ZN3tvm7runtime6Object13TypeIndex2KeyB5cxx11Ej">TypeIndex2Key</dfn>(<a class="typedef" href="../../../../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint32_t" title='uint32_t' data-type='__uint32_t' data-ref="uint32_t" data-ref-filename="uint32_t">uint32_t</a> <dfn class="local col1 decl" id="8961tindex" title='tindex' data-type='uint32_t' data-ref="8961tindex" data-ref-filename="8961tindex">tindex</dfn>);</td></tr>
+<tr><th id="203">203</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="204">204</th><td><i class="doc">   * <span class="command">\brief</span> Get the type key hash of the corresponding index from runtime.</i></td></tr>
+<tr><th id="205">205</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">tindex</span> The type index.</i></td></tr>
+<tr><th id="206">206</th><td><i class="doc">   * <span class="command">\return</span> the related key-hash.</i></td></tr>
+<tr><th id="207">207</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="208">208</th><td>  <em>static</em> <span class='typedef' title='size_t' data-type='unsigned long' data-ref="size_t" data-ref-filename="size_t">size_t</span> <dfn class="decl fn" id="_ZN3tvm7runtime6Object17TypeIndex2KeyHashEj" title='tvm::runtime::Object::TypeIndex2KeyHash' data-ref="_ZN3tvm7runtime6Object17TypeIndex2KeyHashEj" data-ref-filename="_ZN3tvm7runtime6Object17TypeIndex2KeyHashEj">TypeIndex2KeyHash</dfn>(<a class="typedef" href="../../../../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint32_t" title='uint32_t' data-type='__uint32_t' data-ref="uint32_t" data-ref-filename="uint32_t">uint32_t</a> <dfn class="local col2 decl" id="8962tindex" title='tindex' data-type='uint32_t' data-ref="8962tindex" data-ref-filename="8962tindex">tindex</dfn>);</td></tr>
+<tr><th id="209">209</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="210">210</th><td><i class="doc">   * <span class="command">\brief</span> Get the type index of the corresponding key from runtime.</i></td></tr>
+<tr><th id="211">211</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">key</span> The type key.</i></td></tr>
+<tr><th id="212">212</th><td><i class="doc">   * <span class="command">\return</span> the result.</i></td></tr>
+<tr><th id="213">213</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="214">214</th><td>  <em>static</em> <a class="typedef" href="../../../../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint32_t" title='uint32_t' data-type='__uint32_t' data-ref="uint32_t" data-ref-filename="uint32_t">uint32_t</a> <dfn class="decl fn" id="_ZN3tvm7runtime6Object13TypeKey2IndexERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE" title='tvm::runtime::Object::TypeKey2Index' data-ref="_ZN3tvm7runtime6Object13TypeKey2IndexERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE" data-ref-filename="_ZN3tvm7runtime6Object13TypeKey2IndexERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE">TypeKey2Index</dfn>(<em>const</em> <span class="namespace">std::</span><a class="typedef" href="../../../../include/c++/10/bits/stringfwd.h.html#std::string" title='std::string' data-type='basic_string&lt;char&gt;' data-ref="std::string" data-ref-filename="std..string">string</a>&amp; <dfn class="local col3 decl" id="8963key" title='key' data-type='const std::string &amp;' data-ref="8963key" data-ref-filename="8963key">key</dfn>);</td></tr>
+<tr><th id="215">215</th><td></td></tr>
+<tr><th id="216">216</th><td><u>#<span data-ppcond="216">if</span> <a class="macro" href="#40" title="1" data-ref="_M/TVM_OBJECT_ATOMIC_REF_COUNTER">TVM_OBJECT_ATOMIC_REF_COUNTER</a></u></td></tr>
+<tr><th id="217">217</th><td>  <b>using</b> <dfn class="typedef" id="tvm::runtime::Object::RefCounterType" title='tvm::runtime::Object::RefCounterType' data-type='std::atomic&lt;int32_t&gt;' data-ref="tvm::runtime::Object::RefCounterType" data-ref-filename="tvm..runtime..Object..RefCounterType">RefCounterType</dfn> = <span class="namespace">std::</span><a class="type" href="../../../../include/c++/10/bits/atomic_base.h.html#std::atomic" title='std::atomic' data-ref="std::atomic" data-ref-filename="std..atomic">atomic</a>&lt;<a class="typedef" href="../../../../include/x86_64-linux-gnu/bits/stdint-intn.h.html#int32_t" title='int32_t' data-type='__int32_t' data-ref="int32_t" data-ref-filename="int32_t">int32_t</a>&gt;;</td></tr>
+<tr><th id="218">218</th><td><u>#<span data-ppcond="216">else</span></u></td></tr>
+<tr><th id="219">219</th><td>  <b>using</b> RefCounterType = int32_t;</td></tr>
+<tr><th id="220">220</th><td><u>#<span data-ppcond="216">endif</span></u></td></tr>
+<tr><th id="221">221</th><td></td></tr>
+<tr><th id="222">222</th><td>  <em>static</em> <b>constexpr</b> <em>const</em> <em>char</em>* <dfn class="decl" id="tvm::runtime::Object::_type_key" title='tvm::runtime::Object::_type_key' data-ref="tvm::runtime::Object::_type_key" data-ref-filename="tvm..runtime..Object.._type_key">_type_key</dfn> = <q>"runtime.Object"</q>;</td></tr>
+<tr><th id="223">223</th><td></td></tr>
+<tr><th id="224">224</th><td>  <em>static</em> <a class="typedef" href="../../../../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint32_t" title='uint32_t' data-type='__uint32_t' data-ref="uint32_t" data-ref-filename="uint32_t">uint32_t</a> <dfn class="decl def fn" id="_ZN3tvm7runtime6Object27_GetOrAllocRuntimeTypeIndexEv" title='tvm::runtime::Object::_GetOrAllocRuntimeTypeIndex' data-ref="_ZN3tvm7runtime6Object27_GetOrAllocRuntimeTypeIndexEv" data-ref-filename="_ZN3tvm7runtime6Object27_GetOrAllocRuntimeTypeIndexEv">_GetOrAllocRuntimeTypeIndex</dfn>() { <b>return</b> <a class="type" href="#tvm::runtime::TypeIndex" title='tvm::runtime::TypeIndex' data-ref="tvm::runtime::TypeIndex" data-ref-filename="tvm..runtime..TypeIndex">TypeIndex</a>::<a class="enum" href="#tvm::runtime::TypeIndex::kRoot" title='tvm::runtime::TypeIndex::kRoot' data-ref="tvm::runtime::TypeIndex::kRoot" data-ref-filename="tvm..runtime..TypeIndex..kRoot">kRoot</a>; }</td></tr>
+<tr><th id="225">225</th><td>  <em>static</em> <a class="typedef" href="../../../../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint32_t" title='uint32_t' data-type='__uint32_t' data-ref="uint32_t" data-ref-filename="uint32_t">uint32_t</a> <dfn class="decl def fn" id="_ZN3tvm7runtime6Object16RuntimeTypeIndexEv" title='tvm::runtime::Object::RuntimeTypeIndex' data-ref="_ZN3tvm7runtime6Object16RuntimeTypeIndexEv" data-ref-filename="_ZN3tvm7runtime6Object16RuntimeTypeIndexEv">RuntimeTypeIndex</dfn>() { <b>return</b> <a class="type" href="#tvm::runtime::TypeIndex" title='tvm::runtime::TypeIndex' data-ref="tvm::runtime::TypeIndex" data-ref-filename="tvm..runtime..TypeIndex">TypeIndex</a>::<a class="enum" href="#tvm::runtime::TypeIndex::kRoot" title='tvm::runtime::TypeIndex::kRoot' data-ref="tvm::runtime::TypeIndex::kRoot" data-ref-filename="tvm..runtime..TypeIndex..kRoot">kRoot</a>; }</td></tr>
+<tr><th id="226">226</th><td></td></tr>
+<tr><th id="227">227</th><td>  <i>// Default object type properties for sub-classes</i></td></tr>
+<tr><th id="228">228</th><td>  <em>static</em> <b>constexpr</b> <em>bool</em> <dfn class="decl" id="tvm::runtime::Object::_type_final" title='tvm::runtime::Object::_type_final' data-ref="tvm::runtime::Object::_type_final" data-ref-filename="tvm..runtime..Object.._type_final">_type_final</dfn> = <b>false</b>;</td></tr>
+<tr><th id="229">229</th><td>  <em>static</em> <b>constexpr</b> <a class="typedef" href="../../../../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint32_t" title='uint32_t' data-type='__uint32_t' data-ref="uint32_t" data-ref-filename="uint32_t">uint32_t</a> <dfn class="decl" id="tvm::runtime::Object::_type_child_slots" title='tvm::runtime::Object::_type_child_slots' data-ref="tvm::runtime::Object::_type_child_slots" data-ref-filename="tvm..runtime..Object.._type_child_slots">_type_child_slots</dfn> = <var>0</var>;</td></tr>
+<tr><th id="230">230</th><td>  <em>static</em> <b>constexpr</b> <em>bool</em> <dfn class="decl" id="tvm::runtime::Object::_type_child_slots_can_overflow" title='tvm::runtime::Object::_type_child_slots_can_overflow' data-ref="tvm::runtime::Object::_type_child_slots_can_overflow" data-ref-filename="tvm..runtime..Object.._type_child_slots_can_overflow">_type_child_slots_can_overflow</dfn> = <b>true</b>;</td></tr>
+<tr><th id="231">231</th><td>  <i>// member information</i></td></tr>
+<tr><th id="232">232</th><td>  <em>static</em> <b>constexpr</b> <em>bool</em> <dfn class="decl" id="tvm::runtime::Object::_type_has_method_visit_attrs" title='tvm::runtime::Object::_type_has_method_visit_attrs' data-ref="tvm::runtime::Object::_type_has_method_visit_attrs" data-ref-filename="tvm..runtime..Object.._type_has_method_visit_attrs">_type_has_method_visit_attrs</dfn> = <b>true</b>;</td></tr>
+<tr><th id="233">233</th><td>  <em>static</em> <b>constexpr</b> <em>bool</em> <dfn class="decl" id="tvm::runtime::Object::_type_has_method_sequal_reduce" title='tvm::runtime::Object::_type_has_method_sequal_reduce' data-ref="tvm::runtime::Object::_type_has_method_sequal_reduce" data-ref-filename="tvm..runtime..Object.._type_has_method_sequal_reduce">_type_has_method_sequal_reduce</dfn> = <b>false</b>;</td></tr>
+<tr><th id="234">234</th><td>  <em>static</em> <b>constexpr</b> <em>bool</em> <dfn class="decl" id="tvm::runtime::Object::_type_has_method_shash_reduce" title='tvm::runtime::Object::_type_has_method_shash_reduce' data-ref="tvm::runtime::Object::_type_has_method_shash_reduce" data-ref-filename="tvm..runtime..Object.._type_has_method_shash_reduce">_type_has_method_shash_reduce</dfn> = <b>false</b>;</td></tr>
+<tr><th id="235">235</th><td>  <i>// NOTE: the following field is not type index of Object</i></td></tr>
+<tr><th id="236">236</th><td><i>  // but was intended to be used by sub-classes as default value.</i></td></tr>
+<tr><th id="237">237</th><td><i>  // The type index of Object is TypeIndex::kRoot</i></td></tr>
+<tr><th id="238">238</th><td>  <em>static</em> <b>constexpr</b> <a class="typedef" href="../../../../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint32_t" title='uint32_t' data-type='__uint32_t' data-ref="uint32_t" data-ref-filename="uint32_t">uint32_t</a> <dfn class="decl" id="tvm::runtime::Object::_type_index" title='tvm::runtime::Object::_type_index' data-ref="tvm::runtime::Object::_type_index" data-ref-filename="tvm..runtime..Object.._type_index">_type_index</dfn> = <a class="type" href="#tvm::runtime::TypeIndex" title='tvm::runtime::TypeIndex' data-ref="tvm::runtime::TypeIndex" data-ref-filename="tvm..runtime..TypeIndex">TypeIndex</a>::<a class="enum" href="#tvm::runtime::TypeIndex::kDynamic" title='tvm::runtime::TypeIndex::kDynamic' data-ref="tvm::runtime::TypeIndex::kDynamic" data-ref-filename="tvm..runtime..TypeIndex..kDynamic">kDynamic</a>;</td></tr>
+<tr><th id="239">239</th><td></td></tr>
+<tr><th id="240">240</th><td>  <i>// Default constructor and copy constructor</i></td></tr>
+<tr><th id="241">241</th><td>  <dfn class="decl def fn" id="_ZN3tvm7runtime6ObjectC1Ev" title='tvm::runtime::Object::Object' data-ref="_ZN3tvm7runtime6ObjectC1Ev" data-ref-filename="_ZN3tvm7runtime6ObjectC1Ev">Object</dfn>() {}</td></tr>
+<tr><th id="242">242</th><td>  <i>// Override the copy and assign constructors to do nothing.</i></td></tr>
+<tr><th id="243">243</th><td><i>  // This is to make sure only contents, but not deleter and ref_counter</i></td></tr>
+<tr><th id="244">244</th><td><i>  // are copied when a child class copies itself.</i></td></tr>
+<tr><th id="245">245</th><td><i>  // This will enable us to use make_object&lt;ObjectClass&gt;(*obj_ptr)</i></td></tr>
+<tr><th id="246">246</th><td><i>  // to copy an existing object.</i></td></tr>
+<tr><th id="247">247</th><td>  <dfn class="decl def fn" id="_ZN3tvm7runtime6ObjectC1ERKS1_" title='tvm::runtime::Object::Object' data-ref="_ZN3tvm7runtime6ObjectC1ERKS1_" data-ref-filename="_ZN3tvm7runtime6ObjectC1ERKS1_">Object</dfn>(<em>const</em> <a class="type" href="#tvm::runtime::Object" title='tvm::runtime::Object' data-ref="tvm::runtime::Object" data-ref-filename="tvm..runtime..Object">Object</a>&amp; <dfn class="local col4 decl" id="8964other" title='other' data-type='const tvm::runtime::Object &amp;' data-ref="8964other" data-ref-filename="8964other">other</dfn>) {  <i>// NOLINT(*)</i></td></tr>
+<tr><th id="248">248</th><td>  }</td></tr>
+<tr><th id="249">249</th><td>  <dfn class="decl def fn" id="_ZN3tvm7runtime6ObjectC1EOS1_" title='tvm::runtime::Object::Object' data-ref="_ZN3tvm7runtime6ObjectC1EOS1_" data-ref-filename="_ZN3tvm7runtime6ObjectC1EOS1_">Object</dfn>(<a class="type" href="#tvm::runtime::Object" title='tvm::runtime::Object' data-ref="tvm::runtime::Object" data-ref-filename="tvm..runtime..Object">Object</a>&amp;&amp; <dfn class="local col5 decl" id="8965other" title='other' data-type='tvm::runtime::Object &amp;&amp;' data-ref="8965other" data-ref-filename="8965other">other</dfn>) {  <i>// NOLINT(*)</i></td></tr>
+<tr><th id="250">250</th><td>  }</td></tr>
+<tr><th id="251">251</th><td>  <a class="type" href="#tvm::runtime::Object" title='tvm::runtime::Object' data-ref="tvm::runtime::Object" data-ref-filename="tvm..runtime..Object">Object</a>&amp; <dfn class="decl def fn" id="_ZN3tvm7runtime6ObjectaSERKS1_" title='tvm::runtime::Object::operator=' data-ref="_ZN3tvm7runtime6ObjectaSERKS1_" data-ref-filename="_ZN3tvm7runtime6ObjectaSERKS1_"><b>operator</b>=</dfn>(<em>const</em> <a class="type" href="#tvm::runtime::Object" title='tvm::runtime::Object' data-ref="tvm::runtime::Object" data-ref-filename="tvm..runtime..Object">Object</a>&amp; <dfn class="local col6 decl" id="8966other" title='other' data-type='const tvm::runtime::Object &amp;' data-ref="8966other" data-ref-filename="8966other">other</dfn>) {  <i>// NOLINT(*)</i></td></tr>
+<tr><th id="252">252</th><td>    <b>return</b> *<b>this</b>;</td></tr>
+<tr><th id="253">253</th><td>  }</td></tr>
+<tr><th id="254">254</th><td>  <a class="type" href="#tvm::runtime::Object" title='tvm::runtime::Object' data-ref="tvm::runtime::Object" data-ref-filename="tvm..runtime..Object">Object</a>&amp; <dfn class="decl def fn" id="_ZN3tvm7runtime6ObjectaSEOS1_" title='tvm::runtime::Object::operator=' data-ref="_ZN3tvm7runtime6ObjectaSEOS1_" data-ref-filename="_ZN3tvm7runtime6ObjectaSEOS1_"><b>operator</b>=</dfn>(<a class="type" href="#tvm::runtime::Object" title='tvm::runtime::Object' data-ref="tvm::runtime::Object" data-ref-filename="tvm..runtime..Object">Object</a>&amp;&amp; <dfn class="local col7 decl" id="8967other" title='other' data-type='tvm::runtime::Object &amp;&amp;' data-ref="8967other" data-ref-filename="8967other">other</dfn>) {  <i>// NOLINT(*)</i></td></tr>
+<tr><th id="255">255</th><td>    <b>return</b> *<b>this</b>;</td></tr>
+<tr><th id="256">256</th><td>  }</td></tr>
+<tr><th id="257">257</th><td></td></tr>
+<tr><th id="258">258</th><td> <b>protected</b>:</td></tr>
+<tr><th id="259">259</th><td>  <i>// The fields of the base object cell.</i></td></tr>
+<tr><th id="260">260</th><td>  <i class="doc">/*! <span class="command">\brief</span> Type index(tag) that indicates the type of the object. */</i></td></tr>
+<tr><th id="261">261</th><td>  <a class="typedef" href="../../../../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint32_t" title='uint32_t' data-type='__uint32_t' data-ref="uint32_t" data-ref-filename="uint32_t">uint32_t</a> <dfn class="decl field" id="tvm::runtime::Object::type_index_" title='tvm::runtime::Object::type_index_' data-ref="tvm::runtime::Object::type_index_" data-ref-filename="tvm..runtime..Object..type_index_">type_index_</dfn>{<var>0</var>};</td></tr>
+<tr><th id="262">262</th><td>  <i class="doc">/*! <span class="command">\brief</span> The internal reference counter */</i></td></tr>
+<tr><th id="263">263</th><td>  <a class="typedef" href="#tvm::runtime::Object::RefCounterType" title='tvm::runtime::Object::RefCounterType' data-type='std::atomic&lt;int32_t&gt;' data-ref="tvm::runtime::Object::RefCounterType" data-ref-filename="tvm..runtime..Object..RefCounterType">RefCounterType</a> <dfn class="decl field" id="tvm::runtime::Object::ref_counter_" title='tvm::runtime::Object::ref_counter_' data-ref="tvm::runtime::Object::ref_counter_" data-ref-filename="tvm..runtime..Object..ref_counter_">ref_counter_</dfn><a class="ref fn" href="../../../../include/c++/10/atomic.html#_ZNSt6atomicIiEC1Ei" title='std::atomic&lt;int&gt;::atomic' data-ref="_ZNSt6atomicIiEC1Ei" data-ref-filename="_ZNSt6atomicIiEC1Ei">{</a><var>0</var>};</td></tr>
+<tr><th id="264">264</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="265">265</th><td><i class="doc">   * <span class="command">\brief</span> deleter of this object to enable customized allocation.</i></td></tr>
+<tr><th id="266">266</th><td><i class="doc">   * If the deleter is nullptr, no deletion will be performed.</i></td></tr>
+<tr><th id="267">267</th><td><i class="doc">   * The creator of the object must always set the deleter field properly.</i></td></tr>
+<tr><th id="268">268</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="269">269</th><td>  <a class="typedef" href="#tvm::runtime::Object::FDeleter" title='tvm::runtime::Object::FDeleter' data-type='void (*)(tvm::runtime::Object *)' data-ref="tvm::runtime::Object::FDeleter" data-ref-filename="tvm..runtime..Object..FDeleter">FDeleter</a> <dfn class="decl field" id="tvm::runtime::Object::deleter_" title='tvm::runtime::Object::deleter_' data-ref="tvm::runtime::Object::deleter_" data-ref-filename="tvm..runtime..Object..deleter_">deleter_</dfn> = <b>nullptr</b>;</td></tr>
+<tr><th id="270">270</th><td>  <i>// Invariant checks.</i></td></tr>
+<tr><th id="271">271</th><td>  <b>static_assert</b>(<b>sizeof</b>(<a class="typedef" href="../../../../include/x86_64-linux-gnu/bits/stdint-intn.h.html#int32_t" title='int32_t' data-type='__int32_t' data-ref="int32_t" data-ref-filename="int32_t">int32_t</a>) == <b>sizeof</b>(<a class="typedef" href="#tvm::runtime::Object::RefCounterType" title='tvm::runtime::Object::RefCounterType' data-type='std::atomic&lt;int32_t&gt;' data-ref="tvm::runtime::Object::RefCounterType" data-ref-filename="tvm..runtime..Object..RefCounterType">RefCounterType</a>) &amp;&amp;</td></tr>
+<tr><th id="272">272</th><td>                    <b>alignof</b>(<a class="typedef" href="../../../../include/x86_64-linux-gnu/bits/stdint-intn.h.html#int32_t" title='int32_t' data-type='__int32_t' data-ref="int32_t" data-ref-filename="int32_t">int32_t</a>) == <b>sizeof</b>(<a class="typedef" href="#tvm::runtime::Object::RefCounterType" title='tvm::runtime::Object::RefCounterType' data-type='std::atomic&lt;int32_t&gt;' data-ref="tvm::runtime::Object::RefCounterType" data-ref-filename="tvm..runtime..Object..RefCounterType">RefCounterType</a>),</td></tr>
+<tr><th id="273">273</th><td>                <q>"RefCounter ABI check."</q>);</td></tr>
+<tr><th id="274">274</th><td></td></tr>
+<tr><th id="275">275</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="276">276</th><td><i class="doc">   * <span class="command">\brief</span> Get the type index using type key.</i></td></tr>
+<tr><th id="277">277</th><td><i class="doc">   *</i></td></tr>
+<tr><th id="278">278</th><td><i class="doc">   *  When the function is first time called for a type,</i></td></tr>
+<tr><th id="279">279</th><td><i class="doc">   *  it will register the type to the type table in the runtime.</i></td></tr>
+<tr><th id="280">280</th><td><i class="doc">   *  If the static_tindex is TypeIndex::kDynamic, the function will</i></td></tr>
+<tr><th id="281">281</th><td><i class="doc">   *  allocate a runtime type index.</i></td></tr>
+<tr><th id="282">282</th><td><i class="doc">   *  Otherwise, we will populate the type table and return the static index.</i></td></tr>
+<tr><th id="283">283</th><td><i class="doc">   *</i></td></tr>
+<tr><th id="284">284</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">key</span> the type key.</i></td></tr>
+<tr><th id="285">285</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">static_tindex</span> The current _type_index field.</i></td></tr>
+<tr><th id="286">286</th><td><i class="doc">   *                      can be TypeIndex::kDynamic.</i></td></tr>
+<tr><th id="287">287</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">parent_tindex</span> The index of the parent.</i></td></tr>
+<tr><th id="288">288</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">type_child_slots</span> Number of slots reserved for its children.</i></td></tr>
+<tr><th id="289">289</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">type_child_slots_can_overflow</span> Whether to allow child to overflow the slots.</i></td></tr>
+<tr><th id="290">290</th><td><i class="doc">   * <span class="command">\return</span> The allocated type index.</i></td></tr>
+<tr><th id="291">291</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="292">292</th><td>  <em>static</em> <a class="typedef" href="../../../../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint32_t" title='uint32_t' data-type='__uint32_t' data-ref="uint32_t" data-ref-filename="uint32_t">uint32_t</a> <dfn class="decl fn" id="_ZN3tvm7runtime6Object26GetOrAllocRuntimeTypeIndexERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEjjjb" title='tvm::runtime::Object::GetOrAllocRuntimeTypeIndex' data-ref="_ZN3tvm7runtime6Object26GetOrAllocRuntimeTypeIndexERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEjjjb" data-ref-filename="_ZN3tvm7runtime6Object26GetOrAllocRuntimeTypeIndexERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEjjjb">GetOrAllocRuntimeTypeIndex</dfn>(<em>const</em> <span class="namespace">std::</span><a class="typedef" href="../../../../include/c++/10/bits/stringfwd.h.html#std::string" title='std::string' data-type='basic_string&lt;char&gt;' data-ref="std::string" data-ref-filename="std..string">string</a>&amp; <dfn class="local col8 decl" id="8968key" title='key' data-type='const std::string &amp;' data-ref="8968key" data-ref-filename="8968key">key</dfn>, <a class="typedef" href="../../../../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint32_t" title='uint32_t' data-type='__uint32_t' data-ref="uint32_t" data-ref-filename="uint32_t">uint32_t</a> <dfn class="local col9 decl" id="8969static_tindex" title='static_tindex' data-type='uint32_t' data-ref="8969static_tindex" data-ref-filename="8969static_tindex">static_tindex</dfn>,</td></tr>
+<tr><th id="293">293</th><td>                                             <a class="typedef" href="../../../../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint32_t" title='uint32_t' data-type='__uint32_t' data-ref="uint32_t" data-ref-filename="uint32_t">uint32_t</a> <dfn class="local col0 decl" id="8970parent_tindex" title='parent_tindex' data-type='uint32_t' data-ref="8970parent_tindex" data-ref-filename="8970parent_tindex">parent_tindex</dfn>, <a class="typedef" href="../../../../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint32_t" title='uint32_t' data-type='__uint32_t' data-ref="uint32_t" data-ref-filename="uint32_t">uint32_t</a> <dfn class="local col1 decl" id="8971type_child_slots" title='type_child_slots' data-type='uint32_t' data-ref="8971type_child_slots" data-ref-filename="8971type_child_slots">type_child_slots</dfn>,</td></tr>
+<tr><th id="294">294</th><td>                                             <em>bool</em> <dfn class="local col2 decl" id="8972type_child_slots_can_overflow" title='type_child_slots_can_overflow' data-type='bool' data-ref="8972type_child_slots_can_overflow" data-ref-filename="8972type_child_slots_can_overflow">type_child_slots_can_overflow</dfn>);</td></tr>
+<tr><th id="295">295</th><td></td></tr>
+<tr><th id="296">296</th><td>  <i>// reference counter related operations</i></td></tr>
+<tr><th id="297">297</th><td>  <i class="doc">/*! <span class="command">\brief</span> developer function, increases reference counter. */</i></td></tr>
+<tr><th id="298">298</th><td>  <b>inline</b> <em>void</em> <a class="decl fn" href="#_ZN3tvm7runtime6Object6IncRefEv" title='tvm::runtime::Object::IncRef' data-ref="_ZN3tvm7runtime6Object6IncRefEv" data-ref-filename="_ZN3tvm7runtime6Object6IncRefEv">IncRef</a>();</td></tr>
+<tr><th id="299">299</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="300">300</th><td><i class="doc">   * <span class="command">\brief</span> developer function, decrease reference counter.</i></td></tr>
+<tr><th id="301">301</th><td><i class="doc">   * <span class="command">\note</span> The deleter will be called when ref_counter_ becomes zero.</i></td></tr>
+<tr><th id="302">302</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="303">303</th><td>  <b>inline</b> <em>void</em> <a class="decl fn" href="#_ZN3tvm7runtime6Object6DecRefEv" title='tvm::runtime::Object::DecRef' data-ref="_ZN3tvm7runtime6Object6DecRefEv" data-ref-filename="_ZN3tvm7runtime6Object6DecRefEv">DecRef</a>();</td></tr>
+<tr><th id="304">304</th><td></td></tr>
+<tr><th id="305">305</th><td> <b>private</b>:</td></tr>
+<tr><th id="306">306</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="307">307</th><td><i class="doc">   * <span class="command">\return</span> The usage count of the cell.</i></td></tr>
+<tr><th id="308">308</th><td><i class="doc">   * <span class="command">\note</span> We use stl style naming to be consistent with known API in shared_ptr.</i></td></tr>
+<tr><th id="309">309</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="310">310</th><td>  <b>inline</b> <em>int</em> <a class="decl fn" href="#_ZNK3tvm7runtime6Object9use_countEv" title='tvm::runtime::Object::use_count' data-ref="_ZNK3tvm7runtime6Object9use_countEv" data-ref-filename="_ZNK3tvm7runtime6Object9use_countEv">use_count</a>() <em>const</em>;</td></tr>
+<tr><th id="311">311</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="312">312</th><td><i class="doc">   * <span class="command">\brief</span> Check of this object is derived from the parent.</i></td></tr>
+<tr><th id="313">313</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">parent_tindex</span> The parent type index.</i></td></tr>
+<tr><th id="314">314</th><td><i class="doc">   * <span class="command">\return</span> The derivation results.</i></td></tr>
+<tr><th id="315">315</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="316">316</th><td>  <em>bool</em> <dfn class="decl fn" id="_ZNK3tvm7runtime6Object11DerivedFromEj" title='tvm::runtime::Object::DerivedFrom' data-ref="_ZNK3tvm7runtime6Object11DerivedFromEj" data-ref-filename="_ZNK3tvm7runtime6Object11DerivedFromEj">DerivedFrom</dfn>(<a class="typedef" href="../../../../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint32_t" title='uint32_t' data-type='__uint32_t' data-ref="uint32_t" data-ref-filename="uint32_t">uint32_t</a> <dfn class="local col3 decl" id="8973parent_tindex" title='parent_tindex' data-type='uint32_t' data-ref="8973parent_tindex" data-ref-filename="8973parent_tindex">parent_tindex</dfn>) <em>const</em>;</td></tr>
+<tr><th id="317">317</th><td>  <i>// friend classes</i></td></tr>
+<tr><th id="318">318</th><td>  <b>template</b> &lt;<b>typename</b>&gt;</td></tr>
+<tr><th id="319">319</th><td>  <b>friend</b> <b>class</b> <a class="type" href="memory.h.html#tvm::runtime::ObjAllocatorBase" title='tvm::runtime::ObjAllocatorBase' data-ref="tvm::runtime::ObjAllocatorBase" data-ref-filename="tvm..runtime..ObjAllocatorBase" id="tvm::runtime::ObjAllocatorBase">ObjAllocatorBase</a>;</td></tr>
+<tr><th id="320">320</th><td>  <b>template</b> &lt;<b>typename</b>&gt;</td></tr>
+<tr><th id="321">321</th><td>  <b>friend</b> <b>class</b> <a class="type" href="#tvm::runtime::ObjectPtr" title='tvm::runtime::ObjectPtr' data-ref="tvm::runtime::ObjectPtr" data-ref-filename="tvm..runtime..ObjectPtr">ObjectPtr</a>;</td></tr>
+<tr><th id="322">322</th><td>  <b>friend</b> <b>class</b> <a class="type" href="packed_func.h.html#tvm::runtime::TVMRetValue" title='tvm::runtime::TVMRetValue' data-ref="tvm::runtime::TVMRetValue" data-ref-filename="tvm..runtime..TVMRetValue">TVMRetValue</a>;</td></tr>
+<tr><th id="323">323</th><td>  <b>friend</b> <b>class</b> <a class="type" href="#tvm::runtime::ObjectInternal" title='tvm::runtime::ObjectInternal' data-ref="tvm::runtime::ObjectInternal" data-ref-filename="tvm..runtime..ObjectInternal">ObjectInternal</a>;</td></tr>
+<tr><th id="324">324</th><td>};</td></tr>
+<tr><th id="325">325</th><td></td></tr>
+<tr><th id="326">326</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="327">327</th><td><i class="doc"> * <span class="command">\brief</span> Get a reference type from a raw object ptr type</i></td></tr>
+<tr><th id="328">328</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="329">329</th><td><i class="doc"> *  It is always important to get a reference type</i></td></tr>
+<tr><th id="330">330</th><td><i class="doc"> *  if we want to return a value as reference or keep</i></td></tr>
+<tr><th id="331">331</th><td><i class="doc"> *  the object alive beyond the scope of the function.</i></td></tr>
+<tr><th id="332">332</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="333">333</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">ptr</span> The object pointer</i></td></tr>
+<tr><th id="334">334</th><td><i class="doc"> * <span class="command">\tparam</span> <span class="arg">RefType</span> The reference type</i></td></tr>
+<tr><th id="335">335</th><td><i class="doc"> * <span class="command">\tparam</span> <span class="arg">ObjectType</span> The object type</i></td></tr>
+<tr><th id="336">336</th><td><i class="doc"> * <span class="command">\return</span> The corresponding RefType</i></td></tr>
+<tr><th id="337">337</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="338">338</th><td><b>template</b> &lt;<b>typename</b> RelayRefType, <b>typename</b> ObjectType&gt;</td></tr>
+<tr><th id="339">339</th><td><b>inline</b> RelayRefType <a class="decl fn" href="#_ZN3tvm7runtime6GetRefEPKT0_" title='tvm::runtime::GetRef' data-ref="_ZN3tvm7runtime6GetRefEPKT0_" data-ref-filename="_ZN3tvm7runtime6GetRefEPKT0_">GetRef</a>(<em>const</em> ObjectType* <dfn class="local col4 decl" id="8974ptr" title='ptr' data-type='const ObjectType *' data-ref="8974ptr" data-ref-filename="8974ptr">ptr</dfn>);</td></tr>
+<tr><th id="340">340</th><td></td></tr>
+<tr><th id="341">341</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="342">342</th><td><i class="doc"> * <span class="command">\brief</span> Downcast a base reference type to a more specific type.</i></td></tr>
+<tr><th id="343">343</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="344">344</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">ref</span> The input reference</i></td></tr>
+<tr><th id="345">345</th><td><i class="doc"> * <span class="command">\return</span> The corresponding SubRef.</i></td></tr>
+<tr><th id="346">346</th><td><i class="doc"> * <span class="command">\tparam</span> <span class="arg">SubRef</span> The target specific reference type.</i></td></tr>
+<tr><th id="347">347</th><td><i class="doc"> * <span class="command">\tparam</span> <span class="arg">BaseRef</span> the current reference type.</i></td></tr>
+<tr><th id="348">348</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="349">349</th><td><b>template</b> &lt;<b>typename</b> SubRef, <b>typename</b> BaseRef&gt;</td></tr>
+<tr><th id="350">350</th><td><b>inline</b> SubRef <a class="decl fn" href="#_ZN3tvm7runtime8DowncastET0_" title='tvm::runtime::Downcast' data-ref="_ZN3tvm7runtime8DowncastET0_" data-ref-filename="_ZN3tvm7runtime8DowncastET0_">Downcast</a>(BaseRef <dfn class="local col5 decl" id="8975ref" title='ref' data-type='BaseRef' data-ref="8975ref" data-ref-filename="8975ref">ref</dfn>);</td></tr>
+<tr><th id="351">351</th><td></td></tr>
+<tr><th id="352">352</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="353">353</th><td><i class="doc"> * <span class="command">\brief</span> A custom smart pointer for Object.</i></td></tr>
+<tr><th id="354">354</th><td><i class="doc"> * <span class="command">\tparam</span> <span class="arg">T</span> the content data type.</i></td></tr>
+<tr><th id="355">355</th><td><i class="doc"> * <span class="command">\sa</span> make_object</i></td></tr>
+<tr><th id="356">356</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="357">357</th><td><b>template</b> &lt;<b>typename</b> T&gt;</td></tr>
+<tr><th id="358">358</th><td><b>class</b> <dfn class="type def" id="tvm::runtime::ObjectPtr" title='tvm::runtime::ObjectPtr' data-ref="tvm::runtime::ObjectPtr" data-ref-filename="tvm..runtime..ObjectPtr">ObjectPtr</dfn> {</td></tr>
+<tr><th id="359">359</th><td> <b>public</b>:</td></tr>
+<tr><th id="360">360</th><td>  <i class="doc">/*! <span class="command">\brief</span> default constructor */</i></td></tr>
+<tr><th id="361">361</th><td>  <dfn class="decl def fn" id="_ZN3tvm7runtime9ObjectPtrC1Ev" title='tvm::runtime::ObjectPtr::ObjectPtr&lt;type-parameter-0-0&gt;' data-ref="_ZN3tvm7runtime9ObjectPtrC1Ev" data-ref-filename="_ZN3tvm7runtime9ObjectPtrC1Ev">ObjectPtr</dfn>() {}</td></tr>
+<tr><th id="362">362</th><td>  <i class="doc">/*! <span class="command">\brief</span> default constructor */</i></td></tr>
+<tr><th id="363">363</th><td>  <dfn class="decl def fn" id="_ZN3tvm7runtime9ObjectPtrC1EDn" title='tvm::runtime::ObjectPtr::ObjectPtr&lt;type-parameter-0-0&gt;' data-ref="_ZN3tvm7runtime9ObjectPtrC1EDn" data-ref-filename="_ZN3tvm7runtime9ObjectPtrC1EDn">ObjectPtr</dfn>(<span class="namespace">std::</span><a class="typedef" href="../../../../include/x86_64-linux-gnu/c++/10/bits/c++config.h.html#std::nullptr_t" title='std::nullptr_t' data-type='decltype(nullptr)' data-ref="std::nullptr_t" data-ref-filename="std..nullptr_t">nullptr_t</a>) {}  <i>// NOLINT(*)</i></td></tr>
+<tr><th id="364">364</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="365">365</th><td><i class="doc">   * <span class="command">\brief</span> copy constructor</i></td></tr>
+<tr><th id="366">366</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">other</span> The value to be moved</i></td></tr>
+<tr><th id="367">367</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="368">368</th><td>  <dfn class="decl def fn" id="_ZN3tvm7runtime9ObjectPtrC1ERKNS0_9ObjectPtrIT_EE" title='tvm::runtime::ObjectPtr::ObjectPtr&lt;type-parameter-0-0&gt;' data-ref="_ZN3tvm7runtime9ObjectPtrC1ERKNS0_9ObjectPtrIT_EE" data-ref-filename="_ZN3tvm7runtime9ObjectPtrC1ERKNS0_9ObjectPtrIT_EE">ObjectPtr</dfn>(<em>const</em> <a class="type" href="#tvm::runtime::ObjectPtr" title='tvm::runtime::ObjectPtr' data-ref="tvm::runtime::ObjectPtr" data-ref-filename="tvm..runtime..ObjectPtr">ObjectPtr</a>&lt;T&gt;&amp; <dfn class="local col6 decl" id="8976other" title='other' data-type='const ObjectPtr&lt;T&gt; &amp;' data-ref="8976other" data-ref-filename="8976other">other</dfn>)  <i>// NOLINT(*)</i></td></tr>
+<tr><th id="369">369</th><td>      : ObjectPtr(<a class="local col6 ref" href="#8976other" title='other' data-ref="8976other" data-ref-filename="8976other">other</a>.data_) {}</td></tr>
+<tr><th id="370">370</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="371">371</th><td><i class="doc">   * <span class="command">\brief</span> copy constructor</i></td></tr>
+<tr><th id="372">372</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">other</span> The value to be moved</i></td></tr>
+<tr><th id="373">373</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="374">374</th><td>  <b>template</b> &lt;<b>typename</b> U&gt;</td></tr>
+<tr><th id="375">375</th><td>  <dfn class="decl def fn" id="_ZN3tvm7runtime9ObjectPtrC1ERKNS0_9ObjectPtrITL0__EE" title='tvm::runtime::ObjectPtr::ObjectPtr&lt;type-parameter-0-0&gt;' data-ref="_ZN3tvm7runtime9ObjectPtrC1ERKNS0_9ObjectPtrITL0__EE" data-ref-filename="_ZN3tvm7runtime9ObjectPtrC1ERKNS0_9ObjectPtrITL0__EE">ObjectPtr</dfn>(<em>const</em> <a class="type" href="#tvm::runtime::ObjectPtr" title='tvm::runtime::ObjectPtr' data-ref="tvm::runtime::ObjectPtr" data-ref-filename="tvm..runtime..ObjectPtr">ObjectPtr</a>&lt;U&gt;&amp; <dfn class="local col7 decl" id="8977other" title='other' data-type='const ObjectPtr&lt;U&gt; &amp;' data-ref="8977other" data-ref-filename="8977other">other</dfn>)  <i>// NOLINT(*)</i></td></tr>
+<tr><th id="376">376</th><td>      : ObjectPtr(<a class="local col7 ref" href="#8977other" title='other' data-ref="8977other" data-ref-filename="8977other">other</a>.data_) {</td></tr>
+<tr><th id="377">377</th><td>    <b>static_assert</b>(<span class="namespace">std::</span><a class="type" href="../../../../include/c++/10/type_traits.html#std::is_base_of" title='std::is_base_of' data-ref="std::is_base_of" data-ref-filename="std..is_base_of">is_base_of</a>&lt;T, U&gt;::value,</td></tr>
+<tr><th id="378">378</th><td>                  <q>"can only assign of child class ObjectPtr to parent"</q>);</td></tr>
+<tr><th id="379">379</th><td>  }</td></tr>
+<tr><th id="380">380</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="381">381</th><td><i class="doc">   * <span class="command">\brief</span> move constructor</i></td></tr>
+<tr><th id="382">382</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">other</span> The value to be moved</i></td></tr>
+<tr><th id="383">383</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="384">384</th><td>  <dfn class="decl def fn" id="_ZN3tvm7runtime9ObjectPtrC1EONS0_9ObjectPtrIT_EE" title='tvm::runtime::ObjectPtr::ObjectPtr&lt;type-parameter-0-0&gt;' data-ref="_ZN3tvm7runtime9ObjectPtrC1EONS0_9ObjectPtrIT_EE" data-ref-filename="_ZN3tvm7runtime9ObjectPtrC1EONS0_9ObjectPtrIT_EE">ObjectPtr</dfn>(<a class="type" href="#tvm::runtime::ObjectPtr" title='tvm::runtime::ObjectPtr' data-ref="tvm::runtime::ObjectPtr" data-ref-filename="tvm..runtime..ObjectPtr">ObjectPtr</a>&lt;T&gt;&amp;&amp; <dfn class="local col8 decl" id="8978other" title='other' data-type='ObjectPtr&lt;T&gt; &amp;&amp;' data-ref="8978other" data-ref-filename="8978other">other</dfn>)  <i>// NOLINT(*)</i></td></tr>
+<tr><th id="385">385</th><td>      : <a class="member field" href="#tvm::runtime::ObjectPtr::data_" title='tvm::runtime::ObjectPtr::data_' data-ref="tvm::runtime::ObjectPtr::data_" data-ref-filename="tvm..runtime..ObjectPtr..data_">data_</a>(<a class="local col8 ref" href="#8978other" title='other' data-ref="8978other" data-ref-filename="8978other">other</a>.data_) {</td></tr>
+<tr><th id="386">386</th><td>    <a class="local col8 ref" href="#8978other" title='other' data-ref="8978other" data-ref-filename="8978other">other</a>.data_ = <b>nullptr</b>;</td></tr>
+<tr><th id="387">387</th><td>  }</td></tr>
+<tr><th id="388">388</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="389">389</th><td><i class="doc">   * <span class="command">\brief</span> move constructor</i></td></tr>
+<tr><th id="390">390</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">other</span> The value to be moved</i></td></tr>
+<tr><th id="391">391</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="392">392</th><td>  <b>template</b> &lt;<b>typename</b> Y&gt;</td></tr>
+<tr><th id="393">393</th><td>  <dfn class="decl def fn" id="_ZN3tvm7runtime9ObjectPtrC1EONS0_9ObjectPtrITL0__EE" title='tvm::runtime::ObjectPtr::ObjectPtr&lt;type-parameter-0-0&gt;' data-ref="_ZN3tvm7runtime9ObjectPtrC1EONS0_9ObjectPtrITL0__EE" data-ref-filename="_ZN3tvm7runtime9ObjectPtrC1EONS0_9ObjectPtrITL0__EE">ObjectPtr</dfn>(<a class="type" href="#tvm::runtime::ObjectPtr" title='tvm::runtime::ObjectPtr' data-ref="tvm::runtime::ObjectPtr" data-ref-filename="tvm..runtime..ObjectPtr">ObjectPtr</a>&lt;Y&gt;&amp;&amp; <dfn class="local col9 decl" id="8979other" title='other' data-type='ObjectPtr&lt;Y&gt; &amp;&amp;' data-ref="8979other" data-ref-filename="8979other">other</dfn>)  <i>// NOLINT(*)</i></td></tr>
+<tr><th id="394">394</th><td>      : <a class="member field" href="#tvm::runtime::ObjectPtr::data_" title='tvm::runtime::ObjectPtr::data_' data-ref="tvm::runtime::ObjectPtr::data_" data-ref-filename="tvm..runtime..ObjectPtr..data_">data_</a>(<a class="local col9 ref" href="#8979other" title='other' data-ref="8979other" data-ref-filename="8979other">other</a>.data_) {</td></tr>
+<tr><th id="395">395</th><td>    <b>static_assert</b>(<span class="namespace">std::</span><a class="type" href="../../../../include/c++/10/type_traits.html#std::is_base_of" title='std::is_base_of' data-ref="std::is_base_of" data-ref-filename="std..is_base_of">is_base_of</a>&lt;T, Y&gt;::value,</td></tr>
+<tr><th id="396">396</th><td>                  <q>"can only assign of child class ObjectPtr to parent"</q>);</td></tr>
+<tr><th id="397">397</th><td>    <a class="local col9 ref" href="#8979other" title='other' data-ref="8979other" data-ref-filename="8979other">other</a>.data_ = <b>nullptr</b>;</td></tr>
+<tr><th id="398">398</th><td>  }</td></tr>
+<tr><th id="399">399</th><td>  <i class="doc">/*! <span class="command">\brief</span> destructor */</i></td></tr>
+<tr><th id="400">400</th><td>  <dfn class="decl def fn" id="_ZN3tvm7runtime9ObjectPtrD1Ev" title='tvm::runtime::ObjectPtr::~ObjectPtr&lt;type-parameter-0-0&gt;' data-ref="_ZN3tvm7runtime9ObjectPtrD1Ev" data-ref-filename="_ZN3tvm7runtime9ObjectPtrD1Ev">~ObjectPtr</dfn>() { <b>this</b>-&gt;reset(); }</td></tr>
+<tr><th id="401">401</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="402">402</th><td><i class="doc">   * <span class="command">\brief</span> Swap this array with another Object</i></td></tr>
+<tr><th id="403">403</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">other</span> The other Object</i></td></tr>
+<tr><th id="404">404</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="405">405</th><td>  <em>void</em> <dfn class="decl def fn" id="_ZN3tvm7runtime9ObjectPtr4swapERNS0_9ObjectPtrIT_EE" title='tvm::runtime::ObjectPtr::swap' data-ref="_ZN3tvm7runtime9ObjectPtr4swapERNS0_9ObjectPtrIT_EE" data-ref-filename="_ZN3tvm7runtime9ObjectPtr4swapERNS0_9ObjectPtrIT_EE">swap</dfn>(<a class="type" href="#tvm::runtime::ObjectPtr" title='tvm::runtime::ObjectPtr' data-ref="tvm::runtime::ObjectPtr" data-ref-filename="tvm..runtime..ObjectPtr">ObjectPtr</a>&lt;T&gt;&amp; <dfn class="local col0 decl" id="8980other" title='other' data-type='ObjectPtr&lt;T&gt; &amp;' data-ref="8980other" data-ref-filename="8980other">other</dfn>) {  <i>// NOLINT(*)</i></td></tr>
+<tr><th id="406">406</th><td>    <span class="namespace">std::</span>swap(<a class="member field" href="#tvm::runtime::ObjectPtr::data_" title='tvm::runtime::ObjectPtr::data_' data-ref="tvm::runtime::ObjectPtr::data_" data-ref-filename="tvm..runtime..ObjectPtr..data_">data_</a>, <a class="local col0 ref" href="#8980other" title='other' data-ref="8980other" data-ref-filename="8980other">other</a>.data_);</td></tr>
+<tr><th id="407">407</th><td>  }</td></tr>
+<tr><th id="408">408</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="409">409</th><td><i class="doc">   * <span class="command">\return</span> Get the content of the pointer</i></td></tr>
+<tr><th id="410">410</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="411">411</th><td>  T* <dfn class="decl def fn" id="_ZNK3tvm7runtime9ObjectPtr3getEv" title='tvm::runtime::ObjectPtr::get' data-ref="_ZNK3tvm7runtime9ObjectPtr3getEv" data-ref-filename="_ZNK3tvm7runtime9ObjectPtr3getEv">get</dfn>() <em>const</em> { <b>return</b> <b>static_cast</b>&lt;T*&gt;(<a class="member field" href="#tvm::runtime::ObjectPtr::data_" title='tvm::runtime::ObjectPtr::data_' data-ref="tvm::runtime::ObjectPtr::data_" data-ref-filename="tvm..runtime..ObjectPtr..data_">data_</a>); }</td></tr>
+<tr><th id="412">412</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="413">413</th><td><i class="doc">   * <span class="command">\return</span> The pointer</i></td></tr>
+<tr><th id="414">414</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="415">415</th><td>  T* <dfn class="decl def fn" id="_ZNK3tvm7runtime9ObjectPtrptEv" title='tvm::runtime::ObjectPtr::operator-&gt;' data-ref="_ZNK3tvm7runtime9ObjectPtrptEv" data-ref-filename="_ZNK3tvm7runtime9ObjectPtrptEv"><b>operator</b>-&gt;</dfn>() <em>const</em> { <b>return</b> <a class="member fn" href="#_ZNK3tvm7runtime9ObjectPtr3getEv" title='tvm::runtime::ObjectPtr::get' data-ref="_ZNK3tvm7runtime9ObjectPtr3getEv" data-ref-filename="_ZNK3tvm7runtime9ObjectPtr3getEv">get</a>(); }</td></tr>
+<tr><th id="416">416</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="417">417</th><td><i class="doc">   * <span class="command">\return</span> The reference</i></td></tr>
+<tr><th id="418">418</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="419">419</th><td>  T&amp; <dfn class="decl def fn" id="_ZNK3tvm7runtime9ObjectPtrdeEv" title='tvm::runtime::ObjectPtr::operator*' data-ref="_ZNK3tvm7runtime9ObjectPtrdeEv" data-ref-filename="_ZNK3tvm7runtime9ObjectPtrdeEv"><b>operator</b>*</dfn>() <em>const</em> {  <i>// NOLINT(*)</i></td></tr>
+<tr><th id="420">420</th><td>    <b>return</b> *<a class="member fn" href="#_ZNK3tvm7runtime9ObjectPtr3getEv" title='tvm::runtime::ObjectPtr::get' data-ref="_ZNK3tvm7runtime9ObjectPtr3getEv" data-ref-filename="_ZNK3tvm7runtime9ObjectPtr3getEv">get</a>();</td></tr>
+<tr><th id="421">421</th><td>  }</td></tr>
+<tr><th id="422">422</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="423">423</th><td><i class="doc">   * <span class="command">\brief</span> copy assignment</i></td></tr>
+<tr><th id="424">424</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">other</span> The value to be assigned.</i></td></tr>
+<tr><th id="425">425</th><td><i class="doc">   * <span class="command">\return</span> reference to self.</i></td></tr>
+<tr><th id="426">426</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="427">427</th><td>  <a class="type" href="#tvm::runtime::ObjectPtr" title='tvm::runtime::ObjectPtr' data-ref="tvm::runtime::ObjectPtr" data-ref-filename="tvm..runtime..ObjectPtr">ObjectPtr</a>&lt;T&gt;&amp; <dfn class="decl def fn" id="_ZN3tvm7runtime9ObjectPtraSERKNS0_9ObjectPtrIT_EE" title='tvm::runtime::ObjectPtr::operator=' data-ref="_ZN3tvm7runtime9ObjectPtraSERKNS0_9ObjectPtrIT_EE" data-ref-filename="_ZN3tvm7runtime9ObjectPtraSERKNS0_9ObjectPtrIT_EE"><b>operator</b>=</dfn>(<em>const</em> <a class="type" href="#tvm::runtime::ObjectPtr" title='tvm::runtime::ObjectPtr' data-ref="tvm::runtime::ObjectPtr" data-ref-filename="tvm..runtime..ObjectPtr">ObjectPtr</a>&lt;T&gt;&amp; <dfn class="local col1 decl" id="8981other" title='other' data-type='const ObjectPtr&lt;T&gt; &amp;' data-ref="8981other" data-ref-filename="8981other">other</dfn>) {  <i>// NOLINT(*)</i></td></tr>
+<tr><th id="428">428</th><td>    <i>// takes in plane operator to enable copy elison.</i></td></tr>
+<tr><th id="429">429</th><td><i>    // copy-and-swap idiom</i></td></tr>
+<tr><th id="430">430</th><td>    ObjectPtr(<a class="local col1 ref" href="#8981other" title='other' data-ref="8981other" data-ref-filename="8981other">other</a>).swap(*<b>this</b>);  <i>// NOLINT(*)</i></td></tr>
+<tr><th id="431">431</th><td>    <b>return</b> *<b>this</b>;</td></tr>
+<tr><th id="432">432</th><td>  }</td></tr>
+<tr><th id="433">433</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="434">434</th><td><i class="doc">   * <span class="command">\brief</span> move assignment</i></td></tr>
+<tr><th id="435">435</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">other</span> The value to be assigned.</i></td></tr>
+<tr><th id="436">436</th><td><i class="doc">   * <span class="command">\return</span> reference to self.</i></td></tr>
+<tr><th id="437">437</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="438">438</th><td>  <a class="type" href="#tvm::runtime::ObjectPtr" title='tvm::runtime::ObjectPtr' data-ref="tvm::runtime::ObjectPtr" data-ref-filename="tvm..runtime..ObjectPtr">ObjectPtr</a>&lt;T&gt;&amp; <dfn class="decl def fn" id="_ZN3tvm7runtime9ObjectPtraSEONS0_9ObjectPtrIT_EE" title='tvm::runtime::ObjectPtr::operator=' data-ref="_ZN3tvm7runtime9ObjectPtraSEONS0_9ObjectPtrIT_EE" data-ref-filename="_ZN3tvm7runtime9ObjectPtraSEONS0_9ObjectPtrIT_EE"><b>operator</b>=</dfn>(<a class="type" href="#tvm::runtime::ObjectPtr" title='tvm::runtime::ObjectPtr' data-ref="tvm::runtime::ObjectPtr" data-ref-filename="tvm..runtime..ObjectPtr">ObjectPtr</a>&lt;T&gt;&amp;&amp; <dfn class="local col2 decl" id="8982other" title='other' data-type='ObjectPtr&lt;T&gt; &amp;&amp;' data-ref="8982other" data-ref-filename="8982other">other</dfn>) {  <i>// NOLINT(*)</i></td></tr>
+<tr><th id="439">439</th><td>    <i>// copy-and-swap idiom</i></td></tr>
+<tr><th id="440">440</th><td>    ObjectPtr(<span class="namespace">std::</span>move(<a class="local col2 ref" href="#8982other" title='other' data-ref="8982other" data-ref-filename="8982other">other</a>)).swap(*<b>this</b>);  <i>// NOLINT(*)</i></td></tr>
+<tr><th id="441">441</th><td>    <b>return</b> *<b>this</b>;</td></tr>
+<tr><th id="442">442</th><td>  }</td></tr>
+<tr><th id="443">443</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="444">444</th><td><i class="doc">   * <span class="command">\brief</span> nullptr check</i></td></tr>
+<tr><th id="445">445</th><td><i class="doc">   * <span class="command">\return</span> result of comparison of internal pointer with nullptr.</i></td></tr>
+<tr><th id="446">446</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="447">447</th><td>  <b>explicit</b> <dfn class="decl def fn" id="_ZNK3tvm7runtime9ObjectPtrcvbEv" title='tvm::runtime::ObjectPtr::operator bool' data-ref="_ZNK3tvm7runtime9ObjectPtrcvbEv" data-ref-filename="_ZNK3tvm7runtime9ObjectPtrcvbEv"><b>operator</b> <em>bool</em></dfn>() <em>const</em> { <b>return</b> <a class="member fn" href="#_ZNK3tvm7runtime9ObjectPtr3getEv" title='tvm::runtime::ObjectPtr::get' data-ref="_ZNK3tvm7runtime9ObjectPtr3getEv" data-ref-filename="_ZNK3tvm7runtime9ObjectPtr3getEv">get</a>() != <b>nullptr</b>; }</td></tr>
+<tr><th id="448">448</th><td>  <i class="doc">/*! <span class="command">\brief</span> reset the content of ptr to be nullptr */</i></td></tr>
+<tr><th id="449">449</th><td>  <em>void</em> <dfn class="decl def fn" id="_ZN3tvm7runtime9ObjectPtr5resetEv" title='tvm::runtime::ObjectPtr::reset' data-ref="_ZN3tvm7runtime9ObjectPtr5resetEv" data-ref-filename="_ZN3tvm7runtime9ObjectPtr5resetEv">reset</dfn>() {</td></tr>
+<tr><th id="450">450</th><td>    <b>if</b> (<a class="member field" href="#tvm::runtime::ObjectPtr::data_" title='tvm::runtime::ObjectPtr::data_' data-ref="tvm::runtime::ObjectPtr::data_" data-ref-filename="tvm..runtime..ObjectPtr..data_">data_</a> != <b>nullptr</b>) {</td></tr>
+<tr><th id="451">451</th><td>      <a class="member field" href="#tvm::runtime::ObjectPtr::data_" title='tvm::runtime::ObjectPtr::data_' data-ref="tvm::runtime::ObjectPtr::data_" data-ref-filename="tvm..runtime..ObjectPtr..data_">data_</a>-&gt;<a class="ref fn" href="#_ZN3tvm7runtime6Object6DecRefEv" title='tvm::runtime::Object::DecRef' data-ref="_ZN3tvm7runtime6Object6DecRefEv" data-ref-filename="_ZN3tvm7runtime6Object6DecRefEv">DecRef</a>();</td></tr>
+<tr><th id="452">452</th><td>      <a class="member field" href="#tvm::runtime::ObjectPtr::data_" title='tvm::runtime::ObjectPtr::data_' data-ref="tvm::runtime::ObjectPtr::data_" data-ref-filename="tvm..runtime..ObjectPtr..data_">data_</a> = <b>nullptr</b>;</td></tr>
+<tr><th id="453">453</th><td>    }</td></tr>
+<tr><th id="454">454</th><td>  }</td></tr>
+<tr><th id="455">455</th><td>  <i class="doc">/*! <span class="command">\return</span> The use count of the ptr, for debug purposes */</i></td></tr>
+<tr><th id="456">456</th><td>  <em>int</em> <dfn class="decl def fn" id="_ZNK3tvm7runtime9ObjectPtr9use_countEv" title='tvm::runtime::ObjectPtr::use_count' data-ref="_ZNK3tvm7runtime9ObjectPtr9use_countEv" data-ref-filename="_ZNK3tvm7runtime9ObjectPtr9use_countEv">use_count</dfn>() <em>const</em> { <b>return</b> <a class="member field" href="#tvm::runtime::ObjectPtr::data_" title='tvm::runtime::ObjectPtr::data_' data-ref="tvm::runtime::ObjectPtr::data_" data-ref-filename="tvm..runtime..ObjectPtr..data_">data_</a> != <b>nullptr</b> ? <a class="member field" href="#tvm::runtime::ObjectPtr::data_" title='tvm::runtime::ObjectPtr::data_' data-ref="tvm::runtime::ObjectPtr::data_" data-ref-filename="tvm..runtime..ObjectPtr..data_">data_</a>-&gt;<a class="ref fn" href="#_ZNK3tvm7runtime6Object9use_countEv" title='tvm::runtime::Object::use_count' data-ref="_ZNK3tvm7runtime6Object9use_countEv" data-ref-filename="_ZNK3tvm7runtime6Object9use_countEv">use_count</a>() : <var>0</var>; }</td></tr>
+<tr><th id="457">457</th><td>  <i class="doc">/*! <span class="command">\return</span> whether the reference is unique */</i></td></tr>
+<tr><th id="458">458</th><td>  <em>bool</em> <dfn class="decl def fn" id="_ZNK3tvm7runtime9ObjectPtr6uniqueEv" title='tvm::runtime::ObjectPtr::unique' data-ref="_ZNK3tvm7runtime9ObjectPtr6uniqueEv" data-ref-filename="_ZNK3tvm7runtime9ObjectPtr6uniqueEv">unique</dfn>() <em>const</em> { <b>return</b> <a class="member field" href="#tvm::runtime::ObjectPtr::data_" title='tvm::runtime::ObjectPtr::data_' data-ref="tvm::runtime::ObjectPtr::data_" data-ref-filename="tvm..runtime..ObjectPtr..data_">data_</a> != <b>nullptr</b> &amp;&amp; <a class="member field" href="#tvm::runtime::ObjectPtr::data_" title='tvm::runtime::ObjectPtr::data_' data-ref="tvm::runtime::ObjectPtr::data_" data-ref-filename="tvm..runtime..ObjectPtr..data_">data_</a>-&gt;<a class="ref fn" href="#_ZNK3tvm7runtime6Object9use_countEv" title='tvm::runtime::Object::use_count' data-ref="_ZNK3tvm7runtime6Object9use_countEv" data-ref-filename="_ZNK3tvm7runtime6Object9use_countEv">use_count</a>() == <var>1</var>; }</td></tr>
+<tr><th id="459">459</th><td>  <i class="doc">/*! <span class="command">\return</span> Whether two ObjectPtr do not equal each other */</i></td></tr>
+<tr><th id="460">460</th><td>  <em>bool</em> <dfn class="decl def fn" id="_ZNK3tvm7runtime9ObjectPtreqERKNS0_9ObjectPtrIT_EE" title='tvm::runtime::ObjectPtr::operator==' data-ref="_ZNK3tvm7runtime9ObjectPtreqERKNS0_9ObjectPtrIT_EE" data-ref-filename="_ZNK3tvm7runtime9ObjectPtreqERKNS0_9ObjectPtrIT_EE"><b>operator</b>==</dfn>(<em>const</em> <a class="type" href="#tvm::runtime::ObjectPtr" title='tvm::runtime::ObjectPtr' data-ref="tvm::runtime::ObjectPtr" data-ref-filename="tvm..runtime..ObjectPtr">ObjectPtr</a>&lt;T&gt;&amp; <dfn class="local col3 decl" id="8983other" title='other' data-type='const ObjectPtr&lt;T&gt; &amp;' data-ref="8983other" data-ref-filename="8983other">other</dfn>) <em>const</em> { <b>return</b> <a class="member field" href="#tvm::runtime::ObjectPtr::data_" title='tvm::runtime::ObjectPtr::data_' data-ref="tvm::runtime::ObjectPtr::data_" data-ref-filename="tvm..runtime..ObjectPtr..data_">data_</a> == <a class="local col3 ref" href="#8983other" title='other' data-ref="8983other" data-ref-filename="8983other">other</a>.data_; }</td></tr>
+<tr><th id="461">461</th><td>  <i class="doc">/*! <span class="command">\return</span> Whether two ObjectPtr equals each other */</i></td></tr>
+<tr><th id="462">462</th><td>  <em>bool</em> <dfn class="decl def fn" id="_ZNK3tvm7runtime9ObjectPtrneERKNS0_9ObjectPtrIT_EE" title='tvm::runtime::ObjectPtr::operator!=' data-ref="_ZNK3tvm7runtime9ObjectPtrneERKNS0_9ObjectPtrIT_EE" data-ref-filename="_ZNK3tvm7runtime9ObjectPtrneERKNS0_9ObjectPtrIT_EE"><b>operator</b>!=</dfn>(<em>const</em> <a class="type" href="#tvm::runtime::ObjectPtr" title='tvm::runtime::ObjectPtr' data-ref="tvm::runtime::ObjectPtr" data-ref-filename="tvm..runtime..ObjectPtr">ObjectPtr</a>&lt;T&gt;&amp; <dfn class="local col4 decl" id="8984other" title='other' data-type='const ObjectPtr&lt;T&gt; &amp;' data-ref="8984other" data-ref-filename="8984other">other</dfn>) <em>const</em> { <b>return</b> <a class="member field" href="#tvm::runtime::ObjectPtr::data_" title='tvm::runtime::ObjectPtr::data_' data-ref="tvm::runtime::ObjectPtr::data_" data-ref-filename="tvm..runtime..ObjectPtr..data_">data_</a> != <a class="local col4 ref" href="#8984other" title='other' data-ref="8984other" data-ref-filename="8984other">other</a>.data_; }</td></tr>
+<tr><th id="463">463</th><td>  <i class="doc">/*! <span class="command">\return</span> Whether the pointer is nullptr */</i></td></tr>
+<tr><th id="464">464</th><td>  <em>bool</em> <dfn class="decl def fn" id="_ZNK3tvm7runtime9ObjectPtreqEDn" title='tvm::runtime::ObjectPtr::operator==' data-ref="_ZNK3tvm7runtime9ObjectPtreqEDn" data-ref-filename="_ZNK3tvm7runtime9ObjectPtreqEDn"><b>operator</b>==</dfn>(<span class="namespace">std::</span><a class="typedef" href="../../../../include/x86_64-linux-gnu/c++/10/bits/c++config.h.html#std::nullptr_t" title='std::nullptr_t' data-type='decltype(nullptr)' data-ref="std::nullptr_t" data-ref-filename="std..nullptr_t">nullptr_t</a> <dfn class="local col5 decl" id="8985null" title='null' data-type='std::nullptr_t' data-ref="8985null" data-ref-filename="8985null">null</dfn>) <em>const</em> { <b>return</b> <a class="member field" href="#tvm::runtime::ObjectPtr::data_" title='tvm::runtime::ObjectPtr::data_' data-ref="tvm::runtime::ObjectPtr::data_" data-ref-filename="tvm..runtime..ObjectPtr..data_">data_</a> == <b>nullptr</b>; }</td></tr>
+<tr><th id="465">465</th><td>  <i class="doc">/*! <span class="command">\return</span> Whether the pointer is not nullptr */</i></td></tr>
+<tr><th id="466">466</th><td>  <em>bool</em> <dfn class="decl def fn" id="_ZNK3tvm7runtime9ObjectPtrneEDn" title='tvm::runtime::ObjectPtr::operator!=' data-ref="_ZNK3tvm7runtime9ObjectPtrneEDn" data-ref-filename="_ZNK3tvm7runtime9ObjectPtrneEDn"><b>operator</b>!=</dfn>(<span class="namespace">std::</span><a class="typedef" href="../../../../include/x86_64-linux-gnu/c++/10/bits/c++config.h.html#std::nullptr_t" title='std::nullptr_t' data-type='decltype(nullptr)' data-ref="std::nullptr_t" data-ref-filename="std..nullptr_t">nullptr_t</a> <dfn class="local col6 decl" id="8986null" title='null' data-type='std::nullptr_t' data-ref="8986null" data-ref-filename="8986null">null</dfn>) <em>const</em> { <b>return</b> <a class="member field" href="#tvm::runtime::ObjectPtr::data_" title='tvm::runtime::ObjectPtr::data_' data-ref="tvm::runtime::ObjectPtr::data_" data-ref-filename="tvm..runtime..ObjectPtr..data_">data_</a> != <b>nullptr</b>; }</td></tr>
+<tr><th id="467">467</th><td></td></tr>
+<tr><th id="468">468</th><td> <b>private</b>:</td></tr>
+<tr><th id="469">469</th><td>  <i class="doc">/*! <span class="command">\brief</span> internal pointer field */</i></td></tr>
+<tr><th id="470">470</th><td>  <a class="type" href="#tvm::runtime::Object" title='tvm::runtime::Object' data-ref="tvm::runtime::Object" data-ref-filename="tvm..runtime..Object">Object</a>* <dfn class="decl field" id="tvm::runtime::ObjectPtr::data_" title='tvm::runtime::ObjectPtr::data_' data-ref="tvm::runtime::ObjectPtr::data_" data-ref-filename="tvm..runtime..ObjectPtr..data_">data_</dfn>{<b>nullptr</b>};</td></tr>
+<tr><th id="471">471</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="472">472</th><td><i class="doc">   * <span class="command">\brief</span> constructor from Object</i></td></tr>
+<tr><th id="473">473</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">data</span> The data pointer</i></td></tr>
+<tr><th id="474">474</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="475">475</th><td>  <b>explicit</b> <dfn class="decl def fn" id="_ZN3tvm7runtime9ObjectPtrC1EPNS0_6ObjectE" title='tvm::runtime::ObjectPtr::ObjectPtr&lt;type-parameter-0-0&gt;' data-ref="_ZN3tvm7runtime9ObjectPtrC1EPNS0_6ObjectE" data-ref-filename="_ZN3tvm7runtime9ObjectPtrC1EPNS0_6ObjectE">ObjectPtr</dfn>(<a class="type" href="#tvm::runtime::Object" title='tvm::runtime::Object' data-ref="tvm::runtime::Object" data-ref-filename="tvm..runtime..Object">Object</a>* <dfn class="local col7 decl" id="8987data" title='data' data-type='tvm::runtime::Object *' data-ref="8987data" data-ref-filename="8987data">data</dfn>) : <a class="member field" href="#tvm::runtime::ObjectPtr::data_" title='tvm::runtime::ObjectPtr::data_' data-ref="tvm::runtime::ObjectPtr::data_" data-ref-filename="tvm..runtime..ObjectPtr..data_">data_</a>(<a class="local col7 ref" href="#8987data" title='data' data-ref="8987data" data-ref-filename="8987data">data</a>) {</td></tr>
+<tr><th id="476">476</th><td>    <b>if</b> (<a class="local col7 ref" href="#8987data" title='data' data-ref="8987data" data-ref-filename="8987data">data</a> != <b>nullptr</b>) {</td></tr>
+<tr><th id="477">477</th><td>      <a class="member field" href="#tvm::runtime::ObjectPtr::data_" title='tvm::runtime::ObjectPtr::data_' data-ref="tvm::runtime::ObjectPtr::data_" data-ref-filename="tvm..runtime..ObjectPtr..data_">data_</a>-&gt;<a class="ref fn" href="#_ZN3tvm7runtime6Object6IncRefEv" title='tvm::runtime::Object::IncRef' data-ref="_ZN3tvm7runtime6Object6IncRefEv" data-ref-filename="_ZN3tvm7runtime6Object6IncRefEv">IncRef</a>();</td></tr>
+<tr><th id="478">478</th><td>    }</td></tr>
+<tr><th id="479">479</th><td>  }</td></tr>
+<tr><th id="480">480</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="481">481</th><td><i class="doc">   * <span class="command">\brief</span> Move an ObjectPtr from an RValueRef argument.</i></td></tr>
+<tr><th id="482">482</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">ref</span> The rvalue reference.</i></td></tr>
+<tr><th id="483">483</th><td><i class="doc">   * <span class="command">\return</span> the moved result.</i></td></tr>
+<tr><th id="484">484</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="485">485</th><td>  <em>static</em> <a class="type" href="#tvm::runtime::ObjectPtr" title='tvm::runtime::ObjectPtr' data-ref="tvm::runtime::ObjectPtr" data-ref-filename="tvm..runtime..ObjectPtr">ObjectPtr</a>&lt;T&gt; <dfn class="decl def fn" id="_ZN3tvm7runtime9ObjectPtr20MoveFromRValueRefArgEPPNS0_6ObjectE" title='tvm::runtime::ObjectPtr::MoveFromRValueRefArg' data-ref="_ZN3tvm7runtime9ObjectPtr20MoveFromRValueRefArgEPPNS0_6ObjectE" data-ref-filename="_ZN3tvm7runtime9ObjectPtr20MoveFromRValueRefArgEPPNS0_6ObjectE">MoveFromRValueRefArg</dfn>(<a class="type" href="#tvm::runtime::Object" title='tvm::runtime::Object' data-ref="tvm::runtime::Object" data-ref-filename="tvm..runtime..Object">Object</a>** <dfn class="local col8 decl" id="8988ref" title='ref' data-type='tvm::runtime::Object **' data-ref="8988ref" data-ref-filename="8988ref">ref</dfn>) {</td></tr>
+<tr><th id="486">486</th><td>    <a class="type" href="#tvm::runtime::ObjectPtr" title='tvm::runtime::ObjectPtr' data-ref="tvm::runtime::ObjectPtr" data-ref-filename="tvm..runtime..ObjectPtr">ObjectPtr</a>&lt;T&gt; <dfn class="local col9 decl" id="8989ptr" title='ptr' data-type='ObjectPtr&lt;T&gt;' data-ref="8989ptr" data-ref-filename="8989ptr">ptr</dfn>;</td></tr>
+<tr><th id="487">487</th><td>    <a class="local col9 ref" href="#8989ptr" title='ptr' data-ref="8989ptr" data-ref-filename="8989ptr">ptr</a>.data_ = *<a class="local col8 ref" href="#8988ref" title='ref' data-ref="8988ref" data-ref-filename="8988ref">ref</a>;</td></tr>
+<tr><th id="488">488</th><td>    *<a class="local col8 ref" href="#8988ref" title='ref' data-ref="8988ref" data-ref-filename="8988ref">ref</a> = <b>nullptr</b>;</td></tr>
+<tr><th id="489">489</th><td>    <b>return</b> <a class="local col9 ref" href="#8989ptr" title='ptr' data-ref="8989ptr" data-ref-filename="8989ptr">ptr</a>;</td></tr>
+<tr><th id="490">490</th><td>  }</td></tr>
+<tr><th id="491">491</th><td>  <i>// friend classes</i></td></tr>
+<tr><th id="492">492</th><td>  <b>friend</b> <b>class</b> <a class="type" href="#tvm::runtime::Object" title='tvm::runtime::Object' data-ref="tvm::runtime::Object" data-ref-filename="tvm..runtime..Object">Object</a>;</td></tr>
+<tr><th id="493">493</th><td>  <b>friend</b> <b>class</b> <a class="type" href="#tvm::runtime::ObjectRef" title='tvm::runtime::ObjectRef' data-ref="tvm::runtime::ObjectRef" data-ref-filename="tvm..runtime..ObjectRef">ObjectRef</a>;</td></tr>
+<tr><th id="494">494</th><td>  <b>friend</b> <b>struct</b> <a class="type" href="#tvm::runtime::ObjectPtrHash" title='tvm::runtime::ObjectPtrHash' data-ref="tvm::runtime::ObjectPtrHash" data-ref-filename="tvm..runtime..ObjectPtrHash">ObjectPtrHash</a>;</td></tr>
+<tr><th id="495">495</th><td>  <b>template</b> &lt;<b>typename</b>&gt;</td></tr>
+<tr><th id="496">496</th><td>  <b>friend</b> <b>class</b> <dfn class="type" id="tvm::runtime::ObjectPtr" title='tvm::runtime::ObjectPtr' data-ref="tvm::runtime::ObjectPtr" data-ref-filename="tvm..runtime..ObjectPtr">ObjectPtr</dfn>;</td></tr>
+<tr><th id="497">497</th><td>  <b>template</b> &lt;<b>typename</b>&gt;</td></tr>
+<tr><th id="498">498</th><td>  <b>friend</b> <b>class</b> <dfn class="type" id="tvm::runtime::ObjAllocatorBase" title='tvm::runtime::ObjAllocatorBase' data-ref="tvm::runtime::ObjAllocatorBase" data-ref-filename="tvm..runtime..ObjAllocatorBase">ObjAllocatorBase</dfn>;</td></tr>
+<tr><th id="499">499</th><td>  <b>friend</b> <b>class</b> <a class="type" href="packed_func.h.html#tvm::runtime::TVMPODValue_" title='tvm::runtime::TVMPODValue_' data-ref="tvm::runtime::TVMPODValue_" data-ref-filename="tvm..runtime..TVMPODValue_">TVMPODValue_</a>;</td></tr>
+<tr><th id="500">500</th><td>  <b>friend</b> <b>class</b> <a class="type" href="packed_func.h.html#tvm::runtime::TVMArgsSetter" title='tvm::runtime::TVMArgsSetter' data-ref="tvm::runtime::TVMArgsSetter" data-ref-filename="tvm..runtime..TVMArgsSetter">TVMArgsSetter</a>;</td></tr>
+<tr><th id="501">501</th><td>  <b>friend</b> <b>class</b> <a class="type" href="packed_func.h.html#tvm::runtime::TVMRetValue" title='tvm::runtime::TVMRetValue' data-ref="tvm::runtime::TVMRetValue" data-ref-filename="tvm..runtime..TVMRetValue">TVMRetValue</a>;</td></tr>
+<tr><th id="502">502</th><td>  <b>friend</b> <b>class</b> <a class="type" href="packed_func.h.html#tvm::runtime::TVMArgValue" title='tvm::runtime::TVMArgValue' data-ref="tvm::runtime::TVMArgValue" data-ref-filename="tvm..runtime..TVMArgValue">TVMArgValue</a>;</td></tr>
+<tr><th id="503">503</th><td>  <b>friend</b> <b>class</b> <a class="type" href="packed_func.h.html#tvm::runtime::TVMMovableArgValue_" title='tvm::runtime::TVMMovableArgValue_' data-ref="tvm::runtime::TVMMovableArgValue_" data-ref-filename="tvm..runtime..TVMMovableArgValue_">TVMMovableArgValue_</a>;</td></tr>
+<tr><th id="504">504</th><td>  <b>template</b> &lt;<b>typename</b> RelayRefType, <b>typename</b> ObjType&gt;</td></tr>
+<tr><th id="505">505</th><td>  <b>friend</b> RelayRefType <dfn class="decl fn" id="_ZN3tvm7runtime6GetRefEPKTL0_0_" title='tvm::runtime::GetRef' data-ref="_ZN3tvm7runtime6GetRefEPKTL0_0_" data-ref-filename="_ZN3tvm7runtime6GetRefEPKTL0_0_">GetRef</dfn>(<em>const</em> ObjType* <dfn class="local col0 decl" id="8990ptr" title='ptr' data-type='const ObjType *' data-ref="8990ptr" data-ref-filename="8990ptr">ptr</dfn>);</td></tr>
+<tr><th id="506">506</th><td>  <b>template</b> &lt;<b>typename</b> BaseType, <b>typename</b> ObjType&gt;</td></tr>
+<tr><th id="507">507</th><td>  <b>friend</b> <a class="type" href="#tvm::runtime::ObjectPtr" title='tvm::runtime::ObjectPtr' data-ref="tvm::runtime::ObjectPtr" data-ref-filename="tvm..runtime..ObjectPtr">ObjectPtr</a>&lt;BaseType&gt; <dfn class="decl fn" id="_ZN3tvm7runtime12GetObjectPtrEPTL0_0_" title='tvm::runtime::GetObjectPtr' data-ref="_ZN3tvm7runtime12GetObjectPtrEPTL0_0_" data-ref-filename="_ZN3tvm7runtime12GetObjectPtrEPTL0_0_">GetObjectPtr</dfn>(ObjType* <dfn class="local col1 decl" id="8991ptr" title='ptr' data-type='ObjType *' data-ref="8991ptr" data-ref-filename="8991ptr">ptr</dfn>);</td></tr>
+<tr><th id="508">508</th><td>};</td></tr>
+<tr><th id="509">509</th><td></td></tr>
+<tr><th id="510">510</th><td><i class="doc">/*! <span class="command">\brief</span> Base class of all object reference */</i></td></tr>
+<tr><th id="511">511</th><td><b>class</b> <dfn class="type def" id="tvm::runtime::ObjectRef" title='tvm::runtime::ObjectRef' data-ref="tvm::runtime::ObjectRef" data-ref-filename="tvm..runtime..ObjectRef">ObjectRef</dfn> {</td></tr>
+<tr><th id="512">512</th><td> <b>public</b>:</td></tr>
+<tr><th id="513">513</th><td>  <i class="doc">/*! <span class="command">\brief</span> default constructor */</i></td></tr>
+<tr><th id="514">514</th><td>  <dfn class="decl def fn" id="_ZN3tvm7runtime9ObjectRefC1Ev" title='tvm::runtime::ObjectRef::ObjectRef' data-ref="_ZN3tvm7runtime9ObjectRefC1Ev" data-ref-filename="_ZN3tvm7runtime9ObjectRefC1Ev">ObjectRef</dfn>() = <b>default</b>;</td></tr>
+<tr><th id="515">515</th><td>  <i class="doc">/*! <span class="command">\brief</span> Constructor from existing object ptr */</i></td></tr>
+<tr><th id="516">516</th><td>  <b>explicit</b> <dfn class="decl def fn" id="_ZN3tvm7runtime9ObjectRefC1ENS0_9ObjectPtrINS0_6ObjectEEE" title='tvm::runtime::ObjectRef::ObjectRef' data-ref="_ZN3tvm7runtime9ObjectRefC1ENS0_9ObjectPtrINS0_6ObjectEEE" data-ref-filename="_ZN3tvm7runtime9ObjectRefC1ENS0_9ObjectPtrINS0_6ObjectEEE">ObjectRef</dfn>(<a class="type" href="#tvm::runtime::ObjectPtr" title='tvm::runtime::ObjectPtr' data-ref="tvm::runtime::ObjectPtr" data-ref-filename="tvm..runtime..ObjectPtr">ObjectPtr</a>&lt;<a class="type" href="#tvm::runtime::Object" title='tvm::runtime::Object' data-ref="tvm::runtime::Object" data-ref-filename="tvm..runtime..Object">Object</a>&gt; <dfn class="local col2 decl" id="8992data" title='data' data-type='ObjectPtr&lt;tvm::runtime::Object&gt;' data-ref="8992data" data-ref-filename="8992data">data</dfn>) : <a class="member field" href="#tvm::runtime::ObjectRef::data_" title='tvm::runtime::ObjectRef::data_' data-ref="tvm::runtime::ObjectRef::data_" data-ref-filename="tvm..runtime..ObjectRef..data_">data_</a><a class="ref fn" href="#_ZN3tvm7runtime9ObjectPtrC1ERKNS0_9ObjectPtrIT_EE" title='tvm::runtime::ObjectPtr::ObjectPtr&lt;type-parameter-0-0&gt;' data-ref="_ZN3tvm7runtime9ObjectPtrC1ERKNS0_9ObjectPtrIT_EE" data-ref-filename="_ZN3tvm7runtime9ObjectPtrC1ERKNS0_9ObjectPtrIT_EE">(</a><a class="local col2 ref" href="#8992data" title='data' data-ref="8992data" data-ref-filename="8992data">data</a>) {}</td></tr>
+<tr><th id="517">517</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="518">518</th><td><i class="doc">   * <span class="command">\brief</span> Comparator</i></td></tr>
+<tr><th id="519">519</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">other</span> Another object ref.</i></td></tr>
+<tr><th id="520">520</th><td><i class="doc">   * <span class="command">\return</span> the compare result.</i></td></tr>
+<tr><th id="521">521</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="522">522</th><td>  <em>bool</em> <dfn class="decl def fn" id="_ZNK3tvm7runtime9ObjectRef7same_asERKS1_" title='tvm::runtime::ObjectRef::same_as' data-ref="_ZNK3tvm7runtime9ObjectRef7same_asERKS1_" data-ref-filename="_ZNK3tvm7runtime9ObjectRef7same_asERKS1_">same_as</dfn>(<em>const</em> <a class="type" href="#tvm::runtime::ObjectRef" title='tvm::runtime::ObjectRef' data-ref="tvm::runtime::ObjectRef" data-ref-filename="tvm..runtime..ObjectRef">ObjectRef</a>&amp; <dfn class="local col3 decl" id="8993other" title='other' data-type='const tvm::runtime::ObjectRef &amp;' data-ref="8993other" data-ref-filename="8993other">other</dfn>) <em>const</em> { <b>return</b> <a class="member field" href="#tvm::runtime::ObjectRef::data_" title='tvm::runtime::ObjectRef::data_' data-ref="tvm::runtime::ObjectRef::data_" data-ref-filename="tvm..runtime..ObjectRef..data_">data_</a> <a class="ref fn" href="#_ZNK3tvm7runtime9ObjectPtreqERKNS0_9ObjectPtrIT_EE" title='tvm::runtime::ObjectPtr::operator==' data-ref="_ZNK3tvm7runtime9ObjectPtreqERKNS0_9ObjectPtrIT_EE" data-ref-filename="_ZNK3tvm7runtime9ObjectPtreqERKNS0_9ObjectPtrIT_EE">==</a> <a class="local col3 ref" href="#8993other" title='other' data-ref="8993other" data-ref-filename="8993other">other</a>.<a class="member field" href="#tvm::runtime::ObjectRef::data_" title='tvm::runtime::ObjectRef::data_' data-ref="tvm::runtime::ObjectRef::data_" data-ref-filename="tvm..runtime..ObjectRef..data_">data_</a>; }</td></tr>
+<tr><th id="523">523</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="524">524</th><td><i class="doc">   * <span class="command">\brief</span> Comparator</i></td></tr>
+<tr><th id="525">525</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">other</span> Another object ref.</i></td></tr>
+<tr><th id="526">526</th><td><i class="doc">   * <span class="command">\return</span> the compare result.</i></td></tr>
+<tr><th id="527">527</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="528">528</th><td>  <em>bool</em> <dfn class="decl def fn" id="_ZNK3tvm7runtime9ObjectRefeqERKS1_" title='tvm::runtime::ObjectRef::operator==' data-ref="_ZNK3tvm7runtime9ObjectRefeqERKS1_" data-ref-filename="_ZNK3tvm7runtime9ObjectRefeqERKS1_"><b>operator</b>==</dfn>(<em>const</em> <a class="type" href="#tvm::runtime::ObjectRef" title='tvm::runtime::ObjectRef' data-ref="tvm::runtime::ObjectRef" data-ref-filename="tvm..runtime..ObjectRef">ObjectRef</a>&amp; <dfn class="local col4 decl" id="8994other" title='other' data-type='const tvm::runtime::ObjectRef &amp;' data-ref="8994other" data-ref-filename="8994other">other</dfn>) <em>const</em> { <b>return</b> <a class="member field" href="#tvm::runtime::ObjectRef::data_" title='tvm::runtime::ObjectRef::data_' data-ref="tvm::runtime::ObjectRef::data_" data-ref-filename="tvm..runtime..ObjectRef..data_">data_</a> <a class="ref fn" href="#_ZNK3tvm7runtime9ObjectPtreqERKNS0_9ObjectPtrIT_EE" title='tvm::runtime::ObjectPtr::operator==' data-ref="_ZNK3tvm7runtime9ObjectPtreqERKNS0_9ObjectPtrIT_EE" data-ref-filename="_ZNK3tvm7runtime9ObjectPtreqERKNS0_9ObjectPtrIT_EE">==</a> <a class="local col4 ref" href="#8994other" title='other' data-ref="8994other" data-ref-filename="8994other">other</a>.<a class="member field" href="#tvm::runtime::ObjectRef::data_" title='tvm::runtime::ObjectRef::data_' data-ref="tvm::runtime::ObjectRef::data_" data-ref-filename="tvm..runtime..ObjectRef..data_">data_</a>; }</td></tr>
+<tr><th id="529">529</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="530">530</th><td><i class="doc">   * <span class="command">\brief</span> Comparator</i></td></tr>
+<tr><th id="531">531</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">other</span> Another object ref.</i></td></tr>
+<tr><th id="532">532</th><td><i class="doc">   * <span class="command">\return</span> the compare result.</i></td></tr>
+<tr><th id="533">533</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="534">534</th><td>  <em>bool</em> <dfn class="decl def fn" id="_ZNK3tvm7runtime9ObjectRefneERKS1_" title='tvm::runtime::ObjectRef::operator!=' data-ref="_ZNK3tvm7runtime9ObjectRefneERKS1_" data-ref-filename="_ZNK3tvm7runtime9ObjectRefneERKS1_"><b>operator</b>!=</dfn>(<em>const</em> <a class="type" href="#tvm::runtime::ObjectRef" title='tvm::runtime::ObjectRef' data-ref="tvm::runtime::ObjectRef" data-ref-filename="tvm..runtime..ObjectRef">ObjectRef</a>&amp; <dfn class="local col5 decl" id="8995other" title='other' data-type='const tvm::runtime::ObjectRef &amp;' data-ref="8995other" data-ref-filename="8995other">other</dfn>) <em>const</em> { <b>return</b> <a class="member field" href="#tvm::runtime::ObjectRef::data_" title='tvm::runtime::ObjectRef::data_' data-ref="tvm::runtime::ObjectRef::data_" data-ref-filename="tvm..runtime..ObjectRef..data_">data_</a> <a class="ref fn" href="#_ZNK3tvm7runtime9ObjectPtrneERKNS0_9ObjectPtrIT_EE" title='tvm::runtime::ObjectPtr::operator!=' data-ref="_ZNK3tvm7runtime9ObjectPtrneERKNS0_9ObjectPtrIT_EE" data-ref-filename="_ZNK3tvm7runtime9ObjectPtrneERKNS0_9ObjectPtrIT_EE">!=</a> <a class="local col5 ref" href="#8995other" title='other' data-ref="8995other" data-ref-filename="8995other">other</a>.<a class="member field" href="#tvm::runtime::ObjectRef::data_" title='tvm::runtime::ObjectRef::data_' data-ref="tvm::runtime::ObjectRef::data_" data-ref-filename="tvm..runtime..ObjectRef..data_">data_</a>; }</td></tr>
+<tr><th id="535">535</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="536">536</th><td><i class="doc">   * <span class="command">\brief</span> Comparator</i></td></tr>
+<tr><th id="537">537</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">other</span> Another object ref by address.</i></td></tr>
+<tr><th id="538">538</th><td><i class="doc">   * <span class="command">\return</span> the compare result.</i></td></tr>
+<tr><th id="539">539</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="540">540</th><td>  <em>bool</em> <dfn class="decl def fn" id="_ZNK3tvm7runtime9ObjectRefltERKS1_" title='tvm::runtime::ObjectRef::operator&lt;' data-ref="_ZNK3tvm7runtime9ObjectRefltERKS1_" data-ref-filename="_ZNK3tvm7runtime9ObjectRefltERKS1_"><b>operator</b>&lt;</dfn>(<em>const</em> <a class="type" href="#tvm::runtime::ObjectRef" title='tvm::runtime::ObjectRef' data-ref="tvm::runtime::ObjectRef" data-ref-filename="tvm..runtime..ObjectRef">ObjectRef</a>&amp; <dfn class="local col6 decl" id="8996other" title='other' data-type='const tvm::runtime::ObjectRef &amp;' data-ref="8996other" data-ref-filename="8996other">other</dfn>) <em>const</em> { <b>return</b> <a class="member field" href="#tvm::runtime::ObjectRef::data_" title='tvm::runtime::ObjectRef::data_' data-ref="tvm::runtime::ObjectRef::data_" data-ref-filename="tvm..runtime..ObjectRef..data_">data_</a>.<a class="ref fn" href="#_ZNK3tvm7runtime9ObjectPtr3getEv" title='tvm::runtime::ObjectPtr::get' data-ref="_ZNK3tvm7runtime9ObjectPtr3getEv" data-ref-filename="_ZNK3tvm7runtime9ObjectPtr3getEv">get</a>() &lt; <a class="local col6 ref" href="#8996other" title='other' data-ref="8996other" data-ref-filename="8996other">other</a>.<a class="member field" href="#tvm::runtime::ObjectRef::data_" title='tvm::runtime::ObjectRef::data_' data-ref="tvm::runtime::ObjectRef::data_" data-ref-filename="tvm..runtime..ObjectRef..data_">data_</a>.<a class="ref fn" href="#_ZNK3tvm7runtime9ObjectPtr3getEv" title='tvm::runtime::ObjectPtr::get' data-ref="_ZNK3tvm7runtime9ObjectPtr3getEv" data-ref-filename="_ZNK3tvm7runtime9ObjectPtr3getEv">get</a>(); }</td></tr>
+<tr><th id="541">541</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="542">542</th><td><i class="doc">   * <span class="command">\return</span> whether the object is defined(not null).</i></td></tr>
+<tr><th id="543">543</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="544">544</th><td>  <em>bool</em> <dfn class="decl def fn" id="_ZNK3tvm7runtime9ObjectRef7definedEv" title='tvm::runtime::ObjectRef::defined' data-ref="_ZNK3tvm7runtime9ObjectRef7definedEv" data-ref-filename="_ZNK3tvm7runtime9ObjectRef7definedEv">defined</dfn>() <em>const</em> { <b>return</b> <a class="member field" href="#tvm::runtime::ObjectRef::data_" title='tvm::runtime::ObjectRef::data_' data-ref="tvm::runtime::ObjectRef::data_" data-ref-filename="tvm..runtime..ObjectRef..data_">data_</a> <a class="ref fn" href="#_ZNK3tvm7runtime9ObjectPtrneEDn" title='tvm::runtime::ObjectPtr::operator!=' data-ref="_ZNK3tvm7runtime9ObjectPtrneEDn" data-ref-filename="_ZNK3tvm7runtime9ObjectPtrneEDn">!=</a> <b>nullptr</b>; }</td></tr>
+<tr><th id="545">545</th><td>  <i class="doc">/*! <span class="command">\return</span> the internal object pointer */</i></td></tr>
+<tr><th id="546">546</th><td>  <em>const</em> <a class="type" href="#tvm::runtime::Object" title='tvm::runtime::Object' data-ref="tvm::runtime::Object" data-ref-filename="tvm..runtime..Object">Object</a>* <dfn class="decl def fn" id="_ZNK3tvm7runtime9ObjectRef3getEv" title='tvm::runtime::ObjectRef::get' data-ref="_ZNK3tvm7runtime9ObjectRef3getEv" data-ref-filename="_ZNK3tvm7runtime9ObjectRef3getEv">get</dfn>() <em>const</em> { <b>return</b> <a class="member field" href="#tvm::runtime::ObjectRef::data_" title='tvm::runtime::ObjectRef::data_' data-ref="tvm::runtime::ObjectRef::data_" data-ref-filename="tvm..runtime..ObjectRef..data_">data_</a>.<a class="ref fn" href="#_ZNK3tvm7runtime9ObjectPtr3getEv" title='tvm::runtime::ObjectPtr::get' data-ref="_ZNK3tvm7runtime9ObjectPtr3getEv" data-ref-filename="_ZNK3tvm7runtime9ObjectPtr3getEv">get</a>(); }</td></tr>
+<tr><th id="547">547</th><td>  <i class="doc">/*! <span class="command">\return</span> the internal object pointer */</i></td></tr>
+<tr><th id="548">548</th><td>  <em>const</em> <a class="type" href="#tvm::runtime::Object" title='tvm::runtime::Object' data-ref="tvm::runtime::Object" data-ref-filename="tvm..runtime..Object">Object</a>* <dfn class="decl def fn" id="_ZNK3tvm7runtime9ObjectRefptEv" title='tvm::runtime::ObjectRef::operator-&gt;' data-ref="_ZNK3tvm7runtime9ObjectRefptEv" data-ref-filename="_ZNK3tvm7runtime9ObjectRefptEv"><b>operator</b>-&gt;</dfn>() <em>const</em> { <b>return</b> <a class="member fn" href="#_ZNK3tvm7runtime9ObjectRef3getEv" title='tvm::runtime::ObjectRef::get' data-ref="_ZNK3tvm7runtime9ObjectRef3getEv" data-ref-filename="_ZNK3tvm7runtime9ObjectRef3getEv">get</a>(); }</td></tr>
+<tr><th id="549">549</th><td>  <i class="doc">/*! <span class="command">\return</span> whether the reference is unique */</i></td></tr>
+<tr><th id="550">550</th><td>  <em>bool</em> <dfn class="decl def fn" id="_ZNK3tvm7runtime9ObjectRef6uniqueEv" title='tvm::runtime::ObjectRef::unique' data-ref="_ZNK3tvm7runtime9ObjectRef6uniqueEv" data-ref-filename="_ZNK3tvm7runtime9ObjectRef6uniqueEv">unique</dfn>() <em>const</em> { <b>return</b> <a class="member field" href="#tvm::runtime::ObjectRef::data_" title='tvm::runtime::ObjectRef::data_' data-ref="tvm::runtime::ObjectRef::data_" data-ref-filename="tvm..runtime..ObjectRef..data_">data_</a>.<a class="ref fn" href="#_ZNK3tvm7runtime9ObjectPtr6uniqueEv" title='tvm::runtime::ObjectPtr::unique' data-ref="_ZNK3tvm7runtime9ObjectPtr6uniqueEv" data-ref-filename="_ZNK3tvm7runtime9ObjectPtr6uniqueEv">unique</a>(); }</td></tr>
+<tr><th id="551">551</th><td>  <i class="doc">/*! <span class="command">\return</span> The use count of the ptr, for debug purposes */</i></td></tr>
+<tr><th id="552">552</th><td>  <em>int</em> <dfn class="decl def fn" id="_ZNK3tvm7runtime9ObjectRef9use_countEv" title='tvm::runtime::ObjectRef::use_count' data-ref="_ZNK3tvm7runtime9ObjectRef9use_countEv" data-ref-filename="_ZNK3tvm7runtime9ObjectRef9use_countEv">use_count</dfn>() <em>const</em> { <b>return</b> <a class="member field" href="#tvm::runtime::ObjectRef::data_" title='tvm::runtime::ObjectRef::data_' data-ref="tvm::runtime::ObjectRef::data_" data-ref-filename="tvm..runtime..ObjectRef..data_">data_</a>.<a class="ref fn" href="#_ZNK3tvm7runtime9ObjectPtr9use_countEv" title='tvm::runtime::ObjectPtr::use_count' data-ref="_ZNK3tvm7runtime9ObjectPtr9use_countEv" data-ref-filename="_ZNK3tvm7runtime9ObjectPtr9use_countEv">use_count</a>(); }</td></tr>
+<tr><th id="553">553</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="554">554</th><td><i class="doc">   * <span class="command">\brief</span> Try to downcast the internal Object to a</i></td></tr>
+<tr><th id="555">555</th><td><i class="doc">   *  raw pointer of a corresponding type.</i></td></tr>
+<tr><th id="556">556</th><td><i class="doc">   *</i></td></tr>
+<tr><th id="557">557</th><td><i class="doc">   *  The function will return a nullptr if the cast failed.</i></td></tr>
+<tr><th id="558">558</th><td><i class="doc">   *</i></td></tr>
+<tr><th id="559">559</th><td><i class="doc">   * if (const Add *add = node_ref.As&lt;Add&gt;()) {</i></td></tr>
+<tr><th id="560">560</th><td><i class="doc">   *   // This is an add node</i></td></tr>
+<tr><th id="561">561</th><td><i class="doc">   * }</i></td></tr>
+<tr><th id="562">562</th><td><i class="doc">   * <span class="command">\tparam</span> <span class="arg">ObjectType</span> the target type, must be a subtype of Object/</i></td></tr>
+<tr><th id="563">563</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="564">564</th><td>  <b>template</b> &lt;<b>typename</b> ObjectType&gt;</td></tr>
+<tr><th id="565">565</th><td>  <b>inline</b> <em>const</em> ObjectType* <a class="decl fn" href="#_ZNK3tvm7runtime9ObjectRef2asEv" title='tvm::runtime::ObjectRef::as' data-ref="_ZNK3tvm7runtime9ObjectRef2asEv" data-ref-filename="_ZNK3tvm7runtime9ObjectRef2asEv">as</a>() <em>const</em>;</td></tr>
+<tr><th id="566">566</th><td></td></tr>
+<tr><th id="567">567</th><td>  <i class="doc">/*! <span class="command">\brief</span> type indicate the container type. */</i></td></tr>
+<tr><th id="568">568</th><td>  <b>using</b> <dfn class="typedef" id="tvm::runtime::ObjectRef::ContainerType" title='tvm::runtime::ObjectRef::ContainerType' data-type='tvm::runtime::Object' data-ref="tvm::runtime::ObjectRef::ContainerType" data-ref-filename="tvm..runtime..ObjectRef..ContainerType">ContainerType</dfn> = <a class="type" href="#tvm::runtime::Object" title='tvm::runtime::Object' data-ref="tvm::runtime::Object" data-ref-filename="tvm..runtime..Object">Object</a>;</td></tr>
+<tr><th id="569">569</th><td>  <i>// Default type properties for the reference class.</i></td></tr>
+<tr><th id="570">570</th><td>  <em>static</em> <b>constexpr</b> <em>bool</em> <dfn class="decl" id="tvm::runtime::ObjectRef::_type_is_nullable" title='tvm::runtime::ObjectRef::_type_is_nullable' data-ref="tvm::runtime::ObjectRef::_type_is_nullable" data-ref-filename="tvm..runtime..ObjectRef.._type_is_nullable">_type_is_nullable</dfn> = <b>true</b>;</td></tr>
+<tr><th id="571">571</th><td></td></tr>
+<tr><th id="572">572</th><td> <b>protected</b>:</td></tr>
+<tr><th id="573">573</th><td>  <i class="doc">/*! <span class="command">\brief</span> Internal pointer that backs the reference. */</i></td></tr>
+<tr><th id="574">574</th><td>  <a class="type" href="#tvm::runtime::ObjectPtr" title='tvm::runtime::ObjectPtr' data-ref="tvm::runtime::ObjectPtr" data-ref-filename="tvm..runtime..ObjectPtr">ObjectPtr</a>&lt;<a class="type" href="#tvm::runtime::Object" title='tvm::runtime::Object' data-ref="tvm::runtime::Object" data-ref-filename="tvm..runtime..Object">Object</a>&gt; <dfn class="decl field" id="tvm::runtime::ObjectRef::data_" title='tvm::runtime::ObjectRef::data_' data-ref="tvm::runtime::ObjectRef::data_" data-ref-filename="tvm..runtime..ObjectRef..data_">data_</dfn>;</td></tr>
+<tr><th id="575">575</th><td>  <i class="doc">/*! <span class="command">\return</span> return a mutable internal ptr, can be used by sub-classes. */</i></td></tr>
+<tr><th id="576">576</th><td>  <a class="type" href="#tvm::runtime::Object" title='tvm::runtime::Object' data-ref="tvm::runtime::Object" data-ref-filename="tvm..runtime..Object">Object</a>* <dfn class="decl def fn" id="_ZNK3tvm7runtime9ObjectRef11get_mutableEv" title='tvm::runtime::ObjectRef::get_mutable' data-ref="_ZNK3tvm7runtime9ObjectRef11get_mutableEv" data-ref-filename="_ZNK3tvm7runtime9ObjectRef11get_mutableEv">get_mutable</dfn>() <em>const</em> { <b>return</b> <a class="member field" href="#tvm::runtime::ObjectRef::data_" title='tvm::runtime::ObjectRef::data_' data-ref="tvm::runtime::ObjectRef::data_" data-ref-filename="tvm..runtime..ObjectRef..data_">data_</a>.<a class="ref fn" href="#_ZNK3tvm7runtime9ObjectPtr3getEv" title='tvm::runtime::ObjectPtr::get' data-ref="_ZNK3tvm7runtime9ObjectPtr3getEv" data-ref-filename="_ZNK3tvm7runtime9ObjectPtr3getEv">get</a>(); }</td></tr>
+<tr><th id="577">577</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="578">578</th><td><i class="doc">   * <span class="command">\brief</span> Internal helper function downcast a ref without check.</i></td></tr>
+<tr><th id="579">579</th><td><i class="doc">   * <span class="command">\note</span> Only used for internal dev purposes.</i></td></tr>
+<tr><th id="580">580</th><td><i class="doc">   * <span class="command">\tparam</span> <span class="arg">T</span> The target reference type.</i></td></tr>
+<tr><th id="581">581</th><td><i class="doc">   * <span class="command">\return</span> The casted result.</i></td></tr>
+<tr><th id="582">582</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="583">583</th><td>  <b>template</b> &lt;<b>typename</b> T&gt;</td></tr>
+<tr><th id="584">584</th><td>  <em>static</em> T <dfn class="decl def fn" id="_ZN3tvm7runtime9ObjectRef15DowncastNoCheckES1_" title='tvm::runtime::ObjectRef::DowncastNoCheck' data-ref="_ZN3tvm7runtime9ObjectRef15DowncastNoCheckES1_" data-ref-filename="_ZN3tvm7runtime9ObjectRef15DowncastNoCheckES1_">DowncastNoCheck</dfn>(<a class="type" href="#tvm::runtime::ObjectRef" title='tvm::runtime::ObjectRef' data-ref="tvm::runtime::ObjectRef" data-ref-filename="tvm..runtime..ObjectRef">ObjectRef</a> <dfn class="local col7 decl" id="8997ref" title='ref' data-type='tvm::runtime::ObjectRef' data-ref="8997ref" data-ref-filename="8997ref">ref</dfn>) {</td></tr>
+<tr><th id="585">585</th><td>    <b>return</b> T(<span class="namespace">std::</span><a class="ref fn" href="../../../../include/c++/10/bits/move.h.html#_ZSt4moveOT_" title='std::move' data-ref="_ZSt4moveOT_" data-ref-filename="_ZSt4moveOT_">move</a>(<span class='refarg'><a class="local col7 ref" href="#8997ref" title='ref' data-ref="8997ref" data-ref-filename="8997ref">ref</a>.<a class="member field" href="#tvm::runtime::ObjectRef::data_" title='tvm::runtime::ObjectRef::data_' data-ref="tvm::runtime::ObjectRef::data_" data-ref-filename="tvm..runtime..ObjectRef..data_">data_</a></span>));</td></tr>
+<tr><th id="586">586</th><td>  }</td></tr>
+<tr><th id="587">587</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="588">588</th><td><i class="doc">   * <span class="command">\brief</span> Clear the object ref data field without DecRef</i></td></tr>
+<tr><th id="589">589</th><td><i class="doc">   *        after we successfully moved the field.</i></td></tr>
+<tr><th id="590">590</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">ref</span> The reference data.</i></td></tr>
+<tr><th id="591">591</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="592">592</th><td>  <em>static</em> <em>void</em> <dfn class="decl def fn" id="_ZN3tvm7runtime9ObjectRef17FFIClearAfterMoveEPS1_" title='tvm::runtime::ObjectRef::FFIClearAfterMove' data-ref="_ZN3tvm7runtime9ObjectRef17FFIClearAfterMoveEPS1_" data-ref-filename="_ZN3tvm7runtime9ObjectRef17FFIClearAfterMoveEPS1_">FFIClearAfterMove</dfn>(<a class="type" href="#tvm::runtime::ObjectRef" title='tvm::runtime::ObjectRef' data-ref="tvm::runtime::ObjectRef" data-ref-filename="tvm..runtime..ObjectRef">ObjectRef</a>* <dfn class="local col8 decl" id="8998ref" title='ref' data-type='tvm::runtime::ObjectRef *' data-ref="8998ref" data-ref-filename="8998ref">ref</dfn>) { <a class="local col8 ref" href="#8998ref" title='ref' data-ref="8998ref" data-ref-filename="8998ref">ref</a>-&gt;<a class="member field" href="#tvm::runtime::ObjectRef::data_" title='tvm::runtime::ObjectRef::data_' data-ref="tvm::runtime::ObjectRef::data_" data-ref-filename="tvm..runtime..ObjectRef..data_">data_</a>.<a class="ref field" href="#tvm::runtime::ObjectPtr::data_" title='tvm::runtime::ObjectPtr&lt;tvm::runtime::Object&gt;::data_' data-ref="tvm::runtime::ObjectPtr::data_" data-ref-filename="tvm..runtime..ObjectPtr..data_">data_</a> = <b>nullptr</b>; }</td></tr>
+<tr><th id="593">593</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="594">594</th><td><i class="doc">   * <span class="command">\brief</span> Internal helper function get data_ as ObjectPtr of ObjectType.</i></td></tr>
+<tr><th id="595">595</th><td><i class="doc">   * <span class="command">\note</span> only used for internal dev purpose.</i></td></tr>
+<tr><th id="596">596</th><td><i class="doc">   * <span class="command">\tparam</span> <span class="arg">ObjectType</span> The corresponding object type.</i></td></tr>
+<tr><th id="597">597</th><td><i class="doc">   * <span class="command">\return</span> the corresponding type.</i></td></tr>
+<tr><th id="598">598</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="599">599</th><td>  <b>template</b> &lt;<b>typename</b> ObjectType&gt;</td></tr>
+<tr><th id="600">600</th><td>  <em>static</em> <a class="type" href="#tvm::runtime::ObjectPtr" title='tvm::runtime::ObjectPtr' data-ref="tvm::runtime::ObjectPtr" data-ref-filename="tvm..runtime..ObjectPtr">ObjectPtr</a>&lt;ObjectType&gt; <dfn class="decl def fn" id="_ZN3tvm7runtime9ObjectRef10GetDataPtrERKS1_" title='tvm::runtime::ObjectRef::GetDataPtr' data-ref="_ZN3tvm7runtime9ObjectRef10GetDataPtrERKS1_" data-ref-filename="_ZN3tvm7runtime9ObjectRef10GetDataPtrERKS1_">GetDataPtr</dfn>(<em>const</em> <a class="type" href="#tvm::runtime::ObjectRef" title='tvm::runtime::ObjectRef' data-ref="tvm::runtime::ObjectRef" data-ref-filename="tvm..runtime..ObjectRef">ObjectRef</a>&amp; <dfn class="local col9 decl" id="8999ref" title='ref' data-type='const tvm::runtime::ObjectRef &amp;' data-ref="8999ref" data-ref-filename="8999ref">ref</dfn>) {</td></tr>
+<tr><th id="601">601</th><td>    <b>return</b> <a class="type" href="#tvm::runtime::ObjectPtr" title='tvm::runtime::ObjectPtr' data-ref="tvm::runtime::ObjectPtr" data-ref-filename="tvm..runtime..ObjectPtr">ObjectPtr</a>&lt;ObjectType&gt;(<a class="local col9 ref" href="#8999ref" title='ref' data-ref="8999ref" data-ref-filename="8999ref">ref</a>.<a class="member field" href="#tvm::runtime::ObjectRef::data_" title='tvm::runtime::ObjectRef::data_' data-ref="tvm::runtime::ObjectRef::data_" data-ref-filename="tvm..runtime..ObjectRef..data_">data_</a>.<a class="ref field" href="#tvm::runtime::ObjectPtr::data_" title='tvm::runtime::ObjectPtr&lt;tvm::runtime::Object&gt;::data_' data-ref="tvm::runtime::ObjectPtr::data_" data-ref-filename="tvm..runtime..ObjectPtr..data_">data_</a>);</td></tr>
+<tr><th id="602">602</th><td>  }</td></tr>
+<tr><th id="603">603</th><td>  <i>// friend classes.</i></td></tr>
+<tr><th id="604">604</th><td>  <b>friend</b> <b>struct</b> <a class="type" href="#tvm::runtime::ObjectPtrHash" title='tvm::runtime::ObjectPtrHash' data-ref="tvm::runtime::ObjectPtrHash" data-ref-filename="tvm..runtime..ObjectPtrHash">ObjectPtrHash</a>;</td></tr>
+<tr><th id="605">605</th><td>  <b>friend</b> <b>class</b> <a class="type" href="packed_func.h.html#tvm::runtime::TVMRetValue" title='tvm::runtime::TVMRetValue' data-ref="tvm::runtime::TVMRetValue" data-ref-filename="tvm..runtime..TVMRetValue">TVMRetValue</a>;</td></tr>
+<tr><th id="606">606</th><td>  <b>friend</b> <b>class</b> <a class="type" href="packed_func.h.html#tvm::runtime::TVMArgsSetter" title='tvm::runtime::TVMArgsSetter' data-ref="tvm::runtime::TVMArgsSetter" data-ref-filename="tvm..runtime..TVMArgsSetter">TVMArgsSetter</a>;</td></tr>
+<tr><th id="607">607</th><td>  <b>friend</b> <b>class</b> <a class="type" href="#tvm::runtime::ObjectInternal" title='tvm::runtime::ObjectInternal' data-ref="tvm::runtime::ObjectInternal" data-ref-filename="tvm..runtime..ObjectInternal">ObjectInternal</a>;</td></tr>
+<tr><th id="608">608</th><td>  <b>template</b> &lt;<b>typename</b> SubRef, <b>typename</b> BaseRef&gt;</td></tr>
+<tr><th id="609">609</th><td>  <b>friend</b> SubRef <a class="decl fn" href="#_ZN3tvm7runtime8DowncastET0_" title='tvm::runtime::Downcast' data-ref="_ZN3tvm7runtime8DowncastET0_" data-ref-filename="_ZN3tvm7runtime8DowncastET0_">Downcast</a>(BaseRef <dfn class="local col0 decl" id="9000ref" title='ref' data-type='BaseRef' data-ref="9000ref" data-ref-filename="9000ref">ref</dfn>);</td></tr>
+<tr><th id="610">610</th><td>};</td></tr>
+<tr><th id="611">611</th><td></td></tr>
+<tr><th id="612">612</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="613">613</th><td><i class="doc"> * <span class="command">\brief</span> Get an object ptr type from a raw object ptr.</i></td></tr>
+<tr><th id="614">614</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="615">615</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">ptr</span> The object pointer</i></td></tr>
+<tr><th id="616">616</th><td><i class="doc"> * <span class="command">\tparam</span> <span class="arg">BaseType</span> The reference type</i></td></tr>
+<tr><th id="617">617</th><td><i class="doc"> * <span class="command">\tparam</span> <span class="arg">ObjectType</span> The object type</i></td></tr>
+<tr><th id="618">618</th><td><i class="doc"> * <span class="command">\return</span> The corresponding RefType</i></td></tr>
+<tr><th id="619">619</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="620">620</th><td><b>template</b> &lt;<b>typename</b> BaseType, <b>typename</b> ObjectType&gt;</td></tr>
+<tr><th id="621">621</th><td><b>inline</b> <a class="type" href="#tvm::runtime::ObjectPtr" title='tvm::runtime::ObjectPtr' data-ref="tvm::runtime::ObjectPtr" data-ref-filename="tvm..runtime..ObjectPtr">ObjectPtr</a>&lt;BaseType&gt; <a class="decl fn" href="#_ZN3tvm7runtime12GetObjectPtrEPT0_" title='tvm::runtime::GetObjectPtr' data-ref="_ZN3tvm7runtime12GetObjectPtrEPT0_" data-ref-filename="_ZN3tvm7runtime12GetObjectPtrEPT0_">GetObjectPtr</a>(ObjectType* <dfn class="local col1 decl" id="9001ptr" title='ptr' data-type='ObjectType *' data-ref="9001ptr" data-ref-filename="9001ptr">ptr</dfn>);</td></tr>
+<tr><th id="622">622</th><td></td></tr>
+<tr><th id="623">623</th><td><i class="doc">/*! <span class="command">\brief</span> ObjectRef hash functor */</i></td></tr>
+<tr><th id="624">624</th><td><b>struct</b> <dfn class="type def" id="tvm::runtime::ObjectPtrHash" title='tvm::runtime::ObjectPtrHash' data-ref="tvm::runtime::ObjectPtrHash" data-ref-filename="tvm..runtime..ObjectPtrHash">ObjectPtrHash</dfn> {</td></tr>
+<tr><th id="625">625</th><td>  <span class='typedef' title='size_t' data-type='unsigned long' data-ref="size_t" data-ref-filename="size_t">size_t</span> <dfn class="decl def fn" id="_ZNK3tvm7runtime13ObjectPtrHashclERKNS0_9ObjectRefE" title='tvm::runtime::ObjectPtrHash::operator()' data-ref="_ZNK3tvm7runtime13ObjectPtrHashclERKNS0_9ObjectRefE" data-ref-filename="_ZNK3tvm7runtime13ObjectPtrHashclERKNS0_9ObjectRefE"><b>operator</b>()</dfn>(<em>const</em> <a class="type" href="#tvm::runtime::ObjectRef" title='tvm::runtime::ObjectRef' data-ref="tvm::runtime::ObjectRef" data-ref-filename="tvm..runtime..ObjectRef">ObjectRef</a>&amp; <dfn class="local col2 decl" id="9002a" title='a' data-type='const tvm::runtime::ObjectRef &amp;' data-ref="9002a" data-ref-filename="9002a">a</dfn>) <em>const</em> { <b>return</b> <a class="member fn" href="#_ZNK3tvm7runtime13ObjectPtrHashclERKNS0_9ObjectPtrIT_EE" title='tvm::runtime::ObjectPtrHash::operator()' data-ref="_ZNK3tvm7runtime13ObjectPtrHashclERKNS0_9ObjectPtrIT_EE" data-ref-filename="_ZNK3tvm7runtime13ObjectPtrHashclERKNS0_9ObjectPtrIT_EE"><b>operator</b>()</a>(<a class="local col2 ref" href="#9002a" title='a' data-ref="9002a" data-ref-filename="9002a">a</a>.<a class="ref field" href="#tvm::runtime::ObjectRef::data_" title='tvm::runtime::ObjectRef::data_' data-ref="tvm::runtime::ObjectRef::data_" data-ref-filename="tvm..runtime..ObjectRef..data_">data_</a>); }</td></tr>
+<tr><th id="626">626</th><td></td></tr>
+<tr><th id="627">627</th><td>  <b>template</b> &lt;<b>typename</b> T&gt;</td></tr>
+<tr><th id="628">628</th><td>  <span class='typedef' title='size_t' data-type='unsigned long' data-ref="size_t" data-ref-filename="size_t">size_t</span> <dfn class="decl def fn" id="_ZNK3tvm7runtime13ObjectPtrHashclERKNS0_9ObjectPtrIT_EE" title='tvm::runtime::ObjectPtrHash::operator()' data-ref="_ZNK3tvm7runtime13ObjectPtrHashclERKNS0_9ObjectPtrIT_EE" data-ref-filename="_ZNK3tvm7runtime13ObjectPtrHashclERKNS0_9ObjectPtrIT_EE"><b>operator</b>()</dfn>(<em>const</em> <a class="type" href="#tvm::runtime::ObjectPtr" title='tvm::runtime::ObjectPtr' data-ref="tvm::runtime::ObjectPtr" data-ref-filename="tvm..runtime..ObjectPtr">ObjectPtr</a>&lt;T&gt;&amp; <dfn class="local col3 decl" id="9003a" title='a' data-type='const ObjectPtr&lt;T&gt; &amp;' data-ref="9003a" data-ref-filename="9003a">a</dfn>) <em>const</em> {</td></tr>
+<tr><th id="629">629</th><td>    <b>return</b> <span class="namespace">std::</span><a class="type" href="../../../../include/c++/10/bits/functional_hash.h.html#std::hash" title='std::hash' data-ref="std::hash" data-ref-filename="std..hash">hash</a>&lt;<a class="type" href="#tvm::runtime::Object" title='tvm::runtime::Object' data-ref="tvm::runtime::Object" data-ref-filename="tvm..runtime..Object">Object</a>*&gt;<a class="ref fn" href="../../../../include/c++/10/bits/functional_hash.h.html#106" title='std::hash&lt;tvm::runtime::Object *&gt;::hash' data-ref="_ZNSt4hashIPN3tvm7runtime6ObjectEEC1Ev" data-ref-filename="_ZNSt4hashIPN3tvm7runtime6ObjectEEC1Ev">(</a>)(<a class="local col3 ref" href="#9003a" title='a' data-ref="9003a" data-ref-filename="9003a">a</a>.get());</td></tr>
+<tr><th id="630">630</th><td>  }</td></tr>
+<tr><th id="631">631</th><td>};</td></tr>
+<tr><th id="632">632</th><td></td></tr>
+<tr><th id="633">633</th><td><i class="doc">/*! <span class="command">\brief</span> ObjectRef equal functor */</i></td></tr>
+<tr><th id="634">634</th><td><b>struct</b> <dfn class="type def" id="tvm::runtime::ObjectPtrEqual" title='tvm::runtime::ObjectPtrEqual' data-ref="tvm::runtime::ObjectPtrEqual" data-ref-filename="tvm..runtime..ObjectPtrEqual">ObjectPtrEqual</dfn> {</td></tr>
+<tr><th id="635">635</th><td>  <em>bool</em> <dfn class="decl def fn" id="_ZNK3tvm7runtime14ObjectPtrEqualclERKNS0_9ObjectRefES4_" title='tvm::runtime::ObjectPtrEqual::operator()' data-ref="_ZNK3tvm7runtime14ObjectPtrEqualclERKNS0_9ObjectRefES4_" data-ref-filename="_ZNK3tvm7runtime14ObjectPtrEqualclERKNS0_9ObjectRefES4_"><b>operator</b>()</dfn>(<em>const</em> <a class="type" href="#tvm::runtime::ObjectRef" title='tvm::runtime::ObjectRef' data-ref="tvm::runtime::ObjectRef" data-ref-filename="tvm..runtime..ObjectRef">ObjectRef</a>&amp; <dfn class="local col4 decl" id="9004a" title='a' data-type='const tvm::runtime::ObjectRef &amp;' data-ref="9004a" data-ref-filename="9004a">a</dfn>, <em>const</em> <a class="type" href="#tvm::runtime::ObjectRef" title='tvm::runtime::ObjectRef' data-ref="tvm::runtime::ObjectRef" data-ref-filename="tvm..runtime..ObjectRef">ObjectRef</a>&amp; <dfn class="local col5 decl" id="9005b" title='b' data-type='const tvm::runtime::ObjectRef &amp;' data-ref="9005b" data-ref-filename="9005b">b</dfn>) <em>const</em> { <b>return</b> <a class="local col4 ref" href="#9004a" title='a' data-ref="9004a" data-ref-filename="9004a">a</a>.<a class="ref fn" href="#_ZNK3tvm7runtime9ObjectRef7same_asERKS1_" title='tvm::runtime::ObjectRef::same_as' data-ref="_ZNK3tvm7runtime9ObjectRef7same_asERKS1_" data-ref-filename="_ZNK3tvm7runtime9ObjectRef7same_asERKS1_">same_as</a>(<a class="local col5 ref" href="#9005b" title='b' data-ref="9005b" data-ref-filename="9005b">b</a>); }</td></tr>
+<tr><th id="636">636</th><td></td></tr>
+<tr><th id="637">637</th><td>  <b>template</b> &lt;<b>typename</b> T&gt;</td></tr>
+<tr><th id="638">638</th><td>  <span class='typedef' title='size_t' data-type='unsigned long' data-ref="size_t" data-ref-filename="size_t">size_t</span> <dfn class="decl def fn" id="_ZNK3tvm7runtime14ObjectPtrEqualclERKNS0_9ObjectPtrIT_EES6_" title='tvm::runtime::ObjectPtrEqual::operator()' data-ref="_ZNK3tvm7runtime14ObjectPtrEqualclERKNS0_9ObjectPtrIT_EES6_" data-ref-filename="_ZNK3tvm7runtime14ObjectPtrEqualclERKNS0_9ObjectPtrIT_EES6_"><b>operator</b>()</dfn>(<em>const</em> <a class="type" href="#tvm::runtime::ObjectPtr" title='tvm::runtime::ObjectPtr' data-ref="tvm::runtime::ObjectPtr" data-ref-filename="tvm..runtime..ObjectPtr">ObjectPtr</a>&lt;T&gt;&amp; <dfn class="local col6 decl" id="9006a" title='a' data-type='const ObjectPtr&lt;T&gt; &amp;' data-ref="9006a" data-ref-filename="9006a">a</dfn>, <em>const</em> <a class="type" href="#tvm::runtime::ObjectPtr" title='tvm::runtime::ObjectPtr' data-ref="tvm::runtime::ObjectPtr" data-ref-filename="tvm..runtime..ObjectPtr">ObjectPtr</a>&lt;T&gt;&amp; <dfn class="local col7 decl" id="9007b" title='b' data-type='const ObjectPtr&lt;T&gt; &amp;' data-ref="9007b" data-ref-filename="9007b">b</dfn>) <em>const</em> {</td></tr>
+<tr><th id="639">639</th><td>    <b>return</b> <a class="local col6 ref" href="#9006a" title='a' data-ref="9006a" data-ref-filename="9006a">a</a> == <a class="local col7 ref" href="#9007b" title='b' data-ref="9007b" data-ref-filename="9007b">b</a>;</td></tr>
+<tr><th id="640">640</th><td>  }</td></tr>
+<tr><th id="641">641</th><td>};</td></tr>
+<tr><th id="642">642</th><td></td></tr>
+<tr><th id="643">643</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="644">644</th><td><i class="doc"> * <span class="command">\brief</span> helper macro to declare a base object type that can be inherited.</i></td></tr>
+<tr><th id="645">645</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">TypeName</span> The name of the current type.</i></td></tr>
+<tr><th id="646">646</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">ParentType</span> The name of the ParentType</i></td></tr>
+<tr><th id="647">647</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="648">648</th><td><u>#define <dfn class="macro" id="_M/TVM_DECLARE_BASE_OBJECT_INFO" data-ref="_M/TVM_DECLARE_BASE_OBJECT_INFO">TVM_DECLARE_BASE_OBJECT_INFO</dfn>(TypeName, ParentType)                                     \</u></td></tr>
+<tr><th id="649">649</th><td><u>  static_assert(!ParentType::_type_final, "ParentObj marked as final");                        \</u></td></tr>
+<tr><th id="650">650</th><td><u>  static uint32_t RuntimeTypeIndex() {                                                         \</u></td></tr>
+<tr><th id="651">651</th><td><u>    static_assert(TypeName::_type_child_slots == 0 || ParentType::_type_child_slots == 0 ||    \</u></td></tr>
+<tr><th id="652">652</th><td><u>                      TypeName::_type_child_slots &lt; ParentType::_type_child_slots,             \</u></td></tr>
+<tr><th id="653">653</th><td><u>                  "Need to set _type_child_slots when parent specifies it.");                  \</u></td></tr>
+<tr><th id="654">654</th><td><u>    if (TypeName::_type_index != ::tvm::runtime::TypeIndex::kDynamic) {                        \</u></td></tr>
+<tr><th id="655">655</th><td><u>      return TypeName::_type_index;                                                            \</u></td></tr>
+<tr><th id="656">656</th><td><u>    }                                                                                          \</u></td></tr>
+<tr><th id="657">657</th><td><u>    return _GetOrAllocRuntimeTypeIndex();                                                      \</u></td></tr>
+<tr><th id="658">658</th><td><u>  }                                                                                            \</u></td></tr>
+<tr><th id="659">659</th><td><u>  static uint32_t _GetOrAllocRuntimeTypeIndex() {                                              \</u></td></tr>
+<tr><th id="660">660</th><td><u>    static uint32_t tindex = Object::GetOrAllocRuntimeTypeIndex(                               \</u></td></tr>
+<tr><th id="661">661</th><td><u>        TypeName::_type_key, TypeName::_type_index, ParentType::_GetOrAllocRuntimeTypeIndex(), \</u></td></tr>
+<tr><th id="662">662</th><td><u>        TypeName::_type_child_slots, TypeName::_type_child_slots_can_overflow);                \</u></td></tr>
+<tr><th id="663">663</th><td><u>    return tindex;                                                                             \</u></td></tr>
+<tr><th id="664">664</th><td><u>  }</u></td></tr>
+<tr><th id="665">665</th><td></td></tr>
+<tr><th id="666">666</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="667">667</th><td><i class="doc"> * <span class="command">\brief</span> helper macro to declare type information in a final class.</i></td></tr>
+<tr><th id="668">668</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">TypeName</span> The name of the current type.</i></td></tr>
+<tr><th id="669">669</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">ParentType</span> The name of the ParentType</i></td></tr>
+<tr><th id="670">670</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="671">671</th><td><u>#define <dfn class="macro" id="_M/TVM_DECLARE_FINAL_OBJECT_INFO" data-ref="_M/TVM_DECLARE_FINAL_OBJECT_INFO">TVM_DECLARE_FINAL_OBJECT_INFO</dfn>(TypeName, ParentType) \</u></td></tr>
+<tr><th id="672">672</th><td><u>  static const constexpr bool _type_final = true;           \</u></td></tr>
+<tr><th id="673">673</th><td><u>  static const constexpr int _type_child_slots = 0;         \</u></td></tr>
+<tr><th id="674">674</th><td><u>  TVM_DECLARE_BASE_OBJECT_INFO(TypeName, ParentType)</u></td></tr>
+<tr><th id="675">675</th><td></td></tr>
+<tr><th id="676">676</th><td><i class="doc">/*! <span class="command">\brief</span> helper macro to suppress unused warning */</i></td></tr>
+<tr><th id="677">677</th><td><u>#<span data-ppcond="677">if</span> defined(<span class="macro" data-ref="_M/__GNUC__">__GNUC__</span>)</u></td></tr>
+<tr><th id="678">678</th><td><u>#define <dfn class="macro" id="_M/TVM_ATTRIBUTE_UNUSED" data-ref="_M/TVM_ATTRIBUTE_UNUSED">TVM_ATTRIBUTE_UNUSED</dfn> __attribute__((unused))</u></td></tr>
+<tr><th id="679">679</th><td><u>#<span data-ppcond="677">else</span></u></td></tr>
+<tr><th id="680">680</th><td><u>#define TVM_ATTRIBUTE_UNUSED</u></td></tr>
+<tr><th id="681">681</th><td><u>#<span data-ppcond="677">endif</span></u></td></tr>
+<tr><th id="682">682</th><td></td></tr>
+<tr><th id="683">683</th><td><u>#define <dfn class="macro" id="_M/TVM_STR_CONCAT_" data-ref="_M/TVM_STR_CONCAT_">TVM_STR_CONCAT_</dfn>(__x, __y) __x##__y</u></td></tr>
+<tr><th id="684">684</th><td><u>#define <dfn class="macro" id="_M/TVM_STR_CONCAT" data-ref="_M/TVM_STR_CONCAT">TVM_STR_CONCAT</dfn>(__x, __y) TVM_STR_CONCAT_(__x, __y)</u></td></tr>
+<tr><th id="685">685</th><td></td></tr>
+<tr><th id="686">686</th><td><u>#define <dfn class="macro" id="_M/TVM_OBJECT_REG_VAR_DEF" data-ref="_M/TVM_OBJECT_REG_VAR_DEF">TVM_OBJECT_REG_VAR_DEF</dfn> static TVM_ATTRIBUTE_UNUSED uint32_t __make_Object_tid</u></td></tr>
+<tr><th id="687">687</th><td></td></tr>
+<tr><th id="688">688</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="689">689</th><td><i class="doc"> * <span class="command">\brief</span> Helper macro to register the object type to runtime.</i></td></tr>
+<tr><th id="690">690</th><td><i class="doc"> *  Makes sure that the runtime type table is correctly populated.</i></td></tr>
+<tr><th id="691">691</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="692">692</th><td><i class="doc"> *  Use this macro in the cc file for each terminal class.</i></td></tr>
+<tr><th id="693">693</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="694">694</th><td><u>#define <dfn class="macro" id="_M/TVM_REGISTER_OBJECT_TYPE" data-ref="_M/TVM_REGISTER_OBJECT_TYPE">TVM_REGISTER_OBJECT_TYPE</dfn>(TypeName) \</u></td></tr>
+<tr><th id="695">695</th><td><u>  TVM_STR_CONCAT(TVM_OBJECT_REG_VAR_DEF, __COUNTER__) = TypeName::_GetOrAllocRuntimeTypeIndex()</u></td></tr>
+<tr><th id="696">696</th><td></td></tr>
+<tr><th id="697">697</th><td><i>/*</i></td></tr>
+<tr><th id="698">698</th><td><i> * \brief Define the default copy/move constructor and assign operator</i></td></tr>
+<tr><th id="699">699</th><td><i> * \param TypeName The class typename.</i></td></tr>
+<tr><th id="700">700</th><td><i> */</i></td></tr>
+<tr><th id="701">701</th><td><u>#define <dfn class="macro" id="_M/TVM_DEFINE_DEFAULT_COPY_MOVE_AND_ASSIGN" data-ref="_M/TVM_DEFINE_DEFAULT_COPY_MOVE_AND_ASSIGN">TVM_DEFINE_DEFAULT_COPY_MOVE_AND_ASSIGN</dfn>(TypeName) \</u></td></tr>
+<tr><th id="702">702</th><td><u>  TypeName(const TypeName&amp; other) = default;              \</u></td></tr>
+<tr><th id="703">703</th><td><u>  TypeName(TypeName&amp;&amp; other) = default;                   \</u></td></tr>
+<tr><th id="704">704</th><td><u>  TypeName&amp; operator=(const TypeName&amp; other) = default;   \</u></td></tr>
+<tr><th id="705">705</th><td><u>  TypeName&amp; operator=(TypeName&amp;&amp; other) = default;</u></td></tr>
+<tr><th id="706">706</th><td></td></tr>
+<tr><th id="707">707</th><td><i>/*</i></td></tr>
+<tr><th id="708">708</th><td><i> * \brief Define object reference methods.</i></td></tr>
+<tr><th id="709">709</th><td><i> * \param TypeName The object type name</i></td></tr>
+<tr><th id="710">710</th><td><i> * \param ParentType The parent type of the objectref</i></td></tr>
+<tr><th id="711">711</th><td><i> * \param ObjectName The type name of the object.</i></td></tr>
+<tr><th id="712">712</th><td><i> */</i></td></tr>
+<tr><th id="713">713</th><td><u>#define <dfn class="macro" id="_M/TVM_DEFINE_OBJECT_REF_METHODS" data-ref="_M/TVM_DEFINE_OBJECT_REF_METHODS">TVM_DEFINE_OBJECT_REF_METHODS</dfn>(TypeName, ParentType, ObjectName)                        \</u></td></tr>
+<tr><th id="714">714</th><td><u>  TypeName() = default;                                                                        \</u></td></tr>
+<tr><th id="715">715</th><td><u>  explicit TypeName(::tvm::runtime::ObjectPtr&lt;::tvm::runtime::Object&gt; n) : ParentType(n) {}    \</u></td></tr>
+<tr><th id="716">716</th><td><u>  TVM_DEFINE_DEFAULT_COPY_MOVE_AND_ASSIGN(TypeName);                                           \</u></td></tr>
+<tr><th id="717">717</th><td><u>  const ObjectName* operator-&gt;() const { return static_cast&lt;const ObjectName*&gt;(data_.get()); } \</u></td></tr>
+<tr><th id="718">718</th><td><u>  const ObjectName* get() const { return operator-&gt;(); }                                       \</u></td></tr>
+<tr><th id="719">719</th><td><u>  using ContainerType = ObjectName;</u></td></tr>
+<tr><th id="720">720</th><td></td></tr>
+<tr><th id="721">721</th><td><i>/*</i></td></tr>
+<tr><th id="722">722</th><td><i> * \brief Define object reference methods that is not nullable.</i></td></tr>
+<tr><th id="723">723</th><td><i> *</i></td></tr>
+<tr><th id="724">724</th><td><i> * \param TypeName The object type name</i></td></tr>
+<tr><th id="725">725</th><td><i> * \param ParentType The parent type of the objectref</i></td></tr>
+<tr><th id="726">726</th><td><i> * \param ObjectName The type name of the object.</i></td></tr>
+<tr><th id="727">727</th><td><i> */</i></td></tr>
+<tr><th id="728">728</th><td><u>#define <dfn class="macro" id="_M/TVM_DEFINE_NOTNULLABLE_OBJECT_REF_METHODS" data-ref="_M/TVM_DEFINE_NOTNULLABLE_OBJECT_REF_METHODS">TVM_DEFINE_NOTNULLABLE_OBJECT_REF_METHODS</dfn>(TypeName, ParentType, ObjectName)            \</u></td></tr>
+<tr><th id="729">729</th><td><u>  explicit TypeName(::tvm::runtime::ObjectPtr&lt;::tvm::runtime::Object&gt; n) : ParentType(n) {}    \</u></td></tr>
+<tr><th id="730">730</th><td><u>  TVM_DEFINE_DEFAULT_COPY_MOVE_AND_ASSIGN(TypeName);                                           \</u></td></tr>
+<tr><th id="731">731</th><td><u>  const ObjectName* operator-&gt;() const { return static_cast&lt;const ObjectName*&gt;(data_.get()); } \</u></td></tr>
+<tr><th id="732">732</th><td><u>  const ObjectName* get() const { return operator-&gt;(); }                                       \</u></td></tr>
+<tr><th id="733">733</th><td><u>  static constexpr bool _type_is_nullable = false;                                             \</u></td></tr>
+<tr><th id="734">734</th><td><u>  using ContainerType = ObjectName;</u></td></tr>
+<tr><th id="735">735</th><td></td></tr>
+<tr><th id="736">736</th><td><i>/*</i></td></tr>
+<tr><th id="737">737</th><td><i> * \brief Define object reference methods of whose content is mutable.</i></td></tr>
+<tr><th id="738">738</th><td><i> * \param TypeName The object type name</i></td></tr>
+<tr><th id="739">739</th><td><i> * \param ParentType The parent type of the objectref</i></td></tr>
+<tr><th id="740">740</th><td><i> * \param ObjectName The type name of the object.</i></td></tr>
+<tr><th id="741">741</th><td><i> * \note We recommend making objects immutable when possible.</i></td></tr>
+<tr><th id="742">742</th><td><i> *       This macro is only reserved for objects that stores runtime states.</i></td></tr>
+<tr><th id="743">743</th><td><i> */</i></td></tr>
+<tr><th id="744">744</th><td><u>#define <dfn class="macro" id="_M/TVM_DEFINE_MUTABLE_OBJECT_REF_METHODS" data-ref="_M/TVM_DEFINE_MUTABLE_OBJECT_REF_METHODS">TVM_DEFINE_MUTABLE_OBJECT_REF_METHODS</dfn>(TypeName, ParentType, ObjectName)             \</u></td></tr>
+<tr><th id="745">745</th><td><u>  TypeName() = default;                                                                     \</u></td></tr>
+<tr><th id="746">746</th><td><u>  TVM_DEFINE_DEFAULT_COPY_MOVE_AND_ASSIGN(TypeName);                                        \</u></td></tr>
+<tr><th id="747">747</th><td><u>  explicit TypeName(::tvm::runtime::ObjectPtr&lt;::tvm::runtime::Object&gt; n) : ParentType(n) {} \</u></td></tr>
+<tr><th id="748">748</th><td><u>  ObjectName* operator-&gt;() const { return static_cast&lt;ObjectName*&gt;(data_.get()); }          \</u></td></tr>
+<tr><th id="749">749</th><td><u>  using ContainerType = ObjectName;</u></td></tr>
+<tr><th id="750">750</th><td></td></tr>
+<tr><th id="751">751</th><td><i>/*</i></td></tr>
+<tr><th id="752">752</th><td><i> * \brief Define object reference methods that is both not nullable and mutable.</i></td></tr>
+<tr><th id="753">753</th><td><i> *</i></td></tr>
+<tr><th id="754">754</th><td><i> * \param TypeName The object type name</i></td></tr>
+<tr><th id="755">755</th><td><i> * \param ParentType The parent type of the objectref</i></td></tr>
+<tr><th id="756">756</th><td><i> * \param ObjectName The type name of the object.</i></td></tr>
+<tr><th id="757">757</th><td><i> */</i></td></tr>
+<tr><th id="758">758</th><td><u>#define <dfn class="macro" id="_M/TVM_DEFINE_MUTABLE_NOTNULLABLE_OBJECT_REF_METHODS" data-ref="_M/TVM_DEFINE_MUTABLE_NOTNULLABLE_OBJECT_REF_METHODS">TVM_DEFINE_MUTABLE_NOTNULLABLE_OBJECT_REF_METHODS</dfn>(TypeName, ParentType, ObjectName) \</u></td></tr>
+<tr><th id="759">759</th><td><u>  explicit TypeName(::tvm::runtime::ObjectPtr&lt;::tvm::runtime::Object&gt; n) : ParentType(n) {} \</u></td></tr>
+<tr><th id="760">760</th><td><u>  TVM_DEFINE_DEFAULT_COPY_MOVE_AND_ASSIGN(TypeName);                                        \</u></td></tr>
+<tr><th id="761">761</th><td><u>  ObjectName* operator-&gt;() const { return static_cast&lt;ObjectName*&gt;(data_.get()); }          \</u></td></tr>
+<tr><th id="762">762</th><td><u>  ObjectName* get() const { return operator-&gt;(); }                                          \</u></td></tr>
+<tr><th id="763">763</th><td><u>  static constexpr bool _type_is_nullable = false;                                          \</u></td></tr>
+<tr><th id="764">764</th><td><u>  using ContainerType = ObjectName;</u></td></tr>
+<tr><th id="765">765</th><td></td></tr>
+<tr><th id="766">766</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="767">767</th><td><i class="doc"> * <span class="command">\brief</span> Define CopyOnWrite function in an ObjectRef.</i></td></tr>
+<tr><th id="768">768</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">ObjectName</span> The Type of the Node.</i></td></tr>
+<tr><th id="769">769</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="770">770</th><td><i class="doc"> *  CopyOnWrite will generate a unique copy of the internal node.</i></td></tr>
+<tr><th id="771">771</th><td><i class="doc"> *  The node will be copied if it is referenced by multiple places.</i></td></tr>
+<tr><th id="772">772</th><td><i class="doc"> *  The function returns the raw pointer to the node to allow modification</i></td></tr>
+<tr><th id="773">773</th><td><i class="doc"> *  of the content.</i></td></tr>
+<tr><th id="774">774</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="775">775</th><td><i class="doc"> * <span class="command">\code</span></i></td></tr>
+<tr><th id="776">776</th><td><i class="doc"> *<span class="verb"></span></i></td></tr>
+<tr><th id="777">777</th><td><i class="doc"><span class="verb"></span> *<span class="verb">  MyCOWObjectRef ref, ref2;</span></i></td></tr>
+<tr><th id="778">778</th><td><i class="doc"><span class="verb"></span> *<span class="verb">  ref2 = ref;</span></i></td></tr>
+<tr><th id="779">779</th><td><i class="doc"><span class="verb"></span> *<span class="verb">  ref.CopyOnWrite()-&gt;value = new_value;</span></i></td></tr>
+<tr><th id="780">780</th><td><i class="doc"><span class="verb"></span> *<span class="verb">  assert(ref2-&gt;value == old_value);</span></i></td></tr>
+<tr><th id="781">781</th><td><i class="doc"><span class="verb"></span> *<span class="verb">  assert(ref-&gt;value == new_value);</span></i></td></tr>
+<tr><th id="782">782</th><td><i class="doc"><span class="verb"></span> *<span class="verb"></span></i></td></tr>
+<tr><th id="783">783</th><td><i class="doc"><span class="verb"></span> * \endcode</i></td></tr>
+<tr><th id="784">784</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="785">785</th><td><u>#define <dfn class="macro" id="_M/TVM_DEFINE_OBJECT_REF_COW_METHOD" data-ref="_M/TVM_DEFINE_OBJECT_REF_COW_METHOD">TVM_DEFINE_OBJECT_REF_COW_METHOD</dfn>(ObjectName)     \</u></td></tr>
+<tr><th id="786">786</th><td><u>  ObjectName* CopyOnWrite() {                            \</u></td></tr>
+<tr><th id="787">787</th><td><u>    ICHECK(data_ != nullptr);                            \</u></td></tr>
+<tr><th id="788">788</th><td><u>    if (!data_.unique()) {                               \</u></td></tr>
+<tr><th id="789">789</th><td><u>      auto n = make_object&lt;ObjectName&gt;(<span class='refarg'>*</span>(operator-&gt;())); \</u></td></tr>
+<tr><th id="790">790</th><td><u>      ObjectPtr&lt;Object&gt;(std::move(<span class='refarg'>n</span>)).swap(<span class='refarg'>data_</span>);       \</u></td></tr>
+<tr><th id="791">791</th><td><u>    }                                                    \</u></td></tr>
+<tr><th id="792">792</th><td><u>    return static_cast&lt;ObjectName*&gt;(data_.get());        \</u></td></tr>
+<tr><th id="793">793</th><td><u>  }</u></td></tr>
+<tr><th id="794">794</th><td></td></tr>
+<tr><th id="795">795</th><td><i>// Implementations details below</i></td></tr>
+<tr><th id="796">796</th><td><i>// Object reference counting.</i></td></tr>
+<tr><th id="797">797</th><td><u>#<span data-ppcond="797">if</span> <a class="macro" href="#40" title="1" data-ref="_M/TVM_OBJECT_ATOMIC_REF_COUNTER">TVM_OBJECT_ATOMIC_REF_COUNTER</a></u></td></tr>
+<tr><th id="798">798</th><td></td></tr>
+<tr><th id="799">799</th><td><b>inline</b> <em>void</em> <a class="type" href="#tvm::runtime::Object" title='tvm::runtime::Object' data-ref="tvm::runtime::Object" data-ref-filename="tvm..runtime..Object">Object</a>::<dfn class="decl def fn" id="_ZN3tvm7runtime6Object6IncRefEv" title='tvm::runtime::Object::IncRef' data-ref="_ZN3tvm7runtime6Object6IncRefEv" data-ref-filename="_ZN3tvm7runtime6Object6IncRefEv">IncRef</dfn>() { <a class="member field" href="#tvm::runtime::Object::ref_counter_" title='tvm::runtime::Object::ref_counter_' data-ref="tvm::runtime::Object::ref_counter_" data-ref-filename="tvm..runtime..Object..ref_counter_">ref_counter_</a>.<a class="ref fn" href="../../../../include/c++/10/bits/atomic_base.h.html#_ZNSt13__atomic_base9fetch_addET_St12memory_order" title='std::__atomic_base::fetch_add' data-ref="_ZNSt13__atomic_base9fetch_addET_St12memory_order" data-ref-filename="_ZNSt13__atomic_base9fetch_addET_St12memory_order">fetch_add</a>(<var>1</var>, <span class="namespace">std::</span><a class="enum" href="../../../../include/c++/10/bits/atomic_base.h.html#std::memory_order_relaxed" title='std::memory_order_relaxed' data-ref="std::memory_order_relaxed" data-ref-filename="std..memory_order_relaxed">memory_order_relaxed</a>); }</td></tr>
+<tr><th id="800">800</th><td></td></tr>
+<tr><th id="801">801</th><td><b>inline</b> <em>void</em> <a class="type" href="#tvm::runtime::Object" title='tvm::runtime::Object' data-ref="tvm::runtime::Object" data-ref-filename="tvm..runtime..Object">Object</a>::<dfn class="decl def fn" id="_ZN3tvm7runtime6Object6DecRefEv" title='tvm::runtime::Object::DecRef' data-ref="_ZN3tvm7runtime6Object6DecRefEv" data-ref-filename="_ZN3tvm7runtime6Object6DecRefEv">DecRef</dfn>() {</td></tr>
+<tr><th id="802">802</th><td>  <b>if</b> (<a class="member field" href="#tvm::runtime::Object::ref_counter_" title='tvm::runtime::Object::ref_counter_' data-ref="tvm::runtime::Object::ref_counter_" data-ref-filename="tvm..runtime..Object..ref_counter_">ref_counter_</a>.<a class="ref fn" href="../../../../include/c++/10/bits/atomic_base.h.html#_ZNSt13__atomic_base9fetch_subET_St12memory_order" title='std::__atomic_base::fetch_sub' data-ref="_ZNSt13__atomic_base9fetch_subET_St12memory_order" data-ref-filename="_ZNSt13__atomic_base9fetch_subET_St12memory_order">fetch_sub</a>(<var>1</var>, <span class="namespace">std::</span><a class="enum" href="../../../../include/c++/10/bits/atomic_base.h.html#std::memory_order_release" title='std::memory_order_release' data-ref="std::memory_order_release" data-ref-filename="std..memory_order_release">memory_order_release</a>) == <var>1</var>) {</td></tr>
+<tr><th id="803">803</th><td>    <span class="namespace">std::</span><a class="ref fn" href="../../../../include/c++/10/bits/atomic_base.h.html#_ZSt19atomic_thread_fenceSt12memory_order" title='std::atomic_thread_fence' data-ref="_ZSt19atomic_thread_fenceSt12memory_order" data-ref-filename="_ZSt19atomic_thread_fenceSt12memory_order">atomic_thread_fence</a>(<span class="namespace">std::</span><a class="enum" href="../../../../include/c++/10/bits/atomic_base.h.html#std::memory_order_acquire" title='std::memory_order_acquire' data-ref="std::memory_order_acquire" data-ref-filename="std..memory_order_acquire">memory_order_acquire</a>);</td></tr>
+<tr><th id="804">804</th><td>    <b>if</b> (<b>this</b>-&gt;<a class="member field" href="#tvm::runtime::Object::deleter_" title='tvm::runtime::Object::deleter_' data-ref="tvm::runtime::Object::deleter_" data-ref-filename="tvm..runtime..Object..deleter_">deleter_</a> != <b>nullptr</b>) {</td></tr>
+<tr><th id="805">805</th><td>      (*<b>this</b>-&gt;<a class="member field" href="#tvm::runtime::Object::deleter_" title='tvm::runtime::Object::deleter_' data-ref="tvm::runtime::Object::deleter_" data-ref-filename="tvm..runtime..Object..deleter_">deleter_</a>)(<b>this</b>);</td></tr>
+<tr><th id="806">806</th><td>    }</td></tr>
+<tr><th id="807">807</th><td>  }</td></tr>
+<tr><th id="808">808</th><td>}</td></tr>
+<tr><th id="809">809</th><td></td></tr>
+<tr><th id="810">810</th><td><b>inline</b> <em>int</em> <a class="type" href="#tvm::runtime::Object" title='tvm::runtime::Object' data-ref="tvm::runtime::Object" data-ref-filename="tvm..runtime..Object">Object</a>::<dfn class="decl def fn" id="_ZNK3tvm7runtime6Object9use_countEv" title='tvm::runtime::Object::use_count' data-ref="_ZNK3tvm7runtime6Object9use_countEv" data-ref-filename="_ZNK3tvm7runtime6Object9use_countEv">use_count</dfn>() <em>const</em> { <b>return</b> <a class="member field" href="#tvm::runtime::Object::ref_counter_" title='tvm::runtime::Object::ref_counter_' data-ref="tvm::runtime::Object::ref_counter_" data-ref-filename="tvm..runtime..Object..ref_counter_">ref_counter_</a>.<a class="ref fn" href="../../../../include/c++/10/bits/atomic_base.h.html#_ZNKSt13__atomic_base4loadESt12memory_order" title='std::__atomic_base::load' data-ref="_ZNKSt13__atomic_base4loadESt12memory_order" data-ref-filename="_ZNKSt13__atomic_base4loadESt12memory_order">load</a>(<span class="namespace">std::</span><a class="enum" href="../../../../include/c++/10/bits/atomic_base.h.html#std::memory_order_relaxed" title='std::memory_order_relaxed' data-ref="std::memory_order_relaxed" data-ref-filename="std..memory_order_relaxed">memory_order_relaxed</a>); }</td></tr>
+<tr><th id="811">811</th><td></td></tr>
+<tr><th id="812">812</th><td><u>#<span data-ppcond="797">else</span></u></td></tr>
+<tr><th id="813">813</th><td></td></tr>
+<tr><th id="814">814</th><td><b>inline</b> <em>void</em> Object::IncRef() { ++ref_counter_; }</td></tr>
+<tr><th id="815">815</th><td></td></tr>
+<tr><th id="816">816</th><td><b>inline</b> <em>void</em> Object::DecRef() {</td></tr>
+<tr><th id="817">817</th><td>  <b>if</b> (--ref_counter_ == <var>0</var>) {</td></tr>
+<tr><th id="818">818</th><td>    <b>if</b> (<b>this</b>-&gt;deleter_ != <b>nullptr</b>) {</td></tr>
+<tr><th id="819">819</th><td>      (*<b>this</b>-&gt;deleter_)(<b>this</b>);</td></tr>
+<tr><th id="820">820</th><td>    }</td></tr>
+<tr><th id="821">821</th><td>  }</td></tr>
+<tr><th id="822">822</th><td>}</td></tr>
+<tr><th id="823">823</th><td></td></tr>
+<tr><th id="824">824</th><td><b>inline</b> <em>int</em> Object::use_count() <em>const</em> { <b>return</b> ref_counter_; }</td></tr>
+<tr><th id="825">825</th><td></td></tr>
+<tr><th id="826">826</th><td><u>#<span data-ppcond="797">endif</span>  // TVM_OBJECT_ATOMIC_REF_COUNTER</u></td></tr>
+<tr><th id="827">827</th><td></td></tr>
+<tr><th id="828">828</th><td><b>template</b> &lt;<b>typename</b> TargetType&gt;</td></tr>
+<tr><th id="829">829</th><td><b>inline</b> <em>bool</em> <a class="type" href="#tvm::runtime::Object" title='tvm::runtime::Object' data-ref="tvm::runtime::Object" data-ref-filename="tvm..runtime..Object">Object</a>::<dfn class="decl def fn" id="_ZNK3tvm7runtime6Object10IsInstanceEv" title='tvm::runtime::Object::IsInstance' data-ref="_ZNK3tvm7runtime6Object10IsInstanceEv" data-ref-filename="_ZNK3tvm7runtime6Object10IsInstanceEv">IsInstance</dfn>() <em>const</em> {</td></tr>
+<tr><th id="830">830</th><td>  <em>const</em> <a class="type" href="#tvm::runtime::Object" title='tvm::runtime::Object' data-ref="tvm::runtime::Object" data-ref-filename="tvm..runtime..Object">Object</a>* <dfn class="local col8 decl" id="9008self" title='self' data-type='const tvm::runtime::Object *' data-ref="9008self" data-ref-filename="9008self">self</dfn> = <b>this</b>;</td></tr>
+<tr><th id="831">831</th><td>  <i>// NOTE: the following code can be optimized by</i></td></tr>
+<tr><th id="832">832</th><td><i>  // compiler dead-code elimination for already known constants.</i></td></tr>
+<tr><th id="833">833</th><td>  <b>if</b> (<a class="local col8 ref" href="#9008self" title='self' data-ref="9008self" data-ref-filename="9008self">self</a> != <b>nullptr</b>) {</td></tr>
+<tr><th id="834">834</th><td>    <i>// Everything is a subclass of object.</i></td></tr>
+<tr><th id="835">835</th><td>    <b>if</b> (<span class="namespace">std::</span><a class="type" href="../../../../include/c++/10/type_traits.html#std::is_same" title='std::is_same' data-ref="std::is_same" data-ref-filename="std..is_same">is_same</a>&lt;TargetType, <a class="type" href="#tvm::runtime::Object" title='tvm::runtime::Object' data-ref="tvm::runtime::Object" data-ref-filename="tvm..runtime..Object">Object</a>&gt;::value) <b>return</b> <b>true</b>;</td></tr>
+<tr><th id="836">836</th><td>    <b>if</b> (TargetType::_type_final) {</td></tr>
+<tr><th id="837">837</th><td>      <i>// if the target type is a final type</i></td></tr>
+<tr><th id="838">838</th><td><i>      // then we only need to check the equivalence.</i></td></tr>
+<tr><th id="839">839</th><td>      <b>return</b> <a class="local col8 ref" href="#9008self" title='self' data-ref="9008self" data-ref-filename="9008self">self</a>-&gt;<a class="member field" href="#tvm::runtime::Object::type_index_" title='tvm::runtime::Object::type_index_' data-ref="tvm::runtime::Object::type_index_" data-ref-filename="tvm..runtime..Object..type_index_">type_index_</a> == TargetType::RuntimeTypeIndex();</td></tr>
+<tr><th id="840">840</th><td>    } <b>else</b> {</td></tr>
+<tr><th id="841">841</th><td>      <i>// if target type is a non-leaf type</i></td></tr>
+<tr><th id="842">842</th><td><i>      // Check if type index falls into the range of reserved slots.</i></td></tr>
+<tr><th id="843">843</th><td>      <a class="typedef" href="../../../../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint32_t" title='uint32_t' data-type='__uint32_t' data-ref="uint32_t" data-ref-filename="uint32_t">uint32_t</a> <dfn class="local col9 decl" id="9009begin" title='begin' data-type='uint32_t' data-ref="9009begin" data-ref-filename="9009begin">begin</dfn> = TargetType::RuntimeTypeIndex();</td></tr>
+<tr><th id="844">844</th><td>      <i>// The condition will be optimized by constant-folding.</i></td></tr>
+<tr><th id="845">845</th><td>      <b>if</b> (TargetType::_type_child_slots != <var>0</var>) {</td></tr>
+<tr><th id="846">846</th><td>        <a class="typedef" href="../../../../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint32_t" title='uint32_t' data-type='__uint32_t' data-ref="uint32_t" data-ref-filename="uint32_t">uint32_t</a> <dfn class="local col0 decl" id="9010end" title='end' data-type='uint32_t' data-ref="9010end" data-ref-filename="9010end">end</dfn> = <a class="local col9 ref" href="#9009begin" title='begin' data-ref="9009begin" data-ref-filename="9009begin">begin</a> + TargetType::_type_child_slots;</td></tr>
+<tr><th id="847">847</th><td>        <b>if</b> (<a class="local col8 ref" href="#9008self" title='self' data-ref="9008self" data-ref-filename="9008self">self</a>-&gt;<a class="member field" href="#tvm::runtime::Object::type_index_" title='tvm::runtime::Object::type_index_' data-ref="tvm::runtime::Object::type_index_" data-ref-filename="tvm..runtime..Object..type_index_">type_index_</a> &gt;= <a class="local col9 ref" href="#9009begin" title='begin' data-ref="9009begin" data-ref-filename="9009begin">begin</a> &amp;&amp; <a class="local col8 ref" href="#9008self" title='self' data-ref="9008self" data-ref-filename="9008self">self</a>-&gt;<a class="member field" href="#tvm::runtime::Object::type_index_" title='tvm::runtime::Object::type_index_' data-ref="tvm::runtime::Object::type_index_" data-ref-filename="tvm..runtime..Object..type_index_">type_index_</a> &lt; <a class="local col0 ref" href="#9010end" title='end' data-ref="9010end" data-ref-filename="9010end">end</a>) <b>return</b> <b>true</b>;</td></tr>
+<tr><th id="848">848</th><td>      } <b>else</b> {</td></tr>
+<tr><th id="849">849</th><td>        <b>if</b> (<a class="local col8 ref" href="#9008self" title='self' data-ref="9008self" data-ref-filename="9008self">self</a>-&gt;<a class="member field" href="#tvm::runtime::Object::type_index_" title='tvm::runtime::Object::type_index_' data-ref="tvm::runtime::Object::type_index_" data-ref-filename="tvm..runtime..Object..type_index_">type_index_</a> == <a class="local col9 ref" href="#9009begin" title='begin' data-ref="9009begin" data-ref-filename="9009begin">begin</a>) <b>return</b> <b>true</b>;</td></tr>
+<tr><th id="850">850</th><td>      }</td></tr>
+<tr><th id="851">851</th><td>      <b>if</b> (!TargetType::_type_child_slots_can_overflow) <b>return</b> <b>false</b>;</td></tr>
+<tr><th id="852">852</th><td>      <i>// Invariance: parent index is always smaller than the child.</i></td></tr>
+<tr><th id="853">853</th><td>      <b>if</b> (<a class="local col8 ref" href="#9008self" title='self' data-ref="9008self" data-ref-filename="9008self">self</a>-&gt;<a class="member field" href="#tvm::runtime::Object::type_index_" title='tvm::runtime::Object::type_index_' data-ref="tvm::runtime::Object::type_index_" data-ref-filename="tvm..runtime..Object..type_index_">type_index_</a> &lt; TargetType::RuntimeTypeIndex()) <b>return</b> <b>false</b>;</td></tr>
+<tr><th id="854">854</th><td>      <i>// The rare slower-path, check type hierarchy.</i></td></tr>
+<tr><th id="855">855</th><td>      <b>return</b> <a class="local col8 ref" href="#9008self" title='self' data-ref="9008self" data-ref-filename="9008self">self</a>-&gt;<a class="member fn" href="#_ZNK3tvm7runtime6Object11DerivedFromEj" title='tvm::runtime::Object::DerivedFrom' data-ref="_ZNK3tvm7runtime6Object11DerivedFromEj" data-ref-filename="_ZNK3tvm7runtime6Object11DerivedFromEj">DerivedFrom</a>(TargetType::RuntimeTypeIndex());</td></tr>
+<tr><th id="856">856</th><td>    }</td></tr>
+<tr><th id="857">857</th><td>  } <b>else</b> {</td></tr>
+<tr><th id="858">858</th><td>    <b>return</b> <b>false</b>;</td></tr>
+<tr><th id="859">859</th><td>  }</td></tr>
+<tr><th id="860">860</th><td>}</td></tr>
+<tr><th id="861">861</th><td></td></tr>
+<tr><th id="862">862</th><td><b>inline</b> <em>bool</em> <a class="type" href="#tvm::runtime::Object" title='tvm::runtime::Object' data-ref="tvm::runtime::Object" data-ref-filename="tvm..runtime..Object">Object</a>::<dfn class="decl def fn" id="_ZNK3tvm7runtime6Object6uniqueEv" title='tvm::runtime::Object::unique' data-ref="_ZNK3tvm7runtime6Object6uniqueEv" data-ref-filename="_ZNK3tvm7runtime6Object6uniqueEv">unique</dfn>() <em>const</em> { <b>return</b> <a class="member fn" href="#_ZNK3tvm7runtime6Object9use_countEv" title='tvm::runtime::Object::use_count' data-ref="_ZNK3tvm7runtime6Object9use_countEv" data-ref-filename="_ZNK3tvm7runtime6Object9use_countEv">use_count</a>() == <var>1</var>; }</td></tr>
+<tr><th id="863">863</th><td></td></tr>
+<tr><th id="864">864</th><td><b>template</b> &lt;<b>typename</b> ObjectType&gt;</td></tr>
+<tr><th id="865">865</th><td><b>inline</b> <em>const</em> ObjectType* <a class="type" href="#tvm::runtime::ObjectRef" title='tvm::runtime::ObjectRef' data-ref="tvm::runtime::ObjectRef" data-ref-filename="tvm..runtime..ObjectRef">ObjectRef</a>::<dfn class="decl def fn" id="_ZNK3tvm7runtime9ObjectRef2asEv" title='tvm::runtime::ObjectRef::as' data-ref="_ZNK3tvm7runtime9ObjectRef2asEv" data-ref-filename="_ZNK3tvm7runtime9ObjectRef2asEv">as</dfn>() <em>const</em> {</td></tr>
+<tr><th id="866">866</th><td>  <b>if</b> (<a class="member field" href="#tvm::runtime::ObjectRef::data_" title='tvm::runtime::ObjectRef::data_' data-ref="tvm::runtime::ObjectRef::data_" data-ref-filename="tvm..runtime..ObjectRef..data_">data_</a> <a class="ref fn" href="#_ZNK3tvm7runtime9ObjectPtrneEDn" title='tvm::runtime::ObjectPtr::operator!=' data-ref="_ZNK3tvm7runtime9ObjectPtrneEDn" data-ref-filename="_ZNK3tvm7runtime9ObjectPtrneEDn">!=</a> <b>nullptr</b> &amp;&amp; <a class="member field" href="#tvm::runtime::ObjectRef::data_" title='tvm::runtime::ObjectRef::data_' data-ref="tvm::runtime::ObjectRef::data_" data-ref-filename="tvm..runtime..ObjectRef..data_">data_</a><a class="ref fn" href="#_ZNK3tvm7runtime9ObjectPtrptEv" title='tvm::runtime::ObjectPtr::operator-&gt;' data-ref="_ZNK3tvm7runtime9ObjectPtrptEv" data-ref-filename="_ZNK3tvm7runtime9ObjectPtrptEv">-&gt;</a>IsInstance&lt;ObjectType&gt;()) {</td></tr>
+<tr><th id="867">867</th><td>    <b>return</b> <b>static_cast</b>&lt;ObjectType*&gt;(<a class="member field" href="#tvm::runtime::ObjectRef::data_" title='tvm::runtime::ObjectRef::data_' data-ref="tvm::runtime::ObjectRef::data_" data-ref-filename="tvm..runtime..ObjectRef..data_">data_</a>.<a class="ref fn" href="#_ZNK3tvm7runtime9ObjectPtr3getEv" title='tvm::runtime::ObjectPtr::get' data-ref="_ZNK3tvm7runtime9ObjectPtr3getEv" data-ref-filename="_ZNK3tvm7runtime9ObjectPtr3getEv">get</a>());</td></tr>
+<tr><th id="868">868</th><td>  } <b>else</b> {</td></tr>
+<tr><th id="869">869</th><td>    <b>return</b> <b>nullptr</b>;</td></tr>
+<tr><th id="870">870</th><td>  }</td></tr>
+<tr><th id="871">871</th><td>}</td></tr>
+<tr><th id="872">872</th><td></td></tr>
+<tr><th id="873">873</th><td><b>template</b> &lt;<b>typename</b> RefType, <b>typename</b> ObjType&gt;</td></tr>
+<tr><th id="874">874</th><td><b>inline</b> RefType <dfn class="decl def fn" id="_ZN3tvm7runtime6GetRefEPKT0_" title='tvm::runtime::GetRef' data-ref="_ZN3tvm7runtime6GetRefEPKT0_" data-ref-filename="_ZN3tvm7runtime6GetRefEPKT0_">GetRef</dfn>(<em>const</em> ObjType* <dfn class="local col1 decl" id="9011ptr" title='ptr' data-type='const ObjType *' data-ref="9011ptr" data-ref-filename="9011ptr">ptr</dfn>) {</td></tr>
+<tr><th id="875">875</th><td>  <b>static_assert</b>(<span class="namespace">std::</span><a class="type" href="../../../../include/c++/10/type_traits.html#std::is_base_of" title='std::is_base_of' data-ref="std::is_base_of" data-ref-filename="std..is_base_of">is_base_of</a>&lt;<b>typename</b> RefType::ContainerType, ObjType&gt;::value,</td></tr>
+<tr><th id="876">876</th><td>                <q>"Can only cast to the ref of same container type"</q>);</td></tr>
+<tr><th id="877">877</th><td>  <b>if</b> (!RefType::_type_is_nullable) {</td></tr>
+<tr><th id="878">878</th><td>    <a class="macro" href="logging.h.html#681" title="if (!(ptr != nullptr)) ::tvm::runtime::detail::LogFatal(&quot;/home/runner/work/tvm-woboq/tvm-woboq/tvm/include/tvm/runtime/object.h&quot;, 878).stream() &lt;&lt; ::tvm::runtime::detail::kTVM_INTERNAL_ERROR_MESSAGE &lt;&lt; &quot;  &quot; &lt;&lt; &quot;Check failed: (&quot; &quot;ptr != nullptr&quot; &lt;&lt; &quot;) is false: &quot;" data-ref="_M/ICHECK">ICHECK</a>(<a class="local col1 ref" href="#9011ptr" title='ptr' data-ref="9011ptr" data-ref-filename="9011ptr">ptr</a> != <b>nullptr</b>);</td></tr>
+<tr><th id="879">879</th><td>  }</td></tr>
+<tr><th id="880">880</th><td>  <b>return</b> RefType(<a class="type" href="#tvm::runtime::ObjectPtr" title='tvm::runtime::ObjectPtr' data-ref="tvm::runtime::ObjectPtr" data-ref-filename="tvm..runtime..ObjectPtr">ObjectPtr</a>&lt;<a class="type" href="#tvm::runtime::Object" title='tvm::runtime::Object' data-ref="tvm::runtime::Object" data-ref-filename="tvm..runtime..Object">Object</a>&gt;(<b>const_cast</b>&lt;<a class="type" href="#tvm::runtime::Object" title='tvm::runtime::Object' data-ref="tvm::runtime::Object" data-ref-filename="tvm..runtime..Object">Object</a>*&gt;(<b>static_cast</b>&lt;<em>const</em> <a class="type" href="#tvm::runtime::Object" title='tvm::runtime::Object' data-ref="tvm::runtime::Object" data-ref-filename="tvm..runtime..Object">Object</a>*&gt;(<a class="local col1 ref" href="#9011ptr" title='ptr' data-ref="9011ptr" data-ref-filename="9011ptr">ptr</a>))));</td></tr>
+<tr><th id="881">881</th><td>}</td></tr>
+<tr><th id="882">882</th><td></td></tr>
+<tr><th id="883">883</th><td><b>template</b> &lt;<b>typename</b> BaseType, <b>typename</b> ObjType&gt;</td></tr>
+<tr><th id="884">884</th><td><b>inline</b> <a class="type" href="#tvm::runtime::ObjectPtr" title='tvm::runtime::ObjectPtr' data-ref="tvm::runtime::ObjectPtr" data-ref-filename="tvm..runtime..ObjectPtr">ObjectPtr</a>&lt;BaseType&gt; <dfn class="decl def fn" id="_ZN3tvm7runtime12GetObjectPtrEPT0_" title='tvm::runtime::GetObjectPtr' data-ref="_ZN3tvm7runtime12GetObjectPtrEPT0_" data-ref-filename="_ZN3tvm7runtime12GetObjectPtrEPT0_">GetObjectPtr</dfn>(ObjType* <dfn class="local col2 decl" id="9012ptr" title='ptr' data-type='ObjType *' data-ref="9012ptr" data-ref-filename="9012ptr">ptr</dfn>) {</td></tr>
+<tr><th id="885">885</th><td>  <b>static_assert</b>(<span class="namespace">std::</span><a class="type" href="../../../../include/c++/10/type_traits.html#std::is_base_of" title='std::is_base_of' data-ref="std::is_base_of" data-ref-filename="std..is_base_of">is_base_of</a>&lt;BaseType, ObjType&gt;::value,</td></tr>
+<tr><th id="886">886</th><td>                <q>"Can only cast to the ref of same container type"</q>);</td></tr>
+<tr><th id="887">887</th><td>  <b>return</b> <a class="type" href="#tvm::runtime::ObjectPtr" title='tvm::runtime::ObjectPtr' data-ref="tvm::runtime::ObjectPtr" data-ref-filename="tvm..runtime..ObjectPtr">ObjectPtr</a>&lt;BaseType&gt;(<b>static_cast</b>&lt;<a class="type" href="#tvm::runtime::Object" title='tvm::runtime::Object' data-ref="tvm::runtime::Object" data-ref-filename="tvm..runtime..Object">Object</a>*&gt;(<a class="local col2 ref" href="#9012ptr" title='ptr' data-ref="9012ptr" data-ref-filename="9012ptr">ptr</a>));</td></tr>
+<tr><th id="888">888</th><td>}</td></tr>
+<tr><th id="889">889</th><td></td></tr>
+<tr><th id="890">890</th><td><b>template</b> &lt;<b>typename</b> SubRef, <b>typename</b> BaseRef&gt;</td></tr>
+<tr><th id="891">891</th><td><b>inline</b> SubRef <dfn class="decl def fn" id="_ZN3tvm7runtime8DowncastET0_" title='tvm::runtime::Downcast' data-ref="_ZN3tvm7runtime8DowncastET0_" data-ref-filename="_ZN3tvm7runtime8DowncastET0_">Downcast</dfn>(BaseRef <dfn class="local col3 decl" id="9013ref" title='ref' data-type='BaseRef' data-ref="9013ref" data-ref-filename="9013ref">ref</dfn>) {</td></tr>
+<tr><th id="892">892</th><td>  <b>if</b> (<a class="local col3 ref" href="#9013ref" title='ref' data-ref="9013ref" data-ref-filename="9013ref">ref</a>.defined()) {</td></tr>
+<tr><th id="893">893</th><td>    <a class="macro" href="logging.h.html#681" title="if (!(ref-&gt;template IsInstance&lt;typename SubRef::ContainerType&gt;())) ::tvm::runtime::detail::LogFatal(&quot;/home/runner/work/tvm-woboq/tvm-woboq/tvm/include/tvm/runtime/object.h&quot;, 893).stream() &lt;&lt; ::tvm::runtime::detail::kTVM_INTERNAL_ERROR_MESSAGE &lt;&lt; &quot;  &quot; &lt;&lt; &quot;Check failed: (&quot; &quot;ref-&gt;template IsInstance&lt;typename SubRef::ContainerType&gt;()&quot; &lt;&lt; &quot;) is false: &quot;" data-ref="_M/ICHECK">ICHECK</a>(<a class="local col3 ref" href="#9013ref" title='ref' data-ref="9013ref" data-ref-filename="9013ref">ref</a>-&gt;<b>template</b> IsInstance&lt;<b>typename</b> SubRef::ContainerType&gt;())</td></tr>
+<tr><th id="894">894</th><td>        <a class="ref fn" href="../../../../include/c++/10/ostream.html#_ZStlsRSt13basic_ostreamIcT_EPKc" title='std::operator&lt;&lt;' data-ref="_ZStlsRSt13basic_ostreamIcT_EPKc" data-ref-filename="_ZStlsRSt13basic_ostreamIcT_EPKc">&lt;&lt;</a> <q>"Downcast from "</q> &lt;&lt; <a class="local col3 ref" href="#9013ref" title='ref' data-ref="9013ref" data-ref-filename="9013ref">ref</a>-&gt;GetTypeKey() &lt;&lt; <q>" to "</q> &lt;&lt; SubRef::ContainerType::_type_key</td></tr>
+<tr><th id="895">895</th><td>        &lt;&lt; <q>" failed."</q>;</td></tr>
+<tr><th id="896">896</th><td>  } <b>else</b> {</td></tr>
+<tr><th id="897">897</th><td>    <a class="macro" href="logging.h.html#681" title="if (!(SubRef::_type_is_nullable)) ::tvm::runtime::detail::LogFatal(&quot;/home/runner/work/tvm-woboq/tvm-woboq/tvm/include/tvm/runtime/object.h&quot;, 897).stream() &lt;&lt; ::tvm::runtime::detail::kTVM_INTERNAL_ERROR_MESSAGE &lt;&lt; &quot;  &quot; &lt;&lt; &quot;Check failed: (&quot; &quot;SubRef::_type_is_nullable&quot; &lt;&lt; &quot;) is false: &quot;" data-ref="_M/ICHECK">ICHECK</a>(SubRef::_type_is_nullable) <a class="ref fn" href="../../../../include/c++/10/ostream.html#_ZStlsRSt13basic_ostreamIcT_EPKc" title='std::operator&lt;&lt;' data-ref="_ZStlsRSt13basic_ostreamIcT_EPKc" data-ref-filename="_ZStlsRSt13basic_ostreamIcT_EPKc">&lt;&lt;</a> <q>"Downcast from nullptr to not nullable reference of "</q></td></tr>
+<tr><th id="898">898</th><td>                                      &lt;&lt; SubRef::ContainerType::_type_key;</td></tr>
+<tr><th id="899">899</th><td>  }</td></tr>
+<tr><th id="900">900</th><td>  <b>return</b> SubRef(<span class="namespace">std::</span>move(<a class="local col3 ref" href="#9013ref" title='ref' data-ref="9013ref" data-ref-filename="9013ref">ref</a>.data_));</td></tr>
+<tr><th id="901">901</th><td>}</td></tr>
+<tr><th id="902">902</th><td></td></tr>
+<tr><th id="903">903</th><td>}  <i>// namespace runtime</i></td></tr>
+<tr><th id="904">904</th><td>}  <i>// namespace tvm</i></td></tr>
+<tr><th id="905">905</th><td></td></tr>
+<tr><th id="906">906</th><td><u>#<span data-ppcond="23">endif</span>  // TVM_RUNTIME_OBJECT_H_</u></td></tr>
+<tr><th id="907">907</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated while processing <a href='../../../src/arith/analyzer.cc.html'>tvm/src/arith/analyzer.cc</a><br/>Generated on <em>2022-Aug-10</em> from project tvm revision <em>fae79bb</em><br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

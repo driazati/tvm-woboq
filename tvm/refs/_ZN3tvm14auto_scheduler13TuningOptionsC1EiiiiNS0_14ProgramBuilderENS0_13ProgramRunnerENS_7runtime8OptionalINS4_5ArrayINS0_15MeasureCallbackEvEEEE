@@ -1,0 +1,14 @@
+<dec f='tvm/include/tvm/auto_scheduler/auto_schedule.h' l='85' type='void tvm::auto_scheduler::TuningOptions::TuningOptions(int num_measure_trials, int early_stopping, int num_measures_per_round, int verbose, tvm::auto_scheduler::ProgramBuilder builder, tvm::auto_scheduler::ProgramRunner runner, Optional&lt;Array&lt;tvm::auto_scheduler::MeasureCallback&gt;&gt; measure_callbacks)'/>
+<def f='tvm/src/auto_scheduler/auto_schedule.cc' l='35' ll='47' type='void tvm::auto_scheduler::TuningOptions::TuningOptions(int num_measure_trials, int early_stopping, int num_measures_per_round, int verbose, tvm::auto_scheduler::ProgramBuilder builder, tvm::auto_scheduler::ProgramRunner runner, Optional&lt;Array&lt;tvm::auto_scheduler::MeasureCallback&gt;&gt; measure_callbacks)'/>
+<use f='tvm/src/auto_scheduler/auto_schedule.cc' l='75' u='c'/>
+<doc f='tvm/include/tvm/auto_scheduler/auto_schedule.h' l='74'>/*!
+   * \brief The constructor
+   * \param num_measure_trials The number of total measurement trials.
+   * \param early_stopping Stops the tuning early if no improvement after n measurements.
+   * \param num_measures_per_round The number of programs to be measured at each search round.
+   * \param verbose Verbosity level. 0 for silent, 1 to output information during schedule
+   * search.
+   * \param builder ProgramBuilder which builds the program.
+   * \param runner ProgramRunner which runs the program and measure time costs.
+   * \param measure_callbacks MeasureCallback functions to be called after each measure batch.
+   */</doc>

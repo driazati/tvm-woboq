@@ -1,0 +1,12 @@
+<def f='tvm/src/tir/schedule/utils.h' l='391' ll='432' type='void tvm::tir::ReorderAndFuseReductionLoops(const tir::Schedule &amp; sch, const tir::BlockRV &amp; block_rv, tir::LoopRV * fused_reduce_loop, size_t * num_spatial_loops)'/>
+<doc f='tvm/src/tir/schedule/utils.h' l='382'>/*!
+ * \brief Reorder the reduction loops to innermost positions if needed.
+ * \param sch The schedule
+ * \param block_rv The block where to apply the reorder
+ * \param fused_reduce_loop The fusion-generated loop to return.
+ * \param num_spatial_loops The number of spatial loops to return.
+ * \note Before invoking this helper function, make sure that the block has only spatial and
+ *       reduction loop axes.
+ */</doc>
+<use f='tvm/src/meta_schedule/schedule_rule/add_rfactor.cc' l='89' u='c' c='_ZN3tvm13meta_schedule14AddRFactorNode5ApplyERKNS_3tir8ScheduleERKNS2_7BlockRVE'/>
+<use f='tvm/src/meta_schedule/schedule_rule/cross_thread_reduction.cc' l='111' u='c' c='_ZN3tvm13meta_schedule24CrossThreadReductionNode5ApplyERKNS_3tir8ScheduleERKNS2_7BlockRVE'/>

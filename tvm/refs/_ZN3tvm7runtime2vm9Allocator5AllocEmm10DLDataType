@@ -1,0 +1,11 @@
+<dec f='tvm/include/tvm/runtime/vm/memory_manager.h' l='74' type='tvm::runtime::vm::Buffer tvm::runtime::vm::Allocator::Alloc(size_t nbytes, size_t alignment, DLDataType type_hint)'/>
+<ovr f='tvm/src/runtime/vm/naive_allocator.h' l='39' c='_ZN3tvm7runtime2vm14NaiveAllocator5AllocEmm10DLDataType'/>
+<doc f='tvm/include/tvm/runtime/vm/memory_manager.h' l='68'>/*! \brief Allocate a buffer given a size, alignment and type.
+   *  \param nbytes The size of the buffer.
+   *  \param alignment The alignment of the buffer.
+   *  \param type_hint A type hint to the allocator.
+   *  \return A sized allocation in the form of a buffer.
+   */</doc>
+<ovr f='tvm/src/runtime/vm/pooled_allocator.h' l='47' c='_ZN3tvm7runtime2vm15PooledAllocator5AllocEmm10DLDataType'/>
+<use f='tvm/src/runtime/vm/memory_manager.cc' l='167' u='c' c='_ZN3tvm7runtime2vm9Allocator5EmptyESt6vectorIlSaIlEE10DLDataType8DLDevice'/>
+<use f='tvm/src/runtime/vm/vm.cc' l='738' u='c' c='_ZN3tvm7runtime2vm14VirtualMachine7RunLoopEv'/>

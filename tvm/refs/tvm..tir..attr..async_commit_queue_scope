@@ -1,0 +1,20 @@
+<def f='tvm/include/tvm/tir/stmt.h' l='1502' type='const char *const'/>
+<doc f='tvm/include/tvm/tir/stmt.h' l='1485'>/*!
+ * \brief Annotations for invoking and synchronizing asynchronous operations.
+
+ * Synchronization is done in terms of &quot;queue&quot;: It is an abstract entity associated
+ * with each asynchronous unit, and it tracks invocations and completions of asynchronous
+ * operations in the FIFO order.
+ *
+ * Similarly to PTX instructions commit_group and wait_group, these annotations express
+ * synchronization by &quot;counting&quot;:
+ *
+ * async_commit_queue(i): Group one or more invocations of async operations in the given scope,
+ * and &quot;commit&quot; (or push) them to the queue i. A group of operations committed together is
+ * awaited as one chunk. Groups committed to the same queue complete in the FIFO order.
+ *
+ * async_wait_queue(i, N): Block until only N most recent committed groups are still in-flight at
+ * the queue i. N does not have to be a constant, but some backends may require a constant count.
+*/</doc>
+<use f='tvm/src/target/source/codegen_cuda.cc' l='920' u='r' c='_ZN3tvm7codegen11CodeGenCUDA10VisitStmt_EPKNS_3tir12AttrStmtNodeE'/>
+<use f='tvm/src/tir/transforms/inject_software_pipeline.cc' l='767' u='r' c='_ZNK3tvm3tir17software_pipeline16PipelineRewriter30CompletePipelineLoopStatementsERKSt6vectorINS2_18RewrittenBlockInfoESaIS4_EERKSt3mapIiNS2_15AsyncSt4088785'/>

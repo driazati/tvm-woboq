@@ -1,0 +1,16 @@
+<dec f='tvm/src/contrib/ethosu/cascader/plan_generator.h' l='73' type='std::vector&lt;Plan&gt; tvm::contrib::ethosu::cascader::GenerateSinglePlans(const tvm::contrib::ethosu::cascader::Part &amp; part, const std::vector&lt;StripeConfig&gt; &amp; output_stripe_configs, const tvm::contrib::ethosu::cascader::HomeMap &amp; home_map, const tvm::contrib::ethosu::cascader::CascaderOptions &amp; options)'/>
+<def f='tvm/src/contrib/ethosu/cascader/plan_generator.cc' l='340' ll='446' type='std::vector&lt;Plan&gt; tvm::contrib::ethosu::cascader::GenerateSinglePlans(const tvm::contrib::ethosu::cascader::Part &amp; part, const std::vector&lt;StripeConfig&gt; &amp; output_stripe_configs, const std::unordered_map&lt;Tensor, std::vector&lt;MemoryRegion&gt;, ObjectPtrHash, ObjectPtrEqual&gt; &amp; home_map, const tvm::contrib::ethosu::cascader::CascaderOptions &amp; options)'/>
+<use f='tvm/src/contrib/ethosu/cascader/plan_generator.cc' l='492' u='c' c='_ZN3tvm7contrib6ethosu8cascader18GenerateGraphPlansERKNS2_13CascaderGraphERKSt13unordered_mapINS2_6TensorESt6vectorINS2_12MemoryRegionESaIS9_EENS_7run1070765'/>
+<use f='tvm/src/contrib/ethosu/cascader/plan_generator.cc' l='583' u='c'/>
+<doc f='tvm/src/contrib/ethosu/cascader/plan_generator.h' l='61'>/*!
+ * \brief Generate single-Part Plans for a Part for a given list of output StripeConfigs.
+ * \param part The Part to generate Plans for.
+ * \param output_stripe_configs The output StripeConfigs to generate Plans with.
+ * \param home_map The Tensor homing map defining valid memory homes for Tensors.
+ * \param options The configuration options with which to run the generator.
+ * \return The generated Plans covering the Part.
+ * \note For each of the output StripeConfigs provided, this algorithm will produce a number
+ * of Plans corresponding to different choices of Tensor homing/copying, buffer modes
+ * and INTERIOR/BOUNDARY states. For each of these variants, the Part&apos;s performance will
+ * be queried and the memory usage will be calculated.
+ */</doc>

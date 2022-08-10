@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>op_attr_types.h source code [tvm/include/tvm/tir/op_attr_types.h] - Woboq Code Browser</title>
+<meta name="woboq:interestingDefinitions" content="tvm::tir::CallEffectKind "/>
+<link rel="stylesheet" href="../../../.././data/qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href="../../../.././data/kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src="../../../.././data/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="../../../.././data/jquery/jquery-ui.min.js"></script>
+<script>var file = 'tvm/include/tvm/tir/op_attr_types.h'; var root_path = '../../../..'; var data_path = '../../../.././data'; var ecma_script_api_version = 2;</script>
+<script src='../../../.././data/codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='../../..'>tvm</a>/<a href='../..'>include</a>/<a href='..'>tvm</a>/<a href='./'>tir</a>/<a href='op_attr_types.h.html'>op_attr_types.h</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td><i>/*</i></td></tr>
+<tr><th id="2">2</th><td><i> * Licensed to the Apache Software Foundation (ASF) under one</i></td></tr>
+<tr><th id="3">3</th><td><i> * or more contributor license agreements.  See the NOTICE file</i></td></tr>
+<tr><th id="4">4</th><td><i> * distributed with this work for additional information</i></td></tr>
+<tr><th id="5">5</th><td><i> * regarding copyright ownership.  The ASF licenses this file</i></td></tr>
+<tr><th id="6">6</th><td><i> * to you under the Apache License, Version 2.0 (the</i></td></tr>
+<tr><th id="7">7</th><td><i> * "License"); you may not use this file except in compliance</i></td></tr>
+<tr><th id="8">8</th><td><i> * with the License.  You may obtain a copy of the License at</i></td></tr>
+<tr><th id="9">9</th><td><i> *</i></td></tr>
+<tr><th id="10">10</th><td><i> *   <a href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a></i></td></tr>
+<tr><th id="11">11</th><td><i> *</i></td></tr>
+<tr><th id="12">12</th><td><i> * Unless required by applicable law or agreed to in writing,</i></td></tr>
+<tr><th id="13">13</th><td><i> * software distributed under the License is distributed on an</i></td></tr>
+<tr><th id="14">14</th><td><i> * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY</i></td></tr>
+<tr><th id="15">15</th><td><i> * KIND, either express or implied.  See the License for the</i></td></tr>
+<tr><th id="16">16</th><td><i> * specific language governing permissions and limitations</i></td></tr>
+<tr><th id="17">17</th><td><i> * under the License.</i></td></tr>
+<tr><th id="18">18</th><td><i> */</i></td></tr>
+<tr><th id="19">19</th><td></td></tr>
+<tr><th id="20">20</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="21">21</th><td><i class="doc"> * <span class="command">\file</span> <span class="verb">tvm/tir/op_attr_types.h</span></i></td></tr>
+<tr><th id="22">22</th><td><i class="doc"> * <span class="command">\brief</span> Attribute types in the Op registry for TIR ops.</i></td></tr>
+<tr><th id="23">23</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="24">24</th><td><i class="doc"> * These attributes can be set via OpRegEntry::set_attr</i></td></tr>
+<tr><th id="25">25</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="26">26</th><td><i class="doc"> * <span class="command">\sa</span> tvm/ir/op.h</i></td></tr>
+<tr><th id="27">27</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="28">28</th><td><u>#<span data-ppcond="28">ifndef</span> <span class="macro" data-ref="_M/TVM_TIR_OP_ATTR_TYPES_H_">TVM_TIR_OP_ATTR_TYPES_H_</span></u></td></tr>
+<tr><th id="29">29</th><td><u>#define <dfn class="macro" id="_M/TVM_TIR_OP_ATTR_TYPES_H_" data-ref="_M/TVM_TIR_OP_ATTR_TYPES_H_">TVM_TIR_OP_ATTR_TYPES_H_</dfn></u></td></tr>
+<tr><th id="30">30</th><td></td></tr>
+<tr><th id="31">31</th><td><u>#include <a href="../ir/expr.h.html">&lt;tvm/ir/expr.h&gt;</a></u></td></tr>
+<tr><th id="32">32</th><td><u>#include <a href="../runtime/container/string.h.html">&lt;tvm/runtime/container/string.h&gt;</a></u></td></tr>
+<tr><th id="33">33</th><td><u>#include <a href="../runtime/packed_func.h.html">&lt;tvm/runtime/packed_func.h&gt;</a></u></td></tr>
+<tr><th id="34">34</th><td></td></tr>
+<tr><th id="35">35</th><td><b>namespace</b> <span class="namespace">tvm</span> {</td></tr>
+<tr><th id="36">36</th><td><b>namespace</b> <span class="namespace">tir</span> {</td></tr>
+<tr><th id="37">37</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="38">38</th><td><i class="doc"> * <span class="command">\brief</span> Global symbol of the op after lowering.</i></td></tr>
+<tr><th id="39">39</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="40">40</th><td><b>using</b> <dfn class="typedef" id="tvm::tir::TGlobalSymbol" title='tvm::tir::TGlobalSymbol' data-type='tvm::runtime::String' data-ref="tvm::tir::TGlobalSymbol" data-ref-filename="tvm..tir..TGlobalSymbol">TGlobalSymbol</dfn> = String;</td></tr>
+<tr><th id="41">41</th><td></td></tr>
+<tr><th id="42">42</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="43">43</th><td><i class="doc"> * <span class="command">\brief</span> Whether the op is overloaded for vector form.</i></td></tr>
+<tr><th id="44">44</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="45">45</th><td><b>using</b> <dfn class="typedef" id="tvm::tir::TVectorizable" title='tvm::tir::TVectorizable' data-type='bool' data-ref="tvm::tir::TVectorizable" data-ref-filename="tvm..tir..TVectorizable">TVectorizable</dfn> = <em>bool</em>;</td></tr>
+<tr><th id="46">46</th><td></td></tr>
+<tr><th id="47">47</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="48">48</th><td><i class="doc"> * <span class="command">\brief</span> The intrinsic lowering function for given op.</i></td></tr>
+<tr><th id="49">49</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="50">50</th><td><b>using</b> <dfn class="typedef" id="tvm::tir::FLowerIntrinsic" title='tvm::tir::FLowerIntrinsic' data-type='runtime::TypedPackedFunc&lt;PrimExpr (PrimExpr)&gt;' data-ref="tvm::tir::FLowerIntrinsic" data-ref-filename="tvm..tir..FLowerIntrinsic">FLowerIntrinsic</dfn> = <span class="namespace">runtime::</span><a class="type" href="../runtime/packed_func.h.html#tvm::runtime::TypedPackedFunc" title='tvm::runtime::TypedPackedFunc' data-ref="tvm::runtime::TypedPackedFunc" data-ref-filename="tvm..runtime..TypedPackedFunc">TypedPackedFunc</a>&lt;<a class="type" href="../ir/expr.h.html#tvm::PrimExpr" title='tvm::PrimExpr' data-ref="tvm::PrimExpr" data-ref-filename="tvm..PrimExpr">PrimExpr</a>(<a class="type" href="../ir/expr.h.html#tvm::PrimExpr" title='tvm::PrimExpr' data-ref="tvm::PrimExpr" data-ref-filename="tvm..PrimExpr">PrimExpr</a>)&gt;;</td></tr>
+<tr><th id="51">51</th><td></td></tr>
+<tr><th id="52">52</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="53">53</th><td><i class="doc"> * <span class="command">\brief</span> The legalization function for given tir op.</i></td></tr>
+<tr><th id="54">54</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="55">55</th><td><b>using</b> <dfn class="typedef" id="tvm::tir::FLegalize" title='tvm::tir::FLegalize' data-type='runtime::TypedPackedFunc&lt;PrimExpr (PrimExpr)&gt;' data-ref="tvm::tir::FLegalize" data-ref-filename="tvm..tir..FLegalize">FLegalize</dfn> = <span class="namespace">runtime::</span><a class="type" href="../runtime/packed_func.h.html#tvm::runtime::TypedPackedFunc" title='tvm::runtime::TypedPackedFunc' data-ref="tvm::runtime::TypedPackedFunc" data-ref-filename="tvm..runtime..TypedPackedFunc">TypedPackedFunc</a>&lt;<a class="type" href="../ir/expr.h.html#tvm::PrimExpr" title='tvm::PrimExpr' data-ref="tvm::PrimExpr" data-ref-filename="tvm..PrimExpr">PrimExpr</a>(<a class="type" href="../ir/expr.h.html#tvm::PrimExpr" title='tvm::PrimExpr' data-ref="tvm::PrimExpr" data-ref-filename="tvm..PrimExpr">PrimExpr</a>)&gt;;</td></tr>
+<tr><th id="56">56</th><td></td></tr>
+<tr><th id="57">57</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="58">58</th><td><i class="doc"> * <span class="command">\brief</span> The effect type of the call.</i></td></tr>
+<tr><th id="59">59</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="60">60</th><td><b>enum</b> <b>class</b> <dfn class="type def" id="tvm::tir::CallEffectKind" title='tvm::tir::CallEffectKind' data-ref="tvm::tir::CallEffectKind" data-ref-filename="tvm..tir..CallEffectKind">CallEffectKind</dfn> : <em>int</em> {</td></tr>
+<tr><th id="61">61</th><td>  <i class="doc">/*! <span class="command">\brief</span> Function corresponds to an annotation(e.g. likely) and can translate to identity. */</i></td></tr>
+<tr><th id="62">62</th><td>  <dfn class="enum" id="tvm::tir::CallEffectKind::kExprAnnotation" title='tvm::tir::CallEffectKind::kExprAnnotation' data-ref="tvm::tir::CallEffectKind::kExprAnnotation" data-ref-filename="tvm..tir..CallEffectKind..kExprAnnotation">kExprAnnotation</dfn> = <var>0</var>,</td></tr>
+<tr><th id="63">63</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="64">64</th><td><i class="doc">   * <span class="command">\brief</span> Pure function that do not interacts</i></td></tr>
+<tr><th id="65">65</th><td><i class="doc">   *        with any external state.</i></td></tr>
+<tr><th id="66">66</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="67">67</th><td>  <dfn class="enum" id="tvm::tir::CallEffectKind::kPure" title='tvm::tir::CallEffectKind::kPure' data-ref="tvm::tir::CallEffectKind::kPure" data-ref-filename="tvm..tir..CallEffectKind..kPure">kPure</dfn> = <var>1</var>,</td></tr>
+<tr><th id="68">68</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="69">69</th><td><i class="doc">   * <span class="command">\brief</span> Function's that may read from states(e.g. RAM)</i></td></tr>
+<tr><th id="70">70</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="71">71</th><td>  <dfn class="enum" id="tvm::tir::CallEffectKind::kReadState" title='tvm::tir::CallEffectKind::kReadState' data-ref="tvm::tir::CallEffectKind::kReadState" data-ref-filename="tvm..tir..CallEffectKind..kReadState">kReadState</dfn> = <var>2</var>,</td></tr>
+<tr><th id="72">72</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="73">73</th><td><i class="doc">   * <span class="command">\brief</span> Function that may read/write from states(e.g. RAM).</i></td></tr>
+<tr><th id="74">74</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="75">75</th><td>  <dfn class="enum" id="tvm::tir::CallEffectKind::kUpdateState" title='tvm::tir::CallEffectKind::kUpdateState' data-ref="tvm::tir::CallEffectKind::kUpdateState" data-ref-filename="tvm..tir..CallEffectKind..kUpdateState">kUpdateState</dfn> = <var>3</var>,</td></tr>
+<tr><th id="76">76</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="77">77</th><td><i class="doc">   * <span class="command">\brief</span> Opaque function, cannot make any assumption</i></td></tr>
+<tr><th id="78">78</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="79">79</th><td>  <dfn class="enum" id="tvm::tir::CallEffectKind::kOpaque" title='tvm::tir::CallEffectKind::kOpaque' data-ref="tvm::tir::CallEffectKind::kOpaque" data-ref-filename="tvm..tir..CallEffectKind..kOpaque">kOpaque</dfn> = <a class="enum" href="#tvm::tir::CallEffectKind::kUpdateState" title='tvm::tir::CallEffectKind::kUpdateState' data-ref="tvm::tir::CallEffectKind::kUpdateState" data-ref-filename="tvm..tir..CallEffectKind..kUpdateState">kUpdateState</a>,</td></tr>
+<tr><th id="80">80</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="81">81</th><td><i class="doc">   * <span class="command">\brief</span> Special intrinsic to annotate call arguments info</i></td></tr>
+<tr><th id="82">82</th><td><i class="doc">   *        only valid as a direct argument to a call.</i></td></tr>
+<tr><th id="83">83</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="84">84</th><td>  <dfn class="enum" id="tvm::tir::CallEffectKind::kSpecialCallArg" title='tvm::tir::CallEffectKind::kSpecialCallArg' data-ref="tvm::tir::CallEffectKind::kSpecialCallArg" data-ref-filename="tvm..tir..CallEffectKind..kSpecialCallArg">kSpecialCallArg</dfn> = <var>4</var>,</td></tr>
+<tr><th id="85">85</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="86">86</th><td><i class="doc">   * <span class="command">\brief</span> Embed opaque information in the Expr, cannot be codegen.</i></td></tr>
+<tr><th id="87">87</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="88">88</th><td>  <dfn class="enum" id="tvm::tir::CallEffectKind::kEmbedInfo" title='tvm::tir::CallEffectKind::kEmbedInfo' data-ref="tvm::tir::CallEffectKind::kEmbedInfo" data-ref-filename="tvm..tir..CallEffectKind..kEmbedInfo">kEmbedInfo</dfn> = <var>5</var>,</td></tr>
+<tr><th id="89">89</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="90">90</th><td><i class="doc">   * <span class="command">\brief</span> Function that changes control flow</i></td></tr>
+<tr><th id="91">91</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="92">92</th><td>  <dfn class="enum" id="tvm::tir::CallEffectKind::kControlJump" title='tvm::tir::CallEffectKind::kControlJump' data-ref="tvm::tir::CallEffectKind::kControlJump" data-ref-filename="tvm..tir..CallEffectKind..kControlJump">kControlJump</dfn> = <var>6</var>,</td></tr>
+<tr><th id="93">93</th><td>};</td></tr>
+<tr><th id="94">94</th><td></td></tr>
+<tr><th id="95">95</th><td><i class="doc">/*! <span class="command">\brief</span> Use integer to record the kind. */</i></td></tr>
+<tr><th id="96">96</th><td><b>using</b> <dfn class="typedef" id="tvm::tir::TCallEffectKind" title='tvm::tir::TCallEffectKind' data-type='tvm::Integer' data-ref="tvm::tir::TCallEffectKind" data-ref-filename="tvm..tir..TCallEffectKind">TCallEffectKind</dfn> = <a class="type" href="../ir/expr.h.html#tvm::Integer" title='tvm::Integer' data-ref="tvm::Integer" data-ref-filename="tvm..Integer">Integer</a>;</td></tr>
+<tr><th id="97">97</th><td></td></tr>
+<tr><th id="98">98</th><td>}  <i>// namespace tir</i></td></tr>
+<tr><th id="99">99</th><td>}  <i>// namespace tvm</i></td></tr>
+<tr><th id="100">100</th><td><u>#<span data-ppcond="28">endif</span>  // TVM_TIR_OP_ATTR_TYPES_H_</u></td></tr>
+<tr><th id="101">101</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated while processing <a href='../../../src/arith/canonical_simplify.cc.html'>tvm/src/arith/canonical_simplify.cc</a><br/>Generated on <em>2022-Aug-10</em> from project tvm revision <em>fae79bb</em><br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

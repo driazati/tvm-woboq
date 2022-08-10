@@ -1,0 +1,87 @@
+<use f='tvm/src/contrib/ethosu/cascader/pareto.h' l='69' c='_ZN3tvm7contrib6ethosu8cascader15ParetoCullPlansESt6vectorINS2_4PlanESaIS4_EEmb'/>
+<use f='tvm/src/contrib/ethosu/cascader/pareto.h' l='69' c='_ZN3tvm7contrib6ethosu8cascader15ParetoCullPlansESt6vectorINS2_4PlanESaIS4_EEmb'/>
+<use f='tvm/src/contrib/ethosu/cascader/plan.h' l='74'/>
+<inh f='tvm/include/tvm/runtime/object.h' l='511' c='tvm::runtime::ObjectRef'/>
+<def f='tvm/src/contrib/ethosu/cascader/plan.h' l='110' ll='134'/>
+<use f='tvm/src/contrib/ethosu/cascader/plan.h' l='131' c='_ZNK3tvm7contrib6ethosu8cascader4Plan5MergeERKS3_'/>
+<use f='tvm/src/contrib/ethosu/cascader/plan.h' l='131' c='_ZNK3tvm7contrib6ethosu8cascader4Plan5MergeERKS3_'/>
+<use f='tvm/src/contrib/ethosu/cascader/plan.h' l='133' c='_ZN3tvm7contrib6ethosu8cascader4PlanC1ERKS3_'/>
+<use f='tvm/src/contrib/ethosu/cascader/plan.h' l='133' c='_ZN3tvm7contrib6ethosu8cascader4PlanC1EOS3_'/>
+<use f='tvm/src/contrib/ethosu/cascader/plan.h' l='133' c='_ZN3tvm7contrib6ethosu8cascader4PlanaSERKS3_'/>
+<use f='tvm/src/contrib/ethosu/cascader/plan.h' l='133' c='_ZN3tvm7contrib6ethosu8cascader4PlanaSERKS3_'/>
+<use f='tvm/src/contrib/ethosu/cascader/plan.h' l='133' c='_ZN3tvm7contrib6ethosu8cascader4PlanaSEOS3_'/>
+<use f='tvm/src/contrib/ethosu/cascader/plan.h' l='133' c='_ZN3tvm7contrib6ethosu8cascader4PlanaSEOS3_'/>
+<use f='tvm/src/contrib/ethosu/cascader/proposal.h' l='56' c='_ZNK3tvm7contrib6ethosu8cascader12ProposalNode8GetPlansEv'/>
+<use f='tvm/src/contrib/ethosu/cascader/proposal.h' l='77'/>
+<use f='tvm/src/contrib/ethosu/cascader/proposal.h' l='94' c='_ZN3tvm7contrib6ethosu8cascader8ProposalC1ERKNS2_13CascaderGraphERKSt6vectorINS2_4PartESaIS8_EERKS7_INS2_4PlanESaISD_EERKSt13unordered_mapINS2_6Tensor10463963'/>
+<use f='tvm/src/contrib/ethosu/cascader/pareto.cc' l='83' c='_ZN3tvm7contrib6ethosu8cascader15ParetoCullPlansESt6vectorINS2_4PlanESaIS4_EEmb'/>
+<use f='tvm/src/contrib/ethosu/cascader/pareto.cc' l='83' c='_ZN3tvm7contrib6ethosu8cascader15ParetoCullPlansESt6vectorINS2_4PlanESaIS4_EEmb'/>
+<use f='tvm/src/contrib/ethosu/cascader/pareto.cc' l='93' c='_ZN3tvm7contrib6ethosu8cascader15ParetoCullPlansESt6vectorINS2_4PlanESaIS4_EEmb'/>
+<use f='tvm/src/contrib/ethosu/cascader/pareto.cc' l='93' c='_ZN3tvm7contrib6ethosu8cascader15ParetoCullPlansESt6vectorINS2_4PlanESaIS4_EEmb'/>
+<use f='tvm/src/contrib/ethosu/cascader/pareto.cc' l='103' c='_ZN3tvm7contrib6ethosu8cascader15ParetoCullPlansESt6vectorINS2_4PlanESaIS4_EEmb'/>
+<use f='tvm/src/contrib/ethosu/cascader/pareto.cc' l='171'/>
+<use f='tvm/src/contrib/ethosu/cascader/pareto.cc' l='172'/>
+<use f='tvm/src/contrib/ethosu/cascader/pareto.cc' l='173'/>
+<size>8</size>
+<doc f='tvm/src/contrib/ethosu/cascader/plan.h' l='93'>/*!
+ * \brief A class which describes how to schedule a subgraph of Parts together.
+ * \note A Plan takes the form of a subgraph of connected Parts (recorded in part_group) with
+ * TensorConfigs for all of the required Tensors (recorded in tensor_configs). This information can
+ * be used to produce a Tensor Expression schedule with inter-operator scheduling. A Plan is
+ * necessarily single-output such that all non-output Parts are &apos;computed_at&apos;ed the scope of the
+ * output Part. This is what achieves the technique referred to as &apos;cascading&apos;. A Plan also has an
+ * interior memory region which specifies the region of memory into which all the Plans intermediate
+ * buffers should be allocated.
+ *
+ * Additionally, a Plan contains some other information used during the Plan generation and
+ * selection algorithms. Both the memory and cycles required to run the Plan are accounted for so
+ * that Plans can be ranked and Pareto-culled on these metrics. Furthermore, the TensorConfigs which
+ * are &apos;open&apos; is recorded indicating that these are valid points to merge with another Plan. A Plan
+ * can only be turned into a schedule if it has no &apos;open&apos; TensorConfigs - at which point the Plan is
+ * said to be &apos;closed&apos;.
+ */</doc>
+<fun r='_ZN3tvm7contrib6ethosu8cascader4PlanC1ERKSt6vectorINS2_12TensorConfigESaIS5_EES9_RKS5_RKS4_INS2_4PartESaISC_EERKNS2_12MemoryRegionEii'/>
+<fun r='_ZNK3tvm7contrib6ethosu8cascader4Plan5MergeERKS3_'/>
+<fun r='_ZN3tvm7contrib6ethosu8cascader4PlanC1Ev'/>
+<fun r='_ZN3tvm7contrib6ethosu8cascader4PlanC1ENS_7runtime9ObjectPtrINS4_6ObjectEEE'/>
+<fun r='_ZN3tvm7contrib6ethosu8cascader4PlanC1ERKS3_'/>
+<fun r='_ZN3tvm7contrib6ethosu8cascader4PlanC1EOS3_'/>
+<fun r='_ZNK3tvm7contrib6ethosu8cascader4Plan3getEv'/>
+<use f='tvm/src/contrib/ethosu/cascader/plan.cc' l='66' c='_ZNK3tvm7contrib6ethosu8cascader4Plan5MergeERKS3_'/>
+<use f='tvm/src/contrib/ethosu/cascader/plan.cc' l='66' c='_ZNK3tvm7contrib6ethosu8cascader4Plan5MergeERKS3_'/>
+<use f='tvm/src/contrib/ethosu/cascader/plan.cc' l='83' c='_ZNK3tvm7contrib6ethosu8cascader4Plan5MergeERKS3_'/>
+<use f='tvm/src/contrib/ethosu/cascader/plan.cc' l='93'/>
+<use f='tvm/src/contrib/ethosu/cascader/plan.cc' l='100'/>
+<use f='tvm/src/contrib/ethosu/cascader/plan.cc' l='100'/>
+<size>8</size>
+<fun r='_ZN3tvm7contrib6ethosu8cascader4PlanC1ERKSt6vectorINS2_12TensorConfigESaIS5_EES9_RKS5_RKS4_INS2_4PartESaISC_EERKNS2_12MemoryRegionEii'/>
+<fun r='_ZNK3tvm7contrib6ethosu8cascader4Plan5MergeERKS3_'/>
+<use f='tvm/src/contrib/ethosu/cascader/plan_generator.h' l='73' c='_ZN3tvm7contrib6ethosu8cascader19GenerateSinglePlansERKNS2_4PartERKSt6vectorINS2_12StripeConfigESaIS7_EERKSt13unordered_mapINS2_6TensorES6_INS2_12Memo4994141'/>
+<use f='tvm/src/contrib/ethosu/cascader/plan_generator.h' l='103' c='_ZN3tvm7contrib6ethosu8cascader18GenerateGraphPlansERKNS2_13CascaderGraphERKSt13unordered_mapINS2_6TensorESt6vectorINS2_12MemoryRegionESaIS9_EENS_7run1070765'/>
+<use f='tvm/src/contrib/ethosu/cascader/plan_generator.cc' l='340' c='_ZN3tvm7contrib6ethosu8cascader19GenerateSinglePlansERKNS2_4PartERKSt6vectorINS2_12StripeConfigESaIS7_EERKSt13unordered_mapINS2_6TensorES6_INS2_12Memo4994141'/>
+<use f='tvm/src/contrib/ethosu/cascader/plan_generator.cc' l='345' c='_ZN3tvm7contrib6ethosu8cascader19GenerateSinglePlansERKNS2_4PartERKSt6vectorINS2_12StripeConfigESaIS7_EERKSt13unordered_mapINS2_6TensorES6_INS2_12Memo4994141'/>
+<use f='tvm/src/contrib/ethosu/cascader/plan_generator.cc' l='440' c='_ZN3tvm7contrib6ethosu8cascader19GenerateSinglePlansERKNS2_4PartERKSt6vectorINS2_12StripeConfigESaIS7_EERKSt13unordered_mapINS2_6TensorES6_INS2_12Memo4994141'/>
+<use f='tvm/src/contrib/ethosu/cascader/plan_generator.cc' l='448' c='_ZN3tvm7contrib6ethosu8cascader18GenerateGraphPlansERKNS2_13CascaderGraphERKSt13unordered_mapINS2_6TensorESt6vectorINS2_12MemoryRegionESaIS9_EENS_7run1070765'/>
+<use f='tvm/src/contrib/ethosu/cascader/plan_generator.cc' l='462' c='_ZN3tvm7contrib6ethosu8cascader18GenerateGraphPlansERKNS2_13CascaderGraphERKSt13unordered_mapINS2_6TensorESt6vectorINS2_12MemoryRegionESaIS9_EENS_7run1070765'/>
+<use f='tvm/src/contrib/ethosu/cascader/plan_generator.cc' l='464' c='_ZN3tvm7contrib6ethosu8cascader18GenerateGraphPlansERKNS2_13CascaderGraphERKSt13unordered_mapINS2_6TensorESt6vectorINS2_12MemoryRegionESaIS9_EENS_7run1070765'/>
+<use f='tvm/src/contrib/ethosu/cascader/plan_generator.cc' l='471' c='_ZN3tvm7contrib6ethosu8cascader18GenerateGraphPlansERKNS2_13CascaderGraphERKSt13unordered_mapINS2_6TensorESt6vectorINS2_12MemoryRegionESaIS9_EENS_7run1070765'/>
+<use f='tvm/src/contrib/ethosu/cascader/plan_generator.cc' l='493' c='_ZN3tvm7contrib6ethosu8cascader18GenerateGraphPlansERKNS2_13CascaderGraphERKSt13unordered_mapINS2_6TensorESt6vectorINS2_12MemoryRegionESaIS9_EENS_7run1070765'/>
+<use f='tvm/src/contrib/ethosu/cascader/plan_generator.cc' l='583'/>
+<use f='tvm/src/contrib/ethosu/cascader/plan_generator.cc' l='599'/>
+<use f='tvm/src/contrib/ethosu/cascader/plan_generator.cc' l='602'/>
+<size>8</size>
+<use f='tvm/src/contrib/ethosu/cascader/proposal.cc' l='41' c='_ZN3tvm7contrib6ethosu8cascader12ProposalNode10VisitAttrsEPNS_11AttrVisitorE'/>
+<use f='tvm/src/contrib/ethosu/cascader/proposal.cc' l='51' c='_ZN3tvm7contrib6ethosu8cascader8ProposalC1ERKNS2_13CascaderGraphERKSt6vectorINS2_4PartESaIS8_EERKS7_INS2_4PlanESaISD_EERKSt13unordered_mapINS2_6Tensor10463963'/>
+<use f='tvm/src/contrib/ethosu/cascader/proposal.cc' l='66'/>
+<use f='tvm/src/contrib/ethosu/cascader/proposal.cc' l='70'/>
+<size>8</size>
+<use f='tvm/src/contrib/ethosu/cascader/proposal_generator.cc' l='44' c='_ZN3tvm7contrib6ethosu8cascader22GetPlanBoundaryConfigsERKNS2_4PlanE'/>
+<use f='tvm/src/contrib/ethosu/cascader/proposal_generator.cc' l='78' c='_ZN3tvm7contrib6ethosu8cascader17CreatePlansByPartERKSt13unordered_mapISt6vectorINS2_4PartESaIS5_EES4_INS2_4PlanESaIS8_EESt4hashIS7_ESt8equal_toIS7_ES13493804'/>
+<use f='tvm/src/contrib/ethosu/cascader/proposal_generator.cc' l='79' c='_ZN3tvm7contrib6ethosu8cascader17CreatePlansByPartERKSt13unordered_mapISt6vectorINS2_4PartESaIS5_EES4_INS2_4PlanESaIS8_EESt4hashIS7_ESt8equal_toIS7_ES13493804'/>
+<use f='tvm/src/contrib/ethosu/cascader/proposal_generator.cc' l='81' c='_ZN3tvm7contrib6ethosu8cascader17CreatePlansByPartERKSt13unordered_mapISt6vectorINS2_4PartESaIS5_EES4_INS2_4PlanESaIS8_EESt4hashIS7_ESt8equal_toIS7_ES13493804'/>
+<use f='tvm/src/contrib/ethosu/cascader/proposal_generator.cc' l='101' c='_ZN3tvm7contrib6ethosu8cascader17AddPlanToProposalERKNS2_8ProposalERKNS2_4PlanERKSt13unordered_setINS2_12TensorConfigESt4hashISA_ESt8equal_toISA_ESaISA_EE'/>
+<use f='tvm/src/contrib/ethosu/cascader/proposal_generator.cc' l='103' c='_ZN3tvm7contrib6ethosu8cascader17AddPlanToProposalERKNS2_8ProposalERKNS2_4PlanERKSt13unordered_setINS2_12TensorConfigESt4hashISA_ESt8equal_toISA_ESaISA_EE'/>
+<use f='tvm/src/contrib/ethosu/cascader/proposal_generator.cc' l='137' c='_ZN3tvm7contrib6ethosu8cascader24GeneratePartialProposalsERKNS2_13CascaderGraphERKSt13unordered_mapINS2_6TensorESt6vectorINS2_12MemoryRegionESaIS9_EEN15255481'/>
+<use f='tvm/src/contrib/ethosu/cascader/proposal_generator.cc' l='145' c='_ZN3tvm7contrib6ethosu8cascader24GeneratePartialProposalsERKNS2_13CascaderGraphERKSt13unordered_mapINS2_6TensorESt6vectorINS2_12MemoryRegionESaIS9_EEN15255481'/>
+<use f='tvm/src/contrib/ethosu/cascader/proposal_generator.cc' l='192' c='_ZN3tvm7contrib6ethosu8cascader17GenerateProposalsERKNS2_13CascaderGraphERKSt13unordered_mapINS2_6TensorESt6vectorINS2_12MemoryRegionESaIS9_EENS_7runt15189700'/>
+<size>8</size>

@@ -1,0 +1,40 @@
+<inh f='tvm/include/tvm/auto_scheduler/transform_step.h' l='164' c='tvm::auto_scheduler::StepNode'/>
+<def f='tvm/include/tvm/auto_scheduler/transform_step.h' l='1062' ll='1101'/>
+<use f='tvm/include/tvm/auto_scheduler/transform_step.h' l='1123' c='_ZNK3tvm14auto_scheduler14CacheWriteStepptEv'/>
+<use f='tvm/include/tvm/auto_scheduler/transform_step.h' l='1123' c='_ZNK3tvm14auto_scheduler14CacheWriteStepptEv'/>
+<use f='tvm/include/tvm/auto_scheduler/transform_step.h' l='1123' c='_ZNK3tvm14auto_scheduler14CacheWriteStep3getEv'/>
+<use f='tvm/include/tvm/auto_scheduler/transform_step.h' l='1123'/>
+<size>40</size>
+<doc f='tvm/include/tvm/auto_scheduler/transform_step.h' l='1056'>/*!
+ * \brief Cache write step that corresponds to te::Schedule::cache_write.
+ * \note Cache write step will add an extra stage to the original ComputeDAG, a up-to-date
+ * ComputeDAG is stored in State&apos;s `current_compute_dag`.
+ * This step will cache write all output tensors of the target stage.
+ */</doc>
+<mbr r='tvm::auto_scheduler::CacheWriteStepNode::scope_name' o='256' t='tvm::runtime::String'/>
+<fun r='_ZNK3tvm14auto_scheduler18CacheWriteStepNode13WriteToRecordEPN4dmlc10JSONWriterE'/>
+<fun r='_ZNK3tvm14auto_scheduler18CacheWriteStepNode12ApplyToStateEPNS0_5StateERKNS0_10ComputeDAGE'/>
+<fun r='_ZNK3tvm14auto_scheduler18CacheWriteStepNode15ApplyToScheduleEPNS_7runtime5ArrayINS_2te5StageEvEEPNS2_3MapIS5_NS3_INS_3tir7IterVarEvEENS2_10ObjectHash12813282'/>
+<fun r='_ZNK3tvm14auto_scheduler18CacheWriteStepNode16PrintAsPythonAPIEPNS_7runtime5ArrayINS_2te5StageEvEEPNS2_3MapIS5_NS3_INS_3tir7IterVarEvEENS2_10ObjectHas10721419'/>
+<smbr r='tvm::auto_scheduler::CacheWriteStepNode::record_prefix_str' t='const char *const'/>
+<smbr r='tvm::auto_scheduler::CacheWriteStepNode::_type_key' t='const char *const'/>
+<smbr r='tvm::auto_scheduler::CacheWriteStepNode::_type_final' t='const bool'/>
+<smbr r='tvm::auto_scheduler::CacheWriteStepNode::_type_child_slots' t='const int'/>
+<fun r='_ZN3tvm14auto_scheduler18CacheWriteStepNode16RuntimeTypeIndexEv'/>
+<fun r='_ZN3tvm14auto_scheduler18CacheWriteStepNode27_GetOrAllocRuntimeTypeIndexEv'/>
+<use f='tvm/src/auto_scheduler/search_policy/utils.h' l='386' c='_ZN3tvm14auto_scheduler25IsStageNumberChangingStepERKNS0_4StepE'/>
+<use f='tvm/src/auto_scheduler/search_policy/utils.h' l='411' c='_ZN3tvm14auto_scheduler18HasCacheWriteStageERKNS0_5StateEi'/>
+<size>40</size>
+<use f='tvm/src/auto_scheduler/transform_step.cc' l='164' c='_ZN3tvm14auto_scheduler4Step11CopyOnWriteEv'/>
+<use f='tvm/src/auto_scheduler/transform_step.cc' l='165' c='_ZN3tvm14auto_scheduler4Step11CopyOnWriteEv'/>
+<use f='tvm/src/auto_scheduler/transform_step.cc' l='243' c='_ZN3tvm14auto_scheduler16StepApplyToStateERKNS0_4StepEPNS0_5StateERKNS0_10ComputeDAGE'/>
+<use f='tvm/src/auto_scheduler/transform_step.cc' l='278' c='_ZN3tvm14auto_scheduler19StepApplyToScheduleERKNS0_4StepEPNS_7runtime5ArrayINS_2te5StageEvEEPNS4_3MapIS7_NS5_INS_3tir7IterVarEvEENS4_10ObjectHashENS4_198639'/>
+<use f='tvm/src/auto_scheduler/transform_step.cc' l='314' c='_ZN3tvm14auto_scheduler20StepPrintAsPythonAPIERKNS0_4StepEPNS_7runtime5ArrayINS_2te5StageEvEEPNS4_3MapIS7_NS5_INS_3tir7IterVarEvEENS4_10ObjectHashENS410849195'/>
+<use f='tvm/src/auto_scheduler/transform_step.cc' l='1480' c='_ZN3tvm14auto_scheduler29GetFormerStageModifiableStepsENS0_4StepERKNS_7runtime5ArrayIS1_vEE'/>
+<use f='tvm/src/auto_scheduler/transform_step.cc' l='1623' c='_ZN3tvm14auto_scheduler14CacheWriteStepC1EiNS_7runtime6StringE'/>
+<use f='tvm/src/auto_scheduler/transform_step.cc' l='1630' c='_ZN3tvm14auto_scheduler14CacheWriteStepC1EPN4dmlc10JSONReaderE'/>
+<size>40</size>
+<fun r='_ZNK3tvm14auto_scheduler18CacheWriteStepNode13WriteToRecordEPN4dmlc10JSONWriterE'/>
+<fun r='_ZNK3tvm14auto_scheduler18CacheWriteStepNode12ApplyToStateEPNS0_5StateERKNS0_10ComputeDAGE'/>
+<fun r='_ZNK3tvm14auto_scheduler18CacheWriteStepNode15ApplyToScheduleEPNS_7runtime5ArrayINS_2te5StageEvEEPNS2_3MapIS5_NS3_INS_3tir7IterVarEvEENS2_10ObjectHash12813282'/>
+<fun r='_ZNK3tvm14auto_scheduler18CacheWriteStepNode16PrintAsPythonAPIEPNS_7runtime5ArrayINS_2te5StageEvEEPNS2_3MapIS5_NS3_INS_3tir7IterVarEvEENS2_10ObjectHas10721419'/>

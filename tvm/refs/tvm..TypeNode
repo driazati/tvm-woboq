@@ -1,0 +1,58 @@
+<inh f='tvm/include/tvm/runtime/object.h' l='167' c='tvm::runtime::Object'/>
+<def f='tvm/include/tvm/ir/type.h' l='74' ll='87'/>
+<use f='tvm/include/tvm/ir/type.h' l='95' c='_ZNK3tvm4TypeptEv'/>
+<use f='tvm/include/tvm/ir/type.h' l='95' c='_ZNK3tvm4TypeptEv'/>
+<use f='tvm/include/tvm/ir/type.h' l='95' c='_ZNK3tvm4Type3getEv'/>
+<use f='tvm/include/tvm/ir/type.h' l='95'/>
+<ovr f='tvm/include/tvm/ir/type.h' l='106' c='tvm::PrimTypeNode'/>
+<use f='tvm/include/tvm/ir/type.h' l='106'/>
+<ovr f='tvm/include/tvm/ir/type.h' l='150' c='tvm::PointerTypeNode'/>
+<use f='tvm/include/tvm/ir/type.h' l='150'/>
+<ovr f='tvm/include/tvm/ir/type.h' l='228' c='tvm::TypeVarNode'/>
+<use f='tvm/include/tvm/ir/type.h' l='228'/>
+<ovr f='tvm/include/tvm/ir/type.h' l='279' c='tvm::GlobalTypeVarNode'/>
+<use f='tvm/include/tvm/ir/type.h' l='279'/>
+<ovr f='tvm/include/tvm/ir/type.h' l='330' c='tvm::TupleTypeNode'/>
+<use f='tvm/include/tvm/ir/type.h' l='330'/>
+<ovr f='tvm/include/tvm/ir/type.h' l='392' c='tvm::TypeConstraintNode'/>
+<use f='tvm/include/tvm/ir/type.h' l='392'/>
+<ovr f='tvm/include/tvm/ir/type.h' l='416' c='tvm::FuncTypeNode'/>
+<use f='tvm/include/tvm/ir/type.h' l='416'/>
+<ovr f='tvm/include/tvm/ir/type.h' l='488' c='tvm::IncompleteTypeNode'/>
+<use f='tvm/include/tvm/ir/type.h' l='488'/>
+<ovr f='tvm/include/tvm/ir/type.h' l='529' c='tvm::RelayRefTypeNode'/>
+<use f='tvm/include/tvm/ir/type.h' l='529'/>
+<ovr f='tvm/include/tvm/ir/adt.h' l='102' c='tvm::TypeDataNode'/>
+<use f='tvm/include/tvm/ir/adt.h' l='102'/>
+<ovr f='tvm/include/tvm/ir/type_relation.h' l='40' c='tvm::TypeCallNode'/>
+<use f='tvm/include/tvm/ir/type_relation.h' l='40'/>
+<size>24</size>
+<doc f='tvm/include/tvm/ir/type.h' l='62'>/*!
+ * \brief Type is the base type of all types.
+ *
+ * Relay&apos;s type system contains following subclasses:
+ *
+ * - PrimType: type of primitive type values used in the low-level IR.
+ * - FuncType: type of a function.
+ * - TensorType: type of certain Tensor values in the expression.
+ *
+ * There are also advanced types to support generic(polymorphic types).
+ * \sa Type
+ */</doc>
+<mbr r='tvm::TypeNode::span' o='128' t='tvm::Span'/>
+<smbr r='tvm::TypeNode::_type_key' t='const char *const'/>
+<smbr r='tvm::TypeNode::_type_has_method_sequal_reduce' t='const bool'/>
+<smbr r='tvm::TypeNode::_type_has_method_shash_reduce' t='const bool'/>
+<smbr r='tvm::TypeNode::_type_child_slots' t='const uint32_t'/>
+<fun r='_ZN3tvm8TypeNode16RuntimeTypeIndexEv'/>
+<fun r='_ZN3tvm8TypeNode27_GetOrAllocRuntimeTypeIndexEv'/>
+<ovr f='tvm/include/tvm/ir/tensor_type.h' l='36' c='tvm::BaseTensorTypeNode'/>
+<use f='tvm/include/tvm/ir/tensor_type.h' l='36'/>
+<use f='tvm/include/tvm/relay/type.h' l='48'/>
+<size>24</size>
+<use f='tvm/src/printer/tir_text_printer.cc' l='55' c='_ZN3tvm3tir14TIRTextPrinter5PrintERKNS_7runtime9ObjectRefE'/>
+<size>24</size>
+<use f='tvm/src/printer/tvmscript_printer.cc' l='687' c='_ZN3tvm3tir16TVMScriptPrinter5PrintERKNS_7runtime9ObjectRefE'/>
+<size>24</size>
+<use f='tvm/src/relay/ir/base.cc' l='47'/>
+<size>24</size>

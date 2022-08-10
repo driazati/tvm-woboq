@@ -1,0 +1,18 @@
+<dec f='tvm/include/tvm/runtime/crt/rpc_common/framing.h' l='221' type='tvm_crt_error_t tvm::runtime::micro_rpc::Framer::FinishPacket()'/>
+<doc f='tvm/include/tvm/runtime/crt/rpc_common/framing.h' l='204'>/* \brief Finish writing one packet by sending the CRC.
+   *
+   * When transmitting paylaods that are too large to be buffered, call this function after sending
+   * the entire payload using WritePayloadChunk.
+   *
+   * \return
+   *     - kTvmErrorNoError when no error occurs
+   *     - kTvmErrorFramingInvalidState when StartPacket() has not been called.
+   *     - kTvmErrorFramingPayloadIncomplete when less bytes were written using WritePayloadChunk()
+   *       than were declared in the payload_size_bytes parameter given to StartPacket().
+   *     - kTvmErrorWriteStreamShortWrite if the WriteStream passed to constructor&apos;s Write()
+   *       function returns 0.
+   *     - kTvmErrorWriteStreamShortWrite if the WriteStream passed to constructor&apos;s Write()
+   *       function returns an invalid positive number.
+   *     - Any negative value (i.e. with bits in kTvmErrorSystemErrorMask set) returned by the
+   *       WriteStream&apos;s Write() function.
+   */</doc>

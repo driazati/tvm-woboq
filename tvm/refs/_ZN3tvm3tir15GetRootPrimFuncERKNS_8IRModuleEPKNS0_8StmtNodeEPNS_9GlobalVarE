@@ -1,0 +1,17 @@
+<dec f='tvm/src/tir/schedule/analysis.h' l='65' type='const tvm::tir::PrimFuncNode * tvm::tir::GetRootPrimFunc(const tvm::IRModule &amp; mod, const tvm::tir::StmtNode * root_block, tvm::GlobalVar * result_g_var)'/>
+<doc f='tvm/src/tir/schedule/analysis.h' l='57'>/*!
+ * \brief Get PrimFunc and GlobalVar that the root block belongs to
+ * \param mod The IRModule
+ * \param root_block The root block of the PrimFunc
+ * \param result_g_var The result GlobalVar
+ * \return The result PrimFunc where the root block belongs to
+ * \note This function returns the pointer instead of ObjectRef to avoid later copy-on-write
+ */</doc>
+<use f='tvm/src/meta_schedule/schedule_rule/auto_inline.cc' l='40' u='c' c='_ZN3tvm13meta_schedule19IsInSpatialPrimFuncERKNS_3tir8ScheduleERKNS1_8StmtSRefE'/>
+<use f='tvm/src/meta_schedule/schedule_rule/parallel_vectorize_unroll.cc' l='31' u='c' c='_ZN3tvm3tir20CheckSpatialPrimFuncERKNS0_8ScheduleERKNS0_7BlockRVE'/>
+<def f='tvm/src/tir/schedule/analysis/analysis.cc' l='30' ll='50' type='const tvm::tir::PrimFuncNode * tvm::tir::GetRootPrimFunc(const tvm::IRModule &amp; mod, const tvm::tir::StmtNode * root_block, tvm::GlobalVar * result_g_var)'/>
+<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='861' u='c' c='_ZN3tvm3tir15GetBlockRealizeERKNS0_13ScheduleStateERKNS0_8StmtSRefE'/>
+<doc f='tvm/src/tir/schedule/analysis/analysis.cc' l='28'>/******** IR Module ********/</doc>
+<use f='tvm/src/tir/schedule/primitive/layout_transformation.cc' l='176' u='c' c='_ZN3tvm3tir15TransformLayoutENS0_13ScheduleStateERKNS0_8StmtSRefEiNS0_15BufferIndexTypeERKNS0_8IndexMapE'/>
+<use f='tvm/src/tir/schedule/primitive/layout_transformation.cc' l='519' u='c' c='_ZN3tvm3tir16SetAxisSeparatorENS0_13ScheduleStateERKNS0_8StmtSRefEiNS0_15BufferIndexTypeERKNS_7runtime5ArrayINS_6IntImmEvEE'/>
+<use f='tvm/src/tir/schedule/state.cc' l='978' u='c' c='_ZN3tvm3tir17ScheduleStateNode7ReplaceERKNS0_8StmtSRefERKNS0_4StmtERKNS_7runtime3MapINS0_5BlockESA_vvEE'/>

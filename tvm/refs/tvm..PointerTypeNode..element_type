@@ -1,0 +1,36 @@
+<dec f='tvm/include/tvm/ir/type.h' l='155' type='tvm::Type'/>
+<use f='tvm/include/tvm/ir/type.h' l='162' u='a' c='_ZN3tvm15PointerTypeNode10VisitAttrsEPNS_11AttrVisitorE'/>
+<use f='tvm/include/tvm/ir/type.h' l='170' u='r' c='_ZNK3tvm15PointerTypeNode12SEqualReduceEPKS0_NS_13SEqualReducerE'/>
+<use f='tvm/include/tvm/ir/type.h' l='170' u='r' c='_ZNK3tvm15PointerTypeNode12SEqualReduceEPKS0_NS_13SEqualReducerE'/>
+<use f='tvm/include/tvm/ir/type.h' l='174' u='r' c='_ZNK3tvm15PointerTypeNode11SHashReduceENS_12SHashReducerE'/>
+<use f='tvm/include/tvm/tir/op.h' l='741' u='m' c='_ZN3tvm3tir13IsPointerTypeERKNS_4TypeERKNS_7runtime8DataTypeE'/>
+<offset>192</offset>
+<doc f='tvm/include/tvm/ir/type.h' l='152'>/*!
+   * \brief The type of the element which the pointer points to.
+   */</doc>
+<use f='tvm/src/ir/type.cc' l='48' u='w' c='_ZN3tvm11PointerTypeC1ENS_4TypeENS_7runtime6StringE'/>
+<use f='tvm/src/ir/type.cc' l='66' u='r'/>
+<use f='tvm/src/ir/type_functor.cc' l='90' u='r' c='_ZN3tvm11TypeVisitor10VisitType_EPKNS_15PointerTypeNodeE'/>
+<use f='tvm/src/ir/type_functor.cc' l='192' u='r' c='_ZN3tvm11TypeMutator10VisitType_EPKNS_15PointerTypeNodeE'/>
+<use f='tvm/src/ir/type_functor.cc' l='194' u='r' c='_ZN3tvm11TypeMutator10VisitType_EPKNS_15PointerTypeNodeE'/>
+<use f='tvm/src/printer/tir_text_printer.cc' l='719' u='r' c='_ZN3tvm3tir14TIRTextPrinter10VisitType_EPKNS_15PointerTypeNodeE'/>
+<use f='tvm/src/printer/tvmscript_printer.cc' l='1278' u='r' c='_ZN3tvm3tir16TVMScriptPrinter10VisitType_EPKNS_15PointerTypeNodeE'/>
+<use f='tvm/src/printer/tvmscript_printer.cc' l='1670' u='m' c='_ZN3tvm3tir16TVMScriptPrinter13PrintPrimFuncERKNS0_8PrimFuncE'/>
+<use f='tvm/src/relay/backend/aot_executor_codegen.cc' l='772' u='r' c='_ZN3tvm5relay7backend18AOTExecutorCodegen14CreateMainFuncENS_7runtime6StringEj'/>
+<use f='tvm/src/target/llvm/codegen_cpu.cc' l='288' u='r' c='_ZN3tvm7codegen10CodeGenCPU12GetDebugTypeERKNS_4TypeEPN4llvm4TypeE'/>
+<use f='tvm/src/target/llvm/codegen_cpu.cc' l='289' u='r' c='_ZN3tvm7codegen10CodeGenCPU12GetDebugTypeERKNS_4TypeEPN4llvm4TypeE'/>
+<use f='tvm/src/target/llvm/codegen_llvm.cc' l='430' u='m' c='_ZNK3tvm7codegen11CodeGenLLVM11GetLLVMTypeERKNS_4TypeE'/>
+<use f='tvm/src/target/llvm/codegen_llvm.cc' l='436' u='r' c='_ZNK3tvm7codegen11CodeGenLLVM11GetLLVMTypeERKNS_4TypeE'/>
+<use f='tvm/src/target/source/codegen_c.cc' l='107' u='m' c='_ZN3tvm7codegen8CodeGenC11AddFunctionERKNS_3tir8PrimFuncE'/>
+<use f='tvm/src/target/source/codegen_metal.cc' l='89' u='m' c='_ZN3tvm7codegen12CodeGenMetal11AddFunctionERKNS_3tir8PrimFuncE'/>
+<use f='tvm/src/target/source/codegen_opencl.cc' l='253' u='r' c='_ZN3tvm7codegen13CodeGenOpenCL9PrintTypeERKNS_4TypeERSo'/>
+<use f='tvm/src/target/source/codegen_opencl.cc' l='404' u='m' c='_ZN3tvm7codegen13CodeGenOpenCL10VisitExpr_EPKNS_3tir8CallNodeERSo'/>
+<use f='tvm/src/target/source/codegen_source_base.cc' l='171' u='r' c='_ZN3tvm7codegen17CodeGenSourceBase9PrintTypeERKNS_4TypeERSo'/>
+<use f='tvm/src/tir/analysis/device_constraint_utils.cc' l='445' u='r' c='_ZN3tvm3tir12_GLOBAL__N_129ApplyDeviceConstraintsMutator13RewriteBufferERKNS0_6BufferERKNS_13VirtualDeviceE'/>
+<use f='tvm/src/tir/ir/buffer.cc' l='555' u='m' c='_ZN3tvm3tir6BufferC1ENS0_3VarENS_7runtime8DataTypeENS3_5ArrayINS_8PrimExprEvEES7_S6_NS3_6StringEiiNS0_10BufferTypeENS5_INS_6IntImmEvEENS_4SpanE'/>
+<use f='tvm/src/tir/ir/buffer_common.h' l='48' u='m' c='_ZN3tvm3tir14GetPointerTypeERKNS_4TypeE'/>
+<use f='tvm/src/tir/schedule/transform.cc' l='40' u='r' c='_ZN3tvm3tir9WithScopeERKNS0_6BufferERKNS_7runtime6StringE'/>
+<use f='tvm/src/tir/transforms/lower_tvm_builtin.cc' l='529' u='m' c='_ZN3tvm3tir12BuiltinLower23MakeNdMemAllocWithScopeEPKNS0_11LetStmtNodeEPKNS0_8CallNodeE'/>
+<use f='tvm/src/tir/transforms/storage_flatten.cc' l='733' u='r' c='_ZN3tvm3tir20ThreadScopePropagate10VisitStmt_EPKNS0_17BufferRealizeNodeE'/>
+<use f='tvm/src/tir/transforms/update_pointer_storage_scope.cc' l='42' u='r' c='_ZN3tvm3tir16WithStorageScopeEPKNS0_7VarNodeENS_7runtime6StringE'/>
+<use f='tvm/src/tir/usmp/transform/convert_pool_allocations_to_offsets.cc' l='343' u='r' c='_ZN3tvm3tir4usmp31PoolAllocationToOffsetConverter9ToLetStmtERKNS1_14PoolAllocationERKNS0_3VarERKNS0_4StmtE'/>

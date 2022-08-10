@@ -1,0 +1,23 @@
+<def f='tvm/include/tvm/topi/elemwise.h' l='403' ll='435' type='tvm::te::Tensor tvm::topi::fast_exp_float32(const tvm::te::Tensor &amp; _x, std::string name, std::string tag)'/>
+<use f='tvm/include/tvm/topi/elemwise.h' l='450' u='c' c='_ZN3tvm4topi8fast_expERKNS_2te6TensorENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESA_'/>
+<doc f='tvm/include/tvm/topi/elemwise.h' l='382'>/*!
+ * \brief Fast exponential function implementation
+ *
+ * \param _x The input tensor
+ * \param name The name of the operation
+ * \param tag The tag to mark the operation
+ *
+ * \return A Tensor whose op member is exponent operation
+ *
+ * \note Function computes:
+ * log2(e^x) = x * log2(e) * log2(2) =&gt;
+ * log2(e^x) = log2(2^(x*log2(e))) =&gt;
+ * e^x = 2^(x*log2(e))
+ * Splitting power x*log2(e) into integer and fractional parts:
+ * e^(n+f) = e^n * e^f
+ * n = floor(x*log2(e) + 1/2)
+ * f = x - n * ln(2)
+ * exp(x) = 2^n * exp(y)
+ * Approximation for fractional part:
+ * y = exp(f) = 1 + 2 * P(x**2)/(Q(x**2) - P(x**2))
+ */</doc>

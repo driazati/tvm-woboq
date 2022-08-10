@@ -1,0 +1,14 @@
+<def f='tvm/3rdparty/dlpack/include/dlpack/dlpack.h' l='171' ll='184'/>
+<use f='tvm/3rdparty/dlpack/include/dlpack/dlpack.h' l='183'/>
+<use f='tvm/3rdparty/dlpack/include/dlpack/dlpack.h' l='171'/>
+<size>64</size>
+<doc f='tvm/3rdparty/dlpack/include/dlpack/dlpack.h' l='164'>/*!
+ * \brief C Tensor object, manage memory of DLTensor. This data structure is
+ *  intended to facilitate the borrowing of DLTensor by another framework. It is
+ *  not meant to transfer the tensor. When the borrowing framework doesn&apos;t need
+ *  the tensor, it should call the deleter to notify the host that the resource
+ *  is no longer needed.
+ */</doc>
+<mbr r='DLManagedTensor::dl_tensor' o='0' t='DLTensor'/>
+<mbr r='DLManagedTensor::manager_ctx' o='384' t='void *'/>
+<mbr r='DLManagedTensor::deleter' o='448' t='void (*)(struct DLManagedTensor *)'/>

@@ -1,0 +1,34 @@
+<use f='tvm/include/tvm/runtime/container/shape_tuple.h' l='89' u='c' c='_ZN3tvm7runtime10ShapeTupleC1Ev'/>
+<dec f='tvm/include/tvm/runtime/container/shape_tuple.h' l='114' type='void tvm::runtime::ShapeTuple::ShapeTuple(std::vector&lt;index_type&gt; shape)'/>
+<def f='tvm/include/tvm/runtime/container/shape_tuple.h' l='166' ll='171' type='void tvm::runtime::ShapeTuple::ShapeTuple(std::vector&lt;index_type&gt; shape)'/>
+<use f='tvm/include/tvm/runtime/ndarray.h' l='505' u='c' c='_ZN3tvm7runtime7NDArray4LoadEPN4dmlc6StreamE'/>
+<doc f='tvm/include/tvm/runtime/container/shape_tuple.h' l='106'>/*!
+   * \brief Construct a new ShapeTuple object
+   *
+   * \param shape The moved/copied std::vector object
+   *
+   * \note If user passes const reference, it will trigger copy. If it&apos;s rvalue,
+   * it will be moved into other.
+   */</doc>
+<doc f='tvm/include/tvm/runtime/container/shape_tuple.h' l='114'>// NOLINT(*)</doc>
+<use f='tvm/src/meta_schedule/arg_info.cc' l='96' u='c' c='_ZN3tvm13meta_schedule7ArgInfo12FromPrimFuncERKNS_3tir8PrimFuncE'/>
+<use f='tvm/src/relay/transforms/pattern_utils.h' l='289' u='c' c='_ZN3tvm5relayL18MakeConstantTensorENS_7runtime8DataTypeESt6vectorIlSaIlEES3_IT_SaIS6_EE'/>
+<use f='tvm/src/relay/transforms/pattern_utils.h' l='323' u='c' c='_ZN3tvm5relayL18MakeConstantTensorENS_7runtime8DataTypeESt6vectorIlSaIlEENS1_5ArrayIT_NSt9enable_ifIXsr3std10is_base_ofINS1_9ObjectRefES7_EE5valueEvE4typeEEE'/>
+<use f='tvm/src/relay/backend/interpreter.cc' l='538' u='c' c='_ZN3tvm5relay11Interpreter19ComputeDynamicShapeERKNS_9GlobalVarERKNS_7runtime5ArrayIS2_vEERKNS6_INS_7IntegerEvEEmmNS_6TargetERKSt6vectorINS5_9ObjectRefESaISG_EE'/>
+<use f='tvm/src/relay/backend/interpreter.cc' l='640' u='c' c='_ZN3tvm5relay11Interpreter17InvokePrimitiveOpERKNS_9GlobalVarENS_7runtime5ArrayIS2_vEENS_6TargetES4_RKS7_RKNS6_INS_7IntegerEvEEmmS8_RKSt6vectorINS5_9ObjectRefESaISG_EE'/>
+<use f='tvm/src/relay/transforms/fold_constant.cc' l='307' u='c' c='_ZN3tvm5relay9transform12_GLOBAL__N_114ConstantFolder15EvaluateShapeOfERKNS0_4CallE'/>
+<use f='tvm/src/runtime/aot_executor/aot_executor.cc' l='89' u='c' c='_ZN3tvm7runtime11AotExecutorC1ENS0_6ModuleERKSt6vectorI8DLDeviceSaIS4_EE'/>
+<use f='tvm/src/runtime/container.cc' l='198' u='c'/>
+<use f='tvm/src/runtime/contrib/random/mt_random_engine.cc' l='126' u='c' c='_ZN3tvm7contrib12RandomEngine10RandomFillEP8DLTensor'/>
+<use f='tvm/src/runtime/contrib/random/mt_random_engine.cc' l='138' u='c' c='_ZN3tvm7contrib12RandomEngine20RandomFillForMeasureEP8DLTensor'/>
+<use f='tvm/src/runtime/graph_executor/graph_executor.cc' l='130' u='c' c='_ZNK3tvm7runtime13GraphExecutor12GetInputInfoEv'/>
+<use f='tvm/src/runtime/graph_executor/graph_executor.cc' l='348' u='c' c='_ZN3tvm7runtime13GraphExecutor24DefaultLookupLinkedParamENS0_7TVMArgsEPNS0_11TVMRetValueE'/>
+<use f='tvm/src/runtime/graph_executor/graph_executor.cc' l='445' u='c' c='_ZN3tvm7runtime13GraphExecutor12SetupStorageEv'/>
+<use f='tvm/src/runtime/graph_executor/graph_executor.cc' l='457' u='c' c='_ZN3tvm7runtime13GraphExecutor12SetupStorageEv'/>
+<use f='tvm/src/runtime/ndarray.cc' l='218' u='c' c='_ZN3tvm7runtime7NDArray20FromExternalDLTensorERK8DLTensor'/>
+<use f='tvm/src/runtime/ndarray.cc' l='231' u='c' c='_ZN3tvm7runtime7NDArray15NewFromDLTensorEP8DLTensorRK8DLDevice'/>
+<use f='tvm/src/runtime/ndarray.cc' l='250' u='c' c='_ZN3tvm7runtime7NDArray10FromDLPackEP15DLManagedTensor'/>
+<use f='tvm/src/runtime/rpc/rpc_module.cc' l='74' u='c' c='_ZN3tvm7runtime29NDArrayFromRemoteOpaqueHandleESt10shared_ptrINS0_10RPCSessionEEPvP8DLTensor8DLDeviceS4_'/>
+<use f='tvm/src/runtime/vm/memory_manager.cc' l='84' u='c' c='_ZN3tvm7runtime2vm10StorageObj12AllocNDArrayEmSt6vectorIlSaIlEE10DLDataType'/>
+<use f='tvm/src/runtime/vm/memory_manager.cc' l='162' u='c' c='_ZN3tvm7runtime2vm9Allocator5EmptyESt6vectorIlSaIlEE10DLDataType8DLDevice'/>
+<use f='tvm/src/runtime/vm/vm.cc' l='790' u='c' c='_ZN3tvm7runtime2vm14VirtualMachine7RunLoopEv'/>

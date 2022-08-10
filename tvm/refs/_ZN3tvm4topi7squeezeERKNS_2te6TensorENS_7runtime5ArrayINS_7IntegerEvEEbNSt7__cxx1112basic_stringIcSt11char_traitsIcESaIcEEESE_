@@ -1,0 +1,16 @@
+<def f='tvm/include/tvm/topi/transform.h' l='407' ll='458' type='tvm::te::Tensor tvm::topi::squeeze(const tvm::te::Tensor &amp; x, Array&lt;tvm::Integer&gt; axis, bool atleast1d = false, std::string name = &quot;T_squeeze&quot;, std::string tag = kInjective)'/>
+<doc f='tvm/include/tvm/topi/transform.h' l='394'>/*!
+ * \brief Remove size 1 dimensions from the shape of a tensor.
+ * The removed dimensions must have a constant size of 1.
+ *
+ * \param x The input tensor
+ * \param axis Indices of the dimensions to remove. If this is empty,
+ * all entries with a constant size of 1 will be removed.
+ * \param atleast1d Whether the output need to be atleast1d.
+ * \param name The name of the operation
+ * \param tag The tag to mark the operation
+ *
+ * \return A Tensor whose op member is the squeeze operation
+ */</doc>
+<use f='tvm/src/relay/op/tensor/transform.cc' l='2345' u='c' c='_ZN3tvm5relay14SqueezeComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
+<use f='tvm/src/topi/transform.cc' l='62' u='c'/>

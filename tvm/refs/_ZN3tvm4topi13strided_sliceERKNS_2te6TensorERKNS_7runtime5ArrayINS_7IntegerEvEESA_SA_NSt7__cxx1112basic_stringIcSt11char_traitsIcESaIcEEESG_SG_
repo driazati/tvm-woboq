@@ -1,0 +1,19 @@
+<def f='tvm/include/tvm/topi/transform.h' l='815' ll='841' type='tvm::te::Tensor tvm::topi::strided_slice(const tvm::te::Tensor &amp; x, const Array&lt;tvm::Integer&gt; &amp; begin, const Array&lt;tvm::Integer&gt; &amp; end, const Array&lt;tvm::Integer&gt; &amp; strides, std::string slice_mode = &quot;end&quot;, std::string name = &quot;T_strided_slice&quot;, std::string tag = kInjective)'/>
+<doc f='tvm/include/tvm/topi/transform.h' l='801'>/*!
+ * \brief strided_slice of a tensor
+ *
+ * \param x The input tensor
+ * \param begin The indices to begin with in the slicing
+ * \param end Indicies indicating end of the slice
+ * \param strides Specifies the stride values, it can be negative
+ * in that case, the input tensor will be reversed in that particular axis
+ * \param slice_mode Specifies the slice mode
+ * \param name The name of the operation
+ * \param tag The tag to mark the operation
+ *
+ * \return A Tensor whose op member is the strided_slice operation
+ */</doc>
+<use f='tvm/include/tvm/topi/nn.h' l='643' u='c' c='_ZN3tvm4topi17batch_to_space_ndERKNS_2te6TensorERKNS_7runtime5ArrayINS_7IntegerEvEERKNS6_INS_8PrimExprEvEESE_NSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESK_'/>
+<use f='tvm/src/relay/op/tensor/transform.cc' l='2862' u='c' c='_ZN3tvm5relay19StridedSliceComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
+<use f='tvm/src/relay/op/tensor/transform.cc' l='3269' u='c' c='_ZN3tvm5relay16SliceLikeComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
+<use f='tvm/src/topi/transform.cc' l='194' u='c'/>

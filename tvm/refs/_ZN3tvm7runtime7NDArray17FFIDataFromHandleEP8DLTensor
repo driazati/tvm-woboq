@@ -1,0 +1,14 @@
+<dec f='tvm/include/tvm/runtime/ndarray.h' l='236' type='static ObjectPtr&lt;tvm::runtime::Object&gt; tvm::runtime::NDArray::FFIDataFromHandle(TVMArrayHandle handle)'/>
+<def f='tvm/include/tvm/runtime/ndarray.h' l='416' ll='419' type='static ObjectPtr&lt;tvm::runtime::Object&gt; tvm::runtime::NDArray::FFIDataFromHandle(TVMArrayHandle handle)'/>
+<use f='tvm/include/tvm/runtime/packed_func.h' l='590' u='c' c='_ZNK3tvm7runtime12TVMPODValue_cvNS0_7NDArrayEEv'/>
+<use f='tvm/include/tvm/runtime/packed_func.h' l='1838' u='c' c='_ZNK3tvm7runtime12TVMPODValue_11AsObjectRefEv'/>
+<use f='tvm/include/tvm/runtime/packed_func.h' l='1876' u='c' c='_ZNK3tvm7runtime12TVMPODValue_11AsObjectRefEv'/>
+<doc f='tvm/include/tvm/runtime/ndarray.h' l='227'>/*!
+   * \brief Construct NDArray&apos;s Data field from array handle in FFI.
+   * \param handle The array handle.
+   * \return The corresponding ObjectPtr to the constructed container object.
+   *
+   * \note We keep a special calling convention for NDArray by passing
+   *       ContainerBase pointer in FFI.
+   *       As a result, the argument is compatible to DLTensor*.
+   */</doc>

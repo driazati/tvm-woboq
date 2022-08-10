@@ -1,0 +1,14 @@
+<dec f='tvm/3rdparty/dmlc-core/include/dmlc/io.h' l='190' type='bool dmlc::InputSplit::NextRecord(dmlc::InputSplit::Blob * out_rec)'/>
+<doc f='tvm/3rdparty/dmlc-core/include/dmlc/io.h' l='177'>/*!
+   * \brief get the next record, the returning value
+   *   is valid until next call to NextRecord, NextChunk or NextBatch
+   *   caller can modify the memory content of out_rec
+   *
+   *   For text, out_rec contains a single line
+   *   For recordio, out_rec contains one record content(with header striped)
+   *
+   * \param out_rec used to store the result
+   * \return true if we can successfully get next record
+   *     false if we reached end of split
+   * \sa InputSplit::Create for definition of record
+   */</doc>

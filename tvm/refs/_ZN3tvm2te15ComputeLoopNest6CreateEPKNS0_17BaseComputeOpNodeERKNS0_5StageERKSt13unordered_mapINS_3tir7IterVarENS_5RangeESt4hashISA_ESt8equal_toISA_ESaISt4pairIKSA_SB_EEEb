@@ -1,0 +1,13 @@
+<dec f='tvm/src/te/operation/compute_op.h' l='62' type='static tvm::te::ComputeLoopNest tvm::te::ComputeLoopNest::Create(const tvm::te::BaseComputeOpNode * self, const tvm::te::Stage &amp; stage, const std::unordered_map&lt;IterVar, Range&gt; &amp; dom_map, bool debug_keep_trivial_loop)'/>
+<use f='tvm/src/te/operation/compute_op.cc' l='345' u='c' c='_ZN3tvm2te15MakeComputeStmtEPKNS0_13ComputeOpNodeERKNS0_5StageERKSt13unordered_mapINS_3tir7IterVarENS_5RangeESt4hashIS9_ESt8equal_toIS9_ESaISt4pairIKS9_SA_EEEb'/>
+<def f='tvm/src/te/operation/compute_op.cc' l='438' ll='498' type='static tvm::te::ComputeLoopNest tvm::te::ComputeLoopNest::Create(const tvm::te::BaseComputeOpNode * self, const tvm::te::Stage &amp; stage, const std::unordered_map&lt;IterVar, Range&gt; &amp; dom_map, bool debug_keep_trivial_loop)'/>
+<doc f='tvm/src/te/operation/compute_op.h' l='54'>/*!
+   * \brief constructor to build ComputeOpNest
+   * \param self The pointer to compute op.
+   * \param stage The scxhedule stage.
+   * \param dom_map The domain map.
+   * \param debug_keep_trivial_loop Whether keep trivial loops with extent of 1
+   * \return The constructed loop nest
+   */</doc>
+<use f='tvm/src/te/operation/tensor_compute_op.cc' l='202' u='c' c='_ZNK3tvm2te19TensorComputeOpNode12BuildProvideERKNS0_5StageERKSt13unordered_mapINS_3tir7IterVarENS_5RangeESt4hashIS7_ESt8equal_toIS7_ESaISt4pairIKS7_S8_EEEb'/>
+<use f='tvm/src/te/operation/tensorize.cc' l='353' u='c' c='_ZN3tvm2te13MakeTensorizeEPKNS0_13ComputeOpNodeERKNS0_5StageERKSt13unordered_mapINS_3tir7IterVarENS_5RangeESt4hashIS9_ESt8equal_toIS9_ESaISt4pairIKS9_SA_EEEb'/>

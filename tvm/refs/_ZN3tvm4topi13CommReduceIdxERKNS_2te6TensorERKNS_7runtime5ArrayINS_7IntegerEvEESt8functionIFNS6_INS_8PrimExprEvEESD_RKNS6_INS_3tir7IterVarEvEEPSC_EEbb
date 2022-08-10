@@ -1,0 +1,16 @@
+<def f='tvm/include/tvm/topi/reduction.h' l='205' ll='251' type='tvm::te::Tensor tvm::topi::CommReduceIdx(const tvm::te::Tensor &amp; data, const Array&lt;tvm::Integer&gt; &amp; axis, tvm::topi::FCommReduce func, bool keepdims, bool atleast1d)'/>
+<use f='tvm/include/tvm/topi/reduction.h' l='492' u='c' c='_ZN3tvm4topi6argminERKNS_2te6TensorERKNS_7runtime5ArrayINS_7IntegerEvEEbbb'/>
+<use f='tvm/include/tvm/topi/reduction.h' l='552' u='c' c='_ZN3tvm4topi6argmaxERKNS_2te6TensorERKNS_7runtime5ArrayINS_7IntegerEvEEbbb'/>
+<doc f='tvm/include/tvm/topi/reduction.h' l='192'>/*!
+ * \brief Create an index reduction operation.
+ *
+ * \param data The input tensor.
+ * \param axis The axes along which the reduction is performed.
+ * \param func The reduction function
+ * \param keepdims If this is set to true, the axes which are reduced are
+ * left in the result as dimensions with size one. This enables the result
+ * to broadcast correctly against the input array.
+ * \param atleast1d Whether the output need to be atleast1d.
+ *
+ * \return The result tensor.
+ */</doc>

@@ -1,0 +1,17 @@
+<dec f='tvm/src/te/operation/op_utils.h' l='54' type='std::vector&lt;std::vector&lt;Stmt&gt;&gt; tvm::te::MakeLoopNest(const tvm::te::Stage &amp; stage, const std::unordered_map&lt;IterVar, Range&gt; &amp; dom_map, size_t begin_iter_pos, bool new_loop_var, const std::unordered_set&lt;IterVar&gt; &amp; skip_iter, std::unordered_map&lt;IterVar, PrimExpr&gt; * p_value_map, bool debug_keep_trivial_loop)'/>
+<use f='tvm/src/te/operation/compute_op.cc' l='444' u='c' c='_ZN3tvm2te15ComputeLoopNest6CreateEPKNS0_17BaseComputeOpNodeERKNS0_5StageERKSt13unordered_mapINS_3tir7IterVarENS_5RangeESt4hashISA_ESt8equal_toISA_ESaISt4pairIKSA_SB_EEEb'/>
+<use f='tvm/src/te/operation/compute_op.cc' l='485' u='c' c='_ZN3tvm2te15ComputeLoopNest6CreateEPKNS0_17BaseComputeOpNodeERKNS0_5StageERKSt13unordered_mapINS_3tir7IterVarENS_5RangeESt4hashISA_ESt8equal_toISA_ESaISt4pairIKSA_SB_EEEb'/>
+<doc f='tvm/src/te/operation/op_utils.h' l='43'>/*!
+ * \brief Build loop nest for stage.
+ *
+ * \param stage The stage to create a loop nest.
+ * \param dom_map The range of each iter var.
+ * \param begin_iter_pos The beginning position of leaf_iter_vars to generate loop.
+ * \param new_loop_var Whether create new loop variable.
+ * \param skip_iter Whether skip certain iteration.
+ * \param p_value_map The result value of each IterVar.
+ * \param debug_keep_trivial_loop Whether keep trivial loops with extent of 1
+ */</doc>
+<use f='tvm/src/te/operation/cross_thread_reduction.cc' l='91' u='c' c='_ZN3tvm2te24MakeCrossThreadReductionEPKNS0_13ComputeOpNodeERKNS0_5StageERKSt13unordered_mapINS_3tir7IterVarENS_5RangeESt4hashIS9_ESt8equal_toIS9_ESaISt4pairIKS9_SA_EEEb'/>
+<def f='tvm/src/te/operation/op_utils.cc' l='41' ll='208' type='std::vector&lt;std::vector&lt;Stmt&gt;&gt; tvm::te::MakeLoopNest(const tvm::te::Stage &amp; stage, const std::unordered_map&lt;IterVar, Range&gt; &amp; dom_map, size_t begin_iter_pos, bool new_loop_var, const std::unordered_set&lt;IterVar&gt; &amp; skip_iter, std::unordered_map&lt;IterVar, PrimExpr&gt; * p_value_map, bool debug_keep_trivial_loop)'/>
+<use f='tvm/src/te/operation/scan_op.cc' l='273' u='c' c='_ZNK3tvm2te10ScanOpNode12BuildProvideERKNS0_5StageERKSt13unordered_mapINS_3tir7IterVarENS_5RangeESt4hashIS7_ESt8equal_toIS7_ESaISt4pairIKS7_S8_EEEb'/>

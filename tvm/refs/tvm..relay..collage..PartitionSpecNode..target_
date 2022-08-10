@@ -1,0 +1,22 @@
+<dec f='tvm/src/relay/collage/partition_spec.h' l='81' type='tvm::Target'/>
+<use f='tvm/src/relay/collage/candidate_partition.cc' l='59' u='r' c='_ZNK3tvm5relay7collage22CandidatePartitionNode6targetEv'/>
+<offset>192</offset>
+<doc f='tvm/src/relay/collage/partition_spec.h' l='66'>/*!
+   * \brief The target all candidate partitions should be compiled for.
+   *
+   * It&apos;s tempting to support multiple targets here since. Eg the partitioning rules for
+   * TVM are the same irrespective of whether the target is &quot;cuda&quot; or &quot;llvm&quot;, so it would make
+   * sense to build the candidate partitions first without committing to any target, then &apos;stamp&apos;
+   * them for each target as the final step.
+   *
+   * However, we want to make sure any predicate in \p DFPatternPartitionRuleNode instances
+   * can have access to the current target instance. Eg the predicate may need to consult
+   * build-time configuration to decide what operators, shapes etc are actually supported.
+   * That implies the specific target is known when the candidate partitions are being constructed.
+   *
+   * So for now we&apos;ll just force each spec to have exactly one target.
+   */</doc>
+<use f='tvm/src/relay/collage/partition_rule.cc' l='178' u='m' c='_ZNK3tvm5relay7collage26PrimitivePartitionRuleNode13AllCandidatesERKNS1_13DataflowGraphERKNS1_13PartitionSpecE'/>
+<use f='tvm/src/relay/collage/partition_spec.cc' l='46' u='r' c='_ZNK3tvm5relay7collage17PartitionSpecNode13AllCandidatesERKNS1_13DataflowGraphE'/>
+<use f='tvm/src/relay/collage/partition_spec.cc' l='67' u='m' c='_ZNK3tvm5relay7collage17PartitionSpecNode8ToStringB5cxx11Ev'/>
+<use f='tvm/src/relay/collage/partition_spec.cc' l='79' u='w' c='_ZN3tvm5relay7collage13PartitionSpecC1ENS_7runtime6StringENS_6TargetENS1_13PartitionRuleENS3_15TypedPackedFuncIFS4_RKNS0_8FunctionEEEE'/>

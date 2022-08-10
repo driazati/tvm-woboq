@@ -1,0 +1,56 @@
+<def f='tvm/include/tvm/node/reflection.h' l='81' ll='198'/>
+<use f='tvm/include/tvm/node/reflection.h' l='181' c='_ZN3tvm16ReflectionVTable6GlobalEv'/>
+<use f='tvm/include/tvm/node/reflection.h' l='203' c='_ZN3tvm16ReflectionVTable8RegistryC1EPS0_j'/>
+<use f='tvm/include/tvm/node/reflection.h' l='227'/>
+<size>120</size>
+<doc f='tvm/include/tvm/node/reflection.h' l='75'>/*!
+ * \brief Virtual function table to support IR/AST node reflection.
+ *
+ * Functions are stored in columnar manner.
+ * Each column is a vector indexed by Object&apos;s type_index.
+ */</doc>
+<fun r='_ZNK3tvm16ReflectionVTable10VisitAttrsEPNS_7runtime6ObjectEPNS_11AttrVisitorE'/>
+<fun r='_ZNK3tvm16ReflectionVTable12GetReprBytesEPKNS_7runtime6ObjectEPNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<fun r='_ZNK3tvm16ReflectionVTable12SEqualReduceEPKNS_7runtime6ObjectES4_NS_13SEqualReducerE'/>
+<fun r='_ZNK3tvm16ReflectionVTable11SHashReduceEPKNS_7runtime6ObjectENS_12SHashReducerE'/>
+<fun r='_ZNK3tvm16ReflectionVTable16CreateInitObjectERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES8_'/>
+<fun r='_ZN3tvm16ReflectionVTable12CreateObjectERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKNS_7runtime7TVMArgsE'/>
+<fun r='_ZN3tvm16ReflectionVTable12CreateObjectERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKNS_7runtime3MapINS9_6StringENS9_9ObjectRefEvvEE'/>
+<fun r='_ZNK3tvm16ReflectionVTable7GetAttrEPNS_7runtime6ObjectERKNS1_6StringE'/>
+<fun r='_ZNK3tvm16ReflectionVTable13ListAttrNamesB5cxx11EPNS_7runtime6ObjectE'/>
+<fun r='_ZN3tvm16ReflectionVTable6GlobalEv'/>
+<fun r='_ZN3tvm16ReflectionVTable8RegisterEv'/>
+<mbr r='tvm::ReflectionVTable::fvisit_attrs_' o='0' t='std::vector&lt;FVisitAttrs&gt;'/>
+<mbr r='tvm::ReflectionVTable::fsequal_reduce_' o='192' t='std::vector&lt;FSEqualReduce&gt;'/>
+<mbr r='tvm::ReflectionVTable::fshash_reduce_' o='384' t='std::vector&lt;FSHashReduce&gt;'/>
+<mbr r='tvm::ReflectionVTable::fcreate_' o='576' t='std::vector&lt;FCreate&gt;'/>
+<mbr r='tvm::ReflectionVTable::frepr_bytes_' o='768' t='std::vector&lt;FReprBytes&gt;'/>
+<fun r='_ZN3tvm16ReflectionVTable8RegisterEv'/>
+<fun r='_ZNK3tvm16ReflectionVTable10VisitAttrsEPNS_7runtime6ObjectEPNS_11AttrVisitorE'/>
+<fun r='_ZNK3tvm16ReflectionVTable12GetReprBytesEPKNS_7runtime6ObjectEPNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<use f='tvm/src/node/reflection.cc' l='149' c='_ZN3tvm16ReflectionVTable6GlobalEv'/>
+<use f='tvm/src/node/reflection.cc' l='150' c='_ZN3tvm16ReflectionVTable6GlobalEv'/>
+<use f='tvm/src/node/reflection.cc' l='197' c='_ZN3tvm20InitNodeByPackedArgsEPNS_16ReflectionVTableEPNS_7runtime6ObjectERKNS2_7TVMArgsE'/>
+<size>120</size>
+<fun r='_ZNK3tvm16ReflectionVTable7GetAttrEPNS_7runtime6ObjectERKNS1_6StringE'/>
+<fun r='_ZNK3tvm16ReflectionVTable13ListAttrNamesB5cxx11EPNS_7runtime6ObjectE'/>
+<fun r='_ZN3tvm16ReflectionVTable6GlobalEv'/>
+<fun r='_ZNK3tvm16ReflectionVTable16CreateInitObjectERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES8_'/>
+<fun r='_ZN3tvm16ReflectionVTable12CreateObjectERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKNS_7runtime7TVMArgsE'/>
+<fun r='_ZN3tvm16ReflectionVTable12CreateObjectERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKNS_7runtime3MapINS9_6StringENS9_9ObjectRefEvvEE'/>
+<use f='tvm/src/node/serialization.cc' l='75'/>
+<use f='tvm/src/node/serialization.cc' l='240'/>
+<use f='tvm/src/node/serialization.cc' l='313'/>
+<use f='tvm/src/node/serialization.cc' l='370'/>
+<use f='tvm/src/node/serialization.cc' l='575' c='_ZN3tvm8LoadJSONENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<size>120</size>
+<use f='tvm/src/node/structural_equal.cc' l='421'/>
+<size>120</size>
+<fun r='_ZNK3tvm16ReflectionVTable12SEqualReduceEPKNS_7runtime6ObjectES4_NS_13SEqualReducerE'/>
+<use f='tvm/src/node/structural_hash.cc' l='254'/>
+<size>120</size>
+<fun r='_ZNK3tvm16ReflectionVTable11SHashReduceEPKNS_7runtime6ObjectENS_12SHashReducerE'/>
+<use f='tvm/src/relay/ir/dataflow_matcher.cc' l='150' c='_ZN3tvm5relay16DFPatternMatcher15VisitDFPattern_EPKNS0_15AttrPatternNodeERKNS_9RelayExprE'/>
+<size>120</size>
+<use f='tvm/src/tir/analysis/deep_equal.cc' l='53'/>
+<size>120</size>

@@ -1,0 +1,21 @@
+<dec f='tvm/include/tvm/arith/int_solver.h' l='361' type='tvm::arith::IntConstraintsTransform tvm::arith::SolveInequalitiesDeskewRange(const tvm::arith::IntConstraints &amp; system_to_solve)'/>
+<doc f='tvm/include/tvm/arith/int_solver.h' l='345'>/*!
+ * \brief Solve linear inequalities and deskew the ranges towards zero.
+ * \param system_to_solve the variables to solve, their ranges, and a list of inequalities.
+ * \return A transform (src IntConstraints -&gt; dst IntConstraints)
+ *         from original variables to a set of new variables.
+ *         The ranges of new variables always start from zero,
+ *         their extents are solved from \p system_to_solve.
+ *         src IntConstraints is the same as \p system_to_solve.
+ *         dst IntConstraints(variables, ranges, relations) contains,
+ *         1. variables  - the variables that have been solved.
+ *         2. ranges     - the best range (start from zero) of each variable.
+ *         3. relations  - constraints that cannot be transformed to
+ *                         Range will be stored in relations.
+ *         Variable mapping can be obtained from
+ *         IntConstraintsTransform.src_to_dst and IntConstraintsTransform.dst_to_src.
+ */</doc>
+<def f='tvm/src/arith/solve_linear_inequality.cc' l='440' ll='536' type='tvm::arith::IntConstraintsTransform tvm::arith::SolveInequalitiesDeskewRange(const tvm::arith::IntConstraints &amp; inequalities)'/>
+<use f='tvm/src/arith/solve_linear_inequality.cc' l='569' u='c'/>
+<use f='tvm/src/arith/solve_linear_inequality.cc' l='572' u='c'/>
+<use f='tvm/src/te/autodiff/ad_simplify.cc' l='788' u='c' c='_ZN3tvm2te14SimplifyDomainERKNS_5arith14IntConstraintsEb'/>

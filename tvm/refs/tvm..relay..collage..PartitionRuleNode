@@ -1,0 +1,150 @@
+<inh f='tvm/include/tvm/runtime/object.h' l='167' c='tvm::runtime::Object'/>
+<def f='tvm/src/relay/collage/partition_rule.h' l='162' ll='193'/>
+<use f='tvm/src/relay/collage/partition_rule.h' l='199' c='_ZNK3tvm5relay7collage13PartitionRuleptEv'/>
+<use f='tvm/src/relay/collage/partition_rule.h' l='199' c='_ZNK3tvm5relay7collage13PartitionRuleptEv'/>
+<use f='tvm/src/relay/collage/partition_rule.h' l='199' c='_ZNK3tvm5relay7collage13PartitionRule3getEv'/>
+<use f='tvm/src/relay/collage/partition_rule.h' l='199'/>
+<ovr f='tvm/src/relay/collage/partition_rule.h' l='206' c='tvm::relay::collage::DFPatternPartitionRuleNode'/>
+<use f='tvm/src/relay/collage/partition_rule.h' l='206'/>
+<ovr f='tvm/src/relay/collage/partition_rule.h' l='245' c='tvm::relay::collage::CompositePartitionRuleNode'/>
+<use f='tvm/src/relay/collage/partition_rule.h' l='245'/>
+<ovr f='tvm/src/relay/collage/partition_rule.h' l='277' c='tvm::relay::collage::PrimitivePartitionRuleNode'/>
+<use f='tvm/src/relay/collage/partition_rule.h' l='277'/>
+<ovr f='tvm/src/relay/collage/partition_rule.h' l='305' c='tvm::relay::collage::UnionPartitionRuleNode'/>
+<use f='tvm/src/relay/collage/partition_rule.h' l='305'/>
+<ovr f='tvm/src/relay/collage/partition_rule.h' l='333' c='tvm::relay::collage::OpCallByKindPartitionRuleNode'/>
+<use f='tvm/src/relay/collage/partition_rule.h' l='333'/>
+<ovr f='tvm/src/relay/collage/partition_rule.h' l='399' c='tvm::relay::collage::CombinePartitionRuleNode'/>
+<use f='tvm/src/relay/collage/partition_rule.h' l='399'/>
+<ovr f='tvm/src/relay/collage/partition_rule.h' l='432' c='tvm::relay::collage::OnlyValidPartitionRuleNode'/>
+<use f='tvm/src/relay/collage/partition_rule.h' l='432'/>
+<ovr f='tvm/src/relay/collage/partition_rule.h' l='462' c='tvm::relay::collage::HostPartitionRuleNode'/>
+<use f='tvm/src/relay/collage/partition_rule.h' l='462'/>
+<size>32</size>
+<doc f='tvm/src/relay/collage/partition_rule.h' l='55'>/*!
+ * \brief Base class of all partition rules.
+ *
+ * A \p PartitionRule describes how to find a set of \p CandidatePartitions for a \p DataflowGraph.
+ * The candidates are allowed to overlap, and ultimately it is the job of the Collage searcher to
+ * find a selection of candidates which covers the whole Relay expression without overlap. Partition
+ * rules are paired with their \p Target and other &apos;top level&apos; configuration in a \p PartitionSpec.
+ *
+ * We provide a set of &apos;base&apos; partition rules which produce candidates from the dataflow graph
+ * directly. We also provide a set of &apos;combinator&apos; partition rules which can produce new candidates
+ * from the results of an arbitrary sub-rule or sub-rules. By mixing these base and combinator
+ * rules we can express a wide variety of partition strategies and encoding conventions.
+ *
+ * There may be many thousands of candidates in flight during the Collage search. We take care to
+ * defer constructing or rewriting Relay expressions until absolutely necessary. We only pay for
+ * extracting a function to represent a candidate when we need to measure it&apos;s cost. And we only
+ * pay for rewriting the overall Relay expression to commit to a partitioning when the Collage
+ * search has completed.
+ *
+ * The base rules implemented so far:
+ *  - \p DFPatternPartitionRule: Given a \p DFPattern and expression predicate, produces a candidate
+ *    for every sub-graph matched by the pattern and predicate. Unlike the \p PatternRewriter,
+ *    candidates are free to overlap. Used to bring BYOC patterns into the Collage framework.
+ *  - \p OpCallByKindPartitionRule: Uses the &quot;TOpPattern&quot; attribute provided for every Relay
+ *    operator to produce a candidate for every call to a &apos;fusable Relay operator&apos;. Used to
+ *    look ahead to how TVM will fuse sub-graphs.
+ *
+ * The combinator rules implemented so far:
+ *  - \p CompositePartitionRule: Indicates all candidates matched by the sub-rule should be wrapped
+ *    by a &quot;Composite&quot; function. The &quot;Composite&quot; name is taken from the rule name. Used to indicate
+ *    Relay operators (or groups of Relay operators) should be mapped to target-specific operators,
+ *    both for BYOC and TVM external library integrations.
+ *  - \p PrimitivePartitionRule: Indicates all candidates matched by the sub-rule should be wrapped
+ *    by a &quot;Primitive&quot; function, possibly with an additional &quot;Compiler&quot; attribute. Used to
+ *    delineate a partition (or kernel).
+ *  - \p UnionPartitionRule: Simply unions all the candidates from all sub-rules together. Used to
+ *    combine individual \p DFPatternPartitionRules.
+ *  - \p CombinePartitionRule: Given a sub-rule and a list of &apos;combiner&apos; rules, finds
+ *    all possible ways of combining the sub-rule&apos;s candidates to yield even larger candidates.
+ *    Note that the sub-rule&apos;s candidates may also be directly included in the results. The
+ *    &apos;combiner&apos; rules allow combining by \p OpPatternKinds, combining the arguments to tuples
+ *    which themselves are arguments to Relay operator calls, and so on. This rule is intended to
+ *    mimic the existing TVM \p FuseOps pass, though:
+ *    i) all candidates are found rather than just the largest, ii) the starting set of candidates
+ *    can be provided by any other rule, and iii) we rely on \p SubGraph validity checking to weed
+ *    out infeasible candidates.
+ *  - \p OnlyValidPartitionRule: Given a \p SubGraphConfig, ignores candidates with &apos;invalid&apos;
+ *    sub-graphs. Used to limit the maximum candidate depth, the number of independent outputs,
+ *    and whether intermediate &apos;taps&apos; are allowed.
+ *  - \p HostPartitionRule: Produces candidates for all Relay expressions which could be
+ *    &apos;left behind&apos; for execution by the host (eg on the VM). This rule lets us simplify the
+ *    overall Collage search algorithm.
+ *
+ * (Though not yet implemented, we&apos;d like to allow a combinator rule which will union candidate
+ * based on their &apos;anchor&apos; operators. This can be used to implement &apos;vertical&apos; and &apos;horizontal&apos;
+ * partition on more primitive candidates. Note that the \p SubGraph machinery supports
+ * multiple-input and -output sub-graphs and their validation, so horizontal partition is easy
+ * implement.)
+ *
+ * Here are some typical ways to combine \p PartitionRules for different partition/fusion
+ * strategies:
+ *
+ *  - Classic pattern-based BYOC with \p MergeComposite/AnnotateTarget/PartitionGraph passes:
+ *    \code
+ *    PrimitivePartitionRule
+ *      OnlyValidPartitionRule
+ *        CombinePartitionRule (with join-anything combiner rule)
+ *          UnionPartitionRule
+ *            CompositePartitionRule(label1)
+ *              DFPatternPartitionRule(pattern1)
+ *                        :
+ *            CompositePartitionRule(labeln)
+ *              DFPatternPartitionRule(patternn)
+ *    \endcode
+ *
+ *  - &quot;Consider this library implementation for these sub-expressions&quot;, using \p DFPatterns to
+ *    pick out which Relay operators are supported:
+ *    \code
+ *    OnlyValidPartitionRule
+ *      CombinePartitionRule (with default TVM combiner rules)
+ *        UnionPartitionRule
+ *          OpCallByKindPartitionRule
+ *          CompositePartitionRule(lable1)
+ *            DFPatternPartitionRule(pattern1)
+ *                       :
+ *          CompositePartitionRule(lablen)
+ *            DFPatternPartitionRule(patternn)
+ *    \endcode
+ *
+ *  - Classic TVM \p FuseOps
+ *    \code
+ *    PrimitivePartitionRule
+ *      OnlyValidPartitionRule
+ *        CombinePartitionRule (with default TVM combiner rules)
+ *          OpCallByKindPartitionRule
+ *    \endcode
+ *
+ *  - &quot;Just fuse what I tell you to fuse&quot;, using \p DFPatterns to directly select candidates:
+ *    \code
+ *    PrimitivePartitionRule
+ *      OnlyValidPartitionRule
+ *        UnionPartitionRule
+ *          DFPatternPartitionRule(pattern1)
+ *                       :
+ *          DFPatternPartitionRule(patternn)
+ *    \endcode
+ */</doc>
+<mbr r='tvm::relay::collage::PartitionRuleNode::rule_name_' o='192' t='tvm::runtime::String'/>
+<fun r='_ZN3tvm5relay7collage17PartitionRuleNode10VisitAttrsEPNS_11AttrVisitorE'/>
+<fun r='_ZNK3tvm5relay7collage17PartitionRuleNode13AllCandidatesERKNS1_13DataflowGraphERKNS1_13PartitionSpecE'/>
+<fun r='_ZNK3tvm5relay7collage17PartitionRuleNode8ToStringB5cxx11Ev'/>
+<fun r='_ZNK3tvm5relay7collage17PartitionRuleNode5ToDocEv'/>
+<fun r='_ZNK3tvm5relay7collage17PartitionRuleNode15AppendBodyItemsEPSt6vectorINS_3DocESaIS4_EE'/>
+<smbr r='tvm::relay::collage::PartitionRuleNode::_type_key' t='const char *const'/>
+<smbr r='tvm::relay::collage::PartitionRuleNode::_type_child_slots' t='const uint32_t'/>
+<fun r='_ZN3tvm5relay7collage17PartitionRuleNode16RuntimeTypeIndexEv'/>
+<fun r='_ZN3tvm5relay7collage17PartitionRuleNode27_GetOrAllocRuntimeTypeIndexEv'/>
+<use f='tvm/src/relay/collage/partition_rule.cc' l='37'/>
+<use f='tvm/src/relay/collage/partition_rule.cc' l='37'/>
+<use f='tvm/src/relay/collage/partition_rule.cc' l='37'/>
+<use f='tvm/src/relay/collage/partition_rule.cc' l='67' c='_ZN3tvm5relay7collage13PartitionRuleC1ENS_7runtime6StringE'/>
+<size>32</size>
+<fun r='_ZN3tvm5relay7collage17PartitionRuleNode10VisitAttrsEPNS_11AttrVisitorE'/>
+<fun r='_ZNK3tvm5relay7collage17PartitionRuleNode13AllCandidatesERKNS1_13DataflowGraphERKNS1_13PartitionSpecE'/>
+<fun r='_ZNK3tvm5relay7collage17PartitionRuleNode8ToStringB5cxx11Ev'/>
+<fun r='_ZNK3tvm5relay7collage17PartitionRuleNode5ToDocEv'/>
+<fun r='_ZNK3tvm5relay7collage17PartitionRuleNode15AppendBodyItemsEPSt6vectorINS_3DocESaIS4_EE'/>

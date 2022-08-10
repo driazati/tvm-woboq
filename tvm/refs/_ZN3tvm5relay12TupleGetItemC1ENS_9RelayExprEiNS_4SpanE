@@ -1,0 +1,28 @@
+<dec f='tvm/include/tvm/relay/expr.h' l='591' type='void tvm::relay::TupleGetItem::TupleGetItem(tvm::relay::Expr tuple, int index, tvm::relay::Span span = tvm::relay::Span())'/>
+<use f='tvm/src/parser/parser.cc' l='1665' u='c' c='_ZN3tvm6parser6Parser15ParseAtomicExprEv'/>
+<use f='tvm/src/relay/analysis/get_calibration_data.cc' l='82' u='c' c='_ZN3tvm5relay18FlattenOutputTupleERKNS_7runtime5ArrayINS_9RelayExprEvEE'/>
+<use f='tvm/src/relay/transforms/pattern_utils.h' l='522' u='c' c='_ZN3tvm5relay8GetFieldENS_9RelayExprEm'/>
+<use f='tvm/src/relay/collage/sub_graph.cc' l='157' u='c' c='_ZN3tvm5relay7collage12_GLOBAL__N_19Extractor7ExtractEv'/>
+<def f='tvm/src/relay/ir/expr.cc' l='381' ll='388' type='void tvm::relay::TupleGetItem::TupleGetItem(tvm::relay::Expr tuple, int index, tvm::relay::Span span = tvm::relay::Span())'/>
+<use f='tvm/src/relay/ir/expr.cc' l='414' u='c'/>
+<use f='tvm/src/relay/op/memory/memory.cc' l='249' u='c' c='_ZN3tvm5relayL16FromTupleTypeAuxERKNS_4TypeERKNS_9RelayExprEPSt6vectorIS4_SaIS4_EE'/>
+<use f='tvm/src/relay/qnn/op/concatenate.cc' l='183' u='c' c='_ZN3tvm5relay3qnn26ConcatenateQnnCanonicalizeERKNS_5AttrsERKNS_7runtime5ArrayINS_9RelayExprEvEERKNS6_INS_4TypeEvEE'/>
+<use f='tvm/src/relay/transforms/transform_layout.h' l='442' u='c' c='_ZN3tvm5relay14LayoutRewriterERKNS0_4CallERKNS_7runtime5ArrayINS_9RelayExprEvEERKNS4_9ObjectRefE'/>
+<use f='tvm/src/relay/transforms/annotate_target.cc' l='282' u='c' c='_ZN3tvm5relay15annotate_target22AnnotateTargetRewriter8Rewrite_EPKNS0_16TupleGetItemNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/annotate_target.cc' l='386' u='c' c='_ZN3tvm5relay15annotate_target21CallOpsTargetRewriter8Rewrite_EPKNS0_16TupleGetItemNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/combine_parallel_op_batch.cc' l='164' u='c' c='_ZN3tvm5relay23ParallelOpBatchCombiner17UpdateGroupOutputERKNS_9RelayExprERKSt6vectorIS5_IPKNS0_8CallNodeESaIS8_EESaISA_EEmPSt13unordered_mapIS2_S2_NS15144642'/>
+<use f='tvm/src/relay/transforms/first_order_gradient.cc' l='181' u='c' c='_ZN3tvm5relay19FirstOrderReverseAD10VisitExpr_EPKNS0_16TupleGetItemNodeE'/>
+<use f='tvm/src/relay/transforms/forward_rewrite.cc' l='111' u='c' c='_ZN3tvm5relay15ForwardRewriter8Rewrite_EPKNS0_16TupleGetItemNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/fuse_ops.cc' l='931' u='c' c='_ZN3tvm5relay11FuseMutator8Rewrite_EPKNS0_16TupleGetItemNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/higher_order_gradient.cc' l='146' u='c' c='_ZN3tvm5relay13TransferGradsERKNS_4TypeERKNS_9RelayExprES6_PNS0_7LetListE'/>
+<use f='tvm/src/relay/transforms/higher_order_gradient.cc' l='147' u='c' c='_ZN3tvm5relay13TransferGradsERKNS_4TypeERKNS_9RelayExprES6_PNS0_7LetListE'/>
+<use f='tvm/src/relay/transforms/higher_order_gradient.cc' l='151' u='c' c='_ZN3tvm5relay13TransferGradsERKNS_4TypeERKNS_9RelayExprES6_PNS0_7LetListE'/>
+<use f='tvm/src/relay/transforms/higher_order_gradient.cc' l='151' u='c' c='_ZN3tvm5relay13TransferGradsERKNS_4TypeERKNS_9RelayExprES6_PNS0_7LetListE'/>
+<use f='tvm/src/relay/transforms/higher_order_gradient.cc' l='320' u='c' c='_ZN3tvm5relay9ReverseAD10VisitExpr_EPKNS0_6IfNodeE'/>
+<use f='tvm/src/relay/transforms/lazy_gradient_init.cc' l='87' u='c' c='_ZN3tvm5relay23LazyGradientInitializer8WrapExprERKNS0_3VarERKNS_4TypeEPNS0_7LetListE'/>
+<use f='tvm/src/relay/transforms/lazy_gradient_init.cc' l='106' u='c' c='_ZN3tvm5relay23LazyGradientInitializer10UnwrapExprERKNS0_3VarERKNS_4TypeEPNS0_7LetListE'/>
+<use f='tvm/src/relay/transforms/partial_eval.cc' l='628' u='c' c='_ZN3tvm5relay12partial_eval16PartialEvaluator10VisitExpr_EPKNS0_16TupleGetItemNodeEPNS0_7LetListE'/>
+<use f='tvm/src/relay/transforms/partition_graph.cc' l='385' u='c' c='_ZN3tvm5relay12partitioning11Partitioner14CreateFunctionENS0_15AnnotatedRegionEPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/transforms/to_a_normal_form.cc' l='274' u='c' c='_ZN3tvm5relay12_GLOBAL__N_14Fill10VisitExpr_EPKNS0_16TupleGetItemNodeERKNS0_3VarE'/>
+<use f='tvm/src/relay/transforms/to_cps.cc' l='229' u='c' c='_ZZN3tvm5relay5ToCPSERKNS0_8FunctionERKNS_8IRModuleEPSt13unordered_mapINS_9GlobalVarES8_NS_7runtime13ObjectPtrHashENS9_14ObjectPtrEqualESaISt4pairIKS84511437'/>
+<use f='tvm/src/relay/transforms/type_infer.cc' l='886' u='c' c='_ZN3tvm5relay26SameTypedSubgraphExtractor10VisitExpr_EPKNS0_16TupleGetItemNodeE'/>

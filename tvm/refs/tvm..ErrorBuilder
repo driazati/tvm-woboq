@@ -1,0 +1,34 @@
+<def f='tvm/include/tvm/ir/error.h' l='52' ll='63'/>
+<use f='tvm/include/tvm/ir/error.h' l='55' c='_ZN3tvm12ErrorBuilderlsERKT_'/>
+<use f='tvm/include/tvm/ir/error.h' l='81' c='_ZN3tvm12CompileErrorC1ERKNS_12ErrorBuilderE'/>
+<size>392</size>
+<doc f='tvm/include/tvm/ir/error.h' l='36'>/*!
+ * \brief A wrapper around std::stringstream to build error.
+ *
+ * Can be consumed by CompileError to construct an error.
+ *
+ * \code
+ *
+ * void ReportError(const CompileError&amp; err);
+ *
+ * void Test(int number) {
+ *   // Use error reporter to construct an error.
+ *   ReportError(ErrorBuilder() &lt;&lt; &quot;This is an error number=&quot; &lt;&lt; number);
+ * }
+ *
+ * \endcode
+ */</doc>
+<fun r='_ZN3tvm12ErrorBuilderlsERKT_'/>
+<mbr r='tvm::ErrorBuilder::stream_' o='0' t='std::stringstream'/>
+<use f='tvm/src/relay/analysis/annotated_region_set.cc' l='162' c='_ZN3tvm5relay18AnnotatedRegionSet7Creator10VisitExpr_EPKNS0_8CallNodeE'/>
+<size>392</size>
+<use f='tvm/src/relay/op/tensor/transform.h' l='82' c='_ZN3tvm5relay14ConcatenateRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/src/relay/op/tensor/transform.cc' l='1879' c='_ZN3tvm5relay11MeshgridRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<size>392</size>
+<use f='tvm/src/relay/op/type_relations.cc' l='88' c='_ZN3tvm5relay17ConcreteBroadcastERKNS_10TensorTypeES3_NS_7runtime8DataTypeE'/>
+<size>392</size>
+<use f='tvm/src/relay/qnn/op/concatenate.cc' l='55' c='_ZN3tvm5relay3qnn17QnnConcatenateRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/src/relay/qnn/op/concatenate.cc' l='73' c='_ZN3tvm5relay3qnn17QnnConcatenateRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<size>392</size>
+<use f='tvm/src/relay/transforms/type_infer.cc' l='342' c='_ZN3tvm5relay14TypeInferencer10VisitExpr_EPKNS0_9MatchNodeE'/>
+<size>392</size>

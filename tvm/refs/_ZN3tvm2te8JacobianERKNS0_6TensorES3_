@@ -1,0 +1,14 @@
+<dec f='tvm/include/tvm/te/autodiff.h' l='56' type='tvm::te::Tensor tvm::te::Jacobian(const tvm::te::Tensor &amp; output, const tvm::te::Tensor &amp; input)'/>
+<doc f='tvm/include/tvm/te/autodiff.h' l='45'>/*!
+ * \brief Get the tensor representing the Jacobian of the output with respect to the input.
+ *
+ *  Note that if \p output depends on \p input indirectly (by using some other tensor
+ *  depending on \p input), this dependency won&apos;t contribute to the resulting Jacobian.
+ *  For such cases use the function ::Gradient.
+ *
+ * \param output The tensor to differentiate.
+ * \param input The input tensor, which \p output should directly use.
+ * \return The tensor representing the Jacobian of shape `output.shape + input.shape`.
+ */</doc>
+<use f='tvm/src/te/autodiff/adjoint.cc' l='65' u='c' c='_ZN3tvm2te21VectorJacobianProductERKNS0_6TensorES3_S3_'/>
+<def f='tvm/src/te/autodiff/jacobian.cc' l='305' ll='366' type='tvm::te::Tensor tvm::te::Jacobian(const tvm::te::Tensor &amp; output, const tvm::te::Tensor &amp; input)'/>

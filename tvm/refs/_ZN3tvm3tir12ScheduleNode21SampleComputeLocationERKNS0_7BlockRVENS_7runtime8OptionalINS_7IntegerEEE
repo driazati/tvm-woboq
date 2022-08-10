@@ -1,0 +1,13 @@
+<dec f='tvm/include/tvm/tir/schedule/schedule.h' l='243' type='tvm::tir::LoopRV tvm::tir::ScheduleNode::SampleComputeLocation(const tvm::tir::BlockRV &amp; block_rv, Optional&lt;tvm::Integer&gt; decision = NullOpt)'/>
+<doc f='tvm/include/tvm/tir/schedule/schedule.h' l='237'>/*!
+   * \brief Sample a compute-at location of the given block
+   * \param block_rv The block whose compute-at location is to be sampled
+   * \param decision The sampling decision
+   * \return The sampled loop where the input block is to be computed at
+   */</doc>
+<use f='tvm/src/meta_schedule/schedule_rule/random_compute_location.cc' l='102' u='c' c='_ZN3tvm13meta_schedule25RandomComputeLocationNode17RandomlyComputeAtERKNS_3tir8ScheduleERKNS2_7BlockRVE'/>
+<use f='tvm/src/meta_schedule/schedule_rule/winograd.cc' l='120' u='c'/>
+<use f='tvm/src/meta_schedule/schedule_rule/winograd.cc' l='122' u='c'/>
+<ovr f='tvm/src/tir/schedule/concrete_schedule.cc' l='254' c='_ZN3tvm3tir20ConcreteScheduleNode21SampleComputeLocationERKNS0_7BlockRVENS_7runtime8OptionalINS_7IntegerEEE'/>
+<use f='tvm/src/tir/schedule/primitive/sampling.cc' l='457' u='c' c='_ZN3tvm3tir27SampleComputeLocationTraits23UnpackedApplyToScheduleENS0_8ScheduleENS0_7BlockRVENS_7runtime8OptionalINS_7IntegerEEE'/>
+<use f='tvm/src/tir/schedule/schedule.cc' l='131' u='a'/>

@@ -1,0 +1,8 @@
+<dec f='tvm/src/relay/op/make_op.h' l='73' type='tvm::relay::Expr tvm::relay::MakeReshape(tvm::relay::Expr data, Array&lt;tvm::Integer&gt; newshape, bool allowzero = false)'/>
+<use f='tvm/src/relay/transforms/pattern_utils.h' l='769' u='c' c='_ZN3tvm5relayL7ReshapeENS_9RelayExprENS_7runtime5ArrayINS_7IntegerEvEE'/>
+<def f='tvm/src/relay/op/tensor/transform.cc' l='918' ll='924' type='tvm::relay::Expr tvm::relay::MakeReshape(tvm::relay::Expr data, Array&lt;tvm::Integer&gt; newshape, bool allowzero = false)'/>
+<use f='tvm/src/relay/op/tensor/transform.cc' l='926' u='r'/>
+<use f='tvm/src/relay/transforms/dynamic_to_static.cc' l='44' u='c' c='_ZN3tvm5relay22DynamicToStaticMutatorC1ENS_8IRModuleENS0_8FunctionE'/>
+<use f='tvm/src/relay/transforms/fold_scale_axis.cc' l='350' u='c' c='_ZN3tvm5relay15fold_scale_axisL18ReshapeToMatchAxisENS_9RelayExprERKNS_7runtime5ArrayINS_8PrimExprEvEERKNS4_INS_7IntegerEvEE'/>
+<use f='tvm/src/relay/transforms/simplify_expr.cc' l='71' u='c' c='_ZNK3tvm5relay15SimplifyReshape8CallbackERKNS_9RelayExprES4_RKNS_7runtime3MapINS0_9DFPatternENS5_5ArrayIS2_vEEvvEE'/>
+<use f='tvm/src/relay/transforms/simplify_expr.cc' l='536' u='c' c='_ZNK3tvm5relay28ConcretizeReshapeLikeRewrite10ConcretizeERKNS_7runtime3MapINS0_9DFPatternENS2_5ArrayINS_9RelayExprEvEEvvEENS5_INS_7IntegerEvEENS2_8DataTypeE'/>

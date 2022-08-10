@@ -1,0 +1,16 @@
+<dec f='tvm/include/tvm/tir/schedule/schedule.h' l='391' type='tvm::tir::BlockRV tvm::tir::ScheduleNode::CacheRead(const tvm::tir::BlockRV &amp; block_rv, int read_buffer_index, const tvm::runtime::String &amp; storage_scope)'/>
+<doc f='tvm/include/tvm/tir/schedule/schedule.h' l='382'>/*!
+   * \brief Create a block that reads a buffer region into a read cache. It requires:
+   * 1) There is at most one block who writes the buffer in the scope.
+   * 2) The scope block have stage-pipeline property.
+   * \param block_rv The consumer block of the target buffer.
+   * \param read_buffer_index The index of the buffer in block&apos;s read region.
+   * \param storage_scope The target storage scope.
+   * \return The cache stage block.
+   */</doc>
+<use f='tvm/src/meta_schedule/postproc/rewrite_layout.cc' l='150' u='c' c='_ZN3tvm3tir13RewriteLayoutERKNS0_8ScheduleE'/>
+<use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling.cc' l='247' u='c' c='_ZNK3tvm13meta_schedule20MultiLevelTilingNode12AddReadReuseENS0_5StateE'/>
+<use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling_tensor_core.cc' l='258' u='c' c='_ZNK3tvm13meta_schedule30MultiLevelTilingTensorCoreNode22AddReadReuseTensorCoreENS0_15TensorCoreStateE'/>
+<ovr f='tvm/src/tir/schedule/concrete_schedule.cc' l='537' c='_ZN3tvm3tir20ConcreteScheduleNode9CacheReadERKNS0_7BlockRVEiRKNS_7runtime6StringE'/>
+<use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='1179' u='c' c='_ZN3tvm3tir15CacheReadTraits23UnpackedApplyToScheduleENS0_8ScheduleENS0_7BlockRVENS_7IntegerENS_7runtime6StringE'/>
+<use f='tvm/src/tir/schedule/schedule.cc' l='179' u='a'/>

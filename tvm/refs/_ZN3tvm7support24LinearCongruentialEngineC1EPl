@@ -1,0 +1,18 @@
+<def f='tvm/include/tvm/support/random_engine.h' l='130' ll='132' type='void tvm::support::LinearCongruentialEngine::LinearCongruentialEngine(tvm::support::LinearCongruentialEngine::TRandState * rand_state_ptr)'/>
+<use f='tvm/src/meta_schedule/utils.h' l='185' u='c' c='_ZN3tvm13meta_schedule8ForkSeedEPl'/>
+<use f='tvm/src/meta_schedule/utils.h' l='200' u='c' c='_ZN3tvm13meta_schedule8ForkSeedEPli'/>
+<doc f='tvm/include/tvm/support/random_engine.h' l='123'>/*!
+   * \brief Construct a random number generator with a random state pointer.
+   * \param rand_state_ptr The random state pointer given in result_type*.
+   * \note The random state is not checked for whether it&apos;s nullptr and whether it&apos;s in the range of
+   *  [0, modulus-1]. We assume the given random state is valid or the Seed function would be
+   *  called right after the constructor before any usage.
+   */</doc>
+<use f='tvm/src/meta_schedule/task_scheduler/gradient_based.cc' l='229' u='c' c='_ZN3tvm13meta_schedule13TaskScheduler13GradientBasedENS_7runtime5ArrayINS0_11TuneContextEvEENS3_INS_8FloatImmEvEENS0_7BuilderENS0_6RunnerENS2_8Optiona15111662'/>
+<use f='tvm/src/meta_schedule/tune_context.cc' l='47' u='c' c='_ZN3tvm13meta_schedule11TuneContextC1ENS_7runtime8OptionalINS_8IRModuleEEENS3_INS_6TargetEEENS3_INS0_14SpaceGeneratorEEENS3_INS0_14SearchStrategyEEENS10962771'/>
+<use f='tvm/src/tir/schedule/concrete_schedule.cc' l='228' u='c' c='_ZN3tvm3tir20ConcreteScheduleNode4SeedEl'/>
+<use f='tvm/src/tir/schedule/concrete_schedule.cc' l='232' u='c' c='_ZN3tvm3tir20ConcreteScheduleNode8ForkSeedEv'/>
+<use f='tvm/src/tir/schedule/primitive/sampling.cc' l='134' u='c' c='_ZN3tvm3tir9SampleIntEPlii'/>
+<use f='tvm/src/tir/schedule/primitive/sampling.cc' l='180' u='c' c='_ZN3tvm3tir17SampleCategoricalEPlRKNS_7runtime5ArrayINS_7IntegerEvEERKNS3_INS_8FloatImmEvEEPNS2_8OptionalIS4_EE'/>
+<use f='tvm/src/tir/schedule/primitive/sampling.cc' l='199' u='c' c='_ZN3tvm3tir22MakeMultinomialSamplerEPlRKSt6vectorIdSaIdEE'/>
+<use f='tvm/src/tir/schedule/primitive/sampling.cc' l='202' u='c' c='_ZN3tvm3tir22MakeMultinomialSamplerEPlRKSt6vectorIdSaIdEE'/>

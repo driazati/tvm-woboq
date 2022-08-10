@@ -1,0 +1,151 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>reduce.h source code [tvm/include/tvm/relay/attrs/reduce.h] - Woboq Code Browser</title>
+<meta name="woboq:interestingDefinitions" content="tvm::relay::ArgReduceAttrs,tvm::relay::ReduceAttrs,tvm::relay::VarianceAttrs "/>
+<link rel="stylesheet" href="../../../../.././data/qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href="../../../../.././data/kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src="../../../../.././data/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="../../../../.././data/jquery/jquery-ui.min.js"></script>
+<script>var file = 'tvm/include/tvm/relay/attrs/reduce.h'; var root_path = '../../../../..'; var data_path = '../../../../.././data'; var ecma_script_api_version = 2;</script>
+<script src='../../../../.././data/codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='../../../..'>tvm</a>/<a href='../../..'>include</a>/<a href='../..'>tvm</a>/<a href='..'>relay</a>/<a href='./'>attrs</a>/<a href='reduce.h.html'>reduce.h</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td><i>/*</i></td></tr>
+<tr><th id="2">2</th><td><i> * Licensed to the Apache Software Foundation (ASF) under one</i></td></tr>
+<tr><th id="3">3</th><td><i> * or more contributor license agreements.  See the NOTICE file</i></td></tr>
+<tr><th id="4">4</th><td><i> * distributed with this work for additional information</i></td></tr>
+<tr><th id="5">5</th><td><i> * regarding copyright ownership.  The ASF licenses this file</i></td></tr>
+<tr><th id="6">6</th><td><i> * to you under the Apache License, Version 2.0 (the</i></td></tr>
+<tr><th id="7">7</th><td><i> * "License"); you may not use this file except in compliance</i></td></tr>
+<tr><th id="8">8</th><td><i> * with the License.  You may obtain a copy of the License at</i></td></tr>
+<tr><th id="9">9</th><td><i> *</i></td></tr>
+<tr><th id="10">10</th><td><i> *   <a href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a></i></td></tr>
+<tr><th id="11">11</th><td><i> *</i></td></tr>
+<tr><th id="12">12</th><td><i> * Unless required by applicable law or agreed to in writing,</i></td></tr>
+<tr><th id="13">13</th><td><i> * software distributed under the License is distributed on an</i></td></tr>
+<tr><th id="14">14</th><td><i> * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY</i></td></tr>
+<tr><th id="15">15</th><td><i> * KIND, either express or implied.  See the License for the</i></td></tr>
+<tr><th id="16">16</th><td><i> * specific language governing permissions and limitations</i></td></tr>
+<tr><th id="17">17</th><td><i> * under the License.</i></td></tr>
+<tr><th id="18">18</th><td><i> */</i></td></tr>
+<tr><th id="19">19</th><td></td></tr>
+<tr><th id="20">20</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="21">21</th><td><i class="doc"> * <span class="command">\file</span> <span class="verb">tvm/relay/attrs/reduce.h</span></i></td></tr>
+<tr><th id="22">22</th><td><i class="doc"> * <span class="command">\brief</span> Auxiliary attributes for reduce operators.</i></td></tr>
+<tr><th id="23">23</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="24">24</th><td><u>#<span data-ppcond="24">ifndef</span> <span class="macro" data-ref="_M/TVM_RELAY_ATTRS_REDUCE_H_">TVM_RELAY_ATTRS_REDUCE_H_</span></u></td></tr>
+<tr><th id="25">25</th><td><u>#define <dfn class="macro" id="_M/TVM_RELAY_ATTRS_REDUCE_H_" data-ref="_M/TVM_RELAY_ATTRS_REDUCE_H_">TVM_RELAY_ATTRS_REDUCE_H_</dfn></u></td></tr>
+<tr><th id="26">26</th><td></td></tr>
+<tr><th id="27">27</th><td><u>#include <a href="../../ir/attrs.h.html">&lt;tvm/ir/attrs.h&gt;</a></u></td></tr>
+<tr><th id="28">28</th><td></td></tr>
+<tr><th id="29">29</th><td><u>#include <a href="../../../../../include/c++/10/string.html">&lt;string&gt;</a></u></td></tr>
+<tr><th id="30">30</th><td></td></tr>
+<tr><th id="31">31</th><td><b>namespace</b> <span class="namespace">tvm</span> {</td></tr>
+<tr><th id="32">32</th><td><b>namespace</b> <span class="namespace">relay</span> {</td></tr>
+<tr><th id="33">33</th><td></td></tr>
+<tr><th id="34">34</th><td><i class="doc">/*! <span class="command">\brief</span> Attributes for Reduce operators */</i></td></tr>
+<tr><th id="35">35</th><td><b>struct</b> <dfn class="type def" id="tvm::relay::ReduceAttrs" title='tvm::relay::ReduceAttrs' data-ref="tvm::relay::ReduceAttrs" data-ref-filename="tvm..relay..ReduceAttrs">ReduceAttrs</dfn> : <b>public</b> <span class="namespace">tvm::</span><a class="type" href="../../ir/attrs.h.html#tvm::AttrsNode" title='tvm::AttrsNode' data-ref="tvm::AttrsNode" data-ref-filename="tvm..AttrsNode">AttrsNode</a>&lt;<a class="type" href="#tvm::relay::ReduceAttrs" title='tvm::relay::ReduceAttrs' data-ref="tvm::relay::ReduceAttrs" data-ref-filename="tvm..relay..ReduceAttrs">ReduceAttrs</a>&gt; {</td></tr>
+<tr><th id="36">36</th><td>  <a class="type" href="../../runtime/container/array.h.html#tvm::runtime::Array" title='tvm::runtime::Array' data-ref="tvm::runtime::Array" data-ref-filename="tvm..runtime..Array">Array</a>&lt;<a class="type" href="../../ir/expr.h.html#tvm::Integer" title='tvm::Integer' data-ref="tvm::Integer" data-ref-filename="tvm..Integer">Integer</a>&gt; <dfn class="decl field" id="tvm::relay::ReduceAttrs::axis" title='tvm::relay::ReduceAttrs::axis' data-ref="tvm::relay::ReduceAttrs::axis" data-ref-filename="tvm..relay..ReduceAttrs..axis">axis</dfn>;</td></tr>
+<tr><th id="37">37</th><td>  <em>bool</em> <dfn class="decl field" id="tvm::relay::ReduceAttrs::keepdims" title='tvm::relay::ReduceAttrs::keepdims' data-ref="tvm::relay::ReduceAttrs::keepdims" data-ref-filename="tvm..relay..ReduceAttrs..keepdims">keepdims</dfn>;</td></tr>
+<tr><th id="38">38</th><td>  <em>bool</em> <dfn class="decl field" id="tvm::relay::ReduceAttrs::exclude" title='tvm::relay::ReduceAttrs::exclude' data-ref="tvm::relay::ReduceAttrs::exclude" data-ref-filename="tvm..relay..ReduceAttrs..exclude">exclude</dfn>;</td></tr>
+<tr><th id="39">39</th><td></td></tr>
+<tr><th id="40">40</th><td>  <a class="macro" href="../../ir/attrs.h.html#66" title="static constexpr const char* _type_key = &quot;relay.attrs.ReduceAttrs&quot;; static const constexpr bool _type_final = true; static const constexpr int _type_child_slots = 0; static_assert(!::tvm::BaseAttrsNode::_type_final, &quot;ParentObj marked as final&quot;); static uint32_t RuntimeTypeIndex() { static_assert(ReduceAttrs::_type_child_slots == 0 || ::tvm::BaseAttrsNode::_type_child_slots == 0 || ReduceAttrs::_type_child_slots &lt; ::tvm::BaseAttrsNode::_type_child_slots, &quot;Need to set _type_child_slots when parent specifies it.&quot;); if (ReduceAttrs::_type_index != ::tvm::runtime::TypeIndex::kDynamic) { return ReduceAttrs::_type_index; } return _GetOrAllocRuntimeTypeIndex(); } static uint32_t _GetOrAllocRuntimeTypeIndex() { static uint32_t tindex = Object::GetOrAllocRuntimeTypeIndex( ReduceAttrs::_type_key, ReduceAttrs::_type_index, ::tvm::BaseAttrsNode::_GetOrAllocRuntimeTypeIndex(), ReduceAttrs::_type_child_slots, ReduceAttrs::_type_child_slots_can_overflow); return tindex; } template &lt;typename FVisit&gt; void _tvm_VisitAttrs(FVisit&amp; _tvm_fvisit)" data-ref="_M/TVM_DECLARE_ATTRS">TVM_DECLARE_ATTRS</a>(<a class="ref fn fake" href="../../../../../include/c++/10/bits/basic_string.h.html#_ZNSt7__cxx1112basic_stringC1EPKT_RKT1_" title='std::basic_string::basic_string&lt;_CharT, _Traits, _Alloc&gt;' data-ref="_ZNSt7__cxx1112basic_stringC1EPKT_RKT1_" data-ref-filename="_ZNSt7__cxx1112basic_stringC1EPKT_RKT1_"></a><a class="type" href="#tvm::relay::ReduceAttrs" title='tvm::relay::ReduceAttrs' data-ref="tvm::relay::ReduceAttrs" data-ref-filename="tvm..relay..ReduceAttrs">ReduceAttrs</a>, <q>"relay.attrs.ReduceAttrs"</q>) {</td></tr>
+<tr><th id="41">41</th><td>    <a class="macro" href="../../ir/attrs.h.html#76" title="_tvm_fvisit(&quot;axis&quot;, &amp;axis)" data-ref="_M/TVM_ATTR_FIELD">TVM_ATTR_FIELD</a>(<a class="member field" href="#tvm::relay::ReduceAttrs::axis" title='tvm::relay::ReduceAttrs::axis' data-ref="tvm::relay::ReduceAttrs::axis" data-ref-filename="tvm..relay..ReduceAttrs..axis">axis</a>)</td></tr>
+<tr><th id="42">42</th><td>        .set_default(<a class="ref fn" href="../../ir/attrs.h.html#_ZN3tvm9NullValueEv" title='tvm::NullValue' data-ref="_ZN3tvm9NullValueEv" data-ref-filename="_ZN3tvm9NullValueEv">NullValue</a>&lt;<a class="type" href="../../runtime/container/array.h.html#tvm::runtime::Array" title='tvm::runtime::Array' data-ref="tvm::runtime::Array" data-ref-filename="tvm..runtime..Array">Array</a>&lt;<a class="type" href="../../ir/expr.h.html#tvm::Integer" title='tvm::Integer' data-ref="tvm::Integer" data-ref-filename="tvm..Integer">Integer</a>&gt;&gt;())</td></tr>
+<tr><th id="43">43</th><td>        .describe(<q>R"code(The axis or axes along which to perform the reduction.</q></td></tr>
+<tr><th id="44">44</th><td><q></q></td></tr>
+<tr><th id="45">45</th><td><q>      The default, `axis=()`, will compute over all elements into a</q></td></tr>
+<tr><th id="46">46</th><td><q>      scalar array with shape `(1,)`.</q></td></tr>
+<tr><th id="47">47</th><td><q></q></td></tr>
+<tr><th id="48">48</th><td><q>      If `axis` is int, a reduction is performed on a particular axis.</q></td></tr>
+<tr><th id="49">49</th><td><q></q></td></tr>
+<tr><th id="50">50</th><td><q>      If `axis` is a tuple of ints, a reduction is performed on all the axes</q></td></tr>
+<tr><th id="51">51</th><td><q>      specified in the tuple.</q></td></tr>
+<tr><th id="52">52</th><td><q></q></td></tr>
+<tr><th id="53">53</th><td><q>      If `exclude` is true, reduction will be performed on the axes that are</q></td></tr>
+<tr><th id="54">54</th><td><q>      NOT in axis instead.)code"</q>);</td></tr>
+<tr><th id="55">55</th><td></td></tr>
+<tr><th id="56">56</th><td>    <a class="macro" href="../../ir/attrs.h.html#76" title="_tvm_fvisit(&quot;keepdims&quot;, &amp;keepdims)" data-ref="_M/TVM_ATTR_FIELD">TVM_ATTR_FIELD</a>(<a class="member field" href="#tvm::relay::ReduceAttrs::keepdims" title='tvm::relay::ReduceAttrs::keepdims' data-ref="tvm::relay::ReduceAttrs::keepdims" data-ref-filename="tvm..relay..ReduceAttrs..keepdims">keepdims</a>).set_default(<b>false</b>).describe(</td></tr>
+<tr><th id="57">57</th><td>        <q>"If this is set to `True`, the reduced axes are left "</q></td></tr>
+<tr><th id="58">58</th><td>        <q>"in the result as dimension with size one."</q>);</td></tr>
+<tr><th id="59">59</th><td>    <a class="macro" href="../../ir/attrs.h.html#76" title="_tvm_fvisit(&quot;exclude&quot;, &amp;exclude)" data-ref="_M/TVM_ATTR_FIELD">TVM_ATTR_FIELD</a>(<a class="member field" href="#tvm::relay::ReduceAttrs::exclude" title='tvm::relay::ReduceAttrs::exclude' data-ref="tvm::relay::ReduceAttrs::exclude" data-ref-filename="tvm..relay..ReduceAttrs..exclude">exclude</a>).set_default(<b>false</b>).describe(</td></tr>
+<tr><th id="60">60</th><td>        <q>"Whether to perform reduction on axis that are NOT in axis instead."</q>);</td></tr>
+<tr><th id="61">61</th><td>  }</td></tr>
+<tr><th id="62">62</th><td>};</td></tr>
+<tr><th id="63">63</th><td></td></tr>
+<tr><th id="64">64</th><td><i class="doc">/*! <span class="command">\brief</span> Attributes for Reduce operators which reduce by finding a single element. E.g. argmin */</i></td></tr>
+<tr><th id="65">65</th><td><b>struct</b> <dfn class="type def" id="tvm::relay::ArgReduceAttrs" title='tvm::relay::ArgReduceAttrs' data-ref="tvm::relay::ArgReduceAttrs" data-ref-filename="tvm..relay..ArgReduceAttrs">ArgReduceAttrs</dfn> : <b>public</b> <span class="namespace">tvm::</span><a class="type" href="../../ir/attrs.h.html#tvm::AttrsNode" title='tvm::AttrsNode' data-ref="tvm::AttrsNode" data-ref-filename="tvm..AttrsNode">AttrsNode</a>&lt;<a class="type" href="#tvm::relay::ArgReduceAttrs" title='tvm::relay::ArgReduceAttrs' data-ref="tvm::relay::ArgReduceAttrs" data-ref-filename="tvm..relay..ArgReduceAttrs">ArgReduceAttrs</a>&gt; {</td></tr>
+<tr><th id="66">66</th><td>  <a class="type" href="../../runtime/container/array.h.html#tvm::runtime::Array" title='tvm::runtime::Array' data-ref="tvm::runtime::Array" data-ref-filename="tvm..runtime..Array">Array</a>&lt;<a class="type" href="../../ir/expr.h.html#tvm::Integer" title='tvm::Integer' data-ref="tvm::Integer" data-ref-filename="tvm..Integer">Integer</a>&gt; <dfn class="decl field" id="tvm::relay::ArgReduceAttrs::axis" title='tvm::relay::ArgReduceAttrs::axis' data-ref="tvm::relay::ArgReduceAttrs::axis" data-ref-filename="tvm..relay..ArgReduceAttrs..axis">axis</dfn>;</td></tr>
+<tr><th id="67">67</th><td>  <em>bool</em> <dfn class="decl field" id="tvm::relay::ArgReduceAttrs::keepdims" title='tvm::relay::ArgReduceAttrs::keepdims' data-ref="tvm::relay::ArgReduceAttrs::keepdims" data-ref-filename="tvm..relay..ArgReduceAttrs..keepdims">keepdims</dfn>;</td></tr>
+<tr><th id="68">68</th><td>  <em>bool</em> <dfn class="decl field" id="tvm::relay::ArgReduceAttrs::select_last_index" title='tvm::relay::ArgReduceAttrs::select_last_index' data-ref="tvm::relay::ArgReduceAttrs::select_last_index" data-ref-filename="tvm..relay..ArgReduceAttrs..select_last_index">select_last_index</dfn>;</td></tr>
+<tr><th id="69">69</th><td>  <em>bool</em> <dfn class="decl field" id="tvm::relay::ArgReduceAttrs::exclude" title='tvm::relay::ArgReduceAttrs::exclude' data-ref="tvm::relay::ArgReduceAttrs::exclude" data-ref-filename="tvm..relay..ArgReduceAttrs..exclude">exclude</dfn>;</td></tr>
+<tr><th id="70">70</th><td></td></tr>
+<tr><th id="71">71</th><td>  <a class="macro" href="../../ir/attrs.h.html#66" title="static constexpr const char* _type_key = &quot;relay.attrs.ArgReduceAttrs&quot;; static const constexpr bool _type_final = true; static const constexpr int _type_child_slots = 0; static_assert(!::tvm::BaseAttrsNode::_type_final, &quot;ParentObj marked as final&quot;); static uint32_t RuntimeTypeIndex() { static_assert(ArgReduceAttrs::_type_child_slots == 0 || ::tvm::BaseAttrsNode::_type_child_slots == 0 || ArgReduceAttrs::_type_child_slots &lt; ::tvm::BaseAttrsNode::_type_child_slots, &quot;Need to set _type_child_slots when parent specifies it.&quot;); if (ArgReduceAttrs::_type_index != ::tvm::runtime::TypeIndex::kDynamic) { return ArgReduceAttrs::_type_index; } return _GetOrAllocRuntimeTypeIndex(); } static uint32_t _GetOrAllocRuntimeTypeIndex() { static uint32_t tindex = Object::GetOrAllocRuntimeTypeIndex( ArgReduceAttrs::_type_key, ArgReduceAttrs::_type_index, ::tvm::BaseAttrsNode::_GetOrAllocRuntimeTypeIndex(), ArgReduceAttrs::_type_child_slots, ArgReduceAttrs::_type_child_slots_can_overflow); return tindex; } template &lt;typename FVisit&gt; void _tvm_VisitAttrs(FVisit&amp; _tvm_fvisit)" data-ref="_M/TVM_DECLARE_ATTRS">TVM_DECLARE_ATTRS</a>(<a class="ref fn fake" href="../../../../../include/c++/10/bits/basic_string.h.html#_ZNSt7__cxx1112basic_stringC1EPKT_RKT1_" title='std::basic_string::basic_string&lt;_CharT, _Traits, _Alloc&gt;' data-ref="_ZNSt7__cxx1112basic_stringC1EPKT_RKT1_" data-ref-filename="_ZNSt7__cxx1112basic_stringC1EPKT_RKT1_"></a><a class="type" href="#tvm::relay::ArgReduceAttrs" title='tvm::relay::ArgReduceAttrs' data-ref="tvm::relay::ArgReduceAttrs" data-ref-filename="tvm..relay..ArgReduceAttrs">ArgReduceAttrs</a>, <q>"relay.attrs.ArgReduceAttrs"</q>) {</td></tr>
+<tr><th id="72">72</th><td>    <a class="macro" href="../../ir/attrs.h.html#76" title="_tvm_fvisit(&quot;axis&quot;, &amp;axis)" data-ref="_M/TVM_ATTR_FIELD">TVM_ATTR_FIELD</a>(<a class="member field" href="#tvm::relay::ArgReduceAttrs::axis" title='tvm::relay::ArgReduceAttrs::axis' data-ref="tvm::relay::ArgReduceAttrs::axis" data-ref-filename="tvm..relay..ArgReduceAttrs..axis">axis</a>)</td></tr>
+<tr><th id="73">73</th><td>        .set_default(<a class="ref fn" href="../../ir/attrs.h.html#_ZN3tvm9NullValueEv" title='tvm::NullValue' data-ref="_ZN3tvm9NullValueEv" data-ref-filename="_ZN3tvm9NullValueEv">NullValue</a>&lt;<a class="type" href="../../runtime/container/array.h.html#tvm::runtime::Array" title='tvm::runtime::Array' data-ref="tvm::runtime::Array" data-ref-filename="tvm..runtime..Array">Array</a>&lt;<a class="type" href="../../ir/expr.h.html#tvm::Integer" title='tvm::Integer' data-ref="tvm::Integer" data-ref-filename="tvm..Integer">Integer</a>&gt;&gt;())</td></tr>
+<tr><th id="74">74</th><td>        .describe(<q>R"code(The axis or axes along which to perform the reduction.</q></td></tr>
+<tr><th id="75">75</th><td><q></q></td></tr>
+<tr><th id="76">76</th><td><q>      The default, `axis=()`, will compute over all elements into a</q></td></tr>
+<tr><th id="77">77</th><td><q>      scalar array with shape `(1,)`.</q></td></tr>
+<tr><th id="78">78</th><td><q></q></td></tr>
+<tr><th id="79">79</th><td><q>      If `axis` is int, a reduction is performed on a particular axis.</q></td></tr>
+<tr><th id="80">80</th><td><q></q></td></tr>
+<tr><th id="81">81</th><td><q>      If `axis` is a tuple of ints, a reduction is performed on all the axes</q></td></tr>
+<tr><th id="82">82</th><td><q>      specified in the tuple.</q></td></tr>
+<tr><th id="83">83</th><td><q></q></td></tr>
+<tr><th id="84">84</th><td><q>      If `exclude` is true, reduction will be performed on the axes that are</q></td></tr>
+<tr><th id="85">85</th><td><q>      NOT in axis instead.)code"</q>);</td></tr>
+<tr><th id="86">86</th><td></td></tr>
+<tr><th id="87">87</th><td>    <a class="macro" href="../../ir/attrs.h.html#76" title="_tvm_fvisit(&quot;keepdims&quot;, &amp;keepdims)" data-ref="_M/TVM_ATTR_FIELD">TVM_ATTR_FIELD</a>(<a class="member field" href="#tvm::relay::ArgReduceAttrs::keepdims" title='tvm::relay::ArgReduceAttrs::keepdims' data-ref="tvm::relay::ArgReduceAttrs::keepdims" data-ref-filename="tvm..relay..ArgReduceAttrs..keepdims">keepdims</a>).set_default(<b>false</b>).describe(</td></tr>
+<tr><th id="88">88</th><td>        <q>"If this is set to `True`, the reduced axes are left "</q></td></tr>
+<tr><th id="89">89</th><td>        <q>"in the result as dimension with size one."</q>);</td></tr>
+<tr><th id="90">90</th><td>    <a class="macro" href="../../ir/attrs.h.html#76" title="_tvm_fvisit(&quot;select_last_index&quot;, &amp;select_last_index)" data-ref="_M/TVM_ATTR_FIELD">TVM_ATTR_FIELD</a>(<a class="member field" href="#tvm::relay::ArgReduceAttrs::select_last_index" title='tvm::relay::ArgReduceAttrs::select_last_index' data-ref="tvm::relay::ArgReduceAttrs::select_last_index" data-ref-filename="tvm..relay..ArgReduceAttrs..select_last_index">select_last_index</a>)</td></tr>
+<tr><th id="91">91</th><td>        .set_default(<b>false</b>)</td></tr>
+<tr><th id="92">92</th><td>        .describe(</td></tr>
+<tr><th id="93">93</th><td>            <q>"Whether to select the last index if the target element appears multiple times, else "</q></td></tr>
+<tr><th id="94">94</th><td>            <q>"select the first index which the target element appears"</q>);</td></tr>
+<tr><th id="95">95</th><td>    <a class="macro" href="../../ir/attrs.h.html#76" title="_tvm_fvisit(&quot;exclude&quot;, &amp;exclude)" data-ref="_M/TVM_ATTR_FIELD">TVM_ATTR_FIELD</a>(<a class="member field" href="#tvm::relay::ArgReduceAttrs::exclude" title='tvm::relay::ArgReduceAttrs::exclude' data-ref="tvm::relay::ArgReduceAttrs::exclude" data-ref-filename="tvm..relay..ArgReduceAttrs..exclude">exclude</a>).set_default(<b>false</b>).describe(</td></tr>
+<tr><th id="96">96</th><td>        <q>"Whether to perform reduction on axis that are NOT in axis instead."</q>);</td></tr>
+<tr><th id="97">97</th><td>  }</td></tr>
+<tr><th id="98">98</th><td>};</td></tr>
+<tr><th id="99">99</th><td></td></tr>
+<tr><th id="100">100</th><td><b>struct</b> <dfn class="type def" id="tvm::relay::VarianceAttrs" title='tvm::relay::VarianceAttrs' data-ref="tvm::relay::VarianceAttrs" data-ref-filename="tvm..relay..VarianceAttrs">VarianceAttrs</dfn> : <b>public</b> <span class="namespace">tvm::</span><a class="type" href="../../ir/attrs.h.html#tvm::AttrsNode" title='tvm::AttrsNode' data-ref="tvm::AttrsNode" data-ref-filename="tvm..AttrsNode">AttrsNode</a>&lt;<a class="type" href="#tvm::relay::VarianceAttrs" title='tvm::relay::VarianceAttrs' data-ref="tvm::relay::VarianceAttrs" data-ref-filename="tvm..relay..VarianceAttrs">VarianceAttrs</a>&gt; {</td></tr>
+<tr><th id="101">101</th><td>  <a class="type" href="../../runtime/container/array.h.html#tvm::runtime::Array" title='tvm::runtime::Array' data-ref="tvm::runtime::Array" data-ref-filename="tvm..runtime..Array">Array</a>&lt;<a class="type" href="../../ir/expr.h.html#tvm::Integer" title='tvm::Integer' data-ref="tvm::Integer" data-ref-filename="tvm..Integer">Integer</a>&gt; <dfn class="decl field" id="tvm::relay::VarianceAttrs::axis" title='tvm::relay::VarianceAttrs::axis' data-ref="tvm::relay::VarianceAttrs::axis" data-ref-filename="tvm..relay..VarianceAttrs..axis">axis</dfn>;</td></tr>
+<tr><th id="102">102</th><td>  <em>bool</em> <dfn class="decl field" id="tvm::relay::VarianceAttrs::keepdims" title='tvm::relay::VarianceAttrs::keepdims' data-ref="tvm::relay::VarianceAttrs::keepdims" data-ref-filename="tvm..relay..VarianceAttrs..keepdims">keepdims</dfn>;</td></tr>
+<tr><th id="103">103</th><td>  <em>bool</em> <dfn class="decl field" id="tvm::relay::VarianceAttrs::exclude" title='tvm::relay::VarianceAttrs::exclude' data-ref="tvm::relay::VarianceAttrs::exclude" data-ref-filename="tvm..relay..VarianceAttrs..exclude">exclude</dfn>;</td></tr>
+<tr><th id="104">104</th><td>  <em>bool</em> <dfn class="decl field" id="tvm::relay::VarianceAttrs::unbiased" title='tvm::relay::VarianceAttrs::unbiased' data-ref="tvm::relay::VarianceAttrs::unbiased" data-ref-filename="tvm..relay..VarianceAttrs..unbiased">unbiased</dfn>;</td></tr>
+<tr><th id="105">105</th><td></td></tr>
+<tr><th id="106">106</th><td>  <a class="macro" href="../../ir/attrs.h.html#66" title="static constexpr const char* _type_key = &quot;relay.attrs.VarianceAttrs&quot;; static const constexpr bool _type_final = true; static const constexpr int _type_child_slots = 0; static_assert(!::tvm::BaseAttrsNode::_type_final, &quot;ParentObj marked as final&quot;); static uint32_t RuntimeTypeIndex() { static_assert(VarianceAttrs::_type_child_slots == 0 || ::tvm::BaseAttrsNode::_type_child_slots == 0 || VarianceAttrs::_type_child_slots &lt; ::tvm::BaseAttrsNode::_type_child_slots, &quot;Need to set _type_child_slots when parent specifies it.&quot;); if (VarianceAttrs::_type_index != ::tvm::runtime::TypeIndex::kDynamic) { return VarianceAttrs::_type_index; } return _GetOrAllocRuntimeTypeIndex(); } static uint32_t _GetOrAllocRuntimeTypeIndex() { static uint32_t tindex = Object::GetOrAllocRuntimeTypeIndex( VarianceAttrs::_type_key, VarianceAttrs::_type_index, ::tvm::BaseAttrsNode::_GetOrAllocRuntimeTypeIndex(), VarianceAttrs::_type_child_slots, VarianceAttrs::_type_child_slots_can_overflow); return tindex; } template &lt;typename FVisit&gt; void _tvm_VisitAttrs(FVisit&amp; _tvm_fvisit)" data-ref="_M/TVM_DECLARE_ATTRS">TVM_DECLARE_ATTRS</a>(<a class="ref fn fake" href="../../../../../include/c++/10/bits/basic_string.h.html#_ZNSt7__cxx1112basic_stringC1EPKT_RKT1_" title='std::basic_string::basic_string&lt;_CharT, _Traits, _Alloc&gt;' data-ref="_ZNSt7__cxx1112basic_stringC1EPKT_RKT1_" data-ref-filename="_ZNSt7__cxx1112basic_stringC1EPKT_RKT1_"></a><a class="type" href="#tvm::relay::VarianceAttrs" title='tvm::relay::VarianceAttrs' data-ref="tvm::relay::VarianceAttrs" data-ref-filename="tvm..relay..VarianceAttrs">VarianceAttrs</a>, <q>"relay.attrs.VarianceAttrs"</q>) {</td></tr>
+<tr><th id="107">107</th><td>    <a class="macro" href="../../ir/attrs.h.html#76" title="_tvm_fvisit(&quot;axis&quot;, &amp;axis)" data-ref="_M/TVM_ATTR_FIELD">TVM_ATTR_FIELD</a>(<a class="member field" href="#tvm::relay::VarianceAttrs::axis" title='tvm::relay::VarianceAttrs::axis' data-ref="tvm::relay::VarianceAttrs::axis" data-ref-filename="tvm..relay..VarianceAttrs..axis">axis</a>)</td></tr>
+<tr><th id="108">108</th><td>        .set_default(<a class="ref fn" href="../../ir/attrs.h.html#_ZN3tvm9NullValueEv" title='tvm::NullValue' data-ref="_ZN3tvm9NullValueEv" data-ref-filename="_ZN3tvm9NullValueEv">NullValue</a>&lt;<a class="type" href="../../runtime/container/array.h.html#tvm::runtime::Array" title='tvm::runtime::Array' data-ref="tvm::runtime::Array" data-ref-filename="tvm..runtime..Array">Array</a>&lt;<a class="type" href="../../ir/expr.h.html#tvm::Integer" title='tvm::Integer' data-ref="tvm::Integer" data-ref-filename="tvm..Integer">Integer</a>&gt;&gt;())</td></tr>
+<tr><th id="109">109</th><td>        .describe(<q>R"code(The axis or axes along which to perform the reduction.</q></td></tr>
+<tr><th id="110">110</th><td><q></q></td></tr>
+<tr><th id="111">111</th><td><q>      The default, `axis=()`, will compute over all elements into a</q></td></tr>
+<tr><th id="112">112</th><td><q>      scalar array with shape `(1,)`.</q></td></tr>
+<tr><th id="113">113</th><td><q></q></td></tr>
+<tr><th id="114">114</th><td><q>      If `axis` is int, a reduction is performed on a particular axis.</q></td></tr>
+<tr><th id="115">115</th><td><q></q></td></tr>
+<tr><th id="116">116</th><td><q>      If `axis` is a tuple of ints, a reduction is performed on all the axes</q></td></tr>
+<tr><th id="117">117</th><td><q>      specified in the tuple.</q></td></tr>
+<tr><th id="118">118</th><td><q></q></td></tr>
+<tr><th id="119">119</th><td><q>      If `exclude` is true, reduction will be performed on the axes that are</q></td></tr>
+<tr><th id="120">120</th><td><q>      NOT in axis instead.)code"</q>);</td></tr>
+<tr><th id="121">121</th><td></td></tr>
+<tr><th id="122">122</th><td>    <a class="macro" href="../../ir/attrs.h.html#76" title="_tvm_fvisit(&quot;keepdims&quot;, &amp;keepdims)" data-ref="_M/TVM_ATTR_FIELD">TVM_ATTR_FIELD</a>(<a class="member field" href="#tvm::relay::VarianceAttrs::keepdims" title='tvm::relay::VarianceAttrs::keepdims' data-ref="tvm::relay::VarianceAttrs::keepdims" data-ref-filename="tvm..relay..VarianceAttrs..keepdims">keepdims</a>).set_default(<b>false</b>).describe(</td></tr>
+<tr><th id="123">123</th><td>        <q>"If this is set to `True`, the reduced axes are left "</q></td></tr>
+<tr><th id="124">124</th><td>        <q>"in the result as dimension with size one."</q>);</td></tr>
+<tr><th id="125">125</th><td>    <a class="macro" href="../../ir/attrs.h.html#76" title="_tvm_fvisit(&quot;exclude&quot;, &amp;exclude)" data-ref="_M/TVM_ATTR_FIELD">TVM_ATTR_FIELD</a>(<a class="member field" href="#tvm::relay::VarianceAttrs::exclude" title='tvm::relay::VarianceAttrs::exclude' data-ref="tvm::relay::VarianceAttrs::exclude" data-ref-filename="tvm..relay..VarianceAttrs..exclude">exclude</a>).set_default(<b>false</b>).describe(</td></tr>
+<tr><th id="126">126</th><td>        <q>"Whether to perform reduction on axis that are NOT in axis instead."</q>);</td></tr>
+<tr><th id="127">127</th><td>    <a class="macro" href="../../ir/attrs.h.html#76" title="_tvm_fvisit(&quot;unbiased&quot;, &amp;unbiased)" data-ref="_M/TVM_ATTR_FIELD">TVM_ATTR_FIELD</a>(<a class="member field" href="#tvm::relay::VarianceAttrs::unbiased" title='tvm::relay::VarianceAttrs::unbiased' data-ref="tvm::relay::VarianceAttrs::unbiased" data-ref-filename="tvm..relay..VarianceAttrs..unbiased">unbiased</a>).set_default(<b>false</b>).describe(<q>"Whether to use the unbiased estimation."</q>);</td></tr>
+<tr><th id="128">128</th><td>  }</td></tr>
+<tr><th id="129">129</th><td>};</td></tr>
+<tr><th id="130">130</th><td>}  <i>// namespace relay</i></td></tr>
+<tr><th id="131">131</th><td>}  <i>// namespace tvm</i></td></tr>
+<tr><th id="132">132</th><td><u>#<span data-ppcond="24">endif</span>  // TVM_RELAY_ATTRS_REDUCE_H_</u></td></tr>
+<tr><th id="133">133</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated while processing <a href='../../../../src/relay/analysis/mac_count.cc.html'>tvm/src/relay/analysis/mac_count.cc</a><br/>Generated on <em>2022-Aug-10</em> from project tvm revision <em>fae79bb</em><br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

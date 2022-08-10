@@ -1,0 +1,17 @@
+<dec f='tvm/include/tvm/tir/schedule/schedule.h' l='132' type='void tvm::tir::ScheduleNode::WorkOn(const tvm::runtime::String &amp; func_name)'/>
+<doc f='tvm/include/tvm/tir/schedule/schedule.h' l='118'>/*!
+   * \brief Instruct the schedule to work on a function in the IRModule.
+   *
+   * By default, the schedule works on the function with the name &quot;main&quot;, or the only function in
+   * the IRModule if there is only one. If there is multiple functions in the IRModule, and none of
+   * their names are &quot;main&quot;, users will have to call this method to explicitly specify which
+   * function to work on.
+   *
+   * This sugar function will guide the `GetBlock` method if its `func_name` is not specified.
+   *
+   * \param func_name The name of the function to be working on
+   *
+   * \sa GetBlock
+   */</doc>
+<ovr f='tvm/src/tir/schedule/concrete_schedule.cc' l='186' c='_ZN3tvm3tir20ConcreteScheduleNode6WorkOnERKNS_7runtime6StringE'/>
+<use f='tvm/src/tir/schedule/schedule.cc' l='60' u='a'/>

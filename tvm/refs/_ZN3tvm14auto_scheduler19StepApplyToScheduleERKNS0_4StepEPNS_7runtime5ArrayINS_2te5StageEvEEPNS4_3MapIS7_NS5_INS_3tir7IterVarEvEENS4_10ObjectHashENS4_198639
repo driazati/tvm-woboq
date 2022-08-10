@@ -1,0 +1,11 @@
+<dec f='tvm/include/tvm/auto_scheduler/transform_step.h' l='230' type='void tvm::auto_scheduler::StepApplyToSchedule(const tvm::auto_scheduler::Step &amp; step, Array&lt;te::Stage&gt; * stages, tvm::auto_scheduler::StageToAxesMap * stage_to_axes, te::Schedule * schedule, const Array&lt;tvm::auto_scheduler::Step&gt; &amp; transform_steps)'/>
+<doc f='tvm/include/tvm/auto_scheduler/transform_step.h' l='222'>/*!
+ * \brief Apply a general step to tvm.schedule with runtime dynamic dispatching.
+ * \param step The step to be applied to tvm.schedule.
+ * \param stages The list of current stages
+ * \param stage_to_axes A map that maps stage ot all its iterators.
+ * \param schedule A mutable point to the current schedule
+ * \param transform_steps An array of all history transform steps.
+ */</doc>
+<use f='tvm/src/auto_scheduler/compute_dag.cc' l='1200' u='c' c='_ZNK3tvm14auto_scheduler10ComputeDAG10ApplyStepsERKNS_7runtime5ArrayINS0_4StepEvEEPNS3_INS_2te5StageEvEEPNS2_3MapIS9_NS3_INS_3tir7IterVarEvEENS2_10Obj13443217'/>
+<def f='tvm/src/auto_scheduler/transform_step.cc' l='252' ll='285' type='void tvm::auto_scheduler::StepApplyToSchedule(const tvm::auto_scheduler::Step &amp; step, Array&lt;te::Stage&gt; * stages, tvm::auto_scheduler::StageToAxesMap * stage_to_axes, te::Schedule * schedule, const Array&lt;tvm::auto_scheduler::Step&gt; &amp; transform_steps)'/>

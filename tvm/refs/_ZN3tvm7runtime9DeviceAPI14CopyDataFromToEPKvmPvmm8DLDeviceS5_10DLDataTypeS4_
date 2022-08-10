@@ -1,0 +1,18 @@
+<dec f='tvm/include/tvm/runtime/device_api.h' l='230' type='void tvm::runtime::DeviceAPI::CopyDataFromTo(const void * from, size_t from_offset, void * to, size_t to_offset, size_t num_bytes, tvm::Device dev_from, tvm::Device dev_to, DLDataType type_hint, TVMStreamHandle stream)'/>
+<doc f='tvm/include/tvm/runtime/device_api.h' l='217'>/*!
+   * \brief copy data from one place to another
+   * \param from The source array.
+   * \param from_offset The byte offeset in the from.
+   * \param to The target array.
+   * \param to_offset The byte offset in the to.
+   * \param num_bytes The size of the memory in bytes
+   * \param dev_from The source device
+   * \param dev_to The target device
+   * \param type_hint The type of elements, only neded by certain backends.
+   *                  can be useful for cross device endian converison.
+   * \param stream Optional stream object.
+   */</doc>
+<use f='tvm/src/runtime/c_runtime_api.cc' l='181' u='c' c='_ZN3tvm7runtime9DeviceAPI14CopyDataFromToEP8DLTensorS3_Pv'/>
+<def f='tvm/src/runtime/c_runtime_api.cc' l='185' ll='189' type='void tvm::runtime::DeviceAPI::CopyDataFromTo(const void * from, size_t from_offset, void * to, size_t to_offset, size_t num_bytes, tvm::Device dev_from, tvm::Device dev_to, DLDataType type_hint, TVMStreamHandle stream)'/>
+<ovr f='tvm/src/runtime/cpu_device_api.cc' l='84' c='_ZN3tvm7runtime12CPUDeviceAPI14CopyDataFromToEPKvmPvmm8DLDeviceS5_10DLDataTypeS4_'/>
+<ovr f='tvm/src/runtime/rpc/rpc_device_api.cc' l='135' c='_ZN3tvm7runtime12RPCDeviceAPI14CopyDataFromToEPKvmPvmm8DLDeviceS5_10DLDataTypeS4_'/>

@@ -1,0 +1,9 @@
+<dec f='tvm/include/tvm/runtime/debug.h' l='42' type='void tvm::runtime::AppendNDArray(std::ostream &amp; os, const tvm::runtime::NDArray &amp; nd_array, const DLDevice &amp; host_device, bool show_content = true)'/>
+<def f='tvm/src/runtime/debug.cc' l='42' ll='98' type='void tvm::runtime::AppendNDArray(std::ostream &amp; os, const tvm::runtime::NDArray &amp; nd_array, const DLDevice &amp; host_device, bool show_contents = true)'/>
+<use f='tvm/src/runtime/debug.cc' l='114' u='c' c='_ZN3tvm7runtime19AppendRuntimeObjectERSoRKNS0_9ObjectRefERK8DLDeviceb'/>
+<doc f='tvm/include/tvm/runtime/debug.h' l='36'>/*!
+ * \brief Helpers to describe runtime objects in human-friendly form. For \p nd_arrays we show their
+ * shapes and dtypes, but also their contents if &apos;small&apos; and on the \p host_device (mostly so that
+ * we can see dynamic shapes as they are computed). For \p adts we show the ADT fields. For
+ * \p objects we dispatch to one of the above as appropriate.
+ */</doc>

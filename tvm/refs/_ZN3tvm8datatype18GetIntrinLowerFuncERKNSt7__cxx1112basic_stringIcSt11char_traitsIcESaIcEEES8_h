@@ -1,0 +1,10 @@
+<dec f='tvm/src/target/datatype/registry.h' l='148' type='const runtime::PackedFunc * tvm::datatype::GetIntrinLowerFunc(const std::string &amp; target, const std::string &amp; name, uint8_t type_code)'/>
+<doc f='tvm/src/target/datatype/registry.h' l='141'>/*!
+ * \brief Get lowering function for intrinsic Calls/pure intrinsic Calls
+ * \param target The target we are lowering to, e.g. &quot;llvm&quot;
+ * \param type_code The datatype of the Call
+ * \param name The intrinsic name
+ * \return Lowering function for intrinsic Calls for the provided target and type
+ */</doc>
+<def f='tvm/src/target/datatype/registry.cc' l='110' ll='120' type='const runtime::PackedFunc * tvm::datatype::GetIntrinLowerFunc(const std::string &amp; target, const std::string &amp; name, uint8_t type_code)'/>
+<use f='tvm/src/tir/transforms/lower_custom_datatypes.cc' l='195' u='c' c='_ZN3tvm3tir22CustomDatatypesLowerer10VisitExpr_EPKNS0_8CallNodeE'/>

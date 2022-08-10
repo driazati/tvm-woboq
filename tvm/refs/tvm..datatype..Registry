@@ -1,0 +1,38 @@
+<def f='tvm/src/target/datatype/registry.h' l='52' ll='106'/>
+<use f='tvm/src/target/datatype/registry.h' l='57' c='_ZN3tvm8datatype8Registry6GlobalEv'/>
+<size>112</size>
+<doc f='tvm/src/target/datatype/registry.h' l='32'>/*!
+ * \brief Registry for custom datatypes.
+ *
+ * Adding custom datatypes currently requires two steps:
+ * 1. Register the datatype with the registry via a call to
+ *    datatype::Registry::Register. This can also be done in Python
+ *    directly---see the TVM globals registered in the corresponding .cc file.
+ *    Currently, user should manually choose a type name and a type code,
+ *    ensuring that neither conflict with existing types.
+ * 2. Use TVM_REGISTER_GLOBAL to register the lowering functions needed to
+ *    lower the custom datatype. In general, these will look like:
+ *      For Casts: tvm.datatype.lower.&lt;target&gt;.Cast.&lt;type&gt;.&lt;src_type&gt;
+ *        Example: tvm.datatype.lower.llvm.Cast.myfloat.float for a Cast from
+ *                 float to myfloat.
+ * For intrinsic Calls: tvm.datatype.lower.&lt;target&gt;.Call.intrin.&lt;name&gt;.&lt;type&gt;
+ *             Example: tvm.datatype.lower.llvm.Call.intrin.sqrt.myfloat
+ *  For other ops: tvm.datatype.lower.&lt;target&gt;.&lt;op&gt;.&lt;type&gt;
+ *       Examples: tvm.datatype.lower.llvm.Add.myfloat
+ *                 tvm.datatype.lower.llvm.FloatImm.posit
+ */</doc>
+<fun r='_ZN3tvm8datatype8Registry6GlobalEv'/>
+<fun r='_ZN3tvm8datatype8Registry8RegisterERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEh'/>
+<fun r='_ZN3tvm8datatype8Registry11GetTypeCodeERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<fun r='_ZN3tvm8datatype8Registry11GetTypeNameB5cxx11Eh'/>
+<fun r='_ZN3tvm8datatype8Registry17GetTypeRegisteredEh'/>
+<fun r='_ZN3tvm8datatype8Registry17GetTypeRegisteredENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<mbr r='tvm::datatype::Registry::code_to_name_' o='0' t='std::unordered_map&lt;uint8_t, std::string&gt;'/>
+<mbr r='tvm::datatype::Registry::name_to_code_' o='448' t='std::unordered_map&lt;std::string, uint8_t&gt;'/>
+<use f='tvm/src/target/datatype/registry.cc' l='46' c='_ZN3tvm8datatype8Registry6GlobalEv'/>
+<use f='tvm/src/target/datatype/registry.cc' l='47' c='_ZN3tvm8datatype8Registry6GlobalEv'/>
+<size>112</size>
+<fun r='_ZN3tvm8datatype8Registry6GlobalEv'/>
+<fun r='_ZN3tvm8datatype8Registry8RegisterERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEh'/>
+<fun r='_ZN3tvm8datatype8Registry11GetTypeCodeERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<fun r='_ZN3tvm8datatype8Registry11GetTypeNameB5cxx11Eh'/>

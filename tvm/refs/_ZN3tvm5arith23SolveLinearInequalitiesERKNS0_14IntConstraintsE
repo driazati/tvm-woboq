@@ -1,0 +1,25 @@
+<dec f='tvm/include/tvm/arith/int_solver.h' l='321' type='tvm::arith::PartialSolvedInequalities tvm::arith::SolveLinearInequalities(const tvm::arith::IntConstraints &amp; system_to_solve)'/>
+<doc f='tvm/include/tvm/arith/int_solver.h' l='303'>/*!
+ * \brief Solve linear inequalities.
+ * \param system_to_solve the variables to solve, their ranges, and a list of inequalities.
+ *        The inequalities are rewritten using Fourier-Motzkin elimination.
+ *        This function takes an array of (in)equalities and an array of variables, and essentially
+ *        rewrites the (in)equalities into an array of (in)equalities of the following form,
+ *
+ *        x0 &gt;= f0(x1, x2, ..., xn)
+ *        x0 &lt;= g0(x1, x2, ..., xn)
+ *        x1 &gt;= f1(x2, ..., xn)
+ *        x1 &lt;= g1(x2, ..., xn)
+ *        ...
+ *        xn &gt;= fn()  // just a constant
+ *        xn &lt;= gn()  // just a constant
+ *
+ * \return A map of variables and their solved bounds,
+ *         and constrains that cannot be solved to bounds.
+ */</doc>
+<def f='tvm/src/arith/solve_linear_inequality.cc' l='188' ll='359' type='tvm::arith::PartialSolvedInequalities tvm::arith::SolveLinearInequalities(const tvm::arith::IntConstraints &amp; system_to_solve)'/>
+<use f='tvm/src/arith/solve_linear_inequality.cc' l='370' u='c' c='_ZN3tvm5arith24SolveInequalitiesToRangeERKNS0_14IntConstraintsE'/>
+<use f='tvm/src/arith/solve_linear_inequality.cc' l='445' u='c' c='_ZN3tvm5arith28SolveInequalitiesDeskewRangeERKNS0_14IntConstraintsE'/>
+<use f='tvm/src/arith/solve_linear_inequality.cc' l='544' u='c'/>
+<use f='tvm/src/arith/solve_linear_inequality.cc' l='547' u='c'/>
+<use f='tvm/src/te/autodiff/ad_simplify.cc' l='865' u='c' c='_ZN3tvm2te30LiftConditionsThroughReductionERKNS_8PrimExprERKNS_7runtime5ArrayINS_3tir7IterVarEvEESA_'/>

@@ -1,0 +1,39 @@
+<def f='tvm/include/tvm/tir/stmt_functor.h' l='155' type='void tvm::tir::StmtVisitor::VisitExpr(const tvm::PrimExpr &amp; e)'/>
+<ovr f='tvm/include/tvm/tir/stmt_functor.h' l='309' c='_ZN3tvm3tir15StmtExprVisitor9VisitExprERKNS_8PrimExprE'/>
+<doc f='tvm/include/tvm/tir/stmt_functor.h' l='148'>/*!
+   * \brief Visitor to Exprs, can be overriden
+   *        to do recursive changes to Exprs.
+   * \note A common pattern is to call ExprVisitor here,
+   *       or have a class sub-class both StmtVisitor and ExprVisitor
+   *       and redirect Visit to ExprMutator::VisitExpr(Expr)
+   */</doc>
+<use f='tvm/src/tir/ir/stmt_functor.cc' l='35' u='c' c='_ZN3tvm3tir11StmtVisitor10VisitStmt_EPKNS0_11LetStmtNodeE'/>
+<use f='tvm/src/tir/ir/stmt_functor.cc' l='40' u='c' c='_ZN3tvm3tir11StmtVisitor10VisitStmt_EPKNS0_12AttrStmtNodeE'/>
+<use f='tvm/src/tir/ir/stmt_functor.cc' l='45' u='c' c='_ZN3tvm3tir11StmtVisitor10VisitStmt_EPKNS0_7ForNodeE'/>
+<use f='tvm/src/tir/ir/stmt_functor.cc' l='46' u='c' c='_ZN3tvm3tir11StmtVisitor10VisitStmt_EPKNS0_7ForNodeE'/>
+<use f='tvm/src/tir/ir/stmt_functor.cc' l='51' u='c' c='_ZN3tvm3tir11StmtVisitor10VisitStmt_EPKNS0_9WhileNodeE'/>
+<use f='tvm/src/tir/ir/stmt_functor.cc' l='56' u='c' c='_ZN3tvm3tir11StmtVisitor10VisitStmt_EPKNS0_12AllocateNodeE'/>
+<use f='tvm/src/tir/ir/stmt_functor.cc' l='58' u='c' c='_ZN3tvm3tir11StmtVisitor10VisitStmt_EPKNS0_12AllocateNodeE'/>
+<use f='tvm/src/tir/ir/stmt_functor.cc' l='62' u='c' c='_ZN3tvm3tir11StmtVisitor10VisitStmt_EPKNS0_17AllocateConstNodeE'/>
+<use f='tvm/src/tir/ir/stmt_functor.cc' l='73' u='c' c='_ZN3tvm3tir11StmtVisitor10VisitStmt_EPKNS0_15BufferStoreNodeE'/>
+<use f='tvm/src/tir/ir/stmt_functor.cc' l='74' u='c' c='_ZN3tvm3tir11StmtVisitor10VisitStmt_EPKNS0_15BufferStoreNodeE'/>
+<use f='tvm/src/tir/ir/stmt_functor.cc' l='79' u='c' c='_ZN3tvm3tir11StmtVisitor10VisitStmt_EPKNS0_17BufferRealizeNodeE'/>
+<use f='tvm/src/tir/ir/stmt_functor.cc' l='80' u='c' c='_ZN3tvm3tir11StmtVisitor10VisitStmt_EPKNS0_17BufferRealizeNodeE'/>
+<use f='tvm/src/tir/ir/stmt_functor.cc' l='82' u='c' c='_ZN3tvm3tir11StmtVisitor10VisitStmt_EPKNS0_17BufferRealizeNodeE'/>
+<use f='tvm/src/tir/ir/stmt_functor.cc' l='87' u='c' c='_ZN3tvm3tir11StmtVisitor10VisitStmt_EPKNS0_14IfThenElseNodeE'/>
+<use f='tvm/src/tir/ir/stmt_functor.cc' l='95' u='c' c='_ZN3tvm3tir11StmtVisitor10VisitStmt_EPKNS0_14AssertStmtNodeE'/>
+<use f='tvm/src/tir/ir/stmt_functor.cc' l='96' u='c' c='_ZN3tvm3tir11StmtVisitor10VisitStmt_EPKNS0_14AssertStmtNodeE'/>
+<use f='tvm/src/tir/ir/stmt_functor.cc' l='101' u='c' c='_ZN3tvm3tir11StmtVisitor10VisitStmt_EPKNS0_17ProducerStoreNodeE'/>
+<use f='tvm/src/tir/ir/stmt_functor.cc' l='102' u='c' c='_ZN3tvm3tir11StmtVisitor10VisitStmt_EPKNS0_17ProducerStoreNodeE'/>
+<use f='tvm/src/tir/ir/stmt_functor.cc' l='107' u='c' c='_ZN3tvm3tir11StmtVisitor10VisitStmt_EPKNS0_19ProducerRealizeNodeE'/>
+<use f='tvm/src/tir/ir/stmt_functor.cc' l='108' u='c' c='_ZN3tvm3tir11StmtVisitor10VisitStmt_EPKNS0_19ProducerRealizeNodeE'/>
+<use f='tvm/src/tir/ir/stmt_functor.cc' l='111' u='c' c='_ZN3tvm3tir11StmtVisitor10VisitStmt_EPKNS0_19ProducerRealizeNodeE'/>
+<use f='tvm/src/tir/ir/stmt_functor.cc' l='116' u='c' c='_ZN3tvm3tir11StmtVisitor10VisitStmt_EPKNS0_12PrefetchNodeE'/>
+<use f='tvm/src/tir/ir/stmt_functor.cc' l='117' u='c' c='_ZN3tvm3tir11StmtVisitor10VisitStmt_EPKNS0_12PrefetchNodeE'/>
+<use f='tvm/src/tir/ir/stmt_functor.cc' l='125' u='c' c='_ZN3tvm3tir11StmtVisitor10VisitStmt_EPKNS0_12EvaluateNodeE'/>
+<use f='tvm/src/tir/ir/stmt_functor.cc' l='130' u='c' c='_ZN3tvm3tir11StmtVisitor10VisitStmt_EPKNS0_9BlockNodeE'/>
+<use f='tvm/src/tir/ir/stmt_functor.cc' l='131' u='c' c='_ZN3tvm3tir11StmtVisitor10VisitStmt_EPKNS0_9BlockNodeE'/>
+<use f='tvm/src/tir/ir/stmt_functor.cc' l='135' u='c' c='_ZN3tvm3tir11StmtVisitor10VisitStmt_EPKNS0_9BlockNodeE'/>
+<use f='tvm/src/tir/ir/stmt_functor.cc' l='136' u='c' c='_ZN3tvm3tir11StmtVisitor10VisitStmt_EPKNS0_9BlockNodeE'/>
+<use f='tvm/src/tir/ir/stmt_functor.cc' l='151' u='c' c='_ZN3tvm3tir11StmtVisitor10VisitStmt_EPKNS0_16BlockRealizeNodeE'/>
+<use f='tvm/src/tir/ir/stmt_functor.cc' l='152' u='c' c='_ZN3tvm3tir11StmtVisitor10VisitStmt_EPKNS0_16BlockRealizeNodeE'/>

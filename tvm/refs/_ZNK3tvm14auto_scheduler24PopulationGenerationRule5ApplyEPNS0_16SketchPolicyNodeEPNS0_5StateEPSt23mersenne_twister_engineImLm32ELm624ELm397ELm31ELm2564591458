@@ -1,0 +1,20 @@
+<dec f='tvm/src/auto_scheduler/search_policy/sketch_policy_rules.h' l='172' type='tvm::auto_scheduler::PopulationGenerationRule::ResultKind tvm::auto_scheduler::PopulationGenerationRule::Apply(tvm::auto_scheduler::SketchPolicyNode * policy, tvm::auto_scheduler::State * state, std::mt19937 * rand_gen) const'/>
+<doc f='tvm/src/auto_scheduler/search_policy/sketch_policy_rules.h' l='165'>/*!
+   * \brief Apply function of this rule.
+   * \param policy The SketchPolicyNode of this rule, some member may get changed during the
+   * rule applying. (e.g. random number generator)
+   * \param state The state to apply this rule, update inplace.
+   * \return The result of this rule, indicate if there&apos;s any valid state generated.
+   */</doc>
+<use f='tvm/src/auto_scheduler/search_policy/sketch_policy.cc' l='411' u='c' c='_ZN3tvm14auto_scheduler16SketchPolicyNode20SampleInitPopulationERKNS_7runtime5ArrayINS0_5StateEvEE'/>
+<use f='tvm/src/auto_scheduler/search_policy/sketch_policy.cc' l='596' u='c' c='_ZN3tvm14auto_scheduler16SketchPolicyNode18EvolutionarySearchERKNS_7runtime5ArrayINS0_5StateEvEEi'/>
+<ovr f='tvm/src/auto_scheduler/search_policy/sketch_policy_rules.cc' l='494' c='_ZNK3tvm14auto_scheduler16InitFillTileSize5ApplyEPNS0_16SketchPolicyNodeEPNS0_5StateEPSt23mersenne_twister_engineImLm32ELm624ELm397ELm31ELm2567483615E10840474'/>
+<ovr f='tvm/src/auto_scheduler/search_policy/sketch_policy_rules.cc' l='534' c='_ZNK3tvm14auto_scheduler25InitChangeComputeLocation5ApplyEPNS0_16SketchPolicyNodeEPNS0_5StateEPSt23mersenne_twister_engineImLm32ELm624ELm397ELm31ELm258605582'/>
+<ovr f='tvm/src/auto_scheduler/search_policy/sketch_policy_rules.cc' l='581' c='_ZNK3tvm14auto_scheduler12InitParallel5ApplyEPNS0_16SketchPolicyNodeEPNS0_5StateEPSt23mersenne_twister_engineImLm32ELm624ELm397ELm31ELm2567483615ELm1112824415'/>
+<ovr f='tvm/src/auto_scheduler/search_policy/sketch_policy_rules.cc' l='646' c='_ZNK3tvm14auto_scheduler10InitUnroll5ApplyEPNS0_16SketchPolicyNodeEPNS0_5StateEPSt23mersenne_twister_engineImLm32ELm624ELm397ELm31ELm2567483615ELm11EL738680'/>
+<ovr f='tvm/src/auto_scheduler/search_policy/sketch_policy_rules.cc' l='697' c='_ZNK3tvm14auto_scheduler17InitVectorization5ApplyEPNS0_16SketchPolicyNodeEPNS0_5StateEPSt23mersenne_twister_engineImLm32ELm624ELm397ELm31ELm25674836158014700'/>
+<ovr f='tvm/src/auto_scheduler/search_policy/sketch_policy_rules.cc' l='757' c='_ZNK3tvm14auto_scheduler14InitThreadBind5ApplyEPNS0_16SketchPolicyNodeEPNS0_5StateEPSt23mersenne_twister_engineImLm32ELm624ELm397ELm31ELm2567483615ELm12990300'/>
+<ovr f='tvm/src/auto_scheduler/search_policy/sketch_policy_rules.cc' l='913' c='_ZNK3tvm14auto_scheduler14MutateTileSize5ApplyEPNS0_16SketchPolicyNodeEPNS0_5StateEPSt23mersenne_twister_engineImLm32ELm624ELm397ELm31ELm2567483615ELm12039630'/>
+<ovr f='tvm/src/auto_scheduler/search_policy/sketch_policy_rules.cc' l='1021' c='_ZNK3tvm14auto_scheduler16MutateAutoUnroll5ApplyEPNS0_16SketchPolicyNodeEPNS0_5StateEPSt23mersenne_twister_engineImLm32ELm624ELm397ELm31ELm2567483615E9948276'/>
+<ovr f='tvm/src/auto_scheduler/search_policy/sketch_policy_rules.cc' l='1056' c='_ZNK3tvm14auto_scheduler21MutateComputeLocation5ApplyEPNS0_16SketchPolicyNodeEPNS0_5StateEPSt23mersenne_twister_engineImLm32ELm624ELm397ELm31ELm25674843942'/>
+<ovr f='tvm/src/auto_scheduler/search_policy/sketch_policy_rules.cc' l='1119' c='_ZNK3tvm14auto_scheduler14MutateParallel5ApplyEPNS0_16SketchPolicyNodeEPNS0_5StateEPSt23mersenne_twister_engineImLm32ELm624ELm397ELm31ELm2567483615ELm12531882'/>

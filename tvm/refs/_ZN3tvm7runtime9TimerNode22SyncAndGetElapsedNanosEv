@@ -1,0 +1,15 @@
+<dec f='tvm/include/tvm/runtime/profiling.h' l='72' type='int64_t tvm::runtime::TimerNode::SyncAndGetElapsedNanos()'/>
+<doc f='tvm/include/tvm/runtime/profiling.h' l='62'>/*! \brief Synchronize timer state and return elapsed time between `Start` and `Stop`.
+   * \return The time in nanoseconds between `Start` and `Stop`.
+   *
+   * This function is necessary because we want to avoid timing the overhead of
+   * doing timing. When using multiple timers, it is recommended to stop all of
+   * them before calling `SyncAndGetElapsedNanos` on any of them.
+   *
+   * Note: this function should be only called once per object. It may incur
+   * a large synchronization overhead (for example, with GPUs).
+   */</doc>
+<ovr f='tvm/src/runtime/profiling.cc' l='54' c='_ZN3tvm7runtime16DefaultTimerNode22SyncAndGetElapsedNanosEv'/>
+<ovr f='tvm/src/runtime/profiling.cc' l='76' c='_ZN3tvm7runtime12CPUTimerNode22SyncAndGetElapsedNanosEv'/>
+<use f='tvm/src/runtime/profiling.cc' l='651' u='c' c='_ZN3tvm7runtime9profiling8Profiler6ReportEv'/>
+<use f='tvm/src/runtime/profiling.cc' l='889' u='c' c='_ZN3tvm7runtime9profiling17WrapTimeEvaluatorENS0_10PackedFuncE8DLDeviceiiiiiS2_'/>

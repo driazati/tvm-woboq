@@ -1,0 +1,36 @@
+<dec f='tvm/include/tvm/arith/iter_affine_map.h' l='341' type='tvm::arith::IterMapResult tvm::arith::DetectIterMap(const Array&lt;tvm::PrimExpr&gt; &amp; indices, const Map&lt;tvm::tir::Var, tvm::Range&gt; &amp; input_iters, const tvm::PrimExpr &amp; predicate, tvm::arith::IterMapLevel check_level, arith::Analyzer * analyzer, bool simplify_trivial_iterators = true)'/>
+<use f='tvm/src/arith/int_set.cc' l='1049' u='c' c='_ZN3tvm5arith24EstimateRegionLowerBoundERKNS_7runtime5ArrayINS_5RangeEvEERKNS1_3MapINS_3tir3VarES3_vvEERKNS_8PrimExprEPNS0_8AnalyzerE'/>
+<doc f='tvm/include/tvm/arith/iter_affine_map.h' l='318'>/*!
+ * \brief Detect if indices can be written as
+ *  [y_0 + c_0, y_1 + c_1, ..., y_n + c_n]
+ *
+ *  Here y = some-quasi-affine-iter-map(input_iters)
+ *  and c are symbolic constants.
+ *
+ *  We also requires that y_i and y_j to be independent for i != j.
+ *
+ *  For returned value rv, the following is always true:
+ *  - rv[i]-&gt;args.size() &lt;=1: only one iterator per element.
+ *
+ * \param indices The indices to detect pattern for.
+ * \param input_iters Map from variable to iterator&apos;s range.
+ * \param predicate The predicate constraints on the input iterators
+ * \param check_level The iter mapping checking level.
+ * \param analyzer Analyzer used to get context information.
+ * \param simplify_trivial_iterators If true, iterators with extent of
+ *           1 will be replaced with a constant value.
+ *
+ * \return The detected iteration result.
+ * The return object&apos;s .indices is empty on failure.
+ */</doc>
+<def f='tvm/src/arith/iter_affine_map.cc' l='1100' ll='1182' type='tvm::arith::IterMapResult tvm::arith::DetectIterMap(const Array&lt;tvm::PrimExpr&gt; &amp; indices, const Map&lt;tvm::tir::Var, tvm::Range&gt; &amp; input_iters, const tvm::PrimExpr &amp; predicate, tvm::arith::IterMapLevel check_level, arith::Analyzer * analyzer, bool simplify_trivial_iterators = true)'/>
+<use f='tvm/src/arith/iter_affine_map.cc' l='1189' u='c'/>
+<use f='tvm/src/arith/iter_affine_map.cc' l='1772' u='c' c='_ZN3tvm5arith15IterMapSimplifyERKNS_7runtime5ArrayINS_8PrimExprEvEERKNS1_3MapINS_3tir3VarENS_5RangeEvvEERKS3_NS0_12IterMapLevelEb'/>
+<use f='tvm/src/arith/iter_affine_map.cc' l='2065' u='c' c='_ZN3tvm5arith14SubspaceDivideERKNS_7runtime5ArrayINS_8PrimExprEvEERKNS1_3MapINS_3tir3VarENS_5RangeEvvEERKNS2_IS9_vEERKS3_NS0_12IterMapLevelEPNS0_8AnalyzerE'/>
+<use f='tvm/src/tir/ir/index_map.cc' l='79' u='c' c='_ZNK3tvm3tir8IndexMap20NonSurjectiveInverseENS_7runtime5ArrayINS_5RangeEvEE'/>
+<use f='tvm/src/tir/ir/index_map.cc' l='142' u='c' c='_ZNK3tvm3tir8IndexMap7InverseENS_7runtime5ArrayINS_5RangeEvEE'/>
+<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='578' u='c' c='_ZN3tvm3tir15IsAffineBindingERKNS0_12BlockRealizeERKNS_7runtime3MapINS0_3VarENS_5RangeEvvEEPNS_5arith8AnalyzerE'/>
+<use f='tvm/src/tir/schedule/analysis/layout.cc' l='80' u='c' c='_ZN3tvm3tir18SplitExprCollector7CollectERKNS_8PrimExprERKNS_7runtime3MapINS0_3VarENS_5RangeEvvEES4_NS_5arith12IterMapLevelEPNSC_8AnalyzerE'/>
+<use f='tvm/src/tir/schedule/primitive/compute_inline.cc' l='555' u='c' c='_ZN3tvm3tir21ReverseComputeInliner22BodyPatternAllowInlineERKNS0_5BlockE'/>
+<use f='tvm/src/tir/schedule/primitive/decompose_padding.cc' l='159' u='c' c='_ZN3tvm3tir19PaddingInfoAnalyzer21EstimateInBoundRegionERKNS_7runtime5ArrayINS_8PrimExprEvEERKNS2_3MapINS0_3VarENS_5RangeEvvEERKS4_'/>
+<use f='tvm/src/tir/schedule/primitive/layout_transformation.cc' l='392' u='c' c='_ZN3tvm3tir20TransformBlockLayoutENS0_13ScheduleStateERKNS0_8StmtSRefERKNS0_8IndexMapE'/>

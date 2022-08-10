@@ -1,0 +1,127 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>metadata_types.h source code [tvm/include/tvm/runtime/metadata_types.h] - Woboq Code Browser</title>
+<link rel="stylesheet" href="../../../.././data/qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href="../../../.././data/kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src="../../../.././data/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="../../../.././data/jquery/jquery-ui.min.js"></script>
+<script>var file = 'tvm/include/tvm/runtime/metadata_types.h'; var root_path = '../../../..'; var data_path = '../../../.././data'; var ecma_script_api_version = 2;</script>
+<script src='../../../.././data/codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='../../..'>tvm</a>/<a href='../..'>include</a>/<a href='..'>tvm</a>/<a href='./'>runtime</a>/<a href='metadata_types.h.html'>metadata_types.h</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td><i>/*</i></td></tr>
+<tr><th id="2">2</th><td><i> * Licensed to the Apache Software Foundation (ASF) under one</i></td></tr>
+<tr><th id="3">3</th><td><i> * or more contributor license agreements.  See the NOTICE file</i></td></tr>
+<tr><th id="4">4</th><td><i> * distributed with this work for additional information</i></td></tr>
+<tr><th id="5">5</th><td><i> * regarding copyright ownership.  The ASF licenses this file</i></td></tr>
+<tr><th id="6">6</th><td><i> * to you under the Apache License, Version 2.0 (the</i></td></tr>
+<tr><th id="7">7</th><td><i> * "License"); you may not use this file except in compliance</i></td></tr>
+<tr><th id="8">8</th><td><i> * with the License.  You may obtain a copy of the License at</i></td></tr>
+<tr><th id="9">9</th><td><i> *</i></td></tr>
+<tr><th id="10">10</th><td><i> *   <a href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a></i></td></tr>
+<tr><th id="11">11</th><td><i> *</i></td></tr>
+<tr><th id="12">12</th><td><i> * Unless required by applicable law or agreed to in writing,</i></td></tr>
+<tr><th id="13">13</th><td><i> * software distributed under the License is distributed on an</i></td></tr>
+<tr><th id="14">14</th><td><i> * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY</i></td></tr>
+<tr><th id="15">15</th><td><i> * KIND, either express or implied.  See the License for the</i></td></tr>
+<tr><th id="16">16</th><td><i> * specific language governing permissions and limitations</i></td></tr>
+<tr><th id="17">17</th><td><i> * under the License.</i></td></tr>
+<tr><th id="18">18</th><td><i> */</i></td></tr>
+<tr><th id="19">19</th><td><i></i></td></tr>
+<tr><th id="20">20</th><td><i>// LINT_C_FILE</i></td></tr>
+<tr><th id="21">21</th><td></td></tr>
+<tr><th id="22">22</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="23">23</th><td><i class="doc"> * <span class="command">\file</span> <span class="verb">tvm/runtime/metadata_types.h</span></i></td></tr>
+<tr><th id="24">24</th><td><i class="doc"> * <span class="command">\brief</span> Defines types which can be used in metadata here which</i></td></tr>
+<tr><th id="25">25</th><td><i class="doc"> * are also shared between C and C++ code bases.</i></td></tr>
+<tr><th id="26">26</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="27">27</th><td><u>#<span data-ppcond="27">ifndef</span> <span class="macro" data-ref="_M/TVM_RUNTIME_METADATA_TYPES_H_">TVM_RUNTIME_METADATA_TYPES_H_</span></u></td></tr>
+<tr><th id="28">28</th><td><u>#define <dfn class="macro" id="_M/TVM_RUNTIME_METADATA_TYPES_H_" data-ref="_M/TVM_RUNTIME_METADATA_TYPES_H_">TVM_RUNTIME_METADATA_TYPES_H_</dfn></u></td></tr>
+<tr><th id="29">29</th><td></td></tr>
+<tr><th id="30">30</th><td><u>#include &lt;inttypes.h&gt;</u></td></tr>
+<tr><th id="31">31</th><td><u>#include <a href="c_runtime_api.h.html">&lt;tvm/runtime/c_runtime_api.h&gt;</a></u></td></tr>
+<tr><th id="32">32</th><td></td></tr>
+<tr><th id="33">33</th><td><u>#<span data-ppcond="33">ifdef</span> <span class="macro" data-ref="_M/__cplusplus">__cplusplus</span></u></td></tr>
+<tr><th id="34">34</th><td><b>extern</b> <q>"C"</q> {</td></tr>
+<tr><th id="35">35</th><td><u>#<span data-ppcond="33">endif</span></u></td></tr>
+<tr><th id="36">36</th><td></td></tr>
+<tr><th id="37">37</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="38">38</th><td><i class="doc"> * <span class="command">\brief</span> Top-level metadata structure. Holds all other metadata types.</i></td></tr>
+<tr><th id="39">39</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="40">40</th><td><b>struct</b> <dfn class="type def" id="TVMMetadata" title='TVMMetadata' data-ref="TVMMetadata" data-ref-filename="TVMMetadata">TVMMetadata</dfn> {</td></tr>
+<tr><th id="41">41</th><td>  <i class="doc">/*! <span class="command">\brief</span> Version identifier for this metadata. */</i></td></tr>
+<tr><th id="42">42</th><td>  <a class="typedef" href="../../../../include/x86_64-linux-gnu/bits/stdint-intn.h.html#int64_t" title='int64_t' data-type='__int64_t' data-ref="int64_t" data-ref-filename="int64_t">int64_t</a> <dfn class="decl field" id="TVMMetadata::version" title='TVMMetadata::version' data-ref="TVMMetadata::version" data-ref-filename="TVMMetadata..version">version</dfn>;</td></tr>
+<tr><th id="43">43</th><td>  <i class="doc">/*! <span class="command">\brief</span> Inputs to the AOT run_model function.</i></td></tr>
+<tr><th id="44">44</th><td><i class="doc">   * The order of the elements is the same as in the arguments to run_model. That is to say,</i></td></tr>
+<tr><th id="45">45</th><td><i class="doc">   * this array specifies the first `num_inputs` arguments to run_model.</i></td></tr>
+<tr><th id="46">46</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="47">47</th><td>  <em>const</em> <b>struct</b> <a class="type" href="#TVMTensorInfo" title='TVMTensorInfo' data-ref="TVMTensorInfo" data-ref-filename="TVMTensorInfo">TVMTensorInfo</a>* <dfn class="decl field" id="TVMMetadata::inputs" title='TVMMetadata::inputs' data-ref="TVMMetadata::inputs" data-ref-filename="TVMMetadata..inputs">inputs</dfn>;</td></tr>
+<tr><th id="48">48</th><td>  <i class="doc">/*! <span class="command">\brief</span> Number of elements in `inputs` array. */</i></td></tr>
+<tr><th id="49">49</th><td>  <a class="typedef" href="../../../../include/x86_64-linux-gnu/bits/stdint-intn.h.html#int64_t" title='int64_t' data-type='__int64_t' data-ref="int64_t" data-ref-filename="int64_t">int64_t</a> <dfn class="decl field" id="TVMMetadata::num_inputs" title='TVMMetadata::num_inputs' data-ref="TVMMetadata::num_inputs" data-ref-filename="TVMMetadata..num_inputs">num_inputs</dfn>;</td></tr>
+<tr><th id="50">50</th><td>  <i class="doc">/*! <span class="command">\brief</span> Outputs of the AOT run_model function.</i></td></tr>
+<tr><th id="51">51</th><td><i class="doc">   * The order of the elements is the same as in the arguments to run_model. That is to say,</i></td></tr>
+<tr><th id="52">52</th><td><i class="doc">   * this array specifies the last `num_outputs` arguments to run_model.</i></td></tr>
+<tr><th id="53">53</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="54">54</th><td>  <em>const</em> <b>struct</b> <a class="type" href="#TVMTensorInfo" title='TVMTensorInfo' data-ref="TVMTensorInfo" data-ref-filename="TVMTensorInfo">TVMTensorInfo</a>* <dfn class="decl field" id="TVMMetadata::outputs" title='TVMMetadata::outputs' data-ref="TVMMetadata::outputs" data-ref-filename="TVMMetadata..outputs">outputs</dfn>;</td></tr>
+<tr><th id="55">55</th><td>  <i class="doc">/*! <span class="command">\brief</span> Number of elements in `outputs` array. */</i></td></tr>
+<tr><th id="56">56</th><td>  <a class="typedef" href="../../../../include/x86_64-linux-gnu/bits/stdint-intn.h.html#int64_t" title='int64_t' data-type='__int64_t' data-ref="int64_t" data-ref-filename="int64_t">int64_t</a> <dfn class="decl field" id="TVMMetadata::num_outputs" title='TVMMetadata::num_outputs' data-ref="TVMMetadata::num_outputs" data-ref-filename="TVMMetadata..num_outputs">num_outputs</dfn>;</td></tr>
+<tr><th id="57">57</th><td>  <i class="doc">/*! <span class="command">\brief</span> Workspace Memory Pools needed by the AOT main function.</i></td></tr>
+<tr><th id="58">58</th><td><i class="doc">   * The order of the elements is the same as in the arguments to run_model. That is to say,</i></td></tr>
+<tr><th id="59">59</th><td><i class="doc">   * this array specifies the last `num_workspace_pools` arguments to run_model.</i></td></tr>
+<tr><th id="60">60</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="61">61</th><td>  <em>const</em> <b>struct</b> <a class="type" href="#TVMTensorInfo" title='TVMTensorInfo' data-ref="TVMTensorInfo" data-ref-filename="TVMTensorInfo">TVMTensorInfo</a>* <dfn class="decl field" id="TVMMetadata::workspace_pools" title='TVMMetadata::workspace_pools' data-ref="TVMMetadata::workspace_pools" data-ref-filename="TVMMetadata..workspace_pools">workspace_pools</dfn>;</td></tr>
+<tr><th id="62">62</th><td>  <i class="doc">/*! <span class="command">\brief</span> Number of elements in `workspace_pools` array. */</i></td></tr>
+<tr><th id="63">63</th><td>  <a class="typedef" href="../../../../include/x86_64-linux-gnu/bits/stdint-intn.h.html#int64_t" title='int64_t' data-type='__int64_t' data-ref="int64_t" data-ref-filename="int64_t">int64_t</a> <dfn class="decl field" id="TVMMetadata::num_workspace_pools" title='TVMMetadata::num_workspace_pools' data-ref="TVMMetadata::num_workspace_pools" data-ref-filename="TVMMetadata..num_workspace_pools">num_workspace_pools</dfn>;</td></tr>
+<tr><th id="64">64</th><td>  <i class="doc">/*! <span class="command">\brief</span> Constant pools needed by the AOT main function.</i></td></tr>
+<tr><th id="65">65</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="66">66</th><td>  <em>const</em> <b>struct</b> <a class="type" href="#TVMConstantInfo" title='TVMConstantInfo' data-ref="TVMConstantInfo" data-ref-filename="TVMConstantInfo">TVMConstantInfo</a>* <dfn class="decl field" id="TVMMetadata::constant_pools" title='TVMMetadata::constant_pools' data-ref="TVMMetadata::constant_pools" data-ref-filename="TVMMetadata..constant_pools">constant_pools</dfn>;</td></tr>
+<tr><th id="67">67</th><td>  <i class="doc">/*! <span class="command">\brief</span> Number of elements in `constant_pools` array. */</i></td></tr>
+<tr><th id="68">68</th><td>  <a class="typedef" href="../../../../include/x86_64-linux-gnu/bits/stdint-intn.h.html#int64_t" title='int64_t' data-type='__int64_t' data-ref="int64_t" data-ref-filename="int64_t">int64_t</a> <dfn class="decl field" id="TVMMetadata::num_constant_pools" title='TVMMetadata::num_constant_pools' data-ref="TVMMetadata::num_constant_pools" data-ref-filename="TVMMetadata..num_constant_pools">num_constant_pools</dfn>;</td></tr>
+<tr><th id="69">69</th><td>  <i class="doc">/*! <span class="command">\brief</span> Name of the model, as passed to tvm.relay.build. */</i></td></tr>
+<tr><th id="70">70</th><td>  <em>const</em> <em>char</em>* <dfn class="decl field" id="TVMMetadata::mod_name" title='TVMMetadata::mod_name' data-ref="TVMMetadata::mod_name" data-ref-filename="TVMMetadata..mod_name">mod_name</dfn>;</td></tr>
+<tr><th id="71">71</th><td>};</td></tr>
+<tr><th id="72">72</th><td></td></tr>
+<tr><th id="73">73</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="74">74</th><td><i class="doc"> * <span class="command">\brief</span> Describes one tensor argument to `run_model`.</i></td></tr>
+<tr><th id="75">75</th><td><i class="doc"> * NOTE: while TIR allows for other types of arguments, such as scalars, the AOT run_model</i></td></tr>
+<tr><th id="76">76</th><td><i class="doc"> * function does not currently accept these. Therefore it's not possible to express those</i></td></tr>
+<tr><th id="77">77</th><td><i class="doc"> * in this metadata. A future patch may modify this.</i></td></tr>
+<tr><th id="78">78</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="79">79</th><td><b>struct</b> <dfn class="type def" id="TVMTensorInfo" title='TVMTensorInfo' data-ref="TVMTensorInfo" data-ref-filename="TVMTensorInfo">TVMTensorInfo</dfn> {</td></tr>
+<tr><th id="80">80</th><td>  <i class="doc">/*! <span class="command">\brief</span> Name of the tensor, as specified in the Relay program. */</i></td></tr>
+<tr><th id="81">81</th><td>  <em>const</em> <em>char</em>* <dfn class="decl field" id="TVMTensorInfo::name" title='TVMTensorInfo::name' data-ref="TVMTensorInfo::name" data-ref-filename="TVMTensorInfo..name">name</dfn>;</td></tr>
+<tr><th id="82">82</th><td>  <i class="doc">/*! <span class="command">\brief</span> Shape of the tensor. */</i></td></tr>
+<tr><th id="83">83</th><td>  <em>const</em> <a class="typedef" href="../../../../include/x86_64-linux-gnu/bits/stdint-intn.h.html#int64_t" title='int64_t' data-type='__int64_t' data-ref="int64_t" data-ref-filename="int64_t">int64_t</a>* <dfn class="decl field" id="TVMTensorInfo::shape" title='TVMTensorInfo::shape' data-ref="TVMTensorInfo::shape" data-ref-filename="TVMTensorInfo..shape">shape</dfn>;</td></tr>
+<tr><th id="84">84</th><td>  <i class="doc">/*! <span class="command">\brief</span> Rank of this tensor. */</i></td></tr>
+<tr><th id="85">85</th><td>  <a class="typedef" href="../../../../include/x86_64-linux-gnu/bits/stdint-intn.h.html#int64_t" title='int64_t' data-type='__int64_t' data-ref="int64_t" data-ref-filename="int64_t">int64_t</a> <dfn class="decl field" id="TVMTensorInfo::num_shape" title='TVMTensorInfo::num_shape' data-ref="TVMTensorInfo::num_shape" data-ref-filename="TVMTensorInfo..num_shape">num_shape</dfn>;</td></tr>
+<tr><th id="86">86</th><td>  <i class="doc">/*! <span class="command">\brief</span> Data type of one element of this tensor. */</i></td></tr>
+<tr><th id="87">87</th><td>  <a class="typedef" href="../../../3rdparty/dlpack/include/dlpack/dlpack.h.html#DLDataType" title='DLDataType' data-type='struct DLDataType' data-ref="DLDataType" data-ref-filename="DLDataType">DLDataType</a> <dfn class="decl field" id="TVMTensorInfo::dtype" title='TVMTensorInfo::dtype' data-ref="TVMTensorInfo::dtype" data-ref-filename="TVMTensorInfo..dtype">dtype</dfn>;</td></tr>
+<tr><th id="88">88</th><td>};</td></tr>
+<tr><th id="89">89</th><td></td></tr>
+<tr><th id="90">90</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="91">91</th><td><i class="doc"> * <span class="command">\brief</span> Describes one constant argument to `run_model`.</i></td></tr>
+<tr><th id="92">92</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="93">93</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="94">94</th><td><b>struct</b> <dfn class="type def" id="TVMConstantInfo" title='TVMConstantInfo' data-ref="TVMConstantInfo" data-ref-filename="TVMConstantInfo">TVMConstantInfo</dfn> {</td></tr>
+<tr><th id="95">95</th><td>  <i class="doc">/*! <span class="command">\brief</span> Name of the constant */</i></td></tr>
+<tr><th id="96">96</th><td>  <em>const</em> <em>char</em>* <dfn class="decl field" id="TVMConstantInfo::name_hint" title='TVMConstantInfo::name_hint' data-ref="TVMConstantInfo::name_hint" data-ref-filename="TVMConstantInfo..name_hint">name_hint</dfn>;</td></tr>
+<tr><th id="97">97</th><td>  <i class="doc">/*! <span class="command">\brief</span> Offset in bytes of the constant */</i></td></tr>
+<tr><th id="98">98</th><td>  <a class="typedef" href="../../../../include/x86_64-linux-gnu/bits/stdint-intn.h.html#int64_t" title='int64_t' data-type='__int64_t' data-ref="int64_t" data-ref-filename="int64_t">int64_t</a> <dfn class="decl field" id="TVMConstantInfo::byte_offset" title='TVMConstantInfo::byte_offset' data-ref="TVMConstantInfo::byte_offset" data-ref-filename="TVMConstantInfo..byte_offset">byte_offset</dfn>;</td></tr>
+<tr><th id="99">99</th><td>  <i class="doc">/*! <span class="command">\brief</span> length of the data_bytes field */</i></td></tr>
+<tr><th id="100">100</th><td>  <a class="typedef" href="../../../../include/x86_64-linux-gnu/bits/stdint-intn.h.html#int64_t" title='int64_t' data-type='__int64_t' data-ref="int64_t" data-ref-filename="int64_t">int64_t</a> <dfn class="decl field" id="TVMConstantInfo::data_len" title='TVMConstantInfo::data_len' data-ref="TVMConstantInfo::data_len" data-ref-filename="TVMConstantInfo..data_len">data_len</dfn>;</td></tr>
+<tr><th id="101">101</th><td>  <i class="doc">/*! <span class="command">\brief</span> data bytes of serialized NDArray */</i></td></tr>
+<tr><th id="102">102</th><td>  <em>const</em> <em>void</em>* <dfn class="decl field" id="TVMConstantInfo::data_bytes" title='TVMConstantInfo::data_bytes' data-ref="TVMConstantInfo::data_bytes" data-ref-filename="TVMConstantInfo..data_bytes">data_bytes</dfn>;</td></tr>
+<tr><th id="103">103</th><td>};</td></tr>
+<tr><th id="104">104</th><td></td></tr>
+<tr><th id="105">105</th><td><u>#<span data-ppcond="105">ifdef</span> <span class="macro" data-ref="_M/__cplusplus">__cplusplus</span></u></td></tr>
+<tr><th id="106">106</th><td>}  <i>// extern "C"</i></td></tr>
+<tr><th id="107">107</th><td><u>#<span data-ppcond="105">endif</span></u></td></tr>
+<tr><th id="108">108</th><td></td></tr>
+<tr><th id="109">109</th><td><u>#<span data-ppcond="27">endif</span>  // TVM_RUNTIME_METADATA_TYPES_H_</u></td></tr>
+<tr><th id="110">110</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated while processing <a href='../../../src/meta_schedule/apply_history_best.cc.html'>tvm/src/meta_schedule/apply_history_best.cc</a><br/>Generated on <em>2022-Aug-10</em> from project tvm revision <em>fae79bb</em><br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

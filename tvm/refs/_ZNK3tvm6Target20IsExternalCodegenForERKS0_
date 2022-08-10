@@ -1,0 +1,18 @@
+<dec f='tvm/include/tvm/target/target.h' l='242' type='bool tvm::Target::IsExternalCodegenFor(const tvm::Target &amp; that) const'/>
+<doc f='tvm/include/tvm/target/target.h' l='228'>/*!
+   * \brief Returns true if \p this target represents an external codegen which is compatible
+   * with \p that target. In particular:
+   *  - \p this has a true ::tvm::attr::kIsExternalCodegen attribute
+   *  - \p that does not have a true ::tvm::attr::kIsExternalCodegen attribute
+   *  - \p this and \p that have the same kind-&gt;device_type
+   *
+   * After partitioning, the external codegen compilation path may use \p that to guide it&apos;s
+   * compilation to a \p runtime::Module. Given \p this, an appropriate \p that can be
+   * found using \p CompilationConfig::FindPrimitiveTargetOrFail(this-&gt;kind-&gt;device_type).
+   *
+   * The \p CollagePartition pass uses this method to guide it&apos;s search over candidate partitions
+   * using external codegen.
+   */</doc>
+<use f='tvm/src/relay/collage/candidate_partition_index.cc' l='109' u='c' c='_ZN3tvm5relay7collage23CandidatePartitionIndex29IsCompatibleWithVirtualDeviceERKNS1_18CandidatePartitionE'/>
+<use f='tvm/src/target/compilation_config.cc' l='223' u='c' c='_ZN3tvm21CompilationConfigNode4InitERKNS_9transform11PassContextERKNS_7runtime5ArrayINS_6TargetEvEE'/>
+<def f='tvm/src/target/target.cc' l='624' ll='627' type='bool tvm::Target::IsExternalCodegenFor(const tvm::Target &amp; that) const'/>

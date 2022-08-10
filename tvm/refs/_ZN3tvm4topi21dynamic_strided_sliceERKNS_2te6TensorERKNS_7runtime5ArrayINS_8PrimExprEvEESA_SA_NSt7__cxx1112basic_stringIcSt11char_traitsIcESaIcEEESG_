@@ -1,0 +1,16 @@
+<def f='tvm/include/tvm/topi/transform.h' l='652' ll='694' type='tvm::te::Tensor tvm::topi::dynamic_strided_slice(const tvm::te::Tensor &amp; x, const Array&lt;tvm::PrimExpr&gt; &amp; begin, const Array&lt;tvm::PrimExpr&gt; &amp; end, const Array&lt;tvm::PrimExpr&gt; &amp; strides, std::string name = &quot;T_dynamic_strided_slice&quot;, std::string tag = kInjective)'/>
+<use f='tvm/include/tvm/topi/transform.h' l='724' u='c' c='_ZN3tvm4topi21dynamic_strided_sliceERKNS_2te6TensorES4_S4_S4_NSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESA_'/>
+<doc f='tvm/include/tvm/topi/transform.h' l='639'>/*!
+ * \brief strided_slice of a tensor where begin/end/stride can be mixed static and dynamic
+ *
+ * \param x The input tensor
+ * \param begin The indices to begin with in the slicing
+ * \param end Indicies indicating end of the slice
+ * \param strides Specifies the stride values, it can be negative
+ * in that case, the input tensor will be reversed in that particular axis
+ * \param name The name of the operation
+ * \param tag The tag to mark the operation
+ *
+ * \return A Tensor whose op member is the dynamic_strided_slice operation
+ */</doc>
+<use f='tvm/src/topi/transform.cc' l='197' u='c'/>

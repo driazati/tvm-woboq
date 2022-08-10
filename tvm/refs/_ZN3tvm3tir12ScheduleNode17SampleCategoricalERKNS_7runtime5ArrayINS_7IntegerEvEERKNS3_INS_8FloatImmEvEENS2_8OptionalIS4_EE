@@ -1,0 +1,15 @@
+<dec f='tvm/include/tvm/tir/schedule/schedule.h' l='225' type='tvm::tir::ExprRV tvm::tir::ScheduleNode::SampleCategorical(const Array&lt;tvm::Integer&gt; &amp; candidates, const Array&lt;tvm::FloatImm&gt; &amp; probs, Optional&lt;tvm::Integer&gt; decision = NullOpt)'/>
+<doc f='tvm/include/tvm/tir/schedule/schedule.h' l='218'>/*!
+   * \brief Sample an integer given the probability distribution
+   * \param candidates The candidates
+   * \param probs The probability distribution of the candidates
+   * \param decision The sampling decision
+   * \return The random variable sampled from candidates
+   */</doc>
+<use f='tvm/src/meta_schedule/schedule_rule/auto_bind.cc' l='161' u='c' c='_ZN3tvm13meta_schedule17MakeFactorSamplerENS_3tir8ScheduleENS_7runtime5ArrayINS_7IntegerEvEE'/>
+<use f='tvm/src/meta_schedule/schedule_rule/cross_thread_reduction.cc' l='81' u='c' c='_ZN3tvm13meta_schedule24CrossThreadReductionNode5ApplyERKNS_3tir8ScheduleERKNS2_7BlockRVE'/>
+<use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling.cc' l='268' u='c' c='_ZNK3tvm13meta_schedule20MultiLevelTilingNode27AnnotateCooperativeFetchingEPNS_3tir8ScheduleERKNS2_7BlockRVE'/>
+<use f='tvm/src/meta_schedule/schedule_rule/parallel_vectorize_unroll.cc' l='72' u='c' c='_ZN3tvm13meta_schedule30ParallelizeVectorizeUnrollNode5ApplyERKNS_3tir8ScheduleERKNS2_7BlockRVE'/>
+<ovr f='tvm/src/tir/schedule/concrete_schedule.cc' l='235' c='_ZN3tvm3tir20ConcreteScheduleNode17SampleCategoricalERKNS_7runtime5ArrayINS_7IntegerEvEERKNS3_INS_8FloatImmEvEENS2_8OptionalIS4_EE'/>
+<use f='tvm/src/tir/schedule/primitive/sampling.cc' l='396' u='c' c='_ZN3tvm3tir23SampleCategoricalTraits23UnpackedApplyToScheduleENS0_8ScheduleENS_7runtime5ArrayINS_7IntegerEvEENS4_INS_8FloatImmEvEENS3_8OptionalIS5_EE'/>
+<use f='tvm/src/tir/schedule/schedule.cc' l='127' u='a'/>

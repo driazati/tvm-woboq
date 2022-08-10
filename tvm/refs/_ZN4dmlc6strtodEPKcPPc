@@ -1,0 +1,15 @@
+<def f='tvm/3rdparty/dmlc-core/include/dmlc/strtonum.h' l='303' ll='305' type='double dmlc::strtod(const char * nptr, char ** endptr)'/>
+<use f='tvm/3rdparty/dmlc-core/include/dmlc/strtonum.h' l='640' u='c' c='_ZN4dmlc5Str2TIdE3getEPKcS3_'/>
+<doc f='tvm/3rdparty/dmlc-core/include/dmlc/strtonum.h' l='290'>/*!
+ * \brief A faster implementation of strtod(). See documentation of
+ *        std::strtof() for more information. Note that this function does not
+ *        check for overflow. Use strtod_check_range() to check for overflow.
+ * TODO: the current version does not support hex number
+ * TODO: the current version does not handle long decimals: you may only have
+ *       up to 19 digits after the decimal point, and you cannot have too many
+ *       digits before the decimal point either.
+ * \param nptr Beginning of the string that&apos;s to be converted into double
+ * \param endptr After the conversion, this pointer will be set to point one
+ *               past the last character used in the conversion.
+ * \return Converted floating-point value, in double type
+ */</doc>

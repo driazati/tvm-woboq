@@ -1,0 +1,10 @@
+<dec f='tvm/include/tvm/meta_schedule/cost_model.h' l='75' type='std::vector&lt;double&gt; tvm::meta_schedule::CostModelNode::Predict(const tvm::meta_schedule::TuneContext &amp; context, const Array&lt;tvm::meta_schedule::MeasureCandidate&gt; &amp; candidates)'/>
+<doc f='tvm/include/tvm/meta_schedule/cost_model.h' l='69'>/*!
+   * \brief Predict the normalized score (the larger the better) of given measure candidates.
+   * \param context The tuning context.
+   * \param candidates The measure candidates.
+   * \return The predicted normalized score.
+   */</doc>
+<ovr f='tvm/src/meta_schedule/cost_model/cost_model.cc' l='40' c='_ZN3tvm13meta_schedule15PyCostModelNode7PredictERKNS0_11TuneContextERKNS_7runtime5ArrayINS0_16MeasureCandidateEvEE'/>
+<use f='tvm/src/meta_schedule/cost_model/cost_model.cc' l='83' u='c'/>
+<use f='tvm/src/meta_schedule/search_strategy/evolutionary_search.cc' l='225' u='c' c='_ZN3tvm13meta_schedule22PredictNormalizedScoreERKSt6vectorINS_3tir8ScheduleESaIS3_EERKNS0_11TuneContextERKNS0_9CostModelE'/>

@@ -1,0 +1,24 @@
+<def f='tvm/include/tvm/tir/stmt.h' l='1460' type='const char *const'/>
+<doc f='tvm/include/tvm/tir/stmt.h' l='1451'>/*!
+ * \brief Bind the buffer specification to the region of the op
+ *  When this scope occurs, the stmt.node is a Array&lt;NodeRef&gt; = [buffer, tensor]
+ *  stmt.value is a tvm_tuple(min0, extent0, min1, extent1, ...).
+ *  The scope represents that we need to bind the storage region of tensor to buffer.
+ *  This will affect replacement of some variables inside the scope that
+ *  corresponds to field of buffer to be the actual expressions of tensor during
+ *  storage flattening phase.
+ */</doc>
+<use f='tvm/src/te/operation/extern_op.cc' l='155' u='r' c='_ZNK3tvm2te12ExternOpNode12BuildProvideERKNS0_5StageERKSt13unordered_mapINS_3tir7IterVarENS_5RangeESt4hashIS7_ESt8equal_toIS7_ESaISt4pairIKS7_S8_EEEb'/>
+<use f='tvm/src/te/operation/tensor_compute_op.cc' l='156' u='r' c='_ZNK3tvm2te19TensorComputeOpNode12BuildProvideERKNS0_5StageERKSt13unordered_mapINS_3tir7IterVarENS_5RangeESt4hashIS7_ESt8equal_toIS7_ESaISt4pairIKS7_S8_EEEb'/>
+<use f='tvm/src/te/operation/tensor_compute_op.cc' l='180' u='r' c='_ZNK3tvm2te19TensorComputeOpNode12BuildProvideERKNS0_5StageERKSt13unordered_mapINS_3tir7IterVarENS_5RangeESt4hashIS7_ESt8equal_toIS7_ESaISt4pairIKS7_S8_EEEb'/>
+<use f='tvm/src/te/operation/tensorize.cc' l='375' u='r' c='_ZN3tvm2te13MakeTensorizeEPKNS0_13ComputeOpNodeERKNS0_5StageERKSt13unordered_mapINS_3tir7IterVarENS_5RangeESt4hashIS9_ESt8equal_toIS9_ESaISt4pairIKS9_SA_EEEb'/>
+<use f='tvm/src/te/operation/tensorize.cc' l='395' u='r' c='_ZN3tvm2te13MakeTensorizeEPKNS0_13ComputeOpNodeERKNS0_5StageERKSt13unordered_mapINS_3tir7IterVarENS_5RangeESt4hashIS9_ESt8equal_toIS9_ESaISt4pairIKS9_SA_EEEb'/>
+<use f='tvm/src/te/schedule/schedule_ops.cc' l='213' u='r' c='_ZN3tvm2te16SchedulePostProc10VisitStmt_EPKNS_3tir12AttrStmtNodeE'/>
+<use f='tvm/src/te/schedule/schedule_postproc_to_primfunc.cc' l='81' u='r' c='_ZN3tvm2te20TensorToBufferMapper10VisitStmt_EPKNS_3tir12AttrStmtNodeE'/>
+<use f='tvm/src/te/schedule/schedule_postproc_to_primfunc.cc' l='292' u='r' c='_ZN3tvm2te27AxisSeparatorsAttrUnwrapper10VisitStmt_EPKNS_3tir12AttrStmtNodeE'/>
+<use f='tvm/src/te/schedule/verify_compact_buffer.cc' l='46' u='r' c='_ZN3tvm2te12VerifyBuffer10VisitStmt_EPKNS_3tir12AttrStmtNodeE'/>
+<use f='tvm/src/tir/transforms/storage_flatten.cc' l='247' u='r' c='_ZN3tvm3tir19BufferShapeLegalize10VisitStmt_EPKNS0_12AttrStmtNodeE'/>
+<use f='tvm/src/tir/transforms/storage_flatten.cc' l='509' u='r' c='_ZN3tvm3tir20BufferStrideLegalize10VisitStmt_EPKNS0_12AttrStmtNodeE'/>
+<use f='tvm/src/tir/transforms/storage_flatten.cc' l='704' u='r' c='_ZN3tvm3tir20ThreadScopePropagate10VisitStmt_EPKNS0_12AttrStmtNodeE'/>
+<use f='tvm/src/tir/transforms/storage_flatten.cc' l='883' u='r' c='_ZN3tvm3tir19BufferBindUnwrapper10VisitStmt_EPKNS0_12AttrStmtNodeE'/>
+<use f='tvm/src/tir/transforms/storage_flatten.cc' l='1373' u='r' c='_ZN3tvm3tir16StorageFlattener10VisitStmt_EPKNS0_12AttrStmtNodeE'/>

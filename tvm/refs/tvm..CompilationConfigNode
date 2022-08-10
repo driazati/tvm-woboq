@@ -1,0 +1,59 @@
+<inh f='tvm/include/tvm/runtime/object.h' l='167' c='tvm::runtime::Object'/>
+<def f='tvm/include/tvm/target/compilation_config.h' l='54' ll='184'/>
+<use f='tvm/include/tvm/target/compilation_config.h' l='200' c='_ZNK3tvm17CompilationConfigptEv'/>
+<use f='tvm/include/tvm/target/compilation_config.h' l='200' c='_ZNK3tvm17CompilationConfigptEv'/>
+<use f='tvm/include/tvm/target/compilation_config.h' l='200' c='_ZNK3tvm17CompilationConfig3getEv'/>
+<use f='tvm/include/tvm/target/compilation_config.h' l='200'/>
+<size>112</size>
+<doc f='tvm/include/tvm/target/compilation_config.h' l='34'>/*!
+ * \brief Gathers the \p Targets and distinguished \p VirtualDevices in canonical form needed to
+ * compile a Relay module for execution over possibly heterogeneous devices. Centralizes the
+ * validation and canonicalization logic needed to transition from targets supplied by the Python
+ * APIs to a single internal representation. Also holds a cache of canonical \p VirtualDevices
+ * so that structural equal virtual devices have pointer equal canonical virtual devices.
+ *
+ * The construction of \p CompilationConfig is idempotent, in that given the same \p PassContext
+ * \p ctx and an arbitrary \p Array&lt;Target&gt; \p raw_targets:
+ *
+ * \code
+ *   CompilationConfig(ctxt, raw_targets)
+ *      is structurally equal to
+ *   CompilationConfig(ctxt, CompilationConfig(ctxt, raw_targets)-&gt;primitive_targets)
+ * \endcode
+ *
+ * TODO(mbs): This is subject to change as we rework compilation options in general. This class
+ * is probably better called a &apos;CompositeTarget&apos;, and may be better made a sub-class of Target or
+ * some other common-target-root class.
+ */</doc>
+<mbr r='tvm::CompilationConfigNode::host_target' o='128' t='tvm::Target'/>
+<mbr r='tvm::CompilationConfigNode::primitive_targets' o='192' t='Array&lt;tvm::Target&gt;'/>
+<mbr r='tvm::CompilationConfigNode::default_primitive_virtual_device' o='256' t='tvm::VirtualDevice'/>
+<mbr r='tvm::CompilationConfigNode::host_virtual_device' o='320' t='tvm::VirtualDevice'/>
+<mbr r='tvm::CompilationConfigNode::optional_homogeneous_target' o='384' t='tvm::Target'/>
+<fun r='_ZN3tvm21CompilationConfigNode10VisitAttrsEPNS_11AttrVisitorE'/>
+<fun r='_ZNK3tvm21CompilationConfigNode34FindPrimitiveTargetForDeviceOrFailE12DLDeviceType'/>
+<fun r='_ZNK3tvm21CompilationConfigNode26FindPrimitiveTargetForKindERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<fun r='_ZNK3tvm21CompilationConfigNode15CanonicalTargetERKNS_6TargetE'/>
+<fun r='_ZNK3tvm21CompilationConfigNode22CanonicalVirtualDeviceERKNS_13VirtualDeviceE'/>
+<smbr r='tvm::CompilationConfigNode::_type_key' t='const char *const'/>
+<smbr r='tvm::CompilationConfigNode::_type_final' t='const bool'/>
+<smbr r='tvm::CompilationConfigNode::_type_child_slots' t='const int'/>
+<fun r='_ZN3tvm21CompilationConfigNode16RuntimeTypeIndexEv'/>
+<fun r='_ZN3tvm21CompilationConfigNode27_GetOrAllocRuntimeTypeIndexEv'/>
+<fun r='_ZN3tvm21CompilationConfigNode4InitERKNS_9transform11PassContextERKNS_7runtime5ArrayINS_6TargetEvEE'/>
+<fun r='_ZN3tvm21CompilationConfigNode20MakeDefaultCPUTargetEv'/>
+<mbr r='tvm::CompilationConfigNode::virtual_device_cache_' o='448' t='tvm::VirtualDeviceCache'/>
+<use f='tvm/src/target/compilation_config.cc' l='30'/>
+<use f='tvm/src/target/compilation_config.cc' l='30'/>
+<use f='tvm/src/target/compilation_config.cc' l='30'/>
+<use f='tvm/src/target/compilation_config.cc' l='288'/>
+<use f='tvm/src/target/compilation_config.cc' l='289'/>
+<use f='tvm/src/target/compilation_config.cc' l='302' c='_ZN3tvm17CompilationConfigC1ERKNS_9transform11PassContextERKNS_7runtime5ArrayINS_6TargetEvEE'/>
+<size>112</size>
+<fun r='_ZN3tvm21CompilationConfigNode10VisitAttrsEPNS_11AttrVisitorE'/>
+<fun r='_ZNK3tvm21CompilationConfigNode34FindPrimitiveTargetForDeviceOrFailE12DLDeviceType'/>
+<fun r='_ZNK3tvm21CompilationConfigNode26FindPrimitiveTargetForKindERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<fun r='_ZNK3tvm21CompilationConfigNode15CanonicalTargetERKNS_6TargetE'/>
+<fun r='_ZNK3tvm21CompilationConfigNode22CanonicalVirtualDeviceERKNS_13VirtualDeviceE'/>
+<fun r='_ZN3tvm21CompilationConfigNode4InitERKNS_9transform11PassContextERKNS_7runtime5ArrayINS_6TargetEvEE'/>
+<fun r='_ZN3tvm21CompilationConfigNode20MakeDefaultCPUTargetEv'/>

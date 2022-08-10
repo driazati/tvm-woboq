@@ -1,0 +1,21 @@
+<inh f='include/c++/10/bits/ostream.tcc' l='359' c='std::basic_ostream'/>
+<def f='tvm/3rdparty/dmlc-core/include/dmlc/io.h' l='318' ll='374'/>
+<size>376</size>
+<doc f='tvm/3rdparty/dmlc-core/include/dmlc/io.h' l='305'>/*!
+ * \brief a std::ostream class that can can wrap Stream objects,
+ *  can use ostream with that output to underlying Stream
+ *
+ * Usage example:
+ * \code
+ *
+ *   Stream *fs = Stream::Create(&quot;hdfs:///test.txt&quot;, &quot;w&quot;);
+ *   dmlc::ostream os(fs);
+ *   os &lt;&lt; &quot;hello world&quot; &lt;&lt; std::endl;
+ *   delete fs;
+ * \endcode
+ */</doc>
+<fun r='_ZN4dmlc7ostreamC1EPNS_6StreamEm'/>
+<fun r='_ZN4dmlc7ostreamD1Ev'/>
+<fun r='_ZN4dmlc7ostream10set_streamEPNS_6StreamE'/>
+<fun r='_ZNK4dmlc7ostream13bytes_writtenEv'/>
+<mbr r='dmlc::ostream::buf_' o='64' t='dmlc::ostream::OutBuf'/>

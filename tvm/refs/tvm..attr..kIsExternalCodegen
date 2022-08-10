@@ -1,0 +1,16 @@
+<def f='tvm/include/tvm/target/target_kind.h' l='427' type='const char *const'/>
+<doc f='tvm/include/tvm/target/target_kind.h' l='415'>/*!
+ * \brief A \p TargetKind attribute of type \p Bool. If true, then the target kind name also
+ * corresponds to an external codegen &apos;compiler&apos; name. That name may be used:
+ *  - To retrieve partitioning rules using \p get_partition_table.
+ *  - To attach to Relay Functions under the \p attr::kCompiler attribute to indicate
+ *    the function is to be compiled by the external codegen path.
+ *
+ * The \p CollagePartition pass uses this attribute to guide it&apos;s search over candidate partitions
+ * using external codegen.
+ *
+ * See also \p Target::IsExternalCodegenFor
+ */</doc>
+<use f='tvm/src/relay/backend/contrib/codegen_c/target.cc' l='36' u='r'/>
+<use f='tvm/src/target/target.cc' l='617' u='r' c='_ZNK3tvm6Target17IsExternalCodegenEv'/>
+<use f='tvm/src/target/target_kind.cc' l='284' u='r'/>

@@ -1,0 +1,371 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>registry.h source code [tvm/include/tvm/runtime/registry.h] - Woboq Code Browser</title>
+<meta name="woboq:interestingDefinitions" content="tvm::runtime::Registry "/>
+<link rel="stylesheet" href="../../../.././data/qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href="../../../.././data/kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src="../../../.././data/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="../../../.././data/jquery/jquery-ui.min.js"></script>
+<script>var file = 'tvm/include/tvm/runtime/registry.h'; var root_path = '../../../..'; var data_path = '../../../.././data'; var ecma_script_api_version = 2;</script>
+<script src='../../../.././data/codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='../../..'>tvm</a>/<a href='../..'>include</a>/<a href='..'>tvm</a>/<a href='./'>runtime</a>/<a href='registry.h.html'>registry.h</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td><i>/*</i></td></tr>
+<tr><th id="2">2</th><td><i> * Licensed to the Apache Software Foundation (ASF) under one</i></td></tr>
+<tr><th id="3">3</th><td><i> * or more contributor license agreements.  See the NOTICE file</i></td></tr>
+<tr><th id="4">4</th><td><i> * distributed with this work for additional information</i></td></tr>
+<tr><th id="5">5</th><td><i> * regarding copyright ownership.  The ASF licenses this file</i></td></tr>
+<tr><th id="6">6</th><td><i> * to you under the Apache License, Version 2.0 (the</i></td></tr>
+<tr><th id="7">7</th><td><i> * "License"); you may not use this file except in compliance</i></td></tr>
+<tr><th id="8">8</th><td><i> * with the License.  You may obtain a copy of the License at</i></td></tr>
+<tr><th id="9">9</th><td><i> *</i></td></tr>
+<tr><th id="10">10</th><td><i> *   <a href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a></i></td></tr>
+<tr><th id="11">11</th><td><i> *</i></td></tr>
+<tr><th id="12">12</th><td><i> * Unless required by applicable law or agreed to in writing,</i></td></tr>
+<tr><th id="13">13</th><td><i> * software distributed under the License is distributed on an</i></td></tr>
+<tr><th id="14">14</th><td><i> * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY</i></td></tr>
+<tr><th id="15">15</th><td><i> * KIND, either express or implied.  See the License for the</i></td></tr>
+<tr><th id="16">16</th><td><i> * specific language governing permissions and limitations</i></td></tr>
+<tr><th id="17">17</th><td><i> * under the License.</i></td></tr>
+<tr><th id="18">18</th><td><i> */</i></td></tr>
+<tr><th id="19">19</th><td></td></tr>
+<tr><th id="20">20</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="21">21</th><td><i class="doc"> * <span class="command">\file</span> <span class="verb">tvm/runtime/registry.h</span></i></td></tr>
+<tr><th id="22">22</th><td><i class="doc"> * <span class="command">\brief</span> This file defines the TVM global function registry.</i></td></tr>
+<tr><th id="23">23</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="24">24</th><td><i class="doc"> *  The registered functions will be made available to front-end</i></td></tr>
+<tr><th id="25">25</th><td><i class="doc"> *  as well as backend users.</i></td></tr>
+<tr><th id="26">26</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="27">27</th><td><i class="doc"> *  The registry stores type-erased functions.</i></td></tr>
+<tr><th id="28">28</th><td><i class="doc"> *  Each registered function is automatically exposed</i></td></tr>
+<tr><th id="29">29</th><td><i class="doc"> *  to front-end language(e.g. python).</i></td></tr>
+<tr><th id="30">30</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="31">31</th><td><i class="doc"> *  Front-end can also pass callbacks as PackedFunc, or register</i></td></tr>
+<tr><th id="32">32</th><td><i class="doc"> *  then into the same global registry in C++.</i></td></tr>
+<tr><th id="33">33</th><td><i class="doc"> *  The goal is to mix the front-end language and the TVM back-end.</i></td></tr>
+<tr><th id="34">34</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="35">35</th><td><i class="doc"> * <span class="command">\code</span></i></td></tr>
+<tr><th id="36">36</th><td><i class="doc"> *<span class="verb">   // register the function as MyAPIFuncName</span></i></td></tr>
+<tr><th id="37">37</th><td><i class="doc"><span class="verb"></span> *<span class="verb">   TVM_REGISTER_GLOBAL(MyAPIFuncName)</span></i></td></tr>
+<tr><th id="38">38</th><td><i class="doc"><span class="verb"></span> *<span class="verb">   .set_body([](TVMArgs args, TVMRetValue* rv) {</span></i></td></tr>
+<tr><th id="39">39</th><td><i class="doc"><span class="verb"></span> *<span class="verb">     // my code.</span></i></td></tr>
+<tr><th id="40">40</th><td><i class="doc"><span class="verb"></span> *<span class="verb">   });</span></i></td></tr>
+<tr><th id="41">41</th><td><i class="doc"><span class="verb"></span> * \endcode</i></td></tr>
+<tr><th id="42">42</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="43">43</th><td><u>#<span data-ppcond="43">ifndef</span> <span class="macro" data-ref="_M/TVM_RUNTIME_REGISTRY_H_">TVM_RUNTIME_REGISTRY_H_</span></u></td></tr>
+<tr><th id="44">44</th><td><u>#define <dfn class="macro" id="_M/TVM_RUNTIME_REGISTRY_H_" data-ref="_M/TVM_RUNTIME_REGISTRY_H_">TVM_RUNTIME_REGISTRY_H_</dfn></u></td></tr>
+<tr><th id="45">45</th><td></td></tr>
+<tr><th id="46">46</th><td><u>#include <a href="packed_func.h.html">&lt;tvm/runtime/packed_func.h&gt;</a></u></td></tr>
+<tr><th id="47">47</th><td></td></tr>
+<tr><th id="48">48</th><td><u>#include <a href="../../../../include/c++/10/string.html">&lt;string&gt;</a></u></td></tr>
+<tr><th id="49">49</th><td><u>#include <a href="../../../../include/c++/10/type_traits.html">&lt;type_traits&gt;</a></u></td></tr>
+<tr><th id="50">50</th><td><u>#include <a href="../../../../include/c++/10/utility.html">&lt;utility&gt;</a></u></td></tr>
+<tr><th id="51">51</th><td><u>#include <a href="../../../../include/c++/10/vector.html">&lt;vector&gt;</a></u></td></tr>
+<tr><th id="52">52</th><td></td></tr>
+<tr><th id="53">53</th><td><b>namespace</b> <span class="namespace">tvm</span> {</td></tr>
+<tr><th id="54">54</th><td><b>namespace</b> <span class="namespace">runtime</span> {</td></tr>
+<tr><th id="55">55</th><td></td></tr>
+<tr><th id="56">56</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="57">57</th><td><i class="doc"> * <span class="command">\brief</span> Check if signals have been sent to the process and if so</i></td></tr>
+<tr><th id="58">58</th><td><i class="doc"> *  invoke the registered signal handler in the frontend environment.</i></td></tr>
+<tr><th id="59">59</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="60">60</th><td><i class="doc"> *  When running TVM in another language (Python), the signal handler</i></td></tr>
+<tr><th id="61">61</th><td><i class="doc"> *  may not be immediately executed, but instead the signal is marked</i></td></tr>
+<tr><th id="62">62</th><td><i class="doc"> *  in the interpreter state (to ensure non-blocking of the signal handler).</i></td></tr>
+<tr><th id="63">63</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="64">64</th><td><i class="doc"> *  This function can be explicitly invoked to check the cached signal</i></td></tr>
+<tr><th id="65">65</th><td><i class="doc"> *  and run the related processing if a signal is marked.</i></td></tr>
+<tr><th id="66">66</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="67">67</th><td><i class="doc"> *  On Linux, when siginterrupt() is set, invoke this function whenever a syscall returns EINTR.</i></td></tr>
+<tr><th id="68">68</th><td><i class="doc"> *  When it is not set, invoke it between long-running syscalls when you will not immediately</i></td></tr>
+<tr><th id="69">69</th><td><i class="doc"> *  return to the frontend. On Windows, the same rules apply, but due to differences in signal</i></td></tr>
+<tr><th id="70">70</th><td><i class="doc"> *  processing, these are likely to only make a difference when used with Ctrl+C and socket calls.</i></td></tr>
+<tr><th id="71">71</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="72">72</th><td><i class="doc"> *  Not inserting this function will not cause any correctness</i></td></tr>
+<tr><th id="73">73</th><td><i class="doc"> *  issue, but will delay invoking the Python-side signal handler until the function returns to</i></td></tr>
+<tr><th id="74">74</th><td><i class="doc"> *  the Python side. This means that the effect of e.g. pressing Ctrl+C or sending signals the</i></td></tr>
+<tr><th id="75">75</th><td><i class="doc"> *  process will be delayed until function return. When a C function is blocked on a syscall</i></td></tr>
+<tr><th id="76">76</th><td><i class="doc"> *  such as accept(), it needs to be called when EINTR is received.</i></td></tr>
+<tr><th id="77">77</th><td><i class="doc"> *  So this function is not needed in most API functions, which can finish quickly in a</i></td></tr>
+<tr><th id="78">78</th><td><i class="doc"> *  reasonable, deterministic amount of time.</i></td></tr>
+<tr><th id="79">79</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="80">80</th><td><i class="doc"> * <span class="command">\code</span></i></td></tr>
+<tr><th id="81">81</th><td><i class="doc"> *<span class="verb"></span></i></td></tr>
+<tr><th id="82">82</th><td><i class="doc"><span class="verb"></span> *<span class="verb"> int check_signal_every_k_iter = 10;</span></i></td></tr>
+<tr><th id="83">83</th><td><i class="doc"><span class="verb"></span> *<span class="verb"></span></i></td></tr>
+<tr><th id="84">84</th><td><i class="doc"><span class="verb"></span> *<span class="verb"> for (int iter = 0; iter &lt; very_large_number; ++iter) {</span></i></td></tr>
+<tr><th id="85">85</th><td><i class="doc"><span class="verb"></span> *<span class="verb">   if (iter % check_signal_every_k_iter == 0) {</span></i></td></tr>
+<tr><th id="86">86</th><td><i class="doc"><span class="verb"></span> *<span class="verb">     tvm::runtime::EnvCheckSignals();</span></i></td></tr>
+<tr><th id="87">87</th><td><i class="doc"><span class="verb"></span> *<span class="verb">   }</span></i></td></tr>
+<tr><th id="88">88</th><td><i class="doc"><span class="verb"></span> *<span class="verb">   // do work here</span></i></td></tr>
+<tr><th id="89">89</th><td><i class="doc"><span class="verb"></span> *<span class="verb"> }</span></i></td></tr>
+<tr><th id="90">90</th><td><i class="doc"><span class="verb"></span> *<span class="verb"></span></i></td></tr>
+<tr><th id="91">91</th><td><i class="doc"><span class="verb"></span> * \endcode</i></td></tr>
+<tr><th id="92">92</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="93">93</th><td><i class="doc"> * <span class="command">\note</span> This function is a nop when no PyErr_CheckSignals is registered.</i></td></tr>
+<tr><th id="94">94</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="95">95</th><td><i class="doc"> * <span class="command">\throws</span> This function throws an exception when the frontend signal handler</i></td></tr>
+<tr><th id="96">96</th><td><i class="doc"> *         indicate an error happens, otherwise it returns normally.</i></td></tr>
+<tr><th id="97">97</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="98">98</th><td><a class="macro" href="c_runtime_api.h.html#64" title="__attribute__((visibility(&quot;default&quot;)))" data-ref="_M/TVM_DLL">TVM_DLL</a> <em>void</em> <dfn class="decl fn" id="_ZN3tvm7runtime15EnvCheckSignalsEv" title='tvm::runtime::EnvCheckSignals' data-ref="_ZN3tvm7runtime15EnvCheckSignalsEv" data-ref-filename="_ZN3tvm7runtime15EnvCheckSignalsEv">EnvCheckSignals</dfn>();</td></tr>
+<tr><th id="99">99</th><td></td></tr>
+<tr><th id="100">100</th><td><i class="doc">/*! <span class="command">\brief</span> Registry for global function */</i></td></tr>
+<tr><th id="101">101</th><td><b>class</b> <dfn class="type def" id="tvm::runtime::Registry" title='tvm::runtime::Registry' data-ref="tvm::runtime::Registry" data-ref-filename="tvm..runtime..Registry">Registry</dfn> {</td></tr>
+<tr><th id="102">102</th><td> <b>public</b>:</td></tr>
+<tr><th id="103">103</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="104">104</th><td><i class="doc">   * <span class="command">\brief</span> set the body of the function to be f</i></td></tr>
+<tr><th id="105">105</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">f</span> The body of the function.</i></td></tr>
+<tr><th id="106">106</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="107">107</th><td>  <a class="macro" href="c_runtime_api.h.html#64" title="__attribute__((visibility(&quot;default&quot;)))" data-ref="_M/TVM_DLL">TVM_DLL</a> <a class="type" href="#tvm::runtime::Registry" title='tvm::runtime::Registry' data-ref="tvm::runtime::Registry" data-ref-filename="tvm..runtime..Registry">Registry</a>&amp; <dfn class="decl fn" id="_ZN3tvm7runtime8Registry8set_bodyENS0_10PackedFuncE" title='tvm::runtime::Registry::set_body' data-ref="_ZN3tvm7runtime8Registry8set_bodyENS0_10PackedFuncE" data-ref-filename="_ZN3tvm7runtime8Registry8set_bodyENS0_10PackedFuncE">set_body</dfn>(<a class="type" href="packed_func.h.html#tvm::runtime::PackedFunc" title='tvm::runtime::PackedFunc' data-ref="tvm::runtime::PackedFunc" data-ref-filename="tvm..runtime..PackedFunc">PackedFunc</a> <dfn class="local col6 decl" id="13726f" title='f' data-type='tvm::runtime::PackedFunc' data-ref="13726f" data-ref-filename="13726f">f</dfn>);  <i>// NOLINT(*)</i></td></tr>
+<tr><th id="108">108</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="109">109</th><td><i class="doc">   * <span class="command">\brief</span> set the body of the function to be f</i></td></tr>
+<tr><th id="110">110</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">f</span> The body of the function.</i></td></tr>
+<tr><th id="111">111</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="112">112</th><td>  <b>template</b> &lt;<b>typename</b> TCallable,</td></tr>
+<tr><th id="113">113</th><td>            <b>typename</b> = <b>typename</b> <span class="namespace">std::</span><a class="type" href="../../../../include/c++/10/type_traits.html#std::enable_if_t" title='std::enable_if_t' data-ref="std::enable_if_t" data-ref-filename="std..enable_if_t">enable_if_t</a>&lt;</td></tr>
+<tr><th id="114">114</th><td>                <span class="namespace">std::</span><a class="type" href="../../../../include/c++/10/type_traits.html#std::is_convertible" title='std::is_convertible' data-ref="std::is_convertible" data-ref-filename="std..is_convertible">is_convertible</a>&lt;TCallable, <span class="namespace">std::</span><a class="type" href="../../../../include/c++/10/bits/std_function.h.html#std::function" title='std::function' data-ref="std::function" data-ref-filename="std..function">function</a>&lt;<em>void</em>(<a class="type" href="packed_func.h.html#tvm::runtime::TVMArgs" title='tvm::runtime::TVMArgs' data-ref="tvm::runtime::TVMArgs" data-ref-filename="tvm..runtime..TVMArgs">TVMArgs</a>, <a class="type" href="packed_func.h.html#tvm::runtime::TVMRetValue" title='tvm::runtime::TVMRetValue' data-ref="tvm::runtime::TVMRetValue" data-ref-filename="tvm..runtime..TVMRetValue">TVMRetValue</a>*)&gt;&gt;::value &amp;&amp;</td></tr>
+<tr><th id="115">115</th><td>                !<span class="namespace">std::</span><a class="type" href="../../../../include/c++/10/type_traits.html#std::is_base_of" title='std::is_base_of' data-ref="std::is_base_of" data-ref-filename="std..is_base_of">is_base_of</a>&lt;<a class="type" href="packed_func.h.html#tvm::runtime::PackedFunc" title='tvm::runtime::PackedFunc' data-ref="tvm::runtime::PackedFunc" data-ref-filename="tvm..runtime..PackedFunc">PackedFunc</a>, TCallable&gt;::value&gt;&gt;</td></tr>
+<tr><th id="116">116</th><td>  <a class="type" href="#tvm::runtime::Registry" title='tvm::runtime::Registry' data-ref="tvm::runtime::Registry" data-ref-filename="tvm..runtime..Registry">Registry</a>&amp; <dfn class="decl def fn" id="_ZN3tvm7runtime8Registry8set_bodyET_" title='tvm::runtime::Registry::set_body' data-ref="_ZN3tvm7runtime8Registry8set_bodyET_" data-ref-filename="_ZN3tvm7runtime8Registry8set_bodyET_">set_body</dfn>(TCallable <dfn class="local col7 decl" id="13727f" title='f' data-type='TCallable' data-ref="13727f" data-ref-filename="13727f">f</dfn>) {  <i>// NOLINT(*)</i></td></tr>
+<tr><th id="117">117</th><td>    <b>return</b> <a class="member fn" href="#_ZN3tvm7runtime8Registry8set_bodyENS0_10PackedFuncE" title='tvm::runtime::Registry::set_body' data-ref="_ZN3tvm7runtime8Registry8set_bodyENS0_10PackedFuncE" data-ref-filename="_ZN3tvm7runtime8Registry8set_bodyENS0_10PackedFuncE">set_body</a>(<a class="type" href="packed_func.h.html#tvm::runtime::PackedFunc" title='tvm::runtime::PackedFunc' data-ref="tvm::runtime::PackedFunc" data-ref-filename="tvm..runtime..PackedFunc">PackedFunc</a>(<a class="local col7 ref" href="#13727f" title='f' data-ref="13727f" data-ref-filename="13727f">f</a>));</td></tr>
+<tr><th id="118">118</th><td>  }</td></tr>
+<tr><th id="119">119</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="120">120</th><td><i class="doc">   * <span class="command">\brief</span> set the body of the function to the given function.</i></td></tr>
+<tr><th id="121">121</th><td><i class="doc">   *        Note that this will ignore default arg values and always require all arguments to be</i></td></tr>
+<tr><th id="122">122</th><td><i class="doc">   * provided.</i></td></tr>
+<tr><th id="123">123</th><td><i class="doc">   *</i></td></tr>
+<tr><th id="124">124</th><td><i class="doc">   * <span class="command">\code</span></i></td></tr>
+<tr><th id="125">125</th><td><i class="doc">   *<span class="verb"></span></i></td></tr>
+<tr><th id="126">126</th><td><i class="doc"><span class="verb"></span>   *<span class="verb"> int multiply(int x, int y) {</span></i></td></tr>
+<tr><th id="127">127</th><td><i class="doc"><span class="verb"></span>   *<span class="verb">   return x * y;</span></i></td></tr>
+<tr><th id="128">128</th><td><i class="doc"><span class="verb"></span>   *<span class="verb"> }</span></i></td></tr>
+<tr><th id="129">129</th><td><i class="doc"><span class="verb"></span>   *<span class="verb"></span></i></td></tr>
+<tr><th id="130">130</th><td><i class="doc"><span class="verb"></span>   *<span class="verb"> TVM_REGISTER_GLOBAL("multiply")</span></i></td></tr>
+<tr><th id="131">131</th><td><i class="doc"><span class="verb"></span>   *<span class="verb"> .set_body_typed(multiply); // will have type int(int, int)</span></i></td></tr>
+<tr><th id="132">132</th><td><i class="doc"><span class="verb"></span>   *<span class="verb"></span></i></td></tr>
+<tr><th id="133">133</th><td><i class="doc"><span class="verb"></span>   *<span class="verb"> // will have type int(int, int)</span></i></td></tr>
+<tr><th id="134">134</th><td><i class="doc"><span class="verb"></span>   *<span class="verb"> TVM_REGISTER_GLOBAL("sub")</span></i></td></tr>
+<tr><th id="135">135</th><td><i class="doc"><span class="verb"></span>   *<span class="verb"> .set_body_typed([](int a, int b) -&gt; int { return a - b; });</span></i></td></tr>
+<tr><th id="136">136</th><td><i class="doc"><span class="verb"></span>   *<span class="verb"></span></i></td></tr>
+<tr><th id="137">137</th><td><i class="doc"><span class="verb"></span>   * \endcode</i></td></tr>
+<tr><th id="138">138</th><td><i class="doc">   *</i></td></tr>
+<tr><th id="139">139</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">f</span> The function to forward to.</i></td></tr>
+<tr><th id="140">140</th><td><i class="doc">   * <span class="command">\tparam</span> <span class="arg">FLambda</span> The signature of the function.</i></td></tr>
+<tr><th id="141">141</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="142">142</th><td>  <b>template</b> &lt;<b>typename</b> FLambda&gt;</td></tr>
+<tr><th id="143">143</th><td>  <a class="type" href="#tvm::runtime::Registry" title='tvm::runtime::Registry' data-ref="tvm::runtime::Registry" data-ref-filename="tvm..runtime..Registry">Registry</a>&amp; <dfn class="decl def fn" id="_ZN3tvm7runtime8Registry14set_body_typedET_" title='tvm::runtime::Registry::set_body_typed' data-ref="_ZN3tvm7runtime8Registry14set_body_typedET_" data-ref-filename="_ZN3tvm7runtime8Registry14set_body_typedET_">set_body_typed</dfn>(FLambda <dfn class="local col8 decl" id="13728f" title='f' data-type='FLambda' data-ref="13728f" data-ref-filename="13728f">f</dfn>) {</td></tr>
+<tr><th id="144">144</th><td>    <b>using</b> <dfn class="local col9 typedef" id="13729FType" title='FType' data-type='typename detail::function_signature&lt;FLambda&gt;::FType' data-ref="13729FType" data-ref-filename="13729FType">FType</dfn> = <b>typename</b> <span class="namespace">detail::</span><a class="type" href="packed_func.h.html#tvm::runtime::detail::function_signature" title='tvm::runtime::detail::function_signature' data-ref="tvm::runtime::detail::function_signature" data-ref-filename="tvm..runtime..detail..function_signature">function_signature</a>&lt;FLambda&gt;::FType;</td></tr>
+<tr><th id="145">145</th><td>    <b>return</b> set_body(<a class="type" href="packed_func.h.html#tvm::runtime::TypedPackedFunc" title='tvm::runtime::TypedPackedFunc' data-ref="tvm::runtime::TypedPackedFunc" data-ref-filename="tvm..runtime..TypedPackedFunc">TypedPackedFunc</a>&lt;<a class="local col9 typedef" href="#13729FType" title='FType' data-type='typename detail::function_signature&lt;FLambda&gt;::FType' data-ref="13729FType" data-ref-filename="13729FType">FType</a>&gt;(<span class="namespace">std::</span>move(<a class="local col8 ref" href="#13728f" title='f' data-ref="13728f" data-ref-filename="13728f">f</a>), <a class="member field" href="#tvm::runtime::Registry::name_" title='tvm::runtime::Registry::name_' data-ref="tvm::runtime::Registry::name_" data-ref-filename="tvm..runtime..Registry..name_">name_</a>).packed());</td></tr>
+<tr><th id="146">146</th><td>  }</td></tr>
+<tr><th id="147">147</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="148">148</th><td><i class="doc">   * <span class="command">\brief</span> set the body of the function to be the passed method pointer.</i></td></tr>
+<tr><th id="149">149</th><td><i class="doc">   *        Note that this will ignore default arg values and always require all arguments to be</i></td></tr>
+<tr><th id="150">150</th><td><i class="doc">   * provided.</i></td></tr>
+<tr><th id="151">151</th><td><i class="doc">   *</i></td></tr>
+<tr><th id="152">152</th><td><i class="doc">   * <span class="command">\code</span></i></td></tr>
+<tr><th id="153">153</th><td><i class="doc">   *<span class="verb"></span></i></td></tr>
+<tr><th id="154">154</th><td><i class="doc"><span class="verb"></span>   *<span class="verb"> // node subclass:</span></i></td></tr>
+<tr><th id="155">155</th><td><i class="doc"><span class="verb"></span>   *<span class="verb"> struct Example {</span></i></td></tr>
+<tr><th id="156">156</th><td><i class="doc"><span class="verb"></span>   *<span class="verb">    int doThing(int x);</span></i></td></tr>
+<tr><th id="157">157</th><td><i class="doc"><span class="verb"></span>   *<span class="verb"> }</span></i></td></tr>
+<tr><th id="158">158</th><td><i class="doc"><span class="verb"></span>   *<span class="verb"> TVM_REGISTER_GLOBAL("Example_doThing")</span></i></td></tr>
+<tr><th id="159">159</th><td><i class="doc"><span class="verb"></span>   *<span class="verb"> .set_body_method(&amp;Example::doThing); // will have type int(Example, int)</span></i></td></tr>
+<tr><th id="160">160</th><td><i class="doc"><span class="verb"></span>   *<span class="verb"></span></i></td></tr>
+<tr><th id="161">161</th><td><i class="doc"><span class="verb"></span>   * \endcode</i></td></tr>
+<tr><th id="162">162</th><td><i class="doc">   *</i></td></tr>
+<tr><th id="163">163</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">f</span> the method pointer to forward to.</i></td></tr>
+<tr><th id="164">164</th><td><i class="doc">   * <span class="command">\tparam</span> <span class="arg">T</span> the type containing the method (inferred).</i></td></tr>
+<tr><th id="165">165</th><td><i class="doc">   * <span class="command">\tparam</span> <span class="arg">R</span> the return type of the function (inferred).</i></td></tr>
+<tr><th id="166">166</th><td><i class="doc">   * <span class="command">\tparam</span> <span class="arg">Args</span> the argument types of the function (inferred).</i></td></tr>
+<tr><th id="167">167</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="168">168</th><td>  <b>template</b> &lt;<b>typename</b> T, <b>typename</b> R, <b>typename</b>... Args&gt;</td></tr>
+<tr><th id="169">169</th><td>  <a class="type" href="#tvm::runtime::Registry" title='tvm::runtime::Registry' data-ref="tvm::runtime::Registry" data-ref-filename="tvm..runtime..Registry">Registry</a>&amp; <dfn class="decl def fn" id="_ZN3tvm7runtime8Registry15set_body_methodEMT_FT0_DpT1_E" title='tvm::runtime::Registry::set_body_method' data-ref="_ZN3tvm7runtime8Registry15set_body_methodEMT_FT0_DpT1_E" data-ref-filename="_ZN3tvm7runtime8Registry15set_body_methodEMT_FT0_DpT1_E">set_body_method</dfn>(R (T::*<dfn class="local col0 decl" id="13730f" title='f' data-type='R (T::*)(Args...)' data-ref="13730f" data-ref-filename="13730f">f</dfn>)(Args...)) {</td></tr>
+<tr><th id="170">170</th><td>    <b>using</b> <dfn class="local col1 typedef" id="13731R_" title='R_' data-type='typename std::remove_reference&lt;R&gt;::type' data-ref="13731R_" data-ref-filename="13731R_">R_</dfn> = <b>typename</b> <span class="namespace">std::</span><a class="type" href="../../../../include/c++/10/type_traits.html#std::remove_reference" title='std::remove_reference' data-ref="std::remove_reference" data-ref-filename="std..remove_reference">remove_reference</a>&lt;R&gt;::type;</td></tr>
+<tr><th id="171">171</th><td>    <em>auto</em> <dfn class="local col2 decl" id="13732fwrap" title='fwrap' data-type='auto' data-ref="13732fwrap" data-ref-filename="13732fwrap">fwrap</dfn> = [<a class="local col0 ref" href="#13730f" title='f' data-ref="13730f" data-ref-filename="13730f">f</a>](T <dfn class="local col3 decl" id="13733target" title='target' data-type='T' data-ref="13733target" data-ref-filename="13733target">target</dfn>, Args... <dfn class="local col4 decl" id="13734params" title='params' data-type='Args...' data-ref="13734params" data-ref-filename="13734params">params</dfn>) -&gt; <a class="local col1 typedef" href="#13731R_" title='R_' data-type='typename std::remove_reference&lt;R&gt;::type' data-ref="13731R_" data-ref-filename="13731R_">R_</a> {</td></tr>
+<tr><th id="172">172</th><td>      <i>// call method pointer</i></td></tr>
+<tr><th id="173">173</th><td>      <b>return</b> (<a class="local col3 ref" href="#13733target" title='target' data-ref="13733target" data-ref-filename="13733target">target</a>.*<a class="local col0 ref" href="#13730f" title='f' data-ref="13730f" data-ref-filename="13730f">f</a>)(<a class="local col4 ref" href="#13734params" title='params' data-ref="13734params" data-ref-filename="13734params">params</a>...);</td></tr>
+<tr><th id="174">174</th><td>    };</td></tr>
+<tr><th id="175">175</th><td>    <b>return</b> set_body(<a class="type" href="packed_func.h.html#tvm::runtime::TypedPackedFunc" title='tvm::runtime::TypedPackedFunc' data-ref="tvm::runtime::TypedPackedFunc" data-ref-filename="tvm..runtime..TypedPackedFunc">TypedPackedFunc</a>&lt;<a class="local col1 typedef" href="#13731R_" title='R_' data-type='typename std::remove_reference&lt;R&gt;::type' data-ref="13731R_" data-ref-filename="13731R_">R_</a>(T, Args...)&gt;(<a class="local col2 ref" href="#13732fwrap" title='fwrap' data-ref="13732fwrap" data-ref-filename="13732fwrap">fwrap</a>, <a class="member field" href="#tvm::runtime::Registry::name_" title='tvm::runtime::Registry::name_' data-ref="tvm::runtime::Registry::name_" data-ref-filename="tvm..runtime..Registry..name_">name_</a>));</td></tr>
+<tr><th id="176">176</th><td>  }</td></tr>
+<tr><th id="177">177</th><td></td></tr>
+<tr><th id="178">178</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="179">179</th><td><i class="doc">   * <span class="command">\brief</span> set the body of the function to be the passed method pointer.</i></td></tr>
+<tr><th id="180">180</th><td><i class="doc">   *        Note that this will ignore default arg values and always require all arguments to be</i></td></tr>
+<tr><th id="181">181</th><td><i class="doc">   * provided.</i></td></tr>
+<tr><th id="182">182</th><td><i class="doc">   *</i></td></tr>
+<tr><th id="183">183</th><td><i class="doc">   * <span class="command">\code</span></i></td></tr>
+<tr><th id="184">184</th><td><i class="doc">   *<span class="verb"></span></i></td></tr>
+<tr><th id="185">185</th><td><i class="doc"><span class="verb"></span>   *<span class="verb"> // node subclass:</span></i></td></tr>
+<tr><th id="186">186</th><td><i class="doc"><span class="verb"></span>   *<span class="verb"> struct Example {</span></i></td></tr>
+<tr><th id="187">187</th><td><i class="doc"><span class="verb"></span>   *<span class="verb">    int doThing(int x);</span></i></td></tr>
+<tr><th id="188">188</th><td><i class="doc"><span class="verb"></span>   *<span class="verb"> }</span></i></td></tr>
+<tr><th id="189">189</th><td><i class="doc"><span class="verb"></span>   *<span class="verb"> TVM_REGISTER_GLOBAL("Example_doThing")</span></i></td></tr>
+<tr><th id="190">190</th><td><i class="doc"><span class="verb"></span>   *<span class="verb"> .set_body_method(&amp;Example::doThing); // will have type int(Example, int)</span></i></td></tr>
+<tr><th id="191">191</th><td><i class="doc"><span class="verb"></span>   *<span class="verb"></span></i></td></tr>
+<tr><th id="192">192</th><td><i class="doc"><span class="verb"></span>   * \endcode</i></td></tr>
+<tr><th id="193">193</th><td><i class="doc">   *</i></td></tr>
+<tr><th id="194">194</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">f</span> the method pointer to forward to.</i></td></tr>
+<tr><th id="195">195</th><td><i class="doc">   * <span class="command">\tparam</span> <span class="arg">T</span> the type containing the method (inferred).</i></td></tr>
+<tr><th id="196">196</th><td><i class="doc">   * <span class="command">\tparam</span> <span class="arg">R</span> the return type of the function (inferred).</i></td></tr>
+<tr><th id="197">197</th><td><i class="doc">   * <span class="command">\tparam</span> <span class="arg">Args</span> the argument types of the function (inferred).</i></td></tr>
+<tr><th id="198">198</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="199">199</th><td>  <b>template</b> &lt;<b>typename</b> T, <b>typename</b> R, <b>typename</b>... Args&gt;</td></tr>
+<tr><th id="200">200</th><td>  <a class="type" href="#tvm::runtime::Registry" title='tvm::runtime::Registry' data-ref="tvm::runtime::Registry" data-ref-filename="tvm..runtime..Registry">Registry</a>&amp; <dfn class="decl def fn" id="_ZN3tvm7runtime8Registry15set_body_methodEMT_KFT0_DpT1_E" title='tvm::runtime::Registry::set_body_method' data-ref="_ZN3tvm7runtime8Registry15set_body_methodEMT_KFT0_DpT1_E" data-ref-filename="_ZN3tvm7runtime8Registry15set_body_methodEMT_KFT0_DpT1_E">set_body_method</dfn>(R (T::*<dfn class="local col5 decl" id="13735f" title='f' data-type='R (T::*)(Args...) const' data-ref="13735f" data-ref-filename="13735f">f</dfn>)(Args...) <em>const</em>) {</td></tr>
+<tr><th id="201">201</th><td>    <em>auto</em> <dfn class="local col6 decl" id="13736fwrap" title='fwrap' data-type='auto' data-ref="13736fwrap" data-ref-filename="13736fwrap">fwrap</dfn> = [<a class="local col5 ref" href="#13735f" title='f' data-ref="13735f" data-ref-filename="13735f">f</a>](<em>const</em> T <dfn class="local col7 decl" id="13737target" title='target' data-type='const T' data-ref="13737target" data-ref-filename="13737target">target</dfn>, Args... <dfn class="local col8 decl" id="13738params" title='params' data-type='Args...' data-ref="13738params" data-ref-filename="13738params">params</dfn>) -&gt; R {</td></tr>
+<tr><th id="202">202</th><td>      <i>// call method pointer</i></td></tr>
+<tr><th id="203">203</th><td>      <b>return</b> (<a class="local col7 ref" href="#13737target" title='target' data-ref="13737target" data-ref-filename="13737target">target</a>.*<a class="local col5 ref" href="#13735f" title='f' data-ref="13735f" data-ref-filename="13735f">f</a>)(<a class="local col8 ref" href="#13738params" title='params' data-ref="13738params" data-ref-filename="13738params">params</a>...);</td></tr>
+<tr><th id="204">204</th><td>    };</td></tr>
+<tr><th id="205">205</th><td>    <b>return</b> set_body(<a class="type" href="packed_func.h.html#tvm::runtime::TypedPackedFunc" title='tvm::runtime::TypedPackedFunc' data-ref="tvm::runtime::TypedPackedFunc" data-ref-filename="tvm..runtime..TypedPackedFunc">TypedPackedFunc</a>&lt;R(<em>const</em> T, Args...)&gt;(<a class="local col6 ref" href="#13736fwrap" title='fwrap' data-ref="13736fwrap" data-ref-filename="13736fwrap">fwrap</a>, <a class="member field" href="#tvm::runtime::Registry::name_" title='tvm::runtime::Registry::name_' data-ref="tvm::runtime::Registry::name_" data-ref-filename="tvm..runtime..Registry..name_">name_</a>));</td></tr>
+<tr><th id="206">206</th><td>  }</td></tr>
+<tr><th id="207">207</th><td></td></tr>
+<tr><th id="208">208</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="209">209</th><td><i class="doc">   * <span class="command">\brief</span> set the body of the function to be the passed method pointer.</i></td></tr>
+<tr><th id="210">210</th><td><i class="doc">   *        Used when calling a method on a Node subclass through a ObjectRef subclass.</i></td></tr>
+<tr><th id="211">211</th><td><i class="doc">   *        Note that this will ignore default arg values and always require all arguments to be</i></td></tr>
+<tr><th id="212">212</th><td><i class="doc">   * provided.</i></td></tr>
+<tr><th id="213">213</th><td><i class="doc">   *</i></td></tr>
+<tr><th id="214">214</th><td><i class="doc">   * <span class="command">\code</span></i></td></tr>
+<tr><th id="215">215</th><td><i class="doc">   *<span class="verb"></span></i></td></tr>
+<tr><th id="216">216</th><td><i class="doc"><span class="verb"></span>   *<span class="verb"> // node subclass:</span></i></td></tr>
+<tr><th id="217">217</th><td><i class="doc"><span class="verb"></span>   *<span class="verb"> struct ExampleNode: BaseNode {</span></i></td></tr>
+<tr><th id="218">218</th><td><i class="doc"><span class="verb"></span>   *<span class="verb">    int doThing(int x);</span></i></td></tr>
+<tr><th id="219">219</th><td><i class="doc"><span class="verb"></span>   *<span class="verb"> }</span></i></td></tr>
+<tr><th id="220">220</th><td><i class="doc"><span class="verb"></span>   *<span class="verb"></span></i></td></tr>
+<tr><th id="221">221</th><td><i class="doc"><span class="verb"></span>   *<span class="verb"> // noderef subclass</span></i></td></tr>
+<tr><th id="222">222</th><td><i class="doc"><span class="verb"></span>   *<span class="verb"> struct Example;</span></i></td></tr>
+<tr><th id="223">223</th><td><i class="doc"><span class="verb"></span>   *<span class="verb"></span></i></td></tr>
+<tr><th id="224">224</th><td><i class="doc"><span class="verb"></span>   *<span class="verb"> TVM_REGISTER_GLOBAL("Example_doThing")</span></i></td></tr>
+<tr><th id="225">225</th><td><i class="doc"><span class="verb"></span>   *<span class="verb"> .set_body_method&lt;Example&gt;(&amp;ExampleNode::doThing); // will have type int(Example, int)</span></i></td></tr>
+<tr><th id="226">226</th><td><i class="doc"><span class="verb"></span>   *<span class="verb"></span></i></td></tr>
+<tr><th id="227">227</th><td><i class="doc"><span class="verb"></span>   *<span class="verb"> // note that just doing:</span></i></td></tr>
+<tr><th id="228">228</th><td><i class="doc"><span class="verb"></span>   *<span class="verb"> // .set_body_method(&amp;ExampleNode::doThing);</span></i></td></tr>
+<tr><th id="229">229</th><td><i class="doc"><span class="verb"></span>   *<span class="verb"> // wouldn't work, because ExampleNode can't be taken from a TVMArgValue.</span></i></td></tr>
+<tr><th id="230">230</th><td><i class="doc"><span class="verb"></span>   *<span class="verb"></span></i></td></tr>
+<tr><th id="231">231</th><td><i class="doc"><span class="verb"></span>   * \endcode</i></td></tr>
+<tr><th id="232">232</th><td><i class="doc">   *</i></td></tr>
+<tr><th id="233">233</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">f</span> the method pointer to forward to.</i></td></tr>
+<tr><th id="234">234</th><td><i class="doc">   * <span class="command">\tparam</span> <span class="arg">TObjectRef</span> the node reference type to call the method on</i></td></tr>
+<tr><th id="235">235</th><td><i class="doc">   * <span class="command">\tparam</span> <span class="arg">TNode</span> the node type containing the method (inferred).</i></td></tr>
+<tr><th id="236">236</th><td><i class="doc">   * <span class="command">\tparam</span> <span class="arg">R</span> the return type of the function (inferred).</i></td></tr>
+<tr><th id="237">237</th><td><i class="doc">   * <span class="command">\tparam</span> <span class="arg">Args</span> the argument types of the function (inferred).</i></td></tr>
+<tr><th id="238">238</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="239">239</th><td>  <b>template</b> &lt;<b>typename</b> TObjectRef, <b>typename</b> TNode, <b>typename</b> R, <b>typename</b>... Args,</td></tr>
+<tr><th id="240">240</th><td>            <b>typename</b> = <b>typename</b> <span class="namespace">std::</span><a class="type" href="../../../../include/c++/10/type_traits.html#std::enable_if" title='std::enable_if' data-ref="std::enable_if" data-ref-filename="std..enable_if">enable_if</a>&lt;<span class="namespace">std::</span><a class="type" href="../../../../include/c++/10/type_traits.html#std::is_base_of" title='std::is_base_of' data-ref="std::is_base_of" data-ref-filename="std..is_base_of">is_base_of</a>&lt;<a class="type" href="object.h.html#tvm::runtime::ObjectRef" title='tvm::runtime::ObjectRef' data-ref="tvm::runtime::ObjectRef" data-ref-filename="tvm..runtime..ObjectRef">ObjectRef</a>, TObjectRef&gt;::value&gt;::type&gt;</td></tr>
+<tr><th id="241">241</th><td>  <a class="type" href="#tvm::runtime::Registry" title='tvm::runtime::Registry' data-ref="tvm::runtime::Registry" data-ref-filename="tvm..runtime..Registry">Registry</a>&amp; <dfn class="decl def fn" id="_ZN3tvm7runtime8Registry15set_body_methodEMT0_FT1_DpT2_E" title='tvm::runtime::Registry::set_body_method' data-ref="_ZN3tvm7runtime8Registry15set_body_methodEMT0_FT1_DpT2_E" data-ref-filename="_ZN3tvm7runtime8Registry15set_body_methodEMT0_FT1_DpT2_E">set_body_method</dfn>(R (TNode::*<dfn class="local col9 decl" id="13739f" title='f' data-type='R (TNode::*)(Args...)' data-ref="13739f" data-ref-filename="13739f">f</dfn>)(Args...)) {</td></tr>
+<tr><th id="242">242</th><td>    <em>auto</em> <dfn class="local col0 decl" id="13740fwrap" title='fwrap' data-type='auto' data-ref="13740fwrap" data-ref-filename="13740fwrap">fwrap</dfn> = [<a class="local col9 ref" href="#13739f" title='f' data-ref="13739f" data-ref-filename="13739f">f</a>](TObjectRef <dfn class="local col1 decl" id="13741ref" title='ref' data-type='TObjectRef' data-ref="13741ref" data-ref-filename="13741ref">ref</dfn>, Args... <dfn class="local col2 decl" id="13742params" title='params' data-type='Args...' data-ref="13742params" data-ref-filename="13742params">params</dfn>) {</td></tr>
+<tr><th id="243">243</th><td>      TNode* <dfn class="local col3 decl" id="13743target" title='target' data-type='TNode *' data-ref="13743target" data-ref-filename="13743target">target</dfn> = <a class="local col1 ref" href="#13741ref" title='ref' data-ref="13741ref" data-ref-filename="13741ref">ref</a>.<b>operator</b>-&gt;();</td></tr>
+<tr><th id="244">244</th><td>      <i>// call method pointer</i></td></tr>
+<tr><th id="245">245</th><td>      <b>return</b> (<a class="local col3 ref" href="#13743target" title='target' data-ref="13743target" data-ref-filename="13743target">target</a>-&gt;*<a class="local col9 ref" href="#13739f" title='f' data-ref="13739f" data-ref-filename="13739f">f</a>)(<a class="local col2 ref" href="#13742params" title='params' data-ref="13742params" data-ref-filename="13742params">params</a>...);</td></tr>
+<tr><th id="246">246</th><td>    };</td></tr>
+<tr><th id="247">247</th><td>    <b>return</b> set_body(<a class="type" href="packed_func.h.html#tvm::runtime::TypedPackedFunc" title='tvm::runtime::TypedPackedFunc' data-ref="tvm::runtime::TypedPackedFunc" data-ref-filename="tvm..runtime..TypedPackedFunc">TypedPackedFunc</a>&lt;R(TObjectRef, Args...)&gt;(<a class="local col0 ref" href="#13740fwrap" title='fwrap' data-ref="13740fwrap" data-ref-filename="13740fwrap">fwrap</a>, <a class="member field" href="#tvm::runtime::Registry::name_" title='tvm::runtime::Registry::name_' data-ref="tvm::runtime::Registry::name_" data-ref-filename="tvm..runtime..Registry..name_">name_</a>));</td></tr>
+<tr><th id="248">248</th><td>  }</td></tr>
+<tr><th id="249">249</th><td></td></tr>
+<tr><th id="250">250</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="251">251</th><td><i class="doc">   * <span class="command">\brief</span> set the body of the function to be the passed method pointer.</i></td></tr>
+<tr><th id="252">252</th><td><i class="doc">   *        Used when calling a method on a Node subclass through a ObjectRef subclass.</i></td></tr>
+<tr><th id="253">253</th><td><i class="doc">   *        Note that this will ignore default arg values and always require all arguments to be</i></td></tr>
+<tr><th id="254">254</th><td><i class="doc">   * provided.</i></td></tr>
+<tr><th id="255">255</th><td><i class="doc">   *</i></td></tr>
+<tr><th id="256">256</th><td><i class="doc">   * <span class="command">\code</span></i></td></tr>
+<tr><th id="257">257</th><td><i class="doc">   *<span class="verb"></span></i></td></tr>
+<tr><th id="258">258</th><td><i class="doc"><span class="verb"></span>   *<span class="verb"> // node subclass:</span></i></td></tr>
+<tr><th id="259">259</th><td><i class="doc"><span class="verb"></span>   *<span class="verb"> struct ExampleNode: BaseNode {</span></i></td></tr>
+<tr><th id="260">260</th><td><i class="doc"><span class="verb"></span>   *<span class="verb">    int doThing(int x);</span></i></td></tr>
+<tr><th id="261">261</th><td><i class="doc"><span class="verb"></span>   *<span class="verb"> }</span></i></td></tr>
+<tr><th id="262">262</th><td><i class="doc"><span class="verb"></span>   *<span class="verb"></span></i></td></tr>
+<tr><th id="263">263</th><td><i class="doc"><span class="verb"></span>   *<span class="verb"> // noderef subclass</span></i></td></tr>
+<tr><th id="264">264</th><td><i class="doc"><span class="verb"></span>   *<span class="verb"> struct Example;</span></i></td></tr>
+<tr><th id="265">265</th><td><i class="doc"><span class="verb"></span>   *<span class="verb"></span></i></td></tr>
+<tr><th id="266">266</th><td><i class="doc"><span class="verb"></span>   *<span class="verb"> TVM_REGISTER_GLOBAL("Example_doThing")</span></i></td></tr>
+<tr><th id="267">267</th><td><i class="doc"><span class="verb"></span>   *<span class="verb"> .set_body_method&lt;Example&gt;(&amp;ExampleNode::doThing); // will have type int(Example, int)</span></i></td></tr>
+<tr><th id="268">268</th><td><i class="doc"><span class="verb"></span>   *<span class="verb"></span></i></td></tr>
+<tr><th id="269">269</th><td><i class="doc"><span class="verb"></span>   *<span class="verb"> // note that just doing:</span></i></td></tr>
+<tr><th id="270">270</th><td><i class="doc"><span class="verb"></span>   *<span class="verb"> // .set_body_method(&amp;ExampleNode::doThing);</span></i></td></tr>
+<tr><th id="271">271</th><td><i class="doc"><span class="verb"></span>   *<span class="verb"> // wouldn't work, because ExampleNode can't be taken from a TVMArgValue.</span></i></td></tr>
+<tr><th id="272">272</th><td><i class="doc"><span class="verb"></span>   *<span class="verb"></span></i></td></tr>
+<tr><th id="273">273</th><td><i class="doc"><span class="verb"></span>   * \endcode</i></td></tr>
+<tr><th id="274">274</th><td><i class="doc">   *</i></td></tr>
+<tr><th id="275">275</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">f</span> the method pointer to forward to.</i></td></tr>
+<tr><th id="276">276</th><td><i class="doc">   * <span class="command">\tparam</span> <span class="arg">TObjectRef</span> the node reference type to call the method on</i></td></tr>
+<tr><th id="277">277</th><td><i class="doc">   * <span class="command">\tparam</span> <span class="arg">TNode</span> the node type containing the method (inferred).</i></td></tr>
+<tr><th id="278">278</th><td><i class="doc">   * <span class="command">\tparam</span> <span class="arg">R</span> the return type of the function (inferred).</i></td></tr>
+<tr><th id="279">279</th><td><i class="doc">   * <span class="command">\tparam</span> <span class="arg">Args</span> the argument types of the function (inferred).</i></td></tr>
+<tr><th id="280">280</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="281">281</th><td>  <b>template</b> &lt;<b>typename</b> TObjectRef, <b>typename</b> TNode, <b>typename</b> R, <b>typename</b>... Args,</td></tr>
+<tr><th id="282">282</th><td>            <b>typename</b> = <b>typename</b> <span class="namespace">std::</span><a class="type" href="../../../../include/c++/10/type_traits.html#std::enable_if" title='std::enable_if' data-ref="std::enable_if" data-ref-filename="std..enable_if">enable_if</a>&lt;<span class="namespace">std::</span><a class="type" href="../../../../include/c++/10/type_traits.html#std::is_base_of" title='std::is_base_of' data-ref="std::is_base_of" data-ref-filename="std..is_base_of">is_base_of</a>&lt;<a class="type" href="object.h.html#tvm::runtime::ObjectRef" title='tvm::runtime::ObjectRef' data-ref="tvm::runtime::ObjectRef" data-ref-filename="tvm..runtime..ObjectRef">ObjectRef</a>, TObjectRef&gt;::value&gt;::type&gt;</td></tr>
+<tr><th id="283">283</th><td>  <a class="type" href="#tvm::runtime::Registry" title='tvm::runtime::Registry' data-ref="tvm::runtime::Registry" data-ref-filename="tvm..runtime..Registry">Registry</a>&amp; <dfn class="decl def fn" id="_ZN3tvm7runtime8Registry15set_body_methodEMT0_KFT1_DpT2_E" title='tvm::runtime::Registry::set_body_method' data-ref="_ZN3tvm7runtime8Registry15set_body_methodEMT0_KFT1_DpT2_E" data-ref-filename="_ZN3tvm7runtime8Registry15set_body_methodEMT0_KFT1_DpT2_E">set_body_method</dfn>(R (TNode::*<dfn class="local col4 decl" id="13744f" title='f' data-type='R (TNode::*)(Args...) const' data-ref="13744f" data-ref-filename="13744f">f</dfn>)(Args...) <em>const</em>) {</td></tr>
+<tr><th id="284">284</th><td>    <em>auto</em> <dfn class="local col5 decl" id="13745fwrap" title='fwrap' data-type='auto' data-ref="13745fwrap" data-ref-filename="13745fwrap">fwrap</dfn> = [<a class="local col4 ref" href="#13744f" title='f' data-ref="13744f" data-ref-filename="13744f">f</a>](TObjectRef <dfn class="local col6 decl" id="13746ref" title='ref' data-type='TObjectRef' data-ref="13746ref" data-ref-filename="13746ref">ref</dfn>, Args... <dfn class="local col7 decl" id="13747params" title='params' data-type='Args...' data-ref="13747params" data-ref-filename="13747params">params</dfn>) {</td></tr>
+<tr><th id="285">285</th><td>      <em>const</em> TNode* <dfn class="local col8 decl" id="13748target" title='target' data-type='const TNode *' data-ref="13748target" data-ref-filename="13748target">target</dfn> = <a class="local col6 ref" href="#13746ref" title='ref' data-ref="13746ref" data-ref-filename="13746ref">ref</a>.<b>operator</b>-&gt;();</td></tr>
+<tr><th id="286">286</th><td>      <i>// call method pointer</i></td></tr>
+<tr><th id="287">287</th><td>      <b>return</b> (<a class="local col8 ref" href="#13748target" title='target' data-ref="13748target" data-ref-filename="13748target">target</a>-&gt;*<a class="local col4 ref" href="#13744f" title='f' data-ref="13744f" data-ref-filename="13744f">f</a>)(<a class="local col7 ref" href="#13747params" title='params' data-ref="13747params" data-ref-filename="13747params">params</a>...);</td></tr>
+<tr><th id="288">288</th><td>    };</td></tr>
+<tr><th id="289">289</th><td>    <b>return</b> set_body(<a class="type" href="packed_func.h.html#tvm::runtime::TypedPackedFunc" title='tvm::runtime::TypedPackedFunc' data-ref="tvm::runtime::TypedPackedFunc" data-ref-filename="tvm..runtime..TypedPackedFunc">TypedPackedFunc</a>&lt;R(TObjectRef, Args...)&gt;(<a class="local col5 ref" href="#13745fwrap" title='fwrap' data-ref="13745fwrap" data-ref-filename="13745fwrap">fwrap</a>, <a class="member field" href="#tvm::runtime::Registry::name_" title='tvm::runtime::Registry::name_' data-ref="tvm::runtime::Registry::name_" data-ref-filename="tvm..runtime..Registry..name_">name_</a>));</td></tr>
+<tr><th id="290">290</th><td>  }</td></tr>
+<tr><th id="291">291</th><td></td></tr>
+<tr><th id="292">292</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="293">293</th><td><i class="doc">   * <span class="command">\brief</span> Register a function with given name</i></td></tr>
+<tr><th id="294">294</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">name</span> The name of the function.</i></td></tr>
+<tr><th id="295">295</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">override</span> Whether allow oveeride existing function.</i></td></tr>
+<tr><th id="296">296</th><td><i class="doc">   * <span class="command">\return</span> Reference to theregistry.</i></td></tr>
+<tr><th id="297">297</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="298">298</th><td>  <a class="macro" href="c_runtime_api.h.html#64" title="__attribute__((visibility(&quot;default&quot;)))" data-ref="_M/TVM_DLL">TVM_DLL</a> <em>static</em> <a class="type" href="#tvm::runtime::Registry" title='tvm::runtime::Registry' data-ref="tvm::runtime::Registry" data-ref-filename="tvm..runtime..Registry">Registry</a>&amp; <dfn class="decl fn" id="_ZN3tvm7runtime8Registry8RegisterERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEb" title='tvm::runtime::Registry::Register' data-ref="_ZN3tvm7runtime8Registry8RegisterERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEb" data-ref-filename="_ZN3tvm7runtime8Registry8RegisterERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEb">Register</dfn>(<em>const</em> <span class="namespace">std::</span><a class="typedef" href="../../../../include/c++/10/bits/stringfwd.h.html#std::string" title='std::string' data-type='basic_string&lt;char&gt;' data-ref="std::string" data-ref-filename="std..string">string</a>&amp; <dfn class="local col9 decl" id="13749name" title='name' data-type='const std::string &amp;' data-ref="13749name" data-ref-filename="13749name">name</dfn>, <em>bool</em> <dfn class="local col0 decl" id="13750override" title='override' data-type='bool' data-ref="13750override" data-ref-filename="13750override">override</dfn> = <b>false</b>);  <i>// NOLINT(*)</i></td></tr>
+<tr><th id="299">299</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="300">300</th><td><i class="doc">   * <span class="command">\brief</span> Erase global function from registry, if exist.</i></td></tr>
+<tr><th id="301">301</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">name</span> The name of the function.</i></td></tr>
+<tr><th id="302">302</th><td><i class="doc">   * <span class="command">\return</span> Whether function exist.</i></td></tr>
+<tr><th id="303">303</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="304">304</th><td>  <a class="macro" href="c_runtime_api.h.html#64" title="__attribute__((visibility(&quot;default&quot;)))" data-ref="_M/TVM_DLL">TVM_DLL</a> <em>static</em> <em>bool</em> <dfn class="decl fn" id="_ZN3tvm7runtime8Registry6RemoveERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE" title='tvm::runtime::Registry::Remove' data-ref="_ZN3tvm7runtime8Registry6RemoveERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE" data-ref-filename="_ZN3tvm7runtime8Registry6RemoveERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE">Remove</dfn>(<em>const</em> <span class="namespace">std::</span><a class="typedef" href="../../../../include/c++/10/bits/stringfwd.h.html#std::string" title='std::string' data-type='basic_string&lt;char&gt;' data-ref="std::string" data-ref-filename="std..string">string</a>&amp; <dfn class="local col1 decl" id="13751name" title='name' data-type='const std::string &amp;' data-ref="13751name" data-ref-filename="13751name">name</dfn>);</td></tr>
+<tr><th id="305">305</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="306">306</th><td><i class="doc">   * <span class="command">\brief</span> Get the global function by name.</i></td></tr>
+<tr><th id="307">307</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">name</span> The name of the function.</i></td></tr>
+<tr><th id="308">308</th><td><i class="doc">   * <span class="command">\return</span> pointer to the registered function,</i></td></tr>
+<tr><th id="309">309</th><td><i class="doc">   *   nullptr if it does not exist.</i></td></tr>
+<tr><th id="310">310</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="311">311</th><td>  <a class="macro" href="c_runtime_api.h.html#64" title="__attribute__((visibility(&quot;default&quot;)))" data-ref="_M/TVM_DLL">TVM_DLL</a> <em>static</em> <em>const</em> <a class="type" href="packed_func.h.html#tvm::runtime::PackedFunc" title='tvm::runtime::PackedFunc' data-ref="tvm::runtime::PackedFunc" data-ref-filename="tvm..runtime..PackedFunc">PackedFunc</a>* <dfn class="decl fn" id="_ZN3tvm7runtime8Registry3GetERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE" title='tvm::runtime::Registry::Get' data-ref="_ZN3tvm7runtime8Registry3GetERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE" data-ref-filename="_ZN3tvm7runtime8Registry3GetERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE">Get</dfn>(<em>const</em> <span class="namespace">std::</span><a class="typedef" href="../../../../include/c++/10/bits/stringfwd.h.html#std::string" title='std::string' data-type='basic_string&lt;char&gt;' data-ref="std::string" data-ref-filename="std..string">string</a>&amp; <dfn class="local col2 decl" id="13752name" title='name' data-type='const std::string &amp;' data-ref="13752name" data-ref-filename="13752name">name</dfn>);  <i>// NOLINT(*)</i></td></tr>
+<tr><th id="312">312</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="313">313</th><td><i class="doc">   * <span class="command">\brief</span> Get the names of currently registered global function.</i></td></tr>
+<tr><th id="314">314</th><td><i class="doc">   * <span class="command">\return</span> The names</i></td></tr>
+<tr><th id="315">315</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="316">316</th><td>  <a class="macro" href="c_runtime_api.h.html#64" title="__attribute__((visibility(&quot;default&quot;)))" data-ref="_M/TVM_DLL">TVM_DLL</a> <em>static</em> <span class="namespace">std::</span><a class="type" href="../../../../include/c++/10/bits/stl_vector.h.html#std::vector" title='std::vector' data-ref="std::vector" data-ref-filename="std..vector">vector</a>&lt;<span class="namespace">std::</span><a class="typedef" href="../../../../include/c++/10/bits/stringfwd.h.html#std::string" title='std::string' data-type='basic_string&lt;char&gt;' data-ref="std::string" data-ref-filename="std..string">string</a>&gt; <dfn class="decl fn" id="_ZN3tvm7runtime8Registry9ListNamesB5cxx11Ev" title='tvm::runtime::Registry::ListNames' data-ref="_ZN3tvm7runtime8Registry9ListNamesB5cxx11Ev" data-ref-filename="_ZN3tvm7runtime8Registry9ListNamesB5cxx11Ev">ListNames</dfn>();</td></tr>
+<tr><th id="317">317</th><td></td></tr>
+<tr><th id="318">318</th><td>  <i>// Internal class.</i></td></tr>
+<tr><th id="319">319</th><td>  <b>struct</b> <dfn class="type" id="tvm::runtime::Registry::Manager" title='tvm::runtime::Registry::Manager' data-ref="tvm::runtime::Registry::Manager" data-ref-filename="tvm..runtime..Registry..Manager">Manager</dfn>;</td></tr>
+<tr><th id="320">320</th><td></td></tr>
+<tr><th id="321">321</th><td> <b>protected</b>:</td></tr>
+<tr><th id="322">322</th><td>  <i class="doc">/*! <span class="command">\brief</span> name of the function */</i></td></tr>
+<tr><th id="323">323</th><td>  <span class="namespace">std::</span><a class="typedef" href="../../../../include/c++/10/bits/stringfwd.h.html#std::string" title='std::string' data-type='basic_string&lt;char&gt;' data-ref="std::string" data-ref-filename="std..string">string</a> <dfn class="decl field" id="tvm::runtime::Registry::name_" title='tvm::runtime::Registry::name_' data-ref="tvm::runtime::Registry::name_" data-ref-filename="tvm..runtime..Registry..name_">name_</dfn>;</td></tr>
+<tr><th id="324">324</th><td>  <i class="doc">/*! <span class="command">\brief</span> internal packed function */</i></td></tr>
+<tr><th id="325">325</th><td>  <a class="type" href="packed_func.h.html#tvm::runtime::PackedFunc" title='tvm::runtime::PackedFunc' data-ref="tvm::runtime::PackedFunc" data-ref-filename="tvm..runtime..PackedFunc">PackedFunc</a> <dfn class="decl field" id="tvm::runtime::Registry::func_" title='tvm::runtime::Registry::func_' data-ref="tvm::runtime::Registry::func_" data-ref-filename="tvm..runtime..Registry..func_">func_</dfn>;</td></tr>
+<tr><th id="326">326</th><td>  <b>friend</b> <b>struct</b> <a class="type" href="#tvm::runtime::Registry::Manager" title='tvm::runtime::Registry::Manager' data-ref="tvm::runtime::Registry::Manager" data-ref-filename="tvm..runtime..Registry..Manager">Manager</a>;</td></tr>
+<tr><th id="327">327</th><td>};</td></tr>
+<tr><th id="328">328</th><td></td></tr>
+<tr><th id="329">329</th><td><u>#define <dfn class="macro" id="_M/TVM_FUNC_REG_VAR_DEF" data-ref="_M/TVM_FUNC_REG_VAR_DEF">TVM_FUNC_REG_VAR_DEF</dfn> static TVM_ATTRIBUTE_UNUSED ::tvm::runtime::Registry&amp; __mk_##TVM</u></td></tr>
+<tr><th id="330">330</th><td></td></tr>
+<tr><th id="331">331</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="332">332</th><td><i class="doc"> * <span class="command">\brief</span> Register a function globally.</i></td></tr>
+<tr><th id="333">333</th><td><i class="doc"> * <span class="command">\code</span></i></td></tr>
+<tr><th id="334">334</th><td><i class="doc"> *<span class="verb">   TVM_REGISTER_GLOBAL("MyPrint")</span></i></td></tr>
+<tr><th id="335">335</th><td><i class="doc"><span class="verb"></span> *<span class="verb">   .set_body([](TVMArgs args, TVMRetValue* rv) {</span></i></td></tr>
+<tr><th id="336">336</th><td><i class="doc"><span class="verb"></span> *<span class="verb">   });</span></i></td></tr>
+<tr><th id="337">337</th><td><i class="doc"><span class="verb"></span> * \endcode</i></td></tr>
+<tr><th id="338">338</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="339">339</th><td><u>#define <dfn class="macro" id="_M/TVM_REGISTER_GLOBAL" data-ref="_M/TVM_REGISTER_GLOBAL">TVM_REGISTER_GLOBAL</dfn>(OpName) \</u></td></tr>
+<tr><th id="340">340</th><td><u>  TVM_STR_CONCAT(TVM_FUNC_REG_VAR_DEF, __COUNTER__) = ::tvm::runtime::Registry::Register(OpName)</u></td></tr>
+<tr><th id="341">341</th><td></td></tr>
+<tr><th id="342">342</th><td><u>#define <dfn class="macro" id="_M/TVM_STRINGIZE_DETAIL" data-ref="_M/TVM_STRINGIZE_DETAIL">TVM_STRINGIZE_DETAIL</dfn>(x) #x</u></td></tr>
+<tr><th id="343">343</th><td><u>#define <dfn class="macro" id="_M/TVM_STRINGIZE" data-ref="_M/TVM_STRINGIZE">TVM_STRINGIZE</dfn>(x) TVM_STRINGIZE_DETAIL(x)</u></td></tr>
+<tr><th id="344">344</th><td><u>#define <dfn class="macro" id="_M/TVM_DESCRIBE" data-ref="_M/TVM_DESCRIBE">TVM_DESCRIBE</dfn>(...) describe(__VA_ARGS__ "\n\nFrom:" __FILE__ ":" TVM_STRINGIZE(__LINE__))</u></td></tr>
+<tr><th id="345">345</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="346">346</th><td><i class="doc"> * <span class="command">\brief</span> Macro to include current line as string</i></td></tr>
+<tr><th id="347">347</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="348">348</th><td><u>#define <dfn class="macro" id="_M/TVM_ADD_FILELINE" data-ref="_M/TVM_ADD_FILELINE">TVM_ADD_FILELINE</dfn> "\n\nDefined in " __FILE__ ":L" TVM_STRINGIZE(__LINE__)</u></td></tr>
+<tr><th id="349">349</th><td></td></tr>
+<tr><th id="350">350</th><td>}  <i>// namespace runtime</i></td></tr>
+<tr><th id="351">351</th><td>}  <i>// namespace tvm</i></td></tr>
+<tr><th id="352">352</th><td><u>#<span data-ppcond="43">endif</span>  // TVM_RUNTIME_REGISTRY_H_</u></td></tr>
+<tr><th id="353">353</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated while processing <a href='../../../src/arith/analyzer.cc.html'>tvm/src/arith/analyzer.cc</a><br/>Generated on <em>2022-Aug-10</em> from project tvm revision <em>fae79bb</em><br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

@@ -1,0 +1,17 @@
+<dec f='tvm/include/tvm/ir/op.h' l='140' type='bool tvm::IsPrimitiveOp(const tvm::RelayExpr &amp; )'/>
+<def f='tvm/include/tvm/ir/op.h' l='509' ll='512' type='bool tvm::IsPrimitiveOp(const tvm::RelayExpr &amp; expr)'/>
+<doc f='tvm/include/tvm/ir/op.h' l='496'>/*!
+ * \brief Check that an expression is a &quot;primitive operator&quot;.
+ *
+ * Will return true if the expression is an operator which
+ * matches the form of primitive operators registered directly
+ * by the Relay codebase.
+ *
+ * That is the arguments are all type variables, and there is a single
+ * type relation applied to the input and output types.
+ *
+ * \param expr An expression.
+ * \return Whether the expression is primitive op.
+ */</doc>
+<use f='tvm/include/tvm/relay/expr.h' l='338' u='c' c='_ZNK3tvm5relay8CallNode12SEqualReduceEPKS1_NS_13SEqualReducerE'/>
+<use f='tvm/include/tvm/relay/expr.h' l='346' u='c' c='_ZNK3tvm5relay8CallNode11SHashReduceENS_12SHashReducerE'/>

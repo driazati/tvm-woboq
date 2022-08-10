@@ -1,0 +1,64 @@
+<inh f='tvm/include/tvm/ir/expr.h' l='359' c='tvm::RelayExprNode'/>
+<def f='tvm/include/tvm/relay/expr.h' l='775' ll='790'/>
+<use f='tvm/include/tvm/relay/expr.h' l='794' c='_ZNK3tvm5relay8TempExprptEv'/>
+<use f='tvm/include/tvm/relay/expr.h' l='794' c='_ZNK3tvm5relay8TempExprptEv'/>
+<use f='tvm/include/tvm/relay/expr.h' l='794' c='_ZNK3tvm5relay8TempExpr3getEv'/>
+<use f='tvm/include/tvm/relay/expr.h' l='794'/>
+<size>48</size>
+<doc f='tvm/include/tvm/relay/expr.h' l='763'>/*!
+ * \brief Base class of the temporary expression.
+ *
+ * TempExprs are pass specific expression that can be
+ * useful to define intermediate result in the
+ * rewriting pass such as layout or type transformation.
+ *
+ * Subclass TempExprNode allows us to pattern match on
+ * specific kind of TempExpr and use them for expression rewriting.
+ *
+ * TempExpr should only be used within a pass,
+ */</doc>
+<fun r='_ZN3tvm5relay12TempExprNodeD1Ev'/>
+<fun r='_ZNK3tvm5relay12TempExprNode7RealizeEv'/>
+<smbr r='tvm::relay::TempExprNode::_type_key' t='const char *const'/>
+<smbr r='tvm::relay::TempExprNode::_type_has_method_sequal_reduce' t='const bool'/>
+<smbr r='tvm::relay::TempExprNode::_type_has_method_shash_reduce' t='const bool'/>
+<smbr r='tvm::relay::TempExprNode::_type_child_slots' t='const uint32_t'/>
+<fun r='_ZN3tvm5relay12TempExprNode16RuntimeTypeIndexEv'/>
+<fun r='_ZN3tvm5relay12TempExprNode27_GetOrAllocRuntimeTypeIndexEv'/>
+<ovr f='tvm/src/relay/quantize/annotate.cc' l='39' c='tvm::relay::quantize::QAnnotateExprNode'/>
+<use f='tvm/src/relay/quantize/annotate.cc' l='39'/>
+<use f='tvm/src/relay/quantize/annotate.cc' l='84' c='_ZN3tvm5relay8quantize16QuantizeAnnotateEv'/>
+<size>48</size>
+<ovr f='tvm/src/relay/quantize/partition.cc' l='39' c='tvm::relay::quantize::QPartitionExprNode'/>
+<use f='tvm/src/relay/quantize/partition.cc' l='39'/>
+<size>48</size>
+<ovr f='tvm/src/relay/quantize/realize.h' l='36' c='tvm::relay::quantize::QRealizeExprNode'/>
+<use f='tvm/src/relay/quantize/realize.h' l='36'/>
+<use f='tvm/src/relay/quantize/realize.cc' l='152' c='_ZN3tvm5relay8quantize15QuantizeRealizeERKNS0_4CallERKNS_7runtime5ArrayINS_9RelayExprEvEERKNS5_9ObjectRefE'/>
+<use f='tvm/src/relay/quantize/realize.cc' l='192' c='_ZN3tvm5relay8quantize13Conv2dRealizeERKNS0_4CallERKNS_7runtime5ArrayINS_9RelayExprEvEERKNS5_9ObjectRefE'/>
+<use f='tvm/src/relay/quantize/realize.cc' l='192' c='_ZN3tvm5relay8quantize13Conv2dRealizeERKNS0_4CallERKNS_7runtime5ArrayINS_9RelayExprEvEERKNS5_9ObjectRefE'/>
+<use f='tvm/src/relay/quantize/realize.cc' l='201' c='_ZN3tvm5relay8quantize13Conv1dRealizeERKNS0_4CallERKNS_7runtime5ArrayINS_9RelayExprEvEERKNS5_9ObjectRefE'/>
+<use f='tvm/src/relay/quantize/realize.cc' l='201' c='_ZN3tvm5relay8quantize13Conv1dRealizeERKNS0_4CallERKNS_7runtime5ArrayINS_9RelayExprEvEERKNS5_9ObjectRefE'/>
+<use f='tvm/src/relay/quantize/realize.cc' l='232' c='_ZN3tvm5relay8quantize12DenseRealizeERKNS0_4CallERKNS_7runtime5ArrayINS_9RelayExprEvEERKNS5_9ObjectRefE'/>
+<use f='tvm/src/relay/quantize/realize.cc' l='232' c='_ZN3tvm5relay8quantize12DenseRealizeERKNS0_4CallERKNS_7runtime5ArrayINS_9RelayExprEvEERKNS5_9ObjectRefE'/>
+<use f='tvm/src/relay/quantize/realize.cc' l='281' c='_ZN3tvm5relay8quantize10MulRealizeERKNS0_4CallERKNS_7runtime5ArrayINS_9RelayExprEvEERKNS5_9ObjectRefE'/>
+<use f='tvm/src/relay/quantize/realize.cc' l='281' c='_ZN3tvm5relay8quantize10MulRealizeERKNS0_4CallERKNS_7runtime5ArrayINS_9RelayExprEvEERKNS5_9ObjectRefE'/>
+<use f='tvm/src/relay/quantize/realize.cc' l='373' c='_ZN3tvm5relay8quantize10AddRealizeERKNS0_4CallERKNS_7runtime5ArrayINS_9RelayExprEvEERKNS5_9ObjectRefE'/>
+<use f='tvm/src/relay/quantize/realize.cc' l='373' c='_ZN3tvm5relay8quantize10AddRealizeERKNS0_4CallERKNS_7runtime5ArrayINS_9RelayExprEvEERKNS5_9ObjectRefE'/>
+<use f='tvm/src/relay/quantize/realize.cc' l='391' c='_ZN3tvm5relay8quantize11ClipRealizeERKNS0_4CallERKNS_7runtime5ArrayINS_9RelayExprEvEERKNS5_9ObjectRefE'/>
+<use f='tvm/src/relay/quantize/realize.cc' l='416' c='_ZN3tvm5relay8quantize18ConcatenateRealizeERKNS0_4CallERKNS_7runtime5ArrayINS_9RelayExprEvEERKNS5_9ObjectRefE'/>
+<use f='tvm/src/relay/quantize/realize.cc' l='431' c='_ZN3tvm5relay8quantize15IdentityRealizeERKNS0_4CallERKNS_7runtime5ArrayINS_9RelayExprEvEERKNS5_9ObjectRefE'/>
+<use f='tvm/src/relay/quantize/realize.cc' l='459' c='_ZN3tvm5relay8quantize21CastDtypeInputRealizeERKNS0_4CallERKNS_7runtime5ArrayINS_9RelayExprEvEERKNS5_9ObjectRefE'/>
+<use f='tvm/src/relay/quantize/realize.cc' l='480' c='_ZN3tvm5relay8quantize14AvgPoolRealizeERKNS0_4CallERKNS_7runtime5ArrayINS_9RelayExprEvEERKNS5_9ObjectRefE'/>
+<use f='tvm/src/relay/quantize/realize.cc' l='496' c='_ZN3tvm5relay8quantize15CastHintRealizeERKNS0_4CallERKNS_7runtime5ArrayINS_9RelayExprEvEERKNS5_9ObjectRefE'/>
+<use f='tvm/src/relay/quantize/realize.cc' l='506' c='_ZN3tvm5relay8quantize18BatchMatmulRealizeERKNS0_4CallERKNS_7runtime5ArrayINS_9RelayExprEvEERKNS5_9ObjectRefE'/>
+<use f='tvm/src/relay/quantize/realize.cc' l='506' c='_ZN3tvm5relay8quantize18BatchMatmulRealizeERKNS0_4CallERKNS_7runtime5ArrayINS_9RelayExprEvEERKNS5_9ObjectRefE'/>
+<size>48</size>
+<ovr f='tvm/src/relay/transforms/transform_layout.h' l='172' c='tvm::relay::LayoutAlternatedExprNode'/>
+<use f='tvm/src/relay/transforms/transform_layout.h' l='172'/>
+<size>48</size>
+<ovr f='tvm/src/relay/transforms/fold_scale_axis.cc' l='176' c='tvm::relay::fold_scale_axis::ScaledExprNode'/>
+<use f='tvm/src/relay/transforms/fold_scale_axis.cc' l='176'/>
+<size>48</size>
+<use f='tvm/src/relay/transforms/forward_rewrite.cc' l='45' c='_ZN3tvm5relay12TempRealizer17DispatchVisitExprERKNS_9RelayExprE'/>
+<size>48</size>

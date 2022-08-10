@@ -1,0 +1,14 @@
+<dec f='tvm/src/runtime/rpc/rpc_session.h' l='197' type='bool tvm::runtime::RPCSession::IsAsync() const'/>
+<doc f='tvm/src/runtime/rpc/rpc_session.h' l='186'>/*!
+   * \brief Whether the session is async.
+   *
+   * If the session is not async, its Aync implementations
+   * simply calls into the their synchronize counterparts,
+   * and the callback is guaranteed to be called before the async function finishes.
+   *
+   * \return the async state.
+   *
+   * \note We can only use async session in an Event driven RPC server.
+   */</doc>
+<use f='tvm/src/runtime/rpc/rpc_endpoint.cc' l='593' u='c' c='_ZNK3tvm7runtime11RPCEndpoint12EventHandler17GetServingSessionEv'/>
+<def f='tvm/src/runtime/rpc/rpc_session.cc' l='35' type='bool tvm::runtime::RPCSession::IsAsync() const'/>

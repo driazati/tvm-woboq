@@ -1,0 +1,511 @@
+<def f='tvm/include/tvm/runtime/object.h' l='411' type='T * tvm::runtime::ObjectPtr::get() const'/>
+<use f='tvm/include/tvm/runtime/object.h' l='415' u='c' c='_ZNK3tvm7runtime9ObjectPtrptEv'/>
+<use f='tvm/include/tvm/runtime/object.h' l='420' u='c' c='_ZNK3tvm7runtime9ObjectPtrdeEv'/>
+<use f='tvm/include/tvm/runtime/object.h' l='447' u='c' c='_ZNK3tvm7runtime9ObjectPtrcvbEv'/>
+<use f='tvm/include/tvm/runtime/object.h' l='540' u='c' c='_ZNK3tvm7runtime9ObjectRefltERKS1_'/>
+<use f='tvm/include/tvm/runtime/object.h' l='540' u='c' c='_ZNK3tvm7runtime9ObjectRefltERKS1_'/>
+<use f='tvm/include/tvm/runtime/object.h' l='546' u='c' c='_ZNK3tvm7runtime9ObjectRef3getEv'/>
+<use f='tvm/include/tvm/runtime/object.h' l='576' u='c' c='_ZNK3tvm7runtime9ObjectRef11get_mutableEv'/>
+<use f='tvm/include/tvm/runtime/object.h' l='867' u='c' c='_ZNK3tvm7runtime9ObjectRef2asEv'/>
+<use f='tvm/include/tvm/runtime/container/optional.h' l='100' u='c' c='_ZNK3tvm7runtime8Optional3getEv'/>
+<use f='tvm/include/tvm/runtime/container/string.h' l='289' macro='1' u='c' c='_ZNK3tvm7runtime6StringptEv'/>
+<use f='tvm/include/tvm/node/object_path.h' l='127' macro='1' u='c' c='_ZNK3tvm10ObjectPathptEv'/>
+<use f='tvm/include/tvm/node/object_path.h' l='150' macro='1' u='c' c='_ZNK3tvm8RootPathptEv'/>
+<use f='tvm/include/tvm/node/object_path.h' l='172' macro='1' u='c' c='_ZNK3tvm19AttributeAccessPathptEv'/>
+<use f='tvm/include/tvm/node/object_path.h' l='192' macro='1' u='c' c='_ZNK3tvm26UnknownAttributeAccessPathptEv'/>
+<use f='tvm/include/tvm/node/object_path.h' l='215' macro='1' u='c' c='_ZNK3tvm14ArrayIndexPathptEv'/>
+<use f='tvm/include/tvm/node/object_path.h' l='237' macro='1' u='c' c='_ZNK3tvm23MissingArrayElementPathptEv'/>
+<use f='tvm/include/tvm/node/object_path.h' l='260' macro='1' u='c' c='_ZNK3tvm12MapValuePathptEv'/>
+<use f='tvm/include/tvm/node/object_path.h' l='279' macro='1' u='c' c='_ZNK3tvm19MissingMapEntryPathptEv'/>
+<use f='tvm/include/tvm/runtime/container/array.h' l='575' u='c' c='_ZNK3tvm7runtime5Array12GetArrayNodeEv'/>
+<use f='tvm/include/tvm/runtime/container/array.h' l='668' u='c' c='_ZN3tvm7runtime5Array11CopyOnWriteEv'/>
+<use f='tvm/include/tvm/runtime/container/array.h' l='707' u='c' c='_ZN3tvm7runtime5Array15SwitchContainerEl'/>
+<use f='tvm/include/tvm/node/structural_equal.h' l='78' macro='1' u='c' c='_ZNK3tvm14ObjectPathPairptEv'/>
+<use f='tvm/include/tvm/runtime/container/shape_tuple.h' l='163' macro='1' u='c' c='_ZNK3tvm7runtime10ShapeTupleptEv'/>
+<use f='tvm/include/tvm/runtime/ndarray.h' l='413' u='c' c='_ZNK3tvm7runtime7NDArray11get_mutableEv'/>
+<use f='tvm/include/tvm/runtime/container/map.h' l='467' u='c' c='_ZN3tvm7runtime12SmallMapNode17InsertMaybeReHashERKSt4pairINS0_9ObjectRefES3_EPNS0_9ObjectPtrINS0_6ObjectEEE'/>
+<use f='tvm/include/tvm/runtime/container/map.h' l='884' u='c' c='_ZN3tvm7runtime12DenseMapNode17InsertMaybeReHashERKSt4pairINS0_9ObjectRefES3_EPNS0_9ObjectPtrINS0_6ObjectEEE'/>
+<use f='tvm/include/tvm/runtime/container/map.h' l='1232' u='c' c='_ZN3tvm7runtime7MapNode17InsertMaybeReHashERKSt4pairINS0_9ObjectRefES3_EPNS0_9ObjectPtrINS0_6ObjectEEE'/>
+<use f='tvm/include/tvm/runtime/container/map.h' l='1400' u='c' c='_ZN3tvm7runtime3Map11CopyOnWriteEv'/>
+<use f='tvm/include/tvm/runtime/container/map.h' l='1456' u='c' c='_ZNK3tvm7runtime3Map10GetMapNodeEv'/>
+<use f='tvm/include/tvm/runtime/packed_func.h' l='182' macro='1' u='c' c='_ZNK3tvm7runtime10PackedFuncptEv'/>
+<use f='tvm/include/tvm/runtime/packed_func.h' l='1221' u='c' c='_ZNK3tvm7runtime10PackedFunc10CallPackedENS0_7TVMArgsEPNS0_11TVMRetValueE'/>
+<use f='tvm/include/tvm/runtime/packed_func.h' l='1617' u='c' c='_ZNK3tvm7runtime10PackedFuncclEDpOT_'/>
+<use f='tvm/include/tvm/ir/span.h' l='72' macro='1' u='c' c='_ZNK3tvm10SourceNameptEv'/>
+<use f='tvm/include/tvm/ir/span.h' l='122' macro='1' u='c' c='_ZNK3tvm4SpanptEv'/>
+<use f='tvm/include/tvm/ir/type.h' l='95' macro='1' u='c' c='_ZNK3tvm4TypeptEv'/>
+<use f='tvm/include/tvm/ir/type.h' l='137' macro='1' u='c' c='_ZNK3tvm8PrimTypeptEv'/>
+<use f='tvm/include/tvm/ir/type.h' l='196' macro='1' u='c' c='_ZNK3tvm11PointerTypeptEv'/>
+<use f='tvm/include/tvm/ir/type.h' l='272' macro='1' u='c' c='_ZNK3tvm7TypeVarptEv'/>
+<use f='tvm/include/tvm/ir/type.h' l='323' macro='1' u='c' c='_ZNK3tvm13GlobalTypeVarptEv'/>
+<use f='tvm/include/tvm/ir/type.h' l='371' macro='1' u='c' c='_ZNK3tvm9TupleTypeptEv'/>
+<use f='tvm/include/tvm/ir/type.h' l='405' macro='1' u='c' c='_ZNK3tvm14TypeConstraintptEv'/>
+<use f='tvm/include/tvm/ir/type.h' l='475' macro='1' u='c' c='_ZNK3tvm8FuncTypeptEv'/>
+<use f='tvm/include/tvm/ir/type.h' l='521' macro='1' u='c' c='_ZNK3tvm14IncompleteTypeptEv'/>
+<use f='tvm/include/tvm/ir/type.h' l='560' macro='1' u='c' c='_ZNK3tvm12RelayRefTypeptEv'/>
+<use f='tvm/include/tvm/ir/expr.h' l='70' macro='1' u='c' c='_ZNK3tvm8BaseExprptEv'/>
+<use f='tvm/include/tvm/ir/expr.h' l='128' macro='1' u='c' c='_ZNK3tvm8PrimExprptEv'/>
+<use f='tvm/include/tvm/ir/expr.h' l='433' macro='1' u='c' c='_ZNK3tvm9RelayExprptEv'/>
+<use f='tvm/include/tvm/ir/expr.h' l='479' macro='1' u='c' c='_ZNK3tvm9GlobalVarptEv'/>
+<use f='tvm/include/tvm/ir/expr.h' l='480' macro='1' u='c' c='_ZN3tvm9GlobalVar11CopyOnWriteEv'/>
+<use f='tvm/include/tvm/ir/expr.h' l='528' macro='1' u='c' c='_ZNK3tvm6IntImmptEv'/>
+<use f='tvm/include/tvm/ir/expr.h' l='574' macro='1' u='c' c='_ZNK3tvm8FloatImmptEv'/>
+<use f='tvm/include/tvm/ir/expr.h' l='589' macro='1' u='c' c='_ZNK3tvm4BoolptEv'/>
+<use f='tvm/include/tvm/ir/expr.h' l='732' macro='1' u='c' c='_ZNK3tvm5RangeptEv'/>
+<use f='tvm/include/tvm/tir/var.h' l='128' u='c' c='_ZNK3tvm3tir3Var3getEv'/>
+<use f='tvm/include/tvm/tir/var.h' l='164' u='c' c='_ZNK3tvm3tir7SizeVar3getEv'/>
+<use f='tvm/include/tvm/tir/var.h' l='310' macro='1' u='c' c='_ZNK3tvm3tir7IterVarptEv'/>
+<use f='tvm/include/tvm/tir/var.h' l='311' macro='1' u='c' c='_ZN3tvm3tir7IterVar11CopyOnWriteEv'/>
+<use f='tvm/include/tvm/tir/buffer.h' l='225' macro='1' u='c' c='_ZNK3tvm3tir6BufferptEv'/>
+<use f='tvm/include/tvm/tir/buffer.h' l='226' macro='1' u='c' c='_ZN3tvm3tir6Buffer11CopyOnWriteEv'/>
+<use f='tvm/include/tvm/tir/buffer.h' l='295' macro='1' u='c' c='_ZNK3tvm3tir12DataProducerptEv'/>
+<use f='tvm/include/tvm/tir/expr.h' l='81' macro='1' u='c' c='_ZNK3tvm3tir9StringImmptEv'/>
+<use f='tvm/include/tvm/tir/expr.h' l='119' macro='1' u='c' c='_ZNK3tvm3tir4CastptEv'/>
+<use f='tvm/include/tvm/tir/expr.h' l='167' macro='1' u='c' c='_ZNK3tvm3tir3AddptEv'/>
+<use f='tvm/include/tvm/tir/expr.h' l='183' macro='1' u='c' c='_ZNK3tvm3tir3SubptEv'/>
+<use f='tvm/include/tvm/tir/expr.h' l='199' macro='1' u='c' c='_ZNK3tvm3tir3MulptEv'/>
+<use f='tvm/include/tvm/tir/expr.h' l='218' macro='1' u='c' c='_ZNK3tvm3tir3DivptEv'/>
+<use f='tvm/include/tvm/tir/expr.h' l='237' macro='1' u='c' c='_ZNK3tvm3tir3ModptEv'/>
+<use f='tvm/include/tvm/tir/expr.h' l='253' macro='1' u='c' c='_ZNK3tvm3tir8FloorDivptEv'/>
+<use f='tvm/include/tvm/tir/expr.h' l='269' macro='1' u='c' c='_ZNK3tvm3tir8FloorModptEv'/>
+<use f='tvm/include/tvm/tir/expr.h' l='285' macro='1' u='c' c='_ZNK3tvm3tir3MinptEv'/>
+<use f='tvm/include/tvm/tir/expr.h' l='301' macro='1' u='c' c='_ZNK3tvm3tir3MaxptEv'/>
+<use f='tvm/include/tvm/tir/expr.h' l='349' macro='1' u='c' c='_ZNK3tvm3tir2EQptEv'/>
+<use f='tvm/include/tvm/tir/expr.h' l='365' macro='1' u='c' c='_ZNK3tvm3tir2NEptEv'/>
+<use f='tvm/include/tvm/tir/expr.h' l='381' macro='1' u='c' c='_ZNK3tvm3tir2LTptEv'/>
+<use f='tvm/include/tvm/tir/expr.h' l='397' macro='1' u='c' c='_ZNK3tvm3tir2LEptEv'/>
+<use f='tvm/include/tvm/tir/expr.h' l='413' macro='1' u='c' c='_ZNK3tvm3tir2GTptEv'/>
+<use f='tvm/include/tvm/tir/expr.h' l='429' macro='1' u='c' c='_ZNK3tvm3tir2GEptEv'/>
+<use f='tvm/include/tvm/tir/expr.h' l='468' macro='1' u='c' c='_ZNK3tvm3tir3AndptEv'/>
+<use f='tvm/include/tvm/tir/expr.h' l='507' macro='1' u='c' c='_ZNK3tvm3tir2OrptEv'/>
+<use f='tvm/include/tvm/tir/expr.h' l='542' macro='1' u='c' c='_ZNK3tvm3tir3NotptEv'/>
+<use f='tvm/include/tvm/tir/expr.h' l='593' macro='1' u='c' c='_ZNK3tvm3tir6SelectptEv'/>
+<use f='tvm/include/tvm/tir/expr.h' l='658' macro='1' u='c' c='_ZNK3tvm3tir10BufferLoadptEv'/>
+<use f='tvm/include/tvm/tir/expr.h' l='659' macro='1' u='c' c='_ZN3tvm3tir10BufferLoad11CopyOnWriteEv'/>
+<use f='tvm/include/tvm/tir/expr.h' l='708' macro='1' u='c' c='_ZNK3tvm3tir12ProducerLoadptEv'/>
+<use f='tvm/include/tvm/tir/expr.h' l='767' macro='1' u='c' c='_ZNK3tvm3tir4LoadptEv'/>
+<use f='tvm/include/tvm/tir/expr.h' l='819' macro='1' u='c' c='_ZNK3tvm3tir4RampptEv'/>
+<use f='tvm/include/tvm/tir/expr.h' l='858' macro='1' u='c' c='_ZNK3tvm3tir9BroadcastptEv'/>
+<use f='tvm/include/tvm/tir/expr.h' l='904' macro='1' u='c' c='_ZNK3tvm3tir3LetptEv'/>
+<use f='tvm/include/tvm/tir/expr.h' l='950' macro='1' u='c' c='_ZNK3tvm3tir4CallptEv'/>
+<use f='tvm/include/tvm/tir/expr.h' l='997' macro='1' u='c' c='_ZNK3tvm3tir7ShuffleptEv'/>
+<use f='tvm/include/tvm/tir/expr.h' l='1062' macro='1' u='c' c='_ZNK3tvm3tir11CommReducerptEv'/>
+<use f='tvm/include/tvm/tir/expr.h' l='1126' macro='1' u='c' c='_ZNK3tvm3tir6ReduceptEv'/>
+<use f='tvm/include/tvm/tir/expr.h' l='1161' macro='1' u='c' c='_ZNK3tvm3tir3AnyptEv'/>
+<use f='tvm/include/tvm/arith/int_set.h' l='150' macro='1' u='c' c='_ZNK3tvm5arith6IntSetptEv'/>
+<use f='tvm/include/tvm/arith/analyzer.h' l='109' macro='1' u='c' c='_ZNK3tvm5arith13ConstIntBoundptEv'/>
+<use f='tvm/include/tvm/arith/analyzer.h' l='208' macro='1' u='c' c='_ZNK3tvm5arith10ModularSetptEv'/>
+<use f='tvm/include/tvm/ir/attrs.h' l='130' macro='1' u='c' c='_ZNK3tvm13AttrFieldInfoptEv'/>
+<use f='tvm/include/tvm/ir/attrs.h' l='192' macro='1' u='c' c='_ZNK3tvm5AttrsptEv'/>
+<use f='tvm/include/tvm/ir/attrs.h' l='302' macro='1' u='c' c='_ZNK3tvm9DictAttrsptEv'/>
+<use f='tvm/include/tvm/ir/attrs.h' l='303' macro='1' u='c' c='_ZN3tvm9DictAttrs11CopyOnWriteEv'/>
+<use f='tvm/include/tvm/runtime/container/adt.h' l='142' macro='1' u='c' c='_ZNK3tvm7runtime3ADTptEv'/>
+<use f='tvm/include/tvm/ir/adt.h' l='98' macro='1' u='c' c='_ZNK3tvm11ConstructorptEv'/>
+<use f='tvm/include/tvm/ir/adt.h' l='159' macro='1' u='c' c='_ZNK3tvm8TypeDataptEv'/>
+<use f='tvm/include/tvm/ir/function.h' l='145' macro='1' u='c' c='_ZNK3tvm8BaseFuncptEv'/>
+<use f='tvm/include/tvm/parser/source_map.h' l='71' macro='1' u='c' c='_ZNK3tvm6parser6SourceptEv'/>
+<use f='tvm/include/tvm/parser/source_map.h' l='113' macro='1' u='c' c='_ZNK3tvm6parser9SourceMapptEv'/>
+<use f='tvm/include/tvm/ir/module.h' l='449' macro='1' u='c' c='_ZN3tvm8IRModule11CopyOnWriteEv'/>
+<use f='tvm/include/tvm/ir/diagnostic.h' l='90' macro='1' u='c' c='_ZNK3tvm10DiagnosticptEv'/>
+<use f='tvm/include/tvm/ir/diagnostic.h' l='165' macro='1' u='c' c='_ZNK3tvm18DiagnosticRendererptEv'/>
+<use f='tvm/include/tvm/ir/diagnostic.h' l='219' macro='1' u='c' c='_ZNK3tvm17DiagnosticContextptEv'/>
+<use f='tvm/include/tvm/ir/type_relation.h' l='81' macro='1' u='c' c='_ZNK3tvm8TypeCallptEv'/>
+<use f='tvm/include/tvm/ir/type_relation.h' l='240' macro='1' u='c' c='_ZNK3tvm12TypeRelationptEv'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='59' macro='1' u='c' c='_ZNK3tvm3tir4StmtptEv'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='104' macro='1' u='c' c='_ZNK3tvm3tir7LetStmtptEv'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='160' macro='1' u='c' c='_ZNK3tvm3tir8AttrStmtptEv'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='208' macro='1' u='c' c='_ZNK3tvm3tir10AssertStmtptEv'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='273' macro='1' u='c' c='_ZNK3tvm3tir5StoreptEv'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='326' macro='1' u='c' c='_ZNK3tvm3tir11BufferStoreptEv'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='327' macro='1' u='c' c='_ZN3tvm3tir11BufferStore11CopyOnWriteEv'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='390' macro='1' u='c' c='_ZNK3tvm3tir13BufferRealizeptEv'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='391' macro='1' u='c' c='_ZN3tvm3tir13BufferRealize11CopyOnWriteEv'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='444' macro='1' u='c' c='_ZNK3tvm3tir13ProducerStoreptEv'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='507' macro='1' u='c' c='_ZNK3tvm3tir15ProducerRealizeptEv'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='588' macro='1' u='c' c='_ZNK3tvm3tir8AllocateptEv'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='589' macro='1' u='c' c='_ZN3tvm3tir8Allocate11CopyOnWriteEv'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='681' macro='1' u='c' c='_ZNK3tvm3tir13AllocateConstptEv'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='715' macro='1' u='c' c='_ZNK3tvm3tir10DeclBufferptEv'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='813' macro='1' u='c' c='_ZNK3tvm3tir7SeqStmtptEv'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='859' macro='1' u='c' c='_ZNK3tvm3tir10IfThenElseptEv'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='898' macro='1' u='c' c='_ZNK3tvm3tir8EvaluateptEv'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='1007' macro='1' u='c' c='_ZNK3tvm3tir3ForptEv'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='1008' macro='1' u='c' c='_ZN3tvm3tir3For11CopyOnWriteEv'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='1055' macro='1' u='c' c='_ZNK3tvm3tir5WhileptEv'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='1099' macro='1' u='c' c='_ZNK3tvm3tir8PrefetchptEv'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='1155' macro='1' u='c' c='_ZNK3tvm3tir12BufferRegionptEv'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='1156' macro='1' u='c' c='_ZN3tvm3tir12BufferRegion11CopyOnWriteEv'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='1203' macro='1' u='c' c='_ZNK3tvm3tir17MatchBufferRegionptEv'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='1304' macro='1' u='c' c='_ZNK3tvm3tir5BlockptEv'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='1305' macro='1' u='c' c='_ZN3tvm3tir5Block11CopyOnWriteEv'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='1353' macro='1' u='c' c='_ZNK3tvm3tir12BlockRealizeptEv'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='1354' macro='1' u='c' c='_ZN3tvm3tir12BlockRealize11CopyOnWriteEv'/>
+<doc f='tvm/include/tvm/runtime/object.h' l='408'>/*!
+   * \return Get the content of the pointer
+   */</doc>
+<use f='tvm/src/arith/interval_set.h' l='113' macro='1' u='c' c='_ZN3tvm5arith11IntervalSet11CopyOnWriteEv'/>
+<use f='tvm/src/arith/interval_set.h' l='114' macro='1' u='c' c='_ZNK3tvm5arith11IntervalSetptEv'/>
+<use f='tvm/include/tvm/ir/instrument.h' l='151' macro='1' u='c' c='_ZNK3tvm10instrument14PassInstrumentptEv'/>
+<use f='tvm/include/tvm/ir/transform.h' l='321' macro='1' u='c' c='_ZNK3tvm9transform8PassInfoptEv'/>
+<use f='tvm/include/tvm/ir/transform.h' l='392' macro='1' u='c' c='_ZNK3tvm9transform4PassptEv'/>
+<use f='tvm/include/tvm/tir/function.h' l='188' macro='1' u='c' c='_ZNK3tvm3tir8PrimFuncptEv'/>
+<use f='tvm/include/tvm/tir/function.h' l='189' macro='1' u='c' c='_ZN3tvm3tir8PrimFunc11CopyOnWriteEv'/>
+<use f='tvm/include/tvm/tir/function.h' l='241' macro='1' u='c' c='_ZNK3tvm3tir12TensorIntrinptEv'/>
+<use f='tvm/src/arith/canonical_simplify.cc' l='215' macro='1' u='c' c='_ZNK3tvm5arith9SplitExprptEv'/>
+<use f='tvm/src/arith/canonical_simplify.cc' l='216' macro='1' u='c' c='_ZN3tvm5arith9SplitExpr11CopyOnWriteEv'/>
+<use f='tvm/src/arith/canonical_simplify.cc' l='525' macro='1' u='c' c='_ZNK3tvm5arith7SumExprptEv'/>
+<use f='tvm/src/arith/canonical_simplify.cc' l='526' macro='1' u='c' c='_ZN3tvm5arith7SumExpr11CopyOnWriteEv'/>
+<use f='tvm/include/tvm/te/tensor.h' l='210' macro='1' u='c' c='_ZNK3tvm2te6TensorptEv'/>
+<use f='tvm/include/tvm/arith/int_solver.h' l='135' macro='1' u='c' c='_ZNK3tvm5arith14IntGroupBoundsptEv'/>
+<use f='tvm/include/tvm/arith/int_solver.h' l='192' macro='1' u='c' c='_ZNK3tvm5arith14IntConstraintsptEv'/>
+<use f='tvm/include/tvm/arith/int_solver.h' l='268' macro='1' u='c' c='_ZNK3tvm5arith23IntConstraintsTransformptEv'/>
+<use f='tvm/include/tvm/arith/iter_affine_map.h' l='82' macro='1' u='c' c='_ZNK3tvm5arith11IterMapExprptEv'/>
+<use f='tvm/include/tvm/arith/iter_affine_map.h' l='139' macro='1' u='c' c='_ZNK3tvm5arith8IterMarkptEv'/>
+<use f='tvm/include/tvm/arith/iter_affine_map.h' l='140' macro='1' u='c' c='_ZN3tvm5arith8IterMark11CopyOnWriteEv'/>
+<use f='tvm/include/tvm/arith/iter_affine_map.h' l='210' macro='1' u='c' c='_ZNK3tvm5arith13IterSplitExprptEv'/>
+<use f='tvm/include/tvm/arith/iter_affine_map.h' l='211' macro='1' u='c' c='_ZN3tvm5arith13IterSplitExpr11CopyOnWriteEv'/>
+<use f='tvm/include/tvm/arith/iter_affine_map.h' l='258' macro='1' u='c' c='_ZNK3tvm5arith11IterSumExprptEv'/>
+<use f='tvm/include/tvm/arith/iter_affine_map.h' l='259' macro='1' u='c' c='_ZN3tvm5arith11IterSumExpr11CopyOnWriteEv'/>
+<use f='tvm/include/tvm/te/tensor_intrin.h' l='98' macro='1' u='c' c='_ZNK3tvm2te12TensorIntrinptEv'/>
+<use f='tvm/include/tvm/te/tensor_intrin.h' l='140' macro='1' u='c' c='_ZNK3tvm2te16TensorIntrinCallptEv'/>
+<use f='tvm/include/tvm/tir/index_map.h' l='191' macro='1' u='c' c='_ZNK3tvm3tir8IndexMapptEv'/>
+<use f='tvm/include/tvm/te/schedule.h' l='745' macro='1' u='c' c='_ZNK3tvm2te5SplitptEv'/>
+<use f='tvm/include/tvm/te/schedule.h' l='778' macro='1' u='c' c='_ZNK3tvm2te4FuseptEv'/>
+<use f='tvm/include/tvm/te/schedule.h' l='810' macro='1' u='c' c='_ZNK3tvm2te6RebaseptEv'/>
+<use f='tvm/include/tvm/te/schedule.h' l='835' macro='1' u='c' c='_ZNK3tvm2te9SingletonptEv'/>
+<use f='tvm/include/tvm/te/schedule.h' l='890' macro='1' u='c' c='_ZNK3tvm2te9TransformptEv'/>
+<use f='tvm/include/tvm/te/schedule.h' l='926' macro='1' u='c' c='_ZNK3tvm2te20SpecializedConditionptEv'/>
+<use f='tvm/include/tvm/auto_scheduler/transform_step.h' l='157' macro='1' u='c' c='_ZNK3tvm14auto_scheduler8IteratorptEv'/>
+<use f='tvm/include/tvm/auto_scheduler/transform_step.h' l='201' macro='1' u='c' c='_ZNK3tvm14auto_scheduler4StepptEv'/>
+<use f='tvm/include/tvm/auto_scheduler/transform_step.h' l='310' macro='1' u='c' c='_ZNK3tvm14auto_scheduler14AnnotationStepptEv'/>
+<use f='tvm/include/tvm/auto_scheduler/transform_step.h' l='372' macro='1' u='c' c='_ZNK3tvm14auto_scheduler8FuseStepptEv'/>
+<use f='tvm/include/tvm/auto_scheduler/transform_step.h' l='433' macro='1' u='c' c='_ZNK3tvm14auto_scheduler10PragmaStepptEv'/>
+<use f='tvm/include/tvm/auto_scheduler/transform_step.h' l='494' macro='1' u='c' c='_ZNK3tvm14auto_scheduler11ReorderStepptEv'/>
+<use f='tvm/include/tvm/auto_scheduler/transform_step.h' l='573' macro='1' u='c' c='_ZNK3tvm14auto_scheduler9SplitStepptEv'/>
+<use f='tvm/include/tvm/auto_scheduler/transform_step.h' l='651' macro='1' u='c' c='_ZNK3tvm14auto_scheduler15FollowSplitStepptEv'/>
+<use f='tvm/include/tvm/auto_scheduler/transform_step.h' l='734' macro='1' u='c' c='_ZNK3tvm14auto_scheduler20FollowFusedSplitStepptEv'/>
+<use f='tvm/include/tvm/auto_scheduler/transform_step.h' l='798' macro='1' u='c' c='_ZNK3tvm14auto_scheduler16StorageAlignStepptEv'/>
+<use f='tvm/include/tvm/auto_scheduler/transform_step.h' l='865' macro='1' u='c' c='_ZNK3tvm14auto_scheduler13ComputeAtStepptEv'/>
+<use f='tvm/include/tvm/auto_scheduler/transform_step.h' l='920' macro='1' u='c' c='_ZNK3tvm14auto_scheduler17ComputeInlineStepptEv'/>
+<use f='tvm/include/tvm/auto_scheduler/transform_step.h' l='979' macro='1' u='c' c='_ZNK3tvm14auto_scheduler15ComputeRootStepptEv'/>
+<use f='tvm/include/tvm/auto_scheduler/transform_step.h' l='1053' macro='1' u='c' c='_ZNK3tvm14auto_scheduler13CacheReadStepptEv'/>
+<use f='tvm/include/tvm/auto_scheduler/transform_step.h' l='1123' macro='1' u='c' c='_ZNK3tvm14auto_scheduler14CacheWriteStepptEv'/>
+<use f='tvm/include/tvm/auto_scheduler/transform_step.h' l='1191' macro='1' u='c' c='_ZNK3tvm14auto_scheduler11RfactorStepptEv'/>
+<use f='tvm/include/tvm/auto_scheduler/loop_state.h' l='142' macro='1' u='c' c='_ZNK3tvm14auto_scheduler5StageptEv'/>
+<use f='tvm/include/tvm/auto_scheduler/loop_state.h' l='143' macro='1' u='c' c='_ZN3tvm14auto_scheduler5Stage11CopyOnWriteEv'/>
+<use f='tvm/include/tvm/auto_scheduler/loop_state.h' l='216' macro='1' u='c' c='_ZNK3tvm14auto_scheduler9AttachMapptEv'/>
+<use f='tvm/include/tvm/auto_scheduler/loop_state.h' l='217' macro='1' u='c' c='_ZN3tvm14auto_scheduler9AttachMap11CopyOnWriteEv'/>
+<use f='tvm/include/tvm/auto_scheduler/loop_state.h' l='448' macro='1' u='c' c='_ZNK3tvm14auto_scheduler5StateptEv'/>
+<use f='tvm/include/tvm/auto_scheduler/loop_state.h' l='449' macro='1' u='c' c='_ZN3tvm14auto_scheduler5State11CopyOnWriteEv'/>
+<use f='tvm/include/tvm/auto_scheduler/compute_dag.h' l='165' macro='1' u='c' c='_ZNK3tvm14auto_scheduler14AccessAnalyzerptEv'/>
+<use f='tvm/include/tvm/auto_scheduler/compute_dag.h' l='309' macro='1' u='c' c='_ZNK3tvm14auto_scheduler10ComputeDAGptEv'/>
+<use f='tvm/include/tvm/auto_scheduler/compute_dag.h' l='310' macro='1' u='c' c='_ZN3tvm14auto_scheduler10ComputeDAG11CopyOnWriteEv'/>
+<use f='tvm/include/tvm/target/target_kind.h' l='152' macro='1' u='c' c='_ZNK3tvm10TargetKindptEv'/>
+<use f='tvm/include/tvm/target/target_kind.h' l='156' u='c' c='_ZN3tvm10TargetKindptEv'/>
+<use f='tvm/include/tvm/target/target.h' l='211' macro='1' u='c' c='_ZNK3tvm6TargetptEv'/>
+<use f='tvm/include/tvm/auto_scheduler/search_task.h' l='103' macro='1' u='c' c='_ZNK3tvm14auto_scheduler14HardwareParamsptEv'/>
+<use f='tvm/include/tvm/auto_scheduler/search_task.h' l='104' macro='1' u='c' c='_ZN3tvm14auto_scheduler14HardwareParams11CopyOnWriteEv'/>
+<use f='tvm/include/tvm/auto_scheduler/search_task.h' l='165' macro='1' u='c' c='_ZNK3tvm14auto_scheduler10SearchTaskptEv'/>
+<use f='tvm/include/tvm/auto_scheduler/measure.h' l='113' macro='1' u='c' c='_ZNK3tvm14auto_scheduler12MeasureInputptEv'/>
+<use f='tvm/include/tvm/auto_scheduler/measure.h' l='158' macro='1' u='c' c='_ZNK3tvm14auto_scheduler11BuildResultptEv'/>
+<use f='tvm/include/tvm/auto_scheduler/measure.h' l='207' macro='1' u='c' c='_ZNK3tvm14auto_scheduler13MeasureResultptEv'/>
+<use f='tvm/include/tvm/auto_scheduler/measure.h' l='232' macro='1' u='c' c='_ZNK3tvm14auto_scheduler15MeasureCallbackptEv'/>
+<use f='tvm/include/tvm/auto_scheduler/measure.h' l='260' macro='1' u='c' c='_ZNK3tvm14auto_scheduler26PythonBasedMeasureCallbackptEv'/>
+<use f='tvm/include/tvm/auto_scheduler/measure.h' l='293' macro='1' u='c' c='_ZNK3tvm14auto_scheduler14ProgramBuilderptEv'/>
+<use f='tvm/include/tvm/auto_scheduler/measure.h' l='335' macro='1' u='c' c='_ZNK3tvm14auto_scheduler13ProgramRunnerptEv'/>
+<use f='tvm/include/tvm/auto_scheduler/measure.h' l='367' macro='1' u='c' c='_ZNK3tvm14auto_scheduler12LocalBuilderptEv'/>
+<use f='tvm/include/tvm/auto_scheduler/measure.h' l='401' macro='1' u='c' c='_ZNK3tvm14auto_scheduler11LocalRunnerptEv'/>
+<use f='tvm/include/tvm/auto_scheduler/measure.h' l='455' macro='1' u='c' c='_ZNK3tvm14auto_scheduler9RPCRunnerptEv'/>
+<use f='tvm/include/tvm/auto_scheduler/measure.h' l='536' macro='1' u='c' c='_ZNK3tvm14auto_scheduler15ProgramMeasurerptEv'/>
+<use f='tvm/include/tvm/auto_scheduler/search_policy.h' l='83' macro='1' u='c' c='_ZNK3tvm14auto_scheduler14SearchCallbackptEv'/>
+<use f='tvm/include/tvm/auto_scheduler/search_policy.h' l='111' macro='1' u='c' c='_ZNK3tvm14auto_scheduler21PreloadMeasuredStatesptEv'/>
+<use f='tvm/include/tvm/auto_scheduler/search_policy.h' l='200' macro='1' u='c' c='_ZNK3tvm14auto_scheduler12SearchPolicyptEv'/>
+<use f='tvm/include/tvm/auto_scheduler/auto_schedule.h' l='89' macro='1' u='c' c='_ZNK3tvm14auto_scheduler13TuningOptionsptEv'/>
+<use f='tvm/include/tvm/te/operation.h' l='196' macro='1' u='c' c='_ZNK3tvm2te13PlaceholderOpptEv'/>
+<use f='tvm/include/tvm/te/operation.h' l='267' macro='1' u='c' c='_ZNK3tvm2te9ComputeOpptEv'/>
+<use f='tvm/include/tvm/te/operation.h' l='268' macro='1' u='c' c='_ZN3tvm2te9ComputeOp11CopyOnWriteEv'/>
+<use f='tvm/include/tvm/te/operation.h' l='328' macro='1' u='c' c='_ZNK3tvm2te15TensorComputeOpptEv'/>
+<use f='tvm/include/tvm/te/operation.h' l='405' macro='1' u='c' c='_ZNK3tvm2te6ScanOpptEv'/>
+<use f='tvm/include/tvm/te/operation.h' l='466' macro='1' u='c' c='_ZNK3tvm2te8ExternOpptEv'/>
+<use f='tvm/include/tvm/te/operation.h' l='530' macro='1' u='c' c='_ZNK3tvm2te8HybridOpptEv'/>
+<use f='tvm/include/tvm/tir/data_layout.h' l='289' macro='1' u='c' c='_ZNK3tvm3tir6LayoutptEv'/>
+<use f='tvm/include/tvm/tir/data_layout.h' l='348' macro='1' u='c' c='_ZNK3tvm3tir15BijectiveLayoutptEv'/>
+<use f='tvm/include/tvm/relay/base.h' l='120' macro='1' u='c' c='_ZNK3tvm5relay2IdptEv'/>
+<use f='tvm/include/tvm/target/virtual_device.h' l='336' macro='1' u='c' c='_ZNK3tvm13VirtualDeviceptEv'/>
+<use f='tvm/include/tvm/ir/tensor_type.h' l='49' macro='1' u='c' c='_ZNK3tvm14BaseTensorTypeptEv'/>
+<use f='tvm/include/tvm/ir/tensor_type.h' l='115' macro='1' u='c' c='_ZNK3tvm10TensorTypeptEv'/>
+<use f='tvm/include/tvm/relay/expr.h' l='109' macro='1' u='c' c='_ZNK3tvm5relay8ConstantptEv'/>
+<use f='tvm/include/tvm/relay/expr.h' l='110' macro='1' u='c' c='_ZN3tvm5relay8Constant11CopyOnWriteEv'/>
+<use f='tvm/include/tvm/relay/expr.h' l='166' macro='1' u='c' c='_ZNK3tvm5relay5TupleptEv'/>
+<use f='tvm/include/tvm/relay/expr.h' l='167' macro='1' u='c' c='_ZN3tvm5relay5Tuple11CopyOnWriteEv'/>
+<use f='tvm/include/tvm/relay/expr.h' l='263' macro='1' u='c' c='_ZNK3tvm5relay3VarptEv'/>
+<use f='tvm/include/tvm/relay/expr.h' l='264' macro='1' u='c' c='_ZN3tvm5relay3Var11CopyOnWriteEv'/>
+<use f='tvm/include/tvm/relay/expr.h' l='376' macro='1' u='c' c='_ZNK3tvm5relay4CallptEv'/>
+<use f='tvm/include/tvm/relay/expr.h' l='377' macro='1' u='c' c='_ZN3tvm5relay4Call11CopyOnWriteEv'/>
+<use f='tvm/include/tvm/relay/expr.h' l='464' macro='1' u='c' c='_ZNK3tvm5relay3LetptEv'/>
+<use f='tvm/include/tvm/relay/expr.h' l='465' macro='1' u='c' c='_ZN3tvm5relay3Let11CopyOnWriteEv'/>
+<use f='tvm/include/tvm/relay/expr.h' l='538' macro='1' u='c' c='_ZNK3tvm5relay2IfptEv'/>
+<use f='tvm/include/tvm/relay/expr.h' l='539' macro='1' u='c' c='_ZN3tvm5relay2If11CopyOnWriteEv'/>
+<use f='tvm/include/tvm/relay/expr.h' l='593' macro='1' u='c' c='_ZNK3tvm5relay12TupleGetItemptEv'/>
+<use f='tvm/include/tvm/relay/expr.h' l='594' macro='1' u='c' c='_ZN3tvm5relay12TupleGetItem11CopyOnWriteEv'/>
+<use f='tvm/include/tvm/relay/expr.h' l='644' macro='1' u='c' c='_ZNK3tvm5relay9RefCreateptEv'/>
+<use f='tvm/include/tvm/relay/expr.h' l='645' macro='1' u='c' c='_ZN3tvm5relay9RefCreate11CopyOnWriteEv'/>
+<use f='tvm/include/tvm/relay/expr.h' l='694' macro='1' u='c' c='_ZNK3tvm5relay7RefReadptEv'/>
+<use f='tvm/include/tvm/relay/expr.h' l='695' macro='1' u='c' c='_ZN3tvm5relay7RefRead11CopyOnWriteEv'/>
+<use f='tvm/include/tvm/relay/expr.h' l='749' macro='1' u='c' c='_ZNK3tvm5relay8RefWriteptEv'/>
+<use f='tvm/include/tvm/relay/expr.h' l='750' macro='1' u='c' c='_ZN3tvm5relay8RefWrite11CopyOnWriteEv'/>
+<use f='tvm/include/tvm/relay/expr.h' l='794' macro='1' u='c' c='_ZNK3tvm5relay8TempExprptEv'/>
+<use f='tvm/include/tvm/relay/adt.h' l='144' macro='1' u='c' c='_ZNK3tvm5relay10PatternVarptEv'/>
+<use f='tvm/include/tvm/relay/adt.h' l='185' macro='1' u='c' c='_ZNK3tvm5relay18PatternConstructorptEv'/>
+<use f='tvm/include/tvm/relay/adt.h' l='220' macro='1' u='c' c='_ZNK3tvm5relay12PatternTupleptEv'/>
+<use f='tvm/include/tvm/relay/adt.h' l='262' macro='1' u='c' c='_ZNK3tvm5relay6ClauseptEv'/>
+<use f='tvm/include/tvm/relay/adt.h' l='263' macro='1' u='c' c='_ZN3tvm5relay6Clause11CopyOnWriteEv'/>
+<use f='tvm/include/tvm/relay/adt.h' l='327' macro='1' u='c' c='_ZNK3tvm5relay5MatchptEv'/>
+<use f='tvm/include/tvm/relay/adt.h' l='328' macro='1' u='c' c='_ZN3tvm5relay5Match11CopyOnWriteEv'/>
+<use f='tvm/include/tvm/relay/function.h' l='119' macro='1' u='c' c='_ZNK3tvm5relay8FunctionptEv'/>
+<use f='tvm/include/tvm/relay/function.h' l='120' macro='1' u='c' c='_ZN3tvm5relay8Function11CopyOnWriteEv'/>
+<use f='tvm/include/tvm/auto_scheduler/cost_model.h' l='88' macro='1' u='c' c='_ZNK3tvm14auto_scheduler9CostModelptEv'/>
+<use f='tvm/include/tvm/auto_scheduler/cost_model.h' l='115' u='c' c='_ZNK3tvm14auto_scheduler11RandomModelptEv'/>
+<use f='tvm/include/tvm/auto_scheduler/cost_model.h' l='159' macro='1' u='c' c='_ZNK3tvm14auto_scheduler16PythonBasedModelptEv'/>
+<use f='tvm/include/tvm/auto_scheduler/measure_record.h' l='64' macro='1' u='c' c='_ZNK3tvm14auto_scheduler12RecordToFileptEv'/>
+<use f='tvm/include/tvm/auto_scheduler/measure_record.h' l='113' macro='1' u='c' c='_ZNK3tvm14auto_scheduler12RecordReaderptEv'/>
+<use f='tvm/src/auto_scheduler/feature.cc' l='1467' u='c' c='_ZN3tvm14auto_scheduler27GetPerStoreFeaturesFromFileERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiiPSt6vectorIS9_IfSaIfEESaISB_EEPSB_PS9_IiSaIiEE'/>
+<use f='tvm/src/auto_scheduler/feature.cc' l='1467' u='c' c='_ZN3tvm14auto_scheduler27GetPerStoreFeaturesFromFileERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiiPSt6vectorIS9_IfSaIfEESaISB_EEPSB_PS9_IiSaIiEE'/>
+<use f='tvm/src/auto_scheduler/search_policy/empty_policy.h' l='71' macro='1' u='c' c='_ZNK3tvm14auto_scheduler11EmptyPolicyptEv'/>
+<use f='tvm/src/auto_scheduler/search_policy/sketch_policy.h' l='197' macro='1' u='c' c='_ZNK3tvm14auto_scheduler12SketchPolicyptEv'/>
+<use f='tvm/src/auto_scheduler/search_policy/sketch_policy.h' l='230' macro='1' u='c' c='_ZNK3tvm14auto_scheduler23PreloadCustomSketchRuleptEv'/>
+<use f='tvm/src/auto_scheduler/measure_record.cc' l='199' u='c' c='_ZN4dmlc4json7HandlerIN3tvm14auto_scheduler14SearchTaskNodeEE4ReadEPNS_10JSONReaderEPS4_'/>
+<use f='tvm/src/auto_scheduler/measure_record.cc' l='248' u='c' c='_ZN4dmlc4json7HandlerIN3tvm14auto_scheduler16MeasureInputNodeEE4ReadEPNS_10JSONReaderEPS4_'/>
+<use f='tvm/src/auto_scheduler/measure_record.cc' l='251' u='c' c='_ZN4dmlc4json7HandlerIN3tvm14auto_scheduler16MeasureInputNodeEE4ReadEPNS_10JSONReaderEPS4_'/>
+<use f='tvm/src/auto_scheduler/measure_record.cc' l='389' u='c' c='_ZN3tvm14auto_scheduler16RecordReaderNode9ReadLinesEii'/>
+<use f='tvm/src/auto_scheduler/measure_record.cc' l='389' u='c' c='_ZN3tvm14auto_scheduler16RecordReaderNode9ReadLinesEii'/>
+<use f='tvm/src/auto_scheduler/measure_record.cc' l='423' u='c'/>
+<use f='tvm/src/auto_scheduler/measure_record.cc' l='423' u='c'/>
+<use f='tvm/src/auto_scheduler/measure_record.cc' l='434' u='c'/>
+<use f='tvm/src/auto_scheduler/measure_record.cc' l='434' u='c'/>
+<use f='tvm/src/auto_scheduler/measure_record.cc' l='465' u='c'/>
+<use f='tvm/src/auto_scheduler/measure_record.cc' l='481' u='c'/>
+<use f='tvm/src/auto_scheduler/transform_step.cc' l='174' u='c' c='_ZN3tvm14auto_scheduler4Step11CopyOnWriteEv'/>
+<use f='tvm/src/contrib/ethosu/cascader/block_config.h' l='94' macro='1' u='c' c='_ZNK3tvm7contrib6ethosu8cascader11BlockConfigptEv'/>
+<use f='tvm/src/contrib/ethosu/cascader/propagator.h' l='129' macro='1' u='c' c='_ZNK3tvm7contrib6ethosu8cascader10PropagatorptEv'/>
+<use f='tvm/src/contrib/ethosu/cascader/graph.h' l='101' macro='1' u='c' c='_ZNK3tvm7contrib6ethosu8cascader15PerformanceInfoptEv'/>
+<use f='tvm/src/contrib/ethosu/cascader/graph.h' l='164' macro='1' u='c' c='_ZNK3tvm7contrib6ethosu8cascader6TensorptEv'/>
+<use f='tvm/src/contrib/ethosu/cascader/graph.h' l='251' macro='1' u='c' c='_ZNK3tvm7contrib6ethosu8cascader4PartptEv'/>
+<use f='tvm/src/contrib/ethosu/cascader/graph.h' l='326' macro='1' u='c' c='_ZNK3tvm7contrib6ethosu8cascader13CascaderGraphptEv'/>
+<use f='tvm/src/contrib/ethosu/cascader/stripe_config.h' l='177' macro='1' u='c' c='_ZNK3tvm7contrib6ethosu8cascader12StripeConfigptEv'/>
+<use f='tvm/src/contrib/ethosu/cascader/tensor_config.h' l='81' macro='1' u='c' c='_ZNK3tvm7contrib6ethosu8cascader12MemoryRegionptEv'/>
+<use f='tvm/src/contrib/ethosu/cascader/tensor_config.h' l='205' macro='1' u='c' c='_ZNK3tvm7contrib6ethosu8cascader12TensorConfigptEv'/>
+<use f='tvm/src/contrib/ethosu/cascader/cascader_options.h' l='80' macro='1' u='c' c='_ZNK3tvm7contrib6ethosu8cascader15CascaderOptionsptEv'/>
+<use f='tvm/src/contrib/ethosu/cascader/plan.h' l='133' macro='1' u='c' c='_ZNK3tvm7contrib6ethosu8cascader4PlanptEv'/>
+<use f='tvm/src/contrib/ethosu/cascader/proposal.h' l='97' macro='1' u='c' c='_ZNK3tvm7contrib6ethosu8cascader8ProposalptEv'/>
+<use f='tvm/src/contrib/ethosu/cascader/parts/ethosu.h' l='111' macro='1' u='c' c='_ZNK3tvm7contrib6ethosu8cascader10EthosuPartptEv'/>
+<use f='tvm/src/contrib/ethosu/cascader/parts/inline.h' l='72' macro='1' u='c' c='_ZNK3tvm7contrib6ethosu8cascader10InlinePartptEv'/>
+<use f='tvm/include/tvm/relay/executor.h' l='150' macro='1' u='c' c='_ZNK3tvm5relay8ExecutorptEv'/>
+<use f='tvm/include/tvm/relay/executor.h' l='151' macro='1' u='c' c='_ZN3tvm5relay8Executor11CopyOnWriteEv'/>
+<use f='tvm/include/tvm/relay/runtime.h' l='150' macro='1' u='c' c='_ZNK3tvm5relay7RuntimeptEv'/>
+<use f='tvm/include/tvm/ir/affine_type.h' l='56' macro='1' u='c' c='_ZNK3tvm10AffineTypeptEv'/>
+<use f='tvm/include/tvm/ir/affine_type.h' l='110' macro='1' u='c' c='_ZNK3tvm16TensorAffineTypeptEv'/>
+<use f='tvm/include/tvm/ir/affine_type.h' l='146' macro='1' u='c' c='_ZNK3tvm15TupleAffineTypeptEv'/>
+<use f='tvm/src/ir/instrument.cc' l='121' macro='1' u='c' c='_ZNK3tvm10instrument18BasePassInstrumentptEv'/>
+<use f='tvm/include/tvm/ir/memory_pools.h' l='143' macro='1' u='c' c='_ZNK3tvm8PoolInfoptEv'/>
+<use f='tvm/include/tvm/ir/memory_pools.h' l='219' macro='1' u='c' c='_ZNK3tvm18PoolInfoPropertiesptEv'/>
+<use f='tvm/include/tvm/ir/memory_pools.h' l='241' macro='1' u='c' c='_ZNK3tvm17WorkspacePoolInfoptEv'/>
+<use f='tvm/include/tvm/ir/memory_pools.h' l='280' macro='1' u='c' c='_ZNK3tvm12ConstantInfoptEv'/>
+<use f='tvm/include/tvm/ir/memory_pools.h' l='312' macro='1' u='c' c='_ZNK3tvm16ConstantPoolInfoptEv'/>
+<use f='tvm/include/tvm/ir/memory_pools.h' l='334' macro='1' u='c' c='_ZNK3tvm20WorkspaceMemoryPoolsptEv'/>
+<use f='tvm/include/tvm/ir/memory_pools.h' l='356' macro='1' u='c' c='_ZNK3tvm19ConstantMemoryPoolsptEv'/>
+<use f='tvm/include/tvm/target/compilation_config.h' l='200' macro='1' u='c' c='_ZNK3tvm17CompilationConfigptEv'/>
+<use f='tvm/src/ir/transform.cc' l='341' macro='1' u='c' c='_ZNK3tvm9transform10ModulePassptEv'/>
+<use f='tvm/include/tvm/meta_schedule/arg_info.h' l='72' macro='1' u='c' c='_ZNK3tvm13meta_schedule7ArgInfoptEv'/>
+<use f='tvm/include/tvm/meta_schedule/arg_info.h' l='116' macro='1' u='c' c='_ZNK3tvm13meta_schedule10TensorInfoptEv'/>
+<use f='tvm/include/tvm/tir/schedule/instruction.h' l='143' macro='1' u='c' c='_ZNK3tvm3tir15InstructionKindptEv'/>
+<use f='tvm/include/tvm/tir/schedule/instruction.h' l='204' macro='1' u='c' c='_ZNK3tvm3tir11InstructionptEv'/>
+<use f='tvm/include/tvm/tir/schedule/trace.h' l='158' macro='1' u='c' c='_ZNK3tvm3tir5TraceptEv'/>
+<use f='tvm/include/tvm/meta_schedule/database.h' l='86' macro='1' u='c' c='_ZNK3tvm13meta_schedule8WorkloadptEv'/>
+<use f='tvm/include/tvm/meta_schedule/database.h' l='164' macro='1' u='c' c='_ZNK3tvm13meta_schedule12TuningRecordptEv'/>
+<use f='tvm/include/tvm/meta_schedule/database.h' l='340' macro='1' u='c' c='_ZNK3tvm13meta_schedule8DatabaseptEv'/>
+<use f='tvm/include/tvm/meta_schedule/apply_history_best.h' l='101' macro='1' u='c' c='_ZNK3tvm13meta_schedule16ApplyHistoryBestptEv'/>
+<use f='tvm/include/tvm/meta_schedule/builder.h' l='70' macro='1' u='c' c='_ZNK3tvm13meta_schedule12BuilderInputptEv'/>
+<use f='tvm/include/tvm/meta_schedule/builder.h' l='102' macro='1' u='c' c='_ZNK3tvm13meta_schedule13BuilderResultptEv'/>
+<use f='tvm/include/tvm/meta_schedule/builder.h' l='139' macro='1' u='c' c='_ZNK3tvm13meta_schedule7BuilderptEv'/>
+<use f='tvm/include/tvm/tir/schedule/block_scope.h' l='114' u='c' c='_ZNK3tvm3tir8StmtSRef3getEv'/>
+<use f='tvm/include/tvm/tir/schedule/block_scope.h' l='116' macro='1' u='c' c='_ZNK3tvm3tir8StmtSRefptEv'/>
+<use f='tvm/include/tvm/tir/schedule/block_scope.h' l='191' macro='1' u='c' c='_ZNK3tvm3tir10DependencyptEv'/>
+<use f='tvm/include/tvm/tir/schedule/block_scope.h' l='267' macro='1' u='c' c='_ZNK3tvm3tir10BlockScopeptEv'/>
+<use f='tvm/include/tvm/tir/schedule/state.h' l='201' u='c' c='_ZNK3tvm3tir13ScheduleState3getEv'/>
+<use f='tvm/include/tvm/tir/schedule/state.h' l='203' macro='1' u='c' c='_ZNK3tvm3tir13ScheduleStateptEv'/>
+<use f='tvm/include/tvm/tir/schedule/schedule.h' l='66' macro='1' u='c' c='_ZNK3tvm3tir7BlockRVptEv'/>
+<use f='tvm/include/tvm/tir/schedule/schedule.h' l='87' macro='1' u='c' c='_ZNK3tvm3tir6LoopRVptEv'/>
+<use f='tvm/include/tvm/tir/schedule/schedule.h' l='681' macro='1' u='c' c='_ZNK3tvm3tir8ScheduleptEv'/>
+<use f='tvm/include/tvm/meta_schedule/measure_candidate.h' l='61' macro='1' u='c' c='_ZNK3tvm13meta_schedule16MeasureCandidateptEv'/>
+<use f='tvm/include/tvm/meta_schedule/runner.h' l='67' macro='1' u='c' c='_ZNK3tvm13meta_schedule11RunnerInputptEv'/>
+<use f='tvm/include/tvm/meta_schedule/runner.h' l='99' macro='1' u='c' c='_ZNK3tvm13meta_schedule12RunnerResultptEv'/>
+<use f='tvm/include/tvm/meta_schedule/runner.h' l='166' macro='1' u='c' c='_ZNK3tvm13meta_schedule12RunnerFutureptEv'/>
+<use f='tvm/include/tvm/meta_schedule/runner.h' l='209' macro='1' u='c' c='_ZNK3tvm13meta_schedule6RunnerptEv'/>
+<use f='tvm/include/tvm/meta_schedule/cost_model.h' l='168' macro='1' u='c' c='_ZNK3tvm13meta_schedule9CostModelptEv'/>
+<use f='tvm/include/tvm/meta_schedule/extracted_task.h' l='75' macro='1' u='c' c='_ZNK3tvm13meta_schedule13ExtractedTaskptEv'/>
+<use f='tvm/include/tvm/meta_schedule/feature_extractor.h' l='120' macro='1' u='c' c='_ZNK3tvm13meta_schedule16FeatureExtractorptEv'/>
+<use f='tvm/include/tvm/meta_schedule/search_strategy.h' l='245' macro='1' u='c' c='_ZNK3tvm13meta_schedule14SearchStrategyptEv'/>
+<use f='tvm/include/tvm/meta_schedule/mutator.h' l='146' macro='1' u='c' c='_ZNK3tvm13meta_schedule7MutatorptEv'/>
+<use f='tvm/include/tvm/meta_schedule/postproc.h' l='164' macro='1' u='c' c='_ZNK3tvm13meta_schedule8PostprocptEv'/>
+<use f='tvm/include/tvm/meta_schedule/schedule_rule.h' l='258' macro='1' u='c' c='_ZNK3tvm13meta_schedule12ScheduleRuleptEv'/>
+<use f='tvm/include/tvm/meta_schedule/space_generator.h' l='157' macro='1' u='c' c='_ZNK3tvm13meta_schedule14SpaceGeneratorptEv'/>
+<use f='tvm/include/tvm/meta_schedule/tune_context.h' l='156' macro='1' u='c' c='_ZNK3tvm13meta_schedule11TuneContextptEv'/>
+<use f='tvm/include/tvm/meta_schedule/measure_callback.h' l='143' macro='1' u='c' c='_ZNK3tvm13meta_schedule15MeasureCallbackptEv'/>
+<use f='tvm/include/tvm/meta_schedule/profiler.h' l='84' macro='1' u='c' c='_ZNK3tvm13meta_schedule8ProfilerptEv'/>
+<use f='tvm/include/tvm/meta_schedule/task_scheduler.h' l='285' macro='1' u='c' c='_ZNK3tvm13meta_schedule13TaskSchedulerptEv'/>
+<use f='tvm/src/printer/doc.h' l='55' macro='1' u='c' c='_ZNK3tvm7DocAtomptEv'/>
+<use f='tvm/include/tvm/runtime/metadata_base.h' l='56' macro='1' u='c' c='_ZNK3tvm7runtime8metadata12MetadataBaseptEv'/>
+<use f='tvm/include/tvm/runtime/metadata_base.h' l='210' macro='1' u='c' c='_ZNK3tvm7runtime8metadata13MetadataArrayptEv'/>
+<use f='tvm/include/tvm/runtime/metadata.h' l='79' macro='1' u='c' c='_ZNK3tvm7runtime8metadata8MetadataptEv'/>
+<use f='tvm/include/tvm/runtime/metadata.h' l='104' macro='1' u='c' c='_ZNK3tvm7runtime8metadata10TensorInfoptEv'/>
+<use f='tvm/include/tvm/runtime/metadata.h' l='134' macro='1' u='c' c='_ZNK3tvm7runtime8metadata20ConstantInfoMetadataptEv'/>
+<use f='tvm/src/tir/schedule/analysis.h' l='719' macro='1' u='c' c='_ZNK3tvm3tir13TensorizeInfoptEv'/>
+<use f='tvm/src/tir/schedule/analysis.h' l='764' macro='1' u='c' c='_ZNK3tvm3tir24AutoTensorizeMappingInfoptEv'/>
+<use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling.h' l='117' macro='1' u='c' c='_ZNK3tvm13meta_schedule5StateptEv'/>
+<use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling_tensor_core.cc' l='96' macro='1' u='c' c='_ZNK3tvm13meta_schedule15TensorCoreStateptEv'/>
+<use f='tvm/src/meta_schedule/search_strategy/evolutionary_search.cc' l='729' macro='1' u='c' c='_ZNK3tvm13meta_schedule18EvolutionarySearchptEv'/>
+<use f='tvm/src/node/reflection.cc' l='219' u='c' c='_ZN3tvm16ReflectionVTable12CreateObjectERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKNS_7runtime7TVMArgsE'/>
+<use f='tvm/src/node/reflection.cc' l='221' u='c' c='_ZN3tvm16ReflectionVTable12CreateObjectERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKNS_7runtime7TVMArgsE'/>
+<use f='tvm/src/node/serialization.cc' l='430' u='c' c='_ZN3tvm14JSONAttrSetter3SetEPNS_7runtime9ObjectPtrINS1_6ObjectEEEPNS_8JSONNodeE'/>
+<use f='tvm/src/node/serialization.cc' l='434' u='c' c='_ZN3tvm14JSONAttrSetter3SetEPNS_7runtime9ObjectPtrINS1_6ObjectEEEPNS_8JSONNodeE'/>
+<use f='tvm/src/node/serialization.cc' l='467' u='c' c='_ZN3tvm14JSONAttrSetter3SetEPNS_7runtime9ObjectPtrINS1_6ObjectEEEPNS_8JSONNodeE'/>
+<use f='tvm/src/node/serialization.cc' l='608' u='c' c='_ZN3tvm8LoadJSONENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<use f='tvm/include/tvm/runtime/profiling.h' l='142' macro='1' u='c' c='_ZNK3tvm7runtime5TimerptEv'/>
+<use f='tvm/include/tvm/runtime/profiling.h' l='173' macro='1' u='c' c='_ZNK3tvm7runtime9profiling13DeviceWrapperptEv'/>
+<use f='tvm/include/tvm/runtime/profiling.h' l='275' macro='1' u='c' c='_ZNK3tvm7runtime9profiling6ReportptEv'/>
+<use f='tvm/include/tvm/runtime/profiling.h' l='326' macro='1' u='c' c='_ZNK3tvm7runtime9profiling15MetricCollectorptEv'/>
+<use f='tvm/src/parser/token.h' l='377' macro='1' u='c' c='_ZNK3tvm6parser5TokenptEv'/>
+<use f='tvm/src/printer/doc.cc' l='57' macro='1' u='c' c='_ZNK3tvm7DocTextptEv'/>
+<use f='tvm/src/printer/doc.cc' l='80' macro='1' u='c' c='_ZNK3tvm7DocLineptEv'/>
+<use f='tvm/include/tvm/tir/usmp/utils.h' l='124' macro='1' u='c' c='_ZNK3tvm3tir4usmp10BufferInfoptEv'/>
+<use f='tvm/include/tvm/tir/usmp/utils.h' l='163' macro='1' u='c' c='_ZNK3tvm3tir4usmp18BufferInfoAnalysisptEv'/>
+<use f='tvm/include/tvm/tir/usmp/utils.h' l='196' macro='1' u='c' c='_ZNK3tvm3tir4usmp14PoolAllocationptEv'/>
+<use f='tvm/include/tvm/tir/usmp/utils.h' l='235' macro='1' u='c' c='_ZNK3tvm3tir4usmp17AllocatedPoolInfoptEv'/>
+<use f='tvm/src/relay/backend/utils.h' l='129' macro='1' u='c' c='_ZNK3tvm5relay7backend23ExecutorCodegenMetadataptEv'/>
+<use f='tvm/src/relay/backend/utils.h' l='159' macro='1' u='c' c='_ZNK3tvm5relay7backend11StorageInfoptEv'/>
+<use f='tvm/src/relay/backend/utils.h' l='179' macro='1' u='c' c='_ZNK3tvm5relay7backend16StaticMemoryPlanptEv'/>
+<use f='tvm/src/relay/backend/utils.h' l='207' macro='1' u='c' c='_ZNK3tvm5relay7backend12FunctionInfoptEv'/>
+<use f='tvm/include/tvm/relay/op_strategy.h' l='86' macro='1' u='c' c='_ZNK3tvm5relay16OpImplementationptEv'/>
+<use f='tvm/include/tvm/relay/op_strategy.h' l='124' macro='1' u='c' c='_ZNK3tvm5relay16OpSpecializationptEv'/>
+<use f='tvm/include/tvm/relay/op_strategy.h' l='156' macro='1' u='c' c='_ZNK3tvm5relay10OpStrategyptEv'/>
+<use f='tvm/src/relay/transforms/infer_layout_utils.h' l='104' macro='1' u='c' c='_ZNK3tvm5relay24InferCorrectLayoutOutputptEv'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.h' l='74' macro='1' u='c' c='_ZNK3tvm5relay3tec13LoweredOutputptEv'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.h' l='179' macro='1' u='c' c='_ZNK3tvm5relay3tec10CachedFuncptEv'/>
+<use f='tvm/src/relay/backend/contrib/ethosu/utils.h' l='86' macro='1' u='c' c='_ZNK3tvm5relay7contrib6ethosu11BaseAddressptEv'/>
+<use f='tvm/src/relay/backend/contrib/ethosu/utils.h' l='132' macro='1' u='c' c='_ZNK3tvm5relay7contrib6ethosu19CompilationArtifactptEv'/>
+<use f='tvm/include/tvm/runtime/container/closure.h' l='46' macro='1' u='c' c='_ZNK3tvm7runtime7ClosureptEv'/>
+<use f='tvm/include/tvm/relay/interpreter.h' l='77' macro='1' u='c' c='_ZNK3tvm5relay18InterpreterClosureptEv'/>
+<use f='tvm/include/tvm/relay/interpreter.h' l='102' macro='1' u='c' c='_ZNK3tvm5relay10RecClosureptEv'/>
+<use f='tvm/include/tvm/relay/interpreter.h' l='119' macro='1' u='c' c='_ZNK3tvm5relay8RefValueptEv'/>
+<use f='tvm/include/tvm/relay/interpreter.h' l='144' macro='1' u='c' c='_ZNK3tvm5relay16ConstructorValueptEv'/>
+<use f='tvm/src/relay/backend/interpreter.cc' l='280' macro='1' u='c' c='_ZNK3tvm5relay16InterpreterStateptEv'/>
+<use f='tvm/include/tvm/runtime/vm/memory_manager.h' l='140' macro='1' u='c' c='_ZNK3tvm7runtime2vm7StorageptEv'/>
+<use f='tvm/include/tvm/runtime/vm/vm.h' l='68' macro='1' u='c' c='_ZNK3tvm7runtime2vm9VMClosureptEv'/>
+<use f='tvm/src/relay/collage/cost_estimator.h' l='64' macro='1' u='c' c='_ZNK3tvm5relay7collage13CostEstimatorptEv'/>
+<use f='tvm/include/tvm/relay/dataflow_pattern.h' l='77' macro='1' u='c' c='_ZNK3tvm5relay9DFPatternptEv'/>
+<use f='tvm/include/tvm/relay/dataflow_pattern.h' l='103' macro='1' u='c' c='_ZNK3tvm5relay11ExprPatternptEv'/>
+<use f='tvm/include/tvm/relay/dataflow_pattern.h' l='130' macro='1' u='c' c='_ZNK3tvm5relay10VarPatternptEv'/>
+<use f='tvm/include/tvm/relay/dataflow_pattern.h' l='148' macro='1' u='c' c='_ZNK3tvm5relay15ConstantPatternptEv'/>
+<use f='tvm/include/tvm/relay/dataflow_pattern.h' l='182' macro='1' u='c' c='_ZNK3tvm5relay11CallPatternptEv'/>
+<use f='tvm/include/tvm/relay/dataflow_pattern.h' l='223' macro='1' u='c' c='_ZNK3tvm5relay15FunctionPatternptEv'/>
+<use f='tvm/include/tvm/relay/dataflow_pattern.h' l='224' macro='1' u='c' c='_ZN3tvm5relay15FunctionPattern11CopyOnWriteEv'/>
+<use f='tvm/include/tvm/relay/dataflow_pattern.h' l='260' macro='1' u='c' c='_ZNK3tvm5relay10LetPatternptEv'/>
+<use f='tvm/include/tvm/relay/dataflow_pattern.h' l='280' macro='1' u='c' c='_ZNK3tvm5relay12TuplePatternptEv'/>
+<use f='tvm/include/tvm/relay/dataflow_pattern.h' l='318' macro='1' u='c' c='_ZNK3tvm5relay9IfPatternptEv'/>
+<use f='tvm/include/tvm/relay/dataflow_pattern.h' l='324' macro='1' u='c' c='_ZNK3tvm5relay19TupleGetItemPatternptEv'/>
+<use f='tvm/include/tvm/relay/dataflow_pattern.h' l='353' macro='1' u='c' c='_ZNK3tvm5relay10AltPatternptEv'/>
+<use f='tvm/include/tvm/relay/dataflow_pattern.h' l='372' macro='1' u='c' c='_ZNK3tvm5relay15WildcardPatternptEv'/>
+<use f='tvm/include/tvm/relay/dataflow_pattern.h' l='401' macro='1' u='c' c='_ZNK3tvm5relay11TypePatternptEv'/>
+<use f='tvm/include/tvm/relay/dataflow_pattern.h' l='430' macro='1' u='c' c='_ZNK3tvm5relay12ShapePatternptEv'/>
+<use f='tvm/include/tvm/relay/dataflow_pattern.h' l='459' macro='1' u='c' c='_ZNK3tvm5relay15DataTypePatternptEv'/>
+<use f='tvm/include/tvm/relay/dataflow_pattern.h' l='488' macro='1' u='c' c='_ZNK3tvm5relay11AttrPatternptEv'/>
+<use f='tvm/include/tvm/relay/dataflow_pattern.h' l='522' macro='1' u='c' c='_ZNK3tvm5relay16DominatorPatternptEv'/>
+<use f='tvm/include/tvm/relay/dataflow_matcher.h' l='71' macro='1' u='c' c='_ZNK3tvm5relay17DFPatternCallbackptEv'/>
+<use f='tvm/src/relay/collage/sub_graph.h' l='174' macro='1' u='c' c='_ZNK3tvm5relay7collage14NestedSubGraphptEv'/>
+<use f='tvm/src/relay/collage/sub_graph.h' l='428' macro='1' u='c' c='_ZNK3tvm5relay7collage8SubGraphptEv'/>
+<use f='tvm/src/relay/collage/candidate_partition.h' l='160' macro='1' u='c' c='_ZNK3tvm5relay7collage18CandidatePartitionptEv'/>
+<use f='tvm/src/relay/collage/candidate_partition.h' l='161' macro='1' u='c' c='_ZN3tvm5relay7collage18CandidatePartition11CopyOnWriteEv'/>
+<use f='tvm/src/relay/collage/combiner_rule.h' l='67' macro='1' u='c' c='_ZNK3tvm5relay7collage18SimpleCombinerRuleptEv'/>
+<use f='tvm/src/relay/collage/combiner_rule.h' l='93' macro='1' u='c' c='_ZNK3tvm5relay7collage24ByKindSimpleCombinerRuleptEv'/>
+<use f='tvm/src/relay/collage/combiner_rule.h' l='132' macro='1' u='c' c='_ZNK3tvm5relay7collage12CombinerRuleptEv'/>
+<use f='tvm/src/relay/collage/combiner_rule.h' l='156' macro='1' u='c' c='_ZNK3tvm5relay7collage21AllSimpleCombinerRuleptEv'/>
+<use f='tvm/src/relay/collage/combiner_rule.h' l='178' macro='1' u='c' c='_ZNK3tvm5relay7collage20TupleArgCombinerRuleptEv'/>
+<use f='tvm/src/relay/collage/combiner_rule.h' l='200' macro='1' u='c' c='_ZNK3tvm5relay7collage21TupleProjCombinerRuleptEv'/>
+<use f='tvm/src/relay/collage/combiner_rule.h' l='222' macro='1' u='c' c='_ZNK3tvm5relay7collage20ConstantCombinerRuleptEv'/>
+<use f='tvm/src/relay/collage/partition_rule.h' l='199' macro='1' u='c' c='_ZNK3tvm5relay7collage13PartitionRuleptEv'/>
+<use f='tvm/src/relay/collage/partition_rule.h' l='234' macro='1' u='c' c='_ZNK3tvm5relay7collage22DFPatternPartitionRuleptEv'/>
+<use f='tvm/src/relay/collage/partition_rule.h' l='265' macro='1' u='c' c='_ZNK3tvm5relay7collage22CompositePartitionRuleptEv'/>
+<use f='tvm/src/relay/collage/partition_rule.h' l='297' macro='1' u='c' c='_ZNK3tvm5relay7collage22PrimitivePartitionRuleptEv'/>
+<use f='tvm/src/relay/collage/partition_rule.h' l='324' macro='1' u='c' c='_ZNK3tvm5relay7collage18UnionPartitionRuleptEv'/>
+<use f='tvm/src/relay/collage/partition_rule.h' l='350' macro='1' u='c' c='_ZNK3tvm5relay7collage25OpCallByKindPartitionRuleptEv'/>
+<use f='tvm/src/relay/collage/partition_rule.h' l='425' macro='1' u='c' c='_ZNK3tvm5relay7collage20CombinePartitionRuleptEv'/>
+<use f='tvm/src/relay/collage/partition_rule.h' l='453' macro='1' u='c' c='_ZNK3tvm5relay7collage22OnlyValidPartitionRuleptEv'/>
+<use f='tvm/src/relay/collage/partition_rule.h' l='480' macro='1' u='c' c='_ZNK3tvm5relay7collage17HostPartitionRuleptEv'/>
+<use f='tvm/src/relay/collage/partition_spec.h' l='113' macro='1' u='c' c='_ZNK3tvm5relay7collage13PartitionSpecptEv'/>
+<use f='tvm/src/relay/collage/mock_cost_estimator.h' l='77' macro='1' u='c' c='_ZNK3tvm5relay7collage17MockCostEstimatorptEv'/>
+<use f='tvm/src/relay/ir/transform.cc' l='92' macro='1' u='c' c='_ZNK3tvm5relay9transform12FunctionPassptEv'/>
+<use f='tvm/src/relay/quantize/annotate.cc' l='64' macro='1' u='c' c='_ZNK3tvm5relay8quantize13QAnnotateExprptEv'/>
+<use f='tvm/src/relay/quantize/partition.cc' l='60' macro='1' u='c' c='_ZNK3tvm5relay8quantize14QPartitionExprptEv'/>
+<use f='tvm/src/relay/quantize/realize.h' l='45' macro='1' u='c' c='_ZNK3tvm5relay8quantize12QRealizeExprptEv'/>
+<use f='tvm/src/relay/quantize/realize.h' l='69' macro='1' u='c' c='_ZNK3tvm5relay8quantize15QRealizeIntExprptEv'/>
+<use f='tvm/src/relay/transforms/fold_scale_axis.cc' l='111' macro='1' u='c' c='_ZNK3tvm5relay15fold_scale_axis7MessageptEv'/>
+<use f='tvm/src/relay/transforms/partial_eval.cc' l='164' macro='1' u='c' c='_ZNK3tvm5relay12partial_eval7PStaticptEv'/>
+<use f='tvm/src/relay/transforms/partial_eval.cc' l='176' macro='1' u='c' c='_ZNK3tvm5relay12partial_eval6STupleptEv'/>
+<use f='tvm/src/relay/transforms/partial_eval.cc' l='192' macro='1' u='c' c='_ZNK3tvm5relay12partial_eval7STensorptEv'/>
+<use f='tvm/src/relay/transforms/partial_eval.cc' l='208' macro='1' u='c' c='_ZNK3tvm5relay12partial_eval12SConstructorptEv'/>
+<use f='tvm/src/relay/transforms/partial_eval.cc' l='223' macro='1' u='c' c='_ZNK3tvm5relay12partial_eval4SRefptEv'/>
+<use f='tvm/src/relay/transforms/partial_eval.cc' l='240' macro='1' u='c' c='_ZNK3tvm5relay12partial_eval5SFuncptEv'/>
+<use f='tvm/src/relay/transforms/partial_eval.cc' l='313' macro='1' u='c' c='_ZNK3tvm5relay12partial_eval4FSeqptEv'/>
+<use f='tvm/src/relay/transforms/partial_eval.cc' l='334' macro='1' u='c' c='_ZNK3tvm5relay12partial_eval5FTimeptEv'/>
+<use f='tvm/src/relay/transforms/partial_eval.cc' l='356' macro='1' u='c' c='_ZNK3tvm5relay12partial_eval7FTValueptEv'/>
+<use f='tvm/src/relay/transforms/partial_eval.cc' l='376' macro='1' u='c' c='_ZNK3tvm5relay12partial_eval4FTopptEv'/>
+<use f='tvm/src/relay/transforms/type_infer.cc' l='740' u='c' c='_ZN3tvm5relay14TypeInferencer8Resolver17AttachCheckedTypeEPKT_RKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/type_infer.cc' l='741' u='c' c='_ZN3tvm5relay14TypeInferencer8Resolver17AttachCheckedTypeEPKT_RKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/type_infer.cc' l='742' u='c' c='_ZN3tvm5relay14TypeInferencer8Resolver17AttachCheckedTypeEPKT_RKNS_9RelayExprE'/>
+<use f='tvm/src/runtime/aot_executor/aot_executor_factory.cc' l='92' u='c' c='_ZN3tvm7runtime18AotExecutorFactory14ExecutorCreateERKSt6vectorI8DLDeviceSaIS3_EE'/>
+<use f='tvm/src/runtime/graph_executor/graph_executor_factory.cc' l='123' u='c' c='_ZN3tvm7runtime20GraphExecutorFactory14ExecutorCreateERKSt6vectorI8DLDeviceSaIS3_EE'/>
+<use f='tvm/src/runtime/library_module.cc' l='181' u='c' c='_ZN3tvm7runtime17ProcessModuleBlobEPKcNS0_9ObjectPtrINS0_7LibraryEEESt8functionIFNS0_10PackedFuncEPFiP8TVMValuePiiS9_SA_PvERKNS3_INS0_6ObjectEEEEEPNS015931685'/>
+<use f='tvm/src/runtime/vm/executable.cc' l='89' u='c' c='_ZN3tvm7runtime2vm10Executable11GetFunctionERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKNS0_9ObjectPtrINS0_6ObjectEEE'/>
+<use f='tvm/include/tvm/script/printer/doc.h' l='72' macro='1' u='c' c='_ZNK3tvm6script7printer3DocptEv'/>
+<use f='tvm/include/tvm/script/printer/doc.h' l='128' macro='1' u='c' c='_ZNK3tvm6script7printer7ExprDocptEv'/>
+<use f='tvm/include/tvm/script/printer/doc.h' l='167' macro='1' u='c' c='_ZNK3tvm6script7printer7StmtDocptEv'/>
+<use f='tvm/include/tvm/script/printer/doc.h' l='201' macro='1' u='c' c='_ZNK3tvm6script7printer12StmtBlockDocptEv'/>
+<use f='tvm/include/tvm/script/printer/doc.h' l='270' macro='1' u='c' c='_ZNK3tvm6script7printer10LiteralDocptEv'/>
+<use f='tvm/include/tvm/script/printer/doc.h' l='305' macro='1' u='c' c='_ZNK3tvm6script7printer5IdDocptEv'/>
+<use f='tvm/include/tvm/script/printer/doc.h' l='343' macro='1' u='c' c='_ZNK3tvm6script7printer13AttrAccessDocptEv'/>
+<use f='tvm/include/tvm/script/printer/doc.h' l='387' macro='1' u='c' c='_ZNK3tvm6script7printer8IndexDocptEv'/>
+<use f='tvm/include/tvm/script/printer/doc.h' l='439' macro='1' u='c' c='_ZNK3tvm6script7printer7CallDocptEv'/>
+<use f='tvm/include/tvm/script/printer/doc.h' l='515' macro='1' u='c' c='_ZNK3tvm6script7printer12OperationDocptEv'/>
+<use f='tvm/include/tvm/script/printer/doc.h' l='556' macro='1' u='c' c='_ZNK3tvm6script7printer9LambdaDocptEv'/>
+<use f='tvm/include/tvm/script/printer/doc.h' l='594' macro='1' u='c' c='_ZNK3tvm6script7printer8TupleDocptEv'/>
+<use f='tvm/include/tvm/script/printer/doc.h' l='632' macro='1' u='c' c='_ZNK3tvm6script7printer7ListDocptEv'/>
+<use f='tvm/include/tvm/script/printer/doc.h' l='679' macro='1' u='c' c='_ZNK3tvm6script7printer7DictDocptEv'/>
+<use f='tvm/include/tvm/script/printer/doc.h' l='723' macro='1' u='c' c='_ZNK3tvm6script7printer8SliceDocptEv'/>
+<use f='tvm/include/tvm/script/printer/doc.h' l='769' macro='1' u='c' c='_ZNK3tvm6script7printer9AssignDocptEv'/>
+<use f='tvm/include/tvm/script/printer/doc.h' l='811' macro='1' u='c' c='_ZNK3tvm6script7printer5IfDocptEv'/>
+<use f='tvm/include/tvm/script/printer/doc.h' l='849' macro='1' u='c' c='_ZNK3tvm6script7printer8WhileDocptEv'/>
+<use f='tvm/include/tvm/script/printer/doc.h' l='895' macro='1' u='c' c='_ZNK3tvm6script7printer6ForDocptEv'/>
+<use f='tvm/include/tvm/script/printer/doc.h' l='950' macro='1' u='c' c='_ZNK3tvm6script7printer8ScopeDocptEv'/>
+<use f='tvm/include/tvm/script/printer/doc.h' l='984' macro='1' u='c' c='_ZNK3tvm6script7printer11ExprStmtDocptEv'/>
+<use f='tvm/include/tvm/script/printer/doc.h' l='1022' macro='1' u='c' c='_ZNK3tvm6script7printer9AssertDocptEv'/>
+<use f='tvm/include/tvm/script/printer/doc.h' l='1056' macro='1' u='c' c='_ZNK3tvm6script7printer9ReturnDocptEv'/>
+<use f='tvm/include/tvm/script/printer/doc.h' l='1113' macro='1' u='c' c='_ZNK3tvm6script7printer11FunctionDocptEv'/>
+<use f='tvm/include/tvm/script/printer/doc.h' l='1155' macro='1' u='c' c='_ZNK3tvm6script7printer8ClassDocptEv'/>
+<use f='tvm/include/tvm/target/tag.h' l='92' macro='1' u='c' c='_ZNK3tvm9TargetTagptEv'/>
+<use f='tvm/include/tvm/target/tag.h' l='96' u='c' c='_ZN3tvm9TargetTagptEv'/>
+<use f='tvm/src/target/target.cc' l='945' u='c' c='_ZN3tvm14TargetInternal10FromConfigENS_7runtime3MapINS1_6StringENS1_9ObjectRefEvvEE'/>
+<use f='tvm/include/tvm/target/target_info.h' l='65' macro='1' u='c' c='_ZNK3tvm10MemoryInfoptEv'/>
+<use f='tvm/src/te/operation/compute_op.cc' l='144' u='c' c='_ZN3tvm2te9ComputeOpC1ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_NS_7runtime3MapINS8_6StringENS8_9ObjectRefEvvEENS8_5ArrayINS_3tir7IterVa14126749'/>
+<use f='tvm/src/te/schedule/schedule_lang.cc' l='341' u='c' c='_ZN3tvm2te17UpdateIterVarAttrEPNS0_9StageNodeENS_3tir7IterVarET_b'/>
+<use f='tvm/src/tir/ir/transform.cc' l='76' macro='1' u='c' c='_ZNK3tvm3tir9transform12PrimFuncPassptEv'/>
+<use f='tvm/src/tir/schedule/block_scope.cc' l='92' u='c' c='_ZN3tvm3tir10BlockScopeC1ERKNS_7runtime5ArrayINS0_8StmtSRefEvEE'/>
+<use f='tvm/src/tir/schedule/block_scope.cc' l='101' u='c' c='_ZN3tvm3tir10BlockScopeC1ERKNS_7runtime5ArrayINS0_8StmtSRefEvEE'/>
+<use f='tvm/src/tir/schedule/block_scope.cc' l='110' u='c' c='_ZN3tvm3tir10BlockScopeC1ERKNS_7runtime5ArrayINS0_8StmtSRefEvEE'/>
+<use f='tvm/src/tir/schedule/primitive/reduction.cc' l='289' u='c' c='_ZN3tvm3tir18DecomposeReductionENS0_13ScheduleStateERKNS0_8StmtSRefES4_'/>
+<use f='tvm/src/tir/schedule/state.cc' l='406' u='c' c='_ZN3tvm3tir12StateCreator6CreateENS_8IRModuleEi'/>
+<use f='tvm/src/tir/transforms/hoist_expression.cc' l='91' macro='1' u='c' c='_ZNK3tvm3tir21HoistExpressionConfigptEv'/>
+<use f='tvm/src/tir/transforms/hoist_expression.cc' l='112' macro='1' u='c' c='_ZNK3tvm3tir21HoistIfThenElseConfigptEv'/>
+<use f='tvm/src/tir/transforms/inject_double_buffer.cc' l='44' macro='1' u='c' c='_ZNK3tvm3tir24InjectDoubleBufferConfigptEv'/>
+<use f='tvm/src/tir/transforms/loop_partition.cc' l='56' macro='1' u='c' c='_ZNK3tvm3tir19LoopPartitionConfigptEv'/>
+<use f='tvm/src/tir/transforms/unroll_loop.cc' l='65' macro='1' u='c' c='_ZNK3tvm3tir16UnrollLoopConfigptEv'/>

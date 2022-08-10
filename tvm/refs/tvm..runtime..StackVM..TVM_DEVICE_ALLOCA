@@ -1,0 +1,15 @@
+<dec f='tvm/src/runtime/stackvm/stackvm.h' l='249' type='43'/>
+<use f='tvm/src/runtime/stackvm/stackvm.cc' l='159' c='_ZNK3tvm7runtime7StackVM9PrintCodeERSol'/>
+<use f='tvm/src/runtime/stackvm/stackvm.cc' l='569' c='_ZNK3tvm7runtime7StackVM3RunEPNS1_5StateE'/>
+<doc f='tvm/src/runtime/stackvm/stackvm.h' l='238'>/*!
+     * \brief allocate data from device.
+     * \code
+     *  device_type = stack[sp - 2].v_int64;
+     *  device_id = stack[sp - 1].v_int64;
+     *  nbytes = stack[sp].v_int64;
+     *  stack[sp - 2].v_handle = device_alloca(device_type, device_id, nbytes);
+     *  sp = sp - 2;
+     *  pc = pc + 1;
+     * \endcode
+     */</doc>
+<use f='tvm/src/target/stackvm/codegen_stackvm.cc' l='279' u='r' c='_ZN3tvm7codegen14CodeGenStackVM10VisitExpr_EPKNS_3tir8CallNodeE'/>

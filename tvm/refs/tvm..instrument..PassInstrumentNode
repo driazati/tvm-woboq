@@ -1,0 +1,77 @@
+<inh f='tvm/include/tvm/runtime/object.h' l='167' c='tvm::runtime::Object'/>
+<def f='tvm/include/tvm/ir/instrument.h' l='102' ll='143'/>
+<use f='tvm/include/tvm/ir/instrument.h' l='151' c='_ZNK3tvm10instrument14PassInstrumentptEv'/>
+<use f='tvm/include/tvm/ir/instrument.h' l='151' c='_ZNK3tvm10instrument14PassInstrumentptEv'/>
+<use f='tvm/include/tvm/ir/instrument.h' l='151' c='_ZNK3tvm10instrument14PassInstrument3getEv'/>
+<use f='tvm/include/tvm/ir/instrument.h' l='151'/>
+<size>32</size>
+<doc f='tvm/include/tvm/ir/instrument.h' l='46'>/*!
+ * \brief PassInstrumentNode forms an instrument implementation.
+ * It provides API for users to register callbacks at different instrumentation points.
+ *
+ * Within a PassContext, call sequence of a PassInstrument implementation is like:
+ *
+ *   with PassContext(instruments=[pi]):  # pi = a PassInstrument implementation
+ *       pi.EnterPassContext()
+ *
+ *       if pi.ShouldRun(Pass1):
+ *           pi.RunBeforePass()
+ *           Pass1()
+ *           pi.RunAfterPass()
+ *
+ *       if pi.ShouldRun(Pass2):
+ *           pi.RunBeforePass()
+ *           Pass2()
+ *           pi.RunAfterPass()
+ *
+ *       pi.ExitPassContext()
+ *
+ * `EnterPassContext` and `ExitPassContext` are only called once when entering/exiting a
+ * PassContext. `ShouldRun`, `RunBeforePass` and `RunAfterPass` are called multiple times depending
+ * on how many passes.
+ *
+ * If there are multiple pass instrumentations provided, the instrument points are the same.
+ * PassInstrument implementations&apos; callbacks are called in order:
+ *
+ *   with PassContext(instruments=[pi1, pi2]):  # pi1, pi2 = two distinct PassInstrument impls
+ *       pi.EnterPassContext() for pi in instruments
+ *
+ *       should_run = all([pi.ShoudRun(Pass1) for pi in instruments)])
+ *       if (should_run)
+ *           pi.RunBeforePass() for pi in instruments
+ *           Pass1()
+ *           pi.RunAfterPass()  for pi in instruments
+ *
+ *       should_run = all([pi.ShouldRun(Pass2) for pi in instruments)])
+ *       if (should_run)
+ *           pi.RunBeforePass() for pi in instruments
+ *           Pass2()
+ *           pi.RunAfterPass() for pi in instruments
+ *
+ *       pi.ExitPassContext() for pi in instruments
+ *
+ * Note:
+ *   1. Assume there is no dependency between PassInstrument implementations in `instruments` .
+ *   2. `EnterPassContext` and `ExitPassContext` have `with` behavior (see PassContext and its FFI):
+ *        If there is any exception raised in `ShouldRun()`, `RunBeforePass()`, `RunAfterPass()` and
+ *        `Pass()`, `ExitPassContext()` is still called.
+ *   3. In mutiple PassInstrument instances scenario, callbacks are called in order:
+ *        If one throws exceptions, remainings will not be called.
+ *
+ * \sa PassInstrument
+ * \sa src/ir/transform.cc
+ */</doc>
+<mbr r='tvm::instrument::PassInstrumentNode::name' o='192' t='tvm::runtime::String'/>
+<fun r='_ZN3tvm10instrument18PassInstrumentNodeD1Ev'/>
+<fun r='_ZNK3tvm10instrument18PassInstrumentNode16EnterPassContextEv'/>
+<fun r='_ZNK3tvm10instrument18PassInstrumentNode15ExitPassContextEv'/>
+<fun r='_ZNK3tvm10instrument18PassInstrumentNode9ShouldRunERKNS_8IRModuleERKNS_9transform8PassInfoE'/>
+<fun r='_ZNK3tvm10instrument18PassInstrumentNode13RunBeforePassERKNS_8IRModuleERKNS_9transform8PassInfoE'/>
+<fun r='_ZNK3tvm10instrument18PassInstrumentNode12RunAfterPassERKNS_8IRModuleERKNS_9transform8PassInfoE'/>
+<fun r='_ZN3tvm10instrument18PassInstrumentNode10VisitAttrsEPNS_11AttrVisitorE'/>
+<smbr r='tvm::instrument::PassInstrumentNode::_type_key' t='const char *const'/>
+<fun r='_ZN3tvm10instrument18PassInstrumentNode16RuntimeTypeIndexEv'/>
+<fun r='_ZN3tvm10instrument18PassInstrumentNode27_GetOrAllocRuntimeTypeIndexEv'/>
+<ovr f='tvm/src/ir/instrument.cc' l='39' c='tvm::instrument::BasePassInstrumentNode'/>
+<use f='tvm/src/ir/instrument.cc' l='39'/>
+<size>32</size>

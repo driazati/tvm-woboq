@@ -1,0 +1,14 @@
+<dec f='tvm/include/tvm/runtime/object.h' l='269' type='tvm::runtime::Object::FDeleter'/>
+<use f='tvm/include/tvm/runtime/object.h' l='804' u='r' c='_ZN3tvm7runtime6Object6DecRefEv'/>
+<use f='tvm/include/tvm/runtime/object.h' l='805' u='r' c='_ZN3tvm7runtime6Object6DecRefEv'/>
+<use f='tvm/include/tvm/runtime/ndarray.h' l='323' u='w' c='_ZN3tvm7runtime7NDArray9Container10SetDeleterEPFvPNS0_6ObjectEE'/>
+<offset>64</offset>
+<doc f='tvm/include/tvm/runtime/object.h' l='264'>/*!
+   * \brief deleter of this object to enable customized allocation.
+   * If the deleter is nullptr, no deletion will be performed.
+   * The creator of the object must always set the deleter field properly.
+   */</doc>
+<use f='tvm/include/tvm/relay/expr.h' l='812' u='w' c='_ZN3tvm7runtime16ObjAllocatorBase11make_objectEDpOTL0_0_'/>
+<use f='tvm/include/tvm/relay/expr.h' l='827' u='w' c='_ZN3tvm7runtime16ObjAllocatorBase11make_objectEDpOTL0_0_'/>
+<use f='tvm/src/relay/ir/expr.cc' l='623' u='w' c='_ZN3tvm5relay8CallNode8Deleter_EPNS_7runtime6ObjectE'/>
+<use f='tvm/src/relay/ir/expr.cc' l='646' u='w' c='_ZN3tvm5relay7LetNode8Deleter_EPNS_7runtime6ObjectE'/>

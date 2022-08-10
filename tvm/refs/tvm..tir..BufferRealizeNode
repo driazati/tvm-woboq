@@ -1,0 +1,89 @@
+<inh f='tvm/include/tvm/tir/stmt.h' l='38' c='tvm::tir::StmtNode'/>
+<def f='tvm/include/tvm/tir/stmt.h' l='341' ll='379'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='360' c='_ZNK3tvm3tir17BufferRealizeNode12SEqualReduceEPKS1_NS_13SEqualReducerE'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='390' c='_ZNK3tvm3tir13BufferRealizeptEv'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='390' c='_ZNK3tvm3tir13BufferRealizeptEv'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='390' c='_ZNK3tvm3tir13BufferRealize3getEv'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='390'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='391' c='_ZN3tvm3tir13BufferRealize11CopyOnWriteEv'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='391' c='_ZN3tvm3tir13BufferRealize11CopyOnWriteEv'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='391' c='_ZN3tvm3tir13BufferRealize11CopyOnWriteEv'/>
+<size>56</size>
+<doc f='tvm/include/tvm/tir/stmt.h' l='330'>/*!
+ * \brief Annotate the region where the buffer need to
+ *  be read and write in the body.
+ *  We only need to allocate the space for the corresponding region.
+ *
+ * \note There should be at most one BufferRealize for each buffer.
+ *       BufferRealize is not necessary for external buffers,
+ *       since they are assumed to be fully allocated.
+ *
+ * \sa BufferLoad, BufferStore
+ */</doc>
+<mbr r='tvm::tir::BufferRealizeNode::buffer' o='192' t='tvm::tir::Buffer'/>
+<mbr r='tvm::tir::BufferRealizeNode::bounds' o='256' t='Array&lt;tvm::Range&gt;'/>
+<mbr r='tvm::tir::BufferRealizeNode::condition' o='320' t='tvm::PrimExpr'/>
+<mbr r='tvm::tir::BufferRealizeNode::body' o='384' t='tvm::tir::Stmt'/>
+<fun r='_ZN3tvm3tir17BufferRealizeNode10VisitAttrsEPNS_11AttrVisitorE'/>
+<fun r='_ZNK3tvm3tir17BufferRealizeNode12SEqualReduceEPKS1_NS_13SEqualReducerE'/>
+<fun r='_ZNK3tvm3tir17BufferRealizeNode11SHashReduceENS_12SHashReducerE'/>
+<fun r='_ZN3tvm3tir17BufferRealizeNodeC1Ev'/>
+<fun r='_ZN3tvm3tir17BufferRealizeNodeC1ENS0_6BufferENS_7runtime5ArrayINS_5RangeEvEENS_8PrimExprENS0_4StmtENS_4SpanE'/>
+<smbr r='tvm::tir::BufferRealizeNode::_type_key' t='const char *const'/>
+<smbr r='tvm::tir::BufferRealizeNode::_type_final' t='const bool'/>
+<smbr r='tvm::tir::BufferRealizeNode::_type_child_slots' t='const int'/>
+<fun r='_ZN3tvm3tir17BufferRealizeNode16RuntimeTypeIndexEv'/>
+<fun r='_ZN3tvm3tir17BufferRealizeNode27_GetOrAllocRuntimeTypeIndexEv'/>
+<use f='tvm/include/tvm/tir/stmt_functor.h' l='95' c='_ZN3tvm3tir11StmtFunctorIFT_RKNS0_4StmtEDpT0_EE10VisitStmt_EPKNS0_17BufferRealizeNodeES7_'/>
+<use f='tvm/include/tvm/tir/stmt_functor.h' l='129' c='_ZN3tvm3tir11StmtFunctorIFT_RKNS0_4StmtEDpT0_EE10InitVTableEv'/>
+<use f='tvm/include/tvm/tir/stmt_functor.h' l='129' c='_ZN3tvm3tir11StmtFunctorIFT_RKNS0_4StmtEDpT0_EE10InitVTableEv'/>
+<use f='tvm/include/tvm/tir/stmt_functor.h' l='167' c='_ZN3tvm3tir11StmtVisitor10VisitStmt_EPKNS0_17BufferRealizeNodeE'/>
+<use f='tvm/include/tvm/tir/stmt_functor.h' l='269' c='_ZN3tvm3tir11StmtMutator10VisitStmt_EPKNS0_17BufferRealizeNodeE'/>
+<size>56</size>
+<use f='tvm/src/auto_scheduler/feature.cc' l='720' c='_ZN3tvm14auto_scheduler24PerStoreFeatureExtractor10VisitStmt_EPKNS_3tir17BufferRealizeNodeE'/>
+<use f='tvm/src/auto_scheduler/feature.cc' l='1027' c='_ZN3tvm14auto_scheduler24PerStoreFeatureExtractor24ExtractAllocationFeatureEPKNS_3tir17BufferRealizeNodeE'/>
+<size>56</size>
+<use f='tvm/src/printer/text_printer.h' l='352' c='_ZN3tvm3tir14TIRTextPrinter10VisitStmt_EPKNS0_17BufferRealizeNodeE'/>
+<size>56</size>
+<use f='tvm/src/printer/tir_text_printer.cc' l='509' c='_ZN3tvm3tir14TIRTextPrinter10VisitStmt_EPKNS0_17BufferRealizeNodeE'/>
+<size>56</size>
+<use f='tvm/src/printer/tvmscript_printer.cc' l='245' c='_ZN3tvm3tir16TVMScriptPrinter10VisitStmt_EPKNS0_17BufferRealizeNodeE'/>
+<use f='tvm/src/printer/tvmscript_printer.cc' l='952' c='_ZN3tvm3tir16TVMScriptPrinter10VisitStmt_EPKNS0_12AttrStmtNodeE'/>
+<use f='tvm/src/printer/tvmscript_printer.cc' l='1025' c='_ZN3tvm3tir16TVMScriptPrinter10VisitStmt_EPKNS0_17BufferRealizeNodeE'/>
+<size>56</size>
+<use f='tvm/src/te/schedule/schedule_postproc_to_primfunc.cc' l='304' c='_ZN3tvm2te27AxisSeparatorsAttrUnwrapper10VisitStmt_EPKNS_3tir17BufferRealizeNodeE'/>
+<size>56</size>
+<use f='tvm/src/tir/analysis/buffer_access_lca_detector.cc' l='120' c='_ZN3tvm3tir11LCADetector10VisitStmt_EPKNS0_17BufferRealizeNodeE'/>
+<size>56</size>
+<use f='tvm/src/tir/analysis/device_constraint_utils.cc' l='339' c='_ZN3tvm3tir12_GLOBAL__N_129ApplyDeviceConstraintsMutator10VisitStmt_EPKNS0_17BufferRealizeNodeE'/>
+<size>56</size>
+<use f='tvm/src/tir/ir/stmt.cc' l='771' c='_ZN3tvm3tir13BufferRealizeC1ENS0_6BufferENS_7runtime5ArrayINS_5RangeEvEENS_8PrimExprENS0_4StmtENS_4SpanE'/>
+<use f='tvm/src/tir/ir/stmt.cc' l='778'/>
+<use f='tvm/src/tir/ir/stmt.cc' l='778'/>
+<use f='tvm/src/tir/ir/stmt.cc' l='778'/>
+<use f='tvm/src/tir/ir/stmt.cc' l='781'/>
+<use f='tvm/src/tir/ir/stmt.cc' l='782'/>
+<size>56</size>
+<use f='tvm/src/tir/ir/stmt_functor.cc' l='77' c='_ZN3tvm3tir11StmtVisitor10VisitStmt_EPKNS0_17BufferRealizeNodeE'/>
+<use f='tvm/src/tir/ir/stmt_functor.cc' l='391' c='_ZN3tvm3tir11StmtMutator10VisitStmt_EPKNS0_17BufferRealizeNodeE'/>
+<size>56</size>
+<use f='tvm/src/tir/transforms/bf16_legalize.cc' l='228' c='_ZN3tvm3tir17BF16LowerRewriter10VisitStmt_EPKNS0_17BufferRealizeNodeE'/>
+<use f='tvm/src/tir/transforms/bf16_legalize.cc' l='230' c='_ZN3tvm3tir17BF16LowerRewriter10VisitStmt_EPKNS0_17BufferRealizeNodeE'/>
+<size>56</size>
+<use f='tvm/src/tir/transforms/inject_rolling_buffer.cc' l='224' c='_ZN3tvm3tir21RollingBufferInjector10VisitStmt_EPKNS0_17BufferRealizeNodeE'/>
+<use f='tvm/src/tir/transforms/inject_rolling_buffer.cc' l='228' c='_ZN3tvm3tir21RollingBufferInjector10VisitStmt_EPKNS0_17BufferRealizeNodeE'/>
+<size>56</size>
+<use f='tvm/src/tir/transforms/plan_update_buffer_allocation_location.cc' l='132' c='_ZN3tvm3tir23BufferAllocationLocator10VisitStmt_EPKNS0_17BufferRealizeNodeE'/>
+<size>56</size>
+<use f='tvm/src/tir/transforms/storage_flatten.cc' l='120' c='_ZN3tvm3tir19BufferShapeLegalize10VisitStmt_EPKNS0_17BufferRealizeNodeE'/>
+<use f='tvm/src/tir/transforms/storage_flatten.cc' l='129' c='_ZN3tvm3tir19BufferShapeLegalize10VisitStmt_EPKNS0_17BufferRealizeNodeE'/>
+<use f='tvm/src/tir/transforms/storage_flatten.cc' l='560' c='_ZN3tvm3tir20BufferStrideLegalize10VisitStmt_EPKNS0_17BufferRealizeNodeE'/>
+<use f='tvm/src/tir/transforms/storage_flatten.cc' l='574' c='_ZN3tvm3tir20BufferStrideLegalize10VisitStmt_EPKNS0_17BufferRealizeNodeE'/>
+<use f='tvm/src/tir/transforms/storage_flatten.cc' l='711' c='_ZN3tvm3tir20ThreadScopePropagate10VisitStmt_EPKNS0_17BufferRealizeNodeE'/>
+<use f='tvm/src/tir/transforms/storage_flatten.cc' l='990' c='_ZN3tvm3tir19BufferBindUnwrapper10VisitStmt_EPKNS0_17BufferRealizeNodeE'/>
+<use f='tvm/src/tir/transforms/storage_flatten.cc' l='1226' c='_ZN3tvm3tir21ApplyLayoutTransforms10VisitStmt_EPKNS0_17BufferRealizeNodeE'/>
+<use f='tvm/src/tir/transforms/storage_flatten.cc' l='1460' c='_ZN3tvm3tir16StorageFlattener10VisitStmt_EPKNS0_17BufferRealizeNodeE'/>
+<size>56</size>
+<use f='tvm/src/tir/transforms/texture_flatten.cc' l='91' c='_ZN3tvm3tir16TextureFlattener10VisitStmt_EPKNS0_17BufferRealizeNodeE'/>
+<use f='tvm/src/tir/transforms/texture_flatten.cc' l='102' c='_ZN3tvm3tir16TextureFlattener10VisitStmt_EPKNS0_17BufferRealizeNodeE'/>
+<size>56</size>

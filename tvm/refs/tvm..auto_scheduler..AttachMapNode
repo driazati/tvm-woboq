@@ -1,0 +1,33 @@
+<inh f='tvm/include/tvm/runtime/object.h' l='167' c='tvm::runtime::Object'/>
+<def f='tvm/include/tvm/auto_scheduler/loop_state.h' l='159' ll='174'/>
+<use f='tvm/include/tvm/auto_scheduler/loop_state.h' l='216' c='_ZNK3tvm14auto_scheduler9AttachMapptEv'/>
+<use f='tvm/include/tvm/auto_scheduler/loop_state.h' l='216' c='_ZNK3tvm14auto_scheduler9AttachMapptEv'/>
+<use f='tvm/include/tvm/auto_scheduler/loop_state.h' l='216' c='_ZNK3tvm14auto_scheduler9AttachMap3getEv'/>
+<use f='tvm/include/tvm/auto_scheduler/loop_state.h' l='216'/>
+<use f='tvm/include/tvm/auto_scheduler/loop_state.h' l='217' c='_ZN3tvm14auto_scheduler9AttachMap11CopyOnWriteEv'/>
+<use f='tvm/include/tvm/auto_scheduler/loop_state.h' l='217' c='_ZN3tvm14auto_scheduler9AttachMap11CopyOnWriteEv'/>
+<use f='tvm/include/tvm/auto_scheduler/loop_state.h' l='217' c='_ZN3tvm14auto_scheduler9AttachMap11CopyOnWriteEv'/>
+<use f='tvm/include/tvm/auto_scheduler/loop_state.h' l='226' c='_ZN3tvm14auto_scheduler9AttachMap16DeleteStageEntryEPNS0_13AttachMapNodeEi'/>
+<size>128</size>
+<doc f='tvm/include/tvm/auto_scheduler/loop_state.h' l='151'>/*!
+ * \brief stores the compute_at relation between stages
+ * This stores a bi-directional mapping from stages and iter:
+ * 1. Stage to its attached iterator
+ * 2. Iterator to the stage attached to it
+ * You can use AttachMapNode::stage_to_attach_iter and AttachMapNode::iter_to_attached_stages
+ * to query the relations
+ */</doc>
+<mbr r='tvm::auto_scheduler::AttachMapNode::stage_to_attach_iter' o='128' t='std::unordered_map&lt;StageKey, IterKey&gt;'/>
+<mbr r='tvm::auto_scheduler::AttachMapNode::iter_to_attached_stages' o='576' t='std::unordered_map&lt;IterKey, std::vector&lt;StageKey&gt;, IterKeyHash&gt;'/>
+<smbr r='tvm::auto_scheduler::AttachMapNode::_type_key' t='const char *const'/>
+<smbr r='tvm::auto_scheduler::AttachMapNode::_type_final' t='const bool'/>
+<smbr r='tvm::auto_scheduler::AttachMapNode::_type_child_slots' t='const int'/>
+<fun r='_ZN3tvm14auto_scheduler13AttachMapNode16RuntimeTypeIndexEv'/>
+<fun r='_ZN3tvm14auto_scheduler13AttachMapNode27_GetOrAllocRuntimeTypeIndexEv'/>
+<use f='tvm/src/auto_scheduler/loop_state.cc' l='98' c='_ZN3tvm14auto_scheduler9AttachMap16SetComputeAtIterEiii'/>
+<use f='tvm/src/auto_scheduler/loop_state.cc' l='110' c='_ZN3tvm14auto_scheduler9AttachMap11DeleteStageEi'/>
+<use f='tvm/src/auto_scheduler/loop_state.cc' l='118' c='_ZN3tvm14auto_scheduler9AttachMap11UpdateItersERKSt6vectorISt4pairIiiESaIS4_EES8_'/>
+<use f='tvm/src/auto_scheduler/loop_state.cc' l='146' c='_ZN3tvm14auto_scheduler9AttachMap16DeleteStageEntryEPNS0_13AttachMapNodeEi'/>
+<use f='tvm/src/auto_scheduler/loop_state.cc' l='164' c='_ZNK3tvm14auto_scheduler9AttachMap18ApplyStageIdOffsetEii'/>
+<use f='tvm/src/auto_scheduler/loop_state.cc' l='199' c='_ZN3tvm14auto_scheduler5StateC1ERKNS_7runtime5ArrayINS_2te9OperationEvEE'/>
+<size>128</size>

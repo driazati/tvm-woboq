@@ -1,0 +1,15 @@
+<def f='tvm/include/tvm/topi/transform.h' l='1912' ll='1958' type='tvm::te::Tensor tvm::topi::matrix_set_diag(const tvm::te::Tensor &amp; input, const tvm::te::Tensor &amp; diagonal, int k1, int k2, bool super_diag_right_align, bool sub_diag_right_align, const std::string name = &quot;T_matrix_set_diag&quot;, const std::string tag = kInjective)'/>
+<doc f='tvm/include/tvm/topi/transform.h' l='1900'>/*!
+ * \brief Returns a tensor with the diagonal of input tensor replaced with the provided diagonals.
+ * \param input input tensor.
+ * \param diagonal values to be filled in the diagonals.
+ * \param k1 lower limit (included) of the range of diagonals.
+ * \param k2 upper limit (included) of the range of diagonals.
+ * \param super_diag_right_align bool, true iff super-diagonal is right aligned (left-padded).
+ * \param sub_diag_right_align bool, true iff sub-diagonal is right aligned (left-padded).
+ * \param name output tensor name.
+ * \param tag output tensor tag.
+ * \return new tensor with given diagonal values.
+ */</doc>
+<use f='tvm/src/relay/op/tensor/transform.cc' l='4001' u='c' c='_ZN3tvm5relay20MatrixSetDiagComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
+<use f='tvm/src/topi/transform.cc' l='220' u='c'/>

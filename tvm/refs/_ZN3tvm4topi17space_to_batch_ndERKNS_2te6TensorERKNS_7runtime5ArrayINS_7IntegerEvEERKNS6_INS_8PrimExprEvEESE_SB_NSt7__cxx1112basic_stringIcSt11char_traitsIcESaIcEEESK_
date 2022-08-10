@@ -1,0 +1,16 @@
+<def f='tvm/include/tvm/topi/nn.h' l='482' ll='564' type='tvm::te::Tensor tvm::topi::space_to_batch_nd(const tvm::te::Tensor &amp; data, const tvm::Array&lt;Integer&gt; &amp; block_shape, const tvm::Array&lt;tvm::PrimExpr&gt; &amp; pad_before, const tvm::Array&lt;tvm::PrimExpr&gt; &amp; pad_after, tvm::PrimExpr pad_value = tvm::PrimExpr(), std::string name = &quot;space_to_batch_nd&quot;, std::string tag = kInjective)'/>
+<doc f='tvm/include/tvm/topi/nn.h' l='469'>/*!
+ * \brief Divide spatial dimensions of the input into a grid of blocks.
+ *
+ * \param data The input tensor.
+ * \param block_shape The size of the spatial block.
+ * \param pad_before The zero-padding size before each spatial dimension.
+ * \param pad_after The zero-padding size after each spatial dimension.
+ * \param pad_value The value used for padding.
+ * \param name The name of the operation.
+ * \param tag The tag to mark the operation.
+ *
+ * \return A Tensor whose op member is the space_to_batch_nd operation
+ */</doc>
+<use f='tvm/src/relay/op/nn/nn.cc' l='1507' u='c' c='_ZN3tvm5relay21SpaceToBatchNDComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
+<use f='tvm/src/topi/nn.cc' l='61' u='c'/>

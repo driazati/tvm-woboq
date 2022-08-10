@@ -1,0 +1,15 @@
+<def f='tvm/include/tvm/topi/transform.h' l='946' ll='968' type='tvm::te::Tensor tvm::topi::sequence_mask(const tvm::te::Tensor &amp; data, const tvm::te::Tensor &amp; valid_length, double mask_value, int axis, std::string name = &quot;T_sequence_mask&quot;, std::string tag = kInjective)'/>
+<doc f='tvm/include/tvm/topi/transform.h' l='934'>/*!
+ * \brief Mask the out-of-boundary elements of each sequence.
+ *
+ * \param data The source array.
+ * \param valid_length The real length of each sequence.
+ * \param mask_value The masking value.
+ * \param axis The axis of the temporal dimension of the sequence
+ * \param name The name of the operation.
+ * \param tag The tag to mark the operation.
+ *
+ * \return A Tensor whose op member is the sequence_mask operation
+ */</doc>
+<use f='tvm/src/relay/op/tensor/transform.cc' l='3665' u='c' c='_ZN3tvm5relay19SequenceMaskComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
+<use f='tvm/src/topi/transform.cc' l='110' u='c'/>

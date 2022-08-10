@@ -1,0 +1,75 @@
+<inh f='tvm/include/tvm/te/operation.h' l='56' c='tvm::te::OperationNode'/>
+<def f='tvm/include/tvm/te/operation.h' l='152' ll='186'/>
+<use f='tvm/include/tvm/te/operation.h' l='196' c='_ZNK3tvm2te13PlaceholderOpptEv'/>
+<use f='tvm/include/tvm/te/operation.h' l='196' c='_ZNK3tvm2te13PlaceholderOpptEv'/>
+<use f='tvm/include/tvm/te/operation.h' l='196' c='_ZNK3tvm2te13PlaceholderOp3getEv'/>
+<use f='tvm/include/tvm/te/operation.h' l='196'/>
+<use f='tvm/src/auto_scheduler/compute_dag.cc' l='87' c='_ZN3tvm14auto_scheduler11TopoSortOpsERKNS_7runtime5ArrayINS_2te6TensorEvEE'/>
+<use f='tvm/src/auto_scheduler/compute_dag.cc' l='260' c='_ZN3tvm14auto_scheduler14AccessAnalyzerC1ERKNS_7runtime5ArrayINS_2te6TensorEvEE'/>
+<use f='tvm/src/auto_scheduler/compute_dag.cc' l='315' c='_ZN3tvm14auto_scheduler14AccessAnalyzerC1ERKNS_7runtime5ArrayINS_2te6TensorEvEE'/>
+<use f='tvm/src/auto_scheduler/compute_dag.cc' l='574' c='_ZN3tvm14auto_scheduler13FlopEstimator12EstimateFlopERKNS_7runtime5ArrayINS_2te9OperationEvEE'/>
+<use f='tvm/src/auto_scheduler/compute_dag.cc' l='721' c='_ZN3tvm14auto_scheduler10ComputeDAGC1ERKNS_2te8ScheduleE'/>
+<use f='tvm/src/auto_scheduler/compute_dag.cc' l='962' c='_ZNK3tvm14auto_scheduler10ComputeDAG13RewriteLayoutEPNS_7runtime5ArrayINS0_4StepEvEENS0_19LayoutRewriteOptionE'/>
+<use f='tvm/src/auto_scheduler/compute_dag.cc' l='1111' c='_ZNK3tvm14auto_scheduler10ComputeDAG13RewriteLayoutEPNS_7runtime5ArrayINS0_4StepEvEENS0_19LayoutRewriteOptionE'/>
+<use f='tvm/src/auto_scheduler/compute_dag.cc' l='1254' c='_ZNK3tvm14auto_scheduler10ComputeDAG8PrintDAGEb'/>
+<use f='tvm/src/auto_scheduler/compute_dag.cc' l='1522'/>
+<use f='tvm/src/auto_scheduler/compute_dag.cc' l='1523'/>
+<use f='tvm/src/auto_scheduler/compute_dag.cc' l='1524'/>
+<use f='tvm/src/auto_scheduler/compute_dag.cc' l='1524'/>
+<size>112</size>
+<doc f='tvm/include/tvm/te/operation.h' l='149'>/*!
+ * \brief A placeholder op represents an input placeholder.
+ */</doc>
+<mbr r='tvm::te::PlaceholderOpNode::shape' o='768' t='Array&lt;tvm::PrimExpr&gt;'/>
+<mbr r='tvm::te::PlaceholderOpNode::dtype' o='832' t='tvm::DataType'/>
+<fun r='_ZNK3tvm2te17PlaceholderOpNode11num_outputsEv'/>
+<fun r='_ZNK3tvm2te17PlaceholderOpNode14root_iter_varsEv'/>
+<fun r='_ZNK3tvm2te17PlaceholderOpNode12output_dtypeEm'/>
+<fun r='_ZNK3tvm2te17PlaceholderOpNode12output_shapeEm'/>
+<fun r='_ZNK3tvm2te17PlaceholderOpNode12InputTensorsEv'/>
+<fun r='_ZNK3tvm2te17PlaceholderOpNode13ReplaceInputsERKNS0_9OperationERKSt13unordered_mapINS0_6TensorES6_St4hashIS6_ESt8equal_toIS6_ESaISt4pairIKS6_S6_EEE'/>
+<fun r='_ZNK3tvm2te17PlaceholderOpNode17PropBoundToInputsERKNS0_9OperationEPNS_5arith8AnalyzerERKSt13unordered_mapIPKNS_3tir7VarNodeENS5_6IntSetESt4hashISC_ES253690'/>
+<fun r='_ZNK3tvm2te17PlaceholderOpNode11GatherBoundERKNS0_9OperationERKSt13unordered_mapINS0_6TensorENS0_9TensorDomESt4hashIS6_ESt8equal_toIS6_ESaISt4pairIKS65457632'/>
+<fun r='_ZNK3tvm2te17PlaceholderOpNode12BuildRealizeERKNS0_5StageERKSt13unordered_mapINS_3tir7IterVarENS_5RangeESt4hashIS7_ESt8equal_toIS7_ESaISt4pairIKS7_S8_13179119'/>
+<fun r='_ZNK3tvm2te17PlaceholderOpNode12BuildProvideERKNS0_5StageERKSt13unordered_mapINS_3tir7IterVarENS_5RangeESt4hashIS7_ESt8equal_toIS7_ESaISt4pairIKS7_S8_EEEb'/>
+<fun r='_ZN3tvm2te17PlaceholderOpNode10VisitAttrsEPNS_11AttrVisitorE'/>
+<smbr r='tvm::te::PlaceholderOpNode::_type_key' t='const char *const'/>
+<smbr r='tvm::te::PlaceholderOpNode::_type_final' t='const bool'/>
+<smbr r='tvm::te::PlaceholderOpNode::_type_child_slots' t='const int'/>
+<fun r='_ZN3tvm2te17PlaceholderOpNode16RuntimeTypeIndexEv'/>
+<fun r='_ZN3tvm2te17PlaceholderOpNode27_GetOrAllocRuntimeTypeIndexEv'/>
+<use f='tvm/src/auto_scheduler/loop_state.cc' l='72' c='_ZN3tvm14auto_scheduler5StageC1ENS_2te9OperationE'/>
+<size>112</size>
+<use f='tvm/src/auto_scheduler/transform_step.cc' l='103' c='_ZN3tvm14auto_scheduler20UpdateStageToAxesMapERKNS_2te5StageEPNS_7runtime3MapIS2_NS5_5ArrayINS_3tir7IterVarEvEENS5_10ObjectHashENS5_11ObjectEqualEEE'/>
+<size>112</size>
+<use f='tvm/src/meta_schedule/extracted_task.cc' l='60' c='_ZN3tvm13meta_schedule21DefaultTaskFilterImplERKNS_7runtime5ArrayINS_2te6TensorEvEEb'/>
+<size>112</size>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='345' c='_ZN3tvm5relay3tec15ScheduleBuilder6CreateERKNS0_8FunctionESt8functionIFNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESC_EE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='806' c='_ZN3tvm5relay3tec14LowerTEComputeB5cxx11ERKNS0_8FunctionENS_6TargetEb'/>
+<size>112</size>
+<use f='tvm/src/te/operation/create_primfunc.cc' l='407' c='_ZN3tvm3tir17CollectOrderedOpsERKNS_7runtime5ArrayINS_2te6TensorEvEE'/>
+<use f='tvm/src/te/operation/create_primfunc.cc' l='432' c='_ZN3tvm3tir19RewriteStageToBlockERKNS_2te9OperationEPNS0_14CreateFuncInfoEPNS_7runtime5ArrayINS0_4StmtEvEEPNS_5arith8AnalyzerE'/>
+<size>112</size>
+<use f='tvm/src/te/operation/placeholder_op.cc' l='32'/>
+<use f='tvm/src/te/operation/placeholder_op.cc' l='33'/>
+<use f='tvm/src/te/operation/placeholder_op.cc' l='37'/>
+<use f='tvm/src/te/operation/placeholder_op.cc' l='37'/>
+<use f='tvm/src/te/operation/placeholder_op.cc' l='37'/>
+<use f='tvm/src/te/operation/placeholder_op.cc' l='54' c='_ZN3tvm2te13PlaceholderOpC1ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS_7runtime5ArrayINS_8PrimExprEvEENS8_8DataTypeE'/>
+<size>112</size>
+<fun r='_ZNK3tvm2te17PlaceholderOpNode11num_outputsEv'/>
+<fun r='_ZNK3tvm2te17PlaceholderOpNode14root_iter_varsEv'/>
+<fun r='_ZNK3tvm2te17PlaceholderOpNode12output_dtypeEm'/>
+<fun r='_ZNK3tvm2te17PlaceholderOpNode12output_shapeEm'/>
+<fun r='_ZNK3tvm2te17PlaceholderOpNode12InputTensorsEv'/>
+<fun r='_ZNK3tvm2te17PlaceholderOpNode13ReplaceInputsERKNS0_9OperationERKSt13unordered_mapINS0_6TensorES6_St4hashIS6_ESt8equal_toIS6_ESaISt4pairIKS6_S6_EEE'/>
+<fun r='_ZNK3tvm2te17PlaceholderOpNode17PropBoundToInputsERKNS0_9OperationEPNS_5arith8AnalyzerERKSt13unordered_mapIPKNS_3tir7VarNodeENS5_6IntSetESt4hashISC_ES253690'/>
+<fun r='_ZNK3tvm2te17PlaceholderOpNode11GatherBoundERKNS0_9OperationERKSt13unordered_mapINS0_6TensorENS0_9TensorDomESt4hashIS6_ESt8equal_toIS6_ESaISt4pairIKS65457632'/>
+<fun r='_ZNK3tvm2te17PlaceholderOpNode12BuildRealizeERKNS0_5StageERKSt13unordered_mapINS_3tir7IterVarENS_5RangeESt4hashIS7_ESt8equal_toIS7_ESaISt4pairIKS7_S8_13179119'/>
+<fun r='_ZNK3tvm2te17PlaceholderOpNode12BuildProvideERKNS0_5StageERKSt13unordered_mapINS_3tir7IterVarENS_5RangeESt4hashIS7_ESt8equal_toIS7_ESaISt4pairIKS7_S8_EEEb'/>
+<use f='tvm/src/te/schedule/bound.cc' l='98' c='_ZN3tvm2te14InferRootBoundERKNS0_5StageERKNS0_12GraphContextEPSt13unordered_mapINS_3tir7IterVarENS_5RangeESt4hashIS9_ESt8equal_toIS9_ESaISt4pairIKS9_SA_EEE'/>
+<size>112</size>
+<use f='tvm/src/te/schedule/schedule_ops.cc' l='390' c='_ZN3tvm2te11ScheduleOpsENS0_8ScheduleENS_7runtime3MapINS_3tir7IterVarENS_5RangeEvvEEb'/>
+<size>112</size>
+<use f='tvm/include/tvm/topi/cuda/reduction.h' l='139' c='_ZN3tvm4topi4cuda20TraverseBeforeReduceENS_2te8ScheduleENS2_9OperationE'/>
+<size>112</size>

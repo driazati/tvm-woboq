@@ -1,0 +1,18 @@
+<dec f='tvm/include/tvm/arith/int_solver.h' l='288' type='void tvm::arith::SmithNormalFormDiag(std::vector&lt;std::vector&lt;int64_t&gt;&gt; * S, std::vector&lt;std::vector&lt;int64_t&gt;&gt; * V, std::vector&lt;PrimExpr&gt; * x, std::vector&lt;PrimExpr&gt; * y)'/>
+<doc f='tvm/include/tvm/arith/int_solver.h' l='273'>/*!
+ * \brief Obtain Smith Normal Form of linear equation A x = y.
+ *        Smith Normal Form of matrix A_{mxn} is S_{mxn} = U_{mxm} A_{mxn} V_{nxn},
+ *        in which S_{mxn} is diag(s1, s2, ..., sr, 0, ..., 0) and r is the rank of A.
+ *        NOTE: Although in standard Smith Normal Form the diagonal elements satisfy
+ *              s_i | s_{i+1} (| means divides), the implement here does not guarantee it.
+ *        TODO(yzhliu): From sergei-grechanik:
+ *          computing the proper Smith normal form may improve stability of automatic
+ * differentiation (generating the same gradient code for slightly different but equivalent input
+ * code U_{mxm} and V_{nxn} are invertible matrices. This function modifies \p S to be S_{mxn}, \p V
+ * to be V_{nxn}, \p y to be U_{mxm} y_{mx1} and \p x to be V^{-1} x. \param S  the original
+ * A_{mxn}, it will be modified to S_{mxn} \param V  an identity matrix, it will be modified to
+ * V_{nxn} \param x  the x in A x = y. it will be modified to V^{-1}_{nxn} x_{nx1} \param y  the y
+ * in A x = y. it will be modified to U_{mxm} y_{mx1}
+ */</doc>
+<def f='tvm/src/arith/solve_linear_equation.cc' l='40' ll='209' type='void tvm::arith::SmithNormalFormDiag(std::vector&lt;std::vector&lt;int64_t&gt;&gt; * S, std::vector&lt;std::vector&lt;int64_t&gt;&gt; * V, std::vector&lt;PrimExpr&gt; * x, std::vector&lt;PrimExpr&gt; * y)'/>
+<use f='tvm/src/arith/solve_linear_equation.cc' l='337' u='c' c='_ZN3tvm5arith20SolveLinearEquationsERKNS0_14IntConstraintsE'/>

@@ -1,0 +1,43 @@
+<dec f='tvm/src/runtime/runtime_base.h' l='65' type='int TVMAPIHandleException(const std::exception &amp; e)'/>
+<doc f='tvm/src/runtime/runtime_base.h' l='60'>/*!
+ * \brief handle exception throwed out
+ * \param e the exception
+ * \return the return value of API after exception is handled
+ */</doc>
+<def f='tvm/src/runtime/c_runtime_api.cc' l='381' ll='384' type='int TVMAPIHandleException(const std::exception &amp; e)'/>
+<use f='tvm/src/runtime/c_runtime_api.cc' l='396' macro='1' u='c' c='TVMModLoadFromFile'/>
+<use f='tvm/src/runtime/c_runtime_api.cc' l='402' macro='1' u='c' c='TVMModImport'/>
+<use f='tvm/src/runtime/c_runtime_api.cc' l='419' macro='1' u='c' c='TVMModGetFunction'/>
+<use f='tvm/src/runtime/c_runtime_api.cc' l='427' macro='1' u='c' c='TVMBackendGetFuncFromEnv'/>
+<use f='tvm/src/runtime/c_runtime_api.cc' l='498' macro='1' u='c' c='TVMFuncCall'/>
+<use f='tvm/src/runtime/c_runtime_api.cc' l='506' macro='1' u='c' c='TVMCFuncSetReturn'/>
+<use f='tvm/src/runtime/c_runtime_api.cc' l='542' macro='1' u='c' c='TVMFuncCreateFromCFunc'/>
+<use f='tvm/src/runtime/c_runtime_api.cc' l='551' macro='1' u='c' c='TVMStreamCreate'/>
+<use f='tvm/src/runtime/c_runtime_api.cc' l='560' macro='1' u='c' c='TVMStreamFree'/>
+<use f='tvm/src/runtime/c_runtime_api.cc' l='569' macro='1' u='c' c='TVMSetStream'/>
+<use f='tvm/src/runtime/c_runtime_api.cc' l='578' macro='1' u='c' c='TVMSynchronize'/>
+<use f='tvm/src/runtime/c_runtime_api.cc' l='588' macro='1' u='c' c='TVMStreamStreamSynchronize'/>
+<use f='tvm/src/runtime/c_runtime_api.cc' l='596' macro='1' u='c' c='TVMCbArgToReturn'/>
+<use f='tvm/src/runtime/c_runtime_api.cc' l='603' macro='1' u='c' c='TVMDeviceAllocDataSpace'/>
+<use f='tvm/src/runtime/c_runtime_api.cc' l='614' macro='1' u='c' c='TVMDeviceAllocDataSpaceWithScope'/>
+<use f='tvm/src/runtime/c_runtime_api.cc' l='620' macro='1' u='c' c='TVMDeviceFreeDataSpace'/>
+<use f='tvm/src/runtime/c_runtime_api.cc' l='629' macro='1' u='c' c='TVMDeviceCopyDataFromTo'/>
+<use f='tvm/src/runtime/ndarray.cc' l='318' macro='1' u='c' c='TVMArrayGetTypeIndex'/>
+<use f='tvm/src/runtime/ndarray.cc' l='334' macro='1' u='c' c='TVMArrayAlloc'/>
+<use f='tvm/src/runtime/ndarray.cc' l='347' macro='1' u='c' c='TVMArrayFree'/>
+<use f='tvm/src/runtime/ndarray.cc' l='353' macro='1' u='c' c='TVMArrayCopyFromTo'/>
+<use f='tvm/src/runtime/ndarray.cc' l='359' macro='1' u='c' c='TVMArrayFromDLPack'/>
+<use f='tvm/src/runtime/ndarray.cc' l='365' macro='1' u='c' c='TVMArrayToDLPack'/>
+<use f='tvm/src/runtime/ndarray.cc' l='373' macro='1' u='c' c='TVMArrayCopyFromBytes'/>
+<use f='tvm/src/runtime/ndarray.cc' l='379' macro='1' u='c' c='TVMArrayCopyToBytes'/>
+<use f='tvm/src/runtime/object.cc' l='244' macro='1' u='c' c='TVMObjectGetTypeIndex'/>
+<use f='tvm/src/runtime/object.cc' l='250' macro='1' u='c' c='TVMObjectRetain'/>
+<use f='tvm/src/runtime/object.cc' l='256' macro='1' u='c' c='TVMObjectFree'/>
+<use f='tvm/src/runtime/object.cc' l='263' macro='1' u='c' c='TVMObjectDerivedFrom'/>
+<use f='tvm/src/runtime/object.cc' l='269' macro='1' u='c' c='TVMObjectTypeKey2Index'/>
+<use f='tvm/src/runtime/object.cc' l='277' macro='1' u='c' c='TVMObjectTypeIndex2Key'/>
+<use f='tvm/src/runtime/registry.cc' l='197' macro='1' u='c' c='TVMFuncRegisterGlobal'/>
+<use f='tvm/src/runtime/registry.cc' l='213' macro='1' u='c' c='TVMFuncGetGlobal'/>
+<use f='tvm/src/runtime/registry.cc' l='226' macro='1' u='c' c='TVMFuncListGlobalNames'/>
+<use f='tvm/src/runtime/registry.cc' l='232' macro='1' u='c' c='TVMFuncRemoveGlobal'/>
+<use f='tvm/src/runtime/registry.cc' l='238' macro='1' u='c' c='TVMBackendRegisterEnvCAPI'/>

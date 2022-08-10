@@ -1,0 +1,18 @@
+<dec f='tvm/include/tvm/tir/schedule/schedule.h' l='415' type='tvm::tir::BlockRV tvm::tir::ScheduleNode::ReIndex(const tvm::tir::BlockRV &amp; block_rv, int buffer_index, tvm::tir::BufferIndexType buffer_index_type)'/>
+<doc f='tvm/include/tvm/tir/schedule/schedule.h' l='404'>/*!
+   * \brief Create a block that read/write a buffer region into a read/write cache with reindexing.
+   * The layout of the cache will be the same as by the iterators of the block that reads/writes the
+   * buffer. It requires:
+   * 1) There is only one block who reads/writes the target buffer
+   * 2) There is only one buffer load/store of this buffer in the block
+   * \param block_rv The block operates on the target buffer.
+   * \param buffer_index The index of the buffer in block&apos;s read or write region.
+   * \param buffer_index_type The type of the buffer index, kRead or kWrite.
+   * \return The reindex stage block.
+   */</doc>
+<use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling_tensor_core.cc' l='301' u='c' c='_ZNK3tvm13meta_schedule30MultiLevelTilingTensorCoreNode25TransformWithTensorIntrinEPNS0_19TensorCoreStateNodeERKNS_7runtime6StringE'/>
+<use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling_tensor_core.cc' l='303' u='c' c='_ZNK3tvm13meta_schedule30MultiLevelTilingTensorCoreNode25TransformWithTensorIntrinEPNS0_19TensorCoreStateNodeERKNS_7runtime6StringE'/>
+<use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling_tensor_core.cc' l='305' u='c' c='_ZNK3tvm13meta_schedule30MultiLevelTilingTensorCoreNode25TransformWithTensorIntrinEPNS0_19TensorCoreStateNodeERKNS_7runtime6StringE'/>
+<ovr f='tvm/src/tir/schedule/concrete_schedule.cc' l='557' c='_ZN3tvm3tir20ConcreteScheduleNode7ReIndexERKNS0_7BlockRVEiNS0_15BufferIndexTypeE'/>
+<use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='1235' u='c' c='_ZN3tvm3tir13ReIndexTraits23UnpackedApplyToScheduleENS0_8ScheduleENS0_7BlockRVENS_7IntegerES4_'/>
+<use f='tvm/src/tir/schedule/schedule.cc' l='185' u='c'/>

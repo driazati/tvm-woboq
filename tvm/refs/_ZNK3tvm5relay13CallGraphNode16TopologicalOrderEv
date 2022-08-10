@@ -1,0 +1,13 @@
+<dec f='tvm/src/relay/analysis/call_graph.h' l='171' type='std::vector&lt;CallGraphEntry *&gt; tvm::relay::CallGraphNode::TopologicalOrder() const'/>
+<use f='tvm/src/relay/analysis/call_graph.cc' l='121' u='c' c='_ZNK3tvm5relay13CallGraphNode5PrintERSo'/>
+<def f='tvm/src/relay/analysis/call_graph.cc' l='160' ll='188' type='std::vector&lt;CallGraphEntry *&gt; tvm::relay::CallGraphNode::TopologicalOrder() const'/>
+<doc f='tvm/src/relay/analysis/call_graph.h' l='162'>/*!
+   * \brief Get the entries from the CallGraphNode in the topological order.
+   *
+   *  This is useful for various module-level optimizations/analysis. For example,
+   *  inlining requires the correct order of the functions being processed, i.e.
+   *  callee should be always handled before callers.
+   *
+   * \return The list of collected entries that are sorted in the topological order.
+   */</doc>
+<use f='tvm/src/relay/transforms/inline.cc' l='175' u='c' c='_ZN3tvm5relay6InlineERKNS_8IRModuleE'/>

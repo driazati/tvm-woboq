@@ -1,0 +1,29 @@
+<dec f='tvm/src/target/llvm/llvm_instance.h' l='192' type='llvm::TargetMachine * tvm::codegen::LLVMTarget::GetOrCreateTargetMachine(bool allow_missing = false)'/>
+<use f='tvm/src/target/llvm/codegen_amdgpu.cc' l='267' u='c' c='_ZN3tvm7codegen11BuildAMDGPUENS_8IRModuleENS_6TargetE'/>
+<doc f='tvm/src/target/llvm/llvm_instance.h' l='185'>/*!
+   * \brief Return LLVM&apos;s `TargetMachine`, or nullptr
+   * \param allow_missing do not abort if the target machine cannot be created,
+   *        return nullptr instead
+   * \return Pointer to the `TargetMachine` object (or nullptr if it cannot be
+   *         created, \see allow_missing)
+   */</doc>
+<use f='tvm/src/target/llvm/codegen_blob.cc' l='62' u='c' c='_ZN3tvm7codegen11CodeGenBlobERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEbPNS0_10LLVMTargetE'/>
+<use f='tvm/src/target/llvm/codegen_cpu.cc' l='316' u='c' c='_ZN3tvm7codegen10CodeGenCPU15AddMainFunctionERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<use f='tvm/src/target/llvm/codegen_cpu.cc' l='481' u='c' c='_ZN3tvm7codegen10CodeGenCPU14InitContextPtrEPN4llvm4TypeENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<use f='tvm/src/target/llvm/codegen_hexagon.cc' l='574' u='c' c='_ZN3tvm7codegen12BuildHexagonENS_8IRModuleENS_6TargetE'/>
+<use f='tvm/src/target/llvm/codegen_llvm.cc' l='106' u='c' c='_ZN3tvm7codegen11CodeGenLLVM6CreateEPNS0_10LLVMTargetE'/>
+<use f='tvm/src/target/llvm/codegen_llvm.cc' l='151' u='c' c='_ZN3tvm7codegen11CodeGenLLVM10InitTargetEv'/>
+<use f='tvm/src/target/llvm/codegen_llvm.cc' l='281' u='c' c='_ZN3tvm7codegen11CodeGenLLVM12HandleImportERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<use f='tvm/src/target/llvm/codegen_llvm.cc' l='329' u='c' c='_ZN3tvm7codegen11CodeGenLLVM8OptimizeEv'/>
+<use f='tvm/src/target/llvm/codegen_nvptx.cc' l='316' u='c' c='_ZN3tvm7codegen10BuildNVPTXENS_8IRModuleENS_6TargetE'/>
+<use f='tvm/src/target/llvm/codegen_x86_64.cc' l='95' u='c' c='_ZN3tvm7codegen13CodeGenX86_6410VisitExpr_EPKNS_3tir8CastNodeE'/>
+<def f='tvm/src/target/llvm/llvm_instance.cc' l='251' ll='265' type='llvm::TargetMachine * tvm::codegen::LLVMTarget::GetOrCreateTargetMachine(bool allow_missing = false)'/>
+<use f='tvm/src/target/llvm/llvm_module.cc' l='188' u='c' c='_ZN3tvm7codegen14LLVMModuleNode10SaveToFileERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES9_'/>
+<use f='tvm/src/target/llvm/llvm_module.cc' l='208' u='c' c='_ZN3tvm7codegen14LLVMModuleNode10SaveToFileERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES9_'/>
+<use f='tvm/src/target/llvm/llvm_module.cc' l='254' u='c' c='_ZN3tvm7codegen14LLVMModuleNode9GetSourceERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<use f='tvm/src/target/llvm/llvm_module.cc' l='282' u='c' c='_ZN3tvm7codegen14LLVMModuleNode4InitERKNS_8IRModuleERKNS_6TargetE'/>
+<use f='tvm/src/target/llvm/llvm_module.cc' l='394' u='c' c='_ZNK3tvm7codegen14LLVMModuleNode20IsCompatibleWithHostEPKN4llvm13TargetMachineE'/>
+<use f='tvm/src/target/llvm/llvm_module.cc' l='439' u='c'/>
+<use f='tvm/src/target/llvm/llvm_module.cc' l='479' u='c'/>
+<use f='tvm/src/target/llvm/llvm_module.cc' l='509' u='c' c='_ZN3tvm7codegen27CreateLLVMCppMetadataModuleENS_7runtime8metadata8MetadataENS_6TargetENS_5relay7RuntimeE'/>
+<use f='tvm/src/target/llvm/llvm_module.cc' l='555' u='c' c='_ZN3tvm7codegen27CreateLLVMCrtMetadataModuleERKNS_7runtime5ArrayINS1_6ModuleEvEENS_6TargetENS_5relay7RuntimeE'/>

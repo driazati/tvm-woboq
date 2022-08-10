@@ -1,0 +1,13 @@
+<def f='tvm/include/tvm/topi/nn.h' l='76' ll='87' type='tvm::te::Tensor tvm::topi::leaky_relu(const tvm::te::Tensor &amp; t, double alpha = 0.10000000000000001, std::string name = &quot;T_leaky_relu&quot;, std::string tag = kElementWise)'/>
+<doc f='tvm/include/tvm/topi/nn.h' l='66'>/*!
+ * \brief Creates an operation that performs a leaky rectified linear unit
+ *
+ * \param t The input tensor
+ * \param alpha The slope for the small gradient when t &lt; 0
+ * \param name The name of the operation
+ * \param tag The tag to mark the operation
+ *
+ * \return A Tensor whose op member is the leaky relu operation
+ */</doc>
+<use f='tvm/src/relay/op/nn/nn.cc' l='338' u='c'/>
+<use f='tvm/src/topi/nn.cc' l='49' u='c'/>

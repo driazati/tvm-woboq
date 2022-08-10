@@ -1,0 +1,16 @@
+<dec f='tvm/include/tvm/node/structural_hash.h' l='133' type='void tvm::SHashReducer::Handler::SHashReduceFreeVar(const runtime::Object * var, bool map_free_vars)'/>
+<use f='tvm/include/tvm/node/structural_hash.h' l='186' u='c' c='_ZNK3tvm12SHashReducer15FreeVarHashImplEPKNS_7runtime6ObjectE'/>
+<doc f='tvm/include/tvm/node/structural_hash.h' l='120'>/*!
+     * \brief Apppend a hash value of free variable to the current sequence of hashes.
+     *
+     * \param var The var of interest.
+     * \param map_free_vars Whether to map free variables by their occurence number.
+     *
+     * \note If map_free_vars is set to be true,
+     *       internally the handler can maintain a counter to encode free variables
+     *       by their order of occurence. This helps to resolve variable
+     *       mapping of function parameters and let binding variables.
+     *
+     *       If map_free_vars is set to be false, the address of the variable will be used.
+     */</doc>
+<ovr f='tvm/src/node/structural_hash.cc' l='105' c='_ZN3tvm23VarCountingSHashHandler18SHashReduceFreeVarEPKNS_7runtime6ObjectEb'/>

@@ -1,0 +1,35 @@
+<def f='tvm/include/tvm/topi/nn/pooling.h' l='773' ll='783' type='tvm::te::Tensor tvm::topi::nn::pool3d(const tvm::te::Tensor &amp; x, const Array&lt;tvm::PrimExpr&gt; &amp; kernel_size, const Array&lt;tvm::PrimExpr&gt; &amp; stride_size, const Array&lt;tvm::PrimExpr&gt; &amp; dilation_size, const Array&lt;tvm::PrimExpr&gt; &amp; padding_size, tvm::topi::nn::PoolType pool_type, bool ceil_mode, const std::string &amp; layout = &quot;NCDHW&quot;, bool count_include_pad = true)'/>
+<use f='tvm/src/relay/op/nn/pooling.cc' l='1264' u='c' c='_ZN3tvm5relay13Pool3DComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
+<use f='tvm/src/relay/op/nn/pooling.cc' l='1267' u='c' c='_ZN3tvm5relay13Pool3DComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
+<doc f='tvm/include/tvm/topi/nn/pooling.h' l='742'>/*!
+ * \brief Perform pooling on depth, height and width dimension of data.
+ *        It decides the depth, height and width dimension according to the layout string,
+ *        in which &apos;D&apos;, &apos;W&apos; and &apos;H&apos; means depth, width and height respectively.
+ *        Depth, Width and height dimension cannot be split.
+ *        For example, NCDHW, NCDHW16c, etc. are valid for pool,
+ *        while NCDHW16d, NCDHW16w or NCDHW16h are not.
+ *        See \a layout for more information of the layout string convention.
+ * \param x The input tensor.
+ * \param kernel_size Vector of three ints: {kernel_depth, kernel_height, kernel_width}
+ * \param stride_size Vector of three ints: {stride_depth, stride_height, stride_width}
+ * \param dilation_size Vector of three ints: {dilation_depth, dilation_height, dilation_width}
+ * \param padding_size Vector of six ints: {head_pad_depth, head_pad_height, head_pad_width,
+ *        tail_pad_depth, tail_pad_height, tail_pad_width}
+ * \param pool_type The type of pooling operator
+ * \param ceil_mode Whether to use ceil when calculating the output size
+ * \param layout The input layout. Pooling supports any layout as long as &apos;D&apos;, &apos;H&apos; and &apos;W&apos; appear.
+ *        The layout is supposed to be composed of upper cases, lower cases and (optional) numbers,
+ *        where upper case indicates a dimension and
+ *        the corresponding lower case (with factor size) indicates the split dimension.
+ *        For example, NCDHW16c can describe a 6-D tensor of
+ *        [batch_size, channel, depth, height, width, channel_block].
+ *        (in which factor size `16` will not be used in pooling but for other operators,
+ *        it can be used to decide the output shape).
+ *        Since pooling does not care about the factor size of dimensions
+ *        other than `D`, `H` and `W`, one can pass `NCDHWc` as well.
+ * \param  count_include_pad Whether include padding in the calculation when pool_type is &apos;avg&apos;
+ *
+ *
+ * \return The output tensor in the same layout
+ */</doc>
+<use f='tvm/src/topi/nn.cc' l='133' u='c'/>

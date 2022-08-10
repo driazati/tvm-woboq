@@ -1,0 +1,21 @@
+<dec f='tvm/src/arith/constraint_extract.h' l='53' type='std::vector&lt;PrimExpr&gt; tvm::arith::ExtractConstraints(const tvm::PrimExpr &amp; expr)'/>
+<def f='tvm/src/arith/constraint_extract.cc' l='47' ll='52' type='std::vector&lt;PrimExpr&gt; tvm::arith::ExtractConstraints(const tvm::PrimExpr &amp; expr)'/>
+<doc f='tvm/src/arith/constraint_extract.h' l='36'>/* \brief Returns constraints that are true if the expression is true.
+ *
+ * Utility to break up a boolean expression into independent
+ * constraints.
+ *
+ * Example: `i==5 &amp;&amp; j==3` =&gt; `[i==5 &amp;&amp; j==3, i==5, j==3]`
+ * Example: `i==5 || j==3` =&gt; `[i==5 || j==3]`
+ * Example: `!(i&gt;5 || j==3)` =&gt; `[!(i==5 || j==3), i&lt;=5, j!=3]`
+ *
+ * Intended for use in bounds analysis or simplification within a
+ * conditional, or identifying independent conditionals that may be
+ * hoisted.
+ *
+ * \param expr The expression to be analyzers
+ *
+ * \returns A vector of independent constraints
+ */</doc>
+<use f='tvm/src/arith/int_set.cc' l='631' u='c' c='_ZN3tvm5arith14IntSetAnalyzer4Impl15DetectBoundInfoERKNS_8PrimExprE'/>
+<use f='tvm/src/arith/rewrite_simplify.cc' l='233' u='c' c='_ZN3tvm5arith17RewriteSimplifier4Impl15EnterConstraintERKNS_8PrimExprE'/>

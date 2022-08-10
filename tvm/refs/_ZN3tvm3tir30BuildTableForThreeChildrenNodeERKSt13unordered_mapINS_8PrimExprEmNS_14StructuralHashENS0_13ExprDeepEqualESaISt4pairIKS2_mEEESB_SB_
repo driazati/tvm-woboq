@@ -1,0 +1,13 @@
+<def f='tvm/src/tir/transforms/common_subexpr_elim_tools.cc' l='236' ll='254' type='tvm::tir::ComputationTable tvm::tir::BuildTableForThreeChildrenNode(const tvm::tir::ComputationTable &amp; table_child1, const tvm::tir::ComputationTable &amp; table_child2, const tvm::tir::ComputationTable &amp; table_child3)'/>
+<use f='tvm/src/tir/transforms/common_subexpr_elim_tools.cc' l='445' u='c' c='_ZN3tvm3tir18ComputationsDoneBy10VisitStmt_EPKNS0_14IfThenElseNodeE'/>
+<use f='tvm/src/tir/transforms/common_subexpr_elim_tools.cc' l='480' u='c' c='_ZN3tvm3tir18ComputationsDoneBy10VisitStmt_EPKNS0_7ForNodeE'/>
+<doc f='tvm/src/tir/transforms/common_subexpr_elim_tools.cc' l='226'>/*!
+ * \brief Builds a table for a node that has three children. A computation will be reported
+   as being computed if it appears in at least two of the children, i.e. if it will aways be
+   computed, regardless of the execution path.
+ * \param table_child1 The table of computations done by the first child.
+ * \param table_child2 The table of computations done by the second child.
+ * \param table_child3 The table of computations done by the third child.
+ * \note This function will be used for obtaining the computations done by If nodes and by For
+ * nodes, which both have three children.
+ */</doc>

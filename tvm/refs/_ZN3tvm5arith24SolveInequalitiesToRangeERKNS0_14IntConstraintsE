@@ -1,0 +1,15 @@
+<dec f='tvm/include/tvm/arith/int_solver.h' l='343' type='tvm::arith::IntConstraints tvm::arith::SolveInequalitiesToRange(const tvm::arith::IntConstraints &amp; system_to_solve)'/>
+<doc f='tvm/include/tvm/arith/int_solver.h' l='333'>/*!
+ * \brief Solve linear inequalities and infer the range of each variable.
+ * \param system_to_solve the variables to solve, their ranges, and a list of inequalities.
+ * \return The result ranges for each variables.
+ *         The returned IntConstraints(variables, ranges, relations) contains,
+ *         1. variables  - the variables that have been solved.
+ *         2. ranges     - the best range of each variable.
+ *         3. relations  - constraints that cannot be transformed to
+ *                         Range will be stored in relations.
+ */</doc>
+<def f='tvm/src/arith/solve_linear_inequality.cc' l='364' ll='435' type='tvm::arith::IntConstraints tvm::arith::SolveInequalitiesToRange(const tvm::arith::IntConstraints &amp; inequalities)'/>
+<use f='tvm/src/arith/solve_linear_inequality.cc' l='557' u='c'/>
+<use f='tvm/src/arith/solve_linear_inequality.cc' l='560' u='c'/>
+<use f='tvm/src/tir/transforms/ir_utils.cc' l='389' u='c' c='_ZN3tvm3tir24ConditionalBoundsContext25GetVarBoundsFromConditionEv'/>

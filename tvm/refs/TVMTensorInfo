@@ -1,0 +1,39 @@
+<use f='tvm/include/tvm/runtime/metadata_types.h' l='47'/>
+<use f='tvm/include/tvm/runtime/metadata_types.h' l='54'/>
+<use f='tvm/include/tvm/runtime/metadata_types.h' l='61'/>
+<def f='tvm/include/tvm/runtime/metadata_types.h' l='79' ll='88'/>
+<use f='tvm/include/tvm/runtime/metadata.h' l='61' c='_ZN3tvm7runtime8metadata12MetadataNode6inputsEv'/>
+<use f='tvm/include/tvm/runtime/metadata.h' l='63' c='_ZN3tvm7runtime8metadata12MetadataNode7outputsEv'/>
+<use f='tvm/include/tvm/runtime/metadata.h' l='65' c='_ZN3tvm7runtime8metadata12MetadataNode15workspace_poolsEv'/>
+<use f='tvm/include/tvm/runtime/metadata.h' l='84' c='_ZN3tvm7runtime8metadata14TensorInfoNodeC1EPK13TVMTensorInfo'/>
+<use f='tvm/include/tvm/runtime/metadata.h' l='94' c='_ZNK3tvm7runtime8metadata14TensorInfoNode4dataEv'/>
+<use f='tvm/include/tvm/runtime/metadata.h' l='98'/>
+<use f='tvm/include/tvm/runtime/metadata.h' l='103' c='_ZN3tvm7runtime8metadata10TensorInfoC1EPK13TVMTensorInfo'/>
+<size>32</size>
+<doc f='tvm/include/tvm/runtime/metadata_types.h' l='73'>/*!
+ * \brief Describes one tensor argument to `run_model`.
+ * NOTE: while TIR allows for other types of arguments, such as scalars, the AOT run_model
+ * function does not currently accept these. Therefore it&apos;s not possible to express those
+ * in this metadata. A future patch may modify this.
+ */</doc>
+<mbr r='TVMTensorInfo::name' o='0' t='const char *'/>
+<mbr r='TVMTensorInfo::shape' o='64' t='const int64_t *'/>
+<mbr r='TVMTensorInfo::num_shape' o='128' t='int64_t'/>
+<mbr r='TVMTensorInfo::dtype' o='192' t='DLDataType'/>
+<use f='tvm/src/target/metadata.h' l='127' c='_ZN3tvm6target8metadata20InMemoryMetadataNodeC1ElRKSt6vectorINS_7runtime8metadata10TensorInfoESaIS6_EESA_SA_RKS3_INS_12ConstantInfoESaISB_EENS4_6StringE'/>
+<use f='tvm/src/target/metadata.h' l='129' c='_ZN3tvm6target8metadata20InMemoryMetadataNodeC1ElRKSt6vectorINS_7runtime8metadata10TensorInfoESaIS6_EESA_SA_RKS3_INS_12ConstantInfoESaISB_EENS4_6StringE'/>
+<use f='tvm/src/target/metadata.h' l='131' c='_ZN3tvm6target8metadata20InMemoryMetadataNodeC1ElRKSt6vectorINS_7runtime8metadata10TensorInfoESaIS6_EESA_SA_RKS3_INS_12ConstantInfoESaISB_EENS4_6StringE'/>
+<use f='tvm/src/target/metadata.h' l='179'/>
+<use f='tvm/src/target/metadata.h' l='181'/>
+<use f='tvm/src/target/metadata.h' l='183'/>
+<use f='tvm/src/target/metadata.h' l='193' c='_ZN3tvm6target8metadata23VisitableTensorInfoNodeC1EPK13TVMTensorInfo'/>
+<use f='tvm/src/target/metadata.h' l='234'/>
+<size>32</size>
+<use f='tvm/src/runtime/metadata.cc' l='38' c='_ZN3tvm7runtime8metadata12MetadataNode6inputsEv'/>
+<use f='tvm/src/runtime/metadata.cc' l='39' c='_ZN3tvm7runtime8metadata12MetadataNode6inputsEv'/>
+<use f='tvm/src/runtime/metadata.cc' l='41' c='_ZN3tvm7runtime8metadata12MetadataNode7outputsEv'/>
+<use f='tvm/src/runtime/metadata.cc' l='42' c='_ZN3tvm7runtime8metadata12MetadataNode7outputsEv'/>
+<use f='tvm/src/runtime/metadata.cc' l='44' c='_ZN3tvm7runtime8metadata12MetadataNode15workspace_poolsEv'/>
+<use f='tvm/src/runtime/metadata.cc' l='45' c='_ZN3tvm7runtime8metadata12MetadataNode15workspace_poolsEv'/>
+<use f='tvm/src/runtime/metadata.cc' l='70' c='_ZN3tvm7runtime8metadata10TensorInfoC1EPK13TVMTensorInfo'/>
+<size>32</size>
