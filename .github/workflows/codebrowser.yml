@@ -34,7 +34,8 @@ jobs:
           mkdir build
           cd build
           cmake -DUSE_MICRO=1 -DUSE_LLVM=1 ..
-          cmake --build . -- -j$(nproc)
+          # building the code isn't actually necessary
+          # cmake --build . -- -j$(nproc)
       - name: Generate site
         run: |
           set -eux
