@@ -1,0 +1,41 @@
+name: Woboq Codebrowser
+on:
+  push:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 * * * *'
+
+
+jobs:
+  codebrowser:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install LLVM and Clang
+        uses: KyleMayes/install-llvm-action@v1
+        with:
+          version: "14.0"
+      - name: Checkout codebrowser
+        run: |
+          set -eux
+          git clone --depth=1 https://github.com/driazati/codebrowser
+          cd codebrowser
+          mkdir build
+          cd build
+          cmake -DCMAKE_BUILD_TYPE=Release ..
+          cmake --build . -- -j$(nproc)
+      # - name: Setup tmate session
+      #   uses: mxschmitt/action-tmate@v3
+      - name: Build TVM
+        run: |
+          set -eux
+          git clone --depth=1 https://github.com/apache/tvm --recursive --jobs 0
+          cd tvm
+          mkdir build
+          cd build
+          cmake -DUSE_MICRO=1 -DUSE_LLVM=1 -DUSE_CUDA=1 ..
+          cmake --build . -- -j$(nproc)
+      - name: Generate site
+        run: |
+          set -eux
+          ls
