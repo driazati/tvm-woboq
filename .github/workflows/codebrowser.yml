@@ -48,6 +48,10 @@ jobs:
           ./build/indexgenerator/codebrowser_indexgenerator $OUT_DIR
           cd ..
           mkdir deploy
+          curl -LO https://github.com/DimitriFourny/woboq_vscode_theme/raw/master/data/vscode.css
+          curl -LO https://github.com/DimitriFourny/woboq_vscode_theme/raw/master/data/codebrowser.js
+          mv vscode.css ./codebrowser/data
+          mv codebrowser.js ./codebrowser/data
           cp -r ./codebrowser/tvm deploy
           cp -r ./codebrowser/data deploy
           cp -r ./codebrowser/data deploy/tvm
