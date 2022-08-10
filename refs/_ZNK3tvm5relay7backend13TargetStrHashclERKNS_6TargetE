@@ -1,0 +1,11 @@
+<def f='tvm/relay/backend/utils.h' l='583' ll='586' type='size_t tvm::relay::backend::TargetStrHash::operator()(const tvm::Target &amp; target) const'/>
+<use f='tvm/relay/backend/utils.h' l='602' u='c' c='_ZNK3tvm5relay7backend14TargetStrEqualclERKNS_6TargetES5_'/>
+<use f='tvm/relay/backend/utils.h' l='602' u='c' c='_ZNK3tvm5relay7backend14TargetStrEqualclERKNS_6TargetES5_'/>
+<doc f='tvm/relay/backend/utils.h' l='575'>/*!
+   * \brief Calculate the hash code of a Target based on the string value of the Target KIND.
+   Note that this hash should NOT be used in new usecases, equality of targets based on their
+   value is not well-defined.
+   This will be removed when maps from Targets to IRModules are removed from the codebase.
+   * \param target The Target to hash
+   * \return String hash of the target
+   */</doc>

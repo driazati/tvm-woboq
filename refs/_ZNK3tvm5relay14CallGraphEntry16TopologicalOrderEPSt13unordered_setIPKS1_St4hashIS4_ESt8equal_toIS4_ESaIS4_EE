@@ -1,0 +1,14 @@
+<dec f='tvm/relay/analysis/call_graph.h' l='419' type='std::vector&lt;CallGraphEntry *&gt; tvm::relay::CallGraphEntry::TopologicalOrder(tvm::relay::CallGraphEntry::CallGraphEntrySet * visited = new tvm::relay::CallGraphEntry::CallGraphEntrySet()) const'/>
+<use f='tvm/relay/analysis/call_graph.cc' l='168' u='c' c='_ZNK3tvm5relay13CallGraphNode16TopologicalOrderEv'/>
+<def f='tvm/relay/analysis/call_graph.cc' l='194' ll='219' type='std::vector&lt;CallGraphEntry *&gt; tvm::relay::CallGraphEntry::TopologicalOrder(tvm::relay::CallGraphEntry::CallGraphEntrySet * visited = new tvm::relay::CallGraphEntry::CallGraphEntrySet()) const'/>
+<doc f='tvm/relay/analysis/call_graph.cc' l='190'>// BSF traversal is used to collect the nodes in a CallGraphEntry. The nodes
+// that are visited by previous CallGraphEntry entries can be memoized. This
+// helps us to make sure no entry will be visited multiple times when collecting
+// the nodes for an entire call graph.</doc>
+<doc f='tvm/relay/analysis/call_graph.h' l='412'>/*!
+   * \brief Return the topological order of the CallGraphEntry.
+   *
+   * \param visited A set of CallGraphEntry objects that have been visited.
+   *
+   * \return The list of CallGraphEntry that is represented in topological order.
+   */</doc>

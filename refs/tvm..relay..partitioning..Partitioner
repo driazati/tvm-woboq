@@ -1,0 +1,38 @@
+<def f='tvm/relay/transforms/partition_graph.cc' l='116' ll='407'/>
+<use f='tvm/relay/transforms/partition_graph.cc' l='589' c='_ZN3tvm5relay9transform14PartitionGraphENS_7runtime6StringEb'/>
+<size>200</size>
+<doc f='tvm/relay/transforms/partition_graph.cc' l='81'>/*! \brief This class partitions the expr labeled with begin and end annotations
+ * into function containing multiple regions. Each region is labeled with
+ * a compiler attribute so that it will be handled by any compilers that are not
+ * in the TVM stack.
+ *
+ * Input : A Relay module that has functions with disjoint annotated regions
+ *         using compiler_begin and compiler_end. There could be multiple
+ *         outputs.
+ *
+ * Output : A Relay module with global functions for such disjoint annotated
+ *          regions with calls inserted at the respective location
+ *
+ * Dependencies : AnnotatedRegionSet Utility class.
+ *
+ * Methodology :
+ *      1) The AnnotatedRegionSet utility class is able to construct a collection
+ *         of nodes that are bound by a given annotation -- here we use
+ *         compiler_begin and compiler_end
+ *      2) Initially, for each function in the module RegionSets are populated.
+ *      3) Then, Vistor pass is traversed until a compiler_end node is encountered
+ *         that belongs to a &quot;region&quot;.
+ *      4) When the first compiler_end of a given annotated region is found,
+ *         a function is formed and inserted.
+ *         a) if the region has multiple outputs, a Tuple node (capturing
+ *            all outputs) is returned.
+ *      5) Thereafter, if we encounter an another output of the same annotated
+ *         region, it is important to note that the function is already formed.
+ *         Therefore, it will lookup the function and add a TupleGetItemNode.
+ *         a) We will use the location index of &quot;rets&quot; of each Region&quot; of
+ *         AnnotatedRegionSet as TupleGetItemNode index.
+ *      6) Therefore, functions will be created for all annotated regions.
+ *         The name for each global function is created using &quot;Region&quot; id and
+ *         the compiler name.
+ */</doc>
+<fun r='_ZN3tvm5relay12partitioning11Partitioner8Rewrite_EPKNS0_8CallNodeERKNS_9RelayExprE'/>

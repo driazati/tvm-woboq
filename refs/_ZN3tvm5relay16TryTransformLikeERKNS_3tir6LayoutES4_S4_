@@ -1,0 +1,17 @@
+<dec f='tvm/relay/transforms/infer_layout_utils.h' l='69' type='tvm::tir::Layout tvm::relay::TryTransformLike(const tvm::tir::Layout &amp; old, const tvm::tir::Layout &amp; ref_old, const tvm::tir::Layout &amp; ref_new)'/>
+<doc f='tvm/relay/transforms/infer_layout_utils.h' l='55'>/*!
+ * \brief Try transforming `old` in as the smae way as how`ref_old` is transformed to `ref_new`.
+ * `old` and `ref_old` are expected to describe two broadcastable tensors. Layout with fewer rank
+ * will be expanded. For example,
+ * if old = &apos;NW&apos;, ref_old = &apos;NC&apos;, ref_new = &apos;NC1c&apos;, then the result is &apos;NW1w&apos;;
+ * if old = &apos;W&apos;, ref_old = &apos;NC&apos;, ref_new = &apos;NC1c&apos;, then the result is &apos;NW1w&apos;.
+ * When `old` and `ref_old` are isomorphic (same structure, only differ in naming), the transform
+ * is guaranteed to succeed, in which case the function is simply renaming the axes of `ref_new`
+ * to conform to `old`&apos;s naming.
+ * \param old The layout to be transformed.
+ * \param ref_old The reference layout before transform.
+ * \param ref_new The reference layout after transform.
+ * \return The transformed layout.
+ */</doc>
+<def f='tvm/relay/transforms/infer_layout_utils.cc' l='117' ll='186' type='tvm::tir::Layout tvm::relay::TryTransformLike(const tvm::tir::Layout &amp; old, const tvm::tir::Layout &amp; ref_old, const tvm::tir::Layout &amp; ref_new)'/>
+<use f='tvm/relay/transforms/infer_layout_utils.cc' l='245' u='c' c='_ZN3tvm5relay27BinaryBroadcastLayoutHelperERKNS_5AttrsERKNS_7runtime5ArrayINS_3tir6LayoutEvEESA_RKNS5_INS_4TypeEvEE'/>

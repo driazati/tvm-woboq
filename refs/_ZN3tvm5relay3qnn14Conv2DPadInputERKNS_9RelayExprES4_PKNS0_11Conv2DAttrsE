@@ -1,0 +1,13 @@
+<def f='tvm/relay/qnn/op/convolution.cc' l='227' ll='253' type='tvm::relay::Expr tvm::relay::qnn::Conv2DPadInput(const tvm::relay::Expr &amp; data, const tvm::relay::Expr &amp; input_zero_point, const tvm::relay::Conv2DAttrs * param)'/>
+<use f='tvm/relay/qnn/op/convolution.cc' l='779' u='c' c='_ZN3tvm5relay3qnn21QnnConv2DCanonicalizeERKNS_5AttrsERKNS_7runtime5ArrayINS_9RelayExprEvEERKNS6_INS_4TypeEvEE'/>
+<use f='tvm/relay/qnn/op/convolution.cc' l='796' u='c' c='_ZN3tvm5relay3qnn21QnnConv2DCanonicalizeERKNS_5AttrsERKNS_7runtime5ArrayINS_9RelayExprEvEERKNS6_INS_4TypeEvEE'/>
+<doc f='tvm/relay/qnn/op/convolution.cc' l='217'>/*
+ * \brief Pad the input data.
+ * \param data The input expr.
+ * \param input_zero_point The input zero point expr.
+ * \return The padded input expr.
+ * \note For quantized convolution, the input has to be padded with zero point
+ *       instead of zero. This might lead to performance degradation as pad
+ *       cannot be fused with conv in Relay. In case we see performance
+ *       degradation, we can change the conv2D API to accept a pad_const value.
+ */</doc>

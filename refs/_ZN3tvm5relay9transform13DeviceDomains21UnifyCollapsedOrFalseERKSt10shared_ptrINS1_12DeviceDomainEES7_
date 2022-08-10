@@ -1,0 +1,17 @@
+<dec f='tvm/relay/transforms/device_domains.h' l='225' type='bool tvm::relay::transform::DeviceDomains::UnifyCollapsedOrFalse(const tvm::relay::transform::DeviceDomainPtr &amp; lhs_first_order, const tvm::relay::transform::DeviceDomainPtr &amp; rhs_maybe_higher_order)'/>
+<def f='tvm/relay/transforms/device_domains.cc' l='172' ll='180' type='bool tvm::relay::transform::DeviceDomains::UnifyCollapsedOrFalse(const tvm::relay::transform::DeviceDomainPtr &amp; lhs_first_order, const tvm::relay::transform::DeviceDomainPtr &amp; rhs_maybe_higher_order)'/>
+<use f='tvm/relay/transforms/device_domains.cc' l='300' u='c' c='_ZN3tvm5relay9transform13DeviceDomains15DomainForCalleeERKNS0_4CallE'/>
+<use f='tvm/relay/transforms/device_domains.cc' l='373' u='c' c='_ZN3tvm5relay9transform13DeviceDomains18UnifyExprCollapsedERKNS_9RelayExprERKSt10shared_ptrINS1_12DeviceDomainEE'/>
+<doc f='tvm/relay/transforms/device_domains.h' l='212'>/*!
+   * \brief Unifies \p lhs_first_order and \p rhs_maybe_higher_order. If \p rhs_maybe_higher_order
+   * is indeed higher-order, require all of its arguments and result to unify with
+   * \p lhs_first_order. Otherwise same as \p Unify. Returns false if unification is not possible.
+   *
+   * In an expression such as:
+   * \code
+   * (fn(...) {...}, ...).0
+   * \endcode
+   * we need to force all the devices of the inner function to be the same as the device for the
+   * overall tuple since the device domain does not understand tuples. Similarly for references
+   * and ADTs.
+   */</doc>

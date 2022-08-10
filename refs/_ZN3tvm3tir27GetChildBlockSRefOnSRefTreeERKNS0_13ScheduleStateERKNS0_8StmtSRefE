@@ -1,0 +1,13 @@
+<dec f='tvm/tir/schedule/analysis.h' l='309' type='Array&lt;tvm::tir::StmtSRef&gt; tvm::tir::GetChildBlockSRefOnSRefTree(const tvm::tir::ScheduleState &amp; self, const tvm::tir::StmtSRef &amp; parent_sref)'/>
+<doc f='tvm/tir/schedule/analysis.h' l='303'>/*!
+ * \brief Gets StmtSRefs of leaf blocks of a scope where a specific block/loop is in
+ * \param self The schedule state
+ * \param parent_sref The StmtSRef that points to the parent block/loop
+ * \return A list of StmtSRefs of leaf block
+ */</doc>
+<use f='tvm/meta_schedule/schedule_rule/random_compute_location.cc' l='81' u='c' c='_ZNK3tvm13meta_schedule25RandomComputeLocationNode15CheckConditionsENS_3tir8ScheduleERKNS2_7BlockRVE'/>
+<use f='tvm/tir/schedule/analysis/analysis.cc' l='223' u='c' c='_ZN3tvm3tir15IsDominantBlockERKNS0_13ScheduleStateERKNS0_8StmtSRefES6_'/>
+<use f='tvm/tir/schedule/analysis/analysis.cc' l='489' u='c' c='_ZN3tvm3tir27CheckSubtreeCompactDataflowERKNS0_13ScheduleStateERKNS0_8StmtSRefE'/>
+<def f='tvm/tir/schedule/analysis/analysis.cc' l='762' ll='772' type='Array&lt;tvm::tir::StmtSRef&gt; tvm::tir::GetChildBlockSRefOnSRefTree(const tvm::tir::ScheduleState &amp; self, const tvm::tir::StmtSRef &amp; parent_sref)'/>
+<doc f='tvm/tir/schedule/analysis/analysis.cc' l='760'>/******** Block-loop relation ********/</doc>
+<use f='tvm/tir/schedule/state.cc' l='775' u='c' c='_ZN3tvm3tir11SRefUpdater15UpdateBlockInfoERKNS0_8StmtSRefE'/>

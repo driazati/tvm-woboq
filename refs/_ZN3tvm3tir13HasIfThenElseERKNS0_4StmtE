@@ -1,0 +1,12 @@
+<dec f='tvm/tir/schedule/analysis.h' l='599' type='bool tvm::tir::HasIfThenElse(const tvm::tir::Stmt &amp; stmt)'/>
+<doc f='tvm/tir/schedule/analysis.h' l='590'>/*!
+ * \brief Checks if the given AST statement contains if-then-else, including
+ * 1) IfThenElse statement
+ * 2) Select expression
+ * 3) The operator `tir.if_then_else`
+ * 4) non-constant-true Block predicates
+ * \param stmt The AST statement to be checked
+ * \return A boolean indicating whether the statement contains the if-then-else pattern
+ */</doc>
+<use f='tvm/meta_schedule/schedule_rule/auto_inline.cc' l='114' u='c' c='_ZN3tvm13meta_schedule14AutoInlineNode11CheckInlineERKNS_3tir8ScheduleERKNS2_7BlockRVE'/>
+<def f='tvm/tir/schedule/analysis/analysis.cc' l='1785' ll='1811' type='bool tvm::tir::HasIfThenElse(const tvm::tir::Stmt &amp; stmt)'/>

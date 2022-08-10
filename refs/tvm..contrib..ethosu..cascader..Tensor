@@ -1,0 +1,93 @@
+<use f='tvm/contrib/ethosu/cascader/graph.h' l='133'/>
+<def f='tvm/contrib/ethosu/cascader/graph.h' l='160' ll='165'/>
+<use f='tvm/contrib/ethosu/cascader/graph.h' l='164' c='_ZN3tvm7contrib6ethosu8cascader6TensorC1ERKS3_'/>
+<use f='tvm/contrib/ethosu/cascader/graph.h' l='164' c='_ZN3tvm7contrib6ethosu8cascader6TensorC1EOS3_'/>
+<use f='tvm/contrib/ethosu/cascader/graph.h' l='164' c='_ZN3tvm7contrib6ethosu8cascader6TensoraSERKS3_'/>
+<use f='tvm/contrib/ethosu/cascader/graph.h' l='164' c='_ZN3tvm7contrib6ethosu8cascader6TensoraSERKS3_'/>
+<use f='tvm/contrib/ethosu/cascader/graph.h' l='164' c='_ZN3tvm7contrib6ethosu8cascader6TensoraSEOS3_'/>
+<use f='tvm/contrib/ethosu/cascader/graph.h' l='164' c='_ZN3tvm7contrib6ethosu8cascader6TensoraSEOS3_'/>
+<use f='tvm/contrib/ethosu/cascader/graph.h' l='179' c='_ZNK3tvm7contrib6ethosu8cascader8PartNode15GetInputTensorsEv'/>
+<use f='tvm/contrib/ethosu/cascader/graph.h' l='181' c='_ZNK3tvm7contrib6ethosu8cascader8PartNode15GetOutputTensorEv'/>
+<use f='tvm/contrib/ethosu/cascader/graph.h' l='184' c='_ZN3tvm7contrib6ethosu8cascader8PartNode8SetInputEmRKNS2_6TensorE'/>
+<use f='tvm/contrib/ethosu/cascader/graph.h' l='186' c='_ZN3tvm7contrib6ethosu8cascader8PartNode9SetOutputERKNS2_6TensorE'/>
+<use f='tvm/contrib/ethosu/cascader/graph.h' l='221'/>
+<use f='tvm/contrib/ethosu/cascader/graph.h' l='223'/>
+<use f='tvm/contrib/ethosu/cascader/graph.h' l='258' c='_ZN3tvm7contrib6ethosu8cascader17CascaderGraphNodeC1ESt6vectorINS2_6TensorESaIS5_EES7_'/>
+<use f='tvm/contrib/ethosu/cascader/graph.h' l='258' c='_ZN3tvm7contrib6ethosu8cascader17CascaderGraphNodeC1ESt6vectorINS2_6TensorESaIS5_EES7_'/>
+<use f='tvm/contrib/ethosu/cascader/graph.h' l='263' c='_ZNK3tvm7contrib6ethosu8cascader17CascaderGraphNode15GetInputTensorsEv'/>
+<use f='tvm/contrib/ethosu/cascader/graph.h' l='265' c='_ZNK3tvm7contrib6ethosu8cascader17CascaderGraphNode16GetOutputTensorsEv'/>
+<use f='tvm/contrib/ethosu/cascader/graph.h' l='281' c='_ZNK3tvm7contrib6ethosu8cascader17CascaderGraphNode11GetTensorIDERKNS2_6TensorE'/>
+<use f='tvm/contrib/ethosu/cascader/graph.h' l='299'/>
+<use f='tvm/contrib/ethosu/cascader/graph.h' l='301'/>
+<use f='tvm/contrib/ethosu/cascader/graph.h' l='303'/>
+<use f='tvm/contrib/ethosu/cascader/graph.h' l='309'/>
+<use f='tvm/contrib/ethosu/cascader/graph.h' l='324' c='_ZN3tvm7contrib6ethosu8cascader13CascaderGraphC1ESt6vectorINS2_6TensorESaIS5_EES7_'/>
+<use f='tvm/contrib/ethosu/cascader/graph.h' l='324' c='_ZN3tvm7contrib6ethosu8cascader13CascaderGraphC1ESt6vectorINS2_6TensorESaIS5_EES7_'/>
+<use f='tvm/contrib/ethosu/cascader/tensor_config.h' l='96' c='_ZNK3tvm7contrib6ethosu8cascader16TensorConfigNode9GetTensorEv'/>
+<use f='tvm/contrib/ethosu/cascader/tensor_config.h' l='169'/>
+<use f='tvm/contrib/ethosu/cascader/tensor_config.h' l='195' c='_ZN3tvm7contrib6ethosu8cascader12TensorConfigC1ERKNS2_6TensorERKNS2_12MemoryRegionENS2_17TensorConfigStateENS2_10BufferModeERKSt6vectorINS2_12StripeConfigESaISD_EEbS9_'/>
+<size>8</size>
+<doc f='tvm/contrib/ethosu/cascader/graph.h' l='151'>/*!
+ * \brief A class to describe a Tensor in a Cascader graph.
+ * \note Cascader graphs consist of two object types: Tensors and Parts. This class
+ * defines the Tensors which represent the tensors that are consumed and produced
+ * as part of the graph. They are augmented with information about their &apos;kind&apos;
+ * (input/output/constant/intermediate), their default memory home (which memory they
+ * are expected to be allocated in) and a compression ratio where applicable (weights
+ * for instance are compressed).
+ */</doc>
+<fun r='_ZN3tvm7contrib6ethosu8cascader6TensorC1ERKSt6vectorIiSaIiEENS_7runtime8DataTypeEbf'/>
+<fun r='_ZN3tvm7contrib6ethosu8cascader6TensorC1Ev'/>
+<fun r='_ZN3tvm7contrib6ethosu8cascader6TensorC1ERKS3_'/>
+<fun r='_ZN3tvm7contrib6ethosu8cascader6TensorC1EOS3_'/>
+<fun r='_ZN3tvm7contrib6ethosu8cascader6TensorC1ENS_7runtime9ObjectPtrINS4_6ObjectEEE'/>
+<use f='tvm/contrib/ethosu/cascader/graph.cc' l='89'/>
+<use f='tvm/contrib/ethosu/cascader/graph.cc' l='93'/>
+<use f='tvm/contrib/ethosu/cascader/graph.cc' l='95'/>
+<use f='tvm/contrib/ethosu/cascader/graph.cc' l='102' c='_ZN3tvm7contrib6ethosu8cascader8PartNode10VisitAttrsEPNS_11AttrVisitorE'/>
+<use f='tvm/contrib/ethosu/cascader/graph.cc' l='111' c='_ZN3tvm7contrib6ethosu8cascader8PartNode8SetInputEmRKNS2_6TensorE'/>
+<use f='tvm/contrib/ethosu/cascader/graph.cc' l='154' c='_ZN3tvm7contrib6ethosu8cascader17CascaderGraphNodeC1ESt6vectorINS2_6TensorESaIS5_EES7_'/>
+<use f='tvm/contrib/ethosu/cascader/graph.cc' l='155' c='_ZN3tvm7contrib6ethosu8cascader17CascaderGraphNodeC1ESt6vectorINS2_6TensorESaIS5_EES7_'/>
+<use f='tvm/contrib/ethosu/cascader/graph.cc' l='162' c='_ZN3tvm7contrib6ethosu8cascader13VisitedInputsERKNS2_4PartERKSt13unordered_setINS2_6TensorENS_7runtime13ObjectPtrHashENS8_14ObjectPtrEqualESaIS7_EE'/>
+<use f='tvm/contrib/ethosu/cascader/graph.cc' l='172' c='_ZN3tvm7contrib6ethosu8cascader17CascaderGraphNode5Init_Ev'/>
+<use f='tvm/contrib/ethosu/cascader/graph.cc' l='173' c='_ZN3tvm7contrib6ethosu8cascader17CascaderGraphNode5Init_Ev'/>
+<use f='tvm/contrib/ethosu/cascader/graph.cc' l='180' c='_ZN3tvm7contrib6ethosu8cascader17CascaderGraphNode5Init_Ev'/>
+<use f='tvm/contrib/ethosu/cascader/graph.cc' l='211' c='_ZN3tvm7contrib6ethosu8cascader17CascaderGraphNode10VisitAttrsEPNS_11AttrVisitorE'/>
+<use f='tvm/contrib/ethosu/cascader/graph.cc' l='213' c='_ZN3tvm7contrib6ethosu8cascader17CascaderGraphNode10VisitAttrsEPNS_11AttrVisitorE'/>
+<use f='tvm/contrib/ethosu/cascader/graph.cc' l='217' c='_ZN3tvm7contrib6ethosu8cascader17CascaderGraphNode10VisitAttrsEPNS_11AttrVisitorE'/>
+<use f='tvm/contrib/ethosu/cascader/graph.cc' l='228' c='_ZNK3tvm7contrib6ethosu8cascader17CascaderGraphNode11GetTensorIDERKNS2_6TensorE'/>
+<use f='tvm/contrib/ethosu/cascader/graph.cc' l='235' c='_ZN3tvm7contrib6ethosu8cascader13CascaderGraphC1ESt6vectorINS2_6TensorESaIS5_EES7_'/>
+<use f='tvm/contrib/ethosu/cascader/graph.cc' l='236' c='_ZN3tvm7contrib6ethosu8cascader13CascaderGraphC1ESt6vectorINS2_6TensorESaIS5_EES7_'/>
+<use f='tvm/contrib/ethosu/cascader/graph.cc' l='242'/>
+<use f='tvm/contrib/ethosu/cascader/graph.cc' l='242'/>
+<use f='tvm/contrib/ethosu/cascader/graph.cc' l='243'/>
+<use f='tvm/contrib/ethosu/cascader/graph.cc' l='244'/>
+<size>8</size>
+<fun r='_ZN3tvm7contrib6ethosu8cascader6TensorC1ERKSt6vectorIiSaIiEENS_7runtime8DataTypeEbf'/>
+<use f='tvm/contrib/ethosu/cascader/proposal.h' l='44'/>
+<size>8</size>
+<use f='tvm/contrib/ethosu/cascader/plan_generator.h' l='48'/>
+<use f='tvm/contrib/ethosu/cascader/plan_generator.cc' l='74' c='_ZN3tvm7contrib6ethosu8cascader21GetTransferEfficiencyERKNS2_6TensorERKSt6vectorIiSaIiEERKNS2_12MemoryRegionE'/>
+<use f='tvm/contrib/ethosu/cascader/plan_generator.cc' l='221' c='_ZN3tvm7contrib6ethosu8cascader23GetPossibleInputConfigsERKNS2_12StripeConfigERKNS2_6TensorERKSt6vectorINS2_12MemoryRegionESaISA_EERKNS2_15CascaderOptionsE'/>
+<use f='tvm/contrib/ethosu/cascader/plan_generator.cc' l='263' c='_ZN3tvm7contrib6ethosu8cascader24GetPossibleOutputConfigsERKNS2_12StripeConfigERKNS2_6TensorERKSt6vectorINS2_12MemoryRegionESaISA_EERKNS2_15CascaderOptionsE'/>
+<use f='tvm/contrib/ethosu/cascader/plan_generator.cc' l='313' c='_ZN3tvm7contrib6ethosu8cascader17GetCopyCyclesHintERKNS2_12TensorConfigE'/>
+<use f='tvm/contrib/ethosu/cascader/plan_generator.cc' l='342' c='_ZN3tvm7contrib6ethosu8cascader19GenerateSinglePlansERKNS2_4PartERKSt6vectorINS2_12StripeConfigESaIS7_EERKSt13unordered_mapINS2_6TensorES6_INS2_12Memo4994141'/>
+<use f='tvm/contrib/ethosu/cascader/plan_generator.cc' l='355' c='_ZN3tvm7contrib6ethosu8cascader19GenerateSinglePlansERKNS2_4PartERKSt6vectorINS2_12StripeConfigESaIS7_EERKSt13unordered_mapINS2_6TensorES6_INS2_12Memo4994141'/>
+<use f='tvm/contrib/ethosu/cascader/plan_generator.cc' l='363' c='_ZN3tvm7contrib6ethosu8cascader19GenerateSinglePlansERKNS2_4PartERKSt6vectorINS2_12StripeConfigESaIS7_EERKSt13unordered_mapINS2_6TensorES6_INS2_12Memo4994141'/>
+<use f='tvm/contrib/ethosu/cascader/plan_generator.cc' l='410' c='_ZN3tvm7contrib6ethosu8cascader19GenerateSinglePlansERKNS2_4PartERKSt6vectorINS2_12StripeConfigESaIS7_EERKSt13unordered_mapINS2_6TensorES6_INS2_12Memo4994141'/>
+<use f='tvm/contrib/ethosu/cascader/plan_generator.cc' l='450' c='_ZN3tvm7contrib6ethosu8cascader18GenerateGraphPlansERKNS2_13CascaderGraphERKSt13unordered_mapINS2_6TensorESt6vectorINS2_12MemoryRegionESaIS9_EENS_7run1070765'/>
+<use f='tvm/contrib/ethosu/cascader/plan_generator.cc' l='459' c='_ZN3tvm7contrib6ethosu8cascader18GenerateGraphPlansERKNS2_13CascaderGraphERKSt13unordered_mapINS2_6TensorESt6vectorINS2_12MemoryRegionESaIS9_EENS_7run1070765'/>
+<use f='tvm/contrib/ethosu/cascader/plan_generator.cc' l='571'/>
+<use f='tvm/contrib/ethosu/cascader/plan_generator.cc' l='574'/>
+<use f='tvm/contrib/ethosu/cascader/plan_generator.cc' l='587'/>
+<use f='tvm/contrib/ethosu/cascader/plan_generator.cc' l='589'/>
+<size>8</size>
+<use f='tvm/contrib/ethosu/cascader/proposal.cc' l='43' c='_ZN3tvm7contrib6ethosu8cascader12ProposalNode10VisitAttrsEPNS_11AttrVisitorE'/>
+<use f='tvm/contrib/ethosu/cascader/proposal.cc' l='67'/>
+<size>8</size>
+<use f='tvm/contrib/ethosu/cascader/proposal_generator.cc' l='203'/>
+<use f='tvm/contrib/ethosu/cascader/proposal_generator.cc' l='205'/>
+<size>8</size>
+<use f='tvm/contrib/ethosu/cascader/tensor_config.cc' l='131' c='_ZN3tvm7contrib6ethosu8cascader12TensorConfigC1ERKNS2_6TensorERKNS2_12MemoryRegionENS2_17TensorConfigStateENS2_10BufferModeERKSt6vectorINS2_12StripeConfigESaISD_EEbS9_'/>
+<use f='tvm/contrib/ethosu/cascader/tensor_config.cc' l='161'/>
+<size>8</size>

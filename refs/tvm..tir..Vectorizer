@@ -1,0 +1,60 @@
+<def f='tvm/tir/transforms/vectorize_loop.cc' l='157' ll='657'/>
+<use f='tvm/tir/transforms/vectorize_loop.cc' l='668' c='_ZN3tvm3tir14LoopVectorizer10VisitStmt_EPKNS0_7ForNodeE'/>
+<size>168</size>
+<doc f='tvm/tir/transforms/vectorize_loop.cc' l='154'>// We use ExprFunctor directly instead of StmtExprMutator
+// This is because the transformation can change the dtype of the Expr
+// The existing ExprMutator transformation rules may not be well defined.</doc>
+<fun r='_ZN3tvm3tir10VectorizerC1ENS0_3VarEi'/>
+<fun r='_ZN3tvm3tir10Vectorizer9VisitStmtERKNS0_4StmtE'/>
+<fun r='_ZN3tvm3tir10Vectorizer9VisitExprERKNS_8PrimExprE'/>
+<fun r='_ZN3tvm3tir10Vectorizer10VisitExpr_EPKNS0_7AddNodeE'/>
+<fun r='_ZN3tvm3tir10Vectorizer10VisitExpr_EPKNS0_7SubNodeE'/>
+<fun r='_ZN3tvm3tir10Vectorizer10VisitExpr_EPKNS0_7MulNodeE'/>
+<fun r='_ZN3tvm3tir10Vectorizer10VisitExpr_EPKNS0_7DivNodeE'/>
+<fun r='_ZN3tvm3tir10Vectorizer10VisitExpr_EPKNS0_7ModNodeE'/>
+<fun r='_ZN3tvm3tir10Vectorizer10VisitExpr_EPKNS0_12FloorDivNodeE'/>
+<fun r='_ZN3tvm3tir10Vectorizer10VisitExpr_EPKNS0_12FloorModNodeE'/>
+<fun r='_ZN3tvm3tir10Vectorizer10VisitExpr_EPKNS0_7MinNodeE'/>
+<fun r='_ZN3tvm3tir10Vectorizer10VisitExpr_EPKNS0_7MaxNodeE'/>
+<fun r='_ZN3tvm3tir10Vectorizer10VisitExpr_EPKNS0_6EQNodeE'/>
+<fun r='_ZN3tvm3tir10Vectorizer10VisitExpr_EPKNS0_6NENodeE'/>
+<fun r='_ZN3tvm3tir10Vectorizer10VisitExpr_EPKNS0_6LTNodeE'/>
+<fun r='_ZN3tvm3tir10Vectorizer10VisitExpr_EPKNS0_6LENodeE'/>
+<fun r='_ZN3tvm3tir10Vectorizer10VisitExpr_EPKNS0_6GTNodeE'/>
+<fun r='_ZN3tvm3tir10Vectorizer10VisitExpr_EPKNS0_6GENodeE'/>
+<fun r='_ZN3tvm3tir10Vectorizer10VisitExpr_EPKNS0_7AndNodeE'/>
+<fun r='_ZN3tvm3tir10Vectorizer10VisitExpr_EPKNS0_6OrNodeE'/>
+<fun r='_ZN3tvm3tir10Vectorizer10VisitExpr_EPKNS0_7NotNodeE'/>
+<fun r='_ZN3tvm3tir10Vectorizer10VisitExpr_EPKNS0_8RampNodeE'/>
+<fun r='_ZN3tvm3tir10Vectorizer10VisitExpr_EPKNS0_13BroadcastNodeE'/>
+<fun r='_ZN3tvm3tir10Vectorizer10VisitExpr_EPKNS0_10SelectNodeE'/>
+<fun r='_ZN3tvm3tir10Vectorizer10VisitExpr_EPKNS0_8CastNodeE'/>
+<fun r='_ZN3tvm3tir10Vectorizer10VisitExpr_EPKNS_12FloatImmNodeE'/>
+<fun r='_ZN3tvm3tir10Vectorizer10VisitExpr_EPKNS_10IntImmNodeE'/>
+<fun r='_ZN3tvm3tir10Vectorizer10VisitExpr_EPKNS0_13StringImmNodeE'/>
+<fun r='_ZN3tvm3tir10Vectorizer10VisitExpr_EPKNS0_7VarNodeE'/>
+<fun r='_ZN3tvm3tir10Vectorizer21MutateIfThenElseExpr_EPKNS0_8CallNodeE'/>
+<fun r='_ZN3tvm3tir10Vectorizer10VisitExpr_EPKNS0_8CallNodeE'/>
+<fun r='_ZN3tvm3tir10Vectorizer10VisitExpr_EPKNS0_8LoadNodeE'/>
+<fun r='_ZN3tvm3tir10Vectorizer10VisitExpr_EPKNS0_14BufferLoadNodeE'/>
+<fun r='_ZN3tvm3tir10Vectorizer10VisitExpr_EPKNS0_7LetNodeE'/>
+<fun r='_ZN3tvm3tir10Vectorizer10VisitStmt_EPKNS0_9StoreNodeE'/>
+<fun r='_ZN3tvm3tir10Vectorizer10VisitStmt_EPKNS0_15BufferStoreNodeE'/>
+<fun r='_ZN3tvm3tir10Vectorizer10VisitStmt_EPKNS0_7ForNodeE'/>
+<fun r='_ZN3tvm3tir10Vectorizer10VisitStmt_EPKNS0_14IfThenElseNodeE'/>
+<fun r='_ZN3tvm3tir10Vectorizer10VisitStmt_EPKNS0_9WhileNodeE'/>
+<fun r='_ZN3tvm3tir10Vectorizer10VisitStmt_EPKNS0_11LetStmtNodeE'/>
+<fun r='_ZN3tvm3tir10Vectorizer10VisitStmt_EPKNS0_12AllocateNodeE'/>
+<fun r='_ZN3tvm3tir10Vectorizer9ScalarizeENS0_4StmtE'/>
+<fun r='_ZN3tvm3tir10Vectorizer10VisitStmt_EPKNS0_17ProducerStoreNodeE'/>
+<mbr r='tvm::tir::Vectorizer::analyzer_' o='192' t='arith::Analyzer'/>
+<mbr r='tvm::tir::Vectorizer::deep_equal_' o='512' t='tvm::tir::ExprDeepEqual'/>
+<mbr r='tvm::tir::Vectorizer::var_' o='576' t='tvm::tir::Var'/>
+<mbr r='tvm::tir::Vectorizer::var_lanes_' o='640' t='int'/>
+<mbr r='tvm::tir::Vectorizer::ramp_' o='704' t='tvm::PrimExpr'/>
+<mbr r='tvm::tir::Vectorizer::need_scalarize_' o='768' t='bool'/>
+<mbr r='tvm::tir::Vectorizer::let_binding_' o='832' t='std::unordered_map&lt;Var, PrimExpr, ObjectPtrHash, ObjectPtrEqual&gt;'/>
+<mbr r='tvm::tir::Vectorizer::op_vectorizable_' o='1280' t='OpAttrMap&lt;tvm::tir::TVectorizable&gt;'/>
+<fun r='_ZN3tvm3tir10Vectorizer11MutateArrayENS_7runtime5ArrayINS_8PrimExprEvEEPi'/>
+<fun r='_ZN3tvm3tir10Vectorizer9BinaryVecEPKT0_'/>
+<fun r='_ZN3tvm3tir10Vectorizer9AddSubVecEPKT_T0_'/>

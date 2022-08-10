@@ -1,0 +1,28 @@
+<dec f='tvm/relay/collage/sub_graph.h' l='281' type='tvm::relay::OpPatternKind'/>
+<offset>1920</offset>
+<doc f='tvm/relay/collage/sub_graph.h' l='265'>/*!
+   * \brief The \p OpPatternKind summarizing the input/output behavior of the sub-graph.
+   *
+   * A sub-graph consisting of a single Relay expression node is given kind:
+   *  - For Call to a Relay operator, the &quot;TOpPattern&quot; attribute of that operator (provided the
+   *    call does not involve data-dependent dynamic shapes).
+   *  - For Call to Relay Function, the &quot;TOpPattern&quot; attribute of the function (provided it has
+   *    that attribute)
+   *  - For Constants, \p kElemWise.
+   *  - For Tuple and tuple projections, \p kInjective (provided all tuple fields are of tensor
+   *    type)
+   *  - All other nodes \p kOpaque.
+   * Sub-graphs with more than one node have the maximum of the kind of each node.
+   *
+   * Cached for performance, uniquely determined by inside_.
+   */</doc>
+<use f='tvm/relay/collage/combiner_rule.cc' l='64' u='r' c='_ZNK3tvm5relay7collage28ByKindSimpleCombinerRuleNode5FiresERKNS1_13DataflowGraphERKNS1_18CandidatePartitionES8_'/>
+<use f='tvm/relay/collage/combiner_rule.cc' l='65' u='r' c='_ZNK3tvm5relay7collage28ByKindSimpleCombinerRuleNode5FiresERKNS1_13DataflowGraphERKNS1_18CandidatePartitionES8_'/>
+<use f='tvm/relay/collage/combiner_rule.cc' l='192' u='r' c='_ZNK3tvm5relay7collage24TupleArgCombinerRuleNode16AppendAllResultsEPNS1_23AppendAllResultsContextE'/>
+<use f='tvm/relay/collage/combiner_rule.cc' l='204' u='r' c='_ZNK3tvm5relay7collage24TupleArgCombinerRuleNode16AppendAllResultsEPNS1_23AppendAllResultsContextE'/>
+<use f='tvm/relay/collage/sub_graph.cc' l='694' u='r' c='_ZNK3tvm5relay7collage12SubGraphNode8ToStringB5cxx11Ev'/>
+<use f='tvm/relay/collage/sub_graph.cc' l='838' u='w' c='_ZN3tvm5relay7collage8SubGraphC1ERKNS1_13DataflowGraphENS1_8IndexSetENS0_13OpPatternKindENS_7runtime6StringESt6vectorINS1_14NestedSubGraphESaISB_EE'/>
+<use f='tvm/relay/collage/sub_graph.cc' l='903' u='r' c='_ZNK3tvm5relay7collage8SubGraph13DisjointUnionERKNS1_13DataflowGraphERKS2_'/>
+<use f='tvm/relay/collage/sub_graph.cc' l='903' u='r' c='_ZNK3tvm5relay7collage8SubGraph13DisjointUnionERKNS1_13DataflowGraphERKS2_'/>
+<use f='tvm/relay/collage/sub_graph.cc' l='910' u='r' c='_ZNK3tvm5relay7collage8SubGraph9WithAttrsERKNS1_13DataflowGraphENS_7runtime3MapINS6_6StringENS6_9ObjectRefEvvEE'/>
+<use f='tvm/relay/collage/sub_graph.cc' l='920' u='r' c='_ZNK3tvm5relay7collage8SubGraph5SubstERKNS1_13DataflowGraphERKSt13unordered_mapImmSt4hashImESt8equal_toImESaISt4pairIKmmEEE'/>

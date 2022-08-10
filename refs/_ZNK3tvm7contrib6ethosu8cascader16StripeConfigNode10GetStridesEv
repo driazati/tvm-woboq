@@ -1,0 +1,25 @@
+<def f='tvm/contrib/ethosu/cascader/stripe_config.h' l='83' type='std::vector&lt;float&gt; tvm::contrib::ethosu::cascader::StripeConfigNode::GetStrides() const'/>
+<doc f='tvm/contrib/ethosu/cascader/stripe_config.h' l='61'>/*!
+   * \brief Get the strides of the stripe config.
+   * \return The strides of the stripe config.
+   * \note The strides refer to the stride between stripes in each axis.
+   * The strides are represented as a float rather than an int to account for
+   * cases of &apos;fractional striding&apos;. The stride should therefore be interpreted
+   * as the average striding in each axis.
+   *
+   * The starting offset of the i-th stripe in axis &apos;ax&apos; is given by:
+   *
+   * stripe_offset_i[ax] = offset[ax] + floor(strides[ax]*i)
+   *
+   * As a concrete example, consider a 2x2 upscaling operation. If an output
+   * stripe config with a stride of (3, 3) is chosen, then when this is
+   * propagated to the input it will be reduced by a factor of two to become
+   * (1.5, 1.5).
+   *
+   * This means the first stripe in axis 0 should begin at (floor(1.5*0), 0) = (0, 0),
+   * the second at (floor(1.5*1), 0) = (1, 0), and the third at (floor(1.5*2), 0) =
+   * (3, 0). This results in irregular striding where &apos;strides&apos; is the average
+   * striding value.
+   */</doc>
+<use f='tvm/contrib/ethosu/cascader/plan_generator.cc' l='255' u='c' c='_ZN3tvm7contrib6ethosu8cascader8CanBoundERKNS2_12StripeConfigE'/>
+<use f='tvm/contrib/ethosu/cascader/stripe_config.cc' l='66' u='c' c='_ZN3tvm7contrib6ethosu8cascader12CountStripesERKNS2_12StripeConfigEb'/>

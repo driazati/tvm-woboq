@@ -1,0 +1,16 @@
+<def f='tvm/arith/iter_affine_map.cc' l='1799' ll='2058'/>
+<use f='tvm/arith/iter_affine_map.cc' l='2076' c='_ZN3tvm5arith14SubspaceDivideERKNS_7runtime5ArrayINS_8PrimExprEvEERKNS1_3MapINS_3tir3VarENS_5RangeEvvEERKNS2_IS9_vEERKS3_NS0_12IterMapLevelEPNS0_8AnalyzerE'/>
+<size>208</size>
+<doc f='tvm/arith/iter_affine_map.cc' l='1786'>/*!
+ * \brief Divider to divide the bindings into two sets of bindings(outer and inner)
+ *   such that binding_i = Y_i * E(Xi) + Xi, where E(X) is the extent of X.
+ *   We do message passing among IterSplitExpr and IterSumExpr.
+ *
+ *   Example
+ *   - If we encounter sum = i*10 + j*5 + k, and i, j, k are splits,
+ *     and we know i = Yi*1 + 0, j = 0*E(Xj) + Xj, k = 0*E(Xk) + Xk through message passing,
+ *     then sum = Yi*10 + (Xj*5 + Xk) = Y*E(X) + X, where Y = Yi, X = Xj*5 + Xk.
+ *   - If we encounter split = (i / 2) % 4, and we know i = Y*E(X) + X through message passing.
+ *     We inspect all the splits of i, which are i / 8, (i / 2) % 4, i % 2.
+ *     Their extents are 2, 4, 2, if E(X) = 2, 8, 16, the splits can be divided.
+ */</doc>

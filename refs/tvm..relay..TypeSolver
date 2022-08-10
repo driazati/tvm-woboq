@@ -1,0 +1,66 @@
+<def f='tvm/relay/analysis/type_solver.h' l='64' ll='219'/>
+<use f='tvm/relay/analysis/type_solver.cc' l='40' c='_ZN3tvm5relay10TypeSolver8ReporterC1EPS1_'/>
+<use f='tvm/relay/analysis/type_solver.cc' l='76'/>
+<use f='tvm/relay/analysis/type_solver.cc' l='81' c='_ZN3tvm5relay10TypeSolver13OccursCheckerC1EPS1_PNS1_8TypeNodeE'/>
+<use f='tvm/relay/analysis/type_solver.cc' l='96'/>
+<use f='tvm/relay/analysis/type_solver.cc' l='103' c='_ZN3tvm5relay10TypeSolver7UnifierC1EPS1_RKNS_4SpanE'/>
+<use f='tvm/relay/analysis/type_solver.cc' l='364'/>
+<use f='tvm/relay/analysis/type_solver.cc' l='370' c='_ZN3tvm5relay10TypeSolver8ResolverC1EPS1_'/>
+<use f='tvm/relay/analysis/type_solver.cc' l='385'/>
+<use f='tvm/relay/analysis/type_solver.cc' l='393' c='_ZN3tvm5relay10TypeSolver10PropagatorC1EPS1_PKSt13unordered_setIPNS1_12RelationNodeESt4hashIS6_ESt8equal_toIS6_ESaIS6_EE'/>
+<use f='tvm/relay/analysis/type_solver.cc' l='450'/>
+<use f='tvm/relay/analysis/type_solver.cc' l='458' c='_ZN3tvm5relay10TypeSolver6MergerC1EPS1_'/>
+<use f='tvm/relay/analysis/type_solver.cc' l='522'/>
+<use f='tvm/relay/analysis/type_solver.cc' l='646'/>
+<size>264</size>
+<doc f='tvm/relay/analysis/type_solver.h' l='45'>/*!
+ * \brief Interface of type solver used in type inference.
+ *
+ * TypeSolver works on a list of constraints among incomplete types.
+ * The user will populate the constraints by AddConstraint and Assign.
+ * Then we can call Solve to trying to resolve the unknown.
+ *
+ * This can be viewed as &quot;type program(computational graph)&quot; of types, where
+ * the type constraint are operators of the graph and the incomplete
+ * types are intermediate value of the graph.
+ * If all the input types are concretely known, we should be able to
+ * just run a forward pass on the &quot;type program&quot; to get all the types.
+ *
+ * The list of constraints representation means we are storing it as a bipartite
+ * graph instead of a DAG. This is because some constraints might go both direction.
+ * TypeSolver could take advantage of bidirectional constraints to deduce input
+ * value given output ones. Never-the-less, we should keep in mind that
+ * there is a &quot;forward direction&quot; that the TypeSolver should take advantage of.
+ */</doc>
+<fun r='_ZN3tvm5relay10TypeSolverC1ERKNS_9GlobalVarENS_17DiagnosticContextE'/>
+<fun r='_ZN3tvm5relay10TypeSolverD1Ev'/>
+<fun r='_ZN3tvm5relay10TypeSolver13AddConstraintERKNS_14TypeConstraintERKNS_4SpanE'/>
+<fun r='_ZN3tvm5relay10TypeSolver7ResolveERKNS_4TypeE'/>
+<fun r='_ZN3tvm5relay10TypeSolver5SolveEv'/>
+<fun r='_ZN3tvm5relay10TypeSolver5UnifyERKNS_4TypeES4_RKNS_4SpanEbb'/>
+<fun r='_ZN3tvm5relay10TypeSolver4EmitERKNS_10DiagnosticE'/>
+<mbr r='tvm::relay::TypeSolver::shape_uf_' o='0' t='tvm::Map&lt;IndexExpr, IndexExpr&gt;'/>
+<mbr r='tvm::relay::TypeSolver::type_nodes_' o='64' t='std::vector&lt;TypeNode *&gt;'/>
+<mbr r='tvm::relay::TypeSolver::rel_nodes_' o='256' t='std::vector&lt;RelationNode *&gt;'/>
+<mbr r='tvm::relay::TypeSolver::num_resolved_rels_' o='448' t='size_t'/>
+<mbr r='tvm::relay::TypeSolver::tmap_' o='512' t='std::unordered_map&lt;Type, TypeNode *, ObjectPtrHash, ObjectPtrEqual&gt;'/>
+<mbr r='tvm::relay::TypeSolver::update_queue_' o='960' t='std::queue&lt;RelationNode *&gt;'/>
+<mbr r='tvm::relay::TypeSolver::arena_' o='1600' t='support::Arena'/>
+<mbr r='tvm::relay::TypeSolver::reporter_' o='1856' t='tvm::relay::TypeReporter'/>
+<mbr r='tvm::relay::TypeSolver::current_func_' o='1920' t='tvm::relay::GlobalVar'/>
+<mbr r='tvm::relay::TypeSolver::diag_ctx_' o='1984' t='tvm::DiagnosticContext'/>
+<mbr r='tvm::relay::TypeSolver::module_' o='2048' t='tvm::IRModule'/>
+<fun r='_ZN3tvm5relay10TypeSolver11GetTypeNodeERKNS_4TypeE'/>
+<fun r='_ZN3tvm5relay10TypeSolver10AddToQueueEPNS1_12RelationNodeE'/>
+<fun r='_ZN3tvm5relay10TypeSolver11MergeFromToEPNS1_8TypeNodeES3_'/>
+<fun r='_ZN3tvm5relay10TypeSolverC1ERKNS_9GlobalVarENS_17DiagnosticContextE'/>
+<fun r='_ZN3tvm5relay10TypeSolverD1Ev'/>
+<fun r='_ZN3tvm5relay10TypeSolver11MergeFromToEPNS1_8TypeNodeES3_'/>
+<fun r='_ZN3tvm5relay10TypeSolver5UnifyERKNS_4TypeES4_RKNS_4SpanEbb'/>
+<fun r='_ZN3tvm5relay10TypeSolver13AddConstraintERKNS_14TypeConstraintERKNS_4SpanE'/>
+<fun r='_ZN3tvm5relay10TypeSolver7ResolveERKNS_4TypeE'/>
+<fun r='_ZN3tvm5relay10TypeSolver5SolveEv'/>
+<use f='tvm/relay/transforms/type_infer.cc' l='128'/>
+<use f='tvm/relay/transforms/type_infer.cc' l='629' c='_ZN3tvm5relay14TypeInferencer8ResolverC1ERKSt13unordered_mapINS_9RelayExprENS0_16ResolvedTypeInfoENS_7runtime13ObjectPtrHashENS6_14ObjectPtrEqualESaIS1997666'/>
+<use f='tvm/relay/transforms/type_infer.cc' l='773'/>
+<size>264</size>

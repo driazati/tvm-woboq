@@ -1,0 +1,27 @@
+<def f='include/c++/10/bits/stl_vector.h' l='1428' ll='1431' type='std::vector::iterator std::vector::erase(std::vector::const_iterator __position)'/>
+<doc f='include/c++/10/bits/stl_vector.h' l='1413'>/**
+       *  @brief  Remove element at given position.
+       *  @param  __position  Iterator pointing to element to be erased.
+       *  @return  An iterator pointing to the next element (or end()).
+       *
+       *  This function will erase the element at the given position and thus
+       *  shorten the %vector by one.
+       *
+       *  Note This operation could be expensive and if it is
+       *  frequently used the user should consider using std::list.
+       *  The user is also cautioned that this function only erases
+       *  the element, and that if the element is itself a pointer,
+       *  the pointed-to memory is not touched in any way.  Managing
+       *  the pointer is the user&apos;s responsibility.
+       */</doc>
+<use f='tvm/arith/solve_linear_inequality.cc' l='117' u='c' c='_ZN3tvm5arith13AddInequalityEPSt6vectorINS_8PrimExprESaIS2_EERKS2_PNS0_8AnalyzerE'/>
+<use f='tvm/arith/solve_linear_inequality.cc' l='180' u='c' c='_ZN3tvm5arith12MoveEqualityEPSt6vectorINS_8PrimExprESaIS2_EES5_S5_'/>
+<use f='tvm/arith/solve_linear_inequality.cc' l='181' u='c' c='_ZN3tvm5arith12MoveEqualityEPSt6vectorINS_8PrimExprESaIS2_EES5_S5_'/>
+<use f='tvm/arith/solve_linear_inequality.cc' l='293' u='c' c='_ZN3tvm5arith23SolveLinearInequalitiesERKNS0_14IntConstraintsE'/>
+<use f='tvm/arith/solve_linear_inequality.cc' l='314' u='c' c='_ZN3tvm5arith23SolveLinearInequalitiesERKNS0_14IntConstraintsE'/>
+<use f='tvm/meta_schedule/mutator/mutate_compute_location.cc' l='96' u='c' c='_ZN3tvm13meta_schedule25MutateComputeLocationNode14FindCandidatesERKNS_3tir5TraceEPl'/>
+<use f='tvm/meta_schedule/mutator/mutate_thread_binding.cc' l='152' u='c' c='_ZN3tvm13meta_schedule23MutateThreadBindingNode5ApplyERKNS_3tir5TraceEPl'/>
+<use f='tvm/meta_schedule/mutator/mutate_tile_size.cc' l='226' u='c' c='_ZN3tvm13meta_schedule21MutateSampleVectorizeERKNS_3tir5TraceENS1_11InstructionElPl'/>
+<use f='tvm/meta_schedule/mutator/mutate_unroll.cc' l='126' u='c' c='_ZN3tvm13meta_schedule16MutateUnrollNode5ApplyERKNS_3tir5TraceEPl'/>
+<use f='tvm/runtime/workspace_pool.cc' l='74' u='c' c='_ZN3tvm7runtime13WorkspacePool4Pool5AllocE8DLDevicePNS0_9DeviceAPIEm'/>
+<use f='tvm/runtime/workspace_pool.cc' l='100' u='c' c='_ZN3tvm7runtime13WorkspacePool4Pool4FreeEPv'/>

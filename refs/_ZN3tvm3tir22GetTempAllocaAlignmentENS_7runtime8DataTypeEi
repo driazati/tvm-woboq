@@ -1,0 +1,11 @@
+<def f='tvm/tir/transforms/ir_utils.h' l='166' ll='175' type='int tvm::tir::GetTempAllocaAlignment(tvm::DataType type, int32_t const_size)'/>
+<doc f='tvm/tir/transforms/ir_utils.h' l='160'>/*!
+ * \brief Rule to get allocation alignment requirement for a given const array.
+ * \param type The type of allocation.
+ * \param const_size The constant size of the array.
+ * \return the alignment
+ */</doc>
+<use f='tvm/target/llvm/codegen_amdgpu.cc' l='112' u='c' c='_ZN3tvm7codegen13CodeGenAMDGPU10VisitStmt_EPKNS_3tir12AllocateNodeE'/>
+<use f='tvm/target/llvm/codegen_llvm.cc' l='1572' u='c' c='_ZN3tvm7codegen11CodeGenLLVM10VisitStmt_EPKNS_3tir12AllocateNodeE'/>
+<use f='tvm/target/llvm/codegen_nvptx.cc' l='97' u='c' c='_ZN3tvm7codegen12CodeGenNVPTX10VisitStmt_EPKNS_3tir12AllocateNodeE'/>
+<use f='tvm/tir/transforms/storage_flatten.cc' l='1491' u='c' c='_ZN3tvm3tir16StorageFlattener10VisitStmt_EPKNS0_17BufferRealizeNodeE'/>

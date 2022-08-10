@@ -1,0 +1,32 @@
+<inh f='tvm/runtime/minrpc/minrpc_interfaces.h' l='33' c='tvm::runtime::MinRPCReturnInterface'/>
+<def f='tvm/runtime/minrpc/minrpc_logger.h' l='118' ll='194'/>
+<use f='tvm/runtime/minrpc/minrpc_logger.h' l='204' c='_ZN3tvm7runtime20MinRPCExecuteWithLogC1EPNS0_19MinRPCExecInterfaceEPNS0_6LoggerE'/>
+<use f='tvm/runtime/minrpc/minrpc_logger.h' l='241'/>
+<use f='tvm/runtime/minrpc/minrpc_server_logging.h' l='53'/>
+<use f='tvm/runtime/minrpc/minrpc_server_logging.h' l='158'/>
+<size>120</size>
+<doc f='tvm/runtime/minrpc/minrpc_logger.h' l='113'>/*!
+ * \brief A wrapper for a MinRPCReturns object, that also logs the responses.
+ *
+ * \param next underlying MinRPCReturns that generates the responses.
+ */</doc>
+<fun r='_ZN3tvm7runtime20MinRPCReturnsWithLogC1EPNS0_21MinRPCReturnInterfaceEPNS0_6LoggerE'/>
+<fun r='_ZN3tvm7runtime20MinRPCReturnsWithLogD1Ev'/>
+<fun r='_ZN3tvm7runtime20MinRPCReturnsWithLog10ReturnVoidEv'/>
+<fun r='_ZN3tvm7runtime20MinRPCReturnsWithLog12ReturnHandleEPv'/>
+<fun r='_ZN3tvm7runtime20MinRPCReturnsWithLog15ReturnExceptionEPKc'/>
+<fun r='_ZN3tvm7runtime20MinRPCReturnsWithLog15ReturnPackedSeqEPK8TVMValuePKii'/>
+<fun r='_ZN3tvm7runtime20MinRPCReturnsWithLog20ReturnCopyFromRemoteEPhm'/>
+<fun r='_ZN3tvm7runtime20MinRPCReturnsWithLog18ReturnLastTVMErrorEv'/>
+<fun r='_ZN3tvm7runtime20MinRPCReturnsWithLog10ThrowErrorENS0_15RPCServerStatusENS0_7RPCCodeE'/>
+<fun r='_ZN3tvm7runtime20MinRPCReturnsWithLog13ProcessValuesEPK8TVMValuePKii'/>
+<fun r='_ZN3tvm7runtime20MinRPCReturnsWithLog15ResetHandleNameENS0_7RPCCodeE'/>
+<fun r='_ZN3tvm7runtime20MinRPCReturnsWithLog16UpdateHandleNameEPKc'/>
+<fun r='_ZN3tvm7runtime20MinRPCReturnsWithLog13GetHandleNameEPv'/>
+<fun r='_ZN3tvm7runtime20MinRPCReturnsWithLog17ReleaseHandleNameEPv'/>
+<fun r='_ZN3tvm7runtime20MinRPCReturnsWithLog18RegisterHandleNameEPv'/>
+<mbr r='tvm::runtime::MinRPCReturnsWithLog::next_' o='64' t='tvm::runtime::MinRPCReturnInterface *'/>
+<mbr r='tvm::runtime::MinRPCReturnsWithLog::handle_name_' o='128' t='std::string'/>
+<mbr r='tvm::runtime::MinRPCReturnsWithLog::handle_descriptions_' o='384' t='std::unordered_map&lt;void *, std::string&gt;'/>
+<mbr r='tvm::runtime::MinRPCReturnsWithLog::code_' o='832' t='tvm::runtime::RPCCode'/>
+<mbr r='tvm::runtime::MinRPCReturnsWithLog::logger_' o='896' t='tvm::runtime::Logger *'/>

@@ -1,0 +1,15 @@
+<dec f='tvm/te/schedule/message_passing.h' l='49' type='void tvm::te::PassDownDomain(const tvm::te::Stage &amp; stage, std::unordered_map&lt;IterVar, Range&gt; * p_state, arith::Analyzer * analyzer, bool allow_missing = false)'/>
+<doc f='tvm/te/schedule/message_passing.h' l='39'>/*!
+ * \brief Downward inference of domain of each IterVar.
+ *  Caller set the range of the root, then the function
+ *  propagates it towards the leaves.
+ *
+ * \param stage The stage to operate on.
+ * \param p_state The state of the message passing.
+ * \param analyzer Analyzer context, storing information about bounds in p_state.
+ * \param allow_missing Whether allow missing value.
+ */</doc>
+<use f='tvm/te/schedule/bound.cc' l='243' u='c' c='_ZN3tvm2te10InferBoundERKNS0_8ScheduleE'/>
+<def f='tvm/te/schedule/message_passing.cc' l='104' ll='214' type='void tvm::te::PassDownDomain(const tvm::te::Stage &amp; stage, std::unordered_map&lt;IterVar, Range&gt; * p_state, arith::Analyzer * actx, bool allow_missing = false)'/>
+<use f='tvm/te/schedule/schedule_dataflow_rewrite.cc' l='211' u='c' c='_ZN3tvm2te18PrepareAxisMappingENS0_5StageEPT_PSt13unordered_setINS_3tir7IterVarESt4hashIS6_ESt8equal_toIS6_ESaIS6_EEPNS_7runtime5ArrayIS6_vEEPSt13unor13054347'/>
+<use f='tvm/te/schedule/schedule_dataflow_rewrite.cc' l='797' u='c' c='_ZN3tvm2te8Schedule7rfactorERKNS0_6TensorERKNS_3tir7IterVarEi'/>

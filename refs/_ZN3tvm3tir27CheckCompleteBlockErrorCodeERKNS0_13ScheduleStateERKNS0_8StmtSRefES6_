@@ -1,0 +1,14 @@
+<def f='tvm/tir/schedule/analysis/analysis.cc' l='252' ll='278' type='int tvm::tir::CheckCompleteBlockErrorCode(const tvm::tir::ScheduleState &amp; self, const tvm::tir::StmtSRef &amp; block_sref, const tvm::tir::StmtSRef &amp; scope_root_sref)'/>
+<use f='tvm/tir/schedule/analysis/analysis.cc' l='306' u='c' c='_ZN3tvm3tir15IsCompleteBlockERKNS0_13ScheduleStateERKNS0_8StmtSRefES6_'/>
+<use f='tvm/tir/schedule/analysis/analysis.cc' l='329' u='c' c='_ZN3tvm3tir18CheckCompleteBlockERKNS0_13ScheduleStateERKNS0_8StmtSRefES6_'/>
+<use f='tvm/tir/schedule/analysis/analysis.cc' l='436' u='c' c='_ZN3tvm3tir29CheckCompleteOrReductionBlockERKNS0_13ScheduleStateERKNS0_8StmtSRefES6_'/>
+<use f='tvm/tir/schedule/analysis/analysis.cc' l='491' u='c' c='_ZN3tvm3tir27CheckSubtreeCompactDataflowERKNS0_13ScheduleStateERKNS0_8StmtSRefE'/>
+<doc f='tvm/tir/schedule/analysis/analysis.cc' l='243'>/*!
+ * \brief A helper function that checks whether a given block is a complete block under the scope,
+ * or return the condition it violates if it is not a complete block
+ * \param self The schedule state
+ * \param block_sref The block to be checked
+ * \param scope_root_sref The sref to the root block of the scope that `block_sref` is in
+ * \return 0 if the block is a complete block, or a positive integer indicating which condition is
+ * first violated
+ */</doc>

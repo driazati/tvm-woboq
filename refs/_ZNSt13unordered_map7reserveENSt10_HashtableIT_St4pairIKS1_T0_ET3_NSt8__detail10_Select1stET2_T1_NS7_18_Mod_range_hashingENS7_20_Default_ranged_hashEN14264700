@@ -1,0 +1,31 @@
+<def f='include/c++/10/bits/unordered_map.h' l='1129' ll='1131' type='void std::unordered_map::reserve(std::unordered_map::size_type __n)'/>
+<doc f='include/c++/10/bits/unordered_map.h' l='1122'>/**
+       *  @brief  Prepare the %unordered_map for a specified number of
+       *          elements.
+       *  @param  __n Number of elements required.
+       *
+       *  Same as rehash(ceil(n / max_load_factor())).
+       */</doc>
+<use f='tvm/tir/schedule/utils.h' l='261' u='c' c='_ZN3tvm3tir8AsIntSetERKNS_7runtime3MapINS0_3VarENS_5RangeEvvEE'/>
+<use f='tvm/meta_schedule/database/json_database.cc' l='180' u='c' c='_ZN3tvm13meta_schedule8Database12JSONDatabaseENS_7runtime6StringES3_b'/>
+<use f='tvm/meta_schedule/mutator/mutate_parallel.cc' l='218' u='c' c='_ZN3tvm13meta_schedule20FindParallelDecisionERKNS_3tir5TraceEPlPNS0_18MutateParallelNode9CandidateE'/>
+<use f='tvm/meta_schedule/mutator/mutate_unroll.cc' l='89' u='c' c='_ZN3tvm13meta_schedule18FindUnrollDecisionERKNS_3tir5TraceEPlPNS0_16MutateUnrollNode9CandidateE'/>
+<use f='tvm/tir/ir/expr.cc' l='946' u='c' c='_ZN3tvm3tir11CommReducerC1ENS_7runtime5ArrayINS0_3VarEvEES5_NS3_INS_8PrimExprEvEES7_NS_4SpanE'/>
+<use f='tvm/tir/schedule/analysis/analysis.cc' l='1825' u='c' c='_ZN3tvm3tir23AnalyzeReadWritePatternERKNS0_12BufferRegionES3_'/>
+<use f='tvm/tir/schedule/analysis/layout.cc' l='135' u='c' c='_ZN3tvm3tir15SuggestIndexMapERKNS0_6BufferERKNS_7runtime5ArrayINS_8PrimExprEvEERKNS5_INS0_3ForEvEERKS6_PNS_5arith8AnalyzerE'/>
+<use f='tvm/tir/schedule/concrete_schedule.cc' l='122' u='c' c='_ZN3tvm3tir14ScheduleCopier4CopyERKSt13unordered_mapINS0_8StmtSRefENS_7runtime5ArrayINS0_10DependencyEvEENS4_13ObjectPtrHashENS4_14ObjectPtrEqualESaISt4pairIKS3_S7_EEE'/>
+<use f='tvm/tir/schedule/concrete_schedule.cc' l='132' u='c' c='_ZN3tvm3tir14ScheduleCopier4CopyERKSt13unordered_mapINS0_6BufferENS_7runtime5ArrayINS0_8StmtSRefEvEENS4_13ObjectPtrHashENS4_14ObjectPtrEqualESaISt4pairIKS3_S7_EEE'/>
+<use f='tvm/tir/schedule/concrete_schedule.cc' l='160' u='c' c='_ZN3tvm3tir14ScheduleCopier4CopyERKSt13unordered_mapIPKNS0_8StmtNodeENS0_8StmtSRefESt4hashIS5_ESt8equal_toIS5_ESaISt4pairIKS5_S6_EEE'/>
+<use f='tvm/tir/schedule/primitive/compute_at.cc' l='469' u='c' c='_ZN3tvm3tir23CalculateBlockVarDomainERKNS_7runtime5ArrayINS0_7IterVarEvEESt13unordered_mapIPKNS0_10BufferNodeESt6vectorISB_INS_5arith6IntSetESaISD_EES8670169'/>
+<use f='tvm/tir/schedule/primitive/compute_at.cc' l='534' u='c' c='_ZN3tvm3tir32CalculateProvidedRequiredRegionsEPKNS0_9BlockNodeERKNS0_8StmtSRefESt13unordered_mapIS3_PKNS0_16BlockRealizeNodeESt4hashIS3_ESt8equal_toIS1258206'/>
+<use f='tvm/tir/schedule/primitive/compute_at.cc' l='535' u='c' c='_ZN3tvm3tir32CalculateProvidedRequiredRegionsEPKNS0_9BlockNodeERKNS0_8StmtSRefESt13unordered_mapIS3_PKNS0_16BlockRealizeNodeESt4hashIS3_ESt8equal_toIS1258206'/>
+<use f='tvm/tir/schedule/primitive/compute_at.cc' l='586' u='c' c='_ZN3tvm3tir31ComputeAtOrReverseComputeAtImplENS0_13ScheduleStateERKNS0_8StmtSRefES4_bPNS_5arith8AnalyzerEb'/>
+<use f='tvm/tir/schedule/primitive/compute_inline.cc' l='489' u='c' c='_ZN3tvm3tir14ComputeInliner20SetIndexSubstitutionERKNS_7runtime5ArrayINS_8PrimExprEvEE'/>
+<use f='tvm/tir/schedule/primitive/reduction.cc' l='212' u='c' c='_ZN3tvm3tir18DecomposeReductionENS0_13ScheduleStateERKNS0_8StmtSRefES4_'/>
+<use f='tvm/tir/schedule/primitive/reduction.cc' l='505' u='c' c='_ZN3tvm3tir18GetLoopVar2LoopMapERKNS_7runtime5ArrayINS0_3ForEvEE'/>
+<use f='tvm/tir/schedule/primitive/reduction.cc' l='871' u='c' c='_ZN3tvm3tir29CreateLoopOutsideRfactorBlockENS0_12BlockRealizeERKNS_7runtime5ArrayINS0_3ForEvEE'/>
+<use f='tvm/tir/schedule/state.cc' l='235' u='c' c='_ZN3tvm3tir18BlockInfoCollector32CheckRegionCoverAndStagePipelineERKNS0_9BlockInfoERKNS0_8StmtSRefERKNS_7runtime5ArrayIS5_vEE'/>
+<use f='tvm/tir/schedule/state.cc' l='236' u='c' c='_ZN3tvm3tir18BlockInfoCollector32CheckRegionCoverAndStagePipelineERKNS0_9BlockInfoERKNS0_8StmtSRefERKNS_7runtime5ArrayIS5_vEE'/>
+<use f='tvm/tir/schedule/state.cc' l='933' u='c' c='_ZN3tvm3tir17ScheduleStateNode7ReplaceERKNS0_8StmtSRefERKNS0_4StmtERKNS_7runtime3MapINS0_5BlockESA_vvEE'/>
+<use f='tvm/tir/schedule/trace.cc' l='429' u='c' c='_ZNK3tvm3tir9TraceNode10SimplifiedEb'/>
+<use f='tvm/tir/transforms/common_subexpr_elim_tools.cc' l='807' u='c' c='_ZN3tvm3tir31SyntacticToSemanticComputationsERKSt13unordered_mapINS_8PrimExprEmNS_14StructuralHashENS0_13ExprDeepEqualESaISt4pairIKS2_mEEEb'/>

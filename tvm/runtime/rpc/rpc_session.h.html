@@ -1,0 +1,320 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>rpc_session.h source code [tvm/runtime/rpc/rpc_session.h] - Woboq Code Browser</title>
+<meta name="woboq:interestingDefinitions" content="tvm::runtime::RPCSession,tvm::runtime::RemoteSpace "/>
+<link rel="stylesheet" href="../../.././data/qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href="../../.././data/kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src="../../.././data/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="../../.././data/jquery/jquery-ui.min.js"></script>
+<script>var file = 'tvm/runtime/rpc/rpc_session.h'; var root_path = '../../..'; var data_path = '../../.././data'; var ecma_script_api_version = 2;</script>
+<script src='../../.././data/codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='../..'>tvm</a>/<a href='..'>runtime</a>/<a href='./'>rpc</a>/<a href='rpc_session.h.html'>rpc_session.h</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td><i>/*</i></td></tr>
+<tr><th id="2">2</th><td><i> * Licensed to the Apache Software Foundation (ASF) under one</i></td></tr>
+<tr><th id="3">3</th><td><i> * or more contributor license agreements.  See the NOTICE file</i></td></tr>
+<tr><th id="4">4</th><td><i> * distributed with this work for additional information</i></td></tr>
+<tr><th id="5">5</th><td><i> * regarding copyright ownership.  The ASF licenses this file</i></td></tr>
+<tr><th id="6">6</th><td><i> * to you under the Apache License, Version 2.0 (the</i></td></tr>
+<tr><th id="7">7</th><td><i> * "License"); you may not use this file except in compliance</i></td></tr>
+<tr><th id="8">8</th><td><i> * with the License.  You may obtain a copy of the License at</i></td></tr>
+<tr><th id="9">9</th><td><i> *</i></td></tr>
+<tr><th id="10">10</th><td><i> *   <a href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a></i></td></tr>
+<tr><th id="11">11</th><td><i> *</i></td></tr>
+<tr><th id="12">12</th><td><i> * Unless required by applicable law or agreed to in writing,</i></td></tr>
+<tr><th id="13">13</th><td><i> * software distributed under the License is distributed on an</i></td></tr>
+<tr><th id="14">14</th><td><i> * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY</i></td></tr>
+<tr><th id="15">15</th><td><i> * KIND, either express or implied.  See the License for the</i></td></tr>
+<tr><th id="16">16</th><td><i> * specific language governing permissions and limitations</i></td></tr>
+<tr><th id="17">17</th><td><i> * under the License.</i></td></tr>
+<tr><th id="18">18</th><td><i> */</i></td></tr>
+<tr><th id="19">19</th><td></td></tr>
+<tr><th id="20">20</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="21">21</th><td><i class="doc"> * <span class="command">\file</span> <span class="verb">rpc_session.h</span></i></td></tr>
+<tr><th id="22">22</th><td><i class="doc"> * <span class="command">\brief</span> Base RPC session interface.</i></td></tr>
+<tr><th id="23">23</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="24">24</th><td><u>#<span data-ppcond="24">ifndef</span> <span class="macro" data-ref="_M/TVM_RUNTIME_RPC_RPC_SESSION_H_">TVM_RUNTIME_RPC_RPC_SESSION_H_</span></u></td></tr>
+<tr><th id="25">25</th><td><u>#define <dfn class="macro" id="_M/TVM_RUNTIME_RPC_RPC_SESSION_H_" data-ref="_M/TVM_RUNTIME_RPC_RPC_SESSION_H_">TVM_RUNTIME_RPC_RPC_SESSION_H_</dfn></u></td></tr>
+<tr><th id="26">26</th><td></td></tr>
+<tr><th id="27">27</th><td><u>#include &lt;tvm/runtime/device_api.h&gt;</u></td></tr>
+<tr><th id="28">28</th><td><u>#include &lt;tvm/runtime/packed_func.h&gt;</u></td></tr>
+<tr><th id="29">29</th><td></td></tr>
+<tr><th id="30">30</th><td><u>#include <a href="../../../include/c++/10/functional.html">&lt;functional&gt;</a></u></td></tr>
+<tr><th id="31">31</th><td><u>#include <a href="../../../include/c++/10/memory.html">&lt;memory&gt;</a></u></td></tr>
+<tr><th id="32">32</th><td><u>#include <a href="../../../include/c++/10/string.html">&lt;string&gt;</a></u></td></tr>
+<tr><th id="33">33</th><td></td></tr>
+<tr><th id="34">34</th><td><u>#include <a href="../minrpc/rpc_reference.h.html">"../minrpc/rpc_reference.h"</a></u></td></tr>
+<tr><th id="35">35</th><td></td></tr>
+<tr><th id="36">36</th><td><b>namespace</b> <span class="namespace">tvm</span> {</td></tr>
+<tr><th id="37">37</th><td><b>namespace</b> <span class="namespace">runtime</span> {</td></tr>
+<tr><th id="38">38</th><td></td></tr>
+<tr><th id="39">39</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="40">40</th><td><i class="doc"> * <span class="command">\brief</span> The interface of all remote RPC sessions.</i></td></tr>
+<tr><th id="41">41</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="42">42</th><td><i class="doc"> *  It contains all the necessary interface to implement</i></td></tr>
+<tr><th id="43">43</th><td><i class="doc"> *  remote call and resource management.</i></td></tr>
+<tr><th id="44">44</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="45">45</th><td><i class="doc"> *  The interface is designed to allow easy proxy-chaining</i></td></tr>
+<tr><th id="46">46</th><td><i class="doc"> *  by forward requests to another RPCSession.</i></td></tr>
+<tr><th id="47">47</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="48">48</th><td><b>class</b> <dfn class="type def" id="tvm::runtime::RPCSession" title='tvm::runtime::RPCSession' data-ref="tvm::runtime::RPCSession" data-ref-filename="tvm..runtime..RPCSession">RPCSession</dfn> {</td></tr>
+<tr><th id="49">49</th><td> <b>public</b>:</td></tr>
+<tr><th id="50">50</th><td>  <i class="doc">/*! <span class="command">\brief</span> PackedFunc Handle in the remote. */</i></td></tr>
+<tr><th id="51">51</th><td>  <b>using</b> <dfn class="typedef" id="tvm::runtime::RPCSession::PackedFuncHandle" title='tvm::runtime::RPCSession::PackedFuncHandle' data-type='void *' data-ref="tvm::runtime::RPCSession::PackedFuncHandle" data-ref-filename="tvm..runtime..RPCSession..PackedFuncHandle">PackedFuncHandle</dfn> = <em>void</em>*;</td></tr>
+<tr><th id="52">52</th><td></td></tr>
+<tr><th id="53">53</th><td>  <i class="doc">/*! <span class="command">\brief</span> Module handle in the remote. */</i></td></tr>
+<tr><th id="54">54</th><td>  <b>using</b> <dfn class="typedef" id="tvm::runtime::RPCSession::ModuleHandle" title='tvm::runtime::RPCSession::ModuleHandle' data-type='void *' data-ref="tvm::runtime::RPCSession::ModuleHandle" data-ref-filename="tvm..runtime..RPCSession..ModuleHandle">ModuleHandle</dfn> = <em>void</em>*;</td></tr>
+<tr><th id="55">55</th><td></td></tr>
+<tr><th id="56">56</th><td>  <i class="doc">/*! <span class="command">\brief</span> NDArray handle in the remote. */</i></td></tr>
+<tr><th id="57">57</th><td>  <b>using</b> <dfn class="typedef" id="tvm::runtime::RPCSession::NDArrayHandle" title='tvm::runtime::RPCSession::NDArrayHandle' data-type='void *' data-ref="tvm::runtime::RPCSession::NDArrayHandle" data-ref-filename="tvm..runtime..RPCSession..NDArrayHandle">NDArrayHandle</dfn> = <em>void</em>*;</td></tr>
+<tr><th id="58">58</th><td></td></tr>
+<tr><th id="59">59</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="60">60</th><td><i class="doc">   * <span class="command">\brief</span> Callback to send an encoded return values via encode_args.</i></td></tr>
+<tr><th id="61">61</th><td><i class="doc">   *</i></td></tr>
+<tr><th id="62">62</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">encode_args</span> The arguments that we can encode the return values into.</i></td></tr>
+<tr><th id="63">63</th><td><i class="doc">   *</i></td></tr>
+<tr><th id="64">64</th><td><i class="doc">   * Encoding convention (as list of arguments):</i></td></tr>
+<tr><th id="65">65</th><td><i class="doc">   * - str/float/int/byte: [tcode: int, value: TVMValue] value follows PackedFunc convention.</i></td></tr>
+<tr><th id="66">66</th><td><i class="doc">   * - PackedFunc/Module: [tcode: int, handle: void*]</i></td></tr>
+<tr><th id="67">67</th><td><i class="doc">   * - NDArray: [tcode: int,  meta: DLTensor*, nd_handle: void*]</i></td></tr>
+<tr><th id="68">68</th><td><i class="doc">   *            DLTensor* contains the meta-data as well as handle into the remote data.</i></td></tr>
+<tr><th id="69">69</th><td><i class="doc">   *            nd_handle can be used for deletion.</i></td></tr>
+<tr><th id="70">70</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="71">71</th><td>  <b>using</b> <dfn class="typedef" id="tvm::runtime::RPCSession::FEncodeReturn" title='tvm::runtime::RPCSession::FEncodeReturn' data-type='std::function&lt;void (TVMArgs)&gt;' data-ref="tvm::runtime::RPCSession::FEncodeReturn" data-ref-filename="tvm..runtime..RPCSession..FEncodeReturn">FEncodeReturn</dfn> = <span class="namespace">std::</span><a class="type" href="../../../include/c++/10/bits/std_function.h.html#std::function" title='std::function' data-ref="std::function" data-ref-filename="std..function">function</a>&lt;<em>void</em>(<span class='type' title='tvm::runtime::TVMArgs' data-ref="tvm::runtime::TVMArgs" data-ref-filename="tvm..runtime..TVMArgs">TVMArgs</span> <dfn class="local col4 decl" id="74encoded_args" title='encoded_args' data-type='tvm::runtime::TVMArgs' data-ref="74encoded_args" data-ref-filename="74encoded_args">encoded_args</dfn>)&gt;;</td></tr>
+<tr><th id="72">72</th><td></td></tr>
+<tr><th id="73">73</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="74">74</th><td><i class="doc">   * <span class="command">\brief</span> Callback to send an encoded return values via encode_args.</i></td></tr>
+<tr><th id="75">75</th><td><i class="doc">   *</i></td></tr>
+<tr><th id="76">76</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">status</span> The return status, can be RPCCode::kReturn or RPCCode::kException.</i></td></tr>
+<tr><th id="77">77</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">encode_args</span> The arguments that we can encode the return values into.</i></td></tr>
+<tr><th id="78">78</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="79">79</th><td>  <b>using</b> <dfn class="typedef" id="tvm::runtime::RPCSession::FAsyncCallback" title='tvm::runtime::RPCSession::FAsyncCallback' data-type='std::function&lt;void (RPCCode, TVMArgs)&gt;' data-ref="tvm::runtime::RPCSession::FAsyncCallback" data-ref-filename="tvm..runtime..RPCSession..FAsyncCallback">FAsyncCallback</dfn> = <span class="namespace">std::</span><a class="type" href="../../../include/c++/10/bits/std_function.h.html#std::function" title='std::function' data-ref="std::function" data-ref-filename="std..function">function</a>&lt;<em>void</em>(<a class="type" href="../minrpc/rpc_reference.h.html#tvm::runtime::RPCCode" title='tvm::runtime::RPCCode' data-ref="tvm::runtime::RPCCode" data-ref-filename="tvm..runtime..RPCCode">RPCCode</a> <dfn class="local col5 decl" id="75status" title='status' data-type='tvm::runtime::RPCCode' data-ref="75status" data-ref-filename="75status">status</dfn>, <span class='type' title='tvm::runtime::TVMArgs' data-ref="tvm::runtime::TVMArgs" data-ref-filename="tvm..runtime..TVMArgs">TVMArgs</span> <dfn class="local col6 decl" id="76encoded_args" title='encoded_args' data-type='tvm::runtime::TVMArgs' data-ref="76encoded_args" data-ref-filename="76encoded_args">encoded_args</dfn>)&gt;;</td></tr>
+<tr><th id="80">80</th><td></td></tr>
+<tr><th id="81">81</th><td>  <i class="doc">/*! <span class="command">\brief</span> Destructor.*/</i></td></tr>
+<tr><th id="82">82</th><td>  <b>virtual</b> <dfn class="virtual decl def fn" id="_ZN3tvm7runtime10RPCSessionD1Ev" title='tvm::runtime::RPCSession::~RPCSession' data-ref="_ZN3tvm7runtime10RPCSessionD1Ev" data-ref-filename="_ZN3tvm7runtime10RPCSessionD1Ev">~RPCSession</dfn>() {}</td></tr>
+<tr><th id="83">83</th><td></td></tr>
+<tr><th id="84">84</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="85">85</th><td><i class="doc">   * <span class="command">\brief</span> Get function in the session.</i></td></tr>
+<tr><th id="86">86</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">name</span> The name of the function.</i></td></tr>
+<tr><th id="87">87</th><td><i class="doc">   * <span class="command">\return</span> The function handle.</i></td></tr>
+<tr><th id="88">88</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="89">89</th><td>  <b>virtual</b> <a class="typedef" href="#tvm::runtime::RPCSession::PackedFuncHandle" title='tvm::runtime::RPCSession::PackedFuncHandle' data-type='void *' data-ref="tvm::runtime::RPCSession::PackedFuncHandle" data-ref-filename="tvm..runtime..RPCSession..PackedFuncHandle">PackedFuncHandle</a> <dfn class="virtual decl fn" id="_ZN3tvm7runtime10RPCSession11GetFunctionERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE" title='tvm::runtime::RPCSession::GetFunction' data-ref="_ZN3tvm7runtime10RPCSession11GetFunctionERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE" data-ref-filename="_ZN3tvm7runtime10RPCSession11GetFunctionERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE">GetFunction</dfn>(<em>const</em> <span class="namespace">std::</span><a class="typedef" href="../../../include/c++/10/bits/stringfwd.h.html#std::string" title='std::string' data-type='basic_string&lt;char&gt;' data-ref="std::string" data-ref-filename="std..string">string</a>&amp; <dfn class="local col7 decl" id="77name" title='name' data-type='const std::string &amp;' data-ref="77name" data-ref-filename="77name">name</dfn>) = <var>0</var>;</td></tr>
+<tr><th id="90">90</th><td></td></tr>
+<tr><th id="91">91</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="92">92</th><td><i class="doc">   * <span class="command">\brief</span> Call into a remote Packed function.</i></td></tr>
+<tr><th id="93">93</th><td><i class="doc">   *</i></td></tr>
+<tr><th id="94">94</th><td><i class="doc">   *  Calling convention:</i></td></tr>
+<tr><th id="95">95</th><td><i class="doc">   *</i></td></tr>
+<tr><th id="96">96</th><td><i class="doc">   *  - type_code is follows the PackedFunc convention.</i></td></tr>
+<tr><th id="97">97</th><td><i class="doc">   *  - int/float/string/bytes follows the PackedFunc convention, all data are local.</i></td></tr>
+<tr><th id="98">98</th><td><i class="doc">   *  - PackedFunc/Module and future remote objects: pass remote handle instead.</i></td></tr>
+<tr><th id="99">99</th><td><i class="doc">   *  - NDArray/DLTensor: pass a DLTensor pointer, the data field of DLTensor</i></td></tr>
+<tr><th id="100">100</th><td><i class="doc">   *                      points to a remote data handle returned by the Device API.</i></td></tr>
+<tr><th id="101">101</th><td><i class="doc">   *                      The meta-data of the DLTensor sits on local.</i></td></tr>
+<tr><th id="102">102</th><td><i class="doc">   *</i></td></tr>
+<tr><th id="103">103</th><td><i class="doc">   *  The caller populates the arguments and manages these arguments.</i></td></tr>
+<tr><th id="104">104</th><td><i class="doc">   *</i></td></tr>
+<tr><th id="105">105</th><td><i class="doc">   *  The callee can change the content of arg_values and arg_type_codes</i></td></tr>
+<tr><th id="106">106</th><td><i class="doc">   *  if they want to do inplace modify and forward.</i></td></tr>
+<tr><th id="107">107</th><td><i class="doc">   *</i></td></tr>
+<tr><th id="108">108</th><td><i class="doc">   *  The callee need to store the return value into ret_value.</i></td></tr>
+<tr><th id="109">109</th><td><i class="doc">   *  - PackedFunc/Module are stored as void*</i></td></tr>
+<tr><th id="110">110</th><td><i class="doc">   *  - NDArray is stored as local NDArray, whose data field is a remote handle.</i></td></tr>
+<tr><th id="111">111</th><td><i class="doc">   *    Notably the NDArray's deleter won't delete remote handle.</i></td></tr>
+<tr><th id="112">112</th><td><i class="doc">   *    It is up to the user of the RPCSession to such wrapping.</i></td></tr>
+<tr><th id="113">113</th><td><i class="doc">   *  - In short, remote handles are "moved" as return values</i></td></tr>
+<tr><th id="114">114</th><td><i class="doc">   *    and the callee needs to explicitly manage them by calling</i></td></tr>
+<tr><th id="115">115</th><td><i class="doc">   *    the deleter functions when they are no longer needed.</i></td></tr>
+<tr><th id="116">116</th><td><i class="doc">   *</i></td></tr>
+<tr><th id="117">117</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">func</span> The function handle.</i></td></tr>
+<tr><th id="118">118</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">arg_values</span> The argument values.</i></td></tr>
+<tr><th id="119">119</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">arg_type_codes</span> the type codes of the argument.</i></td></tr>
+<tr><th id="120">120</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">num_args</span> Number of arguments.</i></td></tr>
+<tr><th id="121">121</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">fencode_return</span> The function to set the return value,</i></td></tr>
+<tr><th id="122">122</th><td><i class="doc">   *                       if not called, return value is null.</i></td></tr>
+<tr><th id="123">123</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="124">124</th><td>  <b>virtual</b> <em>void</em> <dfn class="virtual decl fn" id="_ZN3tvm7runtime10RPCSession8CallFuncEPvPK8TVMValuePKiiRKSt8functionIFvNS0_7TVMArgsEEE" title='tvm::runtime::RPCSession::CallFunc' data-ref="_ZN3tvm7runtime10RPCSession8CallFuncEPvPK8TVMValuePKiiRKSt8functionIFvNS0_7TVMArgsEEE" data-ref-filename="_ZN3tvm7runtime10RPCSession8CallFuncEPvPK8TVMValuePKiiRKSt8functionIFvNS0_7TVMArgsEEE">CallFunc</dfn>(<a class="typedef" href="#tvm::runtime::RPCSession::PackedFuncHandle" title='tvm::runtime::RPCSession::PackedFuncHandle' data-type='void *' data-ref="tvm::runtime::RPCSession::PackedFuncHandle" data-ref-filename="tvm..runtime..RPCSession..PackedFuncHandle">PackedFuncHandle</a> <dfn class="local col8 decl" id="78func" title='func' data-type='tvm::runtime::RPCSession::PackedFuncHandle' data-ref="78func" data-ref-filename="78func">func</dfn>, <em>const</em> <span class='typedef' title='TVMValue' data-type='union TVMValue' data-ref="TVMValue" data-ref-filename="TVMValue">TVMValue</span>* <dfn class="local col9 decl" id="79arg_values" title='arg_values' data-type='const TVMValue *' data-ref="79arg_values" data-ref-filename="79arg_values">arg_values</dfn>,</td></tr>
+<tr><th id="125">125</th><td>                        <em>const</em> <em>int</em>* <dfn class="local col0 decl" id="80arg_type_codes" title='arg_type_codes' data-type='const int *' data-ref="80arg_type_codes" data-ref-filename="80arg_type_codes">arg_type_codes</dfn>, <em>int</em> <dfn class="local col1 decl" id="81num_args" title='num_args' data-type='int' data-ref="81num_args" data-ref-filename="81num_args">num_args</dfn>,</td></tr>
+<tr><th id="126">126</th><td>                        <em>const</em> <a class="typedef" href="#tvm::runtime::RPCSession::FEncodeReturn" title='tvm::runtime::RPCSession::FEncodeReturn' data-type='std::function&lt;void (TVMArgs)&gt;' data-ref="tvm::runtime::RPCSession::FEncodeReturn" data-ref-filename="tvm..runtime..RPCSession..FEncodeReturn">FEncodeReturn</a>&amp; <dfn class="local col2 decl" id="82fencode_return" title='fencode_return' data-type='const tvm::runtime::RPCSession::FEncodeReturn &amp;' data-ref="82fencode_return" data-ref-filename="82fencode_return">fencode_return</dfn>) = <var>0</var>;</td></tr>
+<tr><th id="127">127</th><td></td></tr>
+<tr><th id="128">128</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="129">129</th><td><i class="doc">   * <span class="command">\brief</span> Copy bytes into remote array content.</i></td></tr>
+<tr><th id="130">130</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">local_from_bytes</span> The source host data.</i></td></tr>
+<tr><th id="131">131</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">remote_to</span> The target array.</i></td></tr>
+<tr><th id="132">132</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">nbytes</span> The size of the memory in bytes.</i></td></tr>
+<tr><th id="133">133</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="134">134</th><td>  <b>virtual</b> <em>void</em> <dfn class="virtual decl fn" id="_ZN3tvm7runtime10RPCSession12CopyToRemoteEPvP8DLTensorm" title='tvm::runtime::RPCSession::CopyToRemote' data-ref="_ZN3tvm7runtime10RPCSession12CopyToRemoteEPvP8DLTensorm" data-ref-filename="_ZN3tvm7runtime10RPCSession12CopyToRemoteEPvP8DLTensorm">CopyToRemote</dfn>(<em>void</em>* <dfn class="local col3 decl" id="83local_from_bytes" title='local_from_bytes' data-type='void *' data-ref="83local_from_bytes" data-ref-filename="83local_from_bytes">local_from_bytes</dfn>, <span class='typedef' title='DLTensor' data-type='struct DLTensor' data-ref="DLTensor" data-ref-filename="DLTensor">DLTensor</span>* <dfn class="local col4 decl" id="84remote_to" title='remote_to' data-type='DLTensor *' data-ref="84remote_to" data-ref-filename="84remote_to">remote_to</dfn>, <a class="typedef" href="../../../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint64_t" title='uint64_t' data-type='__uint64_t' data-ref="uint64_t" data-ref-filename="uint64_t">uint64_t</a> <dfn class="local col5 decl" id="85nbytes" title='nbytes' data-type='uint64_t' data-ref="85nbytes" data-ref-filename="85nbytes">nbytes</dfn>) = <var>0</var>;</td></tr>
+<tr><th id="135">135</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="136">136</th><td><i class="doc">   * <span class="command">\brief</span> Copy bytes from remote array content.</i></td></tr>
+<tr><th id="137">137</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">remote_from</span> The source host data.</i></td></tr>
+<tr><th id="138">138</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">local_to_bytes</span> The target array.</i></td></tr>
+<tr><th id="139">139</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">nbytes</span> The size of the memory in bytes.</i></td></tr>
+<tr><th id="140">140</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="141">141</th><td>  <b>virtual</b> <em>void</em> <dfn class="virtual decl fn" id="_ZN3tvm7runtime10RPCSession14CopyFromRemoteEP8DLTensorPvm" title='tvm::runtime::RPCSession::CopyFromRemote' data-ref="_ZN3tvm7runtime10RPCSession14CopyFromRemoteEP8DLTensorPvm" data-ref-filename="_ZN3tvm7runtime10RPCSession14CopyFromRemoteEP8DLTensorPvm">CopyFromRemote</dfn>(<span class='typedef' title='DLTensor' data-type='struct DLTensor' data-ref="DLTensor" data-ref-filename="DLTensor">DLTensor</span>* <dfn class="local col6 decl" id="86remote_from" title='remote_from' data-type='DLTensor *' data-ref="86remote_from" data-ref-filename="86remote_from">remote_from</dfn>, <em>void</em>* <dfn class="local col7 decl" id="87local_to_bytes" title='local_to_bytes' data-type='void *' data-ref="87local_to_bytes" data-ref-filename="87local_to_bytes">local_to_bytes</dfn>, <a class="typedef" href="../../../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint64_t" title='uint64_t' data-type='__uint64_t' data-ref="uint64_t" data-ref-filename="uint64_t">uint64_t</a> <dfn class="local col8 decl" id="88nbytes" title='nbytes' data-type='uint64_t' data-ref="88nbytes" data-ref-filename="88nbytes">nbytes</dfn>) = <var>0</var>;</td></tr>
+<tr><th id="142">142</th><td></td></tr>
+<tr><th id="143">143</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="144">144</th><td><i class="doc">   * <span class="command">\brief</span> Free a remote function.</i></td></tr>
+<tr><th id="145">145</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">handle</span> The remote handle, can be NDArray/PackedFunc/Module</i></td></tr>
+<tr><th id="146">146</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">type_code</span> The type code of the underlying type.</i></td></tr>
+<tr><th id="147">147</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="148">148</th><td>  <b>virtual</b> <em>void</em> <dfn class="virtual decl fn" id="_ZN3tvm7runtime10RPCSession10FreeHandleEPvi" title='tvm::runtime::RPCSession::FreeHandle' data-ref="_ZN3tvm7runtime10RPCSession10FreeHandleEPvi" data-ref-filename="_ZN3tvm7runtime10RPCSession10FreeHandleEPvi">FreeHandle</dfn>(<em>void</em>* <dfn class="local col9 decl" id="89handle" title='handle' data-type='void *' data-ref="89handle" data-ref-filename="89handle">handle</dfn>, <em>int</em> <dfn class="local col0 decl" id="90type_code" title='type_code' data-type='int' data-ref="90type_code" data-ref-filename="90type_code">type_code</dfn>) = <var>0</var>;</td></tr>
+<tr><th id="149">149</th><td></td></tr>
+<tr><th id="150">150</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="151">151</th><td><i class="doc">   * <span class="command">\brief</span> Get device API that represents the remote</i></td></tr>
+<tr><th id="152">152</th><td><i class="doc">   *  actions that can be taken on the remote.</i></td></tr>
+<tr><th id="153">153</th><td><i class="doc">   *</i></td></tr>
+<tr><th id="154">154</th><td><i class="doc">   *  The caller can then call into the Alloc/Free functions</i></td></tr>
+<tr><th id="155">155</th><td><i class="doc">   *  to allocate free spaces and taking the pointer as the handle.</i></td></tr>
+<tr><th id="156">156</th><td><i class="doc">   *</i></td></tr>
+<tr><th id="157">157</th><td><i class="doc">   *  The device API is guaranteed to be alive during the</i></td></tr>
+<tr><th id="158">158</th><td><i class="doc">   *  lifetime of the Session.</i></td></tr>
+<tr><th id="159">159</th><td><i class="doc">   *</i></td></tr>
+<tr><th id="160">160</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">dev</span> The remote device.</i></td></tr>
+<tr><th id="161">161</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">allow_missing</span> Whether can we return nullptr if it is not available.</i></td></tr>
+<tr><th id="162">162</th><td><i class="doc">   *</i></td></tr>
+<tr><th id="163">163</th><td><i class="doc">   * <span class="command">\return</span> The device API.</i></td></tr>
+<tr><th id="164">164</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="165">165</th><td>  <b>virtual</b> <span class='type' title='tvm::runtime::DeviceAPI' data-ref="tvm::runtime::DeviceAPI" data-ref-filename="tvm..runtime..DeviceAPI">DeviceAPI</span>* <dfn class="virtual decl fn" id="_ZN3tvm7runtime10RPCSession12GetDeviceAPIE8DLDeviceb" title='tvm::runtime::RPCSession::GetDeviceAPI' data-ref="_ZN3tvm7runtime10RPCSession12GetDeviceAPIE8DLDeviceb" data-ref-filename="_ZN3tvm7runtime10RPCSession12GetDeviceAPIE8DLDeviceb">GetDeviceAPI</dfn>(<span class='typedef' title='tvm::Device' data-type='DLDevice' data-ref="tvm::Device" data-ref-filename="tvm..Device">Device</span> <dfn class="local col1 decl" id="91dev" title='dev' data-type='tvm::Device' data-ref="91dev" data-ref-filename="91dev">dev</dfn>, <em>bool</em> <dfn class="local col2 decl" id="92allow_missing" title='allow_missing' data-type='bool' data-ref="92allow_missing" data-ref-filename="92allow_missing">allow_missing</dfn> = <b>false</b>) = <var>0</var>;</td></tr>
+<tr><th id="166">166</th><td></td></tr>
+<tr><th id="167">167</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="168">168</th><td><i class="doc">   * <span class="command">\brief</span> Whether the session is a local session and we can directly</i></td></tr>
+<tr><th id="169">169</th><td><i class="doc">   *        the data handle returned by the session and treat it as pointer</i></td></tr>
+<tr><th id="170">170</th><td><i class="doc">   *        to the local memory.</i></td></tr>
+<tr><th id="171">171</th><td><i class="doc">   *</i></td></tr>
+<tr><th id="172">172</th><td><i class="doc">   * This information is useful for RPC server to directly copy into the</i></td></tr>
+<tr><th id="173">173</th><td><i class="doc">   * local memory without creating a temporary buffer.</i></td></tr>
+<tr><th id="174">174</th><td><i class="doc">   *</i></td></tr>
+<tr><th id="175">175</th><td><i class="doc">   * <span class="command">\return</span> Whether it is a local session.</i></td></tr>
+<tr><th id="176">176</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="177">177</th><td>  <b>virtual</b> <em>bool</em> <dfn class="virtual decl fn" id="_ZNK3tvm7runtime10RPCSession14IsLocalSessionEv" title='tvm::runtime::RPCSession::IsLocalSession' data-ref="_ZNK3tvm7runtime10RPCSession14IsLocalSessionEv" data-ref-filename="_ZNK3tvm7runtime10RPCSession14IsLocalSessionEv">IsLocalSession</dfn>() <em>const</em> = <var>0</var>;</td></tr>
+<tr><th id="178">178</th><td></td></tr>
+<tr><th id="179">179</th><td>  <i>// Asynchrous variant of API</i></td></tr>
+<tr><th id="180">180</th><td><i>  // These APIs are used by the RPC server to allow sessions that</i></td></tr>
+<tr><th id="181">181</th><td><i>  // have special implementations for the async functions.</i></td></tr>
+<tr><th id="182">182</th><td><i>  //</i></td></tr>
+<tr><th id="183">183</th><td><i>  // In the async APIs, an exception is returned by the passing</i></td></tr>
+<tr><th id="184">184</th><td><i>  // async_error=true, encode_args=[error_msg].</i></td></tr>
+<tr><th id="185">185</th><td></td></tr>
+<tr><th id="186">186</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="187">187</th><td><i class="doc">   * <span class="command">\brief</span> Whether the session is async.</i></td></tr>
+<tr><th id="188">188</th><td><i class="doc">   *</i></td></tr>
+<tr><th id="189">189</th><td><i class="doc">   * If the session is not async, its Aync implementations</i></td></tr>
+<tr><th id="190">190</th><td><i class="doc">   * simply calls into the their synchronize counterparts,</i></td></tr>
+<tr><th id="191">191</th><td><i class="doc">   * and the callback is guaranteed to be called before the async function finishes.</i></td></tr>
+<tr><th id="192">192</th><td><i class="doc">   *</i></td></tr>
+<tr><th id="193">193</th><td><i class="doc">   * <span class="command">\return</span> the async state.</i></td></tr>
+<tr><th id="194">194</th><td><i class="doc">   *</i></td></tr>
+<tr><th id="195">195</th><td><i class="doc">   * <span class="command">\note</span> We can only use async session in an Event driven RPC server.</i></td></tr>
+<tr><th id="196">196</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="197">197</th><td>  <b>virtual</b> <em>bool</em> <dfn class="virtual decl fn" id="_ZNK3tvm7runtime10RPCSession7IsAsyncEv" title='tvm::runtime::RPCSession::IsAsync' data-ref="_ZNK3tvm7runtime10RPCSession7IsAsyncEv" data-ref-filename="_ZNK3tvm7runtime10RPCSession7IsAsyncEv">IsAsync</dfn>() <em>const</em>;</td></tr>
+<tr><th id="198">198</th><td></td></tr>
+<tr><th id="199">199</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="200">200</th><td><i class="doc">   * <span class="command">\brief</span> Asynchrously call func.</i></td></tr>
+<tr><th id="201">201</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">func</span> The function handle.</i></td></tr>
+<tr><th id="202">202</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">arg_values</span> The argument values.</i></td></tr>
+<tr><th id="203">203</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">arg_type_codes</span> the type codes of the argument.</i></td></tr>
+<tr><th id="204">204</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">num_args</span> Number of arguments.</i></td></tr>
+<tr><th id="205">205</th><td><i class="doc">   *</i></td></tr>
+<tr><th id="206">206</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">callback</span> The callback to pass the return value or exception.</i></td></tr>
+<tr><th id="207">207</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="208">208</th><td>  <b>virtual</b> <em>void</em> <dfn class="virtual decl fn" id="_ZN3tvm7runtime10RPCSession13AsyncCallFuncEPvPK8TVMValuePKiiSt8functionIFvNS0_7RPCCodeENS0_7TVMArgsEEE" title='tvm::runtime::RPCSession::AsyncCallFunc' data-ref="_ZN3tvm7runtime10RPCSession13AsyncCallFuncEPvPK8TVMValuePKiiSt8functionIFvNS0_7RPCCodeENS0_7TVMArgsEEE" data-ref-filename="_ZN3tvm7runtime10RPCSession13AsyncCallFuncEPvPK8TVMValuePKiiSt8functionIFvNS0_7RPCCodeENS0_7TVMArgsEEE">AsyncCallFunc</dfn>(<a class="typedef" href="#tvm::runtime::RPCSession::PackedFuncHandle" title='tvm::runtime::RPCSession::PackedFuncHandle' data-type='void *' data-ref="tvm::runtime::RPCSession::PackedFuncHandle" data-ref-filename="tvm..runtime..RPCSession..PackedFuncHandle">PackedFuncHandle</a> <dfn class="local col3 decl" id="93func" title='func' data-type='tvm::runtime::RPCSession::PackedFuncHandle' data-ref="93func" data-ref-filename="93func">func</dfn>, <em>const</em> <span class='typedef' title='TVMValue' data-type='union TVMValue' data-ref="TVMValue" data-ref-filename="TVMValue">TVMValue</span>* <dfn class="local col4 decl" id="94arg_values" title='arg_values' data-type='const TVMValue *' data-ref="94arg_values" data-ref-filename="94arg_values">arg_values</dfn>,</td></tr>
+<tr><th id="209">209</th><td>                             <em>const</em> <em>int</em>* <dfn class="local col5 decl" id="95arg_type_codes" title='arg_type_codes' data-type='const int *' data-ref="95arg_type_codes" data-ref-filename="95arg_type_codes">arg_type_codes</dfn>, <em>int</em> <dfn class="local col6 decl" id="96num_args" title='num_args' data-type='int' data-ref="96num_args" data-ref-filename="96num_args">num_args</dfn>, <a class="typedef" href="#tvm::runtime::RPCSession::FAsyncCallback" title='tvm::runtime::RPCSession::FAsyncCallback' data-type='std::function&lt;void (RPCCode, TVMArgs)&gt;' data-ref="tvm::runtime::RPCSession::FAsyncCallback" data-ref-filename="tvm..runtime..RPCSession..FAsyncCallback">FAsyncCallback</a> <dfn class="local col7 decl" id="97callback" title='callback' data-type='tvm::runtime::RPCSession::FAsyncCallback' data-ref="97callback" data-ref-filename="97callback">callback</dfn>);</td></tr>
+<tr><th id="210">210</th><td></td></tr>
+<tr><th id="211">211</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="212">212</th><td><i class="doc">   * <span class="command">\brief</span> Asynchrous version of CopyToRemote.</i></td></tr>
+<tr><th id="213">213</th><td><i class="doc">   *</i></td></tr>
+<tr><th id="214">214</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">local_from_bytes</span> The source host data.</i></td></tr>
+<tr><th id="215">215</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">remote_to</span> The target array.</i></td></tr>
+<tr><th id="216">216</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">nbytes</span> The size of the memory in bytes.</i></td></tr>
+<tr><th id="217">217</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">on_complete</span> The callback to signal copy complete.</i></td></tr>
+<tr><th id="218">218</th><td><i class="doc">   * <span class="command">\note</span> All the allocated memory in local_from, and remote_to</i></td></tr>
+<tr><th id="219">219</th><td><i class="doc">   *       must stay alive until on_compelete is called.</i></td></tr>
+<tr><th id="220">220</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="221">221</th><td>  <b>virtual</b> <em>void</em> <dfn class="virtual decl fn" id="_ZN3tvm7runtime10RPCSession17AsyncCopyToRemoteEPvP8DLTensormSt8functionIFvNS0_7RPCCodeENS0_7TVMArgsEEE" title='tvm::runtime::RPCSession::AsyncCopyToRemote' data-ref="_ZN3tvm7runtime10RPCSession17AsyncCopyToRemoteEPvP8DLTensormSt8functionIFvNS0_7RPCCodeENS0_7TVMArgsEEE" data-ref-filename="_ZN3tvm7runtime10RPCSession17AsyncCopyToRemoteEPvP8DLTensormSt8functionIFvNS0_7RPCCodeENS0_7TVMArgsEEE">AsyncCopyToRemote</dfn>(<em>void</em>* <dfn class="local col8 decl" id="98local_from_bytes" title='local_from_bytes' data-type='void *' data-ref="98local_from_bytes" data-ref-filename="98local_from_bytes">local_from_bytes</dfn>, <span class='typedef' title='DLTensor' data-type='struct DLTensor' data-ref="DLTensor" data-ref-filename="DLTensor">DLTensor</span>* <dfn class="local col9 decl" id="99remote_to" title='remote_to' data-type='DLTensor *' data-ref="99remote_to" data-ref-filename="99remote_to">remote_to</dfn>, <a class="typedef" href="../../../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint64_t" title='uint64_t' data-type='__uint64_t' data-ref="uint64_t" data-ref-filename="uint64_t">uint64_t</a> <dfn class="local col0 decl" id="100nbytes" title='nbytes' data-type='uint64_t' data-ref="100nbytes" data-ref-filename="100nbytes">nbytes</dfn>,</td></tr>
+<tr><th id="222">222</th><td>                                 <a class="typedef" href="#tvm::runtime::RPCSession::FAsyncCallback" title='tvm::runtime::RPCSession::FAsyncCallback' data-type='std::function&lt;void (RPCCode, TVMArgs)&gt;' data-ref="tvm::runtime::RPCSession::FAsyncCallback" data-ref-filename="tvm..runtime..RPCSession..FAsyncCallback">FAsyncCallback</a> <dfn class="local col1 decl" id="101on_complete" title='on_complete' data-type='tvm::runtime::RPCSession::FAsyncCallback' data-ref="101on_complete" data-ref-filename="101on_complete">on_complete</dfn>);</td></tr>
+<tr><th id="223">223</th><td></td></tr>
+<tr><th id="224">224</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="225">225</th><td><i class="doc">   * <span class="command">\brief</span> Asynchrous version of CopyFromRemote.</i></td></tr>
+<tr><th id="226">226</th><td><i class="doc">   *</i></td></tr>
+<tr><th id="227">227</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">remote_from</span> The source host data.</i></td></tr>
+<tr><th id="228">228</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">local_to_bytes</span> The target array.</i></td></tr>
+<tr><th id="229">229</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">nbytes</span> The size of the memory in bytes.</i></td></tr>
+<tr><th id="230">230</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">on_complete</span> The callback to signal copy complete.</i></td></tr>
+<tr><th id="231">231</th><td><i class="doc">   * <span class="command">\note</span> All the allocated memory in remote_from, and local_to</i></td></tr>
+<tr><th id="232">232</th><td><i class="doc">   *       must stay alive until on_compelete is called.</i></td></tr>
+<tr><th id="233">233</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="234">234</th><td>  <b>virtual</b> <em>void</em> <dfn class="virtual decl fn" id="_ZN3tvm7runtime10RPCSession19AsyncCopyFromRemoteEP8DLTensorPvmSt8functionIFvNS0_7RPCCodeENS0_7TVMArgsEEE" title='tvm::runtime::RPCSession::AsyncCopyFromRemote' data-ref="_ZN3tvm7runtime10RPCSession19AsyncCopyFromRemoteEP8DLTensorPvmSt8functionIFvNS0_7RPCCodeENS0_7TVMArgsEEE" data-ref-filename="_ZN3tvm7runtime10RPCSession19AsyncCopyFromRemoteEP8DLTensorPvmSt8functionIFvNS0_7RPCCodeENS0_7TVMArgsEEE">AsyncCopyFromRemote</dfn>(<span class='typedef' title='DLTensor' data-type='struct DLTensor' data-ref="DLTensor" data-ref-filename="DLTensor">DLTensor</span>* <dfn class="local col2 decl" id="102remote_from" title='remote_from' data-type='DLTensor *' data-ref="102remote_from" data-ref-filename="102remote_from">remote_from</dfn>, <em>void</em>* <dfn class="local col3 decl" id="103local_to_bytes" title='local_to_bytes' data-type='void *' data-ref="103local_to_bytes" data-ref-filename="103local_to_bytes">local_to_bytes</dfn>, <a class="typedef" href="../../../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint64_t" title='uint64_t' data-type='__uint64_t' data-ref="uint64_t" data-ref-filename="uint64_t">uint64_t</a> <dfn class="local col4 decl" id="104nbytes" title='nbytes' data-type='uint64_t' data-ref="104nbytes" data-ref-filename="104nbytes">nbytes</dfn>,</td></tr>
+<tr><th id="235">235</th><td>                                   <a class="typedef" href="#tvm::runtime::RPCSession::FAsyncCallback" title='tvm::runtime::RPCSession::FAsyncCallback' data-type='std::function&lt;void (RPCCode, TVMArgs)&gt;' data-ref="tvm::runtime::RPCSession::FAsyncCallback" data-ref-filename="tvm..runtime..RPCSession..FAsyncCallback">FAsyncCallback</a> <dfn class="local col5 decl" id="105on_complete" title='on_complete' data-type='tvm::runtime::RPCSession::FAsyncCallback' data-ref="105on_complete" data-ref-filename="105on_complete">on_complete</dfn>);</td></tr>
+<tr><th id="236">236</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="237">237</th><td><i class="doc">   * <span class="command">\brief</span> Asynchrously wait for all events in dev, stream compeletes.</i></td></tr>
+<tr><th id="238">238</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">dev</span> The device.</i></td></tr>
+<tr><th id="239">239</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">stream</span> The stream to wait on.</i></td></tr>
+<tr><th id="240">240</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">on_complete</span> The callback to signal copy complete.</i></td></tr>
+<tr><th id="241">241</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="242">242</th><td>  <b>virtual</b> <em>void</em> <dfn class="virtual decl fn" id="_ZN3tvm7runtime10RPCSession15AsyncStreamWaitE8DLDevicePvSt8functionIFvNS0_7RPCCodeENS0_7TVMArgsEEE" title='tvm::runtime::RPCSession::AsyncStreamWait' data-ref="_ZN3tvm7runtime10RPCSession15AsyncStreamWaitE8DLDevicePvSt8functionIFvNS0_7RPCCodeENS0_7TVMArgsEEE" data-ref-filename="_ZN3tvm7runtime10RPCSession15AsyncStreamWaitE8DLDevicePvSt8functionIFvNS0_7RPCCodeENS0_7TVMArgsEEE">AsyncStreamWait</dfn>(<span class='typedef' title='tvm::Device' data-type='DLDevice' data-ref="tvm::Device" data-ref-filename="tvm..Device">Device</span> <dfn class="local col6 decl" id="106dev" title='dev' data-type='tvm::Device' data-ref="106dev" data-ref-filename="106dev">dev</dfn>, <span class='typedef' title='TVMStreamHandle' data-type='void *' data-ref="TVMStreamHandle" data-ref-filename="TVMStreamHandle">TVMStreamHandle</span> <dfn class="local col7 decl" id="107stream" title='stream' data-type='TVMStreamHandle' data-ref="107stream" data-ref-filename="107stream">stream</dfn>, <a class="typedef" href="#tvm::runtime::RPCSession::FAsyncCallback" title='tvm::runtime::RPCSession::FAsyncCallback' data-type='std::function&lt;void (RPCCode, TVMArgs)&gt;' data-ref="tvm::runtime::RPCSession::FAsyncCallback" data-ref-filename="tvm..runtime..RPCSession..FAsyncCallback">FAsyncCallback</a> <dfn class="local col8 decl" id="108on_compelte" title='on_compelte' data-type='tvm::runtime::RPCSession::FAsyncCallback' data-ref="108on_compelte" data-ref-filename="108on_compelte">on_compelte</dfn>);</td></tr>
+<tr><th id="243">243</th><td></td></tr>
+<tr><th id="244">244</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="245">245</th><td><i class="doc">   * <span class="command">\return</span> The session table index of the session.</i></td></tr>
+<tr><th id="246">246</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="247">247</th><td>  <em>int</em> <dfn class="decl def fn" id="_ZNK3tvm7runtime10RPCSession11table_indexEv" title='tvm::runtime::RPCSession::table_index' data-ref="_ZNK3tvm7runtime10RPCSession11table_indexEv" data-ref-filename="_ZNK3tvm7runtime10RPCSession11table_indexEv">table_index</dfn>() <em>const</em> { <b>return</b> <a class="member field" href="#tvm::runtime::RPCSession::table_index_" title='tvm::runtime::RPCSession::table_index_' data-ref="tvm::runtime::RPCSession::table_index_" data-ref-filename="tvm..runtime..RPCSession..table_index_">table_index_</a>; }</td></tr>
+<tr><th id="248">248</th><td></td></tr>
+<tr><th id="249">249</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="250">250</th><td><i class="doc">   * <span class="command">\brief</span> Try get session from the global session table by table index.</i></td></tr>
+<tr><th id="251">251</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">table_index</span> The table index of the session.</i></td></tr>
+<tr><th id="252">252</th><td><i class="doc">   * <span class="command">\return</span> The shared_ptr to the session, can be nullptr.</i></td></tr>
+<tr><th id="253">253</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="254">254</th><td>  <em>static</em> <span class="namespace">std::</span><a class="type" href="../../../include/c++/10/bits/shared_ptr_base.h.html#std::shared_ptr" title='std::shared_ptr' data-ref="std::shared_ptr" data-ref-filename="std..shared_ptr">shared_ptr</a>&lt;<a class="type" href="#tvm::runtime::RPCSession" title='tvm::runtime::RPCSession' data-ref="tvm::runtime::RPCSession" data-ref-filename="tvm..runtime..RPCSession">RPCSession</a>&gt; <dfn class="decl fn" id="_ZN3tvm7runtime10RPCSession3GetEi" title='tvm::runtime::RPCSession::Get' data-ref="_ZN3tvm7runtime10RPCSession3GetEi" data-ref-filename="_ZN3tvm7runtime10RPCSession3GetEi">Get</dfn>(<em>int</em> <dfn class="local col9 decl" id="109table_index" title='table_index' data-type='int' data-ref="109table_index" data-ref-filename="109table_index">table_index</dfn>);</td></tr>
+<tr><th id="255">255</th><td></td></tr>
+<tr><th id="256">256</th><td> <b>protected</b>:</td></tr>
+<tr><th id="257">257</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="258">258</th><td><i class="doc">   * <span class="command">\brief</span> Send an exception to the callback.</i></td></tr>
+<tr><th id="259">259</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">msg</span> The exception message.</i></td></tr>
+<tr><th id="260">260</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="261">261</th><td>  <em>void</em> <dfn class="decl fn" id="_ZN3tvm7runtime10RPCSession13SendExceptionESt8functionIFvNS0_7RPCCodeENS0_7TVMArgsEEEPKc" title='tvm::runtime::RPCSession::SendException' data-ref="_ZN3tvm7runtime10RPCSession13SendExceptionESt8functionIFvNS0_7RPCCodeENS0_7TVMArgsEEEPKc" data-ref-filename="_ZN3tvm7runtime10RPCSession13SendExceptionESt8functionIFvNS0_7RPCCodeENS0_7TVMArgsEEEPKc">SendException</dfn>(<a class="typedef" href="#tvm::runtime::RPCSession::FAsyncCallback" title='tvm::runtime::RPCSession::FAsyncCallback' data-type='std::function&lt;void (RPCCode, TVMArgs)&gt;' data-ref="tvm::runtime::RPCSession::FAsyncCallback" data-ref-filename="tvm..runtime..RPCSession..FAsyncCallback">FAsyncCallback</a> <dfn class="local col0 decl" id="110callback" title='callback' data-type='tvm::runtime::RPCSession::FAsyncCallback' data-ref="110callback" data-ref-filename="110callback">callback</dfn>, <em>const</em> <em>char</em>* <dfn class="local col1 decl" id="111msg" title='msg' data-type='const char *' data-ref="111msg" data-ref-filename="111msg">msg</dfn>);</td></tr>
+<tr><th id="262">262</th><td></td></tr>
+<tr><th id="263">263</th><td> <b>private</b>:</td></tr>
+<tr><th id="264">264</th><td>  <i class="doc">/*! <span class="command">\brief</span> index of this session in RPC session table */</i></td></tr>
+<tr><th id="265">265</th><td>  <em>int</em> <dfn class="decl field" id="tvm::runtime::RPCSession::table_index_" title='tvm::runtime::RPCSession::table_index_' data-ref="tvm::runtime::RPCSession::table_index_" data-ref-filename="tvm..runtime..RPCSession..table_index_">table_index_</dfn>{<var>0</var>};</td></tr>
+<tr><th id="266">266</th><td>  <i class="doc">/*! <span class="command">\brief</span> Insert the current session to the session table.*/</i></td></tr>
+<tr><th id="267">267</th><td>  <em>static</em> <em>void</em> <dfn class="decl fn" id="_ZN3tvm7runtime10RPCSession20InsertToSessionTableESt10shared_ptrIS1_E" title='tvm::runtime::RPCSession::InsertToSessionTable' data-ref="_ZN3tvm7runtime10RPCSession20InsertToSessionTableESt10shared_ptrIS1_E" data-ref-filename="_ZN3tvm7runtime10RPCSession20InsertToSessionTableESt10shared_ptrIS1_E">InsertToSessionTable</dfn>(<span class="namespace">std::</span><a class="type" href="../../../include/c++/10/bits/shared_ptr_base.h.html#std::shared_ptr" title='std::shared_ptr' data-ref="std::shared_ptr" data-ref-filename="std..shared_ptr">shared_ptr</a>&lt;<a class="type" href="#tvm::runtime::RPCSession" title='tvm::runtime::RPCSession' data-ref="tvm::runtime::RPCSession" data-ref-filename="tvm..runtime..RPCSession">RPCSession</a>&gt; <dfn class="local col2 decl" id="112sess" title='sess' data-type='std::shared_ptr&lt;RPCSession&gt;' data-ref="112sess" data-ref-filename="112sess">sess</dfn>);</td></tr>
+<tr><th id="268">268</th><td>  <i>// friend declaration</i></td></tr>
+<tr><th id="269">269</th><td>  <b>friend</b> <span class='type' title='tvm::runtime::Module' data-ref="tvm::runtime::Module" data-ref-filename="tvm..runtime..Module">Module</span> <dfn class="decl fn" id="_ZN3tvm7runtime22CreateRPCSessionModuleESt10shared_ptrINS0_10RPCSessionEE" title='tvm::runtime::CreateRPCSessionModule' data-ref="_ZN3tvm7runtime22CreateRPCSessionModuleESt10shared_ptrINS0_10RPCSessionEE" data-ref-filename="_ZN3tvm7runtime22CreateRPCSessionModuleESt10shared_ptrINS0_10RPCSessionEE">CreateRPCSessionModule</dfn>(<span class="namespace">std::</span><a class="type" href="../../../include/c++/10/bits/shared_ptr_base.h.html#std::shared_ptr" title='std::shared_ptr' data-ref="std::shared_ptr" data-ref-filename="std..shared_ptr">shared_ptr</a>&lt;<a class="type" href="#tvm::runtime::RPCSession" title='tvm::runtime::RPCSession' data-ref="tvm::runtime::RPCSession" data-ref-filename="tvm..runtime..RPCSession">RPCSession</a>&gt; <dfn class="local col3 decl" id="113sess" title='sess' data-type='std::shared_ptr&lt;RPCSession&gt;' data-ref="113sess" data-ref-filename="113sess">sess</dfn>);</td></tr>
+<tr><th id="270">270</th><td>};</td></tr>
+<tr><th id="271">271</th><td></td></tr>
+<tr><th id="272">272</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="273">273</th><td><i class="doc"> * <span class="command">\brief</span> Remote space handle cell used by the RPC runtime API.</i></td></tr>
+<tr><th id="274">274</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="275">275</th><td><i class="doc"> *  When we allocate space using a rpc device, the data pointer</i></td></tr>
+<tr><th id="276">276</th><td><i class="doc"> *  points to an allocated RemoteSpace.</i></td></tr>
+<tr><th id="277">277</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="278">278</th><td><b>struct</b> <dfn class="type def" id="tvm::runtime::RemoteSpace" title='tvm::runtime::RemoteSpace' data-ref="tvm::runtime::RemoteSpace" data-ref-filename="tvm..runtime..RemoteSpace">RemoteSpace</dfn> {</td></tr>
+<tr><th id="279">279</th><td>  <i class="doc">/*! <span class="command">\brief</span> The remote data handle. */</i></td></tr>
+<tr><th id="280">280</th><td>  <em>void</em>* <dfn class="decl field" id="tvm::runtime::RemoteSpace::data" title='tvm::runtime::RemoteSpace::data' data-ref="tvm::runtime::RemoteSpace::data" data-ref-filename="tvm..runtime..RemoteSpace..data">data</dfn>;</td></tr>
+<tr><th id="281">281</th><td>  <i class="doc">/*! <span class="command">\brief</span> Reference to the underlying RPC session. */</i></td></tr>
+<tr><th id="282">282</th><td>  <span class="namespace">std::</span><a class="type" href="../../../include/c++/10/bits/shared_ptr_base.h.html#std::shared_ptr" title='std::shared_ptr' data-ref="std::shared_ptr" data-ref-filename="std..shared_ptr">shared_ptr</a>&lt;<a class="type" href="#tvm::runtime::RPCSession" title='tvm::runtime::RPCSession' data-ref="tvm::runtime::RPCSession" data-ref-filename="tvm..runtime..RPCSession">RPCSession</a>&gt; <dfn class="decl field" id="tvm::runtime::RemoteSpace::sess" title='tvm::runtime::RemoteSpace::sess' data-ref="tvm::runtime::RemoteSpace::sess" data-ref-filename="tvm..runtime..RemoteSpace..sess">sess</dfn>;</td></tr>
+<tr><th id="283">283</th><td>};</td></tr>
+<tr><th id="284">284</th><td></td></tr>
+<tr><th id="285">285</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="286">286</th><td><i class="doc"> * <span class="command">\brief</span> Create a Global RPC module that refers to the session.</i></td></tr>
+<tr><th id="287">287</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">sess</span> The RPC session of the global module.</i></td></tr>
+<tr><th id="288">288</th><td><i class="doc"> * <span class="command">\return</span> The created module.</i></td></tr>
+<tr><th id="289">289</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="290">290</th><td><span class='type' title='tvm::runtime::Module' data-ref="tvm::runtime::Module" data-ref-filename="tvm..runtime..Module">Module</span> <a class="decl fn" href="#_ZN3tvm7runtime22CreateRPCSessionModuleESt10shared_ptrINS0_10RPCSessionEE" title='tvm::runtime::CreateRPCSessionModule' data-ref="_ZN3tvm7runtime22CreateRPCSessionModuleESt10shared_ptrINS0_10RPCSessionEE" data-ref-filename="_ZN3tvm7runtime22CreateRPCSessionModuleESt10shared_ptrINS0_10RPCSessionEE">CreateRPCSessionModule</a>(<span class="namespace">std::</span><a class="type" href="../../../include/c++/10/bits/shared_ptr_base.h.html#std::shared_ptr" title='std::shared_ptr' data-ref="std::shared_ptr" data-ref-filename="std..shared_ptr">shared_ptr</a>&lt;<a class="type" href="#tvm::runtime::RPCSession" title='tvm::runtime::RPCSession' data-ref="tvm::runtime::RPCSession" data-ref-filename="tvm..runtime..RPCSession">RPCSession</a>&gt; <dfn class="local col4 decl" id="114sess" title='sess' data-type='std::shared_ptr&lt;RPCSession&gt;' data-ref="114sess" data-ref-filename="114sess">sess</dfn>);</td></tr>
+<tr><th id="291">291</th><td></td></tr>
+<tr><th id="292">292</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="293">293</th><td><i class="doc"> * <span class="command">\brief</span> Get the session module from a RPC session Module.</i></td></tr>
+<tr><th id="294">294</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">mod</span> The input module(must be an RPCModule).</i></td></tr>
+<tr><th id="295">295</th><td><i class="doc"> * <span class="command">\return</span> The internal RPCSession.</i></td></tr>
+<tr><th id="296">296</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="297">297</th><td><span class="namespace">std::</span><a class="type" href="../../../include/c++/10/bits/shared_ptr_base.h.html#std::shared_ptr" title='std::shared_ptr' data-ref="std::shared_ptr" data-ref-filename="std..shared_ptr">shared_ptr</a>&lt;<a class="type" href="#tvm::runtime::RPCSession" title='tvm::runtime::RPCSession' data-ref="tvm::runtime::RPCSession" data-ref-filename="tvm..runtime..RPCSession">RPCSession</a>&gt; <dfn class="decl fn" id="_ZN3tvm7runtime19RPCModuleGetSessionENS0_6ModuleE" title='tvm::runtime::RPCModuleGetSession' data-ref="_ZN3tvm7runtime19RPCModuleGetSessionENS0_6ModuleE" data-ref-filename="_ZN3tvm7runtime19RPCModuleGetSessionENS0_6ModuleE">RPCModuleGetSession</dfn>(<span class='type' title='tvm::runtime::Module' data-ref="tvm::runtime::Module" data-ref-filename="tvm..runtime..Module">Module</span> <dfn class="local col5 decl" id="115mod" title='mod' data-type='tvm::runtime::Module' data-ref="115mod" data-ref-filename="115mod">mod</dfn>);</td></tr>
+<tr><th id="298">298</th><td></td></tr>
+<tr><th id="299">299</th><td>}  <i>// namespace runtime</i></td></tr>
+<tr><th id="300">300</th><td>}  <i>// namespace tvm</i></td></tr>
+<tr><th id="301">301</th><td><u>#<span data-ppcond="24">endif</span>  // TVM_RUNTIME_RPC_RPC_SESSION_H_</u></td></tr>
+<tr><th id="302">302</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated while processing <a href='../graph_executor/debug/graph_executor_debug.cc.html'>tvm/runtime/graph_executor/debug/graph_executor_debug.cc</a><br/>Generated on <em>2022-Aug-10</em> from project tvm revision <em>123</em><br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

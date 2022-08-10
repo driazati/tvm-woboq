@@ -1,0 +1,25 @@
+<dec f='tvm/relay/op/call/call.h' l='59' type='tvm::relay::Call tvm::relay::CallLowered(tvm::relay::GlobalVar lowered_func, Array&lt;tvm::relay::Expr&gt; args, tvm::relay::CallLoweredAttrs call_lowered_attrs, tvm::relay::Span span)'/>
+<doc f='tvm/relay/op/call/call.h' l='41'>/*!
+ * \brief Helper to construct a Relay call with the &quot;call_lowered&quot; op.
+ *
+ * The callee must:
+ *  - Be a global bound to a PrimFunc or an externally defined functions.
+ *  - Accept only tensor arguments and return tensor results.
+ *  - Arguments and results correspond to the flattened form (see FlattenTupleType) of the
+ *    Relay Function type.
+ *  - Return results by output pointer, ie use DPS.
+ * The arguments remain in Relay form (ie not flattened).
+ * The result remains in Relay form (ie returned from the call and not flattened).
+ *
+ * \param lowered_func Lowered function to call with call_lowered.
+ * \param args Arguments to be passed to the function.
+ * \param call_lowered_attrs Function attributes.
+ * \param span TVM span for propagating debugging info.
+ * \return
+ */</doc>
+<use f='tvm/relay/backend/contrib/example_target_hooks/relay_to_tir.cc' l='247' u='c' c='_ZN3tvm5relay7contrib20example_target_hooks12_GLOBAL__N_120ConvertAddToSubtract8Rewrite_EPKNS0_8CallNodeERKNS_9RelayExprE'/>
+<use f='tvm/relay/backend/te_compiler.cc' l='788' u='c' c='_ZN3tvm5relay3tec22LowerTensorExprMutator15MakeLoweredCallERKNS_8BaseFuncERKNS_9GlobalVarENS_7runtime5ArrayINS_9RelayExprEvEENS_4SpanERKNS_6TargetERKNS9_3MapIS6_S3_vvEE'/>
+<def f='tvm/relay/op/call/call.cc' l='66' ll='71' type='tvm::relay::Call tvm::relay::CallLowered(tvm::relay::GlobalVar lowered_func, Array&lt;tvm::relay::Expr&gt; args, tvm::relay::CallLoweredAttrs call_lowered_attrs, tvm::relay::Span span)'/>
+<use f='tvm/relay/op/call/call.cc' l='81' u='c'/>
+<use f='tvm/relay/transforms/device_planner.cc' l='393' u='c' c='_ZN3tvm5relay9transform12_GLOBAL__N_116RewriteOnDevices10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/relay/transforms/device_planner.cc' l='1102' u='c' c='_ZN3tvm5relay9transform12_GLOBAL__N_114DeviceCapturer10VisitExpr_EPKNS0_8CallNodeE'/>

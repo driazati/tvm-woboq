@@ -1,0 +1,41 @@
+<inh f='tvm/relay/transforms/device_aware_visitors.h' l='308' c='tvm::relay::transform::DeviceAwareExprMutator'/>
+<def f='tvm/relay/backend/annotate_used_memory.cc' l='76' ll='202'/>
+<use f='tvm/relay/backend/annotate_used_memory.cc' l='220' c='_ZN3tvm5relay9transform18AnnotateUsedMemoryEv'/>
+<size>520</size>
+<doc f='tvm/relay/backend/annotate_used_memory.cc' l='41'>/*!
+ * \brief Annotates the minimum required memory of each primitive function callsite by analyzing
+ * the liveness of the input/output tensors at each function callsite and calculating the total
+ * amount of memory these tensors require. This is added as a &quot;used_memory&quot; annotation to the
+ * function in question as a list of the number of bytes for each callsite. In addition, the
+ * containing function is annotated with an &quot;io_used_memory&quot; annotation which refers to the total
+ * memory required for the IO tensors.
+ *
+ * Note: This pass does not support dynamic shapes, it is the users responsibility to check this
+ * pass isn&apos;t applied where dynamic shapes may be input.
+ *
+ * A simple example:
+ *
+ * Before:
+ * def @main(%input: Tensor[(1, 2, 2, 4), int8]) -&gt; Tensor[(1, 2, 2, 4), int8] {
+ *   let %x_0 = fn (%x: Tensor[(1, 2, 2, 4), int8], Primitive=1) -&gt; Tensor[(1, 2, 2, 4), int8] {
+ *     nn.max_pool2d(%x, pool_size=[1, 1], padding=[0, 0, 0, 0])
+ *   };
+ *   let %x_1 = %x_0(%input);
+ *   %x_1
+ * }
+ *
+ * After:
+ * def @main(%input: Tensor[(1, 2, 2, 4), int8], io_used_memory=32) -&gt; Tensor[(1, 2, 2, 4), int8] {
+ *   let %x_0: fn (%x: Tensor[(1, 2, 2, 4), int8], Primitive=1, used_memory=[32]) -&gt; Tensor[(1, 2,
+ * 2, 4), int8] {
+ *      nn.max_pool2d(%x, pool_size=[1, 1], padding=[0, 0, 0, 0])
+ *   };
+ *   let %x_1: Tensor[(1, 2, 2, 4), int8] = %x_0(%input);
+ *   %x_1
+ * }
+ *
+ * Note that in the simple example above io_used_memory and used_memory are the same since there
+ * is only one primitive function.
+ */</doc>
+<fun r='_ZN3tvm5relay7backend25AnnotateUsedMemoryMutator19PreVisitLetBinding_ERKNS0_3VarERKNS_9RelayExprE'/>
+<fun r='_ZN3tvm5relay7backend25AnnotateUsedMemoryMutator13PostVisitLet_EPKNS0_7LetNodeES5_'/>

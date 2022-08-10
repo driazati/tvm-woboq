@@ -1,0 +1,11 @@
+<dec f='tvm/target/llvm/codegen_llvm.h' l='299' type='llvm::Value * tvm::codegen::CodeGenLLVM::CreateLookupReturnAddress(unsigned int level = 0)'/>
+<doc f='tvm/target/llvm/codegen_llvm.h' l='290'>/*! \brief Lookup return address, for debugging purposes
+   *
+   * This is intended solely for debugging purposes.  Calls the
+   * `llvm::Intrinsic::returnaddress`, returning the return address of
+   * the current function call.
+   *
+   * \param level Look up the return address of a frame `level` steps
+   * above the current stack frame.
+   */</doc>
+<def f='tvm/target/llvm/codegen_llvm.cc' l='847' ll='855' type='llvm::Value * tvm::codegen::CodeGenLLVM::CreateLookupReturnAddress(unsigned int level = 0)'/>

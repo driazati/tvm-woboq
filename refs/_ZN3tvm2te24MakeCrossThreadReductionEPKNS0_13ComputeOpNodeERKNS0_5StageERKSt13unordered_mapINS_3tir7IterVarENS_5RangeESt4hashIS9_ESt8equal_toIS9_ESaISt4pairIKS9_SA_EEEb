@@ -1,0 +1,61 @@
+<dec f='tvm/te/operation/compute_op.h' l='75' type='tvm::tir::Stmt tvm::te::MakeCrossThreadReduction(const tvm::te::ComputeOpNode * self, const tvm::te::Stage &amp; stage, const std::unordered_map&lt;IterVar, Range&gt; &amp; dom_map, bool debug_keep_trivial_loop)'/>
+<use f='tvm/te/operation/compute_op.cc' l='430' u='c' c='_ZNK3tvm2te13ComputeOpNode12BuildProvideERKNS0_5StageERKSt13unordered_mapINS_3tir7IterVarENS_5RangeESt4hashIS7_ESt8equal_toIS7_ESaISt4pairIKS7_S8_EEEb'/>
+<doc f='tvm/te/operation/compute_op.h' l='67'>/*!
+ * \brief Build body of compute for cross thread reduction pattern.
+ * \param self The pointer to ComputeOpNode
+ * \param stage The schedule stage.
+ * \param dom_map The domain map.
+ * \param debug_keep_trivial_loop Whether keep trivial loops with extent of 1
+ * \return The created statement.
+ */</doc>
+<def f='tvm/te/operation/cross_thread_reduction.cc' l='83' ll='233' type='tvm::tir::Stmt tvm::te::MakeCrossThreadReduction(const tvm::te::ComputeOpNode * self, const tvm::te::Stage &amp; stage, const std::unordered_map&lt;IterVar, Range&gt; &amp; dom_map, bool debug_keep_trivial_loop)'/>
+<doc f='tvm/te/operation/cross_thread_reduction.cc' l='33'>//
+// Cross thread reduction transformation.
+//
+// The input loop nest in generic form (single reduction/thread case)
+//
+// let m be the reduction extent
+// let N be the thread extent
+// let input_pred be the predicate on the reduction
+//
+// B[..] = 0
+// for (tid, 0, N)
+//   for (i, 0, floordiv(m+N-1, N))
+//     if (i + tid * floordiv(m+N-1, N) &lt; m)
+//       if (input_pred)
+//         B[..] = op(B[..], A[i + tid  * floordiv(m+N-1,N)])
+//
+// The threaded reduction looks like
+//
+// (1) normal reductions (leaves)
+// for (i, 0, floordiv(m+N-1, N))
+//   if (i + tid * floordiv(m+N-1, N) &lt; m)
+//     if (input_pred)
+//       B_temp[0] = op(B_temp[0], A[i + tid  * floordiv(m+N-1,N)])
+//
+// (2) threaded reduction does not require predicates as an identity
+//     element will be filled if out of bounds.
+//
+// tvm_thread_allreduce(size, B_temp, (bool)1, tid)
+//
+// The last step is to write the final reduction variable,
+// which should be predicated by the existing input_pred if any
+// The consequence is that input_pred should be independent of
+// the reduction axis. Otherwise, we need to seperate it into
+// dependent part and independent one.
+//
+// (3) write back
+// if (input_pred)
+//    B[..] = B_temp[0]
+//
+// In summary, we are going to need two predicates
+//
+// * the original input_pred from reduction itself
+//
+// * the normal reduction axis predicate
+//     normal_pred = (i + tid * floordiv(m+N-1,N)) &lt; m
+//   this predicate depends on the normal reduction variable.
+//
+// input_pred will be applied to both normal reduction and
+// the writeback step.
+//</doc>

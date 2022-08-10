@@ -1,0 +1,19 @@
+<def f='tvm/target/metadata.h' l='44' ll='105'/>
+<ovr f='tvm/target/metadata.h' l='114' c='tvm::target::metadata::InMemoryMetadataNode'/>
+<use f='tvm/target/metadata.h' l='114'/>
+<use f='tvm/target/metadata.h' l='126' c='_ZN3tvm6target8metadata20InMemoryMetadataNodeC1ElRKSt6vectorINS_7runtime8metadata10TensorInfoESaIS6_EESA_SA_RKS3_INS_12ConstantInfoESaISB_EENS4_6StringE'/>
+<size>32</size>
+<doc f='tvm/target/metadata.h' l='37'>/*!
+ * \brief Subclass of MetadataNode that implements the VisitAttrs reflection method.
+ *
+ * This implementation (and other such Visitable subclasses) is compiled into libtvm.so, but not
+ * libtvm_runtime.so, because reflection is not supported in libtvm_runtime.so over code size
+ * concerns. It is used during compilation by the generic metadata code-generators.
+ */</doc>
+<fun r='_ZN3tvm6target8metadata21VisitableMetadataNodeC1EPK11TVMMetadata'/>
+<fun r='_ZN3tvm6target8metadata21VisitableMetadataNodeC1Ev'/>
+<fun r='_ZN3tvm6target8metadata21VisitableMetadataNode10VisitAttrsEPNS_11AttrVisitorE'/>
+<use f='tvm/target/metadata.cc' l='33'/>
+<use f='tvm/target/metadata.cc' l='34'/>
+<use f='tvm/target/metadata.cc' l='36'/>
+<size>32</size>

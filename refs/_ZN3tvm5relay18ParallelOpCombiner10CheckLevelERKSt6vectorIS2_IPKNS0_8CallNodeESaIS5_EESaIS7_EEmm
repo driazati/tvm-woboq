@@ -1,0 +1,12 @@
+<dec f='tvm/relay/transforms/combine_parallel_op.h' l='232' type='bool tvm::relay::ParallelOpCombiner::CheckLevel(const tvm::relay::Group &amp; branches, size_t depth, size_t parent_index)'/>
+<doc f='tvm/relay/transforms/combine_parallel_op.h' l='223'>/*
+   * \brief Combine parallel branches and updates subst_map_ with Exprs
+   *        to be substituted
+   * \param branches parallel branches to potentially be combined
+   * \param depth depth at which to look at op
+   * \param parent_index index of arg that corresponds to original input that was shared among
+   *                     all combined ops
+   * \return true if parallel ops at depth can be combined, false otherwise
+   */</doc>
+<use f='tvm/relay/transforms/combine_parallel_op.cc' l='145' u='c' c='_ZN3tvm5relay18ParallelOpCombiner15CombineBranchesERKSt6vectorIS2_IPKNS0_8CallNodeESaIS5_EESaIS7_EE'/>
+<def f='tvm/relay/transforms/combine_parallel_op.cc' l='151' ll='175' type='bool tvm::relay::ParallelOpCombiner::CheckLevel(const tvm::relay::Group &amp; branches, size_t depth, size_t parent_index)'/>

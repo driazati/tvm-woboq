@@ -1,0 +1,23 @@
+<def f='include/c++/10/bits/stl_vector.h' l='1455' ll='1462' type='std::vector::iterator std::vector::erase(std::vector::const_iterator __first, std::vector::const_iterator __last)'/>
+<doc f='include/c++/10/bits/stl_vector.h' l='1437'>/**
+       *  @brief  Remove a range of elements.
+       *  @param  __first  Iterator pointing to the first element to be erased.
+       *  @param  __last  Iterator pointing to one past the last element to be
+       *                  erased.
+       *  @return  An iterator pointing to the element pointed to by @a __last
+       *           prior to erasing (or end()).
+       *
+       *  This function will erase the elements in the range
+       *  [__first,__last) and shorten the %vector accordingly.
+       *
+       *  Note This operation could be expensive and if it is
+       *  frequently used the user should consider using std::list.
+       *  The user is also cautioned that this function only erases
+       *  the elements, and that if the elements themselves are
+       *  pointers, the pointed-to memory is not touched in any way.
+       *  Managing the pointer is the user&apos;s responsibility.
+       */</doc>
+<use f='tvm/contrib/ethosu/cascader/plan.cc' l='70' u='c' c='_ZNK3tvm7contrib6ethosu8cascader4Plan5MergeERKS3_'/>
+<use f='tvm/relay/collage/candidate_set.cc' l='58' u='c' c='_ZN3tvm5relay7collage12CandidateSet19PrepareForNextRoundEv'/>
+<use f='tvm/relay/ir/dataflow_matcher.cc' l='49' u='c' c='_ZN3tvm5relay16DFPatternMatcher8ClearMapEm'/>
+<use f='tvm/te/operation/cross_thread_reduction.cc' l='112' u='c' c='_ZN3tvm2te24MakeCrossThreadReductionEPKNS0_13ComputeOpNodeERKNS0_5StageERKSt13unordered_mapINS_3tir7IterVarENS_5RangeESt4hashIS9_ESt8equal_toIS9_ESaISt4pairIKS9_SA_EEEb'/>

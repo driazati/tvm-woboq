@@ -1,0 +1,14 @@
+<def f='tvm/tir/schedule/state.cc' l='696' ll='799'/>
+<use f='tvm/tir/schedule/state.cc' l='701' c='_ZN3tvm3tir11SRefUpdater6UpdateEPNS0_17ScheduleStateNodeEPNS0_12StmtSRefNodeERKSt13unordered_mapIPKNS_7runtime6ObjectENS0_8StmtSRefESt4hashISA_ESt8equ1317141'/>
+<size>48</size>
+<doc f='tvm/tir/schedule/state.cc' l='688'>/*!
+ * \brief Update the sref in the `tgt_stmt` given the reuse information
+ *
+ * After being updated, in the `tgt_stmt` subtree,
+ * 1) all `StmtSRefNode::parent`s are correct
+ * 2) all `StmtSRefNode::seq_index`s are correct, except for the root
+ * 3) all `StmtSRefNode::stmt`s are correct, except for the root
+ */</doc>
+<fun r='_ZN3tvm3tir11SRefUpdater10VisitStmt_EPKNS0_7ForNodeE'/>
+<fun r='_ZN3tvm3tir11SRefUpdater10VisitStmt_EPKNS0_9BlockNodeE'/>
+<fun r='_ZN3tvm3tir11SRefUpdater10VisitStmt_EPKNS0_11SeqStmtNodeE'/>

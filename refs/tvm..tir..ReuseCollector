@@ -1,0 +1,17 @@
+<def f='tvm/tir/schedule/state.cc' l='553' ll='593'/>
+<use f='tvm/tir/schedule/state.cc' l='556' c='_ZN3tvm3tir14ReuseCollector7CollectEPKNS0_17ScheduleStateNodeERKNS0_4StmtE'/>
+<size>64</size>
+<doc f='tvm/tir/schedule/state.cc' l='541'>/*!
+ * \brief A helper visitor which collects two cases of sref reuses in the `tgt_stmt`:
+ *
+ * 1) Intact: the subtree represented by `intact` appears on both old and new IR.
+ * Given the immutability of the IR, we can quickly decide that the entire subtree is unchanged,
+ * which means we do not need to visit into the subtree of the old statement.
+ *
+ * 2) Reused block/loop: for two different objects (`src`, `tgt`),
+ * which are both loops or both blocks,
+ * and there is correspondence between them,
+ * which makes us to reuse the sref pointing to `src`, and changes it to point to `tgt`,
+ */</doc>
+<fun r='_ZN3tvm3tir14ReuseCollector10VisitStmt_EPKNS0_7ForNodeE'/>
+<fun r='_ZN3tvm3tir14ReuseCollector10VisitStmt_EPKNS0_9BlockNodeE'/>

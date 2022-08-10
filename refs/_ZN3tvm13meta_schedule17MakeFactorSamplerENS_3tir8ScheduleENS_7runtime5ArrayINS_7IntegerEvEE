@@ -1,0 +1,14 @@
+<dec f='tvm/meta_schedule/schedule_rule/auto_bind.h' l='46' type='std::function&lt;tir::ExprRV (int64_t)&gt; tvm::meta_schedule::MakeFactorSampler(tir::Schedule sch, Array&lt;tvm::Integer&gt; thread_extents)'/>
+<doc f='tvm/meta_schedule/schedule_rule/auto_bind.h' l='39'>/*!
+ * \brief Given candidates of thread_extents, make a sampler that use `sch-&gt;SampleCategorical`
+ * to return a random thread extent.
+ * \param sch The schedule
+ * \param thread_extents The candidate thread extents.
+ * \return A sampler that returns a random thread extent.
+ */</doc>
+<def f='tvm/meta_schedule/schedule_rule/auto_bind.cc' l='142' ll='163' type='std::function&lt;tir::ExprRV (int64_t)&gt; tvm::meta_schedule::MakeFactorSampler(tir::Schedule sch, Array&lt;tvm::Integer&gt; thread_extents)'/>
+<use f='tvm/meta_schedule/schedule_rule/auto_bind.cc' l='200' u='c' c='_ZN3tvm13meta_schedule12AutoBindNode5ApplyERKNS_3tir8ScheduleERKNS2_7BlockRVE'/>
+<use f='tvm/meta_schedule/schedule_rule/winograd.cc' l='153' u='c'/>
+<use f='tvm/meta_schedule/schedule_rule/winograd.cc' l='163' u='c'/>
+<use f='tvm/meta_schedule/schedule_rule/winograd.cc' l='198' u='c'/>
+<use f='tvm/meta_schedule/schedule_rule/winograd.cc' l='216' u='c'/>

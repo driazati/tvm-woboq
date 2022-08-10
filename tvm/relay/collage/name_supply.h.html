@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>name_supply.h source code [tvm/relay/collage/name_supply.h] - Woboq Code Browser</title>
+<meta name="woboq:interestingDefinitions" content="tvm::relay::collage::NameSupply "/>
+<link rel="stylesheet" href="../../.././data/qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href="../../.././data/kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src="../../.././data/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="../../.././data/jquery/jquery-ui.min.js"></script>
+<script>var file = 'tvm/relay/collage/name_supply.h'; var root_path = '../../..'; var data_path = '../../.././data'; var ecma_script_api_version = 2;</script>
+<script src='../../.././data/codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='../..'>tvm</a>/<a href='..'>relay</a>/<a href='./'>collage</a>/<a href='name_supply.h.html'>name_supply.h</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td><i>/*</i></td></tr>
+<tr><th id="2">2</th><td><i> * Licensed to the Apache Software Foundation (ASF) under one</i></td></tr>
+<tr><th id="3">3</th><td><i> * or more contributor license agreements.  See the NOTICE file</i></td></tr>
+<tr><th id="4">4</th><td><i> * distributed with this work for additional information</i></td></tr>
+<tr><th id="5">5</th><td><i> * regarding copyright ownership.  The ASF licenses this file</i></td></tr>
+<tr><th id="6">6</th><td><i> * to you under the Apache License, Version 2.0 (the</i></td></tr>
+<tr><th id="7">7</th><td><i> * "License"); you may not use this file except in compliance</i></td></tr>
+<tr><th id="8">8</th><td><i> * with the License.  You may obtain a copy of the License at</i></td></tr>
+<tr><th id="9">9</th><td><i> *</i></td></tr>
+<tr><th id="10">10</th><td><i> *   <a href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a></i></td></tr>
+<tr><th id="11">11</th><td><i> *</i></td></tr>
+<tr><th id="12">12</th><td><i> * Unless required by applicable law or agreed to in writing,</i></td></tr>
+<tr><th id="13">13</th><td><i> * software distributed under the License is distributed on an</i></td></tr>
+<tr><th id="14">14</th><td><i> * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY</i></td></tr>
+<tr><th id="15">15</th><td><i> * KIND, either express or implied.  See the License for the</i></td></tr>
+<tr><th id="16">16</th><td><i> * specific language governing permissions and limitations</i></td></tr>
+<tr><th id="17">17</th><td><i> * under the License.</i></td></tr>
+<tr><th id="18">18</th><td><i> */</i></td></tr>
+<tr><th id="19">19</th><td></td></tr>
+<tr><th id="20">20</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="21">21</th><td><i class="doc"> * <span class="command">\file</span> <span class="verb">src/relay/collage/name_supply.h</span></i></td></tr>
+<tr><th id="22">22</th><td><i class="doc"> * <span class="command">\brief</span> A source of fresh variable names.</i></td></tr>
+<tr><th id="23">23</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="24">24</th><td></td></tr>
+<tr><th id="25">25</th><td><u>#<span data-ppcond="25">ifndef</span> <span class="macro" data-ref="_M/TVM_RELAY_COLLAGE_NAME_SUPPLY_H_">TVM_RELAY_COLLAGE_NAME_SUPPLY_H_</span></u></td></tr>
+<tr><th id="26">26</th><td><u>#define <dfn class="macro" id="_M/TVM_RELAY_COLLAGE_NAME_SUPPLY_H_" data-ref="_M/TVM_RELAY_COLLAGE_NAME_SUPPLY_H_">TVM_RELAY_COLLAGE_NAME_SUPPLY_H_</dfn></u></td></tr>
+<tr><th id="27">27</th><td></td></tr>
+<tr><th id="28">28</th><td><u>#include <a href="../../../include/c++/10/string.html">&lt;string&gt;</a></u></td></tr>
+<tr><th id="29">29</th><td><u>#include <a href="../../../include/c++/10/unordered_map.html">&lt;unordered_map&gt;</a></u></td></tr>
+<tr><th id="30">30</th><td><u>#include <a href="../../../include/c++/10/utility.html">&lt;utility&gt;</a></u></td></tr>
+<tr><th id="31">31</th><td></td></tr>
+<tr><th id="32">32</th><td><b>namespace</b> <span class="namespace">tvm</span> {</td></tr>
+<tr><th id="33">33</th><td><b>namespace</b> <span class="namespace">relay</span> {</td></tr>
+<tr><th id="34">34</th><td><b>namespace</b> <span class="namespace">collage</span> {</td></tr>
+<tr><th id="35">35</th><td></td></tr>
+<tr><th id="36">36</th><td><i class="doc">/*! <span class="command">\brief</span> A supply of fresh names. */</i></td></tr>
+<tr><th id="37">37</th><td><b>class</b> <dfn class="type def" id="tvm::relay::collage::NameSupply" title='tvm::relay::collage::NameSupply' data-ref="tvm::relay::collage::NameSupply" data-ref-filename="tvm..relay..collage..NameSupply">NameSupply</dfn> {</td></tr>
+<tr><th id="38">38</th><td> <b>public</b>:</td></tr>
+<tr><th id="39">39</th><td>  <b>explicit</b> <dfn class="decl def fn" id="_ZN3tvm5relay7collage10NameSupplyC1ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE" title='tvm::relay::collage::NameSupply::NameSupply' data-ref="_ZN3tvm5relay7collage10NameSupplyC1ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE" data-ref-filename="_ZN3tvm5relay7collage10NameSupplyC1ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE">NameSupply</dfn>(<span class="namespace">std::</span><a class="typedef" href="../../../include/c++/10/bits/stringfwd.h.html#std::string" title='std::string' data-type='basic_string&lt;char&gt;' data-ref="std::string" data-ref-filename="std..string">string</a> <dfn class="local col7 decl" id="7prefix" title='prefix' data-type='std::string' data-ref="7prefix" data-ref-filename="7prefix">prefix</dfn>) : <a class="member field" href="#tvm::relay::collage::NameSupply::prefix_" title='tvm::relay::collage::NameSupply::prefix_' data-ref="tvm::relay::collage::NameSupply::prefix_" data-ref-filename="tvm..relay..collage..NameSupply..prefix_">prefix_</a><a class="ref fn" href="../../../include/c++/10/bits/basic_string.h.html#_ZNSt7__cxx1112basic_stringC1EONS_12basic_stringIT_T0_T1_EE" title='std::basic_string::basic_string&lt;_CharT, _Traits, _Alloc&gt;' data-ref="_ZNSt7__cxx1112basic_stringC1EONS_12basic_stringIT_T0_T1_EE" data-ref-filename="_ZNSt7__cxx1112basic_stringC1EONS_12basic_stringIT_T0_T1_EE">(</a><span class="namespace">std::</span><a class="ref fn" href="../../../include/c++/10/bits/move.h.html#_ZSt4moveOT_" title='std::move' data-ref="_ZSt4moveOT_" data-ref-filename="_ZSt4moveOT_">move</a>(<span class='refarg'><a class="local col7 ref" href="#7prefix" title='prefix' data-ref="7prefix" data-ref-filename="7prefix">prefix</a></span>)) {}</td></tr>
+<tr><th id="40">40</th><td></td></tr>
+<tr><th id="41">41</th><td>  <a class="type" href="#tvm::relay::collage::NameSupply" title='tvm::relay::collage::NameSupply' data-ref="tvm::relay::collage::NameSupply" data-ref-filename="tvm..relay..collage..NameSupply">NameSupply</a> <dfn class="decl fn" id="_ZN3tvm5relay7collage10NameSupply17MakeSubNameSupplyEv" title='tvm::relay::collage::NameSupply::MakeSubNameSupply' data-ref="_ZN3tvm5relay7collage10NameSupply17MakeSubNameSupplyEv" data-ref-filename="_ZN3tvm5relay7collage10NameSupply17MakeSubNameSupplyEv">MakeSubNameSupply</dfn>();</td></tr>
+<tr><th id="42">42</th><td></td></tr>
+<tr><th id="43">43</th><td>  <em>void</em> <dfn class="decl def fn" id="_ZN3tvm5relay7collage10NameSupply7ReserveERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE" title='tvm::relay::collage::NameSupply::Reserve' data-ref="_ZN3tvm5relay7collage10NameSupply7ReserveERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE" data-ref-filename="_ZN3tvm5relay7collage10NameSupply7ReserveERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE">Reserve</dfn>(<em>const</em> <span class="namespace">std::</span><a class="typedef" href="../../../include/c++/10/bits/stringfwd.h.html#std::string" title='std::string' data-type='basic_string&lt;char&gt;' data-ref="std::string" data-ref-filename="std..string">string</a>&amp; <dfn class="local col8 decl" id="8existing" title='existing' data-type='const std::string &amp;' data-ref="8existing" data-ref-filename="8existing">existing</dfn>) { <a class="member field" href="#tvm::relay::collage::NameSupply::next_free_index_" title='tvm::relay::collage::NameSupply::next_free_index_' data-ref="tvm::relay::collage::NameSupply::next_free_index_" data-ref-filename="tvm..relay..collage..NameSupply..next_free_index_">next_free_index_</a>.<a class="ref fn" href="../../../include/c++/10/bits/unordered_map.h.html#_ZNSt13unordered_map7emplaceEDpOTL0__" title='std::unordered_map::emplace' data-ref="_ZNSt13unordered_map7emplaceEDpOTL0__" data-ref-filename="_ZNSt13unordered_map7emplaceEDpOTL0__">emplace</a>(<a class="local col8 ref" href="#8existing" title='existing' data-ref="8existing" data-ref-filename="8existing">existing</a>, <var>1</var>); }</td></tr>
+<tr><th id="44">44</th><td></td></tr>
+<tr><th id="45">45</th><td>  <span class="namespace">std::</span><a class="typedef" href="../../../include/c++/10/bits/stringfwd.h.html#std::string" title='std::string' data-type='basic_string&lt;char&gt;' data-ref="std::string" data-ref-filename="std..string">string</a> <dfn class="decl fn" id="_ZN3tvm5relay7collage10NameSupply5FreshERKSt16initializer_listINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEE" title='tvm::relay::collage::NameSupply::Fresh' data-ref="_ZN3tvm5relay7collage10NameSupply5FreshERKSt16initializer_listINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEE" data-ref-filename="_ZN3tvm5relay7collage10NameSupply5FreshERKSt16initializer_listINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEE">Fresh</dfn>(<em>const</em> <span class="namespace">std::</span><a class="type" href="../../../include/c++/10/initializer_list.html#std::initializer_list" title='std::initializer_list' data-ref="std::initializer_list" data-ref-filename="std..initializer_list">initializer_list</a>&lt;<span class="namespace">std::</span><a class="typedef" href="../../../include/c++/10/bits/stringfwd.h.html#std::string" title='std::string' data-type='basic_string&lt;char&gt;' data-ref="std::string" data-ref-filename="std..string">string</a>&gt;&amp; <dfn class="local col9 decl" id="9hints" title='hints' data-type='const std::initializer_list&lt;std::string&gt; &amp;' data-ref="9hints" data-ref-filename="9hints">hints</dfn>);</td></tr>
+<tr><th id="46">46</th><td></td></tr>
+<tr><th id="47">47</th><td> <b>private</b>:</td></tr>
+<tr><th id="48">48</th><td>  <i class="doc">/*! <span class="command">\brief</span> Prefix for all names. May be empty. */</i></td></tr>
+<tr><th id="49">49</th><td>  <span class="namespace">std::</span><a class="typedef" href="../../../include/c++/10/bits/stringfwd.h.html#std::string" title='std::string' data-type='basic_string&lt;char&gt;' data-ref="std::string" data-ref-filename="std..string">string</a> <dfn class="decl field" id="tvm::relay::collage::NameSupply::prefix_" title='tvm::relay::collage::NameSupply::prefix_' data-ref="tvm::relay::collage::NameSupply::prefix_" data-ref-filename="tvm..relay..collage..NameSupply..prefix_">prefix_</dfn>;</td></tr>
+<tr><th id="50">50</th><td>  <i class="doc">/*! <span class="command">\brief</span> Next unused index for variables with given basename. */</i></td></tr>
+<tr><th id="51">51</th><td>  <span class="namespace">std::</span><a class="type" href="../../../include/c++/10/bits/unordered_map.h.html#std::unordered_map" title='std::unordered_map' data-ref="std::unordered_map" data-ref-filename="std..unordered_map">unordered_map</a>&lt;<span class="namespace">std::</span><a class="typedef" href="../../../include/c++/10/bits/stringfwd.h.html#std::string" title='std::string' data-type='basic_string&lt;char&gt;' data-ref="std::string" data-ref-filename="std..string">string</a>, <em>int</em>&gt; <dfn class="decl field" id="tvm::relay::collage::NameSupply::next_free_index_" title='tvm::relay::collage::NameSupply::next_free_index_' data-ref="tvm::relay::collage::NameSupply::next_free_index_" data-ref-filename="tvm..relay..collage..NameSupply..next_free_index_">next_free_index_</dfn>;</td></tr>
+<tr><th id="52">52</th><td>};</td></tr>
+<tr><th id="53">53</th><td></td></tr>
+<tr><th id="54">54</th><td>}  <i>// namespace collage</i></td></tr>
+<tr><th id="55">55</th><td>}  <i>// namespace relay</i></td></tr>
+<tr><th id="56">56</th><td>}  <i>// namespace tvm</i></td></tr>
+<tr><th id="57">57</th><td></td></tr>
+<tr><th id="58">58</th><td><u>#<span data-ppcond="25">endif</span>  // TVM_RELAY_COLLAGE_NAME_SUPPLY_H_</u></td></tr>
+<tr><th id="59">59</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated while processing <a href='candidate_function_cache.cc.html'>tvm/relay/collage/candidate_function_cache.cc</a><br/>Generated on <em>2022-Aug-10</em> from project tvm revision <em>123</em><br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

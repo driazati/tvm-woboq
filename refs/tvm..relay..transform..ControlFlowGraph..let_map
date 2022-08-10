@@ -1,0 +1,11 @@
+<dec f='tvm/relay/backend/liveness_analysis.h' l='147' type='std::unordered_map&lt;Expr, NodePtr, ObjectPtrHash, ObjectPtrEqual&gt;'/>
+<use f='tvm/relay/backend/annotate_used_memory.cc' l='145' u='m' c='_ZN3tvm5relay7backend25AnnotateUsedMemoryMutator13PostVisitLet_EPKNS0_7LetNodeES5_'/>
+<offset>64</offset>
+<doc f='tvm/relay/backend/liveness_analysis.h' l='143'>/*!
+   * \brief Mapping from Let expressions to their corresponding nodes. Note that Let expressions
+   * are never shared in ANF (unlike vars), so this is an injection.
+   */</doc>
+<use f='tvm/relay/backend/liveness_analysis.cc' l='75' u='m' c='_ZN3tvm5relay9transform16ControlFlowGraph7Creator10VisitExpr_EPKNS0_7LetNodeEPNS2_10BasicBlockE'/>
+<use f='tvm/relay/backend/liveness_analysis.cc' l='76' u='m' c='_ZN3tvm5relay9transform16ControlFlowGraph7Creator10VisitExpr_EPKNS0_7LetNodeEPNS2_10BasicBlockE'/>
+<use f='tvm/relay/backend/vm/manifest_lifetimes.cc' l='106' u='m' c='_ZN3tvm5relay9transform12KillInserter10VisitExpr_EPKNS0_7LetNodeE'/>
+<use f='tvm/relay/backend/vm/manifest_lifetimes.cc' l='108' u='m' c='_ZN3tvm5relay9transform12KillInserter10VisitExpr_EPKNS0_7LetNodeE'/>

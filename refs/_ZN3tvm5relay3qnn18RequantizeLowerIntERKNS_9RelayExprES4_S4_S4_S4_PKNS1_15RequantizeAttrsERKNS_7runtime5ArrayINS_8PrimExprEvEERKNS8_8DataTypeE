@@ -1,0 +1,20 @@
+<def f='tvm/relay/qnn/op/requantize.cc' l='195' ll='270' type='tvm::relay::Expr tvm::relay::qnn::RequantizeLowerInt(const tvm::relay::Expr &amp; input_tensor, const tvm::relay::Expr &amp; input_scale, const tvm::relay::Expr &amp; input_zero_point, const tvm::relay::Expr &amp; output_scale, const tvm::relay::Expr &amp; output_zero_point, const tvm::relay::qnn::RequantizeAttrs * param, const Array&lt;tvm::relay::IndexExpr&gt; &amp; input_shape, const tvm::DataType &amp; out_dtype)'/>
+<use f='tvm/relay/qnn/op/requantize.cc' l='400' u='c' c='_ZN3tvm5relay3qnn15RequantizeLowerERKNS_9RelayExprES4_S4_S4_S4_PKNS1_15RequantizeAttrsERKNS_7runtime5ArrayINS_8PrimExprEvEERKNS8_8DataTypeE'/>
+<doc f='tvm/relay/qnn/op/requantize.cc' l='177'>/*
+ * \brief Lower requantize to a sequence of ops.
+ * \param input_tensor The input tensor to requantize op.
+ * \param param The requantize op attrs.
+ * \param input_shape The input tensor shape of the requantize op.
+ * \return The sequence of existing Relay ops.
+ * \note RequantizationInt using only integer computation. Here, the computation is
+ *       converted to a fixed point computation by computing output multiplier
+ *       and shift. This is useful, if the target device does not support/have
+ *       very expensive floating point computations.
+ *
+ *       The whole computation this can be broken down into following steps
+ *       1) Calculate the integer multiplier and integer shift.
+ *       2) Subtract the input integer zero point.
+ *       3) Perform fixed point multiplication.
+ *       4) Add the output zero point.
+ *       5) Cast to the out_dtype.
+ */</doc>

@@ -1,0 +1,8 @@
+<dec f='tvm/relay/op/memory/device_copy.h' l='52' type='tvm::relay::Expr tvm::relay::MaybeDeviceCopy(tvm::relay::Expr expr, tvm::VirtualDevice src_virtual_device, tvm::VirtualDevice dst_virtual_device)'/>
+<doc f='tvm/relay/op/memory/device_copy.h' l='47'>/*!
+ * \brief Wraps \p expr in a &quot;device_copy&quot; CallNode indicating it should be evaluated and
+ * stored at \p src_virtual_device but then copied to \p dst_virtual_device.However, return \p expr
+ * directly if \p src_virtual_device and \p dst_virtual_device are (structurally) the same.
+ */</doc>
+<def f='tvm/relay/op/memory/device_copy.cc' l='66' ll='73' type='tvm::relay::Expr tvm::relay::MaybeDeviceCopy(tvm::relay::Expr expr, tvm::VirtualDevice src_virtual_device, tvm::VirtualDevice dst_virtual_device)'/>
+<use f='tvm/relay/transforms/memory_alloc.cc' l='318' u='c' c='_ZN3tvm5relay15DialectRewriter13EmitShapeFuncEPNS0_7LetListERKNS0_5TupleERKNS0_16CallLoweredAttrsE'/>

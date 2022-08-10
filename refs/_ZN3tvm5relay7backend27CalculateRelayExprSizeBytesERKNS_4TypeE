@@ -1,0 +1,14 @@
+<dec f='tvm/relay/backend/utils.h' l='215' type='int64_t tvm::relay::backend::CalculateRelayExprSizeBytes(const tvm::relay::Type &amp; expr_type)'/>
+<doc f='tvm/relay/backend/utils.h' l='210'>/*!
+ * \brief Calculate the storage required to store the type of relay.Expr
+ *
+ * \param func The relay expr for which the storage is calculated
+ */</doc>
+<use f='tvm/relay/backend/annotate_used_memory.cc' l='95' u='c' c='_ZN3tvm5relay7backend25AnnotateUsedMemoryMutatorclERKNS0_8FunctionE'/>
+<use f='tvm/relay/backend/annotate_used_memory.cc' l='102' u='c' c='_ZN3tvm5relay7backend25AnnotateUsedMemoryMutatorclERKNS0_8FunctionE'/>
+<use f='tvm/relay/backend/annotate_used_memory.cc' l='158' u='c' c='_ZN3tvm5relay7backend25AnnotateUsedMemoryMutator13PostVisitLet_EPKNS0_7LetNodeES5_'/>
+<use f='tvm/relay/backend/te_compiler.cc' l='1010' u='c' c='_ZN3tvm5relay3tec23UpdateMainWorkspaceSizeERKNS_8IRModuleERKNS_17CompilationConfigENS_7runtime3MapINS_9RelayExprENS0_7backend11StorageInfoEvvEE'/>
+<def f='tvm/relay/backend/utils.cc' l='140' ll='163' type='int64_t tvm::relay::backend::CalculateRelayExprSizeBytes(const tvm::relay::Type &amp; expr_type)'/>
+<use f='tvm/relay/backend/utils.cc' l='145' u='c' c='_ZN3tvm5relay7backend27CalculateRelayExprSizeBytesERKNS_4TypeE'/>
+<doc f='tvm/relay/backend/utils.cc' l='138'>// TODO(mbs): Cf GetMemorySizeBytes in aot_executor_codegen.cc, GetMemorySize in
+// graph_plan_memory.cc</doc>

@@ -1,0 +1,20 @@
+<def f='tvm/tir/schedule/primitive/cache_read_write.cc' l='181' ll='276' type='tvm::tir::Block tvm::tir::MakeReIndexStage(const tvm::tir::Block &amp; block, tvm::tir::CacheStageInfo * info, const std::unordered_set&lt;Var, ObjectPtrHash, ObjectPtrEqual&gt; &amp; covered, const Array&lt;tvm::PrimExpr&gt; &amp; original_indices, int buffer_index, tvm::tir::BufferIndexType buffer_index_type)'/>
+<use f='tvm/tir/schedule/primitive/cache_read_write.cc' l='1153' u='c' c='_ZN3tvm3tir7ReIndexENS0_13ScheduleStateERKNS0_8StmtSRefEiNS0_15BufferIndexTypeE'/>
+<doc f='tvm/tir/schedule/primitive/cache_read_write.cc' l='163'>/*!
+ * \brief Create the reindex block and generate the corresponding outer loops.
+ * \details The reindex block is a data copy block between the reindex buffer (the intermediate
+ * buffer), and the target buffer.
+    If buffer_index_type == kWrite, copy from the reindex buffer to the target buffer.
+    If buffer_index_type == kRead, copy from the target buffer to the reindex buffer.
+    The reindex block has the same block iters and the surrounding loops as the input block.
+ However, if a block iter is not used in the indices of the target buffer being reindexed, the
+ domain of the block iter, and the corresponding outer loop, will become constant value one, making
+ it a trivial iter.
+ * \param block The block to be reindexed
+ * \param info The cache info
+ * \param covered The set of block iter vars covered in the buffer access indices
+ * \param original_indices The original buffer access indices
+ * \param buffer_index The index of the target buffer
+ * \param buffer_index_type The type of buffer index
+ * \return The reindex block.
+ */</doc>

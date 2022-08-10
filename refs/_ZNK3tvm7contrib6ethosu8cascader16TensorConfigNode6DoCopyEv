@@ -1,0 +1,11 @@
+<def f='tvm/contrib/ethosu/cascader/tensor_config.h' l='125' type='bool tvm::contrib::ethosu::cascader::TensorConfigNode::DoCopy() const'/>
+<doc f='tvm/contrib/ethosu/cascader/tensor_config.h' l='116'>/*!
+   * \return Whether to copy the tensor.
+   * \note While a tensor will originally reside in its home region, the TensorConfig may optionally
+   * specify that the tensor should be copied (according to the StripeConfigs) into another
+   * MemoryRegion. As an example for where this may be used, if a weights tensor initially resides
+   * in slow Flash memory then necessarily the home region will be Flash. However, if the weights
+   * values are used multiple times by a Part, it may be more performant to choose to copy the
+   * weights into a faster memory like SRAM.
+   */</doc>
+<use f='tvm/contrib/ethosu/cascader/plan_generator.cc' l='413' u='c' c='_ZN3tvm7contrib6ethosu8cascader19GenerateSinglePlansERKNS2_4PartERKSt6vectorINS2_12StripeConfigESaIS7_EERKSt13unordered_mapINS2_6TensorES6_INS2_12Memo4994141'/>

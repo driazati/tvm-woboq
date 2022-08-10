@@ -1,0 +1,22 @@
+<dec f='tvm/tir/schedule/primitive.h' l='129' type='Array&lt;tvm::tir::StmtSRef&gt; tvm::tir::GetLoops(const tvm::tir::StmtSRef &amp; block_sref)'/>
+<doc f='tvm/tir/schedule/primitive.h' l='123'>/*!
+ * \brief Gets the parent loops of the block in its scope, from outer to inner
+ * \param self The schedule state
+ * \param block_sref The query block
+ * \return A list of loops above the given block in its scope, from outer to inner
+ */</doc>
+<use f='tvm/meta_schedule/postproc/rewrite_reduction_block.cc' l='93' u='c' c='_ZN3tvm3tir18FindDecomposePointERKNS0_8StmtSRefE'/>
+<use f='tvm/meta_schedule/schedule_rule/auto_bind.cc' l='40' u='c' c='_ZN3tvm13meta_schedule18BindBlockThreadIdxERKNS_3tir8ScheduleERKNS1_7BlockRVEllSt8functionIFNS_8PrimExprElEE'/>
+<use f='tvm/meta_schedule/schedule_rule/random_compute_location.cc' l='77' u='c' c='_ZNK3tvm13meta_schedule25RandomComputeLocationNode15CheckConditionsENS_3tir8ScheduleERKNS2_7BlockRVE'/>
+<use f='tvm/tir/schedule/analysis/analysis.cc' l='973' u='c' c='_ZN3tvm3tir22CollectComputeLocationERKNS0_13ScheduleStateERKNS0_8StmtSRefE'/>
+<use f='tvm/tir/schedule/analysis/analysis.cc' l='1938' u='c' c='_ZN3tvm3tir16IsTrivialBindingERKNS0_13ScheduleStateERKNS0_8StmtSRefE'/>
+<use f='tvm/tir/schedule/analysis/analysis.cc' l='2034' u='c' c='_ZN3tvm3tir36GetCumulativeSpaceAndReductionLengthERKNS0_13ScheduleStateERKNS0_8StmtSRefE'/>
+<use f='tvm/tir/schedule/analysis/analysis.cc' l='2069' u='c' c='_ZN3tvm3tir34NeedsRFactorOrCrossThreadReductionERKNS0_13ScheduleStateERKNS0_8StmtSRefEll'/>
+<use f='tvm/tir/schedule/concrete_schedule.cc' l='320' u='c' c='_ZN3tvm3tir20ConcreteScheduleNode8GetLoopsERKNS0_7BlockRVE'/>
+<use f='tvm/tir/schedule/primitive/decompose_padding.cc' l='430' u='c' c='_ZN3tvm3tir20DecomposePaddingImplENS0_13ScheduleStateERKNS0_8StmtSRefES4_b'/>
+<def f='tvm/tir/schedule/primitive/get_block_loop.cc' l='49' ll='56' type='Array&lt;tvm::tir::StmtSRef&gt; tvm::tir::GetLoops(const tvm::tir::StmtSRef &amp; block_sref)'/>
+<use f='tvm/tir/schedule/primitive/layout_transformation.cc' l='352' u='c' c='_ZN3tvm3tir20TransformBlockLayoutENS0_13ScheduleStateERKNS0_8StmtSRefERKNS0_8IndexMapE'/>
+<use f='tvm/tir/schedule/primitive/loop_transformation.cc' l='440' u='c' c='_ZN3tvm3tir5SplitENS0_13ScheduleStateERKNS0_8StmtSRefERKNS_7runtime5ArrayINS_8PrimExprEvEEb'/>
+<use f='tvm/tir/schedule/primitive/loop_transformation.cc' l='537' u='c' c='_ZN3tvm3tir4FuseENS0_13ScheduleStateERKNS_7runtime5ArrayINS0_8StmtSRefEvEEb'/>
+<use f='tvm/tir/schedule/primitive/reduction.cc' l='189' u='c' c='_ZN3tvm3tir18DecomposeReductionENS0_13ScheduleStateERKNS0_8StmtSRefES4_'/>
+<use f='tvm/tir/schedule/primitive/reduction.cc' l='1029' u='c' c='_ZN3tvm3tir7RFactorENS0_13ScheduleStateERKNS0_8StmtSRefEi'/>

@@ -1,0 +1,12 @@
+<dec f='tvm/target/llvm/codegen_params.h' l='46' type='llvm::ConstantArray * tvm::codegen::NDArrayToLLVMArray(llvm::LLVMContext * ctx, tvm::runtime::NDArray arr)'/>
+<doc f='tvm/target/llvm/codegen_params.h' l='37'>/*!
+ * \brief Convert an NDArray to an LLVM array of constants.
+ *
+ * The supplied NDArray is flattened, and each element is converted to the appropriate LLVM type.
+ *
+ * \param ctx LLVM context used to create the various primitive datatypes.
+ * \param arr NDArray to convert.
+ * \return LLVM array containing the array data.
+ */</doc>
+<use f='tvm/target/llvm/codegen_llvm.cc' l='1551' u='c' c='_ZN3tvm7codegen11CodeGenLLVM10VisitStmt_EPKNS_3tir17AllocateConstNodeE'/>
+<def f='tvm/target/llvm/codegen_params.cc' l='73' ll='177' type='llvm::ConstantArray * tvm::codegen::NDArrayToLLVMArray(llvm::LLVMContext * ctx, ::tvm::runtime::NDArray arr)'/>

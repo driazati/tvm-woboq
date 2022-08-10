@@ -1,0 +1,12 @@
+<dec f='tvm/relay/collage/sub_graph.h' l='394' type='bool tvm::relay::collage::SubGraph::AreTouching(const tvm::relay::collage::DataflowGraph &amp; dataflow_graph, const tvm::relay::collage::SubGraph &amp; that) const'/>
+<use f='tvm/relay/collage/candidate_partition.cc' l='251' u='c' c='_ZNK3tvm5relay7collage18CandidatePartition11AreTouchingERKNS1_13DataflowGraphERKS2_'/>
+<doc f='tvm/relay/collage/sub_graph.h' l='385'>/*!
+   * \brief Returns true if:
+   *  - \p this and \p that are disjoint, and
+   *  - an output node of \p this coincides with an entry node of \p that, and
+   *  - \p this and \p that are not obviously invalid after \p DisjointUnion
+   *    (eg because such a sub-graph would produce a cycle).
+   * Note however that the \p DisjointUnion may not necessarily be valid even with the above
+   * checks.
+   */</doc>
+<def f='tvm/relay/collage/sub_graph.cc' l='865' ll='879' type='bool tvm::relay::collage::SubGraph::AreTouching(const tvm::relay::collage::DataflowGraph &amp; dataflow_graph, const tvm::relay::collage::SubGraph &amp; that) const'/>

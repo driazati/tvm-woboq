@@ -1,0 +1,13 @@
+<def f='tvm/tir/transforms/lower_cross_thread_reduction.cc' l='88' ll='111' type='bool tvm::tir::IsReductionBlock(const tvm::tir::BlockRealize &amp; realize, const Map&lt;tvm::tir::Var, tvm::Range&gt; &amp; loop_range_map, const tvm::tir::Block &amp; scope_block, arith::Analyzer * analyzer)'/>
+<use f='tvm/tir/transforms/lower_cross_thread_reduction.cc' l='421' u='c' c='_ZN3tvm3tir31CrossThreadReductionTransformer24NeedCrossThreadReductionEPKNS0_16BlockRealizeNodeE'/>
+<doc f='tvm/tir/transforms/lower_cross_thread_reduction.cc' l='77'>/*!
+ * \brief Check whether the input block is a reduction block.
+ * \param realize The block to be checked
+ * \param loop_range_map The mapping from the loop variables outside the input block to their ranges
+ * \param scope_block The scope block of the input block
+ * \param analyzer The analyzer
+ * \return A boolean indicating whether the input block is a reduction block.
+ * \note A similar check has been implemented in &quot;src/tir/schedule/analysis.h&quot;, but that check is
+ * based on `tir.Schedule`. Here we have no schedule information, and thus we must implement the
+ * check again.
+ */</doc>

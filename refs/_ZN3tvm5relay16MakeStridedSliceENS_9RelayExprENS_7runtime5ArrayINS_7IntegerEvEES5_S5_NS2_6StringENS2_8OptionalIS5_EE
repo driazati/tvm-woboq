@@ -1,0 +1,8 @@
+<dec f='tvm/relay/op/make_op.h' l='86' type='tvm::relay::Expr tvm::relay::MakeStridedSlice(tvm::relay::Expr data, Array&lt;tvm::Integer&gt; begin, Array&lt;tvm::Integer&gt; end, Array&lt;tvm::Integer&gt; strides, tvm::runtime::String slice_mode, Optional&lt;Array&lt;tvm::Integer&gt;&gt; axes = NullValue&lt;Array&lt;tvm::Integer&gt;&gt;())'/>
+<def f='tvm/relay/op/tensor/transform.cc' l='2866' ll='2876' type='tvm::relay::Expr tvm::relay::MakeStridedSlice(tvm::relay::Expr data, Array&lt;tvm::Integer&gt; begin, Array&lt;tvm::Integer&gt; end, Array&lt;tvm::Integer&gt; strides, tvm::runtime::String slice_mode, Optional&lt;Array&lt;tvm::Integer&gt;&gt; axes = NullValue&lt;Array&lt;tvm::Integer&gt;&gt;())'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='2878' u='r'/>
+<doc f='tvm/relay/op/tensor/transform.cc' l='2865'>// Positional relay function to create StridedSlice operator used by frontend FFI.</doc>
+<use f='tvm/relay/transforms/combine_parallel_batch_matmul.cc' l='147' u='c' c='_ZN3tvm5relay27ParallelBatchMatmulCombiner17UpdateGroupOutputERKNS_9RelayExprERKSt6vectorIS5_IPKNS0_8CallNodeESaIS8_EESaISA_EEmPSt13unordered_mapIS2_S9192580'/>
+<use f='tvm/relay/transforms/combine_parallel_conv2d.cc' l='181' u='c' c='_ZN3tvm5relay22ParallelConv2DCombiner17UpdateGroupOutputERKNS_9RelayExprERKSt6vectorIS5_IPKNS0_8CallNodeESaIS8_EESaISA_EEmPSt13unordered_mapIS2_S2_NS_1057945'/>
+<use f='tvm/relay/transforms/combine_parallel_dense.cc' l='217' u='c' c='_ZN3tvm5relay28ParallelDenseToDenseCombiner17UpdateGroupOutputERKNS_9RelayExprERKSt6vectorIS5_IPKNS0_8CallNodeESaIS8_EESaISA_EEmPSt13unordered_mapIS2_10767304'/>
+<use f='tvm/relay/transforms/dynamic_to_static.cc' l='219' u='c' c='_ZN3tvm5relay22DynamicToStaticMutatorC1ENS_8IRModuleENS0_8FunctionE'/>

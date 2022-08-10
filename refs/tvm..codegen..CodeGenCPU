@@ -1,0 +1,133 @@
+<inh f='tvm/target/llvm/codegen_llvm.h' l='102' c='tvm::codegen::CodeGenLLVM'/>
+<def f='tvm/target/llvm/codegen_cpu.h' l='62' ll='200'/>
+<ovr f='tvm/target/llvm/codegen_arm.cc' l='40' c='tvm::codegen::CodeGenARM'/>
+<use f='tvm/target/llvm/codegen_arm.cc' l='40'/>
+<size>1072</size>
+<doc f='tvm/target/llvm/codegen_cpu.h' l='61'>// CPU host code generation</doc>
+<fun r='_ZN3tvm7codegen10CodeGenCPUC1Ev'/>
+<fun r='_ZN3tvm7codegen10CodeGenCPUD1Ev'/>
+<fun r='_ZN3tvm7codegen10CodeGenCPU4InitERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEPNS0_10LLVMTargetEbbb'/>
+<fun r='_ZN3tvm7codegen10CodeGenCPU11AddFunctionERKNS_3tir8PrimFuncE'/>
+<fun r='_ZN3tvm7codegen10CodeGenCPU15AddMainFunctionERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<fun r='_ZN3tvm7codegen10CodeGenCPU6FinishEv'/>
+<fun r='_ZN3tvm7codegen10CodeGenCPU10VisitStmt_EPKNS_3tir14AssertStmtNodeE'/>
+<fun r='_ZN3tvm7codegen10CodeGenCPU10VisitStmt_EPKNS_3tir12AttrStmtNodeE'/>
+<fun r='_ZN3tvm7codegen10CodeGenCPU10VisitStmt_EPKNS_3tir7ForNodeE'/>
+<fun r='_ZN3tvm7codegen10CodeGenCPU15CreateIntrinsicEPKNS_3tir8CallNodeE'/>
+<fun r='_ZN3tvm7codegen10CodeGenCPU16CreateCallExternENS_4TypeENS_7runtime6StringERKNS3_5ArrayINS_8PrimExprEvEEb'/>
+<fun r='_ZN3tvm7codegen10CodeGenCPU22DefineFunctionRegistryENS_7runtime5ArrayINS2_6StringEvEE'/>
+<fun r='_ZN3tvm7codegen10CodeGenCPU14DefineMetadataENS_7runtime8metadata8MetadataE'/>
+<fun r='_ZN3tvm7codegen10CodeGenCPU18AddStartupFunctionEv'/>
+<mbr r='tvm::codegen::CodeGenCPU::md_tbaa_ctx_ptr_' o='4864' t='llvm::MDNode *'/>
+<mbr r='tvm::codegen::CodeGenCPU::t_tvm_shape_index_' o='4928' t='llvm::Type *'/>
+<mbr r='tvm::codegen::CodeGenCPU::t_tvm_func_handle_' o='4992' t='llvm::Type *'/>
+<mbr r='tvm::codegen::CodeGenCPU::t_tvm_device_' o='5056' t='llvm::StructType *'/>
+<mbr r='tvm::codegen::CodeGenCPU::t_tvm_type_' o='5120' t='llvm::StructType *'/>
+<mbr r='tvm::codegen::CodeGenCPU::t_tvm_array_' o='5184' t='llvm::StructType *'/>
+<mbr r='tvm::codegen::CodeGenCPU::t_tvm_value_' o='5248' t='llvm::StructType *'/>
+<mbr r='tvm::codegen::CodeGenCPU::t_tvm_parallel_group_env_' o='5312' t='llvm::StructType *'/>
+<mbr r='tvm::codegen::CodeGenCPU::ftype_tvm_backend_packed_c_func_' o='5376' t='llvm::FunctionType *'/>
+<mbr r='tvm::codegen::CodeGenCPU::t_tvm_crt_func_registry_' o='5440' t='llvm::StructType *'/>
+<mbr r='tvm::codegen::CodeGenCPU::t_tvm_crt_module_' o='5504' t='llvm::StructType *'/>
+<mbr r='tvm::codegen::CodeGenCPU::ftype_tvm_parallel_lambda_' o='5568' t='llvm::FunctionType *'/>
+<mbr r='tvm::codegen::CodeGenCPU::ftype_tvm_func_call_' o='5632' t='llvm::FunctionType *'/>
+<mbr r='tvm::codegen::CodeGenCPU::ftype_tvm_get_func_from_env_' o='5696' t='llvm::FunctionType *'/>
+<mbr r='tvm::codegen::CodeGenCPU::ftype_tvm_api_set_last_error_' o='5760' t='llvm::FunctionType *'/>
+<mbr r='tvm::codegen::CodeGenCPU::ftype_tvm_parallel_launch_' o='5824' t='llvm::FunctionType *'/>
+<mbr r='tvm::codegen::CodeGenCPU::ftype_tvm_parallel_barrier_' o='5888' t='llvm::FunctionType *'/>
+<mbr r='tvm::codegen::CodeGenCPU::ftype_tvm_register_system_symbol_' o='5952' t='llvm::FunctionType *'/>
+<mbr r='tvm::codegen::CodeGenCPU::ftype_tvm_static_init_callback_' o='6016' t='llvm::FunctionType *'/>
+<mbr r='tvm::codegen::CodeGenCPU::ftype_tvm_static_init_' o='6080' t='llvm::FunctionType *'/>
+<fun r='_ZN3tvm7codegen10CodeGenCPU17InitGlobalContextEb'/>
+<fun r='_ZN3tvm7codegen10CodeGenCPU14InitContextPtrEPN4llvm4TypeENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<fun r='_ZN3tvm7codegen10CodeGenCPU13GetContextPtrEPN4llvm14GlobalVariableE'/>
+<fun r='_ZN3tvm7codegen10CodeGenCPU18RuntimeTVMFuncCallEv'/>
+<fun r='_ZN3tvm7codegen10CodeGenCPU24RuntimeTVMGetFuncFromEnvEv'/>
+<fun r='_ZN3tvm7codegen10CodeGenCPU25RuntimeTVMAPISetLastErrorEv'/>
+<fun r='_ZN3tvm7codegen10CodeGenCPU24RuntimeTVMParallelLaunchEv'/>
+<fun r='_ZN3tvm7codegen10CodeGenCPU25RuntimeTVMParallelBarrierEv'/>
+<fun r='_ZN3tvm7codegen10CodeGenCPU18CreateStaticHandleEv'/>
+<fun r='_ZN3tvm7codegen10CodeGenCPU19GetPackedFuncHandleERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<fun r='_ZN3tvm7codegen10CodeGenCPU15PackClosureDataERKNS_7runtime5ArrayINS_3tir3VarEvEEPmNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<fun r='_ZN3tvm7codegen10CodeGenCPU18CreateStructRefPtrENS_7runtime8DataTypeEPN4llvm5ValueES6_i'/>
+<fun r='_ZN3tvm7codegen10CodeGenCPU17UnpackClosureDataENS0_11CodeGenLLVM12TypedPointerERKNS_7runtime5ArrayINS_3tir3VarEvEEPSt13unordered_mapIPKNS6_7VarNodeEPN5041414'/>
+<fun r='_ZN3tvm7codegen10CodeGenCPU21MakeCallPackedLoweredERKNS_7runtime5ArrayINS_8PrimExprEvEERKNS2_8DataTypeEllb'/>
+<fun r='_ZN3tvm7codegen10CodeGenCPU16CreateCallPackedEPKNS_3tir8CallNodeEb'/>
+<fun r='_ZN3tvm7codegen10CodeGenCPU21CreateCallTracePackedEPKNS_3tir8CallNodeE'/>
+<fun r='_ZN3tvm7codegen10CodeGenCPU16CreateStaticInitERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKNS_3tir4StmtE'/>
+<fun r='_ZN3tvm7codegen10CodeGenCPU20CreateParallelLaunchERKNS_3tir4StmtEiNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<fun r='_ZN3tvm7codegen10CodeGenCPU18CreateComputeScopeEPKNS_3tir12AttrStmtNodeE'/>
+<fun r='_ZN3tvm7codegen10CodeGenCPU16CheckCallSuccessEPN4llvm5ValueE'/>
+<mbr r='tvm::codegen::CodeGenCPU::gv_mod_ctx_' o='6144' t='llvm::GlobalVariable *'/>
+<mbr r='tvm::codegen::CodeGenCPU::gv_tvm_func_call_' o='6208' t='llvm::GlobalVariable *'/>
+<mbr r='tvm::codegen::CodeGenCPU::gv_tvm_get_func_from_env_' o='6272' t='llvm::GlobalVariable *'/>
+<mbr r='tvm::codegen::CodeGenCPU::gv_tvm_api_set_last_error_' o='6336' t='llvm::GlobalVariable *'/>
+<mbr r='tvm::codegen::CodeGenCPU::gv_tvm_parallel_launch_' o='6400' t='llvm::GlobalVariable *'/>
+<mbr r='tvm::codegen::CodeGenCPU::gv_tvm_parallel_barrier_' o='6464' t='llvm::GlobalVariable *'/>
+<mbr r='tvm::codegen::CodeGenCPU::gv_func_map_' o='6528' t='std::unordered_map&lt;String, llvm::GlobalVariable *&gt;'/>
+<mbr r='tvm::codegen::CodeGenCPU::f_tvm_func_call_' o='6976' t='llvm::Function *'/>
+<mbr r='tvm::codegen::CodeGenCPU::f_tvm_get_func_from_env_' o='7040' t='llvm::Function *'/>
+<mbr r='tvm::codegen::CodeGenCPU::f_tvm_api_set_last_error_' o='7104' t='llvm::Function *'/>
+<mbr r='tvm::codegen::CodeGenCPU::f_tvm_parallel_launch_' o='7168' t='llvm::Function *'/>
+<mbr r='tvm::codegen::CodeGenCPU::f_tvm_parallel_barrier_' o='7232' t='llvm::Function *'/>
+<mbr r='tvm::codegen::CodeGenCPU::f_tvm_register_system_symbol_' o='7296' t='llvm::Function *'/>
+<mbr r='tvm::codegen::CodeGenCPU::parallel_env_' o='7360' t='tvm::codegen::CodeGenCPU::ParallelEnv'/>
+<mbr r='tvm::codegen::CodeGenCPU::func_handle_map_' o='7616' t='std::unordered_map&lt;std::string, llvm::GlobalVariable *&gt;'/>
+<mbr r='tvm::codegen::CodeGenCPU::export_system_symbols_' o='8064' t='std::vector&lt;std::pair&lt;std::string, llvm::Constant *&gt;&gt;'/>
+<mbr r='tvm::codegen::CodeGenCPU::registry_functions_' o='8256' t='std::vector&lt;std::pair&lt;std::string, llvm::Function *&gt;&gt;'/>
+<mbr r='tvm::codegen::CodeGenCPU::dbg_info_' o='8448' t='std::unique_ptr&lt;DebugInfo&gt;'/>
+<mbr r='tvm::codegen::CodeGenCPU::target_c_runtime_' o='8512' t='bool'/>
+<mbr r='tvm::codegen::CodeGenCPU::is_system_lib_' o='8520' t='bool'/>
+<fun r='_ZN3tvm7codegen10CodeGenCPU12GetDebugTypeERKNS_4TypeEPN4llvm4TypeE'/>
+<fun r='_ZN3tvm7codegen10CodeGenCPU19AddDebugInformationENS_3tir8PrimFuncEPN4llvm8FunctionE'/>
+<use f='tvm/target/llvm/codegen_cpu.cc' l='547' c='_ZZN3tvm7codegen10CodeGenCPU18CreateComputeScopeEPKNS_3tir12AttrStmtNodeEEN18ComputeScopeStatesC1EPS1_'/>
+<use f='tvm/target/llvm/codegen_cpu.cc' l='564' c='_ZN3tvm7codegen10CodeGenCPU18CreateComputeScopeEPKNS_3tir12AttrStmtNodeE'/>
+<use f='tvm/target/llvm/codegen_cpu.cc' l='1560'/>
+<size>1072</size>
+<fun r='_ZN3tvm7codegen10CodeGenCPUC1Ev'/>
+<fun r='_ZN3tvm7codegen10CodeGenCPUD1Ev'/>
+<fun r='_ZN3tvm7codegen10CodeGenCPU4InitERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEPNS0_10LLVMTargetEbbb'/>
+<fun r='_ZN3tvm7codegen10CodeGenCPU11AddFunctionERKNS_3tir8PrimFuncE'/>
+<fun r='_ZN3tvm7codegen10CodeGenCPU19AddDebugInformationENS_3tir8PrimFuncEPN4llvm8FunctionE'/>
+<fun r='_ZN3tvm7codegen10CodeGenCPU12GetDebugTypeERKNS_4TypeEPN4llvm4TypeE'/>
+<fun r='_ZN3tvm7codegen10CodeGenCPU15AddMainFunctionERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<fun r='_ZN3tvm7codegen10CodeGenCPU6FinishEv'/>
+<fun r='_ZN3tvm7codegen10CodeGenCPU18CreateStructRefPtrENS_7runtime8DataTypeEPN4llvm5ValueES6_i'/>
+<fun r='_ZN3tvm7codegen10CodeGenCPU16CreateCallExternENS_4TypeENS_7runtime6StringERKNS3_5ArrayINS_8PrimExprEvEEb'/>
+<fun r='_ZN3tvm7codegen10CodeGenCPU14InitContextPtrEPN4llvm4TypeENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<fun r='_ZN3tvm7codegen10CodeGenCPU13GetContextPtrEPN4llvm14GlobalVariableE'/>
+<fun r='_ZN3tvm7codegen10CodeGenCPU17InitGlobalContextEb'/>
+<fun r='_ZN3tvm7codegen10CodeGenCPU16CheckCallSuccessEPN4llvm5ValueE'/>
+<fun r='_ZN3tvm7codegen10CodeGenCPU18CreateComputeScopeEPKNS_3tir12AttrStmtNodeE'/>
+<fun r='_ZN3tvm7codegen10CodeGenCPU15PackClosureDataERKNS_7runtime5ArrayINS_3tir3VarEvEEPmNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<fun r='_ZN3tvm7codegen10CodeGenCPU17UnpackClosureDataENS0_11CodeGenLLVM12TypedPointerERKNS_7runtime5ArrayINS_3tir3VarEvEEPSt13unordered_mapIPKNS6_7VarNodeEPN5041414'/>
+<fun r='_ZN3tvm7codegen10CodeGenCPU20CreateParallelLaunchERKNS_3tir4StmtEiNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<fun r='_ZN3tvm7codegen10CodeGenCPU18CreateStaticHandleEv'/>
+<fun r='_ZN3tvm7codegen10CodeGenCPU16CreateStaticInitERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKNS_3tir4StmtE'/>
+<fun r='_ZN3tvm7codegen10CodeGenCPU19GetPackedFuncHandleERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<fun r='_ZN3tvm7codegen10CodeGenCPU21MakeCallPackedLoweredERKNS_7runtime5ArrayINS_8PrimExprEvEERKNS2_8DataTypeEllb'/>
+<fun r='_ZN3tvm7codegen10CodeGenCPU16CreateCallPackedEPKNS_3tir8CallNodeEb'/>
+<fun r='_ZN3tvm7codegen10CodeGenCPU21CreateCallTracePackedEPKNS_3tir8CallNodeE'/>
+<fun r='_ZN3tvm7codegen10CodeGenCPU18RuntimeTVMFuncCallEv'/>
+<fun r='_ZN3tvm7codegen10CodeGenCPU24RuntimeTVMGetFuncFromEnvEv'/>
+<fun r='_ZN3tvm7codegen10CodeGenCPU25RuntimeTVMAPISetLastErrorEv'/>
+<fun r='_ZN3tvm7codegen10CodeGenCPU24RuntimeTVMParallelLaunchEv'/>
+<fun r='_ZN3tvm7codegen10CodeGenCPU25RuntimeTVMParallelBarrierEv'/>
+<fun r='_ZN3tvm7codegen10CodeGenCPU14DefineMetadataENS_7runtime8metadata8MetadataE'/>
+<fun r='_ZN3tvm7codegen10CodeGenCPU22DefineFunctionRegistryENS_7runtime5ArrayINS2_6StringEvEE'/>
+<fun r='_ZN3tvm7codegen10CodeGenCPU18AddStartupFunctionEv'/>
+<fun r='_ZN3tvm7codegen10CodeGenCPU15CreateIntrinsicEPKNS_3tir8CallNodeE'/>
+<fun r='_ZN3tvm7codegen10CodeGenCPU10VisitStmt_EPKNS_3tir14AssertStmtNodeE'/>
+<fun r='_ZN3tvm7codegen10CodeGenCPU10VisitStmt_EPKNS_3tir12AttrStmtNodeE'/>
+<fun r='_ZN3tvm7codegen10CodeGenCPU10VisitStmt_EPKNS_3tir7ForNodeE'/>
+<ovr f='tvm/target/llvm/codegen_hexagon.cc' l='70' c='tvm::codegen::CodeGenHexagon'/>
+<use f='tvm/target/llvm/codegen_hexagon.cc' l='70'/>
+<size>1072</size>
+<ovr f='tvm/target/llvm/codegen_x86_64.cc' l='78' c='tvm::codegen::CodeGenX86_64'/>
+<use f='tvm/target/llvm/codegen_x86_64.cc' l='78'/>
+<size>1072</size>
+<use f='tvm/target/llvm/llvm_module.cc' l='499' c='_ZN3tvm7codegen27CreateLLVMCppMetadataModuleENS_7runtime8metadata8MetadataENS_6TargetENS_5relay7RuntimeE'/>
+<use f='tvm/target/llvm/llvm_module.cc' l='499' c='_ZN3tvm7codegen27CreateLLVMCppMetadataModuleENS_7runtime8metadata8MetadataENS_6TargetENS_5relay7RuntimeE'/>
+<use f='tvm/target/llvm/llvm_module.cc' l='547' c='_ZN3tvm7codegen27CreateLLVMCrtMetadataModuleERKNS_7runtime5ArrayINS1_6ModuleEvEENS_6TargetENS_5relay7RuntimeE'/>
+<use f='tvm/target/llvm/llvm_module.cc' l='547' c='_ZN3tvm7codegen27CreateLLVMCrtMetadataModuleERKNS_7runtime5ArrayINS1_6ModuleEvEENS_6TargetENS_5relay7RuntimeE'/>
+<size>1072</size>

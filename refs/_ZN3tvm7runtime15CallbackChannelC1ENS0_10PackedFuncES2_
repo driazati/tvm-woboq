@@ -1,0 +1,11 @@
+<def f='tvm/runtime/rpc/rpc_channel.h' l='72' ll='73' type='void tvm::runtime::CallbackChannel::CallbackChannel(tvm::runtime::PackedFunc fsend, tvm::runtime::PackedFunc frecv)'/>
+<doc f='tvm/runtime/rpc/rpc_channel.h' l='64'>/*!
+   * \brief Constructor.
+   *
+   * \param fsend The send function, takes in a TVMByteArray and returns the
+   *              number of bytes sent in that array. Returns -1 if error happens.
+   * \param frecv The recv function, takes an expected maximum size, and return
+   *              a byte array with the actual amount of data received.
+   */</doc>
+<use f='tvm/runtime/rpc/rpc_event_impl.cc' l='40' u='c' c='_ZN3tvm7runtime23CreateEventDrivenServerENS0_10PackedFuncENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_'/>
+<use f='tvm/runtime/rpc/rpc_socket_impl.cc' l='124' u='c' c='_ZN3tvm7runtime13RPCServerLoopENS0_10PackedFuncES1_'/>

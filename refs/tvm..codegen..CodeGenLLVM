@@ -1,0 +1,260 @@
+<def f='tvm/target/llvm/codegen_llvm.h' l='102' ll='537'/>
+<use f='tvm/target/llvm/codegen_llvm.h' l='113' c='_ZN3tvm7codegen11CodeGenLLVM6CreateEPNS0_10LLVMTargetE'/>
+<ovr f='tvm/target/llvm/codegen_amdgpu.cc' l='83' c='tvm::codegen::CodeGenAMDGPU'/>
+<use f='tvm/target/llvm/codegen_amdgpu.cc' l='83'/>
+<size>608</size>
+<doc f='tvm/target/llvm/codegen_llvm.h' l='99'>/*!
+ * \brief A base class to generate a LLVM.
+ */</doc>
+<fun r='_ZN3tvm7codegen11CodeGenLLVMC1Ev'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVMD1Ev'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM6CreateEPNS0_10LLVMTargetE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM4InitERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEPNS0_10LLVMTargetEbbb'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM16SetFastMathFlagsEN4llvm13FastMathFlagsE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM11AddFunctionERKNS_3tir8PrimFuncE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM15AddMainFunctionERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM6FinishEv'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM19AddFunctionsOrderedET_S2_T0_'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM19AddFunctionsOrderedET_S2_'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM13AddLinkModuleEOSt10unique_ptrIN4llvm6ModuleESt14default_deleteIS4_EE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM9MakeValueERKNS_8PrimExprE'/>
+<fun r='_ZNK3tvm7codegen11CodeGenLLVM10ConstInt32El'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM10VisitExpr_EPKNS_3tir7VarNodeE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM10VisitExpr_EPKNS_3tir8CastNodeE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM10VisitExpr_EPKNS_10IntImmNodeE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM10VisitExpr_EPKNS_12FloatImmNodeE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM10VisitExpr_EPKNS_3tir13StringImmNodeE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM10VisitExpr_EPKNS_3tir7AddNodeE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM10VisitExpr_EPKNS_3tir7SubNodeE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM10VisitExpr_EPKNS_3tir7MulNodeE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM10VisitExpr_EPKNS_3tir7DivNodeE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM10VisitExpr_EPKNS_3tir7ModNodeE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM10VisitExpr_EPKNS_3tir7MinNodeE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM10VisitExpr_EPKNS_3tir7MaxNodeE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM10VisitExpr_EPKNS_3tir6LTNodeE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM10VisitExpr_EPKNS_3tir6LENodeE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM10VisitExpr_EPKNS_3tir6GTNodeE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM10VisitExpr_EPKNS_3tir6GENodeE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM10VisitExpr_EPKNS_3tir6EQNodeE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM10VisitExpr_EPKNS_3tir6NENodeE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM10VisitExpr_EPKNS_3tir7AndNodeE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM10VisitExpr_EPKNS_3tir6OrNodeE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM10VisitExpr_EPKNS_3tir7NotNodeE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM10VisitExpr_EPKNS_3tir10SelectNodeE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM10VisitExpr_EPKNS_3tir7LetNodeE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM10VisitExpr_EPKNS_3tir8LoadNodeE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM10VisitExpr_EPKNS_3tir14BufferLoadNodeE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM10VisitExpr_EPKNS_3tir8CallNodeE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM10VisitExpr_EPKNS_3tir8RampNodeE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM10VisitExpr_EPKNS_3tir11ShuffleNodeE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM10VisitExpr_EPKNS_3tir13BroadcastNodeE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM10VisitStmt_EPKNS_3tir9StoreNodeE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM10VisitStmt_EPKNS_3tir15BufferStoreNodeE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM10VisitStmt_EPKNS_3tir7ForNodeE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM10VisitStmt_EPKNS_3tir9WhileNodeE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM10VisitStmt_EPKNS_3tir14IfThenElseNodeE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM10VisitStmt_EPKNS_3tir12AllocateNodeE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM10VisitStmt_EPKNS_3tir17AllocateConstNodeE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM10VisitStmt_EPKNS_3tir12AttrStmtNodeE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM10VisitStmt_EPKNS_3tir14AssertStmtNodeE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM10VisitStmt_EPKNS_3tir11LetStmtNodeE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM10VisitStmt_EPKNS_3tir11SeqStmtNodeE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM10VisitStmt_EPKNS_3tir12EvaluateNodeE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM14GetConstStringERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM17GetGlobalConstantEPN4llvm8ConstantERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS2_11GlobalValue12LinkageTypesE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM13MakeStringRefERKNS_7runtime6StringE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM17WithFunctionEntryET_'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM15CreateIntrinsicEPKNS_3tir8CallNodeE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM16CreateCallExternENS_4TypeENS_7runtime6StringERKNS3_5ArrayINS_8PrimExprEvEEb'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM12CreatePrintfERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEN4llvm8ArrayRefIPNSA_5ValueEEE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM25CreateLookupReturnAddressEj'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM14GetThreadIndexERKNS_3tir7IterVarE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM17CreateStorageSyncEPKNS_3tir8CallNodeE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM22InitPassManagerBuilderEPN4llvm18PassManagerBuilderE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM9ScalarizeERKNS_8PrimExprESt8functionIFviPN4llvm5ValueEEE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM18BufferAccessHelperENS_3tir6BufferENS_7runtime5ArrayINS_8PrimExprEvEENS4_8DataTypeESt8functionIFPN4llvm11InstructionENS1_12TypedPointerEiibEE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM10InitTargetEv'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM18AddStartupFunctionEv'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM8OptimizeEv'/>
+<fun r='_ZNK3tvm7codegen11CodeGenLLVM16NativeVectorBitsERKNS_7runtime12StorageScopeE'/>
+<fun r='_ZNK3tvm7codegen11CodeGenLLVM21GetGlobalAddressSpaceEv'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM19AddFunctionInternalERKNS_3tir8PrimFuncEb'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM16CreateCallExternEPN4llvm4TypeERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKSt6vectorIPNS2_5ValueESaISF_EE'/>
+<fun r='_ZNK3tvm7codegen11CodeGenLLVM15DTypeToLLVMTypeERKNS_7runtime8DataTypeE'/>
+<fun r='_ZNK3tvm7codegen11CodeGenLLVM11GetLLVMTypeERKNS_4TypeE'/>
+<fun r='_ZNK3tvm7codegen11CodeGenLLVM11GetLLVMTypeERKNS_8PrimExprE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM16GetIntrinsicDeclEjPN4llvm4TypeENS2_8ArrayRefIS4_EE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM19SetTargetAttributesEPN4llvm8FunctionE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM20GetVectorNumElementsEPN4llvm5ValueE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM13InitFuncStateEv'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM12GetAlignmentENS_7runtime8DataTypeEPKNS_3tir7VarNodeERKNS_8PrimExprEPiSB_'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM19HasAlignmentPaddingENS_7runtime8DataTypeE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM20CreateScalarizedCallEPKNS_3tir8CallNodeEPN4llvm8FunctionERKSt6vectorIPNS6_5ValueESaISB_EE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM12HandleImportERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM10CreateCastENS_7runtime8DataTypeES3_PN4llvm5ValueE'/>
+<fun r='_ZNK3tvm7codegen11CodeGenLLVM11GetVarValueEPKNS_3tir7VarNodeE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM8CreateLTENS_7runtime8DataTypeEPN4llvm5ValueES6_'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM8CreateLEENS_7runtime8DataTypeEPN4llvm5ValueES6_'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM8CreateGTENS_7runtime8DataTypeEPN4llvm5ValueES6_'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM8CreateGEENS_7runtime8DataTypeEPN4llvm5ValueES6_'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM9CreateAddENS_7runtime8DataTypeEPN4llvm5ValueES6_'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM9CreateSubENS_7runtime8DataTypeEPN4llvm5ValueES6_'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM9CreateMulENS_7runtime8DataTypeEPN4llvm5ValueES6_'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM15CreateBroadcastEPN4llvm5ValueEi'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM15CreateBufferPtrEPN4llvm5ValueENS_7runtime8DataTypeENS2_8ArrayRefIS4_EES6_'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM14CreateVecSliceEPN4llvm5ValueEii'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM13CreateVecFlipEPN4llvm5ValueE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM15CreateVecConcatESt6vectorIPN4llvm5ValueESaIS5_EE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM12CreateVecPadEPN4llvm5ValueEi'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM15CreateSerialForEPN4llvm5ValueES4_S4_RKNS_3tir3VarERKNS5_4StmtE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM12AddAliasInfoEPN4llvm11InstructionEPKNS_3tir7VarNodeENS_8PrimExprENS_7runtime8DataTypeE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM20AllocateSharedMemoryENS_7runtime8DataTypeEmjiN4llvm11GlobalValue12LinkageTypesE'/>
+<fun r='_ZNK3tvm7codegen11CodeGenLLVM6GetArgEPKN4llvm8FunctionEi'/>
+<mbr r='tvm::codegen::CodeGenLLVM::function_' o='128' t='llvm::Function *'/>
+<mbr r='tvm::codegen::CodeGenLLVM::builder_' o='192' t='std::unique_ptr&lt;IRBuilder&gt;'/>
+<mbr r='tvm::codegen::CodeGenLLVM::module_' o='256' t='std::unique_ptr&lt;llvm::Module&gt;'/>
+<mbr r='tvm::codegen::CodeGenLLVM::data_layout_' o='320' t='std::unique_ptr&lt;llvm::DataLayout&gt;'/>
+<mbr r='tvm::codegen::CodeGenLLVM::md_builder_' o='384' t='std::unique_ptr&lt;llvm::MDBuilder&gt;'/>
+<mbr r='tvm::codegen::CodeGenLLVM::llvm_target_' o='448' t='tvm::codegen::LLVMTarget *'/>
+<mbr r='tvm::codegen::CodeGenLLVM::t_void_' o='512' t='llvm::Type *'/>
+<mbr r='tvm::codegen::CodeGenLLVM::t_void_p_' o='576' t='llvm::PointerType *'/>
+<mbr r='tvm::codegen::CodeGenLLVM::t_int_' o='640' t='llvm::Type *'/>
+<mbr r='tvm::codegen::CodeGenLLVM::t_char_' o='704' t='llvm::Type *'/>
+<mbr r='tvm::codegen::CodeGenLLVM::t_int8_' o='768' t='llvm::Type *'/>
+<mbr r='tvm::codegen::CodeGenLLVM::t_int16_' o='832' t='llvm::Type *'/>
+<mbr r='tvm::codegen::CodeGenLLVM::t_int32_' o='896' t='llvm::Type *'/>
+<mbr r='tvm::codegen::CodeGenLLVM::t_int64_' o='960' t='llvm::Type *'/>
+<mbr r='tvm::codegen::CodeGenLLVM::t_float64_' o='1024' t='llvm::Type *'/>
+<mbr r='tvm::codegen::CodeGenLLVM::md_very_likely_branch_' o='1088' t='llvm::MDNode *'/>
+<mbr r='tvm::codegen::CodeGenLLVM::md_tbaa_root_' o='1152' t='llvm::MDNode *'/>
+<mbr r='tvm::codegen::CodeGenLLVM::md_tbaa_alias_set_' o='1216' t='llvm::MDNode *'/>
+<mbr r='tvm::codegen::CodeGenLLVM::link_modules_' o='1280' t='std::vector&lt;std::unique_ptr&lt;llvm::Module&gt;&gt;'/>
+<mbr r='tvm::codegen::CodeGenLLVM::native_vector_bits_' o='1472' t='int'/>
+<mbr r='tvm::codegen::CodeGenLLVM::alloc_storage_info_' o='1536' t='std::unordered_map&lt;const VarNode *, StorageInfo&gt;'/>
+<mbr r='tvm::codegen::CodeGenLLVM::var_map_' o='1984' t='std::unordered_map&lt;const VarNode *, llvm::Value *&gt;'/>
+<mbr r='tvm::codegen::CodeGenLLVM::str_map_' o='2432' t='std::unordered_map&lt;std::string, llvm::Constant *&gt;'/>
+<mbr r='tvm::codegen::CodeGenLLVM::is_restricted_' o='2880' t='bool'/>
+<mbr r='tvm::codegen::CodeGenLLVM::analyzer_' o='2944' t='std::unique_ptr&lt;arith::Analyzer&gt;'/>
+<mbr r='tvm::codegen::CodeGenLLVM::alias_var_set_' o='3008' t='std::unordered_set&lt;const VarNode *&gt;'/>
+<mbr r='tvm::codegen::CodeGenLLVM::volatile_buf_' o='3456' t='std::unordered_set&lt;const VarNode *&gt;'/>
+<mbr r='tvm::codegen::CodeGenLLVM::deep_equal_' o='3904' t='tvm::tir::ExprDeepEqual'/>
+<mbr r='tvm::codegen::CodeGenLLVM::let_binding_' o='3968' t='std::unordered_map&lt;Var, const LetNode *, ObjectPtrHash, ObjectPtrEqual&gt;'/>
+<mbr r='tvm::codegen::CodeGenLLVM::op_attr_global_symbol_' o='4416' t='OpAttrMap&lt;tvm::tir::TGlobalSymbol&gt;'/>
+<mbr r='tvm::codegen::CodeGenLLVM::builtin_call_extern_' o='4480' t='const tvm::Op &amp;'/>
+<mbr r='tvm::codegen::CodeGenLLVM::builtin_call_pure_extern_' o='4544' t='const tvm::Op &amp;'/>
+<mbr r='tvm::codegen::CodeGenLLVM::builtin_call_llvm_intrin_' o='4608' t='const tvm::Op &amp;'/>
+<mbr r='tvm::codegen::CodeGenLLVM::builtin_call_llvm_pure_intrin_' o='4672' t='const tvm::Op &amp;'/>
+<mbr r='tvm::codegen::CodeGenLLVM::builtin_lookup_param_' o='4736' t='const tvm::Op &amp;'/>
+<mbr r='tvm::codegen::CodeGenLLVM::builtin_tvm_call_cpacked_lowered_' o='4800' t='const tvm::Op &amp;'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM15CreateDebugInfoEPN4llvm6ModuleE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM20GetVectorNumElementsEPN4llvm5ValueE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM19AddFunctionsOrderedET_S2_T0_'/>
+<ovr f='tvm/target/llvm/codegen_cpu.h' l='62' c='tvm::codegen::CodeGenCPU'/>
+<use f='tvm/target/llvm/codegen_cpu.h' l='62'/>
+<size>608</size>
+<use f='tvm/target/llvm/codegen_cpu.cc' l='1118' c='_ZN3tvm7codegen22MetadataSerializerLLVMC1EPNS0_11CodeGenLLVMEPNS0_17MetadataLlvmTypesE'/>
+<use f='tvm/target/llvm/codegen_cpu.cc' l='1256'/>
+<size>608</size>
+<use f='tvm/target/llvm/codegen_llvm.cc' l='105' c='_ZN3tvm7codegen11CodeGenLLVM6CreateEPNS0_10LLVMTargetE'/>
+<use f='tvm/target/llvm/codegen_llvm.cc' l='117' c='_ZN3tvm7codegen11CodeGenLLVM6CreateEPNS0_10LLVMTargetE'/>
+<use f='tvm/target/llvm/codegen_llvm.cc' l='117' c='_ZN3tvm7codegen11CodeGenLLVM6CreateEPNS0_10LLVMTargetE'/>
+<size>608</size>
+<fun r='_ZN3tvm7codegen11CodeGenLLVMC1Ev'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVMD1Ev'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM6CreateEPNS0_10LLVMTargetE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM4InitERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEPNS0_10LLVMTargetEbbb'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM16SetFastMathFlagsEN4llvm13FastMathFlagsE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM10InitTargetEv'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM11AddFunctionERKNS_3tir8PrimFuncE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM13InitFuncStateEv'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM19AddFunctionInternalERKNS_3tir8PrimFuncEb'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM6FinishEv'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM12HandleImportERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM13AddLinkModuleEOSt10unique_ptrIN4llvm6ModuleESt14default_deleteIS4_EE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM15AddMainFunctionERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM14GetThreadIndexERKNS_3tir7IterVarE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM17CreateStorageSyncEPKNS_3tir8CallNodeE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM22InitPassManagerBuilderEPN4llvm18PassManagerBuilderE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM8OptimizeEv'/>
+<fun r='_ZNK3tvm7codegen11CodeGenLLVM16NativeVectorBitsERKNS_7runtime12StorageScopeE'/>
+<fun r='_ZNK3tvm7codegen11CodeGenLLVM21GetGlobalAddressSpaceEv'/>
+<fun r='_ZNK3tvm7codegen11CodeGenLLVM15DTypeToLLVMTypeERKNS_7runtime8DataTypeE'/>
+<fun r='_ZNK3tvm7codegen11CodeGenLLVM11GetLLVMTypeERKNS_4TypeE'/>
+<fun r='_ZNK3tvm7codegen11CodeGenLLVM11GetLLVMTypeERKNS_8PrimExprE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM12AddAliasInfoEPN4llvm11InstructionEPKNS_3tir7VarNodeENS_8PrimExprENS_7runtime8DataTypeE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM12GetAlignmentENS_7runtime8DataTypeEPKNS_3tir7VarNodeERKNS_8PrimExprEPiSB_'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM20AllocateSharedMemoryENS_7runtime8DataTypeEmjiN4llvm11GlobalValue12LinkageTypesE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM15CreateDebugInfoEPN4llvm6ModuleE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM15CreateBroadcastEPN4llvm5ValueEi'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM14CreateVecSliceEPN4llvm5ValueEii'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM13CreateVecFlipEPN4llvm5ValueE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM12CreateVecPadEPN4llvm5ValueEi'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM15CreateVecConcatESt6vectorIPN4llvm5ValueESaIS5_EE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM15CreateSerialForEPN4llvm5ValueES4_S4_RKNS_3tir3VarERKNS5_4StmtE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM10CreateCastENS_7runtime8DataTypeES3_PN4llvm5ValueE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM17GetGlobalConstantEPN4llvm8ConstantERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS2_11GlobalValue12LinkageTypesE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM14GetConstStringERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM15CreateBufferPtrEPN4llvm5ValueENS_7runtime8DataTypeENS2_8ArrayRefIS4_EES6_'/>
+<fun r='_ZNK3tvm7codegen11CodeGenLLVM11GetVarValueEPKNS_3tir7VarNodeE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM12CreatePrintfERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEN4llvm8ArrayRefIPNSA_5ValueEEE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM25CreateLookupReturnAddressEj'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM16CreateCallExternENS_4TypeENS_7runtime6StringERKNS3_5ArrayINS_8PrimExprEvEEb'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM16GetIntrinsicDeclEjPN4llvm4TypeENS2_8ArrayRefIS4_EE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM19SetTargetAttributesEPN4llvm8FunctionE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM15CreateIntrinsicEPKNS_3tir8CallNodeE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM9ScalarizeERKNS_8PrimExprESt8functionIFviPN4llvm5ValueEEE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM10VisitExpr_EPKNS_3tir7VarNodeE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM10VisitExpr_EPKNS_3tir8CastNodeE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM10VisitExpr_EPKNS_10IntImmNodeE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM10VisitExpr_EPKNS_12FloatImmNodeE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM10VisitExpr_EPKNS_3tir13StringImmNodeE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM9CreateAddENS_7runtime8DataTypeEPN4llvm5ValueES6_'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM10VisitExpr_EPKNS_3tir7AddNodeE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM9CreateSubENS_7runtime8DataTypeEPN4llvm5ValueES6_'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM10VisitExpr_EPKNS_3tir7SubNodeE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM9CreateMulENS_7runtime8DataTypeEPN4llvm5ValueES6_'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM10VisitExpr_EPKNS_3tir7MulNodeE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM8CreateLTENS_7runtime8DataTypeEPN4llvm5ValueES6_'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM10VisitExpr_EPKNS_3tir6LTNodeE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM8CreateLEENS_7runtime8DataTypeEPN4llvm5ValueES6_'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM10VisitExpr_EPKNS_3tir6LENodeE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM8CreateGTENS_7runtime8DataTypeEPN4llvm5ValueES6_'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM10VisitExpr_EPKNS_3tir6GTNodeE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM8CreateGEENS_7runtime8DataTypeEPN4llvm5ValueES6_'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM10VisitExpr_EPKNS_3tir6GENodeE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM10VisitExpr_EPKNS_3tir7DivNodeE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM10VisitExpr_EPKNS_3tir7ModNodeE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM10VisitExpr_EPKNS_3tir7MinNodeE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM10VisitExpr_EPKNS_3tir7MaxNodeE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM10VisitExpr_EPKNS_3tir6EQNodeE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM10VisitExpr_EPKNS_3tir6NENodeE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM10VisitExpr_EPKNS_3tir7AndNodeE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM10VisitExpr_EPKNS_3tir6OrNodeE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM10VisitExpr_EPKNS_3tir7NotNodeE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM10VisitExpr_EPKNS_3tir10SelectNodeE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM10VisitExpr_EPKNS_3tir7LetNodeE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM10VisitExpr_EPKNS_3tir8LoadNodeE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM19HasAlignmentPaddingENS_7runtime8DataTypeE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM18BufferAccessHelperENS_3tir6BufferENS_7runtime5ArrayINS_8PrimExprEvEENS4_8DataTypeESt8functionIFPN4llvm11InstructionENS1_12TypedPointerEiibEE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM10VisitExpr_EPKNS_3tir14BufferLoadNodeE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM10VisitExpr_EPKNS_3tir8CallNodeE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM10VisitExpr_EPKNS_3tir8RampNodeE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM10VisitExpr_EPKNS_3tir11ShuffleNodeE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM10VisitExpr_EPKNS_3tir13BroadcastNodeE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM10VisitStmt_EPKNS_3tir9StoreNodeE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM10VisitStmt_EPKNS_3tir15BufferStoreNodeE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM10VisitStmt_EPKNS_3tir7ForNodeE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM10VisitStmt_EPKNS_3tir9WhileNodeE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM10VisitStmt_EPKNS_3tir14IfThenElseNodeE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM10VisitStmt_EPKNS_3tir17AllocateConstNodeE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM10VisitStmt_EPKNS_3tir12AllocateNodeE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM10VisitStmt_EPKNS_3tir12AttrStmtNodeE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM10VisitStmt_EPKNS_3tir14AssertStmtNodeE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM10VisitStmt_EPKNS_3tir11LetStmtNodeE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM10VisitStmt_EPKNS_3tir11SeqStmtNodeE'/>
+<fun r='_ZN3tvm7codegen11CodeGenLLVM10VisitStmt_EPKNS_3tir12EvaluateNodeE'/>
+<ovr f='tvm/target/llvm/codegen_nvptx.cc' l='65' c='tvm::codegen::CodeGenNVPTX'/>
+<use f='tvm/target/llvm/codegen_nvptx.cc' l='65'/>
+<size>608</size>
+<use f='tvm/target/llvm/llvm_module.cc' l='283' c='_ZN3tvm7codegen14LLVMModuleNode4InitERKNS_8IRModuleERKNS_6TargetE'/>
+<size>608</size>

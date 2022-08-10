@@ -1,0 +1,11 @@
+<def f='tvm/target/source/codegen_c.h' l='231' type='bool tvm::codegen::CodeGenC::IsScopePartOfType() const'/>
+<doc f='tvm/target/source/codegen_c.h' l='223'>/*!
+   * \brief Check if scope is part of type in the target language.
+   *
+   * **NOTE** In OpenCL, __local is part of type, so &quot;__local int *&quot;
+   * is legal. This is not the case for CUDA, where &quot;__shared__&quot;
+   * or &quot;__constant__&quot; is not part of type but a storage class (like
+   * C/C++ static).
+   */</doc>
+<use f='tvm/target/source/codegen_c.cc' l='178' u='c' c='_ZN3tvm7codegen8CodeGenC12GetBufferRefB5cxx11ENS_7runtime8DataTypeEPKNS_3tir10BufferNodeENS_8PrimExprE'/>
+<ovr f='tvm/target/source/codegen_cuda.h' l='83' c='_ZNK3tvm7codegen11CodeGenCUDA17IsScopePartOfTypeEv'/>

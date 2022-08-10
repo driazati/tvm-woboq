@@ -1,0 +1,10 @@
+<def f='tvm/tir/schedule/utils.h' l='165' ll='181' type='tvm::tir::Stmt tvm::tir::RemoveFromSeqStmt(const tvm::tir::SeqStmt &amp; seq, const tvm::tir::Stmt &amp; to_remove)'/>
+<doc f='tvm/tir/schedule/utils.h' l='158'>/*!
+ * \brief Remove a specific Stmt from a SeqStmt. If a SeqStmt contains a BlockRealize,
+ * whose block is the Stmt to be removed, then remove that BlockRealize too.
+ * \param seq The SeqStmt to be removed from
+ * \param to_remove The Stmt to be removed
+ * \return The removal result
+ */</doc>
+<use f='tvm/tir/schedule/transform.cc' l='225' u='c' c='_ZN3tvm3tir20LeafBlockRemovalPlanERKNS0_13ScheduleStateERKNS0_8StmtSRefEPNS0_4StmtES8_'/>
+<use f='tvm/tir/schedule/transform.cc' l='234' u='c' c='_ZN3tvm3tir20LeafBlockRemovalPlanERKNS0_13ScheduleStateERKNS0_8StmtSRefEPNS0_4StmtES8_'/>

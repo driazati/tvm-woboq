@@ -1,0 +1,13 @@
+<dec f='tvm/relay/transforms/combine_parallel_op.h' l='179' type='bool tvm::relay::ParallelOpCombiner::IsArgCompatible(const tvm::relay::CallNode * a, const tvm::relay::CallNode * b, size_t index)'/>
+<ovr f='tvm/relay/transforms/combine_parallel_batch_matmul.cc' l='103' c='_ZN3tvm5relay27ParallelBatchMatmulCombiner15IsArgCompatibleEPKNS0_8CallNodeES4_m'/>
+<doc f='tvm/relay/transforms/combine_parallel_op.h' l='172'>/*
+   * \brief Checks if argument of op following combined ops are able to be combined
+   * \param a node a
+   * \param b node b
+   * \param index index of argument in question
+   * \return True if argument of a and b and index can be combined
+   */</doc>
+<ovr f='tvm/relay/transforms/combine_parallel_conv2d.cc' l='113' c='_ZN3tvm5relay22ParallelConv2DCombiner15IsArgCompatibleEPKNS0_8CallNodeES4_m'/>
+<ovr f='tvm/relay/transforms/combine_parallel_dense.cc' l='131' c='_ZN3tvm5relay28ParallelDenseToDenseCombiner15IsArgCompatibleEPKNS0_8CallNodeES4_m'/>
+<use f='tvm/relay/transforms/combine_parallel_op.cc' l='168' u='c' c='_ZN3tvm5relay18ParallelOpCombiner10CheckLevelERKSt6vectorIS2_IPKNS0_8CallNodeESaIS5_EESaIS7_EEmm'/>
+<ovr f='tvm/relay/transforms/combine_parallel_op_batch.cc' l='113' c='_ZN3tvm5relay23ParallelOpBatchCombiner15IsArgCompatibleEPKNS0_8CallNodeES4_m'/>

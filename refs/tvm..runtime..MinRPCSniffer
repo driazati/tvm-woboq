@@ -1,0 +1,19 @@
+<def f='tvm/runtime/minrpc/minrpc_server_logging.h' l='65' ll='162'/>
+<use f='tvm/runtime/rpc/rpc_channel_logger.h' l='148'/>
+<fun r='_ZN3tvm7runtime13MinRPCSnifferC1EPT_'/>
+<fun r='_ZN3tvm7runtime13MinRPCSniffer16ProcessOnePacketEv'/>
+<fun r='_ZN3tvm7runtime13MinRPCSniffer18ProcessOneResponseEv'/>
+<fun r='_ZN3tvm7runtime13MinRPCSniffer9OutputLogEv'/>
+<fun r='_ZN3tvm7runtime13MinRPCSniffer10ThrowErrorENS0_15RPCServerStatusENS0_7RPCCodeE'/>
+<fun r='_ZN3tvm7runtime13MinRPCSniffer10ArenaAllocEi'/>
+<fun r='_ZN3tvm7runtime13MinRPCSniffer4ReadEPTL0__'/>
+<fun r='_ZN3tvm7runtime13MinRPCSniffer9ReadArrayEPTL0__m'/>
+<fun r='_ZN3tvm7runtime13MinRPCSniffer12ReadRawBytesEPvm'/>
+<mbr r='tvm::runtime::MinRPCSniffer::logger_' t='tvm::runtime::Logger'/>
+<mbr r='tvm::runtime::MinRPCSniffer::io_' t='TIOHandler *'/>
+<mbr r='tvm::runtime::MinRPCSniffer::arena_' t='support::GenericArena&lt;PageAllocator&gt;'/>
+<mbr r='tvm::runtime::MinRPCSniffer::ret_handler_' t='MinRPCReturnsNoOp&lt;TIOHandler&gt;'/>
+<mbr r='tvm::runtime::MinRPCSniffer::ret_handler_wlog_' t='tvm::runtime::MinRPCReturnsWithLog'/>
+<mbr r='tvm::runtime::MinRPCSniffer::exec_handler_' t='tvm::runtime::MinRPCExecuteNoOp'/>
+<mbr r='tvm::runtime::MinRPCSniffer::exec_handler_ptr_' t='std::unique_ptr&lt;MinRPCExecuteWithLog&gt;'/>
+<mbr r='tvm::runtime::MinRPCSniffer::next_' t='MinRPCServer&lt;TIOHandler&gt;'/>

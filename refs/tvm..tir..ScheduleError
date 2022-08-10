@@ -1,0 +1,180 @@
+<def f='tvm/tir/schedule/error.h' l='30' ll='55'/>
+<ovr f='tvm/tir/schedule/error.h' l='57' c='tvm::tir::LoopPositionError'/>
+<use f='tvm/tir/schedule/error.h' l='57'/>
+<size>16</size>
+<doc f='tvm/tir/schedule/error.h' l='29'>/*! \brief Error that happens during TensorIR scheduling */</doc>
+<fun r='_ZN3tvm3tir13ScheduleErrorC1Ev'/>
+<fun r='_ZNK3tvm3tir13ScheduleError3modEv'/>
+<fun r='_ZNK3tvm3tir13ScheduleError19LocationsOfInterestEv'/>
+<fun r='_ZNK3tvm3tir13ScheduleError20DetailRenderTemplateEv'/>
+<fun r='_ZNK3tvm3tir13ScheduleError15FastErrorStringEv'/>
+<fun r='_ZNK3tvm3tir13ScheduleError12RenderReportERKNS_7runtime6StringE'/>
+<ovr f='tvm/tir/schedule/analysis/analysis.cc' l='97' c='RootBlockError'/>
+<use f='tvm/tir/schedule/analysis/analysis.cc' l='97' c='_ZN3tvm3tir12GetScopeRootERKNS0_13ScheduleStateERKNS0_8StmtSRefEb'/>
+<ovr f='tvm/tir/schedule/analysis/analysis.cc' l='111' c='NotStagePipelineError'/>
+<use f='tvm/tir/schedule/analysis/analysis.cc' l='111' c='_ZN3tvm3tir12GetScopeRootERKNS0_13ScheduleStateERKNS0_8StmtSRefEb'/>
+<ovr f='tvm/tir/schedule/analysis/analysis.cc' l='311' c='IncompleteBlockError'/>
+<use f='tvm/tir/schedule/analysis/analysis.cc' l='311' c='_ZN3tvm3tir18CheckCompleteBlockERKNS0_13ScheduleStateERKNS0_8StmtSRefES6_'/>
+<ovr f='tvm/tir/schedule/analysis/analysis.cc' l='377' c='NotReductionBlockError'/>
+<use f='tvm/tir/schedule/analysis/analysis.cc' l='377' c='_ZN3tvm3tir19CheckReductionBlockERKNS0_13ScheduleStateERKNS0_8StmtSRefES6_'/>
+<ovr f='tvm/tir/schedule/analysis/analysis.cc' l='404' c='NotCompleteOrReductionBlockError'/>
+<use f='tvm/tir/schedule/analysis/analysis.cc' l='404' c='_ZN3tvm3tir29CheckCompleteOrReductionBlockERKNS0_13ScheduleStateERKNS0_8StmtSRefES6_'/>
+<ovr f='tvm/tir/schedule/analysis/analysis.cc' l='450' c='NotCompactDataFlowError'/>
+<use f='tvm/tir/schedule/analysis/analysis.cc' l='450' c='_ZN3tvm3tir27CheckSubtreeCompactDataflowERKNS0_13ScheduleStateERKNS0_8StmtSRefE'/>
+<ovr f='tvm/tir/schedule/analysis/analysis.cc' l='521' c='OutputBlockError'/>
+<use f='tvm/tir/schedule/analysis/analysis.cc' l='521' c='_ZN3tvm3tir19CheckNotOutputBlockERKNS0_13ScheduleStateERKNS0_8StmtSRefES6_'/>
+<ovr f='tvm/tir/schedule/analysis/analysis.cc' l='598' c='NotAffineBindingError'/>
+<use f='tvm/tir/schedule/analysis/analysis.cc' l='598' c='_ZN3tvm3tir25CheckPartialAffineBindingERKNS0_13ScheduleStateENS0_5BlockERKNS_7runtime8OptionalINS0_8StmtSRefEEE'/>
+<ovr f='tvm/tir/schedule/analysis/analysis.cc' l='735' c='LoopNotStartWithZeroError'/>
+<use f='tvm/tir/schedule/analysis/analysis.cc' l='735' c='_ZN3tvm3tir23CheckLoopStartsWithZeroERKNS0_13ScheduleStateERKNS0_8StmtSRefEPNS_5arith8AnalyzerE'/>
+<ovr f='tvm/tir/schedule/analysis/analysis.cc' l='802' c='NonSingleChildBlockError'/>
+<use f='tvm/tir/schedule/analysis/analysis.cc' l='802' c='_ZN3tvm3tir41CheckGetSingleChildBlockRealizeOnSRefTreeERKNS0_13ScheduleStateERKNS0_8StmtSRefE'/>
+<ovr f='tvm/tir/schedule/analysis/analysis.cc' l='1050' c='InsertionPointNotFoundError'/>
+<use f='tvm/tir/schedule/analysis/analysis.cc' l='1050' c='_ZN3tvm3tir21ProducerConsumerSplit4FindERKNS0_13ScheduleStateERKNS_7runtime5ArrayINS0_4StmtEvEERKNS6_INS0_8StmtSRefEvEESE_PSt13unordered_mapIPKNS0_9Bl15702090'/>
+<ovr f='tvm/tir/schedule/analysis/analysis.cc' l='1147' c='BufferIndexOutOfRangeError'/>
+<use f='tvm/tir/schedule/analysis/analysis.cc' l='1147' c='_ZN3tvm3tir24GetNthAccessBufferRegionERKNS0_13ScheduleStateERKNS0_5BlockEiNS0_15BufferIndexTypeE'/>
+<ovr f='tvm/tir/schedule/analysis/analysis.cc' l='1519' c='tvm::tir::InitBodyNotBufferStoreError'/>
+<use f='tvm/tir/schedule/analysis/analysis.cc' l='1519'/>
+<ovr f='tvm/tir/schedule/analysis/analysis.cc' l='1556' c='tvm::tir::InitBodyNotSameBufferAccessError'/>
+<use f='tvm/tir/schedule/analysis/analysis.cc' l='1556'/>
+<ovr f='tvm/tir/schedule/analysis/analysis.cc' l='1676' c='tvm::tir::NoMatchedReducerError'/>
+<use f='tvm/tir/schedule/analysis/analysis.cc' l='1676'/>
+<ovr f='tvm/tir/schedule/analysis/analysis.cc' l='1898' c='InvalidStorageScopeError'/>
+<use f='tvm/tir/schedule/analysis/analysis.cc' l='1898' c='_ZN3tvm3tir17CheckStorageScopeERKNS0_13ScheduleStateENS_7runtime6StringE'/>
+<size>16</size>
+<use f='tvm/tir/schedule/concrete_schedule.cc' l='215' c='_ZN3tvm3tir20ConcreteScheduleNode17SampleCategoricalERKNS_7runtime5ArrayINS_7IntegerEvEERKNS3_INS_8FloatImmEvEENS2_8OptionalIS4_EE'/>
+<use f='tvm/tir/schedule/concrete_schedule.cc' l='215' c='_ZN3tvm3tir20ConcreteScheduleNode17SamplePerfectTileERKNS0_6LoopRVEiiNS_7runtime8OptionalINS5_5ArrayINS_7IntegerEvEEEE'/>
+<use f='tvm/tir/schedule/concrete_schedule.cc' l='215' c='_ZN3tvm3tir20ConcreteScheduleNode21SampleComputeLocationERKNS0_7BlockRVENS_7runtime8OptionalINS_7IntegerEEE'/>
+<ovr f='tvm/tir/schedule/concrete_schedule.cc' l='266' c='NotSingleResult'/>
+<use f='tvm/tir/schedule/concrete_schedule.cc' l='266' c='_ZN3tvm3tir20ConcreteScheduleNode8GetBlockERKNS_7runtime6StringERKNS2_8OptionalIS3_EE'/>
+<use f='tvm/tir/schedule/concrete_schedule.cc' l='215' c='_ZN3tvm3tir20ConcreteScheduleNode8GetBlockERKNS_7runtime6StringERKNS2_8OptionalIS3_EE'/>
+<use f='tvm/tir/schedule/concrete_schedule.cc' l='215' c='_ZN3tvm3tir20ConcreteScheduleNode14GetChildBlocksERKNS0_7BlockRVE'/>
+<use f='tvm/tir/schedule/concrete_schedule.cc' l='215' c='_ZN3tvm3tir20ConcreteScheduleNode14GetChildBlocksERKNS0_6LoopRVE'/>
+<use f='tvm/tir/schedule/concrete_schedule.cc' l='215' c='_ZN3tvm3tir20ConcreteScheduleNode12GetProducersERKNS0_7BlockRVE'/>
+<use f='tvm/tir/schedule/concrete_schedule.cc' l='215' c='_ZN3tvm3tir20ConcreteScheduleNode12GetConsumersERKNS0_7BlockRVE'/>
+<use f='tvm/tir/schedule/concrete_schedule.cc' l='215' c='_ZN3tvm3tir20ConcreteScheduleNode4FuseERKNS_7runtime5ArrayINS0_6LoopRVEvEEb'/>
+<ovr f='tvm/tir/schedule/concrete_schedule.cc' l='371' c='NotSingleInferFactorError'/>
+<use f='tvm/tir/schedule/concrete_schedule.cc' l='371' c='_ZN3tvm3tir20ConcreteScheduleNode5SplitERKNS0_6LoopRVERKNS_7runtime5ArrayINS5_8OptionalINS_8PrimExprEEEvEEb'/>
+<ovr f='tvm/tir/schedule/concrete_schedule.cc' l='389' c='WrongFactorProductError'/>
+<use f='tvm/tir/schedule/concrete_schedule.cc' l='389' c='_ZN3tvm3tir20ConcreteScheduleNode5SplitERKNS0_6LoopRVERKNS_7runtime5ArrayINS5_8OptionalINS_8PrimExprEEEvEEb'/>
+<ovr f='tvm/tir/schedule/concrete_schedule.cc' l='409' c='NonPositiveFactorError'/>
+<use f='tvm/tir/schedule/concrete_schedule.cc' l='409' c='_ZN3tvm3tir20ConcreteScheduleNode5SplitERKNS0_6LoopRVERKNS_7runtime5ArrayINS5_8OptionalINS_8PrimExprEEEvEEb'/>
+<use f='tvm/tir/schedule/concrete_schedule.cc' l='215' c='_ZN3tvm3tir20ConcreteScheduleNode5SplitERKNS0_6LoopRVERKNS_7runtime5ArrayINS5_8OptionalINS_8PrimExprEEEvEEb'/>
+<use f='tvm/tir/schedule/concrete_schedule.cc' l='215' c='_ZN3tvm3tir20ConcreteScheduleNode7ReorderERKNS_7runtime5ArrayINS0_6LoopRVEvEE'/>
+<use f='tvm/tir/schedule/concrete_schedule.cc' l='215' c='_ZN3tvm3tir20ConcreteScheduleNode11AddUnitLoopERKNS0_7BlockRVE'/>
+<use f='tvm/tir/schedule/concrete_schedule.cc' l='215' c='_ZN3tvm3tir20ConcreteScheduleNode11AddUnitLoopERKNS0_6LoopRVE'/>
+<use f='tvm/tir/schedule/concrete_schedule.cc' l='215' c='_ZN3tvm3tir20ConcreteScheduleNode8ParallelERKNS0_6LoopRVE'/>
+<use f='tvm/tir/schedule/concrete_schedule.cc' l='215' c='_ZN3tvm3tir20ConcreteScheduleNode9VectorizeERKNS0_6LoopRVE'/>
+<use f='tvm/tir/schedule/concrete_schedule.cc' l='215' c='_ZN3tvm3tir20ConcreteScheduleNode4BindERKNS0_6LoopRVERKNS_7runtime6StringE'/>
+<use f='tvm/tir/schedule/concrete_schedule.cc' l='215' c='_ZN3tvm3tir20ConcreteScheduleNode6UnrollERKNS0_6LoopRVE'/>
+<use f='tvm/tir/schedule/concrete_schedule.cc' l='215' c='_ZN3tvm3tir20ConcreteScheduleNode9CacheReadERKNS0_7BlockRVEiRKNS_7runtime6StringE'/>
+<use f='tvm/tir/schedule/concrete_schedule.cc' l='215' c='_ZN3tvm3tir20ConcreteScheduleNode10CacheWriteERKNS0_7BlockRVEiRKNS_7runtime6StringE'/>
+<use f='tvm/tir/schedule/concrete_schedule.cc' l='215' c='_ZN3tvm3tir20ConcreteScheduleNode7ReIndexERKNS0_7BlockRVEiNS0_15BufferIndexTypeE'/>
+<use f='tvm/tir/schedule/concrete_schedule.cc' l='215' c='_ZN3tvm3tir20ConcreteScheduleNode9ComputeAtERKNS0_7BlockRVERKNS0_6LoopRVEb'/>
+<use f='tvm/tir/schedule/concrete_schedule.cc' l='215' c='_ZN3tvm3tir20ConcreteScheduleNode9ComputeAtERKNS0_7BlockRVERKNS0_6LoopRVEb'/>
+<use f='tvm/tir/schedule/concrete_schedule.cc' l='215' c='_ZN3tvm3tir20ConcreteScheduleNode16ReverseComputeAtERKNS0_7BlockRVERKNS0_6LoopRVEb'/>
+<use f='tvm/tir/schedule/concrete_schedule.cc' l='215' c='_ZN3tvm3tir20ConcreteScheduleNode16ReverseComputeAtERKNS0_7BlockRVERKNS0_6LoopRVEb'/>
+<use f='tvm/tir/schedule/concrete_schedule.cc' l='215' c='_ZN3tvm3tir20ConcreteScheduleNode13ComputeInlineERKNS0_7BlockRVE'/>
+<use f='tvm/tir/schedule/concrete_schedule.cc' l='215' c='_ZN3tvm3tir20ConcreteScheduleNode20ReverseComputeInlineERKNS0_7BlockRVE'/>
+<use f='tvm/tir/schedule/concrete_schedule.cc' l='215' c='_ZN3tvm3tir20ConcreteScheduleNode12StorageAlignERKNS0_7BlockRVEiiii'/>
+<use f='tvm/tir/schedule/concrete_schedule.cc' l='215' c='_ZN3tvm3tir20ConcreteScheduleNode8SetScopeERKNS0_7BlockRVEiRKNS_7runtime6StringE'/>
+<use f='tvm/tir/schedule/concrete_schedule.cc' l='215' c='_ZN3tvm3tir20ConcreteScheduleNode18DecomposeReductionERKNS0_7BlockRVERKNS0_6LoopRVE'/>
+<use f='tvm/tir/schedule/concrete_schedule.cc' l='215' c='_ZN3tvm3tir20ConcreteScheduleNode7RFactorERKNS0_6LoopRVEi'/>
+<use f='tvm/tir/schedule/concrete_schedule.cc' l='215' c='_ZN3tvm3tir20ConcreteScheduleNode8BlockizeERKNS0_6LoopRVE'/>
+<use f='tvm/tir/schedule/concrete_schedule.cc' l='215' c='_ZN3tvm3tir20ConcreteScheduleNode9TensorizeERKNS0_6LoopRVERKNS_7runtime6StringE'/>
+<use f='tvm/tir/schedule/concrete_schedule.cc' l='215' c='_ZN3tvm3tir20ConcreteScheduleNode9TensorizeERKNS0_7BlockRVERKNS_7runtime6StringE'/>
+<use f='tvm/tir/schedule/concrete_schedule.cc' l='215' c='_ZN3tvm3tir20ConcreteScheduleNode8AnnotateERKNS0_6LoopRVERKNS_7runtime6StringERKNS5_9ObjectRefE'/>
+<use f='tvm/tir/schedule/concrete_schedule.cc' l='215' c='_ZN3tvm3tir20ConcreteScheduleNode10UnannotateERKNS0_6LoopRVERKNS_7runtime6StringE'/>
+<use f='tvm/tir/schedule/concrete_schedule.cc' l='215' c='_ZN3tvm3tir20ConcreteScheduleNode8AnnotateERKNS0_7BlockRVERKNS_7runtime6StringERKNS5_9ObjectRefE'/>
+<use f='tvm/tir/schedule/concrete_schedule.cc' l='215' c='_ZN3tvm3tir20ConcreteScheduleNode10UnannotateERKNS0_7BlockRVERKNS_7runtime6StringE'/>
+<use f='tvm/tir/schedule/concrete_schedule.cc' l='215' c='_ZN3tvm3tir20ConcreteScheduleNode15TransformLayoutERKNS0_7BlockRVEiNS0_15BufferIndexTypeERKNS0_8IndexMapE'/>
+<use f='tvm/tir/schedule/concrete_schedule.cc' l='215' c='_ZN3tvm3tir20ConcreteScheduleNode20TransformBlockLayoutERKNS0_7BlockRVERKNS0_8IndexMapE'/>
+<use f='tvm/tir/schedule/concrete_schedule.cc' l='215' c='_ZN3tvm3tir20ConcreteScheduleNode16SetAxisSeparatorERKNS0_7BlockRVEiNS0_15BufferIndexTypeERKNS_7runtime5ArrayINS_6IntImmEvEE'/>
+<use f='tvm/tir/schedule/concrete_schedule.cc' l='215' c='_ZN3tvm3tir20ConcreteScheduleNode16DecomposePaddingERKNS0_7BlockRVERKNS0_6LoopRVE'/>
+<size>16</size>
+<ovr f='tvm/tir/schedule/ir_comparator.cc' l='27' c='tvm::tir::TensorIntrinMismatchError'/>
+<use f='tvm/tir/schedule/ir_comparator.cc' l='27'/>
+<size>16</size>
+<ovr f='tvm/tir/schedule/primitive/block_annotate.cc' l='24' c='tvm::tir::StorageAlignAxisOutOfRangeError'/>
+<use f='tvm/tir/schedule/primitive/block_annotate.cc' l='24'/>
+<ovr f='tvm/tir/schedule/primitive/block_annotate.cc' l='66' c='tvm::tir::NonAllocatedBufferError'/>
+<use f='tvm/tir/schedule/primitive/block_annotate.cc' l='66'/>
+<ovr f='tvm/tir/schedule/primitive/block_annotate.cc' l='103' c='tvm::tir::StorageAlignInvalidFactorError'/>
+<use f='tvm/tir/schedule/primitive/block_annotate.cc' l='103'/>
+<ovr f='tvm/tir/schedule/primitive/block_annotate.cc' l='135' c='tvm::tir::StorageAlignInvalidAnnotationError'/>
+<use f='tvm/tir/schedule/primitive/block_annotate.cc' l='135'/>
+<size>16</size>
+<ovr f='tvm/tir/schedule/primitive/blockize_tensorize.cc' l='45' c='tvm::tir::SubspaceNotDivisibleError'/>
+<use f='tvm/tir/schedule/primitive/blockize_tensorize.cc' l='45'/>
+<size>16</size>
+<ovr f='tvm/tir/schedule/primitive/cache_read_write.cc' l='27' c='tvm::tir::NotSingleWriteBlock'/>
+<use f='tvm/tir/schedule/primitive/cache_read_write.cc' l='27'/>
+<ovr f='tvm/tir/schedule/primitive/cache_read_write.cc' l='744' c='tvm::tir::NotLeafBlockError'/>
+<use f='tvm/tir/schedule/primitive/cache_read_write.cc' l='744'/>
+<ovr f='tvm/tir/schedule/primitive/cache_read_write.cc' l='760' c='tvm::tir::InvalidBufferAccessError'/>
+<use f='tvm/tir/schedule/primitive/cache_read_write.cc' l='760'/>
+<size>16</size>
+<ovr f='tvm/tir/schedule/primitive/compute_at.cc' l='33' c='tvm::tir::NotAllRequiredBlocksAreVisitedError'/>
+<use f='tvm/tir/schedule/primitive/compute_at.cc' l='33'/>
+<ovr f='tvm/tir/schedule/primitive/compute_at.cc' l='78' c='tvm::tir::NotInSameScopeError'/>
+<use f='tvm/tir/schedule/primitive/compute_at.cc' l='78'/>
+<size>16</size>
+<ovr f='tvm/tir/schedule/primitive/compute_inline.cc' l='35' c='tvm::tir::HasInitBlock'/>
+<use f='tvm/tir/schedule/primitive/compute_inline.cc' l='35'/>
+<ovr f='tvm/tir/schedule/primitive/compute_inline.cc' l='59' c='tvm::tir::NotSingleReadWriteBuffer'/>
+<use f='tvm/tir/schedule/primitive/compute_inline.cc' l='59'/>
+<ovr f='tvm/tir/schedule/primitive/compute_inline.cc' l='119' c='tvm::tir::BodyAnalysisError'/>
+<use f='tvm/tir/schedule/primitive/compute_inline.cc' l='119'/>
+<ovr f='tvm/tir/schedule/primitive/compute_inline.cc' l='141' c='tvm::tir::NonSingleProducerError'/>
+<use f='tvm/tir/schedule/primitive/compute_inline.cc' l='141'/>
+<ovr f='tvm/tir/schedule/primitive/compute_inline.cc' l='182' c='tvm::tir::OpaqueAccessError'/>
+<use f='tvm/tir/schedule/primitive/compute_inline.cc' l='182'/>
+<size>16</size>
+<ovr f='tvm/tir/schedule/primitive/decompose_padding.cc' l='37' c='tvm::tir::PaddingPatternMatchError'/>
+<use f='tvm/tir/schedule/primitive/decompose_padding.cc' l='37'/>
+<size>16</size>
+<ovr f='tvm/tir/schedule/primitive/for_kind.cc' l='24' c='tvm::tir::WrongBlockIterTypeError'/>
+<use f='tvm/tir/schedule/primitive/for_kind.cc' l='24'/>
+<size>16</size>
+<ovr f='tvm/tir/schedule/primitive/layout_transformation.cc' l='111' c='tvm::tir::BufferIsSubregionError'/>
+<use f='tvm/tir/schedule/primitive/layout_transformation.cc' l='111'/>
+<ovr f='tvm/tir/schedule/primitive/layout_transformation.cc' l='228' c='tvm::tir::NotBijectiveAffineIndexMapError'/>
+<use f='tvm/tir/schedule/primitive/layout_transformation.cc' l='228'/>
+<ovr f='tvm/tir/schedule/primitive/layout_transformation.cc' l='251' c='tvm::tir::IndexMapNotApplicableToBlockIterError'/>
+<use f='tvm/tir/schedule/primitive/layout_transformation.cc' l='251'/>
+<ovr f='tvm/tir/schedule/primitive/layout_transformation.cc' l='285' c='tvm::tir::NotTrivialBindingError'/>
+<use f='tvm/tir/schedule/primitive/layout_transformation.cc' l='285'/>
+<ovr f='tvm/tir/schedule/primitive/layout_transformation.cc' l='319' c='tvm::tir::OpaqueNewIterTypeError'/>
+<use f='tvm/tir/schedule/primitive/layout_transformation.cc' l='319'/>
+<size>16</size>
+<ovr f='tvm/tir/schedule/primitive/loop_transformation.cc' l='141' c='tvm::tir::BlockPropertyError'/>
+<use f='tvm/tir/schedule/primitive/loop_transformation.cc' l='141'/>
+<ovr f='tvm/tir/schedule/primitive/loop_transformation.cc' l='195' c='tvm::tir::HasAnnotationOrThreadBindingError'/>
+<use f='tvm/tir/schedule/primitive/loop_transformation.cc' l='195'/>
+<ovr f='tvm/tir/schedule/primitive/loop_transformation.cc' l='216' c='tvm::tir::OuterNotInnerParent'/>
+<use f='tvm/tir/schedule/primitive/loop_transformation.cc' l='216'/>
+<ovr f='tvm/tir/schedule/primitive/loop_transformation.cc' l='238' c='tvm::tir::NotOnlyChildError'/>
+<use f='tvm/tir/schedule/primitive/loop_transformation.cc' l='238'/>
+<ovr f='tvm/tir/schedule/primitive/loop_transformation.cc' l='260' c='tvm::tir::NotSingleInferFactorError'/>
+<use f='tvm/tir/schedule/primitive/loop_transformation.cc' l='260'/>
+<ovr f='tvm/tir/schedule/primitive/loop_transformation.cc' l='278' c='tvm::tir::WrongFactorProductError'/>
+<use f='tvm/tir/schedule/primitive/loop_transformation.cc' l='278'/>
+<ovr f='tvm/tir/schedule/primitive/loop_transformation.cc' l='298' c='tvm::tir::LoopMultiAppearanceError'/>
+<use f='tvm/tir/schedule/primitive/loop_transformation.cc' l='298'/>
+<ovr f='tvm/tir/schedule/primitive/loop_transformation.cc' l='317' c='tvm::tir::LoopsNotAChainError'/>
+<use f='tvm/tir/schedule/primitive/loop_transformation.cc' l='317'/>
+<ovr f='tvm/tir/schedule/primitive/loop_transformation.cc' l='352' c='tvm::tir::DependentLoopError'/>
+<use f='tvm/tir/schedule/primitive/loop_transformation.cc' l='352'/>
+<size>16</size>
+<ovr f='tvm/tir/schedule/primitive/reduction.cc' l='105' c='tvm::tir::LoopHeightError'/>
+<use f='tvm/tir/schedule/primitive/reduction.cc' l='105'/>
+<ovr f='tvm/tir/schedule/primitive/reduction.cc' l='340' c='tvm::tir::NotSerialLoopKindError'/>
+<use f='tvm/tir/schedule/primitive/reduction.cc' l='340'/>
+<ovr f='tvm/tir/schedule/primitive/reduction.cc' l='365' c='tvm::tir::FactorAxisOutOfRangeError'/>
+<use f='tvm/tir/schedule/primitive/reduction.cc' l='365'/>
+<ovr f='tvm/tir/schedule/primitive/reduction.cc' l='405' c='tvm::tir::LoopPropertyError'/>
+<use f='tvm/tir/schedule/primitive/reduction.cc' l='405'/>
+<size>16</size>
+<ovr f='tvm/tir/schedule/transform.cc' l='184' c='OnlyLeafError'/>
+<use f='tvm/tir/schedule/transform.cc' l='184' c='_ZN3tvm3tir20LeafBlockRemovalPlanERKNS0_13ScheduleStateERKNS0_8StmtSRefEPNS0_4StmtES8_'/>
+<size>16</size>

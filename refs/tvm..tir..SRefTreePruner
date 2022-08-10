@@ -1,0 +1,13 @@
+<def f='tvm/tir/schedule/state.cc' l='603' ll='686'/>
+<use f='tvm/tir/schedule/state.cc' l='619' c='_ZN3tvm3tir14SRefTreePruner5PruneEPNS0_17ScheduleStateNodeERKNS0_9ReuseInfoERKNS0_4StmtE'/>
+<size>80</size>
+<doc f='tvm/tir/schedule/state.cc' l='595'>/*!
+ * \brief A helper visitor which removes the stale srefs in the `src_stmt`
+ * that are useless after the replacement.
+ *
+ * It uses the reuse information previously collected to
+ * 1) delete those srefs that are not reused.
+ * 2) return the sref objects that are loop/block sref reuses, but not intact reuses
+ */</doc>
+<fun r='_ZN3tvm3tir14SRefTreePruner10VisitStmt_EPKNS0_7ForNodeE'/>
+<fun r='_ZN3tvm3tir14SRefTreePruner10VisitStmt_EPKNS0_9BlockNodeE'/>

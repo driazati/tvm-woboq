@@ -1,0 +1,16 @@
+<dec f='tvm/tir/schedule/analysis.h' l='129' type='bool tvm::tir::IsCompleteBlock(const tvm::tir::ScheduleState &amp; self, const tvm::tir::StmtSRef &amp; block_sref, const tvm::tir::StmtSRef &amp; scope_root_sref)'/>
+<doc f='tvm/tir/schedule/analysis.h' l='117'>/*!
+ * \brief Checks whether the block is a complete block under the scope
+ * \param self The schedule state
+ * \param block_sref The block to be checked
+ * \param scope_root_sref The sref to the root block of the scope that `block_sref` is in
+ * \return A boolean indicating if the block is a complete block
+ * \note Definition of a complete block:
+ * 1) All block vars are data parallel
+ * 2) Dominant: the block is the only writer of its output,
+ * dominating the reader of its output buffers
+ * 3) No overlap between the buffers the block reads and writes
+ */</doc>
+<use f='tvm/meta_schedule/schedule_rule/auto_inline.cc' l='145' u='c' c='_ZN3tvm13meta_schedule14AutoInlineNode11CheckInlineERKNS_3tir8ScheduleERKNS2_7BlockRVE'/>
+<def f='tvm/tir/schedule/analysis/analysis.cc' l='304' ll='307' type='bool tvm::tir::IsCompleteBlock(const tvm::tir::ScheduleState &amp; self, const tvm::tir::StmtSRef &amp; block_sref, const tvm::tir::StmtSRef &amp; scope_root_sref)'/>
+<use f='tvm/tir/schedule/primitive/compute_inline.cc' l='170' u='c' c='_ZN3tvm3tir22NonSingleProducerError5CheckERKNS0_13ScheduleStateERKNS0_8StmtSRefES7_'/>

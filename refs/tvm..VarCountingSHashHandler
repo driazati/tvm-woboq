@@ -1,0 +1,15 @@
+<def f='tvm/node/structural_hash.cc' l='58' ll='257'/>
+<use f='tvm/node/structural_hash.cc' l='261'/>
+<use f='tvm/node/structural_hash.cc' l='266' c='_ZNK3tvm14StructuralHashclERKNS_7runtime9ObjectRefE'/>
+<size>168</size>
+<doc f='tvm/node/structural_hash.cc' l='51'>// Hash handler that handles free vars
+// by assigning an unique counter in the order of their ocurrence.
+//
+// This algorithm depends on the determinism of the traversal of SHash function.
+// In particular, when we traverse unordered_map, we should first sort
+// the entries by keys(or hash of keys) before traversing.</doc>
+<fun r='_ZN3tvm23VarCountingSHashHandler13MarkGraphNodeEv'/>
+<fun r='_ZN3tvm23VarCountingSHashHandler17LookupHashedValueERKNS_7runtime9ObjectRefEPm'/>
+<fun r='_ZN3tvm23VarCountingSHashHandler22SHashReduceHashedValueEm'/>
+<fun r='_ZN3tvm23VarCountingSHashHandler18SHashReduceFreeVarEPKNS_7runtime6ObjectEb'/>
+<fun r='_ZN3tvm23VarCountingSHashHandler11SHashReduceERKNS_7runtime9ObjectRefEb'/>

@@ -1,0 +1,20 @@
+<def f='tvm/tir/transforms/common_subexpr_elim_tools.h' l='125' ll='149'/>
+<size>104</size>
+<doc f='tvm/tir/transforms/common_subexpr_elim_tools.h' l='119'>/*!
+ * \brief Visitor that computes the *direct* subexpressions of a given expression.
+ * \note Returns only the direct subexpressions of the given expressions, not all the subexprs.
+          So for instance, for (A+(B+C)) it will return A and (B+C) if they are eligible,
+          but not B and C.
+ */</doc>
+<fun r='_ZN3tvm3tir13DirectSubexpr23GetDirectSubexpressionsERKNS_8PrimExprESt8functionIFbS4_EES7_'/>
+<fun r='_ZN3tvm3tir13DirectSubexprC1ESt8functionIFbRKNS_8PrimExprEEES7_'/>
+<fun r='_ZN3tvm3tir13DirectSubexpr9VisitExprERKNS_8PrimExprE'/>
+<mbr r='tvm::tir::DirectSubexpr::is_eligible_computation_' o='64' t='std::function&lt;bool (const PrimExpr &amp;)&gt;'/>
+<mbr r='tvm::tir::DirectSubexpr::can_contain_computations_' o='320' t='std::function&lt;bool (const PrimExpr &amp;)&gt;'/>
+<mbr r='tvm::tir::DirectSubexpr::entered_' o='576' t='bool'/>
+<mbr r='tvm::tir::DirectSubexpr::direct_subexpr_' o='640' t='std::vector&lt;PrimExpr&gt;'/>
+<use f='tvm/tir/transforms/common_subexpr_elim_tools.cc' l='599' c='_ZN3tvm3tir13DirectSubexpr23GetDirectSubexpressionsERKNS_8PrimExprESt8functionIFbS4_EES7_'/>
+<size>104</size>
+<fun r='_ZN3tvm3tir13DirectSubexpr23GetDirectSubexpressionsERKNS_8PrimExprESt8functionIFbS4_EES7_'/>
+<fun r='_ZN3tvm3tir13DirectSubexprC1ESt8functionIFbRKNS_8PrimExprEEES7_'/>
+<fun r='_ZN3tvm3tir13DirectSubexpr9VisitExprERKNS_8PrimExprE'/>

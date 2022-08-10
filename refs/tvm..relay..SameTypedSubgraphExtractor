@@ -1,0 +1,29 @@
+<def f='tvm/relay/transforms/type_infer.cc' l='861' ll='922'/>
+<use f='tvm/relay/transforms/type_infer.cc' l='938' c='_ZN3tvm5relay9transform14InferTypeLocalERKNS_9RelayExprE'/>
+<size>64</size>
+<doc f='tvm/relay/transforms/type_infer.cc' l='850'>/*!
+ * \brief Returns a possibly much smaller subgraph whose inner nodes have the same type.
+ *
+ * Returns the largest sub-graph who&apos;s inner nodes need types and leaves are vars standing in
+ * for already typed sub-expressions. This creates a graph whose inner nodes have the same
+ * type as the original graph and when running type inference, we can avoid copying and
+ * recursing through most of the expression graph when running type inference. Note, this assumes
+ * that current populated type information is correct!
+ *
+ * ExprMutator is sufficient over MixedModemutator since we will not recurse much.
+ */</doc>
+<fun r='_ZN3tvm5relay26SameTypedSubgraphExtractor10VisitExpr_EPKNS0_7VarNodeE'/>
+<fun r='_ZN3tvm5relay26SameTypedSubgraphExtractor10VisitExpr_EPKNS0_12ConstantNodeE'/>
+<fun r='_ZN3tvm5relay26SameTypedSubgraphExtractor10VisitExpr_EPKNS_13GlobalVarNodeE'/>
+<fun r='_ZN3tvm5relay26SameTypedSubgraphExtractor10VisitExpr_EPKNS_6OpNodeE'/>
+<fun r='_ZN3tvm5relay26SameTypedSubgraphExtractor10VisitExpr_EPKNS0_9TupleNodeE'/>
+<fun r='_ZN3tvm5relay26SameTypedSubgraphExtractor10VisitExpr_EPKNS0_12FunctionNodeE'/>
+<fun r='_ZN3tvm5relay26SameTypedSubgraphExtractor10VisitExpr_EPKNS0_8CallNodeE'/>
+<fun r='_ZN3tvm5relay26SameTypedSubgraphExtractor10VisitExpr_EPKNS0_7LetNodeE'/>
+<fun r='_ZN3tvm5relay26SameTypedSubgraphExtractor10VisitExpr_EPKNS0_6IfNodeE'/>
+<fun r='_ZN3tvm5relay26SameTypedSubgraphExtractor10VisitExpr_EPKNS0_16TupleGetItemNodeE'/>
+<fun r='_ZN3tvm5relay26SameTypedSubgraphExtractor10VisitExpr_EPKNS0_13RefCreateNodeE'/>
+<fun r='_ZN3tvm5relay26SameTypedSubgraphExtractor10VisitExpr_EPKNS0_11RefReadNodeE'/>
+<fun r='_ZN3tvm5relay26SameTypedSubgraphExtractor10VisitExpr_EPKNS0_12RefWriteNodeE'/>
+<fun r='_ZN3tvm5relay26SameTypedSubgraphExtractor10VisitExpr_EPKNS_15ConstructorNodeE'/>
+<fun r='_ZN3tvm5relay26SameTypedSubgraphExtractor10VisitExpr_EPKNS0_9MatchNodeE'/>

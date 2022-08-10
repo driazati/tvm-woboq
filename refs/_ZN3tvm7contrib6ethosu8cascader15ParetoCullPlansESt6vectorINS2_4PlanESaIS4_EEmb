@@ -1,0 +1,14 @@
+<dec f='tvm/contrib/ethosu/cascader/pareto.h' l='69' type='std::vector&lt;Plan&gt; tvm::contrib::ethosu::cascader::ParetoCullPlans(std::vector&lt;Plan&gt; plans, size_t max_plans, bool disable_pareto_metric)'/>
+<def f='tvm/contrib/ethosu/cascader/pareto.cc' l='83' ll='115' type='std::vector&lt;Plan&gt; tvm::contrib::ethosu::cascader::ParetoCullPlans(std::vector&lt;Plan&gt; plans, size_t max_plans, bool disable_pareto_metric)'/>
+<use f='tvm/contrib/ethosu/cascader/pareto.cc' l='173' u='c'/>
+<doc f='tvm/contrib/ethosu/cascader/pareto.h' l='60'>/*!
+ * \brief Cull plans which are not Pareto optimal then thin them down.
+ * \param plans The plans to apply the Pareto culling to.
+ * \param max_plans The maximum number of plans after the culling.
+ * \param disable_pareto_metric Whether to only select from Pareto frontier or not.
+ * \return The culled plans.
+ * \note Plan Pareto-optimality is determined based upon a Plan&apos;s memory_usage
+ * and cycles.
+ */</doc>
+<use f='tvm/contrib/ethosu/cascader/plan_generator.cc' l='534' u='c' c='_ZN3tvm7contrib6ethosu8cascader18GenerateGraphPlansERKNS2_13CascaderGraphERKSt13unordered_mapINS2_6TensorESt6vectorINS2_12MemoryRegionESaIS9_EENS_7run1070765'/>
+<use f='tvm/contrib/ethosu/cascader/plan_generator.cc' l='539' u='c' c='_ZN3tvm7contrib6ethosu8cascader18GenerateGraphPlansERKNS2_13CascaderGraphERKSt13unordered_mapINS2_6TensorESt6vectorINS2_12MemoryRegionESaIS9_EENS_7run1070765'/>

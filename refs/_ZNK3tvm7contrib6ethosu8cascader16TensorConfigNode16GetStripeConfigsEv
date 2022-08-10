@@ -1,0 +1,11 @@
+<def f='tvm/contrib/ethosu/cascader/tensor_config.h' l='141' type='const std::vector&lt;StripeConfig&gt; tvm::contrib::ethosu::cascader::TensorConfigNode::GetStripeConfigs() const'/>
+<doc f='tvm/contrib/ethosu/cascader/tensor_config.h' l='133'>/*!
+   * \return The StripeConfigs with which to compute the tensor.
+   * \note The StripeConfigs determine the order in which the elements of the tensor should be
+   * computed, including potentially computing them multiple times (recompute). Multiple
+   * StripeConfigs are used over just a single StripeConfig for the case where the tensor is
+   * consumed by two different Parts executing themselves with different StripeConfigs. In this
+   * case, there is a StripeConfig per consumer of the tensor.
+   */</doc>
+<use f='tvm/contrib/ethosu/cascader/plan_generator.cc' l='320' u='c' c='_ZN3tvm7contrib6ethosu8cascader17GetCopyCyclesHintERKNS2_12TensorConfigE'/>
+<use f='tvm/contrib/ethosu/cascader/plan_generator.cc' l='543' u='c' c='_ZN3tvm7contrib6ethosu8cascader18GenerateGraphPlansERKNS2_13CascaderGraphERKSt13unordered_mapINS2_6TensorESt6vectorINS2_12MemoryRegionESaIS9_EENS_7run1070765'/>

@@ -1,0 +1,16 @@
+<def f='tvm/relay/collage/sub_graph.cc' l='960' ll='1028' type='transform::Pass tvm::relay::collage::PartitionForTesting(tvm::Integer max_exits, tvm::Bool allow_taps, tvm::runtime::String compiler, Array&lt;tvm::Integer&gt; indexes, Array&lt;tvm::runtime::String&gt; labels)'/>
+<use f='tvm/relay/collage/sub_graph.cc' l='1030' u='r'/>
+<doc f='tvm/relay/collage/sub_graph.cc' l='946'>/*!
+ * \brief A pass which partitions (the unique) global function in the module according to the
+ * post-dfs indexes in \p indexes. The partitioning must respect the configuration with \p max_exits
+ * and \p allow_taps.
+ *
+ * Each index is also paired with a label. A non-empty label denotes the index should also be
+ * included in a nested sub-graph which will be extracted as a function with the label as its
+ * &quot;Composite&quot; attribute. An empty label denotes the index should go into the overall partitioned
+ * &quot;Compiler&quot; function. In this way we can simulate the usual partitioning needed by external
+ * codegen integrations.
+ *
+ * This function is intended to support \p SubGraph unit tests and is not used by the regular
+ * compilation flow.
+ */</doc>

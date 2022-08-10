@@ -1,0 +1,16 @@
+<dec f='tvm/tir/transforms/common_subexpr_elim.h' l='86' type='static bool tvm::tir::CommonSubexpressionEliminator::OrderOnExprAndFrequency(std::pair&lt;PrimExpr, size_t&gt; a, std::pair&lt;PrimExpr, size_t&gt; b)'/>
+<def f='tvm/tir/transforms/common_subexpr_elim.cc' l='135' ll='157' type='static bool tvm::tir::CommonSubexpressionEliminator::OrderOnExprAndFrequency(std::pair&lt;PrimExpr, size_t&gt; a, std::pair&lt;PrimExpr, size_t&gt; b)'/>
+<use f='tvm/tir/transforms/common_subexpr_elim.cc' l='246' u='r' c='_ZN3tvm3tir29CommonSubexpressionEliminator9VisitExprERKNS_8PrimExprE'/>
+<use f='tvm/tir/transforms/common_subexpr_elim.cc' l='426' u='r' c='_ZN3tvm3tir29CommonSubexpressionEliminator9VisitStmtERKNS0_4StmtE'/>
+<doc f='tvm/tir/transforms/common_subexpr_elim.cc' l='123'>/*!
+ * \brief Implements an order on pairs (expression,frequency). First attempts to compare them
+          using the size of the expression. If it is the same, decides something else still
+          deterministic.
+ * \param a The first pair
+ * \param b The second pair
+ * \return A boolean telling if the first pair `a` comes before the second pair `b`
+ * \note We need this order to be deterministic in order to have a fully deterministic pass,
+ *       as we will deal with elements that are coming from a hashtable, but the order in which
+ *       they appeared in the hashtable was based on some runtime addresses, so it can potentially
+ *       change with every execution.
+ */</doc>

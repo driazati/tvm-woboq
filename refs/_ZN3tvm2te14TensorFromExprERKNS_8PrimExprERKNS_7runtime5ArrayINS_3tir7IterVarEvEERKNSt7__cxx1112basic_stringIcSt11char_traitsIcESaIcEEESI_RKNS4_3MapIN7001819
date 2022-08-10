@@ -1,0 +1,17 @@
+<dec f='tvm/te/autodiff/ad_utils.h' l='65' type='tvm::te::Tensor tvm::te::TensorFromExpr(const tvm::PrimExpr &amp; expr, const Array&lt;tvm::tir::IterVar&gt; &amp; axis, const std::string &amp; name = &quot;tensor&quot;, const std::string &amp; tag = &quot;&quot;, const Map&lt;tvm::runtime::String, tvm::runtime::ObjectRef&gt; &amp; attrs = {}, bool clone_axis = true)'/>
+<use f='tvm/te/autodiff/ad_simplify.cc' l='1055' u='c' c='_ZN3tvm2te18TrySimplifyComputeERKNS_8PrimExprES3_RKNS_7runtime5ArrayINS_3tir3VarEvEERKNS4_3MapIS7_NS_5RangeEvvEE'/>
+<use f='tvm/te/autodiff/ad_simplify.cc' l='1107' u='c' c='_ZN3tvm2te30ReductionAsTensorAccessMutator10VisitExpr_EPKNS_3tir10ReduceNodeE'/>
+<doc f='tvm/te/autodiff/ad_utils.h' l='53'>/*!
+ * \brief Create a tensor from an expression. The expression may be a reduction, in which
+ *  case its body will be correctly duplicated if it is a multi-valued reduction.
+ *
+ * \param expr The expr which will be the tensor&apos;s body.
+ * \param axis The input variables with ranges.
+ * \param name The tensor&apos;s name.
+ * \param tag The tensor&apos;s tag.
+ * \param attrs The tensor&apos;s attrs.
+ * \param clone_axis Whether to clone the given axis and perform substitution.
+ * \return A tensor.
+ */</doc>
+<def f='tvm/te/autodiff/ad_utils.cc' l='100' ll='108' type='tvm::te::Tensor tvm::te::TensorFromExpr(const tvm::PrimExpr &amp; expr, const Array&lt;tvm::tir::IterVar&gt; &amp; axis, const std::string &amp; name = &quot;tensor&quot;, const std::string &amp; tag = &quot;&quot;, const Map&lt;tvm::runtime::String, tvm::runtime::ObjectRef&gt; &amp; attrs = {}, bool clone_axis = true)'/>
+<use f='tvm/te/autodiff/ad_utils.cc' l='122' u='c' c='_ZN3tvm2te19TransformTensorBodyERKNS0_6TensorERKSt8functionIFNS_8PrimExprERKS5_RKNS_7runtime5ArrayINS_3tir7IterVarEvEEEE'/>

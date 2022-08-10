@@ -1,0 +1,28 @@
+<def f='tvm/relay/analysis/dependency_graph.h' l='45' ll='73'/>
+<use f='tvm/relay/analysis/dependency_graph.h' l='69' c='_ZN3tvm5relay15DependencyGraph6CreateEPNS_7support12GenericArenaINS2_19SimplePageAllocatorEEERKNS_9RelayExprE'/>
+<use f='tvm/printer/text_printer.h' l='227'/>
+<size>80</size>
+<doc f='tvm/relay/analysis/dependency_graph.h' l='41'>/* DependencyGraph track input and output of an Expr.
+ * Additionally, dummy scope is created to model scope.
+ * It allow us to traverse the graph in reverse order.
+ */</doc>
+<mbr r='tvm::relay::DependencyGraph::expr_node' o='0' t='std::unordered_map&lt;Expr, Node *, ObjectPtrHash, ObjectPtrEqual&gt;'/>
+<mbr r='tvm::relay::DependencyGraph::post_dfs_order' o='448' t='std::vector&lt;Node *&gt;'/>
+<fun r='_ZN3tvm5relay15DependencyGraph6CreateEPNS_7support12GenericArenaINS2_19SimplePageAllocatorEEERKNS_9RelayExprE'/>
+<use f='tvm/relay/analysis/dependency_graph.cc' l='39' c='_ZN3tvm5relay15DependencyGraph7Creator6CreateERKNS_9RelayExprE'/>
+<use f='tvm/relay/analysis/dependency_graph.cc' l='48'/>
+<use f='tvm/relay/analysis/dependency_graph.cc' l='207' c='_ZN3tvm5relay15DependencyGraph6CreateEPNS_7support12GenericArenaINS2_19SimplePageAllocatorEEERKNS_9RelayExprE'/>
+<size>80</size>
+<fun r='_ZN3tvm5relay15DependencyGraph6CreateEPNS_7support12GenericArenaINS2_19SimplePageAllocatorEEERKNS_9RelayExprE'/>
+<use f='tvm/relay/transforms/pass_utils.h' l='223' c='_ZN3tvm5relay9CalcScopeERKNS0_15DependencyGraphE'/>
+<size>80</size>
+<use f='tvm/relay/transforms/to_a_normal_form.cc' l='55' c='_ZN3tvm5relay9CalcScopeERKNS0_15DependencyGraphE'/>
+<use f='tvm/relay/transforms/to_a_normal_form.cc' l='152' c='_ZN3tvm5relay12_GLOBAL__N_14Fill13ToANormalFormERKNS_9RelayExprERKNS0_15DependencyGraphEPSt13unordered_mapIPNS6_4NodeESt10shared_ptrINS0_9ScopeNodeEES3282190'/>
+<use f='tvm/relay/transforms/to_a_normal_form.cc' l='159' c='_ZN3tvm5relay12_GLOBAL__N_14Fill22ToBasicBlockNormalFormERKNS_9RelayExprERKNS0_15DependencyGraphEPSt13unordered_mapIPNS6_4NodeESt10shared_ptrINS0_9Sco13439133'/>
+<use f='tvm/relay/transforms/to_a_normal_form.cc' l='175' c='_ZN3tvm5relay12_GLOBAL__N_14FillC1ERKNS0_15DependencyGraphEPSt13unordered_mapIPNS3_4NodeESt10shared_ptrINS0_9ScopeNodeEESt4hashIS8_ESt8equal_toIS8_ESa8587531'/>
+<use f='tvm/relay/transforms/to_a_normal_form.cc' l='378'/>
+<use f='tvm/relay/transforms/to_a_normal_form.cc' l='418' c='_ZN3tvm5relay25ToBasicBlockNormalFormAuxERKNS_9RelayExprE'/>
+<use f='tvm/relay/transforms/to_a_normal_form.cc' l='440' c='_ZN3tvm5relay9transform13ToANormalFormERKNS_9RelayExprE'/>
+<size>80</size>
+<use f='tvm/relay/transforms/to_basic_block_normal_form.cc' l='68' c='_ZN3tvm5relay25BasicBlockNormalFormCheckERKNS_9RelayExprE'/>
+<size>80</size>

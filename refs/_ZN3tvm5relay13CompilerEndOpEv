@@ -1,0 +1,16 @@
+<def f='tvm/relay/transforms/pass_utils.h' l='144' ll='147' type='const tvm::relay::Op &amp; tvm::relay::CompilerEndOp()'/>
+<doc f='tvm/relay/transforms/pass_utils.h' l='139'>/*!
+ * \brief Cache the compiler_end annotation op to reduce registry lookup overhead
+ * \param void
+ * \return compiler_end op
+ */</doc>
+<use f='tvm/relay/transforms/annotate_target.cc' l='87' u='c' c='_ZN3tvm5relay15annotate_target22AnnotateTargetRewriter12AnnotateArgsERKNS_7runtime5ArrayINS_9RelayExprEvEERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<use f='tvm/relay/transforms/annotate_target.cc' l='156' u='c' c='_ZN3tvm5relay15annotate_target22AnnotateTargetRewriter35InsertCompilerEndAndPropogateTargetERKNS_9RelayExprE'/>
+<use f='tvm/relay/transforms/annotate_target.cc' l='183' u='c' c='_ZN3tvm5relay15annotate_target22AnnotateTargetRewriter8Rewrite_EPKNS0_8CallNodeERKNS_9RelayExprE'/>
+<use f='tvm/relay/transforms/merge_compiler_regions.cc' l='57' u='c' c='_ZN3tvm5relay21merge_compiler_region12RegionMerger10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/relay/transforms/merge_compiler_regions.cc' l='148' u='c' c='_ZN3tvm5relay21merge_compiler_region16MergeAnnotations8Rewrite_EPKNS0_8CallNodeERKNS_9RelayExprE'/>
+<use f='tvm/relay/transforms/merge_compiler_regions.cc' l='166' u='c' c='_ZN3tvm5relay21merge_compiler_region20MergeCompilerRegionsERKNS_9RelayExprE'/>
+<use f='tvm/relay/transforms/partition_graph.cc' l='132' u='c' c='_ZN3tvm5relay12partitioning11PartitionerC1ERKNS_8IRModuleEb'/>
+<use f='tvm/relay/transforms/partition_graph.cc' l='151' u='c' c='_ZN3tvm5relay12partitioning11Partitioner8Rewrite_EPKNS0_8CallNodeERKNS_9RelayExprE'/>
+<use f='tvm/relay/transforms/partition_graph.cc' l='182' u='c' c='_ZN3tvm5relay12partitioning11Partitioner8Rewrite_EPKNS0_8CallNodeERKNS_9RelayExprE'/>
+<use f='tvm/relay/transforms/partition_graph.cc' l='456' u='c' c='_ZZN3tvm5relay12partitioning19FlattenTupleOutputsENS_8IRModuleEEN17TupleOutFlattener8Rewrite_EPKNS0_8CallNodeERKNS_9RelayExprE'/>

@@ -1,0 +1,26 @@
+<def f='tvm/relay/collage/candidate_set.h' l='43' ll='93'/>
+<use f='tvm/relay/collage/combiner_rule.h' l='100' c='_ZN3tvm5relay7collage23AppendAllResultsContextC1EPKNS1_13DataflowGraphEmPNS1_12CandidateSetE'/>
+<use f='tvm/relay/collage/combiner_rule.h' l='105'/>
+<use f='tvm/relay/collage/candidate_partition.cc' l='291' c='_ZN3tvm5relay7collage18CandidatePartition11MaxCoalesceERKNS1_13DataflowGraphESt6vectorIS2_SaIS2_EE'/>
+<size>136</size>
+<doc f='tvm/relay/collage/candidate_set.h' l='40'>/*!
+ * \brief Holds a vector of current candidates and the additions/removals to apply to them.
+ */</doc>
+<fun r='_ZN3tvm5relay7collage12CandidateSetC1Ev'/>
+<fun r='_ZN3tvm5relay7collage12CandidateSetC1ESt6vectorINS1_18CandidatePartitionESaIS4_EE'/>
+<fun r='_ZN3tvm5relay7collage12CandidateSet3AddERKNS1_13DataflowGraphERKNS1_18CandidatePartitionE'/>
+<fun r='_ZN3tvm5relay7collage12CandidateSet6RemoveERKNS1_18CandidatePartitionE'/>
+<fun r='_ZN3tvm5relay7collage12CandidateSet19PrepareForNextRoundEv'/>
+<fun r='_ZNK3tvm5relay7collage12CandidateSet4sizeEv'/>
+<fun r='_ZNK3tvm5relay7collage12CandidateSetixEm'/>
+<fun r='_ZNK3tvm5relay7collage12CandidateSet2atEm'/>
+<fun r='_ZNK3tvm5relay7collage12CandidateSet15first_new_indexEv'/>
+<fun r='_ZN3tvm5relay7collage12CandidateSet4sortEv'/>
+<fun r='_ZN3tvm5relay7collage12CandidateSet22MovedCurrentCandidatesEv'/>
+<mbr r='tvm::relay::collage::CandidateSet::first_new_index_' o='0' t='size_t'/>
+<mbr r='tvm::relay::collage::CandidateSet::current_candidates_' o='64' t='std::vector&lt;CandidatePartition&gt;'/>
+<mbr r='tvm::relay::collage::CandidateSet::candidates_to_add_' o='256' t='std::vector&lt;CandidatePartition&gt;'/>
+<mbr r='tvm::relay::collage::CandidateSet::candidates_to_remove_' o='448' t='std::vector&lt;CandidatePartition&gt;'/>
+<mbr r='tvm::relay::collage::CandidateSet::seen_' o='640' t='std::unordered_set&lt;CandidatePartition, CandidatePartitionHash, CandidatePartitionEquals&gt;'/>
+<use f='tvm/relay/collage/partition_rule.cc' l='301' c='_ZNK3tvm5relay7collage24CombinePartitionRuleNode13AllCandidatesERKNS1_13DataflowGraphERKNS1_13PartitionSpecE'/>
+<size>136</size>

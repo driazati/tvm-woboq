@@ -1,0 +1,47 @@
+<def f='tvm/runtime/thread_storage_scope.h' l='162' ll='189'/>
+<use f='tvm/runtime/thread_storage_scope.h' l='172' c='_ZN3tvm7runtime11ThreadScope6CreateERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<use f='tvm/runtime/thread_storage_scope.h' l='173' c='_ZN3tvm7runtime11ThreadScope6CreateERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<use f='tvm/runtime/thread_storage_scope.h' l='221' c='_ZN3tvm7runtime17LaunchParamConfig4InitEmRKSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS8_EE'/>
+<use f='tvm/tir/schedule/utils.h' l='148' c='_ZN3tvm3tir26CanRelaxStorageUnderThreadERKNS_7runtime12StorageScopeERKNS1_11ThreadScopeE'/>
+<use f='tvm/tir/schedule/utils.h' l='227' c='_ZN3tvm3tir14GetThreadScopeEPKNS0_7ForNodeE'/>
+<use f='tvm/tir/schedule/utils.h' l='231' c='_ZN3tvm3tir14GetThreadScopeEPKNS0_7ForNodeE'/>
+<use f='tvm/tir/schedule/utils.h' l='239' c='_ZN3tvm3tir10IsBlockIdxERKNS_7runtime11ThreadScopeE'/>
+<use f='tvm/tir/schedule/utils.h' l='248' c='_ZN3tvm3tir11IsThreadIdxERKNS_7runtime11ThreadScopeE'/>
+<size>8</size>
+<doc f='tvm/runtime/thread_storage_scope.h' l='161'>/*! \brief class to represent thread scope */</doc>
+<mbr r='tvm::runtime::ThreadScope::rank' o='0' t='int'/>
+<mbr r='tvm::runtime::ThreadScope::dim_index' o='32' t='int'/>
+<fun r='_ZN3tvm7runtime11ThreadScope6CreateERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<use f='tvm/meta_schedule/postproc/rewrite_reduction_block.cc' l='46' c='_ZN3tvm3tir20ReductionBlockFinder10VisitStmt_EPKNS0_7ForNodeE'/>
+<size>8</size>
+<use f='tvm/meta_schedule/postproc/rewrite_unbound_block.cc' l='43' c='_ZN3tvm3tir18UnboundBlockFinder10VisitStmt_EPKNS0_7ForNodeE'/>
+<size>8</size>
+<use f='tvm/meta_schedule/postproc/verify_gpu_code.cc' l='43' c='_ZN3tvm3tir19ThreadExtentChecker10VisitStmt_EPKNS0_7ForNodeE'/>
+<size>8</size>
+<use f='tvm/meta_schedule/schedule_rule/auto_bind.cc' l='49' c='_ZN3tvm13meta_schedule18BindBlockThreadIdxERKNS_3tir8ScheduleERKNS1_7BlockRVEllSt8functionIFNS_8PrimExprElEE'/>
+<size>8</size>
+<use f='tvm/meta_schedule/schedule_rule/cross_thread_reduction.cc' l='132' c='_ZN3tvm13meta_schedule24CrossThreadReductionNode13InThreadScopeERKNS_3tir8ScheduleERKNS2_7BlockRVE'/>
+<size>8</size>
+<use f='tvm/target/llvm/codegen_amdgpu.cc' l='155' c='_ZN3tvm7codegen13CodeGenAMDGPU14GetThreadIndexERKNS_3tir7IterVarE'/>
+<size>8</size>
+<use f='tvm/target/llvm/codegen_nvptx.cc' l='135' c='_ZN3tvm7codegen12CodeGenNVPTX14GetThreadIndexERKNS_3tir7IterVarE'/>
+<size>8</size>
+<use f='tvm/target/source/codegen_metal.cc' l='136' c='_ZN3tvm7codegen12CodeGenMetal11AddFunctionERKNS_3tir8PrimFuncE'/>
+<size>8</size>
+<use f='tvm/target/source/codegen_opencl.cc' l='160' c='_ZN3tvm7codegen13CodeGenOpenCL15BindThreadIndexERKNS_3tir7IterVarE'/>
+<size>8</size>
+<use f='tvm/te/operation/op_utils.cc' l='179' c='_ZN3tvm2te12MakeLoopNestERKNS0_5StageERKSt13unordered_mapINS_3tir7IterVarENS_5RangeESt4hashIS6_ESt8equal_toIS6_ESaISt4pairIKS6_S7_EEEmbRKSt13unordered9689248'/>
+<size>8</size>
+<use f='tvm/tir/schedule/primitive/for_kind.cc' l='82' c='_ZN3tvm3tir30CheckLoopParallelizableInBlockERKNS0_13ScheduleStateENS0_7ForKindERKNS0_3VarERKNS0_12BlockRealizeENS_7runtime11ThreadScopeE'/>
+<use f='tvm/tir/schedule/primitive/for_kind.cc' l='122' c='_ZN3tvm3tir22CheckParallelizabilityERKNS0_13ScheduleStateERKNS0_3ForENS0_7ForKindENS_7runtime11ThreadScopeE'/>
+<use f='tvm/tir/schedule/primitive/for_kind.cc' l='167' c='_ZN3tvm3tir22ParallelizeComputationERKNS0_13ScheduleStateERKNS0_8StmtSRefENS0_7ForKindENS_7runtime8OptionalINS0_7IterVarEEE'/>
+<size>8</size>
+<use f='tvm/tir/transforms/loop_partition.cc' l='124' c='_ZN3tvm3tir17CandidateSelector10VisitStmt_EPKNS0_12AttrStmtNodeE'/>
+<use f='tvm/tir/transforms/loop_partition.cc' l='415' c='_ZN3tvm3tir15LoopPartitioner10VisitStmt_EPKNS0_12AttrStmtNodeE'/>
+<size>8</size>
+<use f='tvm/tir/transforms/lower_cross_thread_reduction.cc' l='43' c='_ZN3tvm3tir18IsBoundToThreadIdxEPKNS0_7ForNodeE'/>
+<size>8</size>
+<use f='tvm/tir/transforms/lower_thread_allreduce.cc' l='200'/>
+<size>8</size>
+<use f='tvm/tir/transforms/thread_storage_sync.cc' l='399' c='_ZN3tvm3tir18ThreadSyncInserter17MakeGlobalBarrierEv'/>
+<size>8</size>

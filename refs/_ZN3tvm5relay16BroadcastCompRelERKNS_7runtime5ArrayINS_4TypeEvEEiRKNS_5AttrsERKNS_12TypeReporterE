@@ -1,0 +1,22 @@
+<dec f='tvm/relay/op/type_relations.h' l='83' type='bool tvm::relay::BroadcastCompRel(const Array&lt;tvm::relay::Type&gt; &amp; types, int num_inputs, const tvm::Attrs &amp; attrs, const tvm::relay::TypeReporter &amp; reporter)'/>
+<doc f='tvm/relay/op/type_relations.h' l='69'>/*!
+ * \brief The broadcast type relation, implements the broadcasting
+ *  rule over the two input types producing the broadcasted type.
+ *
+ * This differs from BroadcastRel in the return dtype,
+ * it instead returns bool(uint8), for use in comparsion operators
+ * such as equal, not_equal, lt, and so on.
+ *
+ * \param types The input and output types to the relation.
+ * \param num_inputs The number of input arguments.
+ * \param attrs The attributes
+ * \param reporter The reporter.
+ * \return true whether relation has been resolved.
+ */</doc>
+<use f='tvm/relay/op/tensor/binary.cc' l='144' macro='1' u='a'/>
+<use f='tvm/relay/op/tensor/binary.cc' l='149' macro='1' u='a'/>
+<use f='tvm/relay/op/tensor/binary.cc' l='154' macro='1' u='a'/>
+<use f='tvm/relay/op/tensor/binary.cc' l='159' macro='1' u='a'/>
+<use f='tvm/relay/op/tensor/binary.cc' l='164' macro='1' u='a'/>
+<use f='tvm/relay/op/tensor/binary.cc' l='169' macro='1' u='a'/>
+<def f='tvm/relay/op/type_relations.cc' l='120' ll='138' type='bool tvm::relay::BroadcastCompRel(const Array&lt;tvm::relay::Type&gt; &amp; types, int num_inputs, const tvm::Attrs &amp; attrs, const tvm::relay::TypeReporter &amp; reporter)'/>

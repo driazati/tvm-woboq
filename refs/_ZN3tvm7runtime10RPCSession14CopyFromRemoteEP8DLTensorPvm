@@ -1,0 +1,11 @@
+<dec f='tvm/runtime/rpc/rpc_session.h' l='141' type='void tvm::runtime::RPCSession::CopyFromRemote(DLTensor * remote_from, void * local_to_bytes, uint64_t nbytes)'/>
+<doc f='tvm/runtime/rpc/rpc_session.h' l='135'>/*!
+   * \brief Copy bytes from remote array content.
+   * \param remote_from The source host data.
+   * \param local_to_bytes The target array.
+   * \param nbytes The size of the memory in bytes.
+   */</doc>
+<use f='tvm/runtime/rpc/rpc_device_api.cc' l='101' u='c' c='_ZN3tvm7runtime12RPCDeviceAPI14CopyDataFromToEP8DLTensorS3_Pv'/>
+<ovr f='tvm/runtime/rpc/rpc_endpoint.cc' l='1038' c='_ZN3tvm7runtime16RPCClientSession14CopyFromRemoteEP8DLTensorPvm'/>
+<ovr f='tvm/runtime/rpc/rpc_local_session.cc' l='112' c='_ZN3tvm7runtime12LocalSession14CopyFromRemoteEP8DLTensorPvm'/>
+<use f='tvm/runtime/rpc/rpc_session.cc' l='75' u='c' c='_ZN3tvm7runtime10RPCSession19AsyncCopyFromRemoteEP8DLTensorPvmSt8functionIFvNS0_7RPCCodeENS0_7TVMArgsEEE'/>

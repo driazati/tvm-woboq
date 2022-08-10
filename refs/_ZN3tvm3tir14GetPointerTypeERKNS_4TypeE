@@ -1,0 +1,18 @@
+<def f='tvm/tir/ir/buffer_common.h' l='45' ll='55' type='std::pair&lt;bool, runtime::DataType&gt; tvm::tir::GetPointerType(const tvm::Type &amp; type)'/>
+<use f='tvm/tir/ir/expr.cc' l='650' u='c' c='_ZN3tvm3tir4LoadC1ENS_7runtime8DataTypeENS0_3VarENS_8PrimExprES5_NS_4SpanE'/>
+<doc f='tvm/tir/ir/buffer_common.h' l='34'>/*!
+ * \brief Returns the type of object pointed to.
+ *
+ * \param type The type to be checked.
+ *
+ * \return A (bool, DataType) pair.  If the type is a pointer to a
+ * primitive, the boolean is true and the DataType is the pointed-to
+ * type.  Otherwise, the boolean is false and the DataType is
+ * default-constructed.  This can be replaced with std::optional with
+ * C++17 if/when C++17 is required.
+ */</doc>
+<use f='tvm/tir/ir/stmt.cc' l='273' u='c' c='_ZN3tvm3tir5StoreC1ENS0_3VarENS_8PrimExprES3_S3_NS_4SpanE'/>
+<use f='tvm/tir/transforms/inject_ptx_async_copy.cc' l='61' u='c' c='_ZN3tvm3tir20PTXAsyncCopyInjector10VisitStmt_EPKNS0_15BufferStoreNodeE'/>
+<use f='tvm/tir/transforms/inject_ptx_async_copy.cc' l='62' u='c' c='_ZN3tvm3tir20PTXAsyncCopyInjector10VisitStmt_EPKNS0_15BufferStoreNodeE'/>
+<use f='tvm/tir/transforms/storage_rewrite.cc' l='1127' u='c' c='_ZN3tvm3tir23VectorTypeAccessCheckerC1ERKNS_7runtime5ArrayINS0_3VarEvEERKNS2_3MapIS4_NS0_6BufferEvvEEb'/>
+<use f='tvm/tir/transforms/storage_rewrite.cc' l='1192' u='c' c='_ZN3tvm3tir23VectorTypeAccessChecker13HandleLetNodeENS0_3VarE'/>

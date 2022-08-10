@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>candidate_function_cache.h source code [tvm/relay/collage/candidate_function_cache.h] - Woboq Code Browser</title>
+<meta name="woboq:interestingDefinitions" content="tvm::relay::collage::CandidateFunctionCache "/>
+<link rel="stylesheet" href="../../.././data/qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href="../../.././data/kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src="../../.././data/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="../../.././data/jquery/jquery-ui.min.js"></script>
+<script>var file = 'tvm/relay/collage/candidate_function_cache.h'; var root_path = '../../..'; var data_path = '../../.././data'; var ecma_script_api_version = 2;</script>
+<script src='../../.././data/codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='../..'>tvm</a>/<a href='..'>relay</a>/<a href='./'>collage</a>/<a href='candidate_function_cache.h.html'>candidate_function_cache.h</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td><i>/*</i></td></tr>
+<tr><th id="2">2</th><td><i> * Licensed to the Apache Software Foundation (ASF) under one</i></td></tr>
+<tr><th id="3">3</th><td><i> * or more contributor license agreements.  See the NOTICE file</i></td></tr>
+<tr><th id="4">4</th><td><i> * distributed with this work for additional information</i></td></tr>
+<tr><th id="5">5</th><td><i> * regarding copyright ownership.  The ASF licenses this file</i></td></tr>
+<tr><th id="6">6</th><td><i> * to you under the Apache License, Version 2.0 (the</i></td></tr>
+<tr><th id="7">7</th><td><i> * "License"); you may not use this file except in compliance</i></td></tr>
+<tr><th id="8">8</th><td><i> * with the License.  You may obtain a copy of the License at</i></td></tr>
+<tr><th id="9">9</th><td><i> *</i></td></tr>
+<tr><th id="10">10</th><td><i> *   <a href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a></i></td></tr>
+<tr><th id="11">11</th><td><i> *</i></td></tr>
+<tr><th id="12">12</th><td><i> * Unless required by applicable law or agreed to in writing,</i></td></tr>
+<tr><th id="13">13</th><td><i> * software distributed under the License is distributed on an</i></td></tr>
+<tr><th id="14">14</th><td><i> * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY</i></td></tr>
+<tr><th id="15">15</th><td><i> * KIND, either express or implied.  See the License for the</i></td></tr>
+<tr><th id="16">16</th><td><i> * specific language governing permissions and limitations</i></td></tr>
+<tr><th id="17">17</th><td><i> * under the License.</i></td></tr>
+<tr><th id="18">18</th><td><i> */</i></td></tr>
+<tr><th id="19">19</th><td></td></tr>
+<tr><th id="20">20</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="21">21</th><td><i class="doc"> * <span class="command">\file</span> <span class="verb">src/relay/collage/candidate_function_cache.h</span></i></td></tr>
+<tr><th id="22">22</th><td><i class="doc"> * <span class="command">\brief</span> A cache of the unique global symbol name and cost for partitioned functions.</i></td></tr>
+<tr><th id="23">23</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="24">24</th><td></td></tr>
+<tr><th id="25">25</th><td><u>#<span data-ppcond="25">ifndef</span> <span class="macro" data-ref="_M/TVM_RELAY_COLLAGE_CANDIDATE_FUNCTION_CACHE_H_">TVM_RELAY_COLLAGE_CANDIDATE_FUNCTION_CACHE_H_</span></u></td></tr>
+<tr><th id="26">26</th><td><u>#define <dfn class="macro" id="_M/TVM_RELAY_COLLAGE_CANDIDATE_FUNCTION_CACHE_H_" data-ref="_M/TVM_RELAY_COLLAGE_CANDIDATE_FUNCTION_CACHE_H_">TVM_RELAY_COLLAGE_CANDIDATE_FUNCTION_CACHE_H_</dfn></u></td></tr>
+<tr><th id="27">27</th><td></td></tr>
+<tr><th id="28">28</th><td><u>#include &lt;tvm/relay/function.h&gt;</u></td></tr>
+<tr><th id="29">29</th><td></td></tr>
+<tr><th id="30">30</th><td><u>#include <a href="../../../include/c++/10/memory.html">&lt;memory&gt;</a></u></td></tr>
+<tr><th id="31">31</th><td><u>#include <a href="../../../include/c++/10/string.html">&lt;string&gt;</a></u></td></tr>
+<tr><th id="32">32</th><td><u>#include <a href="../../../include/c++/10/unordered_map.html">&lt;unordered_map&gt;</a></u></td></tr>
+<tr><th id="33">33</th><td><u>#include <a href="../../../include/c++/10/utility.html">&lt;utility&gt;</a></u></td></tr>
+<tr><th id="34">34</th><td></td></tr>
+<tr><th id="35">35</th><td><u>#include <a href="../transforms/compiler_function_utils.h.html">"../transforms/compiler_function_utils.h"</a></u></td></tr>
+<tr><th id="36">36</th><td><u>#include <a href="cost.h.html">"./cost.h"</a></u></td></tr>
+<tr><th id="37">37</th><td><u>#include <a href="name_supply.h.html">"./name_supply.h"</a></u></td></tr>
+<tr><th id="38">38</th><td></td></tr>
+<tr><th id="39">39</th><td><b>namespace</b> <span class="namespace">tvm</span> {</td></tr>
+<tr><th id="40">40</th><td><b>namespace</b> <span class="namespace">relay</span> {</td></tr>
+<tr><th id="41">41</th><td><b>namespace</b> <span class="namespace">collage</span> {</td></tr>
+<tr><th id="42">42</th><td></td></tr>
+<tr><th id="43">43</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="44">44</th><td><i class="doc"> * <span class="command">\brief</span> A cache of the unique global symbol and cost for functions extracted to represent</i></td></tr>
+<tr><th id="45">45</th><td><i class="doc"> * partitions. If two functions are structurally equal (which includes equality of their "Compiler"</i></td></tr>
+<tr><th id="46">46</th><td><i class="doc"> * attributes) then they will share the same global symbol and estimated cost. We rely on the</i></td></tr>
+<tr><th id="47">47</th><td><i class="doc"> * function's attributes to distinguish partitions which are structurally the same graph but</i></td></tr>
+<tr><th id="48">48</th><td><i class="doc"> * intended for different targets.</i></td></tr>
+<tr><th id="49">49</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="50">50</th><td><b>class</b> <dfn class="type def" id="tvm::relay::collage::CandidateFunctionCache" title='tvm::relay::collage::CandidateFunctionCache' data-ref="tvm::relay::collage::CandidateFunctionCache" data-ref-filename="tvm..relay..collage..CandidateFunctionCache">CandidateFunctionCache</dfn> : <b>public</b> <span class="namespace">transform::</span><a class="type" href="../transforms/compiler_function_utils.h.html#tvm::relay::transform::GlobalSymbolCache" title='tvm::relay::transform::GlobalSymbolCache' data-ref="tvm::relay::transform::GlobalSymbolCache" data-ref-filename="tvm..relay..transform..GlobalSymbolCache">GlobalSymbolCache</a> {</td></tr>
+<tr><th id="51">51</th><td> <b>public</b>:</td></tr>
+<tr><th id="52">52</th><td>  <b>explicit</b> <dfn class="decl def fn" id="_ZN3tvm5relay7collage22CandidateFunctionCacheC1ESt10shared_ptrINS1_10NameSupplyEE" title='tvm::relay::collage::CandidateFunctionCache::CandidateFunctionCache' data-ref="_ZN3tvm5relay7collage22CandidateFunctionCacheC1ESt10shared_ptrINS1_10NameSupplyEE" data-ref-filename="_ZN3tvm5relay7collage22CandidateFunctionCacheC1ESt10shared_ptrINS1_10NameSupplyEE">CandidateFunctionCache</dfn>(<span class="namespace">std::</span><a class="type" href="../../../include/c++/10/bits/shared_ptr_base.h.html#std::shared_ptr" title='std::shared_ptr' data-ref="std::shared_ptr" data-ref-filename="std..shared_ptr">shared_ptr</a>&lt;<a class="type" href="name_supply.h.html#tvm::relay::collage::NameSupply" title='tvm::relay::collage::NameSupply' data-ref="tvm::relay::collage::NameSupply" data-ref-filename="tvm..relay..collage..NameSupply">NameSupply</a>&gt; <dfn class="local col0 decl" id="10name_supply" title='name_supply' data-type='std::shared_ptr&lt;NameSupply&gt;' data-ref="10name_supply" data-ref-filename="10name_supply">name_supply</dfn>)</td></tr>
+<tr><th id="53">53</th><td>      : <a class="member field" href="#tvm::relay::collage::CandidateFunctionCache::name_supply_" title='tvm::relay::collage::CandidateFunctionCache::name_supply_' data-ref="tvm::relay::collage::CandidateFunctionCache::name_supply_" data-ref-filename="tvm..relay..collage..CandidateFunctionCache..name_supply_">name_supply_</a><a class="ref fn" href="../../../include/c++/10/bits/shared_ptr.h.html#_ZNSt10shared_ptrC1EOSt10shared_ptrIT_E" title='std::shared_ptr::shared_ptr&lt;_Tp&gt;' data-ref="_ZNSt10shared_ptrC1EOSt10shared_ptrIT_E" data-ref-filename="_ZNSt10shared_ptrC1EOSt10shared_ptrIT_E">(</a><span class="namespace">std::</span><a class="ref fn" href="../../../include/c++/10/bits/move.h.html#_ZSt4moveOT_" title='std::move' data-ref="_ZSt4moveOT_" data-ref-filename="_ZSt4moveOT_">move</a>(<span class='refarg'><a class="local col0 ref" href="#10name_supply" title='name_supply' data-ref="10name_supply" data-ref-filename="10name_supply">name_supply</a></span>)) {}</td></tr>
+<tr><th id="54">54</th><td></td></tr>
+<tr><th id="55">55</th><td>  <b>struct</b> <dfn class="type def" id="tvm::relay::collage::CandidateFunctionCache::Entry" title='tvm::relay::collage::CandidateFunctionCache::Entry' data-ref="tvm::relay::collage::CandidateFunctionCache::Entry" data-ref-filename="tvm..relay..collage..CandidateFunctionCache..Entry">Entry</dfn> {</td></tr>
+<tr><th id="56">56</th><td>    <span class='typedef' title='tvm::relay::GlobalVar' data-type='tvm::GlobalVar' data-ref="tvm::relay::GlobalVar" data-ref-filename="tvm..relay..GlobalVar">GlobalVar</span> <dfn class="decl field" id="tvm::relay::collage::CandidateFunctionCache::Entry::global_symbol" title='tvm::relay::collage::CandidateFunctionCache::Entry::global_symbol' data-ref="tvm::relay::collage::CandidateFunctionCache::Entry::global_symbol" data-ref-filename="tvm..relay..collage..CandidateFunctionCache..Entry..global_symbol">global_symbol</dfn>;</td></tr>
+<tr><th id="57">57</th><td>    <a class="type" href="cost.h.html#tvm::relay::collage::Cost" title='tvm::relay::collage::Cost' data-ref="tvm::relay::collage::Cost" data-ref-filename="tvm..relay..collage..Cost">Cost</a> <dfn class="decl field" id="tvm::relay::collage::CandidateFunctionCache::Entry::cost" title='tvm::relay::collage::CandidateFunctionCache::Entry::cost' data-ref="tvm::relay::collage::CandidateFunctionCache::Entry::cost" data-ref-filename="tvm..relay..collage..CandidateFunctionCache..Entry..cost">cost</dfn> = <a class="type" href="cost.h.html#tvm::relay::collage::Cost" title='tvm::relay::collage::Cost' data-ref="tvm::relay::collage::Cost" data-ref-filename="tvm..relay..collage..Cost">Cost</a>::<a class="ref fn" href="cost.h.html#_ZN3tvm5relay7collage4Cost7UnknownEv" title='tvm::relay::collage::Cost::Unknown' data-ref="_ZN3tvm5relay7collage4Cost7UnknownEv" data-ref-filename="_ZN3tvm5relay7collage4Cost7UnknownEv">Unknown</a>();  <i>// Filled in when have estimated cost.</i></td></tr>
+<tr><th id="58">58</th><td></td></tr>
+<tr><th id="59">59</th><td>    <b>explicit</b> <dfn class="decl def fn" id="_ZN3tvm5relay7collage22CandidateFunctionCache5EntryC1ENS_9GlobalVarE" title='tvm::relay::collage::CandidateFunctionCache::Entry::Entry' data-ref="_ZN3tvm5relay7collage22CandidateFunctionCache5EntryC1ENS_9GlobalVarE" data-ref-filename="_ZN3tvm5relay7collage22CandidateFunctionCache5EntryC1ENS_9GlobalVarE">Entry</dfn>(<span class='typedef' title='tvm::relay::GlobalVar' data-type='tvm::GlobalVar' data-ref="tvm::relay::GlobalVar" data-ref-filename="tvm..relay..GlobalVar">GlobalVar</span> <dfn class="local col1 decl" id="11global_symbol" title='global_symbol' data-type='tvm::relay::GlobalVar' data-ref="11global_symbol" data-ref-filename="11global_symbol">global_symbol</dfn>) : <a class="member field" href="#tvm::relay::collage::CandidateFunctionCache::Entry::global_symbol" title='tvm::relay::collage::CandidateFunctionCache::Entry::global_symbol' data-ref="tvm::relay::collage::CandidateFunctionCache::Entry::global_symbol" data-ref-filename="tvm..relay..collage..CandidateFunctionCache..Entry..global_symbol">global_symbol</a><span class='ref fn' title='tvm::GlobalVar::GlobalVar' data-ref="_ZN3tvm9GlobalVarC1EOS0_" data-ref-filename="_ZN3tvm9GlobalVarC1EOS0_">(</span><span class="namespace">std::</span><a class="ref fn" href="../../../include/c++/10/bits/move.h.html#_ZSt4moveOT_" title='std::move' data-ref="_ZSt4moveOT_" data-ref-filename="_ZSt4moveOT_">move</a>(<span class='refarg'><a class="local col1 ref" href="#11global_symbol" title='global_symbol' data-ref="11global_symbol" data-ref-filename="11global_symbol">global_symbol</a></span>)) {}</td></tr>
+<tr><th id="60">60</th><td>  };</td></tr>
+<tr><th id="61">61</th><td></td></tr>
+<tr><th id="62">62</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="63">63</th><td><i class="doc">   * <span class="command">\brief</span> Returns the unique entry for<span class="command"> \p</span> <span class="arg">function.</span> If no such entry already exists, create it</i></td></tr>
+<tr><th id="64">64</th><td><i class="doc">   * and assign it a unique global symbol name.</i></td></tr>
+<tr><th id="65">65</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="66">66</th><td>  <a class="type" href="#tvm::relay::collage::CandidateFunctionCache::Entry" title='tvm::relay::collage::CandidateFunctionCache::Entry' data-ref="tvm::relay::collage::CandidateFunctionCache::Entry" data-ref-filename="tvm..relay..collage..CandidateFunctionCache..Entry">Entry</a>&amp; <a class="decl fn" href="candidate_function_cache.cc.html#_ZN3tvm5relay7collage22CandidateFunctionCache8GetEntryERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKNS0_8FunctionE" title='tvm::relay::collage::CandidateFunctionCache::GetEntry' data-ref="_ZN3tvm5relay7collage22CandidateFunctionCache8GetEntryERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKNS0_8FunctionE" data-ref-filename="_ZN3tvm5relay7collage22CandidateFunctionCache8GetEntryERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKNS0_8FunctionE" id="_ZN3tvm5relay7collage22CandidateFunctionCache8GetEntryERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKNS0_8FunctionE">GetEntry</a>(<em>const</em> <span class="namespace">std::</span><a class="typedef" href="../../../include/c++/10/bits/stringfwd.h.html#std::string" title='std::string' data-type='basic_string&lt;char&gt;' data-ref="std::string" data-ref-filename="std..string">string</a>&amp; <dfn class="local col2 decl" id="12label" title='label' data-type='const std::string &amp;' data-ref="12label" data-ref-filename="12label">label</dfn>, <em>const</em> <span class='type' title='tvm::relay::Function' data-ref="tvm::relay::Function" data-ref-filename="tvm..relay..Function">Function</span>&amp; <dfn class="local col3 decl" id="13function" title='function' data-type='const tvm::relay::Function &amp;' data-ref="13function" data-ref-filename="13function">function</dfn>);</td></tr>
+<tr><th id="67">67</th><td></td></tr>
+<tr><th id="68">68</th><td>  <span class='typedef' title='tvm::relay::GlobalVar' data-type='tvm::GlobalVar' data-ref="tvm::relay::GlobalVar" data-ref-filename="tvm..relay..GlobalVar">GlobalVar</span> <a class="virtual decl fn" href="candidate_function_cache.cc.html#_ZN3tvm5relay7collage22CandidateFunctionCache15GetGlobalSymbolERKNS0_8FunctionE" title='tvm::relay::collage::CandidateFunctionCache::GetGlobalSymbol' data-ref="_ZN3tvm5relay7collage22CandidateFunctionCache15GetGlobalSymbolERKNS0_8FunctionE" data-ref-filename="_ZN3tvm5relay7collage22CandidateFunctionCache15GetGlobalSymbolERKNS0_8FunctionE" id="_ZN3tvm5relay7collage22CandidateFunctionCache15GetGlobalSymbolERKNS0_8FunctionE">GetGlobalSymbol</a>(<em>const</em> <span class='type' title='tvm::relay::Function' data-ref="tvm::relay::Function" data-ref-filename="tvm..relay..Function">Function</span>&amp; <dfn class="local col4 decl" id="14function" title='function' data-type='const tvm::relay::Function &amp;' data-ref="14function" data-ref-filename="14function">function</dfn>) final;</td></tr>
+<tr><th id="69">69</th><td></td></tr>
+<tr><th id="70">70</th><td> <b>private</b>:</td></tr>
+<tr><th id="71">71</th><td>  <span class="namespace">std::</span><a class="type" href="../../../include/c++/10/bits/shared_ptr_base.h.html#std::shared_ptr" title='std::shared_ptr' data-ref="std::shared_ptr" data-ref-filename="std..shared_ptr">shared_ptr</a>&lt;<a class="type" href="name_supply.h.html#tvm::relay::collage::NameSupply" title='tvm::relay::collage::NameSupply' data-ref="tvm::relay::collage::NameSupply" data-ref-filename="tvm..relay..collage..NameSupply">NameSupply</a>&gt; <dfn class="decl field" id="tvm::relay::collage::CandidateFunctionCache::name_supply_" title='tvm::relay::collage::CandidateFunctionCache::name_supply_' data-ref="tvm::relay::collage::CandidateFunctionCache::name_supply_" data-ref-filename="tvm..relay..collage..CandidateFunctionCache..name_supply_">name_supply_</dfn>;</td></tr>
+<tr><th id="72">72</th><td>  <span class="namespace">std::</span><a class="type" href="../../../include/c++/10/bits/unordered_map.h.html#std::unordered_map" title='std::unordered_map' data-ref="std::unordered_map" data-ref-filename="std..unordered_map">unordered_map</a>&lt;<span class='type' title='tvm::relay::Function' data-ref="tvm::relay::Function" data-ref-filename="tvm..relay..Function">Function</span>, <a class="type" href="#tvm::relay::collage::CandidateFunctionCache::Entry" title='tvm::relay::collage::CandidateFunctionCache::Entry' data-ref="tvm::relay::collage::CandidateFunctionCache::Entry" data-ref-filename="tvm..relay..collage..CandidateFunctionCache..Entry">Entry</a>, <span class='type' title='tvm::StructuralHash' data-ref="tvm::StructuralHash" data-ref-filename="tvm..StructuralHash">StructuralHash</span>, <span class='type' title='tvm::StructuralEqual' data-ref="tvm::StructuralEqual" data-ref-filename="tvm..StructuralEqual">StructuralEqual</span>&gt; <dfn class="decl field" id="tvm::relay::collage::CandidateFunctionCache::cache_" title='tvm::relay::collage::CandidateFunctionCache::cache_' data-ref="tvm::relay::collage::CandidateFunctionCache::cache_" data-ref-filename="tvm..relay..collage..CandidateFunctionCache..cache_">cache_</dfn>;</td></tr>
+<tr><th id="73">73</th><td>};</td></tr>
+<tr><th id="74">74</th><td></td></tr>
+<tr><th id="75">75</th><td>}  <i>// namespace collage</i></td></tr>
+<tr><th id="76">76</th><td>}  <i>// namespace relay</i></td></tr>
+<tr><th id="77">77</th><td>}  <i>// namespace tvm</i></td></tr>
+<tr><th id="78">78</th><td></td></tr>
+<tr><th id="79">79</th><td><u>#<span data-ppcond="25">endif</span>  // TVM_RELAY_COLLAGE_CANDIDATE_FUNCTION_CACHE_H_</u></td></tr>
+<tr><th id="80">80</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated while processing <a href='candidate_function_cache.cc.html'>tvm/relay/collage/candidate_function_cache.cc</a><br/>Generated on <em>2022-Aug-10</em> from project tvm revision <em>123</em><br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

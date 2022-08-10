@@ -1,0 +1,9 @@
+<dec f='tvm/runtime/rpc/rpc_session.h' l='242' type='void tvm::runtime::RPCSession::AsyncStreamWait(tvm::Device dev, TVMStreamHandle stream, tvm::runtime::RPCSession::FAsyncCallback on_compelte)'/>
+<doc f='tvm/runtime/rpc/rpc_session.h' l='236'>/*!
+   * \brief Asynchrously wait for all events in dev, stream compeletes.
+   * \param dev The device.
+   * \param stream The stream to wait on.
+   * \param on_complete The callback to signal copy complete.
+   */</doc>
+<use f='tvm/runtime/rpc/rpc_endpoint.cc' l='556' u='c' c='_ZN3tvm7runtime11RPCEndpoint12EventHandler23HandleSyscallStreamSyncEv'/>
+<def f='tvm/runtime/rpc/rpc_session.cc' l='82' ll='94' type='void tvm::runtime::RPCSession::AsyncStreamWait(tvm::Device dev, TVMStreamHandle stream, RPCSession::FAsyncCallback callback)'/>

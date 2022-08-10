@@ -1,0 +1,95 @@
+<def f='tvm/runtime/graph_executor/graph_executor.h' l='67' ll='481'/>
+<use f='tvm/runtime/graph_executor/graph_executor.h' l='194' c='_ZN3tvm7runtime13GraphExecutor11ShareParamsERKS1_PN4dmlc6StreamE'/>
+<ovr f='tvm/runtime/graph_executor/debug/graph_executor_debug.cc' l='46' c='tvm::runtime::GraphExecutorDebug'/>
+<use f='tvm/runtime/graph_executor/debug/graph_executor_debug.cc' l='46'/>
+<size>760</size>
+<doc f='tvm/runtime/graph_executor/graph_executor.h' l='61'>/*!
+ * \brief Tiny graph executor.
+ *
+ *  This runtime can be accessible in various languages via
+ *  TVM runtime PackedFunc API.
+ */</doc>
+<fun r='_ZN3tvm7runtime13GraphExecutor11GetFunctionERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKNS0_9ObjectPtrINS0_6ObjectEEE'/>
+<fun r='_ZNK3tvm7runtime13GraphExecutor8type_keyEv'/>
+<fun r='_ZN3tvm7runtime13GraphExecutor3RunEv'/>
+<fun r='_ZN3tvm7runtime13GraphExecutor4InitERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS0_6ModuleERKSt6vectorI8DLDeviceSaISC_EENS0_10PackedFuncE'/>
+<fun r='_ZN3tvm7runtime13GraphExecutor13GetInputIndexERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<fun r='_ZNK3tvm7runtime13GraphExecutor12GetInputInfoEv'/>
+<fun r='_ZN3tvm7runtime13GraphExecutor14GetOutputIndexERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<fun r='_ZN3tvm7runtime13GraphExecutor8SetInputEiP8DLTensor'/>
+<fun r='_ZN3tvm7runtime13GraphExecutor16SetInputZeroCopyEiP8DLTensor'/>
+<fun r='_ZN3tvm7runtime13GraphExecutor17SetOutputZeroCopyEiP8DLTensor'/>
+<fun r='_ZNK3tvm7runtime13GraphExecutor10NumOutputsEv'/>
+<fun r='_ZNK3tvm7runtime13GraphExecutor9NumInputsEv'/>
+<fun r='_ZNK3tvm7runtime13GraphExecutor8GetInputEi'/>
+<fun r='_ZNK3tvm7runtime13GraphExecutor9GetOutputEi'/>
+<fun r='_ZN3tvm7runtime13GraphExecutor12CopyOutputToEiP8DLTensor'/>
+<fun r='_ZN3tvm7runtime13GraphExecutor10LoadParamsEPN4dmlc6StreamE'/>
+<fun r='_ZN3tvm7runtime13GraphExecutor10LoadParamsERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<fun r='_ZN3tvm7runtime13GraphExecutor11ShareParamsERKS1_PN4dmlc6StreamE'/>
+<fun r='_ZNK3tvm7runtime13GraphExecutor13GetNumOfNodesEv'/>
+<fun r='_ZNK3tvm7runtime13GraphExecutor11GetNodeNameB5cxx11Ej'/>
+<fun r='_ZN3tvm7runtime13GraphExecutor4LoadEPN4dmlc10JSONReaderE'/>
+<fun r='_ZN3tvm7runtime13GraphExecutor24DefaultLookupLinkedParamENS0_7TVMArgsEPNS0_11TVMRetValueE'/>
+<fun r='_ZN3tvm7runtime13GraphExecutor20LinkedNDArrayDeleterEPNS0_6ObjectE'/>
+<fun r='_ZN3tvm7runtime13GraphExecutor12SetupStorageEv'/>
+<fun r='_ZN3tvm7runtime13GraphExecutor12SetupOpExecsEv'/>
+<fun r='_ZNK3tvm7runtime13GraphExecutor21CheckExternalDLTensorEPK8DLTensorj'/>
+<fun r='_ZN3tvm7runtime13GraphExecutor11CreateTVMOpERKNS0_10TVMOpParamERKSt6vectorI8DLTensorSaIS6_EE'/>
+<fun r='_ZNK3tvm7runtime13GraphExecutor8entry_idEjj'/>
+<fun r='_ZNK3tvm7runtime13GraphExecutor8entry_idERKNS1_9NodeEntryE'/>
+<fun r='_ZNK3tvm7runtime13GraphExecutor16num_node_entriesEv'/>
+<mbr r='tvm::runtime::GraphExecutor::nodes_' o='1152' t='std::vector&lt;Node&gt;'/>
+<mbr r='tvm::runtime::GraphExecutor::input_nodes_' o='1344' t='std::vector&lt;uint32_t&gt;'/>
+<mbr r='tvm::runtime::GraphExecutor::param_names_' o='1536' t='std::unordered_set&lt;std::string&gt;'/>
+<mbr r='tvm::runtime::GraphExecutor::input_map_' o='1984' t='std::unordered_map&lt;std::string, uint32_t&gt;'/>
+<mbr r='tvm::runtime::GraphExecutor::output_map_' o='2432' t='std::unordered_map&lt;std::string, uint32_t&gt;'/>
+<mbr r='tvm::runtime::GraphExecutor::input_dltensors_' o='2880' t='std::vector&lt;std::vector&lt;DLTensor *&gt;&gt;'/>
+<mbr r='tvm::runtime::GraphExecutor::output_dltensors_' o='3072' t='std::vector&lt;std::vector&lt;DLTensor *&gt;&gt;'/>
+<mbr r='tvm::runtime::GraphExecutor::both_output_opinput_dltensors_' o='3264' t='std::vector&lt;std::vector&lt;DLTensor *&gt;&gt;'/>
+<mbr r='tvm::runtime::GraphExecutor::node_row_ptr_' o='3456' t='std::vector&lt;uint32_t&gt;'/>
+<mbr r='tvm::runtime::GraphExecutor::outputs_' o='3648' t='std::vector&lt;NodeEntry&gt;'/>
+<mbr r='tvm::runtime::GraphExecutor::attrs_' o='3840' t='tvm::runtime::GraphExecutor::GraphAttr'/>
+<mbr r='tvm::runtime::GraphExecutor::module_' o='4864' t='tvm::runtime::Module'/>
+<mbr r='tvm::runtime::GraphExecutor::devices_' o='4928' t='std::vector&lt;Device&gt;'/>
+<mbr r='tvm::runtime::GraphExecutor::storage_pool_' o='5120' t='std::vector&lt;NDArray&gt;'/>
+<mbr r='tvm::runtime::GraphExecutor::data_entry_' o='5312' t='std::vector&lt;NDArray&gt;'/>
+<mbr r='tvm::runtime::GraphExecutor::data_alignment_' o='5504' t='std::vector&lt;size_t&gt;'/>
+<mbr r='tvm::runtime::GraphExecutor::op_execs_' o='5696' t='std::vector&lt;std::function&lt;void ()&gt;&gt;'/>
+<mbr r='tvm::runtime::GraphExecutor::lookup_linked_param_' o='5888' t='tvm::runtime::PackedFunc'/>
+<mbr r='tvm::runtime::GraphExecutor::module_lookup_linked_param_' o='5952' t='tvm::runtime::PackedFunc'/>
+<mbr r='tvm::runtime::GraphExecutor::module_lookup_linked_param_valid_' o='6016' t='bool'/>
+<use f='tvm/runtime/graph_executor/graph_executor.cc' l='292' c='_ZN3tvm7runtime13GraphExecutor11ShareParamsERKS1_PN4dmlc6StreamE'/>
+<use f='tvm/runtime/graph_executor/graph_executor.cc' l='668' c='_ZN3tvm7runtime13GraphExecutor11GetFunctionERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKNS0_9ObjectPtrINS0_6ObjectEEE'/>
+<use f='tvm/runtime/graph_executor/graph_executor.cc' l='693' c='_ZN3tvm7runtime19GraphExecutorCreateERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKNS0_6ModuleERKSt6vectorI8DLDeviceSaISD_EENS0_10PackedFuncE'/>
+<size>760</size>
+<fun r='_ZN3tvm7runtime13GraphExecutor3RunEv'/>
+<fun r='_ZN3tvm7runtime13GraphExecutor4InitERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS0_6ModuleERKSt6vectorI8DLDeviceSaISC_EENS0_10PackedFuncE'/>
+<fun r='_ZN3tvm7runtime13GraphExecutor13GetInputIndexERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<fun r='_ZNK3tvm7runtime13GraphExecutor12GetInputInfoEv'/>
+<fun r='_ZN3tvm7runtime13GraphExecutor14GetOutputIndexERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<fun r='_ZN3tvm7runtime13GraphExecutor8SetInputEiP8DLTensor'/>
+<fun r='_ZNK3tvm7runtime13GraphExecutor21CheckExternalDLTensorEPK8DLTensorj'/>
+<fun r='_ZN3tvm7runtime13GraphExecutor16SetInputZeroCopyEiP8DLTensor'/>
+<fun r='_ZN3tvm7runtime13GraphExecutor17SetOutputZeroCopyEiP8DLTensor'/>
+<fun r='_ZNK3tvm7runtime13GraphExecutor10NumOutputsEv'/>
+<fun r='_ZNK3tvm7runtime13GraphExecutor9NumInputsEv'/>
+<fun r='_ZNK3tvm7runtime13GraphExecutor8GetInputEi'/>
+<fun r='_ZNK3tvm7runtime13GraphExecutor9GetOutputEi'/>
+<fun r='_ZN3tvm7runtime13GraphExecutor12CopyOutputToEiP8DLTensor'/>
+<fun r='_ZN3tvm7runtime13GraphExecutor10LoadParamsERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<fun r='_ZN3tvm7runtime13GraphExecutor10LoadParamsEPN4dmlc6StreamE'/>
+<fun r='_ZN3tvm7runtime13GraphExecutor11ShareParamsERKS1_PN4dmlc6StreamE'/>
+<fun r='_ZN3tvm7runtime13GraphExecutor20LinkedNDArrayDeleterEPNS0_6ObjectE'/>
+<fun r='_ZN3tvm7runtime13GraphExecutor24DefaultLookupLinkedParamENS0_7TVMArgsEPNS0_11TVMRetValueE'/>
+<fun r='_ZN3tvm7runtime13GraphExecutor12SetupStorageEv'/>
+<fun r='_ZN3tvm7runtime13GraphExecutor12SetupOpExecsEv'/>
+<fun r='_ZN3tvm7runtime13GraphExecutor11CreateTVMOpERKNS0_10TVMOpParamERKSt6vectorI8DLTensorSaIS6_EE'/>
+<fun r='_ZN3tvm7runtime13GraphExecutor11GetFunctionERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKNS0_9ObjectPtrINS0_6ObjectEEE'/>
+<use f='tvm/runtime/graph_executor/graph_executor_factory.h' l='105' c='_ZNK3tvm7runtime20GraphExecutorFactory9SetParamsEPNS0_13GraphExecutorERKSt13unordered_mapINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS0_7NDA3279709'/>
+<use f='tvm/runtime/graph_executor/graph_executor_factory.cc' l='120' c='_ZN3tvm7runtime20GraphExecutorFactory14ExecutorCreateERKSt6vectorI8DLDeviceSaIS3_EE'/>
+<use f='tvm/runtime/graph_executor/graph_executor_factory.cc' l='150' c='_ZN3tvm7runtime20GraphExecutorFactory19DebugExecutorCreateERKSt6vectorI8DLDeviceSaIS3_EE'/>
+<use f='tvm/runtime/graph_executor/graph_executor_factory.cc' l='150' c='_ZN3tvm7runtime20GraphExecutorFactory19DebugExecutorCreateERKSt6vectorI8DLDeviceSaIS3_EE'/>
+<use f='tvm/runtime/graph_executor/graph_executor_factory.cc' l='175' c='_ZN3tvm7runtime20GraphExecutorFactory23CudaGraphExecutorCreateERKSt6vectorI8DLDeviceSaIS3_EE'/>
+<use f='tvm/runtime/graph_executor/graph_executor_factory.cc' l='175' c='_ZN3tvm7runtime20GraphExecutorFactory23CudaGraphExecutorCreateERKSt6vectorI8DLDeviceSaIS3_EE'/>
+<size>760</size>

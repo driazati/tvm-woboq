@@ -1,0 +1,14 @@
+<def f='tvm/tir/transforms/common_subexpr_elim_tools.cc' l='116' ll='124' type='void tvm::tir::UnionOfComputationTables(tvm::tir::ComputationTable * table_main, const tvm::tir::ComputationTable &amp; table_aux)'/>
+<use f='tvm/tir/transforms/common_subexpr_elim_tools.cc' l='144' u='c' c='_ZN3tvm3tir24UnionOfComputationTablesERKSt13unordered_mapINS_8PrimExprEmNS_14StructuralHashENS0_13ExprDeepEqualESaISt4pairIKS2_mEEESB_SB_'/>
+<use f='tvm/tir/transforms/common_subexpr_elim_tools.cc' l='145' u='c' c='_ZN3tvm3tir24UnionOfComputationTablesERKSt13unordered_mapINS_8PrimExprEmNS_14StructuralHashENS0_13ExprDeepEqualESaISt4pairIKS2_mEEESB_SB_'/>
+<use f='tvm/tir/transforms/common_subexpr_elim_tools.cc' l='359' u='c' c='_ZN3tvm3tir18ComputationsDoneBy9VisitExprERKNS_8PrimExprE'/>
+<use f='tvm/tir/transforms/common_subexpr_elim_tools.cc' l='382' u='c' c='_ZN3tvm3tir18ComputationsDoneBy9VisitExprERKNS_8PrimExprE'/>
+<use f='tvm/tir/transforms/common_subexpr_elim_tools.cc' l='401' u='c' c='_ZN3tvm3tir18ComputationsDoneBy9VisitStmtERKNS0_4StmtE'/>
+<use f='tvm/tir/transforms/common_subexpr_elim_tools.cc' l='414' u='c' c='_ZN3tvm3tir18ComputationsDoneBy9VisitStmtERKNS0_4StmtE'/>
+<doc f='tvm/tir/transforms/common_subexpr_elim_tools.cc' l='109'>/*!
+ * \brief Does the union of two tables of computations.
+ * \param table_main Pointer to one of the two tables. The union will be written into it.
+ * \param table_aux The other table, which won&apos;t change.
+ * \note Does it directly in the first argument A for efficiency, as the union of A and B
+ *       necessarily gives something which contains A, so we avoid its copy.
+ */</doc>

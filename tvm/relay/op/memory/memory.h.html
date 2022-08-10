@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>memory.h source code [tvm/relay/op/memory/memory.h] - Woboq Code Browser</title>
+<link rel="stylesheet" href="../../../.././data/qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href="../../../.././data/kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src="../../../.././data/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="../../../.././data/jquery/jquery-ui.min.js"></script>
+<script>var file = 'tvm/relay/op/memory/memory.h'; var root_path = '../../../..'; var data_path = '../../../.././data'; var ecma_script_api_version = 2;</script>
+<script src='../../../.././data/codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='../../..'>tvm</a>/<a href='../..'>relay</a>/<a href='..'>op</a>/<a href='./'>memory</a>/<a href='memory.h.html'>memory.h</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td><i>/*</i></td></tr>
+<tr><th id="2">2</th><td><i> * Licensed to the Apache Software Foundation (ASF) under one</i></td></tr>
+<tr><th id="3">3</th><td><i> * or more contributor license agreements.  See the NOTICE file</i></td></tr>
+<tr><th id="4">4</th><td><i> * distributed with this work for additional information</i></td></tr>
+<tr><th id="5">5</th><td><i> * regarding copyright ownership.  The ASF licenses this file</i></td></tr>
+<tr><th id="6">6</th><td><i> * to you under the Apache License, Version 2.0 (the</i></td></tr>
+<tr><th id="7">7</th><td><i> * "License"); you may not use this file except in compliance</i></td></tr>
+<tr><th id="8">8</th><td><i> * with the License.  You may obtain a copy of the License at</i></td></tr>
+<tr><th id="9">9</th><td><i> *</i></td></tr>
+<tr><th id="10">10</th><td><i> *   <a href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a></i></td></tr>
+<tr><th id="11">11</th><td><i> *</i></td></tr>
+<tr><th id="12">12</th><td><i> * Unless required by applicable law or agreed to in writing,</i></td></tr>
+<tr><th id="13">13</th><td><i> * software distributed under the License is distributed on an</i></td></tr>
+<tr><th id="14">14</th><td><i> * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY</i></td></tr>
+<tr><th id="15">15</th><td><i> * KIND, either express or implied.  See the License for the</i></td></tr>
+<tr><th id="16">16</th><td><i> * specific language governing permissions and limitations</i></td></tr>
+<tr><th id="17">17</th><td><i> * under the License.</i></td></tr>
+<tr><th id="18">18</th><td><i> */</i></td></tr>
+<tr><th id="19">19</th><td></td></tr>
+<tr><th id="20">20</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="21">21</th><td><i class="doc"> * <span class="command">\file</span> <span class="verb">src/relay/op/memory/memory.h</span></i></td></tr>
+<tr><th id="22">22</th><td><i class="doc"> * <span class="command">\brief</span> Operators for memory related operations in Relay.</i></td></tr>
+<tr><th id="23">23</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="24">24</th><td></td></tr>
+<tr><th id="25">25</th><td><u>#<span data-ppcond="25">ifndef</span> <span class="macro" data-ref="_M/TVM_RELAY_OP_MEMORY_MEMORY_H_">TVM_RELAY_OP_MEMORY_MEMORY_H_</span></u></td></tr>
+<tr><th id="26">26</th><td><u>#define <dfn class="macro" id="_M/TVM_RELAY_OP_MEMORY_MEMORY_H_" data-ref="_M/TVM_RELAY_OP_MEMORY_MEMORY_H_">TVM_RELAY_OP_MEMORY_MEMORY_H_</dfn></u></td></tr>
+<tr><th id="27">27</th><td></td></tr>
+<tr><th id="28">28</th><td><u>#include &lt;tvm/target/virtual_device.h&gt;</u></td></tr>
+<tr><th id="29">29</th><td></td></tr>
+<tr><th id="30">30</th><td><u>#include <a href="../../../../include/c++/10/vector.html">&lt;vector&gt;</a></u></td></tr>
+<tr><th id="31">31</th><td></td></tr>
+<tr><th id="32">32</th><td><u>#include "tvm/relay/expr.h"</u></td></tr>
+<tr><th id="33">33</th><td></td></tr>
+<tr><th id="34">34</th><td><b>namespace</b> <span class="namespace">tvm</span> {</td></tr>
+<tr><th id="35">35</th><td><b>namespace</b> <span class="namespace">relay</span> {</td></tr>
+<tr><th id="36">36</th><td></td></tr>
+<tr><th id="37">37</th><td><span class='typedef' title='tvm::relay::Expr' data-type='tvm::RelayExpr' data-ref="tvm::relay::Expr" data-ref-filename="tvm..relay..Expr">Expr</span> <dfn class="decl fn" id="_ZN3tvm5relay12AllocStorageENS_9RelayExprES1_NS_13VirtualDeviceENS_7runtime8DataTypeE" title='tvm::relay::AllocStorage' data-ref="_ZN3tvm5relay12AllocStorageENS_9RelayExprES1_NS_13VirtualDeviceENS_7runtime8DataTypeE" data-ref-filename="_ZN3tvm5relay12AllocStorageENS_9RelayExprES1_NS_13VirtualDeviceENS_7runtime8DataTypeE">AllocStorage</dfn>(<span class='typedef' title='tvm::relay::Expr' data-type='tvm::RelayExpr' data-ref="tvm::relay::Expr" data-ref-filename="tvm..relay..Expr">Expr</span> <dfn class="local col6 decl" id="26size" title='size' data-type='tvm::relay::Expr' data-ref="26size" data-ref-filename="26size">size</dfn>, <span class='typedef' title='tvm::relay::Expr' data-type='tvm::RelayExpr' data-ref="tvm::relay::Expr" data-ref-filename="tvm..relay..Expr">Expr</span> <dfn class="local col7 decl" id="27alignment" title='alignment' data-type='tvm::relay::Expr' data-ref="27alignment" data-ref-filename="27alignment">alignment</dfn>, <span class='type' title='tvm::VirtualDevice' data-ref="tvm::VirtualDevice" data-ref-filename="tvm..VirtualDevice">VirtualDevice</span> <dfn class="local col8 decl" id="28virtual_device" title='virtual_device' data-type='tvm::VirtualDevice' data-ref="28virtual_device" data-ref-filename="28virtual_device">virtual_device</dfn>, <span class='typedef' title='tvm::DataType' data-type='runtime::DataType' data-ref="tvm::DataType" data-ref-filename="tvm..DataType">DataType</span> <dfn class="local col9 decl" id="29dtype_hint" title='dtype_hint' data-type='tvm::DataType' data-ref="29dtype_hint" data-ref-filename="29dtype_hint">dtype_hint</dfn>);</td></tr>
+<tr><th id="38">38</th><td><i class="doc">/*! <span class="command">\brief</span> Returns the "memory.alloc_tensor" operator. */</i></td></tr>
+<tr><th id="39">39</th><td><em>const</em> <span class='typedef' title='tvm::relay::Op' data-type='tvm::Op' data-ref="tvm::relay::Op" data-ref-filename="tvm..relay..Op">Op</span>&amp; <dfn class="decl fn" id="_ZN3tvm5relay19MemoryAllocTensorOpEv" title='tvm::relay::MemoryAllocTensorOp' data-ref="_ZN3tvm5relay19MemoryAllocTensorOpEv" data-ref-filename="_ZN3tvm5relay19MemoryAllocTensorOpEv">MemoryAllocTensorOp</dfn>();</td></tr>
+<tr><th id="40">40</th><td><span class='typedef' title='tvm::relay::Expr' data-type='tvm::RelayExpr' data-ref="tvm::relay::Expr" data-ref-filename="tvm..relay..Expr">Expr</span> <dfn class="decl fn" id="_ZN3tvm5relay11AllocTensorENS_9RelayExprES1_S1_NS_7runtime8DataTypeENS2_5ArrayINS_8PrimExprEvEE" title='tvm::relay::AllocTensor' data-ref="_ZN3tvm5relay11AllocTensorENS_9RelayExprES1_S1_NS_7runtime8DataTypeENS2_5ArrayINS_8PrimExprEvEE" data-ref-filename="_ZN3tvm5relay11AllocTensorENS_9RelayExprES1_S1_NS_7runtime8DataTypeENS2_5ArrayINS_8PrimExprEvEE">AllocTensor</dfn>(<span class='typedef' title='tvm::relay::Expr' data-type='tvm::RelayExpr' data-ref="tvm::relay::Expr" data-ref-filename="tvm..relay..Expr">Expr</span> <dfn class="local col0 decl" id="30storage" title='storage' data-type='tvm::relay::Expr' data-ref="30storage" data-ref-filename="30storage">storage</dfn>, <span class='typedef' title='tvm::relay::Expr' data-type='tvm::RelayExpr' data-ref="tvm::relay::Expr" data-ref-filename="tvm..relay..Expr">Expr</span> <dfn class="local col1 decl" id="31offset" title='offset' data-type='tvm::relay::Expr' data-ref="31offset" data-ref-filename="31offset">offset</dfn>, <span class="namespace">tvm::relay::</span><span class='typedef' title='tvm::relay::Expr' data-type='tvm::RelayExpr' data-ref="tvm::relay::Expr" data-ref-filename="tvm..relay..Expr">Expr</span> <dfn class="local col2 decl" id="32shape" title='shape' data-type='tvm::relay::Expr' data-ref="32shape" data-ref-filename="32shape">shape</dfn>, <span class='typedef' title='tvm::DataType' data-type='runtime::DataType' data-ref="tvm::DataType" data-ref-filename="tvm..DataType">DataType</span> <dfn class="local col3 decl" id="33dtype" title='dtype' data-type='tvm::DataType' data-ref="33dtype" data-ref-filename="33dtype">dtype</dfn>,</td></tr>
+<tr><th id="41">41</th><td>                 <span class='type' title='tvm::runtime::Array' data-ref="tvm::runtime::Array" data-ref-filename="tvm..runtime..Array">Array</span>&lt;<span class='typedef' title='tvm::relay::IndexExpr' data-type='::tvm::PrimExpr' data-ref="tvm::relay::IndexExpr" data-ref-filename="tvm..relay..IndexExpr">IndexExpr</span>&gt; <dfn class="local col4 decl" id="34assert_shape" title='assert_shape' data-type='Array&lt;tvm::relay::IndexExpr&gt;' data-ref="34assert_shape" data-ref-filename="34assert_shape">assert_shape</dfn>);</td></tr>
+<tr><th id="42">42</th><td><span class='typedef' title='tvm::relay::Expr' data-type='tvm::RelayExpr' data-ref="tvm::relay::Expr" data-ref-filename="tvm..relay..Expr">Expr</span> <dfn class="decl fn" id="_ZN3tvm5relay11ToTupleTypeERKNS_4TypeERKSt6vectorINS_9RelayExprESaIS5_EE" title='tvm::relay::ToTupleType' data-ref="_ZN3tvm5relay11ToTupleTypeERKNS_4TypeERKSt6vectorINS_9RelayExprESaIS5_EE" data-ref-filename="_ZN3tvm5relay11ToTupleTypeERKNS_4TypeERKSt6vectorINS_9RelayExprESaIS5_EE">ToTupleType</dfn>(<em>const</em> <span class='typedef' title='tvm::relay::Type' data-type='tvm::Type' data-ref="tvm::relay::Type" data-ref-filename="tvm..relay..Type">Type</span>&amp; <dfn class="local col5 decl" id="35ty" title='ty' data-type='const tvm::relay::Type &amp;' data-ref="35ty" data-ref-filename="35ty">ty</dfn>, <em>const</em> <span class="namespace">std::</span><a class="type" href="../../../../include/c++/10/bits/stl_vector.h.html#std::vector" title='std::vector' data-ref="std::vector" data-ref-filename="std..vector">vector</a>&lt;<span class='typedef' title='tvm::relay::Expr' data-type='tvm::RelayExpr' data-ref="tvm::relay::Expr" data-ref-filename="tvm..relay..Expr">Expr</span>&gt;&amp; <dfn class="local col6 decl" id="36exprs" title='exprs' data-type='const std::vector&lt;Expr&gt; &amp;' data-ref="36exprs" data-ref-filename="36exprs">exprs</dfn>);</td></tr>
+<tr><th id="43">43</th><td><span class="namespace">std::</span><a class="type" href="../../../../include/c++/10/bits/stl_vector.h.html#std::vector" title='std::vector' data-ref="std::vector" data-ref-filename="std..vector">vector</a>&lt;<span class='typedef' title='tvm::relay::Expr' data-type='tvm::RelayExpr' data-ref="tvm::relay::Expr" data-ref-filename="tvm..relay..Expr">Expr</span>&gt; <dfn class="decl fn" id="_ZN3tvm5relay13FromTupleTypeERKNS_4TypeERKNS_9RelayExprE" title='tvm::relay::FromTupleType' data-ref="_ZN3tvm5relay13FromTupleTypeERKNS_4TypeERKNS_9RelayExprE" data-ref-filename="_ZN3tvm5relay13FromTupleTypeERKNS_4TypeERKNS_9RelayExprE">FromTupleType</dfn>(<em>const</em> <span class='typedef' title='tvm::relay::Type' data-type='tvm::Type' data-ref="tvm::relay::Type" data-ref-filename="tvm..relay..Type">Type</span>&amp; <dfn class="local col7 decl" id="37type" title='type' data-type='const tvm::relay::Type &amp;' data-ref="37type" data-ref-filename="37type">type</dfn>, <em>const</em> <span class='typedef' title='tvm::relay::Expr' data-type='tvm::RelayExpr' data-ref="tvm::relay::Expr" data-ref-filename="tvm..relay..Expr">Expr</span>&amp; <dfn class="local col8 decl" id="38expr" title='expr' data-type='const tvm::relay::Expr &amp;' data-ref="38expr" data-ref-filename="38expr">expr</dfn>);</td></tr>
+<tr><th id="44">44</th><td><span class="namespace">std::</span><a class="type" href="../../../../include/c++/10/bits/stl_vector.h.html#std::vector" title='std::vector' data-ref="std::vector" data-ref-filename="std..vector">vector</a>&lt;<span class='typedef' title='tvm::relay::TensorType' data-type='tvm::TensorType' data-ref="tvm::relay::TensorType" data-ref-filename="tvm..relay..TensorType">TensorType</span>&gt; <dfn class="decl fn" id="_ZN3tvm5relay16FlattenTupleTypeERKNS_4TypeE" title='tvm::relay::FlattenTupleType' data-ref="_ZN3tvm5relay16FlattenTupleTypeERKNS_4TypeE" data-ref-filename="_ZN3tvm5relay16FlattenTupleTypeERKNS_4TypeE">FlattenTupleType</dfn>(<em>const</em> <span class='typedef' title='tvm::relay::Type' data-type='tvm::Type' data-ref="tvm::relay::Type" data-ref-filename="tvm..relay..Type">Type</span>&amp; <dfn class="local col9 decl" id="39type" title='type' data-type='const tvm::relay::Type &amp;' data-ref="39type" data-ref-filename="39type">type</dfn>);</td></tr>
+<tr><th id="45">45</th><td></td></tr>
+<tr><th id="46">46</th><td>}  <i>// namespace relay</i></td></tr>
+<tr><th id="47">47</th><td>}  <i>// namespace tvm</i></td></tr>
+<tr><th id="48">48</th><td></td></tr>
+<tr><th id="49">49</th><td><u>#<span data-ppcond="25">endif</span>  // TVM_RELAY_OP_MEMORY_MEMORY_H_</u></td></tr>
+<tr><th id="50">50</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated while processing <a href='../../backend/graph_plan_memory.cc.html'>tvm/relay/backend/graph_plan_memory.cc</a><br/>Generated on <em>2022-Aug-10</em> from project tvm revision <em>123</em><br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

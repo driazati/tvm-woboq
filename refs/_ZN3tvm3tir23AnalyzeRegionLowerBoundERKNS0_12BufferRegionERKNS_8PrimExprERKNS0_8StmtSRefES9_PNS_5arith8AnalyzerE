@@ -1,0 +1,24 @@
+<dec f='tvm/tir/schedule/analysis.h' l='695' type='Array&lt;arith::IntSet&gt; tvm::tir::AnalyzeRegionLowerBound(const tvm::tir::BufferRegion &amp; region, const tvm::PrimExpr &amp; predicate, const tvm::tir::StmtSRef &amp; dom_low_inclusive, const tvm::tir::StmtSRef &amp; dom_high_exclusive, arith::Analyzer * analyzer)'/>
+<doc f='tvm/tir/schedule/analysis.h' l='685'>/*!
+ * \brief Analyze the buffer region under the sref tree path [dom_low_inclusive, dom_high_exclusive)
+ * Some subregion may be discarded during the lower-bound analysis.
+ * \param realize The block realize that touches the buffer region
+ * \param region The buffer region to be analyzed
+ * \param dom_low_inclusive The lowest node in the sref tree path
+ * \param dom_high_exclusive The highest node in the sref tree path
+ * \param analyzer The analyzer
+ * \return An n-dimensional integer set
+ */</doc>
+<def f='tvm/tir/schedule/state.cc' l='66' ll='82' type='Array&lt;arith::IntSet&gt; tvm::tir::AnalyzeRegionLowerBound(const tvm::tir::BufferRegion &amp; region, const tvm::PrimExpr &amp; predicate, const tvm::tir::StmtSRef &amp; dom_low_inclusive, const tvm::tir::StmtSRef &amp; dom_high_exclusive, arith::Analyzer * analyzer)'/>
+<use f='tvm/tir/schedule/state.cc' l='319' u='c' c='_ZN3tvm3tir18BlockInfoCollector32CheckRegionCoverAndStagePipelineERKNS0_9BlockInfoERKNS0_8StmtSRefERKNS_7runtime5ArrayIS5_vEE'/>
+<doc f='tvm/tir/schedule/state.cc' l='56'>/*!
+ * \brief Analyze the buffer region under the sref tree path [dom_low_inclusive, dom_high_exclusive)
+ * Some subregion may be discarded during the lower-bound analysis.
+ * \param realize The block realize that touches the buffer region
+ * \param region The buffer region to be analyzed
+ * \param dom_low_inclusive The lowest node in the sref tree path
+ * \param dom_high_exclusive The highest node in the sref tree path
+ * \param analyzer The analyzer
+ * \return An n-dimensional integer set
+ */</doc>
+<doc f='tvm/tir/schedule/state.cc' l='66'>//</doc>

@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>target.cc source code [tvm/relay/backend/contrib/example_target_hooks/target.cc] - Woboq Code Browser</title>
+<link rel="stylesheet" href="../../../../.././data/qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href="../../../../.././data/kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src="../../../../.././data/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="../../../../.././data/jquery/jquery-ui.min.js"></script>
+<script>var file = 'tvm/relay/backend/contrib/example_target_hooks/target.cc'; var root_path = '../../../../..'; var data_path = '../../../../.././data'; var ecma_script_api_version = 2;</script>
+<script src='../../../../.././data/codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='../../../..'>tvm</a>/<a href='../../..'>relay</a>/<a href='../..'>backend</a>/<a href='..'>contrib</a>/<a href='./'>example_target_hooks</a>/<a href='target.cc.html'>target.cc</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td><i>/*</i></td></tr>
+<tr><th id="2">2</th><td><i> * Licensed to the Apache Software Foundation (ASF) under one</i></td></tr>
+<tr><th id="3">3</th><td><i> * or more contributor license agreements.  See the NOTICE file</i></td></tr>
+<tr><th id="4">4</th><td><i> * distributed with this work for additional information</i></td></tr>
+<tr><th id="5">5</th><td><i> * regarding copyright ownership.  The ASF licenses this file</i></td></tr>
+<tr><th id="6">6</th><td><i> * to you under the Apache License, Version 2.0 (the</i></td></tr>
+<tr><th id="7">7</th><td><i> * "License"); you may not use this file except in compliance</i></td></tr>
+<tr><th id="8">8</th><td><i> * with the License.  You may obtain a copy of the License at</i></td></tr>
+<tr><th id="9">9</th><td><i> *</i></td></tr>
+<tr><th id="10">10</th><td><i> *   <a href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a></i></td></tr>
+<tr><th id="11">11</th><td><i> *</i></td></tr>
+<tr><th id="12">12</th><td><i> * Unless required by applicable law or agreed to in writing,</i></td></tr>
+<tr><th id="13">13</th><td><i> * software distributed under the License is distributed on an</i></td></tr>
+<tr><th id="14">14</th><td><i> * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY</i></td></tr>
+<tr><th id="15">15</th><td><i> * KIND, either express or implied.  See the License for the</i></td></tr>
+<tr><th id="16">16</th><td><i> * specific language governing permissions and limitations</i></td></tr>
+<tr><th id="17">17</th><td><i> * under the License.</i></td></tr>
+<tr><th id="18">18</th><td><i> */</i></td></tr>
+<tr><th id="19">19</th><td></td></tr>
+<tr><th id="20">20</th><td><u>#include &lt;tvm/relay/transform.h&gt;</u></td></tr>
+<tr><th id="21">21</th><td><u>#include &lt;tvm/target/target.h&gt;</u></td></tr>
+<tr><th id="22">22</th><td></td></tr>
+<tr><th id="23">23</th><td><b>namespace</b> <span class="namespace">tvm</span> {</td></tr>
+<tr><th id="24">24</th><td></td></tr>
+<tr><th id="25">25</th><td><b>namespace</b> <span class="namespace">relay</span> {</td></tr>
+<tr><th id="26">26</th><td><b>namespace</b> <span class="namespace">contrib</span> {</td></tr>
+<tr><th id="27">27</th><td><b>namespace</b> <span class="namespace">example_target_hooks</span> {</td></tr>
+<tr><th id="28">28</th><td><span class="namespace">tvm::transform::</span><span class='type' title='tvm::transform::Pass' data-ref="tvm::transform::Pass" data-ref-filename="tvm..transform..Pass">Pass</span> <dfn class="decl fn" id="_ZN3tvm5relay7contrib20example_target_hooks10RelayToTIREv" title='tvm::relay::contrib::example_target_hooks::RelayToTIR' data-ref="_ZN3tvm5relay7contrib20example_target_hooks10RelayToTIREv" data-ref-filename="_ZN3tvm5relay7contrib20example_target_hooks10RelayToTIREv">RelayToTIR</dfn>();</td></tr>
+<tr><th id="29">29</th><td><span class="namespace">runtime::</span><span class='type' title='tvm::runtime::Module' data-ref="tvm::runtime::Module" data-ref-filename="tvm..runtime..Module">Module</span> <dfn class="decl fn" id="_ZN3tvm5relay7contrib20example_target_hooks12TIRToRuntimeENS_8IRModuleENS_6TargetE" title='tvm::relay::contrib::example_target_hooks::TIRToRuntime' data-ref="_ZN3tvm5relay7contrib20example_target_hooks12TIRToRuntimeENS_8IRModuleENS_6TargetE" data-ref-filename="_ZN3tvm5relay7contrib20example_target_hooks12TIRToRuntimeENS_8IRModuleENS_6TargetE">TIRToRuntime</dfn>(<span class='type' title='tvm::IRModule' data-ref="tvm::IRModule" data-ref-filename="tvm..IRModule">IRModule</span> <dfn class="local col1 decl" id="1mod" title='mod' data-type='tvm::IRModule' data-ref="1mod" data-ref-filename="1mod">mod</dfn>, <span class='type' title='tvm::Target' data-ref="tvm::Target" data-ref-filename="tvm..Target">Target</span> <dfn class="local col2 decl" id="2target" title='target' data-type='tvm::Target' data-ref="2target" data-ref-filename="2target">target</dfn>);</td></tr>
+<tr><th id="30">30</th><td>}  <i>// namespace example_target_hooks</i></td></tr>
+<tr><th id="31">31</th><td>}  <i>// namespace contrib</i></td></tr>
+<tr><th id="32">32</th><td>}  <i>// namespace relay</i></td></tr>
+<tr><th id="33">33</th><td></td></tr>
+<tr><th id="34">34</th><td><span class="macro" title="static __attribute__((unused)) ::tvm::TargetKindRegEntry&amp; __make_TargetKind0 = ::tvm::TargetKindRegEntry::RegisterOrGet(&quot;example_target_hook&quot;) .set_name() .set_device_type(kDLCPU) .add_attr_option&lt;Array&lt;String&gt;&gt;(&quot;keys&quot;) .add_attr_option&lt;String&gt;(&quot;tag&quot;) .add_attr_option&lt;String&gt;(&quot;device&quot;) .add_attr_option&lt;String&gt;(&quot;model&quot;) .add_attr_option&lt;Array&lt;String&gt;&gt;(&quot;libs&quot;) .add_attr_option&lt;Target&gt;(&quot;host&quot;) .add_attr_option&lt;Integer&gt;(&quot;from_device&quot;)" data-ref="_M/TVM_REGISTER_TARGET_KIND">TVM_REGISTER_TARGET_KIND</span>(<span class='ref fn fake' title='tvm::runtime::String::String' data-ref="_ZN3tvm7runtime6StringC1EPKc" data-ref-filename="_ZN3tvm7runtime6StringC1EPKc"></span><q>"example_target_hook"</q>, <span class='enum' title='kDLCPU' data-ref="kDLCPU" data-ref-filename="kDLCPU">kDLCPU</span>)</td></tr>
+<tr><th id="35">35</th><td>    .<span class='ref fn' title='tvm::TargetKindRegEntry::set_attr' data-ref="_ZN3tvm18TargetKindRegEntry8set_attrERKNS_7runtime6StringERKT_i" data-ref-filename="_ZN3tvm18TargetKindRegEntry8set_attrERKNS_7runtime6StringERKT_i">set_attr</span>&lt;<span class='type' title='tvm::Bool' data-ref="tvm::Bool" data-ref-filename="tvm..Bool">Bool</span>&gt;(<span class='ref fn fake' title='tvm::runtime::String::String' data-ref="_ZN3tvm7runtime6StringC1EPKc" data-ref-filename="_ZN3tvm7runtime6StringC1EPKc"></span><q>"use_device_api"</q>, <span class='type' title='tvm::Bool' data-ref="tvm::Bool" data-ref-filename="tvm..Bool">Bool</span><span class='ref fn' title='tvm::Bool::Bool' data-ref="_ZN3tvm4BoolC1EbNS_4SpanE" data-ref-filename="_ZN3tvm4BoolC1EbNS_4SpanE">(</span><b>true</b>))</td></tr>
+<tr><th id="36">36</th><td>    .<span class='ref fn' title='tvm::TargetKindRegEntry::set_attr' data-ref="_ZN3tvm18TargetKindRegEntry8set_attrERKNS_7runtime6StringERKT_i" data-ref-filename="_ZN3tvm18TargetKindRegEntry8set_attrERKNS_7runtime6StringERKT_i">set_attr</span>&lt;<span class='typedef' title='tvm::FTVMRelayToTIR' data-type='transform::Pass' data-ref="tvm::FTVMRelayToTIR" data-ref-filename="tvm..FTVMRelayToTIR">FTVMRelayToTIR</span>&gt;(<span class='ref fn fake' title='tvm::runtime::String::String' data-ref="_ZN3tvm7runtime6StringC1EPKc" data-ref-filename="_ZN3tvm7runtime6StringC1EPKc"></span><span class="namespace">attr::</span><span class='ref' title='tvm::attr::kRelayToTIR' data-ref="tvm::attr::kRelayToTIR" data-ref-filename="tvm..attr..kRelayToTIR">kRelayToTIR</span>, <span class="namespace">relay::contrib::example_target_hooks::</span><a class="ref fn" href="#_ZN3tvm5relay7contrib20example_target_hooks10RelayToTIREv" title='tvm::relay::contrib::example_target_hooks::RelayToTIR' data-ref="_ZN3tvm5relay7contrib20example_target_hooks10RelayToTIREv" data-ref-filename="_ZN3tvm5relay7contrib20example_target_hooks10RelayToTIREv">RelayToTIR</a>())</td></tr>
+<tr><th id="37">37</th><td>    .<span class='ref fn' title='tvm::TargetKindRegEntry::set_attr' data-ref="_ZN3tvm18TargetKindRegEntry8set_attrERKNS_7runtime6StringERKT_i" data-ref-filename="_ZN3tvm18TargetKindRegEntry8set_attrERKNS_7runtime6StringERKT_i">set_attr</span>&lt;<span class='typedef' title='tvm::FTVMTIRToRuntime' data-type='runtime::TypedPackedFunc&lt;runtime::Module (IRModule, Target)&gt;' data-ref="tvm::FTVMTIRToRuntime" data-ref-filename="tvm..FTVMTIRToRuntime">FTVMTIRToRuntime</span>&gt;(<span class='ref fn fake' title='tvm::runtime::String::String' data-ref="_ZN3tvm7runtime6StringC1EPKc" data-ref-filename="_ZN3tvm7runtime6StringC1EPKc"></span><q>"TIRToRuntime"</q>, <span class='ref fn fake' title='tvm::runtime::TypedPackedFunc&lt;type-parameter-0-0 (type-parameter-0-1...)&gt;::TypedPackedFunc&lt;type-parameter-0-0 (type-parameter-0-1...)&gt;' data-ref="_ZN3tvm7runtime15TypedPackedFuncIFT_DpT0_EEC1ERKTL0__" data-ref-filename="_ZN3tvm7runtime15TypedPackedFuncIFT_DpT0_EEC1ERKTL0__"></span><span class="namespace">relay::contrib::example_target_hooks::</span><a class="ref fn" href="#_ZN3tvm5relay7contrib20example_target_hooks12TIRToRuntimeENS_8IRModuleENS_6TargetE" title='tvm::relay::contrib::example_target_hooks::TIRToRuntime' data-ref="_ZN3tvm5relay7contrib20example_target_hooks12TIRToRuntimeENS_8IRModuleENS_6TargetE" data-ref-filename="_ZN3tvm5relay7contrib20example_target_hooks12TIRToRuntimeENS_8IRModuleENS_6TargetE">TIRToRuntime</a>)</td></tr>
+<tr><th id="38">38</th><td>    .<span class='ref fn' title='tvm::TargetKindRegEntry::add_attr_option' data-ref="_ZN3tvm18TargetKindRegEntry15add_attr_optionERKNS_7runtime6StringENS1_9ObjectRefE" data-ref-filename="_ZN3tvm18TargetKindRegEntry15add_attr_optionERKNS_7runtime6StringENS1_9ObjectRefE">add_attr_option</span>&lt;<span class='type' title='tvm::Integer' data-ref="tvm::Integer" data-ref-filename="tvm..Integer">Integer</span>&gt;(<span class='ref fn fake' title='tvm::runtime::String::String' data-ref="_ZN3tvm7runtime6StringC1EPKc" data-ref-filename="_ZN3tvm7runtime6StringC1EPKc"></span><q>"example_attribute"</q>, <span class='ref fn fake' title='tvm::runtime::ObjectRef::ObjectRef' data-ref="_ZN3tvm7runtime9ObjectRefC1EOS1_" data-ref-filename="_ZN3tvm7runtime9ObjectRefC1EOS1_"></span><span class='type' title='tvm::Integer' data-ref="tvm::Integer" data-ref-filename="tvm..Integer">Integer</span><span class='ref fn' title='tvm::Integer::Integer' data-ref="_ZN3tvm7IntegerC1EiNS_4SpanE" data-ref-filename="_ZN3tvm7IntegerC1EiNS_4SpanE">(</span><var>0</var>));</td></tr>
+<tr><th id="39">39</th><td></td></tr>
+<tr><th id="40">40</th><td>}  <i>// namespace tvm</i></td></tr>
+<tr><th id="41">41</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated on <em>2022-Aug-10</em> from project tvm revision <em>123</em><br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

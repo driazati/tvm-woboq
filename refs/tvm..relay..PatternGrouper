@@ -1,0 +1,30 @@
+<def f='tvm/relay/ir/dataflow_matcher_impl.h' l='98' ll='151'/>
+<size>144</size>
+<doc f='tvm/relay/ir/dataflow_matcher_impl.h' l='89'>/*!
+ * \brief PatternGrouper does pre-rewriting pattern matching and analysis
+ *
+ * This class creates a number of groups of matched expressions, ensures they don&apos;t overlap, and
+ * returns them to the caller for post-analysis rewriting.
+ *
+ * This is primarily needed to support the post-dominator analysis required for dominator pattern
+ * matching.
+ */</doc>
+<fun r='_ZN3tvm5relay14PatternGrouper17GetGIDAssignmentsEv'/>
+<fun r='_ZN3tvm5relay14PatternGrouper12GroupMatchesERKNS0_9DFPatternERKNS_9RelayExprE'/>
+<fun r='_ZN3tvm5relay14PatternGrouper10VisitExprsEv'/>
+<fun r='_ZN3tvm5relay14PatternGrouper11CreateGroupERKNS_9RelayExprE'/>
+<fun r='_ZN3tvm5relay14PatternGrouper10EmbedConstERKNS_9RelayExprENS0_9DFPatternE'/>
+<mbr r='tvm::relay::PatternGrouper::pattern_' o='0' t='tvm::relay::DFPattern'/>
+<mbr r='tvm::relay::PatternGrouper::groups_' o='64' t='std::unordered_map&lt;int, Group&gt;'/>
+<mbr r='tvm::relay::PatternGrouper::gid_assignments_' o='512' t='std::unordered_map&lt;Expr, int, ObjectPtrHash, ObjectPtrEqual&gt;'/>
+<mbr r='tvm::relay::PatternGrouper::matcher_' o='960' t='tvm::relay::DFPatternMatcher *'/>
+<mbr r='tvm::relay::PatternGrouper::pattern_graph_' o='1024' t='std::unique_ptr&lt;IndexedGraph&lt;DFPattern&gt;&gt;'/>
+<mbr r='tvm::relay::PatternGrouper::gid_' o='1088' t='int'/>
+<mbr r='tvm::relay::PatternGrouper::graph_number_' o='1120' t='int'/>
+<use f='tvm/relay/ir/dataflow_matcher.cc' l='815' c='_ZN3tvm5relay15PatternRewriter7RewriteERKNS_7runtime5ArrayINS0_17DFPatternCallbackEvEERKNS_9RelayExprE'/>
+<use f='tvm/relay/ir/dataflow_matcher.cc' l='872' c='_ZN3tvm5relay18PatternPartitioner9PartitionERKNS0_9DFPatternERKNS_9RelayExprERKNS_7runtime3MapINS8_6StringENS8_9ObjectRefEvvEENS8_10PackedFuncE'/>
+<size>144</size>
+<fun r='_ZN3tvm5relay14PatternGrouper12GroupMatchesERKNS0_9DFPatternERKNS_9RelayExprE'/>
+<fun r='_ZN3tvm5relay14PatternGrouper10VisitExprsEv'/>
+<fun r='_ZN3tvm5relay14PatternGrouper11CreateGroupERKNS_9RelayExprE'/>
+<fun r='_ZN3tvm5relay14PatternGrouper10EmbedConstERKNS_9RelayExprENS0_9DFPatternE'/>

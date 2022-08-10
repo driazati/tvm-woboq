@@ -1,0 +1,15 @@
+<dec f='tvm/relay/collage/sub_graph.h' l='329' type='bool tvm::relay::collage::SubGraphNode::IsValid(const tvm::relay::collage::DataflowGraph &amp; dataflow_graph, const tvm::relay::collage::SubGraphConfig &amp; config) const'/>
+<doc f='tvm/relay/collage/sub_graph.h' l='318'>/*!
+   * \brief Returns true if this sub-graph is valid. Ie:
+   *  - no output of the sub-graph can flow to any input of the sub-graph (otherwise we&apos;d end up
+   *    with a dataflow cycle when we partition).
+   *  - all inputs and outputs of the sub-graph are in the same scope, ie not separated by
+   *    control flow (otherwise there&apos;d be no consistent program point at which to eval the
+   *    partitioned function).
+   *  - no more than config.max_outputs outputs are required.
+   *  - if config.allow_taps is false, no inside node has outputs to nodes both inside and
+   *    outside the sub-graph.
+   */</doc>
+<use f='tvm/relay/collage/partition_rule.cc' l='361' u='c' c='_ZNK3tvm5relay7collage26OnlyValidPartitionRuleNode13AllCandidatesERKNS1_13DataflowGraphERKNS1_13PartitionSpecE'/>
+<def f='tvm/relay/collage/sub_graph.cc' l='601' ll='668' type='bool tvm::relay::collage::SubGraphNode::IsValid(const tvm::relay::collage::DataflowGraph &amp; dataflow_graph, const tvm::relay::collage::SubGraphConfig &amp; config) const'/>
+<use f='tvm/relay/collage/sub_graph.cc' l='1013' u='c' c='_ZN3tvm5relay7collage19PartitionForTestingENS_7IntegerENS_4BoolENS_7runtime6StringENS4_5ArrayIS2_vEENS6_IS5_vEE'/>

@@ -1,0 +1,80 @@
+<use f='tvm/relay/transforms/device_domains.h' l='137'/>
+<def f='tvm/relay/transforms/device_domains.h' l='144' ll='351'/>
+<size>288</size>
+<doc f='tvm/relay/transforms/device_domains.h' l='140'>/*!
+ * \brief Tracks the device domains for a set of expressions w.r.t. an equivalence relation
+ * built up by calls to \p UnifyOrNull.
+ */</doc>
+<fun r='_ZN3tvm5relay9transform13DeviceDomainsC1ENS_17CompilationConfigE'/>
+<fun r='_ZNK3tvm5relay9transform13DeviceDomains6configEv'/>
+<fun r='_ZN3tvm5relay9transform13DeviceDomains20MakeFirstOrderDomainERKNS_13VirtualDeviceE'/>
+<fun r='_ZN3tvm5relay9transform13DeviceDomains21MakeHigherOrderDomainESt6vectorISt10shared_ptrINS1_12DeviceDomainEESaIS6_EE'/>
+<fun r='_ZN3tvm5relay9transform13DeviceDomains10MakeDomainERKNS_4TypeERKNS_13VirtualDeviceE'/>
+<fun r='_ZN3tvm5relay9transform13DeviceDomains16ForVirtualDeviceERKNS_4TypeERKNS_13VirtualDeviceE'/>
+<fun r='_ZN3tvm5relay9transform13DeviceDomains4FreeERKNS_4TypeE'/>
+<fun r='_ZN3tvm5relay9transform13DeviceDomains6LookupESt10shared_ptrINS1_12DeviceDomainEE'/>
+<fun r='_ZN3tvm5relay9transform13DeviceDomains10JoinOrNullERKSt10shared_ptrINS1_12DeviceDomainEES7_'/>
+<fun r='_ZN3tvm5relay9transform13DeviceDomains11UnifyOrNullESt10shared_ptrINS1_12DeviceDomainEES5_'/>
+<fun r='_ZN3tvm5relay9transform13DeviceDomains15CollapseOrFalseERKSt10shared_ptrINS1_12DeviceDomainEES7_'/>
+<fun r='_ZN3tvm5relay9transform13DeviceDomains21UnifyCollapsedOrFalseERKSt10shared_ptrINS1_12DeviceDomainEES7_'/>
+<fun r='_ZNK3tvm5relay9transform13DeviceDomains8containsERKNS_9RelayExprE'/>
+<fun r='_ZN3tvm5relay9transform13DeviceDomains9DomainForERKNS_9RelayExprE'/>
+<fun r='_ZN3tvm5relay9transform13DeviceDomains15DomainForCalleeERKNS0_4CallE'/>
+<fun r='_ZN3tvm5relay9transform13DeviceDomains14UnifyExprExactERKNS_9RelayExprES5_'/>
+<fun r='_ZN3tvm5relay9transform13DeviceDomains22OptionalUnifyExprExactERKNS_9RelayExprES5_'/>
+<fun r='_ZN3tvm5relay9transform13DeviceDomains14UnifyExprExactERKNS_9RelayExprERKSt10shared_ptrINS1_12DeviceDomainEE'/>
+<fun r='_ZN3tvm5relay9transform13DeviceDomains18UnifyExprCollapsedERKNS_9RelayExprERKSt10shared_ptrINS1_12DeviceDomainEE'/>
+<fun r='_ZN3tvm5relay9transform13DeviceDomains18IsFullyConstrainedESt10shared_ptrINS1_12DeviceDomainEE'/>
+<fun r='_ZN3tvm5relay9transform13DeviceDomains10SetDefaultESt10shared_ptrINS1_12DeviceDomainEERKNS_13VirtualDeviceE'/>
+<fun r='_ZN3tvm5relay9transform13DeviceDomains26SetResultDefaultThenParamsERKSt10shared_ptrINS1_12DeviceDomainEERKNS_13VirtualDeviceE'/>
+<fun r='_ZN3tvm5relay9transform13DeviceDomains12ResultDomainESt10shared_ptrINS1_12DeviceDomainEE'/>
+<fun r='_ZN3tvm5relay9transform13DeviceDomains19ResultVirtualDeviceERKSt10shared_ptrINS1_12DeviceDomainEE'/>
+<fun r='_ZN3tvm5relay9transform13DeviceDomains8ToStringB5cxx11ESt10shared_ptrINS1_12DeviceDomainEE'/>
+<fun r='_ZN3tvm5relay9transform13DeviceDomains8ToStringB5cxx11Ev'/>
+<mbr r='tvm::relay::transform::DeviceDomains::alloc_storage_op' o='0' t='const tvm::Op &amp;'/>
+<mbr r='tvm::relay::transform::DeviceDomains::alloc_tensor_op' o='64' t='const tvm::Op &amp;'/>
+<mbr r='tvm::relay::transform::DeviceDomains::shape_of_op' o='128' t='const tvm::Op &amp;'/>
+<mbr r='tvm::relay::transform::DeviceDomains::invoke_tvm_op' o='192' t='const tvm::Op &amp;'/>
+<mbr r='tvm::relay::transform::DeviceDomains::reshape_tensor_op' o='256' t='const tvm::Op &amp;'/>
+<mbr r='tvm::relay::transform::DeviceDomains::config_' o='320' t='tvm::CompilationConfig'/>
+<mbr r='tvm::relay::transform::DeviceDomains::host_domain_' o='384' t='tvm::relay::transform::DeviceDomainPtr'/>
+<mbr r='tvm::relay::transform::DeviceDomains::expr_to_domain_' o='512' t='std::unordered_map&lt;const ExprNode *, DeviceDomainPtr&gt;'/>
+<mbr r='tvm::relay::transform::DeviceDomains::call_to_callee_domain_' o='960' t='std::unordered_map&lt;const CallNode *, DeviceDomainPtr&gt;'/>
+<mbr r='tvm::relay::transform::DeviceDomains::domain_to_equiv_' o='1408' t='std::unordered_map&lt;DeviceDomainPtr, DeviceDomainPtr&gt;'/>
+<mbr r='tvm::relay::transform::DeviceDomains::fully_constrained_virtual_device_to_domain_' o='1856' t='std::unordered_map&lt;VirtualDevice, DeviceDomainPtr, runtime::ObjectPtrHash, runtime::ObjectPtrEqual&gt;'/>
+<fun r='_ZN3tvm5relay9transform13DeviceDomainsC1ENS_17CompilationConfigE'/>
+<fun r='_ZN3tvm5relay9transform13DeviceDomains20MakeFirstOrderDomainERKNS_13VirtualDeviceE'/>
+<fun r='_ZN3tvm5relay9transform13DeviceDomains10MakeDomainERKNS_4TypeERKNS_13VirtualDeviceE'/>
+<fun r='_ZN3tvm5relay9transform13DeviceDomains16ForVirtualDeviceERKNS_4TypeERKNS_13VirtualDeviceE'/>
+<fun r='_ZN3tvm5relay9transform13DeviceDomains6LookupESt10shared_ptrINS1_12DeviceDomainEE'/>
+<fun r='_ZN3tvm5relay9transform13DeviceDomains10JoinOrNullERKSt10shared_ptrINS1_12DeviceDomainEES7_'/>
+<fun r='_ZN3tvm5relay9transform13DeviceDomains11UnifyOrNullESt10shared_ptrINS1_12DeviceDomainEES5_'/>
+<fun r='_ZN3tvm5relay9transform13DeviceDomains15CollapseOrFalseERKSt10shared_ptrINS1_12DeviceDomainEES7_'/>
+<fun r='_ZN3tvm5relay9transform13DeviceDomains21UnifyCollapsedOrFalseERKSt10shared_ptrINS1_12DeviceDomainEES7_'/>
+<fun r='_ZN3tvm5relay9transform13DeviceDomains9DomainForERKNS_9RelayExprE'/>
+<fun r='_ZN3tvm5relay9transform13DeviceDomains15DomainForCalleeERKNS0_4CallE'/>
+<fun r='_ZN3tvm5relay9transform13DeviceDomains14UnifyExprExactERKNS_9RelayExprES5_'/>
+<fun r='_ZN3tvm5relay9transform13DeviceDomains22OptionalUnifyExprExactERKNS_9RelayExprES5_'/>
+<fun r='_ZN3tvm5relay9transform13DeviceDomains14UnifyExprExactERKNS_9RelayExprERKSt10shared_ptrINS1_12DeviceDomainEE'/>
+<fun r='_ZN3tvm5relay9transform13DeviceDomains18UnifyExprCollapsedERKNS_9RelayExprERKSt10shared_ptrINS1_12DeviceDomainEE'/>
+<fun r='_ZN3tvm5relay9transform13DeviceDomains18IsFullyConstrainedESt10shared_ptrINS1_12DeviceDomainEE'/>
+<fun r='_ZN3tvm5relay9transform13DeviceDomains10SetDefaultESt10shared_ptrINS1_12DeviceDomainEERKNS_13VirtualDeviceE'/>
+<fun r='_ZN3tvm5relay9transform13DeviceDomains26SetResultDefaultThenParamsERKSt10shared_ptrINS1_12DeviceDomainEERKNS_13VirtualDeviceE'/>
+<fun r='_ZN3tvm5relay9transform13DeviceDomains12ResultDomainESt10shared_ptrINS1_12DeviceDomainEE'/>
+<fun r='_ZN3tvm5relay9transform13DeviceDomains8ToStringB5cxx11ESt10shared_ptrINS1_12DeviceDomainEE'/>
+<fun r='_ZN3tvm5relay9transform13DeviceDomains8ToStringB5cxx11Ev'/>
+<use f='tvm/relay/transforms/device_planner.cc' l='426' c='_ZN3tvm5relay9transform12_GLOBAL__N_114DeviceAnalyzerC1ENS_8IRModuleENS_17CompilationConfigE'/>
+<use f='tvm/relay/transforms/device_planner.cc' l='433' c='_ZN3tvm5relay9transform12_GLOBAL__N_114DeviceAnalyzer7AnalyzeEv'/>
+<use f='tvm/relay/transforms/device_planner.cc' l='620' c='_ZN3tvm5relay9transform12_GLOBAL__N_114DeviceAnalyzer21DevicePatternAnalyzerC1EPNS1_13DeviceDomainsEPKNS_13RelayExprNodeE'/>
+<use f='tvm/relay/transforms/device_planner.cc' l='631'/>
+<use f='tvm/relay/transforms/device_planner.cc' l='708'/>
+<use f='tvm/relay/transforms/device_planner.cc' l='725' c='_ZN3tvm5relay9transform12_GLOBAL__N_121FreeOnDeviceDefaulterC1ENS_8IRModuleESt10unique_ptrINS1_13DeviceDomainsESt14default_deleteIS6_EE'/>
+<use f='tvm/relay/transforms/device_planner.cc' l='728' c='_ZN3tvm5relay9transform12_GLOBAL__N_121FreeOnDeviceDefaulter7DefaultEv'/>
+<use f='tvm/relay/transforms/device_planner.cc' l='755'/>
+<use f='tvm/relay/transforms/device_planner.cc' l='779' c='_ZN3tvm5relay9transform12_GLOBAL__N_115DeviceDefaulterC1ENS_8IRModuleESt10unique_ptrINS1_13DeviceDomainsESt14default_deleteIS6_EE'/>
+<use f='tvm/relay/transforms/device_planner.cc' l='782' c='_ZN3tvm5relay9transform12_GLOBAL__N_115DeviceDefaulter7DefaultEv'/>
+<use f='tvm/relay/transforms/device_planner.cc' l='866'/>
+<use f='tvm/relay/transforms/device_planner.cc' l='909' c='_ZN3tvm5relay9transform12_GLOBAL__N_114DeviceCapturerC1ENS_8IRModuleESt10unique_ptrINS1_13DeviceDomainsESt14default_deleteIS6_EE'/>
+<use f='tvm/relay/transforms/device_planner.cc' l='1269'/>
+<use f='tvm/relay/transforms/device_planner.cc' l='1289' c='_ZN3tvm5relay9transform12_GLOBAL__N_115PlanDevicesCoreENS_17CompilationConfigE'/>
+<size>288</size>

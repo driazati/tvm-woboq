@@ -1,0 +1,28 @@
+<def f='tvm/relay/backend/liveness_analysis.h' l='56' ll='157'/>
+<use f='tvm/relay/backend/liveness_analysis.h' l='153' c='_ZN3tvm5relay9transform16ControlFlowGraph6CreateEPNS_7support12GenericArenaINS3_19SimplePageAllocatorEEERKNS_9RelayExprE'/>
+<use f='tvm/relay/backend/liveness_analysis.h' l='164' c='_ZN3tvm5relay9transform16ControlFlowGraph7Creator6CreateEPNS_7support12GenericArenaINS4_19SimplePageAllocatorEEERKNS_9RelayExprE'/>
+<use f='tvm/relay/backend/liveness_analysis.h' l='171'/>
+<use f='tvm/relay/backend/liveness_analysis.h' l='228'/>
+<use f='tvm/relay/backend/liveness_analysis.h' l='248'/>
+<use f='tvm/relay/backend/liveness_analysis.h' l='263' c='_ZN3tvm5relay9transform16LivenessAnalysis7AnalyzeERKNS1_16ControlFlowGraphERKNS1_14UseDefAnalysisE'/>
+<use f='tvm/relay/backend/annotate_used_memory.cc' l='78' c='_ZN3tvm5relay7backend25AnnotateUsedMemoryMutatorC1ERKNS_8IRModuleERKNS0_9transform16ControlFlowGraphERKNS6_16LivenessAnalysisE'/>
+<use f='tvm/relay/backend/annotate_used_memory.cc' l='194'/>
+<use f='tvm/relay/backend/annotate_used_memory.cc' l='216' c='_ZN3tvm5relay9transform18AnnotateUsedMemoryEv'/>
+<size>88</size>
+<doc f='tvm/relay/backend/liveness_analysis.h' l='52'>/*!
+ * \brief A representation of an input expression (typically a Function) as a directed graph of
+ * basic blocks, with edges between basic blocks corresponding to control flow branching.
+ */</doc>
+<mbr r='tvm::relay::transform::ControlFlowGraph::entry' o='0' t='tvm::relay::transform::ControlFlowGraph::BasicBlockPtr'/>
+<mbr r='tvm::relay::transform::ControlFlowGraph::let_map' o='64' t='std::unordered_map&lt;Expr, NodePtr, ObjectPtrHash, ObjectPtrEqual&gt;'/>
+<mbr r='tvm::relay::transform::ControlFlowGraph::reverse_post_order' o='512' t='std::vector&lt;NodePtr&gt;'/>
+<fun r='_ZN3tvm5relay9transform16ControlFlowGraph6CreateEPNS_7support12GenericArenaINS3_19SimplePageAllocatorEEERKNS_9RelayExprE'/>
+<use f='tvm/relay/backend/liveness_analysis.cc' l='40' c='_ZN3tvm5relay9transform16ControlFlowGraph6CreateEPNS_7support12GenericArenaINS3_19SimplePageAllocatorEEERKNS_9RelayExprE'/>
+<use f='tvm/relay/backend/liveness_analysis.cc' l='44' c='_ZN3tvm5relay9transform16ControlFlowGraph7Creator6CreateEPNS_7support12GenericArenaINS4_19SimplePageAllocatorEEERKNS_9RelayExprE'/>
+<use f='tvm/relay/backend/liveness_analysis.cc' l='185' c='_ZN3tvm5relay9transform16LivenessAnalysis7AnalyzeERKNS1_16ControlFlowGraphERKNS1_14UseDefAnalysisE'/>
+<size>88</size>
+<fun r='_ZN3tvm5relay9transform16ControlFlowGraph6CreateEPNS_7support12GenericArenaINS3_19SimplePageAllocatorEEERKNS_9RelayExprE'/>
+<use f='tvm/relay/backend/vm/manifest_lifetimes.cc' l='43' c='_ZN3tvm5relay9transform12KillInserterC1EPKNS1_16ControlFlowGraphEPKNS1_16LivenessAnalysisE'/>
+<use f='tvm/relay/backend/vm/manifest_lifetimes.cc' l='132'/>
+<use f='tvm/relay/backend/vm/manifest_lifetimes.cc' l='246' c='_ZN3tvm5relay9transform17ManifestLifetimesEv'/>
+<size>88</size>

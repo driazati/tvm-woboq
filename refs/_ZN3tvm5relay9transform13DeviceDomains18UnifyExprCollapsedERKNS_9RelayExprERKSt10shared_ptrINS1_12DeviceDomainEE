@@ -1,0 +1,18 @@
+<dec f='tvm/relay/transforms/device_domains.h' l='276' type='void tvm::relay::transform::DeviceDomains::UnifyExprCollapsed(const tvm::relay::Expr &amp; expr_first_order, const tvm::relay::transform::DeviceDomainPtr &amp; expected_domain_maybe_higher_order)'/>
+<def f='tvm/relay/transforms/device_domains.cc' l='370' ll='382' type='void tvm::relay::transform::DeviceDomains::UnifyExprCollapsed(const tvm::relay::Expr &amp; expr_first_order, const tvm::relay::transform::DeviceDomainPtr &amp; expected_domain_maybe_higher_order)'/>
+<doc f='tvm/relay/transforms/device_domains.h' l='269'>/*!
+   * \brief Unifies the domain for \p expr with \p expected_domain.
+   * If \p expected_domain is higher-order but \p expr is first-order, require all arguments
+   * and the result of \p expected_domain to have the same domain as for \p expr.
+   *
+   * Aborts if unification fails.
+   */</doc>
+<use f='tvm/relay/transforms/device_planner.cc' l='607' u='c' c='_ZN3tvm5relay9transform12_GLOBAL__N_114DeviceAnalyzer10VisitExpr_EPKNS0_9TupleNodeE'/>
+<use f='tvm/relay/transforms/device_planner.cc' l='614' u='c' c='_ZN3tvm5relay9transform12_GLOBAL__N_114DeviceAnalyzer10VisitExpr_EPKNS0_16TupleGetItemNodeE'/>
+<use f='tvm/relay/transforms/device_planner.cc' l='626' u='c' c='_ZN3tvm5relay9transform12_GLOBAL__N_114DeviceAnalyzer21DevicePatternAnalyzer13VisitPattern_EPKNS0_14PatternVarNodeE'/>
+<use f='tvm/relay/transforms/device_planner.cc' l='643' u='c' c='_ZN3tvm5relay9transform12_GLOBAL__N_114DeviceAnalyzer10VisitExpr_EPKNS0_9MatchNodeE'/>
+<use f='tvm/relay/transforms/device_planner.cc' l='670' u='c' c='_ZN3tvm5relay9transform12_GLOBAL__N_114DeviceAnalyzer10VisitExpr_EPKNS0_6IfNodeE'/>
+<use f='tvm/relay/transforms/device_planner.cc' l='685' u='c' c='_ZN3tvm5relay9transform12_GLOBAL__N_114DeviceAnalyzer10VisitExpr_EPKNS0_13RefCreateNodeE'/>
+<use f='tvm/relay/transforms/device_planner.cc' l='692' u='c' c='_ZN3tvm5relay9transform12_GLOBAL__N_114DeviceAnalyzer10VisitExpr_EPKNS0_11RefReadNodeE'/>
+<use f='tvm/relay/transforms/device_planner.cc' l='699' u='c' c='_ZN3tvm5relay9transform12_GLOBAL__N_114DeviceAnalyzer10VisitExpr_EPKNS0_12RefWriteNodeE'/>
+<use f='tvm/relay/transforms/device_planner.cc' l='700' u='c' c='_ZN3tvm5relay9transform12_GLOBAL__N_114DeviceAnalyzer10VisitExpr_EPKNS0_12RefWriteNodeE'/>

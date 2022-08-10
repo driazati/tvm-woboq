@@ -1,0 +1,12 @@
+<dec f='tvm/contrib/ethosu/cascader/tensor_config.h' l='150' type='int tvm::contrib::ethosu::cascader::TensorConfigNode::GetBufferSize() const'/>
+<doc f='tvm/contrib/ethosu/cascader/tensor_config.h' l='142'>/*!
+   * \return The size of the buffer needed for the TensorConfig.
+   * \note The size of buffer necessary to store a tensor being produced using the TensorConfig is
+   * not necessarily just the size of the tensor. In Plans, a tensor may be being produced and
+   * consumed in &apos;stripes&apos; which are smaller than the full tensor. Therefore, the buffer necessary
+   * to store the tensor may only need to be as large as the stripe. The precise size of the buffer
+   * will depend both on the BufferMode and StripeConfigs (as well as, of course, the Tensor).
+   */</doc>
+<use f='tvm/contrib/ethosu/cascader/plan_generator.cc' l='298' u='c' c='_ZN3tvm7contrib6ethosu8cascader22GetInteriorMemoryUsageERKSt6vectorINS2_12TensorConfigESaIS4_EERKS4_RKNS2_12MemoryRegionE'/>
+<def f='tvm/contrib/ethosu/cascader/tensor_config.cc' l='70' ll='76' type='int tvm::contrib::ethosu::cascader::TensorConfigNode::GetBufferSize() const'/>
+<use f='tvm/contrib/ethosu/cascader/tensor_config.cc' l='175' u='a'/>

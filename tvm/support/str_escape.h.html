@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>str_escape.h source code [tvm/support/str_escape.h] - Woboq Code Browser</title>
+<link rel="stylesheet" href="../.././data/qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href="../.././data/kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src="../.././data/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="../.././data/jquery/jquery-ui.min.js"></script>
+<script>var file = 'tvm/support/str_escape.h'; var root_path = '../..'; var data_path = '../.././data'; var ecma_script_api_version = 2;</script>
+<script src='../.././data/codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='..'>tvm</a>/<a href='./'>support</a>/<a href='str_escape.h.html'>str_escape.h</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td><i>/*</i></td></tr>
+<tr><th id="2">2</th><td><i> * Licensed to the Apache Software Foundation (ASF) under one</i></td></tr>
+<tr><th id="3">3</th><td><i> * or more contributor license agreements.  See the NOTICE file</i></td></tr>
+<tr><th id="4">4</th><td><i> * distributed with this work for additional information</i></td></tr>
+<tr><th id="5">5</th><td><i> * regarding copyright ownership.  The ASF licenses this file</i></td></tr>
+<tr><th id="6">6</th><td><i> * to you under the Apache License, Version 2.0 (the</i></td></tr>
+<tr><th id="7">7</th><td><i> * "License"); you may not use this file except in compliance</i></td></tr>
+<tr><th id="8">8</th><td><i> * with the License.  You may obtain a copy of the License at</i></td></tr>
+<tr><th id="9">9</th><td><i> *</i></td></tr>
+<tr><th id="10">10</th><td><i> *   <a href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a></i></td></tr>
+<tr><th id="11">11</th><td><i> *</i></td></tr>
+<tr><th id="12">12</th><td><i> * Unless required by applicable law or agreed to in writing,</i></td></tr>
+<tr><th id="13">13</th><td><i> * software distributed under the License is distributed on an</i></td></tr>
+<tr><th id="14">14</th><td><i> * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY</i></td></tr>
+<tr><th id="15">15</th><td><i> * KIND, either express or implied.  See the License for the</i></td></tr>
+<tr><th id="16">16</th><td><i> * specific language governing permissions and limitations</i></td></tr>
+<tr><th id="17">17</th><td><i> * under the License.</i></td></tr>
+<tr><th id="18">18</th><td><i> */</i></td></tr>
+<tr><th id="19">19</th><td></td></tr>
+<tr><th id="20">20</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="21">21</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="22">22</th><td><i class="doc"> * <span class="command">\file</span> <span class="verb">support/str_escape.h</span></i></td></tr>
+<tr><th id="23">23</th><td><i class="doc"> * <span class="command">\brief</span> Print escape sequence of a string.</i></td></tr>
+<tr><th id="24">24</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="25">25</th><td><u>#<span data-ppcond="25">ifndef</span> <span class="macro" data-ref="_M/TVM_SUPPORT_STR_ESCAPE_H_">TVM_SUPPORT_STR_ESCAPE_H_</span></u></td></tr>
+<tr><th id="26">26</th><td><u>#define <dfn class="macro" id="_M/TVM_SUPPORT_STR_ESCAPE_H_" data-ref="_M/TVM_SUPPORT_STR_ESCAPE_H_">TVM_SUPPORT_STR_ESCAPE_H_</dfn></u></td></tr>
+<tr><th id="27">27</th><td></td></tr>
+<tr><th id="28">28</th><td><u>#include <a href="../../include/c++/10/sstream.html">&lt;sstream&gt;</a></u></td></tr>
+<tr><th id="29">29</th><td><u>#include <a href="../../include/c++/10/string.html">&lt;string&gt;</a></u></td></tr>
+<tr><th id="30">30</th><td></td></tr>
+<tr><th id="31">31</th><td><b>namespace</b> <span class="namespace">tvm</span> {</td></tr>
+<tr><th id="32">32</th><td><b>namespace</b> <span class="namespace">support</span> {</td></tr>
+<tr><th id="33">33</th><td></td></tr>
+<tr><th id="34">34</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="35">35</th><td><i class="doc"> * <span class="command">\brief</span> Create a stream with escape.</i></td></tr>
+<tr><th id="36">36</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">data</span> The data</i></td></tr>
+<tr><th id="37">37</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">size</span> The size of the string.</i></td></tr>
+<tr><th id="38">38</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">use_octal_escape</span> True to use octal escapes instead of hex. If producing C</i></td></tr>
+<tr><th id="39">39</th><td><i class="doc"> *      strings, use octal escapes to avoid ambiguously-long hex escapes.</i></td></tr>
+<tr><th id="40">40</th><td><i class="doc"> * <span class="command">\return</span> the Result string.</i></td></tr>
+<tr><th id="41">41</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="42">42</th><td><b>inline</b> <span class="namespace">std::</span><a class="typedef" href="../../include/c++/10/bits/stringfwd.h.html#std::string" title='std::string' data-type='basic_string&lt;char&gt;' data-ref="std::string" data-ref-filename="std..string">string</a> <dfn class="decl def fn" id="_ZN3tvm7support9StrEscapeB5cxx11EPKcmb" title='tvm::support::StrEscape' data-ref="_ZN3tvm7support9StrEscapeB5cxx11EPKcmb" data-ref-filename="_ZN3tvm7support9StrEscapeB5cxx11EPKcmb">StrEscape</dfn>(<em>const</em> <em>char</em>* <dfn class="local col1 decl" id="1data" title='data' data-type='const char *' data-ref="1data" data-ref-filename="1data">data</dfn>, <span class='typedef' title='size_t' data-type='unsigned long' data-ref="size_t" data-ref-filename="size_t">size_t</span> <dfn class="local col2 decl" id="2size" title='size' data-type='size_t' data-ref="2size" data-ref-filename="2size">size</dfn>, <em>bool</em> <dfn class="local col3 decl" id="3use_octal_escape" title='use_octal_escape' data-type='bool' data-ref="3use_octal_escape" data-ref-filename="3use_octal_escape">use_octal_escape</dfn> = <b>false</b>) {</td></tr>
+<tr><th id="43">43</th><td>  <span class="namespace">std::</span><a class="typedef" href="../../include/c++/10/iosfwd.html#std::ostringstream" title='std::ostringstream' data-type='basic_ostringstream&lt;char&gt;' data-ref="std::ostringstream" data-ref-filename="std..ostringstream">ostringstream</a> <a class="ref fn fake" href="../../include/c++/10/sstream.html#_ZNSt7__cxx1119basic_ostringstreamC1Ev" title='std::basic_ostringstream::basic_ostringstream&lt;_CharT, _Traits, _Alloc&gt;' data-ref="_ZNSt7__cxx1119basic_ostringstreamC1Ev" data-ref-filename="_ZNSt7__cxx1119basic_ostringstreamC1Ev"></a><dfn class="local col4 decl" id="4stream" title='stream' data-type='std::ostringstream' data-ref="4stream" data-ref-filename="4stream">stream</dfn>;</td></tr>
+<tr><th id="44">44</th><td>  <b>for</b> (<span class='typedef' title='size_t' data-type='unsigned long' data-ref="size_t" data-ref-filename="size_t">size_t</span> <dfn class="local col5 decl" id="5i" title='i' data-type='size_t' data-ref="5i" data-ref-filename="5i">i</dfn> = <var>0</var>; <a class="local col5 ref" href="#5i" title='i' data-ref="5i" data-ref-filename="5i">i</a> &lt; <a class="local col2 ref" href="#2size" title='size' data-ref="2size" data-ref-filename="2size">size</a>; ++<a class="local col5 ref" href="#5i" title='i' data-ref="5i" data-ref-filename="5i">i</a>) {</td></tr>
+<tr><th id="45">45</th><td>    <em>unsigned</em> <em>char</em> <dfn class="local col6 decl" id="6c" title='c' data-type='unsigned char' data-ref="6c" data-ref-filename="6c">c</dfn> = <a class="local col1 ref" href="#1data" title='data' data-ref="1data" data-ref-filename="1data">data</a>[<a class="local col5 ref" href="#5i" title='i' data-ref="5i" data-ref-filename="5i">i</a>];</td></tr>
+<tr><th id="46">46</th><td>    <b>if</b> (<a class="local col6 ref" href="#6c" title='c' data-ref="6c" data-ref-filename="6c">c</a> &gt;= <kbd>' '</kbd> &amp;&amp; <a class="local col6 ref" href="#6c" title='c' data-ref="6c" data-ref-filename="6c">c</a> &lt;= <kbd>'~'</kbd> &amp;&amp; <a class="local col6 ref" href="#6c" title='c' data-ref="6c" data-ref-filename="6c">c</a> != <kbd>'\\'</kbd> &amp;&amp; <a class="local col6 ref" href="#6c" title='c' data-ref="6c" data-ref-filename="6c">c</a> != <kbd>'"'</kbd>) {</td></tr>
+<tr><th id="47">47</th><td>      <a class="local col4 ref" href="#4stream" title='stream' data-ref="4stream" data-ref-filename="4stream">stream</a> <a class="ref fn" href="../../include/c++/10/ostream.html#_ZStlsRSt13basic_ostreamIcT_Eh" title='std::operator&lt;&lt;' data-ref="_ZStlsRSt13basic_ostreamIcT_Eh" data-ref-filename="_ZStlsRSt13basic_ostreamIcT_Eh">&lt;&lt;</a> <a class="local col6 ref" href="#6c" title='c' data-ref="6c" data-ref-filename="6c">c</a>;</td></tr>
+<tr><th id="48">48</th><td>    } <b>else</b> {</td></tr>
+<tr><th id="49">49</th><td>      <a class="local col4 ref" href="#4stream" title='stream' data-ref="4stream" data-ref-filename="4stream">stream</a> <a class="ref fn" href="../../include/c++/10/ostream.html#_ZStlsRSt13basic_ostreamIcT_Ec" title='std::operator&lt;&lt;' data-ref="_ZStlsRSt13basic_ostreamIcT_Ec" data-ref-filename="_ZStlsRSt13basic_ostreamIcT_Ec">&lt;&lt;</a> <kbd>'\\'</kbd>;</td></tr>
+<tr><th id="50">50</th><td>      <b>switch</b> (<a class="local col6 ref" href="#6c" title='c' data-ref="6c" data-ref-filename="6c">c</a>) {</td></tr>
+<tr><th id="51">51</th><td>        <b>case</b> <kbd>'"'</kbd>:</td></tr>
+<tr><th id="52">52</th><td>          <a class="local col4 ref" href="#4stream" title='stream' data-ref="4stream" data-ref-filename="4stream">stream</a> <a class="ref fn" href="../../include/c++/10/ostream.html#_ZStlsRSt13basic_ostreamIcT_Ec" title='std::operator&lt;&lt;' data-ref="_ZStlsRSt13basic_ostreamIcT_Ec" data-ref-filename="_ZStlsRSt13basic_ostreamIcT_Ec">&lt;&lt;</a> <kbd>'"'</kbd>;</td></tr>
+<tr><th id="53">53</th><td>          <b>break</b>;</td></tr>
+<tr><th id="54">54</th><td>        <b>case</b> <kbd>'\\'</kbd>:</td></tr>
+<tr><th id="55">55</th><td>          <a class="local col4 ref" href="#4stream" title='stream' data-ref="4stream" data-ref-filename="4stream">stream</a> <a class="ref fn" href="../../include/c++/10/ostream.html#_ZStlsRSt13basic_ostreamIcT_Ec" title='std::operator&lt;&lt;' data-ref="_ZStlsRSt13basic_ostreamIcT_Ec" data-ref-filename="_ZStlsRSt13basic_ostreamIcT_Ec">&lt;&lt;</a> <kbd>'\\'</kbd>;</td></tr>
+<tr><th id="56">56</th><td>          <b>break</b>;</td></tr>
+<tr><th id="57">57</th><td>        <b>case</b> <kbd>'\t'</kbd>:</td></tr>
+<tr><th id="58">58</th><td>          <a class="local col4 ref" href="#4stream" title='stream' data-ref="4stream" data-ref-filename="4stream">stream</a> <a class="ref fn" href="../../include/c++/10/ostream.html#_ZStlsRSt13basic_ostreamIcT_Ec" title='std::operator&lt;&lt;' data-ref="_ZStlsRSt13basic_ostreamIcT_Ec" data-ref-filename="_ZStlsRSt13basic_ostreamIcT_Ec">&lt;&lt;</a> <kbd>'t'</kbd>;</td></tr>
+<tr><th id="59">59</th><td>          <b>break</b>;</td></tr>
+<tr><th id="60">60</th><td>        <b>case</b> <kbd>'\r'</kbd>:</td></tr>
+<tr><th id="61">61</th><td>          <a class="local col4 ref" href="#4stream" title='stream' data-ref="4stream" data-ref-filename="4stream">stream</a> <a class="ref fn" href="../../include/c++/10/ostream.html#_ZStlsRSt13basic_ostreamIcT_Ec" title='std::operator&lt;&lt;' data-ref="_ZStlsRSt13basic_ostreamIcT_Ec" data-ref-filename="_ZStlsRSt13basic_ostreamIcT_Ec">&lt;&lt;</a> <kbd>'r'</kbd>;</td></tr>
+<tr><th id="62">62</th><td>          <b>break</b>;</td></tr>
+<tr><th id="63">63</th><td>        <b>case</b> <kbd>'\n'</kbd>:</td></tr>
+<tr><th id="64">64</th><td>          <a class="local col4 ref" href="#4stream" title='stream' data-ref="4stream" data-ref-filename="4stream">stream</a> <a class="ref fn" href="../../include/c++/10/ostream.html#_ZStlsRSt13basic_ostreamIcT_Ec" title='std::operator&lt;&lt;' data-ref="_ZStlsRSt13basic_ostreamIcT_Ec" data-ref-filename="_ZStlsRSt13basic_ostreamIcT_Ec">&lt;&lt;</a> <kbd>'n'</kbd>;</td></tr>
+<tr><th id="65">65</th><td>          <b>break</b>;</td></tr>
+<tr><th id="66">66</th><td>        <b>default</b>:</td></tr>
+<tr><th id="67">67</th><td>          <b>if</b> (<a class="local col3 ref" href="#3use_octal_escape" title='use_octal_escape' data-ref="3use_octal_escape" data-ref-filename="3use_octal_escape">use_octal_escape</a>) {</td></tr>
+<tr><th id="68">68</th><td>            <a class="local col4 ref" href="#4stream" title='stream' data-ref="4stream" data-ref-filename="4stream">stream</a> <a class="ref fn" href="../../include/c++/10/ostream.html#_ZStlsRSt13basic_ostreamIcT_Eh" title='std::operator&lt;&lt;' data-ref="_ZStlsRSt13basic_ostreamIcT_Eh" data-ref-filename="_ZStlsRSt13basic_ostreamIcT_Eh">&lt;&lt;</a> <b>static_cast</b>&lt;<em>unsigned</em> <em>char</em>&gt;(<kbd>'0'</kbd> + ((<a class="local col6 ref" href="#6c" title='c' data-ref="6c" data-ref-filename="6c">c</a> &gt;&gt; <var>6</var>) &amp; <var>0x03</var>))</td></tr>
+<tr><th id="69">69</th><td>                   <a class="ref fn" href="../../include/c++/10/ostream.html#_ZStlsRSt13basic_ostreamIcT_Eh" title='std::operator&lt;&lt;' data-ref="_ZStlsRSt13basic_ostreamIcT_Eh" data-ref-filename="_ZStlsRSt13basic_ostreamIcT_Eh">&lt;&lt;</a> <b>static_cast</b>&lt;<em>unsigned</em> <em>char</em>&gt;(<kbd>'0'</kbd> + ((<a class="local col6 ref" href="#6c" title='c' data-ref="6c" data-ref-filename="6c">c</a> &gt;&gt; <var>3</var>) &amp; <var>0x07</var>))</td></tr>
+<tr><th id="70">70</th><td>                   <a class="ref fn" href="../../include/c++/10/ostream.html#_ZStlsRSt13basic_ostreamIcT_Eh" title='std::operator&lt;&lt;' data-ref="_ZStlsRSt13basic_ostreamIcT_Eh" data-ref-filename="_ZStlsRSt13basic_ostreamIcT_Eh">&lt;&lt;</a> <b>static_cast</b>&lt;<em>unsigned</em> <em>char</em>&gt;(<kbd>'0'</kbd> + (<a class="local col6 ref" href="#6c" title='c' data-ref="6c" data-ref-filename="6c">c</a> &amp; <var>0x07</var>));</td></tr>
+<tr><th id="71">71</th><td>          } <b>else</b> {</td></tr>
+<tr><th id="72">72</th><td>            <em>const</em> <em>char</em>* <dfn class="local col7 decl" id="7hex_digits" title='hex_digits' data-type='const char *' data-ref="7hex_digits" data-ref-filename="7hex_digits">hex_digits</dfn> = <q>"0123456789ABCDEF"</q>;</td></tr>
+<tr><th id="73">73</th><td>            <a class="local col4 ref" href="#4stream" title='stream' data-ref="4stream" data-ref-filename="4stream">stream</a> <a class="ref fn" href="../../include/c++/10/ostream.html#_ZStlsRSt13basic_ostreamIcT_Ec" title='std::operator&lt;&lt;' data-ref="_ZStlsRSt13basic_ostreamIcT_Ec" data-ref-filename="_ZStlsRSt13basic_ostreamIcT_Ec">&lt;&lt;</a> <kbd>'x'</kbd> <a class="ref fn" href="../../include/c++/10/ostream.html#_ZStlsRSt13basic_ostreamIcT_Ec" title='std::operator&lt;&lt;' data-ref="_ZStlsRSt13basic_ostreamIcT_Ec" data-ref-filename="_ZStlsRSt13basic_ostreamIcT_Ec">&lt;&lt;</a> <a class="local col7 ref" href="#7hex_digits" title='hex_digits' data-ref="7hex_digits" data-ref-filename="7hex_digits">hex_digits</a>[<a class="local col6 ref" href="#6c" title='c' data-ref="6c" data-ref-filename="6c">c</a> &gt;&gt; <var>4</var>] <a class="ref fn" href="../../include/c++/10/ostream.html#_ZStlsRSt13basic_ostreamIcT_Ec" title='std::operator&lt;&lt;' data-ref="_ZStlsRSt13basic_ostreamIcT_Ec" data-ref-filename="_ZStlsRSt13basic_ostreamIcT_Ec">&lt;&lt;</a> <a class="local col7 ref" href="#7hex_digits" title='hex_digits' data-ref="7hex_digits" data-ref-filename="7hex_digits">hex_digits</a>[<a class="local col6 ref" href="#6c" title='c' data-ref="6c" data-ref-filename="6c">c</a> &amp; <var>0xf</var>];</td></tr>
+<tr><th id="74">74</th><td>          }</td></tr>
+<tr><th id="75">75</th><td>      }</td></tr>
+<tr><th id="76">76</th><td>    }</td></tr>
+<tr><th id="77">77</th><td>  }</td></tr>
+<tr><th id="78">78</th><td>  <b>return</b> <a class="local col4 ref" href="#4stream" title='stream' data-ref="4stream" data-ref-filename="4stream">stream</a>.<a class="ref fn" href="../../include/c++/10/sstream.html#_ZNKSt7__cxx1119basic_ostringstream3strEv" title='std::basic_ostringstream::str' data-ref="_ZNKSt7__cxx1119basic_ostringstream3strEv" data-ref-filename="_ZNKSt7__cxx1119basic_ostringstream3strEv">str</a>();</td></tr>
+<tr><th id="79">79</th><td>}</td></tr>
+<tr><th id="80">80</th><td></td></tr>
+<tr><th id="81">81</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="82">82</th><td><i class="doc"> * <span class="command">\brief</span> Create a stream with escape.</i></td></tr>
+<tr><th id="83">83</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">data</span> The data</i></td></tr>
+<tr><th id="84">84</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">size</span> The size of the string.</i></td></tr>
+<tr><th id="85">85</th><td><i class="doc"> * <span class="command">\return</span> the Result string.</i></td></tr>
+<tr><th id="86">86</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="87">87</th><td><b>inline</b> <span class="namespace">std::</span><a class="typedef" href="../../include/c++/10/bits/stringfwd.h.html#std::string" title='std::string' data-type='basic_string&lt;char&gt;' data-ref="std::string" data-ref-filename="std..string">string</a> <dfn class="decl def fn" id="_ZN3tvm7support9StrEscapeERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE" title='tvm::support::StrEscape' data-ref="_ZN3tvm7support9StrEscapeERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE" data-ref-filename="_ZN3tvm7support9StrEscapeERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE">StrEscape</dfn>(<em>const</em> <span class="namespace">std::</span><a class="typedef" href="../../include/c++/10/bits/stringfwd.h.html#std::string" title='std::string' data-type='basic_string&lt;char&gt;' data-ref="std::string" data-ref-filename="std..string">string</a>&amp; <dfn class="local col8 decl" id="8val" title='val' data-type='const std::string &amp;' data-ref="8val" data-ref-filename="8val">val</dfn>) { <b>return</b> <a class="ref fn" href="#_ZN3tvm7support9StrEscapeB5cxx11EPKcmb" title='tvm::support::StrEscape' data-ref="_ZN3tvm7support9StrEscapeB5cxx11EPKcmb" data-ref-filename="_ZN3tvm7support9StrEscapeB5cxx11EPKcmb">StrEscape</a>(<a class="local col8 ref" href="#8val" title='val' data-ref="8val" data-ref-filename="8val">val</a>.<a class="ref fn" href="../../include/c++/10/bits/basic_string.h.html#_ZNKSt7__cxx1112basic_string4dataEv" title='std::basic_string::data' data-ref="_ZNKSt7__cxx1112basic_string4dataEv" data-ref-filename="_ZNKSt7__cxx1112basic_string4dataEv">data</a>(), <a class="local col8 ref" href="#8val" title='val' data-ref="8val" data-ref-filename="8val">val</a>.<a class="ref fn" href="../../include/c++/10/bits/basic_string.h.html#_ZNKSt7__cxx1112basic_string6lengthEv" title='std::basic_string::length' data-ref="_ZNKSt7__cxx1112basic_string6lengthEv" data-ref-filename="_ZNKSt7__cxx1112basic_string6lengthEv">length</a>()); }</td></tr>
+<tr><th id="88">88</th><td></td></tr>
+<tr><th id="89">89</th><td>}  <i>// namespace support</i></td></tr>
+<tr><th id="90">90</th><td>}  <i>// namespace tvm</i></td></tr>
+<tr><th id="91">91</th><td><u>#<span data-ppcond="25">endif</span>  // TVM_SUPPORT_STR_ESCAPE_H_</u></td></tr>
+<tr><th id="92">92</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated while processing <a href='../meta_schedule/database/database_utils.cc.html'>tvm/meta_schedule/database/database_utils.cc</a><br/>Generated on <em>2022-Aug-10</em> from project tvm revision <em>123</em><br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

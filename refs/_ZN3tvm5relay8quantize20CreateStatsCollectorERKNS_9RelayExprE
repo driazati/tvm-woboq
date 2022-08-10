@@ -1,0 +1,13 @@
+<def f='tvm/relay/quantize/calibrate.cc' l='207' type='tvm::relay::Expr tvm::relay::quantize::CreateStatsCollector(const tvm::relay::Expr &amp; expr)'/>
+<use f='tvm/relay/quantize/calibrate.cc' l='209' u='r'/>
+<doc f='tvm/relay/quantize/calibrate.cc' l='196'>/*
+ * \brief Given an annotated graph, create a profile graph to collect profile data from the
+ * calibration dataset.
+ *
+ * This pass collects simulated_quantize op into a tuple. Simulated_quantize ops are rewritten to
+ * identity mode. The tuple is the output of the profile graph. Both input and output of this pass
+ * are relay::Function.
+ *
+ * \param expr The simulation graph after annotation.
+ * \return The profile graph.
+ */</doc>

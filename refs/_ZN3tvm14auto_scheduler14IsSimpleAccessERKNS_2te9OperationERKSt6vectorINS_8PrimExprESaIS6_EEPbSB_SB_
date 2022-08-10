@@ -1,0 +1,6 @@
+<def f='tvm/auto_scheduler/compute_dag.cc' l='180' ll='225' type='bool tvm::auto_scheduler::IsSimpleAccess(const te::Operation &amp; op, const std::vector&lt;PrimExpr&gt; &amp; indices, bool * axis_missing, bool * axis_duplicated, bool * same_order)'/>
+<use f='tvm/auto_scheduler/compute_dag.cc' l='329' u='c' c='_ZN3tvm14auto_scheduler14AccessAnalyzerC1ERKNS_7runtime5ArrayINS_2te6TensorEvEE'/>
+<use f='tvm/auto_scheduler/compute_dag.cc' l='536' u='c' c='_ZNK3tvm14auto_scheduler14AccessAnalyzer16ElementWiseMatchERKNS_2te9OperationES5_'/>
+<doc f='tvm/auto_scheduler/compute_dag.cc' l='177'>// Return whether the access to an operation is a simple access
+// (i.e. all index is just a variable with an optional constant shift)
+// For example, A[i][j], A[i+1][j] are simple accesses but A[i][j+i] is not.</doc>

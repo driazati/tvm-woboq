@@ -1,0 +1,29 @@
+<def f='tvm/tir/contrib/ethosu/passes.cc' l='129' ll='162'/>
+<use f='tvm/tir/contrib/ethosu/passes.cc' l='174' c='_ZN3tvm3tir7contrib6ethosu14HoistAllocatesEv'/>
+<size>48</size>
+<doc f='tvm/tir/contrib/ethosu/passes.cc' l='104'>/*!
+ * \brief This mutator moves allocates to the top of the body of the main
+ * function.
+ *
+ * Note: This pass can currently only be run in conjunction with the
+ * LowerToTIR() pass as it expects a single primitive function called
+ * &quot;main&quot; that is being offloaded to the NPU.
+ *
+ * For example,
+ * Before:
+ *   allocate {
+ *       extern_call(...)
+ *           allocate {
+ *               extern_call(...)
+ *           }
+ *   }
+ *
+ * After:
+ *   allocate {
+ *       allocate {
+ *           extern_call(...)
+ *           extern_call(...)
+ *       }
+ *  }
+ */</doc>
+<fun r='_ZN3tvm3tir7contrib6ethosu21HoistAllocatesMutator10VisitStmt_EPKNS0_12AllocateNodeE'/>

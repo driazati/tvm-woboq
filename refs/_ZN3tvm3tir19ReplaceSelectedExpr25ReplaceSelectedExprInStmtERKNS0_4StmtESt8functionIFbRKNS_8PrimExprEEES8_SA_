@@ -1,0 +1,13 @@
+<dec f='tvm/tir/transforms/replace_selected_expr.h' l='49' type='static tvm::tir::Stmt tvm::tir::ReplaceSelectedExpr::ReplaceSelectedExprInStmt(const tvm::tir::Stmt &amp; stmt, std::function&lt;bool (const PrimExpr &amp;)&gt; predicate_selector, const tvm::PrimExpr &amp; new_expr, std::function&lt;bool (const PrimExpr &amp;)&gt; can_replace_inside)'/>
+<use f='tvm/tir/transforms/common_subexpr_elim.cc' l='467' u='c' c='_ZN3tvm3tir29CommonSubexpressionEliminator9VisitStmtERKNS0_4StmtE'/>
+<use f='tvm/tir/transforms/common_subexpr_elim.cc' l='497' u='c' c='_ZN3tvm3tir29CommonSubexpressionEliminator9VisitStmtERKNS0_4StmtE'/>
+<def f='tvm/tir/transforms/replace_selected_expr.cc' l='66' ll='71' type='static tvm::tir::Stmt tvm::tir::ReplaceSelectedExpr::ReplaceSelectedExprInStmt(const tvm::tir::Stmt &amp; stmt, std::function&lt;bool (const PrimExpr &amp;)&gt; predicate_selector, const tvm::PrimExpr &amp; new_expr, std::function&lt;bool (const PrimExpr &amp;)&gt; can_replace_inside)'/>
+<doc f='tvm/tir/transforms/replace_selected_expr.cc' l='57'>/*!
+ * \brief Toplevel (static) function that replace in a statement what is selected by a predicate.
+ * \param stmt The Stmt in which replacements will be performed
+ * \param new_expr The new expression that will replace everything that&apos;s selected by the predicate
+ * \param predicate_selector The predicate which tells what to replace in `stmt`
+ * \param can_replace_inside The predicate which tells in which nodes we are allowed to recurse
+                              for pursuing further replacements
+ * \return A new statement where the replacements have been done
+ */</doc>

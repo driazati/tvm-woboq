@@ -1,0 +1,45 @@
+<def f='tvm/relay/collage/candidate_partition.h' l='55' ll='115'/>
+<use f='tvm/relay/collage/candidate_partition.h' l='160' c='_ZNK3tvm5relay7collage18CandidatePartitionptEv'/>
+<use f='tvm/relay/collage/candidate_partition.h' l='160' c='_ZNK3tvm5relay7collage18CandidatePartitionptEv'/>
+<use f='tvm/relay/collage/candidate_partition.h' l='160' c='_ZNK3tvm5relay7collage18CandidatePartition3getEv'/>
+<use f='tvm/relay/collage/candidate_partition.h' l='160'/>
+<use f='tvm/relay/collage/candidate_partition.h' l='161' c='_ZN3tvm5relay7collage18CandidatePartition11CopyOnWriteEv'/>
+<use f='tvm/relay/collage/candidate_partition.h' l='161' c='_ZN3tvm5relay7collage18CandidatePartition11CopyOnWriteEv'/>
+<use f='tvm/relay/collage/candidate_partition.h' l='161' c='_ZN3tvm5relay7collage18CandidatePartition11CopyOnWriteEv'/>
+<use f='tvm/relay/collage/candidate_partition.cc' l='42'/>
+<use f='tvm/relay/collage/candidate_partition.cc' l='42'/>
+<use f='tvm/relay/collage/candidate_partition.cc' l='42'/>
+<use f='tvm/relay/collage/candidate_partition.cc' l='210' c='_ZN3tvm5relay7collage18CandidatePartitionC1ENS_7runtime6StringENS1_8SubGraphENS3_9ObjectRefENS1_4CostE'/>
+<size>48</size>
+<doc f='tvm/relay/collage/candidate_partition.h' l='47'>/*!
+ * \brief A candidate partition w.r.t. the overall Relay model.
+ *
+ * We represent the partition as a sub-graph. This means not only can we represent the scope
+ * of Relay sub-expressions intended for a particular partition (or kernel), but we can also
+ * represent various conventions for encoding how the operators within the partition should be
+ * tagged for downstream processing.
+ */</doc>
+<fun r='_ZN3tvm5relay7collage22CandidatePartitionNodeC1Ev'/>
+<mbr r='tvm::relay::collage::CandidatePartitionNode::rule_name_' o='128' t='tvm::runtime::String'/>
+<mbr r='tvm::relay::collage::CandidatePartitionNode::sub_graph_' o='192' t='tvm::relay::collage::SubGraph'/>
+<mbr r='tvm::relay::collage::CandidatePartitionNode::spec_' o='256' t='tvm::runtime::ObjectRef'/>
+<mbr r='tvm::relay::collage::CandidatePartitionNode::cost_' o='320' t='tvm::relay::collage::Cost'/>
+<fun r='_ZN3tvm5relay7collage22CandidatePartitionNode10VisitAttrsEPNS_11AttrVisitorE'/>
+<fun r='_ZNK3tvm5relay7collage22CandidatePartitionNode14partition_specEv'/>
+<fun r='_ZNK3tvm5relay7collage22CandidatePartitionNode19partition_spec_nameB5cxx11Ev'/>
+<fun r='_ZNK3tvm5relay7collage22CandidatePartitionNode6targetEv'/>
+<fun r='_ZNK3tvm5relay7collage22CandidatePartitionNode13EstimatedCostERKNS1_13DataflowGraphERKNS1_13CostEstimatorERKSt10shared_ptrINS1_22CandidateFunctionCacheEE'/>
+<fun r='_ZNK3tvm5relay7collage22CandidatePartitionNode9ToSummaryB5cxx11ERKNS1_13DataflowGraphE'/>
+<fun r='_ZNK3tvm5relay7collage22CandidatePartitionNode8ToStringB5cxx11Ev'/>
+<smbr r='tvm::relay::collage::CandidatePartitionNode::_type_key' t='const char *const'/>
+<smbr r='tvm::relay::collage::CandidatePartitionNode::_type_final' t='const bool'/>
+<smbr r='tvm::relay::collage::CandidatePartitionNode::_type_child_slots' t='const int'/>
+<fun r='_ZN3tvm5relay7collage22CandidatePartitionNode16RuntimeTypeIndexEv'/>
+<fun r='_ZN3tvm5relay7collage22CandidatePartitionNode27_GetOrAllocRuntimeTypeIndexEv'/>
+<fun r='_ZN3tvm5relay7collage22CandidatePartitionNode10VisitAttrsEPNS_11AttrVisitorE'/>
+<fun r='_ZNK3tvm5relay7collage22CandidatePartitionNode14partition_specEv'/>
+<fun r='_ZNK3tvm5relay7collage22CandidatePartitionNode19partition_spec_nameB5cxx11Ev'/>
+<fun r='_ZNK3tvm5relay7collage22CandidatePartitionNode6targetEv'/>
+<fun r='_ZNK3tvm5relay7collage22CandidatePartitionNode9ToSummaryB5cxx11ERKNS1_13DataflowGraphE'/>
+<fun r='_ZNK3tvm5relay7collage22CandidatePartitionNode8ToStringB5cxx11Ev'/>
+<fun r='_ZNK3tvm5relay7collage22CandidatePartitionNode13EstimatedCostERKNS1_13DataflowGraphERKNS1_13CostEstimatorERKSt10shared_ptrINS1_22CandidateFunctionCacheEE'/>

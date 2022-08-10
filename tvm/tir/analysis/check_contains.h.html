@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>check_contains.h source code [tvm/tir/analysis/check_contains.h] - Woboq Code Browser</title>
+<meta name="woboq:interestingDefinitions" content="tvm::tir::CheckContains "/>
+<link rel="stylesheet" href="../../.././data/qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href="../../.././data/kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src="../../.././data/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="../../.././data/jquery/jquery-ui.min.js"></script>
+<script>var file = 'tvm/tir/analysis/check_contains.h'; var root_path = '../../..'; var data_path = '../../.././data'; var ecma_script_api_version = 2;</script>
+<script src='../../.././data/codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='../..'>tvm</a>/<a href='..'>tir</a>/<a href='./'>analysis</a>/<a href='check_contains.h.html'>check_contains.h</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td><i>/*</i></td></tr>
+<tr><th id="2">2</th><td><i> * Licensed to the Apache Software Foundation (ASF) under one</i></td></tr>
+<tr><th id="3">3</th><td><i> * or more contributor license agreements.  See the NOTICE file</i></td></tr>
+<tr><th id="4">4</th><td><i> * distributed with this work for additional information</i></td></tr>
+<tr><th id="5">5</th><td><i> * regarding copyright ownership.  The ASF licenses this file</i></td></tr>
+<tr><th id="6">6</th><td><i> * to you under the Apache License, Version 2.0 (the</i></td></tr>
+<tr><th id="7">7</th><td><i> * "License"); you may not use this file except in compliance</i></td></tr>
+<tr><th id="8">8</th><td><i> * with the License.  You may obtain a copy of the License at</i></td></tr>
+<tr><th id="9">9</th><td><i> *</i></td></tr>
+<tr><th id="10">10</th><td><i> *   <a href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a></i></td></tr>
+<tr><th id="11">11</th><td><i> *</i></td></tr>
+<tr><th id="12">12</th><td><i> * Unless required by applicable law or agreed to in writing,</i></td></tr>
+<tr><th id="13">13</th><td><i> * software distributed under the License is distributed on an</i></td></tr>
+<tr><th id="14">14</th><td><i> * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY</i></td></tr>
+<tr><th id="15">15</th><td><i> * KIND, either express or implied.  See the License for the</i></td></tr>
+<tr><th id="16">16</th><td><i> * specific language governing permissions and limitations</i></td></tr>
+<tr><th id="17">17</th><td><i> * under the License.</i></td></tr>
+<tr><th id="18">18</th><td><i> */</i></td></tr>
+<tr><th id="19">19</th><td></td></tr>
+<tr><th id="20">20</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="21">21</th><td><i class="doc"> * <span class="command">\file</span> <span class="verb">check_contains.h</span></i></td></tr>
+<tr><th id="22">22</th><td><i class="doc"> * <span class="command">\brief</span> Interface of the analysis that tells if an expression contains</i></td></tr>
+<tr><th id="23">23</th><td><i class="doc">           a node that satisfies a given predicate.</i></td></tr>
+<tr><th id="24">24</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="25">25</th><td></td></tr>
+<tr><th id="26">26</th><td><u>#<span data-ppcond="26">ifndef</span> <span class="macro" data-ref="_M/TVM_TIR_ANALYSIS_CHECK_CONTAINS_H_">TVM_TIR_ANALYSIS_CHECK_CONTAINS_H_</span></u></td></tr>
+<tr><th id="27">27</th><td><u>#define <dfn class="macro" id="_M/TVM_TIR_ANALYSIS_CHECK_CONTAINS_H_" data-ref="_M/TVM_TIR_ANALYSIS_CHECK_CONTAINS_H_">TVM_TIR_ANALYSIS_CHECK_CONTAINS_H_</dfn></u></td></tr>
+<tr><th id="28">28</th><td></td></tr>
+<tr><th id="29">29</th><td><u>#include &lt;tvm/tir/expr.h&gt;</u></td></tr>
+<tr><th id="30">30</th><td><u>#include &lt;tvm/tir/stmt_functor.h&gt;  // For the class StmtExprVisitor</u></td></tr>
+<tr><th id="31">31</th><td></td></tr>
+<tr><th id="32">32</th><td><b>namespace</b> <span class="namespace">tvm</span> {</td></tr>
+<tr><th id="33">33</th><td><b>namespace</b> <span class="namespace">tir</span> {</td></tr>
+<tr><th id="34">34</th><td></td></tr>
+<tr><th id="35">35</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="36">36</th><td><i class="doc"> * <span class="command">\brief</span> Visitor which tells if a given expression or statement contains a subexpression</i></td></tr>
+<tr><th id="37">37</th><td><i class="doc">          that satisfies a given predicate</i></td></tr>
+<tr><th id="38">38</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="39">39</th><td><b>class</b> <dfn class="type def" id="tvm::tir::CheckContains" title='tvm::tir::CheckContains' data-ref="tvm::tir::CheckContains" data-ref-filename="tvm..tir..CheckContains">CheckContains</dfn> : <b>public</b> <span class='type' title='tvm::tir::StmtExprVisitor' data-ref="tvm::tir::StmtExprVisitor" data-ref-filename="tvm..tir..StmtExprVisitor">StmtExprVisitor</span> {</td></tr>
+<tr><th id="40">40</th><td> <b>public</b>:</td></tr>
+<tr><th id="41">41</th><td>  <i>// Toplevel (static) functions</i></td></tr>
+<tr><th id="42">42</th><td>  <em>static</em> <em>bool</em> <a class="decl fn" href="check_contains.cc.html#_ZN3tvm3tir13CheckContains12ExprContainsERKNS_8PrimExprESt8functionIFbS4_EE" title='tvm::tir::CheckContains::ExprContains' data-ref="_ZN3tvm3tir13CheckContains12ExprContainsERKNS_8PrimExprESt8functionIFbS4_EE" data-ref-filename="_ZN3tvm3tir13CheckContains12ExprContainsERKNS_8PrimExprESt8functionIFbS4_EE" id="_ZN3tvm3tir13CheckContains12ExprContainsERKNS_8PrimExprESt8functionIFbS4_EE">ExprContains</a>(<em>const</em> <span class='type' title='tvm::PrimExpr' data-ref="tvm::PrimExpr" data-ref-filename="tvm..PrimExpr">PrimExpr</span>&amp; <dfn class="local col1 decl" id="1expr" title='expr' data-type='const tvm::PrimExpr &amp;' data-ref="1expr" data-ref-filename="1expr">expr</dfn>, <span class="namespace">std::</span><a class="type" href="../../../include/c++/10/bits/std_function.h.html#std::function" title='std::function' data-ref="std::function" data-ref-filename="std..function">function</a>&lt;<em>bool</em>(<em>const</em> <span class='type' title='tvm::PrimExpr' data-ref="tvm::PrimExpr" data-ref-filename="tvm..PrimExpr">PrimExpr</span>&amp;)&gt; <dfn class="local col2 decl" id="2predicate" title='predicate' data-type='std::function&lt;bool (const PrimExpr &amp;)&gt;' data-ref="2predicate" data-ref-filename="2predicate">predicate</dfn>);</td></tr>
+<tr><th id="43">43</th><td>  <em>static</em> <em>bool</em> <a class="decl fn" href="check_contains.cc.html#_ZN3tvm3tir13CheckContains12StmtContainsERKNS0_4StmtESt8functionIFbRKNS_8PrimExprEEE" title='tvm::tir::CheckContains::StmtContains' data-ref="_ZN3tvm3tir13CheckContains12StmtContainsERKNS0_4StmtESt8functionIFbRKNS_8PrimExprEEE" data-ref-filename="_ZN3tvm3tir13CheckContains12StmtContainsERKNS0_4StmtESt8functionIFbRKNS_8PrimExprEEE" id="_ZN3tvm3tir13CheckContains12StmtContainsERKNS0_4StmtESt8functionIFbRKNS_8PrimExprEEE">StmtContains</a>(<em>const</em> <span class='type' title='tvm::tir::Stmt' data-ref="tvm::tir::Stmt" data-ref-filename="tvm..tir..Stmt">Stmt</span>&amp; <dfn class="local col3 decl" id="3stmt" title='stmt' data-type='const tvm::tir::Stmt &amp;' data-ref="3stmt" data-ref-filename="3stmt">stmt</dfn>, <span class="namespace">std::</span><a class="type" href="../../../include/c++/10/bits/std_function.h.html#std::function" title='std::function' data-ref="std::function" data-ref-filename="std..function">function</a>&lt;<em>bool</em>(<em>const</em> <span class='type' title='tvm::PrimExpr' data-ref="tvm::PrimExpr" data-ref-filename="tvm..PrimExpr">PrimExpr</span>&amp;)&gt; <dfn class="local col4 decl" id="4predicate" title='predicate' data-type='std::function&lt;bool (const PrimExpr &amp;)&gt;' data-ref="4predicate" data-ref-filename="4predicate">predicate</dfn>);</td></tr>
+<tr><th id="44">44</th><td></td></tr>
+<tr><th id="45">45</th><td> <b>protected</b>:</td></tr>
+<tr><th id="46">46</th><td>  <i>// Constructor</i></td></tr>
+<tr><th id="47">47</th><td>  <b>explicit</b> <a class="decl fn" href="check_contains.cc.html#_ZN3tvm3tir13CheckContainsC1ESt8functionIFbRKNS_8PrimExprEEE" title='tvm::tir::CheckContains::CheckContains' data-ref="_ZN3tvm3tir13CheckContainsC1ESt8functionIFbRKNS_8PrimExprEEE" data-ref-filename="_ZN3tvm3tir13CheckContainsC1ESt8functionIFbRKNS_8PrimExprEEE" id="_ZN3tvm3tir13CheckContainsC1ESt8functionIFbRKNS_8PrimExprEEE">CheckContains</a>(<span class="namespace">std::</span><a class="type" href="../../../include/c++/10/bits/std_function.h.html#std::function" title='std::function' data-ref="std::function" data-ref-filename="std..function">function</a>&lt;<em>bool</em>(<em>const</em> <span class='type' title='tvm::PrimExpr' data-ref="tvm::PrimExpr" data-ref-filename="tvm..PrimExpr">PrimExpr</span>&amp;)&gt; <dfn class="local col5 decl" id="5predicate" title='predicate' data-type='std::function&lt;bool (const PrimExpr &amp;)&gt;' data-ref="5predicate" data-ref-filename="5predicate">predicate</dfn>);</td></tr>
+<tr><th id="48">48</th><td></td></tr>
+<tr><th id="49">49</th><td>  <em>void</em> <a class="virtual decl fn" href="check_contains.cc.html#_ZN3tvm3tir13CheckContains9VisitExprERKNS_8PrimExprE" title='tvm::tir::CheckContains::VisitExpr' data-ref="_ZN3tvm3tir13CheckContains9VisitExprERKNS_8PrimExprE" data-ref-filename="_ZN3tvm3tir13CheckContains9VisitExprERKNS_8PrimExprE" id="_ZN3tvm3tir13CheckContains9VisitExprERKNS_8PrimExprE">VisitExpr</a>(<em>const</em> <span class='type' title='tvm::PrimExpr' data-ref="tvm::PrimExpr" data-ref-filename="tvm..PrimExpr">PrimExpr</span>&amp; <dfn class="local col6 decl" id="6expr" title='expr' data-type='const tvm::PrimExpr &amp;' data-ref="6expr" data-ref-filename="6expr">expr</dfn>) override;</td></tr>
+<tr><th id="50">50</th><td>  <em>void</em> <a class="virtual decl fn" href="check_contains.cc.html#_ZN3tvm3tir13CheckContains9VisitStmtERKNS0_4StmtE" title='tvm::tir::CheckContains::VisitStmt' data-ref="_ZN3tvm3tir13CheckContains9VisitStmtERKNS0_4StmtE" data-ref-filename="_ZN3tvm3tir13CheckContains9VisitStmtERKNS0_4StmtE" id="_ZN3tvm3tir13CheckContains9VisitStmtERKNS0_4StmtE">VisitStmt</a>(<em>const</em> <span class='type' title='tvm::tir::Stmt' data-ref="tvm::tir::Stmt" data-ref-filename="tvm..tir..Stmt">Stmt</span>&amp; <dfn class="local col7 decl" id="7stmt" title='stmt' data-type='const tvm::tir::Stmt &amp;' data-ref="7stmt" data-ref-filename="7stmt">stmt</dfn>) override;</td></tr>
+<tr><th id="51">51</th><td></td></tr>
+<tr><th id="52">52</th><td> <b>private</b>:</td></tr>
+<tr><th id="53">53</th><td>  <span class="namespace">std::</span><a class="type" href="../../../include/c++/10/bits/std_function.h.html#std::function" title='std::function' data-ref="std::function" data-ref-filename="std..function">function</a>&lt;<em>bool</em>(<em>const</em> <span class='type' title='tvm::PrimExpr' data-ref="tvm::PrimExpr" data-ref-filename="tvm..PrimExpr">PrimExpr</span>&amp;)&gt; <dfn class="decl field" id="tvm::tir::CheckContains::predicate_" title='tvm::tir::CheckContains::predicate_' data-ref="tvm::tir::CheckContains::predicate_" data-ref-filename="tvm..tir..CheckContains..predicate_">predicate_</dfn>;</td></tr>
+<tr><th id="54">54</th><td>  <em>bool</em> <dfn class="decl field" id="tvm::tir::CheckContains::contains_it_" title='tvm::tir::CheckContains::contains_it_' data-ref="tvm::tir::CheckContains::contains_it_" data-ref-filename="tvm..tir..CheckContains..contains_it_">contains_it_</dfn> = <b>false</b>;</td></tr>
+<tr><th id="55">55</th><td>};</td></tr>
+<tr><th id="56">56</th><td></td></tr>
+<tr><th id="57">57</th><td>}  <i>// namespace tir</i></td></tr>
+<tr><th id="58">58</th><td>}  <i>// namespace tvm</i></td></tr>
+<tr><th id="59">59</th><td></td></tr>
+<tr><th id="60">60</th><td><u>#<span data-ppcond="26">endif</span>  // TVM_TIR_ANALYSIS_CHECK_CONTAINS_H_</u></td></tr>
+<tr><th id="61">61</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated while processing <a href='check_contains.cc.html'>tvm/tir/analysis/check_contains.cc</a><br/>Generated on <em>2022-Aug-10</em> from project tvm revision <em>123</em><br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

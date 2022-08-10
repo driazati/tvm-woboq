@@ -1,0 +1,15 @@
+<dec f='tvm/relay/transforms/compiler_function_utils.h' l='136' type='tvm::transform::Pass tvm::relay::transform::MarkCompilerFunctionsAsExtern(std::string compiler_filter = &quot;&quot;)'/>
+<use f='tvm/relay/backend/contrib/codegen_c/codegen.cc' l='397' u='c' c='_ZN3tvm5relay7contrib13CCompilerPassEv'/>
+<doc f='tvm/relay/transforms/compiler_function_utils.h' l='125'>/*!
+ * \brief A pass to mark all global functions which have a &quot;Compiler&quot; attribute matching
+ * compiler_filter as &apos;extern&apos; by replacing all attributes with a single &quot;Extern&quot; attribute.
+ * Calls to such functions are not changed.
+ *
+ * If \p compiler_filter is non-empty only functions with that as their attribute value are
+ * outlined.
+ *
+ * This pass may be useful for external codegen using the &quot;RelayToTIR&quot; custom pass mechanism to
+ * cleanup the IRModule after custom lowering.
+ */</doc>
+<def f='tvm/relay/transforms/compiler_function_utils.cc' l='243' ll='263' type='tvm::transform::Pass tvm::relay::transform::MarkCompilerFunctionsAsExtern(std::string compiler_filter = &quot;&quot;)'/>
+<use f='tvm/relay/transforms/compiler_function_utils.cc' l='294' u='r'/>

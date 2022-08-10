@@ -1,0 +1,12 @@
+<def f='tvm/tir/schedule/primitive/blockize_tensorize.cc' l='148' ll='182' type='Array&lt;Array&lt;arith::IterMark&gt;&gt; tvm::tir::SubspaceDivide(const tvm::tir::BlockRealize &amp; realize, const tvm::tir::StmtSRef &amp; block_sref, const tvm::tir::StmtSRef &amp; loop_sref, std::vector&lt;const ForNode *&gt; * loops, arith::Analyzer * analyzer)'/>
+<use f='tvm/tir/schedule/primitive/blockize_tensorize.cc' l='437' u='c' c='_ZN3tvm3tir12BlockizeImplERKNS0_13ScheduleStateERKNS0_8StmtSRefEPNS_7runtime3MapINS0_5BlockES9_vvEEPNS_5arith8AnalyzerE'/>
+<doc f='tvm/tir/schedule/primitive/blockize_tensorize.cc' l='138'>/*!
+ * \brief Subspace division. The space is divided into two subspaces:
+ *  1. The subspace represented by the outer loops above `loop_sref` (exclusive).
+ *  2. The subspace represented by the inner loops below `loop_sref` (inclusive).
+ * \param realize The inner block
+ * \param block_sref The sref to the inner block
+ * \param loop_sref The loop that is the root of the second subspace.
+ * \param loops The loops that represents the second part of the subspace.
+ * \param analyzer The arithmetic analyzer to use.
+ */</doc>

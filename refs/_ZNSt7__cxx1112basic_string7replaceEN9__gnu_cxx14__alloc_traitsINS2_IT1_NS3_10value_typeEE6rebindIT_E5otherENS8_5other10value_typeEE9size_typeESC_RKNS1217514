@@ -1,0 +1,21 @@
+<def f='include/c++/10/bits/basic_string.h' l='1887' ll='1889' type='basic_string&lt;_CharT, _Traits, _Alloc&gt; &amp; std::basic_string::replace(std::basic_string::size_type __pos, std::basic_string::size_type __n, const basic_string&lt;_CharT, _Traits, _Alloc&gt; &amp; __str)'/>
+<doc f='include/c++/10/bits/basic_string.h' l='1870'>/**
+       *  @brief  Replace characters with value from another string.
+       *  @param __pos  Index of first character to replace.
+       *  @param __n  Number of characters to be replaced.
+       *  @param __str  String to insert.
+       *  @return  Reference to this string.
+       *  @throw  std::out_of_range  If @a pos is beyond the end of this
+       *  string.
+       *  @throw  std::length_error  If new length exceeds @c max_size().
+       *
+       *  Removes the characters in the range [__pos,__pos+__n) from
+       *  this string.  In place, the value of @a __str is inserted.
+       *  If @a __pos is beyond end of string, out_of_range is thrown.
+       *  If the length of the result exceeds max_size(), length_error
+       *  is thrown.  The value of the string doesn&apos;t change if an
+       *  error is thrown.
+      */</doc>
+<use f='tvm/auto_scheduler/utils.h' l='140' u='c' c='_ZN3tvm14auto_scheduler10StrReplaceEPNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKS6_S9_'/>
+<use f='tvm/target/source/ptx.cc' l='412' u='c' c='_ZN3tvm7codegen8Replacer7rewriteENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<use f='tvm/tir/schedule/error.cc' l='38' u='c' c='_ZNK3tvm3tir13ScheduleError12RenderReportERKNS_7runtime6StringE'/>

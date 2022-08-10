@@ -1,0 +1,19 @@
+<dec f='tvm/tir/transforms/common_subexpr_elim_tools.h' l='187' type='std::vector&lt;std::pair&lt;PrimExpr, size_t&gt;&gt; tvm::tir::SyntacticToSemanticComputations(const tvm::tir::ComputationTable &amp; table, bool identify_equiv_terms)'/>
+<use f='tvm/tir/transforms/common_subexpr_elim.cc' l='242' u='c' c='_ZN3tvm3tir29CommonSubexpressionEliminator9VisitExprERKNS_8PrimExprE'/>
+<use f='tvm/tir/transforms/common_subexpr_elim.cc' l='422' u='c' c='_ZN3tvm3tir29CommonSubexpressionEliminator9VisitStmtERKNS0_4StmtE'/>
+<def f='tvm/tir/transforms/common_subexpr_elim_tools.cc' l='777' ll='860' type='std::vector&lt;std::pair&lt;PrimExpr, size_t&gt;&gt; tvm::tir::SyntacticToSemanticComputations(const tvm::tir::ComputationTable &amp; table, bool identify_equiv_terms)'/>
+<doc f='tvm/tir/transforms/common_subexpr_elim_tools.cc' l='762'>/*!
+ * \brief Transforms a hashtable of syntactic computations into a vector or pairs
+          (expression, counter) where equivalent computations are merged and their counters added.
+          This function simply looks for semantically equivalent terms in order to get the real
+          total number of times a computation (and semantically equivalent ones) is seen.
+ * \param table The table to transform
+   \note This function is needed because the advantage of the hashtable was the constant lookup.
+          But in order to have this constant lookup, we could not collapse semantically equivalent
+          computations.
+          Attention, the pairs returned are deterministic and will always be the same (as the same
+          canonical representant will always be chosen for a given class of equivalence), but the
+          order in which these pairs appear in the result is not deterministic, as it is based on
+          the order in which we found items in the &quot;normalized hashtable&quot; `norm_table`). The caller
+          is expected to sort the result anyway.
+ */</doc>

@@ -1,0 +1,24 @@
+<use f='tvm/arith/rewrite_simplify.cc' l='1577' u='r' c='_ZN3tvm5arith17RewriteSimplifier4Impl10VisitExpr_EPKNS_3tir6OrNodeE'/>
+<use f='tvm/auto_scheduler/compute_dag.cc' l='618' u='m' c='_ZN3tvm14auto_scheduler13FlopEstimator10VisitExpr_EPKNS_3tir6OrNodeE'/>
+<use f='tvm/auto_scheduler/compute_dag.cc' l='621' u='r' c='_ZN3tvm14auto_scheduler13FlopEstimator10VisitExpr_EPKNS_3tir6OrNodeE'/>
+<use f='tvm/printer/tir_text_printer.cc' l='322' u='r' c='_ZN3tvm3tir14TIRTextPrinter10VisitExpr_EPKNS0_6OrNodeE'/>
+<use f='tvm/printer/tvmscript_printer.cc' l='762' u='r' c='_ZN3tvm3tir16TVMScriptPrinter10VisitExpr_EPKNS0_6OrNodeEPNS0_14ExprPrecedenceE'/>
+<use f='tvm/target/llvm/codegen_llvm.cc' l='1240' u='r' c='_ZN3tvm7codegen11CodeGenLLVM10VisitExpr_EPKNS_3tir6OrNodeE'/>
+<use f='tvm/target/source/codegen_opencl.cc' l='538' u='r' c='_ZN3tvm7codegen13CodeGenOpenCL10VisitExpr_EPKNS_3tir6OrNodeERSo'/>
+<use f='tvm/target/stackvm/codegen_stackvm.cc' l='410' u='r' c='_ZN3tvm7codegen14CodeGenStackVM10VisitExpr_EPKNS_3tir6OrNodeE'/>
+<use f='tvm/te/autodiff/ad_simplify.cc' l='398' u='r' c='_ZN3tvm2te30FactorOutAtomicFormulasFunctor10VisitExpr_EPKNS_3tir7NotNodeE'/>
+<use f='tvm/te/autodiff/ad_simplify.cc' l='439' u='r' c='_ZN3tvm2te30FactorOutAtomicFormulasFunctor10VisitExpr_EPKNS_3tir6OrNodeE'/>
+<use f='tvm/te/autodiff/ad_simplify.cc' l='833' u='r' c='_ZN3tvm2te28ImplicationNotContainingVarsERKNS_8PrimExprERKSt13unordered_setIPKNS_3tir7VarNodeESt4hashIS8_ESt8equal_toIS8_ESaIS8_EE'/>
+<use f='tvm/tir/analysis/estimate_flops.cc' l='123' u='r' c='_ZN3tvm3tir13FlopEstimator10VisitExpr_EPKNS0_6OrNodeE'/>
+<use f='tvm/tir/ir/expr.cc' l='558' u='w' c='_ZN3tvm3tir2OrC1ENS_8PrimExprES2_NS_4SpanE'/>
+<use f='tvm/tir/ir/expr.cc' l='575' u='r'/>
+<use f='tvm/tir/ir/expr_functor.cc' l='61' u='r' c='_ZN3tvm3tir11ExprVisitor10VisitExpr_EPKNS0_6OrNodeE'/>
+<use f='tvm/tir/ir/expr_functor.cc' l='184' u='r' c='_ZN3tvm3tir11ExprMutator10VisitExpr_EPKNS0_6OrNodeE'/>
+<use f='tvm/tir/ir/expr_functor.cc' l='185' u='r' c='_ZN3tvm3tir11ExprMutator10VisitExpr_EPKNS0_6OrNodeE'/>
+<use f='tvm/tir/ir/specialize.cc' l='53' u='r' c='_ZN3tvm3tir19PrimFuncSpecializer10VisitExpr_EPKNS0_6OrNodeE'/>
+<use f='tvm/tir/ir/specialize.cc' l='54' u='r' c='_ZN3tvm3tir19PrimFuncSpecializer10VisitExpr_EPKNS0_6OrNodeE'/>
+<use f='tvm/tir/schedule/analysis/analysis.cc' l='1338' u='r' c='_ZN3tvm3tir14PatternMatcher10VisitExpr_EPKNS0_6OrNodeE'/>
+<use f='tvm/tir/schedule/analysis/analysis.cc' l='1339' u='r' c='_ZN3tvm3tir14PatternMatcher10VisitExpr_EPKNS0_6OrNodeE'/>
+<use f='tvm/tir/schedule/ir_comparator.cc' l='146' u='r' c='_ZN3tvm3tir19TensorizeComparator10VisitExpr_EPKNS0_6OrNodeERKNS_8PrimExprE'/>
+<use f='tvm/tir/schedule/ir_comparator.cc' l='146' u='r' c='_ZN3tvm3tir19TensorizeComparator10VisitExpr_EPKNS0_6OrNodeERKNS_8PrimExprE'/>
+<use f='tvm/tir/transforms/hoist_expression.cc' l='238' u='r' c='_ZN3tvm3tir18HoistInfoCollector10VisitExpr_EPKNS0_6OrNodeE'/>

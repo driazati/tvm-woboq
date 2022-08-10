@@ -1,0 +1,14 @@
+<dec f='tvm/te/schedule/graph.h' l='88' type='Array&lt;tvm::te::Operation&gt; tvm::te::PostDFSOrder(const Array&lt;tvm::te::Operation&gt; &amp; roots, const tvm::te::ReadGraph &amp; g)'/>
+<use f='tvm/te/operation/create_primfunc.cc' l='404' u='c' c='_ZN3tvm3tir17CollectOrderedOpsERKNS_7runtime5ArrayINS_2te6TensorEvEE'/>
+<doc f='tvm/te/schedule/graph.h' l='79'>/*!
+ * \brief Get a post DFS ordered of operations in the graph.
+ * \param roots The root of the graph.
+ * \param g The read graph.
+ * \return vector order of Operations in PostDFS order.
+ *
+ * \note PostDFSOrder is a special case of Topoligical order,
+ *   and can be used when topoligical order is needed.
+ */</doc>
+<def f='tvm/te/schedule/graph.cc' l='152' ll='159' type='Array&lt;tvm::te::Operation&gt; tvm::te::PostDFSOrder(const Array&lt;tvm::te::Operation&gt; &amp; roots, const tvm::te::ReadGraph &amp; g)'/>
+<use f='tvm/te/schedule/graph.cc' l='408' u='c'/>
+<use f='tvm/te/schedule/schedule_lang.cc' l='726' u='c' c='_ZN3tvm2te8ScheduleC1ENS_7runtime5ArrayINS0_9OperationEvEE'/>

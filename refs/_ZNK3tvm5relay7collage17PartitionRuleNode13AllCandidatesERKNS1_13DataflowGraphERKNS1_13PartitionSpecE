@@ -1,0 +1,22 @@
+<dec f='tvm/relay/collage/partition_rule.h' l='180' type='std::vector&lt;CandidatePartition&gt; tvm::relay::collage::PartitionRuleNode::AllCandidates(const tvm::relay::collage::DataflowGraph &amp; dataflow_graph, const tvm::relay::collage::PartitionSpec &amp; spec) const'/>
+<doc f='tvm/relay/collage/partition_rule.h' l='174'>/*!
+   * \brief Returns all the possible candidate partitions according to this rule for the overall
+   * expression corresponding to \p dataflow_graph. The candidates will generally have unknown
+   * target and cost: the target will be filled in by the \p PartitionSpec, while the cost will
+   * be filled in lazily.
+   */</doc>
+<def f='tvm/relay/collage/partition_rule.cc' l='43' ll='47' type='std::vector&lt;CandidatePartition&gt; tvm::relay::collage::PartitionRuleNode::AllCandidates(const tvm::relay::collage::DataflowGraph &amp; dataflow_graph, const tvm::relay::collage::PartitionSpec &amp; spec) const'/>
+<ovr f='tvm/relay/collage/partition_rule.cc' l='80' c='_ZNK3tvm5relay7collage26DFPatternPartitionRuleNode13AllCandidatesERKNS1_13DataflowGraphERKNS1_13PartitionSpecE'/>
+<ovr f='tvm/relay/collage/partition_rule.cc' l='130' c='_ZNK3tvm5relay7collage26CompositePartitionRuleNode13AllCandidatesERKNS1_13DataflowGraphERKNS1_13PartitionSpecE'/>
+<use f='tvm/relay/collage/partition_rule.cc' l='132' u='c' c='_ZNK3tvm5relay7collage26CompositePartitionRuleNode13AllCandidatesERKNS1_13DataflowGraphERKNS1_13PartitionSpecE'/>
+<ovr f='tvm/relay/collage/partition_rule.cc' l='170' c='_ZNK3tvm5relay7collage26PrimitivePartitionRuleNode13AllCandidatesERKNS1_13DataflowGraphERKNS1_13PartitionSpecE'/>
+<use f='tvm/relay/collage/partition_rule.cc' l='172' u='c' c='_ZNK3tvm5relay7collage26PrimitivePartitionRuleNode13AllCandidatesERKNS1_13DataflowGraphERKNS1_13PartitionSpecE'/>
+<ovr f='tvm/relay/collage/partition_rule.cc' l='214' c='_ZNK3tvm5relay7collage22UnionPartitionRuleNode13AllCandidatesERKNS1_13DataflowGraphERKNS1_13PartitionSpecE'/>
+<use f='tvm/relay/collage/partition_rule.cc' l='218' u='c' c='_ZNK3tvm5relay7collage22UnionPartitionRuleNode13AllCandidatesERKNS1_13DataflowGraphERKNS1_13PartitionSpecE'/>
+<ovr f='tvm/relay/collage/partition_rule.cc' l='251' c='_ZNK3tvm5relay7collage29OpCallByKindPartitionRuleNode13AllCandidatesERKNS1_13DataflowGraphERKNS1_13PartitionSpecE'/>
+<ovr f='tvm/relay/collage/partition_rule.cc' l='294' c='_ZNK3tvm5relay7collage24CombinePartitionRuleNode13AllCandidatesERKNS1_13DataflowGraphERKNS1_13PartitionSpecE'/>
+<use f='tvm/relay/collage/partition_rule.cc' l='298' u='c' c='_ZNK3tvm5relay7collage24CombinePartitionRuleNode13AllCandidatesERKNS1_13DataflowGraphERKNS1_13PartitionSpecE'/>
+<ovr f='tvm/relay/collage/partition_rule.cc' l='354' c='_ZNK3tvm5relay7collage26OnlyValidPartitionRuleNode13AllCandidatesERKNS1_13DataflowGraphERKNS1_13PartitionSpecE'/>
+<use f='tvm/relay/collage/partition_rule.cc' l='356' u='c' c='_ZNK3tvm5relay7collage26OnlyValidPartitionRuleNode13AllCandidatesERKNS1_13DataflowGraphERKNS1_13PartitionSpecE'/>
+<ovr f='tvm/relay/collage/partition_rule.cc' l='398' c='_ZNK3tvm5relay7collage21HostPartitionRuleNode13AllCandidatesERKNS1_13DataflowGraphERKNS1_13PartitionSpecE'/>
+<use f='tvm/relay/collage/partition_spec.cc' l='49' u='c' c='_ZNK3tvm5relay7collage17PartitionSpecNode13AllCandidatesERKNS1_13DataflowGraphE'/>

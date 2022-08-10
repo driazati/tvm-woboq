@@ -1,0 +1,11 @@
+<dec f='tvm/relay/op/contrib/ethosu/common.h' l='43' type='Array&lt;tvm::relay::IndexExpr&gt; tvm::relay::op::contrib::ethosu::EthosuInferElementwiseOutputShape(Array&lt;tvm::relay::IndexExpr&gt; ifm_shape, tvm::runtime::String ifm_layout, tvm::runtime::String ofm_layout, tvm::relay::IndexExpr ofm_channels)'/>
+<use f='tvm/relay/op/contrib/ethosu/binary_elementwise.cc' l='83' u='c' c='_ZN3tvm5relay2op7contrib6ethosu26EthosuBinaryElementwiseRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<doc f='tvm/relay/op/contrib/ethosu/common.h' l='36'>/*! \brief Infer the output tensor shape for binary elementwise operators.
+ * \param ifm_shape The shape of Input Feature Map.
+ * \param ifm_layout The layout of the IFM (NHWC or NHCWB16).
+ * \param ofm_layout The layout of the OFM (NHWC or NHCWB16).
+ * \param ofm_channels The number of Output Feature Map channels.
+ * \return The shape of the output tensor.
+ */</doc>
+<def f='tvm/relay/op/contrib/ethosu/common.cc' l='37' ll='52' type='Array&lt;tvm::relay::IndexExpr&gt; tvm::relay::op::contrib::ethosu::EthosuInferElementwiseOutputShape(Array&lt;tvm::relay::IndexExpr&gt; ifm_shape, tvm::runtime::String ifm_layout, tvm::runtime::String ofm_layout, tvm::relay::IndexExpr ofm_channels)'/>
+<use f='tvm/relay/op/contrib/ethosu/unary_elementwise.cc' l='66' u='c' c='_ZN3tvm5relay2op7contrib6ethosu25EthosuUnaryElementwiseRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>

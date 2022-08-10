@@ -1,0 +1,19 @@
+<dec f='tvm/tir/transforms/ir_utils.h' l='235' type='tvm::Bool tvm::tir::IsFromLegacyTESchedule(tvm::tir::PrimFunc f)'/>
+<doc f='tvm/tir/transforms/ir_utils.h' l='227'>/*!
+ * \brief Check if a given PrimFunc originated from a TE schedule.
+ *
+ * Internally this checks for the `from_legacy_te_schedule` attr of the PrimFunc.
+ *
+ * \param f PrimFunc to check
+ * \return Whether or not the PrimFunc was created from a te schedule
+ */</doc>
+<use f='tvm/tir/transforms/compact_buffer_region.cc' l='587' u='c' c='_ZN3tvm3tir23CompactBufferAllocationENS0_8PrimFuncE'/>
+<use f='tvm/tir/transforms/convert_blocks_to_opaque.cc' l='89' u='c' c='_ZN3tvm3tir21ConvertBlocksToOpaqueENS0_8PrimFuncE'/>
+<use f='tvm/tir/transforms/flatten_buffer.cc' l='153' u='c' c='_ZN3tvm3tir13FlattenBufferENS0_8PrimFuncE'/>
+<use f='tvm/tir/transforms/inject_prefetch.cc' l='102' u='c' c='_ZN3tvm3tir9transform14InjectPrefetchEv'/>
+<def f='tvm/tir/transforms/ir_utils.cc' l='316' ll='319' type='tvm::Bool tvm::tir::IsFromLegacyTESchedule(tvm::tir::PrimFunc f)'/>
+<use f='tvm/tir/transforms/lower_cross_thread_reduction.cc' l='623' u='c' c='_ZN3tvm3tir25LowerCrossThreadReductionENS0_8PrimFuncE'/>
+<use f='tvm/tir/transforms/lower_init_block.cc' l='69' u='c' c='_ZN3tvm3tir14LowerInitBlockENS0_8PrimFuncE'/>
+<use f='tvm/tir/transforms/lower_opaque_block.cc' l='155' u='c' c='_ZN3tvm3tir16LowerOpaqueBlockENS0_8PrimFuncE'/>
+<use f='tvm/tir/transforms/plan_update_buffer_allocation_location.cc' l='175' u='c' c='_ZN3tvm3tir37PlanAndUpdateBufferAllocationLocationENS0_8PrimFuncE'/>
+<use f='tvm/tir/transforms/unify_thread_binding.cc' l='177' u='c' c='_ZN3tvm3tir18UnifyThreadBindingENS0_8PrimFuncE'/>

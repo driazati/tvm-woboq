@@ -1,0 +1,14 @@
+<dec f='tvm/relay/transforms/device_domains.h' l='350' type='std::unordered_map&lt;VirtualDevice, DeviceDomainPtr, runtime::ObjectPtrHash, runtime::ObjectPtrEqual&gt;'/>
+<use f='tvm/relay/transforms/device_domains.cc' l='45' u='m' c='_ZN3tvm5relay9transform13DeviceDomains20MakeFirstOrderDomainERKNS_13VirtualDeviceE'/>
+<use f='tvm/relay/transforms/device_domains.cc' l='46' u='m' c='_ZN3tvm5relay9transform13DeviceDomains20MakeFirstOrderDomainERKNS_13VirtualDeviceE'/>
+<use f='tvm/relay/transforms/device_domains.cc' l='50' u='m' c='_ZN3tvm5relay9transform13DeviceDomains20MakeFirstOrderDomainERKNS_13VirtualDeviceE'/>
+<offset>1856</offset>
+<doc f='tvm/relay/transforms/device_domains.h' l='339'>/*!
+   * \brief Maps fully constrained \p VirtualDevices to their corresponding domains. By sharing
+   * those domains we can ensure:
+   *
+   * \code
+   * domain0 != domain1 &amp;&amp; domain0 fully constrained &amp;&amp; domain1 fully constrained
+   *   ==&gt; domain0 and domain1 are incompatible
+   * \endcode
+   */</doc>

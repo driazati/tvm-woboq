@@ -1,0 +1,14 @@
+<dec f='tvm/tir/schedule/analysis.h' l='666' type='bool tvm::tir::NeedsRFactorOrCrossThreadReduction(const tir::ScheduleState &amp; self, const tir::StmtSRef &amp; block_sref, int64_t max_parallel_extent, int64_t max_parallel_basic)'/>
+<doc f='tvm/tir/schedule/analysis.h' l='658'>/*!
+ * \brief Checks if the rfactor or cross thread reduction is beneficial to the given block.
+ * \param self The schedule state.
+ * \param block_sref The block to be checked.
+ * \param max_parallel_extent The maximum parallel jobs on the target.
+ * \param max_parallel_basic The maximum cores on the target.
+ * \return A boolean indicating whether the operation is beneficial.
+ */</doc>
+<doc f='tvm/tir/schedule/analysis.h' l='666'>//</doc>
+<use f='tvm/meta_schedule/schedule_rule/add_rfactor.cc' l='76' u='c' c='_ZN3tvm13meta_schedule14AddRFactorNode5ApplyERKNS_3tir8ScheduleERKNS2_7BlockRVE'/>
+<use f='tvm/meta_schedule/schedule_rule/cross_thread_reduction.cc' l='55' u='c' c='_ZN3tvm13meta_schedule24CrossThreadReductionNode5ApplyERKNS_3tir8ScheduleERKNS2_7BlockRVE'/>
+<def f='tvm/tir/schedule/analysis/analysis.cc' l='2064' ll='2137' type='bool tvm::tir::NeedsRFactorOrCrossThreadReduction(const tir::ScheduleState &amp; self, const tir::StmtSRef &amp; block_sref, int64_t max_parallel_extent, int64_t max_parallel_basic)'/>
+<doc f='tvm/tir/schedule/analysis/analysis.cc' l='2064'>//</doc>

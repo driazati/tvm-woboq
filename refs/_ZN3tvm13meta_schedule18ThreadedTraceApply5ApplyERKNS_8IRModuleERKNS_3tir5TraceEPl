@@ -1,0 +1,12 @@
+<def f='tvm/meta_schedule/utils.h' l='269' ll='294' type='Optional&lt;tir::Schedule&gt; tvm::meta_schedule::ThreadedTraceApply::Apply(const tvm::IRModule &amp; mod, const tir::Trace &amp; trace, tvm::meta_schedule::TRandState * rand_state)'/>
+<doc f='tvm/meta_schedule/utils.h' l='262'>/*!
+   * \brief Apply the trace and postprocessors to an IRModule
+   * \param mod The IRModule to be applied
+   * \param trace The trace to apply to the IRModule
+   * \param rand_state The random seed
+   * \return The schedule created, or NullOpt if any postprocessor fails
+   */</doc>
+<use f='tvm/meta_schedule/search_strategy/evolutionary_search.cc' l='455' u='c' c='_ZN3tvm13meta_schedule22EvolutionarySearchNode5State20PickBestFromDatabaseEi'/>
+<use f='tvm/meta_schedule/search_strategy/evolutionary_search.cc' l='480' u='c' c='_ZN3tvm13meta_schedule22EvolutionarySearchNode5State20SampleInitPopulationEi'/>
+<use f='tvm/meta_schedule/search_strategy/evolutionary_search.cc' l='557' u='c' c='_ZN3tvm13meta_schedule22EvolutionarySearchNode5State19EvolveWithCostModelESt6vectorINS_3tir8ScheduleESaIS5_EEi'/>
+<use f='tvm/meta_schedule/search_strategy/replay_trace.cc' l='143' u='c' c='_ZN3tvm13meta_schedule15ReplayTraceNode5State25GenerateMeasureCandidatesEv'/>

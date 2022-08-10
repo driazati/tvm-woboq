@@ -1,0 +1,12 @@
+<dec f='tvm/tir/transforms/arg_binder.h' l='92' type='void tvm::tir::ArgBinder::BindBuffer(const tvm::tir::Buffer &amp; arg, const tvm::tir::Buffer &amp; value, const std::string &amp; arg_name, bool fuzzy_match)'/>
+<doc f='tvm/tir/transforms/arg_binder.h' l='84'>/*!
+   * \brief Bind symbolic buffer to another symbolic buffer
+   * \param arg The argument to be binded.
+   * \param value The target expression value
+   * \param arg_name argument name.
+   * \param fuzzy_match If enabled, we allow value&apos;s dimension to be smaller than arg, as long as
+   * arg&apos;s higher dimensions are of 1.
+   */</doc>
+<def f='tvm/tir/transforms/arg_binder.cc' l='89' ll='146' type='void tvm::tir::ArgBinder::BindBuffer(const tvm::tir::Buffer &amp; arg, const tvm::tir::Buffer &amp; value, const std::string &amp; arg_name, bool fuzzy_match)'/>
+<use f='tvm/tir/transforms/storage_flatten.cc' l='353' u='c' c='_ZN3tvm3tir19BufferShapeLegalize21HandleBufferBindScopeEPKNS0_12AttrStmtNodeE'/>
+<use f='tvm/tir/transforms/storage_flatten.cc' l='1122' u='c' c='_ZN3tvm3tir19BufferBindUnwrapper21HandleBufferBindScopeEPKNS0_12AttrStmtNodeE'/>

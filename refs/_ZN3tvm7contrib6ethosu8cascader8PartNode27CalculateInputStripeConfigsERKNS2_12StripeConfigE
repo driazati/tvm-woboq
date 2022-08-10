@@ -1,0 +1,12 @@
+<dec f='tvm/contrib/ethosu/cascader/graph.h' l='192' type='std::vector&lt;StripeConfig&gt; tvm::contrib::ethosu::cascader::PartNode::CalculateInputStripeConfigs(const tvm::contrib::ethosu::cascader::StripeConfig &amp; output_stripe_config)'/>
+<doc f='tvm/contrib/ethosu/cascader/graph.h' l='187'>/*!
+   * \brief Calculate the input stripe configs for a given output stripe config using the
+   * Propagators. \param output_stripe_config The output stripe config to propagate. \return The
+   * calculated input stripe configs.
+   */</doc>
+<def f='tvm/contrib/ethosu/cascader/graph.cc' l='116' ll='123' type='std::vector&lt;StripeConfig&gt; tvm::contrib::ethosu::cascader::PartNode::CalculateInputStripeConfigs(const tvm::contrib::ethosu::cascader::StripeConfig &amp; output_stripe_config)'/>
+<use f='tvm/contrib/ethosu/cascader/graph.cc' l='141' u='c'/>
+<use f='tvm/contrib/ethosu/cascader/parts/ethosu.cc' l='54' u='c' c='_ZN3tvm7contrib6ethosu8cascader14EthosuPartNode12GetBytesReadERKSt6vectorIiSaIiEES8_'/>
+<use f='tvm/contrib/ethosu/cascader/parts/ethosu.cc' l='77' u='c' c='_ZN3tvm7contrib6ethosu8cascader14EthosuPartNode13CalculateCostERKNS2_11BlockConfigERKNS2_12StripeConfigE'/>
+<use f='tvm/contrib/ethosu/cascader/parts/ethosu.cc' l='98' u='c' c='_ZN3tvm7contrib6ethosu8cascader14EthosuPartNode14GetBlockConfigERKNS2_12StripeConfigE'/>
+<use f='tvm/contrib/ethosu/cascader/plan_generator.cc' l='350' u='c' c='_ZN3tvm7contrib6ethosu8cascader19GenerateSinglePlansERKNS2_4PartERKSt6vectorINS2_12StripeConfigESaIS7_EERKSt13unordered_mapINS2_6TensorES6_INS2_12Memo4994141'/>

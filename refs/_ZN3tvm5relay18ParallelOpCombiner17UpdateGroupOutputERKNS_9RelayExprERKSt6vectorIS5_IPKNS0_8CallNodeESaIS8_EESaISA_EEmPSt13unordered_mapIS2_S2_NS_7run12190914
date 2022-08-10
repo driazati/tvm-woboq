@@ -1,0 +1,14 @@
+<dec f='tvm/relay/transforms/combine_parallel_op.h' l='203' type='void tvm::relay::ParallelOpCombiner::UpdateGroupOutput(const tvm::relay::Expr &amp; data, const tvm::relay::Group &amp; branches, size_t depth, tvm::relay::ExprSubstMap * subst_map)'/>
+<ovr f='tvm/relay/transforms/combine_parallel_batch_matmul.cc' l='128' c='_ZN3tvm5relay27ParallelBatchMatmulCombiner17UpdateGroupOutputERKNS_9RelayExprERKSt6vectorIS5_IPKNS0_8CallNodeESaIS8_EESaISA_EEmPSt13unordered_mapIS2_S9192580'/>
+<doc f='tvm/relay/transforms/combine_parallel_op.h' l='195'>/*
+   * \brief Updates map of expr to substitute with combined expr. This usually involves
+   *        slicing or splitting data.
+   * \param data combined op
+   * \param branches branches of parallel ops to be combined
+   * \param depth depth at which to substitute
+   * \param subst_map map of Expr to replace with Expr to replace it with
+   */</doc>
+<ovr f='tvm/relay/transforms/combine_parallel_conv2d.cc' l='164' c='_ZN3tvm5relay22ParallelConv2DCombiner17UpdateGroupOutputERKNS_9RelayExprERKSt6vectorIS5_IPKNS0_8CallNodeESaIS8_EESaISA_EEmPSt13unordered_mapIS2_S2_NS_1057945'/>
+<ovr f='tvm/relay/transforms/combine_parallel_dense.cc' l='197' c='_ZN3tvm5relay28ParallelDenseToDenseCombiner17UpdateGroupOutputERKNS_9RelayExprERKSt6vectorIS5_IPKNS0_8CallNodeESaIS8_EESaISA_EEmPSt13unordered_mapIS2_10767304'/>
+<use f='tvm/relay/transforms/combine_parallel_op.cc' l='148' u='c' c='_ZN3tvm5relay18ParallelOpCombiner15CombineBranchesERKSt6vectorIS2_IPKNS0_8CallNodeESaIS5_EESaIS7_EE'/>
+<ovr f='tvm/relay/transforms/combine_parallel_op_batch.cc' l='159' c='_ZN3tvm5relay23ParallelOpBatchCombiner17UpdateGroupOutputERKNS_9RelayExprERKSt6vectorIS5_IPKNS0_8CallNodeESaIS8_EESaISA_EEmPSt13unordered_mapIS2_S2_NS15144642'/>

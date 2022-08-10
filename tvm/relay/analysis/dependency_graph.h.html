@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>dependency_graph.h source code [tvm/relay/analysis/dependency_graph.h] - Woboq Code Browser</title>
+<meta name="woboq:interestingDefinitions" content="tvm::relay::DependencyGraph "/>
+<link rel="stylesheet" href="../../.././data/qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href="../../.././data/kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src="../../.././data/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="../../.././data/jquery/jquery-ui.min.js"></script>
+<script>var file = 'tvm/relay/analysis/dependency_graph.h'; var root_path = '../../..'; var data_path = '../../.././data'; var ecma_script_api_version = 2;</script>
+<script src='../../.././data/codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='../..'>tvm</a>/<a href='..'>relay</a>/<a href='./'>analysis</a>/<a href='dependency_graph.h.html'>dependency_graph.h</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td><i>/*</i></td></tr>
+<tr><th id="2">2</th><td><i> * Licensed to the Apache Software Foundation (ASF) under one</i></td></tr>
+<tr><th id="3">3</th><td><i> * or more contributor license agreements.  See the NOTICE file</i></td></tr>
+<tr><th id="4">4</th><td><i> * distributed with this work for additional information</i></td></tr>
+<tr><th id="5">5</th><td><i> * regarding copyright ownership.  The ASF licenses this file</i></td></tr>
+<tr><th id="6">6</th><td><i> * to you under the Apache License, Version 2.0 (the</i></td></tr>
+<tr><th id="7">7</th><td><i> * "License"); you may not use this file except in compliance</i></td></tr>
+<tr><th id="8">8</th><td><i> * with the License.  You may obtain a copy of the License at</i></td></tr>
+<tr><th id="9">9</th><td><i> *</i></td></tr>
+<tr><th id="10">10</th><td><i> *   <a href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a></i></td></tr>
+<tr><th id="11">11</th><td><i> *</i></td></tr>
+<tr><th id="12">12</th><td><i> * Unless required by applicable law or agreed to in writing,</i></td></tr>
+<tr><th id="13">13</th><td><i> * software distributed under the License is distributed on an</i></td></tr>
+<tr><th id="14">14</th><td><i> * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY</i></td></tr>
+<tr><th id="15">15</th><td><i> * KIND, either express or implied.  See the License for the</i></td></tr>
+<tr><th id="16">16</th><td><i> * specific language governing permissions and limitations</i></td></tr>
+<tr><th id="17">17</th><td><i> * under the License.</i></td></tr>
+<tr><th id="18">18</th><td><i> */</i></td></tr>
+<tr><th id="19">19</th><td></td></tr>
+<tr><th id="20">20</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="21">21</th><td><i class="doc"> * <span class="command">\file</span> <span class="verb">src/relay/analysis/dependency_graph.h</span></i></td></tr>
+<tr><th id="22">22</th><td><i class="doc"> * <span class="command">\brief</span> create a dependency graph.</i></td></tr>
+<tr><th id="23">23</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="24">24</th><td><u>#<span data-ppcond="24">ifndef</span> <span class="macro" data-ref="_M/TVM_RELAY_ANALYSIS_DEPENDENCY_GRAPH_H_">TVM_RELAY_ANALYSIS_DEPENDENCY_GRAPH_H_</span></u></td></tr>
+<tr><th id="25">25</th><td><u>#define <dfn class="macro" id="_M/TVM_RELAY_ANALYSIS_DEPENDENCY_GRAPH_H_" data-ref="_M/TVM_RELAY_ANALYSIS_DEPENDENCY_GRAPH_H_">TVM_RELAY_ANALYSIS_DEPENDENCY_GRAPH_H_</dfn></u></td></tr>
+<tr><th id="26">26</th><td></td></tr>
+<tr><th id="27">27</th><td><u>#include &lt;tvm/relay/expr.h&gt;</u></td></tr>
+<tr><th id="28">28</th><td></td></tr>
+<tr><th id="29">29</th><td><u>#include <a href="../../../include/c++/10/unordered_map.html">&lt;unordered_map&gt;</a></u></td></tr>
+<tr><th id="30">30</th><td><u>#include <a href="../../../include/c++/10/vector.html">&lt;vector&gt;</a></u></td></tr>
+<tr><th id="31">31</th><td></td></tr>
+<tr><th id="32">32</th><td><u>#include <a href="../../support/arena.h.html">"../../support/arena.h"</a></u></td></tr>
+<tr><th id="33">33</th><td><u>#include <a href="../transforms/let_list.h.html">"../transforms/let_list.h"</a></u></td></tr>
+<tr><th id="34">34</th><td></td></tr>
+<tr><th id="35">35</th><td><b>namespace</b> <span class="namespace">tvm</span> {</td></tr>
+<tr><th id="36">36</th><td><b>namespace</b> <span class="namespace">relay</span> {</td></tr>
+<tr><th id="37">37</th><td></td></tr>
+<tr><th id="38">38</th><td><b>using</b> <span class="namespace">support::</span>LinkedList;</td></tr>
+<tr><th id="39">39</th><td><b>using</b> <span class="namespace">support::</span>LinkNode;</td></tr>
+<tr><th id="40">40</th><td></td></tr>
+<tr><th id="41">41</th><td><i>/* DependencyGraph track input and output of an Expr.</i></td></tr>
+<tr><th id="42">42</th><td><i> * Additionally, dummy scope is created to model scope.</i></td></tr>
+<tr><th id="43">43</th><td><i> * It allow us to traverse the graph in reverse order.</i></td></tr>
+<tr><th id="44">44</th><td><i> */</i></td></tr>
+<tr><th id="45">45</th><td><b>class</b> <dfn class="type def" id="tvm::relay::DependencyGraph" title='tvm::relay::DependencyGraph' data-ref="tvm::relay::DependencyGraph" data-ref-filename="tvm..relay..DependencyGraph">DependencyGraph</dfn> {</td></tr>
+<tr><th id="46">46</th><td> <b>public</b>:</td></tr>
+<tr><th id="47">47</th><td>  <i class="doc">/*! <span class="command">\brief</span> A node in the graph. */</i></td></tr>
+<tr><th id="48">48</th><td>  <b>struct</b> <dfn class="type def" id="tvm::relay::DependencyGraph::Node" title='tvm::relay::DependencyGraph::Node' data-ref="tvm::relay::DependencyGraph::Node" data-ref-filename="tvm..relay..DependencyGraph..Node">Node</dfn> {</td></tr>
+<tr><th id="49">49</th><td>    <i>// Determine scope boundaries. Used for calculating scopes, not for</i></td></tr>
+<tr><th id="50">50</th><td><i>    // constructing dependency graph.</i></td></tr>
+<tr><th id="51">51</th><td>    <em>bool</em> <dfn class="decl field" id="tvm::relay::DependencyGraph::Node::new_scope" title='tvm::relay::DependencyGraph::Node::new_scope' data-ref="tvm::relay::DependencyGraph::Node::new_scope" data-ref-filename="tvm..relay..DependencyGraph..Node..new_scope">new_scope</dfn> = <b>false</b>;</td></tr>
+<tr><th id="52">52</th><td>    <i>// incoming edges</i></td></tr>
+<tr><th id="53">53</th><td>    <a class="type" href="../../support/arena.h.html#tvm::support::LinkedList" title='tvm::support::LinkedList' data-ref="tvm::support::LinkedList" data-ref-filename="tvm..support..LinkedList">LinkedList</a>&lt;<a class="type" href="#tvm::relay::DependencyGraph::Node" title='tvm::relay::DependencyGraph::Node' data-ref="tvm::relay::DependencyGraph::Node" data-ref-filename="tvm..relay..DependencyGraph..Node">Node</a>*&gt; <dfn class="decl field" id="tvm::relay::DependencyGraph::Node::children" title='tvm::relay::DependencyGraph::Node::children' data-ref="tvm::relay::DependencyGraph::Node::children" data-ref-filename="tvm..relay..DependencyGraph..Node..children">children</dfn>;</td></tr>
+<tr><th id="54">54</th><td>    <i>// outgoing edges</i></td></tr>
+<tr><th id="55">55</th><td>    <a class="type" href="../../support/arena.h.html#tvm::support::LinkedList" title='tvm::support::LinkedList' data-ref="tvm::support::LinkedList" data-ref-filename="tvm..support..LinkedList">LinkedList</a>&lt;<a class="type" href="#tvm::relay::DependencyGraph::Node" title='tvm::relay::DependencyGraph::Node' data-ref="tvm::relay::DependencyGraph::Node" data-ref-filename="tvm..relay..DependencyGraph..Node">Node</a>*&gt; <dfn class="decl field" id="tvm::relay::DependencyGraph::Node::parents" title='tvm::relay::DependencyGraph::Node::parents' data-ref="tvm::relay::DependencyGraph::Node::parents" data-ref-filename="tvm..relay..DependencyGraph..Node..parents">parents</dfn>;</td></tr>
+<tr><th id="56">56</th><td>  };</td></tr>
+<tr><th id="57">57</th><td></td></tr>
+<tr><th id="58">58</th><td>  <i class="doc">/*! <span class="command">\brief</span> Maps a Relay Expr to its node in the dependency graph. */</i></td></tr>
+<tr><th id="59">59</th><td>  <span class="namespace">std::</span><a class="type" href="../../../include/c++/10/bits/unordered_map.h.html#std::unordered_map" title='std::unordered_map' data-ref="std::unordered_map" data-ref-filename="std..unordered_map">unordered_map</a>&lt;<span class='typedef' title='tvm::relay::Expr' data-type='tvm::RelayExpr' data-ref="tvm::relay::Expr" data-ref-filename="tvm..relay..Expr">Expr</span>, <a class="type" href="#tvm::relay::DependencyGraph::Node" title='tvm::relay::DependencyGraph::Node' data-ref="tvm::relay::DependencyGraph::Node" data-ref-filename="tvm..relay..DependencyGraph..Node">Node</a>*, ObjectPtrHash, ObjectPtrEqual&gt; <dfn class="decl field" id="tvm::relay::DependencyGraph::expr_node" title='tvm::relay::DependencyGraph::expr_node' data-ref="tvm::relay::DependencyGraph::expr_node" data-ref-filename="tvm..relay..DependencyGraph..expr_node">expr_node</dfn>;</td></tr>
+<tr><th id="60">60</th><td></td></tr>
+<tr><th id="61">61</th><td>  <i class="doc">/*! <span class="command">\brief</span> The dependency graph in post DFS order. */</i></td></tr>
+<tr><th id="62">62</th><td>  <span class="namespace">std::</span><a class="type" href="../../../include/c++/10/bits/stl_vector.h.html#std::vector" title='std::vector' data-ref="std::vector" data-ref-filename="std..vector">vector</a>&lt;<a class="type" href="#tvm::relay::DependencyGraph::Node" title='tvm::relay::DependencyGraph::Node' data-ref="tvm::relay::DependencyGraph::Node" data-ref-filename="tvm..relay..DependencyGraph..Node">Node</a>*&gt; <dfn class="decl field" id="tvm::relay::DependencyGraph::post_dfs_order" title='tvm::relay::DependencyGraph::post_dfs_order' data-ref="tvm::relay::DependencyGraph::post_dfs_order" data-ref-filename="tvm..relay..DependencyGraph..post_dfs_order">post_dfs_order</dfn>;</td></tr>
+<tr><th id="63">63</th><td></td></tr>
+<tr><th id="64">64</th><td>  <i class="doc">/*!</i></td></tr>
+<tr><th id="65">65</th><td><i class="doc">   * <span class="command">\brief</span> Create a dependency graph.</i></td></tr>
+<tr><th id="66">66</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">arena</span> The arena used for data allocation.</i></td></tr>
+<tr><th id="67">67</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">body</span> The body of the expression to create a graph.</i></td></tr>
+<tr><th id="68">68</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="69">69</th><td>  <em>static</em> <a class="type" href="#tvm::relay::DependencyGraph" title='tvm::relay::DependencyGraph' data-ref="tvm::relay::DependencyGraph" data-ref-filename="tvm..relay..DependencyGraph">DependencyGraph</a> <dfn class="decl fn" id="_ZN3tvm5relay15DependencyGraph6CreateEPNS_7support12GenericArenaINS2_19SimplePageAllocatorEEERKNS_9RelayExprE" title='tvm::relay::DependencyGraph::Create' data-ref="_ZN3tvm5relay15DependencyGraph6CreateEPNS_7support12GenericArenaINS2_19SimplePageAllocatorEEERKNS_9RelayExprE" data-ref-filename="_ZN3tvm5relay15DependencyGraph6CreateEPNS_7support12GenericArenaINS2_19SimplePageAllocatorEEERKNS_9RelayExprE">Create</dfn>(<span class="namespace">support::</span><a class="typedef" href="../../support/arena.h.html#tvm::support::Arena" title='tvm::support::Arena' data-type='GenericArena&lt;tvm::support::SimplePageAllocator&gt;' data-ref="tvm::support::Arena" data-ref-filename="tvm..support..Arena">Arena</a>* <dfn class="local col3 decl" id="33arena" title='arena' data-type='support::Arena *' data-ref="33arena" data-ref-filename="33arena">arena</dfn>, <em>const</em> <span class='typedef' title='tvm::relay::Expr' data-type='tvm::RelayExpr' data-ref="tvm::relay::Expr" data-ref-filename="tvm..relay..Expr">Expr</span>&amp; <dfn class="local col4 decl" id="34body" title='body' data-type='const tvm::relay::Expr &amp;' data-ref="34body" data-ref-filename="34body">body</dfn>);</td></tr>
+<tr><th id="70">70</th><td></td></tr>
+<tr><th id="71">71</th><td> <b>private</b>:</td></tr>
+<tr><th id="72">72</th><td>  <b>class</b> <dfn class="type" id="tvm::relay::DependencyGraph::Creator" title='tvm::relay::DependencyGraph::Creator' data-ref="tvm::relay::DependencyGraph::Creator" data-ref-filename="tvm..relay..DependencyGraph..Creator">Creator</dfn>;</td></tr>
+<tr><th id="73">73</th><td>};</td></tr>
+<tr><th id="74">74</th><td></td></tr>
+<tr><th id="75">75</th><td>}  <i>// namespace relay</i></td></tr>
+<tr><th id="76">76</th><td>}  <i>// namespace tvm</i></td></tr>
+<tr><th id="77">77</th><td><u>#<span data-ppcond="24">endif</span>  // TVM_RELAY_ANALYSIS_DEPENDENCY_GRAPH_H_</u></td></tr>
+<tr><th id="78">78</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated while processing <a href='../../meta_schedule/apply_history_best.cc.html'>tvm/meta_schedule/apply_history_best.cc</a><br/>Generated on <em>2022-Aug-10</em> from project tvm revision <em>123</em><br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

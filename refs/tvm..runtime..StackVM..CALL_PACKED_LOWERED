@@ -1,0 +1,20 @@
+<dec f='tvm/runtime/stackvm/stackvm.h' l='225' type='41'/>
+<use f='tvm/runtime/stackvm/stackvm.cc' l='163' c='_ZNK3tvm7runtime7StackVM9PrintCodeERSol'/>
+<use f='tvm/runtime/stackvm/stackvm.cc' l='425' c='_ZNK3tvm7runtime7StackVM3RunEPNS1_5StateE'/>
+<doc f='tvm/runtime/stackvm/stackvm.h' l='209'>/*!
+     * \brief call an extern packed function
+     * \code
+     *  value_stack = stack[sp - 1].v_handle;
+     *  type_stack = stack[sp - 0].v_handle;
+     *  call_fid = code[pc + 1].v_int;
+     *  begin = code[pc + 2].v_int;
+     *  end = code[pc + 3].v_int;
+     *  num_args = end - begin - 1;
+     *  f = extern_func[call_fid];
+     *  stack[sp - 1] = f(&amp;value_stack[begin:end-1], type_stack[begin:end-1], num_args);
+     *  sp = sp - 1;
+     *  // The type codes are hidden in the code space.
+     *  pc = pc + 4
+     * \endcode
+     */</doc>
+<use f='tvm/target/stackvm/codegen_stackvm.cc' l='241' u='r' c='_ZN3tvm7codegen14CodeGenStackVM10VisitExpr_EPKNS_3tir8CallNodeE'/>

@@ -1,0 +1,31 @@
+<dec f='tvm/tir/transforms/ir_utils.h' l='210' type='tvm::runtime::String tvm::tir::GetPtrStorageScope(tvm::tir::Var buffer_var)'/>
+<doc f='tvm/tir/transforms/ir_utils.h' l='205'>/*!
+ * \brief Return the storage scope associated with a buffer variable.
+ * \param buffer_var The input buffer variable.
+ * \return A string representing the storage scope of this buffer variable.
+ */</doc>
+<use f='tvm/printer/tir_text_printer.cc' l='525' u='c' c='_ZN3tvm3tir14TIRTextPrinter10VisitStmt_EPKNS0_12AllocateNodeE'/>
+<use f='tvm/printer/tvmscript_printer.cc' l='1085' u='c' c='_ZN3tvm3tir16TVMScriptPrinter10VisitStmt_EPKNS0_12AllocateNodeE'/>
+<use f='tvm/target/llvm/codegen_amdgpu.cc' l='101' u='c' c='_ZN3tvm7codegen13CodeGenAMDGPU10VisitStmt_EPKNS_3tir12AllocateNodeE'/>
+<use f='tvm/target/llvm/codegen_llvm.cc' l='518' u='c' c='_ZN3tvm7codegen11CodeGenLLVM12GetAlignmentENS_7runtime8DataTypeEPKNS_3tir7VarNodeERKNS_8PrimExprEPiSB_'/>
+<use f='tvm/target/llvm/codegen_nvptx.cc' l='87' u='c' c='_ZN3tvm7codegen12CodeGenNVPTX10VisitStmt_EPKNS_3tir12AllocateNodeE'/>
+<use f='tvm/target/source/codegen_c.cc' l='859' u='c' c='_ZN3tvm7codegen8CodeGenC10VisitStmt_EPKNS_3tir12AllocateNodeE'/>
+<use f='tvm/target/source/codegen_cuda.cc' l='947' u='c' c='_ZN3tvm7codegen11CodeGenCUDA10VisitStmt_EPKNS_3tir12AllocateNodeE'/>
+<use f='tvm/tir/analysis/verify_gpu_code.cc' l='64' u='c' c='_ZN3tvm3tir15GPUCodeVerifier10VisitStmt_EPKNS0_12AllocateNodeE'/>
+<use f='tvm/tir/transforms/inject_double_buffer.cc' l='109' u='c' c='_ZN3tvm3tir20DoubleBufferInjector10VisitStmt_EPKNS0_12AllocateNodeE'/>
+<def f='tvm/tir/transforms/ir_utils.cc' l='264' ll='268' type='tvm::runtime::String tvm::tir::GetPtrStorageScope(tvm::tir::Var buffer_var)'/>
+<use f='tvm/tir/transforms/lower_device_storage_access_info.cc' l='44' u='c' c='_ZN3tvm3tir22StorageAccessInfoLower10VisitStmt_EPKNS0_12AllocateNodeE'/>
+<use f='tvm/tir/transforms/lower_device_storage_access_info.cc' l='46' u='c' c='_ZN3tvm3tir22StorageAccessInfoLower10VisitStmt_EPKNS0_12AllocateNodeE'/>
+<use f='tvm/tir/transforms/lower_thread_allreduce.cc' l='49' u='c' c='_ZN3tvm3tir34UpdatePointerStorageScopeAllReduce10VisitStmt_EPKNS0_12AllocateNodeE'/>
+<use f='tvm/tir/transforms/lower_thread_allreduce.cc' l='50' u='c' c='_ZN3tvm3tir34UpdatePointerStorageScopeAllReduce10VisitStmt_EPKNS0_12AllocateNodeE'/>
+<use f='tvm/tir/transforms/lower_warp_memory.cc' l='454' u='c' c='_ZN3tvm3tir18WarpMemoryRewriter10VisitStmt_EPKNS0_12AllocateNodeE'/>
+<use f='tvm/tir/transforms/merge_dynamic_shared_memory_allocations.cc' l='44' u='c' c='_ZN3tvm3tir21IsDynamicSharedMemoryENS0_3VarE'/>
+<use f='tvm/tir/transforms/split_host_device.cc' l='95' u='c' c='_ZN3tvm3tir17VarUseDefAnalysis10VisitStmt_EPKNS0_12AllocateNodeE'/>
+<use f='tvm/tir/transforms/storage_access.cc' l='263' u='c' c='_ZNK3tvm3tir20StorageAccessVisitor8GetScopeENS0_3VarE'/>
+<use f='tvm/tir/transforms/storage_flatten.cc' l='716' u='c' c='_ZN3tvm3tir20ThreadScopePropagate10VisitStmt_EPKNS0_17BufferRealizeNodeE'/>
+<use f='tvm/tir/transforms/storage_flatten.cc' l='1486' u='c' c='_ZN3tvm3tir16StorageFlattener10VisitStmt_EPKNS0_17BufferRealizeNodeE'/>
+<use f='tvm/tir/transforms/storage_rewrite.cc' l='832' u='c' c='_ZN3tvm3tir19StoragePlanRewriter10PlanMemoryERKSt6vectorINS0_25LinearAccessPatternFinder9StmtEntryESaIS4_EERKSt13unordered_mapIPKNS0_7VarNodeENS3_10Al13373811'/>
+<use f='tvm/tir/transforms/storage_rewrite.cc' l='1392' u='c' c='_ZN3tvm3tir18VectorTypeRewriterC1ERKSt13unordered_mapIPKNS0_7VarNodeENS0_13BufferVarInfoESt4hashIS5_ESt8equal_toIS5_ESaISt4pairIKS5_S6_EEEbbbbbb'/>
+<use f='tvm/tir/transforms/tensorcore_infer_fragment.cc' l='61' u='c' c='_ZN3tvm3tir14FragmentGetter10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/tir/transforms/tensorcore_infer_fragment.cc' l='94' u='c' c='_ZN3tvm3tir14FragmentGetter10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/tir/transforms/thread_storage_sync.cc' l='371' u='c' c='_ZNK3tvm3tir18ThreadSyncInserter8GetScopeENS0_3VarE'/>

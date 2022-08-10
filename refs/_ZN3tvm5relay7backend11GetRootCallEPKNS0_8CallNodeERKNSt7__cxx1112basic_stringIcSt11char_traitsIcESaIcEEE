@@ -1,0 +1,10 @@
+<def f='tvm/relay/backend/utils.h' l='489' ll='497' type='const tvm::relay::CallNode * tvm::relay::backend::GetRootCall(const tvm::relay::CallNode * current_call, const std::string &amp; op_name)'/>
+<use f='tvm/relay/backend/utils.h' l='496' u='c' c='_ZN3tvm5relay7backend11GetRootCallEPKNS0_8CallNodeERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<doc f='tvm/relay/backend/utils.h' l='481'>/*!
+ * \brief Retrieve the &quot;root&quot; op nested inside a fused call, such as conv2d in relu(add(conv2d))
+ * Unlike the previous definition, it does not verify operator names of intermediate nodes. Instead,
+ * it recursively visit child nodes until it finds a call node with the given op_name.
+ * \param call A Relay call node.
+ * \param op_name The name of an op to look for, such as &quot;&quot;nn.conv2d&quot;.
+ * \return A CallNode corresponding to the root op with the given op_name
+ */</doc>

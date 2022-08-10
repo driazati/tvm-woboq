@@ -1,0 +1,7 @@
+<def f='tvm/runtime/ndarray.cc' l='116' ll='123' type='static void tvm::runtime::NDArray::Internal::DLPackDeleter(tvm::runtime::Object * ptr_obj)'/>
+<use f='tvm/runtime/ndarray.cc' l='239' u='r' c='_ZN3tvm7runtime7NDArray10FromDLPackEP15DLManagedTensor'/>
+<doc f='tvm/runtime/ndarray.cc' l='111'>// Deleter for NDArray converted from DLPack
+  // This is used from data which is passed from external DLPack(DLManagedTensor)
+  // that are not allocated inside of TVM.
+  // This enables us to create NDArray from memory allocated by other
+  // frameworks that are DLPack compatible</doc>

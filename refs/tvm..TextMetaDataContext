@@ -1,0 +1,71 @@
+<def f='tvm/printer/meta_data.h' l='88' ll='142'/>
+<use f='tvm/printer/text_printer.h' l='62' c='_ZN3tvm5relay16RelayTextPrinterC1EbPNS_19TextMetaDataContextENS_7runtime15TypedPackedFuncIFNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS4_9ObjectRefEEEE'/>
+<use f='tvm/printer/text_printer.h' l='219'/>
+<use f='tvm/printer/text_printer.h' l='247' c='_ZN3tvm3tir13MetaCollectorC1EPNS_19TextMetaDataContextE'/>
+<use f='tvm/printer/text_printer.h' l='273'/>
+<use f='tvm/printer/text_printer.h' l='280' c='_ZN3tvm3tir14TIRTextPrinterC1EbPNS_19TextMetaDataContextE'/>
+<use f='tvm/printer/text_printer.h' l='297'/>
+<use f='tvm/printer/text_printer.h' l='436'/>
+<size>112</size>
+<doc f='tvm/printer/meta_data.h' l='35'>/*!
+ * \brief Meta data context for Printers
+ *
+ * This is an important part to enable bi-directional serializability.
+ * We use tvm&apos;s Node system to build the current IR.
+ * It can be hard to design a text format for all the possible nodes
+ * as the set of nodes can grow when we do more extensions.
+ *
+ * Instead of trying to design readable text format for every node,
+ * we support a meta data section in the text format.
+ * We allow the text format to refer to a node in the meta data section.
+ *
+ * The meta data section is a json serialized string of an Map&lt;string, Array&lt;NodeRef&gt;&gt;.
+ * Each element in the meta data section can be referenced by the text format.
+ * Each meta data node is printed in the following format.
+ *
+ * meta[type-key-of-node&gt;][&lt;index-in-meta-section&gt;]
+ *
+ * Specifically, consider the following IR(constructed by python).
+ *
+ * \code
+ *
+ * n = tvm.var(&quot;n&quot;)
+ * x = tvm.relay.var(&quot;x&quot;, shape=(n, 1))
+ * f = tvm.relay.Function([x], x)
+ * print(f.astext())
+ *
+ * \endcode
+ *
+ * The corresponding text format is shown in the following code block.
+ *
+ * \code
+ *
+ * fn (%x: Tensor[(meta[Variable][0],), float32]) {
+ *   %x
+ * }
+ * # Meta data section is a json-serialized string
+ * # of the following array.
+ * # [tvm.var(&quot;n&quot;)]
+ *
+ * \endcode
+ *
+ * Note that we store tvm.var(&quot;n&quot;) in the meta data section.
+ * Since it is stored in the index-0 in the meta data section,
+ * we print it as meta[Variable][0].
+ *
+ * The text parser can recover this object by loading from the corresponding
+ * location in the meta data section.
+ *
+ * This is is a design trade-off.
+ * It allows us to embedded any meta data in the text format,
+ * while still being able to tweak the text part of the printed IR easily.
+ */</doc>
+<fun r='_ZN3tvm19TextMetaDataContext11GetMetaNodeERKNS_7runtime9ObjectRefE'/>
+<fun r='_ZN3tvm19TextMetaDataContext6InMetaERKNS_7runtime9ObjectRefE'/>
+<fun r='_ZNK3tvm19TextMetaDataContext13PrintKeyValueERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKNS_3DocE'/>
+<fun r='_ZNK3tvm19TextMetaDataContext14GetMetaSectionEv'/>
+<fun r='_ZNK3tvm19TextMetaDataContext5emptyEv'/>
+<mbr r='tvm::TextMetaDataContext::meta_data_' o='0' t='std::unordered_map&lt;String, Array&lt;ObjectRef&gt;&gt;'/>
+<mbr r='tvm::TextMetaDataContext::meta_repr_' o='448' t='std::unordered_map&lt;ObjectRef, Doc, ObjectPtrHash, ObjectPtrEqual&gt;'/>
+<use f='tvm/printer/tvmscript_printer.cc' l='156'/>
+<size>112</size>

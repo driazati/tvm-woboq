@@ -1,0 +1,45 @@
+<def f='tvm/contrib/ethosu/cascader/graph.h' l='322' ll='327'/>
+<use f='tvm/contrib/ethosu/cascader/graph.h' l='326' c='_ZN3tvm7contrib6ethosu8cascader13CascaderGraphC1ERKS3_'/>
+<use f='tvm/contrib/ethosu/cascader/graph.h' l='326' c='_ZN3tvm7contrib6ethosu8cascader13CascaderGraphC1EOS3_'/>
+<use f='tvm/contrib/ethosu/cascader/graph.h' l='326' c='_ZN3tvm7contrib6ethosu8cascader13CascaderGraphaSERKS3_'/>
+<use f='tvm/contrib/ethosu/cascader/graph.h' l='326' c='_ZN3tvm7contrib6ethosu8cascader13CascaderGraphaSERKS3_'/>
+<use f='tvm/contrib/ethosu/cascader/graph.h' l='326' c='_ZN3tvm7contrib6ethosu8cascader13CascaderGraphaSEOS3_'/>
+<use f='tvm/contrib/ethosu/cascader/graph.h' l='326' c='_ZN3tvm7contrib6ethosu8cascader13CascaderGraphaSEOS3_'/>
+<size>8</size>
+<doc f='tvm/contrib/ethosu/cascader/graph.h' l='312'>/*!
+ * \brief A class to describe a graph of Parts and Tensors used by the cascader.
+ * \note This class describes a graph consisting of two object types: Tensors and Parts.
+ * It defines a topological ordering on the graph such that each Part and Tensor has a
+ * position in the ordering. This ordering is used by the Plan and Proposal generation
+ * algorithms. It is also the ordering the Parts are expected to be executed in.
+ *
+ * In addition to defining an ordering, the Parts and Tensors are also all given unique
+ * IDs which they can be referred to by.
+ */</doc>
+<fun r='_ZN3tvm7contrib6ethosu8cascader13CascaderGraphC1ESt6vectorINS2_6TensorESaIS5_EES7_'/>
+<fun r='_ZN3tvm7contrib6ethosu8cascader13CascaderGraphC1Ev'/>
+<fun r='_ZN3tvm7contrib6ethosu8cascader13CascaderGraphC1ENS_7runtime9ObjectPtrINS4_6ObjectEEE'/>
+<fun r='_ZN3tvm7contrib6ethosu8cascader13CascaderGraphC1ERKS3_'/>
+<fun r='_ZN3tvm7contrib6ethosu8cascader13CascaderGraphC1EOS3_'/>
+<fun r='_ZNK3tvm7contrib6ethosu8cascader13CascaderGraph3getEv'/>
+<use f='tvm/contrib/ethosu/cascader/graph.cc' l='245'/>
+<use f='tvm/contrib/ethosu/cascader/graph.cc' l='248'/>
+<use f='tvm/contrib/ethosu/cascader/graph.cc' l='250'/>
+<size>8</size>
+<fun r='_ZN3tvm7contrib6ethosu8cascader13CascaderGraphC1ESt6vectorINS2_6TensorESaIS5_EES7_'/>
+<use f='tvm/contrib/ethosu/cascader/proposal.h' l='52' c='_ZNK3tvm7contrib6ethosu8cascader12ProposalNode8GetGraphEv'/>
+<use f='tvm/contrib/ethosu/cascader/proposal.h' l='73'/>
+<use f='tvm/contrib/ethosu/cascader/proposal.h' l='93' c='_ZN3tvm7contrib6ethosu8cascader8ProposalC1ERKNS2_13CascaderGraphERKSt6vectorINS2_4PartESaIS8_EERKS7_INS2_4PlanESaISD_EERKSt13unordered_mapINS2_6Tensor10463963'/>
+<size>8</size>
+<use f='tvm/contrib/ethosu/cascader/plan_generator.h' l='104' c='_ZN3tvm7contrib6ethosu8cascader18GenerateGraphPlansERKNS2_13CascaderGraphERKSt13unordered_mapINS2_6TensorESt6vectorINS2_12MemoryRegionESaIS9_EENS_7run1070765'/>
+<use f='tvm/contrib/ethosu/cascader/plan_generator.cc' l='449' c='_ZN3tvm7contrib6ethosu8cascader18GenerateGraphPlansERKNS2_13CascaderGraphERKSt13unordered_mapINS2_6TensorESt6vectorINS2_12MemoryRegionESaIS9_EENS_7run1070765'/>
+<use f='tvm/contrib/ethosu/cascader/plan_generator.cc' l='587'/>
+<size>8</size>
+<use f='tvm/contrib/ethosu/cascader/proposal.cc' l='50' c='_ZN3tvm7contrib6ethosu8cascader8ProposalC1ERKNS2_13CascaderGraphERKSt6vectorINS2_4PartESaIS8_EERKS7_INS2_4PlanESaISD_EERKSt13unordered_mapINS2_6Tensor10463963'/>
+<use f='tvm/contrib/ethosu/cascader/proposal.cc' l='66'/>
+<size>8</size>
+<use f='tvm/contrib/ethosu/cascader/proposal_generator.cc' l='80' c='_ZN3tvm7contrib6ethosu8cascader17CreatePlansByPartERKSt13unordered_mapISt6vectorINS2_4PartESaIS5_EES4_INS2_4PlanESaIS8_EESt4hashIS7_ESt8equal_toIS7_ES13493804'/>
+<use f='tvm/contrib/ethosu/cascader/proposal_generator.cc' l='136' c='_ZN3tvm7contrib6ethosu8cascader24GeneratePartialProposalsERKNS2_13CascaderGraphERKSt13unordered_mapINS2_6TensorESt6vectorINS2_12MemoryRegionESaIS9_EEN15255481'/>
+<use f='tvm/contrib/ethosu/cascader/proposal_generator.cc' l='186' c='_ZN3tvm7contrib6ethosu8cascader17GenerateProposalsERKNS2_13CascaderGraphERKSt13unordered_mapINS2_6TensorESt6vectorINS2_12MemoryRegionESaIS9_EENS_7runt15189700'/>
+<use f='tvm/contrib/ethosu/cascader/proposal_generator.cc' l='203'/>
+<size>8</size>

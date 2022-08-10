@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>replace_selected_expr.h source code [tvm/tir/transforms/replace_selected_expr.h] - Woboq Code Browser</title>
+<meta name="woboq:interestingDefinitions" content="tvm::tir::ReplaceSelectedExpr "/>
+<link rel="stylesheet" href="../../.././data/qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href="../../.././data/kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src="../../.././data/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="../../.././data/jquery/jquery-ui.min.js"></script>
+<script>var file = 'tvm/tir/transforms/replace_selected_expr.h'; var root_path = '../../..'; var data_path = '../../.././data'; var ecma_script_api_version = 2;</script>
+<script src='../../.././data/codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='../..'>tvm</a>/<a href='..'>tir</a>/<a href='./'>transforms</a>/<a href='replace_selected_expr.h.html'>replace_selected_expr.h</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td><i>/*</i></td></tr>
+<tr><th id="2">2</th><td><i> * Licensed to the Apache Software Foundation (ASF) under one</i></td></tr>
+<tr><th id="3">3</th><td><i> * or more contributor license agreements.  See the NOTICE file</i></td></tr>
+<tr><th id="4">4</th><td><i> * distributed with this work for additional information</i></td></tr>
+<tr><th id="5">5</th><td><i> * regarding copyright ownership.  The ASF licenses this file</i></td></tr>
+<tr><th id="6">6</th><td><i> * to you under the Apache License, Version 2.0 (the</i></td></tr>
+<tr><th id="7">7</th><td><i> * "License"); you may not use this file except in compliance</i></td></tr>
+<tr><th id="8">8</th><td><i> * with the License.  You may obtain a copy of the License at</i></td></tr>
+<tr><th id="9">9</th><td><i> *</i></td></tr>
+<tr><th id="10">10</th><td><i> *   <a href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a></i></td></tr>
+<tr><th id="11">11</th><td><i> *</i></td></tr>
+<tr><th id="12">12</th><td><i> * Unless required by applicable law or agreed to in writing,</i></td></tr>
+<tr><th id="13">13</th><td><i> * software distributed under the License is distributed on an</i></td></tr>
+<tr><th id="14">14</th><td><i> * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY</i></td></tr>
+<tr><th id="15">15</th><td><i> * KIND, either express or implied.  See the License for the</i></td></tr>
+<tr><th id="16">16</th><td><i> * specific language governing permissions and limitations</i></td></tr>
+<tr><th id="17">17</th><td><i> * under the License.</i></td></tr>
+<tr><th id="18">18</th><td><i> */</i></td></tr>
+<tr><th id="19">19</th><td></td></tr>
+<tr><th id="20">20</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="21">21</th><td><i class="doc"> * <span class="command">\file</span> <span class="verb">replace_selected_expr.h</span></i></td></tr>
+<tr><th id="22">22</th><td><i class="doc"> * <span class="command">\brief</span> Interface of the pass that replaces in a statement</i></td></tr>
+<tr><th id="23">23</th><td><i class="doc">           or expression all the subexpressions that are selected</i></td></tr>
+<tr><th id="24">24</th><td><i class="doc">           with a predicate by another expression.</i></td></tr>
+<tr><th id="25">25</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="26">26</th><td></td></tr>
+<tr><th id="27">27</th><td><u>#<span data-ppcond="27">ifndef</span> <span class="macro" data-ref="_M/TVM_TIR_TRANSFORMS_REPLACE_SELECTED_EXPR_H_">TVM_TIR_TRANSFORMS_REPLACE_SELECTED_EXPR_H_</span></u></td></tr>
+<tr><th id="28">28</th><td><u>#define <dfn class="macro" id="_M/TVM_TIR_TRANSFORMS_REPLACE_SELECTED_EXPR_H_" data-ref="_M/TVM_TIR_TRANSFORMS_REPLACE_SELECTED_EXPR_H_">TVM_TIR_TRANSFORMS_REPLACE_SELECTED_EXPR_H_</dfn></u></td></tr>
+<tr><th id="29">29</th><td></td></tr>
+<tr><th id="30">30</th><td><u>#include &lt;tvm/tir/expr.h&gt;</u></td></tr>
+<tr><th id="31">31</th><td><u>#include &lt;tvm/tir/expr_functor.h&gt;</u></td></tr>
+<tr><th id="32">32</th><td><u>#include &lt;tvm/tir/stmt.h&gt;</u></td></tr>
+<tr><th id="33">33</th><td><u>#include &lt;tvm/tir/stmt_functor.h&gt;  // For the class StmtExprMutator</u></td></tr>
+<tr><th id="34">34</th><td></td></tr>
+<tr><th id="35">35</th><td><b>namespace</b> <span class="namespace">tvm</span> {</td></tr>
+<tr><th id="36">36</th><td><b>namespace</b> <span class="namespace">tir</span> {</td></tr>
+<tr><th id="37">37</th><td></td></tr>
+<tr><th id="38">38</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="39">39</th><td><i class="doc"> * <span class="command">\brief</span> Mutator for replacing the expressions selected by a predicate in a statement and/or</i></td></tr>
+<tr><th id="40">40</th><td><i class="doc">          in an expression, which only replace inside of nodes in which it is allowed to perform</i></td></tr>
+<tr><th id="41">41</th><td><i class="doc">          replacecements (given by a second predicate)</i></td></tr>
+<tr><th id="42">42</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="43">43</th><td><b>class</b> <dfn class="type def" id="tvm::tir::ReplaceSelectedExpr" title='tvm::tir::ReplaceSelectedExpr' data-ref="tvm::tir::ReplaceSelectedExpr" data-ref-filename="tvm..tir..ReplaceSelectedExpr">ReplaceSelectedExpr</dfn> : <b>public</b> <span class='type' title='tvm::tir::StmtExprMutator' data-ref="tvm::tir::StmtExprMutator" data-ref-filename="tvm..tir..StmtExprMutator">StmtExprMutator</span> {</td></tr>
+<tr><th id="44">44</th><td> <b>public</b>:</td></tr>
+<tr><th id="45">45</th><td>  <i>// Toplevel (static) functions</i></td></tr>
+<tr><th id="46">46</th><td>  <em>static</em> <span class='type' title='tvm::PrimExpr' data-ref="tvm::PrimExpr" data-ref-filename="tvm..PrimExpr">PrimExpr</span> <dfn class="decl fn" id="_ZN3tvm3tir19ReplaceSelectedExpr25ReplaceSelectedExprInExprERKNS_8PrimExprESt8functionIFbS4_EES4_S7_" title='tvm::tir::ReplaceSelectedExpr::ReplaceSelectedExprInExpr' data-ref="_ZN3tvm3tir19ReplaceSelectedExpr25ReplaceSelectedExprInExprERKNS_8PrimExprESt8functionIFbS4_EES4_S7_" data-ref-filename="_ZN3tvm3tir19ReplaceSelectedExpr25ReplaceSelectedExprInExprERKNS_8PrimExprESt8functionIFbS4_EES4_S7_">ReplaceSelectedExprInExpr</dfn>(</td></tr>
+<tr><th id="47">47</th><td>      <em>const</em> <span class='type' title='tvm::PrimExpr' data-ref="tvm::PrimExpr" data-ref-filename="tvm..PrimExpr">PrimExpr</span>&amp; <dfn class="local col2 decl" id="72expr" title='expr' data-type='const tvm::PrimExpr &amp;' data-ref="72expr" data-ref-filename="72expr">expr</dfn>, <span class="namespace">std::</span><a class="type" href="../../../include/c++/10/bits/std_function.h.html#std::function" title='std::function' data-ref="std::function" data-ref-filename="std..function">function</a>&lt;<em>bool</em>(<em>const</em> <span class='type' title='tvm::PrimExpr' data-ref="tvm::PrimExpr" data-ref-filename="tvm..PrimExpr">PrimExpr</span>&amp;)&gt; <dfn class="local col3 decl" id="73predicate_selector" title='predicate_selector' data-type='std::function&lt;bool (const PrimExpr &amp;)&gt;' data-ref="73predicate_selector" data-ref-filename="73predicate_selector">predicate_selector</dfn>,</td></tr>
+<tr><th id="48">48</th><td>      <em>const</em> <span class='type' title='tvm::PrimExpr' data-ref="tvm::PrimExpr" data-ref-filename="tvm..PrimExpr">PrimExpr</span>&amp; <dfn class="local col4 decl" id="74new_expr" title='new_expr' data-type='const tvm::PrimExpr &amp;' data-ref="74new_expr" data-ref-filename="74new_expr">new_expr</dfn>, <span class="namespace">std::</span><a class="type" href="../../../include/c++/10/bits/std_function.h.html#std::function" title='std::function' data-ref="std::function" data-ref-filename="std..function">function</a>&lt;<em>bool</em>(<em>const</em> <span class='type' title='tvm::PrimExpr' data-ref="tvm::PrimExpr" data-ref-filename="tvm..PrimExpr">PrimExpr</span>&amp;)&gt; <dfn class="local col5 decl" id="75can_replace_inside" title='can_replace_inside' data-type='std::function&lt;bool (const PrimExpr &amp;)&gt;' data-ref="75can_replace_inside" data-ref-filename="75can_replace_inside">can_replace_inside</dfn>);</td></tr>
+<tr><th id="49">49</th><td>  <em>static</em> <span class='type' title='tvm::tir::Stmt' data-ref="tvm::tir::Stmt" data-ref-filename="tvm..tir..Stmt">Stmt</span> <dfn class="decl fn" id="_ZN3tvm3tir19ReplaceSelectedExpr25ReplaceSelectedExprInStmtERKNS0_4StmtESt8functionIFbRKNS_8PrimExprEEES8_SA_" title='tvm::tir::ReplaceSelectedExpr::ReplaceSelectedExprInStmt' data-ref="_ZN3tvm3tir19ReplaceSelectedExpr25ReplaceSelectedExprInStmtERKNS0_4StmtESt8functionIFbRKNS_8PrimExprEEES8_SA_" data-ref-filename="_ZN3tvm3tir19ReplaceSelectedExpr25ReplaceSelectedExprInStmtERKNS0_4StmtESt8functionIFbRKNS_8PrimExprEEES8_SA_">ReplaceSelectedExprInStmt</dfn>(<em>const</em> <span class='type' title='tvm::tir::Stmt' data-ref="tvm::tir::Stmt" data-ref-filename="tvm..tir..Stmt">Stmt</span>&amp; <dfn class="local col6 decl" id="76stmt" title='stmt' data-type='const tvm::tir::Stmt &amp;' data-ref="76stmt" data-ref-filename="76stmt">stmt</dfn>,</td></tr>
+<tr><th id="50">50</th><td>                                        <span class="namespace">std::</span><a class="type" href="../../../include/c++/10/bits/std_function.h.html#std::function" title='std::function' data-ref="std::function" data-ref-filename="std..function">function</a>&lt;<em>bool</em>(<em>const</em> <span class='type' title='tvm::PrimExpr' data-ref="tvm::PrimExpr" data-ref-filename="tvm..PrimExpr">PrimExpr</span>&amp;)&gt; <dfn class="local col7 decl" id="77predicate_selector" title='predicate_selector' data-type='std::function&lt;bool (const PrimExpr &amp;)&gt;' data-ref="77predicate_selector" data-ref-filename="77predicate_selector">predicate_selector</dfn>,</td></tr>
+<tr><th id="51">51</th><td>                                        <em>const</em> <span class='type' title='tvm::PrimExpr' data-ref="tvm::PrimExpr" data-ref-filename="tvm..PrimExpr">PrimExpr</span>&amp; <dfn class="local col8 decl" id="78new_expr" title='new_expr' data-type='const tvm::PrimExpr &amp;' data-ref="78new_expr" data-ref-filename="78new_expr">new_expr</dfn>,</td></tr>
+<tr><th id="52">52</th><td>                                        <span class="namespace">std::</span><a class="type" href="../../../include/c++/10/bits/std_function.h.html#std::function" title='std::function' data-ref="std::function" data-ref-filename="std..function">function</a>&lt;<em>bool</em>(<em>const</em> <span class='type' title='tvm::PrimExpr' data-ref="tvm::PrimExpr" data-ref-filename="tvm..PrimExpr">PrimExpr</span>&amp;)&gt; <dfn class="local col9 decl" id="79can_replace_inside" title='can_replace_inside' data-type='std::function&lt;bool (const PrimExpr &amp;)&gt;' data-ref="79can_replace_inside" data-ref-filename="79can_replace_inside">can_replace_inside</dfn>);</td></tr>
+<tr><th id="53">53</th><td></td></tr>
+<tr><th id="54">54</th><td> <b>protected</b>:</td></tr>
+<tr><th id="55">55</th><td>  <i>// Constructor</i></td></tr>
+<tr><th id="56">56</th><td>  <dfn class="decl fn" id="_ZN3tvm3tir19ReplaceSelectedExprC1ESt8functionIFbRKNS_8PrimExprEEES5_S7_" title='tvm::tir::ReplaceSelectedExpr::ReplaceSelectedExpr' data-ref="_ZN3tvm3tir19ReplaceSelectedExprC1ESt8functionIFbRKNS_8PrimExprEEES5_S7_" data-ref-filename="_ZN3tvm3tir19ReplaceSelectedExprC1ESt8functionIFbRKNS_8PrimExprEEES5_S7_">ReplaceSelectedExpr</dfn>(<span class="namespace">std::</span><a class="type" href="../../../include/c++/10/bits/std_function.h.html#std::function" title='std::function' data-ref="std::function" data-ref-filename="std..function">function</a>&lt;<em>bool</em>(<em>const</em> <span class='type' title='tvm::PrimExpr' data-ref="tvm::PrimExpr" data-ref-filename="tvm..PrimExpr">PrimExpr</span>&amp;)&gt; <dfn class="local col0 decl" id="80predicate_selector" title='predicate_selector' data-type='std::function&lt;bool (const PrimExpr &amp;)&gt;' data-ref="80predicate_selector" data-ref-filename="80predicate_selector">predicate_selector</dfn>,</td></tr>
+<tr><th id="57">57</th><td>                      <em>const</em> <span class='type' title='tvm::PrimExpr' data-ref="tvm::PrimExpr" data-ref-filename="tvm..PrimExpr">PrimExpr</span>&amp; <dfn class="local col1 decl" id="81new_expr" title='new_expr' data-type='const tvm::PrimExpr &amp;' data-ref="81new_expr" data-ref-filename="81new_expr">new_expr</dfn>,</td></tr>
+<tr><th id="58">58</th><td>                      <span class="namespace">std::</span><a class="type" href="../../../include/c++/10/bits/std_function.h.html#std::function" title='std::function' data-ref="std::function" data-ref-filename="std..function">function</a>&lt;<em>bool</em>(<em>const</em> <span class='type' title='tvm::PrimExpr' data-ref="tvm::PrimExpr" data-ref-filename="tvm..PrimExpr">PrimExpr</span>&amp;)&gt; <dfn class="local col2 decl" id="82can_replace_inside" title='can_replace_inside' data-type='std::function&lt;bool (const PrimExpr &amp;)&gt;' data-ref="82can_replace_inside" data-ref-filename="82can_replace_inside">can_replace_inside</dfn>);</td></tr>
+<tr><th id="59">59</th><td></td></tr>
+<tr><th id="60">60</th><td>  <span class='type' title='tvm::PrimExpr' data-ref="tvm::PrimExpr" data-ref-filename="tvm..PrimExpr">PrimExpr</span> <dfn class="virtual decl fn" id="_ZN3tvm3tir19ReplaceSelectedExpr9VisitExprERKNS_8PrimExprE" title='tvm::tir::ReplaceSelectedExpr::VisitExpr' data-ref="_ZN3tvm3tir19ReplaceSelectedExpr9VisitExprERKNS_8PrimExprE" data-ref-filename="_ZN3tvm3tir19ReplaceSelectedExpr9VisitExprERKNS_8PrimExprE">VisitExpr</dfn>(<em>const</em> <span class='type' title='tvm::PrimExpr' data-ref="tvm::PrimExpr" data-ref-filename="tvm..PrimExpr">PrimExpr</span>&amp; <dfn class="local col3 decl" id="83expr" title='expr' data-type='const tvm::PrimExpr &amp;' data-ref="83expr" data-ref-filename="83expr">expr</dfn>) override;</td></tr>
+<tr><th id="61">61</th><td></td></tr>
+<tr><th id="62">62</th><td> <b>private</b>:</td></tr>
+<tr><th id="63">63</th><td>  <i>// The predicate used for selecting what will be replaced</i></td></tr>
+<tr><th id="64">64</th><td>  <span class="namespace">std::</span><a class="type" href="../../../include/c++/10/bits/std_function.h.html#std::function" title='std::function' data-ref="std::function" data-ref-filename="std..function">function</a>&lt;<em>bool</em>(<em>const</em> <span class='type' title='tvm::PrimExpr' data-ref="tvm::PrimExpr" data-ref-filename="tvm..PrimExpr">PrimExpr</span>&amp;)&gt; <dfn class="decl field" id="tvm::tir::ReplaceSelectedExpr::predicate_selector_" title='tvm::tir::ReplaceSelectedExpr::predicate_selector_' data-ref="tvm::tir::ReplaceSelectedExpr::predicate_selector_" data-ref-filename="tvm..tir..ReplaceSelectedExpr..predicate_selector_">predicate_selector_</dfn>;</td></tr>
+<tr><th id="65">65</th><td>  <i>// The expression used for replacing</i></td></tr>
+<tr><th id="66">66</th><td>  <em>const</em> <span class='type' title='tvm::PrimExpr' data-ref="tvm::PrimExpr" data-ref-filename="tvm..PrimExpr">PrimExpr</span>&amp; <dfn class="decl field" id="tvm::tir::ReplaceSelectedExpr::new_expr_" title='tvm::tir::ReplaceSelectedExpr::new_expr_' data-ref="tvm::tir::ReplaceSelectedExpr::new_expr_" data-ref-filename="tvm..tir..ReplaceSelectedExpr..new_expr_">new_expr_</dfn>;</td></tr>
+<tr><th id="67">67</th><td>  <i>// The predicate used for knowning inside which nodes we can do rewriting</i></td></tr>
+<tr><th id="68">68</th><td><i>  // (i.e. in which nodes it can recurse)</i></td></tr>
+<tr><th id="69">69</th><td>  <span class="namespace">std::</span><a class="type" href="../../../include/c++/10/bits/std_function.h.html#std::function" title='std::function' data-ref="std::function" data-ref-filename="std..function">function</a>&lt;<em>bool</em>(<em>const</em> <span class='type' title='tvm::PrimExpr' data-ref="tvm::PrimExpr" data-ref-filename="tvm..PrimExpr">PrimExpr</span>&amp;)&gt; <dfn class="decl field" id="tvm::tir::ReplaceSelectedExpr::can_replace_inside_" title='tvm::tir::ReplaceSelectedExpr::can_replace_inside_' data-ref="tvm::tir::ReplaceSelectedExpr::can_replace_inside_" data-ref-filename="tvm..tir..ReplaceSelectedExpr..can_replace_inside_">can_replace_inside_</dfn>;</td></tr>
+<tr><th id="70">70</th><td>};</td></tr>
+<tr><th id="71">71</th><td></td></tr>
+<tr><th id="72">72</th><td>}  <i>// namespace tir</i></td></tr>
+<tr><th id="73">73</th><td>}  <i>// namespace tvm</i></td></tr>
+<tr><th id="74">74</th><td></td></tr>
+<tr><th id="75">75</th><td><u>#<span data-ppcond="27">endif</span>  // TVM_TIR_TRANSFORMS_REPLACE_SELECTED_EXPR_H_</u></td></tr>
+<tr><th id="76">76</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated while processing <a href='common_subexpr_elim.cc.html'>tvm/tir/transforms/common_subexpr_elim.cc</a><br/>Generated on <em>2022-Aug-10</em> from project tvm revision <em>123</em><br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

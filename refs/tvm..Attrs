@@ -1,0 +1,944 @@
+<use f='tvm/ir/attrs.cc' l='70'/>
+<size>8</size>
+<use f='tvm/ir/op.cc' l='125'/>
+<use f='tvm/ir/op.cc' l='142'/>
+<size>8</size>
+<use f='tvm/ir/type_relation.cc' l='48' c='_ZN3tvm12TypeRelationC1ENS_12TypedEnvFuncIFbRKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterEEEES5_iS8_'/>
+<use f='tvm/ir/type_relation.cc' l='60'/>
+<size>8</size>
+<use f='tvm/printer/text_printer.h' l='85' c='_ZN3tvm5relay16RelayTextPrinter18AppendGenericAttrsEPSt6vectorINS_3DocESaIS3_EERKNS_5AttrsEb'/>
+<use f='tvm/printer/text_printer.h' l='91' c='_ZN3tvm5relay16RelayTextPrinter14PrintCallAttrsERKNS_5AttrsERKNS_9RelayExprE'/>
+<use f='tvm/printer/text_printer.h' l='109' c='_ZN3tvm5relay16RelayTextPrinter26PrintAttrsAsAttributeValueERKNS_5AttrsE'/>
+<size>8</size>
+<use f='tvm/parser/meta_ref.cc' l='43' c='_ZN3tvm6parser10MetaRefRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/parser/meta_ref.cc' l='63' c='_ZN3tvm6parser7MetaRefENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEm'/>
+<size>8</size>
+<use f='tvm/parser/parser.cc' l='1320' c='_ZN3tvm6parser6Parser14ParseExprBinOpEv'/>
+<use f='tvm/parser/parser.cc' l='1336' c='_ZN3tvm6parser6Parser14ParseExprBinOpEv'/>
+<use f='tvm/parser/parser.cc' l='1411' c='_ZN3tvm6parser6Parser13ParseCallArgsENS_9RelayExprE'/>
+<use f='tvm/parser/parser.cc' l='1437' c='_ZN3tvm6parser6Parser13ParseCallArgsENS_9RelayExprE'/>
+<use f='tvm/parser/parser.cc' l='1448' c='_ZN3tvm6parser6Parser13ParseCallArgsENS_9RelayExprE'/>
+<use f='tvm/parser/parser.cc' l='1456' c='_ZN3tvm6parser6Parser13ParseCallArgsENS_9RelayExprE'/>
+<use f='tvm/parser/parser.cc' l='1473' c='_ZN3tvm6parser6Parser13ParseCallArgsENS_9RelayExprE'/>
+<size>8</size>
+<use f='tvm/printer/relay_text_printer.cc' l='838' c='_ZN3tvm5relay16RelayTextPrinter18AppendGenericAttrsEPSt6vectorINS_3DocESaIS3_EERKNS_5AttrsEb'/>
+<use f='tvm/printer/relay_text_printer.cc' l='853' c='_ZN3tvm5relay16RelayTextPrinter14PrintCallAttrsERKNS_5AttrsERKNS_9RelayExprE'/>
+<use f='tvm/printer/relay_text_printer.cc' l='914' c='_ZN3tvm5relay16RelayTextPrinter19PrintAttributeValueERKNS_7runtime9ObjectRefEb'/>
+<use f='tvm/printer/relay_text_printer.cc' l='938' c='_ZN3tvm5relay16RelayTextPrinter26PrintAttrsAsAttributeValueERKNS_5AttrsE'/>
+<size>8</size>
+<use f='tvm/relay/op/nn/convolution_make.h' l='55' c='_ZN3tvm5relay8MakeConvENS_9RelayExprES1_NS_7runtime5ArrayINS_8PrimExprEvEES5_S5_iS4_S5_NSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESB_SB_NS2_8DataTypeESB_'/>
+<use f='tvm/relay/op/nn/convolution_make.h' l='77' c='_ZN3tvm5relay16MakeConvWinogradENS_9RelayExprES1_iNS_7runtime5ArrayINS_8PrimExprEvEES5_S5_iS4_S5_NSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES13500517'/>
+<use f='tvm/relay/op/nn/convolution_make.h' l='98' c='_ZN3tvm5relay12MakeConvGemmENS_9RelayExprES1_NS_7runtime5ArrayINS_8PrimExprEvEES5_S5_iS4_S5_NSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESB_SB_NS2_8DataTypeESB_'/>
+<use f='tvm/relay/op/nn/convolution_make.h' l='121' c='_ZN3tvm5relay17MakeConvTransposeENS_9RelayExprES1_NS_7runtime5ArrayINS_8PrimExprEvEES5_S5_iS4_S5_NSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES16169400'/>
+<use f='tvm/relay/op/nn/convolution_make.h' l='144' c='_ZN3tvm5relay18MakeDeformableConvENS_9RelayExprES1_S1_NS_7runtime5ArrayINS_8PrimExprEvEES5_S5_iiiS5_NSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcE6537952'/>
+<use f='tvm/relay/op/nn/pooling.h' l='48' c='_ZN3tvm5relay11MakeMaxPoolENS_9RelayExprENS_7runtime5ArrayINS_8PrimExprEvEES5_S5_S5_NS2_6StringES6_bS6_'/>
+<use f='tvm/relay/op/nn/pooling.h' l='65' c='_ZN3tvm5relay11MakeAvgPoolENS_9RelayExprENS_7runtime5ArrayINS_8PrimExprEvEES5_S5_S5_NS2_6StringES6_bbS6_'/>
+<use f='tvm/relay/transforms/pattern_utils.h' l='146' c='_ZN3tvm5relay24MatchBroadcastToLeftAxesEPKNS_14TensorTypeNodeES3_RKNS_7runtime5ArrayINS_7IntegerEvEEPNS_9RelayExprE'/>
+<use f='tvm/relay/transforms/pattern_utils.h' l='170' c='_ZN3tvm5relay21ExpandBiasToMatchAxisENS_9RelayExprEiRKNS_7runtime5ArrayINS_7IntegerEvEE'/>
+<use f='tvm/relay/transforms/pattern_utils.h' l='179' c='_ZN3tvm5relay21ExpandBiasToMatchAxisENS_9RelayExprEiRKNS_7runtime5ArrayINS_7IntegerEvEE'/>
+<use f='tvm/relay/transforms/pattern_utils.h' l='551' c='_ZN3tvm5relay11FastSoftmaxENS_9RelayExprENS_5AttrsE'/>
+<use f='tvm/relay/transforms/pattern_utils.h' l='588' c='_ZN3tvm5relay8NegativeENS_9RelayExprE'/>
+<use f='tvm/relay/transforms/pattern_utils.h' l='593' c='_ZN3tvm5relay4SqrtENS_9RelayExprE'/>
+<use f='tvm/relay/transforms/pattern_utils.h' l='598' c='_ZN3tvm5relay7SigmoidENS_9RelayExprE'/>
+<use f='tvm/relay/transforms/pattern_utils.h' l='603' c='_ZN3tvm5relay5RsqrtENS_9RelayExprE'/>
+<use f='tvm/relay/transforms/pattern_utils.h' l='608' c='_ZN3tvm5relay4ReluENS_9RelayExprE'/>
+<use f='tvm/relay/transforms/pattern_utils.h' l='613' c='_ZN3tvm5relay5RoundENS_9RelayExprE'/>
+<use f='tvm/relay/transforms/pattern_utils.h' l='618' c='_ZN3tvm5relay5FloorENS_9RelayExprE'/>
+<use f='tvm/relay/transforms/pattern_utils.h' l='628' c='_ZN3tvm5relay18FixedPointMultiplyENS_9RelayExprEii'/>
+<use f='tvm/relay/transforms/pattern_utils.h' l='633' c='_ZN3tvm5relay3AddENS_9RelayExprES1_'/>
+<use f='tvm/relay/transforms/pattern_utils.h' l='638' c='_ZN3tvm5relay8SubtractENS_9RelayExprES1_'/>
+<use f='tvm/relay/transforms/pattern_utils.h' l='643' c='_ZN3tvm5relay8MultiplyENS_9RelayExprES1_'/>
+<use f='tvm/relay/transforms/pattern_utils.h' l='648' c='_ZN3tvm5relay6DivideENS_9RelayExprES1_'/>
+<use f='tvm/relay/transforms/pattern_utils.h' l='653' c='_ZN3tvm5relay7MaximumENS_9RelayExprES1_'/>
+<use f='tvm/relay/transforms/pattern_utils.h' l='681' c='_ZN3tvm5relay5PowerENS_9RelayExprES1_'/>
+<use f='tvm/relay/transforms/pattern_utils.h' l='686' c='_ZN3tvm5relay10RightShiftENS_9RelayExprES1_'/>
+<use f='tvm/relay/transforms/pattern_utils.h' l='691' c='_ZN3tvm5relay9LeftShiftENS_9RelayExprES1_'/>
+<use f='tvm/relay/transforms/pattern_utils.h' l='701' c='_ZN3tvm5relay4CopyENS_9RelayExprE'/>
+<use f='tvm/relay/transforms/pattern_utils.h' l='720' c='_ZN3tvm5relayL9LogicalOrERKNS_9RelayExprES3_'/>
+<use f='tvm/relay/transforms/pattern_utils.h' l='725' c='_ZN3tvm5relayL12GreaterEqualERKNS_9RelayExprES3_'/>
+<use f='tvm/relay/transforms/pattern_utils.h' l='730' c='_ZN3tvm5relayL5EqualERKNS_9RelayExprES3_'/>
+<use f='tvm/relay/transforms/pattern_utils.h' l='735' c='_ZN3tvm5relayL4LessERKNS_9RelayExprES3_'/>
+<use f='tvm/relay/transforms/pattern_utils.h' l='740' c='_ZN3tvm5relayL8IsFiniteENS_9RelayExprE'/>
+<size>8</size>
+<use f='tvm/relay/transforms/infer_layout_utils.h' l='81'/>
+<use f='tvm/relay/transforms/infer_layout_utils.h' l='97' c='_ZN3tvm5relay24InferCorrectLayoutOutputC1ENS_7runtime5ArrayINS_3tir6LayoutEvEES6_NS_5AttrsE'/>
+<use f='tvm/relay/transforms/infer_layout_utils.h' l='119'/>
+<use f='tvm/relay/transforms/infer_layout_utils.h' l='123' c='_ZN3tvm5relay23ElemwiseArbitraryLayoutERKNS_5AttrsERKNS_7runtime5ArrayINS_3tir6LayoutEvEESA_RKNS5_INS_4TypeEvEE'/>
+<use f='tvm/relay/transforms/infer_layout_utils.h' l='143' c='_ZN3tvm5relay27BinaryBroadcastLayoutHelperERKNS_5AttrsERKNS_7runtime5ArrayINS_3tir6LayoutEvEESA_RKNS5_INS_4TypeEvEE'/>
+<use f='tvm/relay/transforms/infer_layout_utils.h' l='147' c='_ZN3tvm5relay21BinaryBroadcastLayoutERKNS_5AttrsERKNS_7runtime5ArrayINS_3tir6LayoutEvEESA_RKNS5_INS_4TypeEvEE'/>
+<size>8</size>
+<use f='tvm/relay/backend/te_compiler_cache.cc' l='435'/>
+<size>8</size>
+<use f='tvm/relay/op/type_relations.h' l='44' c='_ZN3tvm5relay11IdentityRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/type_relations.h' l='57' c='_ZN3tvm5relay12BroadcastRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/type_relations.h' l='83' c='_ZN3tvm5relay16BroadcastCompRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/type_relations.h' l='86' c='_ZN3tvm5relay15IdentityCompRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/type_relations.h' l='100' c='_ZN3tvm5relay10ShapeOfRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/op_common.h' l='109'/>
+<use f='tvm/relay/backend/vm/compiler.cc' l='563' c='_ZN3tvm5relay2vm18VMFunctionCompiler21DeviceAwareVisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/relay/backend/vm/compiler.cc' l='568' c='_ZN3tvm5relay2vm18VMFunctionCompiler21DeviceAwareVisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/relay/backend/vm/compiler.cc' l='604' c='_ZN3tvm5relay2vm18VMFunctionCompiler21DeviceAwareVisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/relay/backend/vm/compiler.cc' l='628' c='_ZN3tvm5relay2vm18VMFunctionCompiler21DeviceAwareVisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/relay/backend/vm/compiler.cc' l='640' c='_ZN3tvm5relay2vm18VMFunctionCompiler21DeviceAwareVisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/relay/backend/vm/compiler.cc' l='649' c='_ZN3tvm5relay2vm18VMFunctionCompiler21DeviceAwareVisitExpr_EPKNS0_8CallNodeE'/>
+<size>8</size>
+<use f='tvm/relay/ir/expr.cc' l='218' c='_ZN3tvm5relay4CallC1ENS_9RelayExprENS_7runtime5ArrayIS2_vEENS_5AttrsENS4_INS_4TypeEvEENS_4SpanE'/>
+<use f='tvm/relay/ir/expr.cc' l='230' c='_ZN3tvm5relay10WithFieldsENS0_4CallENS_7runtime8OptionalINS_9RelayExprEEENS3_INS2_5ArrayIS4_vEEEENS3_INS_5AttrsEEENS3_INS6_INS_4TypeEvEEEENS3_INS_13Vi7126351'/>
+<use f='tvm/relay/ir/expr.cc' l='235' c='_ZN3tvm5relay10WithFieldsENS0_4CallENS_7runtime8OptionalINS_9RelayExprEEENS3_INS2_5ArrayIS4_vEEEENS3_INS_5AttrsEEENS3_INS6_INS_4TypeEvEEEENS3_INS_13Vi7126351'/>
+<use f='tvm/relay/ir/expr.cc' l='278'/>
+<size>8</size>
+<use f='tvm/relay/ir/op_strategy.cc' l='34' c='_ZN3tvm5relay16OpImplementation7ComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
+<use f='tvm/relay/ir/op_strategy.cc' l='39' c='_ZN3tvm5relay16OpImplementation8ScheduleERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_6TargetE'/>
+<use f='tvm/relay/ir/op_strategy.cc' l='77'/>
+<use f='tvm/relay/ir/op_strategy.cc' l='86'/>
+<size>8</size>
+<use f='tvm/relay/op/algorithm/argsort.cc' l='32' c='_ZN3tvm5relay10ArgsortRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/algorithm/argsort.cc' l='53' c='_ZN3tvm5relay11MakeArgsortENS_9RelayExprEibNS_7runtime8DataTypeE'/>
+<size>8</size>
+<use f='tvm/relay/op/algorithm/searchsorted.cc' l='33' c='_ZN3tvm5relay15SearchSortedRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/algorithm/searchsorted.cc' l='66' c='_ZN3tvm5relay16MakeSearchSortedENS_9RelayExprES1_NS_4BoolENS_7runtime8DataTypeE'/>
+<size>8</size>
+<use f='tvm/relay/op/algorithm/sort.cc' l='30' c='_ZN3tvm5relay7SortRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/algorithm/sort.cc' l='49' c='_ZN3tvm5relay8MakeSortENS_9RelayExprEib'/>
+<size>8</size>
+<use f='tvm/relay/op/algorithm/topk.cc' l='36' c='_ZN3tvm5relay22TopKInferCorrectLayoutERKNS_5AttrsERKNS_7runtime5ArrayINS_3tir6LayoutEvEESA_RKNS5_INS_4TypeEvEE'/>
+<use f='tvm/relay/op/algorithm/topk.cc' l='66' c='_ZN3tvm5relay22TopKInferCorrectLayoutERKNS_5AttrsERKNS_7runtime5ArrayINS_3tir6LayoutEvEESA_RKNS5_INS_4TypeEvEE'/>
+<use f='tvm/relay/op/algorithm/topk.cc' l='69' c='_ZN3tvm5relay7TopKRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/algorithm/topk.cc' l='117' c='_ZN3tvm5relay8MakeTopKENS_9RelayExprEiiNS_7runtime6StringEbNS2_8DataTypeE'/>
+<size>8</size>
+<use f='tvm/relay/op/annotation/annotation.cc' l='43' c='_ZN3tvm5relay10StopFusionENS_9RelayExprE'/>
+<use f='tvm/relay/op/annotation/annotation.cc' l='61'/>
+<use f='tvm/relay/op/annotation/annotation.cc' l='73' c='_ZN3tvm5relay8CastHintENS_9RelayExprENS_7runtime8DataTypeE'/>
+<use f='tvm/relay/op/annotation/annotation.cc' l='87'/>
+<use f='tvm/relay/op/annotation/annotation.cc' l='104'/>
+<use f='tvm/relay/op/annotation/annotation.cc' l='121'/>
+<use f='tvm/relay/op/annotation/annotation.cc' l='128'/>
+<use f='tvm/relay/op/annotation/annotation.cc' l='143'/>
+<use f='tvm/relay/op/annotation/annotation.cc' l='166'/>
+<use f='tvm/relay/op/annotation/annotation.cc' l='176'/>
+<use f='tvm/relay/op/annotation/annotation.cc' l='191'/>
+<use f='tvm/relay/op/annotation/annotation.cc' l='201'/>
+<size>8</size>
+<use f='tvm/relay/op/call/call.cc' l='40' c='_ZN3tvm5relay14CallLoweredRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/call/call.cc' l='70' c='_ZN3tvm5relay11CallLoweredENS_9GlobalVarENS_7runtime5ArrayINS_9RelayExprEvEENS0_16CallLoweredAttrsENS_4SpanE'/>
+<use f='tvm/relay/op/call/call.cc' l='74'/>
+<use f='tvm/relay/op/call/call.cc' l='123' c='_ZN3tvm5relay10GetAnyCallEPKNS0_8CallNodeE'/>
+<size>8</size>
+<use f='tvm/relay/op/contrib/ethosu/binary_elementwise.cc' l='35' c='_ZN3tvm5relay2op7contrib6ethosu26EthosuBinaryElementwiseRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/contrib/ethosu/binary_elementwise.cc' l='118' c='_ZN3tvm5relay2op7contrib6ethosu27MakeEthosuBinaryElementwiseENS_9RelayExprES4_S4_NS_7runtime6StringEdididiNS_8PrimExprES7_bS6_iiS6_S6_S6_S6_S6_'/>
+<size>8</size>
+<use f='tvm/relay/op/nn/convolution.h' l='40' c='_ZN3tvm5relay9Conv2DRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/nn/convolution.h' l='43' c='_ZN3tvm5relay18Conv2DTransposeRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/nn/convolution.h' l='47' c='_ZN3tvm5relay17Conv2DWinogradRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/nn/convolution.h' l='124' c='_ZN3tvm5relay22ConvInferCorrectLayoutERKNS_5AttrsERKNS_7runtime5ArrayINS_3tir6LayoutEvEESA_RKNS5_INS_4TypeEvEE'/>
+<use f='tvm/relay/op/contrib/ethosu/convolution.cc' l='42' c='_ZN3tvm5relay2op7contrib6ethosu15EthosuConv2DRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/contrib/ethosu/convolution.cc' l='107' c='_ZN3tvm5relay2op7contrib6ethosu16MakeEthosuConv2DENS_9RelayExprES4_S4_S4_diidiNS_7runtime5ArrayINS_8PrimExprEvEES7_S8_S8_S8_NS5_6StringEiiS9_S9_S9_S9_'/>
+<size>8</size>
+<use f='tvm/relay/op/contrib/ethosu/depthwise.cc' l='41' c='_ZN3tvm5relay2op7contrib6ethosu24EthosuDepthwiseConv2DRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/contrib/ethosu/depthwise.cc' l='109' c='_ZN3tvm5relay2op7contrib6ethosu25MakeEthosuDepthwiseConv2DENS_9RelayExprES4_S4_S4_diidiNS_7runtime5ArrayINS_8PrimExprEvEES7_S8_S8_S8_NS5_6StringEiiS9_S9_S9_S9_S9_'/>
+<size>8</size>
+<use f='tvm/relay/op/contrib/ethosu/identity.cc' l='35' c='_ZN3tvm5relay2op7contrib6ethosu17EthosuIdentityRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/contrib/ethosu/identity.cc' l='74' c='_ZN3tvm5relay2op7contrib6ethosu18MakeEthosuIdentityENS_9RelayExprES4_didiNS_7runtime6StringE'/>
+<size>8</size>
+<use f='tvm/relay/op/contrib/ethosu/pooling.cc' l='35' c='_ZN3tvm5relay2op7contrib6ethosu16EthosuPoolingRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/contrib/ethosu/pooling.cc' l='98' c='_ZN3tvm5relay2op7contrib6ethosu17MakeEthosuPoolingENS_9RelayExprES4_NS_7runtime6StringEdidiNS5_5ArrayINS_8PrimExprEvEES8_S9_S9_S6_iiS6_S6_S6_S6_'/>
+<size>8</size>
+<use f='tvm/relay/op/contrib/ethosu/unary_elementwise.cc' l='35' c='_ZN3tvm5relay2op7contrib6ethosu25EthosuUnaryElementwiseRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/contrib/ethosu/unary_elementwise.cc' l='93' c='_ZN3tvm5relay2op7contrib6ethosu26MakeEthosuUnaryElementwiseENS_9RelayExprES4_NS_7runtime6StringEdidiNS_8PrimExprES6_iiS6_S6_S6_'/>
+<size>8</size>
+<use f='tvm/relay/op/debug.cc' l='40' c='_ZN3tvm5relay12DebugComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
+<use f='tvm/relay/op/debug.cc' l='65' c='_ZN3tvm5relay9MakeDebugENS_9RelayExprENS_7runtime6StringE'/>
+<size>8</size>
+<use f='tvm/relay/op/dyn/algorithm/topk.cc' l='32' c='_ZN3tvm5relay3dyn7TopKRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/dyn/algorithm/topk.cc' l='90' c='_ZN3tvm5relay3dyn8MakeTopKENS_9RelayExprES2_iNS_7runtime6StringEbNS3_8DataTypeE'/>
+<size>8</size>
+<use f='tvm/relay/op/dyn/image/resize.cc' l='36' c='_ZN3tvm5relay3dyn11Resize2DRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/dyn/image/resize.cc' l='82' c='_ZN3tvm5relay3dyn12MakeResize2DENS_9RelayExprES2_S2_NS_7runtime6StringES4_S4_S4_dddNS3_8DataTypeE'/>
+<size>8</size>
+<use f='tvm/relay/op/dyn/nn/pad.cc' l='41' c='_ZN3tvm5relay3dyn6PadRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/dyn/nn/pad.cc' l='72' c='_ZN3tvm5relay3dyn10PadComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
+<use f='tvm/relay/op/dyn/nn/pad.cc' l='104' c='_ZN3tvm5relay3dyn7MakePadENS_9RelayExprES2_S2_NS_7runtime6StringE'/>
+<size>8</size>
+<use f='tvm/relay/op/dyn/nn/upsampling.h' l='39' c='_ZN3tvm5relay3dyn28UpsamplingInferCorrectLayoutERKNS_5AttrsERKNS_7runtime5ArrayINS_3tir6LayoutEvEESB_RKNS6_INS_4TypeEvEE'/>
+<use f='tvm/relay/op/dyn/nn/upsampling.h' l='65' c='_ZN3tvm5relay3dyn28UpsamplingInferCorrectLayoutERKNS_5AttrsERKNS_7runtime5ArrayINS_3tir6LayoutEvEESB_RKNS6_INS_4TypeEvEE'/>
+<use f='tvm/relay/op/dyn/nn/upsampling.cc' l='41' c='_ZN3tvm5relay3dyn13UpSamplingRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/dyn/nn/upsampling.cc' l='85' c='_ZN3tvm5relay3dyn14MakeUpSamplingENS_9RelayExprES2_S2_NS_7runtime6StringES4_b'/>
+<use f='tvm/relay/op/dyn/nn/upsampling.cc' l='122' c='_ZN3tvm5relay3dyn15UpSampling3DRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/dyn/nn/upsampling.cc' l='160' c='_ZN3tvm5relay3dyn16MakeUpSampling3DENS_9RelayExprES2_S2_S2_NS_7runtime6StringES4_S4_'/>
+<size>8</size>
+<use f='tvm/relay/op/dyn/tensor/transform.cc' l='47' c='_ZN3tvm5relay3dyn10ReshapeRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/dyn/tensor/transform.cc' l='77' c='_ZN3tvm5relay3dyn14ReshapeComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
+<use f='tvm/relay/op/dyn/tensor/transform.cc' l='96' c='_ZN3tvm5relay3dyn11MakeReshapeENS_9RelayExprES2_b'/>
+<use f='tvm/relay/op/dyn/tensor/transform.cc' l='151' c='_ZN3tvm5relay3dyn7TileRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/dyn/tensor/transform.cc' l='181' c='_ZN3tvm5relay3dyn11TileComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
+<use f='tvm/relay/op/dyn/tensor/transform.cc' l='192' c='_ZN3tvm5relay3dyn8MakeTileENS_9RelayExprES2_'/>
+<use f='tvm/relay/op/dyn/tensor/transform.cc' l='214' c='_ZN3tvm5relay3dyn14BroadCastToRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/dyn/tensor/transform.cc' l='246' c='_ZN3tvm5relay3dyn15MakeBroadCastToENS_9RelayExprES2_'/>
+<use f='tvm/relay/op/dyn/tensor/transform.cc' l='249' c='_ZN3tvm5relay3dyn18BroadCastToComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
+<use f='tvm/relay/op/dyn/tensor/transform.cc' l='270' c='_ZN3tvm5relay3dyn9InitOpRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/dyn/tensor/transform.cc' l='294' c='_ZN3tvm5relay3dyn9MakeZerosENS_9RelayExprENS_7runtime8DataTypeE'/>
+<use f='tvm/relay/op/dyn/tensor/transform.cc' l='313' c='_ZN3tvm5relay3dyn8MakeOnesENS_9RelayExprENS_7runtime8DataTypeE'/>
+<use f='tvm/relay/op/dyn/tensor/transform.cc' l='328' c='_ZN3tvm5relay3dyn9OneHotRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/dyn/tensor/transform.cc' l='353' c='_ZN3tvm5relay3dyn13OneHotComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
+<use f='tvm/relay/op/dyn/tensor/transform.cc' l='367' c='_ZN3tvm5relay3dyn10MakeOneHotENS_9RelayExprES2_S2_S2_iNS_7runtime8DataTypeE'/>
+<use f='tvm/relay/op/dyn/tensor/transform.cc' l='398' c='_ZN3tvm5relay3dyn7FullRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/dyn/tensor/transform.cc' l='434' c='_ZN3tvm5relay3dyn8MakeFullENS_9RelayExprES2_NS_7runtime8DataTypeE'/>
+<use f='tvm/relay/op/dyn/tensor/transform.cc' l='436' c='_ZN3tvm5relay3dyn11FullComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
+<use f='tvm/relay/op/dyn/tensor/transform.cc' l='456' c='_ZN3tvm5relay3dyn15StridedSliceRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/dyn/tensor/transform.cc' l='492' c='_ZN3tvm5relay3dyn19StridedSliceComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
+<use f='tvm/relay/op/dyn/tensor/transform.cc' l='513' c='_ZN3tvm5relay3dyn16MakeStridedSliceENS_9RelayExprES2_S2_S2_NS_7runtime6StringE'/>
+<use f='tvm/relay/op/dyn/tensor/transform.cc' l='555' c='_ZN3tvm5relay3dyn16SparseToDenseRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/dyn/tensor/transform.cc' l='585' c='_ZN3tvm5relay3dyn20SparseToDenseComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
+<use f='tvm/relay/op/dyn/tensor/transform.cc' l='629' c='_ZN3tvm5relay3dyn13ExpandDimsRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/dyn/tensor/transform.cc' l='653' c='_ZN3tvm5relay3dyn17ExpandDimsComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
+<use f='tvm/relay/op/dyn/tensor/transform.cc' l='680' c='_ZN3tvm5relay3dyn14MakeExpandDimsENS_9RelayExprES2_i'/>
+<use f='tvm/relay/op/dyn/tensor/transform.cc' l='700' c='_ZN3tvm5relay3dyn13DynSqueezeRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/dyn/tensor/transform.cc' l='721' c='_ZN3tvm5relay3dyn14SqueezeComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
+<use f='tvm/relay/op/dyn/tensor/transform.cc' l='735' c='_ZN3tvm5relay3dyn14MakeDynSqueezeENS_9RelayExprES2_'/>
+<size>8</size>
+<use f='tvm/relay/op/image/dilation2d.cc' l='37' c='_ZN3tvm5relay28Dilation2DInferCorrectLayoutERKNS_5AttrsERKNS_7runtime5ArrayINS_3tir6LayoutEvEESA_RKNS5_INS_4TypeEvEE'/>
+<use f='tvm/relay/op/image/dilation2d.cc' l='59' c='_ZN3tvm5relay14MakeDilation2DENS_9RelayExprES1_NS_7runtime5ArrayINS_8PrimExprEvEES5_S5_NS2_6StringES6_NS2_8DataTypeE'/>
+<use f='tvm/relay/op/image/dilation2d.cc' l='63' c='_ZN3tvm5relay13Dilation2DRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<size>8</size>
+<use f='tvm/relay/op/image/grid_sample.cc' l='36' c='_ZN3tvm5relay13AffineGridRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/image/grid_sample.cc' l='70' c='_ZN3tvm5relay14MakeAffineGridENS_9RelayExprENS_7runtime5ArrayINS_8PrimExprEvEE'/>
+<use f='tvm/relay/op/image/grid_sample.cc' l='98' c='_ZN3tvm5relay13GridSampleRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/image/grid_sample.cc' l='145' c='_ZN3tvm5relay14MakeGridSampleENS_9RelayExprES1_NS_7runtime6StringES3_S3_b'/>
+<size>8</size>
+<use f='tvm/relay/op/image/resize.cc' l='35' c='_ZN3tvm5relay24ResizeInferCorrectLayoutERKNS_5AttrsERKNS_7runtime5ArrayINS_3tir6LayoutEvEESA_RKNS5_INS_4TypeEvEE'/>
+<use f='tvm/relay/op/image/resize.cc' l='56' c='_ZN3tvm5relay24ResizeInferCorrectLayoutERKNS_5AttrsERKNS_7runtime5ArrayINS_3tir6LayoutEvEESA_RKNS5_INS_4TypeEvEE'/>
+<use f='tvm/relay/op/image/resize.cc' l='61' c='_ZN3tvm5relay11Resize1DRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/image/resize.cc' l='110' c='_ZN3tvm5relay12MakeResize1DENS_9RelayExprENS_7runtime5ArrayINS_8PrimExprEvEENS3_INS_8FloatImmEvEENS2_6StringES8_S8_S8_didNS2_8DataTypeE'/>
+<use f='tvm/relay/op/image/resize.cc' l='139' c='_ZN3tvm5relay11Resize2DRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/image/resize.cc' l='189' c='_ZN3tvm5relay12MakeResize2DENS_9RelayExprENS_7runtime5ArrayINS_8PrimExprEvEENS3_INS_8FloatImmEvEENS2_6StringES8_S8_S8_didNS2_8DataTypeE'/>
+<use f='tvm/relay/op/image/resize.cc' l='218' c='_ZN3tvm5relay11Resize3DRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/image/resize.cc' l='269' c='_ZN3tvm5relay12MakeResize3DENS_9RelayExprENS_7runtime5ArrayINS_8PrimExprEvEENS3_INS_8FloatImmEvEENS2_6StringES8_S8_S8_didNS2_8DataTypeE'/>
+<use f='tvm/relay/op/image/resize.cc' l='298' c='_ZN3tvm5relay16CropAndResizeRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/image/resize.cc' l='339' c='_ZN3tvm5relay17MakeCropAndResizeENS_9RelayExprES1_S1_NS_7runtime5ArrayINS_8PrimExprEvEENS2_6StringES6_dNS2_8DataTypeE'/>
+<size>8</size>
+<use f='tvm/relay/op/memory/device_copy.cc' l='60' c='_ZN3tvm5relay10DeviceCopyENS_9RelayExprENS_13VirtualDeviceES2_'/>
+<use f='tvm/relay/op/memory/device_copy.cc' l='89'/>
+<size>8</size>
+<use f='tvm/relay/op/memory/memory.cc' l='58' c='_ZN3tvm5relay12AllocStorageENS_9RelayExprES1_NS_13VirtualDeviceENS_7runtime8DataTypeE'/>
+<use f='tvm/relay/op/memory/memory.cc' l='63' c='_ZN3tvm5relay15AllocStorageRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/memory/memory.cc' l='114' c='_ZN3tvm5relay11AllocTensorENS_9RelayExprES1_S1_NS_7runtime8DataTypeENS2_5ArrayINS_8PrimExprEvEE'/>
+<use f='tvm/relay/op/memory/memory.cc' l='144' c='_ZN3tvm5relay14AllocTensorRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/memory/memory.cc' l='207' c='_ZN3tvm5relay7KillRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<size>8</size>
+<use f='tvm/relay/op/memory/on_device.cc' l='56' c='_ZN3tvm5relay8OnDeviceENS_9RelayExprENS_13VirtualDeviceEbb'/>
+<size>8</size>
+<use f='tvm/relay/op/nn/bitserial.cc' l='40' c='_ZN3tvm5relay30BinaryConv2DInferCorrectLayoutERKNS_5AttrsERKNS_7runtime5ArrayINS_3tir6LayoutEvEESA_RKNS5_INS_4TypeEvEE'/>
+<use f='tvm/relay/op/nn/bitserial.cc' l='50' c='_ZN3tvm5relay10BitPackRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/nn/bitserial.cc' l='97' c='_ZN3tvm5relay11MakeBitPackENS_9RelayExprEiiiNS_7runtime8DataTypeENS2_6StringE'/>
+<use f='tvm/relay/op/nn/bitserial.cc' l='122' c='_ZN3tvm5relay15BinaryConv2DRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/nn/bitserial.cc' l='169' c='_ZN3tvm5relay16MakeBinaryConv2DENS_9RelayExprES1_NS_7runtime5ArrayINS_8PrimExprEvEES5_S4_S5_iiNS2_6StringES6_NS2_8DataTypeES7_b'/>
+<use f='tvm/relay/op/nn/bitserial.cc' l='202' c='_ZN3tvm5relay14BinaryDenseRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/nn/bitserial.cc' l='238' c='_ZN3tvm5relay15MakeBinaryDenseENS_9RelayExprES1_NS_8PrimExprEiiNS_7runtime8DataTypeES4_b'/>
+<size>8</size>
+<use f='tvm/relay/op/nn/convolution.cc' l='43' c='_ZN3tvm5relay31MakeConvWinogradWeightTransformENS_9RelayExprEiNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<use f='tvm/relay/op/nn/convolution.cc' l='51' c='_ZN3tvm5relay27MakeConvGemmWeightTransformENS_9RelayExprEiiNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<use f='tvm/relay/op/nn/convolution.cc' l='57' c='_ZN3tvm5relay9Conv1DRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/nn/convolution.cc' l='182' c='_ZN3tvm5relay9Conv2DRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/nn/convolution.cc' l='414' c='_ZN3tvm5relay9Conv3DRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/nn/convolution.cc' l='589' c='_ZN3tvm5relay18Conv3DTransposeRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/nn/convolution.cc' l='750' c='_ZN3tvm5relay18Conv2DTransposeRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/nn/convolution.cc' l='919' c='_ZN3tvm5relay18Conv1DTransposeRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/nn/convolution.cc' l='1092' c='_ZN3tvm5relay32Conv2DWinogradWeightTransformRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/nn/convolution.cc' l='1138' c='_ZN3tvm5relay17Conv3DWinogradRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/nn/convolution.cc' l='1260' c='_ZN3tvm5relay32Conv3DWinogradWeightTransformRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/nn/convolution.cc' l='1308' c='_ZN3tvm5relay38Conv2DWinogradNNPACKWeightTransformRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/nn/convolution.cc' l='1342' c='_ZN3tvm5relay39MakeConv2DWinogradNNPACKWeightTransformENS_9RelayExprEiNS_7runtime8DataTypeE'/>
+<use f='tvm/relay/op/nn/convolution.cc' l='1374' c='_ZN3tvm5relay13Conv2DGemmRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/nn/convolution.cc' l='1493' c='_ZN3tvm5relay28Conv2DGemmWeightTransformRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/nn/convolution.cc' l='1608' c='_ZN3tvm5relay19DeformableConv2DRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/nn/convolution.cc' l='1721' c='_ZN3tvm5relay32DeformableConvInferCorrectLayoutERKNS_5AttrsERKNS_7runtime5ArrayINS_3tir6LayoutEvEESA_RKNS5_INS_4TypeEvEE'/>
+<use f='tvm/relay/op/nn/convolution.cc' l='1788' c='_ZN3tvm5relay24MakeConv2dBackwardWeightENS_9RelayExprES1_NS_7runtime5ArrayINS_8PrimExprEvEES5_S5_iS4_S5_NSt7__cxx1112basic_stringIcSt11char_traitsIcES14593172'/>
+<use f='tvm/relay/op/nn/convolution.cc' l='1801' c='_ZN3tvm5relay23Conv2DBackwardWeightRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<size>8</size>
+<use f='tvm/relay/op/nn/correlation.cc' l='41' c='_ZN3tvm5relay29CorrelationInferCorrectLayoutERKNS_5AttrsERKNS_7runtime5ArrayINS_3tir6LayoutEvEESA_RKNS5_INS_4TypeEvEE'/>
+<use f='tvm/relay/op/nn/correlation.cc' l='61' c='_ZN3tvm5relay15MakeCorrelationENS_9RelayExprES1_iiiiNS_7runtime5ArrayINS_8PrimExprEvEEbNS2_6StringE'/>
+<use f='tvm/relay/op/nn/correlation.cc' l='64' c='_ZN3tvm5relay14CorrelationRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<size>8</size>
+<use f='tvm/relay/op/nn/nn.h' l='41' c='_ZN3tvm5relay9MatmulRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/nn/nn.h' l='126' c='_ZN3tvm5relay14BatchMatmulRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/nn/nn.cc' l='52' c='_ZN3tvm5relay10BiasAddRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/nn/nn.cc' l='83' c='_ZN3tvm5relay11MakeBiasAddENS_9RelayExprES1_i'/>
+<use f='tvm/relay/op/nn/nn.cc' l='99'/>
+<use f='tvm/relay/op/nn/nn.cc' l='112' c='_ZN3tvm5relay14MakeFIFOBufferENS_9RelayExprES1_i'/>
+<use f='tvm/relay/op/nn/nn.cc' l='115' c='_ZN3tvm5relay13FIFOBufferRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/nn/nn.cc' l='178' c='_ZN3tvm5relay10MakeMatmulENS_9RelayExprES1_NS_8PrimExprENS_7runtime8DataTypeEbb'/>
+<use f='tvm/relay/op/nn/nn.cc' l='210' c='_ZN3tvm5relay9MakeDenseENS_9RelayExprES1_NS_8PrimExprENS_7runtime8DataTypeE'/>
+<use f='tvm/relay/op/nn/nn.cc' l='213' c='_ZN3tvm5relay23DenseInferCorrectLayoutERKNS_5AttrsERKNS_7runtime5ArrayINS_3tir6LayoutEvEESA_RKNS5_INS_4TypeEvEE'/>
+<use f='tvm/relay/op/nn/nn.cc' l='251' c='_ZN3tvm5relay13MakeDensePackENS_9RelayExprES1_NS_7runtime6StringENS_8PrimExprENS2_8DataTypeE'/>
+<use f='tvm/relay/op/nn/nn.cc' l='256' c='_ZN3tvm5relay12DensePackRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/nn/nn.cc' l='281' c='_ZN3tvm5relay27DensePackInferCorrectLayoutERKNS_5AttrsERKNS_7runtime5ArrayINS_3tir6LayoutEvEESA_RKNS5_INS_4TypeEvEE'/>
+<use f='tvm/relay/op/nn/nn.cc' l='317' c='_ZN3tvm5relay13MakeLeakyReluENS_9RelayExprEd'/>
+<use f='tvm/relay/op/nn/nn.cc' l='335'/>
+<use f='tvm/relay/op/nn/nn.cc' l='344' c='_ZN3tvm5relay8PReluRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/nn/nn.cc' l='365' c='_ZN3tvm5relay23PReluInferCorrectLayoutERKNS_5AttrsERKNS_7runtime5ArrayINS_3tir6LayoutEvEESA_RKNS5_INS_4TypeEvEE'/>
+<use f='tvm/relay/op/nn/nn.cc' l='383' c='_ZN3tvm5relay9MakePReluENS_9RelayExprES1_i'/>
+<use f='tvm/relay/op/nn/nn.cc' l='402'/>
+<use f='tvm/relay/op/nn/nn.cc' l='411' c='_ZN3tvm5relay10SoftmaxRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/nn/nn.cc' l='436'/>
+<use f='tvm/relay/op/nn/nn.cc' l='463'/>
+<use f='tvm/relay/op/nn/nn.cc' l='489'/>
+<use f='tvm/relay/op/nn/nn.cc' l='508'/>
+<use f='tvm/relay/op/nn/nn.cc' l='518' c='_ZN3tvm5relay15BatchFlattenRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/nn/nn.cc' l='545' c='_ZN3tvm5relay16MakeBatchFlattenENS_9RelayExprE'/>
+<use f='tvm/relay/op/nn/nn.cc' l='578'/>
+<use f='tvm/relay/op/nn/nn.cc' l='587'/>
+<use f='tvm/relay/op/nn/nn.cc' l='603'/>
+<use f='tvm/relay/op/nn/nn.cc' l='619' c='_ZN3tvm5relay7MakeLRNENS_9RelayExprEiiddd'/>
+<use f='tvm/relay/op/nn/nn.cc' l='653' c='_ZN3tvm5relay15MakeL2NormalizeENS_9RelayExprEdNS_7runtime5ArrayINS_7IntegerEvEE'/>
+<use f='tvm/relay/op/nn/nn.cc' l='678' c='_ZN3tvm5relay10DropoutRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/nn/nn.cc' l='695' c='_ZN3tvm5relay11MakeDropoutENS_9RelayExprEd'/>
+<use f='tvm/relay/op/nn/nn.cc' l='719' c='_ZN3tvm5relay27BatchNormInferCorrectLayoutERKNS_5AttrsERKNS_7runtime5ArrayINS_3tir6LayoutEvEESA_RKNS5_INS_4TypeEvEE'/>
+<use f='tvm/relay/op/nn/nn.cc' l='751' c='_ZN3tvm5relay27BatchNormInferCorrectLayoutERKNS_5AttrsERKNS_7runtime5ArrayINS_3tir6LayoutEvEESA_RKNS5_INS_4TypeEvEE'/>
+<use f='tvm/relay/op/nn/nn.cc' l='754' c='_ZN3tvm5relay12BatchNormRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/nn/nn.cc' l='793' c='_ZN3tvm5relay13MakeBatchNormENS_9RelayExprES1_S1_S1_S1_idbb'/>
+<use f='tvm/relay/op/nn/nn.cc' l='852' c='_ZN3tvm5relay31NormalizationInferCorrectLayoutERKNS_5AttrsERKNS_7runtime5ArrayINS_3tir6LayoutEvEESA_RKNS5_INS_4TypeEvEE'/>
+<use f='tvm/relay/op/nn/nn.cc' l='882' c='_ZN3tvm5relay31NormalizationInferCorrectLayoutERKNS_5AttrsERKNS_7runtime5ArrayINS_3tir6LayoutEvEESA_RKNS5_INS_4TypeEvEE'/>
+<use f='tvm/relay/op/nn/nn.cc' l='885' c='_ZN3tvm5relay15InstanceNormRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/nn/nn.cc' l='908' c='_ZN3tvm5relay16MakeInstanceNormENS_9RelayExprES1_S1_idbb'/>
+<use f='tvm/relay/op/nn/nn.cc' l='951' c='_ZN3tvm5relay12LayerNormRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/nn/nn.cc' l='974' c='_ZN3tvm5relay13MakeLayerNormENS_9RelayExprES1_S1_idbb'/>
+<use f='tvm/relay/op/nn/nn.cc' l='995' c='_ZN3tvm5relay12GroupNormRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/nn/nn.cc' l='1019' c='_ZN3tvm5relay13MakeGroupNormENS_9RelayExprES1_S1_iidbb'/>
+<use f='tvm/relay/op/nn/nn.cc' l='1071' c='_ZN3tvm5relay15MakeBatchMatmulENS_9RelayExprES1_NS_7runtime8DataTypeEbb'/>
+<use f='tvm/relay/op/nn/nn.cc' l='1102' c='_ZN3tvm5relay15CrossEntropyRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/nn/nn.cc' l='1128' c='_ZN3tvm5relay16MakeCrossEntropyENS_9RelayExprES1_'/>
+<use f='tvm/relay/op/nn/nn.cc' l='1148' c='_ZN3tvm5relay9DilateRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/nn/nn.cc' l='1175' c='_ZN3tvm5relay10MakeDilateENS_9RelayExprENS_7runtime5ArrayINS_8PrimExprEvEEd'/>
+<use f='tvm/relay/op/nn/nn.cc' l='1194' c='_ZN3tvm5relay26MakeCrossEntropyWithLogitsENS_9RelayExprES1_'/>
+<use f='tvm/relay/op/nn/nn.cc' l='1218' c='_ZN3tvm5relay10NLLLossRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/nn/nn.cc' l='1279' c='_ZN3tvm5relay11MakeNLLLossENS_9RelayExprES1_S1_NS_7runtime6StringEi'/>
+<use f='tvm/relay/op/nn/nn.cc' l='1296' c='_ZN3tvm5relay15DepthToSpaceRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/nn/nn.cc' l='1338' c='_ZN3tvm5relay16MakeDepthToSpaceENS_9RelayExprEiNS_7runtime6StringES3_'/>
+<use f='tvm/relay/op/nn/nn.cc' l='1360' c='_ZN3tvm5relay15SpaceToDepthRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/nn/nn.cc' l='1401' c='_ZN3tvm5relay16MakeSpaceToDepthENS_9RelayExprEiNS_7runtime6StringE'/>
+<use f='tvm/relay/op/nn/nn.cc' l='1434' c='_ZN3tvm5relay18MakeSpaceToBatchNDENS_9RelayExprENS_7runtime5ArrayINS_7IntegerEvEENS3_INS3_INS_8PrimExprEvEEvEEd'/>
+<use f='tvm/relay/op/nn/nn.cc' l='1437' c='_ZN3tvm5relay17SpaceToBatchNDRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/nn/nn.cc' l='1489' c='_ZN3tvm5relay21SpaceToBatchNDComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
+<use f='tvm/relay/op/nn/nn.cc' l='1551' c='_ZN3tvm5relay18MakeBatchToSpaceNDENS_9RelayExprENS_7runtime5ArrayINS_7IntegerEvEENS3_INS3_INS_8PrimExprEvEEvEE'/>
+<use f='tvm/relay/op/nn/nn.cc' l='1554' c='_ZN3tvm5relay17BatchToSpaceNDRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/nn/nn.cc' l='1603' c='_ZN3tvm5relay21BatchToSpaceNDComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
+<size>8</size>
+<use f='tvm/relay/op/nn/pad.cc' l='42' c='_ZN3tvm5relay21PadInferCorrectLayoutERKNS_5AttrsERKNS_7runtime5ArrayINS_3tir6LayoutEvEESA_RKNS5_INS_4TypeEvEE'/>
+<use f='tvm/relay/op/nn/pad.cc' l='117' c='_ZN3tvm5relay21PadInferCorrectLayoutERKNS_5AttrsERKNS_7runtime5ArrayINS_3tir6LayoutEvEESA_RKNS5_INS_4TypeEvEE'/>
+<use f='tvm/relay/op/nn/pad.cc' l='120' c='_ZN3tvm5relay6PadRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/nn/pad.cc' l='164' c='_ZN3tvm5relay10PadComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
+<use f='tvm/relay/op/nn/pad.cc' l='191' c='_ZN3tvm5relay7MakePadENS_9RelayExprENS_7runtime5ArrayINS3_INS_7IntegerEvEEvEES1_NS2_6StringE'/>
+<use f='tvm/relay/op/nn/pad.cc' l='213' c='_ZN3tvm5relay12MirrorPadRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/nn/pad.cc' l='259' c='_ZN3tvm5relay13MakeMirrorPadENS_9RelayExprENS_7runtime5ArrayINS3_INS_8PrimExprEvEEvEENS2_6StringE'/>
+<size>8</size>
+<use f='tvm/relay/op/nn/pooling.cc' l='44' c='_ZN3tvm5relay22PoolInferCorrectLayoutERKNS_5AttrsERKNS_7runtime5ArrayINS_3tir6LayoutEvEESA_RKNS5_INS_4TypeEvEE'/>
+<use f='tvm/relay/op/nn/pooling.cc' l='63' c='_ZN3tvm5relay22PoolInferCorrectLayoutERKNS_5AttrsERKNS_7runtime5ArrayINS_3tir6LayoutEvEESA_RKNS5_INS_4TypeEvEE'/>
+<use f='tvm/relay/op/nn/pooling.cc' l='81' c='_ZN3tvm5relay9Pool2DRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/nn/pooling.cc' l='141' c='_ZN3tvm5relay13Pool2DComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
+<use f='tvm/relay/op/nn/pooling.cc' l='265' c='_ZN3tvm5relay15GlobalPool2DRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/nn/pooling.cc' l='295' c='_ZN3tvm5relay19GlobalPool2DComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
+<use f='tvm/relay/op/nn/pooling.cc' l='319' c='_ZN3tvm5relay19MakeGlobalAvgPool2DENS_9RelayExprENS_7runtime6StringES3_'/>
+<use f='tvm/relay/op/nn/pooling.cc' l='349' c='_ZN3tvm5relay19MakeGlobalMaxPool2DENS_9RelayExprENS_7runtime6StringES3_'/>
+<use f='tvm/relay/op/nn/pooling.cc' l='375' c='_ZN3tvm5relay17AdaptivePool1DRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/nn/pooling.cc' l='410' c='_ZN3tvm5relay21AdaptivePool1DComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
+<use f='tvm/relay/op/nn/pooling.cc' l='445' c='_ZN3tvm5relay21MakeAdaptiveAvgPool1DENS_9RelayExprENS_7runtime5ArrayINS_8PrimExprEvEENS2_6StringES6_'/>
+<use f='tvm/relay/op/nn/pooling.cc' l='481' c='_ZN3tvm5relay21MakeAdaptiveMaxPool1DENS_9RelayExprENS_7runtime5ArrayINS_8PrimExprEvEENS2_6StringES6_'/>
+<use f='tvm/relay/op/nn/pooling.cc' l='512' c='_ZN3tvm5relay17AdaptivePool2DRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/nn/pooling.cc' l='556' c='_ZN3tvm5relay21AdaptivePool2DComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
+<use f='tvm/relay/op/nn/pooling.cc' l='599' c='_ZN3tvm5relay21MakeAdaptiveAvgPool2DENS_9RelayExprENS_7runtime5ArrayINS_8PrimExprEvEENS2_6StringES6_'/>
+<use f='tvm/relay/op/nn/pooling.cc' l='637' c='_ZN3tvm5relay21MakeAdaptiveMaxPool2DENS_9RelayExprENS_7runtime5ArrayINS_8PrimExprEvEENS2_6StringES6_'/>
+<use f='tvm/relay/op/nn/pooling.cc' l='670' c='_ZN3tvm5relay17AdaptivePool3DRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/nn/pooling.cc' l='721' c='_ZN3tvm5relay21AdaptivePool3DComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
+<use f='tvm/relay/op/nn/pooling.cc' l='772' c='_ZN3tvm5relay21MakeAdaptiveMaxPool3DENS_9RelayExprENS_7runtime5ArrayINS_8PrimExprEvEENS2_6StringES6_'/>
+<use f='tvm/relay/op/nn/pooling.cc' l='810' c='_ZN3tvm5relay21MakeAdaptiveAvgPool3DENS_9RelayExprENS_7runtime5ArrayINS_8PrimExprEvEENS2_6StringES6_'/>
+<use f='tvm/relay/op/nn/pooling.cc' l='838' c='_ZN3tvm5relay13Pool2DGradRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/nn/pooling.cc' l='851' c='_ZN3tvm5relay17Pool2DGradComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
+<use f='tvm/relay/op/nn/pooling.cc' l='909' c='_ZN3tvm5relay17MakeMaxPool2DGradENS_9RelayExprES1_NS_7runtime5ArrayINS_8PrimExprEvEES5_S5_NS2_6StringES6_b'/>
+<use f='tvm/relay/op/nn/pooling.cc' l='959' c='_ZN3tvm5relay17MakeAvgPool2DGradENS_9RelayExprES1_NS_7runtime5ArrayINS_8PrimExprEvEES5_S5_NS2_6StringES6_bb'/>
+<use f='tvm/relay/op/nn/pooling.cc' l='1001' c='_ZN3tvm5relay9Pool1DRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/nn/pooling.cc' l='1046' c='_ZN3tvm5relay13Pool1DComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
+<use f='tvm/relay/op/nn/pooling.cc' l='1162' c='_ZN3tvm5relay9Pool3DRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/nn/pooling.cc' l='1226' c='_ZN3tvm5relay13Pool3DComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
+<size>8</size>
+<use f='tvm/relay/op/nn/sparse.cc' l='40' c='_ZN3tvm5relay14SparseDenseRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/nn/sparse.cc' l='102' c='_ZN3tvm5relay15MakeSparseDenseENS_9RelayExprES1_S1_S1_b'/>
+<use f='tvm/relay/op/nn/sparse.cc' l='129' c='_ZN3tvm5relay21MakeSparseDensePaddedENS_9RelayExprES1_S1_S1_'/>
+<use f='tvm/relay/op/nn/sparse.cc' l='161' c='_ZN3tvm5relay18SparseTransposeRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/nn/sparse.cc' l='182' c='_ZN3tvm5relay19MakeSparseTransposeENS_9RelayExprES1_S1_'/>
+<use f='tvm/relay/op/nn/sparse.cc' l='204' c='_ZN3tvm5relay12SparseAddRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/nn/sparse.cc' l='222' c='_ZN3tvm5relay13MakeSparseAddENS_9RelayExprES1_S1_S1_'/>
+<use f='tvm/relay/op/nn/sparse.cc' l='247' c='_ZN3tvm5relay15SparseConv2dRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/nn/sparse.cc' l='286' c='_ZN3tvm5relay16MakeSparseConv2dENS_9RelayExprES1_S1_S1_NSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS_7runtime5ArrayINS_8PrimExprEvEE'/>
+<size>8</size>
+<use f='tvm/relay/op/nn/upsampling.h' l='38' c='_ZN3tvm5relay28UpsamplingInferCorrectLayoutERKNS_5AttrsERKNS_7runtime5ArrayINS_3tir6LayoutEvEESA_RKNS5_INS_4TypeEvEE'/>
+<use f='tvm/relay/op/nn/upsampling.h' l='61' c='_ZN3tvm5relay28UpsamplingInferCorrectLayoutERKNS_5AttrsERKNS_7runtime5ArrayINS_3tir6LayoutEvEESA_RKNS5_INS_4TypeEvEE'/>
+<use f='tvm/relay/op/nn/upsampling.cc' l='43' c='_ZN3tvm5relay13UpSamplingRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/nn/upsampling.cc' l='80' c='_ZN3tvm5relay14MakeUpSamplingENS_9RelayExprEddNS_7runtime6StringES3_b'/>
+<use f='tvm/relay/op/nn/upsampling.cc' l='111' c='_ZN3tvm5relay15UpSampling3DRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/nn/upsampling.cc' l='150' c='_ZN3tvm5relay16MakeUpSampling3DENS_9RelayExprEdddNS_7runtime6StringES3_S3_'/>
+<size>8</size>
+<use f='tvm/relay/op/random/kernel.cc' l='30' c='_ZN3tvm5relay19ThreefryGenerateRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/random/kernel.cc' l='52' c='_ZN3tvm5relay20MakeThreefryGenerateENS_9RelayExprENS_7runtime5ArrayINS_7IntegerEvEE'/>
+<use f='tvm/relay/op/random/kernel.cc' l='65' c='_ZN3tvm5relay16ThreefrySplitRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/random/kernel.cc' l='77' c='_ZN3tvm5relay17MakeThreefrySplitENS_9RelayExprE'/>
+<use f='tvm/relay/op/random/kernel.cc' l='90' c='_ZN3tvm5relay10UniformRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/random/kernel.cc' l='120' c='_ZN3tvm5relay11MakeUniformENS_9RelayExprES1_S1_NS_7runtime5ArrayINS_7IntegerEvEENS2_8DataTypeE'/>
+<use f='tvm/relay/op/random/kernel.cc' l='137' c='_ZN3tvm5relay9NormalRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/random/kernel.cc' l='167' c='_ZN3tvm5relay10MakeNormalENS_9RelayExprES1_S1_NS_7runtime5ArrayINS_7IntegerEvEENS2_8DataTypeE'/>
+<use f='tvm/relay/op/random/kernel.cc' l='184' c='_ZN3tvm5relay14MultinomialRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/random/kernel.cc' l='214' c='_ZN3tvm5relay15MakeMultinomialENS_9RelayExprES1_NS_7IntegerE'/>
+<size>8</size>
+<use f='tvm/relay/op/tensor/binary.cc' l='42' macro='1'/>
+<use f='tvm/relay/op/tensor/binary.cc' l='35'/>
+<use f='tvm/relay/op/tensor/binary.cc' l='48' macro='1'/>
+<use f='tvm/relay/op/tensor/binary.cc' l='35'/>
+<use f='tvm/relay/op/tensor/binary.cc' l='54' macro='1'/>
+<use f='tvm/relay/op/tensor/binary.cc' l='35'/>
+<use f='tvm/relay/op/tensor/binary.cc' l='59' macro='1'/>
+<use f='tvm/relay/op/tensor/binary.cc' l='35'/>
+<use f='tvm/relay/op/tensor/binary.cc' l='64' macro='1'/>
+<use f='tvm/relay/op/tensor/binary.cc' l='35'/>
+<use f='tvm/relay/op/tensor/binary.cc' l='69' macro='1'/>
+<use f='tvm/relay/op/tensor/binary.cc' l='35'/>
+<use f='tvm/relay/op/tensor/binary.cc' l='74' macro='1'/>
+<use f='tvm/relay/op/tensor/binary.cc' l='35'/>
+<use f='tvm/relay/op/tensor/binary.cc' l='79' macro='1'/>
+<use f='tvm/relay/op/tensor/binary.cc' l='35'/>
+<use f='tvm/relay/op/tensor/binary.cc' l='84' macro='1'/>
+<use f='tvm/relay/op/tensor/binary.cc' l='35'/>
+<use f='tvm/relay/op/tensor/binary.cc' l='89' macro='1'/>
+<use f='tvm/relay/op/tensor/binary.cc' l='35'/>
+<use f='tvm/relay/op/tensor/binary.cc' l='94' macro='1'/>
+<use f='tvm/relay/op/tensor/binary.cc' l='35'/>
+<use f='tvm/relay/op/tensor/binary.cc' l='99' macro='1'/>
+<use f='tvm/relay/op/tensor/binary.cc' l='35'/>
+<use f='tvm/relay/op/tensor/binary.cc' l='104' macro='1'/>
+<use f='tvm/relay/op/tensor/binary.cc' l='35'/>
+<use f='tvm/relay/op/tensor/binary.cc' l='109' macro='1'/>
+<use f='tvm/relay/op/tensor/binary.cc' l='35'/>
+<use f='tvm/relay/op/tensor/binary.cc' l='114' macro='1'/>
+<use f='tvm/relay/op/tensor/binary.cc' l='35'/>
+<use f='tvm/relay/op/tensor/binary.cc' l='119' macro='1'/>
+<use f='tvm/relay/op/tensor/binary.cc' l='35'/>
+<use f='tvm/relay/op/tensor/binary.cc' l='124' macro='1'/>
+<use f='tvm/relay/op/tensor/binary.cc' l='35'/>
+<use f='tvm/relay/op/tensor/binary.cc' l='129' macro='1'/>
+<use f='tvm/relay/op/tensor/binary.cc' l='35'/>
+<use f='tvm/relay/op/tensor/binary.cc' l='134' macro='1'/>
+<use f='tvm/relay/op/tensor/binary.cc' l='35'/>
+<use f='tvm/relay/op/tensor/binary.cc' l='139' macro='1'/>
+<use f='tvm/relay/op/tensor/binary.cc' l='35'/>
+<use f='tvm/relay/op/tensor/binary.cc' l='144' macro='1'/>
+<use f='tvm/relay/op/tensor/binary.cc' l='35'/>
+<use f='tvm/relay/op/tensor/binary.cc' l='149' macro='1'/>
+<use f='tvm/relay/op/tensor/binary.cc' l='35'/>
+<use f='tvm/relay/op/tensor/binary.cc' l='154' macro='1'/>
+<use f='tvm/relay/op/tensor/binary.cc' l='35'/>
+<use f='tvm/relay/op/tensor/binary.cc' l='159' macro='1'/>
+<use f='tvm/relay/op/tensor/binary.cc' l='35'/>
+<use f='tvm/relay/op/tensor/binary.cc' l='164' macro='1'/>
+<use f='tvm/relay/op/tensor/binary.cc' l='35'/>
+<use f='tvm/relay/op/tensor/binary.cc' l='169' macro='1'/>
+<use f='tvm/relay/op/tensor/binary.cc' l='35'/>
+<size>8</size>
+<use f='tvm/relay/op/tensor/math.cc' l='38' c='_ZN3tvm5relay9EinsumRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/tensor/math.cc' l='87' c='_ZN3tvm5relay13EinsumComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
+<use f='tvm/relay/op/tensor/math.cc' l='98' c='_ZN3tvm5relay10MakeEinsumENS_9RelayExprENS_7runtime6StringE'/>
+<size>8</size>
+<use f='tvm/relay/op/tensor/reduce.cc' l='120' c='_ZN3tvm5relay24ReduceInferCorrectLayoutERKNS_5AttrsERKNS_7runtime5ArrayINS_3tir6LayoutEvEESA_RKNS5_INS_4TypeEvEE'/>
+<use f='tvm/relay/op/tensor/reduce.cc' l='227' c='_ZN3tvm5relay24ReduceInferCorrectLayoutERKNS_5AttrsERKNS_7runtime5ArrayINS_3tir6LayoutEvEESA_RKNS5_INS_4TypeEvEE'/>
+<use f='tvm/relay/op/tensor/reduce.cc' l='231' c='_ZN3tvm5relay13ReduceComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeET_'/>
+<use f='tvm/relay/op/tensor/reduce.cc' l='250' c='_ZN3tvm5relay16ArgReduceComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeET_'/>
+<use f='tvm/relay/op/tensor/reduce.cc' l='328' c='_ZN3tvm5relay16GenericReduceRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/tensor/reduce.cc' l='351' c='_ZN3tvm5relay12ArgReduceRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/tensor/reduce.cc' l='363' c='_ZN3tvm5relay9ReduceRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/tensor/reduce.cc' l='384' c='_ZN3tvm5relay10MakeReduceENS_9RelayExprENS_7runtime5ArrayINS_7IntegerEvEEbbNS2_6StringE'/>
+<use f='tvm/relay/op/tensor/reduce.cc' l='394' c='_ZN3tvm5relay20MakeOneElementReduceENS_9RelayExprENS_7runtime5ArrayINS_7IntegerEvEEbbbNS2_6StringE'/>
+<use f='tvm/relay/op/tensor/reduce.cc' l='412' c='_ZN3tvm5relay13ArgMaxComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
+<use f='tvm/relay/op/tensor/reduce.cc' l='429' c='_ZN3tvm5relay13ArgMinComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
+<use f='tvm/relay/op/tensor/reduce.cc' l='446' c='_ZN3tvm5relay10SumComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
+<use f='tvm/relay/op/tensor/reduce.cc' l='476' c='_ZN3tvm5relay10AllComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
+<use f='tvm/relay/op/tensor/reduce.cc' l='510' c='_ZN3tvm5relay10AnyComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
+<use f='tvm/relay/op/tensor/reduce.cc' l='543' c='_ZN3tvm5relay10MaxComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
+<use f='tvm/relay/op/tensor/reduce.cc' l='559' c='_ZN3tvm5relay10MinComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
+<use f='tvm/relay/op/tensor/reduce.cc' l='575' c='_ZN3tvm5relay11ProdComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
+<use f='tvm/relay/op/tensor/reduce.cc' l='607' c='_ZN3tvm5relay11MeanComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
+<use f='tvm/relay/op/tensor/reduce.cc' l='646' c='_ZN3tvm5relay11VarianceRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/tensor/reduce.cc' l='668' c='_ZN3tvm5relay15VarianceComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
+<use f='tvm/relay/op/tensor/reduce.cc' l='703' c='_ZN3tvm5relay12MakeVarianceENS_9RelayExprES1_NS_7runtime5ArrayINS_7IntegerEvEEbbb'/>
+<size>8</size>
+<use f='tvm/relay/op/tensor/transform.h' l='45' c='_ZN3tvm5relay14ConcatenateRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/tensor/transform.h' l='172' c='_ZN3tvm5relayL17ConcatenateLayoutERKNS_5AttrsERKNS_7runtime5ArrayINS_3tir6LayoutEvEESA_RKNS5_INS_4TypeEvEE'/>
+<use f='tvm/relay/op/tensor/transform.h' l='225' c='_ZN3tvm5relayL17ConcatenateLayoutERKNS_5AttrsERKNS_7runtime5ArrayINS_3tir6LayoutEvEESA_RKNS5_INS_4TypeEvEE'/>
+<use f='tvm/relay/op/tensor/transform.h' l='236' c='_ZN3tvm5relay13InferNewShapeERKNS_7runtime5ArrayINS_8PrimExprEvEERKNS_5AttrsEb'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='57' c='_ZN3tvm5relay16SlidingWindowRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='100' c='_ZN3tvm5relay20SlidingWindowComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='113' c='_ZN3tvm5relay17MakeSlidingWindowENS_9RelayExprEiNS_7runtime5ArrayINS_7IntegerEvEES5_'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='129' c='_ZN3tvm5relay7CastRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='143' c='_ZN3tvm5relay11CastComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='155' c='_ZN3tvm5relay8MakeCastENS_9RelayExprENS_7runtime8DataTypeE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='174' c='_ZN3tvm5relay11CastLikeRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='193' c='_ZN3tvm5relay15CastLikeComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='200' c='_ZN3tvm5relay12MakeCastLikeENS_9RelayExprES1_'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='217' c='_ZN3tvm5relay18ReinterpretComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='229' c='_ZN3tvm5relay15MakeReinterpretENS_9RelayExprENS_7runtime8DataTypeE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='249' c='_ZN3tvm5relay13ExpandDimsRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='284' c='_ZN3tvm5relay17ExpandDimsComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='296' c='_ZN3tvm5relay14MakeExpandDimsENS_9RelayExprEii'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='319' c='_ZN3tvm5relay18ConcatenateComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='330' c='_ZN3tvm5relay15MakeConcatenateENS_9RelayExprEi'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='353' c='_ZN3tvm5relay8StackRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='413' c='_ZN3tvm5relay12StackComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='424' c='_ZN3tvm5relay9MakeStackENS_9RelayExprEi'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='448' c='_ZN3tvm5relay12TransposeRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='497' c='_ZN3tvm5relay27TransposeInferCorrectLayoutERKNS_5AttrsERKNS_7runtime5ArrayINS_3tir6LayoutEvEESA_RKNS5_INS_4TypeEvEE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='556' c='_ZN3tvm5relay27TransposeInferCorrectLayoutERKNS_5AttrsERKNS_7runtime5ArrayINS_3tir6LayoutEvEESA_RKNS5_INS_4TypeEvEE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='572' c='_ZN3tvm5relay16TransposeComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='583' c='_ZN3tvm5relay13MakeTransposeENS_9RelayExprENS_7runtime5ArrayINS_7IntegerEvEE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='609' c='_ZN3tvm5relay13InferNewShapeERKNS_7runtime5ArrayINS_8PrimExprEvEERKNS_5AttrsEb'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='745' c='_ZN3tvm5relay10ReshapeRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='803' c='_ZN3tvm5relay17ReverseReshapeRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='855' c='_ZN3tvm5relay18infer_reshape_likeERKNS_7runtime5ArrayINS_8PrimExprEvEES6_RKNS_5AttrsE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='890' c='_ZN3tvm5relay14ReshapeComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='923' c='_ZN3tvm5relay11MakeReshapeENS_9RelayExprENS_7runtime5ArrayINS_7IntegerEvEEb'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='996' c='_ZN3tvm5relay14ReshapeLikeRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='1036' c='_ZN3tvm5relay15MakeReshapeLikeENS_9RelayExprES1_iNS_7IntegerEiS2_'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='1065' c='_ZN3tvm5relay11ArgWhereRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='1085'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='1102' c='_ZN3tvm5relay10ScatterRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='1131'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='1150' c='_ZN3tvm5relay13ScatterAddRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='1179'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='1197' c='_ZN3tvm5relay12ScatterNDRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='1254' c='_ZN3tvm5relay13MakeScatterNDENS_9RelayExprES1_S1_NS_7runtime6StringE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='1280' c='_ZN3tvm5relay7TakeRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='1335' c='_ZN3tvm5relay11TakeComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='1354' c='_ZN3tvm5relay8MakeTakeENS_9RelayExprES1_NS_7IntegerES2_NS_7runtime6StringE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='1394' c='_ZN3tvm5relay7FullRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='1425' c='_ZN3tvm5relay8MakeFullENS_9RelayExprENS_7runtime5ArrayINS_7IntegerEvEENS2_8DataTypeE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='1428' c='_ZN3tvm5relay11FullComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='1448' c='_ZN3tvm5relay9InitOpRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='1472' c='_ZN3tvm5relay9MakeZerosENS_7runtime5ArrayINS_7IntegerEvEENS1_8DataTypeE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='1491' c='_ZN3tvm5relay8MakeOnesENS_7runtime5ArrayINS_7IntegerEvEENS1_8DataTypeE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='1505' c='_ZN3tvm5relay11FullLikeRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='1525' c='_ZN3tvm5relay15FullLikeComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='1532' c='_ZN3tvm5relay12MakeFullLikeENS_9RelayExprES1_'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='1553' c='_ZN3tvm5relay9ArangeRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='1596' c='_ZN3tvm5relay13ArangeComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='1613' c='_ZN3tvm5relay10MakeArangeENS_9RelayExprES1_S1_NS_7runtime8DataTypeE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='1650' c='_ZN3tvm5relay9RepeatRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='1687' c='_ZN3tvm5relay13RepeatComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='1699' c='_ZN3tvm5relay10MakeRepeatENS_9RelayExprEii'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='1718' c='_ZN3tvm5relay22SparseFillEmptyRowsRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='1736' c='_ZN3tvm5relay23MakeSparseFillEmptyRowsENS_9RelayExprES1_S1_S1_'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='1762' c='_ZN3tvm5relay16SparseReshapeRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='1790' c='_ZN3tvm5relay17MakeSparseReshapeENS_9RelayExprES1_S1_'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='1814' c='_ZN3tvm5relay7STFTRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='1853' c='_ZN3tvm5relay8MakeSTFTENS_9RelayExprEiiiS1_bb'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='1872' c='_ZN3tvm5relay11MeshgridRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='1928' c='_ZN3tvm5relay15MeshgridComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='1939' c='_ZN3tvm5relay12MakeMeshgridENS_9RelayExprENS_7runtime6StringE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='1959' c='_ZN3tvm5relay7TileRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='2027' c='_ZN3tvm5relay11TileComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='2038' c='_ZN3tvm5relay8MakeTileENS_9RelayExprENS_7runtime5ArrayINS_7IntegerEvEE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='2060' c='_ZN3tvm5relay10ReverseRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='2080' c='_ZN3tvm5relay14ReverseComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='2092' c='_ZN3tvm5relay11MakeReverseENS_9RelayExprEi'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='2114' c='_ZN3tvm5relay18ReverseSequenceRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='2162' c='_ZN3tvm5relay22ReverseSequenceComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='2175' c='_ZN3tvm5relay19MakeReverseSequenceENS_9RelayExprES1_ii'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='2203' c='_ZN3tvm5relay8WhereRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='2234' c='_ZN3tvm5relay12WhereComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='2285' c='_ZN3tvm5relay11MakeSqueezeENS_9RelayExprENS_7runtime5ArrayINS_7IntegerEvEE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='2290' c='_ZN3tvm5relay10SqueezeRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='2341' c='_ZN3tvm5relay14SqueezeComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='2348' c='_ZN3tvm5relay25SqueezeInferCorrectLayoutERKNS_5AttrsERKNS_7runtime5ArrayINS_3tir6LayoutEvEESA_RKNS5_INS_4TypeEvEE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='2409' c='_ZN3tvm5relay25SqueezeInferCorrectLayoutERKNS_5AttrsERKNS_7runtime5ArrayINS_3tir6LayoutEvEESA_RKNS5_INS_4TypeEvEE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='2429' c='_ZN3tvm5relay18CollapseSumLikeRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='2433' c='_ZN3tvm5relay18CollapseSumLikeRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='2438' c='_ZN3tvm5relay19MakeCollapseSumLikeENS_9RelayExprES1_'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='2441' c='_ZN3tvm5relay22CollapseSumLikeComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='2462' c='_ZN3tvm5relay16CollapseSumToRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='2485' c='_ZN3tvm5relay16CollapseSumToRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='2494' c='_ZN3tvm5relay17MakeCollapseSumToENS_9RelayExprES1_'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='2510' c='_ZN3tvm5relay14BroadCastToRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='2534' c='_ZN3tvm5relay14BroadCastToRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='2542' c='_ZN3tvm5relay15MakeBroadCastToENS_9RelayExprENS_7runtime5ArrayINS_7IntegerEvEE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='2545' c='_ZN3tvm5relay18BroadCastToComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='2564' c='_ZN3tvm5relay18BroadCastToLikeRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='2568' c='_ZN3tvm5relay18BroadCastToLikeRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='2573' c='_ZN3tvm5relay19MakeBroadCastToLikeENS_9RelayExprES1_'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='2576' c='_ZN3tvm5relay22BroadCastToLikeComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='2607' c='_ZN3tvm5relay15StridedSliceRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='2659' c='_ZN3tvm5relay30StridedSliceInferCorrectLayoutERKNS_5AttrsERKNS_7runtime5ArrayINS_3tir6LayoutEvEESA_RKNS5_INS_4TypeEvEE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='2844' c='_ZN3tvm5relay30StridedSliceInferCorrectLayoutERKNS_5AttrsERKNS_7runtime5ArrayINS_3tir6LayoutEvEESA_RKNS5_INS_4TypeEvEE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='2849' c='_ZN3tvm5relay19StridedSliceComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='2875' c='_ZN3tvm5relay16MakeStridedSliceENS_9RelayExprENS_7runtime5ArrayINS_7IntegerEvEES5_S5_NS2_6StringENS2_8OptionalIS5_EE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='2915' c='_ZN3tvm5relay13StridedSetRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='2958' c='_ZN3tvm5relay23SplitInferCorrectLayoutERKNS_5AttrsERKNS_7runtime5ArrayINS_3tir6LayoutEvEESA_RKNS5_INS_4TypeEvEE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='2993' c='_ZN3tvm5relay23SplitInferCorrectLayoutERKNS_5AttrsERKNS_7runtime5ArrayINS_3tir6LayoutEvEESA_RKNS5_INS_4TypeEvEE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='2996' c='_ZN3tvm5relay8SplitRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='3063' c='_ZN3tvm5relay12SplitComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='3085' c='_ZN3tvm5relay9MakeSplitENS_9RelayExprENS_7runtime9ObjectRefEi'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='3131' c='_ZN3tvm5relay12SliceLikeRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='3184' c='_ZN3tvm5relay13MakeSliceLikeENS_9RelayExprES1_NS_7runtime5ArrayINS_7IntegerEvEE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='3187' c='_ZN3tvm5relay27SliceLikeInferCorrectLayoutERKNS_5AttrsERKNS_7runtime5ArrayINS_3tir6LayoutEvEESA_RKNS5_INS_4TypeEvEE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='3216' c='_ZN3tvm5relay27SliceLikeInferCorrectLayoutERKNS_5AttrsERKNS_7runtime5ArrayINS_3tir6LayoutEvEESA_RKNS5_INS_4TypeEvEE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='3228' c='_ZN3tvm5relay16SliceLikeComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='3290' c='_ZN3tvm5relay22LayoutTransformComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='3297' c='_ZN3tvm5relay18LayoutTransformRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='3325' c='_ZN3tvm5relay19MakeLayoutTransformENS_9RelayExprENS_7runtime6StringES3_'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='3347' c='_ZN3tvm5relay35AutoSchedulerLayoutTransformComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='3356' c='_ZN3tvm5relay31AutoSchedulerLayoutTransformRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='3376' c='_ZN3tvm5relay32MakeAutoSchedulerLayoutTransformENS_9RelayExprENS_7runtime6StringES3_'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='3395' c='_ZN3tvm5relay34MetaScheduleLayoutTransformComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='3403' c='_ZN3tvm5relay30MetaScheduleLayoutTransformRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='3417' c='_ZN3tvm5relay31MakeMetaScheduleLayoutTransformENS_9RelayExprENS_3tir8IndexMapE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='3438' c='_ZN3tvm5relay18MakeReverseReshapeENS_9RelayExprENS_7runtime5ArrayINS_7IntegerEvEE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='3469' c='_ZN3tvm5relay9GatherRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='3517' c='_ZN3tvm5relay13GatherComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='3527' c='_ZN3tvm5relay10MakeGatherENS_9RelayExprENS_7IntegerES1_'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='3556' c='_ZN3tvm5relay11GatherNDRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='3595' c='_ZN3tvm5relay15GatherNDComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='3608' c='_ZN3tvm5relay12MakeGatherNDENS_9RelayExprES1_iNS_7runtime8OptionalINS_7IntegerEEE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='3643' c='_ZN3tvm5relay15SequenceMaskRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='3660' c='_ZN3tvm5relay19SequenceMaskComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='3673' c='_ZN3tvm5relay16MakeSequenceMaskENS_9RelayExprES1_di'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='3740' c='_ZN3tvm5relay9OneHotRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='3766' c='_ZN3tvm5relay13OneHotComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='3780' c='_ZN3tvm5relay10MakeOneHotENS_9RelayExprES1_S1_iiNS_7runtime8DataTypeE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='3811' c='_ZN3tvm5relay15UnRavelIndexRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='3847' c='_ZN3tvm5relay19UnRavelIndexComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='3854' c='_ZN3tvm5relay16MakeUnRavelIndexENS_9RelayExprES1_'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='3877' c='_ZN3tvm5relay16SparseToDenseRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='3908' c='_ZN3tvm5relay20SparseToDenseComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='3924' c='_ZN3tvm5relay17MakeSparseToDenseENS_9RelayExprENS_7runtime5ArrayINS_7IntegerEvEES1_S1_'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='3959' c='_ZN3tvm5relay16MatrixSetDiagRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='3997' c='_ZN3tvm5relay20MatrixSetDiagComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='4014' c='_ZN3tvm5relay17MakeMatrixSetDiagENS_9RelayExprES1_iibb'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='4039' c='_ZN3tvm5relay11AdvIndexRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='4067' c='_ZN3tvm5relay15AdvIndexComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='4078' c='_ZN3tvm5relay12MakeAdvIndexENS_9RelayExprE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='4096' c='_ZN3tvm5relay9ScanopRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='4133' c='_ZN3tvm5relay10MakeCumsumENS_9RelayExprENS_7IntegerENS_7runtime8DataTypeENS_4BoolE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='4153' c='_ZN3tvm5relay11MakeCumprodENS_9RelayExprENS_7IntegerENS_7runtime8DataTypeENS_4BoolE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='4169' c='_ZN3tvm5relay9UniqueRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='4201' c='_ZN3tvm5relay10MakeUniqueENS_9RelayExprEbb'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='4219' c='_ZN3tvm5relay21MakeInvertPermutationENS_9RelayExprE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='4237' c='_ZN3tvm5relay8TriluRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/tensor/transform.cc' l='4267' c='_ZN3tvm5relay9MakeTriluENS_9RelayExprES1_b'/>
+<size>8</size>
+<use f='tvm/relay/op/tensor/unary.cc' l='41' macro='1'/>
+<use f='tvm/relay/op/tensor/unary.cc' l='38'/>
+<use f='tvm/relay/op/tensor/unary.cc' l='51' macro='1'/>
+<use f='tvm/relay/op/tensor/unary.cc' l='38'/>
+<use f='tvm/relay/op/tensor/unary.cc' l='61' macro='1'/>
+<use f='tvm/relay/op/tensor/unary.cc' l='38'/>
+<use f='tvm/relay/op/tensor/unary.cc' l='71' macro='1'/>
+<use f='tvm/relay/op/tensor/unary.cc' l='38'/>
+<use f='tvm/relay/op/tensor/unary.cc' l='81' macro='1'/>
+<use f='tvm/relay/op/tensor/unary.cc' l='38'/>
+<use f='tvm/relay/op/tensor/unary.cc' l='91' macro='1'/>
+<use f='tvm/relay/op/tensor/unary.cc' l='38'/>
+<use f='tvm/relay/op/tensor/unary.cc' l='101' macro='1'/>
+<use f='tvm/relay/op/tensor/unary.cc' l='38'/>
+<use f='tvm/relay/op/tensor/unary.cc' l='111' macro='1'/>
+<use f='tvm/relay/op/tensor/unary.cc' l='38'/>
+<use f='tvm/relay/op/tensor/unary.cc' l='121' macro='1'/>
+<use f='tvm/relay/op/tensor/unary.cc' l='38'/>
+<use f='tvm/relay/op/tensor/unary.cc' l='131' macro='1'/>
+<use f='tvm/relay/op/tensor/unary.cc' l='38'/>
+<use f='tvm/relay/op/tensor/unary.cc' l='141' macro='1'/>
+<use f='tvm/relay/op/tensor/unary.cc' l='38'/>
+<use f='tvm/relay/op/tensor/unary.cc' l='151' macro='1'/>
+<use f='tvm/relay/op/tensor/unary.cc' l='38'/>
+<use f='tvm/relay/op/tensor/unary.cc' l='161' macro='1'/>
+<use f='tvm/relay/op/tensor/unary.cc' l='38'/>
+<use f='tvm/relay/op/tensor/unary.cc' l='171' macro='1'/>
+<use f='tvm/relay/op/tensor/unary.cc' l='38'/>
+<use f='tvm/relay/op/tensor/unary.cc' l='181' macro='1'/>
+<use f='tvm/relay/op/tensor/unary.cc' l='38'/>
+<use f='tvm/relay/op/tensor/unary.cc' l='191' macro='1'/>
+<use f='tvm/relay/op/tensor/unary.cc' l='38'/>
+<use f='tvm/relay/op/tensor/unary.cc' l='201' macro='1'/>
+<use f='tvm/relay/op/tensor/unary.cc' l='38'/>
+<use f='tvm/relay/op/tensor/unary.cc' l='211' macro='1'/>
+<use f='tvm/relay/op/tensor/unary.cc' l='38'/>
+<use f='tvm/relay/op/tensor/unary.cc' l='221' macro='1'/>
+<use f='tvm/relay/op/tensor/unary.cc' l='38'/>
+<use f='tvm/relay/op/tensor/unary.cc' l='231' macro='1'/>
+<use f='tvm/relay/op/tensor/unary.cc' l='38'/>
+<use f='tvm/relay/op/tensor/unary.cc' l='241' macro='1'/>
+<use f='tvm/relay/op/tensor/unary.cc' l='246' macro='1'/>
+<use f='tvm/relay/op/tensor/unary.cc' l='251' macro='1'/>
+<use f='tvm/relay/op/tensor/unary.cc' l='38'/>
+<use f='tvm/relay/op/tensor/unary.cc' l='261' macro='1'/>
+<use f='tvm/relay/op/tensor/unary.cc' l='38'/>
+<use f='tvm/relay/op/tensor/unary.cc' l='275' c='_ZN3tvm5relay8MakeClipENS_9RelayExprEdd'/>
+<use f='tvm/relay/op/tensor/unary.cc' l='302'/>
+<use f='tvm/relay/op/tensor/unary.cc' l='316' macro='1'/>
+<use f='tvm/relay/op/tensor/unary.cc' l='38'/>
+<use f='tvm/relay/op/tensor/unary.cc' l='322' macro='1'/>
+<use f='tvm/relay/op/tensor/unary.cc' l='38'/>
+<use f='tvm/relay/op/tensor/unary.cc' l='332' macro='1'/>
+<use f='tvm/relay/op/tensor/unary.cc' l='38'/>
+<use f='tvm/relay/op/tensor/unary.cc' l='342' macro='1'/>
+<use f='tvm/relay/op/tensor/unary.cc' l='38'/>
+<use f='tvm/relay/op/tensor/unary.cc' l='352' macro='1'/>
+<use f='tvm/relay/op/tensor/unary.cc' l='38'/>
+<use f='tvm/relay/op/tensor/unary.cc' l='362' macro='1'/>
+<use f='tvm/relay/op/tensor/unary.cc' l='38'/>
+<use f='tvm/relay/op/tensor/unary.cc' l='372' macro='1'/>
+<use f='tvm/relay/op/tensor/unary.cc' l='38'/>
+<use f='tvm/relay/op/tensor/unary.cc' l='382' macro='1'/>
+<use f='tvm/relay/op/tensor/unary.cc' l='38'/>
+<use f='tvm/relay/op/tensor/unary.cc' l='392' macro='1'/>
+<use f='tvm/relay/op/tensor/unary.cc' l='38'/>
+<use f='tvm/relay/op/tensor/unary.cc' l='402' macro='1'/>
+<use f='tvm/relay/op/tensor/unary.cc' l='38'/>
+<use f='tvm/relay/op/tensor/unary.cc' l='412' macro='1'/>
+<use f='tvm/relay/op/tensor/unary.cc' l='38'/>
+<use f='tvm/relay/op/tensor/unary.cc' l='422' c='_ZN3tvm5relay14ShapeOfComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
+<use f='tvm/relay/op/tensor/unary.cc' l='434' c='_ZN3tvm5relay11MakeShapeOfENS_9RelayExprENS_7runtime8DataTypeE'/>
+<use f='tvm/relay/op/tensor/unary.cc' l='456' c='_ZN3tvm5relay14NdarraySizeRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/tensor/unary.cc' l='471' c='_ZN3tvm5relay18NdarraySizeComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
+<use f='tvm/relay/op/tensor/unary.cc' l='483'/>
+<use f='tvm/relay/op/tensor/unary.cc' l='500' macro='1'/>
+<use f='tvm/relay/op/tensor/unary.cc' l='38'/>
+<use f='tvm/relay/op/tensor/unary.cc' l='509' macro='1'/>
+<use f='tvm/relay/op/tensor/unary.cc' l='38'/>
+<use f='tvm/relay/op/tensor/unary.cc' l='518' macro='1'/>
+<use f='tvm/relay/op/tensor/unary.cc' l='38'/>
+<size>8</size>
+<use f='tvm/relay/op/type_relations.cc' l='38' c='_ZN3tvm5relay11IdentityRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/type_relations.cc' l='100' c='_ZN3tvm5relay12BroadcastRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/type_relations.cc' l='120' c='_ZN3tvm5relay16BroadcastCompRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/type_relations.cc' l='140' c='_ZN3tvm5relay15IdentityCompRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/type_relations.cc' l='158' c='_ZN3tvm5relay10ShapeOfRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<size>8</size>
+<use f='tvm/relay/op/vision/multibox_op.cc' l='33' c='_ZN3tvm5relay16MultiboxPriorRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/vision/multibox_op.cc' l='63' c='_ZN3tvm5relay17MakeMultiBoxPriorENS_9RelayExprENS_7runtime5ArrayINS_8PrimExprEvEES5_S5_S5_b'/>
+<use f='tvm/relay/op/vision/multibox_op.cc' l='79' c='_ZN3tvm5relay23MultiBoxTransformLocRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/vision/multibox_op.cc' l='125' c='_ZN3tvm5relay24MakeMultiBoxTransformLocENS_9RelayExprES1_S1_bdNS_7runtime5ArrayINS_8PrimExprEvEE'/>
+<size>8</size>
+<use f='tvm/relay/op/vision/nms.cc' l='33' c='_ZN3tvm5relay16GetValidCountRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/vision/nms.cc' l='58' c='_ZN3tvm5relay18MakeGetValidCountsENS_9RelayExprES1_ii'/>
+<use f='tvm/relay/op/vision/nms.cc' l='76' c='_ZN3tvm5relay6NMSRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/vision/nms.cc' l='116' c='_ZN3tvm5relay7MakeNMSENS_9RelayExprES1_S1_S1_S1_biiiibb'/>
+<use f='tvm/relay/op/vision/nms.cc' l='138' c='_ZN3tvm5relay14AllClassNMSRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/vision/nms.cc' l='190' c='_ZN3tvm5relay15MakeAllClassNMSENS_9RelayExprES1_S1_S1_S1_NSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<size>8</size>
+<use f='tvm/relay/op/vision/rcnn_op.cc' l='35' c='_ZN3tvm5relay11ROIAlignRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/vision/rcnn_op.cc' l='64' c='_ZN3tvm5relay26ROIAlignInferCorrectLayoutERKNS_5AttrsERKNS_7runtime5ArrayINS_3tir6LayoutEvEESA_RKNS5_INS_4TypeEvEE'/>
+<use f='tvm/relay/op/vision/rcnn_op.cc' l='86' c='_ZN3tvm5relay12MakeROIAlignENS_9RelayExprES1_NS_7runtime5ArrayINS_8PrimExprEvEEdiNS2_6StringES6_'/>
+<use f='tvm/relay/op/vision/rcnn_op.cc' l='111' c='_ZN3tvm5relay10ROIPoolRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/vision/rcnn_op.cc' l='137' c='_ZN3tvm5relay25ROIPoolInferCorrectLayoutERKNS_5AttrsERKNS_7runtime5ArrayINS_3tir6LayoutEvEESA_RKNS5_INS_4TypeEvEE'/>
+<use f='tvm/relay/op/vision/rcnn_op.cc' l='157' c='_ZN3tvm5relay11MakeROIPoolENS_9RelayExprES1_NS_7runtime5ArrayINS_8PrimExprEvEEdNS2_6StringE'/>
+<use f='tvm/relay/op/vision/rcnn_op.cc' l='181' c='_ZN3tvm5relay11ProposalRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/vision/rcnn_op.cc' l='221' c='_ZN3tvm5relay12MakeProposalENS_9RelayExprES1_S1_NS_7runtime5ArrayINS_8PrimExprEvEES5_idiiib'/>
+<size>8</size>
+<use f='tvm/relay/op/vision/yolo.cc' l='45' c='_ZN3tvm5relay12YoloReorgRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/vision/yolo.cc' l='67' c='_ZN3tvm5relay13MakeYoloReorgENS_9RelayExprENS_7IntegerE'/>
+<use f='tvm/relay/op/vision/yolo.cc' l='80'/>
+<size>8</size>
+<use f='tvm/relay/op/vm/vm.cc' l='68' c='_ZN3tvm5relay7ShapeOfENS_9RelayExprE'/>
+<use f='tvm/relay/op/vm/vm.cc' l='74' c='_ZN3tvm5relay14InvokeTVMOpRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/vm/vm.cc' l='128' c='_ZN3tvm5relay16ReshapeTensorRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/op/vm/vm.cc' l='157' c='_ZN3tvm5relay13ReshapeTensorENS_9RelayExprES1_NS_7runtime5ArrayINS_8PrimExprEvEE'/>
+<size>8</size>
+<use f='tvm/relay/qnn/op/op_common.h' l='211' c='_ZN3tvm5relay3qnn24QnnBinaryBroadcastLayoutERKNS_5AttrsERKNS_7runtime5ArrayINS_3tir6LayoutEvEESB_RKNS6_INS_4TypeEvEE'/>
+<use f='tvm/relay/qnn/op/op_common.h' l='231' c='_ZN3tvm5relay3qnnL15QnnBroadcastRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/qnn/op/op_common.h' l='361' c='_ZN3tvm5relay3qnnL26QnnElementwiseUnaryFuncRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/qnn/op/add.cc' l='40' c='_ZN3tvm5relay3qnn18QnnAddCanonicalizeERKNS_5AttrsERKNS_7runtime5ArrayINS_9RelayExprEvEERKNS6_INS_4TypeEvEE'/>
+<use f='tvm/relay/qnn/op/add.cc' l='96' macro='1'/>
+<size>8</size>
+<use f='tvm/relay/qnn/op/batch_matmul.cc' l='40' c='_ZN3tvm5relay3qnn17QnnBatchMatmulRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/qnn/op/batch_matmul.cc' l='87' c='_ZN3tvm5relay3qnn24MakeQuantizedBatchMatmulENS_9RelayExprES2_S2_S2_S2_S2_NS_7runtime8DataTypeE'/>
+<use f='tvm/relay/qnn/op/batch_matmul.cc' l='162' c='_ZN3tvm5relay3qnn26QnnBatchMatmulCanonicalizeERKNS_5AttrsERKNS_7runtime5ArrayINS_9RelayExprEvEERKNS6_INS_4TypeEvEE'/>
+<size>8</size>
+<use f='tvm/relay/qnn/op/concatenate.cc' l='39' c='_ZN3tvm5relay3qnn17QnnConcatenateRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/qnn/op/concatenate.cc' l='99' c='_ZN3tvm5relay3qnn20QnnConcatenateLayoutERKNS_5AttrsERKNS_7runtime5ArrayINS_3tir6LayoutEvEESB_RKNS6_INS_4TypeEvEE'/>
+<use f='tvm/relay/qnn/op/concatenate.cc' l='143' c='_ZN3tvm5relay3qnn18MakeQnnConcatenateENS_9RelayExprES2_S2_S2_S2_i'/>
+<use f='tvm/relay/qnn/op/concatenate.cc' l='153' c='_ZN3tvm5relay3qnn26ConcatenateQnnCanonicalizeERKNS_5AttrsERKNS_7runtime5ArrayINS_9RelayExprEvEERKNS6_INS_4TypeEvEE'/>
+<size>8</size>
+<use f='tvm/relay/qnn/op/convolution.cc' l='43' c='_ZN3tvm5relay3qnn12QnnConv2DRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/qnn/op/convolution.cc' l='92' c='_ZN3tvm5relay3qnn25QnnConvInferCorrectLayoutERKNS_5AttrsERKNS_7runtime5ArrayINS_3tir6LayoutEvEESB_RKNS6_INS_4TypeEvEE'/>
+<use f='tvm/relay/qnn/op/convolution.cc' l='708' c='_ZN3tvm5relay3qnn21QnnConv2DCanonicalizeERKNS_5AttrsERKNS_7runtime5ArrayINS_9RelayExprEvEERKNS6_INS_4TypeEvEE'/>
+<use f='tvm/relay/qnn/op/convolution.cc' l='833' c='_ZN3tvm5relay3qnn13MakeQnnConv2DENS_9RelayExprES2_S2_S2_S2_S2_NS_7runtime5ArrayINS_8PrimExprEvEES6_S6_iS5_S6_NS3_6StringES7_S7_NS3_8DataTypeE'/>
+<size>8</size>
+<use f='tvm/relay/qnn/op/convolution_transpose.cc' l='63' c='_ZN3tvm5relay3qnn22MakeQnnConv2DTransposeENS_9RelayExprES2_S2_S2_S2_S2_NS_7runtime5ArrayINS_8PrimExprEvEES6_S6_iS5_S6_NSt7__cxx1112basic_stringIcSt11c3846049'/>
+<use f='tvm/relay/qnn/op/convolution_transpose.cc' l='67' c='_ZN3tvm5relay3qnn34QnnConvTransposeInferCorrectLayoutERKNS_5AttrsERKNS_7runtime5ArrayINS_3tir6LayoutEvEESB_RKNS6_INS_4TypeEvEE'/>
+<use f='tvm/relay/qnn/op/convolution_transpose.cc' l='86' c='_ZN3tvm5relay3qnn21QnnConv2DTransposeRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<size>8</size>
+<use f='tvm/relay/qnn/op/dense.cc' l='40' c='_ZN3tvm5relay3qnn11QnnDenseRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/qnn/op/dense.cc' l='84' c='_ZN3tvm5relay3qnn18MakeQuantizedDenseENS_9RelayExprES2_S2_S2_S2_S2_NS_8PrimExprENS_7runtime8DataTypeE'/>
+<use f='tvm/relay/qnn/op/dense.cc' l='160' c='_ZN3tvm5relay3qnn20QnnDenseCanonicalizeERKNS_5AttrsERKNS_7runtime5ArrayINS_9RelayExprEvEERKNS6_INS_4TypeEvEE'/>
+<size>8</size>
+<use f='tvm/relay/qnn/op/dequantize.cc' l='39' c='_ZN3tvm5relay3qnn13DequantizeRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/qnn/op/dequantize.cc' l='93' c='_ZN3tvm5relay3qnn14MakeDequantizeENS_9RelayExprES2_S2_i'/>
+<use f='tvm/relay/qnn/op/dequantize.cc' l='131' c='_ZN3tvm5relay3qnn25DequantizeQnnCanonicalizeERKNS_5AttrsERKNS_7runtime5ArrayINS_9RelayExprEvEERKNS6_INS_4TypeEvEE'/>
+<size>8</size>
+<use f='tvm/relay/qnn/op/leaky_relu.cc' l='33' c='_ZN3tvm5relay3qnn15QnnLeakyReluRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/qnn/op/leaky_relu.cc' l='74' c='_ZN3tvm5relay3qnn22MakeQuantizedLeakyReluENS_9RelayExprEdS2_S2_S2_S2_'/>
+<use f='tvm/relay/qnn/op/leaky_relu.cc' l='85' c='_ZN3tvm5relay3qnn24QnnLeakyReluCanonicalizeERKNS_5AttrsERKNS_7runtime5ArrayINS_9RelayExprEvEERKNS6_INS_4TypeEvEE'/>
+<size>8</size>
+<use f='tvm/relay/qnn/op/mul.cc' l='43' c='_ZN3tvm5relay3qnn18QnnMulCanonicalizeERKNS_5AttrsERKNS_7runtime5ArrayINS_9RelayExprEvEERKNS6_INS_4TypeEvEE'/>
+<use f='tvm/relay/qnn/op/mul.cc' l='162' macro='1'/>
+<size>8</size>
+<use f='tvm/relay/qnn/op/quantize.cc' l='39' c='_ZN3tvm5relay3qnn11QuantizeRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/qnn/op/quantize.cc' l='110' c='_ZN3tvm5relay3qnn12MakeQuantizeENS_9RelayExprES2_S2_iNS_7runtime8DataTypeE'/>
+<use f='tvm/relay/qnn/op/quantize.cc' l='151' c='_ZN3tvm5relay3qnn23QuantizeQnnCanonicalizeERKNS_5AttrsERKNS_7runtime5ArrayINS_9RelayExprEvEERKNS6_INS_4TypeEvEE'/>
+<size>8</size>
+<use f='tvm/relay/qnn/op/requantize.cc' l='41' c='_ZN3tvm5relay3qnn28RequantizeInferCorrectLayoutERKNS_5AttrsERKNS_7runtime5ArrayINS_3tir6LayoutEvEESB_RKNS6_INS_4TypeEvEE'/>
+<use f='tvm/relay/qnn/op/requantize.cc' l='113' c='_ZN3tvm5relay3qnn28RequantizeInferCorrectLayoutERKNS_5AttrsERKNS_7runtime5ArrayINS_3tir6LayoutEvEESB_RKNS6_INS_4TypeEvEE'/>
+<use f='tvm/relay/qnn/op/requantize.cc' l='418' c='_ZN3tvm5relay3qnn25RequantizeQnnCanonicalizeERKNS_5AttrsERKNS_7runtime5ArrayINS_9RelayExprEvEERKNS6_INS_4TypeEvEE'/>
+<use f='tvm/relay/qnn/op/requantize.cc' l='462' c='_ZN3tvm5relay3qnn13RequantizeRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/qnn/op/requantize.cc' l='525' c='_ZN3tvm5relay3qnn14MakeRequantizeENS_9RelayExprES2_S2_S2_S2_iNS_7runtime6StringES4_NS3_8DataTypeE'/>
+<size>8</size>
+<use f='tvm/relay/qnn/op/simulated_dequantize.cc' l='37' c='_ZN3tvm5relay3qnn22SimulatedDequantizeRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/qnn/op/simulated_dequantize.cc' l='58' c='_ZN3tvm5relay3qnn23MakeSimulatedDequantizeENS_9RelayExprES2_S2_S2_i'/>
+<size>8</size>
+<use f='tvm/relay/qnn/op/simulated_quantize.cc' l='39' c='_ZN3tvm5relay3qnn20SimulatedQuantizeRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/qnn/op/simulated_quantize.cc' l='60' c='_ZN3tvm5relay3qnn21MakeSimulatedQuantizeENS_9RelayExprES2_S2_S2_i'/>
+<size>8</size>
+<use f='tvm/relay/qnn/op/subtract.cc' l='40' c='_ZN3tvm5relay3qnn23QnnSubtractCanonicalizeERKNS_5AttrsERKNS_7runtime5ArrayINS_9RelayExprEvEERKNS6_INS_4TypeEvEE'/>
+<use f='tvm/relay/qnn/op/subtract.cc' l='97' macro='1'/>
+<size>8</size>
+<use f='tvm/relay/qnn/op/unary_elementwise_op.cc' l='31' macro='1'/>
+<use f='tvm/relay/qnn/op/unary_elementwise_op.cc' l='32' macro='1'/>
+<use f='tvm/relay/qnn/op/unary_elementwise_op.cc' l='34' macro='1'/>
+<use f='tvm/relay/qnn/op/unary_elementwise_op.cc' l='35' macro='1'/>
+<use f='tvm/relay/qnn/op/unary_elementwise_op.cc' l='37' macro='1'/>
+<use f='tvm/relay/qnn/op/unary_elementwise_op.cc' l='38' macro='1'/>
+<use f='tvm/relay/qnn/op/unary_elementwise_op.cc' l='40' macro='1'/>
+<use f='tvm/relay/qnn/op/unary_elementwise_op.cc' l='41' macro='1'/>
+<use f='tvm/relay/qnn/op/unary_elementwise_op.cc' l='43' macro='1'/>
+<use f='tvm/relay/qnn/op/unary_elementwise_op.cc' l='44' macro='1'/>
+<use f='tvm/relay/qnn/op/unary_elementwise_op.cc' l='46' macro='1'/>
+<use f='tvm/relay/qnn/op/unary_elementwise_op.cc' l='47' macro='1'/>
+<use f='tvm/relay/qnn/op/unary_elementwise_op.cc' l='49' macro='1'/>
+<use f='tvm/relay/qnn/op/unary_elementwise_op.cc' l='51' macro='1'/>
+<use f='tvm/relay/qnn/op/unary_elementwise_op.cc' l='53' macro='1'/>
+<use f='tvm/relay/qnn/op/unary_elementwise_op.cc' l='54' macro='1'/>
+<use f='tvm/relay/qnn/op/unary_elementwise_op.cc' l='56' macro='1'/>
+<use f='tvm/relay/qnn/op/unary_elementwise_op.cc' l='57' macro='1'/>
+<size>8</size>
+<use f='tvm/relay/quantize/calibrate.cc' l='182' c='_ZN3tvm5relay8quantize14StatsCollector10VisitExpr_EPKNS0_8CallNodeE'/>
+<size>8</size>
+<use f='tvm/relay/quantize/quantize.cc' l='40' c='_ZN3tvm5relay8quantize20SimulatedQuantizeRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/quantize/quantize.cc' l='80'/>
+<size>8</size>
+<use f='tvm/relay/quantize/realize.cc' l='187' c='_ZN3tvm5relay8quantize13Conv2dRealizeERKNS0_4CallERKNS_7runtime5ArrayINS_9RelayExprEvEERKNS5_9ObjectRefE'/>
+<use f='tvm/relay/quantize/realize.cc' l='221' c='_ZN3tvm5relay8quantize13Conv1dRealizeERKNS0_4CallERKNS_7runtime5ArrayINS_9RelayExprEvEERKNS5_9ObjectRefE'/>
+<use f='tvm/relay/quantize/realize.cc' l='250' c='_ZN3tvm5relay8quantize12DenseRealizeERKNS0_4CallERKNS_7runtime5ArrayINS_9RelayExprEvEERKNS5_9ObjectRefE'/>
+<use f='tvm/relay/quantize/realize.cc' l='388' c='_ZN3tvm5relay8quantize11ClipRealizeERKNS0_4CallERKNS_7runtime5ArrayINS_9RelayExprEvEERKNS5_9ObjectRefE'/>
+<use f='tvm/relay/quantize/realize.cc' l='530' c='_ZN3tvm5relay8quantize18BatchMatmulRealizeERKNS0_4CallERKNS_7runtime5ArrayINS_9RelayExprEvEERKNS5_9ObjectRefE'/>
+<size>8</size>
+<use f='tvm/relay/transforms/transform_layout.h' l='69' c='_ZN3tvm5relay22TransformMemorizerNode18CallWithNewLayoutsERKNS0_4CallENS_5AttrsERKSt6vectorINS_9RelayExprESaIS7_EE'/>
+<use f='tvm/relay/transforms/transform_layout.h' l='224' c='_ZN3tvm5relayL19InferCorrectLayoutsERKNS0_4CallERKNS_7runtime5ArrayINS_3tir6LayoutEvEESA_RKNS5_INS_4TypeEvEE'/>
+<use f='tvm/relay/transforms/alter_op_layout.cc' l='62' c='_ZN3tvm5relay15alter_op_layout27AlterTransformMemorizerNode18CallWithNewLayoutsERKNS0_4CallENS_5AttrsERKSt6vectorINS_9RelayExprESaIS8_EE'/>
+<size>8</size>
+<use f='tvm/relay/transforms/auto_scheduler_layout_rewrite.cc' l='49' c='_ZN3tvm5relay22CopyAttrsWithNewLayoutEPKT_RKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<use f='tvm/relay/transforms/auto_scheduler_layout_rewrite.cc' l='52' c='_ZN3tvm5relay22CopyAttrsWithNewLayoutEPKT_RKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<use f='tvm/relay/transforms/auto_scheduler_layout_rewrite.cc' l='83' c='_ZN3tvm5relay11FuncMutator10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/relay/transforms/auto_scheduler_layout_rewrite.cc' l='165'/>
+<size>8</size>
+<use f='tvm/relay/transforms/combine_parallel_conv2d.cc' l='110' c='_ZN3tvm5relay22ParallelConv2DCombiner14MakeCombinedOpERKSt6vectorIS2_IPKNS0_8CallNodeESaIS5_EESaIS7_EE'/>
+<size>8</size>
+<use f='tvm/relay/transforms/combine_parallel_dense.cc' l='128' c='_ZN3tvm5relay28ParallelDenseToDenseCombiner14MakeCombinedOpERKSt6vectorIS2_IPKNS0_8CallNodeESaIS5_EESaIS7_EE'/>
+<size>8</size>
+<use f='tvm/relay/transforms/combine_parallel_op_batch.cc' l='110' c='_ZN3tvm5relay23ParallelOpBatchCombiner14MakeCombinedOpERKSt6vectorIS2_IPKNS0_8CallNodeESaIS5_EESaIS7_EE'/>
+<size>8</size>
+<use f='tvm/relay/transforms/convert_layout.cc' l='69' c='_ZN3tvm5relay17convert_op_layout29ConvertTransformMemorizerNode18CallWithNewLayoutsERKNS0_4CallENS_5AttrsERKSt6vectorINS_9RelayExprESaIS8_EE'/>
+<use f='tvm/relay/transforms/convert_layout.cc' l='162'/>
+<size>8</size>
+<use f='tvm/relay/transforms/convert_sparse_conv2d.cc' l='119' c='_ZN3tvm5relay27Conv2dToSparseConv2dMutator8Rewrite_EPKNS0_8CallNodeERKNS_9RelayExprE'/>
+<use f='tvm/relay/transforms/convert_sparse_conv2d.cc' l='267' c='_ZN3tvm5relay28Conv2dToSparseConv2dMutator28Rewrite_EPKNS0_8CallNodeERKNS_9RelayExprE'/>
+<size>8</size>
+<use f='tvm/relay/transforms/convert_sparse_dense.cc' l='109' c='_ZN3tvm5relay25DenseToSparseDenseMutator8Rewrite_EPKNS0_8CallNodeERKNS_9RelayExprE'/>
+<size>8</size>
+<use f='tvm/relay/transforms/eta_expand.cc' l='109' c='_ZN3tvm5relay10eta_expand11EtaExpander10VisitExpr_EPKNS_15ConstructorNodeE'/>
+<size>8</size>
+<use f='tvm/relay/transforms/fold_constant.cc' l='377' c='_ZN3tvm5relay9transform12_GLOBAL__N_114ConstantFolder9CastValueERKNS_9RelayExprENS_7runtime8DataTypeE'/>
+<size>8</size>
+<use f='tvm/relay/transforms/fold_explicit_padding.cc' l='95' c='_ZNK3tvm5relay19SimplifyExplicitPad13MakeConvAttrsEPKNS0_8PadAttrsEPKT_'/>
+<use f='tvm/relay/transforms/fold_explicit_padding.cc' l='101' c='_ZNK3tvm5relay19SimplifyExplicitPad13MakeConvAttrsEPKNS0_8PadAttrsEPKT_'/>
+<use f='tvm/relay/transforms/fold_explicit_padding.cc' l='116' c='_ZNK3tvm5relay19SimplifyExplicitPad13MakeConvAttrsEPKNS0_8PadAttrsEPKT_'/>
+<use f='tvm/relay/transforms/fold_explicit_padding.cc' l='120' c='_ZNK3tvm5relay19SimplifyExplicitPad17MakeConv2D3DAttrsEPKNS0_8PadAttrsEPKT_'/>
+<use f='tvm/relay/transforms/fold_explicit_padding.cc' l='124' c='_ZNK3tvm5relay19SimplifyExplicitPad17MakeConv2D3DAttrsEPKNS0_8PadAttrsEPKT_'/>
+<use f='tvm/relay/transforms/fold_explicit_padding.cc' l='134' c='_ZNK3tvm5relay19SimplifyExplicitPad13MakePoolAttrsEPKNS0_8PadAttrsEPKT_'/>
+<use f='tvm/relay/transforms/fold_explicit_padding.cc' l='140' c='_ZNK3tvm5relay19SimplifyExplicitPad13MakePoolAttrsEPKNS0_8PadAttrsEPKT_'/>
+<use f='tvm/relay/transforms/fold_explicit_padding.cc' l='152' c='_ZNK3tvm5relay19SimplifyExplicitPad13MakePoolAttrsEPKNS0_8PadAttrsEPKT_'/>
+<use f='tvm/relay/transforms/fold_explicit_padding.cc' l='156' c='_ZNK3tvm5relay19SimplifyExplicitPad16MakeAvgPoolAttrsEPKNS0_8PadAttrsEPKT_'/>
+<use f='tvm/relay/transforms/fold_explicit_padding.cc' l='172' c='_ZNK3tvm5relay19SimplifyExplicitPad16MakeAvgPoolAttrsEPKNS0_8PadAttrsEPKT_'/>
+<use f='tvm/relay/transforms/fold_explicit_padding.cc' l='231' c='_ZNK3tvm5relay19SimplifyExplicitPad8callbackERKNS_9RelayExprES4_RKNS_7runtime3MapINS0_9DFPatternENS5_5ArrayIS2_vEEvvEE'/>
+<use f='tvm/relay/transforms/fold_explicit_padding.cc' l='250' c='_ZNK3tvm5relay19SimplifyExplicitPad8callbackERKNS_9RelayExprES4_RKNS_7runtime3MapINS0_9DFPatternENS5_5ArrayIS2_vEEvvEE'/>
+<size>8</size>
+<use f='tvm/relay/transforms/fuse_ops.cc' l='1003' c='_ZN3tvm5relay11FuseMutator15MakeNewFunctionEPNS0_16GraphPartitioner5GroupENS_4TypeENS_9RelayExprE'/>
+<size>8</size>
+<use f='tvm/relay/transforms/infer_layout_utils.cc' l='189' c='_ZN3tvm5relay27BinaryBroadcastLayoutHelperERKNS_5AttrsERKNS_7runtime5ArrayINS_3tir6LayoutEvEESA_RKNS5_INS_4TypeEvEE'/>
+<size>8</size>
+<use f='tvm/relay/transforms/lazy_gradient_init.cc' l='82' c='_ZN3tvm5relay23LazyGradientInitializer8WrapExprERKNS0_3VarERKNS_4TypeEPNS0_7LetListE'/>
+<use f='tvm/relay/transforms/lazy_gradient_init.cc' l='155' c='_ZN3tvm5relay23LazyGradientInitializer10VisitExpr_EPKNS0_12ConstantNodeE'/>
+<use f='tvm/relay/transforms/lazy_gradient_init.cc' l='177' c='_ZN3tvm5relay23LazyGradientInitializer10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/relay/transforms/lazy_gradient_init.cc' l='188' c='_ZN3tvm5relay23LazyGradientInitializer10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/relay/transforms/lazy_gradient_init.cc' l='195' c='_ZN3tvm5relay23LazyGradientInitializer10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/relay/transforms/lazy_gradient_init.cc' l='224' c='_ZN3tvm5relay23LazyGradientInitializer20CallGradCellFunctionEPKNS0_8CallNodeENS_9GlobalVarE'/>
+<use f='tvm/relay/transforms/lazy_gradient_init.cc' l='242' c='_ZN3tvm5relay23LazyGradientInitializer20CallGradCellFunctionEPKNS0_8CallNodeENS_9GlobalVarE'/>
+<use f='tvm/relay/transforms/lazy_gradient_init.cc' l='254' c='_ZN3tvm5relay23LazyGradientInitializer15CallPrimitiveOpEPKNS0_8CallNodeE'/>
+<size>8</size>
+<use f='tvm/relay/transforms/meta_schedule_layout_rewrite.cc' l='100' c='_ZN3tvm5relay23MetaScheduleFuncMutator10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/relay/transforms/meta_schedule_layout_rewrite.cc' l='78' c='_ZN3tvm5relay23MetaScheduleFuncMutator10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/relay/transforms/meta_schedule_layout_rewrite.cc' l='78' c='_ZN3tvm5relay23MetaScheduleFuncMutator10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/relay/transforms/meta_schedule_layout_rewrite.cc' l='78' c='_ZN3tvm5relay23MetaScheduleFuncMutator10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/relay/transforms/meta_schedule_layout_rewrite.cc' l='78' c='_ZN3tvm5relay23MetaScheduleFuncMutator10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/relay/transforms/meta_schedule_layout_rewrite.cc' l='78' c='_ZN3tvm5relay23MetaScheduleFuncMutator10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/relay/transforms/meta_schedule_layout_rewrite.cc' l='78' c='_ZN3tvm5relay23MetaScheduleFuncMutator10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/relay/transforms/meta_schedule_layout_rewrite.cc' l='158'/>
+<size>8</size>
+<use f='tvm/relay/transforms/partial_eval.cc' l='228'/>
+<use f='tvm/relay/transforms/partial_eval.cc' l='564' c='_ZN3tvm5relay12partial_eval12MkWithFuncIdERKNS_9RelayExprEi'/>
+<use f='tvm/relay/transforms/partial_eval.cc' l='781' c='_ZN3tvm5relay12partial_eval16PartialEvaluator15VisitFuncStaticERKNS0_8FunctionERKNS_9RelayExprE'/>
+<use f='tvm/relay/transforms/partial_eval.cc' l='840' c='_ZN3tvm5relay12partial_eval16PartialEvaluator16VisitFuncDynamicERKNS0_8FunctionERKSt8functionIFNS1_7PStaticERKS7_RKSt6vectorIS7_SaIS7_EERKNS_5AttrsERK12789974'/>
+<use f='tvm/relay/transforms/partial_eval.cc' l='907' c='_ZN3tvm5relay12partial_eval16PartialEvaluator17ConstEvaluateFuncERKNS_9RelayExprE'/>
+<use f='tvm/relay/transforms/partial_eval.cc' l='935' c='_ZN3tvm5relay12partial_eval16PartialEvaluator10VisitExpr_EPKNS_15ConstructorNodeEPNS0_7LetListE'/>
+<size>8</size>
+<use f='tvm/relay/transforms/simplify_expr.cc' l='554' c='_ZNK3tvm5relay32ConcretizeCollapseSumLikeRewrite10ConcretizeERKNS_7runtime3MapINS0_9DFPatternENS2_5ArrayINS_9RelayExprEvEEvvEENS5_INS_7IntegerEvEENS2_8DataTypeE'/>
+<size>8</size>
+<use f='tvm/relay/transforms/simplify_inference.cc' l='34' c='_ZN3tvm5relay22BatchNormToInferUnpackENS_5AttrsENS_9RelayExprES2_S2_S2_S2_NS_4TypeE'/>
+<use f='tvm/relay/transforms/simplify_inference.cc' l='63' c='_ZN3tvm5relay22GroupNormToInferUnpackENS_5AttrsENS_9RelayExprES2_S2_NS_4TypeE'/>
+<use f='tvm/relay/transforms/simplify_inference.cc' l='118' c='_ZN3tvm5relay22LayerNormToInferUnpackENS_5AttrsENS_9RelayExprES2_S2_NS_4TypeE'/>
+<use f='tvm/relay/transforms/simplify_inference.cc' l='141' c='_ZN3tvm5relay25InstanceNormToInferUnpackENS_5AttrsENS_9RelayExprES2_S2_NS_4TypeE'/>
+<use f='tvm/relay/transforms/simplify_inference.cc' l='169' c='_ZN3tvm5relay19L2NormToInferUnpackENS_5AttrsENS_9RelayExprE'/>
+<size>8</size>
+<use f='tvm/relay/transforms/to_mixed_precision.cc' l='113' c='_ZNK3tvm5relay18MixedPrecisionPass11GetNewAttrsEPKNS0_8CallNodeERKNS_7runtime8DataTypeE'/>
+<use f='tvm/relay/transforms/to_mixed_precision.cc' l='115' c='_ZNK3tvm5relay18MixedPrecisionPass11GetNewAttrsEPKNS0_8CallNodeERKNS_7runtime8DataTypeE'/>
+<use f='tvm/relay/transforms/to_mixed_precision.cc' l='155' c='_ZNK3tvm5relay18MixedPrecisionPass22ModifyAttrsOutputDTypeEPKT_RKNS_7runtime8DataTypeE'/>
+<use f='tvm/relay/transforms/to_mixed_precision.cc' l='165' c='_ZNK3tvm5relay18MixedPrecisionPass22ModifyAttrsOutputDTypeEPKT_RKNS_7runtime8DataTypeE'/>
+<use f='tvm/relay/transforms/to_mixed_precision.cc' l='169' c='_ZNK3tvm5relay18MixedPrecisionPass16ModifyAttrsDTypeEPKT_RKNS_7runtime8DataTypeE'/>
+<use f='tvm/relay/transforms/to_mixed_precision.cc' l='179' c='_ZNK3tvm5relay18MixedPrecisionPass16ModifyAttrsDTypeEPKT_RKNS_7runtime8DataTypeE'/>
+<use f='tvm/relay/transforms/to_mixed_precision.cc' l='398' c='_ZN3tvm5relay18MixedPrecisionPass8Rewrite_EPKNS0_8CallNodeERKNS_9RelayExprE'/>
+<size>8</size>
+<use f='tvm/relay/transforms/type_infer.cc' l='62' c='_ZN3tvm5relay15TupleGetItemRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/relay/transforms/type_infer.cc' l='246' c='_ZN3tvm5relay14TypeInferencer10VisitExpr_EPKNS0_16TupleGetItemNodeE'/>
+<use f='tvm/relay/transforms/type_infer.cc' l='403' c='_ZN3tvm5relay14TypeInferencer13PrimitiveCallEPKNS_12FuncTypeNodeENS_7runtime5ArrayINS_4TypeEvEERKNS_5AttrsERKNS_4SpanE'/>
+<size>8</size>
+<ovr f='tvm/tir/transforms/hoist_expression.cc' l='83' c='tvm::tir::HoistExpressionConfig'/>
+<use f='tvm/tir/transforms/hoist_expression.cc' l='83'/>
+<use f='tvm/tir/transforms/hoist_expression.cc' l='91' c='_ZN3tvm3tir21HoistExpressionConfigC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<ovr f='tvm/tir/transforms/hoist_expression.cc' l='110' c='tvm::tir::HoistIfThenElseConfig'/>
+<use f='tvm/tir/transforms/hoist_expression.cc' l='110'/>
+<use f='tvm/tir/transforms/hoist_expression.cc' l='112' c='_ZN3tvm3tir21HoistIfThenElseConfigC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<size>8</size>
+<ovr f='tvm/tir/transforms/inject_double_buffer.cc' l='42' c='tvm::tir::InjectDoubleBufferConfig'/>
+<use f='tvm/tir/transforms/inject_double_buffer.cc' l='42'/>
+<use f='tvm/tir/transforms/inject_double_buffer.cc' l='44' c='_ZN3tvm3tir24InjectDoubleBufferConfigC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<size>8</size>
+<ovr f='tvm/tir/transforms/loop_partition.cc' l='54' c='tvm::tir::LoopPartitionConfig'/>
+<use f='tvm/tir/transforms/loop_partition.cc' l='54'/>
+<use f='tvm/tir/transforms/loop_partition.cc' l='56' c='_ZN3tvm3tir19LoopPartitionConfigC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<size>8</size>
+<ovr f='tvm/tir/transforms/unroll_loop.cc' l='63' c='tvm::tir::UnrollLoopConfig'/>
+<use f='tvm/tir/transforms/unroll_loop.cc' l='63'/>
+<use f='tvm/tir/transforms/unroll_loop.cc' l='65' c='_ZN3tvm3tir16UnrollLoopConfigC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<size>8</size>

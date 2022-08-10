@@ -1,0 +1,39 @@
+<dec f='tvm/runtime/rpc/rpc_session.h' l='165' type='tvm::runtime::DeviceAPI * tvm::runtime::RPCSession::GetDeviceAPI(tvm::Device dev, bool allow_missing = false)'/>
+<doc f='tvm/runtime/rpc/rpc_session.h' l='150'>/*!
+   * \brief Get device API that represents the remote
+   *  actions that can be taken on the remote.
+   *
+   *  The caller can then call into the Alloc/Free functions
+   *  to allocate free spaces and taking the pointer as the handle.
+   *
+   *  The device API is guaranteed to be alive during the
+   *  lifetime of the Session.
+   *
+   * \param dev The remote device.
+   * \param allow_missing Whether can we return nullptr if it is not available.
+   *
+   * \return The device API.
+   */</doc>
+<use f='tvm/runtime/rpc/rpc_device_api.cc' l='38' u='c' c='_ZN3tvm7runtime12RPCDeviceAPI9SetDeviceE8DLDevice'/>
+<use f='tvm/runtime/rpc/rpc_device_api.cc' l='43' u='c' c='_ZN3tvm7runtime12RPCDeviceAPI7GetAttrE8DLDeviceNS0_14DeviceAttrKindEPNS0_11TVMRetValueE'/>
+<use f='tvm/runtime/rpc/rpc_device_api.cc' l='51' u='c' c='_ZN3tvm7runtime12RPCDeviceAPI14AllocDataSpaceE8DLDeviceiPKl10DLDataTypeNS0_8OptionalINS0_6StringEEE'/>
+<use f='tvm/runtime/rpc/rpc_device_api.cc' l='62' u='c' c='_ZN3tvm7runtime12RPCDeviceAPI14AllocDataSpaceE8DLDevicemm10DLDataType'/>
+<use f='tvm/runtime/rpc/rpc_device_api.cc' l='73' u='c' c='_ZN3tvm7runtime12RPCDeviceAPI13FreeDataSpaceE8DLDevicePv'/>
+<use f='tvm/runtime/rpc/rpc_device_api.cc' l='94' u='c' c='_ZN3tvm7runtime12RPCDeviceAPI14CopyDataFromToEP8DLTensorS3_Pv'/>
+<use f='tvm/runtime/rpc/rpc_device_api.cc' l='116' u='c' c='_ZN3tvm7runtime12RPCDeviceAPI12CreateStreamE8DLDevice'/>
+<use f='tvm/runtime/rpc/rpc_device_api.cc' l='121' u='c' c='_ZN3tvm7runtime12RPCDeviceAPI10FreeStreamE8DLDevicePv'/>
+<use f='tvm/runtime/rpc/rpc_device_api.cc' l='126' u='c' c='_ZN3tvm7runtime12RPCDeviceAPI10StreamSyncE8DLDevicePv'/>
+<use f='tvm/runtime/rpc/rpc_device_api.cc' l='131' u='c' c='_ZN3tvm7runtime12RPCDeviceAPI9SetStreamE8DLDevicePv'/>
+<use f='tvm/runtime/rpc/rpc_endpoint.cc' l='860' u='c' c='_ZN3tvm7runtime15RPCDevSetDeviceEPNS0_10RPCSessionENS0_7TVMArgsEPNS0_11TVMRetValueE'/>
+<use f='tvm/runtime/rpc/rpc_endpoint.cc' l='867' u='c' c='_ZN3tvm7runtime13RPCDevGetAttrEPNS0_10RPCSessionENS0_7TVMArgsEPNS0_11TVMRetValueE'/>
+<use f='tvm/runtime/rpc/rpc_endpoint.cc' l='874' u='c' c='_ZN3tvm7runtime13RPCDevGetAttrEPNS0_10RPCSessionENS0_7TVMArgsEPNS0_11TVMRetValueE'/>
+<use f='tvm/runtime/rpc/rpc_endpoint.cc' l='883' u='c' c='_ZN3tvm7runtime15RPCDevAllocDataEPNS0_10RPCSessionENS0_7TVMArgsEPNS0_11TVMRetValueE'/>
+<use f='tvm/runtime/rpc/rpc_endpoint.cc' l='900' u='c' c='_ZN3tvm7runtime24RPCDevAllocDataWithScopeEPNS0_10RPCSessionENS0_7TVMArgsEPNS0_11TVMRetValueE'/>
+<use f='tvm/runtime/rpc/rpc_endpoint.cc' l='907' u='c' c='_ZN3tvm7runtime14RPCDevFreeDataEPNS0_10RPCSessionENS0_7TVMArgsEPNS0_11TVMRetValueE'/>
+<use f='tvm/runtime/rpc/rpc_endpoint.cc' l='922' u='c' c='_ZN3tvm7runtime18RPCCopyAmongRemoteEPNS0_10RPCSessionENS0_7TVMArgsEPNS0_11TVMRetValueE'/>
+<use f='tvm/runtime/rpc/rpc_endpoint.cc' l='927' u='c' c='_ZN3tvm7runtime18RPCDevCreateStreamEPNS0_10RPCSessionENS0_7TVMArgsEPNS0_11TVMRetValueE'/>
+<use f='tvm/runtime/rpc/rpc_endpoint.cc' l='934' u='c' c='_ZN3tvm7runtime16RPCDevFreeStreamEPNS0_10RPCSessionENS0_7TVMArgsEPNS0_11TVMRetValueE'/>
+<use f='tvm/runtime/rpc/rpc_endpoint.cc' l='940' u='c' c='_ZN3tvm7runtime15RPCDevSetStreamEPNS0_10RPCSessionENS0_7TVMArgsEPNS0_11TVMRetValueE'/>
+<ovr f='tvm/runtime/rpc/rpc_endpoint.cc' l='1125' c='_ZN3tvm7runtime16RPCClientSession12GetDeviceAPIE8DLDeviceb'/>
+<ovr f='tvm/runtime/rpc/rpc_local_session.cc' l='137' c='_ZN3tvm7runtime12LocalSession12GetDeviceAPIE8DLDeviceb'/>
+<use f='tvm/runtime/rpc/rpc_session.cc' l='89' u='c' c='_ZN3tvm7runtime10RPCSession15AsyncStreamWaitE8DLDevicePvSt8functionIFvNS0_7RPCCodeENS0_7TVMArgsEEE'/>

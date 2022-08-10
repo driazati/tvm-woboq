@@ -1,0 +1,12 @@
+<dec f='tvm/tir/schedule/analysis.h' l='528' type='void tvm::tir::CheckStorageScope(const tvm::tir::ScheduleState &amp; self, tvm::runtime::String storage_scope)'/>
+<doc f='tvm/tir/schedule/analysis.h' l='522'>/*!
+ * \brief Check whether the input storage scope string is valid. Throw an error if not.
+ * \param self The schedule state
+ * \param storage_scope The storage scope string to be checked
+ * \throw ScheduleError If the input storage scope is not valid
+ */</doc>
+<def f='tvm/tir/schedule/analysis/analysis.cc' l='1897' ll='1924' type='void tvm::tir::CheckStorageScope(const tvm::tir::ScheduleState &amp; self, tvm::runtime::String storage_scope)'/>
+<doc f='tvm/tir/schedule/analysis/analysis.cc' l='1895'>/******** Storage Scope ********/</doc>
+<use f='tvm/tir/schedule/primitive/block_annotate.cc' l='287' u='c' c='_ZN3tvm3tir8SetScopeENS0_13ScheduleStateERKNS0_8StmtSRefEiRKNS_7runtime6StringE'/>
+<use f='tvm/tir/schedule/primitive/cache_read_write.cc' l='979' u='c' c='_ZN3tvm3tir9CacheReadENS0_13ScheduleStateERKNS0_8StmtSRefEiRKNS_7runtime6StringE'/>
+<use f='tvm/tir/schedule/primitive/cache_read_write.cc' l='1050' u='c' c='_ZN3tvm3tir10CacheWriteENS0_13ScheduleStateERKNS0_8StmtSRefEiRKNS_7runtime6StringE'/>
