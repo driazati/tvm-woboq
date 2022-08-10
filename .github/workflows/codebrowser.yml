@@ -39,14 +39,20 @@ jobs:
       - name: Generate site
         run: |
           set -eux
-          SOURCE_DIR=tvm/src
-          BUILD_DIR=tvm/build
-          OUT_DIR=tvm-src
-          ./codebrowser/build/generator/codebrowser_generator -b $BUILD_DIR -a -o $OUT_DIR -p tvm:$SOURCE_DIR:123 -d ./data
-          ./codebrowser/build/indexgenerator/codebrowser_indexgenerator $OUT_DIR
-          cp -r ./codebrowser/data $OUT_DIR
+          cd codebrowser
+          SOURCE_DIR=$(pwd)/../tvm
+          BUILD_DIR=$(pwd)/../tvm/build
+          OUT_DIR=tvm
+          VERSION=$(cd "$SOURCE_DIR" && git describe --always --tags)
+          ./build/generator/codebrowser_generator -b $BUILD_DIR -a -o $OUT_DIR -p tvm:$SOURCE_DIR:$VERSION -d ./data
+          ./build/indexgenerator/codebrowser_indexgenerator $OUT_DIR
+          cd ..
+          mkdir deploy
+          cp -r ./codebrowser/tvm deploy
+          cp -r ./codebrowser/data deploy
+          cp -r ./codebrowser/data deploy/tvm
       - name: Deploy site
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: tvm-src
+          folder: deploy 
 
