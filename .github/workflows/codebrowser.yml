@@ -11,31 +11,45 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Install LLVM and Clang
-        uses: KyleMayes/install-llvm-action@v1
+      - name: test
+        run: |
+          mkdir tvm-src
+          echo hello > tvm-src/index.html
+      # - name: Install LLVM and Clang
+      #   uses: KyleMayes/install-llvm-action@v1
+      #   with:
+      #     version: "14.0"
+      # - name: Checkout codebrowser
+      #   run: |
+      #     set -eux
+      #     git clone --depth=1 https://github.com/driazati/codebrowser
+      #     cd codebrowser
+      #     mkdir build
+      #     cd build
+      #     cmake -DCMAKE_BUILD_TYPE=Release ..
+      #     cmake --build . -- -j$(nproc)
+      # - name: Setup tmate session
+      #   uses: mxschmitt/action-tmate@v3
+      # - name: Build TVM
+      #   run: |
+      #     set -eux
+      #     git clone --depth=1 https://github.com/apache/tvm --recursive --jobs 0
+      #     cd tvm
+      #     mkdir build
+      #     cd build
+      #     cmake -DUSE_MICRO=1 -DUSE_LLVM=1 ..
+      #     cmake --build . -- -j$(nproc)
+      # - name: Generate site
+      #   run: |
+      #     set -eux
+      #     SOURCE_DIR=tvm/src
+      #     BUILD_DIR=tvm/build
+      #     OUT_DIR=tvm-src
+      #     ./codebrowser/build/generator/codebrowser_generator -b $BUILD_DIR -a -o $OUT_DIR -p tvm:$SOURCE_DIR:123 -d ./data
+      #     ./codebrowser/build/indexgenerator/codebrowser_indexgenerator $OUT_DIR
+      #     cp -r ./codebrowser/data $OUT_DIR
+      - name: Deploy site
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          version: "14.0"
-      - name: Checkout codebrowser
-        run: |
-          set -eux
-          git clone --depth=1 https://github.com/driazati/codebrowser
-          cd codebrowser
-          mkdir build
-          cd build
-          cmake -DCMAKE_BUILD_TYPE=Release ..
-          cmake --build . -- -j$(nproc)
-      - name: Setup tmate session
-        uses: mxschmitt/action-tmate@v3
-      - name: Build TVM
-        run: |
-          set -eux
-          git clone --depth=1 https://github.com/apache/tvm --recursive --jobs 0
-          cd tvm
-          mkdir build
-          cd build
-          cmake -DUSE_MICRO=1 -DUSE_LLVM=1 -DUSE_CUDA=1 ..
-          cmake --build . -- -j$(nproc)
-      - name: Generate site
-        run: |
-          set -eux
-          ls
+          folder: tvm-src
+
