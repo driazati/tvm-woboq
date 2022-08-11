@@ -1,6 +1,6 @@
-<def f='tvm/src/script/printer/base_doc_printer.h' l='41' ll='230'/>
-<size>392</size>
-<doc f='tvm/src/script/printer/base_doc_printer.h' l='33'>/*!
+<def f='tvm/src/script/printer/base_doc_printer.h' l='64' ll='284'/>
+<size>496</size>
+<doc f='tvm/src/script/printer/base_doc_printer.h' l='56'>/*!
  * \brief DocPrinter is responsible for printing Doc tree into text format
  * \details This is the base class for translating Doc into string.
  *          Each target language needs to have its subclass of DocPrinter
@@ -8,9 +8,10 @@
  *
  * \sa Doc
  */</doc>
-<fun r='_ZN3tvm6script7printer10DocPrinterC1Ei'/>
+<fun r='_ZN3tvm6script7printer10DocPrinterC1ERKNS1_17DocPrinterOptionsE'/>
 <fun r='_ZN3tvm6script7printer10DocPrinterD1Ev'/>
 <fun r='_ZN3tvm6script7printer10DocPrinter6AppendERKNS1_3DocE'/>
+<fun r='_ZN3tvm6script7printer10DocPrinter6AppendERKNS1_3DocENS_7runtime8OptionalINS_10ObjectPathEEE'/>
 <fun r='_ZNK3tvm6script7printer10DocPrinter9GetStringEv'/>
 <fun r='_ZN3tvm6script7printer10DocPrinter8PrintDocERKNS1_3DocE'/>
 <fun r='_ZN3tvm6script7printer10DocPrinter13PrintTypedDocERKNS1_10LiteralDocE'/>
@@ -39,13 +40,21 @@
 <fun r='_ZN3tvm6script7printer10DocPrinter14DecreaseIndentEv'/>
 <fun r='_ZN3tvm6script7printer10DocPrinter7NewLineEv'/>
 <mbr r='tvm::script::printer::DocPrinter::output_' o='64' t='std::ostringstream'/>
-<mbr r='tvm::script::printer::DocPrinter::indent_spaces_' o='3072' t='int'/>
-<mbr r='tvm::script::printer::DocPrinter::indent_' o='3104' t='int'/>
-<fun r='_ZN3tvm6script7printer10DocPrinterC1Ei'/>
+<fun r='_ZN3tvm6script7printer10DocPrinter8MarkSpanERKSt4pairImmERKNS_10ObjectPathE'/>
+<mbr r='tvm::script::printer::DocPrinter::options_' o='3072' t='tvm::script::printer::DocPrinterOptions'/>
+<mbr r='tvm::script::printer::DocPrinter::indent_' o='3200' t='int'/>
+<mbr r='tvm::script::printer::DocPrinter::line_starts_' o='3264' t='std::vector&lt;size_t&gt;'/>
+<mbr r='tvm::script::printer::DocPrinter::path_to_underline_' o='3456' t='Optional&lt;tvm::ObjectPath&gt;'/>
+<mbr r='tvm::script::printer::DocPrinter::current_underline_candidates_' o='3520' t='std::vector&lt;ByteSpan&gt;'/>
+<mbr r='tvm::script::printer::DocPrinter::current_max_path_length_' o='3712' t='int'/>
+<mbr r='tvm::script::printer::DocPrinter::underlines_' o='3776' t='std::vector&lt;ByteSpan&gt;'/>
+<fun r='_ZN3tvm6script7printer10DocPrinterC1ERKNS1_17DocPrinterOptionsE'/>
 <fun r='_ZN3tvm6script7printer10DocPrinter6AppendERKNS1_3DocE'/>
+<fun r='_ZN3tvm6script7printer10DocPrinter6AppendERKNS1_3DocENS_7runtime8OptionalINS_10ObjectPathEEE'/>
 <fun r='_ZNK3tvm6script7printer10DocPrinter9GetStringEv'/>
 <fun r='_ZN3tvm6script7printer10DocPrinter8PrintDocERKNS1_3DocE'/>
+<fun r='_ZN3tvm6script7printer10DocPrinter8MarkSpanERKSt4pairImmERKNS_10ObjectPathE'/>
 <ovr f='tvm/src/script/printer/python_doc_printer.cc' l='139' c='tvm::script::printer::PythonDocPrinter'/>
 <use f='tvm/src/script/printer/python_doc_printer.cc' l='139'/>
-<use f='tvm/src/script/printer/python_doc_printer.cc' l='141' c='_ZN3tvm6script7printer16PythonDocPrinterC1Ei'/>
-<size>392</size>
+<use f='tvm/src/script/printer/python_doc_printer.cc' l='141' c='_ZN3tvm6script7printer16PythonDocPrinterC1ERKNS1_17DocPrinterOptionsE'/>
+<size>496</size>
