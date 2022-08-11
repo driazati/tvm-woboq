@@ -20,14 +20,15 @@
       // 2063. Contradictory requirements for string move assignment</doc>
 <use f='tvm/src/auto_scheduler/compute_dag.cc' l='753' u='c' c='_ZN3tvm14auto_scheduler13IndexRewriter10VisitExpr_EPKNS_3tir16ProducerLoadNodeE'/>
 <use f='tvm/src/auto_scheduler/compute_dag.cc' l='811' u='c' c='_ZN3tvm14auto_scheduler13GetOrigLayoutEPSt3setINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt4lessIS7_ESaIS7_EERKNS_2te9OperationERKNSD_6TensorE'/>
-<use f='tvm/src/auto_scheduler/feature.cc' l='963' u='c' c='_ZN3tvm14auto_scheduler24PerStoreFeatureExtractor26ExtractBufferAccessFeatureERKNS_3tir3VarERKNS_7runtime5ArrayINS_8PrimExprEvEERKS8_RKNS0_13MathOpCou194105'/>
+<use f='tvm/src/auto_scheduler/feature.cc' l='964' u='c' c='_ZN3tvm14auto_scheduler24PerStoreFeatureExtractor26ExtractBufferAccessFeatureERKNS_3tir3VarERKNS_7runtime5ArrayINS_8PrimExprEvEERKS8_RKNS0_13MathOpCou194105'/>
 <use f='tvm/src/autotvm/touch_extractor.cc' l='416' u='c' c='_ZN3tvm7autotvm28GetCurveSampleFeatureFlattenENS_3tir4StmtEiPSt6vectorIfSaIfEE'/>
-<use f='tvm/src/contrib/hybrid/codegen_hybrid.cc' l='46' u='c' c='_ZN3tvm7contrib13CodeGenHybrid13GetUniqueNameENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
-<use f='tvm/src/contrib/hybrid/codegen_hybrid.cc' l='320' u='c' c='_ZN3tvm7contrib13CodeGenHybrid10VisitStmt_EPKNS_3tir12AttrStmtNodeE'/>
-<use f='tvm/src/contrib/hybrid/codegen_hybrid.cc' l='431' u='c' c='_ZN3tvm7contrib13CodeGenHybrid8GetVarIDB5cxx11EPKNS_3tir7VarNodeE'/>
-<use f='tvm/src/contrib/hybrid/codegen_hybrid.cc' l='443' u='c' c='_ZN3tvm7contrib13CodeGenHybrid11GetTensorIDB5cxx11ERKNS_2te6TensorE'/>
+<use f='tvm/src/contrib/hybrid/codegen_hybrid.cc' l='302' u='c' c='_ZN3tvm7contrib13CodeGenHybrid10VisitStmt_EPKNS_3tir12AttrStmtNodeE'/>
+<use f='tvm/src/contrib/hybrid/codegen_hybrid.cc' l='413' u='c' c='_ZN3tvm7contrib13CodeGenHybrid8GetVarIDB5cxx11EPKNS_3tir7VarNodeE'/>
+<use f='tvm/src/contrib/hybrid/codegen_hybrid.cc' l='425' u='c' c='_ZN3tvm7contrib13CodeGenHybrid11GetTensorIDB5cxx11ERKNS_2te6TensorE'/>
 <use f='tvm/include/tvm/relay/executor.h' l='240' u='c' c='_ZN3tvm5relay16ExecutorRegEntry15add_attr_optionERKNS_7runtime6StringE'/>
 <use f='tvm/include/tvm/relay/runtime.h' l='239' u='c' c='_ZN3tvm5relay15RuntimeRegEntry15add_attr_optionERKNS_7runtime6StringE'/>
+<use f='tvm/src/ir/global_var_supply.cc' l='46' u='c' c='_ZN3tvm15GlobalVarSupplyC1ERKNS_7runtime5ArrayINS_8IRModuleEvEE'/>
+<use f='tvm/src/ir/name_supply.cc' l='85' u='c' c='_ZN3tvm14NameSupplyNode13GetUniqueNameENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
 <use f='tvm/src/ir/transform.cc' l='111' u='c' c='_ZN3tvm9transform17PassConfigManager8RegisterENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEj'/>
 <use f='tvm/src/runtime/thread_storage_scope.h' l='132' u='c' c='_ZN3tvm7runtime12StorageScope6CreateERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
 <use f='tvm/src/runtime/thread_storage_scope.h' l='135' u='c' c='_ZN3tvm7runtime12StorageScope6CreateERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
@@ -78,12 +79,11 @@
 <use f='tvm/src/relay/backend/graph_executor_codegen.cc' l='261' u='c' c='_ZN3tvm5relay7backend20GraphExecutorCodegen7CodegenENS_8IRModuleENS0_8FunctionENS_7runtime6StringE'/>
 <use f='tvm/src/relay/backend/graph_executor_codegen.cc' l='427' u='c' c='_ZN3tvm5relay7backend20GraphExecutorCodegen16GraphAddCallNodeEPKNS0_8CallNodeESt13unordered_mapINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEN411525254'/>
 <use f='tvm/src/relay/backend/graph_executor_codegen.cc' l='454' u='c' c='_ZN3tvm5relay7backend20GraphExecutorCodegen16GraphAddCallNodeEPKNS0_8CallNodeESt13unordered_mapINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEN411525254'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='155' u='c' c='_ZN3tvm5relay3tec16LowerToTECompute5LowerERKNS0_8FunctionESt8functionIFNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESC_EE'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='164' u='c' c='_ZN3tvm5relay3tec16LowerToTECompute5LowerERKNS0_8FunctionESt8functionIFNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESC_EE'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='502' u='c' c='_ZN3tvm5relay3tec13MakeShapeFunc6CreateERKNS0_8FunctionERKNS_6TargetESt8functionIFNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESF_EE'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='835' u='c' c='_ZN3tvm5relay3tec13GetUniqueNameENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEPSt13unordered_mapIS7_iSt4hashIS7_ESt8equal_toIS7_ESaISt4pairIKS7_iEEE'/>
+<use f='tvm/src/relay/backend/te_compiler.cc' l='158' u='c' c='_ZN3tvm5relay3tec14TECompilerImpl5LowerERKNS1_9CCacheKeyENS_7runtime6StringE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='154' u='c' c='_ZN3tvm5relay3tec16LowerToTECompute5LowerERKNS0_8FunctionE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='163' u='c' c='_ZN3tvm5relay3tec16LowerToTECompute5LowerERKNS0_8FunctionE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='502' u='c' c='_ZN3tvm5relay3tec13MakeShapeFunc6CreateERKNS0_8FunctionERKNS_6TargetENS_15GlobalVarSupplyE'/>
 <use f='tvm/src/relay/collage/name_supply.cc' l='83' u='c' c='_ZN3tvm5relay7collage10NameSupply5FreshERKSt16initializer_listINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEE'/>
-<use f='tvm/src/relay/ir/dataflow_matcher.cc' l='446' u='c' c='_ZN3tvm5relay19InferTypeWithModuleERKNS_9RelayExprERKNS_8IRModuleE'/>
 <use f='tvm/src/relay/op/algorithm/topk.cc' l='113' u='c' c='_ZN3tvm5relay8MakeTopKENS_9RelayExprEiiNS_7runtime6StringEbNS2_8DataTypeE'/>
 <use f='tvm/src/relay/op/annotation/annotation.cc' l='174' u='c'/>
 <use f='tvm/src/relay/op/annotation/annotation.cc' l='199' u='c'/>
@@ -207,7 +207,7 @@
 <use f='tvm/src/target/source/codegen_metal.cc' l='355' u='c' c='_ZN3tvm7codegen10BuildMetalENS_8IRModuleENS_6TargetE'/>
 <use f='tvm/src/target/source/codegen_opencl.cc' l='167' u='c' c='_ZN3tvm7codegen13CodeGenOpenCL15BindThreadIndexERKNS_3tir7IterVarE'/>
 <use f='tvm/src/target/source/codegen_opencl.cc' l='592' u='c' c='_ZN3tvm7codegen11BuildOpenCLENS_8IRModuleENS_6TargetE'/>
-<use f='tvm/src/target/source/codegen_source_base.cc' l='66' u='c' c='_ZN3tvm7codegen17CodeGenSourceBase8SSAGetIDENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS_7runtime8DataTypeE'/>
+<use f='tvm/src/target/source/codegen_source_base.cc' l='46' u='c' c='_ZN3tvm7codegen17CodeGenSourceBase8SSAGetIDENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS_7runtime8DataTypeE'/>
 <use f='tvm/src/target/source/codegen_vhls.cc' l='170' u='c' c='_ZN3tvm7codegen12BuildSDAccelENS_8IRModuleENS_6TargetE'/>
 <use f='tvm/src/target/source/codegen_vhls.cc' l='182' u='c' c='_ZN3tvm7codegen12BuildSDAccelENS_8IRModuleENS_6TargetE'/>
 <use f='tvm/src/target/source/ptx.cc' l='567' u='c' c='_ZN3tvm7codegen16PrintMMAAssemblyERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES8_S8_S8_S8_S8_S8_S8_S8_S8_S8_S8_S8_S8_S8_S8_bb'/>

@@ -29,7 +29,7 @@
 <use f='tvm/include/tvm/runtime/container/adt.h' l='142' macro='1' u='c' c='_ZN3tvm7runtime3ADTC1ENS0_9ObjectPtrINS0_6ObjectEEE'/>
 <use f='tvm/include/tvm/parser/source_map.h' l='71' macro='1' u='c' c='_ZN3tvm6parser6SourceC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
 <use f='tvm/include/tvm/parser/source_map.h' l='113' macro='1' u='c' c='_ZN3tvm6parser9SourceMapC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
-<use f='tvm/include/tvm/ir/module.h' l='381' u='c' c='_ZN3tvm8IRModuleC1ENS_7runtime9ObjectPtrINS1_6ObjectEEE'/>
+<use f='tvm/include/tvm/ir/module.h' l='373' u='c' c='_ZN3tvm8IRModuleC1ENS_7runtime9ObjectPtrINS1_6ObjectEEE'/>
 <use f='tvm/include/tvm/ir/diagnostic.h' l='90' macro='1' u='c' c='_ZN3tvm10DiagnosticC1ENS_7runtime9ObjectPtrINS1_6ObjectEEE'/>
 <use f='tvm/include/tvm/ir/diagnostic.h' l='165' macro='1' u='c' c='_ZN3tvm18DiagnosticRendererC1ENS_7runtime9ObjectPtrINS1_6ObjectEEE'/>
 <use f='tvm/include/tvm/ir/diagnostic.h' l='219' macro='1' u='c' c='_ZN3tvm17DiagnosticContextC1ENS_7runtime9ObjectPtrINS1_6ObjectEEE'/>
@@ -86,6 +86,8 @@
 <use f='tvm/include/tvm/relay/adt.h' l='262' macro='1' u='c' c='_ZN3tvm5relay6ClauseC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
 <use f='tvm/include/tvm/auto_scheduler/cost_model.h' l='88' macro='1' u='c' c='_ZN3tvm14auto_scheduler9CostModelC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
 <use f='tvm/include/tvm/auto_scheduler/measure_record.h' l='113' macro='1' u='c' c='_ZN3tvm14auto_scheduler12RecordReaderC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<use f='tvm/include/tvm/ir/name_supply.h' l='118' macro='1' u='c' c='_ZN3tvm10NameSupplyC1ENS_7runtime9ObjectPtrINS1_6ObjectEEE'/>
+<use f='tvm/include/tvm/ir/global_var_supply.h' l='120' macro='1' u='c' c='_ZN3tvm15GlobalVarSupplyC1ENS_7runtime9ObjectPtrINS1_6ObjectEEE'/>
 <use f='tvm/src/auto_scheduler/measure_record.cc' l='424' u='c'/>
 <use f='tvm/src/auto_scheduler/measure_record.cc' l='424' u='c'/>
 <use f='tvm/src/auto_scheduler/measure_record.cc' l='435' u='c'/>
@@ -191,10 +193,10 @@
 <use f='tvm/include/tvm/relay/op_strategy.h' l='124' macro='1' u='c' c='_ZN3tvm5relay16OpSpecializationC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
 <use f='tvm/include/tvm/relay/op_strategy.h' l='156' macro='1' u='c' c='_ZN3tvm5relay10OpStrategyC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
 <use f='tvm/src/relay/transforms/infer_layout_utils.h' l='104' macro='1' u='c' c='_ZN3tvm5relay24InferCorrectLayoutOutputC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.h' l='74' macro='1' u='c' c='_ZN3tvm5relay3tec13LoweredOutputC1ENS_7runtime9ObjectPtrINS3_6ObjectEEE'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.h' l='116' u='c' c='_ZN3tvm5relay3tec9CCacheKeyC1ENS_7runtime9ObjectPtrINS3_6ObjectEEE'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.h' l='179' macro='1' u='c' c='_ZN3tvm5relay3tec10CachedFuncC1ENS_7runtime9ObjectPtrINS3_6ObjectEEE'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.h' l='204' u='c' c='_ZN3tvm5relay3tec11CCacheValueC1ENS_7runtime9ObjectPtrINS3_6ObjectEEE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.h' l='75' macro='1' u='c' c='_ZN3tvm5relay3tec13LoweredOutputC1ENS_7runtime9ObjectPtrINS3_6ObjectEEE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.h' l='117' u='c' c='_ZN3tvm5relay3tec9CCacheKeyC1ENS_7runtime9ObjectPtrINS3_6ObjectEEE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.h' l='180' macro='1' u='c' c='_ZN3tvm5relay3tec10CachedFuncC1ENS_7runtime9ObjectPtrINS3_6ObjectEEE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.h' l='205' u='c' c='_ZN3tvm5relay3tec11CCacheValueC1ENS_7runtime9ObjectPtrINS3_6ObjectEEE'/>
 <use f='tvm/src/relay/backend/te_compiler.h' l='141' u='c' c='_ZN3tvm5relay3tec10TECompilerC1ENS_7runtime9ObjectPtrINS3_6ObjectEEE'/>
 <use f='tvm/src/relay/backend/contrib/ethosu/utils.h' l='86' macro='1' u='c' c='_ZN3tvm5relay7contrib6ethosu11BaseAddressC1ENS_7runtime9ObjectPtrINS4_6ObjectEEE'/>
 <use f='tvm/src/relay/backend/contrib/ethosu/utils.h' l='132' macro='1' u='c' c='_ZN3tvm5relay7contrib6ethosu19CompilationArtifactC1ENS_7runtime9ObjectPtrINS4_6ObjectEEE'/>

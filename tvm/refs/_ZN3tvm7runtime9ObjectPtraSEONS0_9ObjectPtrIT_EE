@@ -105,6 +105,7 @@
 <use f='tvm/src/ir/expr.cc' l='70' u='c' c='_ZN3tvm6IntImmC1ENS_7runtime8DataTypeElNS_4SpanE'/>
 <use f='tvm/src/ir/expr.cc' l='95' u='c' c='_ZN3tvm8FloatImmC1ENS_7runtime8DataTypeEdNS_4SpanE'/>
 <use f='tvm/src/ir/expr.cc' l='149' u='c' c='_ZN3tvm9GlobalVarC1ENS_7runtime6StringENS_4TypeENS_4SpanE'/>
+<use f='tvm/src/ir/global_var_supply.cc' l='36' u='c' c='_ZN3tvm15GlobalVarSupplyC1ERKNS_10NameSupplyESt13unordered_mapINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS_9GlobalVarESt4hashISA_ESt8equal_635173'/>
 <use f='tvm/src/ir/instrument.cc' l='143' u='c' c='_ZN3tvm10instrument18BasePassInstrumentC1ENS_7runtime6StringENS2_15TypedPackedFuncIFvvEEES6_NS4_IFbRKNS_8IRModuleERKNS_9transform8PassInfoEEEENS4_IFvS9_SD_EEESH_'/>
 <use f='tvm/src/ir/memory_pools.cc' l='44' u='c' c='_ZN3tvm8PoolInfoC1ENS_7runtime6StringENS_7IntegerES3_S3_S3_S3_S3_NS1_3MapINS_6TargetES3_vvEENS_4BoolE'/>
 <use f='tvm/src/ir/memory_pools.cc' l='77' u='c' c='_ZN3tvm18PoolInfoPropertiesC1ENS_7IntegerES1_S1_S1_S1_S1_NS_7runtime3MapINS_6TargetES1_vvEENS_4BoolE'/>
@@ -113,7 +114,8 @@
 <use f='tvm/src/ir/memory_pools.cc' l='181' u='c' c='_ZN3tvm16ConstantPoolInfoC1ENS_7runtime6StringENS1_5ArrayINS_6TargetEvEENS3_INS_12ConstantInfoEvEENS_18PoolInfoPropertiesE'/>
 <use f='tvm/src/ir/memory_pools.cc' l='211' u='c' c='_ZN3tvm20WorkspaceMemoryPoolsC1ENS_7runtime5ArrayINS_8PoolInfoEvEE'/>
 <use f='tvm/src/ir/memory_pools.cc' l='229' u='c' c='_ZN3tvm19ConstantMemoryPoolsC1ENS_7runtime5ArrayINS_16ConstantPoolInfoEvEE'/>
-<use f='tvm/src/ir/module.cc' l='73' u='c' c='_ZN3tvm8IRModuleC1ENS_7runtime3MapINS_9GlobalVarENS_8BaseFuncEvvEENS2_INS_13GlobalTypeVarENS_8TypeDataEvvEESt13unordered_setINS1_6StringESt4hashISA_ES11083656'/>
+<use f='tvm/src/ir/module.cc' l='74' u='c' c='_ZN3tvm8IRModuleC1ENS_7runtime3MapINS_9GlobalVarENS_8BaseFuncEvvEENS2_INS_13GlobalTypeVarENS_8TypeDataEvvEESt13unordered_setINS1_6StringESt4hashISA_ES11083656'/>
+<use f='tvm/src/ir/name_supply.cc' l='34' u='c' c='_ZN3tvm10NameSupplyC1ERKNS_7runtime6StringESt13unordered_mapINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiSt4hashISB_ESt8equal_toISB_ESaISt4pairIKSB_iEEE'/>
 <use f='tvm/src/ir/span.cc' l='73' u='c' c='_ZN3tvm4SpanC1ENS_10SourceNameEiiii'/>
 <use f='tvm/src/ir/tensor_type.cc' l='37' u='c' c='_ZN3tvm10TensorTypeC1ENS_7runtime5ArrayINS_8PrimExprEvEENS1_8DataTypeE'/>
 <use f='tvm/src/ir/transform.cc' l='349' u='c' c='_ZN3tvm9transform8PassInfoC1EiNS_7runtime6StringENS2_5ArrayIS3_vEE'/>
@@ -168,7 +170,7 @@
 <use f='tvm/src/relay/backend/interpreter.cc' l='165' u='c' c='_ZN3tvm5relay8RefValueC1ENS_7runtime9ObjectRefE'/>
 <use f='tvm/src/relay/backend/interpreter.cc' l='185' u='c' c='_ZN3tvm5relay16ConstructorValueC1EiNS_7runtime5ArrayINS2_9ObjectRefEvEENS_11ConstructorE'/>
 <use f='tvm/src/relay/backend/interpreter.cc' l='287' u='c' c='_ZN3tvm5relay16InterpreterStateC1ENS_9RelayExprENS_7runtime5ArrayINS3_3MapINS0_3VarENS3_9ObjectRefEvvEEvEE'/>
-<use f='tvm/src/relay/backend/te_compiler.cc' l='544' u='c' c='_ZN3tvm5relay3tec10TECompilerC1ENS_7runtime8OptionalINS_8IRModuleEEE'/>
+<use f='tvm/src/relay/backend/te_compiler.cc' l='538' u='c' c='_ZN3tvm5relay3tec10TECompilerC1ENS_7runtime8OptionalINS_8IRModuleEEENS4_INS3_6StringEEE'/>
 <use f='tvm/src/relay/backend/te_compiler_cache.cc' l='79' u='c' c='_ZN3tvm5relay3tec13LoweredOutputC1ENS_7runtime5ArrayINS_2te6TensorEvEENS0_16OpImplementationE'/>
 <use f='tvm/src/relay/backend/te_compiler_cache.cc' l='87' u='c' c='_ZN3tvm5relay3tec9CCacheKeyC1ENS0_8FunctionENS_6TargetENS_13VirtualDeviceE'/>
 <use f='tvm/src/relay/backend/te_compiler_cache.cc' l='105' u='c' c='_ZN3tvm5relay3tec10CachedFuncC1ENS_6TargetENS_9GlobalVarENS_7runtime5ArrayINS_2te6TensorEvEES9_NS7_8ScheduleENS_3tir8PrimFuncENS6_INS_7IntegerEvEENS_810874565'/>
@@ -206,7 +208,7 @@
 <use f='tvm/src/relay/ir/adt.cc' l='104' u='c' c='_ZN3tvm5relay6ClauseC1ENS0_7PatternENS_9RelayExprE'/>
 <use f='tvm/src/relay/ir/adt.cc' l='139' u='c' c='_ZN3tvm5relay5MatchC1ENS_9RelayExprENS_7runtime5ArrayINS0_6ClauseEvEEbNS_4SpanE'/>
 <use f='tvm/src/relay/ir/base.cc' l='39' u='c' c='_ZN3tvm5relay2IdC1ENS_7runtime6StringE'/>
-<use f='tvm/src/relay/ir/dataflow_matcher.cc' l='787' u='c' c='_ZN3tvm5relay17DFPatternCallbackC1ENS0_9DFPatternENS_7runtime10PackedFuncEbb'/>
+<use f='tvm/src/relay/ir/dataflow_matcher.cc' l='781' u='c' c='_ZN3tvm5relay17DFPatternCallbackC1ENS0_9DFPatternENS_7runtime10PackedFuncEbb'/>
 <use f='tvm/src/relay/ir/dataflow_pattern.cc' l='33' u='c' c='_ZN3tvm5relay11ExprPatternC1ENS_9RelayExprE'/>
 <use f='tvm/src/relay/ir/dataflow_pattern.cc' l='51' u='c' c='_ZN3tvm5relay10VarPatternC1ENS_7runtime6StringE'/>
 <use f='tvm/src/relay/ir/dataflow_pattern.cc' l='82' u='c' c='_ZN3tvm5relay11CallPatternC1ENS0_9DFPatternENS_7runtime5ArrayIS2_vEE'/>

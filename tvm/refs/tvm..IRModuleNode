@@ -1,12 +1,12 @@
 <inh f='tvm/include/tvm/runtime/object.h' l='167' c='tvm::runtime::Object'/>
-<def f='tvm/include/tvm/ir/module.h' l='56' ll='354'/>
+<def f='tvm/include/tvm/ir/module.h' l='56' ll='346'/>
 <use f='tvm/include/tvm/ir/module.h' l='130' c='_ZNK3tvm12IRModuleNode12SEqualReduceEPKS0_NS_13SEqualReducerE'/>
-<use f='tvm/include/tvm/ir/module.h' l='383' c='_ZNK3tvm8IRModuleptEv'/>
-<use f='tvm/include/tvm/ir/module.h' l='386' c='_ZNK3tvm8IRModuleptEv'/>
-<use f='tvm/include/tvm/ir/module.h' l='443'/>
-<use f='tvm/include/tvm/ir/module.h' l='449' c='_ZN3tvm8IRModule11CopyOnWriteEv'/>
-<use f='tvm/include/tvm/ir/module.h' l='449' c='_ZN3tvm8IRModule11CopyOnWriteEv'/>
-<use f='tvm/include/tvm/ir/module.h' l='449' c='_ZN3tvm8IRModule11CopyOnWriteEv'/>
+<use f='tvm/include/tvm/ir/module.h' l='375' c='_ZNK3tvm8IRModuleptEv'/>
+<use f='tvm/include/tvm/ir/module.h' l='378' c='_ZNK3tvm8IRModuleptEv'/>
+<use f='tvm/include/tvm/ir/module.h' l='435'/>
+<use f='tvm/include/tvm/ir/module.h' l='441' c='_ZN3tvm8IRModule11CopyOnWriteEv'/>
+<use f='tvm/include/tvm/ir/module.h' l='441' c='_ZN3tvm8IRModule11CopyOnWriteEv'/>
+<use f='tvm/include/tvm/ir/module.h' l='441' c='_ZN3tvm8IRModule11CopyOnWriteEv'/>
 <size>176</size>
 <doc f='tvm/include/tvm/ir/module.h' l='46'>/*!
  * \brief IRModule that holds functions and type definitions.
@@ -62,19 +62,18 @@
 <fun r='_ZN3tvm12IRModuleNode16RuntimeTypeIndexEv'/>
 <fun r='_ZN3tvm12IRModuleNode27_GetOrAllocRuntimeTypeIndexEv'/>
 <fun r='_ZN3tvm12IRModuleNode20RegisterConstructorsERKNS_13GlobalTypeVarERKNS_8TypeDataE'/>
-<fun r='_ZN3tvm12IRModuleNode13GetUniqueNameERKNS_7runtime6StringE'/>
 <mbr r='tvm::IRModuleNode::global_var_map_' o='384' t='Map&lt;tvm::runtime::String, tvm::GlobalVar&gt;'/>
 <mbr r='tvm::IRModuleNode::global_type_var_map_' o='448' t='Map&lt;tvm::runtime::String, tvm::GlobalTypeVar&gt;'/>
 <mbr r='tvm::IRModuleNode::constructor_tag_map_' o='512' t='std::unordered_map&lt;int32_t, Constructor&gt;'/>
 <mbr r='tvm::IRModuleNode::import_set_' o='960' t='std::unordered_set&lt;String&gt;'/>
-<use f='tvm/src/ir/module.cc' l='49' c='_ZN3tvm8IRModuleC1ENS_7runtime3MapINS_9GlobalVarENS_8BaseFuncEvvEENS2_INS_13GlobalTypeVarENS_8TypeDataEvvEESt13unordered_setINS1_6StringESt4hashISA_ES11083656'/>
-<use f='tvm/src/ir/module.cc' l='76' c='_ZNK3tvm12IRModuleNode12SEqualReduceEPKS0_NS_13SEqualReducerE'/>
-<use f='tvm/src/ir/module.cc' l='447'/>
-<use f='tvm/src/ir/module.cc' l='447'/>
-<use f='tvm/src/ir/module.cc' l='447'/>
-<use f='tvm/src/ir/module.cc' l='466'/>
-<use f='tvm/src/ir/module.cc' l='546'/>
-<use f='tvm/src/ir/module.cc' l='547'/>
+<use f='tvm/src/ir/module.cc' l='50' c='_ZN3tvm8IRModuleC1ENS_7runtime3MapINS_9GlobalVarENS_8BaseFuncEvvEENS2_INS_13GlobalTypeVarENS_8TypeDataEvvEESt13unordered_setINS1_6StringESt4hashISA_ES11083656'/>
+<use f='tvm/src/ir/module.cc' l='77' c='_ZNK3tvm12IRModuleNode12SEqualReduceEPKS0_NS_13SEqualReducerE'/>
+<use f='tvm/src/ir/module.cc' l='436'/>
+<use f='tvm/src/ir/module.cc' l='436'/>
+<use f='tvm/src/ir/module.cc' l='436'/>
+<use f='tvm/src/ir/module.cc' l='455'/>
+<use f='tvm/src/ir/module.cc' l='535'/>
+<use f='tvm/src/ir/module.cc' l='536'/>
 <size>176</size>
 <fun r='_ZNK3tvm12IRModuleNode12SEqualReduceEPKS0_NS_13SEqualReducerE'/>
 <fun r='_ZNK3tvm12IRModuleNode11SHashReduceENS_12SHashReducerE'/>
@@ -98,7 +97,6 @@
 <fun r='_ZNK3tvm12IRModuleNode13LookupTypeDefERKNS_13GlobalTypeVarE'/>
 <fun r='_ZNK3tvm12IRModuleNode13LookupTypeDefERKNS_7runtime6StringE'/>
 <fun r='_ZN3tvm12IRModuleNode9LookupTagEi'/>
-<fun r='_ZN3tvm12IRModuleNode13GetUniqueNameERKNS_7runtime6StringE'/>
 <fun r='_ZN3tvm12IRModuleNode6UpdateERKNS_8IRModuleE'/>
 <fun r='_ZN3tvm12IRModuleNode11ShallowCopyEv'/>
 <fun r='_ZN3tvm12IRModuleNode6ImportERKNS_7runtime6StringE'/>
@@ -128,5 +126,5 @@
 <size>176</size>
 <use f='tvm/src/tir/transforms/make_unpacked_api.cc' l='95' c='_ZN3tvm3tir9transform15MakeUnpackedAPIEv'/>
 <size>176</size>
-<use f='tvm/src/tir/transforms/split_host_device.cc' l='367' c='_ZN3tvm3tir9transform15SplitHostDeviceEv'/>
+<use f='tvm/src/tir/transforms/split_host_device.cc' l='371' c='_ZN3tvm3tir9transform15SplitHostDeviceEv'/>
 <size>176</size>

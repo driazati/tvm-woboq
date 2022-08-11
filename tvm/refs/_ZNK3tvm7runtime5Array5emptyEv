@@ -35,6 +35,7 @@
 <use f='tvm/src/auto_scheduler/transform_step.cc' l='541' u='c' c='_ZNK3tvm14auto_scheduler12FuseStepNode12ApplyToStateEPNS0_5StateE'/>
 <use f='tvm/src/auto_scheduler/transform_step.cc' l='555' u='c' c='_ZNK3tvm14auto_scheduler12FuseStepNode12ApplyToStateEPNS0_5StateE'/>
 <use f='tvm/src/auto_scheduler/transform_step.cc' l='595' u='c' c='_ZNK3tvm14auto_scheduler12FuseStepNode15ApplyToScheduleEPNS_7runtime5ArrayINS_2te5StageEvEEPNS2_3MapIS5_NS3_INS_3tir7IterVarEvEENS2_10ObjectHashENS2_11ObjectEqualEEE'/>
+<use f='tvm/src/ir/global_var_supply.cc' l='44' u='c' c='_ZN3tvm15GlobalVarSupplyC1ERKNS_7runtime5ArrayINS_8IRModuleEvEE'/>
 <use f='tvm/src/ir/transform.cc' l='482' u='c'/>
 <use f='tvm/src/tir/schedule/instruction_traits.h' l='534' u='c' c='_ZN3tvm3tir13PythonAPICall10OutputListENS_7runtime5ArrayINS2_6StringEvEE'/>
 <use f='tvm/src/tir/schedule/utils.h' l='426' u='c' c='_ZN3tvm3tir28ReorderAndFuseReductionLoopsERKNS0_8ScheduleERKNS0_7BlockRVEPNS0_6LoopRVEPm'/>
@@ -67,7 +68,7 @@
 <use f='tvm/src/printer/tvmscript_printer.cc' l='1606' u='c' c='_ZN3tvm3tir16TVMScriptPrinter13PrintPrimFuncERKNS0_8PrimFuncE'/>
 <use f='tvm/src/relay/backend/contrib/example_target_hooks/relay_to_tir.cc' l='246' u='c' c='_ZN3tvm5relay7contrib20example_target_hooks12_GLOBAL__N_120ConvertAddToSubtract8Rewrite_EPKNS0_8CallNodeERKNS_9RelayExprE'/>
 <use f='tvm/src/relay/backend/name_transforms.cc' l='75' u='c' c='_ZN3tvm5relay7backend12CombineNamesB5cxx11ERKNS_7runtime5ArrayINS2_6StringEvEE'/>
-<use f='tvm/src/relay/backend/te_compiler.cc' l='880' u='c' c='_ZN3tvm5relay3tec22LowerTensorExprMutator21DeviceAwareVisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/backend/te_compiler.cc' l='874' u='c' c='_ZN3tvm5relay3tec22LowerTensorExprMutator21DeviceAwareVisitExpr_EPKNS0_8CallNodeE'/>
 <use f='tvm/src/relay/backend/vm/lambda_lift.cc' l='136' u='c' c='_ZN3tvm5relay2vm12LambdaLifter21DeviceAwareVisitExpr_EPKNS0_12FunctionNodeE'/>
 <use f='tvm/src/relay/backend/vm/lambda_lift.cc' l='172' u='c' c='_ZN3tvm5relay2vm12LambdaLifter21DeviceAwareVisitExpr_EPKNS0_12FunctionNodeE'/>
 <use f='tvm/src/relay/backend/vm/lambda_lift.cc' l='172' u='c' c='_ZN3tvm5relay2vm12LambdaLifter21DeviceAwareVisitExpr_EPKNS0_12FunctionNodeE'/>
@@ -116,9 +117,9 @@
 <use f='tvm/src/te/operation/compute_op.cc' l='62' u='c' c='_ZN3tvm2te11ReduceEqualEPKNS_3tir10ReduceNodeES4_'/>
 <use f='tvm/src/te/operation/compute_op.cc' l='62' u='c' c='_ZN3tvm2te11ReduceEqualEPKNS_3tir10ReduceNodeES4_'/>
 <use f='tvm/src/te/operation/compute_op.cc' l='317' u='c' c='_ZN3tvm2te13MakeReductionEPKNS0_13ComputeOpNodeERKNS_7runtime5ArrayINS0_6TensorEvEEPNS_3tir4StmtESC_'/>
-<use f='tvm/src/te/operation/create_primfunc.cc' l='267' u='c' c='_ZN3tvm3tir24GenerateBlockFromTensorsERKNS_2te9ComputeOpERKNS_7runtime5ArrayINS1_6TensorEvEENS6_INS_8PrimExprEvEESB_PNS0_14CreateFuncInfoEPNS_5arith8AnalyzerE'/>
-<use f='tvm/src/te/operation/create_primfunc.cc' l='308' u='c' c='_ZN3tvm3tir23GenerateStmtFromComputeERKNS_2te9ComputeOpEPNS0_14CreateFuncInfoEPNS_5arith8AnalyzerE'/>
-<use f='tvm/src/te/operation/create_primfunc.cc' l='308' u='c' c='_ZN3tvm3tir23GenerateStmtFromComputeERKNS_2te9ComputeOpEPNS0_14CreateFuncInfoEPNS_5arith8AnalyzerE'/>
+<use f='tvm/src/te/operation/create_primfunc.cc' l='260' u='c' c='_ZN3tvm3tir24GenerateBlockFromTensorsERKNS_2te9ComputeOpERKNS_7runtime5ArrayINS1_6TensorEvEENS6_INS_8PrimExprEvEESB_PNS0_14CreateFuncInfoEPNS_5arith8AnalyzerE'/>
+<use f='tvm/src/te/operation/create_primfunc.cc' l='301' u='c' c='_ZN3tvm3tir23GenerateStmtFromComputeERKNS_2te9ComputeOpEPNS0_14CreateFuncInfoEPNS_5arith8AnalyzerE'/>
+<use f='tvm/src/te/operation/create_primfunc.cc' l='301' u='c' c='_ZN3tvm3tir23GenerateStmtFromComputeERKNS_2te9ComputeOpEPNS0_14CreateFuncInfoEPNS_5arith8AnalyzerE'/>
 <use f='tvm/src/te/operation/cross_thread_reduction.cc' l='100' u='c' c='_ZN3tvm2te24MakeCrossThreadReductionEPKNS0_13ComputeOpNodeERKNS0_5StageERKSt13unordered_mapINS_3tir7IterVarENS_5RangeESt4hashIS9_ESt8equal_toIS9_ESaISt4pairIKS9_SA_EEEb'/>
 <use f='tvm/src/te/schedule/schedule_dataflow_rewrite.cc' l='129' u='c' c='_ZN3tvm2te11ReduceEqualEPKNS_3tir10ReduceNodeES4_'/>
 <use f='tvm/src/te/schedule/schedule_dataflow_rewrite.cc' l='129' u='c' c='_ZN3tvm2te11ReduceEqualEPKNS_3tir10ReduceNodeES4_'/>

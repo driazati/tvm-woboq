@@ -1,0 +1,13 @@
+<dec f='tvm/include/tvm/ir/global_var_supply.h' l='69' type='tvm::GlobalVar tvm::GlobalVarSupplyNode::UniqueGlobalFor(const tvm::runtime::String &amp; name, bool add_prefix = true)'/>
+<doc f='tvm/include/tvm/ir/global_var_supply.h' l='62'>/*!
+   * \brief Looks up for a GlobalVar with the given name in this supply.
+   * If no entry is found, creates one, places it in the cache and returns it.
+   * \param name The name of the GlobalVar to search for.
+   * \param add_prefix If set to true, the prefix of the contained NameSupply will be prepended to
+   * the name before performing the search. \return A cached GlobalVar.
+   */</doc>
+<use f='tvm/src/driver/driver_api.cc' l='293' u='c' c='_ZN3tvm16ScheduleToModuleENS_2te8ScheduleERKNS_7runtime5ArrayINS2_9ObjectRefEvEERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKSt13unordered_2528338'/>
+<def f='tvm/src/ir/global_var_supply.cc' l='71' ll='82' type='tvm::GlobalVar tvm::GlobalVarSupplyNode::UniqueGlobalFor(const tvm::runtime::String &amp; name, bool add_prefix = true)'/>
+<use f='tvm/src/ir/global_var_supply.cc' l='110' u='a'/>
+<use f='tvm/src/ir/module.cc' l='393' u='c' c='_ZN3tvm8IRModule17FromExprInContextERKNS_9RelayExprERKNS_7runtime3MapINS_9GlobalVarENS_8BaseFuncEvvEERKNS5_INS_13GlobalTypeVarENS_8TypeDataEvvEESt13un5175574'/>
+<use f='tvm/src/relay/backend/te_compiler.cc' l='376' u='c' c='_ZN3tvm5relay3tec14TECompilerImpl13LowerInternalERKNS1_9CCacheKeyENS_15GlobalVarSupplyE'/>

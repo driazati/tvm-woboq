@@ -25,7 +25,7 @@
 <use f='tvm/src/arith/int_set.cc' l='1042' u='c' c='_ZN3tvm5arith24EstimateRegionLowerBoundERKNS_7runtime5ArrayINS_5RangeEvEERKNS1_3MapINS_3tir3VarES3_vvEERKNS_8PrimExprEPNS0_8AnalyzerE'/>
 <use f='tvm/src/arith/iter_affine_map.cc' l='775' u='c' c='_ZN3tvm5arith15IterMapRewriter12TryFuseItersENS0_11IterSumExprENS0_12IterMapLevelE'/>
 <use f='tvm/include/tvm/target/target.h' l='184' u='c' c='_ZN3tvm6TargetC1EDn'/>
-<use f='tvm/src/ir/module.cc' l='473' u='c'/>
+<use f='tvm/src/ir/module.cc' l='462' u='c'/>
 <use f='tvm/include/tvm/meta_schedule/database.h' l='110' u='c'/>
 <use f='tvm/include/tvm/meta_schedule/apply_history_best.h' l='50' u='c'/>
 <use f='tvm/include/tvm/tir/schedule/state.h' l='45' u='c'/>
@@ -94,11 +94,11 @@
 <use f='tvm/src/relay/analysis/type_solver.cc' l='344' u='c' c='_ZN3tvm5relay10TypeSolver7Unifier10VisitType_EPKNS_16RelayRefTypeNodeERKNS_4TypeE'/>
 <use f='tvm/src/relay/backend/graph_plan_memory.cc' l='60' u='c'/>
 <use f='tvm/src/relay/backend/task_extraction.cc' l='61' u='c' c='_ZN3tvm5relay7backend11ExtractTaskENS_8IRModuleENS_6TargetENS_7runtime3MapINS4_6StringENS4_7NDArrayEvvEENS4_15TypedPackedFuncIFNS4_8OptionalINS_3tir8P10298777'/>
-<use f='tvm/src/relay/backend/te_compiler.cc' l='375' u='c' c='_ZN3tvm5relay3tec14TECompilerImpl13LowerInternalERKNS1_9CCacheKeyESt8functionIFNS_7runtime6StringES8_EE'/>
-<use f='tvm/src/relay/backend/te_compiler.cc' l='376' u='c' c='_ZN3tvm5relay3tec14TECompilerImpl13LowerInternalERKNS1_9CCacheKeyESt8functionIFNS_7runtime6StringES8_EE'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='350' u='c' c='_ZN3tvm5relay3tec15ScheduleBuilder6CreateERKNS0_8FunctionESt8functionIFNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESC_EE'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='351' u='c' c='_ZN3tvm5relay3tec15ScheduleBuilder6CreateERKNS0_8FunctionESt8functionIFNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESC_EE'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='583' u='c' c='_ZN3tvm5relay3tec13MakeShapeFunc6CreateERKNS0_8FunctionERKNS_6TargetESt8functionIFNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESF_EE'/>
+<use f='tvm/src/relay/backend/te_compiler.cc' l='379' u='c' c='_ZN3tvm5relay3tec14TECompilerImpl13LowerInternalERKNS1_9CCacheKeyENS_15GlobalVarSupplyE'/>
+<use f='tvm/src/relay/backend/te_compiler.cc' l='380' u='c' c='_ZN3tvm5relay3tec14TECompilerImpl13LowerInternalERKNS1_9CCacheKeyENS_15GlobalVarSupplyE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='349' u='c' c='_ZN3tvm5relay3tec15ScheduleBuilder6CreateERKNS0_8FunctionENS_15GlobalVarSupplyE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='350' u='c' c='_ZN3tvm5relay3tec15ScheduleBuilder6CreateERKNS0_8FunctionENS_15GlobalVarSupplyE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='573' u='c' c='_ZN3tvm5relay3tec13MakeShapeFunc6CreateERKNS0_8FunctionERKNS_6TargetENS_15GlobalVarSupplyE'/>
 <use f='tvm/include/tvm/runtime/vm/vm.h' l='173' u='c' c='_ZN3tvm7runtime2vm14VirtualMachineC1Ev'/>
 <use f='tvm/src/relay/op/nn/convolution.cc' l='199' u='c' c='_ZN3tvm5relay9Conv2DRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
 <use f='tvm/src/relay/op/nn/convolution.cc' l='432' u='c' c='_ZN3tvm5relay9Conv3DRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
@@ -182,7 +182,7 @@
 <use f='tvm/include/tvm/script/printer/doc.h' l='995' u='c'/>
 <use f='tvm/include/tvm/script/printer/doc.h' l='1033' u='c'/>
 <use f='tvm/src/support/ffi_testing.cc' l='49' u='c' c='_ZN3tvm9TestAttrs15_tvm_VisitAttrsERT_'/>
-<use f='tvm/src/te/operation/create_primfunc.cc' l='217' u='c' c='_ZN3tvm3tir24GenerateBlockFromTensorsERKNS_2te9ComputeOpERKNS_7runtime5ArrayINS1_6TensorEvEENS6_INS_8PrimExprEvEESB_PNS0_14CreateFuncInfoEPNS_5arith8AnalyzerE'/>
+<use f='tvm/src/te/operation/create_primfunc.cc' l='210' u='c' c='_ZN3tvm3tir24GenerateBlockFromTensorsERKNS_2te9ComputeOpERKNS_7runtime5ArrayINS1_6TensorEvEENS6_INS_8PrimExprEvEESB_PNS0_14CreateFuncInfoEPNS_5arith8AnalyzerE'/>
 <use f='tvm/src/tir/analysis/deep_equal.cc' l='48' u='c' c='_ZN3tvm3tir20DeepCmpSEqualHandler11MapLhsToRhsERKNS_7runtime9ObjectRefE'/>
 <use f='tvm/src/tir/analysis/verify_memory.cc' l='172' u='c'/>
 <use f='tvm/src/tir/schedule/analysis/analysis.cc' l='132' u='c' c='_ZN3tvm3tir12GetScopeRootERKNS0_13ScheduleStateERKNS0_8StmtSRefEb'/>

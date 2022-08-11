@@ -35,6 +35,7 @@
 <use f='tvm/src/autotvm/touch_extractor.cc' l='416' u='c' c='_ZN3tvm7autotvm28GetCurveSampleFeatureFlattenENS_3tir4StmtEiPSt6vectorIfSaIfEE'/>
 <use f='tvm/src/ir/diagnostic.cc' l='257' u='c' c='_ZN3tvm8ReportAtERKNS_17DiagnosticContextERSoRKNS_4SpanERKNS_10DiagnosticE'/>
 <use f='tvm/src/ir/error.cc' l='116' u='c' c='_ZN3tvm13ErrorReporter12RenderErrorsERKNS_8IRModuleEb'/>
+<use f='tvm/src/ir/name_supply.cc' l='76' u='c' c='_ZN3tvm14NameSupplyNode13GetUniqueNameENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
 <use f='tvm/src/support/table_printer.h' l='128' u='c' c='_ZNK3tvm7support12TablePrinter5AsStrB5cxx11Ev'/>
 <use f='tvm/src/support/table_printer.h' l='151' u='c' c='_ZNK3tvm7support12TablePrinter5AsStrB5cxx11Ev'/>
 <use f='tvm/include/tvm/runtime/metadata_base.h' l='190' u='c' c='_ZNK3tvm7runtime8metadata17MetadataArrayNode25get_element_c_struct_nameB5cxx11Ev'/>
@@ -61,8 +62,8 @@
 <use f='tvm/src/relay/backend/utils.h' l='585' u='c' c='_ZNK3tvm5relay7backend13TargetStrHashclERKNS_6TargetE'/>
 <use f='tvm/src/relay/backend/name_transforms.cc' l='59' u='c' c='_ZN3tvm5relay7backend16ToCVariableStyleERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
 <use f='tvm/src/relay/backend/param_dict.cc' l='46' u='c'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='160' u='c' c='_ZN3tvm5relay3tec16LowerToTECompute5LowerERKNS0_8FunctionESt8functionIFNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESC_EE'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='498' u='c' c='_ZN3tvm5relay3tec13MakeShapeFunc6CreateERKNS0_8FunctionERKNS_6TargetESt8functionIFNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESF_EE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='159' u='c' c='_ZN3tvm5relay3tec16LowerToTECompute5LowerERKNS0_8FunctionE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='498' u='c' c='_ZN3tvm5relay3tec13MakeShapeFunc6CreateERKNS0_8FunctionERKNS_6TargetENS_15GlobalVarSupplyE'/>
 <use f='tvm/src/relay/collage/name_supply.cc' l='36' u='c' c='_ZN3tvm5relay7collage12_GLOBAL__N_111AppendCSafeEPbRNSt7__cxx1119basic_ostringstreamIcSt11char_traitsIcESaIcEEERKNS4_12basic_stringIcS7_S8_EE'/>
 <use f='tvm/include/tvm/topi/nn/pooling.h' l='223' u='c' c='_ZN3tvm4topi2nn23find_depth_height_widthERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEPiSA_SA_'/>
 <use f='tvm/include/tvm/topi/einsum.h' l='661' u='c' c='_ZN3tvm4topi16NumpyEinsumShapeENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKSt6vectorINS_7runtime5ArrayINS_8PrimExprEvEESaISB_EE'/>
@@ -110,7 +111,6 @@
 <use f='tvm/src/target/llvm/codegen_hexagon.cc' l='496' u='c' c='_ZN3tvm7codegen12BuildHexagonENS_8IRModuleENS_6TargetE'/>
 <use f='tvm/src/target/llvm/codegen_hexagon.cc' l='603' u='c' c='_ZN3tvm7codegen12BuildHexagonENS_8IRModuleENS_6TargetE'/>
 <use f='tvm/src/target/source/codegen_c.cc' l='1020' u='c' c='_ZN3tvm7codegenL26CheckOutermostBracketMatchERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
-<use f='tvm/src/target/source/codegen_source_base.cc' l='38' u='c' c='_ZN3tvm7codegen17CodeGenSourceBase13GetUniqueNameENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
 <use f='tvm/src/target/source/ptx.cc' l='408' u='c' c='_ZN3tvm7codegen8Replacer7rewriteENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
 <use f='tvm/src/target/source/ptx.cc' l='409' u='c' c='_ZN3tvm7codegen8Replacer7rewriteENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
 <use f='tvm/src/target/source/source_module.cc' l='234' u='c' c='_ZN3tvm7codegen28CSourceCrtMetadataModuleNode18CreateFuncRegistryEv'/>

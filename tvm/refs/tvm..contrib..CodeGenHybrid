@@ -1,11 +1,11 @@
 <inh f='tvm/include/tvm/tir/expr_functor.h' l='87' c='tvm::tir::ExprFunctor'/>
 <inh f='tvm/include/tvm/tir/stmt_functor.h' l='57' c='tvm::tir::StmtFunctor'/>
-<def f='tvm/src/contrib/hybrid/codegen_hybrid.h' l='50' ll='173'/>
-<use f='tvm/src/contrib/hybrid/codegen_hybrid.cc' l='98' c='_ZN3tvm7contrib15PrintBinaryExprEPKT_PKcRSoPNS0_13CodeGenHybridE'/>
-<use f='tvm/src/contrib/hybrid/codegen_hybrid.cc' l='119' c='_ZN3tvm7contrib21PrintBinaryIntrinsitcEPKNS_3tir8CallNodeEPKcRSoPNS0_13CodeGenHybridE'/>
-<use f='tvm/src/contrib/hybrid/codegen_hybrid.cc' l='529'/>
-<size>560</size>
-<doc f='tvm/src/contrib/hybrid/codegen_hybrid.h' l='44'>/*!
+<def f='tvm/src/contrib/hybrid/codegen_hybrid.h' l='51' ll='169'/>
+<use f='tvm/src/contrib/hybrid/codegen_hybrid.cc' l='80' c='_ZN3tvm7contrib15PrintBinaryExprEPKT_PKcRSoPNS0_13CodeGenHybridE'/>
+<use f='tvm/src/contrib/hybrid/codegen_hybrid.cc' l='101' c='_ZN3tvm7contrib21PrintBinaryIntrinsitcEPKNS_3tir8CallNodeEPKcRSoPNS0_13CodeGenHybridE'/>
+<use f='tvm/src/contrib/hybrid/codegen_hybrid.cc' l='511'/>
+<size>520</size>
+<doc f='tvm/src/contrib/hybrid/codegen_hybrid.h' l='45'>/*!
  * \brief A base class to generate Hybrid Script.
  *
  * **NOTE** CodeGenHybrid does not aim at generating Python scripts consumed by Python2/3.
@@ -64,14 +64,12 @@
 <mbr r='tvm::contrib::CodeGenHybrid::indent_' o='128' t='int'/>
 <mbr r='tvm::contrib::CodeGenHybrid::tab_' o='160' t='const int'/>
 <fun r='_ZN3tvm7contrib13CodeGenHybrid11PrintIndentEv'/>
-<mbr r='tvm::contrib::CodeGenHybrid::ids_allocated_' o='192' t='std::map&lt;std::string, int&gt;'/>
-<mbr r='tvm::contrib::CodeGenHybrid::id_map_' o='576' t='std::map&lt;std::pair&lt;const Object *, int&gt;, std::string&gt;'/>
-<mbr r='tvm::contrib::CodeGenHybrid::binds_' o='960' t='std::map&lt;const VarNode *, std::string&gt;'/>
-<fun r='_ZN3tvm7contrib13CodeGenHybrid13GetUniqueNameENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
-<mbr r='tvm::contrib::CodeGenHybrid::stream' o='1344' t='std::stringstream'/>
+<mbr r='tvm::contrib::CodeGenHybrid::ids_allocated' o='192' t='tvm::NameSupply'/>
+<mbr r='tvm::contrib::CodeGenHybrid::id_map_' o='256' t='std::map&lt;std::pair&lt;const Object *, int&gt;, std::string&gt;'/>
+<mbr r='tvm::contrib::CodeGenHybrid::binds_' o='640' t='std::map&lt;const VarNode *, std::string&gt;'/>
+<mbr r='tvm::contrib::CodeGenHybrid::stream' o='1024' t='std::stringstream'/>
 <fun r='_ZN3tvm7contrib13CodeGenHybrid8GetVarIDB5cxx11EPKNS_3tir7VarNodeE'/>
 <fun r='_ZN3tvm7contrib13CodeGenHybrid11GetTensorIDB5cxx11ERKNS_2te6TensorE'/>
-<fun r='_ZN3tvm7contrib13CodeGenHybrid13GetUniqueNameENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
 <fun r='_ZN3tvm7contrib13CodeGenHybrid6FinishB5cxx11Ev'/>
 <fun r='_ZN3tvm7contrib13CodeGenHybrid9PrintTypeENS_7runtime8DataTypeERSo'/>
 <fun r='_ZN3tvm7contrib13CodeGenHybrid10VisitExpr_EPKNS_10IntImmNodeERSo'/>

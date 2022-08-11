@@ -13,7 +13,7 @@
 <use f='tvm/include/tvm/tir/expr.h' l='659' macro='1' u='c' c='_ZN3tvm3tir10BufferLoad11CopyOnWriteEv'/>
 <use f='tvm/include/tvm/ir/attrs.h' l='303' macro='1' u='c' c='_ZN3tvm9DictAttrs11CopyOnWriteEv'/>
 <use f='tvm/include/tvm/ir/attrs.h' l='762' u='c' c='_ZN3tvm6detail14AttrDocVisitorclEPKcPT_'/>
-<use f='tvm/include/tvm/ir/module.h' l='449' macro='1' u='c' c='_ZN3tvm8IRModule11CopyOnWriteEv'/>
+<use f='tvm/include/tvm/ir/module.h' l='441' macro='1' u='c' c='_ZN3tvm8IRModule11CopyOnWriteEv'/>
 <use f='tvm/include/tvm/ir/op.h' l='389' u='c' c='_ZN3tvm10OpRegEntry12add_argumentERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES8_S8_'/>
 <use f='tvm/include/tvm/tir/stmt.h' l='327' macro='1' u='c' c='_ZN3tvm3tir11BufferStore11CopyOnWriteEv'/>
 <use f='tvm/include/tvm/tir/stmt.h' l='391' macro='1' u='c' c='_ZN3tvm3tir13BufferRealize11CopyOnWriteEv'/>
@@ -86,8 +86,8 @@
 <use f='tvm/src/auto_scheduler/compute_dag.cc' l='904' u='c' c='_ZNK3tvm14auto_scheduler10ComputeDAG13RewriteLayoutEPNS_7runtime5ArrayINS0_4StepEvEENS0_19LayoutRewriteOptionE'/>
 <use f='tvm/src/auto_scheduler/cost_model.cc' l='35' u='c' c='_ZN3tvm14auto_scheduler11RandomModelC1Ev'/>
 <use f='tvm/src/auto_scheduler/cost_model.cc' l='53' u='c' c='_ZN3tvm14auto_scheduler16PythonBasedModelC1ENS_7runtime10PackedFuncES3_S3_'/>
-<use f='tvm/src/auto_scheduler/feature.cc' l='1465' u='c' c='_ZN3tvm14auto_scheduler27GetPerStoreFeaturesFromFileERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiiPSt6vectorIS9_IfSaIfEESaISB_EEPSB_PS9_IiSaIiEE'/>
-<use f='tvm/src/auto_scheduler/feature.cc' l='1466' u='c' c='_ZN3tvm14auto_scheduler27GetPerStoreFeaturesFromFileERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiiPSt6vectorIS9_IfSaIfEESaISB_EEPSB_PS9_IiSaIiEE'/>
+<use f='tvm/src/auto_scheduler/feature.cc' l='1467' u='c' c='_ZN3tvm14auto_scheduler27GetPerStoreFeaturesFromFileERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiiPSt6vectorIS9_IfSaIfEESaISB_EEPSB_PS9_IiSaIiEE'/>
+<use f='tvm/src/auto_scheduler/feature.cc' l='1468' u='c' c='_ZN3tvm14auto_scheduler27GetPerStoreFeaturesFromFileERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiiPSt6vectorIS9_IfSaIfEESaISB_EEPSB_PS9_IiSaIiEE'/>
 <use f='tvm/src/auto_scheduler/loop_state.cc' l='40' macro='1' u='c'/>
 <use f='tvm/src/auto_scheduler/loop_state.cc' l='41' macro='1' u='c'/>
 <use f='tvm/src/auto_scheduler/loop_state.cc' l='42' macro='1' u='c'/>
@@ -234,6 +234,8 @@
 <use f='tvm/src/ir/expr.cc' l='136' macro='1' u='c'/>
 <use f='tvm/src/ir/expr.cc' l='145' u='c' c='_ZN3tvm9GlobalVarC1ENS_7runtime6StringENS_4TypeENS_4SpanE'/>
 <use f='tvm/src/ir/expr.cc' l='152' macro='1' u='c'/>
+<use f='tvm/src/ir/global_var_supply.cc' l='35' u='c' c='_ZN3tvm15GlobalVarSupplyC1ERKNS_10NameSupplyESt13unordered_mapINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS_9GlobalVarESt4hashISA_ESt8equal_635173'/>
+<use f='tvm/src/ir/global_var_supply.cc' l='93' macro='1' u='c'/>
 <use f='tvm/src/ir/instrument.cc' l='132' u='c' c='_ZN3tvm10instrument18BasePassInstrumentC1ENS_7runtime6StringENS2_15TypedPackedFuncIFvvEEES6_NS4_IFbRKNS_8IRModuleERKNS_9transform8PassInfoEEEENS4_IFvS9_SD_EEESH_'/>
 <use f='tvm/src/ir/instrument.cc' l='181' macro='1' u='c'/>
 <use f='tvm/src/ir/memory_pools.cc' l='34' u='c' c='_ZN3tvm8PoolInfoC1ENS_7runtime6StringENS_7IntegerES3_S3_S3_S3_S3_NS1_3MapINS_6TargetES3_vvEENS_4BoolE'/>
@@ -250,9 +252,11 @@
 <use f='tvm/src/ir/memory_pools.cc' l='214' macro='1' u='c'/>
 <use f='tvm/src/ir/memory_pools.cc' l='227' u='c' c='_ZN3tvm19ConstantMemoryPoolsC1ENS_7runtime5ArrayINS_16ConstantPoolInfoEvEE'/>
 <use f='tvm/src/ir/memory_pools.cc' l='232' macro='1' u='c'/>
-<use f='tvm/src/ir/module.cc' l='49' u='c' c='_ZN3tvm8IRModuleC1ENS_7runtime3MapINS_9GlobalVarENS_8BaseFuncEvvEENS2_INS_13GlobalTypeVarENS_8TypeDataEvvEESt13unordered_setINS1_6StringESt4hashISA_ES11083656'/>
-<use f='tvm/src/ir/module.cc' l='447' macro='1' u='c'/>
-<use f='tvm/src/ir/module.cc' l='466' u='c'/>
+<use f='tvm/src/ir/module.cc' l='50' u='c' c='_ZN3tvm8IRModuleC1ENS_7runtime3MapINS_9GlobalVarENS_8BaseFuncEvvEENS2_INS_13GlobalTypeVarENS_8TypeDataEvvEESt13unordered_setINS1_6StringESt4hashISA_ES11083656'/>
+<use f='tvm/src/ir/module.cc' l='436' macro='1' u='c'/>
+<use f='tvm/src/ir/module.cc' l='455' u='c'/>
+<use f='tvm/src/ir/name_supply.cc' l='33' u='c' c='_ZN3tvm10NameSupplyC1ERKNS_7runtime6StringESt13unordered_mapINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiSt4hashISB_ESt8equal_toISB_ESaISt4pairIKSB_iEEE'/>
+<use f='tvm/src/ir/name_supply.cc' l='93' macro='1' u='c'/>
 <use f='tvm/src/ir/op.cc' l='51' u='c' c='_ZN3tvm10OpRegEntryC1Ej'/>
 <use f='tvm/src/ir/op.cc' l='213' macro='1' u='c'/>
 <use f='tvm/src/ir/span.cc' l='37' u='c' c='_ZN3tvm17GetSourceNameNodeERKNS_7runtime6StringE'/>
@@ -456,7 +460,7 @@
 <use f='tvm/src/relay/backend/contrib/ethosu/utils.cc' l='64' u='c' c='_ZN3tvm5relay7contrib6ethosu19CompilationArtifactC1ENS_7runtime6StringES5_S5_NS4_5ArrayINS2_11BaseAddressEvEE'/>
 <use f='tvm/src/relay/backend/contrib/ethosu/utils.cc' l='72' macro='1' u='c'/>
 <use f='tvm/src/relay/backend/executor.cc' l='31' macro='1' u='c'/>
-<use f='tvm/src/relay/backend/graph_executor_codegen.cc' l='720' u='c' c='_ZN3tvm5relay7backend21CreateGraphCodegenModEv'/>
+<use f='tvm/src/relay/backend/graph_executor_codegen.cc' l='704' u='c' c='_ZN3tvm5relay7backend21CreateGraphCodegenModEv'/>
 <use f='tvm/src/relay/backend/interpreter.cc' l='129' u='c' c='_ZN3tvm5relay18InterpreterClosureC1ENS_7runtime3MapINS0_3VarENS2_9ObjectRefEvvEENS0_8FunctionE'/>
 <use f='tvm/src/relay/backend/interpreter.cc' l='150' u='c' c='_ZN3tvm5relay10RecClosureC1ENS0_18InterpreterClosureENS0_3VarE'/>
 <use f='tvm/src/relay/backend/interpreter.cc' l='163' u='c' c='_ZN3tvm5relay8RefValueC1ENS_7runtime9ObjectRefE'/>
@@ -465,10 +469,10 @@
 <use f='tvm/src/relay/backend/interpreter.cc' l='193' macro='1' u='c'/>
 <use f='tvm/src/relay/backend/interpreter.cc' l='284' u='c' c='_ZN3tvm5relay16InterpreterStateC1ENS_9RelayExprENS_7runtime5ArrayINS3_3MapINS0_3VarENS3_9ObjectRefEvvEEvEE'/>
 <use f='tvm/src/relay/backend/runtime.cc' l='32' macro='1' u='c'/>
-<use f='tvm/src/relay/backend/te_compiler.cc' l='353' u='c' c='_ZN3tvm5relay3tec14TECompilerImpl13LowerInternalERKNS1_9CCacheKeyESt8functionIFNS_7runtime6StringES8_EE'/>
-<use f='tvm/src/relay/backend/te_compiler.cc' l='490' u='c' c='_ZN3tvm5relay3tec14TECompilerImpl22LowerShapeFuncInternalERKNS1_9CCacheKeyE'/>
-<use f='tvm/src/relay/backend/te_compiler.cc' l='543' u='c' c='_ZN3tvm5relay3tec10TECompilerC1ENS_7runtime8OptionalINS_8IRModuleEEE'/>
-<use f='tvm/src/relay/backend/te_compiler.cc' l='550' u='c' c='_ZN3tvm5relay3tec10TECompiler6GlobalEv'/>
+<use f='tvm/src/relay/backend/te_compiler.cc' l='357' u='c' c='_ZN3tvm5relay3tec14TECompilerImpl13LowerInternalERKNS1_9CCacheKeyENS_15GlobalVarSupplyE'/>
+<use f='tvm/src/relay/backend/te_compiler.cc' l='486' u='c' c='_ZN3tvm5relay3tec14TECompilerImpl22LowerShapeFuncInternalERKNS1_9CCacheKeyE'/>
+<use f='tvm/src/relay/backend/te_compiler.cc' l='537' u='c' c='_ZN3tvm5relay3tec10TECompilerC1ENS_7runtime8OptionalINS_8IRModuleEEENS4_INS3_6StringEEE'/>
+<use f='tvm/src/relay/backend/te_compiler.cc' l='545' u='c' c='_ZN3tvm5relay3tec10TECompiler6GlobalEv'/>
 <use f='tvm/src/relay/backend/te_compiler_cache.cc' l='60' macro='1' u='c'/>
 <use f='tvm/src/relay/backend/te_compiler_cache.cc' l='61' macro='1' u='c'/>
 <use f='tvm/src/relay/backend/te_compiler_cache.cc' l='62' macro='1' u='c'/>
@@ -544,8 +548,8 @@
 <use f='tvm/src/relay/ir/adt.cc' l='174' macro='1' u='c'/>
 <use f='tvm/src/relay/ir/base.cc' l='34' macro='1' u='c'/>
 <use f='tvm/src/relay/ir/base.cc' l='37' u='c' c='_ZN3tvm5relay2IdC1ENS_7runtime6StringE'/>
-<use f='tvm/src/relay/ir/dataflow_matcher.cc' l='782' u='c' c='_ZN3tvm5relay17DFPatternCallbackC1ENS0_9DFPatternENS_7runtime10PackedFuncEbb'/>
-<use f='tvm/src/relay/ir/dataflow_matcher.cc' l='790' macro='1' u='c'/>
+<use f='tvm/src/relay/ir/dataflow_matcher.cc' l='776' u='c' c='_ZN3tvm5relay17DFPatternCallbackC1ENS0_9DFPatternENS_7runtime10PackedFuncEbb'/>
+<use f='tvm/src/relay/ir/dataflow_matcher.cc' l='784' macro='1' u='c'/>
 <use f='tvm/src/relay/ir/dataflow_pattern.cc' l='31' u='c' c='_ZN3tvm5relay11ExprPatternC1ENS_9RelayExprE'/>
 <use f='tvm/src/relay/ir/dataflow_pattern.cc' l='36' macro='1' u='c'/>
 <use f='tvm/src/relay/ir/dataflow_pattern.cc' l='49' u='c' c='_ZN3tvm5relay10VarPatternC1ENS_7runtime6StringE'/>

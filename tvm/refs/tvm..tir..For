@@ -18,7 +18,7 @@
 <fun r='_ZN3tvm3tir3ForC1EOS1_'/>
 <fun r='_ZNK3tvm3tir3For3getEv'/>
 <fun r='_ZN3tvm3tir3For11CopyOnWriteEv'/>
-<use f='tvm/src/auto_scheduler/feature.cc' l='635' c='_ZN3tvm14auto_scheduler24PerStoreFeatureExtractor10VisitStmt_EPKNS_3tir12AttrStmtNodeE'/>
+<use f='tvm/src/auto_scheduler/feature.cc' l='636' c='_ZN3tvm14auto_scheduler24PerStoreFeatureExtractor10VisitStmt_EPKNS_3tir12AttrStmtNodeE'/>
 <size>8</size>
 <use f='tvm/include/tvm/tir/schedule/schedule.h' l='163' c='_ZNK3tvm3tir12ScheduleNode3GetERKNS0_6LoopRVE'/>
 <use f='tvm/src/tir/schedule/analysis.h' l='579' c='_ZN3tvm3tir15SuggestIndexMapERKNS0_6BufferERKNS_7runtime5ArrayINS_8PrimExprEvEERKNS5_INS0_3ForEvEERKS6_PNS_5arith8AnalyzerE'/>
@@ -53,7 +53,7 @@
 <size>8</size>
 <use f='tvm/src/target/llvm/codegen_cpu.cc' l='1526' c='_ZN3tvm7codegen10CodeGenCPU10VisitStmt_EPKNS_3tir7ForNodeE'/>
 <size>8</size>
-<use f='tvm/src/te/operation/create_primfunc.cc' l='342' c='_ZN3tvm3tir23GenerateStmtFromComputeERKNS_2te9ComputeOpEPNS0_14CreateFuncInfoEPNS_5arith8AnalyzerE'/>
+<use f='tvm/src/te/operation/create_primfunc.cc' l='335' c='_ZN3tvm3tir23GenerateStmtFromComputeERKNS_2te9ComputeOpEPNS0_14CreateFuncInfoEPNS_5arith8AnalyzerE'/>
 <size>8</size>
 <use f='tvm/src/te/operation/hybrid_op.cc' l='236' c='_ZZN3tvm2te15ApplyLoopShapesERKNS0_5StageERKSt13unordered_mapINS_3tir7IterVarENS_5RangeESt4hashIS6_ESt8equal_toIS6_ESaISt4pairIKS6_S7_EEENS5_4StmtEEN114292304'/>
 <use f='tvm/src/te/operation/hybrid_op.cc' l='238' c='_ZZN3tvm2te15ApplyLoopShapesERKNS0_5StageERKSt13unordered_mapINS_3tir7IterVarENS_5RangeESt4hashIS6_ESt8equal_toIS6_ESaISt4pairIKS6_S7_EEENS5_4StmtEEN114292304'/>
