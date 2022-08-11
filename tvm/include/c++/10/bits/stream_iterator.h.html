@@ -91,14 +91,14 @@
 <tr><th id="77">77</th><td>        <a class="member field" href="#std::istream_iterator::_M_ok" title='std::istream_iterator::_M_ok' data-ref="std::istream_iterator::_M_ok" data-ref-filename="std..istream_iterator.._M_ok">_M_ok</a>(<a class="local col6 ref" href="#1176__obj" title='__obj' data-ref="1176__obj" data-ref-filename="1176__obj">__obj</a>._M_ok)</td></tr>
 <tr><th id="78">78</th><td>      { }</td></tr>
 <tr><th id="79">79</th><td></td></tr>
-<tr><th id="80">80</th><td><u>#<span data-ppcond="80">if</span> <span class="macro" title="201402L" data-ref="_M/__cplusplus">__cplusplus</span> &gt; 201703L &amp;&amp; __cpp_lib_concepts</u></td></tr>
+<tr><th id="80">80</th><td><u>#<span data-ppcond="80">if</span> <span class="macro" title="201703L" data-ref="_M/__cplusplus">__cplusplus</span> &gt; 201703L &amp;&amp; __cpp_lib_concepts</u></td></tr>
 <tr><th id="81">81</th><td>      <b>constexpr</b></td></tr>
 <tr><th id="82">82</th><td>      istream_iterator(default_sentinel_t)</td></tr>
 <tr><th id="83">83</th><td>      <b>noexcept</b>(is_nothrow_default_constructible_v&lt;_Tp&gt;)</td></tr>
 <tr><th id="84">84</th><td>      : istream_iterator() { }</td></tr>
 <tr><th id="85">85</th><td><u>#<span data-ppcond="80">endif</span></u></td></tr>
 <tr><th id="86">86</th><td></td></tr>
-<tr><th id="87">87</th><td><u>#<span data-ppcond="87">if</span> <span class="macro" title="201402L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201103L</u></td></tr>
+<tr><th id="87">87</th><td><u>#<span data-ppcond="87">if</span> <span class="macro" title="201703L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201103L</u></td></tr>
 <tr><th id="88">88</th><td>      istream_iterator&amp; <dfn class="decl def fn" id="_ZNSt16istream_iteratoraSERKSt16istream_iteratorIT_T0_T1_T2_E" title='std::istream_iterator::operator=' data-ref="_ZNSt16istream_iteratoraSERKSt16istream_iteratorIT_T0_T1_T2_E" data-ref-filename="_ZNSt16istream_iteratoraSERKSt16istream_iteratorIT_T0_T1_T2_E"><b>operator</b>=</dfn>(<em>const</em> istream_iterator&amp;) = <b>default</b>;</td></tr>
 <tr><th id="89">89</th><td>      <dfn class="decl def fn" id="_ZNSt16istream_iteratorD1Ev" title='std::istream_iterator::~istream_iterator&lt;_Tp, _CharT, _Traits, _Dist&gt;' data-ref="_ZNSt16istream_iteratorD1Ev" data-ref-filename="_ZNSt16istream_iteratorD1Ev">~istream_iterator</dfn>() = <b>default</b>;</td></tr>
 <tr><th id="90">90</th><td><u>#<span data-ppcond="87">endif</span></u></td></tr>
@@ -167,7 +167,7 @@
 <tr><th id="153">153</th><td>      <dfn class="decl def fn" id="_ZStneRKSt16istream_iteratorIT_T0_T1_T2_ES7_" title='std::operator!=' data-ref="_ZStneRKSt16istream_iteratorIT_T0_T1_T2_ES7_" data-ref-filename="_ZStneRKSt16istream_iteratorIT_T0_T1_T2_ES7_"><b>operator</b>!=</dfn>(<em>const</em> istream_iterator&amp; <dfn class="local col1 decl" id="1181__x" title='__x' data-type='const istream_iterator&lt;_Tp, _CharT, _Traits, _Dist&gt; &amp;' data-ref="1181__x" data-ref-filename="1181__x">__x</dfn>, <em>const</em> istream_iterator&amp; <dfn class="local col2 decl" id="1182__y" title='__y' data-type='const istream_iterator&lt;_Tp, _CharT, _Traits, _Dist&gt; &amp;' data-ref="1182__y" data-ref-filename="1182__y">__y</dfn>)</td></tr>
 <tr><th id="154">154</th><td>      { <b>return</b> !<a class="local col1 ref" href="#1181__x" title='__x' data-ref="1181__x" data-ref-filename="1181__x">__x</a>._M_equal(<a class="local col2 ref" href="#1182__y" title='__y' data-ref="1182__y" data-ref-filename="1182__y">__y</a>); }</td></tr>
 <tr><th id="155">155</th><td></td></tr>
-<tr><th id="156">156</th><td><u>#<span data-ppcond="156">if</span> <span class="macro" title="201402L" data-ref="_M/__cplusplus">__cplusplus</span> &gt; 201703L &amp;&amp; __cpp_lib_concepts</u></td></tr>
+<tr><th id="156">156</th><td><u>#<span data-ppcond="156">if</span> <span class="macro" title="201703L" data-ref="_M/__cplusplus">__cplusplus</span> &gt; 201703L &amp;&amp; __cpp_lib_concepts</u></td></tr>
 <tr><th id="157">157</th><td>      <b>friend</b> <em>bool</em></td></tr>
 <tr><th id="158">158</th><td>      <b>operator</b>==(<em>const</em> istream_iterator&amp; __i, default_sentinel_t)</td></tr>
 <tr><th id="159">159</th><td>      { <b>return</b> !__i._M_stream; }</td></tr>
@@ -193,7 +193,7 @@
 <tr><th id="179">179</th><td>    <b>public</b>:</td></tr>
 <tr><th id="180">180</th><td>      <i>//@{</i></td></tr>
 <tr><th id="181">181</th><td><i>      /// Public typedef</i></td></tr>
-<tr><th id="182">182</th><td><u>#<span data-ppcond="182">if</span> <span class="macro" title="201402L" data-ref="_M/__cplusplus">__cplusplus</span> &gt; 201703L</u></td></tr>
+<tr><th id="182">182</th><td><u>#<span data-ppcond="182">if</span> <span class="macro" title="201703L" data-ref="_M/__cplusplus">__cplusplus</span> &gt; 201703L</u></td></tr>
 <tr><th id="183">183</th><td>      <b>using</b> difference_type = ptrdiff_t;</td></tr>
 <tr><th id="184">184</th><td><u>#<span data-ppcond="182">endif</span></u></td></tr>
 <tr><th id="185">185</th><td>      <b>typedef</b> _CharT                         <dfn class="typedef" id="std::ostream_iterator::char_type" title='std::ostream_iterator::char_type' data-type='_CharT' data-ref="std::ostream_iterator::char_type" data-ref-filename="std..ostream_iterator..char_type">char_type</dfn>;</td></tr>
@@ -206,7 +206,7 @@
 <tr><th id="192">192</th><td>      <em>const</em> _CharT*	<dfn class="decl field" id="std::ostream_iterator::_M_string" title='std::ostream_iterator::_M_string' data-ref="std::ostream_iterator::_M_string" data-ref-filename="std..ostream_iterator.._M_string">_M_string</dfn>;</td></tr>
 <tr><th id="193">193</th><td></td></tr>
 <tr><th id="194">194</th><td>    <b>public</b>:</td></tr>
-<tr><th id="195">195</th><td><u>#<span data-ppcond="195">if</span> <span class="macro" title="201402L" data-ref="_M/__cplusplus">__cplusplus</span> &gt; 201703L</u></td></tr>
+<tr><th id="195">195</th><td><u>#<span data-ppcond="195">if</span> <span class="macro" title="201703L" data-ref="_M/__cplusplus">__cplusplus</span> &gt; 201703L</u></td></tr>
 <tr><th id="196">196</th><td>      <b>constexpr</b> ostream_iterator() <b>noexcept</b></td></tr>
 <tr><th id="197">197</th><td>      : _M_stream(<b>nullptr</b>), _M_string(<b>nullptr</b>) { }</td></tr>
 <tr><th id="198">198</th><td><u>#<span data-ppcond="195">endif</span></u></td></tr>
@@ -232,7 +232,7 @@
 <tr><th id="218">218</th><td>      <dfn class="decl def fn" id="_ZNSt16ostream_iteratorC1ERKSt16ostream_iteratorIT_T0_T1_E" title='std::ostream_iterator::ostream_iterator&lt;_Tp, _CharT, _Traits&gt;' data-ref="_ZNSt16ostream_iteratorC1ERKSt16ostream_iteratorIT_T0_T1_E" data-ref-filename="_ZNSt16ostream_iteratorC1ERKSt16ostream_iteratorIT_T0_T1_E">ostream_iterator</dfn>(<em>const</em> ostream_iterator&amp; <dfn class="local col6 decl" id="1186__obj" title='__obj' data-type='const ostream_iterator&lt;_Tp, _CharT, _Traits&gt; &amp;' data-ref="1186__obj" data-ref-filename="1186__obj">__obj</dfn>)</td></tr>
 <tr><th id="219">219</th><td>      : <a class="member field" href="#std::ostream_iterator::_M_stream" title='std::ostream_iterator::_M_stream' data-ref="std::ostream_iterator::_M_stream" data-ref-filename="std..ostream_iterator.._M_stream">_M_stream</a>(<a class="local col6 ref" href="#1186__obj" title='__obj' data-ref="1186__obj" data-ref-filename="1186__obj">__obj</a>._M_stream), <a class="member field" href="#std::ostream_iterator::_M_string" title='std::ostream_iterator::_M_string' data-ref="std::ostream_iterator::_M_string" data-ref-filename="std..ostream_iterator.._M_string">_M_string</a>(<a class="local col6 ref" href="#1186__obj" title='__obj' data-ref="1186__obj" data-ref-filename="1186__obj">__obj</a>._M_string)  { }</td></tr>
 <tr><th id="220">220</th><td></td></tr>
-<tr><th id="221">221</th><td><u>#<span data-ppcond="221">if</span> <span class="macro" title="201402L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201103L</u></td></tr>
+<tr><th id="221">221</th><td><u>#<span data-ppcond="221">if</span> <span class="macro" title="201703L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201103L</u></td></tr>
 <tr><th id="222">222</th><td>      ostream_iterator&amp; <dfn class="decl def fn" id="_ZNSt16ostream_iteratoraSERKSt16ostream_iteratorIT_T0_T1_E" title='std::ostream_iterator::operator=' data-ref="_ZNSt16ostream_iteratoraSERKSt16ostream_iteratorIT_T0_T1_E" data-ref-filename="_ZNSt16ostream_iteratoraSERKSt16ostream_iteratorIT_T0_T1_E"><b>operator</b>=</dfn>(<em>const</em> ostream_iterator&amp;) = <b>default</b>;</td></tr>
 <tr><th id="223">223</th><td><u>#<span data-ppcond="221">endif</span></u></td></tr>
 <tr><th id="224">224</th><td></td></tr>

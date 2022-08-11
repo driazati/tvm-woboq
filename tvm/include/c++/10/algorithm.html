@@ -73,23 +73,23 @@
 <tr><th id="60">60</th><td><u>#include <a href="utility.html">&lt;utility&gt;</a> // UK-300.</u></td></tr>
 <tr><th id="61">61</th><td><u>#include <a href="bits/stl_algobase.h.html">&lt;bits/stl_algobase.h&gt;</a></u></td></tr>
 <tr><th id="62">62</th><td><u>#include <a href="bits/stl_algo.h.html">&lt;bits/stl_algo.h&gt;</a></u></td></tr>
-<tr><th id="63">63</th><td><u>#<span data-ppcond="63">if</span> <span class="macro" title="201402L" data-ref="_M/__cplusplus">__cplusplus</span> &gt; 201703L</u></td></tr>
+<tr><th id="63">63</th><td><u>#<span data-ppcond="63">if</span> <span class="macro" title="201703L" data-ref="_M/__cplusplus">__cplusplus</span> &gt; 201703L</u></td></tr>
 <tr><th id="64">64</th><td><u># include &lt;bits/ranges_algo.h&gt;</u></td></tr>
 <tr><th id="65">65</th><td><u>#<span data-ppcond="63">endif</span></u></td></tr>
 <tr><th id="66">66</th><td></td></tr>
-<tr><th id="67">67</th><td><u>#<span data-ppcond="67">if</span> <span class="macro" title="201402L" data-ref="_M/__cplusplus">__cplusplus</span> &gt; 201402L</u></td></tr>
+<tr><th id="67">67</th><td><u>#<span data-ppcond="67">if</span> <span class="macro" title="201703L" data-ref="_M/__cplusplus">__cplusplus</span> &gt; 201402L</u></td></tr>
 <tr><th id="68">68</th><td><i>// Parallel STL algorithms</i></td></tr>
-<tr><th id="69">69</th><td><u># if _PSTL_EXECUTION_POLICIES_DEFINED</u></td></tr>
+<tr><th id="69">69</th><td><u># <span data-ppcond="69">if</span> _PSTL_EXECUTION_POLICIES_DEFINED</u></td></tr>
 <tr><th id="70">70</th><td><i>// If &lt;execution&gt; has already been included, pull in implementations</i></td></tr>
 <tr><th id="71">71</th><td><u>#  include &lt;pstl/glue_algorithm_impl.h&gt;</u></td></tr>
-<tr><th id="72">72</th><td><u>#  else</u></td></tr>
+<tr><th id="72">72</th><td><u>#  <span data-ppcond="69">else</span></u></td></tr>
 <tr><th id="73">73</th><td><i>// Otherwise just pull in forward declarations</i></td></tr>
-<tr><th id="74">74</th><td><u>#    include &lt;pstl/glue_algorithm_defs.h&gt;</u></td></tr>
-<tr><th id="75">75</th><td><u>#    define _PSTL_ALGORITHM_FORWARD_DECLARED 1</u></td></tr>
-<tr><th id="76">76</th><td><u>#  endif</u></td></tr>
+<tr><th id="74">74</th><td><u>#    include <a href="pstl/glue_algorithm_defs.h.html">&lt;pstl/glue_algorithm_defs.h&gt;</a></u></td></tr>
+<tr><th id="75">75</th><td><u>#    define <dfn class="macro" id="_M/_PSTL_ALGORITHM_FORWARD_DECLARED" data-ref="_M/_PSTL_ALGORITHM_FORWARD_DECLARED">_PSTL_ALGORITHM_FORWARD_DECLARED</dfn> 1</u></td></tr>
+<tr><th id="76">76</th><td><u>#  <span data-ppcond="69">endif</span></u></td></tr>
 <tr><th id="77">77</th><td></td></tr>
 <tr><th id="78">78</th><td><i>// Feature test macro for parallel algorithms</i></td></tr>
-<tr><th id="79">79</th><td><u># define __cpp_lib_parallel_algorithm 201603L</u></td></tr>
+<tr><th id="79">79</th><td><u># define <dfn class="macro" id="_M/__cpp_lib_parallel_algorithm" data-ref="_M/__cpp_lib_parallel_algorithm">__cpp_lib_parallel_algorithm</dfn> 201603L</u></td></tr>
 <tr><th id="80">80</th><td><u>#<span data-ppcond="67">endif</span> // C++17</u></td></tr>
 <tr><th id="81">81</th><td></td></tr>
 <tr><th id="82">82</th><td><u>#<span data-ppcond="82">ifdef</span> <span class="macro" data-ref="_M/_GLIBCXX_PARALLEL">_GLIBCXX_PARALLEL</span></u></td></tr>

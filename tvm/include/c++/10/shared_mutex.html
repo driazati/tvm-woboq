@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>shared_mutex source code [include/c++/10/shared_mutex] - Woboq Code Browser</title>
-<meta name="woboq:interestingDefinitions" content="std::__shared_mutex_pthread,std::shared_lock,std::shared_timed_mutex "/>
+<meta name="woboq:interestingDefinitions" content="std::__shared_mutex_pthread,std::shared_lock,std::shared_mutex,std::shared_timed_mutex "/>
 <link rel="stylesheet" href="../../.././data/qtcreator.css" title="QtCreator"/>
 <link rel="alternate stylesheet" href="../../.././data/kdevelop.css" title="KDevelop"/>
 <script type="text/javascript" src="../../.././data/jquery/jquery.min.js"></script>
@@ -45,7 +45,7 @@
 <tr><th id="31">31</th><td></td></tr>
 <tr><th id="32">32</th><td><u>#pragma GCC system_header</u></td></tr>
 <tr><th id="33">33</th><td></td></tr>
-<tr><th id="34">34</th><td><u>#<span data-ppcond="34">if</span> <span class="macro" title="201402L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201402L</u></td></tr>
+<tr><th id="34">34</th><td><u>#<span data-ppcond="34">if</span> <span class="macro" title="201703L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201402L</u></td></tr>
 <tr><th id="35">35</th><td></td></tr>
 <tr><th id="36">36</th><td><u>#include <a href="../../x86_64-linux-gnu/c++/10/bits/c++config.h.html">&lt;bits/c++config.h&gt;</a></u></td></tr>
 <tr><th id="37">37</th><td><u>#include <a href="condition_variable.html">&lt;condition_variable&gt;</a></u></td></tr>
@@ -62,9 +62,9 @@
 <tr><th id="48">48</th><td></td></tr>
 <tr><th id="49">49</th><td><u>#<span data-ppcond="49">ifdef</span> <a class="macro" href="../../x86_64-linux-gnu/c++/10/bits/c++config.h.html#1507" data-ref="_M/_GLIBCXX_HAS_GTHREADS">_GLIBCXX_HAS_GTHREADS</a></u></td></tr>
 <tr><th id="50">50</th><td></td></tr>
-<tr><th id="51">51</th><td><u>#<span data-ppcond="51">if</span> <span class="macro" title="201402L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201703L</u></td></tr>
-<tr><th id="52">52</th><td><u>#define __cpp_lib_shared_mutex 201505</u></td></tr>
-<tr><th id="53">53</th><td>  <b>class</b> shared_mutex;</td></tr>
+<tr><th id="51">51</th><td><u>#<span data-ppcond="51">if</span> <span class="macro" title="201703L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201703L</u></td></tr>
+<tr><th id="52">52</th><td><u>#define <dfn class="macro" id="_M/__cpp_lib_shared_mutex" data-ref="_M/__cpp_lib_shared_mutex">__cpp_lib_shared_mutex</dfn> 201505</u></td></tr>
+<tr><th id="53">53</th><td>  <b>class</b> <a class="type" href="#std::shared_mutex" title='std::shared_mutex' data-ref="std::shared_mutex" data-ref-filename="std..shared_mutex">shared_mutex</a>;</td></tr>
 <tr><th id="54">54</th><td><u>#<span data-ppcond="51">endif</span></u></td></tr>
 <tr><th id="55">55</th><td></td></tr>
 <tr><th id="56">56</th><td><u>#define <dfn class="macro" id="_M/__cpp_lib_shared_timed_mutex" data-ref="_M/__cpp_lib_shared_timed_mutex">__cpp_lib_shared_timed_mutex</dfn> 201402</u></td></tr>
@@ -105,7 +105,7 @@
 <tr><th id="91">91</th><td>   <a class="macro" href="../../x86_64-linux-gnu/c++/10/bits/gthr-default.h.html#100" title="static __typeof(pthread_rwlock_timedrdlock) __gthrw_pthread_rwlock_timedrdlock __attribute__ ((__weakref__(&quot;pthread_rwlock_timedrdlock&quot;), __copy__ (pthread_rwlock_timedrdlock)));" data-ref="_M/__gthrw">__gthrw</a>(<a class="ref fn" href="../../pthread.h.html#pthread_rwlock_timedrdlock" title='pthread_rwlock_timedrdlock' data-ref="pthread_rwlock_timedrdlock" data-ref-filename="pthread_rwlock_timedrdlock">pthread_rwlock_timedrdlock</a>);</td></tr>
 <tr><th id="92">92</th><td>  <em>static</em> <b>inline</b> <em>int</em></td></tr>
 <tr><th id="93">93</th><td>  <dfn class="decl def fn" id="_ZStL28__glibcxx_rwlock_timedrdlockP16pthread_rwlock_tPK8timespec" title='std::__glibcxx_rwlock_timedrdlock' data-ref="_ZStL28__glibcxx_rwlock_timedrdlockP16pthread_rwlock_tPK8timespec" data-ref-filename="_ZStL28__glibcxx_rwlock_timedrdlockP16pthread_rwlock_tPK8timespec">__glibcxx_rwlock_timedrdlock</dfn> (<a class="typedef" href="../../x86_64-linux-gnu/bits/pthreadtypes.h.html#pthread_rwlock_t" title='pthread_rwlock_t' data-type='union pthread_rwlock_t' data-ref="pthread_rwlock_t" data-ref-filename="pthread_rwlock_t">pthread_rwlock_t</a> *<dfn class="local col6 decl" id="6__rwlock" title='__rwlock' data-type='pthread_rwlock_t *' data-ref="6__rwlock" data-ref-filename="6__rwlock">__rwlock</dfn>,</td></tr>
-<tr><th id="94">94</th><td>				<em>const</em> <a class="type" href="../../x86_64-linux-gnu/bits/types/struct_timespec.h.html#timespec" title='timespec' data-ref="timespec" data-ref-filename="timespec">timespec</a> *<dfn class="local col7 decl" id="7__ts" title='__ts' data-type='const timespec *' data-ref="7__ts" data-ref-filename="7__ts">__ts</dfn>)</td></tr>
+<tr><th id="94">94</th><td>				<em>const</em> timespec *<dfn class="local col7 decl" id="7__ts" title='__ts' data-type='const timespec *' data-ref="7__ts" data-ref-filename="7__ts">__ts</dfn>)</td></tr>
 <tr><th id="95">95</th><td>  {</td></tr>
 <tr><th id="96">96</th><td>    <b>if</b> (<a class="ref fn" href="../../x86_64-linux-gnu/c++/10/bits/gthr-default.h.html#__gthread_active_p" title='__gthread_active_p' data-ref="__gthread_active_p" data-ref-filename="__gthread_active_p">__gthread_active_p</a> ())</td></tr>
 <tr><th id="97">97</th><td>      <b>return</b> <a class="macro" href="../../x86_64-linux-gnu/c++/10/bits/gthr-default.h.html#93" title="__gthrw_pthread_rwlock_timedrdlock" data-ref="_M/__gthrw_">__gthrw_</a>(pthread_rwlock_timedrdlock) (<a class="local col6 ref" href="#6__rwlock" title='__rwlock' data-ref="6__rwlock" data-ref-filename="6__rwlock">__rwlock</a>, <a class="local col7 ref" href="#7__ts" title='__ts' data-ref="7__ts" data-ref-filename="7__ts">__ts</a>);</td></tr>
@@ -115,7 +115,7 @@
 <tr><th id="101">101</th><td>   <a class="macro" href="../../x86_64-linux-gnu/c++/10/bits/gthr-default.h.html#100" title="static __typeof(pthread_rwlock_timedwrlock) __gthrw_pthread_rwlock_timedwrlock __attribute__ ((__weakref__(&quot;pthread_rwlock_timedwrlock&quot;), __copy__ (pthread_rwlock_timedwrlock)));" data-ref="_M/__gthrw">__gthrw</a>(<a class="ref fn" href="../../pthread.h.html#pthread_rwlock_timedwrlock" title='pthread_rwlock_timedwrlock' data-ref="pthread_rwlock_timedwrlock" data-ref-filename="pthread_rwlock_timedwrlock">pthread_rwlock_timedwrlock</a>);</td></tr>
 <tr><th id="102">102</th><td>  <em>static</em> <b>inline</b> <em>int</em></td></tr>
 <tr><th id="103">103</th><td>  <dfn class="decl def fn" id="_ZStL28__glibcxx_rwlock_timedwrlockP16pthread_rwlock_tPK8timespec" title='std::__glibcxx_rwlock_timedwrlock' data-ref="_ZStL28__glibcxx_rwlock_timedwrlockP16pthread_rwlock_tPK8timespec" data-ref-filename="_ZStL28__glibcxx_rwlock_timedwrlockP16pthread_rwlock_tPK8timespec">__glibcxx_rwlock_timedwrlock</dfn> (<a class="typedef" href="../../x86_64-linux-gnu/bits/pthreadtypes.h.html#pthread_rwlock_t" title='pthread_rwlock_t' data-type='union pthread_rwlock_t' data-ref="pthread_rwlock_t" data-ref-filename="pthread_rwlock_t">pthread_rwlock_t</a> *<dfn class="local col8 decl" id="8__rwlock" title='__rwlock' data-type='pthread_rwlock_t *' data-ref="8__rwlock" data-ref-filename="8__rwlock">__rwlock</dfn>,</td></tr>
-<tr><th id="104">104</th><td>				<em>const</em> <a class="type" href="../../x86_64-linux-gnu/bits/types/struct_timespec.h.html#timespec" title='timespec' data-ref="timespec" data-ref-filename="timespec">timespec</a> *<dfn class="local col9 decl" id="9__ts" title='__ts' data-type='const timespec *' data-ref="9__ts" data-ref-filename="9__ts">__ts</dfn>)</td></tr>
+<tr><th id="104">104</th><td>				<em>const</em> timespec *<dfn class="local col9 decl" id="9__ts" title='__ts' data-type='const timespec *' data-ref="9__ts" data-ref-filename="9__ts">__ts</dfn>)</td></tr>
 <tr><th id="105">105</th><td>  {</td></tr>
 <tr><th id="106">106</th><td>    <b>if</b> (<a class="ref fn" href="../../x86_64-linux-gnu/c++/10/bits/gthr-default.h.html#__gthread_active_p" title='__gthread_active_p' data-ref="__gthread_active_p" data-ref-filename="__gthread_active_p">__gthread_active_p</a> ())</td></tr>
 <tr><th id="107">107</th><td>      <b>return</b> <a class="macro" href="../../x86_64-linux-gnu/c++/10/bits/gthr-default.h.html#93" title="__gthrw_pthread_rwlock_timedwrlock" data-ref="_M/__gthrw_">__gthrw_</a>(pthread_rwlock_timedwrlock) (<a class="local col8 ref" href="#8__rwlock" title='__rwlock' data-ref="8__rwlock" data-ref-filename="8__rwlock">__rwlock</a>, <a class="local col9 ref" href="#9__ts" title='__ts' data-ref="9__ts" data-ref-filename="9__ts">__ts</a>);</td></tr>
@@ -413,39 +413,39 @@
 <tr><th id="399">399</th><td><u>#<span data-ppcond="255">endif</span></u></td></tr>
 <tr><th id="400">400</th><td>  <i class="doc">/// <span class="command">@endcond</span></i></td></tr>
 <tr><th id="401">401</th><td></td></tr>
-<tr><th id="402">402</th><td><u>#<span data-ppcond="402">if</span> <span class="macro" title="201402L" data-ref="_M/__cplusplus">__cplusplus</span> &gt; 201402L</u></td></tr>
+<tr><th id="402">402</th><td><u>#<span data-ppcond="402">if</span> <span class="macro" title="201703L" data-ref="_M/__cplusplus">__cplusplus</span> &gt; 201402L</u></td></tr>
 <tr><th id="403">403</th><td>  <i class="doc">/// The standard shared mutex type.</i></td></tr>
-<tr><th id="404">404</th><td>  <b>class</b> shared_mutex</td></tr>
+<tr><th id="404">404</th><td>  <b>class</b> <dfn class="type def" id="std::shared_mutex" title='std::shared_mutex' data-ref="std::shared_mutex" data-ref-filename="std..shared_mutex">shared_mutex</dfn></td></tr>
 <tr><th id="405">405</th><td>  {</td></tr>
 <tr><th id="406">406</th><td>  <b>public</b>:</td></tr>
-<tr><th id="407">407</th><td>    shared_mutex() = <b>default</b>;</td></tr>
-<tr><th id="408">408</th><td>    ~shared_mutex() = <b>default</b>;</td></tr>
+<tr><th id="407">407</th><td>    <dfn class="decl def fn" id="_ZNSt12shared_mutexC1Ev" title='std::shared_mutex::shared_mutex' data-ref="_ZNSt12shared_mutexC1Ev" data-ref-filename="_ZNSt12shared_mutexC1Ev">shared_mutex</dfn>() = <b>default</b>;</td></tr>
+<tr><th id="408">408</th><td>    <dfn class="decl def fn" id="_ZNSt12shared_mutexD1Ev" title='std::shared_mutex::~shared_mutex' data-ref="_ZNSt12shared_mutexD1Ev" data-ref-filename="_ZNSt12shared_mutexD1Ev">~shared_mutex</dfn>() = <b>default</b>;</td></tr>
 <tr><th id="409">409</th><td></td></tr>
-<tr><th id="410">410</th><td>    shared_mutex(<em>const</em> shared_mutex&amp;) = <b>delete</b>;</td></tr>
-<tr><th id="411">411</th><td>    shared_mutex&amp; <b>operator</b>=(<em>const</em> shared_mutex&amp;) = <b>delete</b>;</td></tr>
+<tr><th id="410">410</th><td>    <dfn class="decl def fn" id="_ZNSt12shared_mutexC1ERKS_" title='std::shared_mutex::shared_mutex' data-ref="_ZNSt12shared_mutexC1ERKS_" data-ref-filename="_ZNSt12shared_mutexC1ERKS_">shared_mutex</dfn>(<em>const</em> <a class="type" href="#std::shared_mutex" title='std::shared_mutex' data-ref="std::shared_mutex" data-ref-filename="std..shared_mutex">shared_mutex</a>&amp;) = <b>delete</b>;</td></tr>
+<tr><th id="411">411</th><td>    <a class="type" href="#std::shared_mutex" title='std::shared_mutex' data-ref="std::shared_mutex" data-ref-filename="std..shared_mutex">shared_mutex</a>&amp; <dfn class="decl def fn" id="_ZNSt12shared_mutexaSERKS_" title='std::shared_mutex::operator=' data-ref="_ZNSt12shared_mutexaSERKS_" data-ref-filename="_ZNSt12shared_mutexaSERKS_"><b>operator</b>=</dfn>(<em>const</em> <a class="type" href="#std::shared_mutex" title='std::shared_mutex' data-ref="std::shared_mutex" data-ref-filename="std..shared_mutex">shared_mutex</a>&amp;) = <b>delete</b>;</td></tr>
 <tr><th id="412">412</th><td></td></tr>
 <tr><th id="413">413</th><td>    <i>// Exclusive ownership</i></td></tr>
 <tr><th id="414">414</th><td></td></tr>
-<tr><th id="415">415</th><td>    <em>void</em> lock() { _M_impl.lock(); }</td></tr>
-<tr><th id="416">416</th><td>    <em>bool</em> try_lock() { <b>return</b> _M_impl.try_lock(); }</td></tr>
-<tr><th id="417">417</th><td>    <em>void</em> unlock() { _M_impl.unlock(); }</td></tr>
+<tr><th id="415">415</th><td>    <em>void</em> <dfn class="decl def fn" id="_ZNSt12shared_mutex4lockEv" title='std::shared_mutex::lock' data-ref="_ZNSt12shared_mutex4lockEv" data-ref-filename="_ZNSt12shared_mutex4lockEv">lock</dfn>() { <a class="member field" href="#std::shared_mutex::_M_impl" title='std::shared_mutex::_M_impl' data-ref="std::shared_mutex::_M_impl" data-ref-filename="std..shared_mutex.._M_impl">_M_impl</a>.<a class="ref fn" href="#_ZNSt22__shared_mutex_pthread4lockEv" title='std::__shared_mutex_pthread::lock' data-ref="_ZNSt22__shared_mutex_pthread4lockEv" data-ref-filename="_ZNSt22__shared_mutex_pthread4lockEv">lock</a>(); }</td></tr>
+<tr><th id="416">416</th><td>    <em>bool</em> <dfn class="decl def fn" id="_ZNSt12shared_mutex8try_lockEv" title='std::shared_mutex::try_lock' data-ref="_ZNSt12shared_mutex8try_lockEv" data-ref-filename="_ZNSt12shared_mutex8try_lockEv">try_lock</dfn>() { <b>return</b> <a class="member field" href="#std::shared_mutex::_M_impl" title='std::shared_mutex::_M_impl' data-ref="std::shared_mutex::_M_impl" data-ref-filename="std..shared_mutex.._M_impl">_M_impl</a>.<a class="ref fn" href="#_ZNSt22__shared_mutex_pthread8try_lockEv" title='std::__shared_mutex_pthread::try_lock' data-ref="_ZNSt22__shared_mutex_pthread8try_lockEv" data-ref-filename="_ZNSt22__shared_mutex_pthread8try_lockEv">try_lock</a>(); }</td></tr>
+<tr><th id="417">417</th><td>    <em>void</em> <dfn class="decl def fn" id="_ZNSt12shared_mutex6unlockEv" title='std::shared_mutex::unlock' data-ref="_ZNSt12shared_mutex6unlockEv" data-ref-filename="_ZNSt12shared_mutex6unlockEv">unlock</dfn>() { <a class="member field" href="#std::shared_mutex::_M_impl" title='std::shared_mutex::_M_impl' data-ref="std::shared_mutex::_M_impl" data-ref-filename="std..shared_mutex.._M_impl">_M_impl</a>.<a class="ref fn" href="#_ZNSt22__shared_mutex_pthread6unlockEv" title='std::__shared_mutex_pthread::unlock' data-ref="_ZNSt22__shared_mutex_pthread6unlockEv" data-ref-filename="_ZNSt22__shared_mutex_pthread6unlockEv">unlock</a>(); }</td></tr>
 <tr><th id="418">418</th><td></td></tr>
 <tr><th id="419">419</th><td>    <i>// Shared ownership</i></td></tr>
 <tr><th id="420">420</th><td></td></tr>
-<tr><th id="421">421</th><td>    <em>void</em> lock_shared() { _M_impl.lock_shared(); }</td></tr>
-<tr><th id="422">422</th><td>    <em>bool</em> try_lock_shared() { <b>return</b> _M_impl.try_lock_shared(); }</td></tr>
-<tr><th id="423">423</th><td>    <em>void</em> unlock_shared() { _M_impl.unlock_shared(); }</td></tr>
+<tr><th id="421">421</th><td>    <em>void</em> <dfn class="decl def fn" id="_ZNSt12shared_mutex11lock_sharedEv" title='std::shared_mutex::lock_shared' data-ref="_ZNSt12shared_mutex11lock_sharedEv" data-ref-filename="_ZNSt12shared_mutex11lock_sharedEv">lock_shared</dfn>() { <a class="member field" href="#std::shared_mutex::_M_impl" title='std::shared_mutex::_M_impl' data-ref="std::shared_mutex::_M_impl" data-ref-filename="std..shared_mutex.._M_impl">_M_impl</a>.<a class="ref fn" href="#_ZNSt22__shared_mutex_pthread11lock_sharedEv" title='std::__shared_mutex_pthread::lock_shared' data-ref="_ZNSt22__shared_mutex_pthread11lock_sharedEv" data-ref-filename="_ZNSt22__shared_mutex_pthread11lock_sharedEv">lock_shared</a>(); }</td></tr>
+<tr><th id="422">422</th><td>    <em>bool</em> <dfn class="decl def fn" id="_ZNSt12shared_mutex15try_lock_sharedEv" title='std::shared_mutex::try_lock_shared' data-ref="_ZNSt12shared_mutex15try_lock_sharedEv" data-ref-filename="_ZNSt12shared_mutex15try_lock_sharedEv">try_lock_shared</dfn>() { <b>return</b> <a class="member field" href="#std::shared_mutex::_M_impl" title='std::shared_mutex::_M_impl' data-ref="std::shared_mutex::_M_impl" data-ref-filename="std..shared_mutex.._M_impl">_M_impl</a>.<a class="ref fn" href="#_ZNSt22__shared_mutex_pthread15try_lock_sharedEv" title='std::__shared_mutex_pthread::try_lock_shared' data-ref="_ZNSt22__shared_mutex_pthread15try_lock_sharedEv" data-ref-filename="_ZNSt22__shared_mutex_pthread15try_lock_sharedEv">try_lock_shared</a>(); }</td></tr>
+<tr><th id="423">423</th><td>    <em>void</em> <dfn class="decl def fn" id="_ZNSt12shared_mutex13unlock_sharedEv" title='std::shared_mutex::unlock_shared' data-ref="_ZNSt12shared_mutex13unlock_sharedEv" data-ref-filename="_ZNSt12shared_mutex13unlock_sharedEv">unlock_shared</dfn>() { <a class="member field" href="#std::shared_mutex::_M_impl" title='std::shared_mutex::_M_impl' data-ref="std::shared_mutex::_M_impl" data-ref-filename="std..shared_mutex.._M_impl">_M_impl</a>.<a class="ref fn" href="#_ZNSt22__shared_mutex_pthread13unlock_sharedEv" title='std::__shared_mutex_pthread::unlock_shared' data-ref="_ZNSt22__shared_mutex_pthread13unlock_sharedEv" data-ref-filename="_ZNSt22__shared_mutex_pthread13unlock_sharedEv">unlock_shared</a>(); }</td></tr>
 <tr><th id="424">424</th><td></td></tr>
-<tr><th id="425">425</th><td><u>#if _GLIBCXX_USE_PTHREAD_RWLOCK_T</u></td></tr>
-<tr><th id="426">426</th><td>    <b>typedef</b> <em>void</em>* native_handle_type;</td></tr>
-<tr><th id="427">427</th><td>    native_handle_type native_handle() { <b>return</b> _M_impl.native_handle(); }</td></tr>
+<tr><th id="425">425</th><td><u>#<span data-ppcond="425">if</span> <a class="macro" href="../../x86_64-linux-gnu/c++/10/bits/c++config.h.html#1652" title="1" data-ref="_M/_GLIBCXX_USE_PTHREAD_RWLOCK_T">_GLIBCXX_USE_PTHREAD_RWLOCK_T</a></u></td></tr>
+<tr><th id="426">426</th><td>    <b>typedef</b> <em>void</em>* <dfn class="typedef" id="std::shared_mutex::native_handle_type" title='std::shared_mutex::native_handle_type' data-type='void *' data-ref="std::shared_mutex::native_handle_type" data-ref-filename="std..shared_mutex..native_handle_type">native_handle_type</dfn>;</td></tr>
+<tr><th id="427">427</th><td>    <a class="typedef" href="#std::shared_mutex::native_handle_type" title='std::shared_mutex::native_handle_type' data-type='void *' data-ref="std::shared_mutex::native_handle_type" data-ref-filename="std..shared_mutex..native_handle_type">native_handle_type</a> <dfn class="decl def fn" id="_ZNSt12shared_mutex13native_handleEv" title='std::shared_mutex::native_handle' data-ref="_ZNSt12shared_mutex13native_handleEv" data-ref-filename="_ZNSt12shared_mutex13native_handleEv">native_handle</dfn>() { <b>return</b> <a class="member field" href="#std::shared_mutex::_M_impl" title='std::shared_mutex::_M_impl' data-ref="std::shared_mutex::_M_impl" data-ref-filename="std..shared_mutex.._M_impl">_M_impl</a>.<a class="ref fn" href="#_ZNSt22__shared_mutex_pthread13native_handleEv" title='std::__shared_mutex_pthread::native_handle' data-ref="_ZNSt22__shared_mutex_pthread13native_handleEv" data-ref-filename="_ZNSt22__shared_mutex_pthread13native_handleEv">native_handle</a>(); }</td></tr>
 <tr><th id="428">428</th><td></td></tr>
 <tr><th id="429">429</th><td>  <b>private</b>:</td></tr>
-<tr><th id="430">430</th><td>    __shared_mutex_pthread _M_impl;</td></tr>
-<tr><th id="431">431</th><td><u>#else</u></td></tr>
+<tr><th id="430">430</th><td>    <a class="type" href="#std::__shared_mutex_pthread" title='std::__shared_mutex_pthread' data-ref="std::__shared_mutex_pthread" data-ref-filename="std..__shared_mutex_pthread">__shared_mutex_pthread</a> <dfn class="decl field" id="std::shared_mutex::_M_impl" title='std::shared_mutex::_M_impl' data-ref="std::shared_mutex::_M_impl" data-ref-filename="std..shared_mutex.._M_impl">_M_impl</dfn>;</td></tr>
+<tr><th id="431">431</th><td><u>#<span data-ppcond="425">else</span></u></td></tr>
 <tr><th id="432">432</th><td>  <b>private</b>:</td></tr>
 <tr><th id="433">433</th><td>    __shared_mutex_cv _M_impl;</td></tr>
-<tr><th id="434">434</th><td><u>#endif</u></td></tr>
+<tr><th id="434">434</th><td><u>#<span data-ppcond="425">endif</span></u></td></tr>
 <tr><th id="435">435</th><td>  };</td></tr>
 <tr><th id="436">436</th><td><u>#<span data-ppcond="402">endif</span> // C++17</u></td></tr>
 <tr><th id="437">437</th><td></td></tr>
@@ -568,7 +568,7 @@
 <tr><th id="554">554</th><td>      <em>bool</em></td></tr>
 <tr><th id="555">555</th><td>      <dfn class="decl def fn" id="_ZNSt18shared_timed_mutex14try_lock_untilERKNSt6chrono10time_pointIT_T0_EE" title='std::shared_timed_mutex::try_lock_until' data-ref="_ZNSt18shared_timed_mutex14try_lock_untilERKNSt6chrono10time_pointIT_T0_EE" data-ref-filename="_ZNSt18shared_timed_mutex14try_lock_untilERKNSt6chrono10time_pointIT_T0_EE">try_lock_until</dfn>(<em>const</em> <span class="namespace">chrono::</span><a class="type" href="chrono.html#std::chrono::time_point" title='std::chrono::time_point' data-ref="std::chrono::time_point" data-ref-filename="std..chrono..time_point">time_point</a>&lt;_Clock, _Duration&gt;&amp; <dfn class="local col9 decl" id="29__atime" title='__atime' data-type='const chrono::time_point&lt;_Clock, _Duration&gt; &amp;' data-ref="29__atime" data-ref-filename="29__atime">__atime</dfn>)</td></tr>
 <tr><th id="556">556</th><td>      {</td></tr>
-<tr><th id="557">557</th><td><u>#<span data-ppcond="557">if</span> <span class="macro" title="201402L" data-ref="_M/__cplusplus">__cplusplus</span> &gt; 201703L</u></td></tr>
+<tr><th id="557">557</th><td><u>#<span data-ppcond="557">if</span> <span class="macro" title="201703L" data-ref="_M/__cplusplus">__cplusplus</span> &gt; 201703L</u></td></tr>
 <tr><th id="558">558</th><td>	<b>static_assert</b>(chrono::is_clock_v&lt;_Clock&gt;);</td></tr>
 <tr><th id="559">559</th><td><u>#<span data-ppcond="557">endif</span></u></td></tr>
 <tr><th id="560">560</th><td>	<i>// The user-supplied clock may not tick at the same rate as</i></td></tr>
@@ -656,7 +656,7 @@
 <tr><th id="642">642</th><td>      <dfn class="decl def fn" id="_ZNSt18shared_timed_mutex21try_lock_shared_untilERKNSt6chrono10time_pointIT_T0_EE" title='std::shared_timed_mutex::try_lock_shared_until' data-ref="_ZNSt18shared_timed_mutex21try_lock_shared_untilERKNSt6chrono10time_pointIT_T0_EE" data-ref-filename="_ZNSt18shared_timed_mutex21try_lock_shared_untilERKNSt6chrono10time_pointIT_T0_EE">try_lock_shared_until</dfn>(<em>const</em> <span class="namespace">chrono::</span><a class="type" href="chrono.html#std::chrono::time_point" title='std::chrono::time_point' data-ref="std::chrono::time_point" data-ref-filename="std..chrono..time_point">time_point</a>&lt;_Clock,</td></tr>
 <tr><th id="643">643</th><td>						     _Duration&gt;&amp; <dfn class="local col2 decl" id="42__atime" title='__atime' data-type='const chrono::time_point&lt;_Clock, _Duration&gt; &amp;' data-ref="42__atime" data-ref-filename="42__atime">__atime</dfn>)</td></tr>
 <tr><th id="644">644</th><td>      {</td></tr>
-<tr><th id="645">645</th><td><u>#<span data-ppcond="645">if</span> <span class="macro" title="201402L" data-ref="_M/__cplusplus">__cplusplus</span> &gt; 201703L</u></td></tr>
+<tr><th id="645">645</th><td><u>#<span data-ppcond="645">if</span> <span class="macro" title="201703L" data-ref="_M/__cplusplus">__cplusplus</span> &gt; 201703L</u></td></tr>
 <tr><th id="646">646</th><td>	<b>static_assert</b>(chrono::is_clock_v&lt;_Clock&gt;);</td></tr>
 <tr><th id="647">647</th><td><u>#<span data-ppcond="645">endif</span></u></td></tr>
 <tr><th id="648">648</th><td>	<i>// The user-supplied clock may not tick at the same rate as</i></td></tr>

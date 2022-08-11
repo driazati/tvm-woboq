@@ -13,7 +13,7 @@
 <use f='include/c++/10/bits/stl_stack.h' l='226' u='c' c='_ZNKSt5stack3topEv'/>
 <use f='include/c++/10/bits/stl_stack.h' l='240' u='c' c='_ZNSt5stack4pushERKNT0_10value_typeE'/>
 <use f='include/c++/10/bits/stl_stack.h' l='245' u='c' c='_ZNSt5stack4pushEONT0_10value_typeE'/>
-<use f='include/c++/10/bits/stl_stack.h' l='256' u='c' c='_ZNSt5stack7emplaceEDpOTL0__'/>
+<use f='include/c++/10/bits/stl_stack.h' l='251' u='c' c='_ZNSt5stack7emplaceEDpOTL0__'/>
 <use f='include/c++/10/bits/stl_stack.h' l='275' u='c' c='_ZNSt5stack3popEv'/>
 <use f='include/c++/10/bits/stl_stack.h' l='288' c='_ZNSt5stack4swapERSt5stackIT_T0_E'/>
 <doc f='include/c++/10/bits/stl_stack.h' l='147'>//  See queue::c for notes on this name.</doc>

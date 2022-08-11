@@ -15,7 +15,7 @@
 <use f='include/c++/10/bits/stl_queue.h' l='252' u='c' c='_ZNKSt5queue4backEv'/>
 <use f='include/c++/10/bits/stl_queue.h' l='266' u='c' c='_ZNSt5queue4pushERKNT0_10value_typeE'/>
 <use f='include/c++/10/bits/stl_queue.h' l='271' u='c' c='_ZNSt5queue4pushEONT0_10value_typeE'/>
-<use f='include/c++/10/bits/stl_queue.h' l='282' u='c' c='_ZNSt5queue7emplaceEDpOTL0__'/>
+<use f='include/c++/10/bits/stl_queue.h' l='277' u='c' c='_ZNSt5queue7emplaceEDpOTL0__'/>
 <use f='include/c++/10/bits/stl_queue.h' l='301' u='c' c='_ZNSt5queue3popEv'/>
 <use f='include/c++/10/bits/stl_queue.h' l='314' c='_ZNSt5queue4swapERSt5queueIT_T0_E'/>
 <doc f='include/c++/10/bits/stl_queue.h' l='145'>/*  Maintainers wondering why this isn&apos;t uglified as per style

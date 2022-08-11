@@ -270,12 +270,12 @@
 <tr><th id="257">257</th><td></td></tr>
 <tr><th id="258">258</th><td><u>#<span data-ppcond="258">ifdef</span> <span class="macro" data-ref="_M/__cplusplus">__cplusplus</span></u></td></tr>
 <tr><th id="259">259</th><td><i>/* This is to enable compatibility for ISO C++17.  */</i></td></tr>
-<tr><th id="260">260</th><td><u># <span data-ppcond="260">if</span> <span class="macro" title="201402L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201703L</u></td></tr>
-<tr><th id="261">261</th><td><u>#  define __USE_ISOC11	1</u></td></tr>
+<tr><th id="260">260</th><td><u># <span data-ppcond="260">if</span> <span class="macro" title="201703L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201703L</u></td></tr>
+<tr><th id="261">261</th><td><u>#  define <dfn class="macro" id="_M/__USE_ISOC11" data-ref="_M/__USE_ISOC11">__USE_ISOC11</dfn>	1</u></td></tr>
 <tr><th id="262">262</th><td><u># <span data-ppcond="260">endif</span></u></td></tr>
 <tr><th id="263">263</th><td><i>/* This is to enable compatibility for ISO C++11.</i></td></tr>
 <tr><th id="264">264</th><td><i>   Check the temporary macro for now, too.  */</i></td></tr>
-<tr><th id="265">265</th><td><u># <span data-ppcond="265">if</span> <span class="macro" title="201402L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201103L || defined <span class="macro" data-ref="_M/__GXX_EXPERIMENTAL_CXX0X__">__GXX_EXPERIMENTAL_CXX0X__</span></u></td></tr>
+<tr><th id="265">265</th><td><u># <span data-ppcond="265">if</span> <span class="macro" title="201703L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201103L || defined <span class="macro" data-ref="_M/__GXX_EXPERIMENTAL_CXX0X__">__GXX_EXPERIMENTAL_CXX0X__</span></u></td></tr>
 <tr><th id="266">266</th><td><u>#  define <dfn class="macro" id="_M/__USE_ISOCXX11" data-ref="_M/__USE_ISOCXX11">__USE_ISOCXX11</dfn>	1</u></td></tr>
 <tr><th id="267">267</th><td><u>#  define <dfn class="macro" id="_M/__USE_ISOC99" data-ref="_M/__USE_ISOC99">__USE_ISOC99</dfn>	1</u></td></tr>
 <tr><th id="268">268</th><td><u># <span data-ppcond="265">endif</span></u></td></tr>
@@ -420,7 +420,7 @@
 <tr><th id="407">407</th><td><i>   safely.  It has been removed from ISO C11 and ISO C++14.  Note: for</i></td></tr>
 <tr><th id="408">408</th><td><i>   compatibility with various implementations of &lt;cstdio&gt;, this test</i></td></tr>
 <tr><th id="409">409</th><td><i>   must consider only the value of __cplusplus when compiling C++.  */</i></td></tr>
-<tr><th id="410">410</th><td><u>#<span data-ppcond="410">if</span> defined <span class="macro" data-ref="_M/__cplusplus">__cplusplus</span> ? <span class="macro" title="201402L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201402L : defined <a class="macro" href="#241" data-ref="_M/__USE_ISOC11">__USE_ISOC11</a></u></td></tr>
+<tr><th id="410">410</th><td><u>#<span data-ppcond="410">if</span> defined <span class="macro" data-ref="_M/__cplusplus">__cplusplus</span> ? <span class="macro" title="201703L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201402L : defined <a class="macro" href="#261" data-ref="_M/__USE_ISOC11">__USE_ISOC11</a></u></td></tr>
 <tr><th id="411">411</th><td><u># define <dfn class="macro" id="_M/__GLIBC_USE_DEPRECATED_GETS" data-ref="_M/__GLIBC_USE_DEPRECATED_GETS">__GLIBC_USE_DEPRECATED_GETS</dfn> 0</u></td></tr>
 <tr><th id="412">412</th><td><u>#<span data-ppcond="410">else</span></u></td></tr>
 <tr><th id="413">413</th><td><u># define __GLIBC_USE_DEPRECATED_GETS 1</u></td></tr>
@@ -440,7 +440,7 @@
 <tr><th id="427">427</th><td><i>   old extension.  */</i></td></tr>
 <tr><th id="428">428</th><td><u>#<span data-ppcond="428">if</span> (defined <a class="macro" href="#392" data-ref="_M/__USE_GNU">__USE_GNU</a>							\</u></td></tr>
 <tr><th id="429">429</th><td><u>     &amp;&amp; (defined <span class="macro" data-ref="_M/__cplusplus">__cplusplus</span>						\</u></td></tr>
-<tr><th id="430">430</th><td><u>	 ? (<span class="macro" title="201402L" data-ref="_M/__cplusplus">__cplusplus</span> &lt; 201103L &amp;&amp; !defined <span class="macro" data-ref="_M/__GXX_EXPERIMENTAL_CXX0X__">__GXX_EXPERIMENTAL_CXX0X__</span>) \</u></td></tr>
+<tr><th id="430">430</th><td><u>	 ? (<span class="macro" title="201703L" data-ref="_M/__cplusplus">__cplusplus</span> &lt; 201103L &amp;&amp; !defined <span class="macro" data-ref="_M/__GXX_EXPERIMENTAL_CXX0X__">__GXX_EXPERIMENTAL_CXX0X__</span>) \</u></td></tr>
 <tr><th id="431">431</th><td><u>	 : (!defined <span class="macro" data-ref="_M/__STDC_VERSION__">__STDC_VERSION__</span> || __STDC_VERSION__ &lt; 199901L)))</u></td></tr>
 <tr><th id="432">432</th><td><u># define __GLIBC_USE_DEPRECATED_SCANF 1</u></td></tr>
 <tr><th id="433">433</th><td><u>#<span data-ppcond="428">else</span></u></td></tr>

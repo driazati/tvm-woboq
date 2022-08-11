@@ -97,7 +97,7 @@
 <tr><th id="84">84</th><td><u># define <dfn class="macro" id="_M/_GLIBCXX_USE_DEPRECATED" data-ref="_M/_GLIBCXX_USE_DEPRECATED">_GLIBCXX_USE_DEPRECATED</dfn> 1</u></td></tr>
 <tr><th id="85">85</th><td><u>#<span data-ppcond="83">endif</span></u></td></tr>
 <tr><th id="86">86</th><td></td></tr>
-<tr><th id="87">87</th><td><u>#<span data-ppcond="87">if</span> defined(<span class="macro" data-ref="_M/__DEPRECATED">__DEPRECATED</span>) &amp;&amp; (<span class="macro" title="201402L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201103L)</u></td></tr>
+<tr><th id="87">87</th><td><u>#<span data-ppcond="87">if</span> defined(<span class="macro" data-ref="_M/__DEPRECATED">__DEPRECATED</span>) &amp;&amp; (<span class="macro" title="201703L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201103L)</u></td></tr>
 <tr><th id="88">88</th><td><u># define <dfn class="macro" id="_M/_GLIBCXX_DEPRECATED" data-ref="_M/_GLIBCXX_DEPRECATED">_GLIBCXX_DEPRECATED</dfn> __attribute__ ((__deprecated__))</u></td></tr>
 <tr><th id="89">89</th><td><u># define <dfn class="macro" id="_M/_GLIBCXX_DEPRECATED_SUGGEST" data-ref="_M/_GLIBCXX_DEPRECATED_SUGGEST">_GLIBCXX_DEPRECATED_SUGGEST</dfn>(ALT) \</u></td></tr>
 <tr><th id="90">90</th><td><u>  __attribute__ ((__deprecated__ ("use '" ALT "' instead")))</u></td></tr>
@@ -106,13 +106,13 @@
 <tr><th id="93">93</th><td><u># define _GLIBCXX_DEPRECATED_SUGGEST(ALT)</u></td></tr>
 <tr><th id="94">94</th><td><u>#<span data-ppcond="87">endif</span></u></td></tr>
 <tr><th id="95">95</th><td></td></tr>
-<tr><th id="96">96</th><td><u>#<span data-ppcond="96">if</span> defined(<span class="macro" data-ref="_M/__DEPRECATED">__DEPRECATED</span>) &amp;&amp; (<span class="macro" title="201402L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201703L)</u></td></tr>
-<tr><th id="97">97</th><td><u># define _GLIBCXX17_DEPRECATED [[__deprecated__]]</u></td></tr>
+<tr><th id="96">96</th><td><u>#<span data-ppcond="96">if</span> defined(<span class="macro" data-ref="_M/__DEPRECATED">__DEPRECATED</span>) &amp;&amp; (<span class="macro" title="201703L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201703L)</u></td></tr>
+<tr><th id="97">97</th><td><u># define <dfn class="macro" id="_M/_GLIBCXX17_DEPRECATED" data-ref="_M/_GLIBCXX17_DEPRECATED">_GLIBCXX17_DEPRECATED</dfn> [[__deprecated__]]</u></td></tr>
 <tr><th id="98">98</th><td><u>#<span data-ppcond="96">else</span></u></td></tr>
-<tr><th id="99">99</th><td><u># define <dfn class="macro" id="_M/_GLIBCXX17_DEPRECATED" data-ref="_M/_GLIBCXX17_DEPRECATED">_GLIBCXX17_DEPRECATED</dfn></u></td></tr>
+<tr><th id="99">99</th><td><u># define _GLIBCXX17_DEPRECATED</u></td></tr>
 <tr><th id="100">100</th><td><u>#<span data-ppcond="96">endif</span></u></td></tr>
 <tr><th id="101">101</th><td></td></tr>
-<tr><th id="102">102</th><td><u>#<span data-ppcond="102">if</span> defined(<span class="macro" data-ref="_M/__DEPRECATED">__DEPRECATED</span>) &amp;&amp; (<span class="macro" title="201402L" data-ref="_M/__cplusplus">__cplusplus</span> &gt; 201703L)</u></td></tr>
+<tr><th id="102">102</th><td><u>#<span data-ppcond="102">if</span> defined(<span class="macro" data-ref="_M/__DEPRECATED">__DEPRECATED</span>) &amp;&amp; (<span class="macro" title="201703L" data-ref="_M/__cplusplus">__cplusplus</span> &gt; 201703L)</u></td></tr>
 <tr><th id="103">103</th><td><u># define _GLIBCXX20_DEPRECATED(MSG) [[deprecated(MSG)]]</u></td></tr>
 <tr><th id="104">104</th><td><u>#<span data-ppcond="102">else</span></u></td></tr>
 <tr><th id="105">105</th><td><u># define <dfn class="macro" id="_M/_GLIBCXX20_DEPRECATED" data-ref="_M/_GLIBCXX20_DEPRECATED">_GLIBCXX20_DEPRECATED</dfn>(MSG)</u></td></tr>
@@ -124,19 +124,19 @@
 <tr><th id="111">111</th><td><u>#<span data-ppcond="109">endif</span></u></td></tr>
 <tr><th id="112">112</th><td></td></tr>
 <tr><th id="113">113</th><td><i>// Macro to warn about unused results.</i></td></tr>
-<tr><th id="114">114</th><td><u>#<span data-ppcond="114">if</span> <span class="macro" title="201402L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201703L</u></td></tr>
-<tr><th id="115">115</th><td><u># define _GLIBCXX_NODISCARD [[__nodiscard__]]</u></td></tr>
+<tr><th id="114">114</th><td><u>#<span data-ppcond="114">if</span> <span class="macro" title="201703L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201703L</u></td></tr>
+<tr><th id="115">115</th><td><u># define <dfn class="macro" id="_M/_GLIBCXX_NODISCARD" data-ref="_M/_GLIBCXX_NODISCARD">_GLIBCXX_NODISCARD</dfn> [[__nodiscard__]]</u></td></tr>
 <tr><th id="116">116</th><td><u>#<span data-ppcond="114">else</span></u></td></tr>
-<tr><th id="117">117</th><td><u># define <dfn class="macro" id="_M/_GLIBCXX_NODISCARD" data-ref="_M/_GLIBCXX_NODISCARD">_GLIBCXX_NODISCARD</dfn></u></td></tr>
+<tr><th id="117">117</th><td><u># define _GLIBCXX_NODISCARD</u></td></tr>
 <tr><th id="118">118</th><td><u>#<span data-ppcond="114">endif</span></u></td></tr>
 <tr><th id="119">119</th><td></td></tr>
 <tr><th id="120">120</th><td></td></tr>
 <tr><th id="121">121</th><td></td></tr>
-<tr><th id="122">122</th><td><u>#<span data-ppcond="122">if</span> <span class="macro" title="201402L" data-ref="_M/__cplusplus">__cplusplus</span></u></td></tr>
+<tr><th id="122">122</th><td><u>#<span data-ppcond="122">if</span> <span class="macro" title="201703L" data-ref="_M/__cplusplus">__cplusplus</span></u></td></tr>
 <tr><th id="123">123</th><td></td></tr>
 <tr><th id="124">124</th><td><i>// Macro for constexpr, to support in mixed 03/0x mode.</i></td></tr>
 <tr><th id="125">125</th><td><u>#<span data-ppcond="125">ifndef</span> <span class="macro" data-ref="_M/_GLIBCXX_CONSTEXPR">_GLIBCXX_CONSTEXPR</span></u></td></tr>
-<tr><th id="126">126</th><td><u># <span data-ppcond="126">if</span> <span class="macro" title="201402L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201103L</u></td></tr>
+<tr><th id="126">126</th><td><u># <span data-ppcond="126">if</span> <span class="macro" title="201703L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201103L</u></td></tr>
 <tr><th id="127">127</th><td><u>#  define <dfn class="macro" id="_M/_GLIBCXX_CONSTEXPR" data-ref="_M/_GLIBCXX_CONSTEXPR">_GLIBCXX_CONSTEXPR</dfn> constexpr</u></td></tr>
 <tr><th id="128">128</th><td><u>#  define <dfn class="macro" id="_M/_GLIBCXX_USE_CONSTEXPR" data-ref="_M/_GLIBCXX_USE_CONSTEXPR">_GLIBCXX_USE_CONSTEXPR</dfn> constexpr</u></td></tr>
 <tr><th id="129">129</th><td><u># <span data-ppcond="126">else</span></u></td></tr>
@@ -146,7 +146,7 @@
 <tr><th id="133">133</th><td><u>#<span data-ppcond="125">endif</span></u></td></tr>
 <tr><th id="134">134</th><td></td></tr>
 <tr><th id="135">135</th><td><u>#<span data-ppcond="135">ifndef</span> <span class="macro" data-ref="_M/_GLIBCXX14_CONSTEXPR">_GLIBCXX14_CONSTEXPR</span></u></td></tr>
-<tr><th id="136">136</th><td><u># <span data-ppcond="136">if</span> <span class="macro" title="201402L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201402L</u></td></tr>
+<tr><th id="136">136</th><td><u># <span data-ppcond="136">if</span> <span class="macro" title="201703L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201402L</u></td></tr>
 <tr><th id="137">137</th><td><u>#  define <dfn class="macro" id="_M/_GLIBCXX14_CONSTEXPR" data-ref="_M/_GLIBCXX14_CONSTEXPR">_GLIBCXX14_CONSTEXPR</dfn> constexpr</u></td></tr>
 <tr><th id="138">138</th><td><u># <span data-ppcond="136">else</span></u></td></tr>
 <tr><th id="139">139</th><td><u>#  define _GLIBCXX14_CONSTEXPR</u></td></tr>
@@ -154,15 +154,15 @@
 <tr><th id="141">141</th><td><u>#<span data-ppcond="135">endif</span></u></td></tr>
 <tr><th id="142">142</th><td></td></tr>
 <tr><th id="143">143</th><td><u>#<span data-ppcond="143">ifndef</span> <span class="macro" data-ref="_M/_GLIBCXX17_CONSTEXPR">_GLIBCXX17_CONSTEXPR</span></u></td></tr>
-<tr><th id="144">144</th><td><u># <span data-ppcond="144">if</span> <span class="macro" title="201402L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201703L</u></td></tr>
-<tr><th id="145">145</th><td><u>#  define _GLIBCXX17_CONSTEXPR constexpr</u></td></tr>
+<tr><th id="144">144</th><td><u># <span data-ppcond="144">if</span> <span class="macro" title="201703L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201703L</u></td></tr>
+<tr><th id="145">145</th><td><u>#  define <dfn class="macro" id="_M/_GLIBCXX17_CONSTEXPR" data-ref="_M/_GLIBCXX17_CONSTEXPR">_GLIBCXX17_CONSTEXPR</dfn> constexpr</u></td></tr>
 <tr><th id="146">146</th><td><u># <span data-ppcond="144">else</span></u></td></tr>
-<tr><th id="147">147</th><td><u>#  define <dfn class="macro" id="_M/_GLIBCXX17_CONSTEXPR" data-ref="_M/_GLIBCXX17_CONSTEXPR">_GLIBCXX17_CONSTEXPR</dfn></u></td></tr>
+<tr><th id="147">147</th><td><u>#  define _GLIBCXX17_CONSTEXPR</u></td></tr>
 <tr><th id="148">148</th><td><u># <span data-ppcond="144">endif</span></u></td></tr>
 <tr><th id="149">149</th><td><u>#<span data-ppcond="143">endif</span></u></td></tr>
 <tr><th id="150">150</th><td></td></tr>
 <tr><th id="151">151</th><td><u>#<span data-ppcond="151">ifndef</span> <span class="macro" data-ref="_M/_GLIBCXX20_CONSTEXPR">_GLIBCXX20_CONSTEXPR</span></u></td></tr>
-<tr><th id="152">152</th><td><u># <span data-ppcond="152">if</span> <span class="macro" title="201402L" data-ref="_M/__cplusplus">__cplusplus</span> &gt; 201703L</u></td></tr>
+<tr><th id="152">152</th><td><u># <span data-ppcond="152">if</span> <span class="macro" title="201703L" data-ref="_M/__cplusplus">__cplusplus</span> &gt; 201703L</u></td></tr>
 <tr><th id="153">153</th><td><u>#  define _GLIBCXX20_CONSTEXPR constexpr</u></td></tr>
 <tr><th id="154">154</th><td><u># <span data-ppcond="152">else</span></u></td></tr>
 <tr><th id="155">155</th><td><u>#  define <dfn class="macro" id="_M/_GLIBCXX20_CONSTEXPR" data-ref="_M/_GLIBCXX20_CONSTEXPR">_GLIBCXX20_CONSTEXPR</dfn></u></td></tr>
@@ -170,16 +170,16 @@
 <tr><th id="157">157</th><td><u>#<span data-ppcond="151">endif</span></u></td></tr>
 <tr><th id="158">158</th><td></td></tr>
 <tr><th id="159">159</th><td><u>#<span data-ppcond="159">ifndef</span> <span class="macro" data-ref="_M/_GLIBCXX17_INLINE">_GLIBCXX17_INLINE</span></u></td></tr>
-<tr><th id="160">160</th><td><u># <span data-ppcond="160">if</span> <span class="macro" title="201402L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201703L</u></td></tr>
-<tr><th id="161">161</th><td><u>#  define _GLIBCXX17_INLINE inline</u></td></tr>
+<tr><th id="160">160</th><td><u># <span data-ppcond="160">if</span> <span class="macro" title="201703L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201703L</u></td></tr>
+<tr><th id="161">161</th><td><u>#  define <dfn class="macro" id="_M/_GLIBCXX17_INLINE" data-ref="_M/_GLIBCXX17_INLINE">_GLIBCXX17_INLINE</dfn> inline</u></td></tr>
 <tr><th id="162">162</th><td><u># <span data-ppcond="160">else</span></u></td></tr>
-<tr><th id="163">163</th><td><u>#  define <dfn class="macro" id="_M/_GLIBCXX17_INLINE" data-ref="_M/_GLIBCXX17_INLINE">_GLIBCXX17_INLINE</dfn></u></td></tr>
+<tr><th id="163">163</th><td><u>#  define _GLIBCXX17_INLINE</u></td></tr>
 <tr><th id="164">164</th><td><u># <span data-ppcond="160">endif</span></u></td></tr>
 <tr><th id="165">165</th><td><u>#<span data-ppcond="159">endif</span></u></td></tr>
 <tr><th id="166">166</th><td></td></tr>
 <tr><th id="167">167</th><td><i>// Macro for noexcept, to support in mixed 03/0x mode.</i></td></tr>
 <tr><th id="168">168</th><td><u>#<span data-ppcond="168">ifndef</span> <span class="macro" data-ref="_M/_GLIBCXX_NOEXCEPT">_GLIBCXX_NOEXCEPT</span></u></td></tr>
-<tr><th id="169">169</th><td><u># <span data-ppcond="169">if</span> <span class="macro" title="201402L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201103L</u></td></tr>
+<tr><th id="169">169</th><td><u># <span data-ppcond="169">if</span> <span class="macro" title="201703L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201103L</u></td></tr>
 <tr><th id="170">170</th><td><u>#  define <dfn class="macro" id="_M/_GLIBCXX_NOEXCEPT" data-ref="_M/_GLIBCXX_NOEXCEPT">_GLIBCXX_NOEXCEPT</dfn> noexcept</u></td></tr>
 <tr><th id="171">171</th><td><u>#  define <dfn class="macro" id="_M/_GLIBCXX_NOEXCEPT_IF" data-ref="_M/_GLIBCXX_NOEXCEPT_IF">_GLIBCXX_NOEXCEPT_IF</dfn>(...) noexcept(__VA_ARGS__)</u></td></tr>
 <tr><th id="172">172</th><td><u>#  define <dfn class="macro" id="_M/_GLIBCXX_USE_NOEXCEPT" data-ref="_M/_GLIBCXX_USE_NOEXCEPT">_GLIBCXX_USE_NOEXCEPT</dfn> noexcept</u></td></tr>
@@ -204,12 +204,12 @@
 <tr><th id="191">191</th><td><u># <span data-ppcond="187">endif</span></u></td></tr>
 <tr><th id="192">192</th><td><u>#<span data-ppcond="186">endif</span></u></td></tr>
 <tr><th id="193">193</th><td></td></tr>
-<tr><th id="194">194</th><td><u>#<span data-ppcond="194">if</span> __cpp_noexcept_function_type</u></td></tr>
-<tr><th id="195">195</th><td><u>#define _GLIBCXX_NOEXCEPT_PARM , bool _NE</u></td></tr>
-<tr><th id="196">196</th><td><u>#define _GLIBCXX_NOEXCEPT_QUAL noexcept (_NE)</u></td></tr>
+<tr><th id="194">194</th><td><u>#<span data-ppcond="194">if</span> <span class="macro" title="201510L" data-ref="_M/__cpp_noexcept_function_type">__cpp_noexcept_function_type</span></u></td></tr>
+<tr><th id="195">195</th><td><u>#define <dfn class="macro" id="_M/_GLIBCXX_NOEXCEPT_PARM" data-ref="_M/_GLIBCXX_NOEXCEPT_PARM">_GLIBCXX_NOEXCEPT_PARM</dfn> , bool _NE</u></td></tr>
+<tr><th id="196">196</th><td><u>#define <dfn class="macro" id="_M/_GLIBCXX_NOEXCEPT_QUAL" data-ref="_M/_GLIBCXX_NOEXCEPT_QUAL">_GLIBCXX_NOEXCEPT_QUAL</dfn> noexcept (_NE)</u></td></tr>
 <tr><th id="197">197</th><td><u>#<span data-ppcond="194">else</span></u></td></tr>
-<tr><th id="198">198</th><td><u>#define <dfn class="macro" id="_M/_GLIBCXX_NOEXCEPT_PARM" data-ref="_M/_GLIBCXX_NOEXCEPT_PARM">_GLIBCXX_NOEXCEPT_PARM</dfn></u></td></tr>
-<tr><th id="199">199</th><td><u>#define <dfn class="macro" id="_M/_GLIBCXX_NOEXCEPT_QUAL" data-ref="_M/_GLIBCXX_NOEXCEPT_QUAL">_GLIBCXX_NOEXCEPT_QUAL</dfn></u></td></tr>
+<tr><th id="198">198</th><td><u>#define _GLIBCXX_NOEXCEPT_PARM</u></td></tr>
+<tr><th id="199">199</th><td><u>#define _GLIBCXX_NOEXCEPT_QUAL</u></td></tr>
 <tr><th id="200">200</th><td><u>#<span data-ppcond="194">endif</span></u></td></tr>
 <tr><th id="201">201</th><td></td></tr>
 <tr><th id="202">202</th><td><i>// Macro for extern template, ie controlling template linkage via use</i></td></tr>
@@ -277,7 +277,7 @@
 <tr><th id="264">264</th><td>  <b>typedef</b> <span class="macro" title="long unsigned int" data-ref="_M/__SIZE_TYPE__">__SIZE_TYPE__</span> 	<dfn class="typedef" id="std::size_t" title='std::size_t' data-type='unsigned long' data-ref="std::size_t" data-ref-filename="std..size_t">size_t</dfn>;</td></tr>
 <tr><th id="265">265</th><td>  <b>typedef</b> <span class="macro" title="long int" data-ref="_M/__PTRDIFF_TYPE__">__PTRDIFF_TYPE__</span>	<dfn class="typedef" id="std::ptrdiff_t" title='std::ptrdiff_t' data-type='long' data-ref="std::ptrdiff_t" data-ref-filename="std..ptrdiff_t">ptrdiff_t</dfn>;</td></tr>
 <tr><th id="266">266</th><td></td></tr>
-<tr><th id="267">267</th><td><u>#<span data-ppcond="267">if</span> <span class="macro" title="201402L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201103L</u></td></tr>
+<tr><th id="267">267</th><td><u>#<span data-ppcond="267">if</span> <span class="macro" title="201703L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201103L</u></td></tr>
 <tr><th id="268">268</th><td>  <b>typedef</b> <b>decltype</b>(<b>nullptr</b>)	<dfn class="typedef" id="std::nullptr_t" title='std::nullptr_t' data-type='decltype(nullptr)' data-ref="std::nullptr_t" data-ref-filename="std..nullptr_t">nullptr_t</dfn>;</td></tr>
 <tr><th id="269">269</th><td><u>#<span data-ppcond="267">endif</span></u></td></tr>
 <tr><th id="270">270</th><td>}</td></tr>
@@ -561,7 +561,7 @@
 <tr><th id="548">548</th><td><i>// Conditionally enable annotations for the Transactional Memory TS on C++11.</i></td></tr>
 <tr><th id="549">549</th><td><i>// Most of the following conditions are due to limitations in the current</i></td></tr>
 <tr><th id="550">550</th><td><i>// implementation.</i></td></tr>
-<tr><th id="551">551</th><td><u>#<span data-ppcond="551">if</span> <span class="macro" title="201402L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201103L &amp;&amp; <a class="macro" href="#280" title="1" data-ref="_M/_GLIBCXX_USE_CXX11_ABI">_GLIBCXX_USE_CXX11_ABI</a>			\</u></td></tr>
+<tr><th id="551">551</th><td><u>#<span data-ppcond="551">if</span> <span class="macro" title="201703L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201103L &amp;&amp; <a class="macro" href="#280" title="1" data-ref="_M/_GLIBCXX_USE_CXX11_ABI">_GLIBCXX_USE_CXX11_ABI</a>			\</u></td></tr>
 <tr><th id="552">552</th><td><u>  &amp;&amp; <a class="macro" href="#272" title="1" data-ref="_M/_GLIBCXX_USE_DUAL_ABI">_GLIBCXX_USE_DUAL_ABI</a> &amp;&amp; __cpp_transactional_memory &gt;= 201500L	\</u></td></tr>
 <tr><th id="553">553</th><td><u>  &amp;&amp;  !_GLIBCXX_FULLY_DYNAMIC_STRING &amp;&amp; <a class="macro" href="#545" title="1" data-ref="_M/_GLIBCXX_USE_WEAK_REF">_GLIBCXX_USE_WEAK_REF</a>		\</u></td></tr>
 <tr><th id="554">554</th><td><u>  &amp;&amp; <a class="macro" href="#511" title="1" data-ref="_M/_GLIBCXX_USE_ALLOCATOR_NEW">_GLIBCXX_USE_ALLOCATOR_NEW</a></u></td></tr>
@@ -572,10 +572,10 @@
 <tr><th id="559">559</th><td><u>#define <dfn class="macro" id="_M/_GLIBCXX_TXN_SAFE_DYN" data-ref="_M/_GLIBCXX_TXN_SAFE_DYN">_GLIBCXX_TXN_SAFE_DYN</dfn></u></td></tr>
 <tr><th id="560">560</th><td><u>#<span data-ppcond="551">endif</span></u></td></tr>
 <tr><th id="561">561</th><td></td></tr>
-<tr><th id="562">562</th><td><u>#<span data-ppcond="562">if</span> <span class="macro" title="201402L" data-ref="_M/__cplusplus">__cplusplus</span> &gt; 201402L</u></td></tr>
+<tr><th id="562">562</th><td><u>#<span data-ppcond="562">if</span> <span class="macro" title="201703L" data-ref="_M/__cplusplus">__cplusplus</span> &gt; 201402L</u></td></tr>
 <tr><th id="563">563</th><td><i>// In C++17 mathematical special functions are in namespace std.</i></td></tr>
-<tr><th id="564">564</th><td><u># define _GLIBCXX_USE_STD_SPEC_FUNCS 1</u></td></tr>
-<tr><th id="565">565</th><td><u>#<span data-ppcond="562">elif</span> <span class="macro" title="201402L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201103L &amp;&amp; __STDCPP_WANT_MATH_SPEC_FUNCS__ != 0</u></td></tr>
+<tr><th id="564">564</th><td><u># define <dfn class="macro" id="_M/_GLIBCXX_USE_STD_SPEC_FUNCS" data-ref="_M/_GLIBCXX_USE_STD_SPEC_FUNCS">_GLIBCXX_USE_STD_SPEC_FUNCS</dfn> 1</u></td></tr>
+<tr><th id="565">565</th><td><u>#<span data-ppcond="562">elif</span> __cplusplus &gt;= 201103L &amp;&amp; __STDCPP_WANT_MATH_SPEC_FUNCS__ != 0</u></td></tr>
 <tr><th id="566">566</th><td><i>// For C++11 and C++14 they are in namespace std when requested.</i></td></tr>
 <tr><th id="567">567</th><td><u># define _GLIBCXX_USE_STD_SPEC_FUNCS 1</u></td></tr>
 <tr><th id="568">568</th><td><u>#<span data-ppcond="562">endif</span></u></td></tr>
@@ -602,7 +602,7 @@
 <tr><th id="589">589</th><td></td></tr>
 <tr><th id="590">590</th><td><i>// N.B. these _GLIBCXX_USE_C99_XXX macros are defined unconditionally</i></td></tr>
 <tr><th id="591">591</th><td><i>// so they should be tested with #if not with #ifdef.</i></td></tr>
-<tr><th id="592">592</th><td><u>#<span data-ppcond="592">if</span> <span class="macro" title="201402L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201103L</u></td></tr>
+<tr><th id="592">592</th><td><u>#<span data-ppcond="592">if</span> <span class="macro" title="201703L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201103L</u></td></tr>
 <tr><th id="593">593</th><td><u># <span data-ppcond="593">ifndef</span> <span class="macro" data-ref="_M/_GLIBCXX_USE_C99_MATH">_GLIBCXX_USE_C99_MATH</span></u></td></tr>
 <tr><th id="594">594</th><td><u>#  define <dfn class="macro" id="_M/_GLIBCXX_USE_C99_MATH" data-ref="_M/_GLIBCXX_USE_C99_MATH">_GLIBCXX_USE_C99_MATH</dfn> _GLIBCXX11_USE_C99_MATH</u></td></tr>
 <tr><th id="595">595</th><td><u># <span data-ppcond="593">endif</span></u></td></tr>
@@ -682,28 +682,28 @@
 <tr><th id="669">669</th><td></td></tr>
 <tr><th id="670">670</th><td><i>// PSTL configuration</i></td></tr>
 <tr><th id="671">671</th><td></td></tr>
-<tr><th id="672">672</th><td><u>#<span data-ppcond="672">if</span> <span class="macro" title="201402L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201703L</u></td></tr>
+<tr><th id="672">672</th><td><u>#<span data-ppcond="672">if</span> <span class="macro" title="201703L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201703L</u></td></tr>
 <tr><th id="673">673</th><td><i>// This header is not installed for freestanding:</i></td></tr>
-<tr><th id="674">674</th><td><u>#if __has_include(&lt;pstl/pstl_config.h&gt;)</u></td></tr>
+<tr><th id="674">674</th><td><u>#<span data-ppcond="674">if</span> <span class="macro" title="" data-ref="_M/__has_include">__has_include</span>(&lt;pstl/pstl_config.h&gt;)</u></td></tr>
 <tr><th id="675">675</th><td><i>// Preserved here so we have some idea which version of upstream we've pulled in</i></td></tr>
 <tr><th id="676">676</th><td><i>// #define PSTL_VERSION 9000</i></td></tr>
 <tr><th id="677">677</th><td><i></i></td></tr>
 <tr><th id="678">678</th><td><i>// For now this defaults to being based on the presence of Thread Building Blocks</i></td></tr>
-<tr><th id="679">679</th><td><u># ifndef _GLIBCXX_USE_TBB_PAR_BACKEND</u></td></tr>
-<tr><th id="680">680</th><td><u>#  define _GLIBCXX_USE_TBB_PAR_BACKEND __has_include(&lt;tbb/tbb.h&gt;)</u></td></tr>
-<tr><th id="681">681</th><td><u># endif</u></td></tr>
+<tr><th id="679">679</th><td><u># <span data-ppcond="679">ifndef</span> <span class="macro" data-ref="_M/_GLIBCXX_USE_TBB_PAR_BACKEND">_GLIBCXX_USE_TBB_PAR_BACKEND</span></u></td></tr>
+<tr><th id="680">680</th><td><u>#  define <dfn class="macro" id="_M/_GLIBCXX_USE_TBB_PAR_BACKEND" data-ref="_M/_GLIBCXX_USE_TBB_PAR_BACKEND">_GLIBCXX_USE_TBB_PAR_BACKEND</dfn> __has_include(&lt;tbb/tbb.h&gt;)</u></td></tr>
+<tr><th id="681">681</th><td><u># <span data-ppcond="679">endif</span></u></td></tr>
 <tr><th id="682">682</th><td><i>// This section will need some rework when a new (default) backend type is added</i></td></tr>
-<tr><th id="683">683</th><td><u># if _GLIBCXX_USE_TBB_PAR_BACKEND</u></td></tr>
+<tr><th id="683">683</th><td><u># <span data-ppcond="683">if</span> <a class="macro" href="#680" title="0" data-ref="_M/_GLIBCXX_USE_TBB_PAR_BACKEND">_GLIBCXX_USE_TBB_PAR_BACKEND</a></u></td></tr>
 <tr><th id="684">684</th><td><u>#  define _PSTL_PAR_BACKEND_TBB</u></td></tr>
-<tr><th id="685">685</th><td><u># else</u></td></tr>
-<tr><th id="686">686</th><td><u>#  define _PSTL_PAR_BACKEND_SERIAL</u></td></tr>
-<tr><th id="687">687</th><td><u># endif</u></td></tr>
+<tr><th id="685">685</th><td><u># <span data-ppcond="683">else</span></u></td></tr>
+<tr><th id="686">686</th><td><u>#  define <dfn class="macro" id="_M/_PSTL_PAR_BACKEND_SERIAL" data-ref="_M/_PSTL_PAR_BACKEND_SERIAL">_PSTL_PAR_BACKEND_SERIAL</dfn></u></td></tr>
+<tr><th id="687">687</th><td><u># <span data-ppcond="683">endif</span></u></td></tr>
 <tr><th id="688">688</th><td></td></tr>
-<tr><th id="689">689</th><td><u># define _PSTL_ASSERT(_Condition) __glibcxx_assert(_Condition)</u></td></tr>
-<tr><th id="690">690</th><td><u># define _PSTL_ASSERT_MSG(_Condition, _Message) __glibcxx_assert(_Condition)</u></td></tr>
+<tr><th id="689">689</th><td><u># define <dfn class="macro" id="_M/_PSTL_ASSERT" data-ref="_M/_PSTL_ASSERT">_PSTL_ASSERT</dfn>(_Condition) __glibcxx_assert(_Condition)</u></td></tr>
+<tr><th id="690">690</th><td><u># define <dfn class="macro" id="_M/_PSTL_ASSERT_MSG" data-ref="_M/_PSTL_ASSERT_MSG">_PSTL_ASSERT_MSG</dfn>(_Condition, _Message) __glibcxx_assert(_Condition)</u></td></tr>
 <tr><th id="691">691</th><td></td></tr>
-<tr><th id="692">692</th><td><u>#include &lt;pstl/pstl_config.h&gt;</u></td></tr>
-<tr><th id="693">693</th><td><u>#endif // __has_include</u></td></tr>
+<tr><th id="692">692</th><td><u>#include <a href="../../../../c++/10/pstl/pstl_config.h.html">&lt;pstl/pstl_config.h&gt;</a></u></td></tr>
+<tr><th id="693">693</th><td><u>#<span data-ppcond="674">endif</span> // __has_include</u></td></tr>
 <tr><th id="694">694</th><td><u>#<span data-ppcond="672">endif</span> // C++17</u></td></tr>
 <tr><th id="695">695</th><td></td></tr>
 <tr><th id="696">696</th><td><i>// End of prewritten config; the settings discovered at configure time follow.</i></td></tr>
@@ -1718,12 +1718,12 @@
 <tr><th id="1705">1705</th><td><i>/* #undef _GLIBCXX_LARGE_FILES */</i></td></tr>
 <tr><th id="1706">1706</th><td></td></tr>
 <tr><th id="1707">1707</th><td><i>/* Define if all C++11 floating point overloads are available in &lt;math.h&gt;.  */</i></td></tr>
-<tr><th id="1708">1708</th><td><u>#<span data-ppcond="1708">if</span> <span class="macro" title="201402L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201103L</u></td></tr>
+<tr><th id="1708">1708</th><td><u>#<span data-ppcond="1708">if</span> <span class="macro" title="201703L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201103L</u></td></tr>
 <tr><th id="1709">1709</th><td><i>/* #undef __CORRECT_ISO_CPP11_MATH_H_PROTO_FP */</i></td></tr>
 <tr><th id="1710">1710</th><td><u>#<span data-ppcond="1708">endif</span></u></td></tr>
 <tr><th id="1711">1711</th><td></td></tr>
 <tr><th id="1712">1712</th><td><i>/* Define if all C++11 integral type overloads are available in &lt;math.h&gt;.  */</i></td></tr>
-<tr><th id="1713">1713</th><td><u>#<span data-ppcond="1713">if</span> <span class="macro" title="201402L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201103L</u></td></tr>
+<tr><th id="1713">1713</th><td><u>#<span data-ppcond="1713">if</span> <span class="macro" title="201703L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201103L</u></td></tr>
 <tr><th id="1714">1714</th><td><i>/* #undef __CORRECT_ISO_CPP11_MATH_H_PROTO_INT */</i></td></tr>
 <tr><th id="1715">1715</th><td><u>#<span data-ppcond="1713">endif</span></u></td></tr>
 <tr><th id="1716">1716</th><td></td></tr>

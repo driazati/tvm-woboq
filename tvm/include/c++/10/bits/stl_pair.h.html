@@ -72,10 +72,10 @@
 <tr><th id="58">58</th><td></td></tr>
 <tr><th id="59">59</th><td><u>#include <a href="move.h.html">&lt;bits/move.h&gt;</a> // for std::move / std::forward, and std::swap</u></td></tr>
 <tr><th id="60">60</th><td></td></tr>
-<tr><th id="61">61</th><td><u>#<span data-ppcond="61">if</span> <span class="macro" title="201402L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201103L</u></td></tr>
+<tr><th id="61">61</th><td><u>#<span data-ppcond="61">if</span> <span class="macro" title="201703L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201103L</u></td></tr>
 <tr><th id="62">62</th><td><u># include <a href="../type_traits.html">&lt;type_traits&gt;</a> // for std::__decay_and_strip, std::is_reference_v</u></td></tr>
 <tr><th id="63">63</th><td><u>#<span data-ppcond="61">endif</span></u></td></tr>
-<tr><th id="64">64</th><td><u>#<span data-ppcond="64">if</span> <span class="macro" title="201402L" data-ref="_M/__cplusplus">__cplusplus</span> &gt; 201703L</u></td></tr>
+<tr><th id="64">64</th><td><u>#<span data-ppcond="64">if</span> <span class="macro" title="201703L" data-ref="_M/__cplusplus">__cplusplus</span> &gt; 201703L</u></td></tr>
 <tr><th id="65">65</th><td><u># include &lt;compare&gt;</u></td></tr>
 <tr><th id="66">66</th><td><u># define __cpp_lib_constexpr_utility 201811L</u></td></tr>
 <tr><th id="67">67</th><td><u>#<span data-ppcond="64">endif</span></u></td></tr>
@@ -89,12 +89,12 @@
 <tr><th id="75">75</th><td><i class="doc">   *  @{</i></td></tr>
 <tr><th id="76">76</th><td><i class="doc">   */</i></td></tr>
 <tr><th id="77">77</th><td></td></tr>
-<tr><th id="78">78</th><td><u>#<span data-ppcond="78">if</span> <span class="macro" title="201402L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201103L</u></td></tr>
+<tr><th id="78">78</th><td><u>#<span data-ppcond="78">if</span> <span class="macro" title="201703L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201103L</u></td></tr>
 <tr><th id="79">79</th><td>  <i class="doc">/// Tag type for piecewise construction of std::pair objects.</i></td></tr>
 <tr><th id="80">80</th><td>  <b>struct</b> <dfn class="type def" id="std::piecewise_construct_t" title='std::piecewise_construct_t' data-ref="std::piecewise_construct_t" data-ref-filename="std..piecewise_construct_t">piecewise_construct_t</dfn> { <b>explicit</b> <dfn class="decl def fn" id="_ZNSt21piecewise_construct_tC1Ev" title='std::piecewise_construct_t::piecewise_construct_t' data-ref="_ZNSt21piecewise_construct_tC1Ev" data-ref-filename="_ZNSt21piecewise_construct_tC1Ev">piecewise_construct_t</dfn>() = <b>default</b>; };</td></tr>
 <tr><th id="81">81</th><td></td></tr>
 <tr><th id="82">82</th><td>  <i class="doc">/// Tag for piecewise construction of std::pair objects.</i></td></tr>
-<tr><th id="83">83</th><td>  <a class="macro" href="../../../x86_64-linux-gnu/c++/10/bits/c++config.h.html#163" title="" data-ref="_M/_GLIBCXX17_INLINE">_GLIBCXX17_INLINE</a> <b>constexpr</b> <a class="type" href="#std::piecewise_construct_t" title='std::piecewise_construct_t' data-ref="std::piecewise_construct_t" data-ref-filename="std..piecewise_construct_t">piecewise_construct_t</a> <dfn class="decl def" id="std::piecewise_construct" title='std::piecewise_construct' data-ref="std::piecewise_construct" data-ref-filename="std..piecewise_construct">piecewise_construct</dfn> =</td></tr>
+<tr><th id="83">83</th><td>  <a class="macro" href="../../../x86_64-linux-gnu/c++/10/bits/c++config.h.html#161" title="inline" data-ref="_M/_GLIBCXX17_INLINE">_GLIBCXX17_INLINE</a> <b>constexpr</b> <a class="type" href="#std::piecewise_construct_t" title='std::piecewise_construct_t' data-ref="std::piecewise_construct_t" data-ref-filename="std..piecewise_construct_t">piecewise_construct_t</a> <dfn class="decl def" id="std::piecewise_construct" title='std::piecewise_construct' data-ref="std::piecewise_construct" data-ref-filename="std..piecewise_construct">piecewise_construct</dfn> =</td></tr>
 <tr><th id="84">84</th><td>    <a class="type" href="#std::piecewise_construct_t" title='std::piecewise_construct_t' data-ref="std::piecewise_construct_t" data-ref-filename="std..piecewise_construct_t">piecewise_construct_t</a><a class="ref fn" href="#_ZNSt21piecewise_construct_tC1Ev" title='std::piecewise_construct_t::piecewise_construct_t' data-ref="_ZNSt21piecewise_construct_tC1Ev" data-ref-filename="_ZNSt21piecewise_construct_tC1Ev">(</a>);</td></tr>
 <tr><th id="85">85</th><td></td></tr>
 <tr><th id="86">86</th><td>  <i class="doc">/// <span class="command">@cond</span> <span class="verb">undocumented</span></i></td></tr>
@@ -202,7 +202,7 @@
 <tr><th id="188">188</th><td></td></tr>
 <tr><th id="189">189</th><td>  <b>template</b>&lt;<b>typename</b> _U1, <b>typename</b> _U2&gt; <b>class</b> <dfn class="type def" id="std::__pair_base" title='std::__pair_base' data-ref="std::__pair_base" data-ref-filename="std..__pair_base">__pair_base</dfn></td></tr>
 <tr><th id="190">190</th><td>  {</td></tr>
-<tr><th id="191">191</th><td><u>#<span data-ppcond="191">if</span> <span class="macro" title="201402L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201103L</u></td></tr>
+<tr><th id="191">191</th><td><u>#<span data-ppcond="191">if</span> <span class="macro" title="201703L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201103L</u></td></tr>
 <tr><th id="192">192</th><td>    <b>template</b>&lt;<b>typename</b> _T1, <b>typename</b> _T2&gt; <b>friend</b> <b>struct</b> <dfn class="type" id="std::pair" title='std::pair' data-ref="std::pair" data-ref-filename="std..pair">pair</dfn>;</td></tr>
 <tr><th id="193">193</th><td>    <dfn class="decl def fn" id="_ZNSt11__pair_baseC1Ev" title='std::__pair_base::__pair_base&lt;_U1, _U2&gt;' data-ref="_ZNSt11__pair_baseC1Ev" data-ref-filename="_ZNSt11__pair_baseC1Ev">__pair_base</dfn>() = <b>default</b>;</td></tr>
 <tr><th id="194">194</th><td>    <dfn class="decl def fn" id="_ZNSt11__pair_baseD1Ev" title='std::__pair_base::~__pair_base&lt;_U1, _U2&gt;' data-ref="_ZNSt11__pair_baseD1Ev" data-ref-filename="_ZNSt11__pair_baseD1Ev">~__pair_base</dfn>() = <b>default</b>;</td></tr>
@@ -235,7 +235,7 @@
 <tr><th id="221">221</th><td><i>      // 265.  std::pair::pair() effects overly restrictive</i></td></tr>
 <tr><th id="222">222</th><td>      <i class="doc">/** The default constructor creates<span class="command"> @c</span> <span class="arg">first</span> and<span class="command"> @c</span> <span class="arg">second</span> using their</i></td></tr>
 <tr><th id="223">223</th><td><i class="doc">       *  respective default constructors.  */</i></td></tr>
-<tr><th id="224">224</th><td><u>#<span data-ppcond="224">if</span> <span class="macro" title="201402L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201103L</u></td></tr>
+<tr><th id="224">224</th><td><u>#<span data-ppcond="224">if</span> <span class="macro" title="201703L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201103L</u></td></tr>
 <tr><th id="225">225</th><td>      <b>template</b> &lt;<b>typename</b> _U1 = _T1,</td></tr>
 <tr><th id="226">226</th><td>                <b>typename</b> _U2 = _T2,</td></tr>
 <tr><th id="227">227</th><td>                <b>typename</b> <a class="type" href="../type_traits.html#std::enable_if" title='std::enable_if' data-ref="std::enable_if" data-ref-filename="std..enable_if">enable_if</a>&lt;<a class="type" href="../type_traits.html#std::__and_" title='std::__and_' data-ref="std::__and_" data-ref-filename="std..__and_">__and_</a>&lt;</td></tr>
@@ -246,7 +246,7 @@
 <tr><th id="232">232</th><td>      <a class="macro" href="../../../x86_64-linux-gnu/c++/10/bits/c++config.h.html#127" title="constexpr" data-ref="_M/_GLIBCXX_CONSTEXPR">_GLIBCXX_CONSTEXPR</a> <dfn class="decl def fn" id="_ZNSt4pairC1Ev" title='std::pair::pair&lt;_T1, _T2&gt;' data-ref="_ZNSt4pairC1Ev" data-ref-filename="_ZNSt4pairC1Ev">pair</dfn>()</td></tr>
 <tr><th id="233">233</th><td>      : <a class="member field" href="#std::pair::first" title='std::pair::first' data-ref="std::pair::first" data-ref-filename="std..pair..first">first</a>(), <a class="member field" href="#std::pair::second" title='std::pair::second' data-ref="std::pair::second" data-ref-filename="std..pair..second">second</a>() { }</td></tr>
 <tr><th id="234">234</th><td></td></tr>
-<tr><th id="235">235</th><td><u>#<span data-ppcond="235">if</span> <span class="macro" title="201402L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201103L</u></td></tr>
+<tr><th id="235">235</th><td><u>#<span data-ppcond="235">if</span> <span class="macro" title="201703L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201103L</u></td></tr>
 <tr><th id="236">236</th><td>      <b>template</b> &lt;<b>typename</b> _U1 = _T1,</td></tr>
 <tr><th id="237">237</th><td>                <b>typename</b> _U2 = _T2,</td></tr>
 <tr><th id="238">238</th><td>                <b>typename</b> <a class="type" href="../type_traits.html#std::enable_if" title='std::enable_if' data-ref="std::enable_if" data-ref-filename="std..enable_if">enable_if</a>&lt;<a class="type" href="../type_traits.html#std::__and_" title='std::__and_' data-ref="std::__and_" data-ref-filename="std..__and_">__and_</a>&lt;</td></tr>
@@ -260,7 +260,7 @@
 <tr><th id="246">246</th><td>      : <a class="member field" href="#std::pair::first" title='std::pair::first' data-ref="std::pair::first" data-ref-filename="std..pair..first">first</a>(), <a class="member field" href="#std::pair::second" title='std::pair::second' data-ref="std::pair::second" data-ref-filename="std..pair..second">second</a>() { }</td></tr>
 <tr><th id="247">247</th><td><u>#<span data-ppcond="235">endif</span></u></td></tr>
 <tr><th id="248">248</th><td></td></tr>
-<tr><th id="249">249</th><td><u>#<span data-ppcond="249">if</span> <span class="macro" title="201402L" data-ref="_M/__cplusplus">__cplusplus</span> &lt; 201103L</u></td></tr>
+<tr><th id="249">249</th><td><u>#<span data-ppcond="249">if</span> <span class="macro" title="201703L" data-ref="_M/__cplusplus">__cplusplus</span> &lt; 201103L</u></td></tr>
 <tr><th id="250">250</th><td>      <i class="doc">/// Two objects may be passed to a<span class="command"> @c</span> <span class="arg">pair</span> constructor to be copied.</i></td></tr>
 <tr><th id="251">251</th><td>      pair(<em>const</em> _T1&amp; __a, <em>const</em> _T2&amp; __b)</td></tr>
 <tr><th id="252">252</th><td>      : first(__a), second(__b) { }</td></tr>
@@ -291,7 +291,7 @@
 <tr><th id="277">277</th><td>      : <a class="member field" href="#std::pair::first" title='std::pair::first' data-ref="std::pair::first" data-ref-filename="std..pair..first">first</a>(<a class="local col7 ref" href="#597__a" title='__a' data-ref="597__a" data-ref-filename="597__a">__a</a>), <a class="member field" href="#std::pair::second" title='std::pair::second' data-ref="std::pair::second" data-ref-filename="std..pair..second">second</a>(<a class="local col8 ref" href="#598__b" title='__b' data-ref="598__b" data-ref-filename="598__b">__b</a>) { }</td></tr>
 <tr><th id="278">278</th><td><u>#<span data-ppcond="249">endif</span></u></td></tr>
 <tr><th id="279">279</th><td></td></tr>
-<tr><th id="280">280</th><td><u>#<span data-ppcond="280">if</span> <span class="macro" title="201402L" data-ref="_M/__cplusplus">__cplusplus</span> &lt; 201103L</u></td></tr>
+<tr><th id="280">280</th><td><u>#<span data-ppcond="280">if</span> <span class="macro" title="201703L" data-ref="_M/__cplusplus">__cplusplus</span> &lt; 201103L</u></td></tr>
 <tr><th id="281">281</th><td>      <i class="doc">/// There is also a templated constructor to convert from other pairs.</i></td></tr>
 <tr><th id="282">282</th><td>      <b>template</b>&lt;<b>typename</b> _U1, <b>typename</b> _U2&gt;</td></tr>
 <tr><th id="283">283</th><td>	pair(<em>const</em> pair&lt;_U1, _U2&gt;&amp; __p)</td></tr>
@@ -324,7 +324,7 @@
 <tr><th id="310">310</th><td>	: <a class="member field" href="#std::pair::first" title='std::pair::first' data-ref="std::pair::first" data-ref-filename="std..pair..first">first</a>(<a class="local col0 ref" href="#600__p" title='__p' data-ref="600__p" data-ref-filename="600__p">__p</a>.first), <a class="member field" href="#std::pair::second" title='std::pair::second' data-ref="std::pair::second" data-ref-filename="std..pair..second">second</a>(<a class="local col0 ref" href="#600__p" title='__p' data-ref="600__p" data-ref-filename="600__p">__p</a>.second) { }</td></tr>
 <tr><th id="311">311</th><td><u>#<span data-ppcond="280">endif</span></u></td></tr>
 <tr><th id="312">312</th><td></td></tr>
-<tr><th id="313">313</th><td><u>#<span data-ppcond="313">if</span> <span class="macro" title="201402L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201103L</u></td></tr>
+<tr><th id="313">313</th><td><u>#<span data-ppcond="313">if</span> <span class="macro" title="201703L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201103L</u></td></tr>
 <tr><th id="314">314</th><td>      <b>constexpr</b> <dfn class="decl def fn" id="_ZNSt4pairC1ERKSt4pairIT_T0_E" title='std::pair::pair&lt;_T1, _T2&gt;' data-ref="_ZNSt4pairC1ERKSt4pairIT_T0_E" data-ref-filename="_ZNSt4pairC1ERKSt4pairIT_T0_E">pair</dfn>(<em>const</em> pair&amp;) = <b>default</b>;	<i class="doc">///&lt; Copy constructor</i></td></tr>
 <tr><th id="315">315</th><td>      <b>constexpr</b> <dfn class="decl def fn" id="_ZNSt4pairC1EOSt4pairIT_T0_E" title='std::pair::pair&lt;_T1, _T2&gt;' data-ref="_ZNSt4pairC1EOSt4pairIT_T0_E" data-ref-filename="_ZNSt4pairC1EOSt4pairIT_T0_E">pair</dfn>(pair&amp;&amp;) = <b>default</b>;		<i class="doc">///&lt; Move constructor</i></td></tr>
 <tr><th id="316">316</th><td></td></tr>
@@ -470,8 +470,8 @@
 <tr><th id="456">456</th><td></td></tr>
 <tr><th id="457">457</th><td>  <i class="doc">/// <span class="command">@relates</span> <span class="verb">pair @{</span></i></td></tr>
 <tr><th id="458">458</th><td></td></tr>
-<tr><th id="459">459</th><td><u>#<span data-ppcond="459">if</span> __cpp_deduction_guides &gt;= 201606</u></td></tr>
-<tr><th id="460">460</th><td>  <b>template</b>&lt;<b>typename</b> _T1, <b>typename</b> _T2&gt; pair(_T1, _T2) -&gt; pair&lt;_T1, _T2&gt;;</td></tr>
+<tr><th id="459">459</th><td><u>#<span data-ppcond="459">if</span> <span class="macro" title="201703L" data-ref="_M/__cpp_deduction_guides">__cpp_deduction_guides</span> &gt;= 201606</u></td></tr>
+<tr><th id="460">460</th><td>  <b>template</b>&lt;<b>typename</b> _T1, <b>typename</b> _T2&gt; <dfn class="tu decl fn" id="std::{deductionguideforpair}" title='std::&lt;deduction guide for pair&gt;' data-type='pair&lt;_T1, _T2&gt; std::&lt;deduction guide for pair&gt;(_T1 , _T2 )' data-ref="std::{deductionguideforpair}" data-ref-filename="std..{deductionguideforpair}">pair</dfn>(_T1, _T2) -&gt; <a class="type" href="#std::pair" title='std::pair' data-ref="std::pair" data-ref-filename="std..pair">pair</a>&lt;_T1, _T2&gt;;</td></tr>
 <tr><th id="461">461</th><td><u>#<span data-ppcond="459">endif</span></u></td></tr>
 <tr><th id="462">462</th><td></td></tr>
 <tr><th id="463">463</th><td>  <i class="doc">/// Two pairs of the same type are equal iff their members are equal.</i></td></tr>
@@ -529,7 +529,7 @@
 <tr><th id="515">515</th><td>    { <b>return</b> !(<a class="local col0 ref" href="#630__x" title='__x' data-ref="630__x" data-ref-filename="630__x">__x</a> &lt; <a class="local col1 ref" href="#631__y" title='__y' data-ref="631__y" data-ref-filename="631__y">__y</a>); }</td></tr>
 <tr><th id="516">516</th><td><u>#<span data-ppcond="469">endif</span> // !(three_way_comparison &amp;&amp; concepts)</u></td></tr>
 <tr><th id="517">517</th><td></td></tr>
-<tr><th id="518">518</th><td><u>#<span data-ppcond="518">if</span> <span class="macro" title="201402L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201103L</u></td></tr>
+<tr><th id="518">518</th><td><u>#<span data-ppcond="518">if</span> <span class="macro" title="201703L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201103L</u></td></tr>
 <tr><th id="519">519</th><td>  <i class="doc">/** Swap overload for pairs. Calls std::pair::swap().</i></td></tr>
 <tr><th id="520">520</th><td><i class="doc">   *</i></td></tr>
 <tr><th id="521">521</th><td><i class="doc">   * <span class="command">@note</span> This std::swap overload is not declared in C++03 mode,</i></td></tr>
@@ -537,10 +537,10 @@
 <tr><th id="523">523</th><td><i class="doc">  */</i></td></tr>
 <tr><th id="524">524</th><td>  <b>template</b>&lt;<b>typename</b> _T1, <b>typename</b> _T2&gt;</td></tr>
 <tr><th id="525">525</th><td>    <a class="macro" href="../../../x86_64-linux-gnu/c++/10/bits/c++config.h.html#155" title="" data-ref="_M/_GLIBCXX20_CONSTEXPR">_GLIBCXX20_CONSTEXPR</a> <b>inline</b></td></tr>
-<tr><th id="526">526</th><td><u>#<span data-ppcond="526">if</span> <span class="macro" title="201402L" data-ref="_M/__cplusplus">__cplusplus</span> &gt; 201402L || !defined(<span class="macro" data-ref="_M/__STRICT_ANSI__">__STRICT_ANSI__</span>) // c++1z or gnu++11</u></td></tr>
+<tr><th id="526">526</th><td><u>#<span data-ppcond="526">if</span> <span class="macro" title="201703L" data-ref="_M/__cplusplus">__cplusplus</span> &gt; 201402L || !defined(<span class="macro" data-ref="_M/__STRICT_ANSI__">__STRICT_ANSI__</span>) // c++1z or gnu++11</u></td></tr>
 <tr><th id="527">527</th><td>    <i>// Constrained free swap overload, see p0185r1</i></td></tr>
-<tr><th id="528">528</th><td>    <b>typename</b> enable_if&lt;__and_&lt;__is_swappable&lt;_T1&gt;,</td></tr>
-<tr><th id="529">529</th><td>                              __is_swappable&lt;_T2&gt;&gt;::value&gt;::type</td></tr>
+<tr><th id="528">528</th><td>    <b>typename</b> <a class="type" href="../type_traits.html#std::enable_if" title='std::enable_if' data-ref="std::enable_if" data-ref-filename="std..enable_if">enable_if</a>&lt;<a class="type" href="../type_traits.html#std::__and_" title='std::__and_' data-ref="std::__and_" data-ref-filename="std..__and_">__and_</a>&lt;<a class="type" href="../type_traits.html#std::__is_swappable" title='std::__is_swappable' data-ref="std::__is_swappable" data-ref-filename="std..__is_swappable">__is_swappable</a>&lt;_T1&gt;,</td></tr>
+<tr><th id="529">529</th><td>                              <a class="type" href="../type_traits.html#std::__is_swappable" title='std::__is_swappable' data-ref="std::__is_swappable" data-ref-filename="std..__is_swappable">__is_swappable</a>&lt;_T2&gt;&gt;::value&gt;::type</td></tr>
 <tr><th id="530">530</th><td><u>#<span data-ppcond="526">else</span></u></td></tr>
 <tr><th id="531">531</th><td>    <em>void</em></td></tr>
 <tr><th id="532">532</th><td><u>#<span data-ppcond="526">endif</span></u></td></tr>
@@ -548,11 +548,11 @@
 <tr><th id="534">534</th><td>    <b>noexcept</b>(<b>noexcept</b>(<a class="local col2 ref" href="#632__x" title='__x' data-ref="632__x" data-ref-filename="632__x">__x</a>.swap(<a class="local col3 ref" href="#633__y" title='__y' data-ref="633__y" data-ref-filename="633__y">__y</a>)))</td></tr>
 <tr><th id="535">535</th><td>    { <a class="local col2 ref" href="#632__x" title='__x' data-ref="632__x" data-ref-filename="632__x">__x</a>.swap(<a class="local col3 ref" href="#633__y" title='__y' data-ref="633__y" data-ref-filename="633__y">__y</a>); }</td></tr>
 <tr><th id="536">536</th><td></td></tr>
-<tr><th id="537">537</th><td><u>#<span data-ppcond="537">if</span> <span class="macro" title="201402L" data-ref="_M/__cplusplus">__cplusplus</span> &gt; 201402L || !defined(<span class="macro" data-ref="_M/__STRICT_ANSI__">__STRICT_ANSI__</span>) // c++1z or gnu++11</u></td></tr>
+<tr><th id="537">537</th><td><u>#<span data-ppcond="537">if</span> <span class="macro" title="201703L" data-ref="_M/__cplusplus">__cplusplus</span> &gt; 201402L || !defined(<span class="macro" data-ref="_M/__STRICT_ANSI__">__STRICT_ANSI__</span>) // c++1z or gnu++11</u></td></tr>
 <tr><th id="538">538</th><td>  <b>template</b>&lt;<b>typename</b> _T1, <b>typename</b> _T2&gt;</td></tr>
-<tr><th id="539">539</th><td>    <b>typename</b> enable_if&lt;!__and_&lt;__is_swappable&lt;_T1&gt;,</td></tr>
-<tr><th id="540">540</th><td>			       __is_swappable&lt;_T2&gt;&gt;::value&gt;::type</td></tr>
-<tr><th id="541">541</th><td>    swap(pair&lt;_T1, _T2&gt;&amp;, pair&lt;_T1, _T2&gt;&amp;) = <b>delete</b>;</td></tr>
+<tr><th id="539">539</th><td>    <b>typename</b> <a class="type" href="../type_traits.html#std::enable_if" title='std::enable_if' data-ref="std::enable_if" data-ref-filename="std..enable_if">enable_if</a>&lt;!<a class="type" href="../type_traits.html#std::__and_" title='std::__and_' data-ref="std::__and_" data-ref-filename="std..__and_">__and_</a>&lt;<a class="type" href="../type_traits.html#std::__is_swappable" title='std::__is_swappable' data-ref="std::__is_swappable" data-ref-filename="std..__is_swappable">__is_swappable</a>&lt;_T1&gt;,</td></tr>
+<tr><th id="540">540</th><td>			       <a class="type" href="../type_traits.html#std::__is_swappable" title='std::__is_swappable' data-ref="std::__is_swappable" data-ref-filename="std..__is_swappable">__is_swappable</a>&lt;_T2&gt;&gt;::value&gt;::type</td></tr>
+<tr><th id="541">541</th><td>    <dfn class="decl def fn" id="_ZSt4swapRSt4pairIT_T0_ES3_" title='std::swap' data-ref="_ZSt4swapRSt4pairIT_T0_ES3_" data-ref-filename="_ZSt4swapRSt4pairIT_T0_ES3_">swap</dfn>(<a class="type" href="#std::pair" title='std::pair' data-ref="std::pair" data-ref-filename="std..pair">pair</a>&lt;_T1, _T2&gt;&amp;, <a class="type" href="#std::pair" title='std::pair' data-ref="std::pair" data-ref-filename="std..pair">pair</a>&lt;_T1, _T2&gt;&amp;) = <b>delete</b>;</td></tr>
 <tr><th id="542">542</th><td><u>#<span data-ppcond="537">endif</span></u></td></tr>
 <tr><th id="543">543</th><td><u>#<span data-ppcond="518">endif</span> // __cplusplus &gt;= 201103L</u></td></tr>
 <tr><th id="544">544</th><td></td></tr>
@@ -573,7 +573,7 @@
 <tr><th id="559">559</th><td><i class="doc">   */</i></td></tr>
 <tr><th id="560">560</th><td><i class="doc">  // _GLIBCXX_RESOLVE_LIB_DEFECTS</i></td></tr>
 <tr><th id="561">561</th><td><i class="doc">  // 181.  make_pair() unintended behavior</i></td></tr>
-<tr><th id="562">562</th><td><u>#<span data-ppcond="562">if</span> <span class="macro" title="201402L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201103L</u></td></tr>
+<tr><th id="562">562</th><td><u>#<span data-ppcond="562">if</span> <span class="macro" title="201703L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201103L</u></td></tr>
 <tr><th id="563">563</th><td>  <i>// NB: DR 706.</i></td></tr>
 <tr><th id="564">564</th><td>  <b>template</b>&lt;<b>typename</b> _T1, <b>typename</b> _T2&gt;</td></tr>
 <tr><th id="565">565</th><td>    <b>constexpr</b> <a class="type" href="#std::pair" title='std::pair' data-ref="std::pair" data-ref-filename="std..pair">pair</a>&lt;<b>typename</b> <a class="type" href="../type_traits.html#std::__decay_and_strip" title='std::__decay_and_strip' data-ref="std::__decay_and_strip" data-ref-filename="std..__decay_and_strip">__decay_and_strip</a>&lt;_T1&gt;::__type,</td></tr>

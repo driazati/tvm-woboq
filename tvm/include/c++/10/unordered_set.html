@@ -44,7 +44,7 @@
 <tr><th id="31">31</th><td></td></tr>
 <tr><th id="32">32</th><td><u>#pragma GCC system_header</u></td></tr>
 <tr><th id="33">33</th><td></td></tr>
-<tr><th id="34">34</th><td><u>#<span data-ppcond="34">if</span> <span class="macro" title="201402L" data-ref="_M/__cplusplus">__cplusplus</span> &lt; 201103L</u></td></tr>
+<tr><th id="34">34</th><td><u>#<span data-ppcond="34">if</span> <span class="macro" title="201703L" data-ref="_M/__cplusplus">__cplusplus</span> &lt; 201103L</u></td></tr>
 <tr><th id="35">35</th><td><u># include &lt;bits/c++0x_warning.h&gt;</u></td></tr>
 <tr><th id="36">36</th><td><u>#<span data-ppcond="34">else</span></u></td></tr>
 <tr><th id="37">37</th><td></td></tr>
@@ -65,29 +65,29 @@
 <tr><th id="52">52</th><td><u># include &lt;debug/unordered_set&gt;</u></td></tr>
 <tr><th id="53">53</th><td><u>#<span data-ppcond="51">endif</span></u></td></tr>
 <tr><th id="54">54</th><td></td></tr>
-<tr><th id="55">55</th><td><u>#<span data-ppcond="55">if</span> <span class="macro" title="201402L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201703L</u></td></tr>
-<tr><th id="56">56</th><td><b>namespace</b> std _GLIBCXX_VISIBILITY(<b>default</b>)</td></tr>
+<tr><th id="55">55</th><td><u>#<span data-ppcond="55">if</span> <span class="macro" title="201703L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201703L</u></td></tr>
+<tr><th id="56">56</th><td><b>namespace</b> <span class="namespace">std</span> <a class="macro" href="../../x86_64-linux-gnu/c++/10/bits/c++config.h.html#70" title="__attribute__ ((__visibility__ (&quot;default&quot;)))" data-ref="_M/_GLIBCXX_VISIBILITY">_GLIBCXX_VISIBILITY</a>(<b>default</b>)</td></tr>
 <tr><th id="57">57</th><td>{</td></tr>
-<tr><th id="58">58</th><td>_GLIBCXX_BEGIN_NAMESPACE_VERSION</td></tr>
-<tr><th id="59">59</th><td>  <b>namespace</b> pmr</td></tr>
+<tr><th id="58">58</th><td><a class="macro" href="../../x86_64-linux-gnu/c++/10/bits/c++config.h.html#334" title="" data-ref="_M/_GLIBCXX_BEGIN_NAMESPACE_VERSION">_GLIBCXX_BEGIN_NAMESPACE_VERSION</a></td></tr>
+<tr><th id="59">59</th><td>  <b>namespace</b> <span class="namespace">pmr</span></td></tr>
 <tr><th id="60">60</th><td>  {</td></tr>
-<tr><th id="61">61</th><td>    <b>template</b>&lt;<b>typename</b> _Tp&gt; <b>class</b> polymorphic_allocator;</td></tr>
-<tr><th id="62">62</th><td>    <b>template</b>&lt;<b>typename</b> _Key, <b>typename</b> _Hash = std::hash&lt;_Key&gt;,</td></tr>
-<tr><th id="63">63</th><td>	     <b>typename</b> _Pred = std::equal_to&lt;_Key&gt;&gt;</td></tr>
-<tr><th id="64">64</th><td>      <b>using</b> unordered_set</td></tr>
-<tr><th id="65">65</th><td>	= std::unordered_set&lt;_Key, _Hash, _Pred,</td></tr>
-<tr><th id="66">66</th><td>			     polymorphic_allocator&lt;_Key&gt;&gt;;</td></tr>
-<tr><th id="67">67</th><td>    <b>template</b>&lt;<b>typename</b> _Key, <b>typename</b> _Hash = std::hash&lt;_Key&gt;,</td></tr>
-<tr><th id="68">68</th><td>	     <b>typename</b> _Pred = std::equal_to&lt;_Key&gt;&gt;</td></tr>
-<tr><th id="69">69</th><td>      <b>using</b> unordered_multiset</td></tr>
-<tr><th id="70">70</th><td>	= std::unordered_multiset&lt;_Key, _Hash, _Pred,</td></tr>
-<tr><th id="71">71</th><td>				  polymorphic_allocator&lt;_Key&gt;&gt;;</td></tr>
+<tr><th id="61">61</th><td>    <b>template</b>&lt;<b>typename</b> _Tp&gt; <b>class</b> <a class="type" href="string.html#std::pmr::polymorphic_allocator" title='std::pmr::polymorphic_allocator' data-ref="std::pmr::polymorphic_allocator" data-ref-filename="std..pmr..polymorphic_allocator" id="std::pmr::polymorphic_allocator">polymorphic_allocator</a>;</td></tr>
+<tr><th id="62">62</th><td>    <b>template</b>&lt;<b>typename</b> _Key, <b>typename</b> _Hash = <span class="namespace">std::</span><a class="type" href="bits/functional_hash.h.html#std::hash" title='std::hash' data-ref="std::hash" data-ref-filename="std..hash">hash</a>&lt;_Key&gt;,</td></tr>
+<tr><th id="63">63</th><td>	     <b>typename</b> _Pred = <span class="namespace">std::</span><a class="type" href="bits/stl_function.h.html#std::equal_to" title='std::equal_to' data-ref="std::equal_to" data-ref-filename="std..equal_to">equal_to</a>&lt;_Key&gt;&gt;</td></tr>
+<tr><th id="64">64</th><td>      <b>using</b> <dfn class="typedef" id="std::pmr::unordered_set" title='std::pmr::unordered_set' data-type='std::unordered_set&lt;_Key, _Hash, _Pred, polymorphic_allocator&lt;_Key&gt;&gt;' data-ref="std::pmr::unordered_set" data-ref-filename="std..pmr..unordered_set">unordered_set</dfn></td></tr>
+<tr><th id="65">65</th><td>	= <span class="namespace">std::</span><a class="type" href="bits/unordered_set.h.html#std::unordered_set" title='std::unordered_set' data-ref="std::unordered_set" data-ref-filename="std..unordered_set">unordered_set</a>&lt;_Key, _Hash, _Pred,</td></tr>
+<tr><th id="66">66</th><td>			     <a class="type" href="string.html#std::pmr::polymorphic_allocator" title='std::pmr::polymorphic_allocator' data-ref="std::pmr::polymorphic_allocator" data-ref-filename="std..pmr..polymorphic_allocator">polymorphic_allocator</a>&lt;_Key&gt;&gt;;</td></tr>
+<tr><th id="67">67</th><td>    <b>template</b>&lt;<b>typename</b> _Key, <b>typename</b> _Hash = <span class="namespace">std::</span><a class="type" href="bits/functional_hash.h.html#std::hash" title='std::hash' data-ref="std::hash" data-ref-filename="std..hash">hash</a>&lt;_Key&gt;,</td></tr>
+<tr><th id="68">68</th><td>	     <b>typename</b> _Pred = <span class="namespace">std::</span><a class="type" href="bits/stl_function.h.html#std::equal_to" title='std::equal_to' data-ref="std::equal_to" data-ref-filename="std..equal_to">equal_to</a>&lt;_Key&gt;&gt;</td></tr>
+<tr><th id="69">69</th><td>      <b>using</b> <dfn class="typedef" id="std::pmr::unordered_multiset" title='std::pmr::unordered_multiset' data-type='std::unordered_multiset&lt;_Key, _Hash, _Pred, polymorphic_allocator&lt;_Key&gt;&gt;' data-ref="std::pmr::unordered_multiset" data-ref-filename="std..pmr..unordered_multiset">unordered_multiset</dfn></td></tr>
+<tr><th id="70">70</th><td>	= <span class="namespace">std::</span><a class="type" href="bits/unordered_set.h.html#std::unordered_multiset" title='std::unordered_multiset' data-ref="std::unordered_multiset" data-ref-filename="std..unordered_multiset">unordered_multiset</a>&lt;_Key, _Hash, _Pred,</td></tr>
+<tr><th id="71">71</th><td>				  <a class="type" href="string.html#std::pmr::polymorphic_allocator" title='std::pmr::polymorphic_allocator' data-ref="std::pmr::polymorphic_allocator" data-ref-filename="std..pmr..polymorphic_allocator">polymorphic_allocator</a>&lt;_Key&gt;&gt;;</td></tr>
 <tr><th id="72">72</th><td>  } <i>// namespace pmr</i></td></tr>
-<tr><th id="73">73</th><td>_GLIBCXX_END_NAMESPACE_VERSION</td></tr>
+<tr><th id="73">73</th><td><a class="macro" href="../../x86_64-linux-gnu/c++/10/bits/c++config.h.html#335" title="" data-ref="_M/_GLIBCXX_END_NAMESPACE_VERSION">_GLIBCXX_END_NAMESPACE_VERSION</a></td></tr>
 <tr><th id="74">74</th><td>} <i>// namespace std</i></td></tr>
 <tr><th id="75">75</th><td><u>#<span data-ppcond="55">endif</span> // C++17</u></td></tr>
 <tr><th id="76">76</th><td></td></tr>
-<tr><th id="77">77</th><td><u>#<span data-ppcond="77">if</span> <span class="macro" title="201402L" data-ref="_M/__cplusplus">__cplusplus</span> &gt; 201703L</u></td></tr>
+<tr><th id="77">77</th><td><u>#<span data-ppcond="77">if</span> <span class="macro" title="201703L" data-ref="_M/__cplusplus">__cplusplus</span> &gt; 201703L</u></td></tr>
 <tr><th id="78">78</th><td><b>namespace</b> std _GLIBCXX_VISIBILITY(<b>default</b>)</td></tr>
 <tr><th id="79">79</th><td>{</td></tr>
 <tr><th id="80">80</th><td>_GLIBCXX_BEGIN_NAMESPACE_VERSION</td></tr>

@@ -80,27 +80,27 @@
 <tr><th id="67">67</th><td><u># include &lt;debug/map&gt;</u></td></tr>
 <tr><th id="68">68</th><td><u>#<span data-ppcond="66">endif</span></u></td></tr>
 <tr><th id="69">69</th><td></td></tr>
-<tr><th id="70">70</th><td><u>#<span data-ppcond="70">if</span> <span class="macro" title="201402L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201703L</u></td></tr>
-<tr><th id="71">71</th><td><b>namespace</b> std _GLIBCXX_VISIBILITY(<b>default</b>)</td></tr>
+<tr><th id="70">70</th><td><u>#<span data-ppcond="70">if</span> <span class="macro" title="201703L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201703L</u></td></tr>
+<tr><th id="71">71</th><td><b>namespace</b> <span class="namespace">std</span> <a class="macro" href="../../x86_64-linux-gnu/c++/10/bits/c++config.h.html#70" title="__attribute__ ((__visibility__ (&quot;default&quot;)))" data-ref="_M/_GLIBCXX_VISIBILITY">_GLIBCXX_VISIBILITY</a>(<b>default</b>)</td></tr>
 <tr><th id="72">72</th><td>{</td></tr>
-<tr><th id="73">73</th><td>_GLIBCXX_BEGIN_NAMESPACE_VERSION</td></tr>
-<tr><th id="74">74</th><td>  <b>namespace</b> pmr</td></tr>
+<tr><th id="73">73</th><td><a class="macro" href="../../x86_64-linux-gnu/c++/10/bits/c++config.h.html#334" title="" data-ref="_M/_GLIBCXX_BEGIN_NAMESPACE_VERSION">_GLIBCXX_BEGIN_NAMESPACE_VERSION</a></td></tr>
+<tr><th id="74">74</th><td>  <b>namespace</b> <span class="namespace">pmr</span></td></tr>
 <tr><th id="75">75</th><td>  {</td></tr>
-<tr><th id="76">76</th><td>    <b>template</b>&lt;<b>typename</b> _Tp&gt; <b>class</b> polymorphic_allocator;</td></tr>
-<tr><th id="77">77</th><td>    <b>template</b>&lt;<b>typename</b> _Key, <b>typename</b> _Tp, <b>typename</b> _Cmp = std::less&lt;_Key&gt;&gt;</td></tr>
-<tr><th id="78">78</th><td>      <b>using</b> map</td></tr>
-<tr><th id="79">79</th><td>	= std::map&lt;_Key, _Tp, _Cmp,</td></tr>
-<tr><th id="80">80</th><td>		   polymorphic_allocator&lt;pair&lt;<em>const</em> _Key, _Tp&gt;&gt;&gt;;</td></tr>
-<tr><th id="81">81</th><td>    <b>template</b>&lt;<b>typename</b> _Key, <b>typename</b> _Tp, <b>typename</b> _Cmp = std::less&lt;_Key&gt;&gt;</td></tr>
-<tr><th id="82">82</th><td>      <b>using</b> multimap</td></tr>
-<tr><th id="83">83</th><td>	= std::multimap&lt;_Key, _Tp, _Cmp,</td></tr>
-<tr><th id="84">84</th><td>			polymorphic_allocator&lt;pair&lt;<em>const</em> _Key, _Tp&gt;&gt;&gt;;</td></tr>
+<tr><th id="76">76</th><td>    <b>template</b>&lt;<b>typename</b> _Tp&gt; <b>class</b> <a class="type" href="string.html#std::pmr::polymorphic_allocator" title='std::pmr::polymorphic_allocator' data-ref="std::pmr::polymorphic_allocator" data-ref-filename="std..pmr..polymorphic_allocator" id="std::pmr::polymorphic_allocator">polymorphic_allocator</a>;</td></tr>
+<tr><th id="77">77</th><td>    <b>template</b>&lt;<b>typename</b> _Key, <b>typename</b> _Tp, <b>typename</b> _Cmp = <span class="namespace">std::</span><a class="type" href="bits/stl_function.h.html#std::less" title='std::less' data-ref="std::less" data-ref-filename="std..less">less</a>&lt;_Key&gt;&gt;</td></tr>
+<tr><th id="78">78</th><td>      <b>using</b> <dfn class="typedef" id="std::pmr::map" title='std::pmr::map' data-type='std::map&lt;_Key, _Tp, _Cmp, polymorphic_allocator&lt;pair&lt;const _Key, _Tp&gt;&gt;&gt;' data-ref="std::pmr::map" data-ref-filename="std..pmr..map">map</dfn></td></tr>
+<tr><th id="79">79</th><td>	= <span class="namespace">std::</span><a class="type" href="bits/stl_map.h.html#std::map" title='std::map' data-ref="std::map" data-ref-filename="std..map">map</a>&lt;_Key, _Tp, _Cmp,</td></tr>
+<tr><th id="80">80</th><td>		   <a class="type" href="string.html#std::pmr::polymorphic_allocator" title='std::pmr::polymorphic_allocator' data-ref="std::pmr::polymorphic_allocator" data-ref-filename="std..pmr..polymorphic_allocator">polymorphic_allocator</a>&lt;<a class="type" href="bits/stl_pair.h.html#std::pair" title='std::pair' data-ref="std::pair" data-ref-filename="std..pair">pair</a>&lt;<em>const</em> _Key, _Tp&gt;&gt;&gt;;</td></tr>
+<tr><th id="81">81</th><td>    <b>template</b>&lt;<b>typename</b> _Key, <b>typename</b> _Tp, <b>typename</b> _Cmp = <span class="namespace">std::</span><a class="type" href="bits/stl_function.h.html#std::less" title='std::less' data-ref="std::less" data-ref-filename="std..less">less</a>&lt;_Key&gt;&gt;</td></tr>
+<tr><th id="82">82</th><td>      <b>using</b> <dfn class="typedef" id="std::pmr::multimap" title='std::pmr::multimap' data-type='std::multimap&lt;_Key, _Tp, _Cmp, polymorphic_allocator&lt;pair&lt;const _Key, _Tp&gt;&gt;&gt;' data-ref="std::pmr::multimap" data-ref-filename="std..pmr..multimap">multimap</dfn></td></tr>
+<tr><th id="83">83</th><td>	= <span class="namespace">std::</span><a class="type" href="bits/stl_map.h.html#std::multimap" title='std::multimap' data-ref="std::multimap" data-ref-filename="std..multimap">multimap</a>&lt;_Key, _Tp, _Cmp,</td></tr>
+<tr><th id="84">84</th><td>			<a class="type" href="string.html#std::pmr::polymorphic_allocator" title='std::pmr::polymorphic_allocator' data-ref="std::pmr::polymorphic_allocator" data-ref-filename="std..pmr..polymorphic_allocator">polymorphic_allocator</a>&lt;<a class="type" href="bits/stl_pair.h.html#std::pair" title='std::pair' data-ref="std::pair" data-ref-filename="std..pair">pair</a>&lt;<em>const</em> _Key, _Tp&gt;&gt;&gt;;</td></tr>
 <tr><th id="85">85</th><td>  } <i>// namespace pmr</i></td></tr>
-<tr><th id="86">86</th><td>_GLIBCXX_END_NAMESPACE_VERSION</td></tr>
+<tr><th id="86">86</th><td><a class="macro" href="../../x86_64-linux-gnu/c++/10/bits/c++config.h.html#335" title="" data-ref="_M/_GLIBCXX_END_NAMESPACE_VERSION">_GLIBCXX_END_NAMESPACE_VERSION</a></td></tr>
 <tr><th id="87">87</th><td>} <i>// namespace std</i></td></tr>
 <tr><th id="88">88</th><td><u>#<span data-ppcond="70">endif</span> // C++17</u></td></tr>
 <tr><th id="89">89</th><td></td></tr>
-<tr><th id="90">90</th><td><u>#<span data-ppcond="90">if</span> <span class="macro" title="201402L" data-ref="_M/__cplusplus">__cplusplus</span> &gt; 201703L</u></td></tr>
+<tr><th id="90">90</th><td><u>#<span data-ppcond="90">if</span> <span class="macro" title="201703L" data-ref="_M/__cplusplus">__cplusplus</span> &gt; 201703L</u></td></tr>
 <tr><th id="91">91</th><td><b>namespace</b> std _GLIBCXX_VISIBILITY(<b>default</b>)</td></tr>
 <tr><th id="92">92</th><td>{</td></tr>
 <tr><th id="93">93</th><td>_GLIBCXX_BEGIN_NAMESPACE_VERSION</td></tr>

@@ -72,7 +72,7 @@
 <tr><th id="58">58</th><td></td></tr>
 <tr><th id="59">59</th><td><u>#include <a href="concept_check.h.html">&lt;bits/concept_check.h&gt;</a></u></td></tr>
 <tr><th id="60">60</th><td><u>#include <a href="../debug/debug.h.html">&lt;debug/debug.h&gt;</a></u></td></tr>
-<tr><th id="61">61</th><td><u>#<span data-ppcond="61">if</span> <span class="macro" title="201402L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201103L</u></td></tr>
+<tr><th id="61">61</th><td><u>#<span data-ppcond="61">if</span> <span class="macro" title="201703L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201103L</u></td></tr>
 <tr><th id="62">62</th><td><u># include <a href="uses_allocator.h.html">&lt;bits/uses_allocator.h&gt;</a></u></td></tr>
 <tr><th id="63">63</th><td><u>#<span data-ppcond="61">endif</span></u></td></tr>
 <tr><th id="64">64</th><td></td></tr>
@@ -136,16 +136,16 @@
 <tr><th id="122">122</th><td>	<b>operator</b>&lt;=&gt;(<em>const</em> stack&lt;_Tp1, _Seq1&gt;&amp;, <em>const</em> stack&lt;_Tp1, _Seq1&gt;&amp;);</td></tr>
 <tr><th id="123">123</th><td><u>#<span data-ppcond="119">endif</span></u></td></tr>
 <tr><th id="124">124</th><td></td></tr>
-<tr><th id="125">125</th><td><u>#<span data-ppcond="125">if</span> <span class="macro" title="201402L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201103L</u></td></tr>
+<tr><th id="125">125</th><td><u>#<span data-ppcond="125">if</span> <span class="macro" title="201703L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201103L</u></td></tr>
 <tr><th id="126">126</th><td>      <b>template</b>&lt;<b>typename</b> _Alloc&gt;</td></tr>
 <tr><th id="127">127</th><td>	<b>using</b> <dfn class="typedef" id="std::stack::_Uses" title='std::stack::_Uses' data-type='typename enable_if&lt;uses_allocator&lt;_Sequence, _Alloc&gt;::value&gt;::type' data-ref="std::stack::_Uses" data-ref-filename="std..stack.._Uses">_Uses</dfn> = <b>typename</b></td></tr>
 <tr><th id="128">128</th><td>	  <a class="type" href="../type_traits.html#std::enable_if" title='std::enable_if' data-ref="std::enable_if" data-ref-filename="std..enable_if">enable_if</a>&lt;<a class="type" href="memoryfwd.h.html#std::uses_allocator" title='std::uses_allocator' data-ref="std::uses_allocator" data-ref-filename="std..uses_allocator">uses_allocator</a>&lt;_Sequence, _Alloc&gt;::value&gt;::type;</td></tr>
 <tr><th id="129">129</th><td></td></tr>
-<tr><th id="130">130</th><td><u>#<span data-ppcond="130">if</span> <span class="macro" title="201402L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201703L</u></td></tr>
+<tr><th id="130">130</th><td><u>#<span data-ppcond="130">if</span> <span class="macro" title="201703L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201703L</u></td></tr>
 <tr><th id="131">131</th><td>      <i>// _GLIBCXX_RESOLVE_LIB_DEFECTS</i></td></tr>
 <tr><th id="132">132</th><td><i>      // 2566. Requirements on the first template parameter of container</i></td></tr>
 <tr><th id="133">133</th><td><i>      // adaptors</i></td></tr>
-<tr><th id="134">134</th><td>      <b>static_assert</b>(is_same&lt;_Tp, <b>typename</b> _Sequence::value_type&gt;::value,</td></tr>
+<tr><th id="134">134</th><td>      <b>static_assert</b>(<a class="type" href="../type_traits.html#std::is_same" title='std::is_same' data-ref="std::is_same" data-ref-filename="std..is_same">is_same</a>&lt;_Tp, <b>typename</b> _Sequence::value_type&gt;::value,</td></tr>
 <tr><th id="135">135</th><td>	  <q>"value_type must be the same as the underlying container"</q>);</td></tr>
 <tr><th id="136">136</th><td><u>#<span data-ppcond="130">endif</span> // C++17</u></td></tr>
 <tr><th id="137">137</th><td><u>#<span data-ppcond="125">endif</span> // C++11</u></td></tr>
@@ -166,7 +166,7 @@
 <tr><th id="152">152</th><td>      <i class="doc">/**</i></td></tr>
 <tr><th id="153">153</th><td><i class="doc">       *  <span class="command">@brief</span>  Default constructor creates no elements.</i></td></tr>
 <tr><th id="154">154</th><td><i class="doc">       */</i></td></tr>
-<tr><th id="155">155</th><td><u>#<span data-ppcond="155">if</span> <span class="macro" title="201402L" data-ref="_M/__cplusplus">__cplusplus</span> &lt; 201103L</u></td></tr>
+<tr><th id="155">155</th><td><u>#<span data-ppcond="155">if</span> <span class="macro" title="201703L" data-ref="_M/__cplusplus">__cplusplus</span> &lt; 201103L</u></td></tr>
 <tr><th id="156">156</th><td>      <b>explicit</b></td></tr>
 <tr><th id="157">157</th><td>      stack(<em>const</em> _Sequence&amp; __c = _Sequence())</td></tr>
 <tr><th id="158">158</th><td>      : c(__c) { }</td></tr>
@@ -209,7 +209,7 @@
 <tr><th id="195">195</th><td>      <i class="doc">/**</i></td></tr>
 <tr><th id="196">196</th><td><i class="doc">       *  Returns true if the %stack is empty.</i></td></tr>
 <tr><th id="197">197</th><td><i class="doc">       */</i></td></tr>
-<tr><th id="198">198</th><td>      <a class="macro" href="../../../x86_64-linux-gnu/c++/10/bits/c++config.h.html#117" title="" data-ref="_M/_GLIBCXX_NODISCARD">_GLIBCXX_NODISCARD</a> <em>bool</em></td></tr>
+<tr><th id="198">198</th><td>      <a class="macro" href="../../../x86_64-linux-gnu/c++/10/bits/c++config.h.html#115" title="[[__nodiscard__]]" data-ref="_M/_GLIBCXX_NODISCARD">_GLIBCXX_NODISCARD</a> <em>bool</em></td></tr>
 <tr><th id="199">199</th><td>      <dfn class="decl def fn" id="_ZNKSt5stack5emptyEv" title='std::stack::empty' data-ref="_ZNKSt5stack5emptyEv" data-ref-filename="_ZNKSt5stack5emptyEv">empty</dfn>() <em>const</em></td></tr>
 <tr><th id="200">200</th><td>      { <b>return</b> <a class="member field" href="#std::stack::c" title='std::stack::c' data-ref="std::stack::c" data-ref-filename="std..stack..c">c</a>.empty(); }</td></tr>
 <tr><th id="201">201</th><td></td></tr>
@@ -253,21 +253,21 @@
 <tr><th id="239">239</th><td>      <dfn class="decl def fn" id="_ZNSt5stack4pushERKNT0_10value_typeE" title='std::stack::push' data-ref="_ZNSt5stack4pushERKNT0_10value_typeE" data-ref-filename="_ZNSt5stack4pushERKNT0_10value_typeE">push</dfn>(<em>const</em> <a class="typedef" href="#std::stack::value_type" title='std::stack::value_type' data-type='typename _Sequence::value_type' data-ref="std::stack::value_type" data-ref-filename="std..stack..value_type">value_type</a>&amp; <dfn class="local col8 decl" id="1928__x" title='__x' data-type='const std::stack::value_type &amp;' data-ref="1928__x" data-ref-filename="1928__x">__x</dfn>)</td></tr>
 <tr><th id="240">240</th><td>      { <a class="member field" href="#std::stack::c" title='std::stack::c' data-ref="std::stack::c" data-ref-filename="std..stack..c">c</a>.push_back(<a class="local col8 ref" href="#1928__x" title='__x' data-ref="1928__x" data-ref-filename="1928__x">__x</a>); }</td></tr>
 <tr><th id="241">241</th><td></td></tr>
-<tr><th id="242">242</th><td><u>#<span data-ppcond="242">if</span> <span class="macro" title="201402L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201103L</u></td></tr>
+<tr><th id="242">242</th><td><u>#<span data-ppcond="242">if</span> <span class="macro" title="201703L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201103L</u></td></tr>
 <tr><th id="243">243</th><td>      <em>void</em></td></tr>
 <tr><th id="244">244</th><td>      <dfn class="decl def fn" id="_ZNSt5stack4pushEONT0_10value_typeE" title='std::stack::push' data-ref="_ZNSt5stack4pushEONT0_10value_typeE" data-ref-filename="_ZNSt5stack4pushEONT0_10value_typeE">push</dfn>(<a class="typedef" href="#std::stack::value_type" title='std::stack::value_type' data-type='typename _Sequence::value_type' data-ref="std::stack::value_type" data-ref-filename="std..stack..value_type">value_type</a>&amp;&amp; <dfn class="local col9 decl" id="1929__x" title='__x' data-type='std::stack::value_type &amp;&amp;' data-ref="1929__x" data-ref-filename="1929__x">__x</dfn>)</td></tr>
 <tr><th id="245">245</th><td>      { <a class="member field" href="#std::stack::c" title='std::stack::c' data-ref="std::stack::c" data-ref-filename="std..stack..c">c</a>.push_back(<span class="namespace">std::</span>move(<a class="local col9 ref" href="#1929__x" title='__x' data-ref="1929__x" data-ref-filename="1929__x">__x</a>)); }</td></tr>
 <tr><th id="246">246</th><td></td></tr>
-<tr><th id="247">247</th><td><u>#<span data-ppcond="247">if</span> <span class="macro" title="201402L" data-ref="_M/__cplusplus">__cplusplus</span> &gt; 201402L</u></td></tr>
+<tr><th id="247">247</th><td><u>#<span data-ppcond="247">if</span> <span class="macro" title="201703L" data-ref="_M/__cplusplus">__cplusplus</span> &gt; 201402L</u></td></tr>
 <tr><th id="248">248</th><td>      <b>template</b>&lt;<b>typename</b>... _Args&gt;</td></tr>
 <tr><th id="249">249</th><td>	<b>decltype</b>(<em>auto</em>)</td></tr>
-<tr><th id="250">250</th><td>	emplace(_Args&amp;&amp;... __args)</td></tr>
-<tr><th id="251">251</th><td>	{ <b>return</b> c.emplace_back(std::forward&lt;_Args&gt;(__args)...); }</td></tr>
+<tr><th id="250">250</th><td>	<dfn class="decl def fn" id="_ZNSt5stack7emplaceEDpOTL0__" title='std::stack::emplace' data-ref="_ZNSt5stack7emplaceEDpOTL0__" data-ref-filename="_ZNSt5stack7emplaceEDpOTL0__">emplace</dfn>(_Args&amp;&amp;... <dfn class="local col0 decl" id="1930__args" title='__args' data-type='_Args &amp;&amp;...' data-ref="1930__args" data-ref-filename="1930__args">__args</dfn>)</td></tr>
+<tr><th id="251">251</th><td>	{ <b>return</b> <a class="member field" href="#std::stack::c" title='std::stack::c' data-ref="std::stack::c" data-ref-filename="std..stack..c">c</a>.emplace_back(<span class="namespace">std::</span>forward&lt;_Args&gt;(<a class="local col0 ref" href="#1930__args" title='__args' data-ref="1930__args" data-ref-filename="1930__args">__args</a>)...); }</td></tr>
 <tr><th id="252">252</th><td><u>#<span data-ppcond="247">else</span></u></td></tr>
 <tr><th id="253">253</th><td>      <b>template</b>&lt;<b>typename</b>... _Args&gt;</td></tr>
 <tr><th id="254">254</th><td>	<em>void</em></td></tr>
-<tr><th id="255">255</th><td>	<dfn class="decl def fn" id="_ZNSt5stack7emplaceEDpOTL0__" title='std::stack::emplace' data-ref="_ZNSt5stack7emplaceEDpOTL0__" data-ref-filename="_ZNSt5stack7emplaceEDpOTL0__">emplace</dfn>(_Args&amp;&amp;... <dfn class="local col0 decl" id="1930__args" title='__args' data-type='_Args &amp;&amp;...' data-ref="1930__args" data-ref-filename="1930__args">__args</dfn>)</td></tr>
-<tr><th id="256">256</th><td>	{ <a class="member field" href="#std::stack::c" title='std::stack::c' data-ref="std::stack::c" data-ref-filename="std..stack..c">c</a>.emplace_back(<span class="namespace">std::</span>forward&lt;_Args&gt;(<a class="local col0 ref" href="#1930__args" title='__args' data-ref="1930__args" data-ref-filename="1930__args">__args</a>)...); }</td></tr>
+<tr><th id="255">255</th><td>	emplace(_Args&amp;&amp;... __args)</td></tr>
+<tr><th id="256">256</th><td>	{ c.emplace_back(std::forward&lt;_Args&gt;(__args)...); }</td></tr>
 <tr><th id="257">257</th><td><u>#<span data-ppcond="247">endif</span></u></td></tr>
 <tr><th id="258">258</th><td><u>#<span data-ppcond="242">endif</span></u></td></tr>
 <tr><th id="259">259</th><td></td></tr>
@@ -289,13 +289,13 @@
 <tr><th id="275">275</th><td>	<a class="member field" href="#std::stack::c" title='std::stack::c' data-ref="std::stack::c" data-ref-filename="std..stack..c">c</a>.pop_back();</td></tr>
 <tr><th id="276">276</th><td>      }</td></tr>
 <tr><th id="277">277</th><td></td></tr>
-<tr><th id="278">278</th><td><u>#<span data-ppcond="278">if</span> <span class="macro" title="201402L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201103L</u></td></tr>
+<tr><th id="278">278</th><td><u>#<span data-ppcond="278">if</span> <span class="macro" title="201703L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201103L</u></td></tr>
 <tr><th id="279">279</th><td>      <em>void</em></td></tr>
 <tr><th id="280">280</th><td>      <dfn class="decl def fn" id="_ZNSt5stack4swapERSt5stackIT_T0_E" title='std::stack::swap' data-ref="_ZNSt5stack4swapERSt5stackIT_T0_E" data-ref-filename="_ZNSt5stack4swapERSt5stackIT_T0_E">swap</dfn>(stack&amp; <dfn class="local col1 decl" id="1931__s" title='__s' data-type='stack&lt;_Tp, _Sequence&gt; &amp;' data-ref="1931__s" data-ref-filename="1931__s">__s</dfn>)</td></tr>
-<tr><th id="281">281</th><td><u>#<span data-ppcond="281">if</span> <span class="macro" title="201402L" data-ref="_M/__cplusplus">__cplusplus</span> &gt; 201402L || !defined(<span class="macro" data-ref="_M/__STRICT_ANSI__">__STRICT_ANSI__</span>) // c++1z or gnu++11</u></td></tr>
-<tr><th id="282">282</th><td>      <b>noexcept</b>(__is_nothrow_swappable&lt;_Sequence&gt;::value)</td></tr>
+<tr><th id="281">281</th><td><u>#<span data-ppcond="281">if</span> <span class="macro" title="201703L" data-ref="_M/__cplusplus">__cplusplus</span> &gt; 201402L || !defined(<span class="macro" data-ref="_M/__STRICT_ANSI__">__STRICT_ANSI__</span>) // c++1z or gnu++11</u></td></tr>
+<tr><th id="282">282</th><td>      <b>noexcept</b>(<a class="type" href="../type_traits.html#std::__is_nothrow_swappable" title='std::__is_nothrow_swappable' data-ref="std::__is_nothrow_swappable" data-ref-filename="std..__is_nothrow_swappable">__is_nothrow_swappable</a>&lt;_Sequence&gt;::value)</td></tr>
 <tr><th id="283">283</th><td><u>#<span data-ppcond="281">else</span></u></td></tr>
-<tr><th id="284">284</th><td>      <b>noexcept</b>(<a class="type" href="../type_traits.html#std::__is_nothrow_swappable" title='std::__is_nothrow_swappable' data-ref="std::__is_nothrow_swappable" data-ref-filename="std..__is_nothrow_swappable">__is_nothrow_swappable</a>&lt;_Tp&gt;::value)</td></tr>
+<tr><th id="284">284</th><td>      <b>noexcept</b>(__is_nothrow_swappable&lt;_Tp&gt;::value)</td></tr>
 <tr><th id="285">285</th><td><u>#<span data-ppcond="281">endif</span></u></td></tr>
 <tr><th id="286">286</th><td>      {</td></tr>
 <tr><th id="287">287</th><td>	<b>using</b> <span class="namespace">std::</span>swap;</td></tr>
@@ -304,16 +304,16 @@
 <tr><th id="290">290</th><td><u>#<span data-ppcond="278">endif</span> // __cplusplus &gt;= 201103L</u></td></tr>
 <tr><th id="291">291</th><td>    };</td></tr>
 <tr><th id="292">292</th><td></td></tr>
-<tr><th id="293">293</th><td><u>#<span data-ppcond="293">if</span> __cpp_deduction_guides &gt;= 201606</u></td></tr>
+<tr><th id="293">293</th><td><u>#<span data-ppcond="293">if</span> <span class="macro" title="201703L" data-ref="_M/__cpp_deduction_guides">__cpp_deduction_guides</span> &gt;= 201606</u></td></tr>
 <tr><th id="294">294</th><td>  <b>template</b>&lt;<b>typename</b> _Container,</td></tr>
-<tr><th id="295">295</th><td>	   <b>typename</b> = _RequireNotAllocator&lt;_Container&gt;&gt;</td></tr>
-<tr><th id="296">296</th><td>    stack(_Container) -&gt; stack&lt;<b>typename</b> _Container::value_type, _Container&gt;;</td></tr>
+<tr><th id="295">295</th><td>	   <b>typename</b> = <a class="type" href="alloc_traits.h.html#std::_RequireNotAllocator" title='std::_RequireNotAllocator' data-ref="std::_RequireNotAllocator" data-ref-filename="std.._RequireNotAllocator">_RequireNotAllocator</a>&lt;_Container&gt;&gt;</td></tr>
+<tr><th id="296">296</th><td>    <dfn class="tu decl fn" id="std::{deductionguideforstack}" title='std::&lt;deduction guide for stack&gt;' data-type='stack&lt;typename _Container::value_type, _Container&gt; std::&lt;deduction guide for stack&gt;(_Container )' data-ref="std::{deductionguideforstack}" data-ref-filename="std..{deductionguideforstack}">stack</dfn>(_Container) -&gt; <a class="type" href="#std::stack" title='std::stack' data-ref="std::stack" data-ref-filename="std..stack">stack</a>&lt;<b>typename</b> _Container::value_type, _Container&gt;;</td></tr>
 <tr><th id="297">297</th><td></td></tr>
 <tr><th id="298">298</th><td>  <b>template</b>&lt;<b>typename</b> _Container, <b>typename</b> _Allocator,</td></tr>
-<tr><th id="299">299</th><td>	   <b>typename</b> = _RequireNotAllocator&lt;_Container&gt;,</td></tr>
-<tr><th id="300">300</th><td>	   <b>typename</b> = _RequireAllocator&lt;_Allocator&gt;&gt;</td></tr>
-<tr><th id="301">301</th><td>    stack(_Container, _Allocator)</td></tr>
-<tr><th id="302">302</th><td>    -&gt; stack&lt;<b>typename</b> _Container::value_type, _Container&gt;;</td></tr>
+<tr><th id="299">299</th><td>	   <b>typename</b> = <a class="type" href="alloc_traits.h.html#std::_RequireNotAllocator" title='std::_RequireNotAllocator' data-ref="std::_RequireNotAllocator" data-ref-filename="std.._RequireNotAllocator">_RequireNotAllocator</a>&lt;_Container&gt;,</td></tr>
+<tr><th id="300">300</th><td>	   <b>typename</b> = <a class="type" href="alloc_traits.h.html#std::_RequireAllocator" title='std::_RequireAllocator' data-ref="std::_RequireAllocator" data-ref-filename="std.._RequireAllocator">_RequireAllocator</a>&lt;_Allocator&gt;&gt;</td></tr>
+<tr><th id="301">301</th><td>    <dfn class="tu decl fn" id="std::{deductionguideforstack}" title='std::&lt;deduction guide for stack&gt;' data-type='stack&lt;typename _Container::value_type, _Container&gt; std::&lt;deduction guide for stack&gt;(_Container , _Allocator )' data-ref="std::{deductionguideforstack}" data-ref-filename="std..{deductionguideforstack}">stack</dfn>(_Container, _Allocator)</td></tr>
+<tr><th id="302">302</th><td>    -&gt; <a class="type" href="#std::stack" title='std::stack' data-ref="std::stack" data-ref-filename="std..stack">stack</a>&lt;<b>typename</b> _Container::value_type, _Container&gt;;</td></tr>
 <tr><th id="303">303</th><td><u>#<span data-ppcond="293">endif</span></u></td></tr>
 <tr><th id="304">304</th><td></td></tr>
 <tr><th id="305">305</th><td>  <i class="doc">/**</i></td></tr>
@@ -382,12 +382,12 @@
 <tr><th id="368">368</th><td>    { <b>return</b> __x.c &lt;=&gt; __y.c; }</td></tr>
 <tr><th id="369">369</th><td><u>#<span data-ppcond="364">endif</span></u></td></tr>
 <tr><th id="370">370</th><td></td></tr>
-<tr><th id="371">371</th><td><u>#<span data-ppcond="371">if</span> <span class="macro" title="201402L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201103L</u></td></tr>
+<tr><th id="371">371</th><td><u>#<span data-ppcond="371">if</span> <span class="macro" title="201703L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201103L</u></td></tr>
 <tr><th id="372">372</th><td>  <b>template</b>&lt;<b>typename</b> _Tp, <b>typename</b> _Seq&gt;</td></tr>
 <tr><th id="373">373</th><td>    <b>inline</b></td></tr>
-<tr><th id="374">374</th><td><u>#<span data-ppcond="374">if</span> <span class="macro" title="201402L" data-ref="_M/__cplusplus">__cplusplus</span> &gt; 201402L || !defined(<span class="macro" data-ref="_M/__STRICT_ANSI__">__STRICT_ANSI__</span>) // c++1z or gnu++11</u></td></tr>
+<tr><th id="374">374</th><td><u>#<span data-ppcond="374">if</span> <span class="macro" title="201703L" data-ref="_M/__cplusplus">__cplusplus</span> &gt; 201402L || !defined(<span class="macro" data-ref="_M/__STRICT_ANSI__">__STRICT_ANSI__</span>) // c++1z or gnu++11</u></td></tr>
 <tr><th id="375">375</th><td>    <i>// Constrained free swap overload, see p0185r1</i></td></tr>
-<tr><th id="376">376</th><td>    <b>typename</b> enable_if&lt;__is_swappable&lt;_Seq&gt;::value&gt;::type</td></tr>
+<tr><th id="376">376</th><td>    <b>typename</b> <a class="type" href="../type_traits.html#std::enable_if" title='std::enable_if' data-ref="std::enable_if" data-ref-filename="std..enable_if">enable_if</a>&lt;<a class="type" href="../type_traits.html#std::__is_swappable" title='std::__is_swappable' data-ref="std::__is_swappable" data-ref-filename="std..__is_swappable">__is_swappable</a>&lt;_Seq&gt;::value&gt;::type</td></tr>
 <tr><th id="377">377</th><td><u>#<span data-ppcond="374">else</span></u></td></tr>
 <tr><th id="378">378</th><td>    <em>void</em></td></tr>
 <tr><th id="379">379</th><td><u>#<span data-ppcond="374">endif</span></u></td></tr>

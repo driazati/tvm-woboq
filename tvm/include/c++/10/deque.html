@@ -71,7 +71,7 @@
 <tr><th id="58">58</th><td><u>#pragma GCC system_header</u></td></tr>
 <tr><th id="59">59</th><td></td></tr>
 <tr><th id="60">60</th><td><u>#include <a href="bits/stl_algobase.h.html">&lt;bits/stl_algobase.h&gt;</a></u></td></tr>
-<tr><th id="61">61</th><td><u>#<span data-ppcond="61">if</span> <span class="macro" title="201402L" data-ref="_M/__cplusplus">__cplusplus</span> &gt; 201703L</u></td></tr>
+<tr><th id="61">61</th><td><u>#<span data-ppcond="61">if</span> <span class="macro" title="201703L" data-ref="_M/__cplusplus">__cplusplus</span> &gt; 201703L</u></td></tr>
 <tr><th id="62">62</th><td><u>#  include &lt;bits/stl_algo.h&gt; // For remove and remove_if</u></td></tr>
 <tr><th id="63">63</th><td><u>#<span data-ppcond="61">endif</span> // C++20</u></td></tr>
 <tr><th id="64">64</th><td><u>#include <a href="bits/allocator.h.html">&lt;bits/allocator.h&gt;</a></u></td></tr>
@@ -85,21 +85,21 @@
 <tr><th id="72">72</th><td><u># include &lt;debug/deque&gt;</u></td></tr>
 <tr><th id="73">73</th><td><u>#<span data-ppcond="71">endif</span></u></td></tr>
 <tr><th id="74">74</th><td></td></tr>
-<tr><th id="75">75</th><td><u>#<span data-ppcond="75">if</span> <span class="macro" title="201402L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201703L</u></td></tr>
-<tr><th id="76">76</th><td><b>namespace</b> std _GLIBCXX_VISIBILITY(<b>default</b>)</td></tr>
+<tr><th id="75">75</th><td><u>#<span data-ppcond="75">if</span> <span class="macro" title="201703L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201703L</u></td></tr>
+<tr><th id="76">76</th><td><b>namespace</b> <span class="namespace">std</span> <a class="macro" href="../../x86_64-linux-gnu/c++/10/bits/c++config.h.html#70" title="__attribute__ ((__visibility__ (&quot;default&quot;)))" data-ref="_M/_GLIBCXX_VISIBILITY">_GLIBCXX_VISIBILITY</a>(<b>default</b>)</td></tr>
 <tr><th id="77">77</th><td>{</td></tr>
-<tr><th id="78">78</th><td>_GLIBCXX_BEGIN_NAMESPACE_VERSION</td></tr>
-<tr><th id="79">79</th><td>  <b>namespace</b> pmr</td></tr>
+<tr><th id="78">78</th><td><a class="macro" href="../../x86_64-linux-gnu/c++/10/bits/c++config.h.html#334" title="" data-ref="_M/_GLIBCXX_BEGIN_NAMESPACE_VERSION">_GLIBCXX_BEGIN_NAMESPACE_VERSION</a></td></tr>
+<tr><th id="79">79</th><td>  <b>namespace</b> <span class="namespace">pmr</span></td></tr>
 <tr><th id="80">80</th><td>  {</td></tr>
-<tr><th id="81">81</th><td>    <b>template</b>&lt;<b>typename</b> _Tp&gt; <b>class</b> polymorphic_allocator;</td></tr>
+<tr><th id="81">81</th><td>    <b>template</b>&lt;<b>typename</b> _Tp&gt; <b>class</b> <a class="type" href="string.html#std::pmr::polymorphic_allocator" title='std::pmr::polymorphic_allocator' data-ref="std::pmr::polymorphic_allocator" data-ref-filename="std..pmr..polymorphic_allocator" id="std::pmr::polymorphic_allocator">polymorphic_allocator</a>;</td></tr>
 <tr><th id="82">82</th><td>    <b>template</b>&lt;<b>typename</b> _Tp&gt;</td></tr>
-<tr><th id="83">83</th><td>      <b>using</b> deque = std::deque&lt;_Tp, polymorphic_allocator&lt;_Tp&gt;&gt;;</td></tr>
+<tr><th id="83">83</th><td>      <b>using</b> <dfn class="typedef" id="std::pmr::deque" title='std::pmr::deque' data-type='std::deque&lt;_Tp, polymorphic_allocator&lt;_Tp&gt;&gt;' data-ref="std::pmr::deque" data-ref-filename="std..pmr..deque">deque</dfn> = <span class="namespace">std::</span><a class="type" href="bits/stl_deque.h.html#std::deque" title='std::deque' data-ref="std::deque" data-ref-filename="std..deque">deque</a>&lt;_Tp, <a class="type" href="string.html#std::pmr::polymorphic_allocator" title='std::pmr::polymorphic_allocator' data-ref="std::pmr::polymorphic_allocator" data-ref-filename="std..pmr..polymorphic_allocator">polymorphic_allocator</a>&lt;_Tp&gt;&gt;;</td></tr>
 <tr><th id="84">84</th><td>  } <i>// namespace pmr</i></td></tr>
-<tr><th id="85">85</th><td>_GLIBCXX_END_NAMESPACE_VERSION</td></tr>
+<tr><th id="85">85</th><td><a class="macro" href="../../x86_64-linux-gnu/c++/10/bits/c++config.h.html#335" title="" data-ref="_M/_GLIBCXX_END_NAMESPACE_VERSION">_GLIBCXX_END_NAMESPACE_VERSION</a></td></tr>
 <tr><th id="86">86</th><td>} <i>// namespace std</i></td></tr>
 <tr><th id="87">87</th><td><u>#<span data-ppcond="75">endif</span> // C++17</u></td></tr>
 <tr><th id="88">88</th><td></td></tr>
-<tr><th id="89">89</th><td><u>#<span data-ppcond="89">if</span> <span class="macro" title="201402L" data-ref="_M/__cplusplus">__cplusplus</span> &gt; 201703L</u></td></tr>
+<tr><th id="89">89</th><td><u>#<span data-ppcond="89">if</span> <span class="macro" title="201703L" data-ref="_M/__cplusplus">__cplusplus</span> &gt; 201703L</u></td></tr>
 <tr><th id="90">90</th><td><b>namespace</b> std _GLIBCXX_VISIBILITY(<b>default</b>)</td></tr>
 <tr><th id="91">91</th><td>{</td></tr>
 <tr><th id="92">92</th><td>_GLIBCXX_BEGIN_NAMESPACE_VERSION</td></tr>

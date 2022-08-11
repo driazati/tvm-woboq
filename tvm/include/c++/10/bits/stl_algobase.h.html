@@ -83,10 +83,10 @@
 <tr><th id="69">69</th><td><u>#include <a href="../debug/debug.h.html">&lt;debug/debug.h&gt;</a></u></td></tr>
 <tr><th id="70">70</th><td><u>#include <a href="move.h.html">&lt;bits/move.h&gt;</a> // For std::swap</u></td></tr>
 <tr><th id="71">71</th><td><u>#include <a href="predefined_ops.h.html">&lt;bits/predefined_ops.h&gt;</a></u></td></tr>
-<tr><th id="72">72</th><td><u>#<span data-ppcond="72">if</span> <span class="macro" title="201402L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201103L</u></td></tr>
+<tr><th id="72">72</th><td><u>#<span data-ppcond="72">if</span> <span class="macro" title="201703L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201103L</u></td></tr>
 <tr><th id="73">73</th><td><u># include <a href="../type_traits.html">&lt;type_traits&gt;</a></u></td></tr>
 <tr><th id="74">74</th><td><u>#<span data-ppcond="72">endif</span></u></td></tr>
-<tr><th id="75">75</th><td><u>#<span data-ppcond="75">if</span> <span class="macro" title="201402L" data-ref="_M/__cplusplus">__cplusplus</span> &gt; 201703L</u></td></tr>
+<tr><th id="75">75</th><td><u>#<span data-ppcond="75">if</span> <span class="macro" title="201703L" data-ref="_M/__cplusplus">__cplusplus</span> &gt; 201703L</u></td></tr>
 <tr><th id="76">76</th><td><u># include &lt;compare&gt;</u></td></tr>
 <tr><th id="77">77</th><td><u>#<span data-ppcond="75">endif</span></u></td></tr>
 <tr><th id="78">78</th><td></td></tr>
@@ -103,7 +103,7 @@
 <tr><th id="89">89</th><td>    <b>inline</b> <em>int</em></td></tr>
 <tr><th id="90">90</th><td>    <dfn class="decl def fn" id="_ZSt8__memcmpPKT_PKT0_m" title='std::__memcmp' data-ref="_ZSt8__memcmpPKT_PKT0_m" data-ref-filename="_ZSt8__memcmpPKT_PKT0_m">__memcmp</dfn>(<em>const</em> _Tp* <dfn class="local col4 decl" id="854__first1" title='__first1' data-type='const _Tp *' data-ref="854__first1" data-ref-filename="854__first1">__first1</dfn>, <em>const</em> _Up* <dfn class="local col5 decl" id="855__first2" title='__first2' data-type='const _Up *' data-ref="855__first2" data-ref-filename="855__first2">__first2</dfn>, <a class="typedef" href="../../../x86_64-linux-gnu/c++/10/bits/c++config.h.html#std::size_t" title='std::size_t' data-type='unsigned long' data-ref="std::size_t" data-ref-filename="std..size_t">size_t</a> <dfn class="local col6 decl" id="856__num" title='__num' data-type='std::size_t' data-ref="856__num" data-ref-filename="856__num">__num</dfn>)</td></tr>
 <tr><th id="91">91</th><td>    {</td></tr>
-<tr><th id="92">92</th><td><u>#<span data-ppcond="92">if</span> <span class="macro" title="201402L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201103L</u></td></tr>
+<tr><th id="92">92</th><td><u>#<span data-ppcond="92">if</span> <span class="macro" title="201703L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201103L</u></td></tr>
 <tr><th id="93">93</th><td>      <b>static_assert</b>(<b>sizeof</b>(_Tp) == <b>sizeof</b>(_Up), <q>"can be compared with memcmp"</q>);</td></tr>
 <tr><th id="94">94</th><td><u>#<span data-ppcond="92">endif</span></u></td></tr>
 <tr><th id="95">95</th><td><u>#<span data-ppcond="95">ifdef</span> <span class="macro" data-ref="_M/__cpp_lib_is_constant_evaluated">__cpp_lib_is_constant_evaluated</span></u></td></tr>
@@ -119,7 +119,7 @@
 <tr><th id="105">105</th><td>	<b>return</b> <a class="ref fn" href="#105" title='__builtin_memcmp' data-ref="__builtin_memcmp" data-ref-filename="__builtin_memcmp">__builtin_memcmp</a>(<a class="local col4 ref" href="#854__first1" title='__first1' data-ref="854__first1" data-ref-filename="854__first1">__first1</a>, <a class="local col5 ref" href="#855__first2" title='__first2' data-ref="855__first2" data-ref-filename="855__first2">__first2</a>, <b>sizeof</b>(_Tp) * <a class="local col6 ref" href="#856__num" title='__num' data-ref="856__num" data-ref-filename="856__num">__num</a>);</td></tr>
 <tr><th id="106">106</th><td>    }</td></tr>
 <tr><th id="107">107</th><td></td></tr>
-<tr><th id="108">108</th><td><u>#<span data-ppcond="108">if</span> <span class="macro" title="201402L" data-ref="_M/__cplusplus">__cplusplus</span> &lt; 201103L</u></td></tr>
+<tr><th id="108">108</th><td><u>#<span data-ppcond="108">if</span> <span class="macro" title="201703L" data-ref="_M/__cplusplus">__cplusplus</span> &lt; 201103L</u></td></tr>
 <tr><th id="109">109</th><td>  <i>// See <a href="http://gcc.gnu.org/ml/libstdc++/2004-08/msg00167.html:">http://gcc.gnu.org/ml/libstdc++/2004-08/msg00167.html:</a> in a</i></td></tr>
 <tr><th id="110">110</th><td><i>  // nutshell, we are partially implementing the resolution of DR 187,</i></td></tr>
 <tr><th id="111">111</th><td><i>  // when it's safe, i.e., the value_types are equal.</i></td></tr>
@@ -171,7 +171,7 @@
 <tr><th id="157">157</th><td>      <a class="macro" href="concept_check.h.html#48" title="" data-ref="_M/__glibcxx_function_requires">__glibcxx_function_requires</a>(_Mutable_ForwardIteratorConcept&lt;</td></tr>
 <tr><th id="158">158</th><td>				  _ForwardIterator2&gt;)</td></tr>
 <tr><th id="159">159</th><td></td></tr>
-<tr><th id="160">160</th><td><u>#<span data-ppcond="160">if</span> <span class="macro" title="201402L" data-ref="_M/__cplusplus">__cplusplus</span> &lt; 201103L</u></td></tr>
+<tr><th id="160">160</th><td><u>#<span data-ppcond="160">if</span> <span class="macro" title="201703L" data-ref="_M/__cplusplus">__cplusplus</span> &lt; 201103L</u></td></tr>
 <tr><th id="161">161</th><td>      <b>typedef</b> <b>typename</b> iterator_traits&lt;_ForwardIterator1&gt;::value_type</td></tr>
 <tr><th id="162">162</th><td>	_ValueType1;</td></tr>
 <tr><th id="163">163</th><td>      <b>typedef</b> <b>typename</b> iterator_traits&lt;_ForwardIterator2&gt;::value_type</td></tr>
@@ -364,7 +364,7 @@
 <tr><th id="350">350</th><td>	}</td></tr>
 <tr><th id="351">351</th><td>    };</td></tr>
 <tr><th id="352">352</th><td></td></tr>
-<tr><th id="353">353</th><td><u>#<span data-ppcond="353">if</span> <span class="macro" title="201402L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201103L</u></td></tr>
+<tr><th id="353">353</th><td><u>#<span data-ppcond="353">if</span> <span class="macro" title="201703L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201103L</u></td></tr>
 <tr><th id="354">354</th><td>  <b>template</b>&lt;<b>typename</b> _Category&gt;</td></tr>
 <tr><th id="355">355</th><td>    <b>struct</b> <dfn class="type def" id="std::__copy_move" title='std::__copy_move' data-ref="std::__copy_move" data-ref-filename="std..__copy_move">__copy_move</dfn>&lt;<b>true</b>, <b>false</b>, _Category&gt;</td></tr>
 <tr><th id="356">356</th><td>    {</td></tr>
@@ -399,7 +399,7 @@
 <tr><th id="385">385</th><td>	}</td></tr>
 <tr><th id="386">386</th><td>    };</td></tr>
 <tr><th id="387">387</th><td></td></tr>
-<tr><th id="388">388</th><td><u>#<span data-ppcond="388">if</span> <span class="macro" title="201402L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201103L</u></td></tr>
+<tr><th id="388">388</th><td><u>#<span data-ppcond="388">if</span> <span class="macro" title="201703L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201103L</u></td></tr>
 <tr><th id="389">389</th><td>  <b>template</b>&lt;&gt;</td></tr>
 <tr><th id="390">390</th><td>    <b>struct</b> <dfn class="type def" id="std::__copy_move" title='std::__copy_move' data-ref="std::__copy_move" data-ref-filename="std..__copy_move"><a class="type" href="#std::__copy_move" title='std::__copy_move' data-ref="std::__copy_move" data-ref-filename="std..__copy_move">__copy_move</a></dfn>&lt;<b>true</b>, <b>false</b>, <a class="type" href="stl_iterator_base_types.h.html#std::random_access_iterator_tag" title='std::random_access_iterator_tag' data-ref="std::random_access_iterator_tag" data-ref-filename="std..random_access_iterator_tag">random_access_iterator_tag</a>&gt;</td></tr>
 <tr><th id="391">391</th><td>    {</td></tr>
@@ -428,7 +428,7 @@
 <tr><th id="414">414</th><td>	<em>static</em> _Tp*</td></tr>
 <tr><th id="415">415</th><td>	<dfn class="decl def fn" id="_ZNSt11__copy_moveIXT_ELb1ESt26random_access_iterator_tagE8__copy_mEPKTL0__S4_PS2_" title='std::__copy_move&lt;_IsMove, true, std::random_access_iterator_tag&gt;::__copy_m' data-ref="_ZNSt11__copy_moveIXT_ELb1ESt26random_access_iterator_tagE8__copy_mEPKTL0__S4_PS2_" data-ref-filename="_ZNSt11__copy_moveIXT_ELb1ESt26random_access_iterator_tagE8__copy_mEPKTL0__S4_PS2_">__copy_m</dfn>(<em>const</em> _Tp* <dfn class="local col2 decl" id="892__first" title='__first' data-type='const _Tp *' data-ref="892__first" data-ref-filename="892__first">__first</dfn>, <em>const</em> _Tp* <dfn class="local col3 decl" id="893__last" title='__last' data-type='const _Tp *' data-ref="893__last" data-ref-filename="893__last">__last</dfn>, _Tp* <dfn class="local col4 decl" id="894__result" title='__result' data-type='_Tp *' data-ref="894__result" data-ref-filename="894__result">__result</dfn>)</td></tr>
 <tr><th id="416">416</th><td>	{</td></tr>
-<tr><th id="417">417</th><td><u>#<span data-ppcond="417">if</span> <span class="macro" title="201402L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201103L</u></td></tr>
+<tr><th id="417">417</th><td><u>#<span data-ppcond="417">if</span> <span class="macro" title="201703L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201103L</u></td></tr>
 <tr><th id="418">418</th><td>	  <b>using</b> <dfn class="local col5 typedef" id="895__assignable" title='__assignable' data-type='conditional&lt;_IsMove, is_move_assignable&lt;_Tp&gt;, is_copy_assignable&lt;_Tp&gt;&gt;' data-ref="895__assignable" data-ref-filename="895__assignable">__assignable</dfn> = <a class="type" href="../type_traits.html#std::conditional" title='std::conditional' data-ref="std::conditional" data-ref-filename="std..conditional">conditional</a>&lt;<a class="tu member" href="#std::__copy_move{_IsMove,true,std::random_access_iterator_tag}::_IsMove" title='std::__copy_move&lt;_IsMove, true, std::random_access_iterator_tag&gt;::_IsMove' data-ref="std::__copy_move{_IsMove,true,std::random_access_iterator_tag}::_IsMove" data-ref-filename="std..__copy_move{_IsMove,true,std..random_access_iterator_tag}.._IsMove">_IsMove</a>,</td></tr>
 <tr><th id="419">419</th><td>					   <a class="type" href="../type_traits.html#std::is_move_assignable" title='std::is_move_assignable' data-ref="std::is_move_assignable" data-ref-filename="std..is_move_assignable">is_move_assignable</a>&lt;_Tp&gt;,</td></tr>
 <tr><th id="420">420</th><td>					   <a class="type" href="../type_traits.html#std::is_copy_assignable" title='std::is_copy_assignable' data-ref="std::is_copy_assignable" data-ref-filename="std..is_copy_assignable">is_copy_assignable</a>&lt;_Tp&gt;&gt;;</td></tr>
@@ -583,7 +583,7 @@
 <tr><th id="569">569</th><td>	     (<span class="namespace">std::</span>__miter_base(<a class="local col7 ref" href="#907__first" title='__first' data-ref="907__first" data-ref-filename="907__first">__first</a>), <span class="namespace">std::</span>__miter_base(<a class="local col8 ref" href="#908__last" title='__last' data-ref="908__last" data-ref-filename="908__last">__last</a>), <a class="local col9 ref" href="#909__result" title='__result' data-ref="909__result" data-ref-filename="909__result">__result</a>);</td></tr>
 <tr><th id="570">570</th><td>    }</td></tr>
 <tr><th id="571">571</th><td></td></tr>
-<tr><th id="572">572</th><td><u>#<span data-ppcond="572">if</span> <span class="macro" title="201402L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201103L</u></td></tr>
+<tr><th id="572">572</th><td><u>#<span data-ppcond="572">if</span> <span class="macro" title="201703L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201103L</u></td></tr>
 <tr><th id="573">573</th><td>  <i class="doc">/**</i></td></tr>
 <tr><th id="574">574</th><td><i class="doc">   *  <span class="command">@brief</span> Moves the range [first,last) into result.</i></td></tr>
 <tr><th id="575">575</th><td><i class="doc">   *  <span class="command">@ingroup</span> <span class="verb">mutating_algorithms</span></i></td></tr>
@@ -635,7 +635,7 @@
 <tr><th id="621">621</th><td>	}</td></tr>
 <tr><th id="622">622</th><td>    };</td></tr>
 <tr><th id="623">623</th><td></td></tr>
-<tr><th id="624">624</th><td><u>#<span data-ppcond="624">if</span> <span class="macro" title="201402L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201103L</u></td></tr>
+<tr><th id="624">624</th><td><u>#<span data-ppcond="624">if</span> <span class="macro" title="201703L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201103L</u></td></tr>
 <tr><th id="625">625</th><td>  <b>template</b>&lt;<b>typename</b> _Category&gt;</td></tr>
 <tr><th id="626">626</th><td>    <b>struct</b> <dfn class="type def" id="std::__copy_move_backward" title='std::__copy_move_backward' data-ref="std::__copy_move_backward" data-ref-filename="std..__copy_move_backward">__copy_move_backward</dfn>&lt;<b>true</b>, <b>false</b>, _Category&gt;</td></tr>
 <tr><th id="627">627</th><td>    {</td></tr>
@@ -667,7 +667,7 @@
 <tr><th id="653">653</th><td>	}</td></tr>
 <tr><th id="654">654</th><td>    };</td></tr>
 <tr><th id="655">655</th><td></td></tr>
-<tr><th id="656">656</th><td><u>#<span data-ppcond="656">if</span> <span class="macro" title="201402L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201103L</u></td></tr>
+<tr><th id="656">656</th><td><u>#<span data-ppcond="656">if</span> <span class="macro" title="201703L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201103L</u></td></tr>
 <tr><th id="657">657</th><td>  <b>template</b>&lt;&gt;</td></tr>
 <tr><th id="658">658</th><td>    <b>struct</b> <dfn class="type def" id="std::__copy_move_backward" title='std::__copy_move_backward' data-ref="std::__copy_move_backward" data-ref-filename="std..__copy_move_backward"><a class="type" href="#std::__copy_move_backward" title='std::__copy_move_backward' data-ref="std::__copy_move_backward" data-ref-filename="std..__copy_move_backward">__copy_move_backward</a></dfn>&lt;<b>true</b>, <b>false</b>, <a class="type" href="stl_iterator_base_types.h.html#std::random_access_iterator_tag" title='std::random_access_iterator_tag' data-ref="std::random_access_iterator_tag" data-ref-filename="std..random_access_iterator_tag">random_access_iterator_tag</a>&gt;</td></tr>
 <tr><th id="659">659</th><td>    {</td></tr>
@@ -693,7 +693,7 @@
 <tr><th id="679">679</th><td>	<em>static</em> _Tp*</td></tr>
 <tr><th id="680">680</th><td>	<dfn class="decl def fn" id="_ZNSt20__copy_move_backwardIXT_ELb1ESt26random_access_iterator_tagE13__copy_move_bEPKTL0__S4_PS2_" title='std::__copy_move_backward&lt;_IsMove, true, std::random_access_iterator_tag&gt;::__copy_move_b' data-ref="_ZNSt20__copy_move_backwardIXT_ELb1ESt26random_access_iterator_tagE13__copy_move_bEPKTL0__S4_PS2_" data-ref-filename="_ZNSt20__copy_move_backwardIXT_ELb1ESt26random_access_iterator_tagE13__copy_move_bEPKTL0__S4_PS2_">__copy_move_b</dfn>(<em>const</em> _Tp* <dfn class="local col7 decl" id="927__first" title='__first' data-type='const _Tp *' data-ref="927__first" data-ref-filename="927__first">__first</dfn>, <em>const</em> _Tp* <dfn class="local col8 decl" id="928__last" title='__last' data-type='const _Tp *' data-ref="928__last" data-ref-filename="928__last">__last</dfn>, _Tp* <dfn class="local col9 decl" id="929__result" title='__result' data-type='_Tp *' data-ref="929__result" data-ref-filename="929__result">__result</dfn>)</td></tr>
 <tr><th id="681">681</th><td>	{</td></tr>
-<tr><th id="682">682</th><td><u>#<span data-ppcond="682">if</span> <span class="macro" title="201402L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201103L</u></td></tr>
+<tr><th id="682">682</th><td><u>#<span data-ppcond="682">if</span> <span class="macro" title="201703L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201103L</u></td></tr>
 <tr><th id="683">683</th><td>	  <b>using</b> <dfn class="local col0 typedef" id="930__assignable" title='__assignable' data-type='conditional&lt;_IsMove, is_move_assignable&lt;_Tp&gt;, is_copy_assignable&lt;_Tp&gt;&gt;' data-ref="930__assignable" data-ref-filename="930__assignable">__assignable</dfn> = <a class="type" href="../type_traits.html#std::conditional" title='std::conditional' data-ref="std::conditional" data-ref-filename="std..conditional">conditional</a>&lt;<a class="tu member" href="#std::__copy_move_backward{_IsMove,true,std::random_access_iterator_tag}::_IsMove" title='std::__copy_move_backward&lt;_IsMove, true, std::random_access_iterator_tag&gt;::_IsMove' data-ref="std::__copy_move_backward{_IsMove,true,std::random_access_iterator_tag}::_IsMove" data-ref-filename="std..__copy_move_backward{_IsMove,true,std..random_access_iterator_tag}.._IsMove">_IsMove</a>,</td></tr>
 <tr><th id="684">684</th><td>					   <a class="type" href="../type_traits.html#std::is_move_assignable" title='std::is_move_assignable' data-ref="std::is_move_assignable" data-ref-filename="std..is_move_assignable">is_move_assignable</a>&lt;_Tp&gt;,</td></tr>
 <tr><th id="685">685</th><td>					   <a class="type" href="../type_traits.html#std::is_copy_assignable" title='std::is_copy_assignable' data-ref="std::is_copy_assignable" data-ref-filename="std..is_copy_assignable">is_copy_assignable</a>&lt;_Tp&gt;&gt;;</td></tr>
@@ -822,7 +822,7 @@
 <tr><th id="808">808</th><td>	     (<span class="namespace">std::</span>__miter_base(<a class="local col2 ref" href="#942__first" title='__first' data-ref="942__first" data-ref-filename="942__first">__first</a>), <span class="namespace">std::</span>__miter_base(<a class="local col3 ref" href="#943__last" title='__last' data-ref="943__last" data-ref-filename="943__last">__last</a>), <a class="local col4 ref" href="#944__result" title='__result' data-ref="944__result" data-ref-filename="944__result">__result</a>);</td></tr>
 <tr><th id="809">809</th><td>    }</td></tr>
 <tr><th id="810">810</th><td></td></tr>
-<tr><th id="811">811</th><td><u>#<span data-ppcond="811">if</span> <span class="macro" title="201402L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201103L</u></td></tr>
+<tr><th id="811">811</th><td><u>#<span data-ppcond="811">if</span> <span class="macro" title="201703L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201103L</u></td></tr>
 <tr><th id="812">812</th><td>  <i class="doc">/**</i></td></tr>
 <tr><th id="813">813</th><td><i class="doc">   *  <span class="command">@brief</span> Moves the range [first,last) into result.</i></td></tr>
 <tr><th id="814">814</th><td><i class="doc">   *  <span class="command">@ingroup</span> <span class="verb">mutating_algorithms</span></i></td></tr>
@@ -1044,7 +1044,7 @@
 <tr><th id="1030">1030</th><td>    <dfn class="decl def fn" id="_ZSt10__fill_n_aT_T0_RKT1_St19output_iterator_tag" title='std::__fill_n_a' data-ref="_ZSt10__fill_n_aT_T0_RKT1_St19output_iterator_tag" data-ref-filename="_ZSt10__fill_n_aT_T0_RKT1_St19output_iterator_tag">__fill_n_a</dfn>(_OutputIterator <dfn class="local col8 decl" id="988__first" title='__first' data-type='_OutputIterator' data-ref="988__first" data-ref-filename="988__first">__first</dfn>, _Size <dfn class="local col9 decl" id="989__n" title='__n' data-type='_Size' data-ref="989__n" data-ref-filename="989__n">__n</dfn>, <em>const</em> _Tp&amp; <dfn class="local col0 decl" id="990__value" title='__value' data-type='const _Tp &amp;' data-ref="990__value" data-ref-filename="990__value">__value</dfn>,</td></tr>
 <tr><th id="1031">1031</th><td>	       <span class="namespace">std::</span><a class="type" href="stl_iterator_base_types.h.html#std::output_iterator_tag" title='std::output_iterator_tag' data-ref="std::output_iterator_tag" data-ref-filename="std..output_iterator_tag">output_iterator_tag</a>)</td></tr>
 <tr><th id="1032">1032</th><td>    {</td></tr>
-<tr><th id="1033">1033</th><td><u>#<span data-ppcond="1033">if</span> <span class="macro" title="201402L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201103L</u></td></tr>
+<tr><th id="1033">1033</th><td><u>#<span data-ppcond="1033">if</span> <span class="macro" title="201703L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201103L</u></td></tr>
 <tr><th id="1034">1034</th><td>      <b>static_assert</b>(<a class="type" href="../type_traits.html#std::is_integral" title='std::is_integral' data-ref="std::is_integral" data-ref-filename="std..is_integral">is_integral</a>&lt;_Size&gt;{}, <q>"fill_n must pass integral size"</q>);</td></tr>
 <tr><th id="1035">1035</th><td><u>#<span data-ppcond="1033">endif</span></u></td></tr>
 <tr><th id="1036">1036</th><td>      <b>return</b> __fill_n_a1(<a class="local col8 ref" href="#988__first" title='__first' data-ref="988__first" data-ref-filename="988__first">__first</a>, <a class="local col9 ref" href="#989__n" title='__n' data-ref="989__n" data-ref-filename="989__n">__n</a>, <a class="local col0 ref" href="#990__value" title='__value' data-ref="990__value" data-ref-filename="990__value">__value</a>);</td></tr>
@@ -1056,7 +1056,7 @@
 <tr><th id="1042">1042</th><td>    <dfn class="decl def fn" id="_ZSt10__fill_n_aT_T0_RKT1_St18input_iterator_tag" title='std::__fill_n_a' data-ref="_ZSt10__fill_n_aT_T0_RKT1_St18input_iterator_tag" data-ref-filename="_ZSt10__fill_n_aT_T0_RKT1_St18input_iterator_tag">__fill_n_a</dfn>(_OutputIterator <dfn class="local col1 decl" id="991__first" title='__first' data-type='_OutputIterator' data-ref="991__first" data-ref-filename="991__first">__first</dfn>, _Size <dfn class="local col2 decl" id="992__n" title='__n' data-type='_Size' data-ref="992__n" data-ref-filename="992__n">__n</dfn>, <em>const</em> _Tp&amp; <dfn class="local col3 decl" id="993__value" title='__value' data-type='const _Tp &amp;' data-ref="993__value" data-ref-filename="993__value">__value</dfn>,</td></tr>
 <tr><th id="1043">1043</th><td>	       <span class="namespace">std::</span><a class="type" href="stl_iterator_base_types.h.html#std::input_iterator_tag" title='std::input_iterator_tag' data-ref="std::input_iterator_tag" data-ref-filename="std..input_iterator_tag">input_iterator_tag</a>)</td></tr>
 <tr><th id="1044">1044</th><td>    {</td></tr>
-<tr><th id="1045">1045</th><td><u>#<span data-ppcond="1045">if</span> <span class="macro" title="201402L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201103L</u></td></tr>
+<tr><th id="1045">1045</th><td><u>#<span data-ppcond="1045">if</span> <span class="macro" title="201703L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201103L</u></td></tr>
 <tr><th id="1046">1046</th><td>      <b>static_assert</b>(<a class="type" href="../type_traits.html#std::is_integral" title='std::is_integral' data-ref="std::is_integral" data-ref-filename="std..is_integral">is_integral</a>&lt;_Size&gt;{}, <q>"fill_n must pass integral size"</q>);</td></tr>
 <tr><th id="1047">1047</th><td><u>#<span data-ppcond="1045">endif</span></u></td></tr>
 <tr><th id="1048">1048</th><td>      <b>return</b> __fill_n_a1(<a class="local col1 ref" href="#991__first" title='__first' data-ref="991__first" data-ref-filename="991__first">__first</a>, <a class="local col2 ref" href="#992__n" title='__n' data-ref="992__n" data-ref-filename="992__n">__n</a>, <a class="local col3 ref" href="#993__value" title='__value' data-ref="993__value" data-ref-filename="993__value">__value</a>);</td></tr>
@@ -1068,7 +1068,7 @@
 <tr><th id="1054">1054</th><td>    <dfn class="decl def fn" id="_ZSt10__fill_n_aT_T0_RKT1_St26random_access_iterator_tag" title='std::__fill_n_a' data-ref="_ZSt10__fill_n_aT_T0_RKT1_St26random_access_iterator_tag" data-ref-filename="_ZSt10__fill_n_aT_T0_RKT1_St26random_access_iterator_tag">__fill_n_a</dfn>(_OutputIterator <dfn class="local col4 decl" id="994__first" title='__first' data-type='_OutputIterator' data-ref="994__first" data-ref-filename="994__first">__first</dfn>, _Size <dfn class="local col5 decl" id="995__n" title='__n' data-type='_Size' data-ref="995__n" data-ref-filename="995__n">__n</dfn>, <em>const</em> _Tp&amp; <dfn class="local col6 decl" id="996__value" title='__value' data-type='const _Tp &amp;' data-ref="996__value" data-ref-filename="996__value">__value</dfn>,</td></tr>
 <tr><th id="1055">1055</th><td>	       <span class="namespace">std::</span><a class="type" href="stl_iterator_base_types.h.html#std::random_access_iterator_tag" title='std::random_access_iterator_tag' data-ref="std::random_access_iterator_tag" data-ref-filename="std..random_access_iterator_tag">random_access_iterator_tag</a>)</td></tr>
 <tr><th id="1056">1056</th><td>    {</td></tr>
-<tr><th id="1057">1057</th><td><u>#<span data-ppcond="1057">if</span> <span class="macro" title="201402L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201103L</u></td></tr>
+<tr><th id="1057">1057</th><td><u>#<span data-ppcond="1057">if</span> <span class="macro" title="201703L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201103L</u></td></tr>
 <tr><th id="1058">1058</th><td>      <b>static_assert</b>(<a class="type" href="../type_traits.html#std::is_integral" title='std::is_integral' data-ref="std::is_integral" data-ref-filename="std..is_integral">is_integral</a>&lt;_Size&gt;{}, <q>"fill_n must pass integral size"</q>);</td></tr>
 <tr><th id="1059">1059</th><td><u>#<span data-ppcond="1057">endif</span></u></td></tr>
 <tr><th id="1060">1060</th><td>      <b>if</b> (<a class="local col5 ref" href="#995__n" title='__n' data-ref="995__n" data-ref-filename="995__n">__n</a> &lt;= <var>0</var>)</td></tr>
@@ -1304,7 +1304,7 @@
 <tr><th id="1290">1290</th><td>	(<a class="type" href="cpp_type_traits.h.html#std::__is_memcmp_ordered_with" title='std::__is_memcmp_ordered_with' data-ref="std::__is_memcmp_ordered_with" data-ref-filename="std..__is_memcmp_ordered_with">__is_memcmp_ordered_with</a>&lt;<a class="local col8 typedef" href="#1048_ValueType1" title='_ValueType1' data-type='typename iterator_traits&lt;_II1&gt;::value_type' data-ref="1048_ValueType1" data-ref-filename="1048_ValueType1">_ValueType1</a>, <a class="local col9 typedef" href="#1049_ValueType2" title='_ValueType2' data-type='typename iterator_traits&lt;_II2&gt;::value_type' data-ref="1049_ValueType2" data-ref-filename="1049_ValueType2">_ValueType2</a>&gt;::__value</td></tr>
 <tr><th id="1291">1291</th><td>	 &amp;&amp; <a class="type" href="cpp_type_traits.h.html#std::__is_pointer" title='std::__is_pointer' data-ref="std::__is_pointer" data-ref-filename="std..__is_pointer">__is_pointer</a>&lt;_II1&gt;::__value</td></tr>
 <tr><th id="1292">1292</th><td>	 &amp;&amp; <a class="type" href="cpp_type_traits.h.html#std::__is_pointer" title='std::__is_pointer' data-ref="std::__is_pointer" data-ref-filename="std..__is_pointer">__is_pointer</a>&lt;_II2&gt;::__value</td></tr>
-<tr><th id="1293">1293</th><td><u>#<span data-ppcond="1293">if</span> <span class="macro" title="201402L" data-ref="_M/__cplusplus">__cplusplus</span> &gt; 201703L &amp;&amp; __cpp_lib_concepts</u></td></tr>
+<tr><th id="1293">1293</th><td><u>#<span data-ppcond="1293">if</span> <span class="macro" title="201703L" data-ref="_M/__cplusplus">__cplusplus</span> &gt; 201703L &amp;&amp; __cpp_lib_concepts</u></td></tr>
 <tr><th id="1294">1294</th><td>	 <i>// For C++20 iterator_traits&lt;volatile T*&gt;::value_type is non-volatile</i></td></tr>
 <tr><th id="1295">1295</th><td><i>	 // so __is_byte&lt;T&gt; could be true, but we can't use memcmp with</i></td></tr>
 <tr><th id="1296">1296</th><td><i>	 // volatile data.</i></td></tr>
@@ -1460,7 +1460,7 @@
 <tr><th id="1446">1446</th><td>      <b>return</b> <b>true</b>;</td></tr>
 <tr><th id="1447">1447</th><td>    }</td></tr>
 <tr><th id="1448">1448</th><td></td></tr>
-<tr><th id="1449">1449</th><td><u>#<span data-ppcond="1449">if</span> <span class="macro" title="201402L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201103L</u></td></tr>
+<tr><th id="1449">1449</th><td><u>#<span data-ppcond="1449">if</span> <span class="macro" title="201703L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201103L</u></td></tr>
 <tr><th id="1450">1450</th><td>  <i>// 4-iterator version of std::equal&lt;It1, It2&gt; for use in C++11.</i></td></tr>
 <tr><th id="1451">1451</th><td>  <b>template</b>&lt;<b>typename</b> _II1, <b>typename</b> _II2&gt;</td></tr>
 <tr><th id="1452">1452</th><td>    <a class="macro" href="../../../x86_64-linux-gnu/c++/10/bits/c++config.h.html#155" title="" data-ref="_M/_GLIBCXX20_CONSTEXPR">_GLIBCXX20_CONSTEXPR</a></td></tr>
@@ -1516,7 +1516,7 @@
 <tr><th id="1502">1502</th><td>    }</td></tr>
 <tr><th id="1503">1503</th><td><u>#<span data-ppcond="1449">endif</span> // C++11</u></td></tr>
 <tr><th id="1504">1504</th><td></td></tr>
-<tr><th id="1505">1505</th><td><u>#<span data-ppcond="1505">if</span> <span class="macro" title="201402L" data-ref="_M/__cplusplus">__cplusplus</span> &gt; 201103L</u></td></tr>
+<tr><th id="1505">1505</th><td><u>#<span data-ppcond="1505">if</span> <span class="macro" title="201703L" data-ref="_M/__cplusplus">__cplusplus</span> &gt; 201103L</u></td></tr>
 <tr><th id="1506">1506</th><td></td></tr>
 <tr><th id="1507">1507</th><td><u>#define <dfn class="macro" id="_M/__cpp_lib_robust_nonmodifying_seq_ops" data-ref="_M/__cpp_lib_robust_nonmodifying_seq_ops">__cpp_lib_robust_nonmodifying_seq_ops</dfn> 201304</u></td></tr>
 <tr><th id="1508">1508</th><td></td></tr>
@@ -1826,7 +1826,7 @@
 <tr><th id="1812">1812</th><td>	<span class="namespace">__gnu_cxx::__ops::</span>__iter_comp_iter(<a class="local col4 ref" href="#1124__binary_pred" title='__binary_pred' data-ref="1124__binary_pred" data-ref-filename="1124__binary_pred">__binary_pred</a>));</td></tr>
 <tr><th id="1813">1813</th><td>    }</td></tr>
 <tr><th id="1814">1814</th><td></td></tr>
-<tr><th id="1815">1815</th><td><u>#<span data-ppcond="1815">if</span> <span class="macro" title="201402L" data-ref="_M/__cplusplus">__cplusplus</span> &gt; 201103L</u></td></tr>
+<tr><th id="1815">1815</th><td><u>#<span data-ppcond="1815">if</span> <span class="macro" title="201703L" data-ref="_M/__cplusplus">__cplusplus</span> &gt; 201103L</u></td></tr>
 <tr><th id="1816">1816</th><td></td></tr>
 <tr><th id="1817">1817</th><td>  <b>template</b>&lt;<b>typename</b> _InputIterator1, <b>typename</b> _InputIterator2,</td></tr>
 <tr><th id="1818">1818</th><td>	   <b>typename</b> _BinaryPredicate&gt;</td></tr>
@@ -2001,7 +2001,7 @@
 <tr><th id="1987">1987</th><td>      <b>return</b> <a class="local col2 ref" href="#1152__n" title='__n' data-ref="1152__n" data-ref-filename="1152__n">__n</a>;</td></tr>
 <tr><th id="1988">1988</th><td>    }</td></tr>
 <tr><th id="1989">1989</th><td></td></tr>
-<tr><th id="1990">1990</th><td><u>#<span data-ppcond="1990">if</span> <span class="macro" title="201402L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201103L</u></td></tr>
+<tr><th id="1990">1990</th><td><u>#<span data-ppcond="1990">if</span> <span class="macro" title="201703L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201103L</u></td></tr>
 <tr><th id="1991">1991</th><td>  <b>template</b>&lt;<b>typename</b> _ForwardIterator1, <b>typename</b> _ForwardIterator2,</td></tr>
 <tr><th id="1992">1992</th><td>	   <b>typename</b> _BinaryPredicate&gt;</td></tr>
 <tr><th id="1993">1993</th><td>    <a class="macro" href="../../../x86_64-linux-gnu/c++/10/bits/c++config.h.html#155" title="" data-ref="_M/_GLIBCXX20_CONSTEXPR">_GLIBCXX20_CONSTEXPR</a></td></tr>

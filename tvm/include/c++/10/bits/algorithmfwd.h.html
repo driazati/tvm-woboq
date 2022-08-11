@@ -48,7 +48,7 @@
 <tr><th id="35">35</th><td><u>#include <a href="../../../x86_64-linux-gnu/c++/10/bits/c++config.h.html">&lt;bits/c++config.h&gt;</a></u></td></tr>
 <tr><th id="36">36</th><td><u>#include <a href="stl_pair.h.html">&lt;bits/stl_pair.h&gt;</a></u></td></tr>
 <tr><th id="37">37</th><td><u>#include <a href="stl_iterator_base_types.h.html">&lt;bits/stl_iterator_base_types.h&gt;</a></u></td></tr>
-<tr><th id="38">38</th><td><u>#<span data-ppcond="38">if</span> <span class="macro" title="201402L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201103L</u></td></tr>
+<tr><th id="38">38</th><td><u>#<span data-ppcond="38">if</span> <span class="macro" title="201703L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201103L</u></td></tr>
 <tr><th id="39">39</th><td><u>#include <a href="../initializer_list.html">&lt;initializer_list&gt;</a></u></td></tr>
 <tr><th id="40">40</th><td><u>#<span data-ppcond="38">endif</span></u></td></tr>
 <tr><th id="41">41</th><td></td></tr>
@@ -204,11 +204,11 @@
 <tr><th id="191">191</th><td><i class="doc"></i></td></tr>
 <tr><th id="192">192</th><td><i class="doc">  // adjacent_find</i></td></tr>
 <tr><th id="193">193</th><td></td></tr>
-<tr><th id="194">194</th><td><u>#<span data-ppcond="194">if</span> <span class="macro" title="201402L" data-ref="_M/__cplusplus">__cplusplus</span> &gt; 201703L</u></td></tr>
+<tr><th id="194">194</th><td><u>#<span data-ppcond="194">if</span> <span class="macro" title="201703L" data-ref="_M/__cplusplus">__cplusplus</span> &gt; 201703L</u></td></tr>
 <tr><th id="195">195</th><td><u>#  define __cpp_lib_constexpr_algorithms 201806L</u></td></tr>
 <tr><th id="196">196</th><td><u>#<span data-ppcond="194">endif</span></u></td></tr>
 <tr><th id="197">197</th><td></td></tr>
-<tr><th id="198">198</th><td><u>#<span data-ppcond="198">if</span> <span class="macro" title="201402L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201103L</u></td></tr>
+<tr><th id="198">198</th><td><u>#<span data-ppcond="198">if</span> <span class="macro" title="201703L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201103L</u></td></tr>
 <tr><th id="199">199</th><td>  <b>template</b>&lt;<b>typename</b> _IIter, <b>typename</b> _Predicate&gt;</td></tr>
 <tr><th id="200">200</th><td>    <a class="macro" href="../../../x86_64-linux-gnu/c++/10/bits/c++config.h.html#155" title="" data-ref="_M/_GLIBCXX20_CONSTEXPR">_GLIBCXX20_CONSTEXPR</a></td></tr>
 <tr><th id="201">201</th><td>    <em>bool</em></td></tr>
@@ -230,16 +230,16 @@
 <tr><th id="217">217</th><td>    <em>bool</em></td></tr>
 <tr><th id="218">218</th><td>    <a class="decl fn" href="stl_algo.h.html#_ZSt13binary_searchT_S_RKT0_T1_" title='std::binary_search' data-ref="_ZSt13binary_searchT_S_RKT0_T1_" data-ref-filename="_ZSt13binary_searchT_S_RKT0_T1_" id="_ZSt13binary_searchT_S_RKT0_T1_">binary_search</a>(_FIter, _FIter, <em>const</em> _Tp&amp;, _Compare);</td></tr>
 <tr><th id="219">219</th><td></td></tr>
-<tr><th id="220">220</th><td><u>#<span data-ppcond="220">if</span> <span class="macro" title="201402L" data-ref="_M/__cplusplus">__cplusplus</span> &gt; 201402L</u></td></tr>
+<tr><th id="220">220</th><td><u>#<span data-ppcond="220">if</span> <span class="macro" title="201703L" data-ref="_M/__cplusplus">__cplusplus</span> &gt; 201402L</u></td></tr>
 <tr><th id="221">221</th><td>  <b>template</b>&lt;<b>typename</b> _Tp&gt;</td></tr>
-<tr><th id="222">222</th><td>    _GLIBCXX14_CONSTEXPR</td></tr>
+<tr><th id="222">222</th><td>    <a class="macro" href="../../../x86_64-linux-gnu/c++/10/bits/c++config.h.html#137" title="constexpr" data-ref="_M/_GLIBCXX14_CONSTEXPR">_GLIBCXX14_CONSTEXPR</a></td></tr>
 <tr><th id="223">223</th><td>    <em>const</em> _Tp&amp;</td></tr>
-<tr><th id="224">224</th><td>    clamp(<em>const</em> _Tp&amp;, <em>const</em> _Tp&amp;, <em>const</em> _Tp&amp;);</td></tr>
+<tr><th id="224">224</th><td>    <a class="decl fn" href="stl_algo.h.html#_ZSt5clampRKT_S1_S1_" title='std::clamp' data-ref="_ZSt5clampRKT_S1_S1_" data-ref-filename="_ZSt5clampRKT_S1_S1_" id="_ZSt5clampRKT_S1_S1_">clamp</a>(<em>const</em> _Tp&amp;, <em>const</em> _Tp&amp;, <em>const</em> _Tp&amp;);</td></tr>
 <tr><th id="225">225</th><td></td></tr>
 <tr><th id="226">226</th><td>  <b>template</b>&lt;<b>typename</b> _Tp, <b>typename</b> _Compare&gt;</td></tr>
-<tr><th id="227">227</th><td>    _GLIBCXX14_CONSTEXPR</td></tr>
+<tr><th id="227">227</th><td>    <a class="macro" href="../../../x86_64-linux-gnu/c++/10/bits/c++config.h.html#137" title="constexpr" data-ref="_M/_GLIBCXX14_CONSTEXPR">_GLIBCXX14_CONSTEXPR</a></td></tr>
 <tr><th id="228">228</th><td>    <em>const</em> _Tp&amp;</td></tr>
-<tr><th id="229">229</th><td>    clamp(<em>const</em> _Tp&amp;, <em>const</em> _Tp&amp;, <em>const</em> _Tp&amp;, _Compare);</td></tr>
+<tr><th id="229">229</th><td>    <a class="decl fn" href="stl_algo.h.html#_ZSt5clampRKT_S1_S1_T0_" title='std::clamp' data-ref="_ZSt5clampRKT_S1_S1_T0_" data-ref-filename="_ZSt5clampRKT_S1_S1_T0_" id="_ZSt5clampRKT_S1_S1_T0_">clamp</a>(<em>const</em> _Tp&amp;, <em>const</em> _Tp&amp;, <em>const</em> _Tp&amp;, _Compare);</td></tr>
 <tr><th id="230">230</th><td><u>#<span data-ppcond="220">endif</span></u></td></tr>
 <tr><th id="231">231</th><td></td></tr>
 <tr><th id="232">232</th><td>  <b>template</b>&lt;<b>typename</b> _IIter, <b>typename</b> _OIter&gt;</td></tr>
@@ -252,7 +252,7 @@
 <tr><th id="239">239</th><td>    _BIter2</td></tr>
 <tr><th id="240">240</th><td>    <a class="decl fn" href="stl_algobase.h.html#_ZSt13copy_backwardT_S_T0_" title='std::copy_backward' data-ref="_ZSt13copy_backwardT_S_T0_" data-ref-filename="_ZSt13copy_backwardT_S_T0_" id="_ZSt13copy_backwardT_S_T0_">copy_backward</a>(_BIter1, _BIter1, _BIter2);</td></tr>
 <tr><th id="241">241</th><td></td></tr>
-<tr><th id="242">242</th><td><u>#<span data-ppcond="242">if</span> <span class="macro" title="201402L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201103L</u></td></tr>
+<tr><th id="242">242</th><td><u>#<span data-ppcond="242">if</span> <span class="macro" title="201703L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201103L</u></td></tr>
 <tr><th id="243">243</th><td>  <b>template</b>&lt;<b>typename</b> _IIter, <b>typename</b> _OIter, <b>typename</b> _Predicate&gt;</td></tr>
 <tr><th id="244">244</th><td>    <a class="macro" href="../../../x86_64-linux-gnu/c++/10/bits/c++config.h.html#155" title="" data-ref="_M/_GLIBCXX20_CONSTEXPR">_GLIBCXX20_CONSTEXPR</a></td></tr>
 <tr><th id="245">245</th><td>    _OIter</td></tr>
@@ -302,7 +302,7 @@
 <tr><th id="289">289</th><td>  <i>// find_first_of</i></td></tr>
 <tr><th id="290">290</th><td><i>  // find_if</i></td></tr>
 <tr><th id="291">291</th><td></td></tr>
-<tr><th id="292">292</th><td><u>#<span data-ppcond="292">if</span> <span class="macro" title="201402L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201103L</u></td></tr>
+<tr><th id="292">292</th><td><u>#<span data-ppcond="292">if</span> <span class="macro" title="201703L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201103L</u></td></tr>
 <tr><th id="293">293</th><td>  <b>template</b>&lt;<b>typename</b> _IIter, <b>typename</b> _Predicate&gt;</td></tr>
 <tr><th id="294">294</th><td>    <a class="macro" href="../../../x86_64-linux-gnu/c++/10/bits/c++config.h.html#155" title="" data-ref="_M/_GLIBCXX20_CONSTEXPR">_GLIBCXX20_CONSTEXPR</a></td></tr>
 <tr><th id="295">295</th><td>    _IIter</td></tr>
@@ -331,7 +331,7 @@
 <tr><th id="318">318</th><td>    <em>void</em></td></tr>
 <tr><th id="319">319</th><td>    <a class="decl fn" href="stl_algo.h.html#_ZSt13inplace_mergeT_S_S_T0_" title='std::inplace_merge' data-ref="_ZSt13inplace_mergeT_S_S_T0_" data-ref-filename="_ZSt13inplace_mergeT_S_S_T0_" id="_ZSt13inplace_mergeT_S_S_T0_">inplace_merge</a>(_BIter, _BIter, _BIter, _Compare);</td></tr>
 <tr><th id="320">320</th><td></td></tr>
-<tr><th id="321">321</th><td><u>#<span data-ppcond="321">if</span> <span class="macro" title="201402L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201103L</u></td></tr>
+<tr><th id="321">321</th><td><u>#<span data-ppcond="321">if</span> <span class="macro" title="201703L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201103L</u></td></tr>
 <tr><th id="322">322</th><td>  <b>template</b>&lt;<b>typename</b> _RAIter&gt;</td></tr>
 <tr><th id="323">323</th><td>    <a class="macro" href="../../../x86_64-linux-gnu/c++/10/bits/c++config.h.html#155" title="" data-ref="_M/_GLIBCXX20_CONSTEXPR">_GLIBCXX20_CONSTEXPR</a></td></tr>
 <tr><th id="324">324</th><td>    <em>bool</em></td></tr>
@@ -439,7 +439,7 @@
 <tr><th id="426">426</th><td></td></tr>
 <tr><th id="427">427</th><td>  <i>// min_element</i></td></tr>
 <tr><th id="428">428</th><td></td></tr>
-<tr><th id="429">429</th><td><u>#<span data-ppcond="429">if</span> <span class="macro" title="201402L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201103L</u></td></tr>
+<tr><th id="429">429</th><td><u>#<span data-ppcond="429">if</span> <span class="macro" title="201703L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201103L</u></td></tr>
 <tr><th id="430">430</th><td>  <b>template</b>&lt;<b>typename</b> _Tp&gt;</td></tr>
 <tr><th id="431">431</th><td>    <a class="macro" href="../../../x86_64-linux-gnu/c++/10/bits/c++config.h.html#137" title="constexpr" data-ref="_M/_GLIBCXX14_CONSTEXPR">_GLIBCXX14_CONSTEXPR</a></td></tr>
 <tr><th id="432">432</th><td>    <a class="type" href="stl_pair.h.html#std::pair" title='std::pair' data-ref="std::pair" data-ref-filename="std..pair">pair</a>&lt;<em>const</em> _Tp&amp;, <em>const</em> _Tp&amp;&gt;</td></tr>
@@ -503,7 +503,7 @@
 <tr><th id="490">490</th><td>    <em>bool</em></td></tr>
 <tr><th id="491">491</th><td>    <a class="decl fn" href="stl_algo.h.html#_ZSt16next_permutationT_S_T0_" title='std::next_permutation' data-ref="_ZSt16next_permutationT_S_T0_" data-ref-filename="_ZSt16next_permutationT_S_T0_" id="_ZSt16next_permutationT_S_T0_">next_permutation</a>(_BIter, _BIter, _Compare);</td></tr>
 <tr><th id="492">492</th><td></td></tr>
-<tr><th id="493">493</th><td><u>#<span data-ppcond="493">if</span> <span class="macro" title="201402L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201103L</u></td></tr>
+<tr><th id="493">493</th><td><u>#<span data-ppcond="493">if</span> <span class="macro" title="201703L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201103L</u></td></tr>
 <tr><th id="494">494</th><td>  <b>template</b>&lt;<b>typename</b> _IIter, <b>typename</b> _Predicate&gt;</td></tr>
 <tr><th id="495">495</th><td>    <a class="macro" href="../../../x86_64-linux-gnu/c++/10/bits/c++config.h.html#155" title="" data-ref="_M/_GLIBCXX20_CONSTEXPR">_GLIBCXX20_CONSTEXPR</a></td></tr>
 <tr><th id="496">496</th><td>    <em>bool</em></td></tr>
@@ -525,7 +525,7 @@
 <tr><th id="512">512</th><td></td></tr>
 <tr><th id="513">513</th><td>  <i>// partition</i></td></tr>
 <tr><th id="514">514</th><td></td></tr>
-<tr><th id="515">515</th><td><u>#<span data-ppcond="515">if</span> <span class="macro" title="201402L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201103L</u></td></tr>
+<tr><th id="515">515</th><td><u>#<span data-ppcond="515">if</span> <span class="macro" title="201703L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201103L</u></td></tr>
 <tr><th id="516">516</th><td>  <b>template</b>&lt;<b>typename</b> _IIter, <b>typename</b> _OIter1,</td></tr>
 <tr><th id="517">517</th><td>	   <b>typename</b> _OIter2, <b>typename</b> _Predicate&gt;</td></tr>
 <tr><th id="518">518</th><td>    <a class="macro" href="../../../x86_64-linux-gnu/c++/10/bits/c++config.h.html#155" title="" data-ref="_M/_GLIBCXX20_CONSTEXPR">_GLIBCXX20_CONSTEXPR</a></td></tr>
@@ -619,7 +619,7 @@
 <tr><th id="606">606</th><td>    <b>template</b>&lt;<b>typename</b> _FIter&gt;</td></tr>
 <tr><th id="607">607</th><td>      <a class="macro" href="../../../x86_64-linux-gnu/c++/10/bits/c++config.h.html#155" title="" data-ref="_M/_GLIBCXX20_CONSTEXPR">_GLIBCXX20_CONSTEXPR</a></td></tr>
 <tr><th id="608">608</th><td>      _FIter</td></tr>
-<tr><th id="609">609</th><td>      <a class="decl fn" href="stl_algo.h.html#_ZNSt3_V26rotateET_S0_S0_" title='std::rotate' data-ref="_ZNSt3_V26rotateET_S0_S0_" data-ref-filename="_ZNSt3_V26rotateET_S0_S0_" id="_ZNSt3_V26rotateET_S0_S0_">rotate</a>(_FIter, _FIter, _FIter);</td></tr>
+<tr><th id="609">609</th><td>      <a class="decl fn" href="stl_algo.h.html#_ZNSt3_V26rotateET_S0_S0_" title='std::_V2::rotate' data-ref="_ZNSt3_V26rotateET_S0_S0_" data-ref-filename="_ZNSt3_V26rotateET_S0_S0_" id="_ZNSt3_V26rotateET_S0_S0_">rotate</a>(_FIter, _FIter, _FIter);</td></tr>
 <tr><th id="610">610</th><td>  }</td></tr>
 <tr><th id="611">611</th><td></td></tr>
 <tr><th id="612">612</th><td>  <b>template</b>&lt;<b>typename</b> _FIter, <b>typename</b> _OIter&gt;</td></tr>
@@ -634,7 +634,7 @@
 <tr><th id="621">621</th><td><i>  // set_symmetric_difference</i></td></tr>
 <tr><th id="622">622</th><td><i>  // set_union</i></td></tr>
 <tr><th id="623">623</th><td></td></tr>
-<tr><th id="624">624</th><td><u>#<span data-ppcond="624">if</span> (<span class="macro" title="201402L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201103L) &amp;&amp; defined(<a class="macro" href="../../../x86_64-linux-gnu/c++/10/bits/c++config.h.html#1588" data-ref="_M/_GLIBCXX_USE_C99_STDINT_TR1">_GLIBCXX_USE_C99_STDINT_TR1</a>)</u></td></tr>
+<tr><th id="624">624</th><td><u>#<span data-ppcond="624">if</span> (<span class="macro" title="201703L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201103L) &amp;&amp; defined(<a class="macro" href="../../../x86_64-linux-gnu/c++/10/bits/c++config.h.html#1588" data-ref="_M/_GLIBCXX_USE_C99_STDINT_TR1">_GLIBCXX_USE_C99_STDINT_TR1</a>)</u></td></tr>
 <tr><th id="625">625</th><td>  <b>template</b>&lt;<b>typename</b> _RAIter, <b>typename</b> _UGenerator&gt;</td></tr>
 <tr><th id="626">626</th><td>    <em>void</em></td></tr>
 <tr><th id="627">627</th><td>    <a class="decl fn" href="stl_algo.h.html#_ZSt7shuffleT_S_OT0_" title='std::shuffle' data-ref="_ZSt7shuffleT_S_OT0_" data-ref-filename="_ZSt7shuffleT_S_OT0_" id="_ZSt7shuffleT_S_OT0_">shuffle</a>(_RAIter, _RAIter, _UGenerator&amp;&amp;);</td></tr>
@@ -654,7 +654,7 @@
 <tr><th id="641">641</th><td>    _BIter</td></tr>
 <tr><th id="642">642</th><td>    <a class="decl fn" href="stl_algo.h.html#_ZSt16stable_partitionT_S_T0_" title='std::stable_partition' data-ref="_ZSt16stable_partitionT_S_T0_" data-ref-filename="_ZSt16stable_partitionT_S_T0_" id="_ZSt16stable_partitionT_S_T0_">stable_partition</a>(_BIter, _BIter, _Predicate);</td></tr>
 <tr><th id="643">643</th><td></td></tr>
-<tr><th id="644">644</th><td><u>#<span data-ppcond="644">if</span> <span class="macro" title="201402L" data-ref="_M/__cplusplus">__cplusplus</span> &lt; 201103L</u></td></tr>
+<tr><th id="644">644</th><td><u>#<span data-ppcond="644">if</span> <span class="macro" title="201703L" data-ref="_M/__cplusplus">__cplusplus</span> &lt; 201103L</u></td></tr>
 <tr><th id="645">645</th><td>  <i>// For C++11 swap() is declared in &lt;type_traits&gt;.</i></td></tr>
 <tr><th id="646">646</th><td></td></tr>
 <tr><th id="647">647</th><td>  <b>template</b>&lt;<b>typename</b> _Tp, size_t _Nm&gt;</td></tr>
@@ -847,7 +847,7 @@
 <tr><th id="834">834</th><td>  <b>template</b>&lt;<b>typename</b> _RAIter, <b>typename</b> _Generator&gt;</td></tr>
 <tr><th id="835">835</th><td>    <em>void</em></td></tr>
 <tr><th id="836">836</th><td>    <a class="decl fn" href="stl_algo.h.html#_ZSt14random_shuffleT_S_OT0_" title='std::random_shuffle' data-ref="_ZSt14random_shuffleT_S_OT0_" data-ref-filename="_ZSt14random_shuffleT_S_OT0_" id="_ZSt14random_shuffleT_S_OT0_">random_shuffle</a>(_RAIter, _RAIter,</td></tr>
-<tr><th id="837">837</th><td><u>#<span data-ppcond="837">if</span> <span class="macro" title="201402L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201103L</u></td></tr>
+<tr><th id="837">837</th><td><u>#<span data-ppcond="837">if</span> <span class="macro" title="201703L" data-ref="_M/__cplusplus">__cplusplus</span> &gt;= 201103L</u></td></tr>
 <tr><th id="838">838</th><td>		   _Generator&amp;&amp;);</td></tr>
 <tr><th id="839">839</th><td><u>#<span data-ppcond="837">else</span></u></td></tr>
 <tr><th id="840">840</th><td>		   _Generator&amp;);</td></tr>
