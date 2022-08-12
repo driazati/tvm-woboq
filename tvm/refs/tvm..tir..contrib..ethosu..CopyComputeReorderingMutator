@@ -1,12 +1,12 @@
 <inh f='tvm/include/tvm/tir/stmt_functor.h' l='315' c='tvm::tir::StmtExprMutator'/>
-<def f='tvm/src/tir/contrib/ethosu/passes.cc' l='189' ll='231'/>
-<use f='tvm/src/tir/contrib/ethosu/passes.cc' l='250' c='_ZN3tvm3tir7contrib6ethosu21CopyComputeReorderingENS_7runtime8OptionalINS_7IntegerEEE'/>
+<def f='tvm/src/tir/contrib/ethosu/passes.cc' l='196' ll='343'/>
+<use f='tvm/src/tir/contrib/ethosu/passes.cc' l='372' c='_ZN3tvm3tir7contrib6ethosu21CopyComputeReorderingENS_7runtime8OptionalINS_7IntegerEEENS4_INS_4BoolEEE'/>
 <size>32</size>
-<doc f='tvm/src/tir/contrib/ethosu/passes.cc' l='182'>/*!
- * \brief Reorders copy and compute nodes in such a way that independent DMA copies,
+<doc f='tvm/src/tir/contrib/ethosu/passes.cc' l='189'>/*!
+ * \brief Reorders copy and compute nodes in such a way that independent DMA copies
  * and computes happen in parallel.
- * Copies to buffers with local scope are not reordered, indeed they copy LUT
- * into the SHRAM which already happens in parallel with copying weights into
+ * Copies to buffers with local scope are not reordered since they copy LUT
+ * into the SHRAM and that already happens in parallel with copying weights into
  * the weights encoder.
  */</doc>
 <fun r='_ZN3tvm3tir7contrib6ethosu28CopyComputeReorderingMutator10VisitStmt_EPKNS0_11SeqStmtNodeE'/>

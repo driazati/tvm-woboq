@@ -406,6 +406,10 @@
 <use f='tvm/src/target/llvm/llvm_module.cc' l='303' u='c' c='_ZN3tvm7codegen14LLVMModuleNode4InitERKNS_8IRModuleERKNS_6TargetE'/>
 <use f='tvm/src/target/metadata_module.cc' l='117' u='c' c='_ZN3tvm7codegenL15ConvertMetaDataENS_5relay7backend23ExecutorCodegenMetadataE'/>
 <use f='tvm/src/target/metadata_module.cc' l='127' u='c' c='_ZN3tvm7codegenL15ConvertMetaDataENS_5relay7backend23ExecutorCodegenMetadataE'/>
+<use f='tvm/src/target/parsers/mprofile.cc' l='48' u='c' c='_ZN3tvm6target7parsers8mprofileL10MatchesCpuENS_7runtime8OptionalINS3_6StringEEERKT_'/>
+<use f='tvm/src/target/parsers/mprofile.cc' l='62' u='c' c='_ZN3tvm6target7parsers8mprofileL7HasFlagENS_7runtime8OptionalINS3_6StringEEENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<use f='tvm/src/target/parsers/mprofile.cc' l='69' u='c' c='_ZN3tvm6target7parsers8mprofileL7HasFlagENS_7runtime8OptionalINS3_5ArrayINS3_6StringEvEEEENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<use f='tvm/src/target/parsers/mprofile.cc' l='114' u='c' c='_ZN3tvm6target7parsers8mprofileL9MergeKeysENS_7runtime8OptionalINS3_5ArrayINS3_6StringEvEEEE'/>
 <use f='tvm/src/target/source/codegen_aocl.cc' l='66' u='c' c='_ZN3tvm7codegen9BuildAOCLENS_8IRModuleENS_6TargetEb'/>
 <use f='tvm/src/target/source/codegen_c.cc' l='90' u='c' c='_ZN3tvm7codegen8CodeGenC11AddFunctionERKNS_3tir8PrimFuncE'/>
 <use f='tvm/src/target/source/codegen_c.cc' l='636' u='c' c='_ZN3tvm7codegen8CodeGenC10VisitStmt_EPKNS_3tir17AllocateConstNodeE'/>
@@ -434,7 +438,7 @@
 <use f='tvm/src/target/target.cc' l='787' u='c' c='_ZN3tvm14TargetInternal10FromStringERKNS_7runtime6StringE'/>
 <use f='tvm/src/target/target.cc' l='804' u='c' c='_ZN3tvm14TargetInternal16FromConfigStringERKNS_7runtime6StringE'/>
 <use f='tvm/src/target/target.cc' l='804' u='c' c='_ZN3tvm14TargetInternal16FromConfigStringERKNS_7runtime6StringE'/>
-<use f='tvm/src/target/target_kind.cc' l='449' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='452' u='c'/>
 <use f='tvm/src/te/operation/create_primfunc.cc' l='85' u='c' c='_ZN3tvm3tir32LayoutFreePlaceholdersNormalizer7ProcessENS0_8PrimFuncE'/>
 <use f='tvm/src/te/schedule/schedule_postproc_to_primfunc.cc' l='260' u='c' c='_ZN3tvm2te27AxisSeparatorsAttrUnwrapper5ApplyENS_3tir8PrimFuncE'/>
 <use f='tvm/src/te/schedule/schedule_postproc_to_primfunc.cc' l='345' u='c' c='_ZN3tvm2te27AxisSeparatorsAttrUnwrapper17GetRemappedBufferENS_3tir6BufferE'/>
@@ -445,11 +449,12 @@
 <use f='tvm/src/tir/analysis/verify_memory.cc' l='183' u='c' c='_ZN3tvm3tir13VerifyMemory_ERKNS0_8PrimFuncE'/>
 <use f='tvm/src/tir/analysis/verify_memory.cc' l='189' u='c' c='_ZN3tvm3tir13VerifyMemory_ERKNS0_8PrimFuncE'/>
 <use f='tvm/src/tir/analysis/verify_well_formed.cc' l='102' u='c' c='_ZN3tvm3tir22BlockVarAccessVerifier10VisitStmt_EPKNS0_9BlockNodeE'/>
-<use f='tvm/src/tir/contrib/ethosu/passes.cc' l='249' u='c' c='_ZN3tvm3tir7contrib6ethosu21CopyComputeReorderingENS_7runtime8OptionalINS_7IntegerEEE'/>
-<use f='tvm/src/tir/contrib/ethosu/passes.cc' l='447' u='c' c='_ZN3tvm3tir7contrib6ethosu21MergeConstantsMutator19RewritePrimFuncBodyENS0_4StmtE'/>
-<use f='tvm/src/tir/contrib/ethosu/passes.cc' l='487' u='c' c='_ZN3tvm3tir7contrib6ethosu21MergeConstantsMutator10VisitStmt_EPKNS0_11SeqStmtNodeE'/>
-<use f='tvm/src/tir/contrib/ethosu/passes.cc' l='568' u='c' c='_ZN3tvm3tir7contrib6ethosu21MergeConstantsMutator15MakeNewCopyArgsERKNS0_4StmtERKNS0_6BufferEi'/>
-<use f='tvm/src/tir/contrib/ethosu/passes.cc' l='781' u='c' c='_ZN3tvm3tir7contrib6ethosu14MergeConstantsEv'/>
+<use f='tvm/src/tir/contrib/ethosu/passes.cc' l='369' u='c' c='_ZN3tvm3tir7contrib6ethosu21CopyComputeReorderingENS_7runtime8OptionalINS_7IntegerEEENS4_INS_4BoolEEE'/>
+<use f='tvm/src/tir/contrib/ethosu/passes.cc' l='371' u='c' c='_ZN3tvm3tir7contrib6ethosu21CopyComputeReorderingENS_7runtime8OptionalINS_7IntegerEEENS4_INS_4BoolEEE'/>
+<use f='tvm/src/tir/contrib/ethosu/passes.cc' l='569' u='c' c='_ZN3tvm3tir7contrib6ethosu21MergeConstantsMutator19RewritePrimFuncBodyENS0_4StmtE'/>
+<use f='tvm/src/tir/contrib/ethosu/passes.cc' l='609' u='c' c='_ZN3tvm3tir7contrib6ethosu21MergeConstantsMutator10VisitStmt_EPKNS0_11SeqStmtNodeE'/>
+<use f='tvm/src/tir/contrib/ethosu/passes.cc' l='690' u='c' c='_ZN3tvm3tir7contrib6ethosu21MergeConstantsMutator15MakeNewCopyArgsERKNS0_4StmtERKNS0_6BufferEi'/>
+<use f='tvm/src/tir/contrib/ethosu/passes.cc' l='903' u='c' c='_ZN3tvm3tir7contrib6ethosu14MergeConstantsEv'/>
 <use f='tvm/src/tir/ir/buffer.cc' l='527' u='c' c='_ZNK3tvm3tir6Buffer10access_ptrEiNS_7runtime8DataTypeEiNS_8PrimExprENS2_8OptionalIS4_EE'/>
 <use f='tvm/src/tir/ir/stmt.cc' l='1004' u='c' c='_ZN3tvm3tir14PrintBlockBodyEPKNS0_9BlockNodeEPNS_11ReprPrinterE'/>
 <use f='tvm/src/tir/ir/stmt_functor.cc' l='145' u='c' c='_ZN3tvm3tir11StmtVisitor10VisitStmt_EPKNS0_9BlockNodeE'/>

@@ -1,0 +1,17 @@
+<def f='tvm/src/tir/contrib/ethosu/passes.cc' l='360' ll='376' type='tvm::transform::Pass tvm::tir::contrib::ethosu::CopyComputeReordering(Optional&lt;tvm::Integer&gt; max_copy_movements, Optional&lt;tvm::Bool&gt; reorder_by_cycles)'/>
+<use f='tvm/src/tir/contrib/ethosu/passes.cc' l='379' u='r'/>
+<doc f='tvm/src/tir/contrib/ethosu/passes.cc' l='345'>/*!
+ * \brief A pass to reorder copy and compute nodes in such a way that independent DMA copies
+ * and computes happen in parallel. If reorder_by_cycles is set, we will ignore the
+ * max_copy_movements value.
+ *
+ *  \param max_copy_movements: The maximum number of movements allowed for a copy.
+ *  If None, the pass context option tir.contrib.ethos-u.copy_compute_reordering_max_copy_movements
+ *  is used if provided, otherwise the default value will be 1.
+ *
+ * \param reorder_by_cycles: Whether to reorder copies and computes by cycles.
+ *  If None, the pass context option tir.contrib.ethos-u.copy_compute_reordering_reorder_by_cycles
+ *  is used if provided, otherwise the default value will be False. If the value is True,
+ *  max_copy_movements will be ignored.
+ * \return tvm::transform::Pass
+ */</doc>

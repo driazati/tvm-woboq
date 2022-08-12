@@ -1,5 +1,5 @@
-<dec f='tvm/include/tvm/target/target_kind.h' l='233' type='tvm::TargetKindRegEntry &amp; tvm::TargetKindRegEntry::add_attr_option(const tvm::runtime::String &amp; key)'/>
-<def f='tvm/include/tvm/target/target_kind.h' l='385' ll='390' type='tvm::TargetKindRegEntry &amp; tvm::TargetKindRegEntry::add_attr_option(const tvm::runtime::String &amp; key)'/>
+<dec f='tvm/include/tvm/target/target_kind.h' l='238' type='tvm::TargetKindRegEntry &amp; tvm::TargetKindRegEntry::add_attr_option(const tvm::runtime::String &amp; key)'/>
+<def f='tvm/include/tvm/target/target_kind.h' l='390' ll='395' type='tvm::TargetKindRegEntry &amp; tvm::TargetKindRegEntry::add_attr_option(const tvm::runtime::String &amp; key)'/>
 <use f='tvm/src/relay/backend/contrib/codegen_c/target.cc' l='35' macro='1' u='c'/>
 <use f='tvm/src/relay/backend/contrib/codegen_c/target.cc' l='35' macro='1' u='c'/>
 <use f='tvm/src/relay/backend/contrib/codegen_c/target.cc' l='35' macro='1' u='c'/>
@@ -14,6 +14,7 @@
 <use f='tvm/src/relay/backend/contrib/example_target_hooks/target.cc' l='34' macro='1' u='c'/>
 <use f='tvm/src/relay/backend/contrib/example_target_hooks/target.cc' l='34' macro='1' u='c'/>
 <use f='tvm/src/relay/backend/contrib/example_target_hooks/target.cc' l='34' macro='1' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='281' u='c'/>
 <use f='tvm/src/target/target_kind.cc' l='280' u='c'/>
 <use f='tvm/src/target/target_kind.cc' l='279' u='c'/>
 <use f='tvm/src/target/target_kind.cc' l='278' u='c'/>
@@ -21,9 +22,9 @@
 <use f='tvm/src/target/target_kind.cc' l='276' u='c'/>
 <use f='tvm/src/target/target_kind.cc' l='275' u='c'/>
 <use f='tvm/src/target/target_kind.cc' l='274' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='273' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='272' u='c'/>
 <use f='tvm/src/target/target_kind.cc' l='271' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='270' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='269' u='c'/>
 <use f='tvm/src/target/target_kind.cc' l='268' u='c'/>
 <use f='tvm/src/target/target_kind.cc' l='267' u='c'/>
 <use f='tvm/src/target/target_kind.cc' l='266' u='c'/>
@@ -31,167 +32,158 @@
 <use f='tvm/src/target/target_kind.cc' l='264' u='c'/>
 <use f='tvm/src/target/target_kind.cc' l='263' u='c'/>
 <use f='tvm/src/target/target_kind.cc' l='262' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='261' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='260' macro='1' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='260' macro='1' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='260' macro='1' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='260' macro='1' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='260' macro='1' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='260' macro='1' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='260' macro='1' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='261' macro='1' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='261' macro='1' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='261' macro='1' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='261' macro='1' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='261' macro='1' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='261' macro='1' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='261' macro='1' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='298' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='297' u='c'/>
 <use f='tvm/src/target/target_kind.cc' l='296' u='c'/>
 <use f='tvm/src/target/target_kind.cc' l='295' u='c'/>
 <use f='tvm/src/target/target_kind.cc' l='294' u='c'/>
 <use f='tvm/src/target/target_kind.cc' l='293' u='c'/>
 <use f='tvm/src/target/target_kind.cc' l='292' u='c'/>
 <use f='tvm/src/target/target_kind.cc' l='291' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='290' u='c'/>
 <use f='tvm/src/target/target_kind.cc' l='289' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='287' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='286' macro='1' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='286' macro='1' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='286' macro='1' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='286' macro='1' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='286' macro='1' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='286' macro='1' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='286' macro='1' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='288' macro='1' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='288' macro='1' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='288' macro='1' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='288' macro='1' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='288' macro='1' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='288' macro='1' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='288' macro='1' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='309' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='307' u='c'/>
 <use f='tvm/src/target/target_kind.cc' l='306' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='305' u='c'/>
 <use f='tvm/src/target/target_kind.cc' l='304' u='c'/>
 <use f='tvm/src/target/target_kind.cc' l='303' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='302' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='301' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='300' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='299' macro='1' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='299' macro='1' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='299' macro='1' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='299' macro='1' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='299' macro='1' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='299' macro='1' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='299' macro='1' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='314' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='313' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='312' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='311' macro='1' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='311' macro='1' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='311' macro='1' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='311' macro='1' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='311' macro='1' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='311' macro='1' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='311' macro='1' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='302' macro='1' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='302' macro='1' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='302' macro='1' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='302' macro='1' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='302' macro='1' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='302' macro='1' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='302' macro='1' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='317' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='316' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='315' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='314' macro='1' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='314' macro='1' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='314' macro='1' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='314' macro='1' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='314' macro='1' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='314' macro='1' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='314' macro='1' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='327' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='326' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='325' u='c'/>
 <use f='tvm/src/target/target_kind.cc' l='324' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='323' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='322' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='321' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='320' macro='1' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='320' macro='1' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='320' macro='1' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='320' macro='1' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='320' macro='1' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='320' macro='1' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='320' macro='1' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='335' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='334' macro='1' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='334' macro='1' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='334' macro='1' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='334' macro='1' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='334' macro='1' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='334' macro='1' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='334' macro='1' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='346' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='345' macro='1' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='345' macro='1' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='345' macro='1' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='345' macro='1' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='345' macro='1' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='345' macro='1' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='345' macro='1' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='323' macro='1' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='323' macro='1' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='323' macro='1' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='323' macro='1' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='323' macro='1' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='323' macro='1' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='323' macro='1' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='338' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='337' macro='1' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='337' macro='1' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='337' macro='1' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='337' macro='1' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='337' macro='1' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='337' macro='1' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='337' macro='1' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='349' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='348' macro='1' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='348' macro='1' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='348' macro='1' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='348' macro='1' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='348' macro='1' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='348' macro='1' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='348' macro='1' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='391' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='390' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='389' u='c'/>
 <use f='tvm/src/target/target_kind.cc' l='388' u='c'/>
 <use f='tvm/src/target/target_kind.cc' l='387' u='c'/>
 <use f='tvm/src/target/target_kind.cc' l='386' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='385' u='c'/>
 <use f='tvm/src/target/target_kind.cc' l='384' u='c'/>
 <use f='tvm/src/target/target_kind.cc' l='383' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='382' u='c'/>
 <use f='tvm/src/target/target_kind.cc' l='381' u='c'/>
 <use f='tvm/src/target/target_kind.cc' l='380' u='c'/>
 <use f='tvm/src/target/target_kind.cc' l='379' u='c'/>
 <use f='tvm/src/target/target_kind.cc' l='378' u='c'/>
 <use f='tvm/src/target/target_kind.cc' l='377' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='376' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='375' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='374' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='372' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='371' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='370' u='c'/>
 <use f='tvm/src/target/target_kind.cc' l='369' u='c'/>
 <use f='tvm/src/target/target_kind.cc' l='368' u='c'/>
 <use f='tvm/src/target/target_kind.cc' l='367' u='c'/>
 <use f='tvm/src/target/target_kind.cc' l='366' u='c'/>
 <use f='tvm/src/target/target_kind.cc' l='365' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='364' u='c'/>
 <use f='tvm/src/target/target_kind.cc' l='363' u='c'/>
 <use f='tvm/src/target/target_kind.cc' l='362' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='360' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='361' u='c'/>
 <use f='tvm/src/target/target_kind.cc' l='359' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='358' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='357' u='c'/>
 <use f='tvm/src/target/target_kind.cc' l='356' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='354' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='353' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='352' macro='1' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='352' macro='1' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='352' macro='1' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='352' macro='1' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='352' macro='1' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='352' macro='1' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='352' macro='1' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='393' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='392' macro='1' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='392' macro='1' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='392' macro='1' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='392' macro='1' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='392' macro='1' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='392' macro='1' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='392' macro='1' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='398' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='397' macro='1' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='397' macro='1' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='397' macro='1' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='397' macro='1' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='397' macro='1' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='397' macro='1' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='397' macro='1' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='402' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='401' macro='1' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='401' macro='1' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='401' macro='1' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='401' macro='1' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='401' macro='1' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='401' macro='1' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='401' macro='1' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='406' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='405' macro='1' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='405' macro='1' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='405' macro='1' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='405' macro='1' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='405' macro='1' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='405' macro='1' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='405' macro='1' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='355' macro='1' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='355' macro='1' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='355' macro='1' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='355' macro='1' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='355' macro='1' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='355' macro='1' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='355' macro='1' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='396' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='395' macro='1' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='395' macro='1' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='395' macro='1' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='395' macro='1' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='395' macro='1' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='395' macro='1' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='395' macro='1' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='401' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='400' macro='1' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='400' macro='1' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='400' macro='1' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='400' macro='1' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='400' macro='1' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='400' macro='1' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='400' macro='1' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='405' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='404' macro='1' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='404' macro='1' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='404' macro='1' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='404' macro='1' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='404' macro='1' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='404' macro='1' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='404' macro='1' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='409' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='408' macro='1' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='408' macro='1' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='408' macro='1' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='408' macro='1' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='408' macro='1' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='408' macro='1' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='408' macro='1' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='418' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='416' u='c'/>
 <use f='tvm/src/target/target_kind.cc' l='415' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='414' u='c'/>
 <use f='tvm/src/target/target_kind.cc' l='413' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='412' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='411' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='410' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='409' macro='1' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='409' macro='1' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='409' macro='1' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='409' macro='1' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='409' macro='1' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='409' macro='1' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='409' macro='1' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='419' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='418' macro='1' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='418' macro='1' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='418' macro='1' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='418' macro='1' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='418' macro='1' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='418' macro='1' u='c'/>
-<use f='tvm/src/target/target_kind.cc' l='418' macro='1' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='412' macro='1' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='412' macro='1' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='412' macro='1' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='412' macro='1' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='412' macro='1' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='412' macro='1' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='412' macro='1' u='c'/>
 <use f='tvm/src/target/target_kind.cc' l='422' u='c'/>
 <use f='tvm/src/target/target_kind.cc' l='421' macro='1' u='c'/>
 <use f='tvm/src/target/target_kind.cc' l='421' macro='1' u='c'/>
@@ -216,6 +208,7 @@
 <use f='tvm/src/target/target_kind.cc' l='427' macro='1' u='c'/>
 <use f='tvm/src/target/target_kind.cc' l='427' macro='1' u='c'/>
 <use f='tvm/src/target/target_kind.cc' l='427' macro='1' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='431' u='c'/>
 <use f='tvm/src/target/target_kind.cc' l='430' macro='1' u='c'/>
 <use f='tvm/src/target/target_kind.cc' l='430' macro='1' u='c'/>
 <use f='tvm/src/target/target_kind.cc' l='430' macro='1' u='c'/>
@@ -223,3 +216,10 @@
 <use f='tvm/src/target/target_kind.cc' l='430' macro='1' u='c'/>
 <use f='tvm/src/target/target_kind.cc' l='430' macro='1' u='c'/>
 <use f='tvm/src/target/target_kind.cc' l='430' macro='1' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='433' macro='1' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='433' macro='1' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='433' macro='1' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='433' macro='1' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='433' macro='1' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='433' macro='1' u='c'/>
+<use f='tvm/src/target/target_kind.cc' l='433' macro='1' u='c'/>
