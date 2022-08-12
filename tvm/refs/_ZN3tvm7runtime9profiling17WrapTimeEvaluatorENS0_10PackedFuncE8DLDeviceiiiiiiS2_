@@ -1,4 +1,4 @@
-<dec f='tvm/include/tvm/runtime/profiling.h' l='584' type='tvm::runtime::PackedFunc tvm::runtime::profiling::WrapTimeEvaluator(tvm::runtime::PackedFunc f, tvm::Device dev, int number, int repeat, int min_repeat_ms, int cooldown_interval_ms, int repeats_to_cooldown, tvm::runtime::PackedFunc f_preproc = nullptr)'/>
+<dec f='tvm/include/tvm/runtime/profiling.h' l='586' type='tvm::runtime::PackedFunc tvm::runtime::profiling::WrapTimeEvaluator(tvm::runtime::PackedFunc f, tvm::Device dev, int number, int repeat, int min_repeat_ms, int limit_zero_time_iterations, int cooldown_interval_ms, int repeats_to_cooldown, tvm::runtime::PackedFunc f_preproc = nullptr)'/>
 <doc f='tvm/include/tvm/runtime/profiling.h' l='540'>/*!
  * \brief Wrap a timer function to measure the time cost of a given packed function.
  *
@@ -35,6 +35,8 @@
  *        minimum duration requirement of one `repeat`.
  *        i.e., When the run time of one `repeat` falls below this time,
  *        the `number` parameter will be automatically increased.
+ * \param limit_zero_time_iterations The maximum number of repeats when
+ *        measured time is equal to 0.  It helps to avoid hanging during measurements.
  * \param cooldown_interval_ms The cooldown interval in milliseconds between the number of repeats
  *        defined by `repeats_to_cooldown`.
  * \param repeats_to_cooldown The number of repeats before the
@@ -43,7 +45,7 @@
  *        evaluator.
  * \return f_timer A timer function.
  */</doc>
-<use f='tvm/src/runtime/graph_executor/debug/graph_executor_debug.cc' l='132' u='c' c='_ZN3tvm7runtime18GraphExecutorDebug17RunIndividualNodeB5cxx11Eiiiiii'/>
-<def f='tvm/src/runtime/profiling.cc' l='850' ll='909' type='tvm::runtime::PackedFunc tvm::runtime::profiling::WrapTimeEvaluator(tvm::runtime::PackedFunc pf, tvm::Device dev, int number, int repeat, int min_repeat_ms, int cooldown_interval_ms, int repeats_to_cooldown, tvm::runtime::PackedFunc f_preproc = nullptr)'/>
-<use f='tvm/src/runtime/rpc/rpc_module.cc' l='388' u='c'/>
-<use f='tvm/src/runtime/rpc/rpc_module.cc' l='401' u='c'/>
+<use f='tvm/src/runtime/graph_executor/debug/graph_executor_debug.cc' l='139' u='c' c='_ZN3tvm7runtime18GraphExecutorDebug17RunIndividualNodeB5cxx11Eiiiiiii'/>
+<def f='tvm/src/runtime/profiling.cc' l='850' ll='911' type='tvm::runtime::PackedFunc tvm::runtime::profiling::WrapTimeEvaluator(tvm::runtime::PackedFunc pf, tvm::Device dev, int number, int repeat, int min_repeat_ms, int limit_zero_time_iterations, int cooldown_interval_ms, int repeats_to_cooldown, tvm::runtime::PackedFunc f_preproc = nullptr)'/>
+<use f='tvm/src/runtime/rpc/rpc_module.cc' l='393' u='c'/>
+<use f='tvm/src/runtime/rpc/rpc_module.cc' l='407' u='c'/>
