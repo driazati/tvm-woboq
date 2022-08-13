@@ -1,0 +1,19 @@
+<dec f='tvm/include/tvm/script/printer/var_table.h' l='95' type='void tvm::script::printer::VarTableNode::DefineByDoc(const tvm::runtime::ObjectRef &amp; obj, tvm::script::printer::VarTableNode::DocFactory doc_factory, const tvm::script::printer::Frame &amp; frame)'/>
+<def f='tvm/src/script/printer/var_table.cc' l='54' ll='63' type='void tvm::script::printer::VarTableNode::DefineByDoc(const tvm::runtime::ObjectRef &amp; obj, tvm::script::printer::VarTableNode::DocFactory doc_factory, const tvm::script::printer::Frame &amp; frame)'/>
+<use f='tvm/src/script/printer/var_table.cc' l='98' u='c'/>
+<doc f='tvm/include/tvm/script/printer/var_table.h' l='79'>/*!
+   * \brief Define variable by doc factory.
+   * \param obj The variable object.
+   * \param doc_factory The function to return an ExprDoc object for this variable.
+   * \param frame The frame that this variable is defined in.
+   *
+   * This function is a special form of `Define`. Variable is mapped to ExprDoc rather
+   * than IdDoc. It&apos;s useful when a variable is implicitly defined without a name, like
+   * the buf-&gt;data in TIR, which should be mapped to `AttrDoc(IdDoc(&quot;&lt;buffer_name&gt;&quot;), &quot;data&quot;)`.
+   *
+   * This function takes a DocFactory instead of Doc. It&apos;s because GetVarDoc needs to
+   * return a new Doc object every time it&apos;s called, as the returned doc will have
+   * different `soruce_path`. Currently there isn&apos;t a good way to deep copy a TVMObject
+   * so VarTable needs to call a factory function to get a freshly-constructed Doc object
+   * every time GetVarDoc is called.
+   */</doc>

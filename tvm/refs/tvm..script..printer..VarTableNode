@@ -1,0 +1,40 @@
+<inh f='tvm/include/tvm/runtime/object.h' l='167' c='tvm::runtime::Object'/>
+<def f='tvm/include/tvm/script/printer/var_table.h' l='44' ll='126'/>
+<use f='tvm/include/tvm/script/printer/var_table.h' l='137' c='_ZNK3tvm6script7printer8VarTableptEv'/>
+<use f='tvm/include/tvm/script/printer/var_table.h' l='137' c='_ZNK3tvm6script7printer8VarTableptEv'/>
+<use f='tvm/include/tvm/script/printer/var_table.h' l='137' c='_ZNK3tvm6script7printer8VarTable3getEv'/>
+<use f='tvm/include/tvm/script/printer/var_table.h' l='137'/>
+<use f='tvm/src/script/printer/var_table.cc' l='88' c='_ZN3tvm6script7printer8VarTableC1Ev'/>
+<use f='tvm/src/script/printer/var_table.cc' l='90'/>
+<use f='tvm/src/script/printer/var_table.cc' l='90'/>
+<use f='tvm/src/script/printer/var_table.cc' l='90'/>
+<use f='tvm/src/script/printer/var_table.cc' l='93'/>
+<size>128</size>
+<doc f='tvm/include/tvm/script/printer/var_table.h' l='35'>/*!
+ * \brief Variable Table manages mapping from variable object to ExprDoc during
+ * the process of printing TVMScript.
+ *
+ * The value type of this map is ExprDoc rather than IdDoc or String. It&apos;s
+ * because variables can be implicitly defined. For example in TIR buffer (tir::Buffer),
+ * `buf-&gt;data` is a variable, while its representation in TVMScript should be an
+ * expression `x.data`, where `x` is the variable for the buffer itself.
+ */</doc>
+<fun r='_ZN3tvm6script7printer12VarTableNode10VisitAttrsEPNS_11AttrVisitorE'/>
+<fun r='_ZN3tvm6script7printer12VarTableNode6DefineERKNS_7runtime9ObjectRefERKNS3_6StringERKNS_10ObjectPathERKNS1_5FrameE'/>
+<fun r='_ZN3tvm6script7printer12VarTableNode6DefineERKNS_7runtime9ObjectRefERKNS_12TracedObjectINS3_6StringEEERKNS1_5FrameE'/>
+<fun r='_ZN3tvm6script7printer12VarTableNode11DefineByDocERKNS_7runtime9ObjectRefESt8functionIFNS1_7ExprDocEvEERKNS1_5FrameE'/>
+<fun r='_ZNK3tvm6script7printer12VarTableNode9GetVarDocERKNS_7runtime9ObjectRefERKNS_10ObjectPathE'/>
+<fun r='_ZNK3tvm6script7printer12VarTableNode12IsVarDefinedERKNS_7runtime9ObjectRefE'/>
+<smbr r='tvm::script::printer::VarTableNode::_type_key' t='const char *const'/>
+<smbr r='tvm::script::printer::VarTableNode::_type_final' t='const bool'/>
+<smbr r='tvm::script::printer::VarTableNode::_type_child_slots' t='const int'/>
+<fun r='_ZN3tvm6script7printer12VarTableNode16RuntimeTypeIndexEv'/>
+<fun r='_ZN3tvm6script7printer12VarTableNode27_GetOrAllocRuntimeTypeIndexEv'/>
+<fun r='_ZN3tvm6script7printer12VarTableNode9RemoveVarERKNS_7runtime9ObjectRefE'/>
+<mbr r='tvm::script::printer::VarTableNode::obj2info' o='128' t='std::unordered_map&lt;ObjectRef, VariableInfo, ObjectPtrHash, ObjectPtrEqual&gt;'/>
+<mbr r='tvm::script::printer::VarTableNode::defined_names' o='576' t='std::unordered_set&lt;String&gt;'/>
+<fun r='_ZN3tvm6script7printer12VarTableNode6DefineERKNS_7runtime9ObjectRefERKNS3_6StringERKNS_10ObjectPathERKNS1_5FrameE'/>
+<fun r='_ZN3tvm6script7printer12VarTableNode11DefineByDocERKNS_7runtime9ObjectRefESt8functionIFNS1_7ExprDocEvEERKNS1_5FrameE'/>
+<fun r='_ZNK3tvm6script7printer12VarTableNode9GetVarDocERKNS_7runtime9ObjectRefERKNS_10ObjectPathE'/>
+<fun r='_ZNK3tvm6script7printer12VarTableNode12IsVarDefinedERKNS_7runtime9ObjectRefE'/>
+<fun r='_ZN3tvm6script7printer12VarTableNode9RemoveVarERKNS_7runtime9ObjectRefE'/>
