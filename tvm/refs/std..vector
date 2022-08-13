@@ -1166,7 +1166,7 @@
 <use f='tvm/src/contrib/ethosu/cascader/stripe_config.cc' l='169'/>
 <use f='tvm/src/contrib/ethosu/cascader/tensor_config.cc' l='133' c='_ZN3tvm7contrib6ethosu8cascader12TensorConfigC1ERKNS2_6TensorERKNS2_12MemoryRegionENS2_17TensorConfigStateENS2_10BufferModeERKSt6vectorINS2_12StripeConfigESaISD_EEbS9_'/>
 <use f='tvm/src/contrib/ethosu/cascader/tensor_config.cc' l='166'/>
-<use f='tvm/src/driver/driver_api.cc' l='411' c='_ZN3tvm12TIRToRuntimeERKNS_7runtime3MapINS_6TargetENS_8IRModuleEvvEERKS2_'/>
+<use f='tvm/src/driver/driver_api.cc' l='412' c='_ZN3tvm12TIRToRuntimeERKNS_7runtime3MapINS_6TargetENS_8IRModuleEvvEERKS2_'/>
 <use f='tvm/src/ir/instrument.cc' l='218'/>
 <use f='tvm/include/tvm/target/generic_func.h' l='64' c='_ZN3tvm11GenericFunc13register_funcERKSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS7_EENS_7runtime10PackedFuncEb'/>
 <use f='tvm/src/ir/module.cc' l='95' c='_ZNK3tvm12IRModuleNode11SHashReduceENS_12SHashReducerE'/>
@@ -1402,6 +1402,7 @@
 <use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling.cc' l='226' c='_ZNK3tvm13meta_schedule20MultiLevelTilingNode12AddReadReuseENS0_5StateE'/>
 <use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling.cc' l='233' c='_ZNK3tvm13meta_schedule20MultiLevelTilingNode12AddReadReuseENS0_5StateE'/>
 <use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling.cc' l='240' c='_ZNK3tvm13meta_schedule20MultiLevelTilingNode12AddReadReuseENS0_5StateE'/>
+<use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling.cc' l='278' c='_ZNK3tvm13meta_schedule20MultiLevelTilingNode27AnnotateCooperativeFetchingEPNS_3tir8ScheduleERKNS2_7BlockRVE'/>
 <use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling_tensor_core.cc' l='126' c='_ZNK3tvm13meta_schedule30MultiLevelTilingTensorCoreNode25TransformForTensorizationENS0_15TensorCoreStateE'/>
 <use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling_tensor_core.cc' l='128' c='_ZNK3tvm13meta_schedule30MultiLevelTilingTensorCoreNode22AddReadReuseTensorCoreENS0_15TensorCoreStateE'/>
 <use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling_tensor_core.cc' l='130' c='_ZNK3tvm13meta_schedule30MultiLevelTilingTensorCoreNode23AddWriteReuseTensorCoreENS0_15TensorCoreStateE'/>
@@ -3252,6 +3253,12 @@
 <use f='tvm/src/tir/transforms/make_packed_api.cc' l='346' c='_ZN3tvm3tir9transform13MakePackedAPIEi'/>
 <use f='tvm/src/tir/transforms/make_unpacked_api.cc' l='58' c='_ZN3tvm3tir15MakeUnpackedAPIEONS0_8PrimFuncE'/>
 <use f='tvm/src/tir/transforms/make_unpacked_api.cc' l='96' c='_ZN3tvm3tir9transform15MakeUnpackedAPIEv'/>
+<use f='tvm/src/tir/transforms/manifest_shared_memory_local_stage.cc' l='61' c='_ZN3tvm3tir25IntermediateStageRewriter7RewriteEPKNS0_9BlockNodeE'/>
+<use f='tvm/src/tir/transforms/manifest_shared_memory_local_stage.cc' l='83' c='_ZN3tvm3tir25IntermediateStageRewriter24CollectRelaxedOuterLoopsEPKNS0_9BlockNodeERKNS0_6BufferE'/>
+<use f='tvm/src/tir/transforms/manifest_shared_memory_local_stage.cc' l='85' c='_ZN3tvm3tir25IntermediateStageRewriter24CollectRelaxedOuterLoopsEPKNS0_9BlockNodeERKNS0_6BufferE'/>
+<use f='tvm/src/tir/transforms/manifest_shared_memory_local_stage.cc' l='122' c='_ZN3tvm3tir25IntermediateStageRewriter14MakeLocalStageEPKNS0_9BlockNodeERKNS0_6BufferENS_7runtime5ArrayINS_8PrimExprEvEESt6vectorIPKNS0_7ForNodeESaISF9837013'/>
+<use f='tvm/src/tir/transforms/manifest_shared_memory_local_stage.cc' l='151' c='_ZNK3tvm3tir25IntermediateStageRewriter24CreateIntermediateBufferESt6vectorIPKNS0_7ForNodeESaIS5_EERKNS0_6BufferE'/>
+<use f='tvm/src/tir/transforms/manifest_shared_memory_local_stage.cc' l='265'/>
 <use f='tvm/src/tir/transforms/merge_dynamic_shared_memory_allocations.cc' l='88'/>
 <use f='tvm/src/tir/transforms/merge_dynamic_shared_memory_allocations.cc' l='223'/>
 <use f='tvm/src/tir/transforms/merge_dynamic_shared_memory_allocations.cc' l='231'/>

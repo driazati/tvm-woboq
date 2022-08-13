@@ -261,6 +261,8 @@
 <size>8</size>
 <use f='tvm/src/tir/transforms/lower_opaque_block.cc' l='86' c='_ZN3tvm3tir16OpaqueBlockLower10VisitStmt_EPKNS0_7ForNodeE'/>
 <size>8</size>
+<use f='tvm/src/tir/transforms/manifest_shared_memory_local_stage.cc' l='142' c='_ZN3tvm3tir25IntermediateStageRewriter14MakeLocalStageEPKNS0_9BlockNodeERKNS0_6BufferENS_7runtime5ArrayINS_8PrimExprEvEESt6vectorIPKNS0_7ForNodeESaISF9837013'/>
+<size>8</size>
 <use f='tvm/src/tir/transforms/narrow_datatype.cc' l='263' c='_ZN3tvm3tir16DataTypeRewriter10VisitStmt_EPKNS0_7ForNodeE'/>
 <size>8</size>
 <use f='tvm/src/tir/transforms/plan_update_buffer_allocation_location.cc' l='64' c='_ZN3tvm3tir23BufferAllocationLocator10VisitStmt_EPKNS0_7ForNodeE'/>

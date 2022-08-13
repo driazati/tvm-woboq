@@ -183,7 +183,7 @@
 <use f='tvm/include/tvm/tir/stmt.h' l='1156' macro='1' c='_ZN3tvm3tir12BufferRegion11CopyOnWriteEv'/>
 <use f='tvm/include/tvm/tir/stmt.h' l='1305' macro='1' c='_ZN3tvm3tir5Block11CopyOnWriteEv'/>
 <use f='tvm/include/tvm/tir/stmt.h' l='1354' macro='1' c='_ZN3tvm3tir12BlockRealize11CopyOnWriteEv'/>
-<use f='tvm/include/tvm/tir/stmt.h' l='1634' macro='1' c='_ZN3tvm3tir14ForKind2StringENS0_7ForKindE'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='1637' macro='1' c='_ZN3tvm3tir14ForKind2StringENS0_7ForKindE'/>
 <use f='tvm/include/tvm/tir/op.h' l='930' macro='1' c='_ZN3tvm3tir15MakeConstScalarENS_7runtime8DataTypeET_NS_4SpanE'/>
 <use f='tvm/src/arith/analyzer.cc' l='51' macro='1' c='_ZN3tvm5arith8Analyzer4BindERKNS_3tir3VarERKNS_5RangeEb'/>
 <use f='tvm/src/arith/analyzer.cc' l='69' macro='1' c='_ZN3tvm5arith17ConstraintContext14EnterWithScopeEv'/>
@@ -728,11 +728,11 @@
 <use f='tvm/src/driver/driver_api.cc' l='105' macro='1' c='_ZN3tvm8GetBindsERKNS_7runtime5ArrayINS0_9ObjectRefEvEEbRKSt13unordered_mapINS_2te6TensorENS_3tir6BufferESt4hashIS8_ESt8equal_toIS8_ESaISt4pairIKS8_SA4030814'/>
 <use f='tvm/src/driver/driver_api.cc' l='168' macro='1' c='_ZN3tvm14CreatePassListEb'/>
 <use f='tvm/src/driver/driver_api.cc' l='172' macro='1' c='_ZN3tvm14CreatePassListEb'/>
-<use f='tvm/src/driver/driver_api.cc' l='386' macro='1' c='_ZN3tvm16SplitMixedModuleENS_8IRModuleERKNS_6TargetES3_'/>
-<use f='tvm/src/driver/driver_api.cc' l='439' macro='1' c='_ZN3tvm12TIRToRuntimeERKNS_7runtime3MapINS_6TargetENS_8IRModuleEvvEERKS2_'/>
-<use f='tvm/src/driver/driver_api.cc' l='449' macro='1' c='_ZN3tvm12TIRToRuntimeERKNS_7runtime3MapINS_6TargetENS_8IRModuleEvvEERKS2_'/>
-<use f='tvm/src/driver/driver_api.cc' l='451' macro='1' c='_ZN3tvm12TIRToRuntimeERKNS_7runtime3MapINS_6TargetENS_8IRModuleEvvEERKS2_'/>
-<use f='tvm/src/driver/driver_api.cc' l='580' macro='1' c='_ZN3tvm21HostModulePassManagerENS_8IRModuleENS_6TargetE'/>
+<use f='tvm/src/driver/driver_api.cc' l='387' macro='1' c='_ZN3tvm16SplitMixedModuleENS_8IRModuleERKNS_6TargetES3_'/>
+<use f='tvm/src/driver/driver_api.cc' l='440' macro='1' c='_ZN3tvm12TIRToRuntimeERKNS_7runtime3MapINS_6TargetENS_8IRModuleEvvEERKS2_'/>
+<use f='tvm/src/driver/driver_api.cc' l='450' macro='1' c='_ZN3tvm12TIRToRuntimeERKNS_7runtime3MapINS_6TargetENS_8IRModuleEvvEERKS2_'/>
+<use f='tvm/src/driver/driver_api.cc' l='452' macro='1' c='_ZN3tvm12TIRToRuntimeERKNS_7runtime3MapINS_6TargetENS_8IRModuleEvvEERKS2_'/>
+<use f='tvm/src/driver/driver_api.cc' l='581' macro='1' c='_ZN3tvm21HostModulePassManagerENS_8IRModuleENS_6TargetE'/>
 <size>1</size>
 <use f='tvm/src/ir/diagnostic.cc' l='105' macro='1' c='_ZN3tvm17DiagnosticContext6RenderEv'/>
 <use f='tvm/src/ir/diagnostic.cc' l='116' macro='1' c='_ZN3tvm17DiagnosticContextC1ERKNS_8IRModuleERKNS_18DiagnosticRendererE'/>
@@ -1081,6 +1081,7 @@
 <use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling.cc' l='40' macro='1' c='_ZN3tvm3tir18GetReadBufferNDimsERKNS0_8StmtSRefE'/>
 <use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling.cc' l='168' macro='1' c='_ZNK3tvm13meta_schedule20MultiLevelTilingNode12TileLoopNestENS0_5StateE'/>
 <use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling.cc' l='231' macro='1' c='_ZNK3tvm13meta_schedule20MultiLevelTilingNode12AddReadReuseENS0_5StateE'/>
+<use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling.cc' l='266' macro='1' c='_ZNK3tvm13meta_schedule20MultiLevelTilingNode27AnnotateCooperativeFetchingEPNS_3tir8ScheduleERKNS2_7BlockRVE'/>
 <size>1</size>
 <use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling_tensor_core.cc' l='57' macro='1' c='_ZN3tvm13meta_schedule21TensorCoreIntrinGroup10FromConfigERKNS_7runtime3MapINS2_6StringES4_vvEE'/>
 <use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling_tensor_core.cc' l='229' macro='1' c='_ZNK3tvm13meta_schedule30MultiLevelTilingTensorCoreNode24TileAndAnnotateTensorizeEPNS_3tir8ScheduleERKNS2_7BlockRVERKNS_7runtime6StringE'/>
@@ -6333,6 +6334,14 @@
 <size>1</size>
 <use f='tvm/src/tir/transforms/make_unpacked_api.cc' l='45' macro='1' c='_ZN3tvm3tir15MakeUnpackedAPIEONS0_8PrimFuncE'/>
 <use f='tvm/src/tir/transforms/make_unpacked_api.cc' l='48' macro='1' c='_ZN3tvm3tir15MakeUnpackedAPIEONS0_8PrimFuncE'/>
+<size>1</size>
+<use f='tvm/src/tir/transforms/manifest_shared_memory_local_stage.cc' l='54' macro='1' c='_ZN3tvm3tir25IntermediateStageRewriter7RewriteEPKNS0_9BlockNodeE'/>
+<use f='tvm/src/tir/transforms/manifest_shared_memory_local_stage.cc' l='89' macro='1' c='_ZN3tvm3tir25IntermediateStageRewriter24CollectRelaxedOuterLoopsEPKNS0_9BlockNodeERKNS0_6BufferE'/>
+<use f='tvm/src/tir/transforms/manifest_shared_memory_local_stage.cc' l='96' macro='1' c='_ZN3tvm3tir25IntermediateStageRewriter24CollectRelaxedOuterLoopsEPKNS0_9BlockNodeERKNS0_6BufferE'/>
+<use f='tvm/src/tir/transforms/manifest_shared_memory_local_stage.cc' l='100' macro='1' c='_ZN3tvm3tir25IntermediateStageRewriter24CollectRelaxedOuterLoopsEPKNS0_9BlockNodeERKNS0_6BufferE'/>
+<use f='tvm/src/tir/transforms/manifest_shared_memory_local_stage.cc' l='101' macro='1' c='_ZN3tvm3tir25IntermediateStageRewriter24CollectRelaxedOuterLoopsEPKNS0_9BlockNodeERKNS0_6BufferE'/>
+<use f='tvm/src/tir/transforms/manifest_shared_memory_local_stage.cc' l='106' macro='1' c='_ZN3tvm3tir25IntermediateStageRewriter24CollectRelaxedOuterLoopsEPKNS0_9BlockNodeERKNS0_6BufferE'/>
+<use f='tvm/src/tir/transforms/manifest_shared_memory_local_stage.cc' l='111' macro='1' c='_ZN3tvm3tir25IntermediateStageRewriter24CollectRelaxedOuterLoopsEPKNS0_9BlockNodeERKNS0_6BufferE'/>
 <size>1</size>
 <use f='tvm/src/tir/transforms/merge_dynamic_shared_memory_allocations.cc' l='107' macro='1' c='_ZN3tvm3tir37DynSharedMemLinearAccessPatternFinder10VisitStmt_EPKNS0_9StoreNodeE'/>
 <use f='tvm/src/tir/transforms/merge_dynamic_shared_memory_allocations.cc' l='118' macro='1' c='_ZN3tvm3tir37DynSharedMemLinearAccessPatternFinder10VisitStmt_EPKNS0_15BufferStoreNodeE'/>
