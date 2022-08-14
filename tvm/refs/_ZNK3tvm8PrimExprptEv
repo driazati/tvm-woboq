@@ -90,6 +90,7 @@
 <use f='tvm/src/auto_scheduler/compute_dag.cc' l='1282' u='c' c='_ZNK3tvm14auto_scheduler10ComputeDAG8PrintDAGEb'/>
 <use f='tvm/src/auto_scheduler/search_policy/sketch_policy_rules.cc' l='922' u='c' c='_ZNK3tvm14auto_scheduler14MutateTileSize5ApplyEPNS0_16SketchPolicyNodeEPNS0_5StateEPSt23mersenne_twister_engineImLm32ELm624ELm397ELm31ELm2567483615ELm12039630'/>
 <use f='tvm/src/auto_scheduler/transform_step.cc' l='981' u='c' c='_ZN3tvm14auto_scheduler9SplitStepC1EiiNS_7runtime8OptionalINS_8PrimExprEEERKNS2_5ArrayINS3_INS_7IntegerEEEvEEb'/>
+<use f='tvm/src/ir/expr.cc' l='60' u='c' c='_ZN3tvm8PrimExpr11FromObject_ENS_7runtime9ObjectRefE'/>
 <use f='tvm/src/meta_schedule/extracted_task.cc' l='48' u='c' c='_ZN3tvm13meta_schedule21DefaultTaskFilterImplERKNS_7runtime5ArrayINS_2te6TensorEvEEb'/>
 <use f='tvm/src/meta_schedule/extracted_task.cc' l='79' u='c' c='_ZN3tvm13meta_schedule21DefaultTaskFilterImplERKNS_7runtime5ArrayINS_2te6TensorEvEEb'/>
 <use f='tvm/src/meta_schedule/feature_extractor/per_store_feature.cc' l='1288' u='c' c='_ZN3tvm3tir24PerStoreFeatureCollector10VisitStmt_EPKNS0_15BufferStoreNodeE'/>
@@ -144,9 +145,10 @@
 <use f='tvm/src/tir/contrib/ethosu/passes.cc' l='64' u='c' c='_ZN3tvm3tir7contrib6ethosu12_GLOBAL__N_111GetStmtArgsERKNS0_4StmtE'/>
 <use f='tvm/src/tir/contrib/ethosu/passes.cc' l='725' u='c' c='_ZN3tvm3tir7contrib6ethosu21MergeConstantsMutator11MakeNewStmtERKNS0_4StmtERKNS_7runtime5ArrayINS_8PrimExprEvEENS7_8OptionalIS9_EE'/>
 <use f='tvm/src/tir/ir/data_layout.cc' l='356' u='c' c='_ZN3tvm3tir14TransformShapeERKNS_7runtime5ArrayINS_8PrimExprEvEERKNS2_INS0_7IterVarEvEESA_S6_'/>
-<use f='tvm/src/tir/ir/expr.cc' l='1021' u='c' c='_ZN3tvm3tir6ReduceC1ENS0_11CommReducerENS_7runtime5ArrayINS_8PrimExprEvEENS4_INS0_7IterVarEvEES5_iS6_NS_4SpanE'/>
-<use f='tvm/src/tir/ir/expr.cc' l='1021' u='c' c='_ZN3tvm3tir6ReduceC1ENS0_11CommReducerENS_7runtime5ArrayINS_8PrimExprEvEENS4_INS0_7IterVarEvEES5_iS6_NS_4SpanE'/>
-<use f='tvm/src/tir/ir/expr.cc' l='1022' u='c' c='_ZN3tvm3tir6ReduceC1ENS0_11CommReducerENS_7runtime5ArrayINS_8PrimExprEvEENS4_INS0_7IterVarEvEES5_iS6_NS_4SpanE'/>
+<use f='tvm/src/tir/ir/expr.cc' l='844' u='c'/>
+<use f='tvm/src/tir/ir/expr.cc' l='1037' u='c' c='_ZN3tvm3tir6ReduceC1ENS0_11CommReducerENS_7runtime5ArrayINS_8PrimExprEvEENS4_INS0_7IterVarEvEES5_iS6_NS_4SpanE'/>
+<use f='tvm/src/tir/ir/expr.cc' l='1037' u='c' c='_ZN3tvm3tir6ReduceC1ENS0_11CommReducerENS_7runtime5ArrayINS_8PrimExprEvEENS4_INS0_7IterVarEvEES5_iS6_NS_4SpanE'/>
+<use f='tvm/src/tir/ir/expr.cc' l='1038' u='c' c='_ZN3tvm3tir6ReduceC1ENS0_11CommReducerENS_7runtime5ArrayINS_8PrimExprEvEENS4_INS0_7IterVarEvEES5_iS6_NS_4SpanE'/>
 <use f='tvm/src/tir/ir/specialize.cc' l='292' u='c' c='_ZN3tvm3tir22UpdateSpecializeVarMapERKNS0_8PrimFuncERKNS0_3VarERKNS0_6BufferEPSt13unordered_mapIS4_NS_8PrimExprENS_7runtime13ObjectPtrHashENSC_14Objec12872565'/>
 <use f='tvm/src/tir/ir/stmt.cc' l='899' u='c' c='_ZN3tvm3tir17MatchBufferRegionC1ENS0_6BufferENS0_12BufferRegionE'/>
 <use f='tvm/src/tir/schedule/analysis/layout.cc' l='111' u='c' c='_ZN3tvm3tir18SplitExprCollector5VisitERKNS_5arith13IterSplitExprE'/>
@@ -156,6 +158,7 @@
 <use f='tvm/src/tir/schedule/ir_comparator.cc' l='74' u='c' c='_ZN3tvm3tir19TensorizeComparator9VisitExprERKNS_8PrimExprES4_'/>
 <use f='tvm/src/tir/schedule/primitive/blockize_tensorize.cc' l='33' u='c' c='_ZN3tvm3tir15RangeFromExtentERKNS_8PrimExprE'/>
 <use f='tvm/src/tir/schedule/primitive/blockize_tensorize.cc' l='116' u='c' c='_ZN3tvm3tir23TrivialSubspaceDivisionERKNS_7runtime5ArrayINS0_7IterVarEvEERKNS2_INS_8PrimExprEvEERKS7_RKNS2_INS0_3VarEvEESG_'/>
+<use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='124' u='c' c='_ZN3tvm3tir14MakeCacheStageERKNS0_12BufferRegionEPNS0_14CacheStageInfoERKNS_7runtime6StringE'/>
 <use f='tvm/src/tir/transforms/bf16_legalize.cc' l='64' u='c' c='_ZN3tvm3tir19BF16PromoteRewriter10VisitExpr_EPKNS0_7AddNodeE'/>
 <use f='tvm/src/tir/transforms/bf16_legalize.cc' l='65' u='c' c='_ZN3tvm3tir19BF16PromoteRewriter10VisitExpr_EPKNS0_7AddNodeE'/>
 <use f='tvm/src/tir/transforms/bf16_legalize.cc' l='64' u='c' c='_ZN3tvm3tir19BF16PromoteRewriter10VisitExpr_EPKNS0_7SubNodeE'/>

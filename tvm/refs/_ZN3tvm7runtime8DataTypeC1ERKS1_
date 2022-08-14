@@ -196,8 +196,9 @@
 <use f='tvm/src/contrib/hybrid/codegen_hybrid.cc' l='328' u='c' c='_ZN3tvm7contrib13CodeGenHybrid10VisitStmt_EPKNS_3tir19ProducerRealizeNodeE'/>
 <use f='tvm/src/driver/driver_api.cc' l='95' u='c' c='_ZN3tvm8GetBindsERKNS_7runtime5ArrayINS0_9ObjectRefEvEEbRKSt13unordered_mapINS_2te6TensorENS_3tir6BufferESt4hashIS8_ESt8equal_toIS8_ESaISt4pairIKS8_SA4030814'/>
 <use f='tvm/src/ir/affine_type.cc' l='47' u='c'/>
-<use f='tvm/src/ir/expr.cc' l='74' u='c'/>
-<use f='tvm/src/ir/expr.cc' l='99' u='c'/>
+<use f='tvm/src/ir/expr.cc' l='60' u='c' c='_ZN3tvm8PrimExpr11FromObject_ENS_7runtime9ObjectRefE'/>
+<use f='tvm/src/ir/expr.cc' l='89' u='c'/>
+<use f='tvm/src/ir/expr.cc' l='114' u='c'/>
 <use f='tvm/src/ir/tensor_type.cc' l='40' u='c' c='_ZN3tvm10TensorType6ScalarENS_7runtime8DataTypeE'/>
 <use f='tvm/src/ir/tensor_type.cc' l='57' u='c'/>
 <use f='tvm/src/ir/type.cc' l='37' u='c'/>
@@ -956,9 +957,10 @@
 <use f='tvm/src/tir/ir/expr.cc' l='696' u='c'/>
 <use f='tvm/src/tir/ir/expr.cc' l='698' u='c'/>
 <use f='tvm/src/tir/ir/expr.cc' l='700' u='c'/>
-<use f='tvm/src/tir/ir/expr.cc' l='839' u='c'/>
-<use f='tvm/src/tir/ir/expr.cc' l='949' u='c' c='_ZN3tvm3tir11CommReducerC1ENS_7runtime5ArrayINS0_3VarEvEES5_NS3_INS_8PrimExprEvEES7_NS_4SpanE'/>
-<use f='tvm/src/tir/ir/expr.cc' l='950' u='c' c='_ZN3tvm3tir11CommReducerC1ENS_7runtime5ArrayINS0_3VarEvEES5_NS3_INS_8PrimExprEvEES7_NS_4SpanE'/>
+<use f='tvm/src/tir/ir/expr.cc' l='844' u='c'/>
+<use f='tvm/src/tir/ir/expr.cc' l='855' u='c'/>
+<use f='tvm/src/tir/ir/expr.cc' l='965' u='c' c='_ZN3tvm3tir11CommReducerC1ENS_7runtime5ArrayINS0_3VarEvEES5_NS3_INS_8PrimExprEvEES7_NS_4SpanE'/>
+<use f='tvm/src/tir/ir/expr.cc' l='966' u='c' c='_ZN3tvm3tir11CommReducerC1ENS_7runtime5ArrayINS0_3VarEvEES5_NS3_INS_8PrimExprEvEES7_NS_4SpanE'/>
 <use f='tvm/src/tir/ir/expr_functor.cc' l='170' u='c' c='_ZN3tvm3tir11ExprMutator10VisitExpr_EPKNS0_8CallNodeE'/>
 <use f='tvm/src/tir/ir/expr_functor.cc' l='242' u='c' c='_ZN3tvm3tir11ExprMutator10VisitExpr_EPKNS0_8CastNodeE'/>
 <use f='tvm/src/tir/ir/stmt.cc' l='410' u='c'/>
@@ -1004,6 +1006,7 @@
 <use f='tvm/src/tir/op/op.cc' l='709' u='c' c='_ZN3tvm5isinfENS_8PrimExprENS_4SpanE'/>
 <use f='tvm/src/tir/schedule/analysis/layout.cc' l='144' u='c' c='_ZN3tvm3tir15SuggestIndexMapERKNS0_6BufferERKNS_7runtime5ArrayINS_8PrimExprEvEERKNS5_INS0_3ForEvEERKS6_PNS_5arith8AnalyzerE'/>
 <use f='tvm/src/tir/schedule/primitive/blockize_tensorize.cc' l='33' u='c' c='_ZN3tvm3tir15RangeFromExtentERKNS_8PrimExprE'/>
+<use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='124' u='c' c='_ZN3tvm3tir14MakeCacheStageERKNS0_12BufferRegionEPNS0_14CacheStageInfoERKNS_7runtime6StringE'/>
 <use f='tvm/src/tir/schedule/primitive/decompose_padding.cc' l='286' u='c' c='_ZN3tvm3tirL18CreateInBoundBlockEPKNS0_16BlockRealizeNodeERKNS0_16PaddingBlockInfoERKNS_7runtime5ArrayINS0_3ForEvEERKNS0_4StmtEPNS_5arith8AnalyzerE'/>
 <use f='tvm/src/tir/schedule/primitive/loop_transformation.cc' l='410' u='c' c='_ZN3tvm3tir5SplitENS0_13ScheduleStateERKNS0_8StmtSRefERKNS_7runtime5ArrayINS_8PrimExprEvEEb'/>
 <use f='tvm/src/tir/schedule/primitive/loop_transformation.cc' l='415' u='c' c='_ZN3tvm3tir5SplitENS0_13ScheduleStateERKNS0_8StmtSRefERKNS_7runtime5ArrayINS_8PrimExprEvEEb'/>

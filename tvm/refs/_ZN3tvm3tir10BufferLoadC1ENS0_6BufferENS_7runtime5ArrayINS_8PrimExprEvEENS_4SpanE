@@ -1,6 +1,7 @@
 <dec f='tvm/include/tvm/tir/expr.h' l='657' type='void tvm::tir::BufferLoad::BufferLoad(tvm::tir::Buffer buffer, Array&lt;tvm::PrimExpr&gt; indices, tvm::Span span = tvm::Span())'/>
 <use f='tvm/src/tir/transforms/ir_utils.h' l='109' u='c' c='_ZN3tvm3tir13AddressOffsetENS0_3VarENS_7runtime8DataTypeEi'/>
 <use f='tvm/src/tir/transforms/ir_utils.h' l='128' u='c' c='_ZN3tvm3tir13AddressOffsetENS0_3VarENS_7runtime8DataTypeENS_8PrimExprE'/>
+<use f='tvm/src/ir/expr.cc' l='65' u='c' c='_ZN3tvm8PrimExpr11FromObject_ENS_7runtime9ObjectRefE'/>
 <use f='tvm/src/relay/backend/aot_executor_codegen.cc' l='513' u='c' c='_ZN3tvm5relay7backend18AOTExecutorCodegen12CopyToOutputENS_8PrimExprES3_bm'/>
 <use f='tvm/src/relay/backend/contrib/example_target_hooks/relay_to_tir.cc' l='81' u='c' c='_ZN3tvm5relay7contrib20example_target_hooks12_GLOBAL__N_120ConvertAddToSubtract9LoadIndexERKNS_3tir6BufferERKNS_8PrimExprE'/>
 <use f='tvm/src/target/llvm/codegen_hexagon.cc' l='390' u='c' c='_ZN3tvm7codegen14CodeGenHexagon16VectorLookupLoadENS_3tir6BufferENS_7runtime8DataTypeENS4_5ArrayINS_8PrimExprEvEE'/>
@@ -15,8 +16,9 @@
 <use f='tvm/src/tir/contrib/ethosu/passes.cc' l='682' u='c' c='_ZN3tvm3tir7contrib6ethosu21MergeConstantsMutator15MakeNewCopyArgsERKNS0_4StmtERKNS0_6BufferEi'/>
 <use f='tvm/src/tir/contrib/ethosu/passes.cc' l='746' u='c' c='_ZN3tvm3tir7contrib6ethosu21MergeConstantsMutator17MakeNewBufferLoadERKNS0_6BufferERKNS_8PrimExprEb'/>
 <use f='tvm/src/tir/ir/buffer.cc' l='412' u='c' c='_ZNK3tvm3tir6Buffer5vloadENS_7runtime5ArrayINS_8PrimExprEvEENS2_8DataTypeE'/>
-<def f='tvm/src/tir/ir/expr.cc' l='1085' ll='1097' type='void tvm::tir::BufferLoad::BufferLoad(tvm::tir::Buffer buffer, Array&lt;tvm::PrimExpr&gt; indices, tvm::Span span = tvm::Span())'/>
-<use f='tvm/src/tir/ir/expr.cc' l='1101' u='c'/>
+<use f='tvm/src/tir/ir/expr.cc' l='850' u='c'/>
+<def f='tvm/src/tir/ir/expr.cc' l='1101' ll='1113' type='void tvm::tir::BufferLoad::BufferLoad(tvm::tir::Buffer buffer, Array&lt;tvm::PrimExpr&gt; indices, tvm::Span span = tvm::Span())'/>
+<use f='tvm/src/tir/ir/expr.cc' l='1117' u='c'/>
 <use f='tvm/src/tir/ir/expr_functor.cc' l='139' u='c' c='_ZN3tvm3tir11ExprMutator10VisitExpr_EPKNS0_14BufferLoadNodeE'/>
 <use f='tvm/src/tir/schedule/analysis/analysis.cc' l='1741' u='c' c='_ZN3tvm3tir20FromIdentityCombinerERKNS_8PrimExprERKNS0_11BufferStoreEPNS0_11CommReducerEPS1_S9_'/>
 <use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='141' u='c' c='_ZN3tvm3tir14MakeCacheStageERKNS0_12BufferRegionEPNS0_14CacheStageInfoERKNS_7runtime6StringE'/>
