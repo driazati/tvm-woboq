@@ -1,5 +1,5 @@
 <dec f='tvm/src/arith/constraint_extract.h' l='53' type='std::vector&lt;PrimExpr&gt; tvm::arith::ExtractConstraints(const tvm::PrimExpr &amp; expr)'/>
-<def f='tvm/src/arith/constraint_extract.cc' l='47' ll='52' type='std::vector&lt;PrimExpr&gt; tvm::arith::ExtractConstraints(const tvm::PrimExpr &amp; expr)'/>
+<use f='tvm/src/arith/const_int_bound.cc' l='651' u='c' c='_ZN3tvm5arith21ConstIntBoundAnalyzer4Impl15DetectBoundInfoERKNS_8PrimExprE'/>
 <doc f='tvm/src/arith/constraint_extract.h' l='36'>/* \brief Returns constraints that are true if the expression is true.
  *
  * Utility to break up a boolean expression into independent
@@ -17,5 +17,6 @@
  *
  * \returns A vector of independent constraints
  */</doc>
+<def f='tvm/src/arith/constraint_extract.cc' l='47' ll='52' type='std::vector&lt;PrimExpr&gt; tvm::arith::ExtractConstraints(const tvm::PrimExpr &amp; expr)'/>
 <use f='tvm/src/arith/int_set.cc' l='631' u='c' c='_ZN3tvm5arith14IntSetAnalyzer4Impl15DetectBoundInfoERKNS_8PrimExprE'/>
 <use f='tvm/src/arith/rewrite_simplify.cc' l='233' u='c' c='_ZN3tvm5arith17RewriteSimplifier4Impl15EnterConstraintERKNS_8PrimExprE'/>
