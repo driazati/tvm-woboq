@@ -1,0 +1,12 @@
+<def f='tvm/include/tvm/script/printer/ir_docsifier.h' l='136' ll='145' type='tvm::script::printer::WithCtx tvm::script::printer::IRDocsifierNode::WithFrame(const tvm::script::printer::Frame &amp; frame)'/>
+<doc f='tvm/include/tvm/script/printer/ir_docsifier.h' l='125'>/*!
+   * \brief Push a new frame the stack
+   * \details Frame contains the contextual information that&apos;s needed during printing,
+   *          for example, variables in the scope. This method returns a RAII guard which
+   *          pops the frame and call the cleanup method of frame when going out of the scope.
+   *
+   * \param frame The frame to push.
+   *
+   * \return A RAII guard to pop frame and call the exit method of frame
+   *          when going out of scope
+   */</doc>
