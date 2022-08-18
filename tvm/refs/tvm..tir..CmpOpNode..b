@@ -134,10 +134,10 @@
 <use f='tvm/src/tir/schedule/ir_comparator.cc' l='146' u='r' c='_ZN3tvm3tir19TensorizeComparator10VisitExpr_EPKNS0_6GTNodeERKNS_8PrimExprE'/>
 <use f='tvm/src/tir/schedule/ir_comparator.cc' l='146' u='r' c='_ZN3tvm3tir19TensorizeComparator10VisitExpr_EPKNS0_6GENodeERKNS_8PrimExprE'/>
 <use f='tvm/src/tir/schedule/ir_comparator.cc' l='146' u='r' c='_ZN3tvm3tir19TensorizeComparator10VisitExpr_EPKNS0_6GENodeERKNS_8PrimExprE'/>
-<use f='tvm/src/tir/transforms/bf16_legalize.cc' l='63' u='r' c='_ZN3tvm3tir19BF16PromoteRewriter10VisitExpr_EPKNS0_6LTNodeE'/>
-<use f='tvm/src/tir/transforms/bf16_legalize.cc' l='63' u='r' c='_ZN3tvm3tir19BF16PromoteRewriter10VisitExpr_EPKNS0_6LENodeE'/>
-<use f='tvm/src/tir/transforms/bf16_legalize.cc' l='63' u='r' c='_ZN3tvm3tir19BF16PromoteRewriter10VisitExpr_EPKNS0_6GTNodeE'/>
-<use f='tvm/src/tir/transforms/bf16_legalize.cc' l='63' u='r' c='_ZN3tvm3tir19BF16PromoteRewriter10VisitExpr_EPKNS0_6GENodeE'/>
+<use f='tvm/src/tir/transforms/bf16_legalize.cc' l='64' u='r' c='_ZN3tvm3tir19BF16PromoteRewriter10VisitExpr_EPKNS0_6LTNodeE'/>
+<use f='tvm/src/tir/transforms/bf16_legalize.cc' l='64' u='r' c='_ZN3tvm3tir19BF16PromoteRewriter10VisitExpr_EPKNS0_6LENodeE'/>
+<use f='tvm/src/tir/transforms/bf16_legalize.cc' l='64' u='r' c='_ZN3tvm3tir19BF16PromoteRewriter10VisitExpr_EPKNS0_6GTNodeE'/>
+<use f='tvm/src/tir/transforms/bf16_legalize.cc' l='64' u='r' c='_ZN3tvm3tir19BF16PromoteRewriter10VisitExpr_EPKNS0_6GENodeE'/>
 <use f='tvm/src/tir/transforms/loop_partition.cc' l='297' u='r' c='_ZN3tvm3tir15PartitionFinder11InverseCondERKNS_8PrimExprE'/>
 <use f='tvm/src/tir/transforms/loop_partition.cc' l='300' u='r' c='_ZN3tvm3tir15PartitionFinder11InverseCondERKNS_8PrimExprE'/>
 <use f='tvm/src/tir/transforms/loop_partition.cc' l='303' u='r' c='_ZN3tvm3tir15PartitionFinder11InverseCondERKNS_8PrimExprE'/>
