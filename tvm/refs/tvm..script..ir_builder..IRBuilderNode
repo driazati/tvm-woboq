@@ -1,0 +1,51 @@
+<inh f='tvm/include/tvm/runtime/object.h' l='167' c='tvm::runtime::Object'/>
+<def f='tvm/include/tvm/script/ir_builder/base.h' l='156' ll='194'/>
+<use f='tvm/include/tvm/script/ir_builder/base.h' l='204' c='_ZNK3tvm6script10ir_builder9IRBuilderptEv'/>
+<use f='tvm/include/tvm/script/ir_builder/base.h' l='204' c='_ZNK3tvm6script10ir_builder9IRBuilderptEv'/>
+<use f='tvm/include/tvm/script/ir_builder/base.h' l='204' c='_ZNK3tvm6script10ir_builder9IRBuilder3getEv'/>
+<use f='tvm/include/tvm/script/ir_builder/base.h' l='204'/>
+<use f='tvm/src/script/ir_builder/base.cc' l='47' c='_ZN3tvm6script10ir_builder9IRBuilderC1Ev'/>
+<use f='tvm/src/script/ir_builder/base.cc' l='47' c='_ZN3tvm6script10ir_builder9IRBuilderC1Ev'/>
+<use f='tvm/src/script/ir_builder/base.cc' l='59' c='_ZN3tvm6script10ir_builder9IRBuilder14EnterWithScopeEv'/>
+<use f='tvm/src/script/ir_builder/base.cc' l='98'/>
+<use f='tvm/src/script/ir_builder/base.cc' l='98'/>
+<use f='tvm/src/script/ir_builder/base.cc' l='98'/>
+<size>32</size>
+<doc f='tvm/include/tvm/script/ir_builder/base.h' l='132'>/*!
+ * \brief A dialect-agnostic IRBuilder that constructs any IR of TVM.
+ * An idiomatic use of this class is to put this inside the RAII with-scope,
+ * call dialect-specific methods accordingly. Upon exiting the scope.
+ *
+ * \code
+ *
+ * PrimFunc ConstructPrimFunc() {
+ *   using tvm::script::ir_builder::IRBuilder;
+ *   using T = tvm::script::ir_builder::tir;
+ *   IRBuilder builder;
+ *   // Step 1. Place IRBuilder inside the with-scope.
+ *   {
+ *     With&lt;IRBuilder&gt; _(builder);
+ *     // Step 2. Call dialect-specific methods.
+ *     With&lt;T::PrimFuncFrame&gt; _2(...);
+ *     T::MatchBuffer(...);
+ *   }
+ *   // Step 3. Return the constructed PrimFunc.
+ *   return builder-&gt;Get&lt;PrimFunc&gt;();
+ * }
+ *
+ * \endcode
+ */</doc>
+<mbr r='tvm::script::ir_builder::IRBuilderNode::frames' o='128' t='runtime::Array&lt;IRBuilderFrame&gt;'/>
+<mbr r='tvm::script::ir_builder::IRBuilderNode::result' o='192' t='Optional&lt;tvm::runtime::ObjectRef&gt;'/>
+<fun r='_ZN3tvm6script10ir_builder13IRBuilderNode10VisitAttrsEPNS_11AttrVisitorE'/>
+<smbr r='tvm::script::ir_builder::IRBuilderNode::_type_key' t='const char *const'/>
+<smbr r='tvm::script::ir_builder::IRBuilderNode::_type_final' t='const bool'/>
+<smbr r='tvm::script::ir_builder::IRBuilderNode::_type_child_slots' t='const int'/>
+<fun r='_ZN3tvm6script10ir_builder13IRBuilderNode16RuntimeTypeIndexEv'/>
+<fun r='_ZN3tvm6script10ir_builder13IRBuilderNode27_GetOrAllocRuntimeTypeIndexEv'/>
+<fun r='_ZNK3tvm6script10ir_builder13IRBuilderNode9FindFrameEv'/>
+<fun r='_ZNK3tvm6script10ir_builder13IRBuilderNode12GetLastFrameEv'/>
+<fun r='_ZNK3tvm6script10ir_builder13IRBuilderNode3GetEv'/>
+<fun r='_ZNK3tvm6script10ir_builder13IRBuilderNode9FindFrameEv'/>
+<fun r='_ZNK3tvm6script10ir_builder13IRBuilderNode12GetLastFrameEv'/>
+<fun r='_ZNK3tvm6script10ir_builder13IRBuilderNode3GetEv'/>

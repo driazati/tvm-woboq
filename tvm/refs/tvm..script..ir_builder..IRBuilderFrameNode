@@ -1,0 +1,54 @@
+<inh f='tvm/include/tvm/runtime/object.h' l='167' c='tvm::runtime::Object'/>
+<def f='tvm/include/tvm/script/ir_builder/base.h' l='64' ll='94'/>
+<use f='tvm/include/tvm/script/ir_builder/base.h' l='104' c='_ZNK3tvm6script10ir_builder14IRBuilderFrameptEv'/>
+<use f='tvm/include/tvm/script/ir_builder/base.h' l='104' c='_ZNK3tvm6script10ir_builder14IRBuilderFrameptEv'/>
+<use f='tvm/include/tvm/script/ir_builder/base.h' l='104' c='_ZNK3tvm6script10ir_builder14IRBuilderFrame3getEv'/>
+<use f='tvm/include/tvm/script/ir_builder/base.h' l='104'/>
+<use f='tvm/include/tvm/script/ir_builder/base.h' l='117' c='_ZN3tvm6script10ir_builder14IRBuilderFrame14EnterWithScopeEv'/>
+<use f='tvm/include/tvm/script/ir_builder/base.h' l='125' c='_ZN3tvm6script10ir_builder14IRBuilderFrame13ExitWithScopeEv'/>
+<use f='tvm/src/script/ir_builder/base.cc' l='97'/>
+<use f='tvm/src/script/ir_builder/base.cc' l='97'/>
+<use f='tvm/src/script/ir_builder/base.cc' l='97'/>
+<size>48</size>
+<doc f='tvm/include/tvm/script/ir_builder/base.h' l='34'>/*!
+ * \brief A stack frame of the IRBuilder used to keep track of the current scope.
+ * Furthermore, the information stored in each stack frame can be useful for context-dependent
+ * IR construction.
+ *
+ * \example
+ *
+ * The `T::MatchBuffer` below adds an element in `PrimFuncNode::buffer_map`:
+ *
+ * \code {.cpp}
+ *
+ * using T = tvm::script::ir_builder::tir;
+ * With &lt;PrimFuncFrame&gt; _(...);
+ * Buffer buffer = T::MatchBuffer(...);
+ *
+ * \endcode
+ *
+ * The `T::MatchBuffer` below instead generates `MatchBufferRegion` in a TIR block:
+ *
+ * \code {.cpp}
+ *
+ * using T = tvm::script::ir_builder::tir;
+ * With &lt;PrimFuncFrame&gt; _(...);
+ * {
+ *   With&lt;BlockFrame&gt; _2(...);
+ *   Buffer buffer = T::MatchBuffer(...);
+ * }
+ *
+ * \endcode
+ */</doc>
+<mbr r='tvm::script::ir_builder::IRBuilderFrameNode::callbacks' o='192' t='std::vector&lt;runtime::TypedPackedFunc&lt;void ()&gt;&gt;'/>
+<fun r='_ZN3tvm6script10ir_builder18IRBuilderFrameNode10VisitAttrsEPNS_11AttrVisitorE'/>
+<smbr r='tvm::script::ir_builder::IRBuilderFrameNode::_type_key' t='const char *const'/>
+<fun r='_ZN3tvm6script10ir_builder18IRBuilderFrameNode16RuntimeTypeIndexEv'/>
+<fun r='_ZN3tvm6script10ir_builder18IRBuilderFrameNode27_GetOrAllocRuntimeTypeIndexEv'/>
+<fun r='_ZN3tvm6script10ir_builder18IRBuilderFrameNodeD1Ev'/>
+<fun r='_ZN3tvm6script10ir_builder18IRBuilderFrameNode14EnterWithScopeEv'/>
+<fun r='_ZN3tvm6script10ir_builder18IRBuilderFrameNode13ExitWithScopeEv'/>
+<fun r='_ZN3tvm6script10ir_builder18IRBuilderFrameNode11AddCallbackENS_7runtime15TypedPackedFuncIFvvEEE'/>
+<fun r='_ZN3tvm6script10ir_builder18IRBuilderFrameNode14EnterWithScopeEv'/>
+<fun r='_ZN3tvm6script10ir_builder18IRBuilderFrameNode13ExitWithScopeEv'/>
+<fun r='_ZN3tvm6script10ir_builder18IRBuilderFrameNode11AddCallbackENS_7runtime15TypedPackedFuncIFvvEEE'/>

@@ -1,0 +1,20 @@
+<dec f='tvm/include/tvm/script/ir_builder/base.h' l='224' type='void tvm::script::ir_builder::IRBuilder::EnterWithScope()'/>
+<def f='tvm/src/script/ir_builder/base.cc' l='58' ll='66' type='void tvm::script::ir_builder::IRBuilder::EnterWithScope()'/>
+<use f='tvm/src/script/ir_builder/base.cc' l='106' u='a'/>
+<doc f='tvm/include/tvm/script/ir_builder/base.h' l='207'>/*!
+   * \brief Puts the current IRBuilder into a thread-local scope, which can be retrieved using
+   * `IRBuilder::Current()`.
+   *
+   * \code {.cpp}
+   * IRBuilder builder;
+   * {
+   *   With&lt;IRBuilder&gt; _(builder);
+   *   // IRBuilder::Current() == builder
+   * }
+   * // IRBuilder::Current() == nullptr
+   * \endcode
+   *
+   * \sa IRBuilder::Current
+   * \sa IRBuilder::ExitWithScope
+   * \sa tvm::support::With
+   */</doc>
