@@ -558,7 +558,7 @@
 <use f='tvm/include/tvm/tir/schedule/trace.h' l='158' macro='1' c='_ZN3tvm3tir5TraceC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
 <use f='tvm/include/tvm/meta_schedule/database.h' l='86' macro='1' c='_ZN3tvm13meta_schedule8WorkloadC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
 <use f='tvm/include/tvm/meta_schedule/database.h' l='164' macro='1' c='_ZN3tvm13meta_schedule12TuningRecordC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
-<use f='tvm/include/tvm/meta_schedule/database.h' l='340' macro='1' c='_ZN3tvm13meta_schedule8DatabaseC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<use f='tvm/include/tvm/meta_schedule/database.h' l='342' macro='1' c='_ZN3tvm13meta_schedule8DatabaseC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
 <use f='tvm/include/tvm/meta_schedule/apply_history_best.h' l='101' macro='1' c='_ZN3tvm13meta_schedule16ApplyHistoryBestC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
 <use f='tvm/include/tvm/meta_schedule/builder.h' l='70' macro='1' c='_ZN3tvm13meta_schedule12BuilderInputC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
 <use f='tvm/include/tvm/meta_schedule/builder.h' l='102' macro='1' c='_ZN3tvm13meta_schedule13BuilderResultC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
@@ -582,7 +582,7 @@
 <use f='tvm/include/tvm/meta_schedule/mutator.h' l='146' macro='1' c='_ZN3tvm13meta_schedule7MutatorC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
 <use f='tvm/include/tvm/meta_schedule/postproc.h' l='164' macro='1' c='_ZN3tvm13meta_schedule8PostprocC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
 <use f='tvm/include/tvm/meta_schedule/schedule_rule.h' l='258' macro='1' c='_ZN3tvm13meta_schedule12ScheduleRuleC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
-<use f='tvm/include/tvm/meta_schedule/space_generator.h' l='157' macro='1' c='_ZN3tvm13meta_schedule14SpaceGeneratorC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
+<use f='tvm/include/tvm/meta_schedule/space_generator.h' l='164' macro='1' c='_ZN3tvm13meta_schedule14SpaceGeneratorC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
 <use f='tvm/include/tvm/meta_schedule/tune_context.h' l='156' macro='1' c='_ZN3tvm13meta_schedule11TuneContextC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
 <use f='tvm/include/tvm/meta_schedule/measure_callback.h' l='143' macro='1' c='_ZN3tvm13meta_schedule15MeasureCallbackC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
 <use f='tvm/include/tvm/meta_schedule/profiler.h' l='84' macro='1' c='_ZN3tvm13meta_schedule8ProfilerC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE'/>
@@ -617,6 +617,8 @@
 <use f='tvm/src/meta_schedule/database/database.cc' l='180' macro='1'/>
 <use f='tvm/src/meta_schedule/database/json_database.cc' l='174' c='_ZN3tvm13meta_schedule8Database12JSONDatabaseENS_7runtime6StringES3_b'/>
 <use f='tvm/src/meta_schedule/database/json_database.cc' l='221' macro='1'/>
+<use f='tvm/src/meta_schedule/database/memory_database.cc' l='100' c='_ZN3tvm13meta_schedule8Database14MemoryDatabaseEv'/>
+<use f='tvm/src/meta_schedule/database/memory_database.cc' l='106' macro='1'/>
 <use f='tvm/src/meta_schedule/extracted_task.cc' l='32' c='_ZN3tvm13meta_schedule13ExtractedTaskC1ENS_7runtime6StringENS_8IRModuleENS_6TargetENS2_5ArrayIS4_vEEi'/>
 <use f='tvm/src/meta_schedule/extracted_task.cc' l='98' macro='1'/>
 <use f='tvm/src/meta_schedule/feature_extractor/feature_extractor.cc' l='33' c='_ZN3tvm13meta_schedule16FeatureExtractor18PyFeatureExtractorENS_7runtime15TypedPackedFuncIFNS2_5ArrayINS2_7NDArrayEvEERKNS0_11TuneContextERKNS4_INS0_110083419'/>
@@ -705,6 +707,8 @@
 <use f='tvm/src/meta_schedule/search_strategy/search_strategy.cc' l='79' macro='1'/>
 <use f='tvm/src/meta_schedule/space_generator/post_order_apply.cc' l='198' c='_ZN3tvm13meta_schedule14SpaceGenerator14PostOrderApplyENS_7runtime10PackedFuncE'/>
 <use f='tvm/src/meta_schedule/space_generator/post_order_apply.cc' l='203' macro='1'/>
+<use f='tvm/src/meta_schedule/space_generator/schedule_fn.cc' l='80' c='_ZN3tvm13meta_schedule14SpaceGenerator10ScheduleFnENS_7runtime10PackedFuncE'/>
+<use f='tvm/src/meta_schedule/space_generator/schedule_fn.cc' l='85' macro='1'/>
 <use f='tvm/src/meta_schedule/space_generator/space_generator.cc' l='39' c='_ZN3tvm13meta_schedule14SpaceGenerator16PySpaceGeneratorENS_7runtime15TypedPackedFuncIFvRKNS0_11TuneContextEEEENS3_IFNS2_5ArrayINS_3tir8ScheduleEvEERKNS_8IRModuleEEEE'/>
 <use f='tvm/src/meta_schedule/space_generator/space_generator.cc' l='46' macro='1'/>
 <use f='tvm/src/meta_schedule/space_generator/space_generator_union.cc' l='60' c='_ZN3tvm13meta_schedule14SpaceGenerator19SpaceGeneratorUnionENS_7runtime5ArrayIS1_vEE'/>
@@ -1512,7 +1516,7 @@
 <use f='tvm/src/tir/schedule/trace.cc' l='29' c='_ZN3tvm3tir5TraceC1ENS_7runtime5ArrayINS0_11InstructionEvEENS2_3MapIS4_NS2_9ObjectRefEvvEE'/>
 <use f='tvm/src/tir/schedule/trace.cc' l='190' c='_ZN3tvm3tir21TranslateAddOutputRVsERKNS_7runtime5ArrayINS1_9ObjectRefEvEEPSt13unordered_mapIS3_NS1_6StringENS1_13ObjectPtrHashENS1_14ObjectPtrEqualESaISt4pairIKS3_S8_EEE'/>
 <use f='tvm/src/tir/schedule/trace.cc' l='375' c='_ZN3tvm3tir5Trace19ApplyJSONToScheduleENS_7runtime9ObjectRefENS0_8ScheduleE'/>
-<use f='tvm/src/tir/schedule/trace.cc' l='517' macro='1'/>
+<use f='tvm/src/tir/schedule/trace.cc' l='523' macro='1'/>
 <use f='tvm/src/tir/schedule/traced_schedule.cc' l='26' c='_ZN3tvm3tir8Schedule6TracedENS_8IRModuleEliNS0_24ScheduleErrorRenderLevelE'/>
 <use f='tvm/src/tir/schedule/traced_schedule.cc' l='43' c='_ZN3tvm3tir18TracedScheduleNode4CopyEv'/>
 <use f='tvm/src/tir/schedule/transform.cc' l='30' c='_ZN3tvm3tir14WithAnnotationEPKNS0_9BlockNodeERKNS_7runtime6StringERKNS4_9ObjectRefE'/>
