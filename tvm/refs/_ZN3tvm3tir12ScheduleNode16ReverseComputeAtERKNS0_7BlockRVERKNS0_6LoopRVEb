@@ -1,5 +1,5 @@
-<dec f='tvm/include/tvm/tir/schedule/schedule.h' l='451' type='void tvm::tir::ScheduleNode::ReverseComputeAt(const tvm::tir::BlockRV &amp; block_rv, const tvm::tir::LoopRV &amp; loop_rv, bool preserve_unit_loops)'/>
-<doc f='tvm/include/tvm/tir/schedule/schedule.h' l='436'>/*!
+<dec f='tvm/include/tvm/tir/schedule/schedule.h' l='453' type='void tvm::tir::ScheduleNode::ReverseComputeAt(const tvm::tir::BlockRV &amp; block_rv, const tvm::tir::LoopRV &amp; loop_rv, bool preserve_unit_loops)'/>
+<doc f='tvm/include/tvm/tir/schedule/schedule.h' l='438'>/*!
    * \brief Move a consumer block under the specific loop, and regenerate the
    * loops induced by the block so that the buffer region consumed by the consumer block could
    * cover those regions produced by its producer blocks under the given loop. It requires:
@@ -18,6 +18,6 @@
 <use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling.cc' l='157' u='c' c='_ZNK3tvm13meta_schedule20MultiLevelTilingNode13AddWriteReuseENS0_5StateE'/>
 <use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling_tensor_core.cc' l='244' u='c' c='_ZNK3tvm13meta_schedule30MultiLevelTilingTensorCoreNode23AddWriteReuseTensorCoreENS0_15TensorCoreStateE'/>
 <use f='tvm/src/meta_schedule/schedule_rule/winograd.cc' l='210' u='c'/>
-<ovr f='tvm/src/tir/schedule/concrete_schedule.cc' l='588' c='_ZN3tvm3tir20ConcreteScheduleNode16ReverseComputeAtERKNS0_7BlockRVERKNS0_6LoopRVEb'/>
+<ovr f='tvm/src/tir/schedule/concrete_schedule.cc' l='595' c='_ZN3tvm3tir20ConcreteScheduleNode16ReverseComputeAtERKNS0_7BlockRVERKNS0_6LoopRVEb'/>
 <use f='tvm/src/tir/schedule/primitive/compute_at.cc' l='706' u='c' c='_ZN3tvm3tir22ReverseComputeAtTraits23UnpackedApplyToScheduleENS0_8ScheduleENS0_7BlockRVENS0_6LoopRVENS_4BoolE'/>
 <use f='tvm/src/tir/schedule/schedule.cc' l='191' u='a'/>

@@ -93,8 +93,8 @@
 <use f='tvm/src/tir/schedule/primitive/blockize_tensorize.cc' l='422' c='_ZN3tvm3tir12MakeLoopNestENS0_4StmtERKSt6vectorIPKNS0_7ForNodeESaIS5_EE'/>
 <use f='tvm/src/tir/schedule/primitive/blockize_tensorize.cc' l='439' c='_ZN3tvm3tir12BlockizeImplERKNS0_13ScheduleStateERKNS0_8StmtSRefEPNS_7runtime3MapINS0_5BlockES9_vvEEPNS_5arith8AnalyzerE'/>
 <size>8</size>
-<use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='153' c='_ZN3tvm3tir14MakeCacheStageERKNS0_12BufferRegionEPNS0_14CacheStageInfoERKNS_7runtime6StringE'/>
-<use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='267' c='_ZN3tvm3tir16MakeReIndexStageERKNS0_5BlockEPNS0_14CacheStageInfoERKSt13unordered_setINS0_3VarENS_7runtime13ObjectPtrHashENS8_14ObjectPtrEqualESaIS7_EE4253367'/>
+<use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='155' c='_ZN3tvm3tir14MakeCacheStageERKNS0_12BufferRegionEPNS0_14CacheStageInfoERKNS_7runtime6StringE'/>
+<use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='269' c='_ZN3tvm3tir16MakeReIndexStageERKNS0_5BlockEPNS0_14CacheStageInfoERKSt13unordered_setINS0_3VarENS_7runtime13ObjectPtrHashENS8_14ObjectPtrEqualESaIS7_EE4253367'/>
 <size>8</size>
 <use f='tvm/src/tir/schedule/primitive/compute_at.cc' l='114' c='_ZN3tvm3tir19NotInSameScopeErrorC1ENS_8IRModuleERKNS0_8StmtSRefES5_'/>
 <use f='tvm/src/tir/schedule/primitive/compute_at.cc' l='118'/>
