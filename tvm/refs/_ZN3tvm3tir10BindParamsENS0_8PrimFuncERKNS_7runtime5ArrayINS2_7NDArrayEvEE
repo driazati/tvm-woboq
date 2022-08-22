@@ -1,0 +1,12 @@
+<dec f='tvm/src/tir/transforms/ir_utils.h' l='322' type='tvm::tir::PrimFunc tvm::tir::BindParams(tvm::tir::PrimFunc f, const Array&lt;runtime::NDArray&gt; &amp; constants)'/>
+<doc f='tvm/src/tir/transforms/ir_utils.h' l='314'>/*!
+ * \brief Bind a subset of parameter tensors to constants, replacing them by AllocateConst nodes.
+ * \param f The function to bind constants to.
+ * \param constants Raw constant data. If the size of this array is N, the last N parameter tensors
+ * will be removed from the signature and instead AllocateConst nodes will be introduced in the
+ * function body.
+ * \return The updated function.
+ */</doc>
+<use f='tvm/src/te/operation/create_primfunc.cc' l='504' u='c' c='_ZN3tvm3tir27CreatePrimFuncWithConstantsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS2_INS1_7NDArrayEvEE'/>
+<def f='tvm/src/tir/transforms/bind_params.cc' l='87' ll='131' type='tvm::tir::PrimFunc tvm::tir::BindParams(tvm::tir::PrimFunc f, const Array&lt;runtime::NDArray&gt; &amp; constants)'/>
+<use f='tvm/src/tir/transforms/bind_params.cc' l='137' u='c' c='_ZN3tvm3tir9transform10BindParamsERKNS_7runtime5ArrayINS2_7NDArrayEvEE'/>

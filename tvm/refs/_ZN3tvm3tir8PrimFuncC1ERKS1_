@@ -8,9 +8,10 @@
 <use f='tvm/src/relay/backend/te_compiler.cc' l='727' u='c' c='_ZN3tvm5relay3tec22LowerTensorExprMutator15MakeLoweredCallERKNS_8BaseFuncERKNS_9GlobalVarENS_7runtime5ArrayINS_9RelayExprEvEENS_4SpanERKNS_6TargetERKNS9_3MapIS6_S3_vvEE'/>
 <use f='tvm/src/relay/backend/te_compiler.cc' l='728' u='c' c='_ZN3tvm5relay3tec22LowerTensorExprMutator15MakeLoweredCallERKNS_8BaseFuncERKNS_9GlobalVarENS_7runtime5ArrayINS_9RelayExprEvEENS_4SpanERKNS_6TargetERKNS9_3MapIS6_S3_vvEE'/>
 <use f='tvm/src/relay/backend/te_compiler.cc' l='1120' u='c' c='_ZN3tvm5relay3tec22UpdateFunctionMetadataENS_8BaseFuncERNS_7runtime3MapINS3_6StringENS0_7backend12FunctionInfoEvvEENS_7IntegerE'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='101' u='c' c='_ZN3tvm5relay3tec10CachedFuncC1ENS_6TargetENS_9GlobalVarENS_7runtime5ArrayINS_2te6TensorEvEES9_NS7_8ScheduleENS_3tir8PrimFuncENS6_INS_7IntegerEvEENS_810874565'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='405' u='c' c='_ZN3tvm5relay3tec15ScheduleBuilder6CreateERKNS0_8FunctionENS_15GlobalVarSupplyE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='100' u='c' c='_ZN3tvm5relay3tec10CachedFuncC1ENS_6TargetENS_9GlobalVarENS_7runtime5ArrayINS_2te6TensorEvEES9_NS7_8ScheduleENS_3tir8PrimFuncENS6_INS_7IntegerEvEENS_810874565'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='410' u='c' c='_ZN3tvm5relay3tec15ScheduleBuilder6CreateERKNS0_8FunctionENS_15GlobalVarSupplyE'/>
 <use f='tvm/src/target/llvm/codegen_cpu.cc' l='195' u='c' c='_ZN3tvm7codegen10CodeGenCPU11AddFunctionERKNS_3tir8PrimFuncE'/>
+<use f='tvm/src/te/operation/create_primfunc.cc' l='504' u='c' c='_ZN3tvm3tir27CreatePrimFuncWithConstantsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS2_INS1_7NDArrayEvEE'/>
 <use f='tvm/src/te/schedule/schedule_postproc_to_primfunc.cc' l='438' u='c' c='_ZN3tvm2te26SchedulePostProcToPrimFuncENS_7runtime5ArrayINS1_9ObjectRefEvEENS_3tir4StmtENS1_8OptionalINS1_3MapINS0_6TensorENS5_6BufferEvvEEEE'/>
 <use f='tvm/src/tir/analysis/device_constraint_utils.cc' l='265' u='c' c='_ZN3tvm3tir12_GLOBAL__N_129ApplyDeviceConstraintsMutator7RewriteERKNS0_8PrimFuncERKNS_8FuncTypeERKNS_7runtime5ArrayINS_13VirtualDeviceEvEE'/>
 <use f='tvm/src/tir/analysis/verify_memory.cc' l='50' u='c' c='_ZN3tvm3tir12_GLOBAL__N_120MemoryAccessVerifierC1ENS0_8PrimFuncEi'/>
@@ -25,6 +26,7 @@
 <use f='tvm/src/tir/ir/function.cc' l='133' u='c'/>
 <use f='tvm/src/tir/ir/specialize.cc' l='371' u='c' c='_ZN3tvm3tir10SpecializeENS0_8PrimFuncERKNS_7runtime3MapINS0_3VarENS2_9ObjectRefEvvEE'/>
 <use f='tvm/src/tir/schedule/primitive/blockize_tensorize.cc' l='524' u='c' c='_ZN3tvm3tir9TensorizeENS0_13ScheduleStateERKNS0_8StmtSRefERKNS0_12TensorIntrinE'/>
+<use f='tvm/src/tir/transforms/bind_params.cc' l='137' u='c' c='_ZN3tvm3tir9transform10BindParamsERKNS_7runtime5ArrayINS2_7NDArrayEvEE'/>
 <use f='tvm/src/tir/transforms/compact_buffer_region.cc' l='587' u='c' c='_ZN3tvm3tir23CompactBufferAllocationENS0_8PrimFuncE'/>
 <use f='tvm/src/tir/transforms/convert_blocks_to_opaque.cc' l='89' u='c' c='_ZN3tvm3tir21ConvertBlocksToOpaqueENS0_8PrimFuncE'/>
 <use f='tvm/src/tir/transforms/flatten_buffer.cc' l='153' u='c' c='_ZN3tvm3tir13FlattenBufferENS0_8PrimFuncE'/>
@@ -33,7 +35,7 @@
 <use f='tvm/src/tir/transforms/lower_cross_thread_reduction.cc' l='623' u='c' c='_ZN3tvm3tir25LowerCrossThreadReductionENS0_8PrimFuncE'/>
 <use f='tvm/src/tir/transforms/lower_init_block.cc' l='69' u='c' c='_ZN3tvm3tir14LowerInitBlockENS0_8PrimFuncE'/>
 <use f='tvm/src/tir/transforms/lower_opaque_block.cc' l='155' u='c' c='_ZN3tvm3tir16LowerOpaqueBlockENS0_8PrimFuncE'/>
-<use f='tvm/src/tir/transforms/plan_update_buffer_allocation_location.cc' l='175' u='c' c='_ZN3tvm3tir37PlanAndUpdateBufferAllocationLocationENS0_8PrimFuncE'/>
+<use f='tvm/src/tir/transforms/plan_update_buffer_allocation_location.cc' l='189' u='c' c='_ZN3tvm3tir37PlanAndUpdateBufferAllocationLocationENS0_8PrimFuncE'/>
 <use f='tvm/src/tir/transforms/primfunc_utils.cc' l='48' u='c' c='_ZN3tvm3tir9transform6FilterENS_7runtime15TypedPackedFuncIFbNS0_8PrimFuncEEEE'/>
 <use f='tvm/src/tir/transforms/unify_thread_binding.cc' l='177' u='c' c='_ZN3tvm3tir18UnifyThreadBindingENS0_8PrimFuncE'/>
 <use f='tvm/src/tir/usmp/analysis/extract_buffer_info.cc' l='246' u='c' c='_ZN3tvm3tir4usmp19BufferInfoExtractor22RecordAllocateNodeInfoEPKNS0_12AllocateNodeE'/>

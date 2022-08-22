@@ -70,6 +70,8 @@
 <fun r='_ZN3tvm7runtime7NDArray9FFIDecRefEP8DLTensor'/>
 <fun r='_ZNK3tvm7runtime7NDArray4SaveEPN4dmlc6StreamE'/>
 <fun r='_ZN3tvm7runtime7NDArray4LoadEPN4dmlc6StreamE'/>
+<use f='tvm/src/tir/transforms/ir_utils.h' l='322' c='_ZN3tvm3tir10BindParamsENS0_8PrimFuncERKNS_7runtime5ArrayINS2_7NDArrayEvEE'/>
+<size>8</size>
 <use f='tvm/include/tvm/relay/expr.h' l='75'/>
 <use f='tvm/include/tvm/relay/expr.h' l='107' c='_ZN3tvm5relay8ConstantC1ENS_7runtime7NDArrayENS_4SpanE'/>
 <use f='tvm/include/tvm/relay/expr.h' l='118' c='_ZN3tvm5relay10WithFieldsENS0_8ConstantENS_7runtime8OptionalINS2_7NDArrayEEENS3_INS_13VirtualDeviceEEENS3_INS_4SpanEEE'/>
@@ -81,8 +83,11 @@
 <use f='tvm/src/ir/memory_pools.cc' l='142' c='_ZN3tvm12ConstantInfoC1ENS_7runtime6StringENS_7IntegerENS1_7NDArrayE'/>
 <use f='tvm/src/ir/memory_pools.cc' l='152'/>
 <size>8</size>
+<use f='tvm/include/tvm/meta_schedule/apply_history_best.h' l='44'/>
 <use f='tvm/include/tvm/meta_schedule/builder.h' l='44'/>
 <use f='tvm/include/tvm/meta_schedule/builder.h' l='69' c='_ZN3tvm13meta_schedule12BuilderInputC1ENS_8IRModuleENS_6TargetENS_7runtime8OptionalINS4_3MapINS4_6StringENS4_7NDArrayEvvEEEE'/>
+<use f='tvm/include/tvm/meta_schedule/extracted_task.h' l='87' c='_ZN3tvm13meta_schedule17DefaultTaskFilterERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS2_INS1_7NDArrayEvEE'/>
+<use f='tvm/include/tvm/meta_schedule/extracted_task.h' l='97' c='_ZN3tvm13meta_schedule28DefaultTaskFilterAllowExternERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS2_INS1_7NDArrayEvEE'/>
 <use f='tvm/include/tvm/meta_schedule/feature_extractor.h' l='50' c='_ZN3tvm13meta_schedule20FeatureExtractorNode11ExtractFromERKNS0_11TuneContextERKNS_7runtime5ArrayINS0_16MeasureCandidateEvEE'/>
 <use f='tvm/include/tvm/meta_schedule/feature_extractor.h' l='66'/>
 <use f='tvm/include/tvm/meta_schedule/feature_extractor.h' l='84' c='_ZN3tvm13meta_schedule22PyFeatureExtractorNode11ExtractFromERKNS0_11TuneContextERKNS_7runtime5ArrayINS0_16MeasureCandidateEvEE'/>
@@ -91,6 +96,13 @@
 <size>8</size>
 <use f='tvm/src/meta_schedule/builder/builder.cc' l='27' c='_ZN3tvm13meta_schedule12BuilderInputC1ENS_8IRModuleENS_6TargetENS_7runtime8OptionalINS4_3MapINS4_6StringENS4_7NDArrayEvvEEEE'/>
 <use f='tvm/src/meta_schedule/builder/builder.cc' l='57'/>
+<size>8</size>
+<use f='tvm/src/te/operation/create_primfunc.h' l='39' c='_ZN3tvm3tir27CreatePrimFuncWithConstantsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS2_INS1_7NDArrayEvEE'/>
+<use f='tvm/src/meta_schedule/extracted_task.cc' l='42' c='_ZN3tvm13meta_schedule21DefaultTaskFilterImplERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS2_INS1_7NDArrayEvEEb'/>
+<use f='tvm/src/meta_schedule/extracted_task.cc' l='93' c='_ZN3tvm13meta_schedule17DefaultTaskFilterERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS2_INS1_7NDArrayEvEE'/>
+<use f='tvm/src/meta_schedule/extracted_task.cc' l='98' c='_ZN3tvm13meta_schedule28DefaultTaskFilterAllowExternERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS2_INS1_7NDArrayEvEE'/>
+<use f='tvm/src/meta_schedule/extracted_task.cc' l='110'/>
+<use f='tvm/src/meta_schedule/extracted_task.cc' l='115'/>
 <size>8</size>
 <use f='tvm/src/meta_schedule/feature_extractor/feature_extractor.cc' l='24' c='_ZN3tvm13meta_schedule22PyFeatureExtractorNode11ExtractFromERKNS0_11TuneContextERKNS_7runtime5ArrayINS0_16MeasureCandidateEvEE'/>
 <size>8</size>
@@ -147,6 +159,7 @@
 <use f='tvm/src/relay/analysis/util.cc' l='372' c='_ZN3tvm5relay24IsNDArrayAllGreaterEqualERKNS_7runtime7NDArrayET_'/>
 <size>8</size>
 <use f='tvm/src/target/source/codegen_source_base.h' l='167' c='_ZN3tvm7codegen20CreateMetadataModuleERKSt13unordered_mapINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS_7runtime7NDArrayESt4hashIS7_ESt8equal1760940'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.h' l='221' c='_ZN3tvm5relay3tec14LowerTEComputeB5cxx11ERKNS0_8FunctionENS_6TargetEb'/>
 <use f='tvm/src/relay/backend/aot_executor_codegen.cc' l='1013'/>
 <use f='tvm/src/relay/backend/aot_executor_codegen.cc' l='1177' c='_ZN3tvm5relay7backend18AOTExecutorCodegen7CodegenENS_8IRModuleENS0_8FunctionENS_7runtime6StringE'/>
 <use f='tvm/src/relay/backend/aot_executor_codegen.cc' l='1178' c='_ZN3tvm5relay7backend18AOTExecutorCodegen7CodegenENS_8IRModuleENS0_8FunctionENS_7runtime6StringE'/>
@@ -180,9 +193,13 @@
 <use f='tvm/src/runtime/file_utils.h' l='131' c='_ZN3tvm7runtime10SaveParamsEPN4dmlc6StreamERKNS0_3MapINS0_6StringENS0_7NDArrayEvvEE'/>
 <use f='tvm/src/relay/backend/param_dict.cc' l='42'/>
 <size>8</size>
-<use f='tvm/src/relay/backend/task_extraction.cc' l='35' c='_ZN3tvm5relay7backend11ExtractTaskENS_8IRModuleENS_6TargetENS_7runtime3MapINS4_6StringENS4_7NDArrayEvvEENS4_15TypedPackedFuncIFNS4_8OptionalINS_3tir8P10298777'/>
+<use f='tvm/src/relay/backend/task_extraction.cc' l='36' c='_ZN3tvm5relay7backend11ExtractTaskENS_8IRModuleENS_6TargetENS_7runtime3MapINS4_6StringENS4_7NDArrayEvvEENS4_15TypedPackedFuncIFNS4_8OptionalINS_3tir8P14767441'/>
 <size>8</size>
 <use f='tvm/src/relay/backend/te_compiler.cc' l='411' c='_ZN3tvm5relay3tec14TECompilerImpl13LowerInternalERKNS1_9CCacheKeyENS_15GlobalVarSupplyE'/>
+<size>8</size>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='364' c='_ZN3tvm5relay3tec15ScheduleBuilder6CreateERKNS0_8FunctionENS_15GlobalVarSupplyE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='793' c='_ZN3tvm5relay3tec14LowerTEComputeB5cxx11ERKNS0_8FunctionENS_6TargetEb'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='805' c='_ZN3tvm5relay3tec14LowerTEComputeB5cxx11ERKNS0_8FunctionENS_6TargetEb'/>
 <size>8</size>
 <use f='tvm/src/relay/backend/utils.cc' l='322' c='_ZN3tvm5relay7backend16BindParamsByNameENS0_8FunctionERKSt13unordered_mapINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS_7runtime7NDArrayESt4h11724621'/>
 <use f='tvm/src/relay/backend/utils.cc' l='353' c='_ZN3tvm5relay7backend18BindParamsInModuleENS_8IRModuleERKSt13unordered_mapINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS_7runtime7NDArrayESt4288342'/>
@@ -404,6 +421,8 @@
 <size>8</size>
 <use f='tvm/src/target/source/source_module.cc' l='707' c='_ZN3tvm7codegen18MetadataSerializer5VisitEPKcPNS_7runtime7NDArrayE'/>
 <size>8</size>
+<use f='tvm/src/te/operation/create_primfunc.cc' l='502' c='_ZN3tvm3tir27CreatePrimFuncWithConstantsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS2_INS1_7NDArrayEvEE'/>
+<size>8</size>
 <use f='tvm/src/tir/contrib/ethosu/passes.cc' l='508' c='_ZN3tvm3tir7contrib6ethosu21MergeConstantsMutatorclENS0_8PrimFuncERKNS_7runtime3MapINS_6IntImmENS5_7NDArrayEvvEE'/>
 <use f='tvm/src/tir/contrib/ethosu/passes.cc' l='519' c='_ZN3tvm3tir7contrib6ethosu21MergeConstantsMutatorclENS0_8PrimFuncERKNS_7runtime3MapINS_6IntImmENS5_7NDArrayEvvEE'/>
 <use f='tvm/src/tir/contrib/ethosu/passes.cc' l='836' c='_ZN3tvm3tir7contrib6ethosu21MergeConstantsMutator39GetArgsToMergeWithoutArgsNotInConstDictERKNS_7runtime5ArrayINS5_INS_6IntImmEvEEvEERKNS4_3MapIS6_NS4_7NDArrayEvvEE'/>
@@ -423,8 +442,9 @@
 <size>8</size>
 <use f='tvm/src/tir/transforms/bind_params.cc' l='49' c='_ZN3tvm3tir15ParamsCollectorC1ERKNS_7runtime3MapINS0_3VarENS2_7NDArrayEvvEE'/>
 <use f='tvm/src/tir/transforms/bind_params.cc' l='84'/>
-<use f='tvm/src/tir/transforms/bind_params.cc' l='89' c='_ZN3tvm3tir9transform10BindParamsERKNS_7runtime5ArrayINS2_7NDArrayEvEE'/>
-<use f='tvm/src/tir/transforms/bind_params.cc' l='91' c='_ZN3tvm3tir9transform10BindParamsERKNS_7runtime5ArrayINS2_7NDArrayEvEE'/>
+<use f='tvm/src/tir/transforms/bind_params.cc' l='87' c='_ZN3tvm3tir10BindParamsENS0_8PrimFuncERKNS_7runtime5ArrayINS2_7NDArrayEvEE'/>
+<use f='tvm/src/tir/transforms/bind_params.cc' l='88' c='_ZN3tvm3tir10BindParamsENS0_8PrimFuncERKNS_7runtime5ArrayINS2_7NDArrayEvEE'/>
+<use f='tvm/src/tir/transforms/bind_params.cc' l='135' c='_ZN3tvm3tir9transform10BindParamsERKNS_7runtime5ArrayINS2_7NDArrayEvEE'/>
 <size>8</size>
 <use f='tvm/src/tir/transforms/extract_constants.cc' l='37'/>
 <use f='tvm/src/tir/transforms/extract_constants.cc' l='41' c='_ZN3tvm3tir10Applicator5DeDupERKNS_7runtime7NDArrayE'/>

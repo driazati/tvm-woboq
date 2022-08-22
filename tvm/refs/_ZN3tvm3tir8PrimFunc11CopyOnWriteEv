@@ -1,6 +1,6 @@
 <def f='tvm/include/tvm/tir/function.h' l='189' macro='1' type='tvm::tir::PrimFuncNode * tvm::tir::PrimFunc::CopyOnWrite()'/>
 <use f='tvm/src/meta_schedule/feature_extractor/per_store_feature.cc' l='291' u='c' c='_ZN3tvm3tir9transform28SimplifyForFeatureExtractionEv'/>
-<use f='tvm/src/te/operation/create_primfunc.cc' l='89' u='c' c='_ZN3tvm3tir32LayoutFreePlaceholdersNormalizer7ProcessENS0_8PrimFuncE'/>
+<use f='tvm/src/te/operation/create_primfunc.cc' l='95' u='c' c='_ZN3tvm3tir32LayoutFreePlaceholdersNormalizer7ProcessENS0_8PrimFuncE'/>
 <use f='tvm/src/te/schedule/schedule_postproc_to_primfunc.cc' l='189' u='c' c='_ZN3tvm2te28LayoutTransformAttrUnwrapper5ApplyENS_3tir8PrimFuncE'/>
 <use f='tvm/src/te/schedule/schedule_postproc_to_primfunc.cc' l='255' u='c' c='_ZN3tvm2te27AxisSeparatorsAttrUnwrapper5ApplyENS_3tir8PrimFuncE'/>
 <use f='tvm/src/tir/contrib/ethosu/passes.cc' l='203' u='c' c='_ZN3tvm3tir7contrib6ethosu28CopyComputeReorderingMutatorclENS0_8PrimFuncE'/>
@@ -14,7 +14,7 @@
 <use f='tvm/src/tir/transforms/bf16_legalize.cc' l='376' u='c' c='_ZN3tvm3tir9transform11BF16PromoteEv'/>
 <use f='tvm/src/tir/transforms/bf16_legalize.cc' l='387' u='c' c='_ZN3tvm3tir9transform19BF16CastEliminationEv'/>
 <use f='tvm/src/tir/transforms/bf16_legalize.cc' l='398' u='c' c='_ZN3tvm3tir9transform16BF16TypeLoweringEv'/>
-<use f='tvm/src/tir/transforms/bind_params.cc' l='101' u='c' c='_ZN3tvm3tir9transform10BindParamsERKNS_7runtime5ArrayINS2_7NDArrayEvEE'/>
+<use f='tvm/src/tir/transforms/bind_params.cc' l='98' u='c' c='_ZN3tvm3tir10BindParamsENS0_8PrimFuncERKNS_7runtime5ArrayINS2_7NDArrayEvEE'/>
 <use f='tvm/src/tir/transforms/bound_checker.cc' l='255' u='c' c='_ZN3tvm3tir9transform23InstrumentBoundCheckersEv'/>
 <use f='tvm/src/tir/transforms/combine_context_call.cc' l='105' u='c' c='_ZN3tvm3tir9transform18CombineContextCallEv'/>
 <use f='tvm/src/tir/transforms/common_subexpr_elim.cc' l='636' u='c' c='_ZN3tvm3tir9transform20CommonSubexprElimTIREbb'/>
@@ -33,7 +33,7 @@
 <use f='tvm/src/tir/transforms/inject_prefetch.cc' l='103' u='c' c='_ZN3tvm3tir9transform14InjectPrefetchEv'/>
 <use f='tvm/src/tir/transforms/inject_ptx_async_copy.cc' l='133' u='c' c='_ZN3tvm3tir9transform18InjectPTXAsyncCopyEv'/>
 <use f='tvm/src/tir/transforms/inject_rolling_buffer.cc' l='305' u='c' c='_ZN3tvm3tir9transform19InjectRollingBufferEv'/>
-<use f='tvm/src/tir/transforms/inject_software_pipeline.cc' l='1201' u='c' c='_ZN3tvm3tir9transform22InjectSoftwarePipelineEv'/>
+<use f='tvm/src/tir/transforms/inject_software_pipeline.cc' l='1198' u='c' c='_ZN3tvm3tir9transform22InjectSoftwarePipelineEv'/>
 <use f='tvm/src/tir/transforms/inject_virtual_thread.cc' l='539' u='c' c='_ZN3tvm3tir9transform19InjectVirtualThreadEv'/>
 <use f='tvm/src/tir/transforms/legalize_packed_calls.cc' l='121' u='c' c='_ZN3tvm3tir9transform19LegalizePackedCallsEv'/>
 <use f='tvm/src/tir/transforms/lift_attr_scope.cc' l='192' u='c' c='_ZN3tvm3tir9transform13LiftAttrScopeENS_7runtime6StringE'/>
@@ -54,7 +54,7 @@
 <use f='tvm/src/tir/transforms/manifest_shared_memory_local_stage.cc' l='275' u='c' c='_ZN3tvm3tir9transform30ManifestSharedMemoryLocalStageEv'/>
 <use f='tvm/src/tir/transforms/merge_dynamic_shared_memory_allocations.cc' l='629' u='c' c='_ZN3tvm3tir9transform35MergeDynamicSharedMemoryAllocationsEv'/>
 <use f='tvm/src/tir/transforms/narrow_datatype.cc' l='496' u='c' c='_ZN3tvm3tir9transform14NarrowDataTypeEi'/>
-<use f='tvm/src/tir/transforms/plan_update_buffer_allocation_location.cc' l='176' u='c' c='_ZN3tvm3tir37PlanAndUpdateBufferAllocationLocationENS0_8PrimFuncE'/>
+<use f='tvm/src/tir/transforms/plan_update_buffer_allocation_location.cc' l='190' u='c' c='_ZN3tvm3tir37PlanAndUpdateBufferAllocationLocationENS0_8PrimFuncE'/>
 <use f='tvm/src/tir/transforms/remap_thread_axis.cc' l='81' u='c' c='_ZN3tvm3tir15RemapThreadAxisEONS0_8PrimFuncENS_7runtime3MapINS3_6StringENS0_7IterVarEvvEE'/>
 <use f='tvm/src/tir/transforms/remove_assume.cc' l='53' u='c' c='_ZN3tvm3tir9transform20RemoveAssumeInternalEv'/>
 <use f='tvm/src/tir/transforms/remove_no_op.cc' l='173' u='c' c='_ZN3tvm3tir9transform10RemoveNoOpEv'/>

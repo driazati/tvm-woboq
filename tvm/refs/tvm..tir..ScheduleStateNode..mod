@@ -101,4 +101,4 @@
 <use f='tvm/src/tir/schedule/state.cc' l='1037' u='m' c='_ZN3tvm3tir17ScheduleStateNode7ReplaceERKNS0_8StmtSRefERKNS0_4StmtERKNS_7runtime3MapINS0_5BlockESA_vvEE'/>
 <use f='tvm/src/tir/schedule/state.cc' l='1057' u='w' c='_ZN3tvm3tir17ScheduleStateNode7ReplaceERKNS0_8StmtSRefERKNS0_4StmtERKNS_7runtime3MapINS0_5BlockESA_vvEE'/>
 <use f='tvm/src/tir/schedule/traced_schedule.cc' l='103' u='m' c='_ZN3tvm3tir18TracedScheduleNode8GetBlockERKNS_7runtime6StringERKNS2_8OptionalIS3_EE'/>
-<use f='tvm/src/tir/schedule/transform.cc' l='243' u='r' c='_ZN3tvm3tir20LeafBlockRemovalPlanERKNS0_13ScheduleStateERKNS0_8StmtSRefEPNS0_4StmtES8_'/>
+<use f='tvm/src/tir/schedule/transform.cc' l='258' u='r' c='_ZN3tvm3tir20LeafBlockRemovalPlanERKNS0_13ScheduleStateERKNS0_8StmtSRefEPNS0_4StmtES8_'/>

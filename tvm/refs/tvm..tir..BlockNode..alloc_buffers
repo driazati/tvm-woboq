@@ -7,7 +7,7 @@
 <doc f='tvm/include/tvm/tir/stmt.h' l='1247'>/*! \brief The buffer allocated in the block. */</doc>
 <use f='tvm/src/meta_schedule/feature_extractor/per_store_feature.cc' l='1309' c='_ZN3tvm3tir24PerStoreFeatureCollector10VisitStmt_EPKNS0_9BlockNodeE'/>
 <use f='tvm/src/printer/tir_text_printer.cc' l='688' c='_ZN3tvm3tir14TIRTextPrinter10VisitStmt_EPKNS0_16BlockRealizeNodeE'/>
-<use f='tvm/src/printer/tvmscript_printer.cc' l='1439' c='_ZN3tvm3tir16TVMScriptPrinter14PrintBlockBodyEPKNS0_9BlockNodeE'/>
+<use f='tvm/src/printer/tvmscript_printer.cc' l='1458' c='_ZN3tvm3tir16TVMScriptPrinter14PrintBlockBodyEPKNS0_9BlockNodeE'/>
 <use f='tvm/src/tir/analysis/buffer_access_lca_detector.cc' l='92' c='_ZN3tvm3tir11LCADetector10VisitStmt_EPKNS0_9BlockNodeE'/>
 <use f='tvm/src/tir/analysis/device_constraint_utils.cc' l='410' u='r' c='_ZN3tvm3tir12_GLOBAL__N_129ApplyDeviceConstraintsMutator10VisitStmt_EPKNS0_9BlockNodeE'/>
 <use f='tvm/src/tir/ir/script/script_complete.cc' l='55' c='_ZN3tvm3tir15ScriptCompleter10VisitStmt_EPKNS0_9BlockNodeE'/>
@@ -44,13 +44,13 @@
 <use f='tvm/src/tir/transforms/inject_software_pipeline.cc' l='242' c='_ZN3tvm3tir17software_pipeline20PipelineBodyRewriter10VisitStmt_EPKNS0_9BlockNodeE'/>
 <use f='tvm/src/tir/transforms/inject_software_pipeline.cc' l='253' c='_ZN3tvm3tir17software_pipeline20PipelineBodyRewriter10VisitStmt_EPKNS0_9BlockNodeE'/>
 <use f='tvm/src/tir/transforms/inject_software_pipeline.cc' l='366' u='w' c='_ZN3tvm3tir17software_pipeline16PipelineRewriter13BuildPipelineEv'/>
-<use f='tvm/src/tir/transforms/inject_software_pipeline.cc' l='1049' c='_ZN3tvm3tir17software_pipeline16PipelineInjector10VisitStmt_EPKNS0_7ForNodeE'/>
-<use f='tvm/src/tir/transforms/inject_software_pipeline.cc' l='1054' u='r' c='_ZN3tvm3tir17software_pipeline16PipelineInjector10VisitStmt_EPKNS0_7ForNodeE'/>
-<use f='tvm/src/tir/transforms/inject_software_pipeline.cc' l='1079' c='_ZN3tvm3tir17software_pipeline16PipelineInjector10VisitStmt_EPKNS0_7ForNodeE'/>
-<use f='tvm/src/tir/transforms/inject_software_pipeline.cc' l='1124' c='_ZN3tvm3tir17software_pipeline16PipelineInjector10VisitStmt_EPKNS0_7ForNodeE'/>
-<use f='tvm/src/tir/transforms/inject_software_pipeline.cc' l='1138' u='m' c='_ZN3tvm3tir17software_pipeline16PipelineInjector15AddAllocBuffersEPNS0_9BlockNodeENS_7runtime5ArrayINS0_6BufferEvEE'/>
-<use f='tvm/src/tir/transforms/inject_software_pipeline.cc' l='1149' c='_ZN3tvm3tir17software_pipeline16PipelineInjector10VisitStmt_EPKNS0_9BlockNodeE'/>
-<use f='tvm/src/tir/transforms/inject_software_pipeline.cc' l='1163' c='_ZN3tvm3tir17software_pipeline16PipelineInjector10VisitStmt_EPKNS0_9BlockNodeE'/>
+<use f='tvm/src/tir/transforms/inject_software_pipeline.cc' l='1046' c='_ZN3tvm3tir17software_pipeline16PipelineInjector10VisitStmt_EPKNS0_7ForNodeE'/>
+<use f='tvm/src/tir/transforms/inject_software_pipeline.cc' l='1051' u='r' c='_ZN3tvm3tir17software_pipeline16PipelineInjector10VisitStmt_EPKNS0_7ForNodeE'/>
+<use f='tvm/src/tir/transforms/inject_software_pipeline.cc' l='1076' c='_ZN3tvm3tir17software_pipeline16PipelineInjector10VisitStmt_EPKNS0_7ForNodeE'/>
+<use f='tvm/src/tir/transforms/inject_software_pipeline.cc' l='1121' c='_ZN3tvm3tir17software_pipeline16PipelineInjector10VisitStmt_EPKNS0_7ForNodeE'/>
+<use f='tvm/src/tir/transforms/inject_software_pipeline.cc' l='1135' u='m' c='_ZN3tvm3tir17software_pipeline16PipelineInjector15AddAllocBuffersEPNS0_9BlockNodeENS_7runtime5ArrayINS0_6BufferEvEE'/>
+<use f='tvm/src/tir/transforms/inject_software_pipeline.cc' l='1146' c='_ZN3tvm3tir17software_pipeline16PipelineInjector10VisitStmt_EPKNS0_9BlockNodeE'/>
+<use f='tvm/src/tir/transforms/inject_software_pipeline.cc' l='1160' c='_ZN3tvm3tir17software_pipeline16PipelineInjector10VisitStmt_EPKNS0_9BlockNodeE'/>
 <use f='tvm/src/tir/transforms/lower_cross_thread_reduction.cc' l='563' u='m' c='_ZN3tvm3tir31CrossThreadReductionTransformer10VisitStmt_EPKNS0_9BlockNodeE'/>
 <use f='tvm/src/tir/transforms/lower_opaque_block.cc' l='50' u='m' c='_ZN3tvm3tir16OpaqueBlockLower10VisitStmt_EPKNS0_16BlockRealizeNodeE'/>
 <use f='tvm/src/tir/transforms/lower_opaque_block.cc' l='51' u='m' c='_ZN3tvm3tir16OpaqueBlockLower10VisitStmt_EPKNS0_16BlockRealizeNodeE'/>
@@ -61,7 +61,7 @@
 <use f='tvm/src/tir/transforms/manifest_shared_memory_local_stage.cc' l='209' u='m' c='_ZN3tvm3tir30SharedMemoryLocalStageInserter10VisitStmt_EPKNS0_9BlockNodeE'/>
 <use f='tvm/src/tir/transforms/manifest_shared_memory_local_stage.cc' l='259' u='w' c='_ZN3tvm3tir30SharedMemoryLocalStageInserter10VisitStmt_EPKNS0_9BlockNodeE'/>
 <use f='tvm/src/tir/transforms/manifest_shared_memory_local_stage.cc' l='259' u='r' c='_ZN3tvm3tir30SharedMemoryLocalStageInserter10VisitStmt_EPKNS0_9BlockNodeE'/>
-<use f='tvm/src/tir/transforms/plan_update_buffer_allocation_location.cc' l='115' u='w' c='_ZN3tvm3tir23BufferAllocationLocator10VisitStmt_EPKNS0_9BlockNodeE'/>
+<use f='tvm/src/tir/transforms/plan_update_buffer_allocation_location.cc' l='139' u='w' c='_ZN3tvm3tir23BufferAllocationLocator10VisitStmt_EPKNS0_9BlockNodeE'/>
 <use f='tvm/src/tir/transforms/remove_weight_layout_rewrite_block.cc' l='62' c='_ZN3tvm3tir31WeightLayoutRewriteBlockRemover10VisitStmt_EPKNS0_9BlockNodeE'/>
 <use f='tvm/src/tir/transforms/remove_weight_layout_rewrite_block.cc' l='67' u='m' c='_ZN3tvm3tir31WeightLayoutRewriteBlockRemover10VisitStmt_EPKNS0_9BlockNodeE'/>
 <use f='tvm/src/tir/transforms/remove_weight_layout_rewrite_block.cc' l='69' u='w' c='_ZN3tvm3tir31WeightLayoutRewriteBlockRemover10VisitStmt_EPKNS0_9BlockNodeE'/>

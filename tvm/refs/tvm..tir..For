@@ -39,13 +39,13 @@
 <use f='tvm/src/printer/tvmscript_printer.cc' l='183'/>
 <use f='tvm/src/printer/tvmscript_printer.cc' l='185'/>
 <use f='tvm/src/printer/tvmscript_printer.cc' l='306' c='_ZN3tvm3tir16TVMScriptPrinter9PrintLoopERKNS0_3ForE'/>
-<use f='tvm/src/printer/tvmscript_printer.cc' l='1219' c='_ZN3tvm3tir16TVMScriptPrinter10VisitStmt_EPKNS0_7ForNodeE'/>
-<use f='tvm/src/printer/tvmscript_printer.cc' l='1222' c='_ZN3tvm3tir16TVMScriptPrinter10VisitStmt_EPKNS0_7ForNodeE'/>
-<use f='tvm/src/printer/tvmscript_printer.cc' l='1225' c='_ZN3tvm3tir16TVMScriptPrinter10VisitStmt_EPKNS0_7ForNodeE'/>
-<use f='tvm/src/printer/tvmscript_printer.cc' l='1240' c='_ZN3tvm3tir16TVMScriptPrinter10VisitStmt_EPKNS0_7ForNodeE'/>
-<use f='tvm/src/printer/tvmscript_printer.cc' l='1792' c='_ZN3tvm3tir16TVMScriptPrinter9PrintLoopERKNS0_3ForE'/>
-<use f='tvm/src/printer/tvmscript_printer.cc' l='1864' c='_ZN3tvm3tir30TVMScriptPrinterWithDiagnostic9PrintLoopERKNS0_3ForE'/>
+<use f='tvm/src/printer/tvmscript_printer.cc' l='1238' c='_ZN3tvm3tir16TVMScriptPrinter10VisitStmt_EPKNS0_7ForNodeE'/>
+<use f='tvm/src/printer/tvmscript_printer.cc' l='1241' c='_ZN3tvm3tir16TVMScriptPrinter10VisitStmt_EPKNS0_7ForNodeE'/>
+<use f='tvm/src/printer/tvmscript_printer.cc' l='1244' c='_ZN3tvm3tir16TVMScriptPrinter10VisitStmt_EPKNS0_7ForNodeE'/>
+<use f='tvm/src/printer/tvmscript_printer.cc' l='1259' c='_ZN3tvm3tir16TVMScriptPrinter10VisitStmt_EPKNS0_7ForNodeE'/>
+<use f='tvm/src/printer/tvmscript_printer.cc' l='1811' c='_ZN3tvm3tir16TVMScriptPrinter9PrintLoopERKNS0_3ForE'/>
 <use f='tvm/src/printer/tvmscript_printer.cc' l='1883' c='_ZN3tvm3tir30TVMScriptPrinterWithDiagnostic9PrintLoopERKNS0_3ForE'/>
+<use f='tvm/src/printer/tvmscript_printer.cc' l='1902' c='_ZN3tvm3tir30TVMScriptPrinterWithDiagnostic9PrintLoopERKNS0_3ForE'/>
 <size>8</size>
 <use f='tvm/src/relay/backend/aot_executor_codegen.cc' l='515' c='_ZN3tvm5relay7backend18AOTExecutorCodegen12CopyToOutputENS_8PrimExprES3_bm'/>
 <size>8</size>
@@ -53,7 +53,7 @@
 <size>8</size>
 <use f='tvm/src/target/llvm/codegen_cpu.cc' l='1527' c='_ZN3tvm7codegen10CodeGenCPU10VisitStmt_EPKNS_3tir7ForNodeE'/>
 <size>8</size>
-<use f='tvm/src/te/operation/create_primfunc.cc' l='335' c='_ZN3tvm3tir23GenerateStmtFromComputeERKNS_2te9ComputeOpEPNS0_14CreateFuncInfoEPNS_5arith8AnalyzerE'/>
+<use f='tvm/src/te/operation/create_primfunc.cc' l='341' c='_ZN3tvm3tir23GenerateStmtFromComputeERKNS_2te9ComputeOpEPNS0_14CreateFuncInfoEPNS_5arith8AnalyzerE'/>
 <size>8</size>
 <use f='tvm/src/te/operation/hybrid_op.cc' l='236' c='_ZZN3tvm2te15ApplyLoopShapesERKNS0_5StageERKSt13unordered_mapINS_3tir7IterVarENS_5RangeESt4hashIS6_ESt8equal_toIS6_ESaISt4pairIKS6_S7_EEENS5_4StmtEEN114292304'/>
 <use f='tvm/src/te/operation/hybrid_op.cc' l='238' c='_ZZN3tvm2te15ApplyLoopShapesERKNS0_5StageERKSt13unordered_mapINS_3tir7IterVarENS_5RangeESt4hashIS6_ESt8equal_toIS6_ESaISt4pairIKS6_S7_EEENS5_4StmtEEN114292304'/>
@@ -218,7 +218,7 @@
 <use f='tvm/src/tir/schedule/state.cc' l='635' c='_ZN3tvm3tir14SRefTreePruner10VisitStmt_EPKNS0_7ForNodeE'/>
 <use f='tvm/src/tir/schedule/state.cc' l='886' c='_ZN3tvm3tir13ChildReplacer19CopyOnWriteAndVisitEPKNS0_8StmtNodeE'/>
 <size>8</size>
-<use f='tvm/src/tir/schedule/transform.cc' l='287' c='_ZN3tvm3tir20TileWithTensorIntrinERKNS0_8ScheduleERKNS0_7BlockRVERKNS_7runtime6StringE'/>
+<use f='tvm/src/tir/schedule/transform.cc' l='302' c='_ZN3tvm3tir20TileWithTensorIntrinERKNS0_8ScheduleERKNS0_7BlockRVERKNS_7runtime6StringE'/>
 <size>8</size>
 <use f='tvm/src/tir/transforms/common_subexpr_elim.cc' l='622' c='_ZN3tvm3tir29CommonSubexpressionEliminator10VisitStmt_EPKNS0_7ForNodeE'/>
 <size>8</size>
@@ -239,11 +239,11 @@
 <use f='tvm/src/tir/transforms/inject_software_pipeline.cc' l='296'/>
 <use f='tvm/src/tir/transforms/inject_software_pipeline.cc' l='309' c='_ZN3tvm3tir17software_pipeline16PipelineRewriter7RewriteENS_7runtime3MapINS0_3VarENS0_6BufferEvvEERKSt13unordered_setIS6_NS3_13ObjectPtrHashENS3_14Obj15961855'/>
 <use f='tvm/src/tir/transforms/inject_software_pipeline.cc' l='320' c='_ZN3tvm3tir17software_pipeline16PipelineRewriterC1ENS_7runtime3MapINS0_3VarENS0_6BufferEvvEERKSt13unordered_setIS6_NS3_13ObjectPtrHashENS3_14ObjectPtr9287938'/>
-<use f='tvm/src/tir/transforms/inject_software_pipeline.cc' l='908' c='_ZN3tvm3tir17software_pipeline16PipelineRewriter8EmitImplENS_8PrimExprES3_b'/>
-<use f='tvm/src/tir/transforms/inject_software_pipeline.cc' l='936'/>
-<use f='tvm/src/tir/transforms/inject_software_pipeline.cc' l='1038' c='_ZN3tvm3tir17software_pipeline16PipelineInjector10VisitStmt_EPKNS0_7ForNodeE'/>
-<use f='tvm/src/tir/transforms/inject_software_pipeline.cc' l='1038' c='_ZN3tvm3tir17software_pipeline16PipelineInjector10VisitStmt_EPKNS0_7ForNodeE'/>
-<use f='tvm/src/tir/transforms/inject_software_pipeline.cc' l='1120' c='_ZN3tvm3tir17software_pipeline16PipelineInjector10VisitStmt_EPKNS0_7ForNodeE'/>
+<use f='tvm/src/tir/transforms/inject_software_pipeline.cc' l='905' c='_ZN3tvm3tir17software_pipeline16PipelineRewriter8EmitImplENS_8PrimExprES3_b'/>
+<use f='tvm/src/tir/transforms/inject_software_pipeline.cc' l='933'/>
+<use f='tvm/src/tir/transforms/inject_software_pipeline.cc' l='1035' c='_ZN3tvm3tir17software_pipeline16PipelineInjector10VisitStmt_EPKNS0_7ForNodeE'/>
+<use f='tvm/src/tir/transforms/inject_software_pipeline.cc' l='1035' c='_ZN3tvm3tir17software_pipeline16PipelineInjector10VisitStmt_EPKNS0_7ForNodeE'/>
+<use f='tvm/src/tir/transforms/inject_software_pipeline.cc' l='1117' c='_ZN3tvm3tir17software_pipeline16PipelineInjector10VisitStmt_EPKNS0_7ForNodeE'/>
 <size>8</size>
 <use f='tvm/src/tir/transforms/inject_virtual_thread.cc' l='469' c='_ZN3tvm3tir10VTInjector12InjectVTLoopENS0_4StmtEb'/>
 <size>8</size>
@@ -265,7 +265,7 @@
 <size>8</size>
 <use f='tvm/src/tir/transforms/narrow_datatype.cc' l='263' c='_ZN3tvm3tir16DataTypeRewriter10VisitStmt_EPKNS0_7ForNodeE'/>
 <size>8</size>
-<use f='tvm/src/tir/transforms/plan_update_buffer_allocation_location.cc' l='64' c='_ZN3tvm3tir23BufferAllocationLocator10VisitStmt_EPKNS0_7ForNodeE'/>
+<use f='tvm/src/tir/transforms/plan_update_buffer_allocation_location.cc' l='88' c='_ZN3tvm3tir23BufferAllocationLocator10VisitStmt_EPKNS0_7ForNodeE'/>
 <size>8</size>
 <use f='tvm/src/tir/transforms/storage_flatten.cc' l='1599' c='_ZN3tvm3tir16StorageFlattener10VisitStmt_EPKNS0_12PrefetchNodeE'/>
 <use f='tvm/src/tir/transforms/storage_flatten.cc' l='1606' c='_ZN3tvm3tir16StorageFlattener10VisitStmt_EPKNS0_12PrefetchNodeE'/>

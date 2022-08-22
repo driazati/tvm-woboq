@@ -1,10 +1,10 @@
-<dec f='tvm/src/relay/backend/te_compiler_cache.h' l='220' type='std::pair&lt;Array&lt;te::Tensor&gt;, std::string&gt; tvm::relay::tec::LowerTECompute(const tvm::relay::Function &amp; source_func, tvm::Target target, bool return_inputs = true)'/>
-<doc f='tvm/src/relay/backend/te_compiler_cache.h' l='213'>/*!
+<dec f='tvm/src/relay/backend/te_compiler_cache.h' l='221' type='std::tuple&lt;Array&lt;te::Tensor&gt;, Array&lt;runtime::NDArray&gt;, std::string&gt; tvm::relay::tec::LowerTECompute(const tvm::relay::Function &amp; source_func, tvm::Target target, bool return_inputs = true)'/>
+<doc f='tvm/src/relay/backend/te_compiler_cache.h' l='214'>/*!
  * \brief Lowers Relay primitive Function to TE Compute
  * \param source_func The primitive function to be lowered.
  * \param target The target we want to create schedule for.
  * \param return_inputs If true, prepend input tensors to the output array of tensors.
- * \return Pair of schedule and fused function name.
+ * \return Tuple of the lowered TE compute, constant raw data, and fused function name.
  */</doc>
-<use f='tvm/src/relay/backend/task_extraction.cc' l='64' u='c' c='_ZN3tvm5relay7backend11ExtractTaskENS_8IRModuleENS_6TargetENS_7runtime3MapINS4_6StringENS4_7NDArrayEvvEENS4_15TypedPackedFuncIFNS4_8OptionalINS_3tir8P10298777'/>
-<def f='tvm/src/relay/backend/te_compiler_cache.cc' l='788' ll='804' type='std::pair&lt;Array&lt;te::Tensor&gt;, std::string&gt; tvm::relay::tec::LowerTECompute(const tvm::relay::Function &amp; source_func, tvm::Target target, bool return_inputs = true)'/>
+<use f='tvm/src/relay/backend/task_extraction.cc' l='64' u='c' c='_ZN3tvm5relay7backend11ExtractTaskENS_8IRModuleENS_6TargetENS_7runtime3MapINS4_6StringENS4_7NDArrayEvvEENS4_15TypedPackedFuncIFNS4_8OptionalINS_3tir8P14767441'/>
+<def f='tvm/src/relay/backend/te_compiler_cache.cc' l='793' ll='816' type='std::tuple&lt;Array&lt;te::Tensor&gt;, Array&lt;runtime::NDArray&gt;, std::string&gt; tvm::relay::tec::LowerTECompute(const tvm::relay::Function &amp; source_func, tvm::Target target, bool return_inputs = true)'/>
