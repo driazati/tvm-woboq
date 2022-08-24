@@ -19,6 +19,9 @@
    * \note This function performs not-null checking.
    */</doc>
 <use f='tvm/src/arith/const_int_bound.cc' l='187' u='c' c='_ZN3tvm5arith21ConstIntBoundAnalyzer4Impl10VisitExpr_EPKNS_3tir8CastNodeE'/>
+<use f='tvm/src/arith/int_set.cc' l='1110' u='c' c='_ZN3tvm5arith25EstimateRegionStrictBoundERKNS_7runtime5ArrayINS_5RangeEvEERKNS1_3MapINS_3tir3VarES3_vvEERKNS_8PrimExprEPNS0_8AnalyzerE'/>
+<use f='tvm/src/arith/int_set.cc' l='1131' u='c' c='_ZN3tvm5arith24EstimateRegionUpperBoundERKNS_7runtime5ArrayINS_5RangeEvEERKNS1_3MapINS_3tir3VarES3_vvEERKNS_8PrimExprEPNS0_8AnalyzerE'/>
+<use f='tvm/src/arith/int_set.cc' l='1153' u='c' c='_ZN3tvm5arith24EstimateRegionUpperBoundERKNS_7runtime5ArrayINS_5RangeEvEERKNS1_3MapINS_3tir3VarES3_vvEERKNS_8PrimExprEPNS0_8AnalyzerE'/>
 <use f='tvm/src/arith/iter_affine_map.cc' l='656' u='c' c='_ZN3tvm5arith15IterMapRewriter26NormalizeToIterOnBoundExprENS0_11IterSumExprENS_7runtime8OptionalINS_8PrimExprEEES6_'/>
 <use f='tvm/src/arith/iter_affine_map.cc' l='658' u='c' c='_ZN3tvm5arith15IterMapRewriter26NormalizeToIterOnBoundExprENS0_11IterSumExprENS_7runtime8OptionalINS_8PrimExprEEES6_'/>
 <use f='tvm/src/arith/iter_affine_map.cc' l='661' u='c' c='_ZN3tvm5arith15IterMapRewriter26NormalizeToIterOnBoundExprENS0_11IterSumExprENS_7runtime8OptionalINS_8PrimExprEEES6_'/>
@@ -102,8 +105,8 @@
 <use f='tvm/src/ir/transform.cc' l='550' u='c'/>
 <use f='tvm/src/tir/schedule/instruction_traits.h' l='552' u='c' c='_ZNK3tvm3tir13PythonAPICall3StrEv'/>
 <use f='tvm/src/tir/schedule/utils.h' l='229' u='c' c='_ZN3tvm3tir14GetThreadScopeEPKNS0_7ForNodeE'/>
-<use f='tvm/src/tir/schedule/utils.h' l='365' u='c' c='_ZN3tvm3tir6HasAnnERKNS0_8StmtSRefERKNS_7runtime6StringES7_'/>
-<use f='tvm/src/tir/schedule/utils.h' l='377' u='c' c='_ZN3tvm3tir6HasAnnERKNS0_8StmtSRefERKNS_7runtime6StringEb'/>
+<use f='tvm/src/tir/schedule/utils.h' l='347' u='c' c='_ZN3tvm3tir6HasAnnERKNS0_8StmtSRefERKNS_7runtime6StringES7_'/>
+<use f='tvm/src/tir/schedule/utils.h' l='359' u='c' c='_ZN3tvm3tir6HasAnnERKNS0_8StmtSRefERKNS_7runtime6StringEb'/>
 <use f='tvm/src/meta_schedule/utils.h' l='351' u='c' c='_ZN3tvm13meta_schedule14GetRunMsMedianERKNS0_12RunnerResultE'/>
 <use f='tvm/src/meta_schedule/apply_history_best.cc' l='110' u='c' c='_ZN3tvm13meta_schedule20ApplyHistoryBestNode5QueryENS_7runtime6StringENS_8IRModuleENS_6TargetENS2_8OptionalINS2_5ArrayIS4_vEEEENS2_15TypedPackedFuncIF892736'/>
 <use f='tvm/src/meta_schedule/apply_history_best.cc' l='112' u='c' c='_ZN3tvm13meta_schedule20ApplyHistoryBestNode5QueryENS_7runtime6StringENS_8IRModuleENS_6TargetENS2_8OptionalINS2_5ArrayIS4_vEEEENS2_15TypedPackedFuncIF892736'/>
@@ -497,9 +500,8 @@
 <use f='tvm/src/tir/schedule/primitive/loop_transformation.cc' l='343' u='c' c='_ZNK3tvm3tir19LoopsNotAChainError19LocationsOfInterestEv'/>
 <use f='tvm/src/tir/schedule/primitive/reduction.cc' l='232' u='c' c='_ZN3tvm3tir18DecomposeReductionENS0_13ScheduleStateERKNS0_8StmtSRefES4_'/>
 <use f='tvm/src/tir/schedule/primitive/sampling.cc' l='323' u='c' c='_ZN3tvm3tir17SamplePerfectTileEPlRKNS0_8StmtSRefEiiPNS_7runtime8OptionalINS5_5ArrayINS_7IntegerEvEEEE'/>
-<use f='tvm/src/tir/schedule/state.cc' l='51' u='c' c='_ZN3tvm3tir23AnalyzeRegionUpperBoundERKNS0_12BufferRegionERKNS_8PrimExprERKNS0_8StmtSRefES9_PNS_5arith8AnalyzerE'/>
-<use f='tvm/src/tir/schedule/state.cc' l='79' u='c' c='_ZN3tvm3tir23AnalyzeRegionLowerBoundERKNS0_12BufferRegionERKNS_8PrimExprERKNS0_8StmtSRefES9_PNS_5arith8AnalyzerE'/>
-<use f='tvm/src/tir/schedule/state.cc' l='865' u='c' c='_ZN3tvm3tir13ChildReplacer10VisitStmt_EPKNS0_11SeqStmtNodeE'/>
+<use f='tvm/src/tir/schedule/state.cc' l='77' u='c' c='_ZN3tvm3tir23AnalyzeRegionLowerBoundERKNS0_12BufferRegionERKNS_8PrimExprERKNS0_8StmtSRefES9_PNS_5arith8AnalyzerE'/>
+<use f='tvm/src/tir/schedule/state.cc' l='863' u='c' c='_ZN3tvm3tir13ChildReplacer10VisitStmt_EPKNS0_11SeqStmtNodeE'/>
 <use f='tvm/src/tir/schedule/trace.cc' l='296' u='c' c='_ZNK3tvm3tir9TraceNode6AsJSONEb'/>
 <use f='tvm/src/tir/schedule/trace.cc' l='538' u='c'/>
 <use f='tvm/src/tir/schedule/traced_schedule.cc' l='103' u='c' c='_ZN3tvm3tir18TracedScheduleNode8GetBlockERKNS_7runtime6StringERKNS2_8OptionalIS3_EE'/>

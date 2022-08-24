@@ -215,8 +215,8 @@
 <use f='tvm/src/tir/schedule/primitive/reduction.cc' l='1074' c='_ZN3tvm3tir7RFactorENS0_13ScheduleStateERKNS0_8StmtSRefEi'/>
 <use f='tvm/src/tir/schedule/primitive/reduction.cc' l='1091' c='_ZN3tvm3tir7RFactorENS0_13ScheduleStateERKNS0_8StmtSRefEi'/>
 <size>8</size>
-<use f='tvm/src/tir/schedule/state.cc' l='635' c='_ZN3tvm3tir14SRefTreePruner10VisitStmt_EPKNS0_7ForNodeE'/>
-<use f='tvm/src/tir/schedule/state.cc' l='886' c='_ZN3tvm3tir13ChildReplacer19CopyOnWriteAndVisitEPKNS0_8StmtNodeE'/>
+<use f='tvm/src/tir/schedule/state.cc' l='633' c='_ZN3tvm3tir14SRefTreePruner10VisitStmt_EPKNS0_7ForNodeE'/>
+<use f='tvm/src/tir/schedule/state.cc' l='884' c='_ZN3tvm3tir13ChildReplacer19CopyOnWriteAndVisitEPKNS0_8StmtNodeE'/>
 <size>8</size>
 <use f='tvm/src/tir/schedule/transform.cc' l='302' c='_ZN3tvm3tir20TileWithTensorIntrinERKNS0_8ScheduleERKNS0_7BlockRVERKNS_7runtime6StringE'/>
 <size>8</size>
