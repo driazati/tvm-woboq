@@ -26,10 +26,10 @@
 <use f='tvm/src/tir/schedule/analysis.h' l='706'/>
 <use f='tvm/src/tir/schedule/error.h' l='59' c='_ZN3tvm3tir17LoopPositionErrorC1ENS_8IRModuleENS0_3ForENS0_5BlockERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
 <use f='tvm/src/tir/schedule/error.h' l='80'/>
-<use f='tvm/src/tir/schedule/utils.h' l='113' c='_ZN3tvm3tir15LoopSRefs2LoopsERKNS_7runtime5ArrayINS0_8StmtSRefEvEE'/>
-<use f='tvm/src/tir/schedule/utils.h' l='114' c='_ZN3tvm3tir15LoopSRefs2LoopsERKNS_7runtime5ArrayINS0_8StmtSRefEvEE'/>
-<use f='tvm/src/tir/schedule/utils.h' l='118' c='_ZN3tvm3tir15LoopSRefs2LoopsERKNS_7runtime5ArrayINS0_8StmtSRefEvEE'/>
-<use f='tvm/src/tir/schedule/utils.h' l='217' c='_ZN3tvm3tir15IterVarFromLoopERKNS0_3ForENS_7runtime6StringENS0_11IterVarTypeE'/>
+<use f='tvm/src/tir/schedule/utils.h' l='126' c='_ZN3tvm3tir15LoopSRefs2LoopsERKNS_7runtime5ArrayINS0_8StmtSRefEvEE'/>
+<use f='tvm/src/tir/schedule/utils.h' l='127' c='_ZN3tvm3tir15LoopSRefs2LoopsERKNS_7runtime5ArrayINS0_8StmtSRefEvEE'/>
+<use f='tvm/src/tir/schedule/utils.h' l='131' c='_ZN3tvm3tir15LoopSRefs2LoopsERKNS_7runtime5ArrayINS0_8StmtSRefEvEE'/>
+<use f='tvm/src/tir/schedule/utils.h' l='230' c='_ZN3tvm3tir15IterVarFromLoopERKNS0_3ForENS_7runtime6StringENS0_11IterVarTypeE'/>
 <size>8</size>
 <use f='tvm/src/meta_schedule/postproc/rewrite_layout.cc' l='46' c='_ZN3tvm3tir22BufferReadPosCollector10VisitStmt_EPKNS0_7ForNodeE'/>
 <use f='tvm/src/meta_schedule/postproc/rewrite_layout.cc' l='100'/>

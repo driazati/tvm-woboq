@@ -1,9 +1,11 @@
-<dec f='tvm/src/tir/schedule/utils.h' l='69'/>
+<dec f='tvm/src/tir/schedule/utils.h' l='71'/>
 <use f='tvm/src/meta_schedule/utils.h' l='241' u='c'/>
 <doc f='tvm/src/tir/schedule/utils.h' l='63'>/*!
  * \brief A helper macro to convert an sref to the block it points to,
- * throwing an internal error if downcasting fails
- * \param Result The result variable, used for checking
+ *
+ * Throws an internal error if downcasting fails.  The variable name
+ * in the parent scope is used for the error message.
+ *
  * \param SRef The SRef to be cast
  */</doc>
 <use f='tvm/src/meta_schedule/mutator/mutate_parallel.cc' l='85' u='c'/>
