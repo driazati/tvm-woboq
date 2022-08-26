@@ -1,5 +1,5 @@
-<dec f='tvm/include/tvm/tir/schedule/schedule.h' l='453' type='void tvm::tir::ScheduleNode::ReverseComputeAt(const tvm::tir::BlockRV &amp; block_rv, const tvm::tir::LoopRV &amp; loop_rv, bool preserve_unit_loops)'/>
-<doc f='tvm/include/tvm/tir/schedule/schedule.h' l='438'>/*!
+<dec f='tvm/include/tvm/tir/schedule/schedule.h' l='461' type='void tvm::tir::ScheduleNode::ReverseComputeAt(const tvm::tir::BlockRV &amp; block_rv, const tvm::tir::LoopRV &amp; loop_rv, bool preserve_unit_loops, int index = -1)'/>
+<doc f='tvm/include/tvm/tir/schedule/schedule.h' l='442'>/*!
    * \brief Move a consumer block under the specific loop, and regenerate the
    * loops induced by the block so that the buffer region consumed by the consumer block could
    * cover those regions produced by its producer blocks under the given loop. It requires:
@@ -13,11 +13,15 @@
    * \param block_rv The block to be moved
    * \param loop_rv The loop where the block to be moved under
    * \param preserve_unit_loops Whether to keep the trivial loops whose extents are 1
+   * \param index The block index of the loop body subtree blocks:
+   * - `index = -1` means inserted into the last possible insertion point;
+   * - `index = -2` means inserted into the first possible insertion point;
+   * - Otherwise, `index` is a nonnegative number that indicates the insertion point
    */</doc>
 <use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling.cc' l='136' u='c' c='_ZNK3tvm13meta_schedule20MultiLevelTilingNode13AddWriteReuseENS0_5StateE'/>
 <use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling.cc' l='157' u='c' c='_ZNK3tvm13meta_schedule20MultiLevelTilingNode13AddWriteReuseENS0_5StateE'/>
 <use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling_tensor_core.cc' l='251' u='c' c='_ZNK3tvm13meta_schedule30MultiLevelTilingTensorCoreNode23AddWriteReuseTensorCoreENS0_15TensorCoreStateE'/>
 <use f='tvm/src/meta_schedule/schedule_rule/winograd.cc' l='210' u='c'/>
-<ovr f='tvm/src/tir/schedule/concrete_schedule.cc' l='595' c='_ZN3tvm3tir20ConcreteScheduleNode16ReverseComputeAtERKNS0_7BlockRVERKNS0_6LoopRVEb'/>
-<use f='tvm/src/tir/schedule/primitive/compute_at.cc' l='706' u='c' c='_ZN3tvm3tir22ReverseComputeAtTraits23UnpackedApplyToScheduleENS0_8ScheduleENS0_7BlockRVENS0_6LoopRVENS_4BoolE'/>
+<ovr f='tvm/src/tir/schedule/concrete_schedule.cc' l='595' c='_ZN3tvm3tir20ConcreteScheduleNode16ReverseComputeAtERKNS0_7BlockRVERKNS0_6LoopRVEbi'/>
+<use f='tvm/src/tir/schedule/primitive/compute_at.cc' l='727' u='c' c='_ZN3tvm3tir22ReverseComputeAtTraits23UnpackedApplyToScheduleENS0_8ScheduleENS0_7BlockRVENS0_6LoopRVENS_4BoolENS_6IntImmE'/>
 <use f='tvm/src/tir/schedule/schedule.cc' l='191' u='a'/>

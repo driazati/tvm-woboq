@@ -78,8 +78,8 @@
 <use f='tvm/src/tir/schedule/analysis/layout.cc' l='205'/>
 <size>8</size>
 <use f='tvm/src/tir/schedule/concrete_schedule.h' l='75' c='_ZNK3tvm3tir20ConcreteScheduleNode3GetERKNS0_6LoopRVE'/>
-<use f='tvm/src/tir/schedule/concrete_schedule.h' l='212' c='_ZNK3tvm3tir20ConcreteScheduleNode3GetERKNS0_6LoopRVE'/>
-<use f='tvm/src/tir/schedule/concrete_schedule.h' l='215' c='_ZNK3tvm3tir20ConcreteScheduleNode3GetERKNS0_6LoopRVE'/>
+<use f='tvm/src/tir/schedule/concrete_schedule.h' l='213' c='_ZNK3tvm3tir20ConcreteScheduleNode3GetERKNS0_6LoopRVE'/>
+<use f='tvm/src/tir/schedule/concrete_schedule.h' l='216' c='_ZNK3tvm3tir20ConcreteScheduleNode3GetERKNS0_6LoopRVE'/>
 <use f='tvm/src/tir/schedule/concrete_schedule.cc' l='391' c='_ZZN3tvm3tir20ConcreteScheduleNode5SplitERKNS0_6LoopRVERKNS_7runtime5ArrayINS5_8OptionalINS_8PrimExprEEEvEEbEN23WrongFactorProductErrorC1ENS_8IRModuleENS0_3ForE'/>
 <use f='tvm/src/tir/schedule/concrete_schedule.cc' l='406' c='_ZN3tvm3tir20ConcreteScheduleNode5SplitERKNS0_6LoopRVERKNS_7runtime5ArrayINS5_8OptionalINS_8PrimExprEEEvEEb'/>
 <use f='tvm/src/tir/schedule/concrete_schedule.cc' l='466' c='_ZN3tvm3tir20ConcreteScheduleNode5SplitERKNS0_6LoopRVERKNS_7runtime5ArrayINS5_8OptionalINS_8PrimExprEEEvEEb'/>
@@ -98,12 +98,12 @@
 <size>8</size>
 <use f='tvm/src/tir/schedule/primitive/compute_at.cc' l='114' c='_ZN3tvm3tir19NotInSameScopeErrorC1ENS_8IRModuleERKNS0_8StmtSRefES5_'/>
 <use f='tvm/src/tir/schedule/primitive/compute_at.cc' l='118'/>
-<use f='tvm/src/tir/schedule/primitive/compute_at.cc' l='219' c='_ZN3tvm3tir18ScopeReconstructorC1ENS0_5BlockES2_NS0_3ForE'/>
-<use f='tvm/src/tir/schedule/primitive/compute_at.cc' l='272' c='_ZN3tvm3tir18ScopeReconstructor11MakeNewLoopEiSt6vectorINS0_18BlockVarDomainInfoESaIS3_EEPNS_5arith8AnalyzerEb'/>
-<use f='tvm/src/tir/schedule/primitive/compute_at.cc' l='282' c='_ZN3tvm3tir18ScopeReconstructor11MakeNewLoopEiSt6vectorINS0_18BlockVarDomainInfoESaIS3_EEPNS_5arith8AnalyzerEb'/>
-<use f='tvm/src/tir/schedule/primitive/compute_at.cc' l='312'/>
-<use f='tvm/src/tir/schedule/primitive/compute_at.cc' l='314'/>
-<use f='tvm/src/tir/schedule/primitive/compute_at.cc' l='581' c='_ZN3tvm3tir31ComputeAtOrReverseComputeAtImplENS0_13ScheduleStateERKNS0_8StmtSRefES4_bPNS_5arith8AnalyzerEb'/>
+<use f='tvm/src/tir/schedule/primitive/compute_at.cc' l='237' c='_ZN3tvm3tir18ScopeReconstructorC1ENS0_5BlockES2_NS0_3ForE'/>
+<use f='tvm/src/tir/schedule/primitive/compute_at.cc' l='290' c='_ZN3tvm3tir18ScopeReconstructor11MakeNewLoopEiSt6vectorINS0_18BlockVarDomainInfoESaIS3_EEPNS_5arith8AnalyzerEb'/>
+<use f='tvm/src/tir/schedule/primitive/compute_at.cc' l='300' c='_ZN3tvm3tir18ScopeReconstructor11MakeNewLoopEiSt6vectorINS0_18BlockVarDomainInfoESaIS3_EEPNS_5arith8AnalyzerEb'/>
+<use f='tvm/src/tir/schedule/primitive/compute_at.cc' l='330'/>
+<use f='tvm/src/tir/schedule/primitive/compute_at.cc' l='332'/>
+<use f='tvm/src/tir/schedule/primitive/compute_at.cc' l='600' c='_ZN3tvm3tir31ComputeAtOrReverseComputeAtImplENS0_13ScheduleStateERKNS0_8StmtSRefES4_bPNS_5arith8AnalyzerEbi'/>
 <size>8</size>
 <use f='tvm/src/tir/schedule/primitive/decompose_padding.cc' l='193' c='_ZN3tvm3tirL16CreateConstBlockEPKNS0_16BlockRealizeNodeERKNS0_16PaddingBlockInfoERKNS_7runtime5ArrayINS0_3ForEvEERKNS0_4StmtEPNS_5arith8AnalyzerE'/>
 <use f='tvm/src/tir/schedule/primitive/decompose_padding.cc' l='230' c='_ZN3tvm3tirL16CreateConstBlockEPKNS0_16BlockRealizeNodeERKNS0_16PaddingBlockInfoERKNS_7runtime5ArrayINS0_3ForEvEERKNS0_4StmtEPNS_5arith8AnalyzerE'/>

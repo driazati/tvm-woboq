@@ -48,8 +48,8 @@
 <use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='1125' u='r' c='_ZN3tvm3tir7ReIndexENS0_13ScheduleStateERKNS0_8StmtSRefEiNS0_15BufferIndexTypeE'/>
 <use f='tvm/src/tir/schedule/primitive/compute_at.cc' l='87' u='r' c='_ZN3tvm3tir19NotInSameScopeError22CheckAndBindLoopDomainERKNS0_13ScheduleStateERKNS0_8StmtSRefES7_S7_PNS_5arith8AnalyzerE'/>
 <use f='tvm/src/tir/schedule/primitive/compute_at.cc' l='94' u='r' c='_ZN3tvm3tir19NotInSameScopeError22CheckAndBindLoopDomainERKNS0_13ScheduleStateERKNS0_8StmtSRefES7_S7_PNS_5arith8AnalyzerE'/>
-<use f='tvm/src/tir/schedule/primitive/compute_at.cc' l='148' u='r' c='_ZN3tvm3tir18FindInsertionPointERKNS0_13ScheduleStateERKNS_7runtime5ArrayINS0_4StmtEvEERKNS5_INS0_8StmtSRefEvEESD_PSt13unordered_mapIPKNS0_9BlockNodeE2990142'/>
-<use f='tvm/src/tir/schedule/primitive/compute_at.cc' l='156' u='r' c='_ZN3tvm3tir18FindInsertionPointERKNS0_13ScheduleStateERKNS_7runtime5ArrayINS0_4StmtEvEERKNS5_INS0_8StmtSRefEvEESD_PSt13unordered_mapIPKNS0_9BlockNodeE2990142'/>
+<use f='tvm/src/tir/schedule/primitive/compute_at.cc' l='152' u='r' c='_ZN3tvm3tir18FindInsertionPointERKNS0_13ScheduleStateERKNS_7runtime5ArrayINS0_4StmtEvEERKNS5_INS0_8StmtSRefEvEESD_PSt13unordered_mapIPKNS0_9BlockNodeE12832446'/>
+<use f='tvm/src/tir/schedule/primitive/compute_at.cc' l='160' u='r' c='_ZN3tvm3tir18FindInsertionPointERKNS0_13ScheduleStateERKNS_7runtime5ArrayINS0_4StmtEvEERKNS5_INS0_8StmtSRefEvEESD_PSt13unordered_mapIPKNS0_9BlockNodeE12832446'/>
 <use f='tvm/src/tir/schedule/primitive/compute_inline.cc' l='100' u='r' c='_ZN3tvm3tir24NotSingleReadWriteBuffer13GetSingleReadERKNS0_13ScheduleStateERKNS0_5BlockERKNS0_8StmtSRefE'/>
 <use f='tvm/src/tir/schedule/primitive/compute_inline.cc' l='106' u='r' c='_ZN3tvm3tir24NotSingleReadWriteBuffer13GetSingleReadERKNS0_13ScheduleStateERKNS0_5BlockERKNS0_8StmtSRefE'/>
 <use f='tvm/src/tir/schedule/primitive/compute_inline.cc' l='113' u='r' c='_ZN3tvm3tir24NotSingleReadWriteBuffer14GetSingleWriteERKNS0_13ScheduleStateERKNS0_5BlockE'/>

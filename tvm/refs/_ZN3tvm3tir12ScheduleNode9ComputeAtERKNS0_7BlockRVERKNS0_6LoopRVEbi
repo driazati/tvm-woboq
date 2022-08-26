@@ -1,4 +1,4 @@
-<dec f='tvm/include/tvm/tir/schedule/schedule.h' l='436' type='void tvm::tir::ScheduleNode::ComputeAt(const tvm::tir::BlockRV &amp; block_rv, const tvm::tir::LoopRV &amp; loop_rv, bool preserve_unit_loops)'/>
+<dec f='tvm/include/tvm/tir/schedule/schedule.h' l='440' type='void tvm::tir::ScheduleNode::ComputeAt(const tvm::tir::BlockRV &amp; block_rv, const tvm::tir::LoopRV &amp; loop_rv, bool preserve_unit_loops, int index = -1)'/>
 <doc f='tvm/include/tvm/tir/schedule/schedule.h' l='420'>/*!
    * \brief Move a producer block under the specific loop, and regenerate the
    * loops induced by the block so that the buffer region produced by the producer block could
@@ -14,6 +14,10 @@
    * \param block_rv The block to be moved
    * \param loop_rv The loop where the block to be moved under
    * \param preserve_unit_loops Whether to keep the trivial loops whose extents are 1
+   * \param index The block index of the loop body subtree blocks:
+   * - `index = -1` means inserted into the last possible insertion point;
+   * - `index = -2` means inserted into the first possible insertion point;
+   * - Otherwise, `index` is a nonnegative number that indicates the insertion point
    */</doc>
 <use f='tvm/src/meta_schedule/schedule_rule/cross_thread_reduction.cc' l='102' u='c' c='_ZN3tvm13meta_schedule24CrossThreadReductionNode5ApplyERKNS_3tir8ScheduleERKNS2_7BlockRVE'/>
 <use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling.cc' l='250' u='c' c='_ZNK3tvm13meta_schedule20MultiLevelTilingNode12AddReadReuseENS0_5StateE'/>
@@ -24,6 +28,6 @@
 <use f='tvm/src/meta_schedule/schedule_rule/winograd.cc' l='145' u='c'/>
 <use f='tvm/src/meta_schedule/schedule_rule/winograd.cc' l='193' u='c'/>
 <use f='tvm/src/meta_schedule/schedule_rule/winograd.cc' l='211' u='c'/>
-<ovr f='tvm/src/tir/schedule/concrete_schedule.cc' l='576' c='_ZN3tvm3tir20ConcreteScheduleNode9ComputeAtERKNS0_7BlockRVERKNS0_6LoopRVEb'/>
-<use f='tvm/src/tir/schedule/primitive/compute_at.cc' l='679' u='c' c='_ZN3tvm3tir15ComputeAtTraits23UnpackedApplyToScheduleENS0_8ScheduleENS0_7BlockRVENS0_6LoopRVENS_4BoolE'/>
+<ovr f='tvm/src/tir/schedule/concrete_schedule.cc' l='576' c='_ZN3tvm3tir20ConcreteScheduleNode9ComputeAtERKNS0_7BlockRVERKNS0_6LoopRVEbi'/>
+<use f='tvm/src/tir/schedule/primitive/compute_at.cc' l='699' u='c' c='_ZN3tvm3tir15ComputeAtTraits23UnpackedApplyToScheduleENS0_8ScheduleENS0_7BlockRVENS0_6LoopRVENS_4BoolENS_6IntImmE'/>
 <use f='tvm/src/tir/schedule/schedule.cc' l='189' u='a'/>
