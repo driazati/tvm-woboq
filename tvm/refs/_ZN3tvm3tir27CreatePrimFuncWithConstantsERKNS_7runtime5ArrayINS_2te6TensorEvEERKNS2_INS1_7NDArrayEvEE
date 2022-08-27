@@ -1,8 +1,8 @@
 <dec f='tvm/src/te/operation/create_primfunc.h' l='38' type='tvm::tir::PrimFunc tvm::tir::CreatePrimFuncWithConstants(const Array&lt;te::Tensor&gt; &amp; arg_list, const Array&lt;runtime::NDArray&gt; &amp; constants)'/>
-<use f='tvm/src/meta_schedule/extracted_task.cc' l='77' u='c' c='_ZN3tvm13meta_schedule21DefaultTaskFilterImplERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS2_INS1_7NDArrayEvEEb'/>
 <doc f='tvm/src/te/operation/create_primfunc.h' l='33'>/*! \brief The same as above but create a PrimFunc with AllocateConstNode. If the size of the
  * constants array is N, the last N tensors in arg_list will be treated as constant tensors.
  * Constant tensors will not be part of the parameters of the created PrimFunc, instead constants
  * will be embedded in the body as AllocateConstNode.
  */</doc>
+<use f='tvm/src/relay/backend/utils.cc' l='417' u='c' c='_ZN3tvm5relay7backend23DefaultTIRConverterImplERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS3_INS2_7NDArrayEvEEb'/>
 <def f='tvm/src/te/operation/create_primfunc.cc' l='501' ll='505' type='tvm::tir::PrimFunc tvm::tir::CreatePrimFuncWithConstants(const Array&lt;te::Tensor&gt; &amp; arg_list, const Array&lt;runtime::NDArray&gt; &amp; constants)'/>

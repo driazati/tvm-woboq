@@ -304,11 +304,11 @@
 <use f='tvm/src/ir/type_functor.cc' l='204' c='_ZN3tvm10TypeBinderC1ERKNS_7runtime3MapINS_7TypeVarENS_4TypeEvvEE'/>
 <use f='tvm/src/ir/type_functor.cc' l='217'/>
 <use f='tvm/src/ir/type_functor.cc' l='220' c='_ZN3tvm4BindERKNS_4TypeERKNS_7runtime3MapINS_7TypeVarES0_vvEE'/>
-<use f='tvm/include/tvm/tir/schedule/trace.h' l='63'/>
-<use f='tvm/include/tvm/tir/schedule/trace.h' l='150' c='_ZN3tvm3tir5TraceC1ENS_7runtime5ArrayINS0_11InstructionEvEENS2_3MapIS4_NS2_9ObjectRefEvvEE'/>
 <use f='tvm/include/tvm/meta_schedule/builder.h' l='44'/>
 <use f='tvm/include/tvm/meta_schedule/builder.h' l='69' c='_ZN3tvm13meta_schedule12BuilderInputC1ENS_8IRModuleENS_6TargetENS_7runtime8OptionalINS4_3MapINS4_6StringENS4_7NDArrayEvvEEEE'/>
 <use f='tvm/include/tvm/tir/schedule/state.h' l='130' c='_ZN3tvm3tir17ScheduleStateNode7ReplaceERKNS0_8StmtSRefERKNS0_4StmtERKNS_7runtime3MapINS0_5BlockESA_vvEE'/>
+<use f='tvm/include/tvm/tir/schedule/trace.h' l='63'/>
+<use f='tvm/include/tvm/tir/schedule/trace.h' l='150' c='_ZN3tvm3tir5TraceC1ENS_7runtime5ArrayINS0_11InstructionEvEENS2_3MapIS4_NS2_9ObjectRefEvvEE'/>
 <use f='tvm/include/tvm/meta_schedule/schedule_rule.h' l='151' c='_ZN3tvm13meta_schedule12ScheduleRule16MultiLevelTilingENS_7runtime6StringENS2_8OptionalINS2_5ArrayIS3_vEEEENS4_INS_7IntegerEEENS4_INS5_IS8_vEEEENS4_IN16529610'/>
 <use f='tvm/include/tvm/meta_schedule/schedule_rule.h' l='152' c='_ZN3tvm13meta_schedule12ScheduleRule16MultiLevelTilingENS_7runtime6StringENS2_8OptionalINS2_5ArrayIS3_vEEEENS4_INS_7IntegerEEENS4_INS5_IS8_vEEEENS4_IN16529610'/>
 <use f='tvm/include/tvm/meta_schedule/schedule_rule.h' l='174' c='_ZN3tvm13meta_schedule12ScheduleRule26MultiLevelTilingWithIntrinENS_7runtime6StringES3_NS2_8OptionalINS2_5ArrayIS3_vEEEENS4_INS_7IntegerEEENS4_INS5_IS4465841'/>
@@ -442,8 +442,9 @@
 <use f='tvm/src/relay/backend/utils.h' l='225'/>
 <use f='tvm/src/relay/backend/utils.h' l='288' c='_ZN3tvm5relay7backend15UpdateConstantsENS_8BaseFuncEPSt13unordered_mapINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS_7runtime7NDArrayESt4hash10208662'/>
 <use f='tvm/src/relay/backend/utils.h' l='417' c='_ZN3tvm5relay7backend18BindParamsInModuleENS_8IRModuleENS_7runtime3MapINS3_6StringENS3_7NDArrayEvvEE'/>
-<use f='tvm/src/relay/backend/utils.h' l='616' c='_ZN3tvm5relay7backend35TargetModuleMapToTargetStrModuleMapENS_7runtime3MapINS_6TargetENS_8IRModuleEvvEE'/>
-<use f='tvm/src/relay/backend/utils.h' l='625' c='_ZN3tvm5relay7backend35TargetStrModuleMapToTargetModuleMapESt13unordered_mapINS_6TargetENS_8IRModuleENS1_13TargetStrHashENS1_14TargetStrEqualESaISt4pairIKS3_S4_EEE'/>
+<use f='tvm/src/relay/backend/utils.h' l='585' c='_ZN3tvm5relay7backend18PrimFuncToIRModuleENS_3tir8PrimFuncE'/>
+<use f='tvm/src/relay/backend/utils.h' l='647' c='_ZN3tvm5relay7backend35TargetModuleMapToTargetStrModuleMapENS_7runtime3MapINS_6TargetENS_8IRModuleEvvEE'/>
+<use f='tvm/src/relay/backend/utils.h' l='656' c='_ZN3tvm5relay7backend35TargetStrModuleMapToTargetModuleMapESt13unordered_mapINS_6TargetENS_8IRModuleENS1_13TargetStrHashENS1_14TargetStrEqualESaISt4pairIKS3_S4_EEE'/>
 <use f='tvm/src/relay/analysis/type_solver.h' l='163'/>
 <use f='tvm/src/relay/analysis/type_solver.cc' l='306' c='_ZN3tvm5relay10TypeSolver7Unifier10VisitType_EPKNS_12FuncTypeNodeERKNS_4TypeE'/>
 <use f='tvm/src/relay/analysis/util.cc' l='433' c='_ZN3tvm5relay9TypeSubstERKNS_4TypeERKNS_7TypeVarES3_'/>
@@ -523,57 +524,57 @@
 <use f='tvm/src/relay/backend/runtime.cc' l='44' c='_ZN3tvm5relay7Runtime6CreateENS_7runtime6StringENS2_3MapIS3_NS2_9ObjectRefEvvEE'/>
 <use f='tvm/src/relay/backend/runtime.cc' l='73' c='_ZN3tvm5relay7Runtime18ListRuntimeOptionsERKNS_7runtime6StringE'/>
 <use f='tvm/src/relay/backend/runtime.cc' l='74' c='_ZN3tvm5relay7Runtime18ListRuntimeOptionsERKNS_7runtime6StringE'/>
-<use f='tvm/src/relay/backend/task_extraction.cc' l='36' c='_ZN3tvm5relay7backend11ExtractTaskENS_8IRModuleENS_6TargetENS_7runtime3MapINS4_6StringENS4_7NDArrayEvvEENS4_15TypedPackedFuncIFNS4_8OptionalINS_3tir8P14767441'/>
+<use f='tvm/src/relay/backend/task_extraction.cc' l='34' c='_ZN3tvm5relay7backend11ExtractTaskENS_8IRModuleENS_6TargetENS_7runtime3MapINS4_6StringENS4_7NDArrayEvvEE'/>
 <use f='tvm/src/relay/backend/te_compiler.cc' l='252' c='_ZN3tvm5relay3tec14TECompilerImpl10AddExternsENS_8IRModuleE'/>
 <use f='tvm/src/relay/backend/te_compiler.cc' l='316' c='_ZN3tvm5relay3tec14TECompilerImpl17GetDeviceContextsEv'/>
 <use f='tvm/src/relay/backend/te_compiler.cc' l='317' c='_ZN3tvm5relay3tec14TECompilerImpl17SetDeviceContextsERKNS_7runtime3MapINS_9GlobalVarENS3_6StringEvvEE'/>
 <use f='tvm/src/relay/backend/te_compiler.cc' l='509' c='_ZNK3tvm5relay3tec14TECompilerImpl12GetOpWeightsEv'/>
 <use f='tvm/src/relay/backend/te_compiler.cc' l='510' c='_ZNK3tvm5relay3tec14TECompilerImpl12GetOpWeightsEv'/>
 <use f='tvm/src/relay/backend/te_compiler.cc' l='533'/>
-<use f='tvm/src/relay/backend/te_compiler.cc' l='699' c='_ZN3tvm5relay3tec22LowerTensorExprMutator15MakeLoweredCallERKNS_8BaseFuncERKNS_9GlobalVarENS_7runtime5ArrayINS_9RelayExprEvEENS_4SpanERKNS_6TargetERKNS9_3MapIS6_S3_vvEE'/>
-<use f='tvm/src/relay/backend/te_compiler.cc' l='705' c='_ZN3tvm5relay3tec22LowerTensorExprMutator15MakeLoweredCallERKNS_8BaseFuncERKNS_9GlobalVarENS_7runtime5ArrayINS_9RelayExprEvEENS_4SpanERKNS_6TargetERKNS9_3MapIS6_S3_vvEE'/>
-<use f='tvm/src/relay/backend/te_compiler.cc' l='885' c='_ZN3tvm5relay3tec22LowerTensorExprMutator21DeviceAwareVisitExpr_EPKNS0_8CallNodeE'/>
-<use f='tvm/src/relay/backend/te_compiler.cc' l='954' c='_ZN3tvm5relay3tec23UpdateMainWorkspaceSizeERKNS_8IRModuleERKNS_17CompilationConfigENS_7runtime3MapINS_9RelayExprENS0_7backend11StorageInfoEvvEE'/>
-<use f='tvm/src/relay/backend/te_compiler.cc' l='1051' c='_ZN3tvm5relay3tec23UpdateMainWorkspaceSizeERKNS_8IRModuleERKNS_17CompilationConfigENS_7runtime3MapINS_9RelayExprENS0_7backend11StorageInfoEvvEE'/>
+<use f='tvm/src/relay/backend/te_compiler.cc' l='700' c='_ZN3tvm5relay3tec22LowerTensorExprMutator15MakeLoweredCallERKNS_8BaseFuncERKNS_9GlobalVarENS_7runtime5ArrayINS_9RelayExprEvEENS_4SpanERKNS_6TargetERKNS9_3MapIS6_S3_vvEE'/>
+<use f='tvm/src/relay/backend/te_compiler.cc' l='706' c='_ZN3tvm5relay3tec22LowerTensorExprMutator15MakeLoweredCallERKNS_8BaseFuncERKNS_9GlobalVarENS_7runtime5ArrayINS_9RelayExprEvEENS_4SpanERKNS_6TargetERKNS9_3MapIS6_S3_vvEE'/>
+<use f='tvm/src/relay/backend/te_compiler.cc' l='886' c='_ZN3tvm5relay3tec22LowerTensorExprMutator21DeviceAwareVisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/backend/te_compiler.cc' l='955' c='_ZN3tvm5relay3tec23UpdateMainWorkspaceSizeERKNS_8IRModuleERKNS_17CompilationConfigENS_7runtime3MapINS_9RelayExprENS0_7backend11StorageInfoEvvEE'/>
 <use f='tvm/src/relay/backend/te_compiler.cc' l='1052' c='_ZN3tvm5relay3tec23UpdateMainWorkspaceSizeERKNS_8IRModuleERKNS_17CompilationConfigENS_7runtime3MapINS_9RelayExprENS0_7backend11StorageInfoEvvEE'/>
 <use f='tvm/src/relay/backend/te_compiler.cc' l='1053' c='_ZN3tvm5relay3tec23UpdateMainWorkspaceSizeERKNS_8IRModuleERKNS_17CompilationConfigENS_7runtime3MapINS_9RelayExprENS0_7backend11StorageInfoEvvEE'/>
 <use f='tvm/src/relay/backend/te_compiler.cc' l='1054' c='_ZN3tvm5relay3tec23UpdateMainWorkspaceSizeERKNS_8IRModuleERKNS_17CompilationConfigENS_7runtime3MapINS_9RelayExprENS0_7backend11StorageInfoEvvEE'/>
 <use f='tvm/src/relay/backend/te_compiler.cc' l='1055' c='_ZN3tvm5relay3tec23UpdateMainWorkspaceSizeERKNS_8IRModuleERKNS_17CompilationConfigENS_7runtime3MapINS_9RelayExprENS0_7backend11StorageInfoEvvEE'/>
-<use f='tvm/src/relay/backend/te_compiler.cc' l='1092' c='_ZN3tvm5relay3tec22UpdateFunctionMetadataENS_8BaseFuncERNS_7runtime3MapINS3_6StringENS0_7backend12FunctionInfoEvvEENS_7IntegerE'/>
-<use f='tvm/src/relay/backend/te_compiler.cc' l='1103' c='_ZN3tvm5relay3tec22UpdateFunctionMetadataENS_8BaseFuncERNS_7runtime3MapINS3_6StringENS0_7backend12FunctionInfoEvvEENS_7IntegerE'/>
+<use f='tvm/src/relay/backend/te_compiler.cc' l='1056' c='_ZN3tvm5relay3tec23UpdateMainWorkspaceSizeERKNS_8IRModuleERKNS_17CompilationConfigENS_7runtime3MapINS_9RelayExprENS0_7backend11StorageInfoEvvEE'/>
+<use f='tvm/src/relay/backend/te_compiler.cc' l='1093' c='_ZN3tvm5relay3tec22UpdateFunctionMetadataENS_8BaseFuncERNS_7runtime3MapINS3_6StringENS0_7backend12FunctionInfoEvvEENS_7IntegerE'/>
 <use f='tvm/src/relay/backend/te_compiler.cc' l='1104' c='_ZN3tvm5relay3tec22UpdateFunctionMetadataENS_8BaseFuncERNS_7runtime3MapINS3_6StringENS0_7backend12FunctionInfoEvvEENS_7IntegerE'/>
 <use f='tvm/src/relay/backend/te_compiler.cc' l='1105' c='_ZN3tvm5relay3tec22UpdateFunctionMetadataENS_8BaseFuncERNS_7runtime3MapINS3_6StringENS0_7backend12FunctionInfoEvvEENS_7IntegerE'/>
 <use f='tvm/src/relay/backend/te_compiler.cc' l='1106' c='_ZN3tvm5relay3tec22UpdateFunctionMetadataENS_8BaseFuncERNS_7runtime3MapINS3_6StringENS0_7backend12FunctionInfoEvvEENS_7IntegerE'/>
 <use f='tvm/src/relay/backend/te_compiler.cc' l='1107' c='_ZN3tvm5relay3tec22UpdateFunctionMetadataENS_8BaseFuncERNS_7runtime3MapINS3_6StringENS0_7backend12FunctionInfoEvvEENS_7IntegerE'/>
-<use f='tvm/src/relay/backend/te_compiler.cc' l='1109' c='_ZN3tvm5relay3tec22UpdateFunctionMetadataENS_8BaseFuncERNS_7runtime3MapINS3_6StringENS0_7backend12FunctionInfoEvvEENS_7IntegerE'/>
+<use f='tvm/src/relay/backend/te_compiler.cc' l='1108' c='_ZN3tvm5relay3tec22UpdateFunctionMetadataENS_8BaseFuncERNS_7runtime3MapINS3_6StringENS0_7backend12FunctionInfoEvvEENS_7IntegerE'/>
 <use f='tvm/src/relay/backend/te_compiler.cc' l='1110' c='_ZN3tvm5relay3tec22UpdateFunctionMetadataENS_8BaseFuncERNS_7runtime3MapINS3_6StringENS0_7backend12FunctionInfoEvvEENS_7IntegerE'/>
-<use f='tvm/src/relay/backend/te_compiler.cc' l='1232' c='_ZN3tvm5relay3tec7LowerTEERKNS_8IRModuleERKNS_7runtime6StringESt8functionIFvNS_8BaseFuncEEENS_17CompilationConfigE'/>
-<use f='tvm/src/relay/backend/te_compiler.cc' l='1233' c='_ZN3tvm5relay3tec7LowerTEERKNS_8IRModuleERKNS_7runtime6StringESt8functionIFvNS_8BaseFuncEEENS_17CompilationConfigE'/>
+<use f='tvm/src/relay/backend/te_compiler.cc' l='1111' c='_ZN3tvm5relay3tec22UpdateFunctionMetadataENS_8BaseFuncERNS_7runtime3MapINS3_6StringENS0_7backend12FunctionInfoEvvEENS_7IntegerE'/>
 <use f='tvm/src/relay/backend/te_compiler.cc' l='1233' c='_ZN3tvm5relay3tec7LowerTEERKNS_8IRModuleERKNS_7runtime6StringESt8functionIFvNS_8BaseFuncEEENS_17CompilationConfigE'/>
 <use f='tvm/src/relay/backend/te_compiler.cc' l='1234' c='_ZN3tvm5relay3tec7LowerTEERKNS_8IRModuleERKNS_7runtime6StringESt8functionIFvNS_8BaseFuncEEENS_17CompilationConfigE'/>
-<use f='tvm/src/relay/backend/te_compiler.cc' l='1247' c='_ZN3tvm5relay3tec7LowerTEERKNS_8IRModuleERKNS_7runtime6StringESt8functionIFvNS_8BaseFuncEEENS_17CompilationConfigE'/>
-<use f='tvm/src/relay/backend/te_compiler.cc' l='1248' c='_ZN3tvm5relay3tec7LowerTEERKNS_8IRModuleERKNS_7runtime6StringESt8functionIFvNS_8BaseFuncEEENS_17CompilationConfigE'/>
+<use f='tvm/src/relay/backend/te_compiler.cc' l='1234' c='_ZN3tvm5relay3tec7LowerTEERKNS_8IRModuleERKNS_7runtime6StringESt8functionIFvNS_8BaseFuncEEENS_17CompilationConfigE'/>
+<use f='tvm/src/relay/backend/te_compiler.cc' l='1235' c='_ZN3tvm5relay3tec7LowerTEERKNS_8IRModuleERKNS_7runtime6StringESt8functionIFvNS_8BaseFuncEEENS_17CompilationConfigE'/>
 <use f='tvm/src/relay/backend/te_compiler.cc' l='1248' c='_ZN3tvm5relay3tec7LowerTEERKNS_8IRModuleERKNS_7runtime6StringESt8functionIFvNS_8BaseFuncEEENS_17CompilationConfigE'/>
 <use f='tvm/src/relay/backend/te_compiler.cc' l='1249' c='_ZN3tvm5relay3tec7LowerTEERKNS_8IRModuleERKNS_7runtime6StringESt8functionIFvNS_8BaseFuncEEENS_17CompilationConfigE'/>
-<use f='tvm/src/relay/backend/te_compiler.cc' l='1262' c='_ZN3tvm5relay3tec19GetPerTargetModulesENS_8IRModuleE'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='409' c='_ZN3tvm5relay3tec15ScheduleBuilder6CreateERKNS0_8FunctionENS_15GlobalVarSupplyE'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='824'/>
-<use f='tvm/src/relay/backend/utils.cc' l='127' c='_ZN3tvm5relay7backend16StaticMemoryPlanC1ENS_7runtime3MapINS_9RelayExprENS1_11StorageInfoEvvEE'/>
-<use f='tvm/src/relay/backend/utils.cc' l='134'/>
-<use f='tvm/src/relay/backend/utils.cc' l='167' c='_ZN3tvm5relay7backend12FunctionInfoC1ENS_7runtime3MapINS_6TargetENS_7IntegerEvvEES7_S7_NS4_IS5_NS_3tir8PrimFuncEvvEENS4_IS5_NS0_8FunctionEvvEE'/>
-<use f='tvm/src/relay/backend/utils.cc' l='167' c='_ZN3tvm5relay7backend12FunctionInfoC1ENS_7runtime3MapINS_6TargetENS_7IntegerEvvEES7_S7_NS4_IS5_NS_3tir8PrimFuncEvvEENS4_IS5_NS0_8FunctionEvvEE'/>
-<use f='tvm/src/relay/backend/utils.cc' l='168' c='_ZN3tvm5relay7backend12FunctionInfoC1ENS_7runtime3MapINS_6TargetENS_7IntegerEvvEES7_S7_NS4_IS5_NS_3tir8PrimFuncEvvEENS4_IS5_NS0_8FunctionEvvEE'/>
-<use f='tvm/src/relay/backend/utils.cc' l='169' c='_ZN3tvm5relay7backend12FunctionInfoC1ENS_7runtime3MapINS_6TargetENS_7IntegerEvvEES7_S7_NS4_IS5_NS_3tir8PrimFuncEvvEENS4_IS5_NS0_8FunctionEvvEE'/>
+<use f='tvm/src/relay/backend/te_compiler.cc' l='1249' c='_ZN3tvm5relay3tec7LowerTEERKNS_8IRModuleERKNS_7runtime6StringESt8functionIFvNS_8BaseFuncEEENS_17CompilationConfigE'/>
+<use f='tvm/src/relay/backend/te_compiler.cc' l='1250' c='_ZN3tvm5relay3tec7LowerTEERKNS_8IRModuleERKNS_7runtime6StringESt8functionIFvNS_8BaseFuncEEENS_17CompilationConfigE'/>
+<use f='tvm/src/relay/backend/te_compiler.cc' l='1263' c='_ZN3tvm5relay3tec19GetPerTargetModulesENS_8IRModuleE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='411' c='_ZN3tvm5relay3tec15ScheduleBuilder6CreateERKNS0_8FunctionENS_15GlobalVarSupplyE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='826'/>
+<use f='tvm/src/relay/backend/utils.cc' l='130' c='_ZN3tvm5relay7backend16StaticMemoryPlanC1ENS_7runtime3MapINS_9RelayExprENS1_11StorageInfoEvvEE'/>
+<use f='tvm/src/relay/backend/utils.cc' l='137'/>
 <use f='tvm/src/relay/backend/utils.cc' l='170' c='_ZN3tvm5relay7backend12FunctionInfoC1ENS_7runtime3MapINS_6TargetENS_7IntegerEvvEES7_S7_NS4_IS5_NS_3tir8PrimFuncEvvEENS4_IS5_NS0_8FunctionEvvEE'/>
-<use f='tvm/src/relay/backend/utils.cc' l='195' c='_ZN3tvm5relay7backend23ExecutorCodegenMetadataC1ENS_7runtime5ArrayINS_3tir3VarEvEENS4_INS_10TensorTypeEvEENS4_INS3_6StringEvEES9_S7_SB_SA_SA_SA_bNS_7I14228502'/>
-<use f='tvm/src/relay/backend/utils.cc' l='196' c='_ZN3tvm5relay7backend23ExecutorCodegenMetadataC1ENS_7runtime5ArrayINS_3tir3VarEvEENS4_INS_10TensorTypeEvEENS4_INS3_6StringEvEES9_S7_SB_SA_SA_SA_bNS_7I14228502'/>
-<use f='tvm/src/relay/backend/utils.cc' l='282' c='_ZN3tvm5relay7backend35TargetModuleMapToTargetStrModuleMapENS_7runtime3MapINS_6TargetENS_8IRModuleEvvEE'/>
-<use f='tvm/src/relay/backend/utils.cc' l='290' c='_ZN3tvm5relay7backend35TargetStrModuleMapToTargetModuleMapESt13unordered_mapINS_6TargetENS_8IRModuleENS1_13TargetStrHashENS1_14TargetStrEqualESaISt4pairIKS3_S4_EEE'/>
-<use f='tvm/src/relay/backend/utils.cc' l='292' c='_ZN3tvm5relay7backend35TargetStrModuleMapToTargetModuleMapESt13unordered_mapINS_6TargetENS_8IRModuleENS1_13TargetStrHashENS1_14TargetStrEqualESaISt4pairIKS3_S4_EEE'/>
-<use f='tvm/src/relay/backend/utils.cc' l='306' c='_ZN3tvm5relay7backend28UpdateAutoSchedulerOpWeightsERKNS_8IRModuleE'/>
-<use f='tvm/src/relay/backend/utils.cc' l='307' c='_ZN3tvm5relay7backend28UpdateAutoSchedulerOpWeightsERKNS_8IRModuleE'/>
-<use f='tvm/src/relay/backend/utils.cc' l='307' c='_ZN3tvm5relay7backend28UpdateAutoSchedulerOpWeightsERKNS_8IRModuleE'/>
-<use f='tvm/src/relay/backend/utils.cc' l='363' c='_ZN3tvm5relay7backend18BindParamsInModuleENS_8IRModuleENS_7runtime3MapINS3_6StringENS3_7NDArrayEvvEE'/>
+<use f='tvm/src/relay/backend/utils.cc' l='170' c='_ZN3tvm5relay7backend12FunctionInfoC1ENS_7runtime3MapINS_6TargetENS_7IntegerEvvEES7_S7_NS4_IS5_NS_3tir8PrimFuncEvvEENS4_IS5_NS0_8FunctionEvvEE'/>
+<use f='tvm/src/relay/backend/utils.cc' l='171' c='_ZN3tvm5relay7backend12FunctionInfoC1ENS_7runtime3MapINS_6TargetENS_7IntegerEvvEES7_S7_NS4_IS5_NS_3tir8PrimFuncEvvEENS4_IS5_NS0_8FunctionEvvEE'/>
+<use f='tvm/src/relay/backend/utils.cc' l='172' c='_ZN3tvm5relay7backend12FunctionInfoC1ENS_7runtime3MapINS_6TargetENS_7IntegerEvvEES7_S7_NS4_IS5_NS_3tir8PrimFuncEvvEENS4_IS5_NS0_8FunctionEvvEE'/>
+<use f='tvm/src/relay/backend/utils.cc' l='173' c='_ZN3tvm5relay7backend12FunctionInfoC1ENS_7runtime3MapINS_6TargetENS_7IntegerEvvEES7_S7_NS4_IS5_NS_3tir8PrimFuncEvvEENS4_IS5_NS0_8FunctionEvvEE'/>
+<use f='tvm/src/relay/backend/utils.cc' l='198' c='_ZN3tvm5relay7backend23ExecutorCodegenMetadataC1ENS_7runtime5ArrayINS_3tir3VarEvEENS4_INS_10TensorTypeEvEENS4_INS3_6StringEvEES9_S7_SB_SA_SA_SA_bNS_7I14228502'/>
+<use f='tvm/src/relay/backend/utils.cc' l='199' c='_ZN3tvm5relay7backend23ExecutorCodegenMetadataC1ENS_7runtime5ArrayINS_3tir3VarEvEENS4_INS_10TensorTypeEvEENS4_INS3_6StringEvEES9_S7_SB_SA_SA_SA_bNS_7I14228502'/>
+<use f='tvm/src/relay/backend/utils.cc' l='285' c='_ZN3tvm5relay7backend35TargetModuleMapToTargetStrModuleMapENS_7runtime3MapINS_6TargetENS_8IRModuleEvvEE'/>
+<use f='tvm/src/relay/backend/utils.cc' l='293' c='_ZN3tvm5relay7backend35TargetStrModuleMapToTargetModuleMapESt13unordered_mapINS_6TargetENS_8IRModuleENS1_13TargetStrHashENS1_14TargetStrEqualESaISt4pairIKS3_S4_EEE'/>
+<use f='tvm/src/relay/backend/utils.cc' l='295' c='_ZN3tvm5relay7backend35TargetStrModuleMapToTargetModuleMapESt13unordered_mapINS_6TargetENS_8IRModuleENS1_13TargetStrHashENS1_14TargetStrEqualESaISt4pairIKS3_S4_EEE'/>
+<use f='tvm/src/relay/backend/utils.cc' l='309' c='_ZN3tvm5relay7backend28UpdateAutoSchedulerOpWeightsERKNS_8IRModuleE'/>
+<use f='tvm/src/relay/backend/utils.cc' l='310' c='_ZN3tvm5relay7backend28UpdateAutoSchedulerOpWeightsERKNS_8IRModuleE'/>
+<use f='tvm/src/relay/backend/utils.cc' l='310' c='_ZN3tvm5relay7backend28UpdateAutoSchedulerOpWeightsERKNS_8IRModuleE'/>
+<use f='tvm/src/relay/backend/utils.cc' l='366' c='_ZN3tvm5relay7backend18BindParamsInModuleENS_8IRModuleENS_7runtime3MapINS3_6StringENS3_7NDArrayEvvEE'/>
 <use f='tvm/include/tvm/runtime/vm/executable.h' l='277'/>
 <use f='tvm/src/relay/backend/vm/compiler.cc' l='292'/>
 <use f='tvm/src/relay/backend/vm/compiler.cc' l='295'/>

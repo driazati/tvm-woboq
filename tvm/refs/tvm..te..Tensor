@@ -583,22 +583,10 @@
 <use f='tvm/include/tvm/relay/op_attr_types.h' l='229'/>
 <use f='tvm/include/tvm/relay/op_attr_types.h' l='230'/>
 <size>8</size>
-<use f='tvm/include/tvm/meta_schedule/apply_history_best.h' l='44'/>
-<use f='tvm/include/tvm/meta_schedule/extracted_task.h' l='86' c='_ZN3tvm13meta_schedule17DefaultTaskFilterERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS2_INS1_7NDArrayEvEE'/>
-<use f='tvm/include/tvm/meta_schedule/extracted_task.h' l='96' c='_ZN3tvm13meta_schedule28DefaultTaskFilterAllowExternERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS2_INS1_7NDArrayEvEE'/>
-<size>8</size>
 <use f='tvm/src/te/operation/create_primfunc.h' l='31' c='_ZN3tvm3tir14CreatePrimFuncERKNS_7runtime5ArrayINS_2te6TensorEvEE'/>
 <use f='tvm/src/te/operation/create_primfunc.h' l='38' c='_ZN3tvm3tir27CreatePrimFuncWithConstantsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS2_INS1_7NDArrayEvEE'/>
-<use f='tvm/src/meta_schedule/extracted_task.cc' l='41' c='_ZN3tvm13meta_schedule21DefaultTaskFilterImplERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS2_INS1_7NDArrayEvEEb'/>
-<use f='tvm/src/meta_schedule/extracted_task.cc' l='45' c='_ZN3tvm13meta_schedule21DefaultTaskFilterImplERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS2_INS1_7NDArrayEvEEb'/>
-<use f='tvm/src/meta_schedule/extracted_task.cc' l='47' c='_ZN3tvm13meta_schedule21DefaultTaskFilterImplERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS2_INS1_7NDArrayEvEEb'/>
-<use f='tvm/src/meta_schedule/extracted_task.cc' l='60' c='_ZN3tvm13meta_schedule21DefaultTaskFilterImplERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS2_INS1_7NDArrayEvEEb'/>
-<use f='tvm/src/meta_schedule/extracted_task.cc' l='66' c='_ZN3tvm13meta_schedule21DefaultTaskFilterImplERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS2_INS1_7NDArrayEvEEb'/>
-<use f='tvm/src/meta_schedule/extracted_task.cc' l='67' c='_ZN3tvm13meta_schedule21DefaultTaskFilterImplERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS2_INS1_7NDArrayEvEEb'/>
-<use f='tvm/src/meta_schedule/extracted_task.cc' l='92' c='_ZN3tvm13meta_schedule17DefaultTaskFilterERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS2_INS1_7NDArrayEvEE'/>
-<use f='tvm/src/meta_schedule/extracted_task.cc' l='97' c='_ZN3tvm13meta_schedule28DefaultTaskFilterAllowExternERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS2_INS1_7NDArrayEvEE'/>
-<use f='tvm/src/meta_schedule/extracted_task.cc' l='110'/>
-<use f='tvm/src/meta_schedule/extracted_task.cc' l='115'/>
+<size>8</size>
+<use f='tvm/src/relay/backend/utils.h' l='570'/>
 <size>8</size>
 <use f='tvm/include/tvm/relay/op_strategy.h' l='74' c='_ZN3tvm5relay16OpImplementation7ComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
 <use f='tvm/include/tvm/relay/op_strategy.h' l='74' c='_ZN3tvm5relay16OpImplementation7ComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
@@ -710,73 +698,82 @@
 <use f='tvm/src/relay/backend/te_compiler.cc' l='417' c='_ZN3tvm5relay3tec14TECompilerImpl13LowerInternalERKNS1_9CCacheKeyENS_15GlobalVarSupplyE'/>
 <use f='tvm/src/relay/backend/te_compiler.cc' l='424' c='_ZN3tvm5relay3tec14TECompilerImpl13LowerInternalERKNS1_9CCacheKeyENS_15GlobalVarSupplyE'/>
 <use f='tvm/src/relay/backend/te_compiler.cc' l='440' c='_ZN3tvm5relay3tec14TECompilerImpl13LowerInternalERKNS1_9CCacheKeyENS_15GlobalVarSupplyE'/>
-<use f='tvm/src/relay/backend/te_compiler.cc' l='562'/>
+<use f='tvm/src/relay/backend/te_compiler.cc' l='563'/>
 <size>8</size>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='74' c='_ZN3tvm5relay3tec13LoweredOutputC1ENS_7runtime5ArrayINS_2te6TensorEvEENS0_16OpImplementationE'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='89' c='_ZN3tvm5relay3tec10CachedFuncC1ENS_6TargetENS_9GlobalVarENS_7runtime5ArrayINS_2te6TensorEvEES9_NS7_8ScheduleENS_3tir8PrimFuncENS6_INS_7IntegerEvEENS_810874565'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='90' c='_ZN3tvm5relay3tec10CachedFuncC1ENS_6TargetENS_9GlobalVarENS_7runtime5ArrayINS_2te6TensorEvEES9_NS7_8ScheduleENS_3tir8PrimFuncENS6_INS_7IntegerEvEENS_810874565'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='93' c='_ZN3tvm5relay3tec10CachedFuncC1ENS_6TargetENS_9GlobalVarENS_7runtime5ArrayINS_2te6TensorEvEES9_NS7_8ScheduleENS_3tir8PrimFuncENS6_INS_7IntegerEvEENS_810874565'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='134'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='139' c='_ZN3tvm5relay3tec16LowerToTECompute5LowerERKNS0_8FunctionE'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='141' c='_ZN3tvm5relay3tec16LowerToTECompute5LowerERKNS0_8FunctionE'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='143' c='_ZN3tvm5relay3tec16LowerToTECompute5LowerERKNS0_8FunctionE'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='151' c='_ZN3tvm5relay3tec16LowerToTECompute5LowerERKNS0_8FunctionE'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='168' c='_ZN3tvm5relay3tec16LowerToTECompute10VisitExpr_EPKNS0_7VarNodeE'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='173' c='_ZN3tvm5relay3tec16LowerToTECompute10VisitExpr_EPKNS0_12ConstantNodeE'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='211' c='_ZN3tvm5relay3tec16LowerToTECompute10VisitExpr_EPKNS0_12ConstantNodeE'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='217' c='_ZN3tvm5relay3tec16LowerToTECompute10VisitExpr_EPKNS0_8CallNodeE'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='221' c='_ZN3tvm5relay3tec16LowerToTECompute10VisitExpr_EPKNS0_8CallNodeE'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='227' c='_ZN3tvm5relay3tec16LowerToTECompute10VisitExpr_EPKNS0_8CallNodeE'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='245' c='_ZN3tvm5relay3tec16LowerToTECompute10VisitExpr_EPKNS0_8CallNodeE'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='260' c='_ZN3tvm5relay3tec16LowerToTECompute10VisitExpr_EPKNS0_12FunctionNodeE'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='262' c='_ZN3tvm5relay3tec16LowerToTECompute10VisitExpr_EPKNS0_12FunctionNodeE'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='265' c='_ZN3tvm5relay3tec16LowerToTECompute10VisitExpr_EPKNS0_7LetNodeE'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='266' c='_ZN3tvm5relay3tec16LowerToTECompute10VisitExpr_EPKNS0_7LetNodeE'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='272' c='_ZN3tvm5relay3tec16LowerToTECompute10VisitExpr_EPKNS0_9TupleNodeE'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='273' c='_ZN3tvm5relay3tec16LowerToTECompute10VisitExpr_EPKNS0_9TupleNodeE'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='277' c='_ZN3tvm5relay3tec16LowerToTECompute10VisitExpr_EPKNS0_9TupleNodeE'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='284' c='_ZN3tvm5relay3tec16LowerToTECompute10VisitExpr_EPKNS0_16TupleGetItemNodeE'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='286' c='_ZN3tvm5relay3tec16LowerToTECompute10VisitExpr_EPKNS0_16TupleGetItemNodeE'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='295'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='297'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='330' c='_ZN3tvm5relay3tec15ScheduleBuilder6CreateERKNS0_8FunctionENS_15GlobalVarSupplyE'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='331' c='_ZN3tvm5relay3tec15ScheduleBuilder6CreateERKNS0_8FunctionENS_15GlobalVarSupplyE'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='363' c='_ZN3tvm5relay3tec15ScheduleBuilder6CreateERKNS0_8FunctionENS_15GlobalVarSupplyE'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='459'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='470' c='_ZN3tvm5relay3tec13MakeShapeFunc6CreateERKNS0_8FunctionERKNS_6TargetENS_15GlobalVarSupplyE'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='471' c='_ZN3tvm5relay3tec13MakeShapeFunc6CreateERKNS0_8FunctionERKNS_6TargetENS_15GlobalVarSupplyE'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='476' c='_ZN3tvm5relay3tec13MakeShapeFunc6CreateERKNS0_8FunctionERKNS_6TargetENS_15GlobalVarSupplyE'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='484' c='_ZN3tvm5relay3tec13MakeShapeFunc6CreateERKNS0_8FunctionERKNS_6TargetENS_15GlobalVarSupplyE'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='495' c='_ZN3tvm5relay3tec13MakeShapeFunc6CreateERKNS0_8FunctionERKNS_6TargetENS_15GlobalVarSupplyE'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='512' c='_ZN3tvm5relay3tec13MakeShapeFunc6CreateERKNS0_8FunctionERKNS_6TargetENS_15GlobalVarSupplyE'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='567' c='_ZN3tvm5relay3tec13MakeShapeFunc6CreateERKNS0_8FunctionERKNS_6TargetENS_15GlobalVarSupplyE'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='567' c='_ZN3tvm5relay3tec13MakeShapeFunc6CreateERKNS0_8FunctionERKNS_6TargetENS_15GlobalVarSupplyE'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='568' c='_ZN3tvm5relay3tec13MakeShapeFunc6CreateERKNS0_8FunctionERKNS_6TargetENS_15GlobalVarSupplyE'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='575' c='_ZN3tvm5relay3tec13MakeShapeFunc6CreateERKNS0_8FunctionERKNS_6TargetENS_15GlobalVarSupplyE'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='582' c='_ZN3tvm5relay3tec13MakeShapeFunc9VisitExprERKNS_9RelayExprE'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='592' c='_ZN3tvm5relay3tec13MakeShapeFunc10VisitExpr_EPKNS0_7VarNodeE'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='616' c='_ZN3tvm5relay3tec13MakeShapeFunc10VisitExpr_EPKNS0_12ConstantNodeE'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='627' c='_ZN3tvm5relay3tec13MakeShapeFunc10VisitExpr_EPKNS0_12ConstantNodeE'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='674' c='_ZN3tvm5relay3tec13MakeShapeFunc10VisitExpr_EPKNS0_8CallNodeE'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='705' c='_ZN3tvm5relay3tec13MakeShapeFunc10VisitExpr_EPKNS0_8CallNodeE'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='713' c='_ZN3tvm5relay3tec13MakeShapeFunc10VisitExpr_EPKNS0_8CallNodeE'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='729' c='_ZN3tvm5relay3tec13MakeShapeFunc10VisitExpr_EPKNS0_8CallNodeE'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='738' c='_ZN3tvm5relay3tec13MakeShapeFunc10VisitExpr_EPKNS0_12FunctionNodeE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='65' c='_ZN3tvm5relay3tec13LoweredOutputC1ENS_7runtime5ArrayINS_2te6TensorEvEENS0_16OpImplementationE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='80' c='_ZN3tvm5relay3tec10CachedFuncC1ENS_6TargetENS_9GlobalVarENS_7runtime5ArrayINS_2te6TensorEvEES9_NS7_8ScheduleENS_3tir8PrimFuncENS6_INS_7IntegerEvEENS_810874565'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='81' c='_ZN3tvm5relay3tec10CachedFuncC1ENS_6TargetENS_9GlobalVarENS_7runtime5ArrayINS_2te6TensorEvEES9_NS7_8ScheduleENS_3tir8PrimFuncENS6_INS_7IntegerEvEENS_810874565'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='84' c='_ZN3tvm5relay3tec10CachedFuncC1ENS_6TargetENS_9GlobalVarENS_7runtime5ArrayINS_2te6TensorEvEES9_NS7_8ScheduleENS_3tir8PrimFuncENS6_INS_7IntegerEvEENS_810874565'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='125'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='130' c='_ZN3tvm5relay3tec16LowerToTECompute5LowerERKNS0_8FunctionE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='132' c='_ZN3tvm5relay3tec16LowerToTECompute5LowerERKNS0_8FunctionE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='134' c='_ZN3tvm5relay3tec16LowerToTECompute5LowerERKNS0_8FunctionE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='142' c='_ZN3tvm5relay3tec16LowerToTECompute5LowerERKNS0_8FunctionE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='159' c='_ZN3tvm5relay3tec16LowerToTECompute10VisitExpr_EPKNS0_7VarNodeE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='164' c='_ZN3tvm5relay3tec16LowerToTECompute10VisitExpr_EPKNS0_12ConstantNodeE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='202' c='_ZN3tvm5relay3tec16LowerToTECompute10VisitExpr_EPKNS0_12ConstantNodeE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='208' c='_ZN3tvm5relay3tec16LowerToTECompute10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='212' c='_ZN3tvm5relay3tec16LowerToTECompute10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='218' c='_ZN3tvm5relay3tec16LowerToTECompute10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='236' c='_ZN3tvm5relay3tec16LowerToTECompute10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='251' c='_ZN3tvm5relay3tec16LowerToTECompute10VisitExpr_EPKNS0_12FunctionNodeE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='253' c='_ZN3tvm5relay3tec16LowerToTECompute10VisitExpr_EPKNS0_12FunctionNodeE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='256' c='_ZN3tvm5relay3tec16LowerToTECompute10VisitExpr_EPKNS0_7LetNodeE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='257' c='_ZN3tvm5relay3tec16LowerToTECompute10VisitExpr_EPKNS0_7LetNodeE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='263' c='_ZN3tvm5relay3tec16LowerToTECompute10VisitExpr_EPKNS0_9TupleNodeE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='264' c='_ZN3tvm5relay3tec16LowerToTECompute10VisitExpr_EPKNS0_9TupleNodeE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='268' c='_ZN3tvm5relay3tec16LowerToTECompute10VisitExpr_EPKNS0_9TupleNodeE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='275' c='_ZN3tvm5relay3tec16LowerToTECompute10VisitExpr_EPKNS0_16TupleGetItemNodeE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='277' c='_ZN3tvm5relay3tec16LowerToTECompute10VisitExpr_EPKNS0_16TupleGetItemNodeE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='286'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='288'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='321' c='_ZN3tvm5relay3tec15ScheduleBuilder6CreateERKNS0_8FunctionENS_15GlobalVarSupplyE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='322' c='_ZN3tvm5relay3tec15ScheduleBuilder6CreateERKNS0_8FunctionENS_15GlobalVarSupplyE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='361' c='_ZN3tvm5relay3tec15ScheduleBuilder6CreateERKNS0_8FunctionENS_15GlobalVarSupplyE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='461'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='472' c='_ZN3tvm5relay3tec13MakeShapeFunc6CreateERKNS0_8FunctionERKNS_6TargetENS_15GlobalVarSupplyE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='473' c='_ZN3tvm5relay3tec13MakeShapeFunc6CreateERKNS0_8FunctionERKNS_6TargetENS_15GlobalVarSupplyE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='478' c='_ZN3tvm5relay3tec13MakeShapeFunc6CreateERKNS0_8FunctionERKNS_6TargetENS_15GlobalVarSupplyE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='486' c='_ZN3tvm5relay3tec13MakeShapeFunc6CreateERKNS0_8FunctionERKNS_6TargetENS_15GlobalVarSupplyE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='497' c='_ZN3tvm5relay3tec13MakeShapeFunc6CreateERKNS0_8FunctionERKNS_6TargetENS_15GlobalVarSupplyE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='514' c='_ZN3tvm5relay3tec13MakeShapeFunc6CreateERKNS0_8FunctionERKNS_6TargetENS_15GlobalVarSupplyE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='569' c='_ZN3tvm5relay3tec13MakeShapeFunc6CreateERKNS0_8FunctionERKNS_6TargetENS_15GlobalVarSupplyE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='569' c='_ZN3tvm5relay3tec13MakeShapeFunc6CreateERKNS0_8FunctionERKNS_6TargetENS_15GlobalVarSupplyE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='570' c='_ZN3tvm5relay3tec13MakeShapeFunc6CreateERKNS0_8FunctionERKNS_6TargetENS_15GlobalVarSupplyE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='577' c='_ZN3tvm5relay3tec13MakeShapeFunc6CreateERKNS0_8FunctionERKNS_6TargetENS_15GlobalVarSupplyE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='584' c='_ZN3tvm5relay3tec13MakeShapeFunc9VisitExprERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='594' c='_ZN3tvm5relay3tec13MakeShapeFunc10VisitExpr_EPKNS0_7VarNodeE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='618' c='_ZN3tvm5relay3tec13MakeShapeFunc10VisitExpr_EPKNS0_12ConstantNodeE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='629' c='_ZN3tvm5relay3tec13MakeShapeFunc10VisitExpr_EPKNS0_12ConstantNodeE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='676' c='_ZN3tvm5relay3tec13MakeShapeFunc10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='707' c='_ZN3tvm5relay3tec13MakeShapeFunc10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='715' c='_ZN3tvm5relay3tec13MakeShapeFunc10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='731' c='_ZN3tvm5relay3tec13MakeShapeFunc10VisitExpr_EPKNS0_8CallNodeE'/>
 <use f='tvm/src/relay/backend/te_compiler_cache.cc' l='740' c='_ZN3tvm5relay3tec13MakeShapeFunc10VisitExpr_EPKNS0_12FunctionNodeE'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='743' c='_ZN3tvm5relay3tec13MakeShapeFunc10VisitExpr_EPKNS0_7LetNodeE'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='744' c='_ZN3tvm5relay3tec13MakeShapeFunc10VisitExpr_EPKNS0_7LetNodeE'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='750' c='_ZN3tvm5relay3tec13MakeShapeFunc10VisitExpr_EPKNS0_9TupleNodeE'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='751' c='_ZN3tvm5relay3tec13MakeShapeFunc10VisitExpr_EPKNS0_9TupleNodeE'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='755' c='_ZN3tvm5relay3tec13MakeShapeFunc10VisitExpr_EPKNS0_9TupleNodeE'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='762' c='_ZN3tvm5relay3tec13MakeShapeFunc10VisitExpr_EPKNS0_16TupleGetItemNodeE'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='763' c='_ZN3tvm5relay3tec13MakeShapeFunc10VisitExpr_EPKNS0_16TupleGetItemNodeE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='742' c='_ZN3tvm5relay3tec13MakeShapeFunc10VisitExpr_EPKNS0_12FunctionNodeE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='745' c='_ZN3tvm5relay3tec13MakeShapeFunc10VisitExpr_EPKNS0_7LetNodeE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='746' c='_ZN3tvm5relay3tec13MakeShapeFunc10VisitExpr_EPKNS0_7LetNodeE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='752' c='_ZN3tvm5relay3tec13MakeShapeFunc10VisitExpr_EPKNS0_9TupleNodeE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='753' c='_ZN3tvm5relay3tec13MakeShapeFunc10VisitExpr_EPKNS0_9TupleNodeE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='757' c='_ZN3tvm5relay3tec13MakeShapeFunc10VisitExpr_EPKNS0_9TupleNodeE'/>
 <use f='tvm/src/relay/backend/te_compiler_cache.cc' l='764' c='_ZN3tvm5relay3tec13MakeShapeFunc10VisitExpr_EPKNS0_16TupleGetItemNodeE'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='775'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='765' c='_ZN3tvm5relay3tec13MakeShapeFunc10VisitExpr_EPKNS0_16TupleGetItemNodeE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='766' c='_ZN3tvm5relay3tec13MakeShapeFunc10VisitExpr_EPKNS0_16TupleGetItemNodeE'/>
 <use f='tvm/src/relay/backend/te_compiler_cache.cc' l='777'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='781'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='793' c='_ZN3tvm5relay3tec14LowerTEComputeB5cxx11ERKNS0_8FunctionENS_6TargetEb'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='796' c='_ZN3tvm5relay3tec14LowerTEComputeB5cxx11ERKNS0_8FunctionENS_6TargetEb'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='779'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='783'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='795' c='_ZN3tvm5relay3tec14LowerTEComputeB5cxx11ERKNS0_8FunctionENS_6TargetEb'/>
 <use f='tvm/src/relay/backend/te_compiler_cache.cc' l='798' c='_ZN3tvm5relay3tec14LowerTEComputeB5cxx11ERKNS0_8FunctionENS_6TargetEb'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='800' c='_ZN3tvm5relay3tec14LowerTEComputeB5cxx11ERKNS0_8FunctionENS_6TargetEb'/>
+<size>8</size>
+<use f='tvm/src/relay/backend/utils.cc' l='381' c='_ZN3tvm5relay7backend23DefaultTIRConverterImplERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS3_INS2_7NDArrayEvEEb'/>
+<use f='tvm/src/relay/backend/utils.cc' l='385' c='_ZN3tvm5relay7backend23DefaultTIRConverterImplERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS3_INS2_7NDArrayEvEEb'/>
+<use f='tvm/src/relay/backend/utils.cc' l='387' c='_ZN3tvm5relay7backend23DefaultTIRConverterImplERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS3_INS2_7NDArrayEvEEb'/>
+<use f='tvm/src/relay/backend/utils.cc' l='400' c='_ZN3tvm5relay7backend23DefaultTIRConverterImplERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS3_INS2_7NDArrayEvEEb'/>
+<use f='tvm/src/relay/backend/utils.cc' l='406' c='_ZN3tvm5relay7backend23DefaultTIRConverterImplERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS3_INS2_7NDArrayEvEEb'/>
+<use f='tvm/src/relay/backend/utils.cc' l='407' c='_ZN3tvm5relay7backend23DefaultTIRConverterImplERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS3_INS2_7NDArrayEvEEb'/>
+<use f='tvm/src/relay/backend/utils.cc' l='433'/>
+<use f='tvm/src/relay/backend/utils.cc' l='439'/>
 <size>8</size>
 <use f='tvm/src/relay/ir/op_strategy.cc' l='34' c='_ZN3tvm5relay16OpImplementation7ComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
 <use f='tvm/src/relay/ir/op_strategy.cc' l='34' c='_ZN3tvm5relay16OpImplementation7ComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
