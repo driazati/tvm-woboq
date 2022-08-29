@@ -19,7 +19,7 @@
 <use f='tvm/src/tir/ir/stmt.cc' l='979' c='_ZN3tvm3tir19PrintBlockSignatureEPKNS0_9BlockNodeEPNS_11ReprPrinterE'/>
 <use f='tvm/src/tir/schedule/analysis/analysis.cc' l='507' u='m' c='_ZN3tvm3tir13IsOutputBlockERKNS0_13ScheduleStateERKNS0_8StmtSRefES6_'/>
 <use f='tvm/src/tir/schedule/analysis/analysis.cc' l='508' c='_ZN3tvm3tir13IsOutputBlockERKNS0_13ScheduleStateERKNS0_8StmtSRefES6_'/>
-<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='1218' c='_ZN3tvm3tir21GetBufferDefiningSiteERKNS0_8StmtSRefERKNS0_6BufferE'/>
+<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='1222' c='_ZN3tvm3tir21GetBufferDefiningSiteERKNS0_8StmtSRefERKNS0_6BufferE'/>
 <use f='tvm/src/tir/schedule/ir_comparator.cc' l='128' u='r' c='_ZN3tvm3tir19TensorizeComparator10VisitStmt_EPKNS0_9BlockNodeERKNS0_4StmtE'/>
 <use f='tvm/src/tir/schedule/ir_comparator.cc' l='128' u='r' c='_ZN3tvm3tir19TensorizeComparator10VisitStmt_EPKNS0_9BlockNodeERKNS0_4StmtE'/>
 <use f='tvm/src/tir/schedule/ir_comparator.cc' l='380' u='r' c='_ZN3tvm3tir23AutoTensorizeComparator10VisitStmt_EPKNS0_9BlockNodeERKNS0_4StmtE'/>
@@ -32,8 +32,8 @@
 <use f='tvm/src/tir/schedule/primitive/compute_inline.cc' l='320' c='_ZN3tvm3tir11BaseInliner29UpdateBuffersInBlockSignatureENS0_5BlockEb'/>
 <use f='tvm/src/tir/schedule/primitive/compute_inline.cc' l='326' u='r' c='_ZN3tvm3tir11BaseInliner29UpdateBuffersInBlockSignatureENS0_5BlockEb'/>
 <use f='tvm/src/tir/schedule/primitive/compute_inline.cc' l='344' u='w' c='_ZN3tvm3tir11BaseInliner29UpdateBuffersInBlockSignatureENS0_5BlockEb'/>
-<use f='tvm/src/tir/schedule/primitive/layout_transformation.cc' l='167' u='m' c='_ZN3tvm3tir15TransformLayoutENS0_13ScheduleStateERKNS0_8StmtSRefEiNS0_15BufferIndexTypeERKNS0_8IndexMapE'/>
-<use f='tvm/src/tir/schedule/primitive/reduction.cc' l='936' u='m' c='_ZN3tvm3tir13BlockReplacer7ReplaceENS0_5BlockENS0_4StmtENS0_3ForENS0_12BlockRealizeES5_S4_St13unordered_setIPKNS0_7VarNodeESt4hashIS9_ESt8equal_toIS9_12959421'/>
+<use f='tvm/src/tir/schedule/primitive/layout_transformation.cc' l='163' u='m' c='_ZN3tvm3tir15TransformLayoutENS0_13ScheduleStateERKNS0_8StmtSRefEiNS0_15BufferIndexTypeERKNS0_8IndexMapE'/>
+<use f='tvm/src/tir/schedule/primitive/reduction.cc' l='934' u='m' c='_ZN3tvm3tir13BlockReplacer7ReplaceENS0_5BlockENS0_4StmtENS0_3ForENS0_12BlockRealizeES5_S4_St13unordered_setIPKNS0_7VarNodeESt4hashIS9_ESt8equal_toIS9_12959421'/>
 <use f='tvm/src/tir/schedule/transform.cc' l='156' u='r' c='_ZN3tvm3tir20ReplaceBufferMutator10VisitStmt_EPKNS0_9BlockNodeE'/>
 <use f='tvm/src/tir/schedule/transform.cc' l='162' u='r' c='_ZN3tvm3tir20ReplaceBufferMutator10VisitStmt_EPKNS0_9BlockNodeE'/>
 <use f='tvm/src/tir/schedule/transform.cc' l='169' u='w' c='_ZN3tvm3tir20ReplaceBufferMutator10VisitStmt_EPKNS0_9BlockNodeE'/>
@@ -51,16 +51,16 @@
 <use f='tvm/src/tir/transforms/inject_software_pipeline.cc' l='1135' u='m' c='_ZN3tvm3tir17software_pipeline16PipelineInjector15AddAllocBuffersEPNS0_9BlockNodeENS_7runtime5ArrayINS0_6BufferEvEE'/>
 <use f='tvm/src/tir/transforms/inject_software_pipeline.cc' l='1146' c='_ZN3tvm3tir17software_pipeline16PipelineInjector10VisitStmt_EPKNS0_9BlockNodeE'/>
 <use f='tvm/src/tir/transforms/inject_software_pipeline.cc' l='1160' c='_ZN3tvm3tir17software_pipeline16PipelineInjector10VisitStmt_EPKNS0_9BlockNodeE'/>
-<use f='tvm/src/tir/transforms/lower_cross_thread_reduction.cc' l='563' u='m' c='_ZN3tvm3tir31CrossThreadReductionTransformer10VisitStmt_EPKNS0_9BlockNodeE'/>
+<use f='tvm/src/tir/transforms/lower_cross_thread_reduction.cc' l='559' u='m' c='_ZN3tvm3tir31CrossThreadReductionTransformer10VisitStmt_EPKNS0_9BlockNodeE'/>
 <use f='tvm/src/tir/transforms/lower_opaque_block.cc' l='50' u='m' c='_ZN3tvm3tir16OpaqueBlockLower10VisitStmt_EPKNS0_16BlockRealizeNodeE'/>
 <use f='tvm/src/tir/transforms/lower_opaque_block.cc' l='51' u='m' c='_ZN3tvm3tir16OpaqueBlockLower10VisitStmt_EPKNS0_16BlockRealizeNodeE'/>
+<use f='tvm/src/tir/transforms/manifest_shared_memory_local_stage.cc' l='107' u='m' c='_ZN3tvm3tir25IntermediateStageRewriter24CollectRelaxedOuterLoopsEPKNS0_9BlockNodeERKNS0_6BufferE'/>
+<use f='tvm/src/tir/transforms/manifest_shared_memory_local_stage.cc' l='107' u='m' c='_ZN3tvm3tir25IntermediateStageRewriter24CollectRelaxedOuterLoopsEPKNS0_9BlockNodeERKNS0_6BufferE'/>
 <use f='tvm/src/tir/transforms/manifest_shared_memory_local_stage.cc' l='109' u='m' c='_ZN3tvm3tir25IntermediateStageRewriter24CollectRelaxedOuterLoopsEPKNS0_9BlockNodeERKNS0_6BufferE'/>
-<use f='tvm/src/tir/transforms/manifest_shared_memory_local_stage.cc' l='109' u='m' c='_ZN3tvm3tir25IntermediateStageRewriter24CollectRelaxedOuterLoopsEPKNS0_9BlockNodeERKNS0_6BufferE'/>
-<use f='tvm/src/tir/transforms/manifest_shared_memory_local_stage.cc' l='111' u='m' c='_ZN3tvm3tir25IntermediateStageRewriter24CollectRelaxedOuterLoopsEPKNS0_9BlockNodeERKNS0_6BufferE'/>
-<use f='tvm/src/tir/transforms/manifest_shared_memory_local_stage.cc' l='209' u='m' c='_ZN3tvm3tir30SharedMemoryLocalStageInserter10VisitStmt_EPKNS0_9BlockNodeE'/>
-<use f='tvm/src/tir/transforms/manifest_shared_memory_local_stage.cc' l='209' u='m' c='_ZN3tvm3tir30SharedMemoryLocalStageInserter10VisitStmt_EPKNS0_9BlockNodeE'/>
-<use f='tvm/src/tir/transforms/manifest_shared_memory_local_stage.cc' l='259' u='w' c='_ZN3tvm3tir30SharedMemoryLocalStageInserter10VisitStmt_EPKNS0_9BlockNodeE'/>
-<use f='tvm/src/tir/transforms/manifest_shared_memory_local_stage.cc' l='259' u='r' c='_ZN3tvm3tir30SharedMemoryLocalStageInserter10VisitStmt_EPKNS0_9BlockNodeE'/>
+<use f='tvm/src/tir/transforms/manifest_shared_memory_local_stage.cc' l='203' u='m' c='_ZN3tvm3tir30SharedMemoryLocalStageInserter10VisitStmt_EPKNS0_9BlockNodeE'/>
+<use f='tvm/src/tir/transforms/manifest_shared_memory_local_stage.cc' l='203' u='m' c='_ZN3tvm3tir30SharedMemoryLocalStageInserter10VisitStmt_EPKNS0_9BlockNodeE'/>
+<use f='tvm/src/tir/transforms/manifest_shared_memory_local_stage.cc' l='253' u='w' c='_ZN3tvm3tir30SharedMemoryLocalStageInserter10VisitStmt_EPKNS0_9BlockNodeE'/>
+<use f='tvm/src/tir/transforms/manifest_shared_memory_local_stage.cc' l='253' u='r' c='_ZN3tvm3tir30SharedMemoryLocalStageInserter10VisitStmt_EPKNS0_9BlockNodeE'/>
 <use f='tvm/src/tir/transforms/plan_update_buffer_allocation_location.cc' l='139' u='w' c='_ZN3tvm3tir23BufferAllocationLocator10VisitStmt_EPKNS0_9BlockNodeE'/>
 <use f='tvm/src/tir/transforms/remove_weight_layout_rewrite_block.cc' l='62' c='_ZN3tvm3tir31WeightLayoutRewriteBlockRemover10VisitStmt_EPKNS0_9BlockNodeE'/>
 <use f='tvm/src/tir/transforms/remove_weight_layout_rewrite_block.cc' l='67' u='m' c='_ZN3tvm3tir31WeightLayoutRewriteBlockRemover10VisitStmt_EPKNS0_9BlockNodeE'/>

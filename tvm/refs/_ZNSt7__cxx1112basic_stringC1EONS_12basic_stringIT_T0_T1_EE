@@ -45,6 +45,8 @@
 <use f='tvm/src/relay/collage/name_supply.h' l='39' u='c' c='_ZN3tvm5relay7collage10NameSupplyC1ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
 <use f='tvm/src/relay/collage/candidate_function_cache.cc' l='37' u='c' c='_ZN3tvm5relay7collage22CandidateFunctionCache8GetEntryERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKNS0_8FunctionE'/>
 <use f='tvm/src/relay/collage/name_supply.cc' l='85' u='c' c='_ZN3tvm5relay7collage10NameSupply5FreshERKSt16initializer_listINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEE'/>
+<use f='tvm/src/relay/collage/partition_rule.cc' l='96' u='c' c='_ZNK3tvm5relay7collage26DFPatternPartitionRuleNode13AllCandidatesERKNS1_13DataflowGraphERKNS1_13PartitionSpecE'/>
+<use f='tvm/src/relay/collage/partition_rule.cc' l='260' u='c' c='_ZNK3tvm5relay7collage29OpCallByKindPartitionRuleNode13AllCandidatesERKNS1_13DataflowGraphERKNS1_13PartitionSpecE'/>
 <use f='tvm/src/relay/op/nn/convolution.cc' l='1784' u='c' c='_ZN3tvm5relay24MakeConv2dBackwardWeightENS_9RelayExprES1_NS_7runtime5ArrayINS_8PrimExprEvEES5_S5_iS4_S5_NSt7__cxx1112basic_stringIcSt11char_traitsIcES14593172'/>
 <use f='tvm/src/relay/op/nn/convolution.cc' l='1785' u='c' c='_ZN3tvm5relay24MakeConv2dBackwardWeightENS_9RelayExprES1_NS_7runtime5ArrayINS_8PrimExprEvEES5_S5_iS4_S5_NSt7__cxx1112basic_stringIcSt11char_traitsIcES14593172'/>
 <use f='tvm/src/relay/op/nn/convolution.cc' l='1786' u='c' c='_ZN3tvm5relay24MakeConv2dBackwardWeightENS_9RelayExprES1_NS_7runtime5ArrayINS_8PrimExprEvEES5_S5_iS4_S5_NSt7__cxx1112basic_stringIcSt11char_traitsIcES14593172'/>
@@ -78,10 +80,10 @@
 <use f='tvm/src/target/source/codegen_source_base.cc' l='62' u='c' c='_ZN3tvm7codegen17CodeGenSourceBase10AllocVarIDB5cxx11EPKNS_3tir7VarNodeE'/>
 <use f='tvm/src/target/source/intrin_rule_cuda.cc' l='40' u='c' c='_ZNK3tvm7codegen6intrin8CUDAMathclENS_7runtime8DataTypeENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
 <use f='tvm/src/target/source/intrin_rule_cuda.cc' l='78' u='c' c='_ZNK3tvm7codegen6intrin15CUDAFastMathTanclENS_7runtime8DataTypeENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
-<use f='tvm/src/target/source/ptx.cc' l='416' u='c' c='_ZN3tvm7codegen8Replacer7rewriteENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
-<use f='tvm/src/target/source/ptx.cc' l='576' u='c' c='_ZN3tvm7codegen16PrintMMAAssemblyERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES8_S8_S8_S8_S8_S8_S8_S8_S8_S8_S8_S8_S8_S8_S8_bb'/>
-<use f='tvm/src/target/source/ptx.cc' l='638' u='c' c='_ZN3tvm7codegen23PrintLoadMatrixAssemblyEbiRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES8_S8_S8_S8_'/>
-<use f='tvm/src/target/source/ptx.cc' l='665' u='c' c='_ZN3tvm7codegen20PrintCpAsyncAssemblyERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES8_S8_S8_S8_'/>
+<use f='tvm/src/target/source/ptx.cc' l='415' u='c' c='_ZN3tvm7codegen8Replacer7rewriteENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<use f='tvm/src/target/source/ptx.cc' l='573' u='c' c='_ZN3tvm7codegen16PrintMMAAssemblyERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES8_S8_S8_S8_S8_S8_S8_S8_S8_S8_S8_S8_S8_S8_S8_bb'/>
+<use f='tvm/src/target/source/ptx.cc' l='634' u='c' c='_ZN3tvm7codegen23PrintLoadMatrixAssemblyEbiRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES8_S8_S8_S8_'/>
+<use f='tvm/src/target/source/ptx.cc' l='661' u='c' c='_ZN3tvm7codegen20PrintCpAsyncAssemblyERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES8_S8_S8_S8_'/>
 <use f='tvm/src/target/target.cc' l='178' u='c' c='_ZN3tvm14TargetInternal5QuoteERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
 <use f='tvm/src/target/target.cc' l='195' u='c' c='_ZN3tvm14TargetInternal10JoinStringERKSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS7_EEc'/>
 <use f='tvm/src/target/target.cc' l='273' u='c' c='_ZN3tvm14TargetInternal9InterpretERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>

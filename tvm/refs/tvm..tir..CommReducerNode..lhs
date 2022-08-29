@@ -21,4 +21,4 @@
 <use f='tvm/src/tir/ir/expr.cc' l='990' u='m' c='_ZNK3tvm3tir15CommReducerNodeclENS_7runtime5ArrayINS_8PrimExprEvEES5_'/>
 <use f='tvm/src/tir/ir/expr.cc' l='994' u='m' c='_ZNK3tvm3tir15CommReducerNodeclENS_7runtime5ArrayINS_8PrimExprEvEES5_'/>
 <use f='tvm/src/tir/ir/expr.cc' l='1016' u='r'/>
-<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='1728' u='m' c='_ZN3tvm3tir12MatchReducerERKNS0_11CommReducerERKNS_8PrimExprES6_RKNS0_10BufferLoadEPS4_SA_'/>
+<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='1732' u='m' c='_ZN3tvm3tir12MatchReducerERKNS0_11CommReducerERKNS_8PrimExprES6_RKNS0_10BufferLoadEPS4_SA_'/>

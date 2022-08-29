@@ -10,7 +10,7 @@
 <use f='tvm/src/meta_schedule/database/database.cc' l='90' u='r' c='_ZNK3tvm13meta_schedule16TuningRecordNode18AsMeasureCandidateEv'/>
 <use f='tvm/src/meta_schedule/database/database.cc' l='145' u='r' c='_ZN3tvm13meta_schedule12TuningRecord8FromJSONERKNS_7runtime9ObjectRefERKNS0_8WorkloadE'/>
 <use f='tvm/src/meta_schedule/database/database.cc' l='177' u='r' c='_ZN3tvm13meta_schedule12DatabaseNode13QueryScheduleERKNS_8IRModuleERKNS_6TargetERKNS_7runtime6StringE'/>
-<use f='tvm/src/meta_schedule/database/json_database.cc' l='206' u='r' c='_ZN3tvm13meta_schedule8Database12JSONDatabaseENS_7runtime6StringES3_b'/>
+<use f='tvm/src/meta_schedule/database/json_database.cc' l='204' u='r' c='_ZN3tvm13meta_schedule8Database12JSONDatabaseENS_7runtime6StringES3_b'/>
 <use f='tvm/src/meta_schedule/database/memory_database.cc' l='40' u='r' c='_ZN3tvm13meta_schedule18MemoryDatabaseNode11HasWorkloadERKNS_8IRModuleE'/>
 <use f='tvm/src/meta_schedule/database/memory_database.cc' l='49' u='r' c='_ZN3tvm13meta_schedule18MemoryDatabaseNode14CommitWorkloadERKNS_8IRModuleE'/>
 <use f='tvm/src/relay/backend/te_compiler_cache.cc' l='380' u='r' c='_ZN3tvm5relay3tec15ScheduleBuilder6CreateERKNS0_8FunctionENS_15GlobalVarSupplyE'/>

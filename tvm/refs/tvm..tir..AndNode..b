@@ -25,8 +25,8 @@
 <use f='tvm/src/tir/ir/expr_functor.cc' l='185' u='r' c='_ZN3tvm3tir11ExprMutator10VisitExpr_EPKNS0_7AndNodeE'/>
 <use f='tvm/src/tir/ir/specialize.cc' l='53' u='r' c='_ZN3tvm3tir19PrimFuncSpecializer10VisitExpr_EPKNS0_7AndNodeE'/>
 <use f='tvm/src/tir/ir/specialize.cc' l='54' u='r' c='_ZN3tvm3tir19PrimFuncSpecializer10VisitExpr_EPKNS0_7AndNodeE'/>
-<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='1338' u='r' c='_ZN3tvm3tir14PatternMatcher10VisitExpr_EPKNS0_7AndNodeE'/>
-<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='1339' u='r' c='_ZN3tvm3tir14PatternMatcher10VisitExpr_EPKNS0_7AndNodeE'/>
+<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='1342' u='r' c='_ZN3tvm3tir14PatternMatcher10VisitExpr_EPKNS0_7AndNodeE'/>
+<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='1343' u='r' c='_ZN3tvm3tir14PatternMatcher10VisitExpr_EPKNS0_7AndNodeE'/>
 <use f='tvm/src/tir/schedule/ir_comparator.cc' l='146' u='r' c='_ZN3tvm3tir19TensorizeComparator10VisitExpr_EPKNS0_7AndNodeERKNS_8PrimExprE'/>
 <use f='tvm/src/tir/schedule/ir_comparator.cc' l='146' u='r' c='_ZN3tvm3tir19TensorizeComparator10VisitExpr_EPKNS0_7AndNodeERKNS_8PrimExprE'/>
 <use f='tvm/src/tir/transforms/hoist_expression.cc' l='232' u='r' c='_ZN3tvm3tir18HoistInfoCollector10VisitExpr_EPKNS0_7AndNodeE'/>

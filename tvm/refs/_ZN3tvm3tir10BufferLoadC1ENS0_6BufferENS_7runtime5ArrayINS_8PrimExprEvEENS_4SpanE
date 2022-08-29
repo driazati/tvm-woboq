@@ -20,11 +20,11 @@
 <def f='tvm/src/tir/ir/expr.cc' l='1101' ll='1113' type='void tvm::tir::BufferLoad::BufferLoad(tvm::tir::Buffer buffer, Array&lt;tvm::PrimExpr&gt; indices, tvm::Span span = tvm::Span())'/>
 <use f='tvm/src/tir/ir/expr.cc' l='1117' u='c'/>
 <use f='tvm/src/tir/ir/expr_functor.cc' l='139' u='c' c='_ZN3tvm3tir11ExprMutator10VisitExpr_EPKNS0_14BufferLoadNodeE'/>
-<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='1741' u='c' c='_ZN3tvm3tir20FromIdentityCombinerERKNS_8PrimExprERKNS0_11BufferStoreEPNS0_11CommReducerEPS1_S9_'/>
+<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='1745' u='c' c='_ZN3tvm3tir20FromIdentityCombinerERKNS_8PrimExprERKNS0_11BufferStoreEPNS0_11CommReducerEPS1_S9_'/>
 <use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='143' u='c' c='_ZN3tvm3tir14MakeCacheStageERKNS0_12BufferRegionEPNS0_14CacheStageInfoERKNS_7runtime6StringE'/>
 <use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='249' u='c' c='_ZN3tvm3tir16MakeReIndexStageERKNS0_5BlockEPNS0_14CacheStageInfoERKSt13unordered_setINS0_3VarENS_7runtime13ObjectPtrHashENS8_14ObjectPtrEqualESaIS7_EE4253367'/>
-<use f='tvm/src/tir/schedule/primitive/reduction.cc' l='729' u='c' c='_ZN3tvm3tir19RFactorBlockCreator21CreateReductionUpdateEb'/>
-<use f='tvm/src/tir/schedule/primitive/reduction.cc' l='825' u='c' c='_ZN3tvm3tir21WriteBackBlockCreator21CreateReductionUpdateEb'/>
+<use f='tvm/src/tir/schedule/primitive/reduction.cc' l='727' u='c' c='_ZN3tvm3tir19RFactorBlockCreator21CreateReductionUpdateEb'/>
+<use f='tvm/src/tir/schedule/primitive/reduction.cc' l='823' u='c' c='_ZN3tvm3tir21WriteBackBlockCreator21CreateReductionUpdateEb'/>
 <use f='tvm/src/tir/transforms/arg_binder.cc' l='215' u='c' c='_ZN3tvm3tir9ArgBinder12BindDLTensorERKNS0_6BufferERKNS_8PrimExprES7_RKNS0_3VarERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
 <use f='tvm/src/tir/transforms/arg_binder.cc' l='232' u='c' c='_ZN3tvm3tir9ArgBinder12BindDLTensorERKNS0_6BufferERKNS_8PrimExprES7_RKNS0_3VarERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
 <use f='tvm/src/tir/transforms/arg_binder.cc' l='253' u='c' c='_ZN3tvm3tir9ArgBinder12BindDLTensorERKNS0_6BufferERKNS_8PrimExprES7_RKNS0_3VarERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
@@ -39,16 +39,16 @@
 <use f='tvm/src/tir/transforms/lower_match_buffer.cc' l='116' u='c' c='_ZN3tvm3tir16MatchBufferLower10VisitExpr_EPKNS0_14BufferLoadNodeE'/>
 <use f='tvm/src/tir/transforms/lower_thread_allreduce.cc' l='139' u='c' c='_ZN3tvm3tir22ThreadAllreduceBuilder10VisitExpr_EPKNS0_14BufferLoadNodeE'/>
 <use f='tvm/src/tir/transforms/lower_thread_allreduce.cc' l='152' u='c' c='_ZN3tvm3tir22ThreadAllreduceBuilder10VisitExpr_EPKNS0_14BufferLoadNodeE'/>
-<use f='tvm/src/tir/transforms/lower_thread_allreduce.cc' l='387' u='c' c='_ZN3tvm3tir22ThreadAllreduceBuilder13MakeAllreduceEPKNS0_8CallNodeE'/>
-<use f='tvm/src/tir/transforms/lower_thread_allreduce.cc' l='409' u='c' c='_ZN3tvm3tir22ThreadAllreduceBuilder13MakeAllreduceEPKNS0_8CallNodeE'/>
-<use f='tvm/src/tir/transforms/lower_thread_allreduce.cc' l='444' u='c' c='_ZN3tvm3tir22ThreadAllreduceBuilder13MakeAllreduceEPKNS0_8CallNodeE'/>
-<use f='tvm/src/tir/transforms/lower_thread_allreduce.cc' l='456' u='c' c='_ZN3tvm3tir22ThreadAllreduceBuilder13MakeAllreduceEPKNS0_8CallNodeE'/>
-<use f='tvm/src/tir/transforms/lower_thread_allreduce.cc' l='494' u='c' c='_ZN3tvm3tir22ThreadAllreduceBuilder13MakeAllreduceEPKNS0_8CallNodeE'/>
-<use f='tvm/src/tir/transforms/lower_thread_allreduce.cc' l='535' u='c' c='_ZN3tvm3tir22ThreadAllreduceBuilder16MakeBufAllreduceEPKNS0_15CommReducerNodeERKSt6vectorINS_7runtime8DataTypeESaIS7_EERKNS6_5ArrayINS0_6BufferEvEENS_8PrimExprESH_iii'/>
-<use f='tvm/src/tir/transforms/lower_thread_allreduce.cc' l='540' u='c' c='_ZN3tvm3tir22ThreadAllreduceBuilder16MakeBufAllreduceEPKNS0_15CommReducerNodeERKSt6vectorINS_7runtime8DataTypeESaIS7_EERKNS6_5ArrayINS0_6BufferEvEENS_8PrimExprESH_iii'/>
-<use f='tvm/src/tir/transforms/lower_thread_allreduce.cc' l='662' u='c' c='_ZN3tvm3tir22ThreadAllreduceBuilder11WarpShuffleERKNS_2OpENS0_6BufferENS_8PrimExprES6_'/>
+<use f='tvm/src/tir/transforms/lower_thread_allreduce.cc' l='386' u='c' c='_ZN3tvm3tir22ThreadAllreduceBuilder13MakeAllreduceEPKNS0_8CallNodeE'/>
+<use f='tvm/src/tir/transforms/lower_thread_allreduce.cc' l='408' u='c' c='_ZN3tvm3tir22ThreadAllreduceBuilder13MakeAllreduceEPKNS0_8CallNodeE'/>
+<use f='tvm/src/tir/transforms/lower_thread_allreduce.cc' l='443' u='c' c='_ZN3tvm3tir22ThreadAllreduceBuilder13MakeAllreduceEPKNS0_8CallNodeE'/>
+<use f='tvm/src/tir/transforms/lower_thread_allreduce.cc' l='455' u='c' c='_ZN3tvm3tir22ThreadAllreduceBuilder13MakeAllreduceEPKNS0_8CallNodeE'/>
+<use f='tvm/src/tir/transforms/lower_thread_allreduce.cc' l='493' u='c' c='_ZN3tvm3tir22ThreadAllreduceBuilder13MakeAllreduceEPKNS0_8CallNodeE'/>
+<use f='tvm/src/tir/transforms/lower_thread_allreduce.cc' l='534' u='c' c='_ZN3tvm3tir22ThreadAllreduceBuilder16MakeBufAllreduceEPKNS0_15CommReducerNodeERKSt6vectorINS_7runtime8DataTypeESaIS7_EERKNS6_5ArrayINS0_6BufferEvEENS_8PrimExprESH_iii'/>
+<use f='tvm/src/tir/transforms/lower_thread_allreduce.cc' l='539' u='c' c='_ZN3tvm3tir22ThreadAllreduceBuilder16MakeBufAllreduceEPKNS0_15CommReducerNodeERKSt6vectorINS_7runtime8DataTypeESaIS7_EERKNS6_5ArrayINS0_6BufferEvEENS_8PrimExprESH_iii'/>
+<use f='tvm/src/tir/transforms/lower_thread_allreduce.cc' l='661' u='c' c='_ZN3tvm3tir22ThreadAllreduceBuilder11WarpShuffleERKNS_2OpENS0_6BufferENS_8PrimExprES6_'/>
 <use f='tvm/src/tir/transforms/make_packed_api.cc' l='241' u='c' c='_ZN3tvm3tir13MakePackedAPIEONS0_8PrimFuncEi'/>
-<use f='tvm/src/tir/transforms/manifest_shared_memory_local_stage.cc' l='72' u='c' c='_ZN3tvm3tir25IntermediateStageRewriter7RewriteEPKNS0_9BlockNodeE'/>
+<use f='tvm/src/tir/transforms/manifest_shared_memory_local_stage.cc' l='70' u='c' c='_ZN3tvm3tir25IntermediateStageRewriter7RewriteEPKNS0_9BlockNodeE'/>
 <use f='tvm/src/tir/transforms/storage_flatten.cc' l='752' u='c' c='_ZN3tvm3tir20ThreadScopePropagate10VisitExpr_EPKNS0_14BufferLoadNodeE'/>
 <use f='tvm/src/tir/transforms/storage_flatten.cc' l='969' u='c' c='_ZN3tvm3tir19BufferBindUnwrapper10VisitExpr_EPKNS0_14BufferLoadNodeE'/>
 <use f='tvm/src/tir/transforms/storage_flatten.cc' l='1551' u='c' c='_ZN3tvm3tir16StorageFlattener10VisitExpr_EPKNS0_14BufferLoadNodeE'/>
