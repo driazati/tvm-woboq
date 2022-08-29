@@ -1,0 +1,12 @@
+<dec f='tvm/include/tvm/meta_schedule/database.h' l='222' type='Optional&lt;tir::Schedule&gt; tvm::meta_schedule::DatabaseNode::QuerySchedule(const tvm::IRModule &amp; mod, const tvm::Target &amp; target, const tvm::runtime::String &amp; workload_name)'/>
+<doc f='tvm/include/tvm/meta_schedule/database.h' l='215'>/*!
+   * \brief Query the best schedule of the given workload from the database.
+   * \param mod The IRModule to be searched for.
+   * \param target The target to be searched for.
+   * \param workload_name The name of the workload to be searched for.
+   * \return The schedule in the best schedule of the given workload; NullOpt if not found.
+   */</doc>
+<def f='tvm/src/meta_schedule/database/database.cc' l='172' ll='184' type='Optional&lt;tir::Schedule&gt; tvm::meta_schedule::DatabaseNode::QuerySchedule(const tvm::IRModule &amp; mod, const tvm::Target &amp; target, const tvm::runtime::String &amp; workload_name)'/>
+<use f='tvm/src/meta_schedule/database/database.cc' l='188' u='c' c='_ZN3tvm13meta_schedule12DatabaseNode13QueryIRModuleERKNS_8IRModuleERKNS_6TargetERKNS_7runtime6StringE'/>
+<use f='tvm/src/meta_schedule/database/database.cc' l='272' u='a'/>
+<ovr f='tvm/src/meta_schedule/database/schedule_fn_database.cc' l='48' c='_ZN3tvm13meta_schedule22ScheduleFnDatabaseNode13QueryScheduleERKNS_8IRModuleERKNS_6TargetERKNS_7runtime6StringE'/>

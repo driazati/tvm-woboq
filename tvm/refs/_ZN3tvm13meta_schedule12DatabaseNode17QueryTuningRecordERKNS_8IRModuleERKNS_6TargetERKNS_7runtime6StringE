@@ -1,0 +1,14 @@
+<dec f='tvm/include/tvm/meta_schedule/database.h' l='213' type='Optional&lt;tvm::meta_schedule::TuningRecord&gt; tvm::meta_schedule::DatabaseNode::QueryTuningRecord(const tvm::IRModule &amp; mod, const tvm::Target &amp; target, const tvm::runtime::String &amp; workload_name)'/>
+<doc f='tvm/include/tvm/meta_schedule/database.h' l='206'>/*!
+   * \brief Query the best record of the given workload from the database.
+   * \param mod The IRModule to be searched for.
+   * \param target The target to be searched for.
+   * \param workload_name The name of the workload to be searched for.
+   * \return The best record of the given workload; NullOpt if not found.
+   */</doc>
+<def f='tvm/src/meta_schedule/database/database.cc' l='159' ll='170' type='Optional&lt;tvm::meta_schedule::TuningRecord&gt; tvm::meta_schedule::DatabaseNode::QueryTuningRecord(const tvm::IRModule &amp; mod, const tvm::Target &amp; target, const tvm::runtime::String &amp; workload_name)'/>
+<use f='tvm/src/meta_schedule/database/database.cc' l='174' u='c' c='_ZN3tvm13meta_schedule12DatabaseNode13QueryScheduleERKNS_8IRModuleERKNS_6TargetERKNS_7runtime6StringE'/>
+<use f='tvm/src/meta_schedule/database/database.cc' l='270' u='a'/>
+<doc f='tvm/src/meta_schedule/database/database.cc' l='157'>/******** Database ********/</doc>
+<ovr f='tvm/src/meta_schedule/database/schedule_fn_database.cc' l='36' c='_ZN3tvm13meta_schedule22ScheduleFnDatabaseNode17QueryTuningRecordERKNS_8IRModuleERKNS_6TargetERKNS_7runtime6StringE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='368' u='c' c='_ZN3tvm5relay3tec15ScheduleBuilder6CreateERKNS0_8FunctionENS_15GlobalVarSupplyE'/>

@@ -10,13 +10,13 @@
 <use f='tvm/include/tvm/meta_schedule/database.h' l='188' c='_ZN3tvm13meta_schedule12DatabaseNode18CommitTuningRecordERKNS0_12TuningRecordE'/>
 <use f='tvm/include/tvm/meta_schedule/database.h' l='195' c='_ZN3tvm13meta_schedule12DatabaseNode7GetTopKERKNS0_8WorkloadEi'/>
 <use f='tvm/include/tvm/meta_schedule/database.h' l='200' c='_ZN3tvm13meta_schedule12DatabaseNode19GetAllTuningRecordsEv'/>
-<use f='tvm/include/tvm/meta_schedule/database.h' l='212' c='_ZN3tvm13meta_schedule12DatabaseNode17QueryTuningRecordENS_8IRModuleENS_6TargetE'/>
-<use f='tvm/include/tvm/meta_schedule/database.h' l='251'/>
-<use f='tvm/include/tvm/meta_schedule/database.h' l='258'/>
-<use f='tvm/include/tvm/meta_schedule/database.h' l='263'/>
-<use f='tvm/include/tvm/meta_schedule/database.h' l='305' c='_ZN3tvm13meta_schedule14PyDatabaseNode18CommitTuningRecordERKNS0_12TuningRecordE'/>
-<use f='tvm/include/tvm/meta_schedule/database.h' l='311' c='_ZN3tvm13meta_schedule14PyDatabaseNode7GetTopKERKNS0_8WorkloadEi'/>
-<use f='tvm/include/tvm/meta_schedule/database.h' l='316' c='_ZN3tvm13meta_schedule14PyDatabaseNode19GetAllTuningRecordsEv'/>
+<use f='tvm/include/tvm/meta_schedule/database.h' l='213' c='_ZN3tvm13meta_schedule12DatabaseNode17QueryTuningRecordERKNS_8IRModuleERKNS_6TargetERKNS_7runtime6StringE'/>
+<use f='tvm/include/tvm/meta_schedule/database.h' l='257'/>
+<use f='tvm/include/tvm/meta_schedule/database.h' l='264'/>
+<use f='tvm/include/tvm/meta_schedule/database.h' l='269'/>
+<use f='tvm/include/tvm/meta_schedule/database.h' l='311' c='_ZN3tvm13meta_schedule14PyDatabaseNode18CommitTuningRecordERKNS0_12TuningRecordE'/>
+<use f='tvm/include/tvm/meta_schedule/database.h' l='317' c='_ZN3tvm13meta_schedule14PyDatabaseNode7GetTopKERKNS0_8WorkloadEi'/>
+<use f='tvm/include/tvm/meta_schedule/database.h' l='322' c='_ZN3tvm13meta_schedule14PyDatabaseNode19GetAllTuningRecordsEv'/>
 <size>8</size>
 <doc f='tvm/include/tvm/meta_schedule/database.h' l='140'>/*!
  * \brief The managed reference of TuningRecordNode.
@@ -31,13 +31,13 @@
 <smbr r='tvm::meta_schedule::TuningRecord::_type_is_nullable' t='const bool'/>
 <use f='tvm/src/meta_schedule/database/database.cc' l='115' c='_ZN3tvm13meta_schedule12TuningRecord8FromJSONERKNS_7runtime9ObjectRefERKNS0_8WorkloadE'/>
 <use f='tvm/src/meta_schedule/database/database.cc' l='154' c='_ZN3tvm13meta_schedule12TuningRecord8FromJSONERKNS_7runtime9ObjectRefERKNS0_8WorkloadE'/>
-<use f='tvm/src/meta_schedule/database/database.cc' l='159' c='_ZN3tvm13meta_schedule12DatabaseNode17QueryTuningRecordENS_8IRModuleENS_6TargetE'/>
-<use f='tvm/src/meta_schedule/database/database.cc' l='163' c='_ZN3tvm13meta_schedule12DatabaseNode17QueryTuningRecordENS_8IRModuleENS_6TargetE'/>
-<use f='tvm/src/meta_schedule/database/database.cc' l='172' c='_ZN3tvm13meta_schedule12DatabaseNode13QueryScheduleENS_8IRModuleENS_6TargetE'/>
-<use f='tvm/src/meta_schedule/database/database.cc' l='173' c='_ZN3tvm13meta_schedule12DatabaseNode13QueryScheduleENS_8IRModuleENS_6TargetE'/>
-<use f='tvm/src/meta_schedule/database/database.cc' l='243'/>
+<use f='tvm/src/meta_schedule/database/database.cc' l='159' c='_ZN3tvm13meta_schedule12DatabaseNode17QueryTuningRecordERKNS_8IRModuleERKNS_6TargetERKNS_7runtime6StringE'/>
+<use f='tvm/src/meta_schedule/database/database.cc' l='164' c='_ZN3tvm13meta_schedule12DatabaseNode17QueryTuningRecordERKNS_8IRModuleERKNS_6TargetERKNS_7runtime6StringE'/>
+<use f='tvm/src/meta_schedule/database/database.cc' l='174' c='_ZN3tvm13meta_schedule12DatabaseNode13QueryScheduleERKNS_8IRModuleERKNS_6TargetERKNS_7runtime6StringE'/>
+<use f='tvm/src/meta_schedule/database/database.cc' l='175' c='_ZN3tvm13meta_schedule12DatabaseNode13QueryScheduleERKNS_8IRModuleERKNS_6TargetERKNS_7runtime6StringE'/>
 <use f='tvm/src/meta_schedule/database/database.cc' l='246'/>
-<use f='tvm/src/meta_schedule/database/database.cc' l='248'/>
+<use f='tvm/src/meta_schedule/database/database.cc' l='249'/>
+<use f='tvm/src/meta_schedule/database/database.cc' l='251'/>
 <size>8</size>
 <fun r='_ZN3tvm13meta_schedule12TuningRecordC1ENS_3tir5TraceENS0_8WorkloadENS_7runtime8OptionalINS5_5ArrayINS_8FloatImmEvEEEENS6_INS_6TargetEEENS6_INS7_INS0_7ArgInfoEvEEEE'/>
 <fun r='_ZN3tvm13meta_schedule12TuningRecord8FromJSONERKNS_7runtime9ObjectRefERKNS0_8WorkloadE'/>
@@ -62,6 +62,12 @@
 <use f='tvm/src/meta_schedule/database/memory_database.cc' l='63' c='_ZN3tvm13meta_schedule18MemoryDatabaseNode7GetTopKERKNS0_8WorkloadEi'/>
 <use f='tvm/src/meta_schedule/database/memory_database.cc' l='85' c='_ZN3tvm13meta_schedule18MemoryDatabaseNode7GetTopKERKNS0_8WorkloadEi'/>
 <use f='tvm/src/meta_schedule/database/memory_database.cc' l='94' c='_ZN3tvm13meta_schedule18MemoryDatabaseNode19GetAllTuningRecordsEv'/>
+<size>8</size>
+<use f='tvm/src/meta_schedule/database/schedule_fn_database.cc' l='36' c='_ZN3tvm13meta_schedule22ScheduleFnDatabaseNode17QueryTuningRecordERKNS_8IRModuleERKNS_6TargetERKNS_7runtime6StringE'/>
+<use f='tvm/src/meta_schedule/database/schedule_fn_database.cc' l='39' c='_ZN3tvm13meta_schedule22ScheduleFnDatabaseNode17QueryTuningRecordERKNS_8IRModuleERKNS_6TargetERKNS_7runtime6StringE'/>
+<use f='tvm/src/meta_schedule/database/schedule_fn_database.cc' l='71' c='_ZN3tvm13meta_schedule22ScheduleFnDatabaseNode18CommitTuningRecordERKNS0_12TuningRecordE'/>
+<use f='tvm/src/meta_schedule/database/schedule_fn_database.cc' l='76' c='_ZN3tvm13meta_schedule22ScheduleFnDatabaseNode7GetTopKERKNS0_8WorkloadEi'/>
+<use f='tvm/src/meta_schedule/database/schedule_fn_database.cc' l='81' c='_ZN3tvm13meta_schedule22ScheduleFnDatabaseNode19GetAllTuningRecordsEv'/>
 <size>8</size>
 <use f='tvm/src/meta_schedule/measure_callback/add_to_database.cc' l='49' c='_ZN3tvm13meta_schedule17AddToDatabaseNode5ApplyERKNS0_13TaskSchedulerEiRKNS_7runtime5ArrayINS0_16MeasureCandidateEvEERKNS6_INS0_13BuilderResultEvEERKN3362037'/>
 <size>8</size>
