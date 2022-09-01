@@ -5,6 +5,6 @@
 <use f='tvm/src/runtime/vm/bytecode.cc' l='244' c='_ZN3tvm7runtime2vm11InstructionD1Ev'/>
 <use f='tvm/src/runtime/vm/bytecode.cc' l='495' u='r' c='_ZN3tvm7runtime2vm11Instruction4MoveEll'/>
 <use f='tvm/src/runtime/vm/bytecode.cc' l='538' c='_ZN3tvm7runtime2vm16InstructionPrintERSoRKNS1_11InstructionE'/>
-<use f='tvm/src/runtime/vm/executable.cc' l='515' c='_ZN3tvm7runtime2vm20SerializeInstructionERKNS1_11InstructionE'/>
-<use f='tvm/src/runtime/vm/executable.cc' l='809' c='_ZN3tvm7runtime2vm22DeserializeInstructionERKNS1_23VMInstructionSerializerE'/>
+<use f='tvm/src/runtime/vm/executable.cc' l='537' c='_ZN3tvm7runtime2vm20SerializeInstructionERKNS1_11InstructionE'/>
+<use f='tvm/src/runtime/vm/executable.cc' l='831' c='_ZN3tvm7runtime2vm22DeserializeInstructionERKNS1_23VMInstructionSerializerE'/>
 <use f='tvm/src/runtime/vm/vm.cc' l='532' c='_ZN3tvm7runtime2vm14VirtualMachine7RunLoopEv'/>
