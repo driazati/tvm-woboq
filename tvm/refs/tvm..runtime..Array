@@ -1757,6 +1757,8 @@
 <use f='tvm/include/tvm/meta_schedule/database.h' l='269'/>
 <use f='tvm/include/tvm/meta_schedule/database.h' l='317' c='_ZN3tvm13meta_schedule14PyDatabaseNode7GetTopKERKNS0_8WorkloadEi'/>
 <use f='tvm/include/tvm/meta_schedule/database.h' l='322' c='_ZN3tvm13meta_schedule14PyDatabaseNode19GetAllTuningRecordsEv'/>
+<use f='tvm/include/tvm/meta_schedule/database.h' l='367' c='_ZN3tvm13meta_schedule8Database13UnionDatabaseENS_7runtime5ArrayIS1_vEE'/>
+<use f='tvm/include/tvm/meta_schedule/database.h' l='375' c='_ZN3tvm13meta_schedule8Database20OrderedUnionDatabaseENS_7runtime5ArrayIS1_vEE'/>
 <use f='tvm/include/tvm/meta_schedule/extracted_task.h' l='51'/>
 <use f='tvm/include/tvm/meta_schedule/extracted_task.h' l='73' c='_ZN3tvm13meta_schedule13ExtractedTaskC1ENS_7runtime6StringENS_8IRModuleENS_6TargetENS2_5ArrayIS4_vEEi'/>
 <use f='tvm/include/tvm/meta_schedule/feature_extractor.h' l='50' c='_ZN3tvm13meta_schedule20FeatureExtractorNode11ExtractFromERKNS0_11TuneContextERKNS_7runtime5ArrayINS0_16MeasureCandidateEvEE'/>
@@ -1947,6 +1949,7 @@
 <use f='tvm/src/meta_schedule/utils.h' l='373' c='_ZN3tvm13meta_schedule12AsFloatArrayERKNS_7runtime9ObjectRefE'/>
 <use f='tvm/src/meta_schedule/utils.h' l='392' c='_ZN3tvm13meta_schedule10AsIntArrayERKNS_7runtime9ObjectRefE'/>
 <use f='tvm/src/meta_schedule/utils.h' l='395' c='_ZN3tvm13meta_schedule10AsIntArrayERKNS_7runtime9ObjectRefE'/>
+<use f='tvm/src/meta_schedule/utils.h' l='411' c='_ZN3tvm13meta_schedule29SortTuningRecordByMeanRunSecs4MeanERKNS_7runtime5ArrayINS_8FloatImmEvEE'/>
 <use f='tvm/src/meta_schedule/arg_info.cc' l='88' c='_ZN3tvm13meta_schedule7ArgInfo12FromPrimFuncERKNS_3tir8PrimFuncE'/>
 <use f='tvm/src/meta_schedule/arg_info.cc' l='90' c='_ZN3tvm13meta_schedule7ArgInfo12FromPrimFuncERKNS_3tir8PrimFuncE'/>
 <use f='tvm/src/meta_schedule/arg_info.cc' l='104' c='_ZN3tvm13meta_schedule7ArgInfo13FromEntryFuncERKNS_8IRModuleEb'/>
@@ -1971,20 +1974,27 @@
 <use f='tvm/src/meta_schedule/database/database.cc' l='245'/>
 <use f='tvm/src/meta_schedule/database/database_utils.cc' l='312' c='_ZN3tvm13meta_schedule10JSONParser10ParseArrayEv'/>
 <use f='tvm/src/meta_schedule/database/database_utils.cc' l='314' c='_ZN3tvm13meta_schedule10JSONParser10ParseArrayEv'/>
-<use f='tvm/src/meta_schedule/database/json_database.cc' l='32' c='_ZN3tvm13meta_schedule29SortTuningRecordByMeanRunSecs4MeanERKNS_7runtime5ArrayINS_8FloatImmEvEE'/>
-<use f='tvm/src/meta_schedule/database/json_database.cc' l='132' c='_ZN3tvm13meta_schedule16JSONDatabaseNode18CommitTuningRecordERKNS0_12TuningRecordE'/>
-<use f='tvm/src/meta_schedule/database/json_database.cc' l='138' c='_ZN3tvm13meta_schedule16JSONDatabaseNode7GetTopKERKNS0_8WorkloadEi'/>
-<use f='tvm/src/meta_schedule/database/json_database.cc' l='143' c='_ZN3tvm13meta_schedule16JSONDatabaseNode7GetTopKERKNS0_8WorkloadEi'/>
-<use f='tvm/src/meta_schedule/database/json_database.cc' l='157' c='_ZN3tvm13meta_schedule16JSONDatabaseNode19GetAllTuningRecordsEv'/>
-<use f='tvm/src/meta_schedule/database/json_database.cc' l='158' c='_ZN3tvm13meta_schedule16JSONDatabaseNode19GetAllTuningRecordsEv'/>
+<use f='tvm/src/meta_schedule/database/json_database.cc' l='110' c='_ZN3tvm13meta_schedule16JSONDatabaseNode18CommitTuningRecordERKNS0_12TuningRecordE'/>
+<use f='tvm/src/meta_schedule/database/json_database.cc' l='116' c='_ZN3tvm13meta_schedule16JSONDatabaseNode7GetTopKERKNS0_8WorkloadEi'/>
+<use f='tvm/src/meta_schedule/database/json_database.cc' l='121' c='_ZN3tvm13meta_schedule16JSONDatabaseNode7GetTopKERKNS0_8WorkloadEi'/>
+<use f='tvm/src/meta_schedule/database/json_database.cc' l='135' c='_ZN3tvm13meta_schedule16JSONDatabaseNode19GetAllTuningRecordsEv'/>
+<use f='tvm/src/meta_schedule/database/json_database.cc' l='136' c='_ZN3tvm13meta_schedule16JSONDatabaseNode19GetAllTuningRecordsEv'/>
 <use f='tvm/src/meta_schedule/database/memory_database.cc' l='26'/>
 <use f='tvm/src/meta_schedule/database/memory_database.cc' l='27'/>
 <use f='tvm/src/meta_schedule/database/memory_database.cc' l='60' c='_ZN3tvm13meta_schedule18MemoryDatabaseNode7GetTopKERKNS0_8WorkloadEi'/>
 <use f='tvm/src/meta_schedule/database/memory_database.cc' l='67' c='_ZN3tvm13meta_schedule18MemoryDatabaseNode7GetTopKERKNS0_8WorkloadEi'/>
 <use f='tvm/src/meta_schedule/database/memory_database.cc' l='85' c='_ZN3tvm13meta_schedule18MemoryDatabaseNode7GetTopKERKNS0_8WorkloadEi'/>
 <use f='tvm/src/meta_schedule/database/memory_database.cc' l='94' c='_ZN3tvm13meta_schedule18MemoryDatabaseNode19GetAllTuningRecordsEv'/>
+<use f='tvm/src/meta_schedule/database/ordered_union_database.cc' l='26'/>
+<use f='tvm/src/meta_schedule/database/ordered_union_database.cc' l='59' c='_ZN3tvm13meta_schedule24OrderedUnionDatabaseNode7GetTopKERKNS0_8WorkloadEi'/>
+<use f='tvm/src/meta_schedule/database/ordered_union_database.cc' l='64' c='_ZN3tvm13meta_schedule24OrderedUnionDatabaseNode19GetAllTuningRecordsEv'/>
+<use f='tvm/src/meta_schedule/database/ordered_union_database.cc' l='75' c='_ZN3tvm13meta_schedule8Database20OrderedUnionDatabaseENS_7runtime5ArrayIS1_vEE'/>
 <use f='tvm/src/meta_schedule/database/schedule_fn_database.cc' l='76' c='_ZN3tvm13meta_schedule22ScheduleFnDatabaseNode7GetTopKERKNS0_8WorkloadEi'/>
 <use f='tvm/src/meta_schedule/database/schedule_fn_database.cc' l='81' c='_ZN3tvm13meta_schedule22ScheduleFnDatabaseNode19GetAllTuningRecordsEv'/>
+<use f='tvm/src/meta_schedule/database/union_database.cc' l='26'/>
+<use f='tvm/src/meta_schedule/database/union_database.cc' l='62' c='_ZN3tvm13meta_schedule17UnionDatabaseNode7GetTopKERKNS0_8WorkloadEi'/>
+<use f='tvm/src/meta_schedule/database/union_database.cc' l='67' c='_ZN3tvm13meta_schedule17UnionDatabaseNode19GetAllTuningRecordsEv'/>
+<use f='tvm/src/meta_schedule/database/union_database.cc' l='78' c='_ZN3tvm13meta_schedule8Database13UnionDatabaseENS_7runtime5ArrayIS1_vEE'/>
 <use f='tvm/src/te/operation/create_primfunc.h' l='31' c='_ZN3tvm3tir14CreatePrimFuncERKNS_7runtime5ArrayINS_2te6TensorEvEE'/>
 <use f='tvm/src/te/operation/create_primfunc.h' l='38' c='_ZN3tvm3tir27CreatePrimFuncWithConstantsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS2_INS1_7NDArrayEvEE'/>
 <use f='tvm/src/te/operation/create_primfunc.h' l='39' c='_ZN3tvm3tir27CreatePrimFuncWithConstantsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS2_INS1_7NDArrayEvEE'/>
