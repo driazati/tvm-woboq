@@ -1,13 +1,13 @@
 <inh f='tvm/include/tvm/tir/stmt.h' l='57' c='tvm::tir::Stmt'/>
-<def f='tvm/include/tvm/tir/stmt.h' l='1001' ll='1009'/>
-<use f='tvm/include/tvm/tir/stmt.h' l='1007' c='_ZN3tvm3tir3ForC1ERKS1_'/>
-<use f='tvm/include/tvm/tir/stmt.h' l='1007' c='_ZN3tvm3tir3ForC1EOS1_'/>
-<use f='tvm/include/tvm/tir/stmt.h' l='1007' c='_ZN3tvm3tir3ForaSERKS1_'/>
-<use f='tvm/include/tvm/tir/stmt.h' l='1007' c='_ZN3tvm3tir3ForaSERKS1_'/>
-<use f='tvm/include/tvm/tir/stmt.h' l='1007' c='_ZN3tvm3tir3ForaSEOS1_'/>
-<use f='tvm/include/tvm/tir/stmt.h' l='1007' c='_ZN3tvm3tir3ForaSEOS1_'/>
+<def f='tvm/include/tvm/tir/stmt.h' l='1002' ll='1010'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='1008' c='_ZN3tvm3tir3ForC1ERKS1_'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='1008' c='_ZN3tvm3tir3ForC1EOS1_'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='1008' c='_ZN3tvm3tir3ForaSERKS1_'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='1008' c='_ZN3tvm3tir3ForaSERKS1_'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='1008' c='_ZN3tvm3tir3ForaSEOS1_'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='1008' c='_ZN3tvm3tir3ForaSEOS1_'/>
 <size>8</size>
-<doc f='tvm/include/tvm/tir/stmt.h' l='997'>/*!
+<doc f='tvm/include/tvm/tir/stmt.h' l='998'>/*!
  * \brief Managed reference to ForNode.
  * \sa ForNode
  */</doc>
@@ -247,7 +247,7 @@
 <size>8</size>
 <use f='tvm/src/tir/transforms/inject_virtual_thread.cc' l='469' c='_ZN3tvm3tir10VTInjector12InjectVTLoopENS0_4StmtEb'/>
 <size>8</size>
-<use f='tvm/src/tir/transforms/ir_utils.cc' l='198' c='_ZN3tvm3tir12IRConvertSSA10VisitStmt_EPKNS0_7ForNodeE'/>
+<use f='tvm/src/tir/transforms/ir_utils.cc' l='207' c='_ZN3tvm3tir12IRConvertSSA10VisitStmt_EPKNS0_7ForNodeE'/>
 <size>8</size>
 <use f='tvm/src/tir/transforms/loop_partition.cc' l='691' c='_ZN3tvm3tir15LoopPartitioner7MakeForEPKNS_7runtime6ObjectENS_8PrimExprENS0_4StmtE'/>
 <size>8</size>

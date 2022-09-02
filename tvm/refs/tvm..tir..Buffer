@@ -20,18 +20,18 @@
 <use f='tvm/include/tvm/tir/stmt.h' l='387' c='_ZN3tvm3tir13BufferRealizeC1ENS0_6BufferENS_7runtime5ArrayINS_5RangeEvEENS_8PrimExprENS0_4StmtENS_4SpanE'/>
 <use f='tvm/include/tvm/tir/stmt.h' l='688'/>
 <use f='tvm/include/tvm/tir/stmt.h' l='714' c='_ZN3tvm3tir10DeclBufferC1ENS0_6BufferENS0_4StmtENS_4SpanE'/>
-<use f='tvm/include/tvm/tir/stmt.h' l='1064'/>
-<use f='tvm/include/tvm/tir/stmt.h' l='1084' c='_ZN3tvm3tir12PrefetchNodeC1ENS0_6BufferENS_7runtime5ArrayINS_5RangeEvEENS_4SpanE'/>
-<use f='tvm/include/tvm/tir/stmt.h' l='1097' c='_ZN3tvm3tir8PrefetchC1ENS0_6BufferENS_7runtime5ArrayINS_5RangeEvEENS_4SpanE'/>
-<use f='tvm/include/tvm/tir/stmt.h' l='1108'/>
-<use f='tvm/include/tvm/tir/stmt.h' l='1138' c='_ZN3tvm3tir12BufferRegionC1ENS0_6BufferENS_7runtime5ArrayINS_5RangeEvEE'/>
-<use f='tvm/include/tvm/tir/stmt.h' l='1145' c='_ZN3tvm3tir12BufferRegion10FullRegionENS0_6BufferE'/>
-<use f='tvm/include/tvm/tir/stmt.h' l='1153' c='_ZN3tvm3tir12BufferRegion9FromPointENS0_6BufferENS_7runtime5ArrayINS_8PrimExprEvEE'/>
-<use f='tvm/include/tvm/tir/stmt.h' l='1171'/>
-<use f='tvm/include/tvm/tir/stmt.h' l='1201' c='_ZN3tvm3tir17MatchBufferRegionC1ENS0_6BufferENS0_12BufferRegionE'/>
-<use f='tvm/include/tvm/tir/stmt.h' l='1248'/>
-<use f='tvm/include/tvm/tir/stmt.h' l='1299' c='_ZN3tvm3tir5BlockC1ENS_7runtime5ArrayINS0_7IterVarEvEENS3_INS0_12BufferRegionEvEES7_NS2_6StringENS0_4StmtENS2_8OptionalIS9_EENS3_INS0_6BufferEvEENS3_I7879093'/>
-<use f='tvm/include/tvm/tir/stmt.h' l='1299' c='_ZN3tvm3tir5BlockC1ENS_7runtime5ArrayINS0_7IterVarEvEENS3_INS0_12BufferRegionEvEES7_NS2_6StringENS0_4StmtENS2_8OptionalIS9_EENS3_INS0_6BufferEvEENS3_I7879093'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='1065'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='1085' c='_ZN3tvm3tir12PrefetchNodeC1ENS0_6BufferENS_7runtime5ArrayINS_5RangeEvEENS_4SpanE'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='1098' c='_ZN3tvm3tir8PrefetchC1ENS0_6BufferENS_7runtime5ArrayINS_5RangeEvEENS_4SpanE'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='1109'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='1139' c='_ZN3tvm3tir12BufferRegionC1ENS0_6BufferENS_7runtime5ArrayINS_5RangeEvEE'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='1146' c='_ZN3tvm3tir12BufferRegion10FullRegionENS0_6BufferE'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='1154' c='_ZN3tvm3tir12BufferRegion9FromPointENS0_6BufferENS_7runtime5ArrayINS_8PrimExprEvEE'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='1172'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='1202' c='_ZN3tvm3tir17MatchBufferRegionC1ENS0_6BufferENS0_12BufferRegionE'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='1249'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='1300' c='_ZN3tvm3tir5BlockC1ENS_7runtime5ArrayINS0_7IterVarEvEENS3_INS0_12BufferRegionEvEES7_NS2_6StringENS0_4StmtENS2_8OptionalIS9_EENS3_INS0_6BufferEvEENS3_I7879093'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='1300' c='_ZN3tvm3tir5BlockC1ENS_7runtime5ArrayINS0_7IterVarEvEENS3_INS0_12BufferRegionEvEES7_NS2_6StringENS0_4StmtENS2_8OptionalIS9_EENS3_INS0_6BufferEvEENS3_I7879093'/>
 <size>8</size>
 <doc f='tvm/include/tvm/tir/buffer.h' l='155'>/*!
  * \brief Buffer is a symbolic n-darray structure.
@@ -767,15 +767,16 @@
 <use f='tvm/src/tir/transforms/inject_virtual_thread.cc' l='287' c='_ZN3tvm3tir10VTInjector17GetRemappedBufferENS0_6BufferENS_8PrimExprE'/>
 <use f='tvm/src/tir/transforms/inject_virtual_thread.cc' l='505'/>
 <size>8</size>
-<use f='tvm/src/tir/transforms/ir_utils.cc' l='137' c='_ZN3tvm3tir12IRConvertSSA17VisitBufferAccessET_'/>
-<use f='tvm/src/tir/transforms/ir_utils.cc' l='146' c='_ZN3tvm3tir12IRConvertSSA17GetRemappedBufferENS0_6BufferE'/>
-<use f='tvm/src/tir/transforms/ir_utils.cc' l='146' c='_ZN3tvm3tir12IRConvertSSA17GetRemappedBufferENS0_6BufferE'/>
-<use f='tvm/src/tir/transforms/ir_utils.cc' l='164' c='_ZN3tvm3tir12IRConvertSSA17GetRemappedBufferENS0_6BufferE'/>
+<use f='tvm/src/tir/transforms/ir_utils.cc' l='137' c='_ZN3tvm3tir12IRConvertSSA10VisitStmt_EPKNS0_14DeclBufferNodeE'/>
+<use f='tvm/src/tir/transforms/ir_utils.cc' l='146' c='_ZN3tvm3tir12IRConvertSSA17VisitBufferAccessET_'/>
+<use f='tvm/src/tir/transforms/ir_utils.cc' l='155' c='_ZN3tvm3tir12IRConvertSSA17GetRemappedBufferENS0_6BufferE'/>
+<use f='tvm/src/tir/transforms/ir_utils.cc' l='155' c='_ZN3tvm3tir12IRConvertSSA17GetRemappedBufferENS0_6BufferE'/>
 <use f='tvm/src/tir/transforms/ir_utils.cc' l='173' c='_ZN3tvm3tir12IRConvertSSA17GetRemappedBufferENS0_6BufferE'/>
-<use f='tvm/src/tir/transforms/ir_utils.cc' l='245' c='_ZN3tvm3tir12IRConvertSSA14ScopedRedefineD1Ev'/>
-<use f='tvm/src/tir/transforms/ir_utils.cc' l='259'/>
-<use f='tvm/src/tir/transforms/ir_utils.cc' l='272' c='_ZN3tvm3tir14ConvertIndicesERKNS0_17MatchBufferRegionERKNS_7runtime5ArrayINS_8PrimExprEvEE'/>
-<use f='tvm/src/tir/transforms/ir_utils.cc' l='294' c='_ZN3tvm3tir13ConvertRegionERKNS0_17MatchBufferRegionERKNS_7runtime5ArrayINS_5RangeEvEE'/>
+<use f='tvm/src/tir/transforms/ir_utils.cc' l='182' c='_ZN3tvm3tir12IRConvertSSA17GetRemappedBufferENS0_6BufferE'/>
+<use f='tvm/src/tir/transforms/ir_utils.cc' l='254' c='_ZN3tvm3tir12IRConvertSSA14ScopedRedefineD1Ev'/>
+<use f='tvm/src/tir/transforms/ir_utils.cc' l='268'/>
+<use f='tvm/src/tir/transforms/ir_utils.cc' l='281' c='_ZN3tvm3tir14ConvertIndicesERKNS0_17MatchBufferRegionERKNS_7runtime5ArrayINS_8PrimExprEvEE'/>
+<use f='tvm/src/tir/transforms/ir_utils.cc' l='303' c='_ZN3tvm3tir13ConvertRegionERKNS0_17MatchBufferRegionERKNS_7runtime5ArrayINS_5RangeEvEE'/>
 <size>8</size>
 <use f='tvm/src/tir/transforms/legalize_packed_calls.cc' l='80' c='_ZN3tvm3tir19PackedCallLegalizer10VisitStmt_EPKNS0_12EvaluateNodeE'/>
 <size>8</size>

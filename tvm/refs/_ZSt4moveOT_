@@ -36,10 +36,11 @@
 <use f='tvm/include/tvm/tir/stmt.h' l='327' macro='1' u='c' c='_ZN3tvm3tir11BufferStore11CopyOnWriteEv'/>
 <use f='tvm/include/tvm/tir/stmt.h' l='391' macro='1' u='c' c='_ZN3tvm3tir13BufferRealize11CopyOnWriteEv'/>
 <use f='tvm/include/tvm/tir/stmt.h' l='589' macro='1' u='c' c='_ZN3tvm3tir8Allocate11CopyOnWriteEv'/>
-<use f='tvm/include/tvm/tir/stmt.h' l='1008' macro='1' u='c' c='_ZN3tvm3tir3For11CopyOnWriteEv'/>
-<use f='tvm/include/tvm/tir/stmt.h' l='1156' macro='1' u='c' c='_ZN3tvm3tir12BufferRegion11CopyOnWriteEv'/>
-<use f='tvm/include/tvm/tir/stmt.h' l='1305' macro='1' u='c' c='_ZN3tvm3tir5Block11CopyOnWriteEv'/>
-<use f='tvm/include/tvm/tir/stmt.h' l='1354' macro='1' u='c' c='_ZN3tvm3tir12BlockRealize11CopyOnWriteEv'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='716' macro='1' u='c' c='_ZN3tvm3tir10DeclBuffer11CopyOnWriteEv'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='1009' macro='1' u='c' c='_ZN3tvm3tir3For11CopyOnWriteEv'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='1157' macro='1' u='c' c='_ZN3tvm3tir12BufferRegion11CopyOnWriteEv'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='1306' macro='1' u='c' c='_ZN3tvm3tir5Block11CopyOnWriteEv'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='1355' macro='1' u='c' c='_ZN3tvm3tir12BlockRealize11CopyOnWriteEv'/>
 <use f='tvm/src/arith/interval_set.h' l='113' macro='1' u='c' c='_ZN3tvm5arith11IntervalSet11CopyOnWriteEv'/>
 <use f='tvm/include/tvm/ir/transform.h' l='344' u='c' c='_ZNK3tvm9transform8PassNodeclENS_8IRModuleE'/>
 <use f='tvm/include/tvm/tir/function.h' l='189' macro='1' u='c' c='_ZN3tvm3tir8PrimFunc11CopyOnWriteEv'/>
@@ -2624,7 +2625,9 @@
 <use f='tvm/src/tir/transforms/ir_utils.cc' l='126' u='c' c='_ZN3tvm3tir12IRConvertSSA10VisitExpr_EPKNS0_14BufferLoadNodeE'/>
 <use f='tvm/src/tir/transforms/ir_utils.cc' l='131' u='c' c='_ZN3tvm3tir12IRConvertSSA10VisitStmt_EPKNS0_15BufferStoreNodeE'/>
 <use f='tvm/src/tir/transforms/ir_utils.cc' l='132' u='c' c='_ZN3tvm3tir12IRConvertSSA10VisitStmt_EPKNS0_15BufferStoreNodeE'/>
-<use f='tvm/src/tir/transforms/ir_utils.cc' l='262' u='c' c='_ZN3tvm3tir10ConvertSSAENS0_4StmtE'/>
+<use f='tvm/src/tir/transforms/ir_utils.cc' l='139' u='c' c='_ZN3tvm3tir12IRConvertSSA10VisitStmt_EPKNS0_14DeclBufferNodeE'/>
+<use f='tvm/src/tir/transforms/ir_utils.cc' l='141' u='c' c='_ZN3tvm3tir12IRConvertSSA10VisitStmt_EPKNS0_14DeclBufferNodeE'/>
+<use f='tvm/src/tir/transforms/ir_utils.cc' l='271' u='c' c='_ZN3tvm3tir10ConvertSSAENS0_4StmtE'/>
 <use f='tvm/src/tir/transforms/legalize_packed_calls.cc' l='128' u='c' c='_ZN3tvm3tir9transform19LegalizePackedCallsEv'/>
 <use f='tvm/src/tir/transforms/lift_attr_scope.cc' l='42' u='c' c='_ZN3tvm3tir15AttrScopeLifter4LiftENS0_4StmtE'/>
 <use f='tvm/src/tir/transforms/lift_attr_scope.cc' l='185' u='c' c='_ZN3tvm3tir13LiftAttrScopeENS0_4StmtENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
