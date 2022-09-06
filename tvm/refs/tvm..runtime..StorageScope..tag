@@ -30,7 +30,7 @@
 <use f='tvm/src/tir/transforms/storage_rewrite.cc' l='588' u='r' c='_ZN3tvm3tir19StoragePlanRewriter21IsSpecialTaggedMemoryERKNS_7runtime12StorageScopeE'/>
 <use f='tvm/src/tir/transforms/storage_rewrite.cc' l='588' u='r' c='_ZN3tvm3tir19StoragePlanRewriter21IsSpecialTaggedMemoryERKNS_7runtime12StorageScopeE'/>
 <use f='tvm/src/tir/transforms/storage_rewrite.cc' l='589' u='r' c='_ZN3tvm3tir19StoragePlanRewriter21IsSpecialTaggedMemoryERKNS_7runtime12StorageScopeE'/>
-<use f='tvm/src/tir/transforms/storage_rewrite.cc' l='724' u='m' c='_ZN3tvm3tir19StoragePlanRewriter17NewAllocTagMergedEPNS1_12StorageEntryE'/>
-<use f='tvm/src/tir/transforms/storage_rewrite.cc' l='933' u='m' c='_ZN3tvm3tir19StoragePlanRewriter9FindAllocEPKNS0_12AllocateNodeEPKNS_7runtime6ObjectERKNS5_12StorageScopeEm'/>
-<use f='tvm/src/tir/transforms/storage_rewrite.cc' l='989' u='m' c='_ZN3tvm3tir19StoragePlanRewriter4FreeEPKNS0_7VarNodeE'/>
+<use f='tvm/src/tir/transforms/storage_rewrite.cc' l='742' u='m' c='_ZN3tvm3tir19StoragePlanRewriter17NewAllocTagMergedEPNS1_12StorageEntryE'/>
+<use f='tvm/src/tir/transforms/storage_rewrite.cc' l='951' u='m' c='_ZN3tvm3tir19StoragePlanRewriter9FindAllocEPKNS0_12AllocateNodeEPKNS_7runtime6ObjectERKNS5_12StorageScopeEm'/>
+<use f='tvm/src/tir/transforms/storage_rewrite.cc' l='1007' u='m' c='_ZN3tvm3tir19StoragePlanRewriter4FreeEPKNS0_7VarNodeE'/>
 <use f='tvm/src/tir/transforms/thread_storage_sync.cc' l='429' u='r' c='_ZN3tvm3tir10ThreadSyncENS0_4StmtENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
