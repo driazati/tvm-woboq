@@ -138,12 +138,12 @@
 <use f='tvm/src/tir/transforms/bf16_legalize.cc' l='64' u='r' c='_ZN3tvm3tir19BF16PromoteRewriter10VisitExpr_EPKNS0_6LENodeE'/>
 <use f='tvm/src/tir/transforms/bf16_legalize.cc' l='64' u='r' c='_ZN3tvm3tir19BF16PromoteRewriter10VisitExpr_EPKNS0_6GTNodeE'/>
 <use f='tvm/src/tir/transforms/bf16_legalize.cc' l='64' u='r' c='_ZN3tvm3tir19BF16PromoteRewriter10VisitExpr_EPKNS0_6GENodeE'/>
-<use f='tvm/src/tir/transforms/loop_partition.cc' l='298' u='r' c='_ZN3tvm3tir15PartitionFinder11InverseCondERKNS_8PrimExprE'/>
 <use f='tvm/src/tir/transforms/loop_partition.cc' l='301' u='r' c='_ZN3tvm3tir15PartitionFinder11InverseCondERKNS_8PrimExprE'/>
 <use f='tvm/src/tir/transforms/loop_partition.cc' l='304' u='r' c='_ZN3tvm3tir15PartitionFinder11InverseCondERKNS_8PrimExprE'/>
 <use f='tvm/src/tir/transforms/loop_partition.cc' l='307' u='r' c='_ZN3tvm3tir15PartitionFinder11InverseCondERKNS_8PrimExprE'/>
 <use f='tvm/src/tir/transforms/loop_partition.cc' l='310' u='r' c='_ZN3tvm3tir15PartitionFinder11InverseCondERKNS_8PrimExprE'/>
 <use f='tvm/src/tir/transforms/loop_partition.cc' l='313' u='r' c='_ZN3tvm3tir15PartitionFinder11InverseCondERKNS_8PrimExprE'/>
+<use f='tvm/src/tir/transforms/loop_partition.cc' l='316' u='r' c='_ZN3tvm3tir15PartitionFinder11InverseCondERKNS_8PrimExprE'/>
 <use f='tvm/src/tir/transforms/narrow_datatype.cc' l='429' u='m' c='_ZN3tvm3tir16DataTypeRewriter10VisitExpr_EPKNS0_6EQNodeE'/>
 <use f='tvm/src/tir/transforms/narrow_datatype.cc' l='434' u='r' c='_ZN3tvm3tir16DataTypeRewriter10VisitExpr_EPKNS0_6EQNodeE'/>
 <use f='tvm/src/tir/transforms/narrow_datatype.cc' l='436' u='r' c='_ZN3tvm3tir16DataTypeRewriter10VisitExpr_EPKNS0_6EQNodeE'/>
