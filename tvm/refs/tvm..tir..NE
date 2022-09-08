@@ -37,7 +37,7 @@
 <use f='tvm/src/tir/op/op.cc' l='518' c='_ZN3tvm9not_equalENS_8PrimExprES0_NS_4SpanE'/>
 <use f='tvm/src/tir/op/op.cc' l='520' c='_ZN3tvm9not_equalENS_8PrimExprES0_NS_4SpanE'/>
 <size>8</size>
-<use f='tvm/src/tir/transforms/loop_partition.cc' l='313' c='_ZN3tvm3tir15PartitionFinder11InverseCondERKNS_8PrimExprE'/>
+<use f='tvm/src/tir/transforms/loop_partition.cc' l='317' c='_ZN3tvm3tir15PartitionFinder11InverseCondERKNS_8PrimExprE'/>
 <size>8</size>
 <use f='tvm/src/tir/transforms/vectorize_loop.cc' l='215' c='_ZN3tvm3tir10Vectorizer10VisitExpr_EPKNS0_6NENodeE'/>
 <size>8</size>
