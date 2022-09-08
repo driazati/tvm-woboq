@@ -260,7 +260,7 @@
 <use f='tvm/src/tir/transforms/lower_cross_thread_reduction.cc' l='402' c='_ZN3tvm3tir23TransformReductionBlockEPKNS0_16BlockRealizeNodeERKNS_7runtime8OptionalINS0_6BufferEEERKS6_RKNS0_11CommReducerERKNS_8PrimExprERKSt6vector8114036'/>
 <use f='tvm/src/tir/transforms/lower_cross_thread_reduction.cc' l='507' c='_ZNK3tvm3tir31CrossThreadReductionTransformer33CheckCanApplyCrossThreadReductionEPKNS0_9BlockNodeERKSt6vectorIPKNS0_7ForNodeESaIS8_EE'/>
 <size>8</size>
-<use f='tvm/src/tir/transforms/lower_opaque_block.cc' l='96' c='_ZN3tvm3tir16OpaqueBlockLower10VisitStmt_EPKNS0_7ForNodeE'/>
+<use f='tvm/src/tir/transforms/lower_opaque_block.cc' l='97' c='_ZN3tvm3tir16OpaqueBlockLower10VisitStmt_EPKNS0_7ForNodeE'/>
 <size>8</size>
 <use f='tvm/src/tir/transforms/manifest_shared_memory_local_stage.cc' l='140' c='_ZN3tvm3tir25IntermediateStageRewriter14MakeLocalStageEPKNS0_9BlockNodeERKNS0_6BufferENS_7runtime5ArrayINS_8PrimExprEvEESt6vectorIPKNS0_7ForNodeESaISF9837013'/>
 <size>8</size>
