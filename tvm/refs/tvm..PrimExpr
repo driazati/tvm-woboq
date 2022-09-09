@@ -2980,16 +2980,16 @@
 <use f='tvm/src/printer/tvmscript_printer.cc' l='205'/>
 <use f='tvm/src/printer/tvmscript_printer.cc' l='281' c='_ZN3tvm3tir16TVMScriptPrinter18PrintBufferIndicesERKNS_7runtime5ArrayINS_8PrimExprEvEE'/>
 <use f='tvm/src/printer/tvmscript_printer.cc' l='284' c='_ZN3tvm3tir16TVMScriptPrinter13PrintBlockVarERKNS0_7IterVarERKNS_8PrimExprE'/>
-<use f='tvm/src/printer/tvmscript_printer.cc' l='622' c='_ZN3tvm3tir16TVMScriptPrinter14IsSimpleBufferERKNS0_6BufferE'/>
-<use f='tvm/src/printer/tvmscript_printer.cc' l='627' c='_ZN3tvm3tir16TVMScriptPrinter14IsSimpleBufferERKNS0_6BufferE'/>
-<use f='tvm/src/printer/tvmscript_printer.cc' l='724' c='_ZN3tvm3tir16TVMScriptPrinter5PrintERKNS_7runtime9ObjectRefE'/>
-<use f='tvm/src/printer/tvmscript_printer.cc' l='1361' c='_ZN3tvm3tir16TVMScriptPrinter13PrintBlockVarERKNS0_7IterVarERKNS_8PrimExprE'/>
-<use f='tvm/src/printer/tvmscript_printer.cc' l='1396' c='_ZN3tvm3tir16TVMScriptPrinter19PrintBlockVarRemapsEv'/>
-<use f='tvm/src/printer/tvmscript_printer.cc' l='1404' c='_ZN3tvm3tir16TVMScriptPrinter19PrintBlockVarRemapsEv'/>
-<use f='tvm/src/printer/tvmscript_printer.cc' l='1427' c='_ZN3tvm3tir16TVMScriptPrinter14PrintBlockVarsEPKNS0_16BlockRealizeNodeE'/>
-<use f='tvm/src/printer/tvmscript_printer.cc' l='1438' c='_ZN3tvm3tir16TVMScriptPrinter14PrintBlockVarsEPKNS0_16BlockRealizeNodeE'/>
-<use f='tvm/src/printer/tvmscript_printer.cc' l='1773' c='_ZN3tvm3tir16TVMScriptPrinter18PrintBufferIndicesERKNS_7runtime5ArrayINS_8PrimExprEvEE'/>
-<use f='tvm/src/printer/tvmscript_printer.cc' l='1780' c='_ZN3tvm3tir16TVMScriptPrinter18PrintBufferIndicesERKNS_7runtime5ArrayINS_8PrimExprEvEE'/>
+<use f='tvm/src/printer/tvmscript_printer.cc' l='623' c='_ZN3tvm3tir16TVMScriptPrinter14IsSimpleBufferERKNS0_6BufferE'/>
+<use f='tvm/src/printer/tvmscript_printer.cc' l='628' c='_ZN3tvm3tir16TVMScriptPrinter14IsSimpleBufferERKNS0_6BufferE'/>
+<use f='tvm/src/printer/tvmscript_printer.cc' l='725' c='_ZN3tvm3tir16TVMScriptPrinter5PrintERKNS_7runtime9ObjectRefE'/>
+<use f='tvm/src/printer/tvmscript_printer.cc' l='1362' c='_ZN3tvm3tir16TVMScriptPrinter13PrintBlockVarERKNS0_7IterVarERKNS_8PrimExprE'/>
+<use f='tvm/src/printer/tvmscript_printer.cc' l='1397' c='_ZN3tvm3tir16TVMScriptPrinter19PrintBlockVarRemapsEv'/>
+<use f='tvm/src/printer/tvmscript_printer.cc' l='1405' c='_ZN3tvm3tir16TVMScriptPrinter19PrintBlockVarRemapsEv'/>
+<use f='tvm/src/printer/tvmscript_printer.cc' l='1436' c='_ZN3tvm3tir16TVMScriptPrinter14PrintBlockVarsEPKNS0_16BlockRealizeNodeE'/>
+<use f='tvm/src/printer/tvmscript_printer.cc' l='1447' c='_ZN3tvm3tir16TVMScriptPrinter14PrintBlockVarsEPKNS0_16BlockRealizeNodeE'/>
+<use f='tvm/src/printer/tvmscript_printer.cc' l='1783' c='_ZN3tvm3tir16TVMScriptPrinter18PrintBufferIndicesERKNS_7runtime5ArrayINS_8PrimExprEvEE'/>
+<use f='tvm/src/printer/tvmscript_printer.cc' l='1790' c='_ZN3tvm3tir16TVMScriptPrinter18PrintBufferIndicesERKNS_7runtime5ArrayINS_8PrimExprEvEE'/>
 <size>8</size>
 <use f='tvm/include/tvm/relay/attrs/nn.h' l='128'/>
 <use f='tvm/include/tvm/relay/attrs/nn.h' l='222'/>
@@ -3415,6 +3415,12 @@
 <size>8</size>
 <use f='tvm/src/relay/transforms/meta_schedule_layout_rewrite.cc' l='99' c='_ZN3tvm5relay23MetaScheduleFuncMutator10VisitExpr_EPKNS0_8CallNodeE'/>
 <use f='tvm/src/relay/transforms/meta_schedule_layout_rewrite.cc' l='157'/>
+<size>8</size>
+<use f='tvm/include/tvm/script/ir_builder/tir/frame.h' l='129'/>
+<use f='tvm/include/tvm/script/ir_builder/tir/frame.h' l='131'/>
+<use f='tvm/include/tvm/script/ir_builder/tir/ir.h' l='41' c='_ZN3tvm6script10ir_builder3tir8EvaluateENS_8PrimExprE'/>
+<size>8</size>
+<use f='tvm/src/script/ir_builder/tir/ir.cc' l='44' c='_ZN3tvm6script10ir_builder3tir8EvaluateENS_8PrimExprE'/>
 <size>8</size>
 <use f='tvm/src/support/ffi_testing.cc' l='39'/>
 <use f='tvm/src/support/ffi_testing.cc' l='46' c='_ZN3tvm9TestAttrs15_tvm_VisitAttrsERT_'/>
@@ -6038,8 +6044,11 @@
 <use f='tvm/src/tir/transforms/compact_buffer_region.cc' l='530' c='_ZNK3tvm3tir15BufferCompactor19RewriteBufferAccessEPNS0_6BufferEPNS_7runtime5ArrayINS_8PrimExprEvEE'/>
 <size>8</size>
 <use f='tvm/src/tir/transforms/convert_blocks_to_opaque.cc' l='47' c='_ZN3tvm3tir20OpaqueBlockConverter10VisitExpr_EPKNS0_7VarNodeE'/>
-<use f='tvm/src/tir/transforms/convert_blocks_to_opaque.cc' l='72' c='_ZN3tvm3tir20OpaqueBlockConverter10VisitStmt_EPKNS0_16BlockRealizeNodeE'/>
-<use f='tvm/src/tir/transforms/convert_blocks_to_opaque.cc' l='84'/>
+<use f='tvm/src/tir/transforms/convert_blocks_to_opaque.cc' l='75' c='_ZN3tvm3tir20OpaqueBlockConverter10VisitStmt_EPKNS0_16BlockRealizeNodeE'/>
+<use f='tvm/src/tir/transforms/convert_blocks_to_opaque.cc' l='76' c='_ZN3tvm3tir20OpaqueBlockConverter10VisitStmt_EPKNS0_16BlockRealizeNodeE'/>
+<use f='tvm/src/tir/transforms/convert_blocks_to_opaque.cc' l='77' c='_ZN3tvm3tir20OpaqueBlockConverter10VisitStmt_EPKNS0_16BlockRealizeNodeE'/>
+<use f='tvm/src/tir/transforms/convert_blocks_to_opaque.cc' l='84' c='_ZN3tvm3tir20OpaqueBlockConverter10VisitStmt_EPKNS0_16BlockRealizeNodeE'/>
+<use f='tvm/src/tir/transforms/convert_blocks_to_opaque.cc' l='105'/>
 <size>8</size>
 <use f='tvm/src/tir/transforms/coproc_sync.cc' l='340' c='_ZN3tvm3tir21CoProcBarrierDetector11MakeBarrierERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKSt6vectorINS0_20StorageAccessVisitor11AccessEntryESaISC_EE'/>
 <use f='tvm/src/tir/transforms/coproc_sync.cc' l='341' c='_ZN3tvm3tir21CoProcBarrierDetector11MakeBarrierERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKSt6vectorINS0_20StorageAccessVisitor11AccessEntryESaISC_EE'/>

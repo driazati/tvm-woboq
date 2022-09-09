@@ -38,14 +38,14 @@
 <size>8</size>
 <use f='tvm/src/printer/tvmscript_printer.cc' l='195'/>
 <use f='tvm/src/printer/tvmscript_printer.cc' l='197'/>
-<use f='tvm/src/printer/tvmscript_printer.cc' l='318' c='_ZN3tvm3tir16TVMScriptPrinter9PrintLoopERKNS0_3ForE'/>
-<use f='tvm/src/printer/tvmscript_printer.cc' l='1271' c='_ZN3tvm3tir16TVMScriptPrinter10VisitStmt_EPKNS0_7ForNodeE'/>
-<use f='tvm/src/printer/tvmscript_printer.cc' l='1274' c='_ZN3tvm3tir16TVMScriptPrinter10VisitStmt_EPKNS0_7ForNodeE'/>
-<use f='tvm/src/printer/tvmscript_printer.cc' l='1277' c='_ZN3tvm3tir16TVMScriptPrinter10VisitStmt_EPKNS0_7ForNodeE'/>
-<use f='tvm/src/printer/tvmscript_printer.cc' l='1292' c='_ZN3tvm3tir16TVMScriptPrinter10VisitStmt_EPKNS0_7ForNodeE'/>
-<use f='tvm/src/printer/tvmscript_printer.cc' l='1844' c='_ZN3tvm3tir16TVMScriptPrinter9PrintLoopERKNS0_3ForE'/>
-<use f='tvm/src/printer/tvmscript_printer.cc' l='1916' c='_ZN3tvm3tir30TVMScriptPrinterWithDiagnostic9PrintLoopERKNS0_3ForE'/>
-<use f='tvm/src/printer/tvmscript_printer.cc' l='1935' c='_ZN3tvm3tir30TVMScriptPrinterWithDiagnostic9PrintLoopERKNS0_3ForE'/>
+<use f='tvm/src/printer/tvmscript_printer.cc' l='319' c='_ZN3tvm3tir16TVMScriptPrinter9PrintLoopERKNS0_3ForE'/>
+<use f='tvm/src/printer/tvmscript_printer.cc' l='1272' c='_ZN3tvm3tir16TVMScriptPrinter10VisitStmt_EPKNS0_7ForNodeE'/>
+<use f='tvm/src/printer/tvmscript_printer.cc' l='1275' c='_ZN3tvm3tir16TVMScriptPrinter10VisitStmt_EPKNS0_7ForNodeE'/>
+<use f='tvm/src/printer/tvmscript_printer.cc' l='1278' c='_ZN3tvm3tir16TVMScriptPrinter10VisitStmt_EPKNS0_7ForNodeE'/>
+<use f='tvm/src/printer/tvmscript_printer.cc' l='1293' c='_ZN3tvm3tir16TVMScriptPrinter10VisitStmt_EPKNS0_7ForNodeE'/>
+<use f='tvm/src/printer/tvmscript_printer.cc' l='1854' c='_ZN3tvm3tir16TVMScriptPrinter9PrintLoopERKNS0_3ForE'/>
+<use f='tvm/src/printer/tvmscript_printer.cc' l='1926' c='_ZN3tvm3tir30TVMScriptPrinterWithDiagnostic9PrintLoopERKNS0_3ForE'/>
+<use f='tvm/src/printer/tvmscript_printer.cc' l='1945' c='_ZN3tvm3tir30TVMScriptPrinterWithDiagnostic9PrintLoopERKNS0_3ForE'/>
 <size>8</size>
 <use f='tvm/src/relay/backend/aot_executor_codegen.cc' l='515' c='_ZN3tvm5relay7backend18AOTExecutorCodegen12CopyToOutputENS_8PrimExprES3_bm'/>
 <size>8</size>
