@@ -48,19 +48,27 @@
 <tr><th id="35">35</th><td><a class="type" href="frame.h.html#tvm::script::ir_builder::tir::PrimFuncFrame" title='tvm::script::ir_builder::tir::PrimFuncFrame' data-ref="tvm::script::ir_builder::tir::PrimFuncFrame" data-ref-filename="tvm..script..ir_builder..tir..PrimFuncFrame">PrimFuncFrame</a> <dfn class="decl fn" id="_ZN3tvm6script10ir_builder3tir8PrimFuncEv" title='tvm::script::ir_builder::tir::PrimFunc' data-ref="_ZN3tvm6script10ir_builder3tir8PrimFuncEv" data-ref-filename="_ZN3tvm6script10ir_builder3tir8PrimFuncEv">PrimFunc</dfn>();</td></tr>
 <tr><th id="36">36</th><td></td></tr>
 <tr><th id="37">37</th><td><i class="doc">/*!</i></td></tr>
-<tr><th id="38">38</th><td><i class="doc"> * <span class="command">\brief</span> Evaluate the input expression.</i></td></tr>
-<tr><th id="39">39</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">value</span> The input expression to evaluate.</i></td></tr>
-<tr><th id="40">40</th><td><i class="doc"> */</i></td></tr>
-<tr><th id="41">41</th><td><em>void</em> <dfn class="decl fn" id="_ZN3tvm6script10ir_builder3tir8EvaluateENS_8PrimExprE" title='tvm::script::ir_builder::tir::Evaluate' data-ref="_ZN3tvm6script10ir_builder3tir8EvaluateENS_8PrimExprE" data-ref-filename="_ZN3tvm6script10ir_builder3tir8EvaluateENS_8PrimExprE">Evaluate</dfn>(<a class="type" href="../../../ir/expr.h.html#tvm::PrimExpr" title='tvm::PrimExpr' data-ref="tvm::PrimExpr" data-ref-filename="tvm..PrimExpr">PrimExpr</a> <dfn class="local col6 decl" id="6value" title='value' data-type='tvm::PrimExpr' data-ref="6value" data-ref-filename="6value">value</dfn>);</td></tr>
-<tr><th id="42">42</th><td></td></tr>
-<tr><th id="43">43</th><td>}  <i>// namespace tir</i></td></tr>
-<tr><th id="44">44</th><td>}  <i>// namespace ir_builder</i></td></tr>
-<tr><th id="45">45</th><td>}  <i>// namespace script</i></td></tr>
-<tr><th id="46">46</th><td>}  <i>// namespace tvm</i></td></tr>
-<tr><th id="47">47</th><td></td></tr>
-<tr><th id="48">48</th><td><u>#<span data-ppcond="19">endif</span>  // TVM_SCRIPT_IR_BUILDER_TIR_IR_H_</u></td></tr>
-<tr><th id="49">49</th><td></td></tr>
+<tr><th id="38">38</th><td><i class="doc"> * <span class="command">\brief</span> The block declaration statement.</i></td></tr>
+<tr><th id="39">39</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">name</span> The name of the block.</i></td></tr>
+<tr><th id="40">40</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">no_realize</span> The flag whether to construct BlockRealize or Block.</i></td></tr>
+<tr><th id="41">41</th><td><i class="doc"> * <span class="command">\return</span> The BlockFrame.</i></td></tr>
+<tr><th id="42">42</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="43">43</th><td><a class="type" href="frame.h.html#tvm::script::ir_builder::tir::BlockFrame" title='tvm::script::ir_builder::tir::BlockFrame' data-ref="tvm::script::ir_builder::tir::BlockFrame" data-ref-filename="tvm..script..ir_builder..tir..BlockFrame">BlockFrame</a> <dfn class="decl fn" id="_ZN3tvm6script10ir_builder3tir5BlockENS_7runtime6StringEb" title='tvm::script::ir_builder::tir::Block' data-ref="_ZN3tvm6script10ir_builder3tir5BlockENS_7runtime6StringEb" data-ref-filename="_ZN3tvm6script10ir_builder3tir5BlockENS_7runtime6StringEb">Block</dfn>(String <dfn class="local col7 decl" id="7name" title='name' data-type='tvm::runtime::String' data-ref="7name" data-ref-filename="7name">name</dfn>, <em>bool</em> <dfn class="local col8 decl" id="8no_realize" title='no_realize' data-type='bool' data-ref="8no_realize" data-ref-filename="8no_realize">no_realize</dfn> = <b>false</b>);</td></tr>
+<tr><th id="44">44</th><td></td></tr>
+<tr><th id="45">45</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="46">46</th><td><i class="doc"> * <span class="command">\brief</span> Evaluate the input expression.</i></td></tr>
+<tr><th id="47">47</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">value</span> The input expression to evaluate.</i></td></tr>
+<tr><th id="48">48</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="49">49</th><td><em>void</em> <dfn class="decl fn" id="_ZN3tvm6script10ir_builder3tir8EvaluateENS_8PrimExprE" title='tvm::script::ir_builder::tir::Evaluate' data-ref="_ZN3tvm6script10ir_builder3tir8EvaluateENS_8PrimExprE" data-ref-filename="_ZN3tvm6script10ir_builder3tir8EvaluateENS_8PrimExprE">Evaluate</dfn>(<a class="type" href="../../../ir/expr.h.html#tvm::PrimExpr" title='tvm::PrimExpr' data-ref="tvm::PrimExpr" data-ref-filename="tvm..PrimExpr">PrimExpr</a> <dfn class="local col9 decl" id="9value" title='value' data-type='tvm::PrimExpr' data-ref="9value" data-ref-filename="9value">value</dfn>);</td></tr>
+<tr><th id="50">50</th><td></td></tr>
+<tr><th id="51">51</th><td>}  <i>// namespace tir</i></td></tr>
+<tr><th id="52">52</th><td>}  <i>// namespace ir_builder</i></td></tr>
+<tr><th id="53">53</th><td>}  <i>// namespace script</i></td></tr>
+<tr><th id="54">54</th><td>}  <i>// namespace tvm</i></td></tr>
+<tr><th id="55">55</th><td></td></tr>
+<tr><th id="56">56</th><td><u>#<span data-ppcond="19">endif</span>  // TVM_SCRIPT_IR_BUILDER_TIR_IR_H_</u></td></tr>
+<tr><th id="57">57</th><td></td></tr>
 </table><hr/><p id='footer'>
-Generated while processing <a href='../../../../../src/script/ir_builder/tir/frame.cc.html'>tvm/src/script/ir_builder/tir/frame.cc</a><br/>Generated on <em>2022-Sep-12</em> from project tvm revision <em>286fade</em><br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+Generated while processing <a href='../../../../../src/script/ir_builder/tir/frame.cc.html'>tvm/src/script/ir_builder/tir/frame.cc</a><br/>Generated on <em>2022-Sep-12</em> from project tvm revision <em>a63d03a</em><br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
 <br/>Generator usage only permitted with license.</p>
 </div></body></html>
