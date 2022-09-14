@@ -296,8 +296,10 @@
 <use f='tvm/src/tir/ir/specialize.cc' l='248' u='c' c='_ZN3tvm3tir19PrimFuncSpecializer18MutateBufferRegionERKNS0_12BufferRegionE'/>
 <use f='tvm/src/tir/ir/specialize.cc' l='297' u='c' c='_ZN3tvm3tir22UpdateSpecializeVarMapERKNS0_8PrimFuncERKNS0_3VarERKNS0_6BufferEPSt13unordered_mapIS4_NS_8PrimExprENS_7runtime13ObjectPtrHashENSC_14Objec12872565'/>
 <use f='tvm/src/tir/ir/stmt_functor.cc' l='712' u='c' c='_ZN3tvm3tir12IRSubstitute17GetRemappedBufferENS0_6BufferE'/>
-<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='1272' u='c' c='_ZN3tvm3tir14PatternMatcher10VisitExpr_EPKNS0_7VarNodeE'/>
-<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='1508' u='c' c='_ZN3tvm3tir14PatternMatcher4EvalERKNS0_3VarE'/>
+<use f='tvm/src/tir/schedule/analysis/reducer.cc' l='56' u='c' c='_ZN3tvm3tir14PatternMatcher10VisitExpr_EPKNS0_7VarNodeE'/>
+<use f='tvm/src/tir/schedule/analysis/reducer.cc' l='297' u='c' c='_ZN3tvm3tir14PatternMatcher4EvalERKNS0_3VarE'/>
+<use f='tvm/src/tir/schedule/analysis/reducer.cc' l='434' u='c' c='_ZN3tvm3tir23ExtractReductionUpdatesERKNS_7runtime8OptionalINS0_13ScheduleStateEEENS0_5BlockEPKNS0_11LetStmtNodeEiPNS1_5ArrayINS0_11BufferStoreEvEEPSt14845231'/>
+<use f='tvm/src/tir/schedule/analysis/reducer.cc' l='522' u='c' c='_ZN3tvm3tir41GetInitValuesAndUpdatesFromReductionBlockERKNS_7runtime8OptionalINS0_13ScheduleStateEEENS0_5BlockE'/>
 <use f='tvm/src/tir/schedule/block_scope.cc' l='90' u='c' c='_ZN3tvm3tir10BlockScopeC1ERKNS_7runtime5ArrayINS0_8StmtSRefEvEE'/>
 <use f='tvm/src/tir/schedule/block_scope.cc' l='99' u='c' c='_ZN3tvm3tir10BlockScopeC1ERKNS_7runtime5ArrayINS0_8StmtSRefEvEE'/>
 <use f='tvm/src/tir/schedule/block_scope.cc' l='108' u='c' c='_ZN3tvm3tir10BlockScopeC1ERKNS_7runtime5ArrayINS0_8StmtSRefEvEE'/>
@@ -320,8 +322,8 @@
 <use f='tvm/src/tir/schedule/primitive/compute_inline.cc' l='660' u='c' c='_ZN3tvm3tir21ReverseComputeInliner20CheckConsumerCoveredEv'/>
 <use f='tvm/src/tir/schedule/primitive/get_block_loop.cc' l='31' u='c' c='_ZZN3tvm3tir9GetBlocksERKNS0_13ScheduleStateERKNS_7runtime6StringERKNS_9GlobalVarEEN6Finder10VisitStmt_EPKNS0_9BlockNodeE'/>
 <use f='tvm/src/tir/schedule/primitive/layout_transformation.cc' l='469' u='c' c='_ZN3tvm3tir26BufferAxisSeparatorMutator22VisitMatchBufferRegionERKNS0_17MatchBufferRegionE'/>
-<use f='tvm/src/tir/schedule/primitive/reduction.cc' l='701' u='c' c='_ZN3tvm3tir19RFactorBlockCreator17CreateNormalItersEi'/>
-<use f='tvm/src/tir/schedule/primitive/reduction.cc' l='706' u='c' c='_ZN3tvm3tir19RFactorBlockCreator17CreateNormalItersEi'/>
+<use f='tvm/src/tir/schedule/primitive/reduction.cc' l='831' u='c' c='_ZN3tvm3tir19RFactorBlockCreator17CreateNormalItersEi'/>
+<use f='tvm/src/tir/schedule/primitive/reduction.cc' l='836' u='c' c='_ZN3tvm3tir19RFactorBlockCreator17CreateNormalItersEi'/>
 <use f='tvm/src/tir/schedule/schedule.cc' l='35' u='c' c='_ZNK3tvm3tir12ScheduleNode7GetSRefEPKNS0_8StmtNodeE'/>
 <use f='tvm/src/tir/schedule/state.cc' l='281' u='c' c='_ZN3tvm3tir18BlockInfoCollector32CheckRegionCoverAndStagePipelineERKNS0_9BlockInfoERKNS0_8StmtSRefERKNS_7runtime5ArrayIS5_vEE'/>
 <use f='tvm/src/tir/schedule/state.cc' l='311' u='c' c='_ZN3tvm3tir18BlockInfoCollector32CheckRegionCoverAndStagePipelineERKNS0_9BlockInfoERKNS0_8StmtSRefERKNS_7runtime5ArrayIS5_vEE'/>
@@ -382,8 +384,8 @@
 <use f='tvm/src/tir/transforms/ir_utils.cc' l='422' u='c' c='_ZN3tvm3tir24ConditionalBoundsContext14EnterWithScopeEv'/>
 <use f='tvm/src/tir/transforms/ir_utils.cc' l='437' u='c' c='_ZN3tvm3tir24ConditionalBoundsContext13ExitWithScopeEv'/>
 <use f='tvm/src/tir/transforms/ir_utils.cc' l='443' u='c' c='_ZN3tvm3tir24ConditionalBoundsContext13ExitWithScopeEv'/>
-<use f='tvm/src/tir/transforms/lower_cross_thread_reduction.cc' l='537' u='c' c='_ZN3tvm3tir31CrossThreadReductionTransformer10VisitStmt_EPKNS0_7ForNodeE'/>
-<use f='tvm/src/tir/transforms/lower_cross_thread_reduction.cc' l='555' u='c' c='_ZN3tvm3tir31CrossThreadReductionTransformer10VisitStmt_EPKNS0_9BlockNodeE'/>
+<use f='tvm/src/tir/transforms/lower_cross_thread_reduction.cc' l='581' u='c' c='_ZN3tvm3tir31CrossThreadReductionTransformer10VisitStmt_EPKNS0_7ForNodeE'/>
+<use f='tvm/src/tir/transforms/lower_cross_thread_reduction.cc' l='599' u='c' c='_ZN3tvm3tir31CrossThreadReductionTransformer10VisitStmt_EPKNS0_9BlockNodeE'/>
 <use f='tvm/src/tir/transforms/lower_custom_datatypes.cc' l='80' u='c' c='_ZN3tvm3tir22CustomDatatypesLowerer10VisitExpr_EPKNS0_7VarNodeE'/>
 <use f='tvm/src/tir/transforms/lower_custom_datatypes.cc' l='150' u='c' c='_ZN3tvm3tir22CustomDatatypesLowerer17GetRemappedBufferENS0_6BufferE'/>
 <use f='tvm/src/tir/transforms/lower_custom_datatypes.cc' l='162' u='c' c='_ZN3tvm3tir22CustomDatatypesLowerer17GetRemappedBufferENS0_6BufferE'/>

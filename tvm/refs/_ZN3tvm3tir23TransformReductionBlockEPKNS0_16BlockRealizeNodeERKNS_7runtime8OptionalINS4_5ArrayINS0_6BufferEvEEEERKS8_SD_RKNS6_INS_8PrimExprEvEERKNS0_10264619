@@ -1,0 +1,15 @@
+<def f='tvm/src/tir/transforms/lower_cross_thread_reduction.cc' l='240' ll='431' type='tvm::tir::Stmt tvm::tir::TransformReductionBlock(const tvm::tir::BlockRealizeNode * realize, const Optional&lt;Array&lt;tvm::tir::Buffer&gt;&gt; &amp; it_buffers, const Array&lt;tvm::tir::Buffer&gt; &amp; ct_buffers, const Array&lt;tvm::tir::Buffer&gt; &amp; wb_buffers, const Array&lt;tvm::PrimExpr&gt; &amp; old_wb_indices, const tvm::tir::CommReducer &amp; reducer, const Array&lt;tvm::PrimExpr&gt; &amp; combiner_rhs, const std::vector&lt;const ForNode *&gt; &amp; reduction_loops)'/>
+<use f='tvm/src/tir/transforms/lower_cross_thread_reduction.cc' l='644' u='c' c='_ZN3tvm3tir31CrossThreadReductionTransformer10VisitStmt_EPKNS0_16BlockRealizeNodeE'/>
+<doc f='tvm/src/tir/transforms/lower_cross_thread_reduction.cc' l='228'>/*!
+ * \brief Create the lowered allreduce block transformed from the input reduction block
+ * \param realize The block-realize which contains the old reduction block
+ * \param it_buffers The buffers to store in-thread reduction results
+ * \param ct_buffers The buffers to store cross-thread reduction results
+ * \param wb_buffers The buffers to store the final reduction results
+ * \param old_wb_indices The indices used to access the write-back buffers when storing the final
+ * reduction results into the write-back buffers
+ * \param reducer The reduction function
+ * \param combiner_rhs The RHS values of the combiner
+ * \param reduction_loops The reduction loops
+ */</doc>
+<doc f='tvm/src/tir/transforms/lower_cross_thread_reduction.cc' l='240'>//</doc>

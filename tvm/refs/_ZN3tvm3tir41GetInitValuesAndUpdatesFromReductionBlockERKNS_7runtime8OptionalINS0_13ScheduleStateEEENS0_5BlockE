@@ -1,0 +1,11 @@
+<dec f='tvm/src/tir/schedule/analysis.h' l='464' type='std::pair&lt;Array&lt;PrimExpr&gt;, Array&lt;BufferStore&gt;&gt; tvm::tir::GetInitValuesAndUpdatesFromReductionBlock(const Optional&lt;tvm::tir::ScheduleState&gt; &amp; self, tvm::tir::Block block)'/>
+<doc f='tvm/src/tir/schedule/analysis.h' l='457'>/*!
+ * \brief Get the init values and the BufferStore updates from the input reduction block
+ * \param self The schedule state, used for error reporting
+ * \param block The block from which the init values and BufferStore updates are extracted from
+ * \return The extracted init values and BufferStore updates
+ * \throw ScheduleError If rfactor or cross-thread reduction cannot be applied to the block
+ */</doc>
+<def f='tvm/src/tir/schedule/analysis/reducer.cc' l='452' ll='535' type='std::pair&lt;Array&lt;PrimExpr&gt;, Array&lt;BufferStore&gt;&gt; tvm::tir::GetInitValuesAndUpdatesFromReductionBlock(const Optional&lt;tvm::tir::ScheduleState&gt; &amp; self, tvm::tir::Block block)'/>
+<use f='tvm/src/tir/schedule/primitive/reduction.cc' l='1179' u='c' c='_ZN3tvm3tir7RFactorENS0_13ScheduleStateERKNS0_8StmtSRefEi'/>
+<use f='tvm/src/tir/transforms/lower_cross_thread_reduction.cc' l='535' u='c' c='_ZNK3tvm3tir31CrossThreadReductionTransformer33CheckCanApplyCrossThreadReductionEPKNS0_9BlockNodeERKSt6vectorIPKNS0_7ForNodeESaIS8_EE'/>

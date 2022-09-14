@@ -1,0 +1,13 @@
+<dec f='tvm/src/tir/schedule/analysis.h' l='517' type='bool tvm::tir::FromIdentityCombiner(const Array&lt;tvm::PrimExpr&gt; &amp; identities, const Array&lt;tvm::tir::BufferStore&gt; &amp; combiners, tvm::tir::CommReducer * result_reducer, Array&lt;tvm::PrimExpr&gt; * lhs, Array&lt;tvm::PrimExpr&gt; * rhs)'/>
+<doc f='tvm/src/tir/schedule/analysis.h' l='507'>/*!
+ * \brief Given the input identities and the combiner BufferStores of a reduction, extract the
+ * corresponding commutative reducer, LHS values and RHS values, if possible.
+ * \param identities The identities of the reduction
+ * \param combiners The combiners of the reduction
+ * \param result_reducer The extracted CommReducer
+ * \param lhs The extracted LHS values of the reducer
+ * \param rhs The extracted RHS values of the reducer
+ * \return A boolean indicating whether a corresponding commutative reducer is found
+ */</doc>
+<use f='tvm/src/tir/schedule/analysis/reducer.cc' l='624' u='c' c='_ZN3tvm3tir27GetReducerAndCombinerLhsRhsERKNS_7runtime8OptionalINS0_13ScheduleStateEEERKNS1_5ArrayINS_8PrimExprEvEERKNS7_INS0_11BufferStoreEvEE'/>
+<def f='tvm/src/tir/schedule/analysis/reducer.cc' l='673' ll='699' type='bool tvm::tir::FromIdentityCombiner(const Array&lt;tvm::PrimExpr&gt; &amp; identities, const Array&lt;tvm::tir::BufferStore&gt; &amp; combiners, tvm::tir::CommReducer * result_reducer, Array&lt;tvm::PrimExpr&gt; * lhs, Array&lt;tvm::PrimExpr&gt; * rhs)'/>

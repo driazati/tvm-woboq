@@ -735,11 +735,11 @@
 <use f='tvm/src/tir/contrib/ethosu/passes.cc' l='457' u='c' c='_ZN3tvm3tir7contrib6ethosu27MergeConstantsInfoExtractor10VisitStmt_EPKNS0_11SeqStmtNodeE'/>
 <use f='tvm/src/tir/contrib/ethosu/passes.cc' l='824' u='c' c='_ZN3tvm3tir7contrib6ethosu21MergeConstantsMutator14GetArgsToMergeERKNS_7runtime3MapINS0_3VarENS0_6BufferEvvEERKNS4_5ArrayIS6_vEE'/>
 <use f='tvm/src/tir/contrib/ethosu/passes.cc' l='828' u='c' c='_ZN3tvm3tir7contrib6ethosu21MergeConstantsMutator14GetArgsToMergeERKNS_7runtime3MapINS0_3VarENS0_6BufferEvvEERKNS4_5ArrayIS6_vEE'/>
-<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='163' u='c' c='_ZZN3tvm3tir21GetScopeBlockLoopInfoERKNS0_5BlockEEN9Collector10VisitStmt_EPKNS0_16BlockRealizeNodeE'/>
+<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='160' u='c' c='_ZZN3tvm3tir21GetScopeBlockLoopInfoERKNS0_5BlockEEN9Collector10VisitStmt_EPKNS0_16BlockRealizeNodeE'/>
+<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='953' u='c' c='_ZN3tvm3tir22CollectComputeLocationERKNS0_13ScheduleStateERKNS0_8StmtSRefE'/>
 <use f='tvm/src/tir/schedule/analysis/analysis.cc' l='956' u='c' c='_ZN3tvm3tir22CollectComputeLocationERKNS0_13ScheduleStateERKNS0_8StmtSRefE'/>
-<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='959' u='c' c='_ZN3tvm3tir22CollectComputeLocationERKNS0_13ScheduleStateERKNS0_8StmtSRefE'/>
-<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='1021' u='c' c='_ZN3tvm3tir22CollectComputeLocationERKNS0_13ScheduleStateERKNS0_8StmtSRefE'/>
-<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='1976' u='c' c='_ZN3tvm3tir21NeedsMultiLevelTilingERKNS0_13ScheduleStateERKNS0_8StmtSRefE'/>
+<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='1018' u='c' c='_ZN3tvm3tir22CollectComputeLocationERKNS0_13ScheduleStateERKNS0_8StmtSRefE'/>
+<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='1456' u='c' c='_ZN3tvm3tir21NeedsMultiLevelTilingERKNS0_13ScheduleStateERKNS0_8StmtSRefE'/>
 <use f='tvm/src/tir/schedule/analysis/layout.cc' l='107' u='c' c='_ZN3tvm3tir18SplitExprCollector5VisitERKNS_5arith13IterSplitExprE'/>
 <use f='tvm/src/tir/schedule/analysis/layout.cc' l='189' u='c' c='_ZN3tvm3tir15SuggestIndexMapERKNS0_6BufferERKNS_7runtime5ArrayINS_8PrimExprEvEERKNS5_INS0_3ForEvEERKS6_PNS_5arith8AnalyzerE'/>
 <use f='tvm/src/tir/schedule/analysis/verify.cc' l='72' u='c' c='_ZN3tvm3tir16SRefTreeVerifier10VisitStmt_EPKNS0_9BlockNodeE'/>
@@ -749,7 +749,7 @@
 <use f='tvm/src/tir/schedule/primitive/compute_at.cc' l='385' u='c' c='_ZN3tvm3tir18RelaxBufferRegionsERKNS_7runtime3MapINS0_3VarENS_8PrimExprEvvEERKNS1_5ArrayINS0_12BufferRegionEvEERKNS0_8StmtSRefESF_PSt13unordered_mapIP12813344'/>
 <use f='tvm/src/tir/schedule/primitive/compute_at.cc' l='557' u='c' c='_ZN3tvm3tir32CalculateProvidedRequiredRegionsEPKNS0_9BlockNodeERKNS0_8StmtSRefESt13unordered_mapIS3_PKNS0_16BlockRealizeNodeESt4hashIS3_ESt8equal_toIS1258206'/>
 <use f='tvm/src/tir/schedule/primitive/get_block_loop.cc' l='53' u='c' c='_ZN3tvm3tir8GetLoopsERKNS0_8StmtSRefE'/>
-<use f='tvm/src/tir/schedule/primitive/reduction.cc' l='311' u='c' c='_ZN3tvm3tir15ReducerRegistry15RegisterReducerENS_7runtime15TypedPackedFuncIFNS_8PrimExprENS0_3VarES5_EEENS3_IFS4_NS2_8DataTypeEEEE'/>
+<use f='tvm/src/tir/schedule/primitive/reduction.cc' l='358' u='c' c='_ZN3tvm3tir15ReducerRegistry15RegisterReducerEiNS_7runtime15TypedPackedFuncIFNS2_5ArrayINS_8PrimExprEvEENS4_INS0_3VarEvEES8_EEENS3_IFS6_S6_EEE'/>
 <use f='tvm/src/tir/schedule/primitive/sampling.cc' l='83' u='c' c='_ZN3tvm3tir10PrimeTableC1Ev'/>
 <use f='tvm/src/tir/schedule/primitive/sampling.cc' l='282' u='c' c='_ZN3tvm3tir17SamplePerfectTileEPlii'/>
 <use f='tvm/src/tir/schedule/state.cc' l='282' u='c' c='_ZN3tvm3tir18BlockInfoCollector32CheckRegionCoverAndStagePipelineERKNS0_9BlockInfoERKNS0_8StmtSRefERKNS_7runtime5ArrayIS5_vEE'/>
@@ -790,8 +790,7 @@
 <use f='tvm/src/tir/transforms/inject_software_pipeline.cc' l='857' u='c' c='_ZN3tvm3tir17software_pipeline16PipelineRewriter8EmitImplENS_8PrimExprES3_b'/>
 <use f='tvm/src/tir/transforms/inject_software_pipeline.cc' l='877' u='c' c='_ZN3tvm3tir17software_pipeline16PipelineRewriter8EmitImplENS_8PrimExprES3_b'/>
 <use f='tvm/src/tir/transforms/ir_utils.cc' l='347' u='c' c='_ZN3tvm3tir24ConditionalBoundsContext25GetVarBoundsFromConditionEv'/>
-<use f='tvm/src/tir/transforms/lower_cross_thread_reduction.cc' l='522' u='c' c='_ZN3tvm3tir31CrossThreadReductionTransformer9VisitStmtERKNS0_4StmtE'/>
-<use f='tvm/src/tir/transforms/lower_cross_thread_reduction.cc' l='593' u='c' c='_ZN3tvm3tir31CrossThreadReductionTransformer10VisitStmt_EPKNS0_16BlockRealizeNodeE'/>
+<use f='tvm/src/tir/transforms/lower_cross_thread_reduction.cc' l='566' u='c' c='_ZN3tvm3tir31CrossThreadReductionTransformer9VisitStmtERKNS0_4StmtE'/>
 <use f='tvm/src/tir/transforms/lower_init_block.cc' l='51' u='c' c='_ZN3tvm3tir14InitBlockLower10DoLoweringERKNS0_4StmtERKNS_7runtime5ArrayINS0_7IterVarEvEE'/>
 <use f='tvm/src/tir/transforms/lower_intrin.cc' l='47' u='c' c='_ZN3tvm3tir14IntrinInjecterC1EPNS_5arith8AnalyzerENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESA_'/>
 <use f='tvm/src/tir/transforms/lower_intrin.cc' l='48' u='c' c='_ZN3tvm3tir14IntrinInjecterC1EPNS_5arith8AnalyzerENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESA_'/>
