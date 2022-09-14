@@ -1,0 +1,20 @@
+<dec f='tvm/src/relay/backend/utils.h' l='126' type='2'/>
+<doc f='tvm/src/relay/backend/utils.h' l='109'>/*! \brief Directly call a function accepting the `data` arrays as args.
+   *
+   * When this type is selected, assumes all operaotrs are implemented in C functions whose
+   * arguments are 1-to-1 with those in the tir::Call. DLTensor arguments are encoded as just the
+   * `data` parameters (i.e. no DLTensor object is passed along).
+   *
+   * The following code is emitted at call sites to a function named `func`:
+   * func(void* arg0, void* arg1, ..., void* argN) // no resource_handle
+   * -or-
+   * func(void* arg0, void* arg1, ..., void* argN, void* resource_handle) // with resource_handle
+   *
+   * `resource_handle` is encoded as the final argument to the tir::Call node. In practice, it is
+   * always the device context parameter when not null.
+   *
+   * Compatible with the C runtime and C++ runtime (so long as target_host == target). Implemented
+   * with the C runtime only.
+   */</doc>
+<doc f='tvm/src/relay/backend/utils.h' l='126'>// Emit tir.call_extern passing only the `data` part of DLTensors.</doc>
+<use f='tvm/src/relay/backend/aot/aot_lower_main.cc' l='627' c='_ZN3tvm5relay7backend3aot14AOTMainLowerer14CreateFuncCallENS0_16CallLoweredPropsERKNS_9RelayExprE'/>

@@ -554,6 +554,12 @@
 <use f='tvm/src/relay/analysis/util.cc' l='211' u='c' c='_ZN3tvm5relay10VarVisitor3AllERKNS_9RelayExprE'/>
 <use f='tvm/src/relay/analysis/util.cc' l='342' u='c' c='_ZN3tvm5relay14DtypeCollector3AllERKNS_9RelayExprE'/>
 <use f='tvm/src/relay/backend/annotate_used_memory.cc' l='161' u='c' c='_ZN3tvm5relay7backend25AnnotateUsedMemoryMutator13PostVisitLet_EPKNS0_7LetNodeES5_'/>
+<use f='tvm/src/relay/backend/aot/aot_lower_main.cc' l='477' u='c' c='_ZN3tvm5relay7backend3aot14AOTMainLowerer14CreateMainFuncENS_7runtime6StringE'/>
+<use f='tvm/src/relay/backend/aot/aot_lower_main.cc' l='528' u='c' c='_ZN3tvm5relay7backend3aot14AOTMainLowerer22CollectDeviceVariablesERKNS_7runtime3MapINS_9GlobalVarENS4_6StringEvvEE'/>
+<use f='tvm/src/relay/backend/aot/aot_lower_main.cc' l='631' u='c' c='_ZN3tvm5relay7backend3aot14AOTMainLowerer14CreateFuncCallENS0_16CallLoweredPropsERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/backend/aot/aot_lower_main.cc' l='640' u='c' c='_ZN3tvm5relay7backend3aot14AOTMainLowerer14CreateFuncCallENS0_16CallLoweredPropsERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/backend/aot/aot_lower_main.cc' l='643' u='c' c='_ZN3tvm5relay7backend3aot14AOTMainLowerer14CreateFuncCallENS0_16CallLoweredPropsERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/backend/aot/aot_lower_main.cc' l='785' u='c' c='_ZN3tvm5relay7backend3aot14AOTMainLowerer11CreateIOVarERKNS_4TypeERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEb'/>
 <use f='tvm/src/relay/backend/aot_executor_codegen.cc' l='434' u='c' c='_ZN3tvm5relay7backend18AOTExecutorCodegen14CreateFuncCallENS0_16CallLoweredPropsERKNS_9RelayExprE'/>
 <use f='tvm/src/relay/backend/aot_executor_codegen.cc' l='455' u='c' c='_ZN3tvm5relay7backend18AOTExecutorCodegen14CreateFuncCallENS0_16CallLoweredPropsERKNS_9RelayExprE'/>
 <use f='tvm/src/relay/backend/aot_executor_codegen.cc' l='464' u='c' c='_ZN3tvm5relay7backend18AOTExecutorCodegen14CreateFuncCallENS0_16CallLoweredPropsERKNS_9RelayExprE'/>
@@ -624,14 +630,12 @@
 <use f='tvm/src/relay/backend/utils.cc' l='107' u='c'/>
 <use f='tvm/src/relay/backend/utils.cc' l='115' u='c'/>
 <use f='tvm/src/relay/backend/utils.cc' l='123' u='c'/>
-<use f='tvm/src/relay/backend/utils.cc' l='227' u='c' c='_ZN3tvm5relay7backend13GetPassPrefixEbb'/>
-<use f='tvm/src/relay/backend/utils.cc' l='228' u='c' c='_ZN3tvm5relay7backend13GetPassPrefixEbb'/>
+<use f='tvm/src/relay/backend/utils.cc' l='229' u='c' c='_ZN3tvm5relay7backend13GetPassPrefixEbb'/>
 <use f='tvm/src/relay/backend/utils.cc' l='230' u='c' c='_ZN3tvm5relay7backend13GetPassPrefixEbb'/>
-<use f='tvm/src/relay/backend/utils.cc' l='234' u='c' c='_ZN3tvm5relay7backend13GetPassPrefixEbb'/>
-<use f='tvm/src/relay/backend/utils.cc' l='237' u='c' c='_ZN3tvm5relay7backend13GetPassPrefixEbb'/>
-<use f='tvm/src/relay/backend/utils.cc' l='241' u='c' c='_ZN3tvm5relay7backend13GetPassPrefixEbb'/>
-<use f='tvm/src/relay/backend/utils.cc' l='258' u='c' c='_ZN3tvm5relay7backend13GetPassPrefixEbb'/>
-<use f='tvm/src/relay/backend/utils.cc' l='259' u='c' c='_ZN3tvm5relay7backend13GetPassPrefixEbb'/>
+<use f='tvm/src/relay/backend/utils.cc' l='232' u='c' c='_ZN3tvm5relay7backend13GetPassPrefixEbb'/>
+<use f='tvm/src/relay/backend/utils.cc' l='236' u='c' c='_ZN3tvm5relay7backend13GetPassPrefixEbb'/>
+<use f='tvm/src/relay/backend/utils.cc' l='239' u='c' c='_ZN3tvm5relay7backend13GetPassPrefixEbb'/>
+<use f='tvm/src/relay/backend/utils.cc' l='243' u='c' c='_ZN3tvm5relay7backend13GetPassPrefixEbb'/>
 <use f='tvm/src/relay/backend/utils.cc' l='260' u='c' c='_ZN3tvm5relay7backend13GetPassPrefixEbb'/>
 <use f='tvm/src/relay/backend/utils.cc' l='261' u='c' c='_ZN3tvm5relay7backend13GetPassPrefixEbb'/>
 <use f='tvm/src/relay/backend/utils.cc' l='262' u='c' c='_ZN3tvm5relay7backend13GetPassPrefixEbb'/>
@@ -640,10 +644,12 @@
 <use f='tvm/src/relay/backend/utils.cc' l='265' u='c' c='_ZN3tvm5relay7backend13GetPassPrefixEbb'/>
 <use f='tvm/src/relay/backend/utils.cc' l='266' u='c' c='_ZN3tvm5relay7backend13GetPassPrefixEbb'/>
 <use f='tvm/src/relay/backend/utils.cc' l='267' u='c' c='_ZN3tvm5relay7backend13GetPassPrefixEbb'/>
-<use f='tvm/src/relay/backend/utils.cc' l='272' u='c' c='_ZN3tvm5relay7backend13GetPassPrefixEbb'/>
+<use f='tvm/src/relay/backend/utils.cc' l='268' u='c' c='_ZN3tvm5relay7backend13GetPassPrefixEbb'/>
+<use f='tvm/src/relay/backend/utils.cc' l='269' u='c' c='_ZN3tvm5relay7backend13GetPassPrefixEbb'/>
 <use f='tvm/src/relay/backend/utils.cc' l='274' u='c' c='_ZN3tvm5relay7backend13GetPassPrefixEbb'/>
-<use f='tvm/src/relay/backend/utils.cc' l='278' u='c' c='_ZN3tvm5relay7backend13GetPassPrefixEbb'/>
-<use f='tvm/src/relay/backend/utils.cc' l='279' u='c' c='_ZN3tvm5relay7backend13GetPassPrefixEbb'/>
+<use f='tvm/src/relay/backend/utils.cc' l='276' u='c' c='_ZN3tvm5relay7backend13GetPassPrefixEbb'/>
+<use f='tvm/src/relay/backend/utils.cc' l='280' u='c' c='_ZN3tvm5relay7backend13GetPassPrefixEbb'/>
+<use f='tvm/src/relay/backend/utils.cc' l='281' u='c' c='_ZN3tvm5relay7backend13GetPassPrefixEbb'/>
 <use f='tvm/src/relay/backend/vm/compiler.cc' l='991' u='c' c='_ZN3tvm5relay2vm10VMCompiler9MemoryOptERKNS_17CompilationConfigE'/>
 <use f='tvm/src/relay/backend/vm/compiler.cc' l='993' u='c' c='_ZN3tvm5relay2vm10VMCompiler9MemoryOptERKNS_17CompilationConfigE'/>
 <use f='tvm/src/relay/backend/vm/compiler.cc' l='996' u='c' c='_ZN3tvm5relay2vm10VMCompiler9MemoryOptERKNS_17CompilationConfigE'/>

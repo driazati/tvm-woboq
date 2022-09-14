@@ -453,16 +453,16 @@
 <use f='tvm/src/relay/analysis/kind_check.cc' l='186'/>
 <size>8</size>
 <use f='tvm/include/tvm/tir/usmp/utils.h' l='250' c='_ZN3tvm3tir4usmp28CalculateModuleWorkspaceSizeERKNS_8IRModuleE'/>
-<use f='tvm/src/relay/backend/utils.h' l='223'/>
-<use f='tvm/src/relay/backend/utils.h' l='414' c='_ZN3tvm5relay7backend18BindParamsInModuleENS_8IRModuleERKSt13unordered_mapINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS_7runtime7NDArrayESt4288342'/>
-<use f='tvm/src/relay/backend/utils.h' l='417' c='_ZN3tvm5relay7backend18BindParamsInModuleENS_8IRModuleENS_7runtime3MapINS3_6StringENS3_7NDArrayEvvEE'/>
-<use f='tvm/src/relay/backend/utils.h' l='584' c='_ZN3tvm5relay7backend18PrimFuncToIRModuleENS_3tir8PrimFuncE'/>
-<use f='tvm/src/relay/backend/utils.h' l='589' c='_ZN3tvm5relay7backend18PrimFuncToIRModuleENS_3tir8PrimFuncE'/>
-<use f='tvm/src/relay/backend/utils.h' l='646' c='_ZN3tvm5relay7backend35TargetModuleMapToTargetStrModuleMapENS_7runtime3MapINS_6TargetENS_8IRModuleEvvEE'/>
-<use f='tvm/src/relay/backend/utils.h' l='647' c='_ZN3tvm5relay7backend35TargetModuleMapToTargetStrModuleMapENS_7runtime3MapINS_6TargetENS_8IRModuleEvvEE'/>
-<use f='tvm/src/relay/backend/utils.h' l='656' c='_ZN3tvm5relay7backend35TargetStrModuleMapToTargetModuleMapESt13unordered_mapINS_6TargetENS_8IRModuleENS1_13TargetStrHashENS1_14TargetStrEqualESaISt4pairIKS3_S4_EEE'/>
-<use f='tvm/src/relay/backend/utils.h' l='657' c='_ZN3tvm5relay7backend35TargetStrModuleMapToTargetModuleMapESt13unordered_mapINS_6TargetENS_8IRModuleENS1_13TargetStrHashENS1_14TargetStrEqualESaISt4pairIKS3_S4_EEE'/>
-<use f='tvm/src/relay/backend/utils.h' l='666' c='_ZN3tvm5relay7backend28UpdateAutoSchedulerOpWeightsERKNS_8IRModuleE'/>
+<use f='tvm/src/relay/backend/utils.h' l='297'/>
+<use f='tvm/src/relay/backend/utils.h' l='488' c='_ZN3tvm5relay7backend18BindParamsInModuleENS_8IRModuleERKSt13unordered_mapINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS_7runtime7NDArrayESt4288342'/>
+<use f='tvm/src/relay/backend/utils.h' l='491' c='_ZN3tvm5relay7backend18BindParamsInModuleENS_8IRModuleENS_7runtime3MapINS3_6StringENS3_7NDArrayEvvEE'/>
+<use f='tvm/src/relay/backend/utils.h' l='658' c='_ZN3tvm5relay7backend18PrimFuncToIRModuleENS_3tir8PrimFuncE'/>
+<use f='tvm/src/relay/backend/utils.h' l='663' c='_ZN3tvm5relay7backend18PrimFuncToIRModuleENS_3tir8PrimFuncE'/>
+<use f='tvm/src/relay/backend/utils.h' l='720' c='_ZN3tvm5relay7backend35TargetModuleMapToTargetStrModuleMapENS_7runtime3MapINS_6TargetENS_8IRModuleEvvEE'/>
+<use f='tvm/src/relay/backend/utils.h' l='721' c='_ZN3tvm5relay7backend35TargetModuleMapToTargetStrModuleMapENS_7runtime3MapINS_6TargetENS_8IRModuleEvvEE'/>
+<use f='tvm/src/relay/backend/utils.h' l='730' c='_ZN3tvm5relay7backend35TargetStrModuleMapToTargetModuleMapESt13unordered_mapINS_6TargetENS_8IRModuleENS1_13TargetStrHashENS1_14TargetStrEqualESaISt4pairIKS3_S4_EEE'/>
+<use f='tvm/src/relay/backend/utils.h' l='731' c='_ZN3tvm5relay7backend35TargetStrModuleMapToTargetModuleMapESt13unordered_mapINS_6TargetENS_8IRModuleENS1_13TargetStrHashENS1_14TargetStrEqualESaISt4pairIKS3_S4_EEE'/>
+<use f='tvm/src/relay/backend/utils.h' l='740' c='_ZN3tvm5relay7backend28UpdateAutoSchedulerOpWeightsERKNS_8IRModuleE'/>
 <size>8</size>
 <use f='tvm/src/relay/analysis/match_exhaustion.cc' l='163' c='_ZN3tvm5relay26ExpandWildcardsConstructorERKNS0_18PatternConstructorERKNS0_7PatternERKNS_8IRModuleE'/>
 <use f='tvm/src/relay/analysis/match_exhaustion.cc' l='166' c='_ZN3tvm5relay20ExpandWildcardsTupleERKNS0_12PatternTupleERKNS0_7PatternERKNS_8IRModuleE'/>
@@ -499,6 +499,15 @@
 <use f='tvm/src/relay/backend/annotate_used_memory.cc' l='209' c='_ZN3tvm5relay9transform18AnnotateUsedMemoryEv'/>
 <use f='tvm/src/relay/backend/annotate_used_memory.cc' l='209' c='_ZN3tvm5relay9transform18AnnotateUsedMemoryEv'/>
 <use f='tvm/src/relay/backend/annotate_used_memory.cc' l='209' c='_ZN3tvm5relay9transform18AnnotateUsedMemoryEv'/>
+<size>8</size>
+<use f='tvm/src/relay/backend/aot/aot_lower_main.cc' l='53' c='_ZN3tvm5relay7backend3aot13ExprAllocatorC1Ev'/>
+<use f='tvm/src/relay/backend/aot/aot_lower_main.cc' l='218' c='_ZN3tvm5relay7backend3aot14AOTMainLowerer5LowerENS_8IRModuleENS_7runtime6StringE'/>
+<use f='tvm/src/relay/backend/aot/aot_lower_main.cc' l='218' c='_ZN3tvm5relay7backend3aot14AOTMainLowerer5LowerENS_8IRModuleENS_7runtime6StringE'/>
+<use f='tvm/src/relay/backend/aot/aot_lower_main.cc' l='220' c='_ZN3tvm5relay7backend3aot14AOTMainLowerer5LowerENS_8IRModuleENS_7runtime6StringE'/>
+<use f='tvm/src/relay/backend/aot/aot_lower_main.cc' l='220' c='_ZN3tvm5relay7backend3aot14AOTMainLowerer5LowerENS_8IRModuleENS_7runtime6StringE'/>
+<use f='tvm/src/relay/backend/aot/aot_lower_main.cc' l='844' c='_ZN3tvm5relay7backend3aot12AOTLowerMainENS_7runtime6StringENS_17CompilationConfigENS1_8CallTypeE'/>
+<use f='tvm/src/relay/backend/aot/aot_lower_main.cc' l='844' c='_ZN3tvm5relay7backend3aot12AOTLowerMainENS_7runtime6StringENS_17CompilationConfigENS1_8CallTypeE'/>
+<use f='tvm/src/relay/backend/aot/aot_lower_main.cc' l='845' c='_ZN3tvm5relay7backend3aot12AOTLowerMainENS_7runtime6StringENS_17CompilationConfigENS1_8CallTypeE'/>
 <size>8</size>
 <use f='tvm/src/relay/backend/te_compiler_cache.h' l='154'/>
 <use f='tvm/src/relay/backend/te_compiler_cache.h' l='154'/>
@@ -617,15 +626,15 @@
 <use f='tvm/src/relay/backend/te_compiler_cache.cc' l='581' c='_ZN3tvm5relay3tec13MakeShapeFunc6CreateERKNS0_8FunctionERKNS_6TargetENS_15GlobalVarSupplyE'/>
 <use f='tvm/src/relay/backend/te_compiler_cache.cc' l='829'/>
 <size>8</size>
-<use f='tvm/src/relay/backend/utils.cc' l='284' c='_ZN3tvm5relay7backend35TargetModuleMapToTargetStrModuleMapENS_7runtime3MapINS_6TargetENS_8IRModuleEvvEE'/>
-<use f='tvm/src/relay/backend/utils.cc' l='285' c='_ZN3tvm5relay7backend35TargetModuleMapToTargetStrModuleMapENS_7runtime3MapINS_6TargetENS_8IRModuleEvvEE'/>
 <use f='tvm/src/relay/backend/utils.cc' l='286' c='_ZN3tvm5relay7backend35TargetModuleMapToTargetStrModuleMapENS_7runtime3MapINS_6TargetENS_8IRModuleEvvEE'/>
-<use f='tvm/src/relay/backend/utils.cc' l='293' c='_ZN3tvm5relay7backend35TargetStrModuleMapToTargetModuleMapESt13unordered_mapINS_6TargetENS_8IRModuleENS1_13TargetStrHashENS1_14TargetStrEqualESaISt4pairIKS3_S4_EEE'/>
-<use f='tvm/src/relay/backend/utils.cc' l='294' c='_ZN3tvm5relay7backend35TargetStrModuleMapToTargetModuleMapESt13unordered_mapINS_6TargetENS_8IRModuleENS1_13TargetStrHashENS1_14TargetStrEqualESaISt4pairIKS3_S4_EEE'/>
+<use f='tvm/src/relay/backend/utils.cc' l='287' c='_ZN3tvm5relay7backend35TargetModuleMapToTargetStrModuleMapENS_7runtime3MapINS_6TargetENS_8IRModuleEvvEE'/>
+<use f='tvm/src/relay/backend/utils.cc' l='288' c='_ZN3tvm5relay7backend35TargetModuleMapToTargetStrModuleMapENS_7runtime3MapINS_6TargetENS_8IRModuleEvvEE'/>
 <use f='tvm/src/relay/backend/utils.cc' l='295' c='_ZN3tvm5relay7backend35TargetStrModuleMapToTargetModuleMapESt13unordered_mapINS_6TargetENS_8IRModuleENS1_13TargetStrHashENS1_14TargetStrEqualESaISt4pairIKS3_S4_EEE'/>
-<use f='tvm/src/relay/backend/utils.cc' l='302' c='_ZN3tvm5relay7backend28UpdateAutoSchedulerOpWeightsERKNS_8IRModuleE'/>
-<use f='tvm/src/relay/backend/utils.cc' l='355' c='_ZN3tvm5relay7backend18BindParamsInModuleENS_8IRModuleERKSt13unordered_mapINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS_7runtime7NDArrayESt4288342'/>
-<use f='tvm/src/relay/backend/utils.cc' l='366' c='_ZN3tvm5relay7backend18BindParamsInModuleENS_8IRModuleENS_7runtime3MapINS3_6StringENS3_7NDArrayEvvEE'/>
+<use f='tvm/src/relay/backend/utils.cc' l='296' c='_ZN3tvm5relay7backend35TargetStrModuleMapToTargetModuleMapESt13unordered_mapINS_6TargetENS_8IRModuleENS1_13TargetStrHashENS1_14TargetStrEqualESaISt4pairIKS3_S4_EEE'/>
+<use f='tvm/src/relay/backend/utils.cc' l='297' c='_ZN3tvm5relay7backend35TargetStrModuleMapToTargetModuleMapESt13unordered_mapINS_6TargetENS_8IRModuleENS1_13TargetStrHashENS1_14TargetStrEqualESaISt4pairIKS3_S4_EEE'/>
+<use f='tvm/src/relay/backend/utils.cc' l='304' c='_ZN3tvm5relay7backend28UpdateAutoSchedulerOpWeightsERKNS_8IRModuleE'/>
+<use f='tvm/src/relay/backend/utils.cc' l='357' c='_ZN3tvm5relay7backend18BindParamsInModuleENS_8IRModuleERKSt13unordered_mapINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS_7runtime7NDArrayESt4288342'/>
+<use f='tvm/src/relay/backend/utils.cc' l='368' c='_ZN3tvm5relay7backend18BindParamsInModuleENS_8IRModuleENS_7runtime3MapINS3_6StringENS3_7NDArrayEvvEE'/>
 <size>8</size>
 <use f='tvm/src/relay/backend/vm/compiler.h' l='68'/>
 <use f='tvm/src/relay/backend/vm/compiler.h' l='118' c='_ZN3tvm5relay2vm10VMCompiler5LowerENS_8IRModuleERKNS_7runtime5ArrayINS_6TargetEvEE'/>

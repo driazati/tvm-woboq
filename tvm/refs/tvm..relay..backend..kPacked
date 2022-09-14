@@ -1,0 +1,23 @@
+<dec f='tvm/src/relay/backend/utils.h' l='84' type='0'/>
+<doc f='tvm/src/relay/backend/utils.h' l='64'>/*!
+   * \brief Emit PackedFunc calls bound just-in-time using TVMBackend* functions.
+   *
+   * When this type is selected, assumes all operators must be called via TVMFuncCall. Given the
+   * implementation of TVMFuncCall in the C++ runtime, this in practice implies that those
+   * functions are of type TVMBackendPackedCFunc.
+   *
+   * The following code is emitted at call sites to call a function named `func`:
+   * void* func_ptr = TVMBackendGetFuncFromEnv(&quot;func&quot;);
+   * TVMFuncCall(func_ptr, values, tcodes, num_args, ret_values, ret_tcodes)
+   *
+   * The arguments given to the tir::Call node are encoded into `values`, `tcodes`, and `num_args`
+   * by LowerTVMBuiltin TIR transform.
+   *
+   * If `resource_handle` is passed to `func`, it is determined by TVMFuncCall (often,
+   * `resource_handle` is registered with the C++ runtime to provide a `this` equivalent when
+   * `func` is implemented in C).
+   *
+   * Compatible with both C++ and C runtimes, implemented with the C runtime only.
+   */</doc>
+<doc f='tvm/src/relay/backend/utils.h' l='84'>// Emit tir.call_packed and wrap all arguments in DLTensor.</doc>
+<use f='tvm/src/relay/backend/aot/aot_lower_main.cc' l='650' c='_ZN3tvm5relay7backend3aot14AOTMainLowerer14CreateFuncCallENS0_16CallLoweredPropsERKNS_9RelayExprE'/>

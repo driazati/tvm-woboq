@@ -1,0 +1,12 @@
+<dec f='tvm/src/relay/backend/aot/aot_lower_main.h' l='51' type='transform::Pass tvm::relay::backend::aot::AOTLowerMain(tvm::runtime::String mod_name, tvm::CompilationConfig config, tvm::relay::backend::CallType call_type)'/>
+<def f='tvm/src/relay/backend/aot/aot_lower_main.cc' l='843' ll='850' type='tvm::relay::backend::Pass tvm::relay::backend::aot::AOTLowerMain(tvm::runtime::String mod_name, tvm::CompilationConfig config, tvm::relay::backend::CallType call_type)'/>
+<use f='tvm/src/relay/backend/aot/aot_lower_main.cc' l='855' u='c'/>
+<doc f='tvm/src/relay/backend/aot/aot_lower_main.h' l='42'>/*! \brief Lower the Relay main function into TIR for use with the AOT executor.
+ *
+ * This pass expects that all operators have already been lowered to TIR and
+ * so only Calls to &apos;call_lowered&apos; are present in main.
+ *
+ * \param mod_name The name of the module.
+ * \param config The compilation config.
+ * \param call_type The call type to use when calling functions.
+ */</doc>
