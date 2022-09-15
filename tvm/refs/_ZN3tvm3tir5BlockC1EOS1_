@@ -6,7 +6,8 @@
 <use f='tvm/src/tir/schedule/analysis/analysis.cc' l='602' u='c' c='_ZZN3tvm3tir25CheckPartialAffineBindingERKNS0_13ScheduleStateENS0_5BlockERKNS_7runtime8OptionalINS0_8StmtSRefEEEEN21NotAffineBindingErrorC1ENS_8IRModuleES4_S8_'/>
 <use f='tvm/src/tir/schedule/analysis/analysis.cc' l='648' u='c' c='_ZN3tvm3tir25CheckPartialAffineBindingERKNS0_13ScheduleStateENS0_5BlockERKNS_7runtime8OptionalINS0_8StmtSRefEEE'/>
 <use f='tvm/src/tir/schedule/analysis/analysis.cc' l='652' u='c' c='_ZN3tvm3tir18CheckAffineBindingERKNS0_13ScheduleStateENS0_5BlockE'/>
-<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='1153' u='c' c='_ZZN3tvm3tir24GetNthAccessBufferRegionERKNS0_13ScheduleStateERKNS0_5BlockEiNS0_15BufferIndexTypeEEN26BufferIndexOutOfRangeErrorC1ENS_8IRModuleES4_iS7_'/>
+<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='659' u='c' c='_ZZN3tvm3tir27CheckBlockHasTrivialBindingERKNS0_13ScheduleStateERKNS0_8StmtSRefEEN22NotTrivialBindingErrorC1ENS_8IRModuleENS0_5BlockE'/>
+<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='1182' u='c' c='_ZZN3tvm3tir24GetNthAccessBufferRegionERKNS0_13ScheduleStateERKNS0_5BlockEiNS0_15BufferIndexTypeEEN26BufferIndexOutOfRangeErrorC1ENS_8IRModuleES4_iS7_'/>
 <use f='tvm/src/tir/schedule/analysis/reducer.cc' l='333' u='c' c='_ZZN3tvm3tir45ErrorRFactorCrossThreadReductionNotApplicableERKNS_7runtime8OptionalINS0_13ScheduleStateEEENS0_5BlockEiEN25RFactorNotApplicableErrorC1ENS_8IRModuleES7_i'/>
 <use f='tvm/src/tir/schedule/analysis/reducer.cc' l='357' u='c' c='_ZN3tvm3tir45ErrorRFactorCrossThreadReductionNotApplicableERKNS_7runtime8OptionalINS0_13ScheduleStateEEENS0_5BlockEi'/>
 <use f='tvm/src/tir/schedule/analysis/reducer.cc' l='390' u='c' c='_ZN3tvm3tir23ExtractReductionUpdatesERKNS_7runtime8OptionalINS0_13ScheduleStateEEENS0_5BlockEPKNS0_11LetStmtNodeEiPNS1_5ArrayINS0_11BufferStoreEvEEPSt14845231'/>
@@ -42,9 +43,13 @@
 <use f='tvm/src/tir/schedule/primitive/decompose_padding.cc' l='40' u='c' c='_ZN3tvm3tir24PaddingPatternMatchErrorC1ENS_8IRModuleENS0_5BlockERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
 <use f='tvm/src/tir/schedule/primitive/for_kind.cc' l='27' u='c' c='_ZN3tvm3tir23WrongBlockIterTypeErrorC1ENS_8IRModuleENS0_7ForKindENS0_3VarENS0_5BlockE'/>
 <use f='tvm/src/tir/schedule/primitive/layout_transformation.cc' l='255' u='c' c='_ZN3tvm3tir37IndexMapNotApplicableToBlockIterErrorC1ENS_8IRModuleENS0_5BlockENS0_8IndexMapE'/>
-<use f='tvm/src/tir/schedule/primitive/layout_transformation.cc' l='284' u='c' c='_ZN3tvm3tir22NotTrivialBindingErrorC1ENS_8IRModuleENS0_5BlockE'/>
-<use f='tvm/src/tir/schedule/primitive/layout_transformation.cc' l='318' u='c' c='_ZN3tvm3tir22OpaqueNewIterTypeErrorC1ENS_8IRModuleENS0_5BlockENS_8PrimExprE'/>
+<use f='tvm/src/tir/schedule/primitive/layout_transformation.cc' l='284' u='c' c='_ZN3tvm3tir22OpaqueNewIterTypeErrorC1ENS_8IRModuleENS0_5BlockENS_8PrimExprE'/>
 <use f='tvm/src/tir/schedule/primitive/loop_transformation.cc' l='176' u='c' c='_ZN3tvm3tir18BlockPropertyErrorC1ENS_8IRModuleENS0_5BlockE'/>
+<use f='tvm/src/tir/schedule/primitive/pad_einsum.cc' l='31' u='c' c='_ZN3tvm3tir19InvalidPaddingErrorC1ENS_8IRModuleENS0_5BlockENS_7runtime5ArrayINS_7IntegerEvEE'/>
+<use f='tvm/src/tir/schedule/primitive/pad_einsum.cc' l='65' u='c' c='_ZN3tvm3tir14NonEinsumErrorC1ENS_8IRModuleENS0_5BlockE'/>
+<use f='tvm/src/tir/schedule/primitive/pad_einsum.cc' l='244' u='c' c='_ZN3tvm3tir17PadEinsumRewriter16PadProducerBlockENS0_5BlockERKNS_8PrimExprE'/>
+<use f='tvm/src/tir/schedule/primitive/pad_einsum.cc' l='251' u='c' c='_ZN3tvm3tir17PadEinsumRewriter10VisitStmt_EPKNS0_9BlockNodeE'/>
+<use f='tvm/src/tir/schedule/primitive/pad_einsum.cc' l='286' u='c' c='_ZN3tvm3tir20InvalidProducerErrorC1ENS_8IRModuleENS0_5BlockE'/>
 <use f='tvm/src/tir/schedule/primitive/reduction.cc' l='41' u='c' c='_ZN3tvm3tir31DecomposeReductionBlockReplacer7ReplaceENS0_5BlockENS0_3ForENS0_4StmtES2_'/>
 <use f='tvm/src/tir/schedule/primitive/reduction.cc' l='51' u='c' c='_ZN3tvm3tir31DecomposeReductionBlockReplacerC1ENS0_3ForENS0_4StmtENS0_5BlockE'/>
 <use f='tvm/src/tir/schedule/primitive/reduction.cc' l='134' u='c' c='_ZN3tvm3tir15LoopHeightErrorC1ENS_8IRModuleENS0_3ForENS0_5BlockE'/>

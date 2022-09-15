@@ -19,8 +19,8 @@
 <use f='tvm/src/tir/ir/stmt_functor.cc' l='538' u='r' c='_ZN3tvm3tir11StmtMutator10VisitStmt_EPKNS0_9BlockNodeE'/>
 <use f='tvm/src/tir/ir/stmt_functor.cc' l='546' u='w' c='_ZN3tvm3tir11StmtMutator10VisitStmt_EPKNS0_9BlockNodeE'/>
 <use f='tvm/src/tir/schedule/analysis/analysis.cc' l='184' u='r' c='_ZN3tvm3tir21GetScopeBlockLoopInfoERKNS0_5BlockE'/>
-<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='795' u='r' c='_ZN3tvm3tir30GetChildBlockRealizeOnSRefTreeERKNS0_8StmtSRefE'/>
-<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='1664' u='r' c='_ZN3tvm3tir27ExtractTensorIntrinDescInfoEPNS_5arith8AnalyzerERKNS0_8PrimFuncE'/>
+<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='824' u='r' c='_ZN3tvm3tir30GetChildBlockRealizeOnSRefTreeERKNS0_8StmtSRefE'/>
+<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='1693' u='r' c='_ZN3tvm3tir27ExtractTensorIntrinDescInfoEPNS_5arith8AnalyzerERKNS0_8PrimFuncE'/>
 <use f='tvm/src/tir/schedule/analysis/reducer.cc' l='480' u='m' c='_ZN3tvm3tir41GetInitValuesAndUpdatesFromReductionBlockERKNS_7runtime8OptionalINS0_13ScheduleStateEEENS0_5BlockE'/>
 <use f='tvm/src/tir/schedule/analysis/reducer.cc' l='484' u='m' c='_ZN3tvm3tir41GetInitValuesAndUpdatesFromReductionBlockERKNS_7runtime8OptionalINS0_13ScheduleStateEEENS0_5BlockE'/>
 <use f='tvm/src/tir/schedule/analysis/reducer.cc' l='567' u='r' c='_ZN3tvm3tir33ReductionIterNotIndexOutputBufferERKNS0_5BlockE'/>
@@ -46,6 +46,10 @@
 <use f='tvm/src/tir/schedule/primitive/decompose_padding.cc' l='222' u='r' c='_ZN3tvm3tirL16CreateConstBlockEPKNS0_16BlockRealizeNodeERKNS0_16PaddingBlockInfoERKNS_7runtime5ArrayINS0_3ForEvEERKNS0_4StmtEPNS_5arith8AnalyzerE'/>
 <use f='tvm/src/tir/schedule/primitive/decompose_padding.cc' l='325' u='r' c='_ZN3tvm3tirL18CreateInBoundBlockEPKNS0_16BlockRealizeNodeERKNS0_16PaddingBlockInfoERKNS_7runtime5ArrayINS0_3ForEvEERKNS0_4StmtEPNS_5arith8AnalyzerE'/>
 <use f='tvm/src/tir/schedule/primitive/get_block_loop.cc' l='75' u='r' c='_ZN3tvm3tir14GetChildBlocksERKNS0_13ScheduleStateERKNS0_8StmtSRefE'/>
+<use f='tvm/src/tir/schedule/primitive/pad_einsum.cc' l='96' u='m' c='_ZN3tvm3tir15EinsumExtractor7ExtractERKNS0_5BlockE'/>
+<use f='tvm/src/tir/schedule/primitive/pad_einsum.cc' l='240' u='r' c='_ZN3tvm3tir17PadEinsumRewriter16PadProducerBlockENS0_5BlockERKNS_8PrimExprE'/>
+<use f='tvm/src/tir/schedule/primitive/pad_einsum.cc' l='243' u='w' c='_ZN3tvm3tir17PadEinsumRewriter16PadProducerBlockENS0_5BlockERKNS_8PrimExprE'/>
+<use f='tvm/src/tir/schedule/primitive/pad_einsum.cc' l='396' u='m' c='_ZN3tvm3tir9PadEinsumENS0_13ScheduleStateERKNS0_8StmtSRefERKNS_7runtime5ArrayINS_7IntegerEvEE'/>
 <use f='tvm/src/tir/schedule/primitive/reduction.cc' l='232' u='w' c='_ZN3tvm3tir18DecomposeReductionENS0_13ScheduleStateERKNS0_8StmtSRefES4_'/>
 <use f='tvm/src/tir/schedule/state.cc' l='368' u='r' c='_ZN3tvm3tir18BlockInfoCollector10VisitStmt_EPKNS0_16BlockRealizeNodeE'/>
 <use f='tvm/src/tir/schedule/state.cc' l='460' u='r' c='_ZN3tvm3tir12StateCreator10VisitStmt_EPKNS0_16BlockRealizeNodeE'/>
@@ -53,8 +57,8 @@
 <use f='tvm/src/tir/schedule/state.cc' l='759' u='r' c='_ZN3tvm3tir11SRefUpdater10VisitStmt_EPKNS0_9BlockNodeE'/>
 <use f='tvm/src/tir/schedule/state.cc' l='878' u='w' c='_ZN3tvm3tir13ChildReplacer19CopyOnWriteAndVisitEPKNS0_8StmtNodeE'/>
 <use f='tvm/src/tir/schedule/state.cc' l='878' u='r' c='_ZN3tvm3tir13ChildReplacer19CopyOnWriteAndVisitEPKNS0_8StmtNodeE'/>
-<use f='tvm/src/tir/schedule/transform.cc' l='244' u='r' c='_ZN3tvm3tir20LeafBlockRemovalPlanERKNS0_13ScheduleStateERKNS0_8StmtSRefEPNS0_4StmtES8_'/>
-<use f='tvm/src/tir/schedule/transform.cc' l='261' u='w' c='_ZN3tvm3tir20LeafBlockRemovalPlanERKNS0_13ScheduleStateERKNS0_8StmtSRefEPNS0_4StmtES8_'/>
+<use f='tvm/src/tir/schedule/transform.cc' l='252' u='r' c='_ZN3tvm3tir20LeafBlockRemovalPlanERKNS0_13ScheduleStateERKNS0_8StmtSRefEPNS0_4StmtES8_'/>
+<use f='tvm/src/tir/schedule/transform.cc' l='269' u='w' c='_ZN3tvm3tir20LeafBlockRemovalPlanERKNS0_13ScheduleStateERKNS0_8StmtSRefEPNS0_4StmtES8_'/>
 <use f='tvm/src/tir/transforms/bind_params.cc' l='123' u='w' c='_ZN3tvm3tir10BindParamsENS0_8PrimFuncERKNS_7runtime5ArrayINS2_7NDArrayEvEE'/>
 <use f='tvm/src/tir/transforms/bind_params.cc' l='124' u='r' c='_ZN3tvm3tir10BindParamsENS0_8PrimFuncERKNS_7runtime5ArrayINS2_7NDArrayEvEE'/>
 <use f='tvm/src/tir/transforms/inject_software_pipeline.cc' l='727' u='w' c='_ZNK3tvm3tir17software_pipeline16PipelineRewriter30CompletePipelineLoopStatementsERKSt6vectorINS2_18RewrittenBlockInfoESaIS4_EERKSt3mapIiNS2_15AsyncSt4088785'/>

@@ -55,6 +55,7 @@
 <use f='tvm/src/ir/type_functor.cc' l='107' u='c' c='_ZN3tvm11TypeMutator11MutateArrayENS_7runtime5ArrayINS_4TypeEvEE'/>
 <use f='tvm/src/support/array.h' l='100' u='c' c='_ZN3tvm7support7AsArrayERKNS_7runtime10ShapeTupleE'/>
 <use f='tvm/include/tvm/runtime/metadata_base.h' l='179' u='c' c='_ZN3tvm7runtime8metadata17MetadataArrayNodeC1ENS0_5ArrayINS0_9ObjectRefEvEENS1_12MetadataKindEPKc'/>
+<use f='tvm/src/tir/schedule/analysis.h' l='724' u='c' c='_ZN3tvm3tir25CheckTrivialBufferIndicesERKT_'/>
 <use f='tvm/src/tir/schedule/utils.h' l='133' u='c' c='_ZN3tvm3tir15LoopSRefs2LoopsERKNS_7runtime5ArrayINS0_8StmtSRefEvEE'/>
 <use f='tvm/src/tir/schedule/utils.h' l='148' u='c' c='_ZN3tvm3tir18BlockRVs2StmtSRefsERKNS0_8ScheduleERKNS_7runtime5ArrayINS0_7BlockRVEvEE'/>
 <use f='tvm/src/meta_schedule/utils.h' l='384' u='c' c='_ZN3tvm13meta_schedule12AsFloatArrayERKNS_7runtime9ObjectRefE'/>
@@ -234,17 +235,17 @@
 <use f='tvm/src/tir/ir/specialize.cc' l='251' u='c' c='_ZN3tvm3tir19PrimFuncSpecializer18MutateBufferRegionERKNS0_12BufferRegionE'/>
 <use f='tvm/src/tir/ir/stmt.cc' l='630' u='c'/>
 <use f='tvm/src/tir/ir/stmt_functor.cc' l='768' u='c' c='_ZN3tvm3tir10SubstituteERKNS_7runtime5ArrayINS_5RangeEvEERKNS1_3MapINS0_3VarENS_8PrimExprEvvEE'/>
-<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='772' u='c' c='_ZN3tvm3tir27GetChildBlockSRefOnSRefTreeERKNS0_13ScheduleStateERKNS0_8StmtSRefE'/>
-<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='780' u='c' c='_ZZN3tvm3tir30GetChildBlockRealizeOnSRefTreeERKNS0_8StmtSRefEEN9Collector7CollectERKNS0_4StmtE'/>
-<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='1034' u='c' c='_ZN3tvm3tir12GetProducersERKNS0_8StmtSRefERKNS0_10BlockScopeE'/>
-<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='1044' u='c' c='_ZN3tvm3tir12GetConsumersERKNS0_8StmtSRefERKNS0_10BlockScopeE'/>
+<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='801' u='c' c='_ZN3tvm3tir27GetChildBlockSRefOnSRefTreeERKNS0_13ScheduleStateERKNS0_8StmtSRefE'/>
+<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='809' u='c' c='_ZZN3tvm3tir30GetChildBlockRealizeOnSRefTreeERKNS0_8StmtSRefEEN9Collector7CollectERKNS0_4StmtE'/>
+<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='1063' u='c' c='_ZN3tvm3tir12GetProducersERKNS0_8StmtSRefERKNS0_10BlockScopeE'/>
+<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='1073' u='c' c='_ZN3tvm3tir12GetConsumersERKNS0_8StmtSRefERKNS0_10BlockScopeE'/>
 <use f='tvm/src/tir/schedule/analysis/layout.cc' l='44' u='c' c='_ZN3tvm3tir10GetStridesERKNS0_6BufferE'/>
 <use f='tvm/src/tir/schedule/analysis/layout.cc' l='199' u='c' c='_ZN3tvm3tir15SuggestIndexMapERKNS0_6BufferERKNS_7runtime5ArrayINS_8PrimExprEvEERKNS5_INS0_3ForEvEERKS6_PNS_5arith8AnalyzerE'/>
 <use f='tvm/src/tir/schedule/analysis/reducer.cc' l='52' u='c' c='_ZN3tvm3tir14PatternMatcherC1ENS_7runtime5ArrayINS_8PrimExprEvEE'/>
 <use f='tvm/src/tir/schedule/analysis/reducer.cc' l='594' u='c' c='_ZN3tvm3tir21NoMatchedReducerErrorC1ENS_8IRModuleENS_7runtime5ArrayINS_8PrimExprEvEENS4_INS0_11BufferStoreEvEE'/>
 <use f='tvm/src/tir/schedule/analysis/reducer.cc' l='595' u='c' c='_ZN3tvm3tir21NoMatchedReducerErrorC1ENS_8IRModuleENS_7runtime5ArrayINS_8PrimExprEvEENS4_INS0_11BufferStoreEvEE'/>
-<use f='tvm/src/tir/schedule/concrete_schedule.h' l='294' u='c' c='_ZN3tvm3tir14GetSRefsHelperEPKNS0_20ConcreteScheduleNodeERKNS_7runtime5ArrayIT_NSt9enable_ifIXsr3std10is_base_ofINS4_9ObjectRefES6_EE5valueEvE4typeEEE'/>
-<use f='tvm/src/tir/schedule/concrete_schedule.h' l='338' u='c' c='_ZN3tvm3tir20ConcreteScheduleNode8CreateRVERKSt6vectorIlSaIlEE'/>
+<use f='tvm/src/tir/schedule/concrete_schedule.h' l='295' u='c' c='_ZN3tvm3tir14GetSRefsHelperEPKNS0_20ConcreteScheduleNodeERKNS_7runtime5ArrayIT_NSt9enable_ifIXsr3std10is_base_ofINS4_9ObjectRefES6_EE5valueEvE4typeEEE'/>
+<use f='tvm/src/tir/schedule/concrete_schedule.h' l='339' u='c' c='_ZN3tvm3tir20ConcreteScheduleNode8CreateRVERKSt6vectorIlSaIlEE'/>
 <use f='tvm/src/tir/schedule/concrete_schedule.cc' l='106' u='c' c='_ZN3tvm3tir14ScheduleCopier4CopyERKNS_7runtime5ArrayINS0_8StmtSRefEvEE'/>
 <use f='tvm/src/tir/schedule/concrete_schedule.cc' l='116' u='c' c='_ZN3tvm3tir14ScheduleCopier4CopyERKNS_7runtime5ArrayINS0_10DependencyEvEE'/>
 <use f='tvm/src/tir/schedule/concrete_schedule.cc' l='329' u='c' c='_ZN3tvm3tir20ConcreteScheduleNode14GetChildBlocksERKNS0_7BlockRVE'/>
@@ -264,9 +265,10 @@
 <use f='tvm/src/tir/schedule/primitive/get_block_loop.cc' l='77' u='c' c='_ZN3tvm3tir14GetChildBlocksERKNS0_13ScheduleStateERKNS0_8StmtSRefE'/>
 <use f='tvm/src/tir/schedule/primitive/get_block_loop.cc' l='90' u='c' c='_ZN3tvm3tir12GetProducersERKNS0_13ScheduleStateERKNS0_8StmtSRefE'/>
 <use f='tvm/src/tir/schedule/primitive/get_block_loop.cc' l='103' u='c' c='_ZN3tvm3tir12GetConsumersERKNS0_13ScheduleStateERKNS0_8StmtSRefE'/>
-<use f='tvm/src/tir/schedule/primitive/layout_transformation.cc' l='578' u='c' c='_ZN3tvm3tir21TransformLayoutTraits13AttrsFromJSONERKNS_7runtime9ObjectRefE'/>
-<use f='tvm/src/tir/schedule/primitive/layout_transformation.cc' l='617' u='c' c='_ZN3tvm3tir26TransformBlockLayoutTraits13AttrsFromJSONERKNS_7runtime9ObjectRefE'/>
+<use f='tvm/src/tir/schedule/primitive/layout_transformation.cc' l='544' u='c' c='_ZN3tvm3tir21TransformLayoutTraits13AttrsFromJSONERKNS_7runtime9ObjectRefE'/>
+<use f='tvm/src/tir/schedule/primitive/layout_transformation.cc' l='583' u='c' c='_ZN3tvm3tir26TransformBlockLayoutTraits13AttrsFromJSONERKNS_7runtime9ObjectRefE'/>
 <use f='tvm/src/tir/schedule/primitive/loop_transformation.cc' l='451' u='c' c='_ZN3tvm3tir5SplitENS0_13ScheduleStateERKNS0_8StmtSRefERKNS_7runtime5ArrayINS_8PrimExprEvEEb'/>
+<use f='tvm/src/tir/schedule/primitive/pad_einsum.cc' l='31' u='c' c='_ZN3tvm3tir19InvalidPaddingErrorC1ENS_8IRModuleENS0_5BlockENS_7runtime5ArrayINS_7IntegerEvEE'/>
 <use f='tvm/src/tir/schedule/primitive/reduction.cc' l='590' u='c' c='_ZN3tvm3tir20CreateRFactorBuffersERKNS_7runtime5ArrayINS0_11BufferStoreEvEEiPKNS0_7ForNodeE'/>
 <use f='tvm/src/tir/schedule/primitive/reduction.cc' l='608' u='c' c='_ZN3tvm3tir16BaseBlockCreatorC1ENS0_12BlockRealizeENS0_3ForENS_7runtime5ArrayINS0_11BufferStoreEvEENS0_11CommReducerENS5_INS0_6BufferEvEEb'/>
 <use f='tvm/src/tir/schedule/primitive/reduction.cc' l='610' u='c' c='_ZN3tvm3tir16BaseBlockCreatorC1ENS0_12BlockRealizeENS0_3ForENS_7runtime5ArrayINS0_11BufferStoreEvEENS0_11CommReducerENS5_INS0_6BufferEvEEb'/>

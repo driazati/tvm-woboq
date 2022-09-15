@@ -36,11 +36,11 @@
 <use f='tvm/src/tir/schedule/analysis/analysis.cc' l='508' c='_ZN3tvm3tir13IsOutputBlockERKNS0_13ScheduleStateERKNS0_8StmtSRefES6_'/>
 <use f='tvm/src/tir/schedule/analysis/analysis.cc' l='553' u='m' c='_ZN3tvm3tir12IsWriteCacheERKNS0_8StmtSRefE'/>
 <use f='tvm/src/tir/schedule/analysis/analysis.cc' l='556' u='m' c='_ZN3tvm3tir12IsWriteCacheERKNS0_8StmtSRefE'/>
-<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='1174' u='m' c='_ZZN3tvm3tir24GetNthAccessBufferRegionERKNS0_13ScheduleStateERKNS0_5BlockEiNS0_15BufferIndexTypeEENK26BufferIndexOutOfRangeError20DetailRenderTemplateEv'/>
-<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='1193' u='r' c='_ZN3tvm3tir24GetNthAccessBufferRegionERKNS0_13ScheduleStateERKNS0_5BlockEiNS0_15BufferIndexTypeE'/>
-<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='1441' u='m' c='_ZN3tvm3tir21NeedsMultiLevelTilingERKNS0_13ScheduleStateERKNS0_8StmtSRefE'/>
-<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='1445' u='m' c='_ZN3tvm3tir21NeedsMultiLevelTilingERKNS0_13ScheduleStateERKNS0_8StmtSRefE'/>
-<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='1556' u='m' c='_ZN3tvm3tir34NeedsRFactorOrCrossThreadReductionERKNS0_13ScheduleStateERKNS0_8StmtSRefEll'/>
+<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='1203' u='m' c='_ZZN3tvm3tir24GetNthAccessBufferRegionERKNS0_13ScheduleStateERKNS0_5BlockEiNS0_15BufferIndexTypeEENK26BufferIndexOutOfRangeError20DetailRenderTemplateEv'/>
+<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='1222' u='r' c='_ZN3tvm3tir24GetNthAccessBufferRegionERKNS0_13ScheduleStateERKNS0_5BlockEiNS0_15BufferIndexTypeE'/>
+<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='1470' u='m' c='_ZN3tvm3tir21NeedsMultiLevelTilingERKNS0_13ScheduleStateERKNS0_8StmtSRefE'/>
+<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='1474' u='m' c='_ZN3tvm3tir21NeedsMultiLevelTilingERKNS0_13ScheduleStateERKNS0_8StmtSRefE'/>
+<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='1585' u='m' c='_ZN3tvm3tir34NeedsRFactorOrCrossThreadReductionERKNS0_13ScheduleStateERKNS0_8StmtSRefEll'/>
 <use f='tvm/src/tir/schedule/analysis/reducer.cc' l='557' u='m' c='_ZN3tvm3tir33ReductionIterNotIndexOutputBufferERKNS0_5BlockE'/>
 <use f='tvm/src/tir/schedule/analysis/reducer.cc' l='558' c='_ZN3tvm3tir33ReductionIterNotIndexOutputBufferERKNS0_5BlockE'/>
 <use f='tvm/src/tir/schedule/block_scope.cc' l='84' c='_ZN3tvm3tir10BlockScopeC1ERKNS_7runtime5ArrayINS0_8StmtSRefEvEE'/>
@@ -77,6 +77,8 @@
 <use f='tvm/src/tir/schedule/primitive/decompose_padding.cc' l='217' u='m' c='_ZN3tvm3tirL16CreateConstBlockEPKNS0_16BlockRealizeNodeERKNS0_16PaddingBlockInfoERKNS_7runtime5ArrayINS0_3ForEvEERKNS0_4StmtEPNS_5arith8AnalyzerE'/>
 <use f='tvm/src/tir/schedule/primitive/decompose_padding.cc' l='320' c='_ZN3tvm3tirL18CreateInBoundBlockEPKNS0_16BlockRealizeNodeERKNS0_16PaddingBlockInfoERKNS_7runtime5ArrayINS0_3ForEvEERKNS0_4StmtEPNS_5arith8AnalyzerE'/>
 <use f='tvm/src/tir/schedule/primitive/layout_transformation.cc' l='99' u='a' c='_ZN3tvm3tir23TransformLayoutRewriter10VisitStmt_EPKNS0_9BlockNodeE'/>
+<use f='tvm/src/tir/schedule/primitive/pad_einsum.cc' l='398' u='m' c='_ZN3tvm3tir9PadEinsumENS0_13ScheduleStateERKNS0_8StmtSRefERKNS_7runtime5ArrayINS_7IntegerEvEE'/>
+<use f='tvm/src/tir/schedule/primitive/pad_einsum.cc' l='404' u='m' c='_ZN3tvm3tir9PadEinsumENS0_13ScheduleStateERKNS0_8StmtSRefERKNS_7runtime5ArrayINS_7IntegerEvEE'/>
 <use f='tvm/src/tir/schedule/primitive/reduction.cc' l='73' c='_ZN3tvm3tir31DecomposeReductionBlockReplacer10VisitStmt_EPKNS0_9BlockNodeE'/>
 <use f='tvm/src/tir/schedule/primitive/reduction.cc' l='233' c='_ZN3tvm3tir18DecomposeReductionENS0_13ScheduleStateERKNS0_8StmtSRefES4_'/>
 <use f='tvm/src/tir/schedule/primitive/reduction.cc' l='234' u='m' c='_ZN3tvm3tir18DecomposeReductionENS0_13ScheduleStateERKNS0_8StmtSRefES4_'/>
@@ -84,10 +86,10 @@
 <use f='tvm/src/tir/schedule/primitive/reduction.cc' l='876' c='_ZN3tvm3tir19RFactorBlockCreator22CreateReadWriteRegionsEv'/>
 <use f='tvm/src/tir/schedule/state.cc' l='247' u='m' c='_ZN3tvm3tir18BlockInfoCollector32CheckRegionCoverAndStagePipelineERKNS0_9BlockInfoERKNS0_8StmtSRefERKNS_7runtime5ArrayIS5_vEE'/>
 <use f='tvm/src/tir/schedule/state.cc' l='248' c='_ZN3tvm3tir18BlockInfoCollector32CheckRegionCoverAndStagePipelineERKNS0_9BlockInfoERKNS0_8StmtSRefERKNS_7runtime5ArrayIS5_vEE'/>
-<use f='tvm/src/tir/schedule/transform.cc' l='175' u='r' c='_ZN3tvm3tir20ReplaceBufferMutator10VisitStmt_EPKNS0_9BlockNodeE'/>
-<use f='tvm/src/tir/schedule/transform.cc' l='182' u='r' c='_ZN3tvm3tir20ReplaceBufferMutator10VisitStmt_EPKNS0_9BlockNodeE'/>
-<use f='tvm/src/tir/schedule/transform.cc' l='189' u='w' c='_ZN3tvm3tir20ReplaceBufferMutator10VisitStmt_EPKNS0_9BlockNodeE'/>
-<use f='tvm/src/tir/schedule/transform.cc' l='362' u='a' c='_ZN3tvm3tir27BlockBufferAccessSimplifier10VisitStmt_EPKNS0_9BlockNodeE'/>
+<use f='tvm/src/tir/schedule/transform.cc' l='183' u='r' c='_ZN3tvm3tir20ReplaceBufferMutator10VisitStmt_EPKNS0_9BlockNodeE'/>
+<use f='tvm/src/tir/schedule/transform.cc' l='190' u='r' c='_ZN3tvm3tir20ReplaceBufferMutator10VisitStmt_EPKNS0_9BlockNodeE'/>
+<use f='tvm/src/tir/schedule/transform.cc' l='197' u='w' c='_ZN3tvm3tir20ReplaceBufferMutator10VisitStmt_EPKNS0_9BlockNodeE'/>
+<use f='tvm/src/tir/schedule/transform.cc' l='370' u='a' c='_ZN3tvm3tir27BlockBufferAccessSimplifier10VisitStmt_EPKNS0_9BlockNodeE'/>
 <use f='tvm/src/tir/transforms/compact_buffer_region.cc' l='222' c='_ZN3tvm3tir27BufferAccessRegionCollector10VisitStmt_EPKNS0_9BlockNodeE'/>
 <use f='tvm/src/tir/transforms/compact_buffer_region.cc' l='383' u='m' c='_ZN3tvm3tir21StorageAlignCollector10VisitStmt_EPKNS0_9BlockNodeE'/>
 <use f='tvm/src/tir/transforms/compact_buffer_region.cc' l='478' u='a' c='_ZN3tvm3tir15BufferCompactor10VisitStmt_EPKNS0_9BlockNodeE'/>

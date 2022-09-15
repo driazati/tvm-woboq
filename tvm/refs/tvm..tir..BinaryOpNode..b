@@ -279,6 +279,8 @@
 <use f='tvm/src/tir/schedule/ir_comparator.cc' l='146' u='r' c='_ZN3tvm3tir19TensorizeComparator10VisitExpr_EPKNS0_12FloorDivNodeERKNS_8PrimExprE'/>
 <use f='tvm/src/tir/schedule/ir_comparator.cc' l='146' u='r' c='_ZN3tvm3tir19TensorizeComparator10VisitExpr_EPKNS0_12FloorModNodeERKNS_8PrimExprE'/>
 <use f='tvm/src/tir/schedule/ir_comparator.cc' l='146' u='r' c='_ZN3tvm3tir19TensorizeComparator10VisitExpr_EPKNS0_12FloorModNodeERKNS_8PrimExprE'/>
+<use f='tvm/src/tir/schedule/primitive/pad_einsum.cc' l='139' u='m' c='_ZN3tvm3tir15EinsumExtractor15CheckStoreValueERKNS_8PrimExprE'/>
+<use f='tvm/src/tir/schedule/primitive/pad_einsum.cc' l='148' u='r' c='_ZN3tvm3tir15EinsumExtractor15CheckStoreValueERKNS_8PrimExprE'/>
 <use f='tvm/src/tir/transforms/bf16_legalize.cc' l='64' u='r' c='_ZN3tvm3tir19BF16PromoteRewriter10VisitExpr_EPKNS0_7AddNodeE'/>
 <use f='tvm/src/tir/transforms/bf16_legalize.cc' l='64' u='r' c='_ZN3tvm3tir19BF16PromoteRewriter10VisitExpr_EPKNS0_7SubNodeE'/>
 <use f='tvm/src/tir/transforms/bf16_legalize.cc' l='64' u='r' c='_ZN3tvm3tir19BF16PromoteRewriter10VisitExpr_EPKNS0_7MulNodeE'/>
