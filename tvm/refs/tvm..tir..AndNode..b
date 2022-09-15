@@ -5,7 +5,7 @@
 <use f='tvm/include/tvm/tir/expr.h' l='454' u='r' c='_ZNK3tvm3tir7AndNode11SHashReduceENS_12SHashReducerE'/>
 <offset>320</offset>
 <doc f='tvm/include/tvm/tir/expr.h' l='437'>/*! \brief The right operand. */</doc>
-<use f='tvm/src/arith/rewrite_simplify.cc' l='1537' u='r' c='_ZN3tvm5arith17RewriteSimplifier4Impl10VisitExpr_EPKNS_3tir7AndNodeE'/>
+<use f='tvm/src/arith/rewrite_simplify.cc' l='1525' u='r' c='_ZN3tvm5arith17RewriteSimplifier4Impl10VisitExpr_EPKNS_3tir7AndNodeE'/>
 <use f='tvm/src/auto_scheduler/compute_dag.cc' l='618' u='m' c='_ZN3tvm14auto_scheduler13FlopEstimator10VisitExpr_EPKNS_3tir7AndNodeE'/>
 <use f='tvm/src/auto_scheduler/compute_dag.cc' l='621' u='r' c='_ZN3tvm14auto_scheduler13FlopEstimator10VisitExpr_EPKNS_3tir7AndNodeE'/>
 <use f='tvm/src/printer/tir_text_printer.cc' l='322' u='r' c='_ZN3tvm3tir14TIRTextPrinter10VisitExpr_EPKNS0_7AndNodeE'/>

@@ -1,6 +1,6 @@
 <dec f='tvm/include/tvm/arith/iter_affine_map.h' l='341' type='tvm::arith::IterMapResult tvm::arith::DetectIterMap(const Array&lt;tvm::PrimExpr&gt; &amp; indices, const Map&lt;tvm::tir::Var, tvm::Range&gt; &amp; input_iters, const tvm::PrimExpr &amp; predicate, tvm::arith::IterMapLevel check_level, arith::Analyzer * analyzer, bool simplify_trivial_iterators = true)'/>
-<use f='tvm/src/arith/int_set.cc' l='1094' u='c' c='_ZN3tvm5arith25EstimateRegionStrictBoundERKNS_7runtime5ArrayINS_5RangeEvEERKNS1_3MapINS_3tir3VarES3_vvEERKNS_8PrimExprEPNS0_8AnalyzerE'/>
-<use f='tvm/src/arith/int_set.cc' l='1137' u='c' c='_ZN3tvm5arith24EstimateRegionUpperBoundERKNS_7runtime5ArrayINS_5RangeEvEERKNS1_3MapINS_3tir3VarES3_vvEERKNS_8PrimExprEPNS0_8AnalyzerE'/>
+<use f='tvm/src/arith/int_set.cc' l='1098' u='c' c='_ZN3tvm5arith25EstimateRegionStrictBoundERKNS_7runtime5ArrayINS_5RangeEvEERKNS1_3MapINS_3tir3VarES3_vvEERKNS_8PrimExprEPNS0_8AnalyzerE'/>
+<use f='tvm/src/arith/int_set.cc' l='1141' u='c' c='_ZN3tvm5arith24EstimateRegionUpperBoundERKNS_7runtime5ArrayINS_5RangeEvEERKNS1_3MapINS_3tir3VarES3_vvEERKNS_8PrimExprEPNS0_8AnalyzerE'/>
 <doc f='tvm/include/tvm/arith/iter_affine_map.h' l='318'>/*!
  * \brief Detect if indices can be written as
  *  [y_0 + c_0, y_1 + c_1, ..., y_n + c_n]
@@ -26,8 +26,8 @@
  */</doc>
 <def f='tvm/src/arith/iter_affine_map.cc' l='1100' ll='1182' type='tvm::arith::IterMapResult tvm::arith::DetectIterMap(const Array&lt;tvm::PrimExpr&gt; &amp; indices, const Map&lt;tvm::tir::Var, tvm::Range&gt; &amp; input_iters, const tvm::PrimExpr &amp; predicate, tvm::arith::IterMapLevel check_level, arith::Analyzer * analyzer, bool simplify_trivial_iterators = true)'/>
 <use f='tvm/src/arith/iter_affine_map.cc' l='1189' u='c'/>
-<use f='tvm/src/arith/iter_affine_map.cc' l='1772' u='c' c='_ZN3tvm5arith15IterMapSimplifyERKNS_7runtime5ArrayINS_8PrimExprEvEERKNS1_3MapINS_3tir3VarENS_5RangeEvvEERKS3_NS0_12IterMapLevelEb'/>
-<use f='tvm/src/arith/iter_affine_map.cc' l='2065' u='c' c='_ZN3tvm5arith14SubspaceDivideERKNS_7runtime5ArrayINS_8PrimExprEvEERKNS1_3MapINS_3tir3VarENS_5RangeEvvEERKNS2_IS9_vEERKS3_NS0_12IterMapLevelEPNS0_8AnalyzerE'/>
+<use f='tvm/src/arith/iter_affine_map.cc' l='1767' u='c' c='_ZN3tvm5arith15IterMapSimplifyERKNS_7runtime5ArrayINS_8PrimExprEvEERKNS1_3MapINS_3tir3VarENS_5RangeEvvEERKS3_NS0_12IterMapLevelEb'/>
+<use f='tvm/src/arith/iter_affine_map.cc' l='2060' u='c' c='_ZN3tvm5arith14SubspaceDivideERKNS_7runtime5ArrayINS_8PrimExprEvEERKNS1_3MapINS_3tir3VarENS_5RangeEvvEERKNS2_IS9_vEERKS3_NS0_12IterMapLevelEPNS0_8AnalyzerE'/>
 <use f='tvm/src/tir/ir/index_map.cc' l='79' u='c' c='_ZNK3tvm3tir8IndexMap20NonSurjectiveInverseENS_7runtime5ArrayINS_5RangeEvEE'/>
 <use f='tvm/src/tir/ir/index_map.cc' l='142' u='c' c='_ZNK3tvm3tir8IndexMap7InverseENS_7runtime5ArrayINS_5RangeEvEE'/>
 <use f='tvm/src/tir/schedule/analysis/analysis.cc' l='579' u='c' c='_ZN3tvm3tir15IsAffineBindingERKNS0_12BlockRealizeERKNS_7runtime3MapINS0_3VarENS_5RangeEvvEEPNS_5arith8AnalyzerE'/>
