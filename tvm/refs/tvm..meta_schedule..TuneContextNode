@@ -1,11 +1,11 @@
 <inh f='tvm/include/tvm/runtime/object.h' l='167' c='tvm::runtime::Object'/>
-<def f='tvm/include/tvm/meta_schedule/tune_context.h' l='48' ll='123'/>
-<use f='tvm/include/tvm/meta_schedule/tune_context.h' l='156' c='_ZNK3tvm13meta_schedule11TuneContextptEv'/>
-<use f='tvm/include/tvm/meta_schedule/tune_context.h' l='156' c='_ZNK3tvm13meta_schedule11TuneContextptEv'/>
-<use f='tvm/include/tvm/meta_schedule/tune_context.h' l='156' c='_ZNK3tvm13meta_schedule11TuneContext3getEv'/>
-<use f='tvm/include/tvm/meta_schedule/tune_context.h' l='156'/>
+<def f='tvm/include/tvm/meta_schedule/tune_context.h' l='49' ll='129'/>
+<use f='tvm/include/tvm/meta_schedule/tune_context.h' l='162' c='_ZNK3tvm13meta_schedule11TuneContextptEv'/>
+<use f='tvm/include/tvm/meta_schedule/tune_context.h' l='162' c='_ZNK3tvm13meta_schedule11TuneContextptEv'/>
+<use f='tvm/include/tvm/meta_schedule/tune_context.h' l='162' c='_ZNK3tvm13meta_schedule11TuneContext3getEv'/>
+<use f='tvm/include/tvm/meta_schedule/tune_context.h' l='162'/>
 <size>128</size>
-<doc f='tvm/include/tvm/meta_schedule/tune_context.h' l='47'>/*! \brief The auto tuning context. */</doc>
+<doc f='tvm/include/tvm/meta_schedule/tune_context.h' l='48'>/*! \brief The auto tuning context. */</doc>
 <mbr r='tvm::meta_schedule::TuneContextNode::mod' o='128' t='Optional&lt;tvm::IRModule&gt;'/>
 <mbr r='tvm::meta_schedule::TuneContextNode::target' o='192' t='Optional&lt;tvm::Target&gt;'/>
 <mbr r='tvm::meta_schedule::TuneContextNode::space_generator' o='256' t='Optional&lt;tvm::meta_schedule::SpaceGenerator&gt;'/>
@@ -23,6 +23,7 @@
 <mbr r='tvm::meta_schedule::TuneContextNode::runner_futures' o='960' t='Optional&lt;Array&lt;tvm::meta_schedule::RunnerFuture&gt;&gt;'/>
 <fun r='_ZN3tvm13meta_schedule15TuneContextNode10VisitAttrsEPNS_11AttrVisitorE'/>
 <fun r='_ZN3tvm13meta_schedule15TuneContextNode10InitializeEv'/>
+<fun r='_ZNK3tvm13meta_schedule15TuneContextNode5CloneEv'/>
 <fun r='_ZN3tvm13meta_schedule15TuneContextNode21_SetMeasureCandidatesERKNS_7runtime5ArrayINS0_16MeasureCandidateEvEE'/>
 <fun r='_ZN3tvm13meta_schedule15TuneContextNode14_SendToBuilderERKNS0_7BuilderE'/>
 <fun r='_ZN3tvm13meta_schedule15TuneContextNode13_SendToRunnerERKNS0_6RunnerE'/>
@@ -38,18 +39,21 @@
 <size>128</size>
 <use f='tvm/src/meta_schedule/search_strategy/replay_func.cc' l='37' c='_ZN3tvm13meta_schedule14ReplayFuncNode5StateC1EPS1_'/>
 <use f='tvm/src/meta_schedule/search_strategy/replay_func.cc' l='51'/>
-<use f='tvm/src/meta_schedule/search_strategy/replay_func.cc' l='111' c='_ZN3tvm13meta_schedule14ReplayFuncNode5State25GenerateMeasureCandidatesEv'/>
+<use f='tvm/src/meta_schedule/search_strategy/replay_func.cc' l='121' c='_ZN3tvm13meta_schedule14ReplayFuncNode5State25GenerateMeasureCandidatesEv'/>
 <size>128</size>
 <use f='tvm/src/meta_schedule/search_strategy/replay_trace.cc' l='43' c='_ZN3tvm13meta_schedule15ReplayTraceNode5StateC1EPS1_NS_7runtime5ArrayINS_3tir5TraceEvEE'/>
 <use f='tvm/src/meta_schedule/search_strategy/replay_trace.cc' l='64'/>
-<use f='tvm/src/meta_schedule/search_strategy/replay_trace.cc' l='129' c='_ZN3tvm13meta_schedule15ReplayTraceNode5State25GenerateMeasureCandidatesEv'/>
+<use f='tvm/src/meta_schedule/search_strategy/replay_trace.cc' l='140' c='_ZN3tvm13meta_schedule15ReplayTraceNode5State25GenerateMeasureCandidatesEv'/>
 <size>128</size>
 <use f='tvm/src/meta_schedule/tune_context.cc' l='37' c='_ZN3tvm13meta_schedule11TuneContextC1ENS_7runtime8OptionalINS_8IRModuleEEENS3_INS_6TargetEEENS3_INS0_14SpaceGeneratorEEENS3_INS0_14SearchStrategyEEENS10962771'/>
 <use f='tvm/src/meta_schedule/tune_context.cc' l='37' c='_ZN3tvm13meta_schedule11TuneContextC1ENS_7runtime8OptionalINS_8IRModuleEEENS3_INS_6TargetEEENS3_INS0_14SpaceGeneratorEEENS3_INS0_14SearchStrategyEEENS10962771'/>
-<use f='tvm/src/meta_schedule/tune_context.cc' l='161'/>
-<use f='tvm/src/meta_schedule/tune_context.cc' l='161'/>
-<use f='tvm/src/meta_schedule/tune_context.cc' l='161'/>
+<use f='tvm/src/meta_schedule/tune_context.cc' l='56' c='_ZNK3tvm13meta_schedule15TuneContextNode5CloneEv'/>
+<use f='tvm/src/meta_schedule/tune_context.cc' l='56' c='_ZNK3tvm13meta_schedule15TuneContextNode5CloneEv'/>
+<use f='tvm/src/meta_schedule/tune_context.cc' l='187'/>
+<use f='tvm/src/meta_schedule/tune_context.cc' l='187'/>
+<use f='tvm/src/meta_schedule/tune_context.cc' l='187'/>
 <size>128</size>
+<fun r='_ZNK3tvm13meta_schedule15TuneContextNode5CloneEv'/>
 <fun r='_ZN3tvm13meta_schedule15TuneContextNode10InitializeEv'/>
 <fun r='_ZN3tvm13meta_schedule15TuneContextNode21_SetMeasureCandidatesERKNS_7runtime5ArrayINS0_16MeasureCandidateEvEE'/>
 <fun r='_ZN3tvm13meta_schedule15TuneContextNode14_SendToBuilderERKNS0_7BuilderE'/>

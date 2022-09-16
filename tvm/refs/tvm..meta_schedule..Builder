@@ -7,7 +7,7 @@
 <use f='tvm/include/tvm/meta_schedule/builder.h' l='139' c='_ZN3tvm13meta_schedule7BuilderaSERKS1_'/>
 <use f='tvm/include/tvm/meta_schedule/builder.h' l='139' c='_ZN3tvm13meta_schedule7BuilderaSEOS1_'/>
 <use f='tvm/include/tvm/meta_schedule/builder.h' l='139' c='_ZN3tvm13meta_schedule7BuilderaSEOS1_'/>
-<use f='tvm/include/tvm/meta_schedule/tune_context.h' l='108' c='_ZN3tvm13meta_schedule15TuneContextNode14_SendToBuilderERKNS0_7BuilderE'/>
+<use f='tvm/include/tvm/meta_schedule/tune_context.h' l='114' c='_ZN3tvm13meta_schedule15TuneContextNode14_SendToBuilderERKNS0_7BuilderE'/>
 <use f='tvm/include/tvm/meta_schedule/task_scheduler.h' l='79'/>
 <use f='tvm/include/tvm/meta_schedule/task_scheduler.h' l='219' c='_ZN3tvm13meta_schedule13TaskScheduler10RoundRobinENS_7runtime5ArrayINS0_11TuneContextEvEENS0_7BuilderENS0_6RunnerENS2_8OptionalINS0_8DatabaseEEENS8_IN927609'/>
 <use f='tvm/include/tvm/meta_schedule/task_scheduler.h' l='244' c='_ZN3tvm13meta_schedule13TaskScheduler13GradientBasedENS_7runtime5ArrayINS0_11TuneContextEvEENS3_INS_8FloatImmEvEENS0_7BuilderENS0_6RunnerENS2_8Optiona15111662'/>
@@ -34,5 +34,5 @@
 <size>8</size>
 <use f='tvm/src/meta_schedule/task_scheduler/task_scheduler.cc' l='161' c='_ZN3tvm13meta_schedule13TaskScheduler15PyTaskSchedulerENS_7runtime5ArrayINS0_11TuneContextEvEENS0_7BuilderENS0_6RunnerENS2_8OptionalINS0_8DatabaseEEEN15662921'/>
 <size>8</size>
-<use f='tvm/src/meta_schedule/tune_context.cc' l='77' c='_ZN3tvm13meta_schedule15TuneContextNode14_SendToBuilderERKNS0_7BuilderE'/>
+<use f='tvm/src/meta_schedule/tune_context.cc' l='103' c='_ZN3tvm13meta_schedule15TuneContextNode14_SendToBuilderERKNS0_7BuilderE'/>
 <size>8</size>

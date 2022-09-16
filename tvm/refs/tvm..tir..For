@@ -34,7 +34,7 @@
 <use f='tvm/src/meta_schedule/postproc/rewrite_layout.cc' l='46' c='_ZN3tvm3tir22BufferReadPosCollector10VisitStmt_EPKNS0_7ForNodeE'/>
 <use f='tvm/src/meta_schedule/postproc/rewrite_layout.cc' l='100'/>
 <size>8</size>
-<use f='tvm/src/meta_schedule/schedule_rule/cross_thread_reduction.cc' l='127' c='_ZN3tvm13meta_schedule24CrossThreadReductionNode13InThreadScopeERKNS_3tir8ScheduleERKNS2_7BlockRVE'/>
+<use f='tvm/src/meta_schedule/schedule_rule/cross_thread_reduction.cc' l='133' c='_ZN3tvm13meta_schedule24CrossThreadReductionNode13InThreadScopeERKNS_3tir8ScheduleERKNS2_7BlockRVE'/>
 <size>8</size>
 <use f='tvm/src/printer/tvmscript_printer.cc' l='195'/>
 <use f='tvm/src/printer/tvmscript_printer.cc' l='197'/>
