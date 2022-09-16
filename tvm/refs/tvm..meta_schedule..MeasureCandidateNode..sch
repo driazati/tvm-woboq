@@ -7,4 +7,4 @@
 <use f='tvm/src/meta_schedule/measure_callback/echo_statistics.cc' l='71' u='m' c='_ZN3tvm13meta_schedule8TaskInfo11UpdateErrorENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKNS0_16MeasureCandidateE'/>
 <use f='tvm/src/meta_schedule/measure_callback/echo_statistics.cc' l='72' u='m' c='_ZN3tvm13meta_schedule8TaskInfo11UpdateErrorENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKNS0_16MeasureCandidateE'/>
 <use f='tvm/src/meta_schedule/search_strategy/search_strategy.cc' l='26' u='w' c='_ZN3tvm13meta_schedule16MeasureCandidateC1ENS_3tir8ScheduleENS_7runtime5ArrayINS0_7ArgInfoEvEE'/>
-<use f='tvm/src/meta_schedule/tune_context.cc' l='110' u='m' c='_ZN3tvm13meta_schedule15TuneContextNode14_SendToBuilderERKNS0_7BuilderE'/>
+<use f='tvm/src/meta_schedule/tune_context.cc' l='111' u='m' c='_ZN3tvm13meta_schedule15TuneContextNode14_SendToBuilderERKNS0_7BuilderE'/>

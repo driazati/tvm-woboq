@@ -34,5 +34,5 @@
 <size>8</size>
 <use f='tvm/src/meta_schedule/task_scheduler/task_scheduler.cc' l='161' c='_ZN3tvm13meta_schedule13TaskScheduler15PyTaskSchedulerENS_7runtime5ArrayINS0_11TuneContextEvEENS0_7BuilderENS0_6RunnerENS2_8OptionalINS0_8DatabaseEEEN15662921'/>
 <size>8</size>
-<use f='tvm/src/meta_schedule/tune_context.cc' l='103' c='_ZN3tvm13meta_schedule15TuneContextNode14_SendToBuilderERKNS0_7BuilderE'/>
+<use f='tvm/src/meta_schedule/tune_context.cc' l='104' c='_ZN3tvm13meta_schedule15TuneContextNode14_SendToBuilderERKNS0_7BuilderE'/>
 <size>8</size>
