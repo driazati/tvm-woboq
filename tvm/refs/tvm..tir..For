@@ -53,6 +53,14 @@
 <size>8</size>
 <use f='tvm/src/relay/backend/contrib/example_target_hooks/relay_to_tir.cc' l='146' c='_ZN3tvm5relay7contrib20example_target_hooks12_GLOBAL__N_120ConvertAddToSubtract30ReplaceAddWithSubtractPrimFuncERKNS0_8FunctionE'/>
 <size>8</size>
+<use f='tvm/src/script/ir_builder/tir/ir.cc' l='187' c='_ZN3tvm6script10ir_builder3tir6SerialENS_8PrimExprES3_NS_7runtime8OptionalINS4_3MapINS4_6StringENS4_9ObjectRefEvvEEEE'/>
+<use f='tvm/src/script/ir_builder/tir/ir.cc' l='187' c='_ZN3tvm6script10ir_builder3tir8ParallelENS_8PrimExprES3_NS_7runtime8OptionalINS4_3MapINS4_6StringENS4_9ObjectRefEvvEEEE'/>
+<use f='tvm/src/script/ir_builder/tir/ir.cc' l='187' c='_ZN3tvm6script10ir_builder3tir10VectorizedENS_8PrimExprES3_NS_7runtime8OptionalINS4_3MapINS4_6StringENS4_9ObjectRefEvvEEEE'/>
+<use f='tvm/src/script/ir_builder/tir/ir.cc' l='187' c='_ZN3tvm6script10ir_builder3tir6UnrollENS_8PrimExprES3_NS_7runtime8OptionalINS4_3MapINS4_6StringENS4_9ObjectRefEvvEEEE'/>
+<use f='tvm/src/script/ir_builder/tir/ir.cc' l='209' c='_ZN3tvm6script10ir_builder3tir13ThreadBindingENS_8PrimExprES3_NS_7runtime6StringENS4_8OptionalINS4_3MapIS5_NS4_9ObjectRefEvvEEEE'/>
+<use f='tvm/src/script/ir_builder/tir/ir.cc' l='214' c='_ZN3tvm6script10ir_builder3tir13ThreadBindingENS_8PrimExprES3_NS_7runtime6StringENS4_8OptionalINS4_3MapIS5_NS4_9ObjectRefEvvEEEE'/>
+<use f='tvm/src/script/ir_builder/tir/ir.cc' l='236' c='_ZN3tvm6script10ir_builder3tir4GridENS_7runtime5ArrayINS_8PrimExprEvEE'/>
+<size>8</size>
 <use f='tvm/src/target/llvm/codegen_cpu.cc' l='1527' c='_ZN3tvm7codegen10CodeGenCPU10VisitStmt_EPKNS_3tir7ForNodeE'/>
 <size>8</size>
 <use f='tvm/src/te/operation/create_primfunc.cc' l='341' c='_ZN3tvm3tir23GenerateStmtFromComputeERKNS_2te9ComputeOpEPNS0_14CreateFuncInfoEPNS_5arith8AnalyzerE'/>
