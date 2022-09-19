@@ -31,7 +31,7 @@
 <use f='tvm/src/arith/canonical_simplify.cc' l='1089' c='_ZN3tvm5arith19CanonicalSimplifier4Impl10VisitExpr_EPKNS_3tir7ModNodeE'/>
 <size>8</size>
 <use f='tvm/src/arith/int_set.cc' l='228' c='_ZN3tvm5arith7CombineEPNS0_8AnalyzerENS0_11IntervalSetES3_NS_7runtime8DataTypeE'/>
-<use f='tvm/src/arith/int_set.cc' l='408' c='_ZN3tvm5arith20IntervalSetEvaluator10VisitExpr_EPKNS_3tir7ModNodeE'/>
+<use f='tvm/src/arith/int_set.cc' l='435' c='_ZN3tvm5arith20IntervalSetEvaluator10VisitExpr_EPKNS_3tir7ModNodeE'/>
 <size>8</size>
 <use f='tvm/src/arith/rewrite_simplify.cc' l='665' c='_ZN3tvm5arith17RewriteSimplifier4Impl10VisitExpr_EPKNS_3tir7ModNodeE'/>
 <size>8</size>

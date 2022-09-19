@@ -33,8 +33,8 @@
 <use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling_tensor_core.cc' l='515' u='m' c='_ZNK3tvm13meta_schedule30MultiLevelTilingTensorCoreNode25TransformWithTensorIntrinEPNS0_19TensorCoreStateNodeERKNS_7runtime6StringE'/>
 <use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling_tensor_core.cc' l='516' u='m' c='_ZNK3tvm13meta_schedule30MultiLevelTilingTensorCoreNode25TransformWithTensorIntrinEPNS0_19TensorCoreStateNodeERKNS_7runtime6StringE'/>
 <use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling_tensor_core.cc' l='518' u='r' c='_ZNK3tvm13meta_schedule30MultiLevelTilingTensorCoreNode25TransformWithTensorIntrinEPNS0_19TensorCoreStateNodeERKNS_7runtime6StringE'/>
-<use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling_tensor_core.cc' l='532' u='m' c='_ZNK3tvm13meta_schedule30MultiLevelTilingTensorCoreNode25TransformForTensorizationENS0_15TensorCoreStateE'/>
-<use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling_tensor_core.cc' l='535' u='m' c='_ZNK3tvm13meta_schedule30MultiLevelTilingTensorCoreNode25TransformForTensorizationENS0_15TensorCoreStateE'/>
-<use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling_tensor_core.cc' l='537' u='m' c='_ZNK3tvm13meta_schedule30MultiLevelTilingTensorCoreNode25TransformForTensorizationENS0_15TensorCoreStateE'/>
-<use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling_tensor_core.cc' l='539' u='m' c='_ZNK3tvm13meta_schedule30MultiLevelTilingTensorCoreNode25TransformForTensorizationENS0_15TensorCoreStateE'/>
+<use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling_tensor_core.cc' l='533' u='m' c='_ZNK3tvm13meta_schedule30MultiLevelTilingTensorCoreNode25TransformForTensorizationENS0_15TensorCoreStateE'/>
+<use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling_tensor_core.cc' l='536' u='m' c='_ZNK3tvm13meta_schedule30MultiLevelTilingTensorCoreNode25TransformForTensorizationENS0_15TensorCoreStateE'/>
+<use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling_tensor_core.cc' l='538' u='m' c='_ZNK3tvm13meta_schedule30MultiLevelTilingTensorCoreNode25TransformForTensorizationENS0_15TensorCoreStateE'/>
+<use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling_tensor_core.cc' l='540' u='m' c='_ZNK3tvm13meta_schedule30MultiLevelTilingTensorCoreNode25TransformForTensorizationENS0_15TensorCoreStateE'/>
 <use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling_with_intrin.cc' l='77' u='r' c='_ZN3tvm13meta_schedule30MultiLevelTilingWithIntrinNode13ApplySubRulesESt6vectorINS0_5StateESaIS3_EE'/>

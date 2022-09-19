@@ -80,8 +80,8 @@
 <use f='tvm/src/tir/schedule/analysis/analysis.cc' l='767' c='_ZZN3tvm3tir23CheckLoopStartsWithZeroERKNS0_13ScheduleStateERKNS0_8StmtSRefEPNS_5arith8AnalyzerEEN25LoopNotStartWithZeroErrorC1ENS_8IRModuleENS0_3ForE'/>
 <use f='tvm/src/tir/schedule/analysis/analysis.cc' l='782' c='_ZN3tvm3tir23CheckLoopStartsWithZeroERKNS0_13ScheduleStateERKNS0_8StmtSRefEPNS_5arith8AnalyzerE'/>
 <use f='tvm/src/tir/schedule/analysis/analysis.cc' l='786' c='_ZN3tvm3tir23CheckLoopStartsWithZeroERKNS0_13ScheduleStateERKNS0_8StmtSRefEPNS_5arith8AnalyzerE'/>
-<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='1813' c='_ZN3tvm3tir23GetTensorizeLoopMappingERKNS0_13ScheduleStateERKNS0_8StmtSRefERKNS0_8PrimFuncE'/>
-<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='1819' c='_ZN3tvm3tir23GetTensorizeLoopMappingERKNS0_13ScheduleStateERKNS0_8StmtSRefERKNS0_8PrimFuncE'/>
+<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='1832' c='_ZN3tvm3tir23GetTensorizeLoopMappingERKNS0_13ScheduleStateERKNS0_8StmtSRefERKNS0_8PrimFuncEb'/>
+<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='1838' c='_ZN3tvm3tir23GetTensorizeLoopMappingERKNS0_13ScheduleStateERKNS0_8StmtSRefERKNS0_8PrimFuncEb'/>
 <size>8</size>
 <use f='tvm/src/tir/schedule/analysis/layout.cc' l='128' c='_ZN3tvm3tir15SuggestIndexMapERKNS0_6BufferERKNS_7runtime5ArrayINS_8PrimExprEvEERKNS5_INS0_3ForEvEERKS6_PNS_5arith8AnalyzerE'/>
 <use f='tvm/src/tir/schedule/analysis/layout.cc' l='137' c='_ZN3tvm3tir15SuggestIndexMapERKNS0_6BufferERKNS_7runtime5ArrayINS_8PrimExprEvEERKNS5_INS0_3ForEvEERKS6_PNS_5arith8AnalyzerE'/>
@@ -243,7 +243,7 @@
 <use f='tvm/src/tir/schedule/state.cc' l='638' c='_ZN3tvm3tir14SRefTreePruner10VisitStmt_EPKNS0_7ForNodeE'/>
 <use f='tvm/src/tir/schedule/state.cc' l='889' c='_ZN3tvm3tir13ChildReplacer19CopyOnWriteAndVisitEPKNS0_8StmtNodeE'/>
 <size>8</size>
-<use f='tvm/src/tir/schedule/transform.cc' l='331' c='_ZN3tvm3tir20TileWithTensorIntrinERKNS0_8ScheduleERKNS0_7BlockRVERKNS_7runtime6StringE'/>
+<use f='tvm/src/tir/schedule/transform.cc' l='335' c='_ZN3tvm3tir20TileWithTensorIntrinERKNS0_8ScheduleERKNS0_7BlockRVERKNS_7runtime6StringEb'/>
 <size>8</size>
 <use f='tvm/src/tir/transforms/common_subexpr_elim.cc' l='622' c='_ZN3tvm3tir29CommonSubexpressionEliminator10VisitStmt_EPKNS0_7ForNodeE'/>
 <size>8</size>

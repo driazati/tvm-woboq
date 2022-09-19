@@ -25,7 +25,7 @@
 <use f='tvm/src/arith/pattern_match.h' l='406' c='_ZN3tvm5aritheqElRKNS0_7PatternIT_EE'/>
 <size>8</size>
 <use f='tvm/src/arith/int_set.cc' l='96'/>
-<use f='tvm/src/arith/int_set.cc' l='418' c='_ZN3tvm5arith20IntervalSetEvaluator10VisitExpr_EPKNS_3tir6EQNodeE'/>
+<use f='tvm/src/arith/int_set.cc' l='445' c='_ZN3tvm5arith20IntervalSetEvaluator10VisitExpr_EPKNS_3tir6EQNodeE'/>
 <size>8</size>
 <use f='tvm/src/arith/rewrite_simplify.cc' l='1321' c='_ZN3tvm5arith17RewriteSimplifier4Impl10VisitExpr_EPKNS_3tir6EQNodeE'/>
 <size>8</size>

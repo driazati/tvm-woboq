@@ -122,15 +122,15 @@
 <use f='tvm/src/arith/rewrite_simplify.h' l='115' c='_ZNK3tvm5arith17RewriteSimplifier4Impl25TryMatchLiteralConstraintERKNS_8PrimExprE'/>
 <use f='tvm/src/arith/const_int_bound.cc' l='677' c='_ZN3tvm5arith21ConstIntBoundAnalyzer4Impl15FindCeilLog2ArgEPKNS_3tir8CastNodeE'/>
 <use f='tvm/include/tvm/runtime/device_api.h' l='118' c='_ZN3tvm7runtime9DeviceAPI14AllocDataSpaceE8DLDeviceiPKl10DLDataTypeNS0_8OptionalINS0_6StringEEE'/>
-<use f='tvm/src/arith/int_set.cc' l='1056' c='_ZN3tvm5arithL11EvalIterSumERKNS0_11IterSumExprERKNS_8PrimExprEPNS0_8AnalyzerE'/>
-<use f='tvm/src/arith/int_set.cc' l='1083' c='_ZN3tvm5arith25EstimateRegionStrictBoundERKNS_7runtime5ArrayINS_5RangeEvEERKNS1_3MapINS_3tir3VarES3_vvEERKNS_8PrimExprEPNS0_8AnalyzerE'/>
-<use f='tvm/src/arith/int_set.cc' l='1112' c='_ZN3tvm5arith25EstimateRegionStrictBoundERKNS_7runtime5ArrayINS_5RangeEvEERKNS1_3MapINS_3tir3VarES3_vvEERKNS_8PrimExprEPNS0_8AnalyzerE'/>
-<use f='tvm/src/arith/int_set.cc' l='1122' c='_ZN3tvm5arith24EstimateRegionLowerBoundERKNS_7runtime5ArrayINS_5RangeEvEERKNS1_3MapINS_3tir3VarES3_vvEERKNS_8PrimExprEPNS0_8AnalyzerE'/>
-<use f='tvm/src/arith/int_set.cc' l='1131' c='_ZN3tvm5arith24EstimateRegionUpperBoundERKNS_7runtime5ArrayINS_5RangeEvEERKNS1_3MapINS_3tir3VarES3_vvEERKNS_8PrimExprEPNS0_8AnalyzerE'/>
-<use f='tvm/src/arith/int_set.cc' l='1156' c='_ZN3tvm5arith24EstimateRegionUpperBoundERKNS_7runtime5ArrayINS_5RangeEvEERKNS1_3MapINS_3tir3VarES3_vvEERKNS_8PrimExprEPNS0_8AnalyzerE'/>
-<use f='tvm/src/arith/int_set.cc' l='1192'/>
-<use f='tvm/src/arith/int_set.cc' l='1198'/>
-<use f='tvm/src/arith/int_set.cc' l='1204'/>
+<use f='tvm/src/arith/int_set.cc' l='1034' c='_ZN3tvm5arithL11EvalIterSumERKNS0_11IterSumExprERKNS_8PrimExprEPNS0_8AnalyzerE'/>
+<use f='tvm/src/arith/int_set.cc' l='1061' c='_ZN3tvm5arith25EstimateRegionStrictBoundERKNS_7runtime5ArrayINS_5RangeEvEERKNS1_3MapINS_3tir3VarES3_vvEERKNS_8PrimExprEPNS0_8AnalyzerE'/>
+<use f='tvm/src/arith/int_set.cc' l='1090' c='_ZN3tvm5arith25EstimateRegionStrictBoundERKNS_7runtime5ArrayINS_5RangeEvEERKNS1_3MapINS_3tir3VarES3_vvEERKNS_8PrimExprEPNS0_8AnalyzerE'/>
+<use f='tvm/src/arith/int_set.cc' l='1100' c='_ZN3tvm5arith24EstimateRegionLowerBoundERKNS_7runtime5ArrayINS_5RangeEvEERKNS1_3MapINS_3tir3VarES3_vvEERKNS_8PrimExprEPNS0_8AnalyzerE'/>
+<use f='tvm/src/arith/int_set.cc' l='1109' c='_ZN3tvm5arith24EstimateRegionUpperBoundERKNS_7runtime5ArrayINS_5RangeEvEERKNS1_3MapINS_3tir3VarES3_vvEERKNS_8PrimExprEPNS0_8AnalyzerE'/>
+<use f='tvm/src/arith/int_set.cc' l='1134' c='_ZN3tvm5arith24EstimateRegionUpperBoundERKNS_7runtime5ArrayINS_5RangeEvEERKNS1_3MapINS_3tir3VarES3_vvEERKNS_8PrimExprEPNS0_8AnalyzerE'/>
+<use f='tvm/src/arith/int_set.cc' l='1170'/>
+<use f='tvm/src/arith/int_set.cc' l='1176'/>
+<use f='tvm/src/arith/int_set.cc' l='1182'/>
 <use f='tvm/src/arith/iter_affine_map.cc' l='220' c='_ZN3tvm5arith15IterMapRewriter21RewriteIterConstraintERKNS_8PrimExprERKNS_7runtime8OptionalIS2_EES9_'/>
 <use f='tvm/src/arith/iter_affine_map.cc' l='221' c='_ZN3tvm5arith15IterMapRewriter21RewriteIterConstraintERKNS_8PrimExprERKNS_7runtime8OptionalIS2_EES9_'/>
 <use f='tvm/src/arith/iter_affine_map.cc' l='649' c='_ZN3tvm5arith15IterMapRewriter26NormalizeToIterOnBoundExprENS0_11IterSumExprENS_7runtime8OptionalINS_8PrimExprEEES6_'/>
@@ -452,8 +452,9 @@
 <use f='tvm/src/tir/schedule/analysis.h' l='514' c='_ZN3tvm3tir17GetReducerGettersEv'/>
 <use f='tvm/src/tir/schedule/analysis.h' l='587' c='_ZN3tvm3tir15SuggestIndexMapERKNS0_6BufferERKNS_7runtime5ArrayINS_8PrimExprEvEERKNS5_INS0_3ForEvEERKS6_PNS_5arith8AnalyzerE'/>
 <use f='tvm/src/tir/schedule/analysis.h' l='715' c='_ZN3tvm3tir25CheckTrivialBufferIndicesERKT_'/>
-<use f='tvm/src/tir/schedule/analysis.h' l='756' c='_ZN3tvm3tir23GetTensorizeLoopMappingERKNS0_13ScheduleStateERKNS0_8StmtSRefERKNS0_8PrimFuncE'/>
-<use f='tvm/src/tir/schedule/analysis.h' l='806' c='_ZN3tvm3tir27GetAutoTensorizeMappingInfoERKNS0_13ScheduleStateERKNS0_8StmtSRefERKNS0_8PrimFuncE'/>
+<use f='tvm/src/tir/schedule/analysis.h' l='737'/>
+<use f='tvm/src/tir/schedule/analysis.h' l='762' c='_ZN3tvm3tir23GetTensorizeLoopMappingERKNS0_13ScheduleStateERKNS0_8StmtSRefERKNS0_8PrimFuncEb'/>
+<use f='tvm/src/tir/schedule/analysis.h' l='812' c='_ZN3tvm3tir27GetAutoTensorizeMappingInfoERKNS0_13ScheduleStateERKNS0_8StmtSRefERKNS0_8PrimFuncE'/>
 <use f='tvm/src/tir/schedule/instruction_traits.h' l='157' c='_ZN3tvm3tir18UnpackedInstTraits15ApplyToScheduleERKNS0_8ScheduleERKNS_7runtime5ArrayINS5_9ObjectRefEvEESA_RKNS5_8OptionalIS7_EE'/>
 <use f='tvm/src/tir/schedule/instruction_traits.h' l='165' c='_ZN3tvm3tir18UnpackedInstTraits8AsPythonERKNS_7runtime5ArrayINS2_9ObjectRefEvEES7_RKNS2_8OptionalIS4_EERKNS3_INS2_6StringEvEE'/>
 <use f='tvm/src/tir/schedule/instruction_traits.h' l='182' c='_ZN3tvm3tir18UnpackedInstTraits12_SetDecisionERKNS_7runtime13TVMArgsSetterERKNS2_8OptionalINS2_9ObjectRefEEE'/>
@@ -461,7 +462,7 @@
 <use f='tvm/src/tir/schedule/instruction_traits.h' l='306' c='_ZN3tvm3tir18UnpackedInstTraits15ApplyToScheduleERKNS0_8ScheduleERKNS_7runtime5ArrayINS5_9ObjectRefEvEESA_RKNS5_8OptionalIS7_EE'/>
 <use f='tvm/src/tir/schedule/instruction_traits.h' l='338' c='_ZN3tvm3tir18UnpackedInstTraits8AsPythonERKNS_7runtime5ArrayINS2_9ObjectRefEvEES7_RKNS2_8OptionalIS4_EERKNS3_INS2_6StringEvEE'/>
 <use f='tvm/src/tir/schedule/instruction_traits.h' l='398' c='_ZN3tvm3tir18UnpackedInstTraits12_SetDecisionERKNS_7runtime13TVMArgsSetterERKNS2_8OptionalINS2_9ObjectRefEEE'/>
-<use f='tvm/src/tir/schedule/transform.h' l='199' c='_ZN3tvm3tir20TileWithTensorIntrinERKNS0_8ScheduleERKNS0_7BlockRVERKNS_7runtime6StringE'/>
+<use f='tvm/src/tir/schedule/transform.h' l='200' c='_ZN3tvm3tir20TileWithTensorIntrinERKNS0_8ScheduleERKNS0_7BlockRVERKNS_7runtime6StringEb'/>
 <use f='tvm/src/tir/schedule/utils.h' l='291' c='_ZN3tvm3tir19AnalyzeVarWithShiftERKNS_8PrimExprEPNS_7runtime8OptionalINS_6IntImmEEE'/>
 <use f='tvm/src/tir/schedule/utils.h' l='291' c='_ZN3tvm3tir19AnalyzeVarWithShiftERKNS_8PrimExprEPNS_7runtime8OptionalINS_6IntImmEEE'/>
 <use f='tvm/src/tir/schedule/utils.h' l='322' c='_ZN3tvm3tir6GetAnnEPKT0_RKNS_7runtime6StringE'/>
@@ -561,12 +562,12 @@
 <use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling_tensor_core.cc' l='185' c='_ZN3tvm13meta_schedule30MultiLevelTilingTensorCoreNode5ApplyERKNS_3tir8ScheduleERKNS2_7BlockRVE'/>
 <use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling_tensor_core.cc' l='245' c='_ZNK3tvm13meta_schedule30MultiLevelTilingTensorCoreNode24TileAndAnnotateTensorizeEPNS_3tir8ScheduleERKNS2_7BlockRVERKNS_7runtime6StringE'/>
 <use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling_tensor_core.cc' l='414' c='_ZNK3tvm13meta_schedule30MultiLevelTilingTensorCoreNode25TransformWithTensorIntrinEPNS0_19TensorCoreStateNodeERKNS_7runtime6StringE'/>
-<use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling_tensor_core.cc' l='524' c='_ZNK3tvm13meta_schedule30MultiLevelTilingTensorCoreNode25TransformForTensorizationENS0_15TensorCoreStateE'/>
-<use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling_tensor_core.cc' l='544' c='_ZN3tvm13meta_schedule12ScheduleRule26MultiLevelTilingTensorCoreENS_7runtime5ArrayINS2_3MapINS2_6StringES5_vvEEvEES5_NS2_8OptionalINS3_IS5_vEEEENS8_IN10176615'/>
-<use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling_tensor_core.cc' l='545' c='_ZN3tvm13meta_schedule12ScheduleRule26MultiLevelTilingTensorCoreENS_7runtime5ArrayINS2_3MapINS2_6StringES5_vvEEvEES5_NS2_8OptionalINS3_IS5_vEEEENS8_IN10176615'/>
+<use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling_tensor_core.cc' l='525' c='_ZNK3tvm13meta_schedule30MultiLevelTilingTensorCoreNode25TransformForTensorizationENS0_15TensorCoreStateE'/>
 <use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling_tensor_core.cc' l='545' c='_ZN3tvm13meta_schedule12ScheduleRule26MultiLevelTilingTensorCoreENS_7runtime5ArrayINS2_3MapINS2_6StringES5_vvEEvEES5_NS2_8OptionalINS3_IS5_vEEEENS8_IN10176615'/>
 <use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling_tensor_core.cc' l='546' c='_ZN3tvm13meta_schedule12ScheduleRule26MultiLevelTilingTensorCoreENS_7runtime5ArrayINS2_3MapINS2_6StringES5_vvEEvEES5_NS2_8OptionalINS3_IS5_vEEEENS8_IN10176615'/>
 <use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling_tensor_core.cc' l='546' c='_ZN3tvm13meta_schedule12ScheduleRule26MultiLevelTilingTensorCoreENS_7runtime5ArrayINS2_3MapINS2_6StringES5_vvEEvEES5_NS2_8OptionalINS3_IS5_vEEEENS8_IN10176615'/>
+<use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling_tensor_core.cc' l='547' c='_ZN3tvm13meta_schedule12ScheduleRule26MultiLevelTilingTensorCoreENS_7runtime5ArrayINS2_3MapINS2_6StringES5_vvEEvEES5_NS2_8OptionalINS3_IS5_vEEEENS8_IN10176615'/>
+<use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling_tensor_core.cc' l='547' c='_ZN3tvm13meta_schedule12ScheduleRule26MultiLevelTilingTensorCoreENS_7runtime5ArrayINS2_3MapINS2_6StringES5_vvEEvEES5_NS2_8OptionalINS3_IS5_vEEEENS8_IN10176615'/>
 <use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling_with_intrin.cc' l='32' c='_ZN3tvm13meta_schedule13TileForIntrinENS_3tir8ScheduleENS1_7BlockRVERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
 <use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling_with_intrin.cc' l='34' c='_ZN3tvm13meta_schedule13TileForIntrinENS_3tir8ScheduleENS1_7BlockRVERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
 <use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling_with_intrin.cc' l='95' c='_ZN3tvm13meta_schedule12ScheduleRule26MultiLevelTilingWithIntrinENS_7runtime6StringES3_NS2_8OptionalINS2_5ArrayIS3_vEEEENS4_INS_7IntegerEEENS4_INS5_IS4465841'/>
@@ -1049,8 +1050,8 @@
 <use f='tvm/src/tir/schedule/analysis/analysis.cc' l='685' c='_ZN3tvm3tir24LoopDomainOfSRefTreePathERKNS0_8StmtSRefERKNS_7runtime8OptionalIS1_EERKNS4_12StorageScopeE'/>
 <use f='tvm/src/tir/schedule/analysis/analysis.cc' l='1235' c='_ZN3tvm3tir21GetBufferDefiningSiteERKNS0_8StmtSRefERKNS0_6BufferE'/>
 <use f='tvm/src/tir/schedule/analysis/analysis.cc' l='1367' c='_ZN3tvm3tir23AnalyzeReadWritePatternERKNS0_12BufferRegionES3_'/>
-<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='1698' c='_ZN3tvm3tir23GetTensorizeLoopMappingERKNS0_13ScheduleStateERKNS0_8StmtSRefERKNS0_8PrimFuncE'/>
-<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='2031' c='_ZN3tvm3tir27GetAutoTensorizeMappingInfoERKNS0_13ScheduleStateERKNS0_8StmtSRefERKNS0_8PrimFuncE'/>
+<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='1698' c='_ZN3tvm3tir23GetTensorizeLoopMappingERKNS0_13ScheduleStateERKNS0_8StmtSRefERKNS0_8PrimFuncEb'/>
+<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='2066' c='_ZN3tvm3tir27GetAutoTensorizeMappingInfoERKNS0_13ScheduleStateERKNS0_8StmtSRefERKNS0_8PrimFuncE'/>
 <use f='tvm/src/tir/schedule/analysis/layout.cc' l='127' c='_ZN3tvm3tir15SuggestIndexMapERKNS0_6BufferERKNS_7runtime5ArrayINS_8PrimExprEvEERKNS5_INS0_3ForEvEERKS6_PNS_5arith8AnalyzerE'/>
 <use f='tvm/src/tir/schedule/analysis/reducer.cc' l='328' c='_ZN3tvm3tir45ErrorRFactorCrossThreadReductionNotApplicableERKNS_7runtime8OptionalINS0_13ScheduleStateEEENS0_5BlockEi'/>
 <use f='tvm/src/tir/schedule/analysis/reducer.cc' l='377' c='_ZN3tvm3tir23ExtractReductionUpdatesERKNS_7runtime8OptionalINS0_13ScheduleStateEEENS0_5BlockEPKNS0_11LetStmtNodeEiPNS1_5ArrayINS0_11BufferStoreEvEEPSt14845231'/>
@@ -1176,8 +1177,8 @@
 <use f='tvm/src/tir/schedule/traced_schedule.cc' l='100' c='_ZN3tvm3tir18TracedScheduleNode8GetBlockERKNS_7runtime6StringERKNS2_8OptionalIS3_EE'/>
 <use f='tvm/src/tir/schedule/traced_schedule.cc' l='190' c='_ZN3tvm3tir18TracedScheduleNode5SplitERKNS0_6LoopRVERKNS_7runtime5ArrayINS5_8OptionalINS_8PrimExprEEEvEEb'/>
 <use f='tvm/src/tir/schedule/traced_schedule.cc' l='491' c='_ZN3tvm3tir18TracedScheduleNode15TransformLayoutERKNS0_7BlockRVEiNS0_15BufferIndexTypeERKNS0_8IndexMapERKNS_7runtime8OptionalIS6_EE'/>
-<use f='tvm/src/tir/schedule/transform.cc' l='290' c='_ZN3tvm3tir20TileWithTensorIntrinERKNS0_8ScheduleERKNS0_7BlockRVERKNS_7runtime6StringE'/>
-<use f='tvm/src/tir/schedule/transform.cc' l='292' c='_ZN3tvm3tir20TileWithTensorIntrinERKNS0_8ScheduleERKNS0_7BlockRVERKNS_7runtime6StringE'/>
+<use f='tvm/src/tir/schedule/transform.cc' l='290' c='_ZN3tvm3tir20TileWithTensorIntrinERKNS0_8ScheduleERKNS0_7BlockRVERKNS_7runtime6StringEb'/>
+<use f='tvm/src/tir/schedule/transform.cc' l='292' c='_ZN3tvm3tir20TileWithTensorIntrinERKNS0_8ScheduleERKNS0_7BlockRVERKNS_7runtime6StringEb'/>
 <use f='tvm/src/tir/transforms/compact_buffer_region.cc' l='90' c='_ZN3tvm3tir12NDIntSetEvalENS_7runtime5ArrayINS_5RangeEvEENS_8PrimExprERKSt13unordered_mapIPKNS0_7VarNodeENS_5arith6IntSetESt4hashIS9_ESt8equal_toIS9_E14688976'/>
 <use f='tvm/src/tir/transforms/extract_constants.cc' l='66' c='_ZN3tvm3tir10Applicator10VisitStmt_EPKNS0_17AllocateConstNodeE'/>
 <use f='tvm/src/tir/transforms/inject_rolling_buffer.cc' l='52'/>

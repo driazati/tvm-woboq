@@ -26,9 +26,9 @@
 <use f='tvm/src/arith/canonical_simplify.cc' l='1035' u='c' c='_ZN3tvm5arith19CanonicalSimplifier4Impl10VisitExpr_EPKNS_3tir7ModNodeE'/>
 <use f='tvm/src/arith/canonical_simplify.cc' l='1102' u='c' c='_ZN3tvm5arith19CanonicalSimplifier4Impl10VisitExpr_EPKNS_3tir12FloorModNodeE'/>
 <use f='tvm/src/arith/const_int_bound.cc' l='187' u='c' c='_ZN3tvm5arith21ConstIntBoundAnalyzer4Impl10VisitExpr_EPKNS_3tir8CastNodeE'/>
-<use f='tvm/src/arith/int_set.cc' l='1114' u='c' c='_ZN3tvm5arith25EstimateRegionStrictBoundERKNS_7runtime5ArrayINS_5RangeEvEERKNS1_3MapINS_3tir3VarES3_vvEERKNS_8PrimExprEPNS0_8AnalyzerE'/>
+<use f='tvm/src/arith/int_set.cc' l='1092' u='c' c='_ZN3tvm5arith25EstimateRegionStrictBoundERKNS_7runtime5ArrayINS_5RangeEvEERKNS1_3MapINS_3tir3VarES3_vvEERKNS_8PrimExprEPNS0_8AnalyzerE'/>
+<use f='tvm/src/arith/int_set.cc' l='1113' u='c' c='_ZN3tvm5arith24EstimateRegionUpperBoundERKNS_7runtime5ArrayINS_5RangeEvEERKNS1_3MapINS_3tir3VarES3_vvEERKNS_8PrimExprEPNS0_8AnalyzerE'/>
 <use f='tvm/src/arith/int_set.cc' l='1135' u='c' c='_ZN3tvm5arith24EstimateRegionUpperBoundERKNS_7runtime5ArrayINS_5RangeEvEERKNS1_3MapINS_3tir3VarES3_vvEERKNS_8PrimExprEPNS0_8AnalyzerE'/>
-<use f='tvm/src/arith/int_set.cc' l='1157' u='c' c='_ZN3tvm5arith24EstimateRegionUpperBoundERKNS_7runtime5ArrayINS_5RangeEvEERKNS1_3MapINS_3tir3VarES3_vvEERKNS_8PrimExprEPNS0_8AnalyzerE'/>
 <use f='tvm/src/arith/iter_affine_map.cc' l='656' u='c' c='_ZN3tvm5arith15IterMapRewriter26NormalizeToIterOnBoundExprENS0_11IterSumExprENS_7runtime8OptionalINS_8PrimExprEEES6_'/>
 <use f='tvm/src/arith/iter_affine_map.cc' l='658' u='c' c='_ZN3tvm5arith15IterMapRewriter26NormalizeToIterOnBoundExprENS0_11IterSumExprENS_7runtime8OptionalINS_8PrimExprEEES6_'/>
 <use f='tvm/src/arith/iter_affine_map.cc' l='661' u='c' c='_ZN3tvm5arith15IterMapRewriter26NormalizeToIterOnBoundExprENS0_11IterSumExprENS_7runtime8OptionalINS_8PrimExprEEES6_'/>
@@ -200,7 +200,7 @@
 <use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling_tensor_core.cc' l='189' u='c' c='_ZN3tvm13meta_schedule30MultiLevelTilingTensorCoreNode5ApplyERKNS_3tir8ScheduleERKNS2_7BlockRVE'/>
 <use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling_tensor_core.cc' l='245' u='c' c='_ZNK3tvm13meta_schedule30MultiLevelTilingTensorCoreNode24TileAndAnnotateTensorizeEPNS_3tir8ScheduleERKNS2_7BlockRVERKNS_7runtime6StringE'/>
 <use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling_tensor_core.cc' l='247' u='c' c='_ZNK3tvm13meta_schedule30MultiLevelTilingTensorCoreNode24TileAndAnnotateTensorizeEPNS_3tir8ScheduleERKNS2_7BlockRVERKNS_7runtime6StringE'/>
-<use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling_tensor_core.cc' l='532' u='c' c='_ZNK3tvm13meta_schedule30MultiLevelTilingTensorCoreNode25TransformForTensorizationENS0_15TensorCoreStateE'/>
+<use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling_tensor_core.cc' l='533' u='c' c='_ZNK3tvm13meta_schedule30MultiLevelTilingTensorCoreNode25TransformForTensorizationENS0_15TensorCoreStateE'/>
 <use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling_with_intrin.cc' l='39' u='c' c='_ZN3tvm13meta_schedule13TileForIntrinENS_3tir8ScheduleENS1_7BlockRVERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
 <use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling_with_intrin.cc' l='78' u='c' c='_ZN3tvm13meta_schedule30MultiLevelTilingWithIntrinNode13ApplySubRulesESt6vectorINS0_5StateESaIS3_EE'/>
 <use f='tvm/src/meta_schedule/schedule_rule/parallel_vectorize_unroll.cc' l='46' u='c' c='_ZN3tvm13meta_schedule30ParallelizeVectorizeUnrollNode25InitializeWithTuneContextERKNS0_11TuneContextE'/>
@@ -622,7 +622,8 @@
 <use f='tvm/src/tir/schedule/trace.cc' l='538' u='c'/>
 <use f='tvm/src/tir/schedule/traced_schedule.cc' l='103' u='c' c='_ZN3tvm3tir18TracedScheduleNode8GetBlockERKNS_7runtime6StringERKNS2_8OptionalIS3_EE'/>
 <use f='tvm/src/tir/schedule/traced_schedule.cc' l='105' u='c' c='_ZN3tvm3tir18TracedScheduleNode8GetBlockERKNS_7runtime6StringERKNS2_8OptionalIS3_EE'/>
-<use f='tvm/src/tir/schedule/transform.cc' l='295' u='c' c='_ZN3tvm3tir20TileWithTensorIntrinERKNS0_8ScheduleERKNS0_7BlockRVERKNS_7runtime6StringE'/>
+<use f='tvm/src/tir/schedule/transform.cc' l='296' u='c' c='_ZN3tvm3tir20TileWithTensorIntrinERKNS0_8ScheduleERKNS0_7BlockRVERKNS_7runtime6StringEb'/>
+<use f='tvm/src/tir/schedule/transform.cc' l='298' u='c' c='_ZN3tvm3tir20TileWithTensorIntrinERKNS0_8ScheduleERKNS0_7BlockRVERKNS_7runtime6StringEb'/>
 <use f='tvm/src/tir/transforms/compact_buffer_region.cc' l='93' u='c' c='_ZN3tvm3tir12NDIntSetEvalENS_7runtime5ArrayINS_5RangeEvEENS_8PrimExprERKSt13unordered_mapIPKNS0_7VarNodeENS_5arith6IntSetESt4hashIS9_ESt8equal_toIS9_E14688976'/>
 <use f='tvm/src/tir/transforms/compact_buffer_region.cc' l='93' u='c' c='_ZN3tvm3tir12NDIntSetEvalENS_7runtime5ArrayINS_5RangeEvEENS_8PrimExprERKSt13unordered_mapIPKNS0_7VarNodeENS_5arith6IntSetESt4hashIS9_ESt8equal_toIS9_E14688976'/>
 <use f='tvm/src/tir/transforms/compact_buffer_region.cc' l='329' u='c' c='_ZN3tvm3tir27BufferAccessRegionCollector15NeedRelaxThreadERKNS0_3ForERKNS_7runtime12StorageScopeE'/>

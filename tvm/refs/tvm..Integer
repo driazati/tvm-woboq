@@ -326,6 +326,7 @@
 <use f='tvm/src/tir/schedule/primitive.h' l='388'/>
 <use f='tvm/src/tir/schedule/primitive.h' l='513' c='_ZN3tvm3tir9PadEinsumENS0_13ScheduleStateERKNS0_8StmtSRefERKNS_7runtime5ArrayINS_7IntegerEvEE'/>
 <use f='tvm/src/tir/schedule/analysis.h' l='733'/>
+<use f='tvm/src/tir/schedule/analysis.h' l='737'/>
 <use f='tvm/src/meta_schedule/utils.h' l='331' c='_ZN3tvm13meta_schedule17GetTargetNumCoresERKNS_6TargetE'/>
 <use f='tvm/src/meta_schedule/utils.h' l='393' c='_ZN3tvm13meta_schedule10AsIntArrayERKNS_7runtime9ObjectRefE'/>
 <use f='tvm/src/meta_schedule/utils.h' l='396' c='_ZN3tvm13meta_schedule10AsIntArrayERKNS_7runtime9ObjectRefE'/>
@@ -436,9 +437,9 @@
 <use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling_tensor_core.cc' l='365' c='_ZNK3tvm13meta_schedule30MultiLevelTilingTensorCoreNode19AddSoftwarePipelineENS0_15TensorCoreStateE'/>
 <use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling_tensor_core.cc' l='407' c='_ZNK3tvm13meta_schedule30MultiLevelTilingTensorCoreNode19AddSoftwarePipelineENS0_15TensorCoreStateE'/>
 <use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling_tensor_core.cc' l='409' c='_ZNK3tvm13meta_schedule30MultiLevelTilingTensorCoreNode19AddSoftwarePipelineENS0_15TensorCoreStateE'/>
-<use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling_tensor_core.cc' l='539' c='_ZNK3tvm13meta_schedule30MultiLevelTilingTensorCoreNode25TransformForTensorizationENS0_15TensorCoreStateE'/>
-<use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling_tensor_core.cc' l='545' c='_ZN3tvm13meta_schedule12ScheduleRule26MultiLevelTilingTensorCoreENS_7runtime5ArrayINS2_3MapINS2_6StringES5_vvEEvEES5_NS2_8OptionalINS3_IS5_vEEEENS8_IN10176615'/>
-<use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling_tensor_core.cc' l='545' c='_ZN3tvm13meta_schedule12ScheduleRule26MultiLevelTilingTensorCoreENS_7runtime5ArrayINS2_3MapINS2_6StringES5_vvEEvEES5_NS2_8OptionalINS3_IS5_vEEEENS8_IN10176615'/>
+<use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling_tensor_core.cc' l='540' c='_ZNK3tvm13meta_schedule30MultiLevelTilingTensorCoreNode25TransformForTensorizationENS0_15TensorCoreStateE'/>
+<use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling_tensor_core.cc' l='546' c='_ZN3tvm13meta_schedule12ScheduleRule26MultiLevelTilingTensorCoreENS_7runtime5ArrayINS2_3MapINS2_6StringES5_vvEEvEES5_NS2_8OptionalINS3_IS5_vEEEENS8_IN10176615'/>
+<use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling_tensor_core.cc' l='546' c='_ZN3tvm13meta_schedule12ScheduleRule26MultiLevelTilingTensorCoreENS_7runtime5ArrayINS2_3MapINS2_6StringES5_vvEEvEES5_NS2_8OptionalINS3_IS5_vEEEENS8_IN10176615'/>
 <size>8</size>
 <use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling_with_intrin.cc' l='96' c='_ZN3tvm13meta_schedule12ScheduleRule26MultiLevelTilingWithIntrinENS_7runtime6StringES3_NS2_8OptionalINS2_5ArrayIS3_vEEEENS4_INS_7IntegerEEENS4_INS5_IS4465841'/>
 <use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling_with_intrin.cc' l='96' c='_ZN3tvm13meta_schedule12ScheduleRule26MultiLevelTilingWithIntrinENS_7runtime6StringES3_NS2_8OptionalINS2_5ArrayIS3_vEEEENS4_INS_7IntegerEEENS4_INS5_IS4465841'/>
@@ -2172,7 +2173,8 @@
 <use f='tvm/src/tir/op/runtime.cc' l='33'/>
 <use f='tvm/src/tir/op/runtime.cc' l='38'/>
 <size>8</size>
-<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='1819' c='_ZN3tvm3tir23GetTensorizeLoopMappingERKNS0_13ScheduleStateERKNS0_8StmtSRefERKNS0_8PrimFuncE'/>
+<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='1838' c='_ZN3tvm3tir23GetTensorizeLoopMappingERKNS0_13ScheduleStateERKNS0_8StmtSRefERKNS0_8PrimFuncEb'/>
+<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='1844' c='_ZN3tvm3tir23GetTensorizeLoopMappingERKNS0_13ScheduleStateERKNS0_8StmtSRefERKNS0_8PrimFuncEb'/>
 <size>8</size>
 <use f='tvm/src/tir/schedule/analysis/layout.cc' l='217' c='_ZN3tvm3tir15SuggestIndexMapERKNS0_6BufferERKNS_7runtime5ArrayINS_8PrimExprEvEERKNS5_INS0_3ForEvEERKS6_PNS_5arith8AnalyzerE'/>
 <use f='tvm/src/tir/schedule/analysis/layout.cc' l='224' c='_ZN3tvm3tir15SuggestIndexMapERKNS0_6BufferERKNS_7runtime5ArrayINS_8PrimExprEvEERKNS5_INS0_3ForEvEERKS6_PNS_5arith8AnalyzerE'/>
@@ -2298,7 +2300,7 @@
 <use f='tvm/src/tir/schedule/traced_schedule.cc' l='522' c='_ZN3tvm3tir18TracedScheduleNode16SetAxisSeparatorERKNS0_7BlockRVEiNS0_15BufferIndexTypeERKNS_7runtime5ArrayINS_6IntImmEvEE'/>
 <use f='tvm/src/tir/schedule/traced_schedule.cc' l='538' c='_ZN3tvm3tir18TracedScheduleNode9PadEinsumERKNS0_7BlockRVERKNS_7runtime5ArrayINS_7IntegerEvEE'/>
 <size>8</size>
-<use f='tvm/src/tir/schedule/transform.cc' l='327' c='_ZN3tvm3tir20TileWithTensorIntrinERKNS0_8ScheduleERKNS0_7BlockRVERKNS_7runtime6StringE'/>
+<use f='tvm/src/tir/schedule/transform.cc' l='331' c='_ZN3tvm3tir20TileWithTensorIntrinERKNS0_8ScheduleERKNS0_7BlockRVERKNS_7runtime6StringEb'/>
 <size>8</size>
 <use f='tvm/src/tir/transforms/extract_constants.cc' l='66' c='_ZN3tvm3tir10Applicator10VisitStmt_EPKNS0_17AllocateConstNodeE'/>
 <use f='tvm/src/tir/transforms/extract_constants.cc' l='66' c='_ZN3tvm3tir10Applicator10VisitStmt_EPKNS0_17AllocateConstNodeE'/>
