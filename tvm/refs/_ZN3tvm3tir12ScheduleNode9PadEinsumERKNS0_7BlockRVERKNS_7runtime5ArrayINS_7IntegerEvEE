@@ -1,5 +1,5 @@
-<dec f='tvm/include/tvm/tir/schedule/schedule.h' l='657' type='void tvm::tir::ScheduleNode::PadEinsum(const tvm::tir::BlockRV &amp; block_rv, const Array&lt;tvm::Integer&gt; &amp; padding)'/>
-<doc f='tvm/include/tvm/tir/schedule/schedule.h' l='640'>/*!
+<dec f='tvm/include/tvm/tir/schedule/schedule.h' l='672' type='void tvm::tir::ScheduleNode::PadEinsum(const tvm::tir::BlockRV &amp; block_rv, const Array&lt;tvm::Integer&gt; &amp; padding)'/>
+<doc f='tvm/include/tvm/tir/schedule/schedule.h' l='655'>/*!
    * \brief Pad the computation of Einsum.
    * \param block_rv The block that matches the Einsum pattern.
    * \param padding The padding for each block iter.
@@ -16,6 +16,6 @@
    * The size of the producer buffers are infered from the padding size of the Einsum computation.
    * The producer buffers are padded by the initial value of the corresponding reduction.
    */</doc>
-<ovr f='tvm/src/tir/schedule/concrete_schedule.cc' l='798' c='_ZN3tvm3tir20ConcreteScheduleNode9PadEinsumERKNS0_7BlockRVERKNS_7runtime5ArrayINS_7IntegerEvEE'/>
+<ovr f='tvm/src/tir/schedule/concrete_schedule.cc' l='800' c='_ZN3tvm3tir20ConcreteScheduleNode9PadEinsumERKNS0_7BlockRVERKNS_7runtime5ArrayINS_7IntegerEvEE'/>
 <use f='tvm/src/tir/schedule/primitive/pad_einsum.cc' l='457' u='c' c='_ZN3tvm3tir15PadEinsumTraits23UnpackedApplyToScheduleENS0_8ScheduleENS0_7BlockRVENS_7runtime5ArrayINS_7IntegerEvEE'/>
-<use f='tvm/src/tir/schedule/schedule.cc' l='268' u='a'/>
+<use f='tvm/src/tir/schedule/schedule.cc' l='270' u='a'/>

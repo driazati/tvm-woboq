@@ -1,0 +1,31 @@
+<dec f='tvm/include/tvm/tir/schedule/schedule.h' l='619' type='void tvm::tir::ScheduleNode::TransformLayout(const tvm::tir::BlockRV &amp; block_rv, int buffer_index, tvm::tir::BufferIndexType buffer_index_type, const tvm::tir::IndexMap &amp; index_map, const Optional&lt;tvm::tir::IndexMap&gt; &amp; pad_value = NullOpt)'/>
+<doc f='tvm/include/tvm/tir/schedule/schedule.h' l='594'>/*!
+   * \brief Apply a transformation represented by IndexMap to buffer
+   * \details The indices and the access region to the target buffer is transformed by the given
+   * index_map. The index_map is used to infer the new shape of the buffer. Buffer must be either
+   * a function parameter, or allocated in a block (it cannot be a buffer subregion created via
+   * &apos;match_buffer&apos;).
+   * \param block_rv The block that accesses the target buffer.
+   * \param buffer_index The index of the buffer in block&apos;s read or write region.
+   * \param buffer_index_type The type of the buffer index, kRead or kWrite.
+   * \param index_map The transformation to apply.
+   *
+   * \param pad_value The value to write into padding introduced by
+   *    the transformation.  If the schedule contains a producer block
+   *    for the specified buffer, the pad value will be written as
+   *    part of the producer block if possible, or after the producer
+   *    block otherwise.  Otherwise, if the buffer is an input, will
+   *    insert an annotation block to state that the padding contains
+   *    the known value.
+   *
+   *    Note: If applied to an input buffer, the calling scope is
+   *    responsible for ensuring that the pad_value is present.
+   *    Algebraic symplifications, branch elimination, and other
+   *    optimizations may assume that this precondition is met, and
+   *    may result in incorrect results being returned.
+   */</doc>
+<use f='tvm/src/meta_schedule/postproc/rewrite_layout.cc' l='151' u='c' c='_ZN3tvm3tir13RewriteLayoutERKNS0_8ScheduleE'/>
+<use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling_tensor_core.cc' l='502' u='c' c='_ZNK3tvm13meta_schedule30MultiLevelTilingTensorCoreNode25TransformWithTensorIntrinEPNS0_19TensorCoreStateNodeERKNS_7runtime6StringE'/>
+<ovr f='tvm/src/tir/schedule/concrete_schedule.cc' l='762' c='_ZN3tvm3tir20ConcreteScheduleNode15TransformLayoutERKNS0_7BlockRVEiNS0_15BufferIndexTypeERKNS0_8IndexMapERKNS_7runtime8OptionalIS6_EE'/>
+<use f='tvm/src/tir/schedule/primitive/layout_transformation.cc' l='1354' u='c' c='_ZN3tvm3tir21TransformLayoutTraits23UnpackedApplyToScheduleENS0_8ScheduleENS0_7BlockRVENS_7IntegerES4_NS0_8IndexMapENS_7runtime8OptionalIS5_EE'/>
+<use f='tvm/src/tir/schedule/schedule.cc' l='253' u='c'/>

@@ -4,15 +4,15 @@
 <use f='tvm/include/tvm/tir/schedule/schedule.h' l='103'/>
 <use f='tvm/include/tvm/tir/schedule/schedule.h' l='141' c='_ZN3tvm3tir12ScheduleNode4CopyEv'/>
 <inh f='tvm/include/tvm/runtime/object.h' l='511' c='tvm::runtime::ObjectRef'/>
-<def f='tvm/include/tvm/tir/schedule/schedule.h' l='679' ll='712'/>
-<use f='tvm/include/tvm/tir/schedule/schedule.h' l='694' c='_ZN3tvm3tir8Schedule8ConcreteENS_8IRModuleEliNS0_24ScheduleErrorRenderLevelE'/>
-<use f='tvm/include/tvm/tir/schedule/schedule.h' l='709' c='_ZN3tvm3tir8Schedule6TracedENS_8IRModuleEliNS0_24ScheduleErrorRenderLevelE'/>
-<use f='tvm/include/tvm/tir/schedule/schedule.h' l='711' c='_ZN3tvm3tir8ScheduleC1ERKS1_'/>
-<use f='tvm/include/tvm/tir/schedule/schedule.h' l='711' c='_ZN3tvm3tir8ScheduleC1EOS1_'/>
-<use f='tvm/include/tvm/tir/schedule/schedule.h' l='711' c='_ZN3tvm3tir8ScheduleaSERKS1_'/>
-<use f='tvm/include/tvm/tir/schedule/schedule.h' l='711' c='_ZN3tvm3tir8ScheduleaSERKS1_'/>
-<use f='tvm/include/tvm/tir/schedule/schedule.h' l='711' c='_ZN3tvm3tir8ScheduleaSEOS1_'/>
-<use f='tvm/include/tvm/tir/schedule/schedule.h' l='711' c='_ZN3tvm3tir8ScheduleaSEOS1_'/>
+<def f='tvm/include/tvm/tir/schedule/schedule.h' l='694' ll='727'/>
+<use f='tvm/include/tvm/tir/schedule/schedule.h' l='709' c='_ZN3tvm3tir8Schedule8ConcreteENS_8IRModuleEliNS0_24ScheduleErrorRenderLevelE'/>
+<use f='tvm/include/tvm/tir/schedule/schedule.h' l='724' c='_ZN3tvm3tir8Schedule6TracedENS_8IRModuleEliNS0_24ScheduleErrorRenderLevelE'/>
+<use f='tvm/include/tvm/tir/schedule/schedule.h' l='726' c='_ZN3tvm3tir8ScheduleC1ERKS1_'/>
+<use f='tvm/include/tvm/tir/schedule/schedule.h' l='726' c='_ZN3tvm3tir8ScheduleC1EOS1_'/>
+<use f='tvm/include/tvm/tir/schedule/schedule.h' l='726' c='_ZN3tvm3tir8ScheduleaSERKS1_'/>
+<use f='tvm/include/tvm/tir/schedule/schedule.h' l='726' c='_ZN3tvm3tir8ScheduleaSERKS1_'/>
+<use f='tvm/include/tvm/tir/schedule/schedule.h' l='726' c='_ZN3tvm3tir8ScheduleaSEOS1_'/>
+<use f='tvm/include/tvm/tir/schedule/schedule.h' l='726' c='_ZN3tvm3tir8ScheduleaSEOS1_'/>
 <use f='tvm/include/tvm/meta_schedule/measure_candidate.h' l='36'/>
 <use f='tvm/include/tvm/meta_schedule/measure_candidate.h' l='60' c='_ZN3tvm13meta_schedule16MeasureCandidateC1ENS_3tir8ScheduleENS_7runtime5ArrayINS0_7ArgInfoEvEE'/>
 <use f='tvm/include/tvm/meta_schedule/database.h' l='222' c='_ZN3tvm13meta_schedule12DatabaseNode13QueryScheduleERKNS_8IRModuleERKNS_6TargetERKNS_7runtime6StringE'/>
@@ -42,7 +42,7 @@
 <use f='tvm/src/meta_schedule/utils.h' l='269' c='_ZN3tvm13meta_schedule18ThreadedTraceApply5ApplyERKNS_8IRModuleERKNS_3tir5TraceEPl'/>
 <use f='tvm/src/meta_schedule/utils.h' l='271' c='_ZN3tvm13meta_schedule18ThreadedTraceApply5ApplyERKNS_8IRModuleERKNS_3tir5TraceEPl'/>
 <size>8</size>
-<doc f='tvm/include/tvm/tir/schedule/schedule.h' l='664'>/*!
+<doc f='tvm/include/tvm/tir/schedule/schedule.h' l='679'>/*!
  * \brief Managed reference to ScheduleNode
  *
  * A schedule is a set of transformations that change the order of computation but
@@ -90,7 +90,7 @@
 <use f='tvm/src/meta_schedule/postproc/rewrite_cooperative_fetch.cc' l='121' c='_ZN3tvm13meta_schedule27RewriteCooperativeFetchNode5ApplyERKNS_3tir8ScheduleE'/>
 <size>8</size>
 <use f='tvm/src/meta_schedule/postproc/rewrite_layout.cc' l='107' c='_ZN3tvm3tir13RewriteLayoutERKNS0_8ScheduleE'/>
-<use f='tvm/src/meta_schedule/postproc/rewrite_layout.cc' l='168' c='_ZN3tvm13meta_schedule17RewriteLayoutNode5ApplyERKNS_3tir8ScheduleE'/>
+<use f='tvm/src/meta_schedule/postproc/rewrite_layout.cc' l='169' c='_ZN3tvm13meta_schedule17RewriteLayoutNode5ApplyERKNS_3tir8ScheduleE'/>
 <size>8</size>
 <use f='tvm/src/meta_schedule/postproc/rewrite_parallel_vectorize_unroll.cc' l='132' c='_ZN3tvm3tir15RemoveParsedAnnERKNS0_8ScheduleERKNS0_7BlockRVERKNS0_16ParsedAnnotationE'/>
 <use f='tvm/src/meta_schedule/postproc/rewrite_parallel_vectorize_unroll.cc' l='147' c='_ZN3tvm3tir23AdjustParallelVectorizeERKNS0_8ScheduleERKNS0_7BlockRVERKNS_7runtime5ArrayINS0_6LoopRVEvEEPNS0_16ParsedAnnotationE'/>
@@ -275,9 +275,9 @@
 <use f='tvm/src/tir/schedule/primitive/get_block_loop.cc' l='197' c='_ZN3tvm3tir18GetProducersTraits23UnpackedApplyToScheduleENS0_8ScheduleENS0_7BlockRVE'/>
 <use f='tvm/src/tir/schedule/primitive/get_block_loop.cc' l='221' c='_ZN3tvm3tir18GetConsumersTraits23UnpackedApplyToScheduleENS0_8ScheduleENS0_7BlockRVE'/>
 <size>8</size>
-<use f='tvm/src/tir/schedule/primitive/layout_transformation.cc' l='508' c='_ZN3tvm3tir21TransformLayoutTraits23UnpackedApplyToScheduleENS0_8ScheduleENS0_7BlockRVENS_7IntegerES4_NS0_8IndexMapE'/>
-<use f='tvm/src/tir/schedule/primitive/layout_transformation.cc' l='560' c='_ZN3tvm3tir26TransformBlockLayoutTraits23UnpackedApplyToScheduleENS0_8ScheduleENS0_7BlockRVENS0_8IndexMapE'/>
-<use f='tvm/src/tir/schedule/primitive/layout_transformation.cc' l='599' c='_ZN3tvm3tir22SetAxisSeparatorTraits23UnpackedApplyToScheduleENS0_8ScheduleENS0_7BlockRVENS_7IntegerES4_NS_7runtime5ArrayINS_6IntImmEvEE'/>
+<use f='tvm/src/tir/schedule/primitive/layout_transformation.cc' l='1351' c='_ZN3tvm3tir21TransformLayoutTraits23UnpackedApplyToScheduleENS0_8ScheduleENS0_7BlockRVENS_7IntegerES4_NS0_8IndexMapENS_7runtime8OptionalIS5_EE'/>
+<use f='tvm/src/tir/schedule/primitive/layout_transformation.cc' l='1410' c='_ZN3tvm3tir26TransformBlockLayoutTraits23UnpackedApplyToScheduleENS0_8ScheduleENS0_7BlockRVENS0_8IndexMapE'/>
+<use f='tvm/src/tir/schedule/primitive/layout_transformation.cc' l='1449' c='_ZN3tvm3tir22SetAxisSeparatorTraits23UnpackedApplyToScheduleENS0_8ScheduleENS0_7BlockRVENS_7IntegerES4_NS_7runtime5ArrayINS_6IntImmEvEE'/>
 <size>8</size>
 <use f='tvm/src/tir/schedule/primitive/loop_transformation.cc' l='778' c='_ZN3tvm3tir11SplitTraits23UnpackedApplyToScheduleENS0_8ScheduleENS0_6LoopRVENS_7runtime5ArrayINS4_8OptionalINS_8PrimExprEEEvEENS_4BoolE'/>
 <use f='tvm/src/tir/schedule/primitive/loop_transformation.cc' l='813' c='_ZN3tvm3tir10FuseTraits23UnpackedApplyToScheduleENS0_8ScheduleENS_7runtime5ArrayINS0_6LoopRVEvEENS_4BoolE'/>
@@ -337,11 +337,11 @@
 <use f='tvm/src/tir/schedule/schedule.cc' l='223'/>
 <use f='tvm/src/tir/schedule/schedule.cc' l='236'/>
 <use f='tvm/src/tir/schedule/schedule.cc' l='250'/>
-<use f='tvm/src/tir/schedule/schedule.cc' l='256'/>
 <use f='tvm/src/tir/schedule/schedule.cc' l='258'/>
-<use f='tvm/src/tir/schedule/schedule.cc' l='266'/>
+<use f='tvm/src/tir/schedule/schedule.cc' l='260'/>
 <use f='tvm/src/tir/schedule/schedule.cc' l='268'/>
-<use f='tvm/src/tir/schedule/schedule.cc' l='271'/>
+<use f='tvm/src/tir/schedule/schedule.cc' l='270'/>
+<use f='tvm/src/tir/schedule/schedule.cc' l='273'/>
 <size>8</size>
 <use f='tvm/src/tir/schedule/trace.cc' l='252' c='_ZNK3tvm3tir9TraceNode15ApplyToScheduleENS0_8ScheduleEbNS_7runtime15TypedPackedFuncIFNS3_9ObjectRefERKNS0_11InstructionERKNS3_5ArrayIS5_vEESC_RKNS3_8OptionalIS5_EEEEE'/>
 <use f='tvm/src/tir/schedule/trace.cc' l='333' c='_ZN3tvm3tir5Trace19ApplyJSONToScheduleENS_7runtime9ObjectRefENS0_8ScheduleE'/>
