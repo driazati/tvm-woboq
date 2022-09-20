@@ -1,9 +1,9 @@
-<dec f='tvm/include/tvm/meta_schedule/database.h' l='42' type='tvm::IRModule'/>
-<use f='tvm/include/tvm/meta_schedule/database.h' l='47' u='a' c='_ZN3tvm13meta_schedule12WorkloadNode10VisitAttrsEPNS_11AttrVisitorE'/>
-<use f='tvm/include/tvm/meta_schedule/database.h' l='97' u='r' c='_ZNK3tvm13meta_schedule13WorkloadEqualclERKNS0_8WorkloadES4_'/>
-<use f='tvm/include/tvm/meta_schedule/database.h' l='97' u='r' c='_ZNK3tvm13meta_schedule13WorkloadEqualclERKNS0_8WorkloadES4_'/>
+<dec f='tvm/include/tvm/meta_schedule/database.h' l='43' type='tvm::IRModule'/>
+<use f='tvm/include/tvm/meta_schedule/database.h' l='48' u='a' c='_ZN3tvm13meta_schedule12WorkloadNode10VisitAttrsEPNS_11AttrVisitorE'/>
+<use f='tvm/include/tvm/meta_schedule/database.h' l='98' u='r' c='_ZNK3tvm13meta_schedule13WorkloadEqualclERKNS0_8WorkloadES4_'/>
+<use f='tvm/include/tvm/meta_schedule/database.h' l='98' u='r' c='_ZNK3tvm13meta_schedule13WorkloadEqualclERKNS0_8WorkloadES4_'/>
 <offset>128</offset>
-<doc f='tvm/include/tvm/meta_schedule/database.h' l='41'>/*! \brief The workload&apos;s IRModule. */</doc>
+<doc f='tvm/include/tvm/meta_schedule/database.h' l='42'>/*! \brief The workload&apos;s IRModule. */</doc>
 <use f='tvm/src/meta_schedule/database/database.cc' l='29' u='w' c='_ZN3tvm13meta_schedule8WorkloadC1ENS_8IRModuleE'/>
 <use f='tvm/src/meta_schedule/database/database.cc' l='35' u='w' c='_ZN3tvm13meta_schedule8WorkloadC1ENS_8IRModuleEm'/>
 <use f='tvm/src/meta_schedule/database/database.cc' l='42' u='r' c='_ZNK3tvm13meta_schedule12WorkloadNode6AsJSONEv'/>
