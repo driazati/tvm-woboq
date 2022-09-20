@@ -59,8 +59,8 @@
 <use f='tvm/src/tir/schedule/primitive/compute_inline.cc' l='804' u='r' c='_ZN3tvm3tir24ReverseComputeInlineImplENS0_13ScheduleStateERKNS0_8StmtSRefEb'/>
 <use f='tvm/src/tir/schedule/primitive/compute_inline.cc' l='819' u='r' c='_ZN3tvm3tir24ReverseComputeInlineImplENS0_13ScheduleStateERKNS0_8StmtSRefEb'/>
 <use f='tvm/src/tir/schedule/primitive/compute_inline.cc' l='827' u='r' c='_ZN3tvm3tir24ReverseComputeInlineImplENS0_13ScheduleStateERKNS0_8StmtSRefEb'/>
-<use f='tvm/src/tir/schedule/primitive/decompose_padding.cc' l='460' u='r' c='_ZN3tvm3tir20DecomposePaddingImplENS0_13ScheduleStateERKNS0_8StmtSRefES4_b'/>
-<use f='tvm/src/tir/schedule/primitive/decompose_padding.cc' l='466' u='r' c='_ZN3tvm3tir20DecomposePaddingImplENS0_13ScheduleStateERKNS0_8StmtSRefES4_b'/>
+<use f='tvm/src/tir/schedule/primitive/decompose_padding.cc' l='459' u='r' c='_ZN3tvm3tir20DecomposePaddingImplENS0_13ScheduleStateERKNS0_8StmtSRefES4_b'/>
+<use f='tvm/src/tir/schedule/primitive/decompose_padding.cc' l='465' u='r' c='_ZN3tvm3tir20DecomposePaddingImplENS0_13ScheduleStateERKNS0_8StmtSRefES4_b'/>
 <use f='tvm/src/tir/schedule/primitive/for_kind.cc' l='106' u='r' c='_ZN3tvm3tir30CheckLoopParallelizableInBlockERKNS0_13ScheduleStateENS0_7ForKindERKNS0_3VarERKNS0_12BlockRealizeENS_7runtime11ThreadScopeE'/>
 <use f='tvm/src/tir/schedule/primitive/get_block_loop.cc' l='42' u='m' c='_ZN3tvm3tir9GetBlocksERKNS0_13ScheduleStateERKNS_7runtime6StringERKNS_9GlobalVarE'/>
 <use f='tvm/src/tir/schedule/primitive/layout_transformation.cc' l='970' u='r' c='_ZN3tvm3tir15TransformLayoutENS0_13ScheduleStateERKNS0_8StmtSRefEiNS0_15BufferIndexTypeERKNS0_8IndexMapERKNS_7runtime8OptionalIS6_EE'/>

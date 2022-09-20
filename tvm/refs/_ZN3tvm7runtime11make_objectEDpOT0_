@@ -1,8 +1,8 @@
 <dec f='tvm/include/tvm/runtime/memory.h' l='41' type='ObjectPtr&lt;T&gt; tvm::runtime::make_object(Args &amp;&amp;... args)'/>
 <def f='tvm/include/tvm/runtime/memory.h' l='195' ll='197' type='ObjectPtr&lt;T&gt; tvm::runtime::make_object(Args &amp;&amp;... args)'/>
 <use f='tvm/include/tvm/runtime/container/string.h' l='318' u='c' c='_ZN3tvm7runtime6StringC1ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
-<dec f='tvm/include/tvm/runtime/container/array.h' l='728' type='ObjectPtr&lt;tvm::runtime::ArrayNode&gt; tvm::runtime::make_object()'/>
-<def f='tvm/include/tvm/runtime/container/array.h' l='727' ll='730' type='ObjectPtr&lt;tvm::runtime::ArrayNode&gt; tvm::runtime::make_object()'/>
+<dec f='tvm/include/tvm/runtime/container/array.h' l='844' type='ObjectPtr&lt;tvm::runtime::ArrayNode&gt; tvm::runtime::make_object()'/>
+<def f='tvm/include/tvm/runtime/container/array.h' l='843' ll='846' type='ObjectPtr&lt;tvm::runtime::ArrayNode&gt; tvm::runtime::make_object()'/>
 <use f='tvm/include/tvm/runtime/container/shape_tuple.h' l='167' u='c' c='_ZN3tvm7runtime10ShapeTupleC1ESt6vectorIlSaIlEE'/>
 <use f='tvm/include/tvm/runtime/container/map.h' l='839' u='c' c='_ZN3tvm7runtime12DenseMapNode5EmptyEjm'/>
 <use f='tvm/include/tvm/runtime/container/map.h' l='856' u='c' c='_ZN3tvm7runtime12DenseMapNode8CopyFromEPS1_'/>
@@ -23,8 +23,8 @@
 <use f='tvm/include/tvm/tir/stmt.h' l='1157' macro='1' u='c' c='_ZN3tvm3tir12BufferRegion11CopyOnWriteEv'/>
 <use f='tvm/include/tvm/tir/stmt.h' l='1306' macro='1' u='c' c='_ZN3tvm3tir5Block11CopyOnWriteEv'/>
 <use f='tvm/include/tvm/tir/stmt.h' l='1355' macro='1' u='c' c='_ZN3tvm3tir12BlockRealize11CopyOnWriteEv'/>
-<doc f='tvm/include/tvm/runtime/container/array.h' l='247'>// To specialize make_object&lt;ArrayNode&gt;</doc>
-<doc f='tvm/include/tvm/runtime/container/array.h' l='726'>// Specialize make_object&lt;ArrayNode&gt; to make sure it is correct.</doc>
+<doc f='tvm/include/tvm/runtime/container/array.h' l='249'>// To specialize make_object&lt;ArrayNode&gt;</doc>
+<doc f='tvm/include/tvm/runtime/container/array.h' l='842'>// Specialize make_object&lt;ArrayNode&gt; to make sure it is correct.</doc>
 <use f='tvm/src/arith/interval_set.h' l='113' macro='1' u='c' c='_ZN3tvm5arith11IntervalSet11CopyOnWriteEv'/>
 <use f='tvm/include/tvm/tir/function.h' l='189' macro='1' u='c' c='_ZN3tvm3tir8PrimFunc11CopyOnWriteEv'/>
 <use f='tvm/src/arith/canonical_simplify.cc' l='216' macro='1' u='c' c='_ZN3tvm5arith9SplitExpr11CopyOnWriteEv'/>
@@ -1362,23 +1362,23 @@
 <use f='tvm/src/tir/ir/expr.cc' l='893' u='c' c='_ZN3tvm3tir7ShuffleC1ENS_7runtime5ArrayINS_8PrimExprEvEES5_NS_4SpanE'/>
 <use f='tvm/src/tir/ir/expr.cc' l='925' macro='1' u='c'/>
 <use f='tvm/src/tir/ir/expr.cc' l='979' u='c' c='_ZN3tvm3tir11CommReducerC1ENS_7runtime5ArrayINS0_3VarEvEES5_NS3_INS_8PrimExprEvEES7_NS_4SpanE'/>
-<use f='tvm/src/tir/ir/expr.cc' l='1011' macro='1' u='c'/>
-<use f='tvm/src/tir/ir/expr.cc' l='1029' u='c' c='_ZN3tvm3tir6ReduceC1ENS0_11CommReducerENS_7runtime5ArrayINS_8PrimExprEvEENS4_INS0_7IterVarEvEES5_iS6_NS_4SpanE'/>
-<use f='tvm/src/tir/ir/expr.cc' l='1059' macro='1' u='c'/>
-<use f='tvm/src/tir/ir/expr.cc' l='1075' u='c' c='_ZN3tvm3tir3AnyC1ENS_4SpanE'/>
-<use f='tvm/src/tir/ir/expr.cc' l='1083' macro='1' u='c'/>
-<use f='tvm/src/tir/ir/expr.cc' l='1107' u='c' c='_ZN3tvm3tir10BufferLoadC1ENS0_6BufferENS_7runtime5ArrayINS_8PrimExprEvEENS_4SpanE'/>
-<use f='tvm/src/tir/ir/expr.cc' l='1120' macro='1' u='c'/>
-<use f='tvm/src/tir/ir/expr.cc' l='1137' u='c' c='_ZN3tvm3tir12ProducerLoadC1ENS0_12DataProducerENS_7runtime5ArrayINS_8PrimExprEvEENS_4SpanE'/>
-<use f='tvm/src/tir/ir/expr.cc' l='1150' macro='1' u='c'/>
+<use f='tvm/src/tir/ir/expr.cc' l='1010' macro='1' u='c'/>
+<use f='tvm/src/tir/ir/expr.cc' l='1028' u='c' c='_ZN3tvm3tir6ReduceC1ENS0_11CommReducerENS_7runtime5ArrayINS_8PrimExprEvEENS4_INS0_7IterVarEvEES5_iS6_NS_4SpanE'/>
+<use f='tvm/src/tir/ir/expr.cc' l='1058' macro='1' u='c'/>
+<use f='tvm/src/tir/ir/expr.cc' l='1074' u='c' c='_ZN3tvm3tir3AnyC1ENS_4SpanE'/>
+<use f='tvm/src/tir/ir/expr.cc' l='1082' macro='1' u='c'/>
+<use f='tvm/src/tir/ir/expr.cc' l='1106' u='c' c='_ZN3tvm3tir10BufferLoadC1ENS0_6BufferENS_7runtime5ArrayINS_8PrimExprEvEENS_4SpanE'/>
+<use f='tvm/src/tir/ir/expr.cc' l='1119' macro='1' u='c'/>
+<use f='tvm/src/tir/ir/expr.cc' l='1136' u='c' c='_ZN3tvm3tir12ProducerLoadC1ENS0_12DataProducerENS_7runtime5ArrayINS_8PrimExprEvEENS_4SpanE'/>
+<use f='tvm/src/tir/ir/expr.cc' l='1149' macro='1' u='c'/>
 <use f='tvm/src/tir/ir/function.cc' l='40' u='c' c='_ZN3tvm3tir8PrimFuncC1ENS_7runtime5ArrayINS0_3VarEvEENS0_4StmtENS_4TypeENS2_3MapIS4_NS0_6BufferEvvEENS2_8OptionalISA_EENS_9DictAttrsENS_4SpanE'/>
 <use f='tvm/src/tir/ir/function.cc' l='60' macro='1' u='c'/>
 <use f='tvm/src/tir/ir/function.cc' l='85' u='c' c='_ZN3tvm3tir12TensorIntrinC1ENS0_8PrimFuncES2_'/>
 <use f='tvm/src/tir/ir/function.cc' l='107' macro='1' u='c'/>
 <use f='tvm/src/tir/ir/index_map.cc' l='39' u='c' c='_ZN3tvm3tir8IndexMapC1ENS_7runtime5ArrayINS0_3VarEvEENS3_INS_8PrimExprEvEENS2_8OptionalIS1_EE'/>
-<use f='tvm/src/tir/ir/index_map.cc' l='307' macro='1' u='c'/>
-<use f='tvm/src/tir/ir/specialize.cc' l='167' u='c' c='_ZN3tvm3tir19PrimFuncSpecializer10VisitExpr_EPKNS0_14BufferLoadNodeE'/>
-<use f='tvm/src/tir/ir/specialize.cc' l='214' u='c' c='_ZN3tvm3tir19PrimFuncSpecializer12MutateBufferERKNS0_6BufferE'/>
+<use f='tvm/src/tir/ir/index_map.cc' l='306' macro='1' u='c'/>
+<use f='tvm/src/tir/ir/specialize.cc' l='164' u='c' c='_ZN3tvm3tir19PrimFuncSpecializer10VisitExpr_EPKNS0_14BufferLoadNodeE'/>
+<use f='tvm/src/tir/ir/specialize.cc' l='210' u='c' c='_ZN3tvm3tir19PrimFuncSpecializer12MutateBufferERKNS0_6BufferE'/>
 <use f='tvm/src/tir/ir/stmt.cc' l='47' u='c' c='_ZN3tvm3tir7LetStmtC1ENS0_3VarENS_8PrimExprENS0_4StmtENS_4SpanE'/>
 <use f='tvm/src/tir/ir/stmt.cc' l='60' macro='1' u='c'/>
 <use f='tvm/src/tir/ir/stmt.cc' l='74' u='c' c='_ZN3tvm3tir8AttrStmtC1ENS_7runtime9ObjectRefENS2_6StringENS_8PrimExprENS0_4StmtENS_4SpanE'/>
@@ -1520,12 +1520,12 @@
 <use f='tvm/src/tir/transforms/renew_defs.cc' l='39' u='c' c='_ZN3tvm3tir15RenewDefMutator10VisitStmt_EPKNS0_12AllocateNodeE'/>
 <use f='tvm/src/tir/transforms/renew_defs.cc' l='39' u='c' c='_ZN3tvm3tir15RenewDefMutator10VisitStmt_EPKNS0_17AllocateConstNodeE'/>
 <use f='tvm/src/tir/transforms/renew_defs.cc' l='39' u='c' c='_ZN3tvm3tir15RenewDefMutator10VisitStmt_EPKNS0_7ForNodeE'/>
-<use f='tvm/src/tir/transforms/renew_defs.cc' l='124' u='c' c='_ZN3tvm3tir15RenewDefMutator10VisitStmt_EPKNS0_9BlockNodeE'/>
-<use f='tvm/src/tir/transforms/renew_defs.cc' l='142' u='c' c='_ZN3tvm3tir15RenewDefMutator10VisitStmt_EPKNS0_15BufferStoreNodeE'/>
-<use f='tvm/src/tir/transforms/renew_defs.cc' l='156' u='c' c='_ZN3tvm3tir15RenewDefMutator10VisitExpr_EPKNS0_14BufferLoadNodeE'/>
-<use f='tvm/src/tir/transforms/renew_defs.cc' l='174' u='c' c='_ZN3tvm3tir15RenewDefMutator11ReDefineVarERKNS0_3VarE'/>
-<use f='tvm/src/tir/transforms/renew_defs.cc' l='212' u='c' c='_ZN3tvm3tir15RenewDefMutator11VisitBufferERKNS0_6BufferEb'/>
-<use f='tvm/src/tir/transforms/renew_defs.cc' l='251' u='c' c='_ZN3tvm3tir15RenewDefMutator22VisitDeclOrRemapBufferERKNS0_6BufferE'/>
+<use f='tvm/src/tir/transforms/renew_defs.cc' l='122' u='c' c='_ZN3tvm3tir15RenewDefMutator10VisitStmt_EPKNS0_9BlockNodeE'/>
+<use f='tvm/src/tir/transforms/renew_defs.cc' l='140' u='c' c='_ZN3tvm3tir15RenewDefMutator10VisitStmt_EPKNS0_15BufferStoreNodeE'/>
+<use f='tvm/src/tir/transforms/renew_defs.cc' l='154' u='c' c='_ZN3tvm3tir15RenewDefMutator10VisitExpr_EPKNS0_14BufferLoadNodeE'/>
+<use f='tvm/src/tir/transforms/renew_defs.cc' l='172' u='c' c='_ZN3tvm3tir15RenewDefMutator11ReDefineVarERKNS0_3VarE'/>
+<use f='tvm/src/tir/transforms/renew_defs.cc' l='210' u='c' c='_ZN3tvm3tir15RenewDefMutator11VisitBufferERKNS0_6BufferEb'/>
+<use f='tvm/src/tir/transforms/renew_defs.cc' l='249' u='c' c='_ZN3tvm3tir15RenewDefMutator22VisitDeclOrRemapBufferERKNS0_6BufferE'/>
 <use f='tvm/src/tir/transforms/unroll_loop.cc' l='68' macro='1' u='c'/>
 <use f='tvm/src/tir/usmp/utils.cc' l='41' u='c' c='_ZN3tvm3tir4usmp10BufferInfoC1ENS_7runtime6StringENS_7IntegerENS3_5ArrayINS_8PoolInfoEvEES5_NS1_14BufferInfoKindE'/>
 <use f='tvm/src/tir/usmp/utils.cc' l='54' macro='1' u='c'/>

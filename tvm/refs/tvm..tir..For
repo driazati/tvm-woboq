@@ -116,21 +116,21 @@
 <use f='tvm/src/tir/schedule/primitive/compute_at.cc' l='600' c='_ZN3tvm3tir31ComputeAtOrReverseComputeAtImplENS0_13ScheduleStateERKNS0_8StmtSRefES4_bPNS_5arith8AnalyzerEbi'/>
 <size>8</size>
 <use f='tvm/src/tir/schedule/primitive/decompose_padding.cc' l='193' c='_ZN3tvm3tirL16CreateConstBlockEPKNS0_16BlockRealizeNodeERKNS0_16PaddingBlockInfoERKNS_7runtime5ArrayINS0_3ForEvEERKNS0_4StmtEPNS_5arith8AnalyzerE'/>
-<use f='tvm/src/tir/schedule/primitive/decompose_padding.cc' l='230' c='_ZN3tvm3tirL16CreateConstBlockEPKNS0_16BlockRealizeNodeERKNS0_16PaddingBlockInfoERKNS_7runtime5ArrayINS0_3ForEvEERKNS0_4StmtEPNS_5arith8AnalyzerE'/>
-<use f='tvm/src/tir/schedule/primitive/decompose_padding.cc' l='251' c='_ZN3tvm3tirL16CreateConstBlockEPKNS0_16BlockRealizeNodeERKNS0_16PaddingBlockInfoERKNS_7runtime5ArrayINS0_3ForEvEERKNS0_4StmtEPNS_5arith8AnalyzerE'/>
-<use f='tvm/src/tir/schedule/primitive/decompose_padding.cc' l='253' c='_ZN3tvm3tirL16CreateConstBlockEPKNS0_16BlockRealizeNodeERKNS0_16PaddingBlockInfoERKNS_7runtime5ArrayINS0_3ForEvEERKNS0_4StmtEPNS_5arith8AnalyzerE'/>
-<use f='tvm/src/tir/schedule/primitive/decompose_padding.cc' l='263' c='_ZN3tvm3tirL18CreateInBoundBlockEPKNS0_16BlockRealizeNodeERKNS0_16PaddingBlockInfoERKNS_7runtime5ArrayINS0_3ForEvEERKNS0_4StmtEPNS_5arith8AnalyzerE'/>
-<use f='tvm/src/tir/schedule/primitive/decompose_padding.cc' l='272' c='_ZN3tvm3tirL18CreateInBoundBlockEPKNS0_16BlockRealizeNodeERKNS0_16PaddingBlockInfoERKNS_7runtime5ArrayINS0_3ForEvEERKNS0_4StmtEPNS_5arith8AnalyzerE'/>
-<use f='tvm/src/tir/schedule/primitive/decompose_padding.cc' l='336' c='_ZN3tvm3tirL18CreateInBoundBlockEPKNS0_16BlockRealizeNodeERKNS0_16PaddingBlockInfoERKNS_7runtime5ArrayINS0_3ForEvEERKNS0_4StmtEPNS_5arith8AnalyzerE'/>
-<use f='tvm/src/tir/schedule/primitive/decompose_padding.cc' l='340' c='_ZN3tvm3tirL18CreateInBoundBlockEPKNS0_16BlockRealizeNodeERKNS0_16PaddingBlockInfoERKNS_7runtime5ArrayINS0_3ForEvEERKNS0_4StmtEPNS_5arith8AnalyzerE'/>
-<use f='tvm/src/tir/schedule/primitive/decompose_padding.cc' l='357'/>
-<use f='tvm/src/tir/schedule/primitive/decompose_padding.cc' l='359'/>
-<use f='tvm/src/tir/schedule/primitive/decompose_padding.cc' l='431' c='_ZN3tvm3tir20DecomposePaddingImplENS0_13ScheduleStateERKNS0_8StmtSRefES4_b'/>
+<use f='tvm/src/tir/schedule/primitive/decompose_padding.cc' l='229' c='_ZN3tvm3tirL16CreateConstBlockEPKNS0_16BlockRealizeNodeERKNS0_16PaddingBlockInfoERKNS_7runtime5ArrayINS0_3ForEvEERKNS0_4StmtEPNS_5arith8AnalyzerE'/>
+<use f='tvm/src/tir/schedule/primitive/decompose_padding.cc' l='250' c='_ZN3tvm3tirL16CreateConstBlockEPKNS0_16BlockRealizeNodeERKNS0_16PaddingBlockInfoERKNS_7runtime5ArrayINS0_3ForEvEERKNS0_4StmtEPNS_5arith8AnalyzerE'/>
+<use f='tvm/src/tir/schedule/primitive/decompose_padding.cc' l='252' c='_ZN3tvm3tirL16CreateConstBlockEPKNS0_16BlockRealizeNodeERKNS0_16PaddingBlockInfoERKNS_7runtime5ArrayINS0_3ForEvEERKNS0_4StmtEPNS_5arith8AnalyzerE'/>
+<use f='tvm/src/tir/schedule/primitive/decompose_padding.cc' l='262' c='_ZN3tvm3tirL18CreateInBoundBlockEPKNS0_16BlockRealizeNodeERKNS0_16PaddingBlockInfoERKNS_7runtime5ArrayINS0_3ForEvEERKNS0_4StmtEPNS_5arith8AnalyzerE'/>
+<use f='tvm/src/tir/schedule/primitive/decompose_padding.cc' l='271' c='_ZN3tvm3tirL18CreateInBoundBlockEPKNS0_16BlockRealizeNodeERKNS0_16PaddingBlockInfoERKNS_7runtime5ArrayINS0_3ForEvEERKNS0_4StmtEPNS_5arith8AnalyzerE'/>
+<use f='tvm/src/tir/schedule/primitive/decompose_padding.cc' l='335' c='_ZN3tvm3tirL18CreateInBoundBlockEPKNS0_16BlockRealizeNodeERKNS0_16PaddingBlockInfoERKNS_7runtime5ArrayINS0_3ForEvEERKNS0_4StmtEPNS_5arith8AnalyzerE'/>
+<use f='tvm/src/tir/schedule/primitive/decompose_padding.cc' l='339' c='_ZN3tvm3tirL18CreateInBoundBlockEPKNS0_16BlockRealizeNodeERKNS0_16PaddingBlockInfoERKNS_7runtime5ArrayINS0_3ForEvEERKNS0_4StmtEPNS_5arith8AnalyzerE'/>
+<use f='tvm/src/tir/schedule/primitive/decompose_padding.cc' l='356'/>
+<use f='tvm/src/tir/schedule/primitive/decompose_padding.cc' l='358'/>
+<use f='tvm/src/tir/schedule/primitive/decompose_padding.cc' l='430' c='_ZN3tvm3tir20DecomposePaddingImplENS0_13ScheduleStateERKNS0_8StmtSRefES4_b'/>
+<use f='tvm/src/tir/schedule/primitive/decompose_padding.cc' l='433' c='_ZN3tvm3tir20DecomposePaddingImplENS0_13ScheduleStateERKNS0_8StmtSRefES4_b'/>
+<use f='tvm/src/tir/schedule/primitive/decompose_padding.cc' l='433' c='_ZN3tvm3tir20DecomposePaddingImplENS0_13ScheduleStateERKNS0_8StmtSRefES4_b'/>
 <use f='tvm/src/tir/schedule/primitive/decompose_padding.cc' l='434' c='_ZN3tvm3tir20DecomposePaddingImplENS0_13ScheduleStateERKNS0_8StmtSRefES4_b'/>
-<use f='tvm/src/tir/schedule/primitive/decompose_padding.cc' l='434' c='_ZN3tvm3tir20DecomposePaddingImplENS0_13ScheduleStateERKNS0_8StmtSRefES4_b'/>
-<use f='tvm/src/tir/schedule/primitive/decompose_padding.cc' l='435' c='_ZN3tvm3tir20DecomposePaddingImplENS0_13ScheduleStateERKNS0_8StmtSRefES4_b'/>
-<use f='tvm/src/tir/schedule/primitive/decompose_padding.cc' l='437' c='_ZN3tvm3tir20DecomposePaddingImplENS0_13ScheduleStateERKNS0_8StmtSRefES4_b'/>
-<use f='tvm/src/tir/schedule/primitive/decompose_padding.cc' l='437' c='_ZN3tvm3tir20DecomposePaddingImplENS0_13ScheduleStateERKNS0_8StmtSRefES4_b'/>
+<use f='tvm/src/tir/schedule/primitive/decompose_padding.cc' l='436' c='_ZN3tvm3tir20DecomposePaddingImplENS0_13ScheduleStateERKNS0_8StmtSRefES4_b'/>
+<use f='tvm/src/tir/schedule/primitive/decompose_padding.cc' l='436' c='_ZN3tvm3tir20DecomposePaddingImplENS0_13ScheduleStateERKNS0_8StmtSRefES4_b'/>
 <size>8</size>
 <use f='tvm/src/tir/schedule/primitive/for_kind.cc' l='121' c='_ZN3tvm3tir22CheckParallelizabilityERKNS0_13ScheduleStateERKNS0_3ForENS0_7ForKindENS_7runtime11ThreadScopeE'/>
 <use f='tvm/src/tir/schedule/primitive/for_kind.cc' l='164' c='_ZN3tvm3tir22ParallelizeComputationERKNS0_13ScheduleStateERKNS0_8StmtSRefENS0_7ForKindENS_7runtime8OptionalINS0_7IterVarEEE'/>
@@ -304,9 +304,9 @@
 <size>8</size>
 <use f='tvm/src/tir/transforms/unroll_loop.cc' l='128' c='_ZN3tvm3tir12LoopUnroller10VisitStmt_EPKNS0_7ForNodeE'/>
 <size>8</size>
-<use f='tvm/src/tir/transforms/vectorize_loop.cc' l='483' c='_ZN3tvm3tir10Vectorizer10VisitStmt_EPKNS0_7ForNodeE'/>
-<use f='tvm/src/tir/transforms/vectorize_loop.cc' l='572' c='_ZN3tvm3tir10Vectorizer9ScalarizeENS0_4StmtE'/>
-<use f='tvm/src/tir/transforms/vectorize_loop.cc' l='683' c='_ZN3tvm3tir16VectorizeSkipper10VisitStmt_EPKNS0_7ForNodeE'/>
+<use f='tvm/src/tir/transforms/vectorize_loop.cc' l='481' c='_ZN3tvm3tir10Vectorizer10VisitStmt_EPKNS0_7ForNodeE'/>
+<use f='tvm/src/tir/transforms/vectorize_loop.cc' l='570' c='_ZN3tvm3tir10Vectorizer9ScalarizeENS0_4StmtE'/>
+<use f='tvm/src/tir/transforms/vectorize_loop.cc' l='681' c='_ZN3tvm3tir16VectorizeSkipper10VisitStmt_EPKNS0_7ForNodeE'/>
 <size>8</size>
 <use f='tvm/src/tir/usmp/analysis/extract_buffer_info.cc' l='150'/>
 <use f='tvm/src/tir/usmp/analysis/extract_buffer_info.cc' l='355' c='_ZN3tvm3tir4usmp19BufferInfoExtractor10VisitStmt_EPKNS0_7ForNodeE'/>
