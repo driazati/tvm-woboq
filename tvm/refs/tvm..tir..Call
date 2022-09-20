@@ -229,6 +229,11 @@
 <use f='tvm/src/tir/transforms/legalize_packed_calls.cc' l='100' c='_ZN3tvm3tir19PackedCallLegalizer10VisitStmt_EPKNS0_12EvaluateNodeE'/>
 <use f='tvm/src/tir/transforms/legalize_packed_calls.cc' l='106' c='_ZN3tvm3tir19PackedCallLegalizer10VisitStmt_EPKNS0_12EvaluateNodeE'/>
 <size>8</size>
+<use f='tvm/src/tir/transforms/lower_async_dma.cc' l='71' c='_ZN3tvm3tir15AsyncDMALowerer10VisitStmt_EPKNS0_12AttrStmtNodeE'/>
+<use f='tvm/src/tir/transforms/lower_async_dma.cc' l='164' c='_ZN3tvm3tir15AsyncDMALowerer10VisitStmt_EPKNS0_12AttrStmtNodeE'/>
+<use f='tvm/src/tir/transforms/lower_async_dma.cc' l='166' c='_ZN3tvm3tir15AsyncDMALowerer10VisitStmt_EPKNS0_12AttrStmtNodeE'/>
+<use f='tvm/src/tir/transforms/lower_async_dma.cc' l='168' c='_ZN3tvm3tir15AsyncDMALowerer10VisitStmt_EPKNS0_12AttrStmtNodeE'/>
+<size>8</size>
 <use f='tvm/src/tir/transforms/lower_cross_thread_reduction.cc' l='365' c='_ZN3tvm3tir23TransformReductionBlockEPKNS0_16BlockRealizeNodeERKNS_7runtime8OptionalINS4_5ArrayINS0_6BufferEvEEEERKS8_SD_RKNS6_INS_8PrimExprEvEERKNS0_10264619'/>
 <size>8</size>
 <use f='tvm/src/tir/transforms/lower_intrin.cc' l='273' c='_ZN3tvm3tir14IntrinInjecter7MakeFMAERKNS_8PrimExprES4_S4_PKNS0_7AddNodeE'/>
@@ -241,16 +246,20 @@
 <use f='tvm/src/tir/transforms/lower_tvm_builtin.cc' l='250' c='_ZN3tvm3tir12BuiltinLower10VisitStmt_EPKNS0_12AllocateNodeE'/>
 <use f='tvm/src/tir/transforms/lower_tvm_builtin.cc' l='255' c='_ZN3tvm3tir12BuiltinLower10VisitStmt_EPKNS0_12AllocateNodeE'/>
 <use f='tvm/src/tir/transforms/lower_tvm_builtin.cc' l='261' c='_ZN3tvm3tir12BuiltinLower10VisitStmt_EPKNS0_12AllocateNodeE'/>
-<use f='tvm/src/tir/transforms/lower_tvm_builtin.cc' l='333' c='_ZN3tvm3tir12BuiltinLower11MakeMemCopyEPKNS0_8CallNodeE'/>
-<use f='tvm/src/tir/transforms/lower_tvm_builtin.cc' l='333' c='_ZN3tvm3tir12BuiltinLower11MakeMemCopyEPKNS0_8CallNodeE'/>
-<use f='tvm/src/tir/transforms/lower_tvm_builtin.cc' l='469' c='_ZN3tvm3tir12BuiltinLower14MakeCallPackedEPKNS0_8CallNodeEb'/>
-<use f='tvm/src/tir/transforms/lower_tvm_builtin.cc' l='516' c='_ZN3tvm3tir12BuiltinLower19MakeCallTracePackedEPKNS0_8CallNodeE'/>
-<use f='tvm/src/tir/transforms/lower_tvm_builtin.cc' l='522' c='_ZN3tvm3tir12BuiltinLower23MakeNdMemAllocWithScopeEPKNS0_11LetStmtNodeEPKNS0_8CallNodeE'/>
-<use f='tvm/src/tir/transforms/lower_tvm_builtin.cc' l='525' c='_ZN3tvm3tir12BuiltinLower23MakeNdMemAllocWithScopeEPKNS0_11LetStmtNodeEPKNS0_8CallNodeE'/>
-<use f='tvm/src/tir/transforms/lower_tvm_builtin.cc' l='546' c='_ZN3tvm3tir12BuiltinLower23MakeNdMemAllocWithScopeEPKNS0_11LetStmtNodeEPKNS0_8CallNodeE'/>
-<use f='tvm/src/tir/transforms/lower_tvm_builtin.cc' l='546' c='_ZN3tvm3tir12BuiltinLower23MakeNdMemAllocWithScopeEPKNS0_11LetStmtNodeEPKNS0_8CallNodeE'/>
-<use f='tvm/src/tir/transforms/lower_tvm_builtin.cc' l='550' c='_ZN3tvm3tir12BuiltinLower23MakeNdMemAllocWithScopeEPKNS0_11LetStmtNodeEPKNS0_8CallNodeE'/>
-<use f='tvm/src/tir/transforms/lower_tvm_builtin.cc' l='550' c='_ZN3tvm3tir12BuiltinLower23MakeNdMemAllocWithScopeEPKNS0_11LetStmtNodeEPKNS0_8CallNodeE'/>
+<use f='tvm/src/tir/transforms/lower_tvm_builtin.cc' l='337' c='_ZN3tvm3tir12BuiltinLower11MakeMemCopyEPKNS0_8CallNodeE'/>
+<use f='tvm/src/tir/transforms/lower_tvm_builtin.cc' l='337' c='_ZN3tvm3tir12BuiltinLower11MakeMemCopyEPKNS0_8CallNodeE'/>
+<use f='tvm/src/tir/transforms/lower_tvm_builtin.cc' l='351' c='_ZN3tvm3tir12BuiltinLower11MakeDMACopyEPKNS0_8CallNodeE'/>
+<use f='tvm/src/tir/transforms/lower_tvm_builtin.cc' l='351' c='_ZN3tvm3tir12BuiltinLower11MakeDMACopyEPKNS0_8CallNodeE'/>
+<use f='tvm/src/tir/transforms/lower_tvm_builtin.cc' l='363' c='_ZN3tvm3tir12BuiltinLower11MakeDMAWaitEPKNS0_8CallNodeE'/>
+<use f='tvm/src/tir/transforms/lower_tvm_builtin.cc' l='363' c='_ZN3tvm3tir12BuiltinLower11MakeDMAWaitEPKNS0_8CallNodeE'/>
+<use f='tvm/src/tir/transforms/lower_tvm_builtin.cc' l='499' c='_ZN3tvm3tir12BuiltinLower14MakeCallPackedEPKNS0_8CallNodeEb'/>
+<use f='tvm/src/tir/transforms/lower_tvm_builtin.cc' l='546' c='_ZN3tvm3tir12BuiltinLower19MakeCallTracePackedEPKNS0_8CallNodeE'/>
+<use f='tvm/src/tir/transforms/lower_tvm_builtin.cc' l='552' c='_ZN3tvm3tir12BuiltinLower23MakeNdMemAllocWithScopeEPKNS0_11LetStmtNodeEPKNS0_8CallNodeE'/>
+<use f='tvm/src/tir/transforms/lower_tvm_builtin.cc' l='555' c='_ZN3tvm3tir12BuiltinLower23MakeNdMemAllocWithScopeEPKNS0_11LetStmtNodeEPKNS0_8CallNodeE'/>
+<use f='tvm/src/tir/transforms/lower_tvm_builtin.cc' l='576' c='_ZN3tvm3tir12BuiltinLower23MakeNdMemAllocWithScopeEPKNS0_11LetStmtNodeEPKNS0_8CallNodeE'/>
+<use f='tvm/src/tir/transforms/lower_tvm_builtin.cc' l='576' c='_ZN3tvm3tir12BuiltinLower23MakeNdMemAllocWithScopeEPKNS0_11LetStmtNodeEPKNS0_8CallNodeE'/>
+<use f='tvm/src/tir/transforms/lower_tvm_builtin.cc' l='580' c='_ZN3tvm3tir12BuiltinLower23MakeNdMemAllocWithScopeEPKNS0_11LetStmtNodeEPKNS0_8CallNodeE'/>
+<use f='tvm/src/tir/transforms/lower_tvm_builtin.cc' l='580' c='_ZN3tvm3tir12BuiltinLower23MakeNdMemAllocWithScopeEPKNS0_11LetStmtNodeEPKNS0_8CallNodeE'/>
 <size>8</size>
 <use f='tvm/src/tir/transforms/lower_vtcm_alloc.cc' l='45' c='_ZN3tvm3tir13VtcmAllocator10VisitStmt_EPKNS0_12AllocateNodeE'/>
 <use f='tvm/src/tir/transforms/lower_vtcm_alloc.cc' l='47' c='_ZN3tvm3tir13VtcmAllocator10VisitStmt_EPKNS0_12AllocateNodeE'/>

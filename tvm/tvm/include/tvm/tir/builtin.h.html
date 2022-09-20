@@ -735,47 +735,57 @@
 <tr><th id="721">721</th><td><a class="macro" href="../runtime/c_runtime_api.h.html#64" title="__attribute__((visibility(&quot;default&quot;)))" data-ref="_M/TVM_DLL">TVM_DLL</a> <em>const</em> <a class="type" href="../ir/op.h.html#tvm::Op" title='tvm::Op' data-ref="tvm::Op" data-ref-filename="tvm..Op">Op</a>&amp; <dfn class="decl fn" id="_ZN3tvm3tir7builtin8mem_copyEv" title='tvm::tir::builtin::mem_copy' data-ref="_ZN3tvm3tir7builtin8mem_copyEv" data-ref-filename="_ZN3tvm3tir7builtin8mem_copyEv">mem_copy</dfn>();</td></tr>
 <tr><th id="722">722</th><td></td></tr>
 <tr><th id="723">723</th><td><i class="doc">/*!</i></td></tr>
-<tr><th id="724">724</th><td><i class="doc"> * <span class="command">\brief</span> Provide a true statement that can be used for simplifications</i></td></tr>
-<tr><th id="725">725</th><td><i class="doc"> *</i></td></tr>
-<tr><th id="726">726</th><td><i class="doc"> * Compile-time representation of known constraints about function</i></td></tr>
-<tr><th id="727">727</th><td><i class="doc"> * inputs.  This assumption is removed when lowering, and does not</i></td></tr>
-<tr><th id="728">728</th><td><i class="doc"> * occur in codegen.</i></td></tr>
-<tr><th id="729">729</th><td><i class="doc"> */</i></td></tr>
-<tr><th id="730">730</th><td><a class="macro" href="../runtime/c_runtime_api.h.html#64" title="__attribute__((visibility(&quot;default&quot;)))" data-ref="_M/TVM_DLL">TVM_DLL</a> <em>const</em> <a class="type" href="../ir/op.h.html#tvm::Op" title='tvm::Op' data-ref="tvm::Op" data-ref-filename="tvm..Op">Op</a>&amp; <dfn class="decl fn" id="_ZN3tvm3tir7builtin6assumeEv" title='tvm::tir::builtin::assume' data-ref="_ZN3tvm3tir7builtin6assumeEv" data-ref-filename="_ZN3tvm3tir7builtin6assumeEv">assume</dfn>();</td></tr>
-<tr><th id="731">731</th><td></td></tr>
-<tr><th id="732">732</th><td><i class="doc">/*!</i></td></tr>
-<tr><th id="733">733</th><td><i class="doc"> * <span class="command">\brief</span> Returns an initialized but arbitrary value</i></td></tr>
-<tr><th id="734">734</th><td><i class="doc"> *</i></td></tr>
-<tr><th id="735">735</th><td><i class="doc"> * Compile-time representation of memory locations whose values may be</i></td></tr>
-<tr><th id="736">736</th><td><i class="doc"> * altered as a result of optimizations.</i></td></tr>
-<tr><th id="737">737</th><td><i class="doc"> */</i></td></tr>
-<tr><th id="738">738</th><td><a class="macro" href="../runtime/c_runtime_api.h.html#64" title="__attribute__((visibility(&quot;default&quot;)))" data-ref="_M/TVM_DLL">TVM_DLL</a> <em>const</em> <a class="type" href="../ir/op.h.html#tvm::Op" title='tvm::Op' data-ref="tvm::Op" data-ref-filename="tvm..Op">Op</a>&amp; <dfn class="decl fn" id="_ZN3tvm3tir7builtin5undefEv" title='tvm::tir::builtin::undef' data-ref="_ZN3tvm3tir7builtin5undefEv" data-ref-filename="_ZN3tvm3tir7builtin5undefEv">undef</dfn>();</td></tr>
-<tr><th id="739">739</th><td></td></tr>
-<tr><th id="740">740</th><td><i class="doc">/*! <span class="command">\brief</span> The kind of structure field info used in intrinsic */</i></td></tr>
-<tr><th id="741">741</th><td><b>enum</b> <dfn class="type def" id="tvm::tir::builtin::TVMStructFieldKind" title='tvm::tir::builtin::TVMStructFieldKind' data-ref="tvm::tir::builtin::TVMStructFieldKind" data-ref-filename="tvm..tir..builtin..TVMStructFieldKind">TVMStructFieldKind</dfn> : <em>int</em> {</td></tr>
-<tr><th id="742">742</th><td>  <i>// array head address</i></td></tr>
-<tr><th id="743">743</th><td>  <dfn class="enum" id="tvm::tir::builtin::kArrAddr" title='tvm::tir::builtin::kArrAddr' data-ref="tvm::tir::builtin::kArrAddr" data-ref-filename="tvm..tir..builtin..kArrAddr">kArrAddr</dfn>,</td></tr>
-<tr><th id="744">744</th><td>  <dfn class="enum" id="tvm::tir::builtin::kArrData" title='tvm::tir::builtin::kArrData' data-ref="tvm::tir::builtin::kArrData" data-ref-filename="tvm..tir..builtin..kArrData">kArrData</dfn>,</td></tr>
-<tr><th id="745">745</th><td>  <dfn class="enum" id="tvm::tir::builtin::kArrShape" title='tvm::tir::builtin::kArrShape' data-ref="tvm::tir::builtin::kArrShape" data-ref-filename="tvm..tir..builtin..kArrShape">kArrShape</dfn>,</td></tr>
-<tr><th id="746">746</th><td>  <dfn class="enum" id="tvm::tir::builtin::kArrStrides" title='tvm::tir::builtin::kArrStrides' data-ref="tvm::tir::builtin::kArrStrides" data-ref-filename="tvm..tir..builtin..kArrStrides">kArrStrides</dfn>,</td></tr>
-<tr><th id="747">747</th><td>  <dfn class="enum" id="tvm::tir::builtin::kArrNDim" title='tvm::tir::builtin::kArrNDim' data-ref="tvm::tir::builtin::kArrNDim" data-ref-filename="tvm..tir..builtin..kArrNDim">kArrNDim</dfn>,</td></tr>
-<tr><th id="748">748</th><td>  <dfn class="enum" id="tvm::tir::builtin::kArrTypeCode" title='tvm::tir::builtin::kArrTypeCode' data-ref="tvm::tir::builtin::kArrTypeCode" data-ref-filename="tvm..tir..builtin..kArrTypeCode">kArrTypeCode</dfn>,</td></tr>
-<tr><th id="749">749</th><td>  <dfn class="enum" id="tvm::tir::builtin::kArrTypeBits" title='tvm::tir::builtin::kArrTypeBits' data-ref="tvm::tir::builtin::kArrTypeBits" data-ref-filename="tvm..tir..builtin..kArrTypeBits">kArrTypeBits</dfn>,</td></tr>
-<tr><th id="750">750</th><td>  <dfn class="enum" id="tvm::tir::builtin::kArrTypeLanes" title='tvm::tir::builtin::kArrTypeLanes' data-ref="tvm::tir::builtin::kArrTypeLanes" data-ref-filename="tvm..tir..builtin..kArrTypeLanes">kArrTypeLanes</dfn>,</td></tr>
-<tr><th id="751">751</th><td>  <dfn class="enum" id="tvm::tir::builtin::kArrByteOffset" title='tvm::tir::builtin::kArrByteOffset' data-ref="tvm::tir::builtin::kArrByteOffset" data-ref-filename="tvm..tir..builtin..kArrByteOffset">kArrByteOffset</dfn>,</td></tr>
-<tr><th id="752">752</th><td>  <dfn class="enum" id="tvm::tir::builtin::kArrDeviceId" title='tvm::tir::builtin::kArrDeviceId' data-ref="tvm::tir::builtin::kArrDeviceId" data-ref-filename="tvm..tir..builtin..kArrDeviceId">kArrDeviceId</dfn>,</td></tr>
-<tr><th id="753">753</th><td>  <dfn class="enum" id="tvm::tir::builtin::kArrDeviceType" title='tvm::tir::builtin::kArrDeviceType' data-ref="tvm::tir::builtin::kArrDeviceType" data-ref-filename="tvm..tir..builtin..kArrDeviceType">kArrDeviceType</dfn>,</td></tr>
-<tr><th id="754">754</th><td>  <dfn class="enum" id="tvm::tir::builtin::kArrKindBound_" title='tvm::tir::builtin::kArrKindBound_' data-ref="tvm::tir::builtin::kArrKindBound_" data-ref-filename="tvm..tir..builtin..kArrKindBound_">kArrKindBound_</dfn>,</td></tr>
-<tr><th id="755">755</th><td>  <i>// TVMValue field</i></td></tr>
-<tr><th id="756">756</th><td>  <dfn class="enum" id="tvm::tir::builtin::kTVMValueContent" title='tvm::tir::builtin::kTVMValueContent' data-ref="tvm::tir::builtin::kTVMValueContent" data-ref-filename="tvm..tir..builtin..kTVMValueContent">kTVMValueContent</dfn>,</td></tr>
-<tr><th id="757">757</th><td>  <dfn class="enum" id="tvm::tir::builtin::kTVMValueKindBound_" title='tvm::tir::builtin::kTVMValueKindBound_' data-ref="tvm::tir::builtin::kTVMValueKindBound_" data-ref-filename="tvm..tir..builtin..kTVMValueKindBound_">kTVMValueKindBound_</dfn></td></tr>
-<tr><th id="758">758</th><td>};</td></tr>
-<tr><th id="759">759</th><td>}  <i>// namespace builtin</i></td></tr>
-<tr><th id="760">760</th><td>}  <i>// namespace tir</i></td></tr>
-<tr><th id="761">761</th><td>}  <i>// namespace tvm</i></td></tr>
-<tr><th id="762">762</th><td><u>#<span data-ppcond="33">endif</span>  // TVM_TIR_BUILTIN_H_</u></td></tr>
-<tr><th id="763">763</th><td></td></tr>
+<tr><th id="724">724</th><td><i class="doc"> * <span class="command">\brief</span> Initiate a non-blocking DMA copy from source to destination</i></td></tr>
+<tr><th id="725">725</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="726">726</th><td><a class="macro" href="../runtime/c_runtime_api.h.html#64" title="__attribute__((visibility(&quot;default&quot;)))" data-ref="_M/TVM_DLL">TVM_DLL</a> <em>const</em> <a class="type" href="../ir/op.h.html#tvm::Op" title='tvm::Op' data-ref="tvm::Op" data-ref-filename="tvm..Op">Op</a>&amp; <dfn class="decl fn" id="_ZN3tvm3tir7builtin8dma_copyEv" title='tvm::tir::builtin::dma_copy' data-ref="_ZN3tvm3tir7builtin8dma_copyEv" data-ref-filename="_ZN3tvm3tir7builtin8dma_copyEv">dma_copy</dfn>();</td></tr>
+<tr><th id="727">727</th><td></td></tr>
+<tr><th id="728">728</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="729">729</th><td><i class="doc"> * <span class="command">\brief</span> Wait until the number of DMAs in flight is less than or equal to some maximum</i></td></tr>
+<tr><th id="730">730</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="731">731</th><td><a class="macro" href="../runtime/c_runtime_api.h.html#64" title="__attribute__((visibility(&quot;default&quot;)))" data-ref="_M/TVM_DLL">TVM_DLL</a> <em>const</em> <a class="type" href="../ir/op.h.html#tvm::Op" title='tvm::Op' data-ref="tvm::Op" data-ref-filename="tvm..Op">Op</a>&amp; <dfn class="decl fn" id="_ZN3tvm3tir7builtin8dma_waitEv" title='tvm::tir::builtin::dma_wait' data-ref="_ZN3tvm3tir7builtin8dma_waitEv" data-ref-filename="_ZN3tvm3tir7builtin8dma_waitEv">dma_wait</dfn>();</td></tr>
+<tr><th id="732">732</th><td></td></tr>
+<tr><th id="733">733</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="734">734</th><td><i class="doc"> * <span class="command">\brief</span> Provide a true statement that can be used for simplifications</i></td></tr>
+<tr><th id="735">735</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="736">736</th><td><i class="doc"> * Compile-time representation of known constraints about function</i></td></tr>
+<tr><th id="737">737</th><td><i class="doc"> * inputs.  This assumption is removed when lowering, and does not</i></td></tr>
+<tr><th id="738">738</th><td><i class="doc"> * occur in codegen.</i></td></tr>
+<tr><th id="739">739</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="740">740</th><td><a class="macro" href="../runtime/c_runtime_api.h.html#64" title="__attribute__((visibility(&quot;default&quot;)))" data-ref="_M/TVM_DLL">TVM_DLL</a> <em>const</em> <a class="type" href="../ir/op.h.html#tvm::Op" title='tvm::Op' data-ref="tvm::Op" data-ref-filename="tvm..Op">Op</a>&amp; <dfn class="decl fn" id="_ZN3tvm3tir7builtin6assumeEv" title='tvm::tir::builtin::assume' data-ref="_ZN3tvm3tir7builtin6assumeEv" data-ref-filename="_ZN3tvm3tir7builtin6assumeEv">assume</dfn>();</td></tr>
+<tr><th id="741">741</th><td></td></tr>
+<tr><th id="742">742</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="743">743</th><td><i class="doc"> * <span class="command">\brief</span> Returns an initialized but arbitrary value</i></td></tr>
+<tr><th id="744">744</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="745">745</th><td><i class="doc"> * Compile-time representation of memory locations whose values may be</i></td></tr>
+<tr><th id="746">746</th><td><i class="doc"> * altered as a result of optimizations.</i></td></tr>
+<tr><th id="747">747</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="748">748</th><td><a class="macro" href="../runtime/c_runtime_api.h.html#64" title="__attribute__((visibility(&quot;default&quot;)))" data-ref="_M/TVM_DLL">TVM_DLL</a> <em>const</em> <a class="type" href="../ir/op.h.html#tvm::Op" title='tvm::Op' data-ref="tvm::Op" data-ref-filename="tvm..Op">Op</a>&amp; <dfn class="decl fn" id="_ZN3tvm3tir7builtin5undefEv" title='tvm::tir::builtin::undef' data-ref="_ZN3tvm3tir7builtin5undefEv" data-ref-filename="_ZN3tvm3tir7builtin5undefEv">undef</dfn>();</td></tr>
+<tr><th id="749">749</th><td></td></tr>
+<tr><th id="750">750</th><td><i class="doc">/*! <span class="command">\brief</span> The kind of structure field info used in intrinsic */</i></td></tr>
+<tr><th id="751">751</th><td><b>enum</b> <dfn class="type def" id="tvm::tir::builtin::TVMStructFieldKind" title='tvm::tir::builtin::TVMStructFieldKind' data-ref="tvm::tir::builtin::TVMStructFieldKind" data-ref-filename="tvm..tir..builtin..TVMStructFieldKind">TVMStructFieldKind</dfn> : <em>int</em> {</td></tr>
+<tr><th id="752">752</th><td>  <i>// array head address</i></td></tr>
+<tr><th id="753">753</th><td>  <dfn class="enum" id="tvm::tir::builtin::kArrAddr" title='tvm::tir::builtin::kArrAddr' data-ref="tvm::tir::builtin::kArrAddr" data-ref-filename="tvm..tir..builtin..kArrAddr">kArrAddr</dfn>,</td></tr>
+<tr><th id="754">754</th><td>  <dfn class="enum" id="tvm::tir::builtin::kArrData" title='tvm::tir::builtin::kArrData' data-ref="tvm::tir::builtin::kArrData" data-ref-filename="tvm..tir..builtin..kArrData">kArrData</dfn>,</td></tr>
+<tr><th id="755">755</th><td>  <dfn class="enum" id="tvm::tir::builtin::kArrShape" title='tvm::tir::builtin::kArrShape' data-ref="tvm::tir::builtin::kArrShape" data-ref-filename="tvm..tir..builtin..kArrShape">kArrShape</dfn>,</td></tr>
+<tr><th id="756">756</th><td>  <dfn class="enum" id="tvm::tir::builtin::kArrStrides" title='tvm::tir::builtin::kArrStrides' data-ref="tvm::tir::builtin::kArrStrides" data-ref-filename="tvm..tir..builtin..kArrStrides">kArrStrides</dfn>,</td></tr>
+<tr><th id="757">757</th><td>  <dfn class="enum" id="tvm::tir::builtin::kArrNDim" title='tvm::tir::builtin::kArrNDim' data-ref="tvm::tir::builtin::kArrNDim" data-ref-filename="tvm..tir..builtin..kArrNDim">kArrNDim</dfn>,</td></tr>
+<tr><th id="758">758</th><td>  <dfn class="enum" id="tvm::tir::builtin::kArrTypeCode" title='tvm::tir::builtin::kArrTypeCode' data-ref="tvm::tir::builtin::kArrTypeCode" data-ref-filename="tvm..tir..builtin..kArrTypeCode">kArrTypeCode</dfn>,</td></tr>
+<tr><th id="759">759</th><td>  <dfn class="enum" id="tvm::tir::builtin::kArrTypeBits" title='tvm::tir::builtin::kArrTypeBits' data-ref="tvm::tir::builtin::kArrTypeBits" data-ref-filename="tvm..tir..builtin..kArrTypeBits">kArrTypeBits</dfn>,</td></tr>
+<tr><th id="760">760</th><td>  <dfn class="enum" id="tvm::tir::builtin::kArrTypeLanes" title='tvm::tir::builtin::kArrTypeLanes' data-ref="tvm::tir::builtin::kArrTypeLanes" data-ref-filename="tvm..tir..builtin..kArrTypeLanes">kArrTypeLanes</dfn>,</td></tr>
+<tr><th id="761">761</th><td>  <dfn class="enum" id="tvm::tir::builtin::kArrByteOffset" title='tvm::tir::builtin::kArrByteOffset' data-ref="tvm::tir::builtin::kArrByteOffset" data-ref-filename="tvm..tir..builtin..kArrByteOffset">kArrByteOffset</dfn>,</td></tr>
+<tr><th id="762">762</th><td>  <dfn class="enum" id="tvm::tir::builtin::kArrDeviceId" title='tvm::tir::builtin::kArrDeviceId' data-ref="tvm::tir::builtin::kArrDeviceId" data-ref-filename="tvm..tir..builtin..kArrDeviceId">kArrDeviceId</dfn>,</td></tr>
+<tr><th id="763">763</th><td>  <dfn class="enum" id="tvm::tir::builtin::kArrDeviceType" title='tvm::tir::builtin::kArrDeviceType' data-ref="tvm::tir::builtin::kArrDeviceType" data-ref-filename="tvm..tir..builtin..kArrDeviceType">kArrDeviceType</dfn>,</td></tr>
+<tr><th id="764">764</th><td>  <dfn class="enum" id="tvm::tir::builtin::kArrKindBound_" title='tvm::tir::builtin::kArrKindBound_' data-ref="tvm::tir::builtin::kArrKindBound_" data-ref-filename="tvm..tir..builtin..kArrKindBound_">kArrKindBound_</dfn>,</td></tr>
+<tr><th id="765">765</th><td>  <i>// TVMValue field</i></td></tr>
+<tr><th id="766">766</th><td>  <dfn class="enum" id="tvm::tir::builtin::kTVMValueContent" title='tvm::tir::builtin::kTVMValueContent' data-ref="tvm::tir::builtin::kTVMValueContent" data-ref-filename="tvm..tir..builtin..kTVMValueContent">kTVMValueContent</dfn>,</td></tr>
+<tr><th id="767">767</th><td>  <dfn class="enum" id="tvm::tir::builtin::kTVMValueKindBound_" title='tvm::tir::builtin::kTVMValueKindBound_' data-ref="tvm::tir::builtin::kTVMValueKindBound_" data-ref-filename="tvm..tir..builtin..kTVMValueKindBound_">kTVMValueKindBound_</dfn></td></tr>
+<tr><th id="768">768</th><td>};</td></tr>
+<tr><th id="769">769</th><td>}  <i>// namespace builtin</i></td></tr>
+<tr><th id="770">770</th><td>}  <i>// namespace tir</i></td></tr>
+<tr><th id="771">771</th><td>}  <i>// namespace tvm</i></td></tr>
+<tr><th id="772">772</th><td><u>#<span data-ppcond="33">endif</span>  // TVM_TIR_BUILTIN_H_</u></td></tr>
+<tr><th id="773">773</th><td></td></tr>
 </table><hr/><p id='footer'>
-Generated while processing <a href='../../../src/arith/canonical_simplify.cc.html'>tvm/src/arith/canonical_simplify.cc</a><br/>Generated on <em>2022-Sep-20</em> from project tvm revision <em>d9f7cf3</em><br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+Generated while processing <a href='../../../src/arith/canonical_simplify.cc.html'>tvm/src/arith/canonical_simplify.cc</a><br/>Generated on <em>2022-Sep-20</em> from project tvm revision <em>5dfa8da</em><br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
 <br/>Generator usage only permitted with license.</p>
 </div></body></html>
