@@ -156,6 +156,8 @@
 <use f='tvm/include/tvm/tir/stmt_functor.h' l='342' c='_ZN3tvm3tir11IRTransformENS0_4StmtERKNS_7runtime10PackedFuncES5_NS2_8OptionalINS2_5ArrayINS2_6StringEvEEEE'/>
 <use f='tvm/include/tvm/tir/stmt_functor.h' l='360' c='_ZN3tvm3tir10SubstituteENS0_4StmtESt8functionIFNS_7runtime8OptionalINS_8PrimExprEEERKNS0_3VarEEE'/>
 <use f='tvm/include/tvm/tir/stmt_functor.h' l='360' c='_ZN3tvm3tir10SubstituteENS0_4StmtESt8functionIFNS_7runtime8OptionalINS_8PrimExprEEERKNS0_3VarEEE'/>
+<use f='tvm/include/tvm/tir/stmt_functor.h' l='442' c='_ZN3tvm3tir12ContainsNodeERKNS0_4StmtE'/>
+<use f='tvm/include/tvm/tir/stmt_functor.h' l='445' c='_ZZN3tvm3tir12ContainsNodeERKNS0_4StmtEEN7Visitor9VisitStmtES3_'/>
 <use f='tvm/src/arith/ir_mutator_with_analyzer.h' l='52' c='_ZN3tvm5arith21IRMutatorWithAnalyzer10VisitStmt_EPKNS_3tir7ForNodeE'/>
 <use f='tvm/src/arith/ir_mutator_with_analyzer.h' l='53' c='_ZN3tvm5arith21IRMutatorWithAnalyzer10VisitStmt_EPKNS_3tir9BlockNodeE'/>
 <use f='tvm/src/arith/ir_mutator_with_analyzer.h' l='54' c='_ZN3tvm5arith21IRMutatorWithAnalyzer10VisitStmt_EPKNS_3tir11LetStmtNodeE'/>
@@ -299,12 +301,11 @@
 <use f='tvm/src/printer/tvmscript_printer.cc' l='1531' c='_ZN3tvm3tir16TVMScriptPrinter10VisitStmt_EPKNS0_16BlockRealizeNodeE'/>
 <use f='tvm/src/printer/tvmscript_printer.cc' l='1550' c='_ZN3tvm3tir16TVMScriptPrinter9PrintBodyERKNS0_4StmtE'/>
 <use f='tvm/src/printer/tvmscript_printer.cc' l='1561' c='_ZN3tvm3tir16TVMScriptPrinter9PrintBodyERKNS0_4StmtE'/>
-<use f='tvm/src/printer/tvmscript_printer.cc' l='1670' c='_ZN3tvm3tir16TVMScriptPrinter13PrintPrimFuncERKNS0_8PrimFuncE'/>
-<use f='tvm/src/printer/tvmscript_printer.cc' l='1920' c='_ZN3tvm3tir30TVMScriptPrinterWithDiagnosticC1ERKNS_7runtime6StringEbNS2_15TypedPackedFuncIFNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS0_4StmtEEEE'/>
-<use f='tvm/src/printer/tvmscript_printer.cc' l='1925' c='_ZN3tvm3tir30TVMScriptPrinterWithDiagnostic14PrintUnderlineERKNS0_4StmtEi'/>
-<use f='tvm/src/printer/tvmscript_printer.cc' l='1931' c='_ZN3tvm3tir30TVMScriptPrinterWithDiagnostic14PrintBlockNameEPKNS0_9BlockNodeE'/>
-<use f='tvm/src/printer/tvmscript_printer.cc' l='1935' c='_ZN3tvm3tir30TVMScriptPrinterWithDiagnostic14PrintUnderlineERKNS0_4StmtEi'/>
-<use f='tvm/src/printer/tvmscript_printer.cc' l='1962' c='_ZN3tvm3tir25AsTVMScriptWithDiagnosticERKNS_7runtime9ObjectRefERKNS1_6StringEbNS1_15TypedPackedFuncIFNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS0_4StmtEEEE'/>
+<use f='tvm/src/printer/tvmscript_printer.cc' l='1954' c='_ZN3tvm3tir30TVMScriptPrinterWithDiagnosticC1ERKNS_7runtime6StringEbNS2_15TypedPackedFuncIFNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS0_4StmtEEEE'/>
+<use f='tvm/src/printer/tvmscript_printer.cc' l='1959' c='_ZN3tvm3tir30TVMScriptPrinterWithDiagnostic14PrintUnderlineERKNS0_4StmtEi'/>
+<use f='tvm/src/printer/tvmscript_printer.cc' l='1965' c='_ZN3tvm3tir30TVMScriptPrinterWithDiagnostic14PrintBlockNameEPKNS0_9BlockNodeE'/>
+<use f='tvm/src/printer/tvmscript_printer.cc' l='1969' c='_ZN3tvm3tir30TVMScriptPrinterWithDiagnostic14PrintUnderlineERKNS0_4StmtEi'/>
+<use f='tvm/src/printer/tvmscript_printer.cc' l='1996' c='_ZN3tvm3tir25AsTVMScriptWithDiagnosticERKNS_7runtime9ObjectRefERKNS1_6StringEbNS1_15TypedPackedFuncIFNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS0_4StmtEEEE'/>
 <size>8</size>
 <use f='tvm/include/tvm/tir/usmp/utils.h' l='134'/>
 <use f='tvm/include/tvm/tir/usmp/utils.h' l='162' c='_ZN3tvm3tir4usmp18BufferInfoAnalysisC1ENS_7runtime3MapINS1_10BufferInfoENS0_4StmtEvvEENS_7IntegerE'/>
@@ -697,7 +698,7 @@
 <size>8</size>
 <use f='tvm/src/tir/ir/script/script_complete.cc' l='44' c='_ZN3tvm3tir15ScriptCompleter10VisitStmt_EPKNS0_16BlockRealizeNodeE'/>
 <use f='tvm/src/tir/ir/script/script_complete.cc' l='53' c='_ZN3tvm3tir15ScriptCompleter10VisitStmt_EPKNS0_9BlockNodeE'/>
-<use f='tvm/src/tir/ir/script/script_complete.cc' l='112' c='_ZN3tvm3tir14ScriptCompleteENS0_8PrimFuncERKNS_7runtime5ArrayINS0_6BufferEvEE'/>
+<use f='tvm/src/tir/ir/script/script_complete.cc' l='109' c='_ZN3tvm3tir14ScriptCompleteENS0_8PrimFuncERKNS_7runtime5ArrayINS0_6BufferEvEE'/>
 <size>8</size>
 <use f='tvm/src/tir/ir/specialize.cc' l='104' c='_ZN3tvm3tir19PrimFuncSpecializer10SpecializeENS0_8PrimFuncERKSt13unordered_mapINS0_3VarENS_8PrimExprENS_7runtime13ObjectPtrHashENS6_14ObjectPtrEqualESaISt4pairIKS4_S5_EEE'/>
 <use f='tvm/src/tir/ir/specialize.cc' l='116' c='_ZN3tvm3tir19PrimFuncSpecializer10VisitStmt_EPKNS0_9BlockNodeE'/>
