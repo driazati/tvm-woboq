@@ -9,8 +9,8 @@
 <use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling.cc' l='142' u='m' c='_ZNK3tvm13meta_schedule20MultiLevelTilingNode13AddWriteReuseENS0_5StateE'/>
 <use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling.cc' l='157' u='m' c='_ZNK3tvm13meta_schedule20MultiLevelTilingNode13AddWriteReuseENS0_5StateE'/>
 <use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling.cc' l='163' u='m' c='_ZNK3tvm13meta_schedule20MultiLevelTilingNode13AddWriteReuseENS0_5StateE'/>
-<use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling.cc' l='170' u='a' c='_ZNK3tvm13meta_schedule20MultiLevelTilingNode12TileLoopNestENS0_5StateE'/>
-<use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling.cc' l='244' u='a' c='_ZNK3tvm13meta_schedule20MultiLevelTilingNode12AddReadReuseENS0_5StateE'/>
+<use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling.cc' l='181' u='a' c='_ZNK3tvm13meta_schedule20MultiLevelTilingNode12TileLoopNestENS0_5StateE'/>
+<use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling.cc' l='257' u='a' c='_ZNK3tvm13meta_schedule20MultiLevelTilingNode12AddReadReuseENS0_5StateE'/>
 <offset>192</offset>
 <doc f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling.h' l='91'>/*! \brief The schedule to date */</doc>
 <use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling_tensor_core.cc' l='107' u='w' c='_ZN3tvm13meta_schedule15TensorCoreStateC1ENS0_21TensorCoreIntrinGroupENS_3tir24AutoTensorizeMappingInfoENS3_8ScheduleENS3_7BlockRVENS_7runtime5ArrayIN4827044'/>
