@@ -2901,6 +2901,7 @@
 <use f='tvm/include/tvm/topi/reduction.h' l='351' u='c' c='_ZN3tvm4topi12collapse_sumERKNS_2te6TensorENS_7runtime5ArrayINS_8PrimExprEvEE'/>
 <use f='tvm/include/tvm/topi/reduction.h' l='470' u='c' c='_ZN3tvm4topi17MakeArgminReducerEb'/>
 <use f='tvm/include/tvm/topi/reduction.h' l='531' u='c' c='_ZN3tvm4topi17MakeArgmaxReducerEb'/>
+<use f='tvm/include/tvm/topi/reduction.h' l='593' u='c' c='_ZN3tvm4topi19MakeTupleSumReducerEv'/>
 <use f='tvm/include/tvm/topi/nn.h' l='56' u='c' c='_ZN3tvm4topi4reluERKNS_2te6TensorET_NSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESB_'/>
 <use f='tvm/include/tvm/topi/nn.h' l='56' u='c' c='_ZN3tvm4topi4reluERKNS_2te6TensorET_NSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESB_'/>
 <use f='tvm/include/tvm/topi/nn.h' l='77' u='c' c='_ZN3tvm4topi10leaky_reluERKNS_2te6TensorEdNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESA_'/>
@@ -8325,8 +8326,8 @@
 <use f='tvm/src/tir/schedule/primitive/reduction.cc' l='194' u='c' c='_ZN3tvm3tir18DecomposeReductionENS0_13ScheduleStateERKNS0_8StmtSRefES4_'/>
 <use f='tvm/src/tir/schedule/primitive/reduction.cc' l='267' macro='1' u='c' c='_ZN3tvm3tir18DecomposeReductionENS0_13ScheduleStateERKNS0_8StmtSRefES4_'/>
 <use f='tvm/src/tir/schedule/primitive/reduction.cc' l='280' macro='1' u='c' c='_ZN3tvm3tir18DecomposeReductionENS0_13ScheduleStateERKNS0_8StmtSRefES4_'/>
-<use f='tvm/src/tir/schedule/primitive/reduction.cc' l='1171' macro='1' u='c' c='_ZN3tvm3tir7RFactorENS0_13ScheduleStateERKNS0_8StmtSRefEi'/>
-<use f='tvm/src/tir/schedule/primitive/reduction.cc' l='1322' u='c'/>
+<use f='tvm/src/tir/schedule/primitive/reduction.cc' l='1180' macro='1' u='c' c='_ZN3tvm3tir7RFactorENS0_13ScheduleStateERKNS0_8StmtSRefEi'/>
+<use f='tvm/src/tir/schedule/primitive/reduction.cc' l='1331' u='c'/>
 <use f='tvm/src/tir/schedule/primitive/sampling.cc' l='314' macro='1' u='c' c='_ZN3tvm3tir17SamplePerfectTileEPlRKNS0_8StmtSRefEiiPNS_7runtime8OptionalINS5_5ArrayINS_7IntegerEvEEEE'/>
 <use f='tvm/src/tir/schedule/schedule.cc' l='47' u='c'/>
 <use f='tvm/src/tir/schedule/schedule.cc' l='49' u='c'/>
@@ -8691,6 +8692,9 @@
 <use f='tvm/include/tvm/topi/nn/dense.h' l='72' u='c' c='_ZN3tvm4topi2nn5denseERKNS_2te6TensorES5_S5_RKNS_7runtime8DataTypeE'/>
 <use f='tvm/include/tvm/topi/nn/dilate.h' l='71' u='c' c='_ZN3tvm4topi2nn6dilateERKNS_2te6TensorENS_7runtime5ArrayINS_8PrimExprEvEEdNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESF_'/>
 <use f='tvm/include/tvm/topi/nn/dilate.h' l='71' u='c' c='_ZN3tvm4topi2nn6dilateERKNS_2te6TensorENS_7runtime5ArrayINS_8PrimExprEvEEdNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESF_'/>
+<use f='tvm/include/tvm/topi/nn/layer_norm.h' l='53' u='c' c='_ZN3tvm4topi2nn10layer_normERKNS_2te6TensorES5_S5_RKNS_7runtime5ArrayINS_7IntegerEvEEdNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESH_'/>
+<use f='tvm/include/tvm/topi/nn/layer_norm.h' l='53' u='c' c='_ZN3tvm4topi2nn10layer_normERKNS_2te6TensorES5_S5_RKNS_7runtime5ArrayINS_7IntegerEvEEdNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESH_'/>
+<use f='tvm/include/tvm/topi/nn/layer_norm.h' l='83' u='c' c='_ZN3tvm4topi2nn10layer_normERKNS_2te6TensorES5_S5_RKNS_7runtime5ArrayINS_7IntegerEvEEdNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESH_'/>
 <use f='tvm/include/tvm/topi/nn/local_response_norm.h' l='53' u='c' c='_ZN3tvm4topi2nn3lrnERKNS_2te6TensorEiifffNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESB_'/>
 <use f='tvm/include/tvm/topi/nn/local_response_norm.h' l='54' u='c' c='_ZN3tvm4topi2nn3lrnERKNS_2te6TensorEiifffNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESB_'/>
 <use f='tvm/include/tvm/topi/nn/local_response_norm.h' l='64' u='c' c='_ZN3tvm4topi2nn3lrnERKNS_2te6TensorEiifffNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESB_'/>
@@ -8705,31 +8709,32 @@
 <use f='tvm/include/tvm/topi/nn/mapping.h' l='50' u='c' c='_ZN3tvm4topi2nn16scale_shift_nchwERKNS_2te6TensorES5_S5_NSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESB_'/>
 <use f='tvm/include/tvm/topi/nn/mapping.h' l='68' u='c' c='_ZN3tvm4topi2nn16scale_shift_nhwcERKNS_2te6TensorES5_S5_NSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESB_'/>
 <use f='tvm/include/tvm/topi/nn/mapping.h' l='68' u='c' c='_ZN3tvm4topi2nn16scale_shift_nhwcERKNS_2te6TensorES5_S5_NSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESB_'/>
-<use f='tvm/src/topi/nn.cc' l='44' u='c'/>
-<use f='tvm/src/topi/nn.cc' l='48' u='c'/>
-<use f='tvm/src/topi/nn.cc' l='52' u='c'/>
-<use f='tvm/src/topi/nn.cc' l='56' u='c'/>
-<use f='tvm/src/topi/nn.cc' l='60' u='c'/>
-<use f='tvm/src/topi/nn.cc' l='64' u='c'/>
-<use f='tvm/src/topi/nn.cc' l='68' u='c'/>
-<use f='tvm/src/topi/nn.cc' l='73' u='c'/>
-<use f='tvm/src/topi/nn.cc' l='78' u='c'/>
-<use f='tvm/src/topi/nn.cc' l='83' u='c'/>
-<use f='tvm/src/topi/nn.cc' l='88' u='c'/>
-<use f='tvm/src/topi/nn.cc' l='93' u='c'/>
-<use f='tvm/src/topi/nn.cc' l='97' u='c'/>
-<use f='tvm/src/topi/nn.cc' l='102' u='c'/>
-<use f='tvm/src/topi/nn.cc' l='108' u='c'/>
-<use f='tvm/src/topi/nn.cc' l='112' u='c'/>
-<use f='tvm/src/topi/nn.cc' l='117' u='c'/>
-<use f='tvm/src/topi/nn.cc' l='122' u='c'/>
-<use f='tvm/src/topi/nn.cc' l='127' u='c'/>
-<use f='tvm/src/topi/nn.cc' l='132' u='c'/>
-<use f='tvm/src/topi/nn.cc' l='138' u='c'/>
-<use f='tvm/src/topi/nn.cc' l='142' u='c'/>
-<use f='tvm/src/topi/nn.cc' l='146' u='c'/>
-<use f='tvm/src/topi/nn.cc' l='152' u='c'/>
-<use f='tvm/src/topi/nn.cc' l='156' u='c'/>
+<use f='tvm/src/topi/nn.cc' l='45' u='c'/>
+<use f='tvm/src/topi/nn.cc' l='49' u='c'/>
+<use f='tvm/src/topi/nn.cc' l='53' u='c'/>
+<use f='tvm/src/topi/nn.cc' l='57' u='c'/>
+<use f='tvm/src/topi/nn.cc' l='61' u='c'/>
+<use f='tvm/src/topi/nn.cc' l='65' u='c'/>
+<use f='tvm/src/topi/nn.cc' l='69' u='c'/>
+<use f='tvm/src/topi/nn.cc' l='74' u='c'/>
+<use f='tvm/src/topi/nn.cc' l='79' u='c'/>
+<use f='tvm/src/topi/nn.cc' l='84' u='c'/>
+<use f='tvm/src/topi/nn.cc' l='89' u='c'/>
+<use f='tvm/src/topi/nn.cc' l='94' u='c'/>
+<use f='tvm/src/topi/nn.cc' l='98' u='c'/>
+<use f='tvm/src/topi/nn.cc' l='103' u='c'/>
+<use f='tvm/src/topi/nn.cc' l='109' u='c'/>
+<use f='tvm/src/topi/nn.cc' l='113' u='c'/>
+<use f='tvm/src/topi/nn.cc' l='118' u='c'/>
+<use f='tvm/src/topi/nn.cc' l='123' u='c'/>
+<use f='tvm/src/topi/nn.cc' l='128' u='c'/>
+<use f='tvm/src/topi/nn.cc' l='133' u='c'/>
+<use f='tvm/src/topi/nn.cc' l='139' u='c'/>
+<use f='tvm/src/topi/nn.cc' l='143' u='c'/>
+<use f='tvm/src/topi/nn.cc' l='147' u='c'/>
+<use f='tvm/src/topi/nn.cc' l='153' u='c'/>
+<use f='tvm/src/topi/nn.cc' l='157' u='c'/>
+<use f='tvm/src/topi/nn.cc' l='162' u='c'/>
 <use f='tvm/src/topi/reduction.cc' l='35' u='c'/>
 <use f='tvm/src/topi/reduction.cc' l='39' u='c'/>
 <use f='tvm/src/topi/reduction.cc' l='43' u='c'/>

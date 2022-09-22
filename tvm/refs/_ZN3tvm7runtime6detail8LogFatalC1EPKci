@@ -1953,6 +1953,7 @@
 <use f='tvm/include/tvm/topi/reduction.h' l='185' macro='1' u='c' c='_ZN3tvm4topi10CommReduceERKNS_2te6TensorERKNS_7runtime5ArrayINS_7IntegerEvEESt8functionIFNS_8PrimExprESC_RKNS6_INS_3tir7IterVarEvEENS6_ISC_vEENS_4SpanEEEbb'/>
 <use f='tvm/include/tvm/topi/reduction.h' l='208' macro='1' u='c' c='_ZN3tvm4topi13CommReduceIdxERKNS_2te6TensorERKNS_7runtime5ArrayINS_7IntegerEvEESt8functionIFNS6_INS_8PrimExprEvEESD_RKNS6_INS_3tir7IterVarEvEEPSC_EEbb'/>
 <use f='tvm/include/tvm/topi/reduction.h' l='332' macro='1' u='c' c='_ZN3tvm4topi12collapse_sumERKNS_2te6TensorENS_7runtime5ArrayINS_8PrimExprEvEE'/>
+<use f='tvm/include/tvm/topi/reduction.h' l='579' macro='1' u='c' c='_ZN3tvm4topi19MakeTupleSumReducerEv'/>
 <use f='tvm/include/tvm/topi/nn.h' l='103' macro='1' u='c' c='_ZN3tvm4topi5preluERKNS_2te6TensorES4_iNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESA_'/>
 <use f='tvm/include/tvm/topi/nn.h' l='104' macro='1' u='c' c='_ZN3tvm4topi5preluERKNS_2te6TensorES4_iNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESA_'/>
 <use f='tvm/include/tvm/topi/nn.h' l='167' macro='1' u='c' c='_ZN3tvm4topi3padERKNS_2te6TensorERKNS_7runtime5ArrayINS_8PrimExprEvEES8_S7_NSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESG_SG_PS9_'/>
@@ -5653,13 +5654,13 @@
 <use f='tvm/src/tir/schedule/primitive/reduction.cc' l='187' macro='1' u='c' c='_ZN3tvm3tir18DecomposeReductionENS0_13ScheduleStateERKNS0_8StmtSRefES4_'/>
 <use f='tvm/src/tir/schedule/primitive/reduction.cc' l='267' macro='1' u='c' c='_ZN3tvm3tir18DecomposeReductionENS0_13ScheduleStateERKNS0_8StmtSRefES4_'/>
 <use f='tvm/src/tir/schedule/primitive/reduction.cc' l='280' macro='1' u='c' c='_ZN3tvm3tir18DecomposeReductionENS0_13ScheduleStateERKNS0_8StmtSRefES4_'/>
-<use f='tvm/src/tir/schedule/primitive/reduction.cc' l='512' macro='1' u='c' c='_ZNK3tvm3tir17LoopPropertyError15FastErrorStringEv'/>
-<use f='tvm/src/tir/schedule/primitive/reduction.cc' l='531' macro='1' u='c' c='_ZNK3tvm3tir17LoopPropertyError20DetailRenderTemplateEv'/>
-<use f='tvm/src/tir/schedule/primitive/reduction.cc' l='851' macro='1' u='c' c='_ZN3tvm3tir19RFactorBlockCreator17CreateNormalItersEi'/>
-<use f='tvm/src/tir/schedule/primitive/reduction.cc' l='906' macro='1' u='c' c='_ZN3tvm3tir19RFactorBlockCreator22CreateReadWriteRegionsEv'/>
-<use f='tvm/src/tir/schedule/primitive/reduction.cc' l='993' macro='1' u='c' c='_ZN3tvm3tir21WriteBackBlockCreator12CreateRegionERKNS_7runtime5ArrayINS_8PrimExprEvEEb'/>
-<use f='tvm/src/tir/schedule/primitive/reduction.cc' l='1135' macro='1' u='c' c='_ZN3tvm3tir13BlockReplacer10VisitStmt_EPKNS0_16BlockRealizeNodeE'/>
-<use f='tvm/src/tir/schedule/primitive/reduction.cc' l='1171' macro='1' u='c' c='_ZN3tvm3tir7RFactorENS0_13ScheduleStateERKNS0_8StmtSRefEi'/>
+<use f='tvm/src/tir/schedule/primitive/reduction.cc' l='521' macro='1' u='c' c='_ZNK3tvm3tir17LoopPropertyError15FastErrorStringEv'/>
+<use f='tvm/src/tir/schedule/primitive/reduction.cc' l='540' macro='1' u='c' c='_ZNK3tvm3tir17LoopPropertyError20DetailRenderTemplateEv'/>
+<use f='tvm/src/tir/schedule/primitive/reduction.cc' l='860' macro='1' u='c' c='_ZN3tvm3tir19RFactorBlockCreator17CreateNormalItersEi'/>
+<use f='tvm/src/tir/schedule/primitive/reduction.cc' l='915' macro='1' u='c' c='_ZN3tvm3tir19RFactorBlockCreator22CreateReadWriteRegionsEv'/>
+<use f='tvm/src/tir/schedule/primitive/reduction.cc' l='1002' macro='1' u='c' c='_ZN3tvm3tir21WriteBackBlockCreator12CreateRegionERKNS_7runtime5ArrayINS_8PrimExprEvEEb'/>
+<use f='tvm/src/tir/schedule/primitive/reduction.cc' l='1144' macro='1' u='c' c='_ZN3tvm3tir13BlockReplacer10VisitStmt_EPKNS0_16BlockRealizeNodeE'/>
+<use f='tvm/src/tir/schedule/primitive/reduction.cc' l='1180' macro='1' u='c' c='_ZN3tvm3tir7RFactorENS0_13ScheduleStateERKNS0_8StmtSRefEi'/>
 <use f='tvm/src/tir/schedule/primitive/sampling.cc' l='76' macro='1' u='c' c='_ZN3tvm3tir10PrimeTableC1Ev'/>
 <use f='tvm/src/tir/schedule/primitive/sampling.cc' l='129' macro='1' u='c' c='_ZN3tvm3tir9SampleIntEPlii'/>
 <use f='tvm/src/tir/schedule/primitive/sampling.cc' l='168' macro='1' u='c' c='_ZN3tvm3tir17SampleCategoricalEPlRKNS_7runtime5ArrayINS_7IntegerEvEERKNS3_INS_8FloatImmEvEEPNS2_8OptionalIS4_EE'/>
@@ -6362,6 +6363,7 @@
 <use f='tvm/include/tvm/topi/nn/dense.h' l='53' macro='1' u='c' c='_ZN3tvm4topi2nn5denseERKNS_2te6TensorES5_S5_RKNS_7runtime8DataTypeE'/>
 <use f='tvm/include/tvm/topi/nn/dilate.h' l='48' macro='1' u='c' c='_ZN3tvm4topi2nn3allENS_7runtime5ArrayINS_8PrimExprEvEE'/>
 <use f='tvm/include/tvm/topi/nn/dilate.h' l='73' macro='1' u='c' c='_ZN3tvm4topi2nn6dilateERKNS_2te6TensorENS_7runtime5ArrayINS_8PrimExprEvEEdNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESF_'/>
+<use f='tvm/include/tvm/topi/nn/layer_norm.h' l='56' macro='1' u='c' c='_ZN3tvm4topi2nn10layer_normERKNS_2te6TensorES5_S5_RKNS_7runtime5ArrayINS_7IntegerEvEEdNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESH_'/>
 <use f='tvm/include/tvm/topi/nn/local_response_norm.h' l='55' macro='1' u='c' c='_ZN3tvm4topi2nn3lrnERKNS_2te6TensorEiifffNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESB_'/>
 <use f='tvm/include/tvm/topi/nn/local_response_norm.h' l='56' macro='1' u='c' c='_ZN3tvm4topi2nn3lrnERKNS_2te6TensorEiifffNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESB_'/>
 <use f='tvm/include/tvm/topi/nn/local_response_norm.h' l='57' macro='1' u='c' c='_ZN3tvm4topi2nn3lrnERKNS_2te6TensorEiifffNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESB_'/>

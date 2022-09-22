@@ -229,6 +229,7 @@
 <use f='tvm/src/relay/backend/te_compiler_cache.cc' l='675' u='c' c='_ZN3tvm5relay3tec13MakeShapeFunc10VisitExpr_EPKNS0_12ConstantNodeE'/>
 <use f='tvm/include/tvm/topi/reduction.h' l='466' u='c' c='_ZN3tvm4topi17MakeArgminReducerEb'/>
 <use f='tvm/include/tvm/topi/reduction.h' l='527' u='c' c='_ZN3tvm4topi17MakeArgmaxReducerEb'/>
+<use f='tvm/include/tvm/topi/reduction.h' l='589' u='c' c='_ZN3tvm4topi19MakeTupleSumReducerEv'/>
 <use f='tvm/include/tvm/topi/nn.h' l='83' u='c' c='_ZN3tvm4topi10leaky_reluERKNS_2te6TensorEdNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESA_'/>
 <use f='tvm/include/tvm/topi/nn.h' l='196' u='c' c='_ZN3tvm4topi3padERKNS_2te6TensorERKNS_7runtime5ArrayINS_8PrimExprEvEES8_S7_NSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESG_SG_PS9_'/>
 <use f='tvm/include/tvm/topi/nn.h' l='509' u='c' c='_ZN3tvm4topi17space_to_batch_ndERKNS_2te6TensorERKNS_7runtime5ArrayINS_7IntegerEvEERKNS6_INS_8PrimExprEvEESE_SB_NSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESK_'/>
@@ -346,10 +347,12 @@
 <use f='tvm/src/tir/schedule/primitive/loop_transformation.cc' l='417' u='c' c='_ZN3tvm3tir5SplitENS0_13ScheduleStateERKNS0_8StmtSRefERKNS_7runtime5ArrayINS_8PrimExprEvEEb'/>
 <use f='tvm/src/tir/schedule/primitive/reduction.cc' l='307' u='c' c='_ZN3tvm3tir15ReducerRegistryC1Ev'/>
 <use f='tvm/src/tir/schedule/primitive/reduction.cc' l='315' u='c' c='_ZN3tvm3tir15ReducerRegistryC1Ev'/>
-<use f='tvm/src/tir/schedule/primitive/reduction.cc' l='341' u='c' c='_ZN3tvm3tir15ReducerRegistryC1Ev'/>
-<use f='tvm/src/tir/schedule/primitive/reduction.cc' l='354' u='c' c='_ZN3tvm3tir15ReducerRegistryC1Ev'/>
-<use f='tvm/src/tir/schedule/primitive/reduction.cc' l='365' u='c' c='_ZN3tvm3tir15ReducerRegistryC1Ev'/>
-<use f='tvm/src/tir/schedule/primitive/reduction.cc' l='377' u='c' c='_ZN3tvm3tir15ReducerRegistryC1Ev'/>
+<use f='tvm/src/tir/schedule/primitive/reduction.cc' l='339' u='c' c='_ZN3tvm3tir15ReducerRegistryC1Ev'/>
+<use f='tvm/src/tir/schedule/primitive/reduction.cc' l='340' u='c' c='_ZN3tvm3tir15ReducerRegistryC1Ev'/>
+<use f='tvm/src/tir/schedule/primitive/reduction.cc' l='350' u='c' c='_ZN3tvm3tir15ReducerRegistryC1Ev'/>
+<use f='tvm/src/tir/schedule/primitive/reduction.cc' l='363' u='c' c='_ZN3tvm3tir15ReducerRegistryC1Ev'/>
+<use f='tvm/src/tir/schedule/primitive/reduction.cc' l='374' u='c' c='_ZN3tvm3tir15ReducerRegistryC1Ev'/>
+<use f='tvm/src/tir/schedule/primitive/reduction.cc' l='386' u='c' c='_ZN3tvm3tir15ReducerRegistryC1Ev'/>
 <use f='tvm/src/tir/transforms/arg_binder.cc' l='113' u='c' c='_ZN3tvm3tir9ArgBinder10BindBufferERKNS0_6BufferES4_RKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEb'/>
 <use f='tvm/src/tir/transforms/arg_binder.cc' l='172' u='c' c='_ZN3tvm3tir9ArgBinder12BindDLTensorERKNS0_6BufferERKNS_8PrimExprES7_RKNS0_3VarERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
 <use f='tvm/src/tir/transforms/arg_binder.cc' l='206' u='c' c='_ZN3tvm3tir9ArgBinder12BindDLTensorERKNS0_6BufferERKNS_8PrimExprES7_RKNS0_3VarERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
@@ -432,6 +435,8 @@
 <use f='tvm/src/tir/transforms/vectorize_loop.cc' l='237' u='c' c='_ZN3tvm3tir10Vectorizer10VisitExpr_EPKNS0_8RampNodeE'/>
 <use f='tvm/include/tvm/topi/nn/bnn.h' l='74' u='c' c='_ZN3tvm4topi2nn13binarize_packERKNS_2te6TensorEiNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESB_'/>
 <use f='tvm/include/tvm/topi/nn/dilate.h' l='99' u='c' c='_ZN3tvm4topi2nn6dilateERKNS_2te6TensorENS_7runtime5ArrayINS_8PrimExprEvEEdNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESF_'/>
+<use f='tvm/include/tvm/topi/nn/layer_norm.h' l='88' u='c' c='_ZN3tvm4topi2nn10layer_normERKNS_2te6TensorES5_S5_RKNS_7runtime5ArrayINS_7IntegerEvEEdNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESH_'/>
+<use f='tvm/include/tvm/topi/nn/layer_norm.h' l='103' u='c' c='_ZN3tvm4topi2nn10layer_normERKNS_2te6TensorES5_S5_RKNS_7runtime5ArrayINS_7IntegerEvEEdNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESH_'/>
 <use f='tvm/include/tvm/topi/nn/local_response_norm.h' l='82' u='c' c='_ZN3tvm4topi2nn3lrnERKNS_2te6TensorEiifffNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESB_'/>
 <use f='tvm/include/tvm/topi/nn/local_response_norm.h' l='83' u='c' c='_ZN3tvm4topi2nn3lrnERKNS_2te6TensorEiifffNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESB_'/>
 <use f='tvm/include/tvm/topi/nn/local_response_norm.h' l='84' u='c' c='_ZN3tvm4topi2nn3lrnERKNS_2te6TensorEiifffNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESB_'/>
