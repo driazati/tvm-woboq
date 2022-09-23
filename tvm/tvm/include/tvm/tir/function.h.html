@@ -248,119 +248,122 @@
 <tr><th id="234">234</th><td>  <i class="doc">/*!</i></td></tr>
 <tr><th id="235">235</th><td><i class="doc">   * <span class="command">\brief</span> Look up TensorIntrin by name. Raises an exception if not found.</i></td></tr>
 <tr><th id="236">236</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">name</span> The name of the TensorIntrin.</i></td></tr>
-<tr><th id="237">237</th><td><i class="doc">   * <span class="command">\return</span> The TensorIntrin with the specified name.</i></td></tr>
-<tr><th id="238">238</th><td><i class="doc">   * <span class="command">\throws</span> This method throws an exception if the TensorIntrin does not exist.</i></td></tr>
-<tr><th id="239">239</th><td><i class="doc">   */</i></td></tr>
-<tr><th id="240">240</th><td>  <a class="macro" href="../runtime/c_runtime_api.h.html#64" title="__attribute__((visibility(&quot;default&quot;)))" data-ref="_M/TVM_DLL">TVM_DLL</a> <em>static</em> <a class="type" href="#tvm::tir::TensorIntrin" title='tvm::tir::TensorIntrin' data-ref="tvm::tir::TensorIntrin" data-ref-filename="tvm..tir..TensorIntrin">TensorIntrin</a> <dfn class="decl fn" id="_ZN3tvm3tir12TensorIntrin3GetENS_7runtime6StringE" title='tvm::tir::TensorIntrin::Get' data-ref="_ZN3tvm3tir12TensorIntrin3GetENS_7runtime6StringE" data-ref-filename="_ZN3tvm3tir12TensorIntrin3GetENS_7runtime6StringE">Get</dfn>(String <dfn class="local col5 decl" id="85name" title='name' data-type='tvm::runtime::String' data-ref="85name" data-ref-filename="85name">name</dfn>);</td></tr>
-<tr><th id="241">241</th><td></td></tr>
-<tr><th id="242">242</th><td>  <a class="macro" href="../runtime/object.h.html#713" title="TensorIntrin() = default; explicit TensorIntrin(::tvm::runtime::ObjectPtr&lt;::tvm::runtime::Object&gt; n) : ObjectRef(n) {} TensorIntrin(const TensorIntrin&amp; other) = default; TensorIntrin(TensorIntrin&amp;&amp; other) = default; TensorIntrin&amp; operator=(const TensorIntrin&amp; other) = default; TensorIntrin&amp; operator=(TensorIntrin&amp;&amp; other) = default;; const TensorIntrinNode* operator-&gt;() const { return static_cast&lt;const TensorIntrinNode*&gt;(data_.get()); } const TensorIntrinNode* get() const { return operator-&gt;(); } using ContainerType = TensorIntrinNode;" data-ref="_M/TVM_DEFINE_OBJECT_REF_METHODS">TVM_DEFINE_OBJECT_REF_METHODS</a>(<dfn class="decl def fn" id="_ZN3tvm3tir12TensorIntrinC1Ev" title='tvm::tir::TensorIntrin::TensorIntrin' data-ref="_ZN3tvm3tir12TensorIntrinC1Ev" data-ref-filename="_ZN3tvm3tir12TensorIntrinC1Ev"><dfn class="decl def fn" id="_ZN3tvm3tir12TensorIntrinC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE" title='tvm::tir::TensorIntrin::TensorIntrin' data-ref="_ZN3tvm3tir12TensorIntrinC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE" data-ref-filename="_ZN3tvm3tir12TensorIntrinC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE"><dfn class="decl def fn" id="_ZN3tvm3tir12TensorIntrinC1ERKS1_" title='tvm::tir::TensorIntrin::TensorIntrin' data-ref="_ZN3tvm3tir12TensorIntrinC1ERKS1_" data-ref-filename="_ZN3tvm3tir12TensorIntrinC1ERKS1_"><a class="type" href="#tvm::tir::TensorIntrin" title='tvm::tir::TensorIntrin' data-ref="tvm::tir::TensorIntrin" data-ref-filename="tvm..tir..TensorIntrin"><dfn class="decl def fn" id="_ZN3tvm3tir12TensorIntrinC1EOS1_" title='tvm::tir::TensorIntrin::TensorIntrin' data-ref="_ZN3tvm3tir12TensorIntrinC1EOS1_" data-ref-filename="_ZN3tvm3tir12TensorIntrinC1EOS1_"><a class="type" href="#tvm::tir::TensorIntrin" title='tvm::tir::TensorIntrin' data-ref="tvm::tir::TensorIntrin" data-ref-filename="tvm..tir..TensorIntrin"><a class="type" href="#tvm::tir::TensorIntrin" title='tvm::tir::TensorIntrin' data-ref="tvm::tir::TensorIntrin" data-ref-filename="tvm..tir..TensorIntrin"><a class="type" href="#tvm::tir::TensorIntrin" title='tvm::tir::TensorIntrin' data-ref="tvm::tir::TensorIntrin" data-ref-filename="tvm..tir..TensorIntrin"><a class="type" href="#tvm::tir::TensorIntrin" title='tvm::tir::TensorIntrin' data-ref="tvm::tir::TensorIntrin" data-ref-filename="tvm..tir..TensorIntrin"><a class="type" href="#tvm::tir::TensorIntrin" title='tvm::tir::TensorIntrin' data-ref="tvm::tir::TensorIntrin" data-ref-filename="tvm..tir..TensorIntrin">TensorIntrin</a></a></a></a></a></dfn></a></dfn></dfn></dfn>, <a class="type" href="../runtime/object.h.html#tvm::runtime::ObjectRef" title='tvm::runtime::ObjectRef' data-ref="tvm::runtime::ObjectRef" data-ref-filename="tvm..runtime..ObjectRef">ObjectRef</a>, <a class="type" href="#tvm::tir::TensorIntrinNode" title='tvm::tir::TensorIntrinNode' data-ref="tvm::tir::TensorIntrinNode" data-ref-filename="tvm..tir..TensorIntrinNode">TensorIntrinNode</a>)</td></tr>
-<tr><th id="243">243</th><td>};</td></tr>
+<tr><th id="237">237</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">allow_missing</span> Whether to allow missing tensor intrin. If false, an exception is raised</i></td></tr>
+<tr><th id="238">238</th><td><i class="doc">   *    if the tensor intrin is not found.</i></td></tr>
+<tr><th id="239">239</th><td><i class="doc">   * <span class="command">\return</span> The TensorIntrin with the specified name.</i></td></tr>
+<tr><th id="240">240</th><td><i class="doc">   * <span class="command">\throws</span> This method throws an exception if the TensorIntrin does not exist and allow_missing is</i></td></tr>
+<tr><th id="241">241</th><td><i class="doc">   * false.</i></td></tr>
+<tr><th id="242">242</th><td><i class="doc">   */</i></td></tr>
+<tr><th id="243">243</th><td>  <a class="macro" href="../runtime/c_runtime_api.h.html#64" title="__attribute__((visibility(&quot;default&quot;)))" data-ref="_M/TVM_DLL">TVM_DLL</a> <em>static</em> <a class="type" href="../runtime/container/optional.h.html#tvm::runtime::Optional" title='tvm::runtime::Optional' data-ref="tvm::runtime::Optional" data-ref-filename="tvm..runtime..Optional">Optional</a>&lt;<a class="type" href="#tvm::tir::TensorIntrin" title='tvm::tir::TensorIntrin' data-ref="tvm::tir::TensorIntrin" data-ref-filename="tvm..tir..TensorIntrin">TensorIntrin</a>&gt; <dfn class="decl fn" id="_ZN3tvm3tir12TensorIntrin3GetENS_7runtime6StringEb" title='tvm::tir::TensorIntrin::Get' data-ref="_ZN3tvm3tir12TensorIntrin3GetENS_7runtime6StringEb" data-ref-filename="_ZN3tvm3tir12TensorIntrin3GetENS_7runtime6StringEb">Get</dfn>(String <dfn class="local col5 decl" id="85name" title='name' data-type='tvm::runtime::String' data-ref="85name" data-ref-filename="85name">name</dfn>, <em>bool</em> <dfn class="local col6 decl" id="86allow_missing" title='allow_missing' data-type='bool' data-ref="86allow_missing" data-ref-filename="86allow_missing">allow_missing</dfn> = <b>false</b>);</td></tr>
 <tr><th id="244">244</th><td></td></tr>
-<tr><th id="245">245</th><td><i>/*</i></td></tr>
-<tr><th id="246">246</th><td><i> * \brief Specialize parameters of PrimFunc.</i></td></tr>
-<tr><th id="247">247</th><td><i> * \param func The PrimFunc to be specialized.</i></td></tr>
-<tr><th id="248">248</th><td><i> * \param param_map The mapping from function params to the instance.</i></td></tr>
-<tr><th id="249">249</th><td><i> * \return The new function with parameter specialized.</i></td></tr>
-<tr><th id="250">250</th><td><i> * \note We can define a Meta TIR function with symbolic shape:</i></td></tr>
-<tr><th id="251">251</th><td><i> *</i></td></tr>
-<tr><th id="252">252</th><td><i> * \code</i></td></tr>
-<tr><th id="253">253</th><td><i> *  @T.prim_func</i></td></tr>
-<tr><th id="254">254</th><td><i> *  def mem_copy(a: T.handle, b: T.handle, m: T.int32, n: T.int32) -&gt; None:</i></td></tr>
-<tr><th id="255">255</th><td><i> *      A = T.match_buffer(a, (m, n), "float32")</i></td></tr>
-<tr><th id="256">256</th><td><i> *      B = T.match_buffer(b, (m, n), "float32")</i></td></tr>
-<tr><th id="257">257</th><td><i> *      for i, j in T.grid(m, n):</i></td></tr>
-<tr><th id="258">258</th><td><i> *          with T.block():</i></td></tr>
-<tr><th id="259">259</th><td><i> *              vi, vj = T.axis.remap("SS", [i, j])</i></td></tr>
-<tr><th id="260">260</th><td><i> *              B[vi, vj] = A[vi, vj]</i></td></tr>
-<tr><th id="261">261</th><td><i> * \endcode</i></td></tr>
-<tr><th id="262">262</th><td><i> *</i></td></tr>
-<tr><th id="263">263</th><td><i> * Then we can make it specialized with given shapes or buffers.</i></td></tr>
-<tr><th id="264">264</th><td><i> *</i></td></tr>
-<tr><th id="265">265</th><td><i> * \code</i></td></tr>
-<tr><th id="266">266</th><td><i> *  a, _, m, n = mem_copy.params</i></td></tr>
-<tr><th id="267">267</th><td><i> *  func = mem_copy.specialize({a: tir.decl_buffer((16, 16))})</i></td></tr>
-<tr><th id="268">268</th><td><i> *  # or</i></td></tr>
-<tr><th id="269">269</th><td><i> *  func = mem_copy.specialize({n: 16, m: 16})</i></td></tr>
-<tr><th id="270">270</th><td><i> * \endcode</i></td></tr>
-<tr><th id="271">271</th><td><i> *</i></td></tr>
-<tr><th id="272">272</th><td><i> * \code {.language-id}</i></td></tr>
-<tr><th id="273">273</th><td><i> *  @T.prim_func</i></td></tr>
-<tr><th id="274">274</th><td><i> *  def mem_copy_16_16(a: T.handle, b: T.handle) -&gt; None:</i></td></tr>
-<tr><th id="275">275</th><td><i> *      A = T.match_buffer(a, (16, 16), "float32")</i></td></tr>
-<tr><th id="276">276</th><td><i> *      B = T.match_buffer(b, (16, 16), "float32")</i></td></tr>
-<tr><th id="277">277</th><td><i> *      for i, j in T.grid(16, 16):</i></td></tr>
-<tr><th id="278">278</th><td><i> *          with T.block():</i></td></tr>
-<tr><th id="279">279</th><td><i> *              vi, vj = T.axis.remap("SS", [i, j])</i></td></tr>
-<tr><th id="280">280</th><td><i> *              B[vi, vj] = A[vi, vj]</i></td></tr>
-<tr><th id="281">281</th><td><i> * \endcode</i></td></tr>
-<tr><th id="282">282</th><td><i> */</i></td></tr>
-<tr><th id="283">283</th><td><a class="type" href="#tvm::tir::PrimFunc" title='tvm::tir::PrimFunc' data-ref="tvm::tir::PrimFunc" data-ref-filename="tvm..tir..PrimFunc">PrimFunc</a> <dfn class="decl fn" id="_ZN3tvm3tir10SpecializeENS0_8PrimFuncERKNS_7runtime3MapINS0_3VarENS2_9ObjectRefEvvEE" title='tvm::tir::Specialize' data-ref="_ZN3tvm3tir10SpecializeENS0_8PrimFuncERKNS_7runtime3MapINS0_3VarENS2_9ObjectRefEvvEE" data-ref-filename="_ZN3tvm3tir10SpecializeENS0_8PrimFuncERKNS_7runtime3MapINS0_3VarENS2_9ObjectRefEvvEE">Specialize</dfn>(<a class="type" href="#tvm::tir::PrimFunc" title='tvm::tir::PrimFunc' data-ref="tvm::tir::PrimFunc" data-ref-filename="tvm..tir..PrimFunc">PrimFunc</a> <dfn class="local col6 decl" id="86func" title='func' data-type='tvm::tir::PrimFunc' data-ref="86func" data-ref-filename="86func">func</dfn>, <em>const</em> <a class="type" href="../runtime/container/map.h.html#tvm::runtime::Map" title='tvm::runtime::Map' data-ref="tvm::runtime::Map" data-ref-filename="tvm..runtime..Map">Map</a>&lt;<a class="type" href="var.h.html#tvm::tir::Var" title='tvm::tir::Var' data-ref="tvm::tir::Var" data-ref-filename="tvm..tir..Var">Var</a>, ObjectRef&gt;&amp; <dfn class="local col7 decl" id="87param_map" title='param_map' data-type='const Map&lt;tvm::tir::Var, tvm::runtime::ObjectRef&gt; &amp;' data-ref="87param_map" data-ref-filename="87param_map">param_map</dfn>);</td></tr>
-<tr><th id="284">284</th><td></td></tr>
-<tr><th id="285">285</th><td><i class="doc">/*!</i></td></tr>
-<tr><th id="286">286</th><td><i class="doc"> * <span class="command">\brief</span> PrimFunc specific attribute names.</i></td></tr>
-<tr><th id="287">287</th><td><i class="doc"> *</i></td></tr>
-<tr><th id="288">288</th><td><i class="doc"> * <span class="command">\sa</span> tvm::attr</i></td></tr>
-<tr><th id="289">289</th><td><i class="doc"> */</i></td></tr>
-<tr><th id="290">290</th><td><b>namespace</b> <span class="namespace">attr</span> {</td></tr>
-<tr><th id="291">291</th><td><i class="doc">/*!</i></td></tr>
-<tr><th id="292">292</th><td><i class="doc"> * <span class="command">\brief</span> List of thread IterVar that a DeviceLaunch function corresponds to.</i></td></tr>
-<tr><th id="293">293</th><td><i class="doc"> *</i></td></tr>
-<tr><th id="294">294</th><td><i class="doc"> * Type: Array&lt;tir::IterVar&gt;</i></td></tr>
-<tr><th id="295">295</th><td><i class="doc"> *</i></td></tr>
-<tr><th id="296">296</th><td><i class="doc"> * We call a device kernel launch function f using the following convention:</i></td></tr>
-<tr><th id="297">297</th><td><i class="doc"> *</i></td></tr>
-<tr><th id="298">298</th><td><i class="doc"> * Call(f,</i></td></tr>
-<tr><th id="299">299</th><td><i class="doc"> *      [arg1, arg2, ..., arg_n,</i></td></tr>
-<tr><th id="300">300</th><td><i class="doc"> *       work_size_1, work_size_2, ... work_size_m, dyn_shmem_size])</i></td></tr>
-<tr><th id="301">301</th><td><i class="doc"> *</i></td></tr>
-<tr><th id="302">302</th><td><i class="doc"> * Here n = len(arg), m = len(work_size) = len(device_thread_axis).</i></td></tr>
-<tr><th id="303">303</th><td><i class="doc"> *</i></td></tr>
-<tr><th id="304">304</th><td><i class="doc"> * When kDeviceUseDynSharedMemory is not set, dyn_shmem_size argument is omitted.</i></td></tr>
-<tr><th id="305">305</th><td><i class="doc"> *</i></td></tr>
-<tr><th id="306">306</th><td><i class="doc"> * The list of device_thread_axis indicates how can be bind the</i></td></tr>
-<tr><th id="307">307</th><td><i class="doc"> * work_size arguments to the corresponding threads.</i></td></tr>
+<tr><th id="245">245</th><td>  <a class="macro" href="../runtime/object.h.html#713" title="TensorIntrin() = default; explicit TensorIntrin(::tvm::runtime::ObjectPtr&lt;::tvm::runtime::Object&gt; n) : ObjectRef(n) {} TensorIntrin(const TensorIntrin&amp; other) = default; TensorIntrin(TensorIntrin&amp;&amp; other) = default; TensorIntrin&amp; operator=(const TensorIntrin&amp; other) = default; TensorIntrin&amp; operator=(TensorIntrin&amp;&amp; other) = default;; const TensorIntrinNode* operator-&gt;() const { return static_cast&lt;const TensorIntrinNode*&gt;(data_.get()); } const TensorIntrinNode* get() const { return operator-&gt;(); } using ContainerType = TensorIntrinNode;" data-ref="_M/TVM_DEFINE_OBJECT_REF_METHODS">TVM_DEFINE_OBJECT_REF_METHODS</a>(<dfn class="decl def fn" id="_ZN3tvm3tir12TensorIntrinC1Ev" title='tvm::tir::TensorIntrin::TensorIntrin' data-ref="_ZN3tvm3tir12TensorIntrinC1Ev" data-ref-filename="_ZN3tvm3tir12TensorIntrinC1Ev"><dfn class="decl def fn" id="_ZN3tvm3tir12TensorIntrinC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE" title='tvm::tir::TensorIntrin::TensorIntrin' data-ref="_ZN3tvm3tir12TensorIntrinC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE" data-ref-filename="_ZN3tvm3tir12TensorIntrinC1ENS_7runtime9ObjectPtrINS2_6ObjectEEE"><dfn class="decl def fn" id="_ZN3tvm3tir12TensorIntrinC1ERKS1_" title='tvm::tir::TensorIntrin::TensorIntrin' data-ref="_ZN3tvm3tir12TensorIntrinC1ERKS1_" data-ref-filename="_ZN3tvm3tir12TensorIntrinC1ERKS1_"><a class="type" href="#tvm::tir::TensorIntrin" title='tvm::tir::TensorIntrin' data-ref="tvm::tir::TensorIntrin" data-ref-filename="tvm..tir..TensorIntrin"><dfn class="decl def fn" id="_ZN3tvm3tir12TensorIntrinC1EOS1_" title='tvm::tir::TensorIntrin::TensorIntrin' data-ref="_ZN3tvm3tir12TensorIntrinC1EOS1_" data-ref-filename="_ZN3tvm3tir12TensorIntrinC1EOS1_"><a class="type" href="#tvm::tir::TensorIntrin" title='tvm::tir::TensorIntrin' data-ref="tvm::tir::TensorIntrin" data-ref-filename="tvm..tir..TensorIntrin"><a class="type" href="#tvm::tir::TensorIntrin" title='tvm::tir::TensorIntrin' data-ref="tvm::tir::TensorIntrin" data-ref-filename="tvm..tir..TensorIntrin"><a class="type" href="#tvm::tir::TensorIntrin" title='tvm::tir::TensorIntrin' data-ref="tvm::tir::TensorIntrin" data-ref-filename="tvm..tir..TensorIntrin"><a class="type" href="#tvm::tir::TensorIntrin" title='tvm::tir::TensorIntrin' data-ref="tvm::tir::TensorIntrin" data-ref-filename="tvm..tir..TensorIntrin"><a class="type" href="#tvm::tir::TensorIntrin" title='tvm::tir::TensorIntrin' data-ref="tvm::tir::TensorIntrin" data-ref-filename="tvm..tir..TensorIntrin">TensorIntrin</a></a></a></a></a></dfn></a></dfn></dfn></dfn>, <a class="type" href="../runtime/object.h.html#tvm::runtime::ObjectRef" title='tvm::runtime::ObjectRef' data-ref="tvm::runtime::ObjectRef" data-ref-filename="tvm..runtime..ObjectRef">ObjectRef</a>, <a class="type" href="#tvm::tir::TensorIntrinNode" title='tvm::tir::TensorIntrinNode' data-ref="tvm::tir::TensorIntrinNode" data-ref-filename="tvm..tir..TensorIntrinNode">TensorIntrinNode</a>)</td></tr>
+<tr><th id="246">246</th><td>};</td></tr>
+<tr><th id="247">247</th><td></td></tr>
+<tr><th id="248">248</th><td><i>/*</i></td></tr>
+<tr><th id="249">249</th><td><i> * \brief Specialize parameters of PrimFunc.</i></td></tr>
+<tr><th id="250">250</th><td><i> * \param func The PrimFunc to be specialized.</i></td></tr>
+<tr><th id="251">251</th><td><i> * \param param_map The mapping from function params to the instance.</i></td></tr>
+<tr><th id="252">252</th><td><i> * \return The new function with parameter specialized.</i></td></tr>
+<tr><th id="253">253</th><td><i> * \note We can define a Meta TIR function with symbolic shape:</i></td></tr>
+<tr><th id="254">254</th><td><i> *</i></td></tr>
+<tr><th id="255">255</th><td><i> * \code</i></td></tr>
+<tr><th id="256">256</th><td><i> *  @T.prim_func</i></td></tr>
+<tr><th id="257">257</th><td><i> *  def mem_copy(a: T.handle, b: T.handle, m: T.int32, n: T.int32) -&gt; None:</i></td></tr>
+<tr><th id="258">258</th><td><i> *      A = T.match_buffer(a, (m, n), "float32")</i></td></tr>
+<tr><th id="259">259</th><td><i> *      B = T.match_buffer(b, (m, n), "float32")</i></td></tr>
+<tr><th id="260">260</th><td><i> *      for i, j in T.grid(m, n):</i></td></tr>
+<tr><th id="261">261</th><td><i> *          with T.block():</i></td></tr>
+<tr><th id="262">262</th><td><i> *              vi, vj = T.axis.remap("SS", [i, j])</i></td></tr>
+<tr><th id="263">263</th><td><i> *              B[vi, vj] = A[vi, vj]</i></td></tr>
+<tr><th id="264">264</th><td><i> * \endcode</i></td></tr>
+<tr><th id="265">265</th><td><i> *</i></td></tr>
+<tr><th id="266">266</th><td><i> * Then we can make it specialized with given shapes or buffers.</i></td></tr>
+<tr><th id="267">267</th><td><i> *</i></td></tr>
+<tr><th id="268">268</th><td><i> * \code</i></td></tr>
+<tr><th id="269">269</th><td><i> *  a, _, m, n = mem_copy.params</i></td></tr>
+<tr><th id="270">270</th><td><i> *  func = mem_copy.specialize({a: tir.decl_buffer((16, 16))})</i></td></tr>
+<tr><th id="271">271</th><td><i> *  # or</i></td></tr>
+<tr><th id="272">272</th><td><i> *  func = mem_copy.specialize({n: 16, m: 16})</i></td></tr>
+<tr><th id="273">273</th><td><i> * \endcode</i></td></tr>
+<tr><th id="274">274</th><td><i> *</i></td></tr>
+<tr><th id="275">275</th><td><i> * \code {.language-id}</i></td></tr>
+<tr><th id="276">276</th><td><i> *  @T.prim_func</i></td></tr>
+<tr><th id="277">277</th><td><i> *  def mem_copy_16_16(a: T.handle, b: T.handle) -&gt; None:</i></td></tr>
+<tr><th id="278">278</th><td><i> *      A = T.match_buffer(a, (16, 16), "float32")</i></td></tr>
+<tr><th id="279">279</th><td><i> *      B = T.match_buffer(b, (16, 16), "float32")</i></td></tr>
+<tr><th id="280">280</th><td><i> *      for i, j in T.grid(16, 16):</i></td></tr>
+<tr><th id="281">281</th><td><i> *          with T.block():</i></td></tr>
+<tr><th id="282">282</th><td><i> *              vi, vj = T.axis.remap("SS", [i, j])</i></td></tr>
+<tr><th id="283">283</th><td><i> *              B[vi, vj] = A[vi, vj]</i></td></tr>
+<tr><th id="284">284</th><td><i> * \endcode</i></td></tr>
+<tr><th id="285">285</th><td><i> */</i></td></tr>
+<tr><th id="286">286</th><td><a class="type" href="#tvm::tir::PrimFunc" title='tvm::tir::PrimFunc' data-ref="tvm::tir::PrimFunc" data-ref-filename="tvm..tir..PrimFunc">PrimFunc</a> <dfn class="decl fn" id="_ZN3tvm3tir10SpecializeENS0_8PrimFuncERKNS_7runtime3MapINS0_3VarENS2_9ObjectRefEvvEE" title='tvm::tir::Specialize' data-ref="_ZN3tvm3tir10SpecializeENS0_8PrimFuncERKNS_7runtime3MapINS0_3VarENS2_9ObjectRefEvvEE" data-ref-filename="_ZN3tvm3tir10SpecializeENS0_8PrimFuncERKNS_7runtime3MapINS0_3VarENS2_9ObjectRefEvvEE">Specialize</dfn>(<a class="type" href="#tvm::tir::PrimFunc" title='tvm::tir::PrimFunc' data-ref="tvm::tir::PrimFunc" data-ref-filename="tvm..tir..PrimFunc">PrimFunc</a> <dfn class="local col7 decl" id="87func" title='func' data-type='tvm::tir::PrimFunc' data-ref="87func" data-ref-filename="87func">func</dfn>, <em>const</em> <a class="type" href="../runtime/container/map.h.html#tvm::runtime::Map" title='tvm::runtime::Map' data-ref="tvm::runtime::Map" data-ref-filename="tvm..runtime..Map">Map</a>&lt;<a class="type" href="var.h.html#tvm::tir::Var" title='tvm::tir::Var' data-ref="tvm::tir::Var" data-ref-filename="tvm..tir..Var">Var</a>, ObjectRef&gt;&amp; <dfn class="local col8 decl" id="88param_map" title='param_map' data-type='const Map&lt;tvm::tir::Var, tvm::runtime::ObjectRef&gt; &amp;' data-ref="88param_map" data-ref-filename="88param_map">param_map</dfn>);</td></tr>
+<tr><th id="287">287</th><td></td></tr>
+<tr><th id="288">288</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="289">289</th><td><i class="doc"> * <span class="command">\brief</span> PrimFunc specific attribute names.</i></td></tr>
+<tr><th id="290">290</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="291">291</th><td><i class="doc"> * <span class="command">\sa</span> tvm::attr</i></td></tr>
+<tr><th id="292">292</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="293">293</th><td><b>namespace</b> <span class="namespace">attr</span> {</td></tr>
+<tr><th id="294">294</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="295">295</th><td><i class="doc"> * <span class="command">\brief</span> List of thread IterVar that a DeviceLaunch function corresponds to.</i></td></tr>
+<tr><th id="296">296</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="297">297</th><td><i class="doc"> * Type: Array&lt;tir::IterVar&gt;</i></td></tr>
+<tr><th id="298">298</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="299">299</th><td><i class="doc"> * We call a device kernel launch function f using the following convention:</i></td></tr>
+<tr><th id="300">300</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="301">301</th><td><i class="doc"> * Call(f,</i></td></tr>
+<tr><th id="302">302</th><td><i class="doc"> *      [arg1, arg2, ..., arg_n,</i></td></tr>
+<tr><th id="303">303</th><td><i class="doc"> *       work_size_1, work_size_2, ... work_size_m, dyn_shmem_size])</i></td></tr>
+<tr><th id="304">304</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="305">305</th><td><i class="doc"> * Here n = len(arg), m = len(work_size) = len(device_thread_axis).</i></td></tr>
+<tr><th id="306">306</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="307">307</th><td><i class="doc"> * When kDeviceUseDynSharedMemory is not set, dyn_shmem_size argument is omitted.</i></td></tr>
 <tr><th id="308">308</th><td><i class="doc"> *</i></td></tr>
-<tr><th id="309">309</th><td><i class="doc"> * <span class="command">\sa</span> tvm::CallingConv::kDeviceKernelLaunch</i></td></tr>
-<tr><th id="310">310</th><td><i class="doc"> */</i></td></tr>
-<tr><th id="311">311</th><td><b>constexpr</b> <em>const</em> <em>char</em>* <dfn class="decl def" id="tvm::tir::attr::kDeviceThreadAxis" title='tvm::tir::attr::kDeviceThreadAxis' data-ref="tvm::tir::attr::kDeviceThreadAxis" data-ref-filename="tvm..tir..attr..kDeviceThreadAxis">kDeviceThreadAxis</dfn> = <q>"tir.device_thread_axis"</q>;</td></tr>
-<tr><th id="312">312</th><td></td></tr>
-<tr><th id="313">313</th><td><i class="doc">/*!</i></td></tr>
-<tr><th id="314">314</th><td><i class="doc"> * <span class="command">\brief</span> Whether or not use dynamic shared memory.</i></td></tr>
-<tr><th id="315">315</th><td><i class="doc"> *</i></td></tr>
-<tr><th id="316">316</th><td><i class="doc"> * Type: Integer</i></td></tr>
-<tr><th id="317">317</th><td><i class="doc"> */</i></td></tr>
-<tr><th id="318">318</th><td><b>constexpr</b> <em>const</em> <em>char</em>* <dfn class="decl def" id="tvm::tir::attr::kDeviceUseDynSharedMemory" title='tvm::tir::attr::kDeviceUseDynSharedMemory' data-ref="tvm::tir::attr::kDeviceUseDynSharedMemory" data-ref-filename="tvm..tir..attr..kDeviceUseDynSharedMemory">kDeviceUseDynSharedMemory</dfn> = <q>"tir.device_use_dyn_shared_memory"</q>;</td></tr>
-<tr><th id="319">319</th><td></td></tr>
-<tr><th id="320">320</th><td><i class="doc">/*!</i></td></tr>
-<tr><th id="321">321</th><td><i class="doc"> * <span class="command">\brief</span> Whether to set noalias rule on the function arguments.</i></td></tr>
-<tr><th id="322">322</th><td><i class="doc"> *</i></td></tr>
-<tr><th id="323">323</th><td><i class="doc"> * Type: Integer</i></td></tr>
-<tr><th id="324">324</th><td><i class="doc"> */</i></td></tr>
-<tr><th id="325">325</th><td><b>constexpr</b> <em>const</em> <em>char</em>* <dfn class="decl def" id="tvm::tir::attr::kNoAlias" title='tvm::tir::attr::kNoAlias' data-ref="tvm::tir::attr::kNoAlias" data-ref-filename="tvm..tir..attr..kNoAlias">kNoAlias</dfn> = <q>"tir.noalias"</q>;</td></tr>
-<tr><th id="326">326</th><td></td></tr>
-<tr><th id="327">327</th><td><i class="doc">/*!</i></td></tr>
-<tr><th id="328">328</th><td><i class="doc"> * <span class="command">\brief</span> Mark the function as the entry function of</i></td></tr>
-<tr><th id="329">329</th><td><i class="doc"> *        the final generated runtime module.</i></td></tr>
-<tr><th id="330">330</th><td><i class="doc"> *</i></td></tr>
-<tr><th id="331">331</th><td><i class="doc"> * Type: Integer</i></td></tr>
-<tr><th id="332">332</th><td><i class="doc"> *</i></td></tr>
-<tr><th id="333">333</th><td><i class="doc"> * <span class="command">\note</span> There can only be one entry function per module.</i></td></tr>
-<tr><th id="334">334</th><td><i class="doc"> */</i></td></tr>
-<tr><th id="335">335</th><td><b>constexpr</b> <em>const</em> <em>char</em>* <dfn class="decl def" id="tvm::tir::attr::kIsEntryFunc" title='tvm::tir::attr::kIsEntryFunc' data-ref="tvm::tir::attr::kIsEntryFunc" data-ref-filename="tvm..tir..attr..kIsEntryFunc">kIsEntryFunc</dfn> = <q>"tir.is_entry_func"</q>;</td></tr>
-<tr><th id="336">336</th><td></td></tr>
-<tr><th id="337">337</th><td><i class="doc">/*!</i></td></tr>
-<tr><th id="338">338</th><td><i class="doc"> * <span class="command">\brief</span> Mark the function as the global function called from the host.</i></td></tr>
-<tr><th id="339">339</th><td><i class="doc"> *</i></td></tr>
-<tr><th id="340">340</th><td><i class="doc"> * Type: Integer</i></td></tr>
-<tr><th id="341">341</th><td><i class="doc"> */</i></td></tr>
-<tr><th id="342">342</th><td><b>constexpr</b> <em>const</em> <em>char</em>* <dfn class="decl def" id="tvm::tir::attr::kIsGlobalFunc" title='tvm::tir::attr::kIsGlobalFunc' data-ref="tvm::tir::attr::kIsGlobalFunc" data-ref-filename="tvm..tir..attr..kIsGlobalFunc">kIsGlobalFunc</dfn> = <q>"tir.is_global_func"</q>;</td></tr>
-<tr><th id="343">343</th><td></td></tr>
-<tr><th id="344">344</th><td>}  <i>// namespace attr</i></td></tr>
-<tr><th id="345">345</th><td>}  <i>// namespace tir</i></td></tr>
-<tr><th id="346">346</th><td>}  <i>// namespace tvm</i></td></tr>
-<tr><th id="347">347</th><td><u>#<span data-ppcond="24">endif</span>  // TVM_TIR_FUNCTION_H_</u></td></tr>
-<tr><th id="348">348</th><td></td></tr>
+<tr><th id="309">309</th><td><i class="doc"> * The list of device_thread_axis indicates how can be bind the</i></td></tr>
+<tr><th id="310">310</th><td><i class="doc"> * work_size arguments to the corresponding threads.</i></td></tr>
+<tr><th id="311">311</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="312">312</th><td><i class="doc"> * <span class="command">\sa</span> tvm::CallingConv::kDeviceKernelLaunch</i></td></tr>
+<tr><th id="313">313</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="314">314</th><td><b>constexpr</b> <em>const</em> <em>char</em>* <dfn class="decl def" id="tvm::tir::attr::kDeviceThreadAxis" title='tvm::tir::attr::kDeviceThreadAxis' data-ref="tvm::tir::attr::kDeviceThreadAxis" data-ref-filename="tvm..tir..attr..kDeviceThreadAxis">kDeviceThreadAxis</dfn> = <q>"tir.device_thread_axis"</q>;</td></tr>
+<tr><th id="315">315</th><td></td></tr>
+<tr><th id="316">316</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="317">317</th><td><i class="doc"> * <span class="command">\brief</span> Whether or not use dynamic shared memory.</i></td></tr>
+<tr><th id="318">318</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="319">319</th><td><i class="doc"> * Type: Integer</i></td></tr>
+<tr><th id="320">320</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="321">321</th><td><b>constexpr</b> <em>const</em> <em>char</em>* <dfn class="decl def" id="tvm::tir::attr::kDeviceUseDynSharedMemory" title='tvm::tir::attr::kDeviceUseDynSharedMemory' data-ref="tvm::tir::attr::kDeviceUseDynSharedMemory" data-ref-filename="tvm..tir..attr..kDeviceUseDynSharedMemory">kDeviceUseDynSharedMemory</dfn> = <q>"tir.device_use_dyn_shared_memory"</q>;</td></tr>
+<tr><th id="322">322</th><td></td></tr>
+<tr><th id="323">323</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="324">324</th><td><i class="doc"> * <span class="command">\brief</span> Whether to set noalias rule on the function arguments.</i></td></tr>
+<tr><th id="325">325</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="326">326</th><td><i class="doc"> * Type: Integer</i></td></tr>
+<tr><th id="327">327</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="328">328</th><td><b>constexpr</b> <em>const</em> <em>char</em>* <dfn class="decl def" id="tvm::tir::attr::kNoAlias" title='tvm::tir::attr::kNoAlias' data-ref="tvm::tir::attr::kNoAlias" data-ref-filename="tvm..tir..attr..kNoAlias">kNoAlias</dfn> = <q>"tir.noalias"</q>;</td></tr>
+<tr><th id="329">329</th><td></td></tr>
+<tr><th id="330">330</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="331">331</th><td><i class="doc"> * <span class="command">\brief</span> Mark the function as the entry function of</i></td></tr>
+<tr><th id="332">332</th><td><i class="doc"> *        the final generated runtime module.</i></td></tr>
+<tr><th id="333">333</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="334">334</th><td><i class="doc"> * Type: Integer</i></td></tr>
+<tr><th id="335">335</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="336">336</th><td><i class="doc"> * <span class="command">\note</span> There can only be one entry function per module.</i></td></tr>
+<tr><th id="337">337</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="338">338</th><td><b>constexpr</b> <em>const</em> <em>char</em>* <dfn class="decl def" id="tvm::tir::attr::kIsEntryFunc" title='tvm::tir::attr::kIsEntryFunc' data-ref="tvm::tir::attr::kIsEntryFunc" data-ref-filename="tvm..tir..attr..kIsEntryFunc">kIsEntryFunc</dfn> = <q>"tir.is_entry_func"</q>;</td></tr>
+<tr><th id="339">339</th><td></td></tr>
+<tr><th id="340">340</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="341">341</th><td><i class="doc"> * <span class="command">\brief</span> Mark the function as the global function called from the host.</i></td></tr>
+<tr><th id="342">342</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="343">343</th><td><i class="doc"> * Type: Integer</i></td></tr>
+<tr><th id="344">344</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="345">345</th><td><b>constexpr</b> <em>const</em> <em>char</em>* <dfn class="decl def" id="tvm::tir::attr::kIsGlobalFunc" title='tvm::tir::attr::kIsGlobalFunc' data-ref="tvm::tir::attr::kIsGlobalFunc" data-ref-filename="tvm..tir..attr..kIsGlobalFunc">kIsGlobalFunc</dfn> = <q>"tir.is_global_func"</q>;</td></tr>
+<tr><th id="346">346</th><td></td></tr>
+<tr><th id="347">347</th><td>}  <i>// namespace attr</i></td></tr>
+<tr><th id="348">348</th><td>}  <i>// namespace tir</i></td></tr>
+<tr><th id="349">349</th><td>}  <i>// namespace tvm</i></td></tr>
+<tr><th id="350">350</th><td><u>#<span data-ppcond="24">endif</span>  // TVM_TIR_FUNCTION_H_</u></td></tr>
+<tr><th id="351">351</th><td></td></tr>
 </table><hr/><p id='footer'>
-Generated while processing <a href='../../../src/arith/canonical_simplify.cc.html'>tvm/src/arith/canonical_simplify.cc</a><br/>Generated on <em>2022-Sep-23</em> from project tvm revision <em>0b074d8</em><br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+Generated while processing <a href='../../../src/arith/canonical_simplify.cc.html'>tvm/src/arith/canonical_simplify.cc</a><br/>Generated on <em>2022-Sep-23</em> from project tvm revision <em>9ce95a9</em><br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
 <br/>Generator usage only permitted with license.</p>
 </div></body></html>
