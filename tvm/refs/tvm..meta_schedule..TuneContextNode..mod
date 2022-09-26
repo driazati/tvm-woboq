@@ -13,7 +13,7 @@
 <use f='tvm/src/meta_schedule/search_strategy/replay_func.cc' l='123' u='m' c='_ZN3tvm13meta_schedule14ReplayFuncNode5State25GenerateMeasureCandidatesEv'/>
 <use f='tvm/src/meta_schedule/search_strategy/replay_trace.cc' l='45' u='m' c='_ZN3tvm13meta_schedule15ReplayTraceNode5StateC1EPS1_NS_7runtime5ArrayINS_3tir5TraceEvEE'/>
 <use f='tvm/src/meta_schedule/search_strategy/replay_trace.cc' l='83' u='m' c='_ZN3tvm13meta_schedule15ReplayTraceNode25InitializeWithTuneContextERKNS0_11TuneContextE'/>
-<use f='tvm/src/meta_schedule/task_scheduler/gradient_based.cc' l='209' u='m' c='_ZN3tvm13meta_schedule13TaskScheduler13GradientBasedENS_7runtime5ArrayINS0_11TuneContextEvEENS3_INS_8FloatImmEvEENS0_7BuilderENS0_6RunnerENS2_8Optiona15111662'/>
+<use f='tvm/src/meta_schedule/task_scheduler/gradient_based.cc' l='233' u='m' c='_ZN3tvm13meta_schedule13TaskScheduler13GradientBasedENS_7runtime5ArrayINS0_11TuneContextEvEENS3_INS_8FloatImmEvEENS0_7BuilderENS0_6RunnerENS2_8Optiona15111662'/>
 <use f='tvm/src/meta_schedule/task_scheduler/task_scheduler.cc' l='31' u='m' c='_ZN3tvm13meta_schedule17TaskSchedulerNode14InitializeTaskEi'/>
 <use f='tvm/src/meta_schedule/task_scheduler/task_scheduler.cc' l='36' u='r' c='_ZN3tvm13meta_schedule17TaskSchedulerNode14InitializeTaskEi'/>
 <use f='tvm/src/meta_schedule/task_scheduler/task_scheduler.cc' l='39' u='m' c='_ZN3tvm13meta_schedule17TaskSchedulerNode14InitializeTaskEi'/>
