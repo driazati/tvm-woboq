@@ -1,18 +1,14 @@
-<dec f='tvm/include/tvm/tir/index_map.h' l='200' type='tvm::tir::IndexMap tvm::tir::IndexMap::Inverse(Array&lt;tvm::Range&gt; initial_ranges) const'/>
+<dec f='tvm/include/tvm/tir/index_map.h' l='196' type='tvm::tir::IndexMap tvm::tir::IndexMap::Inverse(Array&lt;tvm::Range&gt; initial_ranges) const'/>
 <doc f='tvm/include/tvm/tir/index_map.h' l='188'>/*! \brief Generate the inverse mapping.
    *
    * The range of the input indices is required in order to ensure
    * that the transformation is bijective over the input domain.
    *
-   * TODO(Lunderberg): Look into allowing non-bijective
-   * transformations.  If injective, the inverse mapping could still
-   * be generated with some predicate (see NonSurjectiveInverse).  If
-   * non-injective, could simplify the implementation of other
-   * optimizations (e.g. double buffering as a map `lambda *indices:
-   * [buffer_loop%2, *indices]`).
+   * If the user has supplied an `inverse_index_map`, that map is
+   * assumed to be correct and bijective, and is returned.
    */</doc>
 <use f='tvm/include/tvm/topi/transform.h' l='1744' u='c' c='_ZN3tvm4topi30meta_schedule_layout_transformERKNS_2te6TensorERKNS_3tir8IndexMapENS_7runtime6StringESA_'/>
 <use f='tvm/src/target/source/codegen_cuda.cc' l='860' u='c' c='_ZN3tvm7codegen11CodeGenCUDA10VisitExpr_EPKNS_3tir8CallNodeERSo'/>
 <use f='tvm/src/te/schedule/schedule_lang.cc' l='473' u='c' c='_ZN3tvm2te5Stage16transform_layoutERKNS_7runtime5ArrayINS_3tir3VarEvEERKNS3_INS_8PrimExprEvEEPNS3_INS4_7IterVarEvEE'/>
-<def f='tvm/src/tir/ir/index_map.cc' l='119' ll='171' type='tvm::tir::IndexMap tvm::tir::IndexMap::Inverse(Array&lt;tvm::Range&gt; initial_ranges) const'/>
-<use f='tvm/src/tir/ir/index_map.cc' l='320' u='a'/>
+<def f='tvm/src/tir/ir/index_map.cc' l='134' ll='141' type='tvm::tir::IndexMap tvm::tir::IndexMap::Inverse(Array&lt;tvm::Range&gt; initial_ranges) const'/>
+<use f='tvm/src/tir/ir/index_map.cc' l='290' u='a'/>
