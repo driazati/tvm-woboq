@@ -32,7 +32,7 @@
 <use f='tvm/src/tir/schedule/utils.h' l='230' c='_ZN3tvm3tir15IterVarFromLoopERKNS0_3ForENS_7runtime6StringENS0_11IterVarTypeE'/>
 <size>8</size>
 <use f='tvm/src/meta_schedule/postproc/rewrite_layout.cc' l='46' c='_ZN3tvm3tir22BufferReadPosCollector10VisitStmt_EPKNS0_7ForNodeE'/>
-<use f='tvm/src/meta_schedule/postproc/rewrite_layout.cc' l='100'/>
+<use f='tvm/src/meta_schedule/postproc/rewrite_layout.cc' l='102'/>
 <size>8</size>
 <use f='tvm/src/meta_schedule/schedule_rule/cross_thread_reduction.cc' l='133' c='_ZN3tvm13meta_schedule24CrossThreadReductionNode13InThreadScopeERKNS_3tir8ScheduleERKNS2_7BlockRVE'/>
 <size>8</size>
