@@ -1,9 +1,9 @@
 <inh f='tvm/include/tvm/runtime/module.h' l='113' c='tvm::runtime::ModuleNode'/>
-<def f='tvm/include/tvm/runtime/vm/vm.h' l='148' ll='372'/>
+<def f='tvm/include/tvm/runtime/vm/vm.h' l='148' ll='461'/>
 <ovr f='tvm/src/runtime/vm/profiler/vm.h' l='41' c='tvm::runtime::vm::VirtualMachineDebug'/>
 <use f='tvm/src/runtime/vm/profiler/vm.h' l='41'/>
 <use f='tvm/src/runtime/vm/profiler/vm.h' l='43' c='_ZN3tvm7runtime2vm19VirtualMachineDebugC1Ev'/>
-<size>360</size>
+<size>536</size>
 <doc f='tvm/include/tvm/runtime/vm/vm.h' l='137'>/*!
  * \brief The virtual machine.
  *
@@ -27,14 +27,18 @@
 <fun r='_ZNK3tvm7runtime2vm14VirtualMachine13LoadScalarIntEl'/>
 <fun r='_ZN3tvm7runtime2vm14VirtualMachine6InvokeERKNS1_10VMFunctionERKSt6vectorINS0_9ObjectRefESaIS7_EE'/>
 <fun r='_ZN3tvm7runtime2vm14VirtualMachine6InvokeERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKSt6vectorINS0_9ObjectRefESaISC_EE'/>
+<fun r='_ZN3tvm7runtime2vm14VirtualMachine6InvokeERKNS1_10VMFunctionERKSt6vectorINS0_9ObjectRefESaIS7_EESB_'/>
 <fun r='_ZN3tvm7runtime2vm14VirtualMachine12InvokePackedElRKNS0_10PackedFuncEllRKSt6vectorINS0_9ObjectRefESaIS7_EE'/>
 <fun r='_ZN3tvm7runtime2vm14VirtualMachine4InitERKSt6vectorI8DLDeviceSaIS4_EERKS3_INS1_13AllocatorTypeESaIS9_EE'/>
-<fun r='_ZN3tvm7runtime2vm14VirtualMachine7RunLoopEv'/>
+<fun r='_ZN3tvm7runtime2vm14VirtualMachine7RunLoopERKSt6vectorIlSaIlEE'/>
 <fun r='_ZNK3tvm7runtime2vm14VirtualMachine9GetDeviceEl'/>
 <fun r='_ZNK3tvm7runtime2vm14VirtualMachine12GetAllocatorEl'/>
 <fun r='_ZN3tvm7runtime2vm14VirtualMachine12InvokeGlobalERKNS1_10VMFunctionERKSt6vectorINS0_9ObjectRefESaIS7_EE'/>
 <fun r='_ZN3tvm7runtime2vm14VirtualMachine8SetInputENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS0_7TVMArgsEi'/>
 <fun r='_ZN3tvm7runtime2vm14VirtualMachine11SetOneInputENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKNS0_11TVMArgValueESB_'/>
+<fun r='_ZN3tvm7runtime2vm14VirtualMachine10SetOutputsENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS0_7TVMArgsE'/>
+<fun r='_ZN3tvm7runtime2vm14VirtualMachine24PrintInfoAndSetInputArgsERKNS1_10VMFunctionERKSt6vectorINS0_9ObjectRefESaIS7_EE'/>
+<fun r='_ZN3tvm7runtime2vm14VirtualMachine26SetOutputTensorsToRegisterERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKSt6vectorINS0_9ObjectRefESaISC_EE'/>
 <fun r='_ZN3tvm7runtime2vm14VirtualMachine11OpStartHookENS1_11InstructionE'/>
 <fun r='_ZN3tvm7runtime2vm14VirtualMachine10OpStopHookEv'/>
 <fun r='_ZNK3tvm7runtime2vm14VirtualMachine27GetInputIndexFromVMFunctionERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESA_'/>
@@ -42,6 +46,13 @@
 <fun r='_ZNK3tvm7runtime2vm14VirtualMachine21CheckAndGetVMFunctionERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
 <fun r='_ZN3tvm7runtime2vm14VirtualMachine23CreateInputsOrCheckSizeERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEm'/>
 <fun r='_ZN3tvm7runtime2vm14VirtualMachine23SetInputTensorWithIndexERSt6vectorINS0_9ObjectRefESaIS4_EERKNS0_11TVMArgValueEi8DLDevice'/>
+<fun r='_ZNK3tvm7runtime2vm14VirtualMachine32TensorFromTVMArgValueToObjectRefERKNS0_11TVMArgValueE'/>
+<fun r='_ZNK3tvm7runtime2vm14VirtualMachine22GetResultRegisterIndexEv'/>
+<fun r='_ZN3tvm7runtime2vm14VirtualMachine25CalculatePreResultOpIndexEl'/>
+<fun r='_ZN3tvm7runtime2vm14VirtualMachine25GetOutputTensorRegIndicesEv'/>
+<fun r='_ZN3tvm7runtime2vm14VirtualMachine20WriteAllocatedTensorERKNS1_11InstructionE'/>
+<fun r='_ZN3tvm7runtime2vm14VirtualMachine31WriteAllocatedTensorFromOutsideERKNS1_11InstructionE'/>
+<fun r='_ZNK3tvm7runtime2vm14VirtualMachine9FindIndexERKSt6vectorIlSaIlEEl'/>
 <mbr r='tvm::runtime::vm::VirtualMachine::packed_funcs_' o='1152' t='std::vector&lt;PackedFunc&gt;'/>
 <mbr r='tvm::runtime::vm::VirtualMachine::frames_' o='1344' t='std::vector&lt;VMFrame&gt;'/>
 <mbr r='tvm::runtime::vm::VirtualMachine::func_index_' o='1536' t='tvm::runtime::vm::Index'/>
@@ -50,18 +61,26 @@
 <mbr r='tvm::runtime::vm::VirtualMachine::return_register_' o='1728' t='tvm::runtime::ObjectRef'/>
 <mbr r='tvm::runtime::vm::VirtualMachine::exec_' o='1792' t='ObjectPtr&lt;tvm::runtime::vm::Executable&gt;'/>
 <mbr r='tvm::runtime::vm::VirtualMachine::inputs_' o='1856' t='std::unordered_map&lt;std::string, std::vector&lt;ObjectRef&gt;&gt;'/>
-<mbr r='tvm::runtime::vm::VirtualMachine::devices_' o='2304' t='std::vector&lt;Device&gt;'/>
-<mbr r='tvm::runtime::vm::VirtualMachine::allocators_' o='2496' t='std::vector&lt;Allocator *&gt;'/>
-<mbr r='tvm::runtime::vm::VirtualMachine::const_pool_' o='2688' t='std::vector&lt;ObjectRef&gt;'/>
+<mbr r='tvm::runtime::vm::VirtualMachine::set_outputs_enabled_' o='2304' t='std::unordered_map&lt;std::string, bool&gt;'/>
+<mbr r='tvm::runtime::vm::VirtualMachine::preresult_op_index_' o='2752' t='tvm::runtime::vm::Index'/>
+<mbr r='tvm::runtime::vm::VirtualMachine::output_tensor_reg_indices_' o='2816' t='std::unordered_map&lt;std::string, std::vector&lt;Index&gt;&gt;'/>
+<mbr r='tvm::runtime::vm::VirtualMachine::outputs_' o='3264' t='std::unordered_map&lt;std::string, std::vector&lt;ObjectRef&gt;&gt;'/>
+<mbr r='tvm::runtime::vm::VirtualMachine::devices_' o='3712' t='std::vector&lt;Device&gt;'/>
+<mbr r='tvm::runtime::vm::VirtualMachine::allocators_' o='3904' t='std::vector&lt;Allocator *&gt;'/>
+<mbr r='tvm::runtime::vm::VirtualMachine::const_pool_' o='4096' t='std::vector&lt;ObjectRef&gt;'/>
 <use f='tvm/src/runtime/vm/executable.cc' l='88' c='_ZN3tvm7runtime2vm10Executable11GetFunctionERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKNS0_9ObjectPtrINS0_6ObjectEEE'/>
-<size>360</size>
-<use f='tvm/src/runtime/vm/vm.cc' l='829' c='_ZN3tvm7runtime2vm20CreateVirtualMachineEPNS1_10ExecutableE'/>
-<size>360</size>
+<size>536</size>
+<use f='tvm/src/runtime/vm/vm.cc' l='994' c='_ZN3tvm7runtime2vm20CreateVirtualMachineEPNS1_10ExecutableE'/>
+<size>536</size>
 <fun r='_ZN3tvm7runtime2vm14VirtualMachine11OpStartHookENS1_11InstructionE'/>
 <fun r='_ZN3tvm7runtime2vm14VirtualMachine10OpStopHookEv'/>
 <fun r='_ZN3tvm7runtime2vm14VirtualMachine11GetFunctionERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKNS0_9ObjectPtrINS0_6ObjectEEE'/>
 <fun r='_ZN3tvm7runtime2vm14VirtualMachine8SetInputENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS0_7TVMArgsEi'/>
 <fun r='_ZN3tvm7runtime2vm14VirtualMachine11SetOneInputENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKNS0_11TVMArgValueESB_'/>
+<fun r='_ZN3tvm7runtime2vm14VirtualMachine10SetOutputsENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS0_7TVMArgsE'/>
+<fun r='_ZN3tvm7runtime2vm14VirtualMachine24PrintInfoAndSetInputArgsERKNS1_10VMFunctionERKSt6vectorINS0_9ObjectRefESaIS7_EE'/>
+<fun r='_ZN3tvm7runtime2vm14VirtualMachine26SetOutputTensorsToRegisterERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKSt6vectorINS0_9ObjectRefESaISC_EE'/>
+<fun r='_ZNK3tvm7runtime2vm14VirtualMachine32TensorFromTVMArgValueToObjectRefERKNS0_11TVMArgValueE'/>
 <fun r='_ZNK3tvm7runtime2vm14VirtualMachine27GetInputIndexFromVMFunctionERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESA_'/>
 <fun r='_ZNK3tvm7runtime2vm14VirtualMachine21GetInputIndexFromNameERKSt6vectorINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESaIS9_EERKS9_'/>
 <fun r='_ZNK3tvm7runtime2vm14VirtualMachine21CheckAndGetVMFunctionERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
@@ -74,10 +93,17 @@
 <fun r='_ZN3tvm7runtime2vm14VirtualMachine12InvokeGlobalERKNS1_10VMFunctionERKSt6vectorINS0_9ObjectRefESaIS7_EE'/>
 <fun r='_ZN3tvm7runtime2vm14VirtualMachine6InvokeERKNS1_10VMFunctionERKSt6vectorINS0_9ObjectRefESaIS7_EE'/>
 <fun r='_ZN3tvm7runtime2vm14VirtualMachine6InvokeERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKSt6vectorINS0_9ObjectRefESaISC_EE'/>
+<fun r='_ZN3tvm7runtime2vm14VirtualMachine6InvokeERKNS1_10VMFunctionERKSt6vectorINS0_9ObjectRefESaIS7_EESB_'/>
 <fun r='_ZN3tvm7runtime2vm14VirtualMachine12InvokePackedElRKNS0_10PackedFuncEllRKSt6vectorINS0_9ObjectRefESaIS7_EE'/>
 <fun r='_ZN3tvm7runtime2vm14VirtualMachine14LoadExecutableERKNS0_9ObjectPtrINS1_10ExecutableEEE'/>
 <fun r='_ZN3tvm7runtime2vm14VirtualMachine4InitERKSt6vectorI8DLDeviceSaIS4_EERKS3_INS1_13AllocatorTypeESaIS9_EE'/>
 <fun r='_ZN3tvm7runtime2vm14VirtualMachine13WriteRegisterElRKNS0_9ObjectRefE'/>
 <fun r='_ZNK3tvm7runtime2vm14VirtualMachine12ReadRegisterEl'/>
 <fun r='_ZNK3tvm7runtime2vm14VirtualMachine13LoadScalarIntEl'/>
-<fun r='_ZN3tvm7runtime2vm14VirtualMachine7RunLoopEv'/>
+<fun r='_ZNK3tvm7runtime2vm14VirtualMachine22GetResultRegisterIndexEv'/>
+<fun r='_ZN3tvm7runtime2vm14VirtualMachine25CalculatePreResultOpIndexEl'/>
+<fun r='_ZN3tvm7runtime2vm14VirtualMachine25GetOutputTensorRegIndicesEv'/>
+<fun r='_ZN3tvm7runtime2vm14VirtualMachine7RunLoopERKSt6vectorIlSaIlEE'/>
+<fun r='_ZN3tvm7runtime2vm14VirtualMachine20WriteAllocatedTensorERKNS1_11InstructionE'/>
+<fun r='_ZN3tvm7runtime2vm14VirtualMachine31WriteAllocatedTensorFromOutsideERKNS1_11InstructionE'/>
+<fun r='_ZNK3tvm7runtime2vm14VirtualMachine9FindIndexERKSt6vectorIlSaIlEEl'/>

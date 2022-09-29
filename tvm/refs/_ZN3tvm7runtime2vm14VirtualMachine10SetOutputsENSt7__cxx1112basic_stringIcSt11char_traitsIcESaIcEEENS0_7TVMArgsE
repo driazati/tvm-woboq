@@ -1,0 +1,12 @@
+<dec f='tvm/include/tvm/runtime/vm/vm.h' l='303' type='void tvm::runtime::vm::VirtualMachine::SetOutputs(std::string name, tvm::runtime::TVMArgs args)'/>
+<doc f='tvm/include/tvm/runtime/vm/vm.h' l='294'>/*!
+   * \brief Set pre-allocated output tensors to a function.
+   * It is native implementation of &apos;set_outputs&apos; python method.
+   * It is used in scenario when output tensors are allocated outside each invocation.
+   * Note: it sets set_outputs_enabled_[name] true and fill outputs_[name]
+   * but after invocation the first is switched off and the second is cleared
+   * \param name The function name
+   * \param args outputs to the function.
+   */</doc>
+<use f='tvm/src/runtime/vm/vm.cc' l='237' u='c' c='_ZN3tvm7runtime2vm14VirtualMachine11GetFunctionERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKNS0_9ObjectPtrINS0_6ObjectEEE'/>
+<def f='tvm/src/runtime/vm/vm.cc' l='286' ll='299' type='void tvm::runtime::vm::VirtualMachine::SetOutputs(std::string func_name, tvm::runtime::TVMArgs args)'/>

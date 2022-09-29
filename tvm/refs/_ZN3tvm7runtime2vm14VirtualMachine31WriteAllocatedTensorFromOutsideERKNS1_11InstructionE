@@ -1,0 +1,10 @@
+<dec f='tvm/include/tvm/runtime/vm/vm.h' l='419' type='void tvm::runtime::vm::VirtualMachine::WriteAllocatedTensorFromOutside(const tvm::runtime::vm::Instruction &amp; instr)'/>
+<doc f='tvm/include/tvm/runtime/vm/vm.h' l='412'>/*!
+   * \brief &apos;set_outputs_enabled&apos; is assumed true for using this method.
+   * It is expected that result register has already contained tensor from outside,
+   * new memory is not allocated and write, but expected shape and data type are checked.
+   * For other register WriteAllocatedTensor method is used.
+   * \param instr current instruction containing shape and storage info.
+   */</doc>
+<use f='tvm/src/runtime/vm/vm.cc' l='776' u='c' c='_ZN3tvm7runtime2vm14VirtualMachine7RunLoopERKSt6vectorIlSaIlEE'/>
+<def f='tvm/src/runtime/vm/vm.cc' l='942' ll='986' type='void tvm::runtime::vm::VirtualMachine::WriteAllocatedTensorFromOutside(const tvm::runtime::vm::Instruction &amp; instr)'/>
