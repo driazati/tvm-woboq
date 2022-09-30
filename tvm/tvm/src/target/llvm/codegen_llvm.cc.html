@@ -216,7 +216,7 @@
 <tr><th id="202">202</th><td>    os &lt;&lt; <q>"}\n"</q>;</td></tr>
 <tr><th id="203">203</th><td>    <em>auto</em> mod = llvm_target_-&gt;GetInstance().ParseIR(os.str());</td></tr>
 <tr><th id="204">204</th><td>    <em>auto</em>* test_sse2 = mod-&gt;getFunction(fname);</td></tr>
-<tr><th id="205">205</th><td>    ICHECK_NE(test_sse2, <b>nullptr</b>) &lt;&lt; <q>"Module creation error"</q>;</td></tr>
+<tr><th id="205">205</th><td>    ICHECK(test_sse2 != <b>nullptr</b>) &lt;&lt; <q>"Module creation error"</q>;</td></tr>
 <tr><th id="206">206</th><td>    use_float16_abi = tm-&gt;getSubtargetImpl(*test_sse2)-&gt;checkFeatures(<q>"+sse2"</q>);</td></tr>
 <tr><th id="207">207</th><td>  }</td></tr>
 <tr><th id="208">208</th><td><u>#<span data-ppcond="178">endif</span>  // TVM_LLVM_VERSION &gt;= 150</u></td></tr>
@@ -1911,6 +1911,6 @@
 <tr><th id="1897">1897</th><td><u>#<span data-ppcond="23">endif</span>  // TVM_LLVM_VERSION</u></td></tr>
 <tr><th id="1898">1898</th><td></td></tr>
 </table><hr/><p id='footer'>
-Generated on <em>2022-Sep-30</em> from project tvm revision <em>595f0b3</em><br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+Generated on <em>2022-Sep-30</em> from project tvm revision <em>dedf639</em><br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
 <br/>Generator usage only permitted with license.</p>
 </div></body></html>
