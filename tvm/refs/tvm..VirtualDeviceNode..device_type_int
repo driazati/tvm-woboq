@@ -4,8 +4,8 @@
 <offset>192</offset>
 <doc f='tvm/include/tvm/target/virtual_device.h' l='168'>/*!
    * \brief The \p DLDeviceType (represented as an int) of the virtual device. If \p target is
-   * known then this will be equal to \p target-&gt;kind-&gt;device_type. If \p target is null then the
-   * target is to be determined later.
+   * known then this will be equal to \p target-&gt;GetTargetDeviceType(). If \p target is null then
+   * the target is to be determined later.
    *
    * This is needed to support the legacy &quot;on_device&quot; and &quot;device_copy&quot; calls which only allow
    * a \p DLDeviceTypes (as an integer) to be given.

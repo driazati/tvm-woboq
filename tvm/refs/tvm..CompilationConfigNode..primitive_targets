@@ -14,7 +14,7 @@
    * It is possible to have multiple primitive targets for the same device type. However given
    * primitive targets left and right where:
    *  - left appears before right in the array
-   *  - left-&gt;kind-&gt;device_type == right-&gt;kind-&gt;device_type
+   *  - left-&gt;GetTargetDeviceType() == right-&gt;GetTargetDeviceType()
    * then:
    *  - right.IsExternalCodegenFor(left) must be true
    * In this way the \p FindPrimitiveTargetForDeviceOrFail method will find the &apos;most general&apos;
@@ -46,12 +46,12 @@
 <use f='tvm/src/target/compilation_config.cc' l='68' u='m' c='_ZNK3tvm21CompilationConfigNode26FindPrimitiveTargetForKindERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
 <use f='tvm/src/target/compilation_config.cc' l='80' c='_ZNK3tvm21CompilationConfigNode15CanonicalTargetERKNS_6TargetE'/>
 <use f='tvm/src/target/compilation_config.cc' l='90' c='_ZNK3tvm21CompilationConfigNode15CanonicalTargetERKNS_6TargetE'/>
-<use f='tvm/src/target/compilation_config.cc' l='185' u='m' c='_ZN3tvm21CompilationConfigNode4InitERKNS_9transform11PassContextERKNS_7runtime5ArrayINS_6TargetEvEE'/>
 <use f='tvm/src/target/compilation_config.cc' l='186' u='m' c='_ZN3tvm21CompilationConfigNode4InitERKNS_9transform11PassContextERKNS_7runtime5ArrayINS_6TargetEvEE'/>
-<use f='tvm/src/target/compilation_config.cc' l='193' u='m' c='_ZN3tvm21CompilationConfigNode4InitERKNS_9transform11PassContextERKNS_7runtime5ArrayINS_6TargetEvEE'/>
-<use f='tvm/src/target/compilation_config.cc' l='195' u='m' c='_ZN3tvm21CompilationConfigNode4InitERKNS_9transform11PassContextERKNS_7runtime5ArrayINS_6TargetEvEE'/>
-<use f='tvm/src/target/compilation_config.cc' l='207' c='_ZN3tvm21CompilationConfigNode4InitERKNS_9transform11PassContextERKNS_7runtime5ArrayINS_6TargetEvEE'/>
-<use f='tvm/src/target/compilation_config.cc' l='215' c='_ZN3tvm21CompilationConfigNode4InitERKNS_9transform11PassContextERKNS_7runtime5ArrayINS_6TargetEvEE'/>
-<use f='tvm/src/target/compilation_config.cc' l='272' u='m' c='_ZN3tvm21CompilationConfigNode4InitERKNS_9transform11PassContextERKNS_7runtime5ArrayINS_6TargetEvEE'/>
-<use f='tvm/src/target/compilation_config.cc' l='272' u='m' c='_ZN3tvm21CompilationConfigNode4InitERKNS_9transform11PassContextERKNS_7runtime5ArrayINS_6TargetEvEE'/>
-<use f='tvm/src/target/compilation_config.cc' l='291'/>
+<use f='tvm/src/target/compilation_config.cc' l='187' u='m' c='_ZN3tvm21CompilationConfigNode4InitERKNS_9transform11PassContextERKNS_7runtime5ArrayINS_6TargetEvEE'/>
+<use f='tvm/src/target/compilation_config.cc' l='194' u='m' c='_ZN3tvm21CompilationConfigNode4InitERKNS_9transform11PassContextERKNS_7runtime5ArrayINS_6TargetEvEE'/>
+<use f='tvm/src/target/compilation_config.cc' l='196' u='m' c='_ZN3tvm21CompilationConfigNode4InitERKNS_9transform11PassContextERKNS_7runtime5ArrayINS_6TargetEvEE'/>
+<use f='tvm/src/target/compilation_config.cc' l='208' c='_ZN3tvm21CompilationConfigNode4InitERKNS_9transform11PassContextERKNS_7runtime5ArrayINS_6TargetEvEE'/>
+<use f='tvm/src/target/compilation_config.cc' l='216' c='_ZN3tvm21CompilationConfigNode4InitERKNS_9transform11PassContextERKNS_7runtime5ArrayINS_6TargetEvEE'/>
+<use f='tvm/src/target/compilation_config.cc' l='273' u='m' c='_ZN3tvm21CompilationConfigNode4InitERKNS_9transform11PassContextERKNS_7runtime5ArrayINS_6TargetEvEE'/>
+<use f='tvm/src/target/compilation_config.cc' l='273' u='m' c='_ZN3tvm21CompilationConfigNode4InitERKNS_9transform11PassContextERKNS_7runtime5ArrayINS_6TargetEvEE'/>
+<use f='tvm/src/target/compilation_config.cc' l='292'/>
