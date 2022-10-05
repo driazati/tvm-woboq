@@ -1,4 +1,13 @@
-<dec f='tvm/src/runtime/rpc/rpc_endpoint.h' l='181' type='void tvm::runtime::RPCEndpoint::Shutdown()'/>
-<doc f='tvm/src/runtime/rpc/rpc_endpoint.h' l='180'>// Shutdown</doc>
-<use f='tvm/src/runtime/rpc/rpc_endpoint.cc' l='706' u='c' c='_ZN3tvm7runtime11RPCEndpointD1Ev'/>
-<def f='tvm/src/runtime/rpc/rpc_endpoint.cc' l='708' ll='728' type='void tvm::runtime::RPCEndpoint::Shutdown()'/>
+<dec f='tvm/src/runtime/rpc/rpc_endpoint.h' l='85' type='void tvm::runtime::RPCEndpoint::Shutdown()'/>
+<doc f='tvm/src/runtime/rpc/rpc_endpoint.h' l='76'>/*!
+   *  \brief Shutdown RPC connection.
+   *
+   *  Shutdown has no effect if the connection has already been shut down.
+   *  Shutdown will wait for all output currently queued from the RPC connection (i.e. The user
+   * doesn&apos;t need to wait for completion before calling Shutdown.) Any further use of objects that
+   * depended on the endpoint (e.g. A tvm.nd.array allocated on the remote RPC session) may throw an
+   * exception when used.
+   */</doc>
+<use f='tvm/src/runtime/rpc/rpc_endpoint.cc' l='709' u='c' c='_ZN3tvm7runtime11RPCEndpointD1Ev'/>
+<def f='tvm/src/runtime/rpc/rpc_endpoint.cc' l='711' ll='731' type='void tvm::runtime::RPCEndpoint::Shutdown()'/>
+<use f='tvm/src/runtime/rpc/rpc_endpoint.cc' l='1132' u='c' c='_ZN3tvm7runtime16RPCClientSession8ShutdownEv'/>
