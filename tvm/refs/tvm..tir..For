@@ -18,7 +18,7 @@
 <fun r='_ZN3tvm3tir3ForC1EOS1_'/>
 <fun r='_ZNK3tvm3tir3For3getEv'/>
 <fun r='_ZN3tvm3tir3For11CopyOnWriteEv'/>
-<use f='tvm/src/auto_scheduler/feature.cc' l='636' c='_ZN3tvm14auto_scheduler24PerStoreFeatureExtractor10VisitStmt_EPKNS_3tir12AttrStmtNodeE'/>
+<use f='tvm/src/auto_scheduler/feature.cc' l='637' c='_ZN3tvm14auto_scheduler24PerStoreFeatureExtractor10VisitStmt_EPKNS_3tir12AttrStmtNodeE'/>
 <size>8</size>
 <use f='tvm/include/tvm/tir/schedule/schedule.h' l='163' c='_ZNK3tvm3tir12ScheduleNode3GetERKNS0_6LoopRVE'/>
 <use f='tvm/src/tir/schedule/analysis.h' l='588' c='_ZN3tvm3tir15SuggestIndexMapERKNS0_6BufferERKNS_7runtime5ArrayINS_8PrimExprEvEERKNS5_INS0_3ForEvEERKS6_PNS_5arith8AnalyzerE'/>

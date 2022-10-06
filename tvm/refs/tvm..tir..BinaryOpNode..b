@@ -91,7 +91,7 @@
 <use f='tvm/src/auto_scheduler/compute_dag.cc' l='621' u='r' c='_ZN3tvm14auto_scheduler13FlopEstimator10VisitExpr_EPKNS_3tir7MaxNodeE'/>
 <use f='tvm/src/auto_scheduler/compute_dag.cc' l='618' u='m' c='_ZN3tvm14auto_scheduler13FlopEstimator10VisitExpr_EPKNS_3tir7MinNodeE'/>
 <use f='tvm/src/auto_scheduler/compute_dag.cc' l='621' u='r' c='_ZN3tvm14auto_scheduler13FlopEstimator10VisitExpr_EPKNS_3tir7MinNodeE'/>
-<use f='tvm/src/auto_scheduler/feature.cc' l='394' u='m' c='_ZN3tvm14auto_scheduler20CoefficientExtractor10VisitExpr_EPKNS_3tir7MulNodeE'/>
+<use f='tvm/src/auto_scheduler/feature.cc' l='395' u='m' c='_ZN3tvm14auto_scheduler20CoefficientExtractor10VisitExpr_EPKNS_3tir7MulNodeE'/>
 <use f='tvm/src/autotvm/touch_extractor.cc' l='70' u='m' c='_ZN3tvm7autotvm11IndexParser10VisitExpr_EPKNS_3tir7MulNodeE'/>
 <use f='tvm/src/meta_schedule/feature_extractor/per_store_feature.cc' l='170' u='m' c='_ZZN3tvm3tir5utils12GetVarStrideERKSt6vectorIS2_INS_8PrimExprESaIS3_EESaIS5_EERKS2_IlSaIlEERKNS0_3VarEEN20CoefficientExtractor10VisitExpr_EPKNS0_7MulNodeE'/>
 <use f='tvm/src/meta_schedule/postproc/rewrite_parallel_vectorize_unroll.cc' l='56' u='m' c='_ZN3tvm3tir15StrideExtractor10VisitExpr_EPKNS0_7MulNodeE'/>
