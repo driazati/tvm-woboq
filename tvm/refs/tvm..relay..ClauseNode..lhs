@@ -5,7 +5,7 @@
 <use f='tvm/include/tvm/relay/adt.h' l='243' u='r' c='_ZNK3tvm5relay10ClauseNode11SHashReduceENS_12SHashReducerE'/>
 <offset>128</offset>
 <doc f='tvm/include/tvm/relay/adt.h' l='228'>/*! \brief The pattern the clause matches. */</doc>
-<use f='tvm/src/printer/relay_text_printer.cc' l='551' u='r' c='_ZN3tvm5relay16RelayTextPrinter10VisitExpr_EPKNS0_9MatchNodeE'/>
+<use f='tvm/src/printer/relay_text_printer.cc' l='556' u='r' c='_ZN3tvm5relay16RelayTextPrinter10VisitExpr_EPKNS0_9MatchNodeE'/>
 <use f='tvm/src/relay/analysis/match_exhaustion.cc' l='286' u='r' c='_ZN3tvm5relay14UnmatchedCasesERKNS0_5MatchERKNS_8IRModuleE'/>
 <use f='tvm/src/relay/analysis/match_exhaustion.cc' l='295' u='r' c='_ZN3tvm5relay14UnmatchedCasesERKNS0_5MatchERKNS_8IRModuleE'/>
 <use f='tvm/src/relay/analysis/util.cc' l='454' u='r' c='_ZZN3tvm5relay9TypeSubstERKNS_9RelayExprERKNS_7runtime3MapINS_7TypeVarENS_4TypeEvvEEEN16TypeSubstMutator11VisitClauseERKNS0_6ClauseE'/>
