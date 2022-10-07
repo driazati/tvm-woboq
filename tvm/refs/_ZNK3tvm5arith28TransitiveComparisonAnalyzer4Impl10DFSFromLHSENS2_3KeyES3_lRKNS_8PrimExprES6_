@@ -1,0 +1,26 @@
+<dec f='tvm/src/arith/transitive_comparison_analyzer.cc' l='217' type='tvm::arith::CompareResult tvm::arith::TransitiveComparisonAnalyzer::Impl::DFSFromLHS(tvm::arith::TransitiveComparisonAnalyzer::Impl::Key lhs_key, tvm::arith::TransitiveComparisonAnalyzer::Impl::Key rhs_key, int64_t offset, const tvm::PrimExpr &amp; lhs, const tvm::PrimExpr &amp; rhs) const'/>
+<use f='tvm/src/arith/transitive_comparison_analyzer.cc' l='578' u='c' c='_ZNK3tvm5arith28TransitiveComparisonAnalyzer4Impl10TryCompareERKNS_8PrimExprES5_'/>
+<use f='tvm/src/arith/transitive_comparison_analyzer.cc' l='579' u='c' c='_ZNK3tvm5arith28TransitiveComparisonAnalyzer4Impl10TryCompareERKNS_8PrimExprES5_'/>
+<def f='tvm/src/arith/transitive_comparison_analyzer.cc' l='585' ll='788' type='tvm::arith::CompareResult tvm::arith::TransitiveComparisonAnalyzer::Impl::DFSFromLHS(tvm::arith::TransitiveComparisonAnalyzer::Impl::Key lhs_key_input, tvm::arith::TransitiveComparisonAnalyzer::Impl::Key rhs_key_input, int64_t offset_input, const tvm::PrimExpr &amp; lhs_input, const tvm::PrimExpr &amp; rhs_input) const'/>
+<doc f='tvm/src/arith/transitive_comparison_analyzer.cc' l='195'>/*! \brief Attempt to compare the expressions, starting at the lhs.
+   *
+   * Perform a depth-first search through the space of known
+   * expressions, starting at the LHS of a comparison.  In this
+   * search, each expression is a node of a graph, and each known
+   * comparison is an edge of the graph.
+   *
+   * For example, suppose we have previous knowns of (A&lt;=B), (B&lt;=C+1)
+   * and (C&lt;=D-5).  The expressions [A,B,C,D] are the nodes of the
+   * search space.  Each comparison is an edge connecting two
+   * expressions, such as (B&lt;=C+1) connecting the expressions B and D.
+   * If we are attempting to compare expressions A and D, a search
+   * starting at expression A could follow each edge until reaching
+   * expression D, then combine the comparisons that compose the path
+   * into the expression A&lt;=D-4.
+   *
+   * \param lhs The left-hand side of the comparison
+   *
+   * \param rhs The right-hand side of the comparison
+   *
+   * \return The result of the comparison
+   */</doc>

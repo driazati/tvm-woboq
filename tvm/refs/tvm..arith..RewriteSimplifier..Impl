@@ -1,10 +1,10 @@
-<use f='tvm/include/tvm/arith/analyzer.h' l='286'/>
+<use f='tvm/include/tvm/arith/analyzer.h' l='320'/>
 <inh f='tvm/src/arith/ir_mutator_with_analyzer.h' l='44' c='tvm::arith::IRMutatorWithAnalyzer'/>
-<def f='tvm/src/arith/rewrite_simplify.h' l='47' ll='150'/>
+<def f='tvm/src/arith/rewrite_simplify.h' l='47' ll='172'/>
 <ovr f='tvm/src/arith/canonical_simplify.cc' l='575' c='tvm::arith::CanonicalSimplifier::Impl'/>
 <use f='tvm/src/arith/canonical_simplify.cc' l='575'/>
 <use f='tvm/src/arith/canonical_simplify.cc' l='577'/>
-<size>120</size>
+<size>128</size>
 <doc f='tvm/src/arith/rewrite_simplify.h' l='42'>/*!
  * \brief Rewrite-based simplifier.
  *
@@ -36,25 +36,36 @@
 <fun r='_ZN3tvm5arith17RewriteSimplifier4Impl10VisitExpr_EPKNS_3tir8CastNodeE'/>
 <fun r='_ZN3tvm5arith17RewriteSimplifier4Impl10VisitExpr_EPKNS_3tir7LetNodeE'/>
 <fun r='_ZN3tvm5arith17RewriteSimplifier4Impl15EnterConstraintERKNS_8PrimExprE'/>
+<fun r='_ZN3tvm5arith17RewriteSimplifier4Impl20SetEnabledExtensionsENS1_9ExtensionE'/>
+<fun r='_ZNK3tvm5arith17RewriteSimplifier4Impl20GetEnabledExtensionsEv'/>
 <mbr r='tvm::arith::RewriteSimplifier::Impl::recur_depth_' o='256' t='int'/>
 <mbr r='tvm::arith::RewriteSimplifier::Impl::var_map_' o='320' t='std::unordered_map&lt;Var, PrimExpr, ObjectPtrHash, ObjectPtrEqual&gt;'/>
 <mbr r='tvm::arith::RewriteSimplifier::Impl::literal_constraints_' o='768' t='std::vector&lt;PrimExpr&gt;'/>
+<mbr r='tvm::arith::RewriteSimplifier::Impl::enabled_extensions_' o='960' t='tvm::arith::RewriteSimplifier::Extension'/>
 <smbr r='tvm::arith::RewriteSimplifier::Impl::kMaxRecurDepth' t='const int'/>
 <fun r='_ZN3tvm5arith17RewriteSimplifier4Impl10TryCompareERKNS_8PrimExprEl'/>
+<fun r='_ZN3tvm5arith17RewriteSimplifier4Impl10TryCompareERKNS_8PrimExprES5_'/>
 <fun r='_ZN3tvm5arith17RewriteSimplifier4Impl12CanInlineLetEPKNS_3tir7LetNodeE'/>
 <fun r='_ZNK3tvm5arith17RewriteSimplifier4Impl25TryMatchLiteralConstraintERKNS_8PrimExprE'/>
+<fun r='_ZN3tvm5arith17RewriteSimplifier4Impl32TryCompareUsingKnownInequalitiesERKNS_8PrimExprES5_'/>
+<fun r='_ZN3tvm5arith17RewriteSimplifier4Impl29TryCompareUsingConstIntBoundsERKNS_8PrimExprES3_'/>
 <fun r='_ZN3tvm5arith17RewriteSimplifier4Impl20CanProveGreaterEqualERKNS_8PrimExprEl'/>
 <fun r='_ZN3tvm5arith17RewriteSimplifier4Impl12CanProveLessERKNS_8PrimExprEl'/>
 <fun r='_ZN3tvm5arith17RewriteSimplifier4Impl13CanProveEqualERKNS_8PrimExprEl'/>
 <fun r='_ZN3tvm5arith17RewriteSimplifier4Impl16RecursiveRewriteERKNS_8PrimExprE'/>
 <fun r='_ZN3tvm5arith17RewriteSimplifier4Impl16ZeroWithTypeLikeERKNS0_7PatternIT_EE'/>
 <fun r='_ZN3tvm5arith17RewriteSimplifier4Impl15OneWithTypeLikeERKNS0_7PatternIT_EE'/>
-<use f='tvm/src/arith/rewrite_simplify.cc' l='1745' c='_ZN3tvm5arith17RewriteSimplifierC1EPNS0_8AnalyzerE'/>
-<size>120</size>
+<use f='tvm/src/arith/rewrite_simplify.cc' l='1788' c='_ZN3tvm5arith17RewriteSimplifierC1EPNS0_8AnalyzerE'/>
+<size>128</size>
+<fun r='_ZN3tvm5arith17RewriteSimplifier4Impl10TryCompareERKNS_8PrimExprES5_'/>
+<fun r='_ZN3tvm5arith17RewriteSimplifier4Impl29TryCompareUsingConstIntBoundsERKNS_8PrimExprES3_'/>
+<fun r='_ZN3tvm5arith17RewriteSimplifier4Impl32TryCompareUsingKnownInequalitiesERKNS_8PrimExprES5_'/>
 <fun r='_ZN3tvm5arith17RewriteSimplifier4Impl10TryCompareERKNS_8PrimExprEl'/>
 <fun r='_ZN3tvm5arith17RewriteSimplifier4Impl6UpdateERKNS_3tir3VarERKNS_8PrimExprEb'/>
 <fun r='_ZN3tvm5arith17RewriteSimplifier4Impl10VisitExpr_EPKNS_3tir7AddNodeE'/>
 <fun r='_ZN3tvm5arith17RewriteSimplifier4Impl15EnterConstraintERKNS_8PrimExprE'/>
+<fun r='_ZN3tvm5arith17RewriteSimplifier4Impl20SetEnabledExtensionsENS1_9ExtensionE'/>
+<fun r='_ZNK3tvm5arith17RewriteSimplifier4Impl20GetEnabledExtensionsEv'/>
 <fun r='_ZN3tvm5arith17RewriteSimplifier4Impl10VisitExpr_EPKNS_3tir7SubNodeE'/>
 <fun r='_ZN3tvm5arith17RewriteSimplifier4Impl10VisitExpr_EPKNS_3tir7MulNodeE'/>
 <fun r='_ZN3tvm5arith17RewriteSimplifier4Impl10VisitExpr_EPKNS_3tir7DivNodeE'/>

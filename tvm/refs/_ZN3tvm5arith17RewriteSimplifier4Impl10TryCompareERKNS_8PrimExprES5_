@@ -1,0 +1,16 @@
+<dec f='tvm/src/arith/rewrite_simplify.h' l='118' type='tvm::arith::CompareResult tvm::arith::RewriteSimplifier::Impl::TryCompare(const tvm::PrimExpr &amp; x, const tvm::PrimExpr &amp; y)'/>
+<doc f='tvm/src/arith/rewrite_simplify.h' l='112'>/*! Try to compare x against y
+   *
+   * \param x The lhs of the comparison
+   * \param y The rhs of the comparison
+   * \return comparison result.
+   */</doc>
+<def f='tvm/src/arith/rewrite_simplify.cc' l='74' ll='91' type='tvm::arith::CompareResult tvm::arith::RewriteSimplifier::Impl::TryCompare(const tvm::PrimExpr &amp; x, const tvm::PrimExpr &amp; y)'/>
+<use f='tvm/src/arith/rewrite_simplify.cc' l='1370' u='c' c='_ZN3tvm5arith17RewriteSimplifier4Impl10VisitExpr_EPKNS_3tir6EQNodeE'/>
+<use f='tvm/src/arith/rewrite_simplify.cc' l='1420' u='c' c='_ZN3tvm5arith17RewriteSimplifier4Impl10VisitExpr_EPKNS_3tir6LTNodeE'/>
+<doc f='tvm/src/arith/rewrite_simplify.cc' l='67'>// NOTE for developers:
+//
+// We mainly focus on index expression simplification.
+// Besides the RewriteSimplifier, some cases can be better
+// handled by CanonicalSimplifier.
+//</doc>

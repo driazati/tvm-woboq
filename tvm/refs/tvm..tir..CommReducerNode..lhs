@@ -5,8 +5,8 @@
 <use f='tvm/include/tvm/tir/expr.h' l='1041' u='r' c='_ZNK3tvm3tir15CommReducerNode11SHashReduceENS_12SHashReducerE'/>
 <offset>128</offset>
 <doc f='tvm/include/tvm/tir/expr.h' l='1007'>/*! \brief The left argument of reducer */</doc>
-<use f='tvm/src/arith/canonical_simplify.cc' l='1175' u='m' c='_ZN3tvm5arith19CanonicalSimplifier4Impl22SimplifyReduceCombinerEPKNS_3tir10ReduceNodeE'/>
-<use f='tvm/src/arith/canonical_simplify.cc' l='1209' u='m' c='_ZN3tvm5arith19CanonicalSimplifier4Impl22SimplifyReduceCombinerEPKNS_3tir10ReduceNodeE'/>
+<use f='tvm/src/arith/canonical_simplify.cc' l='1177' u='m' c='_ZN3tvm5arith19CanonicalSimplifier4Impl22SimplifyReduceCombinerEPKNS_3tir10ReduceNodeE'/>
+<use f='tvm/src/arith/canonical_simplify.cc' l='1211' u='m' c='_ZN3tvm5arith19CanonicalSimplifier4Impl22SimplifyReduceCombinerEPKNS_3tir10ReduceNodeE'/>
 <use f='tvm/src/printer/tvmscript_printer.cc' l='691' c='_ZN3tvm3tir16TVMScriptPrinter16PrintCommReducerEPKNS0_15CommReducerNodeE'/>
 <use f='tvm/src/printer/tvmscript_printer.cc' l='713' u='m' c='_ZN3tvm3tir16TVMScriptPrinter16PrintCommReducerEPKNS0_15CommReducerNodeE'/>
 <use f='tvm/src/te/autodiff/ad_simplify.cc' l='148' u='m' c='_ZN3tvm2te13IsSumCombinerERKNS_3tir11CommReducerERKNS_7runtime3MapINS1_3VarENS_5RangeEvvEE'/>

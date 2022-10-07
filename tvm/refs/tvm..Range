@@ -25,9 +25,10 @@
 <use f='tvm/include/tvm/arith/int_set.h' l='308' c='_ZN3tvm5arith24EstimateRegionUpperBoundERKNS_7runtime5ArrayINS_5RangeEvEERKNS1_3MapINS_3tir3VarES3_vvEERKNS_8PrimExprEPNS0_8AnalyzerE'/>
 <use f='tvm/include/tvm/arith/int_set.h' l='309' c='_ZN3tvm5arith24EstimateRegionUpperBoundERKNS_7runtime5ArrayINS_5RangeEvEERKNS1_3MapINS_3tir3VarES3_vvEERKNS_8PrimExprEPNS0_8AnalyzerE'/>
 <use f='tvm/include/tvm/arith/analyzer.h' l='148' c='_ZN3tvm5arith21ConstIntBoundAnalyzer4BindERKNS_3tir3VarERKNS_5RangeEb'/>
-<use f='tvm/include/tvm/arith/analyzer.h' l='400' c='_ZN3tvm5arith14IntSetAnalyzer4BindERKNS_3tir3VarERKNS_5RangeEb'/>
-<use f='tvm/include/tvm/arith/analyzer.h' l='467' c='_ZN3tvm5arith8Analyzer4BindERKNS_3tir3VarERKNS_5RangeEb'/>
-<use f='tvm/include/tvm/arith/analyzer.h' l='476' c='_ZN3tvm5arith8Analyzer4BindERKNS_7runtime3MapINS_3tir3VarENS_5RangeEvvEEb'/>
+<use f='tvm/include/tvm/arith/analyzer.h' l='410' c='_ZN3tvm5arith28TransitiveComparisonAnalyzer4BindERKNS_3tir3VarERKNS_5RangeEb'/>
+<use f='tvm/include/tvm/arith/analyzer.h' l='510' c='_ZN3tvm5arith14IntSetAnalyzer4BindERKNS_3tir3VarERKNS_5RangeEb'/>
+<use f='tvm/include/tvm/arith/analyzer.h' l='579' c='_ZN3tvm5arith8Analyzer4BindERKNS_3tir3VarERKNS_5RangeEb'/>
+<use f='tvm/include/tvm/arith/analyzer.h' l='588' c='_ZN3tvm5arith8Analyzer4BindERKNS_7runtime3MapINS_3tir3VarENS_5RangeEvvEEb'/>
 <use f='tvm/include/tvm/tir/stmt.h' l='346'/>
 <use f='tvm/include/tvm/tir/stmt.h' l='373' c='_ZN3tvm3tir17BufferRealizeNodeC1ENS0_6BufferENS_7runtime5ArrayINS_5RangeEvEENS_8PrimExprENS0_4StmtENS_4SpanE'/>
 <use f='tvm/include/tvm/tir/stmt.h' l='387' c='_ZN3tvm3tir13BufferRealizeC1ENS0_6BufferENS_7runtime5ArrayINS_5RangeEvEENS_8PrimExprENS0_4StmtENS_4SpanE'/>
@@ -36,9 +37,9 @@
 <use f='tvm/include/tvm/tir/stmt.h' l='1098' c='_ZN3tvm3tir8PrefetchC1ENS0_6BufferENS_7runtime5ArrayINS_5RangeEvEENS_4SpanE'/>
 <use f='tvm/include/tvm/tir/stmt.h' l='1111'/>
 <use f='tvm/include/tvm/tir/stmt.h' l='1139' c='_ZN3tvm3tir12BufferRegionC1ENS0_6BufferENS_7runtime5ArrayINS_5RangeEvEE'/>
-<use f='tvm/src/arith/analyzer.cc' l='50' c='_ZN3tvm5arith8Analyzer4BindERKNS_3tir3VarERKNS_5RangeEb'/>
-<use f='tvm/src/arith/analyzer.cc' l='62' c='_ZN3tvm5arith8Analyzer4BindERKNS_7runtime3MapINS_3tir3VarENS_5RangeEvvEEb'/>
-<use f='tvm/src/arith/analyzer.cc' l='179'/>
+<use f='tvm/src/arith/analyzer.cc' l='51' c='_ZN3tvm5arith8Analyzer4BindERKNS_3tir3VarERKNS_5RangeEb'/>
+<use f='tvm/src/arith/analyzer.cc' l='64' c='_ZN3tvm5arith8Analyzer4BindERKNS_7runtime3MapINS_3tir3VarENS_5RangeEvvEEb'/>
+<use f='tvm/src/arith/analyzer.cc' l='182'/>
 <size>8</size>
 <doc f='tvm/include/tvm/ir/expr.h' l='710'>/*! \brief Range constainer  */</doc>
 <fun r='_ZN3tvm5RangeC1ENS_8PrimExprES1_NS_4SpanE'/>
@@ -134,6 +135,11 @@
 <use f='tvm/src/arith/solve_linear_inequality.cc' l='457' c='_ZN3tvm5arith28SolveInequalitiesDeskewRangeERKNS0_14IntConstraintsE'/>
 <use f='tvm/src/arith/solve_linear_inequality.cc' l='458' c='_ZN3tvm5arith28SolveInequalitiesDeskewRangeERKNS0_14IntConstraintsE'/>
 <use f='tvm/src/arith/solve_linear_inequality.cc' l='509' c='_ZN3tvm5arith28SolveInequalitiesDeskewRangeERKNS0_14IntConstraintsE'/>
+<size>8</size>
+<use f='tvm/src/arith/transitive_comparison_analyzer.cc' l='65' c='_ZN3tvm5arith28TransitiveComparisonAnalyzer4Impl4BindERKNS_3tir3VarERKNS_5RangeEb'/>
+<use f='tvm/src/arith/transitive_comparison_analyzer.cc' l='225'/>
+<use f='tvm/src/arith/transitive_comparison_analyzer.cc' l='485' c='_ZN3tvm5arith28TransitiveComparisonAnalyzer4BindERKNS_3tir3VarERKNS_5RangeEb'/>
+<use f='tvm/src/arith/transitive_comparison_analyzer.cc' l='504' c='_ZN3tvm5arith28TransitiveComparisonAnalyzer4Impl4BindERKNS_3tir3VarERKNS_5RangeEb'/>
 <size>8</size>
 <use f='tvm/include/tvm/tir/index_map.h' l='124' c='_ZNK3tvm3tir12IndexMapNode9MapRangesERKNS_7runtime5ArrayINS_5RangeEvEEPNS_5arith8AnalyzerE'/>
 <use f='tvm/include/tvm/tir/index_map.h' l='124' c='_ZNK3tvm3tir12IndexMapNode9MapRangesERKNS_7runtime5ArrayINS_5RangeEvEEPNS_5arith8AnalyzerE'/>

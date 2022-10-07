@@ -1,0 +1,18 @@
+<dec f='tvm/src/arith/transitive_comparison_analyzer.cc' l='123' type='std::optional&lt;Key&gt; tvm::arith::TransitiveComparisonAnalyzer::Impl::ExprToPreviousKey(const tvm::PrimExpr &amp; expr) const'/>
+<def f='tvm/src/arith/transitive_comparison_analyzer.cc' l='383' ll='391' type='std::optional&lt;TransitiveComparisonAnalyzer::Impl::Key&gt; tvm::arith::TransitiveComparisonAnalyzer::Impl::ExprToPreviousKey(const tvm::PrimExpr &amp; expr) const'/>
+<use f='tvm/src/arith/transitive_comparison_analyzer.cc' l='395' u='c' c='_ZN3tvm5arith28TransitiveComparisonAnalyzer4Impl9ExprToKeyERKNS_8PrimExprE'/>
+<use f='tvm/src/arith/transitive_comparison_analyzer.cc' l='514' u='c' c='_ZN3tvm5arith28TransitiveComparisonAnalyzer4Impl4BindERKNS_3tir3VarERKNS_5RangeEb'/>
+<use f='tvm/src/arith/transitive_comparison_analyzer.cc' l='571' u='c' c='_ZNK3tvm5arith28TransitiveComparisonAnalyzer4Impl10TryCompareERKNS_8PrimExprES5_'/>
+<use f='tvm/src/arith/transitive_comparison_analyzer.cc' l='572' u='c' c='_ZNK3tvm5arith28TransitiveComparisonAnalyzer4Impl10TryCompareERKNS_8PrimExprES5_'/>
+<doc f='tvm/src/arith/transitive_comparison_analyzer.cc' l='111'>/*! \brief Convert an expression to internal representation
+   *
+   * If the expression has previously been converted to the internal
+   * representation, returns the same Key as has been used previously.
+   * Otherwise, return `std::nullopt`.
+   *
+   * \param expr The PrimExpr to be converted
+   *
+   * \returns The Key representing the expression, if one exists.
+   *
+   * \see ExprToKey
+   */</doc>

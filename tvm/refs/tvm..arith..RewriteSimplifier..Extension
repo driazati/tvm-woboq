@@ -1,0 +1,25 @@
+<def f='tvm/include/tvm/arith/analyzer.h' l='290' ll='300'/>
+<use f='tvm/include/tvm/arith/analyzer.h' l='307' c='_ZN3tvm5arith17RewriteSimplifier20SetEnabledExtensionsENS1_9ExtensionE'/>
+<use f='tvm/include/tvm/arith/analyzer.h' l='310' c='_ZNK3tvm5arith17RewriteSimplifier20GetEnabledExtensionsEv'/>
+<doc f='tvm/include/tvm/arith/analyzer.h' l='278'>/*! \brief Flags to enable more computationally-intensive simplifications
+   *
+   * These simplifications may be required for specific schedules, but
+   * would impose too high a compile-time cost to enable by default.
+   * They can be enabled on an as-needed basis by calling
+   * `RewriteSimplifier::SetEnabledExtensions` prior to using
+   * `RewriteSimplifier::operator()`.
+   *
+   * Flags are defined as powers of two to allow future expansion.  To
+   * enable multiple extensions, a user should pass a bitwise OR of the
+   * flags for each desired extension.
+   */</doc>
+<use f='tvm/src/arith/rewrite_simplify.h' l='85' c='_ZN3tvm5arith17RewriteSimplifier4Impl20SetEnabledExtensionsENS1_9ExtensionE'/>
+<use f='tvm/src/arith/rewrite_simplify.h' l='88' c='_ZNK3tvm5arith17RewriteSimplifier4Impl20GetEnabledExtensionsEv'/>
+<use f='tvm/src/arith/rewrite_simplify.h' l='99'/>
+<use f='tvm/src/arith/rewrite_simplify.cc' l='285' c='_ZN3tvm5arith17RewriteSimplifier4Impl20SetEnabledExtensionsENS1_9ExtensionE'/>
+<use f='tvm/src/arith/rewrite_simplify.cc' l='287' c='_ZNK3tvm5arith17RewriteSimplifier4Impl20GetEnabledExtensionsEv'/>
+<use f='tvm/src/arith/rewrite_simplify.cc' l='1781' c='_ZN3tvm5arith17RewriteSimplifier20SetEnabledExtensionsENS1_9ExtensionE'/>
+<use f='tvm/src/arith/rewrite_simplify.cc' l='1784' c='_ZNK3tvm5arith17RewriteSimplifier20GetEnabledExtensionsEv'/>
+<use f='tvm/src/tir/transforms/simplify.cc' l='49' c='_ZNK3tvm5arith18SimplifyConfigNode20GetEnabledExtensionsEv'/>
+<use f='tvm/src/tir/transforms/simplify.cc' l='50' c='_ZNK3tvm5arith18SimplifyConfigNode20GetEnabledExtensionsEv'/>
+<use f='tvm/src/tir/transforms/simplify.cc' l='53' c='_ZNK3tvm5arith18SimplifyConfigNode20GetEnabledExtensionsEv'/>

@@ -5,21 +5,22 @@
 <use f='tvm/include/tvm/arith/analyzer.h' l='153' c='_ZN3tvm5arith21ConstIntBoundAnalyzerC1EPNS0_8AnalyzerE'/>
 <use f='tvm/include/tvm/arith/analyzer.h' l='232'/>
 <use f='tvm/include/tvm/arith/analyzer.h' l='234' c='_ZN3tvm5arith18ModularSetAnalyzerC1EPNS0_8AnalyzerE'/>
-<use f='tvm/include/tvm/arith/analyzer.h' l='279'/>
-<use f='tvm/include/tvm/arith/analyzer.h' l='282' c='_ZN3tvm5arith17RewriteSimplifierC1EPNS0_8AnalyzerE'/>
-<use f='tvm/include/tvm/arith/analyzer.h' l='311'/>
-<use f='tvm/include/tvm/arith/analyzer.h' l='313' c='_ZN3tvm5arith19CanonicalSimplifierC1EPNS0_8AnalyzerE'/>
-<use f='tvm/include/tvm/arith/analyzer.h' l='345' c='_ZN3tvm5arith17ConstraintContextC1EPNS0_8AnalyzerENS_8PrimExprE'/>
-<use f='tvm/include/tvm/arith/analyzer.h' l='352'/>
-<use f='tvm/include/tvm/arith/analyzer.h' l='405'/>
-<use f='tvm/include/tvm/arith/analyzer.h' l='406' c='_ZN3tvm5arith14IntSetAnalyzerC1EPNS0_8AnalyzerE'/>
-<def f='tvm/include/tvm/arith/analyzer.h' l='423' ll='536'/>
-<use f='tvm/include/tvm/arith/analyzer.h' l='428' c='_ZN3tvm5arith8AnalyzerC1ERKS1_'/>
-<use f='tvm/include/tvm/arith/analyzer.h' l='429' c='_ZN3tvm5arith8AnalyzeraSERKS1_'/>
-<use f='tvm/include/tvm/arith/analyzer.h' l='429' c='_ZN3tvm5arith8AnalyzeraSERKS1_'/>
-<use f='tvm/src/arith/analyzer.cc' l='146'/>
-<size>40</size>
-<doc f='tvm/include/tvm/arith/analyzer.h' l='413'>/*!
+<use f='tvm/include/tvm/arith/analyzer.h' l='313'/>
+<use f='tvm/include/tvm/arith/analyzer.h' l='316' c='_ZN3tvm5arith17RewriteSimplifierC1EPNS0_8AnalyzerE'/>
+<use f='tvm/include/tvm/arith/analyzer.h' l='345'/>
+<use f='tvm/include/tvm/arith/analyzer.h' l='347' c='_ZN3tvm5arith19CanonicalSimplifierC1EPNS0_8AnalyzerE'/>
+<use f='tvm/include/tvm/arith/analyzer.h' l='421'/>
+<use f='tvm/include/tvm/arith/analyzer.h' l='455' c='_ZN3tvm5arith17ConstraintContextC1EPNS0_8AnalyzerENS_8PrimExprE'/>
+<use f='tvm/include/tvm/arith/analyzer.h' l='462'/>
+<use f='tvm/include/tvm/arith/analyzer.h' l='515'/>
+<use f='tvm/include/tvm/arith/analyzer.h' l='516' c='_ZN3tvm5arith14IntSetAnalyzerC1EPNS0_8AnalyzerE'/>
+<def f='tvm/include/tvm/arith/analyzer.h' l='533' ll='648'/>
+<use f='tvm/include/tvm/arith/analyzer.h' l='538' c='_ZN3tvm5arith8AnalyzerC1ERKS1_'/>
+<use f='tvm/include/tvm/arith/analyzer.h' l='539' c='_ZN3tvm5arith8AnalyzeraSERKS1_'/>
+<use f='tvm/include/tvm/arith/analyzer.h' l='539' c='_ZN3tvm5arith8AnalyzeraSERKS1_'/>
+<use f='tvm/src/arith/analyzer.cc' l='149'/>
+<size>48</size>
+<doc f='tvm/include/tvm/arith/analyzer.h' l='523'>/*!
  * \brief Analyzer that contains bunch of sub-analyzers.
  *
  * Each sub-analyzer can make use of another sub-analyzer
@@ -36,6 +37,7 @@
 <mbr r='tvm::arith::Analyzer::rewrite_simplify' o='128' t='tvm::arith::RewriteSimplifier'/>
 <mbr r='tvm::arith::Analyzer::canonical_simplify' o='192' t='tvm::arith::CanonicalSimplifier'/>
 <mbr r='tvm::arith::Analyzer::int_set' o='256' t='tvm::arith::IntSetAnalyzer'/>
+<mbr r='tvm::arith::Analyzer::transitive_comparisons' o='320' t='tvm::arith::TransitiveComparisonAnalyzer'/>
 <fun r='_ZN3tvm5arith8AnalyzerC1Ev'/>
 <fun r='_ZN3tvm5arith8Analyzer4BindERKNS_3tir3VarERKNS_8PrimExprEb'/>
 <fun r='_ZN3tvm5arith8Analyzer4BindERKNS_3tir3VarERKNS_5RangeEb'/>
@@ -58,7 +60,7 @@
 <use f='tvm/src/arith/interval_set.h' l='124' c='_ZN3tvm5arith5UnionEPNS0_8AnalyzerENS0_11IntervalSetES3_'/>
 <use f='tvm/src/arith/interval_set.h' l='133' c='_ZN3tvm5arith9IntersectEPNS0_8AnalyzerENS0_11IntervalSetES3_'/>
 <use f='tvm/src/arith/bound_deducer.cc' l='182'/>
-<size>40</size>
+<size>48</size>
 <use f='tvm/src/arith/ir_mutator_with_analyzer.h' l='46' c='_ZN3tvm5arith21IRMutatorWithAnalyzerC1EPNS0_8AnalyzerE'/>
 <use f='tvm/src/arith/ir_mutator_with_analyzer.h' l='65'/>
 <use f='tvm/src/arith/rewrite_simplify.h' l='51' c='_ZN3tvm5arith17RewriteSimplifier4ImplC1EPNS0_8AnalyzerE'/>
@@ -66,24 +68,24 @@
 <use f='tvm/src/arith/canonical_simplify.cc' l='158' c='_ZNK3tvm5arith13SplitExprNode21CanPushCastToChildrenENS_7runtime8DataTypeEPNS0_8AnalyzerE'/>
 <use f='tvm/src/arith/canonical_simplify.cc' l='337' c='_ZNK3tvm5arith11SumExprNode21CanPushCastToChildrenENS_7runtime8DataTypeEPNS0_8AnalyzerE'/>
 <use f='tvm/src/arith/canonical_simplify.cc' l='579' c='_ZN3tvm5arith19CanonicalSimplifier4ImplC1EPNS0_8AnalyzerE'/>
-<use f='tvm/src/arith/canonical_simplify.cc' l='1279' c='_ZN3tvm5arith19CanonicalSimplifierC1EPNS0_8AnalyzerE'/>
-<size>40</size>
+<use f='tvm/src/arith/canonical_simplify.cc' l='1281' c='_ZN3tvm5arith19CanonicalSimplifierC1EPNS0_8AnalyzerE'/>
+<size>48</size>
 <use f='tvm/src/arith/const_int_bound.cc' l='736' c='_ZN3tvm5arith21ConstIntBoundAnalyzerC1EPNS0_8AnalyzerE'/>
-<size>40</size>
+<size>48</size>
 <use f='tvm/src/arith/constraint_extract.cc' l='34' c='_ZN3tvm5arith18CollectConstraintsERKNS_8PrimExprEPNS0_8AnalyzerEPSt6vectorIS1_SaIS1_EE'/>
 <use f='tvm/src/arith/constraint_extract.cc' l='49' c='_ZN3tvm5arith18ExtractConstraintsERKNS_8PrimExprE'/>
-<size>40</size>
+<size>48</size>
 <use f='tvm/src/arith/detect_linear_equation.cc' l='209' c='_ZN3tvm5arith15DetectClipBoundERKNS_8PrimExprEPSt13unordered_mapIPKNS_3tir7VarNodeENS0_13IntervalEntryESt4hashIS8_ESt8equal_toIS8_ESaISt4pairIKS8_S9_EEE'/>
 <use f='tvm/src/arith/detect_linear_equation.cc' l='248' c='_ZN3tvm5arith15DetectClipBoundERKNS_8PrimExprERKNS_7runtime5ArrayINS_3tir3VarEvEE'/>
-<size>40</size>
+<size>48</size>
 <use f='tvm/src/arith/ir_visitor_with_analyzer.h' l='58'/>
-<size>40</size>
+<size>48</size>
 <use f='tvm/src/arith/int_constraints.cc' l='80' c='_ZN3tvm5arith14IntGroupBounds9FromRangeERKNS_5RangeE'/>
 <use f='tvm/src/arith/int_constraints.cc' l='95' c='_ZN3tvm5arith14IntGroupBoundsplERKNS_5RangeE'/>
 <use f='tvm/src/arith/int_constraints.cc' l='121' c='_ZNK3tvm5arith14IntGroupBounds13FindBestRangeERKNS_7runtime3MapINS_3tir3VarENS_5RangeEvvEE'/>
 <use f='tvm/src/arith/int_constraints.cc' l='266' c='_ZNK3tvm5arith23IntConstraintsTransformplERKS1_'/>
 <use f='tvm/src/arith/int_constraints.cc' l='272' c='_ZNK3tvm5arith23IntConstraintsTransformplERKS1_'/>
-<size>40</size>
+<size>48</size>
 <use f='tvm/include/tvm/arith/iter_affine_map.h' l='343' c='_ZN3tvm5arith13DetectIterMapERKNS_7runtime5ArrayINS_8PrimExprEvEERKNS1_3MapINS_3tir3VarENS_5RangeEvvEERKS3_NS0_12IterMapLevelEPNS0_8AnalyzerEb'/>
 <use f='tvm/include/tvm/arith/iter_affine_map.h' l='410' c='_ZN3tvm5arith14SubspaceDivideERKNS_7runtime5ArrayINS_8PrimExprEvEERKNS1_3MapINS_3tir3VarENS_5RangeEvvEERKNS2_IS9_vEERKS3_NS0_12IterMapLevelEPNS0_8AnalyzerE'/>
 <use f='tvm/src/arith/int_set.cc' l='62' c='_ZN3tvm5arith9IntersectEPNS0_8AnalyzerENS0_11IntervalSetES3_'/>
@@ -127,7 +129,7 @@
 <use f='tvm/src/arith/int_set.cc' l='1171'/>
 <use f='tvm/src/arith/int_set.cc' l='1177'/>
 <use f='tvm/src/arith/int_set.cc' l='1183'/>
-<size>40</size>
+<size>48</size>
 <use f='tvm/src/arith/iter_affine_map.cc' l='179' c='_ZN3tvm5arith15IterMapRewriterC1EPNS0_8AnalyzerERKNS_7runtime3MapINS_3tir3VarENS_5RangeEvvEENS0_12IterMapLevelEbPNS4_5ArrayINS4_6StringEvEE'/>
 <use f='tvm/src/arith/iter_affine_map.cc' l='425'/>
 <use f='tvm/src/arith/iter_affine_map.cc' l='1041' c='_ZN3tvm5arith21MatchBoundConstraintsENS_8PrimExprEPNS_7runtime3MapINS_3tir3VarENS_5RangeEvvEEPSt6vectorINS0_14IterConstraintESaISA_EE'/>
@@ -145,16 +147,16 @@
 <use f='tvm/src/arith/iter_affine_map.cc' l='2096' c='_ZN3tvm5arith31InverseAffineIterMapTransformerC1EPNS0_8AnalyzerE'/>
 <use f='tvm/src/arith/iter_affine_map.cc' l='2212'/>
 <use f='tvm/src/arith/iter_affine_map.cc' l='2219' c='_ZN3tvm5arith20InverseAffineIterMapERKNS_7runtime5ArrayINS0_11IterSumExprEvEENS2_INS_8PrimExprEvEE'/>
-<size>40</size>
+<size>48</size>
 <use f='tvm/src/arith/modular_set.cc' l='90' c='_ZN3tvm5arith18ModularSetAnalyzer4ImplC1EPNS0_8AnalyzerE'/>
 <use f='tvm/src/arith/modular_set.cc' l='292'/>
 <use f='tvm/src/arith/modular_set.cc' l='383' c='_ZN3tvm5arith18ModularSetAnalyzerC1EPNS0_8AnalyzerE'/>
-<size>40</size>
-<use f='tvm/src/arith/rewrite_simplify.cc' l='1745' c='_ZN3tvm5arith17RewriteSimplifierC1EPNS0_8AnalyzerE'/>
-<size>40</size>
+<size>48</size>
+<use f='tvm/src/arith/rewrite_simplify.cc' l='1788' c='_ZN3tvm5arith17RewriteSimplifierC1EPNS0_8AnalyzerE'/>
+<size>48</size>
 <use f='tvm/src/arith/solve_linear_equation.cc' l='281' c='_ZN3tvm5arith20SolveLinearEquationsERKNS0_14IntConstraintsE'/>
 <use f='tvm/src/arith/solve_linear_equation.cc' l='425' c='_ZN3tvm5arith20SolveLinearEquationsERKNS0_14IntConstraintsE'/>
-<size>40</size>
+<size>48</size>
 <use f='tvm/src/arith/solve_linear_inequality.cc' l='98'/>
 <use f='tvm/src/arith/solve_linear_inequality.cc' l='102' c='_ZN3tvm5arith13AddInequalityEPSt6vectorINS_8PrimExprESaIS2_EERKS2_PNS0_8AnalyzerE'/>
 <use f='tvm/src/arith/solve_linear_inequality.cc' l='130' c='_ZN3tvm5arith18ClassifyByPolarityERKNS_3tir3VarERKSt6vectorINS_8PrimExprESaIS6_EEPS8_SB_PS5_ISt4pairIlS6_ESaISD_EESG_PNS0_8AnalyzerE'/>
@@ -162,7 +164,7 @@
 <use f='tvm/src/arith/solve_linear_inequality.cc' l='386' c='_ZN3tvm5arith24SolveInequalitiesToRangeERKNS0_14IntConstraintsE'/>
 <use f='tvm/src/arith/solve_linear_inequality.cc' l='422' c='_ZN3tvm5arith24SolveInequalitiesToRangeERKNS0_14IntConstraintsE'/>
 <use f='tvm/src/arith/solve_linear_inequality.cc' l='449' c='_ZN3tvm5arith28SolveInequalitiesDeskewRangeERKNS0_14IntConstraintsE'/>
-<size>40</size>
+<size>48</size>
 <use f='tvm/include/tvm/tir/index_map.h' l='106' c='_ZNK3tvm3tir12IndexMapNode10MapIndicesERKNS_7runtime5ArrayINS_8PrimExprEvEEPNS_5arith8AnalyzerE'/>
 <use f='tvm/include/tvm/tir/index_map.h' l='124' c='_ZNK3tvm3tir12IndexMapNode9MapRangesERKNS_7runtime5ArrayINS_5RangeEvEEPNS_5arith8AnalyzerE'/>
 <use f='tvm/include/tvm/tir/index_map.h' l='137' c='_ZNK3tvm3tir12IndexMapNode8MapShapeERKNS_7runtime5ArrayINS_8PrimExprEvEEPNS_5arith8AnalyzerE'/>
@@ -176,9 +178,9 @@
 <use f='tvm/include/tvm/topi/detail/constant_utils.h' l='133' c='_ZN3tvm4topi6detail10EqualCheckENS_8PrimExprES2_'/>
 <use f='tvm/include/tvm/topi/transform.h' l='484' c='_ZN3tvm4topi11concatenateERKNS_7runtime5ArrayINS_2te6TensorEvEEiNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESD_'/>
 <use f='tvm/src/auto_scheduler/compute_dag.cc' l='256' c='_ZN3tvm14auto_scheduler14AccessAnalyzerC1ERKNS_7runtime5ArrayINS_2te6TensorEvEE'/>
-<size>40</size>
+<size>48</size>
 <use f='tvm/src/auto_scheduler/feature.cc' l='467' c='_ZN3tvm14auto_scheduler13ComputeRegionERKSt6vectorIS1_INS_8PrimExprESaIS2_EESaIS4_EEPNS_5arith8AnalyzerEPS1_IiSaIiEE'/>
-<size>40</size>
+<size>48</size>
 <use f='tvm/src/tir/schedule/analysis.h' l='233' c='_ZN3tvm3tir15IsAffineBindingERKNS0_12BlockRealizeERKNS_7runtime3MapINS0_3VarENS_5RangeEvvEEPNS_5arith8AnalyzerE'/>
 <use f='tvm/src/tir/schedule/analysis.h' l='299' c='_ZN3tvm3tir23CheckLoopStartsWithZeroERKNS0_13ScheduleStateERKNS0_8StmtSRefEPNS_5arith8AnalyzerE'/>
 <use f='tvm/src/tir/schedule/analysis.h' l='589' c='_ZN3tvm3tir15SuggestIndexMapERKNS0_6BufferERKNS_7runtime5ArrayINS_8PrimExprEvEERKNS5_INS0_3ForEvEERKS6_PNS_5arith8AnalyzerE'/>
@@ -187,7 +189,7 @@
 <use f='tvm/src/tir/schedule/analysis.h' l='737' c='_ZN3tvm3tir22SimplifyNonTrivialExprERKNS_8PrimExprEPNS_5arith8AnalyzerE'/>
 <use f='tvm/src/tir/schedule/transform.h' l='216' c='_ZN3tvm3tir27BlockBufferAccessSimplifier8SimplifyERKNS0_4StmtEPNS_5arith8AnalyzerE'/>
 <use f='tvm/src/tir/schedule/transform.h' l='222' c='_ZN3tvm3tir27BlockBufferAccessSimplifierC1EPNS_5arith8AnalyzerE'/>
-<size>40</size>
+<size>48</size>
 <use f='tvm/src/meta_schedule/feature_extractor/per_store_feature.cc' l='61' c='_ZN3tvm3tir5utils14GetBufferShapeERKNS0_6BufferEPNS_5arith8AnalyzerE'/>
 <use f='tvm/src/meta_schedule/feature_extractor/per_store_feature.cc' l='119' c='_ZN3tvm3tir5utils13RelaxAndUnionERKSt6vectorIS2_INS_8PrimExprESaIS3_EESaIS5_EEPlPNS_5arith8AnalyzerE'/>
 <use f='tvm/src/meta_schedule/feature_extractor/per_store_feature.cc' l='726' c='_ZN3tvm3tir6group27Feature10SubFeature9SetStrideERKNS0_8LoopNestEPNS_5arith8AnalyzerE'/>
@@ -198,48 +200,48 @@
 <use f='tvm/src/meta_schedule/feature_extractor/per_store_feature.cc' l='998' c='_ZN3tvm3tir6group27FeatureC1EPKNS0_15BufferStoreNodeERKNS0_8LoopNestElPSt6vectorIlSaIlEEPSt13unordered_mapIPKNS0_7ForNodeESD_IPKNS0_10BufferNodeESB_St10446514'/>
 <use f='tvm/src/meta_schedule/feature_extractor/per_store_feature.cc' l='1144' c='_ZN3tvm3tir6group47FeatureC1ERKNS0_8LoopNestERKNS0_6BufferEPNS_5arith8AnalyzerE'/>
 <use f='tvm/src/meta_schedule/feature_extractor/per_store_feature.cc' l='1341'/>
-<size>40</size>
+<size>48</size>
 <use f='tvm/src/meta_schedule/postproc/rewrite_layout.cc' l='104'/>
-<size>40</size>
+<size>48</size>
 <use f='tvm/src/meta_schedule/postproc/rewrite_parallel_vectorize_unroll.cc' l='189' c='_ZN3tvm3tir23AdjustParallelVectorizeERKNS0_8ScheduleERKNS0_7BlockRVERKNS_7runtime5ArrayINS0_6LoopRVEvEEPNS0_16ParsedAnnotationE'/>
-<size>40</size>
+<size>48</size>
 <use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling_wide_vector.cc' l='80' c='_ZNK3tvm13meta_schedule30MultiLevelTilingWideVectorNode9SplitLoopERKNS_3tir8ScheduleENS2_7BlockRVENS2_6LoopRVEi'/>
-<size>40</size>
+<size>48</size>
 <use f='tvm/src/printer/tvmscript_printer.cc' l='215'/>
-<size>40</size>
+<size>48</size>
 <use f='tvm/include/tvm/topi/nn.h' l='166' c='_ZN3tvm4topi3padERKNS_2te6TensorERKNS_7runtime5ArrayINS_8PrimExprEvEES8_S7_NSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESG_SG_PS9_'/>
-<size>40</size>
+<size>48</size>
 <use f='tvm/include/tvm/topi/nn/pooling.h' l='87' c='_ZN3tvm4topi2nn14pool_grad_implERKNS_2te6TensorES5_RKNS_7runtime5ArrayINS_8PrimExprEvEESB_SB_NS1_8PoolTypeEbmmb'/>
 <use f='tvm/include/tvm/topi/nn/pooling.h' l='561' c='_ZN3tvm4topi2nn12pool_impl_ndERKNS_2te6TensorERKNS_7runtime5ArrayINS_8PrimExprEvEESB_SB_SB_NS1_8PoolTypeEbRKSt6vectorIiSaIiEEb'/>
-<size>40</size>
+<size>48</size>
 <use f='tvm/src/relay/op/tensor/transform.cc' l='737' c='_ZN3tvm5relay13InferNewShapeERKNS_7runtime5ArrayINS_8PrimExprEvEERKNS_5AttrsEb'/>
-<size>40</size>
+<size>48</size>
 <use f='tvm/src/relay/op/type_relations.cc' l='52' c='_ZN3tvm5relay10EqualCheckERKNS_8PrimExprES3_'/>
-<size>40</size>
+<size>48</size>
 <use f='tvm/src/script/ir_builder/tir/ir.cc' l='333' c='_ZN3tvm6script10ir_builder3tir6SerialENS_8PrimExprES3_NS_7runtime8OptionalINS4_3MapINS4_6StringENS4_9ObjectRefEvvEEEE'/>
 <use f='tvm/src/script/ir_builder/tir/ir.cc' l='333' c='_ZN3tvm6script10ir_builder3tir8ParallelENS_8PrimExprES3_NS_7runtime8OptionalINS4_3MapINS4_6StringENS4_9ObjectRefEvvEEEE'/>
 <use f='tvm/src/script/ir_builder/tir/ir.cc' l='333' c='_ZN3tvm6script10ir_builder3tir10VectorizedENS_8PrimExprES3_NS_7runtime8OptionalINS4_3MapINS4_6StringENS4_9ObjectRefEvvEEEE'/>
 <use f='tvm/src/script/ir_builder/tir/ir.cc' l='333' c='_ZN3tvm6script10ir_builder3tir6UnrollENS_8PrimExprES3_NS_7runtime8OptionalINS4_3MapINS4_6StringENS4_9ObjectRefEvvEEEE'/>
 <use f='tvm/src/script/ir_builder/tir/ir.cc' l='358' c='_ZN3tvm6script10ir_builder3tir13ThreadBindingENS_8PrimExprES3_NS_7runtime6StringENS4_8OptionalINS4_3MapIS5_NS4_9ObjectRefEvvEEEE'/>
 <use f='tvm/src/script/ir_builder/tir/ir.cc' l='428' c='_ZN3tvm6script10ir_builder3tir12LaunchThreadENS_3tir3VarENS_8PrimExprE'/>
-<size>40</size>
+<size>48</size>
 <use f='tvm/src/target/llvm/codegen_llvm.h' l='514'/>
-<size>40</size>
+<size>48</size>
 <use f='tvm/src/target/llvm/codegen_cpu.cc' l='563' c='_ZN3tvm7codegen10CodeGenCPU18CreateComputeScopeEPKNS_3tir12AttrStmtNodeE'/>
 <use f='tvm/src/target/llvm/codegen_cpu.cc' l='563' c='_ZN3tvm7codegen10CodeGenCPU18CreateComputeScopeEPKNS_3tir12AttrStmtNodeE'/>
 <use f='tvm/src/target/llvm/codegen_cpu.cc' l='709' c='_ZN3tvm7codegen10CodeGenCPU20CreateParallelLaunchERKNS_3tir4StmtEiNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
 <use f='tvm/src/target/llvm/codegen_cpu.cc' l='765' c='_ZN3tvm7codegen10CodeGenCPU16CreateStaticInitERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKNS_3tir4StmtE'/>
-<size>40</size>
+<size>48</size>
 <use f='tvm/src/target/llvm/codegen_hexagon.cc' l='375' c='_ZN3tvm7codegen14CodeGenHexagon16VectorLookupLoadENS_3tir6BufferENS_7runtime8DataTypeENS4_5ArrayINS_8PrimExprEvEE'/>
-<size>40</size>
+<size>48</size>
 <use f='tvm/src/target/llvm/codegen_llvm.cc' l='223' c='_ZN3tvm7codegen11CodeGenLLVM13InitFuncStateEv'/>
-<size>40</size>
+<size>48</size>
 <use f='tvm/src/target/source/codegen_c.cc' l='689' c='_ZN3tvm7codegen8CodeGenC10VisitExpr_EPKNS_3tir14BufferLoadNodeERSo'/>
-<size>40</size>
+<size>48</size>
 <use f='tvm/src/target/source/codegen_cuda.cc' l='80' c='_ZN3tvm7codegen11CodeGenCUDA15PrintExtraAttrsERKNS_3tir8PrimFuncE'/>
-<size>40</size>
+<size>48</size>
 <use f='tvm/src/target/source/intrin_rule_opencl.cc' l='103' c='_ZN3tvm7codegen6intrinL20DispatchIntelShuffleERKNS_8PrimExprE'/>
-<size>40</size>
+<size>48</size>
 <use f='tvm/src/te/autodiff/ad_simplify.cc' l='134' c='_ZN3tvm2te13IsSumCombinerERKNS_3tir11CommReducerERKNS_7runtime3MapINS1_3VarENS_5RangeEvvEE'/>
 <use f='tvm/src/te/autodiff/ad_simplify.cc' l='154' c='_ZN3tvm2te25CanFactorZeroFromCombinerERKNS_3tir11CommReducerEiRKNS_7runtime3MapINS1_3VarENS_5RangeEvvEE'/>
 <use f='tvm/src/te/autodiff/ad_simplify.cc' l='342'/>
@@ -250,62 +252,62 @@
 <use f='tvm/src/te/autodiff/ad_simplify.cc' l='1049' c='_ZN3tvm2te18TrySimplifyComputeERKNS_8PrimExprES3_RKNS_7runtime5ArrayINS_3tir3VarEvEERKNS4_3MapIS7_NS_5RangeEvvEE'/>
 <use f='tvm/src/te/autodiff/ad_simplify.cc' l='1102' c='_ZN3tvm2te30ReductionAsTensorAccessMutator10VisitExpr_EPKNS_3tir10ReduceNodeE'/>
 <use f='tvm/src/te/autodiff/ad_simplify.cc' l='1152' c='_ZN3tvm2te36RemoveJacobianAndLiftNonzeroCondImplERKNS_8PrimExprERKNS_7runtime5ArrayINS_3tir7IterVarEvEERKNS4_3MapINS6_3VarENS_5RangeEvvEE'/>
-<size>40</size>
+<size>48</size>
 <use f='tvm/src/te/autodiff/jacobian.cc' l='283'/>
 <use f='tvm/src/te/autodiff/jacobian.cc' l='332' c='_ZN3tvm2te8JacobianERKNS0_6TensorES3_'/>
-<size>40</size>
+<size>48</size>
 <use f='tvm/src/te/schedule/message_passing.h' l='50' c='_ZN3tvm2te14PassDownDomainERKNS0_5StageEPSt13unordered_mapINS_3tir7IterVarENS_5RangeESt4hashIS6_ESt8equal_toIS6_ESaISt4pairIKS6_S7_EEEPNS_5arith8AnalyzerEb'/>
 <use f='tvm/src/tir/transforms/arg_binder.h' l='139'/>
 <use f='tvm/src/te/operation/compute_op.cc' l='202' c='_ZNK3tvm2te13ComputeOpNode17PropBoundToInputsERKNS0_9OperationEPNS_5arith8AnalyzerERKSt13unordered_mapIPKNS_3tir7VarNodeENS5_6IntSetESt4hashISC_ESt8eq10941970'/>
-<size>40</size>
+<size>48</size>
 <use f='tvm/src/te/operation/create_primfunc.cc' l='131' c='_ZN3tvm3tir24GenerateBlockFromTensorsERKNS_2te9ComputeOpERKNS_7runtime5ArrayINS1_6TensorEvEENS6_INS_8PrimExprEvEESB_PNS0_14CreateFuncInfoEPNS_5arith8AnalyzerE'/>
 <use f='tvm/src/te/operation/create_primfunc.cc' l='289' c='_ZN3tvm3tir23GenerateStmtFromComputeERKNS_2te9ComputeOpEPNS0_14CreateFuncInfoEPNS_5arith8AnalyzerE'/>
 <use f='tvm/src/te/operation/create_primfunc.cc' l='430' c='_ZN3tvm3tir19RewriteStageToBlockERKNS_2te9OperationEPNS0_14CreateFuncInfoEPNS_7runtime5ArrayINS0_4StmtEvEEPNS_5arith8AnalyzerE'/>
 <use f='tvm/src/te/operation/create_primfunc.cc' l='485' c='_ZN3tvm3tir14CreatePrimFuncERKNS_7runtime5ArrayINS_2te6TensorEvEE'/>
-<size>40</size>
+<size>48</size>
 <use f='tvm/src/te/operation/extern_op.cc' l='107' c='_ZNK3tvm2te12ExternOpNode17PropBoundToInputsERKNS0_9OperationEPNS_5arith8AnalyzerERKSt13unordered_mapIPKNS_3tir7VarNodeENS5_6IntSetESt4hashISC_ESt8equ1920430'/>
-<size>40</size>
+<size>48</size>
 <use f='tvm/src/te/operation/hybrid_op.cc' l='121' c='_ZNK3tvm2te12HybridOpNode17PropBoundToInputsERKNS0_9OperationEPNS_5arith8AnalyzerERKSt13unordered_mapIPKNS_3tir7VarNodeENS5_6IntSetESt4hashISC_ESt8equ6264819'/>
-<size>40</size>
+<size>48</size>
 <use f='tvm/src/te/operation/placeholder_op.cc' l='78' c='_ZNK3tvm2te17PlaceholderOpNode17PropBoundToInputsERKNS0_9OperationEPNS_5arith8AnalyzerERKSt13unordered_mapIPKNS_3tir7VarNodeENS5_6IntSetESt4hashISC_ES253690'/>
-<size>40</size>
+<size>48</size>
 <use f='tvm/src/te/operation/scan_op.cc' l='67' c='_ZN3tvm2te6ScanOpC1ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_NS_7runtime3MapINS8_6StringENS8_9ObjectRefEvvEENS_3tir7IterVarENS8_5ArrayIN10627940'/>
 <use f='tvm/src/te/operation/scan_op.cc' l='161' c='_ZNK3tvm2te10ScanOpNode17PropBoundToInputsERKNS0_9OperationEPNS_5arith8AnalyzerERKSt13unordered_mapIPKNS_3tir7VarNodeENS5_6IntSetESt4hashISC_ESt8equal12372833'/>
 <use f='tvm/src/te/operation/scan_op.cc' l='211' c='_ZNK3tvm2te10ScanOpNode11GatherBoundERKNS0_9OperationERKSt13unordered_mapINS0_6TensorENS0_9TensorDomESt4hashIS6_ESt8equal_toIS6_ESaISt4pairIKS6_S7_EEE8410255'/>
 <use f='tvm/src/te/operation/scan_op.cc' l='238' c='_ZNK3tvm2te10ScanOpNode12BuildRealizeERKNS0_5StageERKSt13unordered_mapINS_3tir7IterVarENS_5RangeESt4hashIS7_ESt8equal_toIS7_ESaISt4pairIKS7_S8_EEERKNS15698446'/>
-<size>40</size>
+<size>48</size>
 <use f='tvm/src/te/operation/tensor_compute_op.cc' l='114' c='_ZNK3tvm2te19TensorComputeOpNode17PropBoundToInputsERKNS0_9OperationEPNS_5arith8AnalyzerERKSt13unordered_mapIPKNS_3tir7VarNodeENS5_6IntSetESt4hashISC_15099893'/>
-<size>40</size>
+<size>48</size>
 <use f='tvm/src/te/operation/tensorize.cc' l='84' c='_ZN3tvm2te20InferTensorizeRegionEPKNS0_13ComputeOpNodeERKNS0_5StageERKSt13unordered_mapINS_3tir7IterVarENS_5RangeESt4hashIS9_ESt8equal_toIS9_ESaISt4pa14645131'/>
 <use f='tvm/src/te/operation/tensorize.cc' l='294'/>
 <use f='tvm/src/te/operation/tensorize.cc' l='326' c='_ZN3tvm2te19VerifyTensorizeBodyEPKNS0_13ComputeOpNodeERKNS0_5StageERKSt13unordered_mapINS_3tir7IterVarENS_8PrimExprESt4hashIS9_ESt8equal_toIS9_ESaISt413878024'/>
-<size>40</size>
+<size>48</size>
 <use f='tvm/src/te/schedule/bound.cc' l='182' c='_ZN3tvm2te14InferRootBoundERKNS0_5StageERKNS0_12GraphContextEPSt13unordered_mapINS_3tir7IterVarENS_5RangeESt4hashIS9_ESt8equal_toIS9_ESaISt4pairIKS9_SA_EEE'/>
 <use f='tvm/src/te/schedule/bound.cc' l='211' c='_ZN3tvm2te10InferBoundERKNS0_8ScheduleE'/>
-<size>40</size>
+<size>48</size>
 <use f='tvm/src/te/schedule/message_passing.cc' l='35' c='_ZN3tvm2te6UpdateEPSt13unordered_mapINS_3tir7IterVarENS_5RangeESt4hashIS3_ESt8equal_toIS3_ESaISt4pairIKS3_S4_EEERSA_S4_PNS_5arith8AnalyzerE'/>
 <use f='tvm/src/te/schedule/message_passing.cc' l='105' c='_ZN3tvm2te14PassDownDomainERKNS0_5StageEPSt13unordered_mapINS_3tir7IterVarENS_5RangeESt4hashIS6_ESt8equal_toIS6_ESaISt4pairIKS6_S7_EEEPNS_5arith8AnalyzerEb'/>
 <use f='tvm/src/te/schedule/message_passing.cc' l='389' c='_ZN3tvm2te12PassUpDomainEPKNS0_8FuseNodeERKSt13unordered_mapINS_3tir7IterVarENS_5RangeESt4hashIS6_ESt8equal_toIS6_ESaISt4pairIKS6_S7_EEERKNS_5arith6IntSetEPSK_SN_'/>
 <use f='tvm/src/te/schedule/message_passing.cc' l='620' c='_ZN3tvm2te16PassUpBoundCheckERKNS0_5StageERKNS_7runtime3MapINS_3tir7IterVarENS_5RangeEvvEEPSt13unordered_mapIS7_bSt4hashIS7_ESt8equal_toIS7_ESaISt4pai12937513'/>
 <use f='tvm/src/te/schedule/message_passing.cc' l='674' c='_ZN3tvm2te11IsRangeSameENS_5RangeES1_'/>
 <use f='tvm/src/te/schedule/message_passing.cc' l='685' c='_ZN3tvm2te14MakeBoundCheckERKNS0_5StageERKNS_7runtime3MapINS_3tir7IterVarENS_5RangeEvvEERKSt13unordered_mapIS7_NS_8PrimExprESt4hashIS7_ESt8equal_toIS75759837'/>
-<size>40</size>
+<size>48</size>
 <use f='tvm/src/te/schedule/schedule_dataflow_rewrite.cc' l='202' c='_ZN3tvm2te18PrepareAxisMappingENS0_5StageEPT_PSt13unordered_setINS_3tir7IterVarESt4hashIS6_ESt8equal_toIS6_ESaIS6_EEPNS_7runtime5ArrayIS6_vEEPSt13unor13054347'/>
 <use f='tvm/src/te/schedule/schedule_dataflow_rewrite.cc' l='785' c='_ZN3tvm2te8Schedule7rfactorERKNS0_6TensorERKNS_3tir7IterVarEi'/>
-<size>40</size>
+<size>48</size>
 <use f='tvm/src/te/schedule/schedule_ops.cc' l='357'/>
-<size>40</size>
+<size>48</size>
 <use f='tvm/src/tir/analysis/block_access_region_detector.cc' l='80'/>
-<size>40</size>
+<size>48</size>
 <use f='tvm/src/tir/ir/buffer.cc' l='43' c='_ZN3tvm3tir13SimplifyArrayEPNS_5arith8AnalyzerENS_7runtime5ArrayINS_8PrimExprEvEE'/>
 <use f='tvm/src/tir/ir/buffer.cc' l='85' c='_ZN3tvm3tir16MergeMulModInnerEPNS_5arith8AnalyzerERKNS_8PrimExprES6_S6_'/>
 <use f='tvm/src/tir/ir/buffer.cc' l='182' c='_ZN3tvm3tir11MergeMulModEPNS_5arith8AnalyzerERKNS_8PrimExprE'/>
 <use f='tvm/src/tir/ir/buffer.cc' l='286' c='_ZNK3tvm3tir10BufferNode10ElemOffsetENS_7runtime5ArrayINS_8PrimExprEvEE'/>
 <use f='tvm/src/tir/ir/buffer.cc' l='462' c='_ZNK3tvm3tir6Buffer9MakeSliceENS_7runtime5ArrayINS_8PrimExprEvEES5_'/>
-<size>40</size>
+<size>48</size>
 <use f='tvm/src/tir/ir/data_layout.cc' l='296' c='_ZN3tvm3tir14TransformIndexERKNS_7runtime5ArrayINS_8PrimExprEvEERKNS2_INS0_7IterVarEvEES6_'/>
 <use f='tvm/src/tir/ir/data_layout.cc' l='328' c='_ZN3tvm3tir14TransformShapeERKNS_7runtime5ArrayINS_8PrimExprEvEERKNS2_INS0_7IterVarEvEESA_S6_'/>
-<size>40</size>
+<size>48</size>
 <use f='tvm/src/tir/ir/index_map.cc' l='89' c='_ZNK3tvm3tir8IndexMap20NonSurjectiveInverseENS_7runtime5ArrayINS_5RangeEvEE'/>
 <use f='tvm/src/tir/ir/index_map.cc' l='122' c='_ZNK3tvm3tir8IndexMap20NonSurjectiveInverseENS_7runtime5ArrayINS_5RangeEvEE'/>
 <use f='tvm/src/tir/ir/index_map.cc' l='136' c='_ZNK3tvm3tir8IndexMap7InverseENS_7runtime5ArrayINS_5RangeEvEE'/>
@@ -314,9 +316,9 @@
 <use f='tvm/src/tir/ir/index_map.cc' l='164' c='_ZNK3tvm3tir12IndexMapNode9MapRangesERKNS_7runtime5ArrayINS_5RangeEvEEPNS_5arith8AnalyzerE'/>
 <use f='tvm/src/tir/ir/index_map.cc' l='172' c='_ZNK3tvm3tir12IndexMapNode9MapRangesERKNS_7runtime5ArrayINS_5RangeEvEEPNS_5arith8AnalyzerE'/>
 <use f='tvm/src/tir/ir/index_map.cc' l='218' c='_ZNK3tvm3tir12IndexMapNode8MapShapeERKNS_7runtime5ArrayINS_8PrimExprEvEEPNS_5arith8AnalyzerE'/>
-<size>40</size>
+<size>48</size>
 <use f='tvm/src/tir/ir/stmt.cc' l='866' c='_ZN3tvm3tir17MatchBufferRegionC1ENS0_6BufferENS0_12BufferRegionE'/>
-<size>40</size>
+<size>48</size>
 <use f='tvm/src/tir/schedule/ir_comparator.h' l='106'/>
 <use f='tvm/src/tir/schedule/analysis/analysis.cc' l='575' c='_ZN3tvm3tir15IsAffineBindingERKNS0_12BlockRealizeERKNS_7runtime3MapINS0_3VarENS_5RangeEvvEEPNS_5arith8AnalyzerE'/>
 <use f='tvm/src/tir/schedule/analysis/analysis.cc' l='641' c='_ZN3tvm3tir25CheckPartialAffineBindingERKNS0_13ScheduleStateENS0_5BlockERKNS_7runtime8OptionalINS0_8StmtSRefEEE'/>
@@ -329,17 +331,17 @@
 <use f='tvm/src/tir/schedule/analysis/analysis.cc' l='2051'/>
 <use f='tvm/src/tir/schedule/analysis/analysis.cc' l='2063' c='_ZN3tvm3tir28CheckAutoTensorizeApplicableERKNS0_13ScheduleStateERKNS0_8StmtSRefERKNS0_8PrimFuncEPNS0_23AutoTensorizeComparatorE'/>
 <use f='tvm/src/tir/schedule/analysis/analysis.cc' l='2082' c='_ZN3tvm3tir27GetAutoTensorizeMappingInfoERKNS0_13ScheduleStateERKNS0_8StmtSRefERKNS0_8PrimFuncE'/>
-<size>40</size>
+<size>48</size>
 <use f='tvm/src/tir/schedule/analysis/layout.cc' l='79' c='_ZN3tvm3tir18SplitExprCollector7CollectERKNS_8PrimExprERKNS_7runtime3MapINS0_3VarENS_5RangeEvvEES4_NS_5arith12IterMapLevelEPNSC_8AnalyzerE'/>
 <use f='tvm/src/tir/schedule/analysis/layout.cc' l='129' c='_ZN3tvm3tir15SuggestIndexMapERKNS0_6BufferERKNS_7runtime5ArrayINS_8PrimExprEvEERKNS5_INS0_3ForEvEERKS6_PNS_5arith8AnalyzerE'/>
 <use f='tvm/src/tir/schedule/analysis/layout.cc' l='244'/>
-<size>40</size>
+<size>48</size>
 <use f='tvm/src/tir/schedule/analysis/reducer.cc' l='502' c='_ZN3tvm3tir41GetInitValuesAndUpdatesFromReductionBlockERKNS_7runtime8OptionalINS0_13ScheduleStateEEENS0_5BlockE'/>
-<size>40</size>
+<size>48</size>
 <use f='tvm/src/tir/schedule/concrete_schedule.h' l='48'/>
 <use f='tvm/src/tir/schedule/concrete_schedule.cc' l='32' c='_ZN3tvm3tir8Schedule8ConcreteENS_8IRModuleEliNS0_24ScheduleErrorRenderLevelE'/>
 <use f='tvm/src/tir/schedule/concrete_schedule.cc' l='200' c='_ZN3tvm3tir20ConcreteScheduleNode4CopyEv'/>
-<size>40</size>
+<size>48</size>
 <use f='tvm/src/tir/schedule/primitive/blockize_tensorize.cc' l='152' c='_ZN3tvm3tir14SubspaceDivideERKNS0_12BlockRealizeERKNS0_8StmtSRefES6_PSt6vectorIPKNS0_7ForNodeESaISA_EEPNS_5arith8AnalyzerE'/>
 <use f='tvm/src/tir/schedule/primitive/blockize_tensorize.cc' l='350' c='_ZN3tvm3tir10SubstituteERKNS0_4StmtERKNS_7runtime3MapINS0_3VarENS_8PrimExprEvvEEPNS5_INS0_5BlockESB_vvEEPNS_5arith8AnalyzerE'/>
 <use f='tvm/src/tir/schedule/primitive/blockize_tensorize.cc' l='353' c='_ZZN3tvm3tir10SubstituteERKNS0_4StmtERKNS_7runtime3MapINS0_3VarENS_8PrimExprEvvEEPNS5_INS0_5BlockESB_vvEEPNS_5arith8AnalyzerEEN8ReplacerC1ESA_SD_SG_'/>
@@ -347,11 +349,11 @@
 <use f='tvm/src/tir/schedule/primitive/blockize_tensorize.cc' l='428' c='_ZN3tvm3tir12BlockizeImplERKNS0_13ScheduleStateERKNS0_8StmtSRefEPNS_7runtime3MapINS0_5BlockES9_vvEEPNS_5arith8AnalyzerE'/>
 <use f='tvm/src/tir/schedule/primitive/blockize_tensorize.cc' l='496' c='_ZN3tvm3tir8BlockizeENS0_13ScheduleStateERKNS0_8StmtSRefE'/>
 <use f='tvm/src/tir/schedule/primitive/blockize_tensorize.cc' l='516' c='_ZN3tvm3tir9TensorizeENS0_13ScheduleStateERKNS0_8StmtSRefERKNS0_12TensorIntrinE'/>
-<size>40</size>
+<size>48</size>
 <use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='284' c='_ZN3tvm3tir19CalculateAffineFlagERKNS0_13ScheduleStateERKNS0_8StmtSRefE'/>
 <use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='351' c='_ZN3tvm3tir17RelaxBufferRegionENS0_13ScheduleStateERKNS0_12BufferRegionERKNS0_8StmtSRefES7_S7_'/>
 <use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='1149' c='_ZN3tvm3tir7ReIndexENS0_13ScheduleStateERKNS0_8StmtSRefEiNS0_15BufferIndexTypeE'/>
-<size>40</size>
+<size>48</size>
 <use f='tvm/src/tir/schedule/primitive/compute_at.cc' l='82' c='_ZN3tvm3tir19NotInSameScopeError22CheckAndBindLoopDomainERKNS0_13ScheduleStateERKNS0_8StmtSRefES7_S7_PNS_5arith8AnalyzerE'/>
 <use f='tvm/src/tir/schedule/primitive/compute_at.cc' l='201' c='_ZN3tvm3tir18BlockVarDomainInfo8SimplifyEPNS_5arith8AnalyzerE'/>
 <use f='tvm/src/tir/schedule/primitive/compute_at.cc' l='251' c='_ZN3tvm3tir18ScopeReconstructor11MakeNewLoopEiSt6vectorINS0_18BlockVarDomainInfoESaIS3_EEPNS_5arith8AnalyzerEb'/>
@@ -363,85 +365,85 @@
 <use f='tvm/src/tir/schedule/primitive/compute_at.cc' l='657' c='_ZN3tvm3tir16ReverseComputeAtENS0_13ScheduleStateERKNS0_8StmtSRefES4_bi'/>
 <use f='tvm/src/tir/schedule/primitive/compute_at.cc' l='664' c='_ZN3tvm3tir12CanComputeAtERKNS0_13ScheduleStateERKNS0_8StmtSRefES6_b'/>
 <use f='tvm/src/tir/schedule/primitive/compute_at.cc' l='676' c='_ZN3tvm3tir19CanReverseComputeAtERKNS0_13ScheduleStateERKNS0_8StmtSRefES6_b'/>
-<size>40</size>
+<size>48</size>
 <use f='tvm/src/tir/schedule/primitive/compute_inline.cc' l='751'/>
-<size>40</size>
+<size>48</size>
 <use f='tvm/src/tir/schedule/primitive/decompose_padding.cc' l='70' c='_ZN3tvm3tir19PaddingInfoAnalyzer22CheckAndGetPaddingInfoENS_8IRModuleEPKNS0_16BlockRealizeNodeERKNS_7runtime3MapINS0_3VarENS_5RangeEvvEEPNS_5arith8AnalyzerE'/>
 <use f='tvm/src/tir/schedule/primitive/decompose_padding.cc' l='79' c='_ZN3tvm3tir19PaddingInfoAnalyzerC1EPNS_5arith8AnalyzerE'/>
 <use f='tvm/src/tir/schedule/primitive/decompose_padding.cc' l='187'/>
 <use f='tvm/src/tir/schedule/primitive/decompose_padding.cc' l='195' c='_ZN3tvm3tirL16CreateConstBlockEPKNS0_16BlockRealizeNodeERKNS0_16PaddingBlockInfoERKNS_7runtime5ArrayINS0_3ForEvEERKNS0_4StmtEPNS_5arith8AnalyzerE'/>
 <use f='tvm/src/tir/schedule/primitive/decompose_padding.cc' l='264' c='_ZN3tvm3tirL18CreateInBoundBlockEPKNS0_16BlockRealizeNodeERKNS0_16PaddingBlockInfoERKNS_7runtime5ArrayINS0_3ForEvEERKNS0_4StmtEPNS_5arith8AnalyzerE'/>
 <use f='tvm/src/tir/schedule/primitive/decompose_padding.cc' l='420' c='_ZN3tvm3tir20DecomposePaddingImplENS0_13ScheduleStateERKNS0_8StmtSRefES4_b'/>
-<size>40</size>
+<size>48</size>
 <use f='tvm/src/tir/schedule/primitive/layout_transformation.cc' l='678' c='_ZN3tvm3tir23TransformLayoutRewriter7RewriteERKNS0_5BlockERKNS0_6BufferES7_RKNS0_8IndexMapESA_RKNS_8PrimExprERKNS_7runtime8OptionalIS8_EE'/>
 <use f='tvm/src/tir/schedule/primitive/layout_transformation.cc' l='692' c='_ZN3tvm3tir23TransformLayoutRewriterC1ERKNS0_6BufferES4_RKNS0_8IndexMapERKSt7variantIJNS0_22TransformLayoutPlanner12ProloguePlanENS9_15ReplacementPlan13586267'/>
 <use f='tvm/src/tir/schedule/primitive/layout_transformation.cc' l='1156' c='_ZN3tvm3tir20TransformBlockLayoutENS0_13ScheduleStateERKNS0_8StmtSRefERKNS0_8IndexMapE'/>
-<size>40</size>
+<size>48</size>
 <use f='tvm/src/tir/schedule/primitive/loop_transformation.cc' l='397' c='_ZN3tvm3tir5SplitENS0_13ScheduleStateERKNS0_8StmtSRefERKNS_7runtime5ArrayINS_8PrimExprEvEEb'/>
 <use f='tvm/src/tir/schedule/primitive/loop_transformation.cc' l='463' c='_ZN3tvm3tir4FuseENS0_13ScheduleStateERKNS_7runtime5ArrayINS0_8StmtSRefEvEEb'/>
-<size>40</size>
+<size>48</size>
 <use f='tvm/src/tir/schedule/primitive/pad_einsum.cc' l='225' c='_ZN3tvm3tir17PadEinsumRewriterC1ESt13unordered_mapIPKNS0_9BlockNodeENS_8PrimExprESt4hashIS5_ESt8equal_toIS5_ESaISt4pairIKS5_S6_EEENS_7runtime3MapINS0_1339822'/>
 <use f='tvm/src/tir/schedule/primitive/pad_einsum.cc' l='281'/>
 <use f='tvm/src/tir/schedule/primitive/pad_einsum.cc' l='311' c='_ZN3tvm3tir9PadEinsumENS0_13ScheduleStateERKNS0_8StmtSRefERKNS_7runtime5ArrayINS_7IntegerEvEE'/>
-<size>40</size>
+<size>48</size>
 <use f='tvm/src/tir/schedule/state.cc' l='43' c='_ZN3tvm3tir23AnalyzeRegionUpperBoundERKNS0_12BufferRegionERKNS_8PrimExprERKNS0_8StmtSRefES9_PNS_5arith8AnalyzerE'/>
 <use f='tvm/src/tir/schedule/state.cc' l='68' c='_ZN3tvm3tir23AnalyzeRegionLowerBoundERKNS0_12BufferRegionERKNS_8PrimExprERKNS0_8StmtSRefES9_PNS_5arith8AnalyzerE'/>
 <use f='tvm/src/tir/schedule/state.cc' l='93' c='_ZN3tvm3tir22ProducerCoversConsumerERKNS_7runtime5ArrayINS_8PrimExprEvEERKNS2_INS_5arith6IntSetEvEESB_PNS7_8AnalyzerE'/>
 <use f='tvm/src/tir/schedule/state.cc' l='398'/>
-<size>40</size>
+<size>48</size>
 <use f='tvm/src/tir/schedule/traced_schedule.cc' l='30' c='_ZN3tvm3tir8Schedule6TracedENS_8IRModuleEliNS0_24ScheduleErrorRenderLevelE'/>
 <use f='tvm/src/tir/schedule/traced_schedule.cc' l='47' c='_ZN3tvm3tir18TracedScheduleNode4CopyEv'/>
-<size>40</size>
+<size>48</size>
 <use f='tvm/src/tir/schedule/transform.cc' l='309' c='_ZN3tvm3tir20TileWithTensorIntrinERKNS0_8ScheduleERKNS0_7BlockRVERKNS_7runtime6StringEb'/>
-<size>40</size>
+<size>48</size>
 <use f='tvm/src/tir/transforms/arg_binder.cc' l='36' c='_ZN3tvm3tir15BinderAddAssertEPNS_5arith8AnalyzerENS_8PrimExprERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEPSt6vectorINS0_4StmtESaISE_EE'/>
-<size>40</size>
+<size>48</size>
 <use f='tvm/src/tir/transforms/bound_checker.cc' l='241'/>
-<size>40</size>
+<size>48</size>
 <use f='tvm/src/tir/transforms/common_subexpr_elim_tools.cc' l='743' c='_ZN3tvm3tir13NormalizeTermERKNS_8PrimExprEb'/>
-<size>40</size>
+<size>48</size>
 <use f='tvm/src/tir/transforms/compact_buffer_region.cc' l='49' c='_ZN3tvm3tir41SimplifyAndNarrowBufferRegionFromNDIntSetERKSt6vectorINS_5arith6IntSetESaIS3_EERKNS_7runtime5ArrayINS_8PrimExprEvEEPNS2_8AnalyzerERKS1_IP2686196'/>
 <use f='tvm/src/tir/transforms/compact_buffer_region.cc' l='85' c='_ZN3tvm3tir12NDIntSetEvalENS_7runtime5ArrayINS_5RangeEvEENS_8PrimExprERKSt13unordered_mapIPKNS0_7VarNodeENS_5arith6IntSetESt4hashIS9_ESt8equal_toIS9_E14688976'/>
 <use f='tvm/src/tir/transforms/compact_buffer_region.cc' l='356'/>
-<size>40</size>
+<size>48</size>
 <use f='tvm/src/tir/transforms/hoist_expression.cc' l='428' c='_ZN3tvm3tir17ExpressionHoister5HoistENS0_4StmtENS0_21HoistExpressionConfigE'/>
 <use f='tvm/src/tir/transforms/hoist_expression.cc' l='441' c='_ZN3tvm3tir17ExpressionHoisterC1ESt6vectorINS0_18HoistInfoCollector9HoistInfoESaIS4_EENS0_21HoistExpressionConfigEPNS_5arith8AnalyzerE'/>
-<size>40</size>
+<size>48</size>
 <use f='tvm/src/tir/transforms/inject_copy_intrin.cc' l='200'/>
-<size>40</size>
+<size>48</size>
 <use f='tvm/src/tir/transforms/inject_rolling_buffer.cc' l='265' c='_ZN3tvm3tir21RollingBufferInjector10VisitStmt_EPKNS0_15BufferStoreNodeE'/>
-<size>40</size>
+<size>48</size>
 <use f='tvm/src/tir/transforms/inject_software_pipeline.cc' l='582' c='_ZN3tvm3tir17software_pipeline16PipelineRewriter18PopulateWaitCountsERKSt6vectorINS2_18RewrittenBlockInfoESaIS4_EEPNS_5arith8AnalyzerERKSt13unordered_10437664'/>
 <use f='tvm/src/tir/transforms/inject_software_pipeline.cc' l='712' c='_ZNK3tvm3tir17software_pipeline16PipelineRewriter30CompletePipelineLoopStatementsERKSt6vectorINS2_18RewrittenBlockInfoESaIS4_EERKSt3mapIiNS2_15AsyncSt4088785'/>
 <use f='tvm/src/tir/transforms/inject_software_pipeline.cc' l='802' c='_ZN3tvm3tir17software_pipeline16PipelineRewriter8EmitImplENS_8PrimExprES3_b'/>
 <use f='tvm/src/tir/transforms/inject_software_pipeline.cc' l='933'/>
-<size>40</size>
+<size>48</size>
 <use f='tvm/src/tir/transforms/inject_virtual_thread.cc' l='191' c='_ZN3tvm3tir10VTInjectorC1EPNS_5arith8AnalyzerENS0_3VarEiRKSt13unordered_setIPKNS0_7VarNodeESt4hashIS9_ESt8equal_toIS9_ESaIS9_EEb'/>
 <use f='tvm/src/tir/transforms/inject_virtual_thread.cc' l='541' c='_ZN3tvm3tir9transform19InjectVirtualThreadEv'/>
-<size>40</size>
+<size>48</size>
 <use f='tvm/src/tir/transforms/ir_utils.cc' l='285' c='_ZN3tvm3tir14ConvertIndicesERKNS0_17MatchBufferRegionERKNS_7runtime5ArrayINS_8PrimExprEvEE'/>
 <use f='tvm/src/tir/transforms/ir_utils.cc' l='307' c='_ZN3tvm3tir13ConvertRegionERKNS0_17MatchBufferRegionERKNS_7runtime5ArrayINS_5RangeEvEE'/>
 <use f='tvm/src/tir/transforms/ir_utils.cc' l='333' c='_ZN3tvm3tir24ConditionalBoundsContext25GetVarBoundsFromConditionEv'/>
-<size>40</size>
+<size>48</size>
 <use f='tvm/src/tir/transforms/loop_partition.cc' l='200'/>
 <use f='tvm/src/tir/transforms/loop_partition.cc' l='453'/>
-<size>40</size>
+<size>48</size>
 <use f='tvm/src/tir/transforms/lower_async_dma.cc' l='153' c='_ZN3tvm3tir15AsyncDMALowerer10VisitStmt_EPKNS0_12AttrStmtNodeE'/>
 <use f='tvm/src/tir/transforms/lower_async_dma.cc' l='160' c='_ZN3tvm3tir15AsyncDMALowerer10VisitStmt_EPKNS0_12AttrStmtNodeE'/>
-<size>40</size>
+<size>48</size>
 <use f='tvm/src/tir/transforms/lower_cross_thread_reduction.cc' l='89' c='_ZN3tvm3tir16IsReductionBlockERKNS0_12BlockRealizeERKNS_7runtime3MapINS0_3VarENS_5RangeEvvEERKNS0_5BlockEPNS_5arith8AnalyzerE'/>
 <use f='tvm/src/tir/transforms/lower_cross_thread_reduction.cc' l='658'/>
-<size>40</size>
+<size>48</size>
 <use f='tvm/src/tir/transforms/lower_device_storage_access_info.cc' l='107'/>
-<size>40</size>
+<size>48</size>
 <use f='tvm/src/tir/transforms/lower_intrin.cc' l='44' c='_ZN3tvm3tir14IntrinInjecterC1EPNS_5arith8AnalyzerENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESA_'/>
 <use f='tvm/src/tir/transforms/lower_intrin.cc' l='291' c='_ZN3tvm3tir15LowerIntrinStmtENS0_4StmtERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
 <use f='tvm/src/tir/transforms/lower_intrin.cc' l='302' c='_ZN3tvm3tir9transform11LowerIntrinEv'/>
-<size>40</size>
+<size>48</size>
 <use f='tvm/src/tir/transforms/lower_match_buffer.cc' l='262'/>
-<size>40</size>
+<size>48</size>
 <use f='tvm/src/tir/transforms/lower_thread_allreduce.cc' l='741'/>
-<size>40</size>
+<size>48</size>
 <use f='tvm/src/tir/transforms/lower_warp_memory.cc' l='106' c='_ZN3tvm3tir20WarpStoreCoeffFinderC1EPKNS0_7VarNodeENS0_3VarEPNS_5arith8AnalyzerE'/>
 <use f='tvm/src/tir/transforms/lower_warp_memory.cc' l='185'/>
 <use f='tvm/src/tir/transforms/lower_warp_memory.cc' l='236' c='_ZN3tvm3tir18WarpAccessRewriterC1EiPNS_5arith8AnalyzerE'/>
@@ -449,31 +451,31 @@
 <use f='tvm/src/tir/transforms/lower_warp_memory.cc' l='404' c='_ZN3tvm3tir16BindVarBoundInfoC1EPNS_5arith8AnalyzerE'/>
 <use f='tvm/src/tir/transforms/lower_warp_memory.cc' l='427'/>
 <use f='tvm/src/tir/transforms/lower_warp_memory.cc' l='460'/>
-<size>40</size>
+<size>48</size>
 <use f='tvm/src/tir/transforms/narrow_datatype.cc' l='175'/>
-<size>40</size>
+<size>48</size>
 <use f='tvm/src/tir/transforms/remove_no_op.cc' l='54' c='_ZN3tvm3tir11NoOpRemover10VisitStmt_EPKNS0_12AttrStmtNodeE'/>
 <use f='tvm/src/tir/transforms/remove_no_op.cc' l='175'/>
-<size>40</size>
+<size>48</size>
 <use f='tvm/src/tir/transforms/renormalize_split_pattern.cc' l='53' c='_ZN3tvm3tir24SplitPatternReNormalizerC1EPNS_5arith8AnalyzerE'/>
 <use f='tvm/src/tir/transforms/renormalize_split_pattern.cc' l='201' c='_ZN3tvm3tir9transform23RenormalizeSplitPatternEv'/>
-<size>40</size>
-<use f='tvm/src/tir/transforms/simplify.cc' l='41' c='_ZN3tvm5arith14StmtSimplifierC1EPNS0_8AnalyzerE'/>
-<use f='tvm/src/tir/transforms/simplify.cc' l='163' c='_ZN3tvm3tir9transform8SimplifyEv'/>
-<size>40</size>
+<size>48</size>
+<use f='tvm/src/tir/transforms/simplify.cc' l='69' c='_ZN3tvm5arith14StmtSimplifierC1EPNS0_8AnalyzerE'/>
+<use f='tvm/src/tir/transforms/simplify.cc' l='190' c='_ZN3tvm3tir9transform8SimplifyEv'/>
+<size>48</size>
 <use f='tvm/src/tir/transforms/storage_flatten.cc' l='1637' c='_ZN3tvm3tir16StorageFlattener14FlattenExtentsERKT_'/>
-<size>40</size>
+<size>48</size>
 <use f='tvm/src/tir/transforms/storage_rewrite.cc' l='1039'/>
 <use f='tvm/src/tir/transforms/storage_rewrite.cc' l='1100' c='_ZNK3tvm3tir13BufferVarInfo19get_preferred_dtypeEv'/>
 <use f='tvm/src/tir/transforms/storage_rewrite.cc' l='1332'/>
-<size>40</size>
+<size>48</size>
 <use f='tvm/src/tir/transforms/unify_thread_binding.cc' l='172'/>
-<size>40</size>
+<size>48</size>
 <use f='tvm/src/tir/transforms/unroll_loop.cc' l='213'/>
-<size>40</size>
+<size>48</size>
 <use f='tvm/src/tir/transforms/vectorize_loop.cc' l='151'/>
 <use f='tvm/src/tir/transforms/vectorize_loop.cc' l='581'/>
-<size>40</size>
+<size>48</size>
 <use f='tvm/include/tvm/topi/nn/bnn.h' l='58' c='_ZN3tvm4topi2nn13binarize_packERKNS_2te6TensorEiNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESB_'/>
 <use f='tvm/include/tvm/topi/nn/dilate.h' l='77' c='_ZN3tvm4topi2nn6dilateERKNS_2te6TensorENS_7runtime5ArrayINS_8PrimExprEvEEdNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESF_'/>
-<size>40</size>
+<size>48</size>

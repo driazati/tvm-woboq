@@ -1,23 +1,15 @@
-<dec f='tvm/src/arith/rewrite_simplify.h' l='99' type='tvm::arith::RewriteSimplifier::Impl::CompareResult tvm::arith::RewriteSimplifier::Impl::TryCompare(const tvm::PrimExpr &amp; x, int64_t val)'/>
-<use f='tvm/src/arith/rewrite_simplify.h' l='127' u='c' c='_ZN3tvm5arith17RewriteSimplifier4Impl13CanProveEqualERKNS_8PrimExprEl'/>
+<dec f='tvm/src/arith/rewrite_simplify.h' l='110' type='tvm::arith::CompareResult tvm::arith::RewriteSimplifier::Impl::TryCompare(const tvm::PrimExpr &amp; x, int64_t val)'/>
+<use f='tvm/src/arith/rewrite_simplify.h' l='149' u='c' c='_ZN3tvm5arith17RewriteSimplifier4Impl13CanProveEqualERKNS_8PrimExprEl'/>
 <use f='tvm/src/arith/canonical_simplify.cc' l='894' u='c' c='_ZN3tvm5arith19CanonicalSimplifier4Impl10VisitExpr_EPKNS_3tir7DivNodeE'/>
 <use f='tvm/src/arith/canonical_simplify.cc' l='948' u='c' c='_ZN3tvm5arith19CanonicalSimplifier4Impl10VisitExpr_EPKNS_3tir12FloorDivNodeE'/>
-<use f='tvm/src/arith/canonical_simplify.cc' l='1055' u='c' c='_ZN3tvm5arith19CanonicalSimplifier4Impl10VisitExpr_EPKNS_3tir7ModNodeE'/>
-<use f='tvm/src/arith/canonical_simplify.cc' l='1116' u='c' c='_ZN3tvm5arith19CanonicalSimplifier4Impl10VisitExpr_EPKNS_3tir12FloorModNodeE'/>
-<doc f='tvm/src/arith/rewrite_simplify.h' l='93'>/*!
+<use f='tvm/src/arith/canonical_simplify.cc' l='1056' u='c' c='_ZN3tvm5arith19CanonicalSimplifier4Impl10VisitExpr_EPKNS_3tir7ModNodeE'/>
+<use f='tvm/src/arith/canonical_simplify.cc' l='1117' u='c' c='_ZN3tvm5arith19CanonicalSimplifier4Impl10VisitExpr_EPKNS_3tir12FloorModNodeE'/>
+<doc f='tvm/src/arith/rewrite_simplify.h' l='104'>/*!
    * \brief try to compare x against val.
    * \param x The expression to be evaluated.
    * \param val The constant value.
    * \return comparison result.
    */</doc>
-<def f='tvm/src/arith/rewrite_simplify.cc' l='75' ll='110' type='RewriteSimplifier::Impl::CompareResult tvm::arith::RewriteSimplifier::Impl::TryCompare(const tvm::PrimExpr &amp; x, int64_t val)'/>
-<use f='tvm/src/arith/rewrite_simplify.cc' l='1336' u='c' c='_ZN3tvm5arith17RewriteSimplifier4Impl10VisitExpr_EPKNS_3tir6EQNodeE'/>
-<use f='tvm/src/arith/rewrite_simplify.cc' l='1385' u='c' c='_ZN3tvm5arith17RewriteSimplifier4Impl10VisitExpr_EPKNS_3tir6LTNodeE'/>
-<doc f='tvm/src/arith/rewrite_simplify.cc' l='67'>// NOTE for developers:
-//
-// We mainly focus on index expression simplification.
-// Besides the RewriteSimplifier, some cases can be better
-// handled by CanonicalSimplifier.
-//
-
-// try to prove x equals val</doc>
+<use f='tvm/src/arith/rewrite_simplify.cc' l='95' u='c' c='_ZN3tvm5arith17RewriteSimplifier4Impl29TryCompareUsingConstIntBoundsERKNS_8PrimExprES3_'/>
+<def f='tvm/src/arith/rewrite_simplify.cc' l='104' ll='138' type='tvm::arith::CompareResult tvm::arith::RewriteSimplifier::Impl::TryCompare(const tvm::PrimExpr &amp; x, int64_t val)'/>
+<doc f='tvm/src/arith/rewrite_simplify.cc' l='103'>// try to prove x equals val</doc>
