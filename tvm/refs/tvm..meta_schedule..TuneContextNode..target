@@ -1,7 +1,7 @@
-<dec f='tvm/include/tvm/meta_schedule/tune_context.h' l='54' type='Optional&lt;tvm::Target&gt;'/>
-<use f='tvm/include/tvm/meta_schedule/tune_context.h' l='85' u='a' c='_ZN3tvm13meta_schedule15TuneContextNode10VisitAttrsEPNS_11AttrVisitorE'/>
+<dec f='tvm/include/tvm/meta_schedule/tune_context.h' l='53' type='Optional&lt;tvm::Target&gt;'/>
+<use f='tvm/include/tvm/meta_schedule/tune_context.h' l='69' u='a' c='_ZN3tvm13meta_schedule15TuneContextNode10VisitAttrsEPNS_11AttrVisitorE'/>
 <offset>192</offset>
-<doc f='tvm/include/tvm/meta_schedule/tune_context.h' l='53'>/*! \brief The target to be tuned for. */</doc>
+<doc f='tvm/include/tvm/meta_schedule/tune_context.h' l='52'>/*! \brief The target to be tuned for. */</doc>
 <use f='tvm/src/meta_schedule/feature_extractor/per_store_feature.cc' l='1390' u='m' c='_ZN3tvm13meta_schedule19PerStoreFeatureNode11ExtractFromERKNS0_11TuneContextERKNS_7runtime5ArrayINS0_16MeasureCandidateEvEE'/>
 <use f='tvm/src/meta_schedule/measure_callback/add_to_database.cc' l='37' u='m' c='_ZN3tvm13meta_schedule17AddToDatabaseNode5ApplyERKNS0_13TaskSchedulerEiRKNS_7runtime5ArrayINS0_16MeasureCandidateEvEERKNS6_INS0_13BuilderResultEvEERKN3362037'/>
 <use f='tvm/src/meta_schedule/mutator/mutate_parallel.cc' l='185' u='m' c='_ZN3tvm13meta_schedule18MutateParallelNode25InitializeWithTuneContextERKNS0_11TuneContextE'/>
@@ -20,7 +20,8 @@
 <use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling.cc' l='84' u='m' c='_ZN3tvm13meta_schedule20MultiLevelTilingNode25InitializeWithTuneContextERKNS0_11TuneContextE'/>
 <use f='tvm/src/meta_schedule/schedule_rule/parallel_vectorize_unroll.cc' l='44' u='m' c='_ZN3tvm13meta_schedule30ParallelizeVectorizeUnrollNode25InitializeWithTuneContextERKNS0_11TuneContextE'/>
 <use f='tvm/src/meta_schedule/schedule_rule/parallel_vectorize_unroll.cc' l='46' u='m' c='_ZN3tvm13meta_schedule30ParallelizeVectorizeUnrollNode25InitializeWithTuneContextERKNS0_11TuneContextE'/>
-<use f='tvm/src/meta_schedule/search_strategy/evolutionary_search.cc' l='380' u='m' c='_ZN3tvm13meta_schedule22EvolutionarySearchNode25InitializeWithTuneContextERKNS0_11TuneContextE'/>
-<use f='tvm/src/meta_schedule/tune_context.cc' l='39' u='w' c='_ZN3tvm13meta_schedule11TuneContextC1ENS_7runtime8OptionalINS_8IRModuleEEENS3_INS_6TargetEEENS3_INS0_14SpaceGeneratorEEENS3_INS0_14SearchStrategyEEENS10962771'/>
-<use f='tvm/src/meta_schedule/tune_context.cc' l='107' u='m' c='_ZN3tvm13meta_schedule15TuneContextNode14_SendToBuilderERKNS0_7BuilderE'/>
-<use f='tvm/src/meta_schedule/tune_context.cc' l='120' u='m' c='_ZN3tvm13meta_schedule15TuneContextNode13_SendToRunnerERKNS0_6RunnerE'/>
+<use f='tvm/src/meta_schedule/space_generator/space_generator.cc' l='59' u='m' c='_ZN3tvm13meta_schedule18SpaceGeneratorNode25InitializeWithTuneContextERKNS0_11TuneContextE'/>
+<use f='tvm/src/meta_schedule/space_generator/space_generator.cc' l='63' u='m' c='_ZN3tvm13meta_schedule18SpaceGeneratorNode25InitializeWithTuneContextERKNS0_11TuneContextE'/>
+<use f='tvm/src/meta_schedule/task_scheduler/task_scheduler.cc' l='44' u='m' c='_ZN3tvm13meta_schedule13SendToBuilderEPNS0_14TaskRecordNodeERKNS0_7BuilderE'/>
+<use f='tvm/src/meta_schedule/task_scheduler/task_scheduler.cc' l='57' u='m' c='_ZN3tvm13meta_schedule12SendToRunnerEPNS0_14TaskRecordNodeERKNS0_6RunnerE'/>
+<use f='tvm/src/meta_schedule/tune_context.cc' l='33' u='w' c='_ZN3tvm13meta_schedule11TuneContextC1ENS_7runtime8OptionalINS_8IRModuleEEENS3_INS_6TargetEEENS3_INS0_14SpaceGeneratorEEENS3_INS0_14SearchStrategyEEENS14263180'/>

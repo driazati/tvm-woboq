@@ -1,6 +1,6 @@
 <use f='tvm/include/tvm/meta_schedule/postproc.h' l='62' c='_ZNK3tvm13meta_schedule12PostprocNode5CloneEv'/>
 <inh f='tvm/include/tvm/runtime/object.h' l='511' c='tvm::runtime::ObjectRef'/>
-<def f='tvm/include/tvm/meta_schedule/postproc.h' l='72' ll='154'/>
+<def f='tvm/include/tvm/meta_schedule/postproc.h' l='72' ll='163'/>
 <use f='tvm/include/tvm/meta_schedule/postproc.h' l='89'/>
 <use f='tvm/include/tvm/meta_schedule/postproc.h' l='103' c='_ZN3tvm13meta_schedule8Postproc10PyPostprocENS_7runtime15TypedPackedFuncIFvRKNS0_11TuneContextEEEENS3_IFbRKNS_3tir8ScheduleEEEENS3_IFS1_vEEENS3_IFNS2_6StringEvEEE'/>
 <use f='tvm/include/tvm/meta_schedule/postproc.h' l='111' c='_ZN3tvm13meta_schedule8Postproc19DisallowDynamicLoopEv'/>
@@ -11,17 +11,27 @@
 <use f='tvm/include/tvm/meta_schedule/postproc.h' l='141' c='_ZN3tvm13meta_schedule8Postproc16RewriteTensorizeEb'/>
 <use f='tvm/include/tvm/meta_schedule/postproc.h' l='146' c='_ZN3tvm13meta_schedule8Postproc13VerifyGPUCodeEv'/>
 <use f='tvm/include/tvm/meta_schedule/postproc.h' l='152' c='_ZN3tvm13meta_schedule8Postproc13RewriteLayoutEv'/>
-<use f='tvm/include/tvm/meta_schedule/postproc.h' l='153' c='_ZN3tvm13meta_schedule8PostprocC1ERKS1_'/>
-<use f='tvm/include/tvm/meta_schedule/postproc.h' l='153' c='_ZN3tvm13meta_schedule8PostprocC1EOS1_'/>
-<use f='tvm/include/tvm/meta_schedule/postproc.h' l='153' c='_ZN3tvm13meta_schedule8PostprocaSERKS1_'/>
-<use f='tvm/include/tvm/meta_schedule/postproc.h' l='153' c='_ZN3tvm13meta_schedule8PostprocaSERKS1_'/>
-<use f='tvm/include/tvm/meta_schedule/postproc.h' l='153' c='_ZN3tvm13meta_schedule8PostprocaSEOS1_'/>
-<use f='tvm/include/tvm/meta_schedule/postproc.h' l='153' c='_ZN3tvm13meta_schedule8PostprocaSEOS1_'/>
-<use f='tvm/include/tvm/meta_schedule/postproc.h' l='181' c='_ZNK3tvm13meta_schedule14PyPostprocNode5CloneEv'/>
-<use f='tvm/include/tvm/meta_schedule/tune_context.h' l='62'/>
-<use f='tvm/include/tvm/meta_schedule/tune_context.h' l='156' c='_ZN3tvm13meta_schedule11TuneContextC1ENS_7runtime8OptionalINS_8IRModuleEEENS3_INS_6TargetEEENS3_INS0_14SpaceGeneratorEEENS3_INS0_14SearchStrategyEEENS10962771'/>
-<use f='tvm/src/meta_schedule/utils.h' l='283' c='_ZN3tvm13meta_schedule18ThreadedTraceApplyC1ERKNS_7runtime5ArrayINS0_8PostprocEvEE'/>
-<use f='tvm/src/meta_schedule/utils.h' l='346'/>
+<use f='tvm/include/tvm/meta_schedule/postproc.h' l='154' c='_ZN3tvm13meta_schedule8Postproc11DefaultLLVMEv'/>
+<use f='tvm/include/tvm/meta_schedule/postproc.h' l='156' c='_ZN3tvm13meta_schedule8Postproc11DefaultCUDAEv'/>
+<use f='tvm/include/tvm/meta_schedule/postproc.h' l='158' c='_ZN3tvm13meta_schedule8Postproc21DefaultCUDATensorCoreEv'/>
+<use f='tvm/include/tvm/meta_schedule/postproc.h' l='160' c='_ZN3tvm13meta_schedule8Postproc14DefaultHexagonEv'/>
+<use f='tvm/include/tvm/meta_schedule/postproc.h' l='162' c='_ZN3tvm13meta_schedule8PostprocC1ERKS1_'/>
+<use f='tvm/include/tvm/meta_schedule/postproc.h' l='162' c='_ZN3tvm13meta_schedule8PostprocC1EOS1_'/>
+<use f='tvm/include/tvm/meta_schedule/postproc.h' l='162' c='_ZN3tvm13meta_schedule8PostprocaSERKS1_'/>
+<use f='tvm/include/tvm/meta_schedule/postproc.h' l='162' c='_ZN3tvm13meta_schedule8PostprocaSERKS1_'/>
+<use f='tvm/include/tvm/meta_schedule/postproc.h' l='162' c='_ZN3tvm13meta_schedule8PostprocaSEOS1_'/>
+<use f='tvm/include/tvm/meta_schedule/postproc.h' l='162' c='_ZN3tvm13meta_schedule8PostprocaSEOS1_'/>
+<use f='tvm/include/tvm/meta_schedule/postproc.h' l='190' c='_ZNK3tvm13meta_schedule14PyPostprocNode5CloneEv'/>
+<use f='tvm/include/tvm/meta_schedule/space_generator.h' l='81'/>
+<use f='tvm/include/tvm/meta_schedule/space_generator.h' l='156' c='_ZN3tvm13meta_schedule14SpaceGenerator16PySpaceGeneratorENS_7runtime8OptionalINS2_5ArrayINS0_12ScheduleRuleEvEEEENS3_INS4_INS0_8PostprocEvEEEENS3_INS212388868'/>
+<use f='tvm/include/tvm/meta_schedule/space_generator.h' l='172' c='_ZN3tvm13meta_schedule14SpaceGenerator10ScheduleFnENS_7runtime10PackedFuncENS2_8OptionalINS2_5ArrayINS0_12ScheduleRuleEvEEEENS4_INS5_INS0_8PostprocEvE5997878'/>
+<use f='tvm/include/tvm/meta_schedule/space_generator.h' l='184' c='_ZN3tvm13meta_schedule14SpaceGenerator19SpaceGeneratorUnionENS_7runtime5ArrayIS1_vEENS2_8OptionalINS3_INS0_12ScheduleRuleEvEEEENS5_INS3_INS0_8Postproc6295884'/>
+<use f='tvm/include/tvm/meta_schedule/space_generator.h' l='197' c='_ZN3tvm13meta_schedule14SpaceGenerator14PostOrderApplyENS_7runtime10PackedFuncENS2_8OptionalINS2_5ArrayINS0_12ScheduleRuleEvEEEENS4_INS5_INS0_8Postpro16235914'/>
+<use f='tvm/src/meta_schedule/utils.h' l='290' c='_ZN3tvm13meta_schedule18ThreadedTraceApplyC1ERKNS_7runtime5ArrayINS0_8PostprocEvEE'/>
+<use f='tvm/src/meta_schedule/utils.h' l='353'/>
+<use f='tvm/src/meta_schedule/utils.h' l='485' c='_ZN3tvm13meta_schedule10CloneRulesEPKNS0_18SpaceGeneratorNodeEPS1_'/>
+<use f='tvm/src/meta_schedule/utils.h' l='486' c='_ZN3tvm13meta_schedule10CloneRulesEPKNS0_18SpaceGeneratorNodeEPS1_'/>
+<use f='tvm/src/meta_schedule/utils.h' l='488' c='_ZN3tvm13meta_schedule10CloneRulesEPKNS0_18SpaceGeneratorNodeEPS1_'/>
 <size>8</size>
 <doc f='tvm/include/tvm/meta_schedule/postproc.h' l='68'>/*!
  * \brief Managed reference to PostprocNode
@@ -36,6 +46,10 @@
 <fun r='_ZN3tvm13meta_schedule8Postproc16RewriteTensorizeEb'/>
 <fun r='_ZN3tvm13meta_schedule8Postproc13VerifyGPUCodeEv'/>
 <fun r='_ZN3tvm13meta_schedule8Postproc13RewriteLayoutEv'/>
+<fun r='_ZN3tvm13meta_schedule8Postproc11DefaultLLVMEv'/>
+<fun r='_ZN3tvm13meta_schedule8Postproc11DefaultCUDAEv'/>
+<fun r='_ZN3tvm13meta_schedule8Postproc21DefaultCUDATensorCoreEv'/>
+<fun r='_ZN3tvm13meta_schedule8Postproc14DefaultHexagonEv'/>
 <fun r='_ZN3tvm13meta_schedule8PostprocC1Ev'/>
 <fun r='_ZN3tvm13meta_schedule8PostprocC1ERKS1_'/>
 <fun r='_ZN3tvm13meta_schedule8PostprocC1EOS1_'/>
@@ -49,11 +63,23 @@
 <use f='tvm/src/meta_schedule/postproc/postproc.cc' l='35' c='_ZNK3tvm13meta_schedule14PyPostprocNode5CloneEv'/>
 <use f='tvm/src/meta_schedule/postproc/postproc.cc' l='40' c='_ZN3tvm13meta_schedule8Postproc10PyPostprocENS_7runtime15TypedPackedFuncIFvRKNS0_11TuneContextEEEENS3_IFbRKNS_3tir8ScheduleEEEENS3_IFS1_vEEENS3_IFNS2_6StringEvEEE'/>
 <use f='tvm/src/meta_schedule/postproc/postproc.cc' l='50' c='_ZN3tvm13meta_schedule8Postproc10PyPostprocENS_7runtime15TypedPackedFuncIFvRKNS0_11TuneContextEEEENS3_IFbRKNS_3tir8ScheduleEEEENS3_IFS1_vEEENS3_IFNS2_6StringEvEEE'/>
-<use f='tvm/src/meta_schedule/postproc/postproc.cc' l='66'/>
-<use f='tvm/src/meta_schedule/postproc/postproc.cc' l='67'/>
-<use f='tvm/src/meta_schedule/postproc/postproc.cc' l='68'/>
+<use f='tvm/src/meta_schedule/postproc/postproc.cc' l='53' c='_ZN3tvm13meta_schedule8Postproc11DefaultLLVMEv'/>
+<use f='tvm/src/meta_schedule/postproc/postproc.cc' l='54' c='_ZN3tvm13meta_schedule8Postproc11DefaultLLVMEv'/>
+<use f='tvm/src/meta_schedule/postproc/postproc.cc' l='62' c='_ZN3tvm13meta_schedule8Postproc11DefaultCUDAEv'/>
+<use f='tvm/src/meta_schedule/postproc/postproc.cc' l='63' c='_ZN3tvm13meta_schedule8Postproc11DefaultCUDAEv'/>
+<use f='tvm/src/meta_schedule/postproc/postproc.cc' l='73' c='_ZN3tvm13meta_schedule8Postproc21DefaultCUDATensorCoreEv'/>
+<use f='tvm/src/meta_schedule/postproc/postproc.cc' l='74' c='_ZN3tvm13meta_schedule8Postproc21DefaultCUDATensorCoreEv'/>
+<use f='tvm/src/meta_schedule/postproc/postproc.cc' l='85' c='_ZN3tvm13meta_schedule8Postproc14DefaultHexagonEv'/>
+<use f='tvm/src/meta_schedule/postproc/postproc.cc' l='86' c='_ZN3tvm13meta_schedule8Postproc14DefaultHexagonEv'/>
+<use f='tvm/src/meta_schedule/postproc/postproc.cc' l='108'/>
+<use f='tvm/src/meta_schedule/postproc/postproc.cc' l='109'/>
+<use f='tvm/src/meta_schedule/postproc/postproc.cc' l='110'/>
 <size>8</size>
 <fun r='_ZN3tvm13meta_schedule8Postproc10PyPostprocENS_7runtime15TypedPackedFuncIFvRKNS0_11TuneContextEEEENS3_IFbRKNS_3tir8ScheduleEEEENS3_IFS1_vEEENS3_IFNS2_6StringEvEEE'/>
+<fun r='_ZN3tvm13meta_schedule8Postproc11DefaultLLVMEv'/>
+<fun r='_ZN3tvm13meta_schedule8Postproc11DefaultCUDAEv'/>
+<fun r='_ZN3tvm13meta_schedule8Postproc21DefaultCUDATensorCoreEv'/>
+<fun r='_ZN3tvm13meta_schedule8Postproc14DefaultHexagonEv'/>
 <use f='tvm/src/meta_schedule/postproc/rewrite_cooperative_fetch.cc' l='107' c='_ZNK3tvm13meta_schedule27RewriteCooperativeFetchNode5CloneEv'/>
 <use f='tvm/src/meta_schedule/postproc/rewrite_cooperative_fetch.cc' l='109' c='_ZNK3tvm13meta_schedule27RewriteCooperativeFetchNode5CloneEv'/>
 <use f='tvm/src/meta_schedule/postproc/rewrite_cooperative_fetch.cc' l='194' c='_ZN3tvm13meta_schedule8Postproc23RewriteCooperativeFetchEv'/>
@@ -96,11 +122,20 @@
 <use f='tvm/src/meta_schedule/postproc/verify_gpu_code.cc' l='211' c='_ZN3tvm13meta_schedule8Postproc13VerifyGPUCodeEv'/>
 <size>8</size>
 <fun r='_ZN3tvm13meta_schedule8Postproc13VerifyGPUCodeEv'/>
-<use f='tvm/src/meta_schedule/search_strategy/replay_func.cc' l='131' c='_ZN3tvm13meta_schedule14ReplayFuncNode5State25GenerateMeasureCandidatesEv'/>
+<use f='tvm/src/meta_schedule/search_strategy/evolutionary_search.cc' l='330'/>
 <size>8</size>
-<use f='tvm/src/meta_schedule/tune_context.cc' l='31' c='_ZN3tvm13meta_schedule11TuneContextC1ENS_7runtime8OptionalINS_8IRModuleEEENS3_INS_6TargetEEENS3_INS0_14SpaceGeneratorEEENS3_INS0_14SearchStrategyEEENS10962771'/>
-<use f='tvm/src/meta_schedule/tune_context.cc' l='64' c='_ZNK3tvm13meta_schedule15TuneContextNode5CloneEv'/>
-<use f='tvm/src/meta_schedule/tune_context.cc' l='65' c='_ZNK3tvm13meta_schedule15TuneContextNode5CloneEv'/>
-<use f='tvm/src/meta_schedule/tune_context.cc' l='92' c='_ZN3tvm13meta_schedule15TuneContextNode10InitializeEv'/>
-<use f='tvm/src/meta_schedule/tune_context.cc' l='196'/>
+<use f='tvm/src/meta_schedule/search_strategy/replay_func.cc' l='125' c='_ZN3tvm13meta_schedule14ReplayFuncNode5State25GenerateMeasureCandidatesEv'/>
+<use f='tvm/src/meta_schedule/search_strategy/replay_func.cc' l='133' c='_ZN3tvm13meta_schedule14ReplayFuncNode5State25GenerateMeasureCandidatesEv'/>
+<size>8</size>
+<use f='tvm/src/meta_schedule/search_strategy/replay_trace.cc' l='74'/>
+<size>8</size>
+<use f='tvm/src/meta_schedule/space_generator/post_order_apply.cc' l='199' c='_ZN3tvm13meta_schedule14SpaceGenerator14PostOrderApplyENS_7runtime10PackedFuncENS2_8OptionalINS2_5ArrayINS0_12ScheduleRuleEvEEEENS4_INS5_INS0_8Postpro16235914'/>
+<size>8</size>
+<use f='tvm/src/meta_schedule/space_generator/schedule_fn.cc' l='89' c='_ZN3tvm13meta_schedule14SpaceGenerator10ScheduleFnENS_7runtime10PackedFuncENS2_8OptionalINS2_5ArrayINS0_12ScheduleRuleEvEEEENS4_INS5_INS0_8PostprocEvE5997878'/>
+<size>8</size>
+<use f='tvm/src/meta_schedule/space_generator/space_generator.cc' l='65' c='_ZN3tvm13meta_schedule18SpaceGeneratorNode25InitializeWithTuneContextERKNS0_11TuneContextE'/>
+<use f='tvm/src/meta_schedule/space_generator/space_generator.cc' l='103' c='_ZN3tvm13meta_schedule18SpaceGeneratorNode25InitializeWithTuneContextERKNS0_11TuneContextE'/>
+<use f='tvm/src/meta_schedule/space_generator/space_generator.cc' l='133' c='_ZN3tvm13meta_schedule14SpaceGenerator16PySpaceGeneratorENS_7runtime8OptionalINS2_5ArrayINS0_12ScheduleRuleEvEEEENS3_INS4_INS0_8PostprocEvEEEENS3_INS212388868'/>
+<size>8</size>
+<use f='tvm/src/meta_schedule/space_generator/space_generator_union.cc' l='74' c='_ZN3tvm13meta_schedule14SpaceGenerator19SpaceGeneratorUnionENS_7runtime5ArrayIS1_vEENS2_8OptionalINS3_INS0_12ScheduleRuleEvEEEENS5_INS3_INS0_8Postproc6295884'/>
 <size>8</size>

@@ -1,8 +1,7 @@
-<use f='tvm/src/meta_schedule/utils.h' l='309' u='c' c='_ZN3tvm13meta_schedule18ThreadedTraceApply5ApplyERKNS_8IRModuleERKNS_3tir5TraceEPl'/>
+<use f='tvm/src/meta_schedule/utils.h' l='316' u='c' c='_ZN3tvm13meta_schedule18ThreadedTraceApply5ApplyERKNS_8IRModuleERKNS_3tir5TraceEPl'/>
 <use f='tvm/src/meta_schedule/database/database.cc' l='91' u='c' c='_ZNK3tvm13meta_schedule16TuningRecordNode18AsMeasureCandidateEv'/>
 <use f='tvm/src/meta_schedule/database/database.cc' l='109' u='c' c='_ZNK3tvm13meta_schedule16TuningRecordNode6AsJSONEv'/>
 <use f='tvm/src/meta_schedule/database/database.cc' l='179' u='c' c='_ZN3tvm13meta_schedule12DatabaseNode13QueryScheduleERKNS_8IRModuleERKNS_6TargetERKNS_7runtime6StringE'/>
-<use f='tvm/src/meta_schedule/measure_callback/echo_statistics.cc' l='72' u='c' c='_ZN3tvm13meta_schedule8TaskInfo11UpdateErrorENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKNS0_16MeasureCandidateE'/>
 <use f='tvm/src/meta_schedule/mutator/mutate_compute_location.cc' l='109' u='c' c='_ZN3tvm13meta_schedule25MutateComputeLocationNode14FindCandidatesERKNS_3tir5TraceEPl'/>
 <use f='tvm/src/meta_schedule/mutator/mutate_compute_location.cc' l='122' u='c' c='_ZN3tvm13meta_schedule25MutateComputeLocationNode5ApplyERKNS_3tir5TraceEPl'/>
 <use f='tvm/src/meta_schedule/mutator/mutate_parallel.cc' l='223' u='c' c='_ZN3tvm13meta_schedule20FindParallelDecisionERKNS_3tir5TraceEPlPNS0_18MutateParallelNode9CandidateE'/>
@@ -33,14 +32,15 @@
 <use f='tvm/src/meta_schedule/postproc/rewrite_cooperative_fetch.cc' l='127' u='c' c='_ZN3tvm13meta_schedule27RewriteCooperativeFetchNode5ApplyERKNS_3tir8ScheduleE'/>
 <use f='tvm/src/meta_schedule/schedule_rule/cross_thread_reduction.cc' l='151' u='c' c='_ZN3tvm13meta_schedule24CrossThreadReductionNode21GetLoopRVExtentSourceERKNS_3tir5TraceERKNS2_6LoopRVEPNS_8PrimExprE'/>
 <use f='tvm/src/meta_schedule/schedule_rule/cross_thread_reduction.cc' l='170' u='c' c='_ZN3tvm13meta_schedule24CrossThreadReductionNode27GetThreadIdxExtentFromTraceERKNS_3tir5TraceE'/>
-<use f='tvm/src/meta_schedule/search_strategy/evolutionary_search.cc' l='413' u='c' c='_ZN3tvm13meta_schedule22EvolutionarySearchNode9PreTuningERKNS_7runtime5ArrayINS_3tir8ScheduleEvEERKNS2_8OptionalINS0_8DatabaseEEERKNS9_INS0_9CostModelEEE'/>
-<use f='tvm/src/meta_schedule/search_strategy/evolutionary_search.cc' l='497' u='c' c='_ZN3tvm13meta_schedule22EvolutionarySearchNode5State20SampleInitPopulationEi'/>
-<use f='tvm/src/meta_schedule/search_strategy/replay_trace.cc' l='101' u='c' c='_ZN3tvm13meta_schedule15ReplayTraceNode9PreTuningERKNS_7runtime5ArrayINS_3tir8ScheduleEvEERKNS2_8OptionalINS0_8DatabaseEEERKNS9_INS0_9CostModelEEE'/>
-<use f='tvm/src/meta_schedule/search_strategy/replay_trace.cc' l='153' u='c' c='_ZN3tvm13meta_schedule15ReplayTraceNode5State25GenerateMeasureCandidatesEv'/>
-<use f='tvm/src/meta_schedule/task_scheduler/task_scheduler.cc' l='45' u='c' c='_ZN3tvm13meta_schedule17TaskSchedulerNode14InitializeTaskEi'/>
-<use f='tvm/src/meta_schedule/task_scheduler/task_scheduler.cc' l='48' u='c' c='_ZN3tvm13meta_schedule17TaskSchedulerNode14InitializeTaskEi'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='376' u='c' c='_ZN3tvm5relay3tec15ScheduleBuilder6CreateERKNS0_8FunctionENS_15GlobalVarSupplyE'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='384' u='c' c='_ZN3tvm5relay3tec15ScheduleBuilder6CreateERKNS0_8FunctionENS_15GlobalVarSupplyE'/>
+<use f='tvm/src/meta_schedule/search_strategy/evolutionary_search.cc' l='277' u='c' c='_ZN3tvm13meta_schedule22EvolutionarySearchNode5StateC1EPS1_iiNS_7runtime5ArrayINS_3tir8ScheduleEvEENS0_8DatabaseENS0_9CostModelE'/>
+<use f='tvm/src/meta_schedule/search_strategy/evolutionary_search.cc' l='496' u='c' c='_ZN3tvm13meta_schedule22EvolutionarySearchNode5State20SampleInitPopulationEi'/>
+<use f='tvm/src/meta_schedule/search_strategy/replay_trace.cc' l='115' u='c' c='_ZN3tvm13meta_schedule15ReplayTraceNode9PreTuningEiiRKNS_7runtime5ArrayINS_3tir8ScheduleEvEERKNS2_8OptionalINS0_8DatabaseEEERKNS9_INS0_9CostModelEEE'/>
+<use f='tvm/src/meta_schedule/search_strategy/replay_trace.cc' l='163' u='c' c='_ZN3tvm13meta_schedule15ReplayTraceNode5State25GenerateMeasureCandidatesEv'/>
+<use f='tvm/src/meta_schedule/task_scheduler/task_scheduler.cc' l='126' u='c' c='_ZN3tvm13meta_schedule11TaskCleanUpEPNS0_14TaskRecordNodeEiRKNS_7runtime5ArrayINS0_12RunnerResultEvEE'/>
+<use f='tvm/src/meta_schedule/task_scheduler/task_scheduler.cc' l='167' u='c' c='_ZN3tvm13meta_schedule17TaskSchedulerNode4TuneENS_7runtime5ArrayINS0_11TuneContextEvEENS3_INS_8FloatImmEvEEiiiNS0_7BuilderENS0_6RunnerENS3_INS0_15Meas9556795'/>
+<use f='tvm/src/meta_schedule/task_scheduler/task_scheduler.cc' l='170' u='c' c='_ZN3tvm13meta_schedule17TaskSchedulerNode4TuneENS_7runtime5ArrayINS0_11TuneContextEvEENS3_INS_8FloatImmEvEEiiiNS0_7BuilderENS0_6RunnerENS3_INS0_15Meas9556795'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='377' u='c' c='_ZN3tvm5relay3tec15ScheduleBuilder6CreateERKNS0_8FunctionENS_15GlobalVarSupplyE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='385' u='c' c='_ZN3tvm5relay3tec15ScheduleBuilder6CreateERKNS0_8FunctionENS_15GlobalVarSupplyE'/>
 <use f='tvm/src/tir/schedule/trace.cc' l='538' u='c'/>
 <use f='tvm/src/tir/schedule/trace.cc' l='540' u='c'/>
 <use f='tvm/src/tir/schedule/traced_schedule.cc' l='49' u='c' c='_ZN3tvm3tir18TracedScheduleNode4CopyEv'/>

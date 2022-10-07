@@ -7,11 +7,9 @@
 <use f='tvm/include/tvm/meta_schedule/builder.h' l='139' c='_ZN3tvm13meta_schedule7BuilderaSERKS1_'/>
 <use f='tvm/include/tvm/meta_schedule/builder.h' l='139' c='_ZN3tvm13meta_schedule7BuilderaSEOS1_'/>
 <use f='tvm/include/tvm/meta_schedule/builder.h' l='139' c='_ZN3tvm13meta_schedule7BuilderaSEOS1_'/>
-<use f='tvm/include/tvm/meta_schedule/tune_context.h' l='114' c='_ZN3tvm13meta_schedule15TuneContextNode14_SendToBuilderERKNS0_7BuilderE'/>
-<use f='tvm/include/tvm/meta_schedule/task_scheduler.h' l='79'/>
-<use f='tvm/include/tvm/meta_schedule/task_scheduler.h' l='219' c='_ZN3tvm13meta_schedule13TaskScheduler10RoundRobinENS_7runtime5ArrayINS0_11TuneContextEvEENS0_7BuilderENS0_6RunnerENS2_8OptionalINS0_8DatabaseEEENS8_IN927609'/>
-<use f='tvm/include/tvm/meta_schedule/task_scheduler.h' l='244' c='_ZN3tvm13meta_schedule13TaskScheduler13GradientBasedENS_7runtime5ArrayINS0_11TuneContextEvEENS3_INS_8FloatImmEvEENS0_7BuilderENS0_6RunnerENS2_8Optiona15111662'/>
-<use f='tvm/include/tvm/meta_schedule/task_scheduler.h' l='273' c='_ZN3tvm13meta_schedule13TaskScheduler15PyTaskSchedulerENS_7runtime5ArrayINS0_11TuneContextEvEENS0_7BuilderENS0_6RunnerENS2_8OptionalINS0_8DatabaseEEEN15662921'/>
+<use f='tvm/include/tvm/meta_schedule/task_scheduler.h' l='184' c='_ZN3tvm13meta_schedule17TaskSchedulerNode4TuneENS_7runtime5ArrayINS0_11TuneContextEvEENS3_INS_8FloatImmEvEEiiiNS0_7BuilderENS0_6RunnerENS3_INS0_15Meas9556795'/>
+<use f='tvm/include/tvm/meta_schedule/task_scheduler.h' l='227'/>
+<use f='tvm/include/tvm/meta_schedule/task_scheduler.h' l='250' c='_ZN3tvm13meta_schedule19PyTaskSchedulerNode4TuneENS_7runtime5ArrayINS0_11TuneContextEvEENS3_INS_8FloatImmEvEEiiiNS0_7BuilderENS0_6RunnerENS3_INS0_15Me9679234'/>
 <size>8</size>
 <doc f='tvm/include/tvm/meta_schedule/builder.h' l='127'>/*!
  * \brief Managed reference to BuilderNode
@@ -28,11 +26,9 @@
 <use f='tvm/src/meta_schedule/builder/builder.cc' l='67'/>
 <size>8</size>
 <fun r='_ZN3tvm13meta_schedule7Builder9PyBuilderENS_7runtime15TypedPackedFuncIFNS2_5ArrayINS0_13BuilderResultEvEERKNS4_INS0_12BuilderInputEvEEEEE'/>
-<use f='tvm/src/meta_schedule/task_scheduler/gradient_based.cc' l='214' c='_ZN3tvm13meta_schedule13TaskScheduler13GradientBasedENS_7runtime5ArrayINS0_11TuneContextEvEENS3_INS_8FloatImmEvEENS0_7BuilderENS0_6RunnerENS2_8Optiona15111662'/>
+<use f='tvm/src/meta_schedule/task_scheduler/gradient_based.cc' l='48' c='_ZN3tvm13meta_schedule17GradientBasedNode4TuneENS_7runtime5ArrayINS0_11TuneContextEvEENS3_INS_8FloatImmEvEEiiiNS0_7BuilderENS0_6RunnerENS3_INS0_15Meas2489504'/>
 <size>8</size>
-<use f='tvm/src/meta_schedule/task_scheduler/round_robin.cc' l='59' c='_ZN3tvm13meta_schedule13TaskScheduler10RoundRobinENS_7runtime5ArrayINS0_11TuneContextEvEENS0_7BuilderENS0_6RunnerENS2_8OptionalINS0_8DatabaseEEENS8_IN927609'/>
-<size>8</size>
-<use f='tvm/src/meta_schedule/task_scheduler/task_scheduler.cc' l='161' c='_ZN3tvm13meta_schedule13TaskScheduler15PyTaskSchedulerENS_7runtime5ArrayINS0_11TuneContextEvEENS0_7BuilderENS0_6RunnerENS2_8OptionalINS0_8DatabaseEEEN15662921'/>
-<size>8</size>
-<use f='tvm/src/meta_schedule/tune_context.cc' l='104' c='_ZN3tvm13meta_schedule15TuneContextNode14_SendToBuilderERKNS0_7BuilderE'/>
+<use f='tvm/src/meta_schedule/task_scheduler/task_scheduler.cc' l='41' c='_ZN3tvm13meta_schedule13SendToBuilderEPNS0_14TaskRecordNodeERKNS0_7BuilderE'/>
+<use f='tvm/src/meta_schedule/task_scheduler/task_scheduler.cc' l='143' c='_ZN3tvm13meta_schedule17TaskSchedulerNode4TuneENS_7runtime5ArrayINS0_11TuneContextEvEENS3_INS_8FloatImmEvEEiiiNS0_7BuilderENS0_6RunnerENS3_INS0_15Meas9556795'/>
+<use f='tvm/src/meta_schedule/task_scheduler/task_scheduler.cc' l='344' c='_ZN3tvm13meta_schedule19PyTaskSchedulerNode4TuneENS_7runtime5ArrayINS0_11TuneContextEvEENS3_INS_8FloatImmEvEEiiiNS0_7BuilderENS0_6RunnerENS3_INS0_15Me9679234'/>
 <size>8</size>

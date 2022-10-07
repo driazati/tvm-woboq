@@ -30,10 +30,9 @@
 <use f='tvm/src/ir/module.cc' l='462' u='c'/>
 <use f='tvm/include/tvm/tir/schedule/state.h' l='45' u='c'/>
 <use f='tvm/include/tvm/meta_schedule/database.h' l='111' u='c'/>
-<use f='tvm/include/tvm/meta_schedule/task_scheduler.h' l='79' u='c'/>
-<use f='tvm/include/tvm/meta_schedule/task_scheduler.h' l='81' u='c'/>
+<use f='tvm/include/tvm/meta_schedule/task_scheduler.h' l='43' u='c'/>
 <use f='tvm/src/support/nd_int_set.h' l='109' u='c' c='_ZN3tvm7support13NDIntSetUnionERKSt6vectorIS1_INS_5arith6IntSetESaIS3_EESaIS5_EE'/>
-<use f='tvm/src/meta_schedule/utils.h' l='346' u='c'/>
+<use f='tvm/src/meta_schedule/utils.h' l='353' u='c'/>
 <use f='tvm/src/meta_schedule/arg_info.cc' l='71' u='c' c='_ZN3tvm13meta_schedule7ArgInfo8FromJSONERKNS_7runtime9ObjectRefE'/>
 <use f='tvm/src/meta_schedule/database/database.cc' l='50' u='c' c='_ZN3tvm13meta_schedule8Workload8FromJSONERKNS_7runtime9ObjectRefE'/>
 <use f='tvm/src/meta_schedule/database/database.cc' l='116' u='c' c='_ZN3tvm13meta_schedule12TuningRecord8FromJSONERKNS_7runtime9ObjectRefERKNS0_8WorkloadE'/>
@@ -66,17 +65,16 @@
 <use f='tvm/src/meta_schedule/schedule_rule/winograd.cc' l='46' u='c' c='_ZN3tvm13meta_schedule16ScheduleDataPackENS_3tir8ScheduleENS1_7BlockRVE'/>
 <use f='tvm/src/meta_schedule/schedule_rule/winograd.cc' l='133' u='c'/>
 <use f='tvm/src/meta_schedule/search_strategy/evolutionary_search.cc' l='103' u='c'/>
-<use f='tvm/src/meta_schedule/search_strategy/evolutionary_search.cc' l='257' u='c'/>
-<use f='tvm/src/meta_schedule/search_strategy/evolutionary_search.cc' l='259' u='c'/>
 <use f='tvm/src/meta_schedule/search_strategy/evolutionary_search.cc' l='261' u='c'/>
-<use f='tvm/src/meta_schedule/search_strategy/evolutionary_search.cc' l='464' u='c' c='_ZN3tvm13meta_schedule22EvolutionarySearchNode5State20PickBestFromDatabaseEi'/>
-<use f='tvm/src/meta_schedule/search_strategy/evolutionary_search.cc' l='489' u='c' c='_ZN3tvm13meta_schedule22EvolutionarySearchNode5State20SampleInitPopulationEi'/>
-<use f='tvm/src/meta_schedule/search_strategy/evolutionary_search.cc' l='555' u='c' c='_ZN3tvm13meta_schedule22EvolutionarySearchNode5State19EvolveWithCostModelESt6vectorINS_3tir8ScheduleESaIS5_EEi'/>
-<use f='tvm/src/meta_schedule/search_strategy/evolutionary_search.cc' l='645' u='c' c='_ZN3tvm13meta_schedule22EvolutionarySearchNode5State17PickWithEpsGreedyERKSt6vectorINS_3tir8ScheduleESaIS5_EES9_i'/>
-<use f='tvm/src/meta_schedule/search_strategy/replay_trace.cc' l='39' u='c'/>
-<use f='tvm/src/meta_schedule/search_strategy/replay_trace.cc' l='143' u='c' c='_ZN3tvm13meta_schedule15ReplayTraceNode5State25GenerateMeasureCandidatesEv'/>
-<use f='tvm/src/meta_schedule/space_generator/post_order_apply.cc' l='95' u='c'/>
-<use f='tvm/src/meta_schedule/space_generator/post_order_apply.cc' l='175' u='c' c='_ZN3tvm13meta_schedule18PostOrderApplyNode19GenerateDesignSpaceERKNS_8IRModuleE'/>
+<use f='tvm/src/meta_schedule/search_strategy/evolutionary_search.cc' l='263' u='c'/>
+<use f='tvm/src/meta_schedule/search_strategy/evolutionary_search.cc' l='265' u='c'/>
+<use f='tvm/src/meta_schedule/search_strategy/evolutionary_search.cc' l='463' u='c' c='_ZN3tvm13meta_schedule22EvolutionarySearchNode5State20PickBestFromDatabaseEi'/>
+<use f='tvm/src/meta_schedule/search_strategy/evolutionary_search.cc' l='488' u='c' c='_ZN3tvm13meta_schedule22EvolutionarySearchNode5State20SampleInitPopulationEi'/>
+<use f='tvm/src/meta_schedule/search_strategy/evolutionary_search.cc' l='554' u='c' c='_ZN3tvm13meta_schedule22EvolutionarySearchNode5State19EvolveWithCostModelESt6vectorINS_3tir8ScheduleESaIS5_EEi'/>
+<use f='tvm/src/meta_schedule/search_strategy/evolutionary_search.cc' l='643' u='c' c='_ZN3tvm13meta_schedule22EvolutionarySearchNode5State17PickWithEpsGreedyERKSt6vectorINS_3tir8ScheduleESaIS5_EES9_i'/>
+<use f='tvm/src/meta_schedule/search_strategy/replay_trace.cc' l='43' u='c'/>
+<use f='tvm/src/meta_schedule/search_strategy/replay_trace.cc' l='153' u='c' c='_ZN3tvm13meta_schedule15ReplayTraceNode5State25GenerateMeasureCandidatesEv'/>
+<use f='tvm/src/meta_schedule/space_generator/post_order_apply.cc' l='171' u='c' c='_ZN3tvm13meta_schedule18PostOrderApplyNode19GenerateDesignSpaceERKNS_8IRModuleE'/>
 <use f='tvm/src/node/serialization.cc' l='597' u='c' c='_ZN3tvm8LoadJSONENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
 <use f='tvm/src/node/structural_equal.cc' l='255' u='c' c='_ZN3tvm21RemapVarSEqualHandler11MapLhsToRhsERKNS_7runtime9ObjectRefE'/>
 <use f='tvm/src/node/structural_hash.cc' l='102' u='c' c='_ZN3tvm23VarCountingSHashHandler22SHashReduceHashedValueEm'/>
@@ -96,9 +94,9 @@
 <use f='tvm/src/relay/backend/graph_plan_memory.cc' l='60' u='c'/>
 <use f='tvm/src/relay/backend/te_compiler.cc' l='379' u='c' c='_ZN3tvm5relay3tec14TECompilerImpl13LowerInternalERKNS1_9CCacheKeyENS_15GlobalVarSupplyE'/>
 <use f='tvm/src/relay/backend/te_compiler.cc' l='380' u='c' c='_ZN3tvm5relay3tec14TECompilerImpl13LowerInternalERKNS1_9CCacheKeyENS_15GlobalVarSupplyE'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='341' u='c' c='_ZN3tvm5relay3tec15ScheduleBuilder6CreateERKNS0_8FunctionENS_15GlobalVarSupplyE'/>
 <use f='tvm/src/relay/backend/te_compiler_cache.cc' l='342' u='c' c='_ZN3tvm5relay3tec15ScheduleBuilder6CreateERKNS0_8FunctionENS_15GlobalVarSupplyE'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='587' u='c' c='_ZN3tvm5relay3tec13MakeShapeFunc6CreateERKNS0_8FunctionERKNS_6TargetENS_15GlobalVarSupplyE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='343' u='c' c='_ZN3tvm5relay3tec15ScheduleBuilder6CreateERKNS0_8FunctionENS_15GlobalVarSupplyE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='599' u='c' c='_ZN3tvm5relay3tec13MakeShapeFunc6CreateERKNS0_8FunctionERKNS_6TargetENS_15GlobalVarSupplyE'/>
 <use f='tvm/include/tvm/runtime/vm/vm.h' l='173' u='c' c='_ZN3tvm7runtime2vm14VirtualMachineC1Ev'/>
 <use f='tvm/src/relay/op/nn/convolution.cc' l='199' u='c' c='_ZN3tvm5relay9Conv2DRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
 <use f='tvm/src/relay/op/nn/convolution.cc' l='432' u='c' c='_ZN3tvm5relay9Conv3DRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>

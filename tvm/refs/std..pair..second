@@ -276,6 +276,7 @@
 <use f='tvm/src/tir/schedule/instruction_traits.h' l='462' u='r' c='_ZN3tvm3tir13PythonAPICall14AsPythonStringERKNS_7runtime9ObjectRefERSo'/>
 <use f='tvm/src/tir/schedule/instruction_traits.h' l='473' u='r' c='_ZN3tvm3tir13PythonAPICall14AsPythonStringERKNS_7runtime9ObjectRefERSo'/>
 <use f='tvm/src/tir/schedule/utils.h' l='326' c='_ZN3tvm3tir6GetAnnEPKT0_RKNS_7runtime6StringE'/>
+<use f='tvm/src/meta_schedule/utils.h' l='497' u='r' c='_ZN3tvm13meta_schedule10CloneRulesEPKNS0_18SpaceGeneratorNodeEPS1_'/>
 <use f='tvm/src/meta_schedule/arg_info.cc' l='37' u='r' c='_ZN3tvm13meta_schedule13FindEntryFuncERKNS_8IRModuleE'/>
 <use f='tvm/src/meta_schedule/database/database_utils.cc' l='62' u='r' c='_ZN3tvm13meta_schedule9JSONDumpsENS_7runtime9ObjectRefERNSt7__cxx1119basic_ostringstreamIcSt11char_traitsIcESaIcEEE'/>
 <use f='tvm/src/meta_schedule/database/database_utils.cc' l='77' u='r' c='_ZN3tvm13meta_schedule9JSONDumpsENS_7runtime9ObjectRefERNSt7__cxx1119basic_ostringstreamIcSt11char_traitsIcESaIcEEE'/>
@@ -315,9 +316,7 @@
 <use f='tvm/src/meta_schedule/profiler.cc' l='50' u='r' c='_ZNK3tvm13meta_schedule12ProfilerNode5TableEv'/>
 <use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling_tensor_core.cc' l='205' u='r' c='_ZN3tvm13meta_schedule30MultiLevelTilingTensorCoreNode5ApplyERKNS_3tir8ScheduleERKNS2_7BlockRVE'/>
 <use f='tvm/src/meta_schedule/search_strategy/evolutionary_search.cc' l='138' u='m' c='_ZN3tvm13meta_schedule13PerThreadData18MakeMutatorSamplerEdRKNS_7runtime3MapINS0_7MutatorENS_8FloatImmEvvEEPl'/>
-<use f='tvm/src/meta_schedule/search_strategy/evolutionary_search.cc' l='384' u='m' c='_ZN3tvm13meta_schedule22EvolutionarySearchNode25InitializeWithTuneContextERKNS0_11TuneContextE'/>
 <use f='tvm/src/meta_schedule/space_generator/post_order_apply.cc' l='38' u='r' c='_ZN3tvm13meta_schedule14BlockCollector3RunEv'/>
-<use f='tvm/src/meta_schedule/tune_context.cc' l='72' u='r' c='_ZNK3tvm13meta_schedule15TuneContextNode5CloneEv'/>
 <use f='tvm/src/node/container_printing.cc' l='58' u='r'/>
 <use f='tvm/src/node/reflection.cc' l='103' u='r' c='_ZNK3tvm16ReflectionVTable7GetAttrEPNS_7runtime6ObjectERKNS1_6StringE'/>
 <use f='tvm/src/node/reflection.cc' l='191' u='r' c='_ZN3tvm14NodeAttrSetter7GetAttrEPKc'/>
@@ -550,8 +549,8 @@
 <use f='tvm/src/relay/backend/te_compiler.cc' l='1240' u='r' c='_ZN3tvm5relay3tec7LowerTEERKNS_8IRModuleERKNS_7runtime6StringESt8functionIFvNS_8BaseFuncEEENS_17CompilationConfigE'/>
 <use f='tvm/src/relay/backend/te_compiler.cc' l='1255' u='r' c='_ZN3tvm5relay3tec7LowerTEERKNS_8IRModuleERKNS_7runtime6StringESt8functionIFvNS_8BaseFuncEEENS_17CompilationConfigE'/>
 <use f='tvm/src/relay/backend/te_compiler.cc' l='1268' u='r' c='_ZN3tvm5relay3tec19GetPerTargetModulesENS_8IRModuleE'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='399' u='m' c='_ZN3tvm5relay3tec15ScheduleBuilder6CreateERKNS0_8FunctionENS_15GlobalVarSupplyE'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='607' u='r' c='_ZN3tvm5relay3tec13MakeShapeFunc10VisitExpr_EPKNS0_7VarNodeE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='411' u='m' c='_ZN3tvm5relay3tec15ScheduleBuilder6CreateERKNS0_8FunctionENS_15GlobalVarSupplyE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='619' u='r' c='_ZN3tvm5relay3tec13MakeShapeFunc10VisitExpr_EPKNS0_7VarNodeE'/>
 <use f='tvm/src/relay/backend/utils.cc' l='290' u='r' c='_ZN3tvm5relay7backend35TargetModuleMapToTargetStrModuleMapENS_7runtime3MapINS_6TargetENS_8IRModuleEvvEE'/>
 <use f='tvm/src/relay/backend/utils.cc' l='299' u='r' c='_ZN3tvm5relay7backend35TargetStrModuleMapToTargetModuleMapESt13unordered_mapINS_6TargetENS_8IRModuleENS1_13TargetStrHashENS1_14TargetStrEqualESaISt4pairIKS3_S4_EEE'/>
 <use f='tvm/src/relay/backend/utils.cc' l='348' u='r' c='_ZN3tvm5relay7backend16BindParamsByNameENS0_8FunctionERKSt13unordered_mapINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS_7runtime7NDArrayESt4h11724621'/>

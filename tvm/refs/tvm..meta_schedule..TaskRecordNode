@@ -1,0 +1,42 @@
+<inh f='tvm/include/tvm/runtime/object.h' l='167' c='tvm::runtime::Object'/>
+<def f='tvm/include/tvm/meta_schedule/task_scheduler.h' l='40' ll='78'/>
+<use f='tvm/include/tvm/meta_schedule/task_scheduler.h' l='89' c='_ZNK3tvm13meta_schedule10TaskRecordptEv'/>
+<use f='tvm/include/tvm/meta_schedule/task_scheduler.h' l='89' c='_ZNK3tvm13meta_schedule10TaskRecordptEv'/>
+<use f='tvm/include/tvm/meta_schedule/task_scheduler.h' l='89' c='_ZNK3tvm13meta_schedule10TaskRecord3getEv'/>
+<use f='tvm/include/tvm/meta_schedule/task_scheduler.h' l='89'/>
+<size>104</size>
+<mbr r='tvm::meta_schedule::TaskRecordNode::ctx' o='128' t='tvm::meta_schedule::TuneContext'/>
+<mbr r='tvm::meta_schedule::TaskRecordNode::task_weight' o='192' t='double'/>
+<mbr r='tvm::meta_schedule::TaskRecordNode::flop' o='256' t='double'/>
+<mbr r='tvm::meta_schedule::TaskRecordNode::is_terminated' o='320' t='bool'/>
+<mbr r='tvm::meta_schedule::TaskRecordNode::build_error_count' o='352' t='int'/>
+<mbr r='tvm::meta_schedule::TaskRecordNode::run_error_count' o='384' t='int'/>
+<mbr r='tvm::meta_schedule::TaskRecordNode::latency_ms' o='448' t='std::vector&lt;double&gt;'/>
+<mbr r='tvm::meta_schedule::TaskRecordNode::measure_candidates' o='640' t='Optional&lt;Array&lt;tvm::meta_schedule::MeasureCandidate&gt;&gt;'/>
+<mbr r='tvm::meta_schedule::TaskRecordNode::builder_results' o='704' t='Optional&lt;Array&lt;tvm::meta_schedule::BuilderResult&gt;&gt;'/>
+<mbr r='tvm::meta_schedule::TaskRecordNode::runner_futures' o='768' t='Optional&lt;Array&lt;tvm::meta_schedule::RunnerFuture&gt;&gt;'/>
+<fun r='_ZN3tvm13meta_schedule14TaskRecordNode10VisitAttrsEPNS_11AttrVisitorE'/>
+<smbr r='tvm::meta_schedule::TaskRecordNode::_type_key' t='const char *const'/>
+<smbr r='tvm::meta_schedule::TaskRecordNode::_type_final' t='const bool'/>
+<smbr r='tvm::meta_schedule::TaskRecordNode::_type_child_slots' t='const int'/>
+<fun r='_ZN3tvm13meta_schedule14TaskRecordNode16RuntimeTypeIndexEv'/>
+<fun r='_ZN3tvm13meta_schedule14TaskRecordNode27_GetOrAllocRuntimeTypeIndexEv'/>
+<use f='tvm/src/meta_schedule/task_scheduler/gradient_based.cc' l='125' c='_ZN3tvm13meta_schedule17GradientBasedNode15JoinRunningTaskEi'/>
+<size>104</size>
+<use f='tvm/src/meta_schedule/task_scheduler/round_robin.cc' l='46' c='_ZN3tvm13meta_schedule14RoundRobinNode10NextTaskIdEv'/>
+<size>104</size>
+<use f='tvm/src/meta_schedule/task_scheduler/task_scheduler.cc' l='25' c='_ZN3tvm13meta_schedule10TaskRecordC1ENS0_11TuneContextEd'/>
+<use f='tvm/src/meta_schedule/task_scheduler/task_scheduler.cc' l='25' c='_ZN3tvm13meta_schedule10TaskRecordC1ENS0_11TuneContextEd'/>
+<use f='tvm/src/meta_schedule/task_scheduler/task_scheduler.cc' l='41' c='_ZN3tvm13meta_schedule13SendToBuilderEPNS0_14TaskRecordNodeERKNS0_7BuilderE'/>
+<use f='tvm/src/meta_schedule/task_scheduler/task_scheduler.cc' l='53' c='_ZN3tvm13meta_schedule12SendToRunnerEPNS0_14TaskRecordNodeERKNS0_6RunnerE'/>
+<use f='tvm/src/meta_schedule/task_scheduler/task_scheduler.cc' l='97' c='_ZN3tvm13meta_schedule11TaskCleanUpEPNS0_14TaskRecordNodeEiRKNS_7runtime5ArrayINS0_12RunnerResultEvEE'/>
+<use f='tvm/src/meta_schedule/task_scheduler/task_scheduler.cc' l='180' c='_ZN3tvm13meta_schedule17TaskSchedulerNode4TuneENS_7runtime5ArrayINS0_11TuneContextEvEENS3_INS_8FloatImmEvEEiiiNS0_7BuilderENS0_6RunnerENS3_INS0_15Meas9556795'/>
+<use f='tvm/src/meta_schedule/task_scheduler/task_scheduler.cc' l='200' c='_ZN3tvm13meta_schedule17TaskSchedulerNode4TuneENS_7runtime5ArrayINS0_11TuneContextEvEENS3_INS_8FloatImmEvEEiiiNS0_7BuilderENS0_6RunnerENS3_INS0_15Meas9556795'/>
+<use f='tvm/src/meta_schedule/task_scheduler/task_scheduler.cc' l='212' c='_ZN3tvm13meta_schedule17TaskSchedulerNode15JoinRunningTaskEi'/>
+<use f='tvm/src/meta_schedule/task_scheduler/task_scheduler.cc' l='242' c='_ZN3tvm13meta_schedule17TaskSchedulerNode9TouchTaskEi'/>
+<use f='tvm/src/meta_schedule/task_scheduler/task_scheduler.cc' l='254' c='_ZN3tvm13meta_schedule17TaskSchedulerNode13TerminateTaskEi'/>
+<use f='tvm/src/meta_schedule/task_scheduler/task_scheduler.cc' l='282' c='_ZNK3tvm13meta_schedule17TaskSchedulerNode16TuningStatisticsB5cxx11Ev'/>
+<use f='tvm/src/meta_schedule/task_scheduler/task_scheduler.cc' l='357'/>
+<use f='tvm/src/meta_schedule/task_scheduler/task_scheduler.cc' l='357'/>
+<use f='tvm/src/meta_schedule/task_scheduler/task_scheduler.cc' l='357'/>
+<size>104</size>

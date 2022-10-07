@@ -1,8 +1,8 @@
-<def f='tvm/include/tvm/support/random_engine.h' l='47' ll='136'/>
-<use f='tvm/src/meta_schedule/utils.h' l='217' c='_ZN3tvm13meta_schedule8ForkSeedEPl'/>
-<use f='tvm/src/meta_schedule/utils.h' l='232' c='_ZN3tvm13meta_schedule8ForkSeedEPli'/>
+<def f='tvm/include/tvm/support/random_engine.h' l='44' ll='131'/>
+<use f='tvm/src/meta_schedule/utils.h' l='224' c='_ZN3tvm13meta_schedule8ForkSeedEPl'/>
+<use f='tvm/src/meta_schedule/utils.h' l='239' c='_ZN3tvm13meta_schedule8ForkSeedEPli'/>
 <size>8</size>
-<doc f='tvm/include/tvm/support/random_engine.h' l='37'>/*!
+<doc f='tvm/include/tvm/support/random_engine.h' l='34'>/*!
  * \brief This linear congruential engine is a drop-in replacement for std::minstd_rand. It strictly
  *  corresponds to std::minstd_rand and is designed to be platform-independent.
  * \note Our linear congruential engine is a complete implementation of
@@ -18,16 +18,11 @@
 <fun r='_ZN3tvm7support24LinearCongruentialEngine3maxEv'/>
 <fun r='_ZN3tvm7support24LinearCongruentialEngine12DeviceRandomEv'/>
 <fun r='_ZN3tvm7support24LinearCongruentialEngineclEv'/>
+<fun r='_ZN3tvm7support24LinearCongruentialEngine13NormalizeSeedEl'/>
 <fun r='_ZN3tvm7support24LinearCongruentialEngine4SeedEl'/>
 <fun r='_ZN3tvm7support24LinearCongruentialEngine8ForkSeedEv'/>
 <fun r='_ZN3tvm7support24LinearCongruentialEngineC1EPl'/>
 <mbr r='tvm::support::LinearCongruentialEngine::rand_state_ptr_' o='0' t='tvm::support::LinearCongruentialEngine::TRandState *'/>
-<use f='tvm/src/meta_schedule/task_scheduler/gradient_based.cc' l='253' c='_ZN3tvm13meta_schedule13TaskScheduler13GradientBasedENS_7runtime5ArrayINS0_11TuneContextEvEENS3_INS_8FloatImmEvEENS0_7BuilderENS0_6RunnerENS2_8Optiona15111662'/>
-<size>8</size>
-<use f='tvm/src/meta_schedule/tune_context.cc' l='47' c='_ZN3tvm13meta_schedule11TuneContextC1ENS_7runtime8OptionalINS_8IRModuleEEENS3_INS_6TargetEEENS3_INS0_14SpaceGeneratorEEENS3_INS0_14SearchStrategyEEENS10962771'/>
-<use f='tvm/src/meta_schedule/tune_context.cc' l='77' c='_ZNK3tvm13meta_schedule15TuneContextNode5CloneEv'/>
-<size>8</size>
-<use f='tvm/src/tir/schedule/concrete_schedule.cc' l='228' c='_ZN3tvm3tir20ConcreteScheduleNode4SeedEl'/>
 <use f='tvm/src/tir/schedule/concrete_schedule.cc' l='232' c='_ZN3tvm3tir20ConcreteScheduleNode8ForkSeedEv'/>
 <size>8</size>
 <use f='tvm/src/tir/schedule/primitive/sampling.cc' l='134' c='_ZN3tvm3tir9SampleIntEPlii'/>

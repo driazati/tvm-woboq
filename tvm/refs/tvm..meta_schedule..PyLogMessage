@@ -1,6 +1,6 @@
-<def f='tvm/src/meta_schedule/utils.h' l='73' ll='114'/>
+<def f='tvm/src/meta_schedule/utils.h' l='74' ll='119'/>
 <size>408</size>
-<doc f='tvm/src/meta_schedule/utils.h' l='67'>/*!
+<doc f='tvm/src/meta_schedule/utils.h' l='68'>/*!
  * \brief Class to accumulate an log message on the python side. Do not use directly, instead use
  * TVM_PY_LOG(DEBUG), TVM_PY_LOG(INFO), TVM_PY_LOG(WARNING), TVM_PY_ERROR(ERROR).
  * \sa TVM_PY_LOG
@@ -12,11 +12,8 @@
 <mbr r='tvm::meta_schedule::PyLogMessage::file_' o='0' t='const char *'/>
 <mbr r='tvm::meta_schedule::PyLogMessage::lineno_' o='64' t='int'/>
 <mbr r='tvm::meta_schedule::PyLogMessage::stream_' o='128' t='std::ostringstream'/>
-<mbr r='tvm::meta_schedule::PyLogMessage::logging_func_' o='3136' t='tvm::runtime::PackedFunc'/>
+<mbr r='tvm::meta_schedule::PyLogMessage::logger_' o='3136' t='tvm::runtime::PackedFunc'/>
 <mbr r='tvm::meta_schedule::PyLogMessage::logging_level_' o='3200' t='tvm::meta_schedule::PyLogMessage::Level'/>
-<use f='tvm/src/meta_schedule/measure_callback/echo_statistics.cc' l='54' macro='1' c='_ZN3tvm13meta_schedule8TaskInfo6UpdateEd'/>
-<use f='tvm/src/meta_schedule/measure_callback/echo_statistics.cc' l='67' macro='1' c='_ZN3tvm13meta_schedule8TaskInfo11UpdateErrorENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKNS0_16MeasureCandidateE'/>
-<size>408</size>
 <use f='tvm/src/meta_schedule/postproc/rewrite_cooperative_fetch.cc' l='100' macro='1' c='_ZN3tvm13meta_schedule27RewriteCooperativeFetchNode25InitializeWithTuneContextERKNS0_11TuneContextE'/>
 <size>408</size>
 <use f='tvm/src/meta_schedule/schedule_rule/cross_thread_reduction.cc' l='35' macro='1' c='_ZN3tvm13meta_schedule24CrossThreadReductionNode25InitializeWithTuneContextERKNS0_11TuneContextE'/>
@@ -32,31 +29,31 @@
 <use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling_with_intrin.cc' l='59' macro='1' c='_ZN3tvm13meta_schedule30MultiLevelTilingWithIntrinNode5ApplyERKNS_3tir8ScheduleERKNS2_7BlockRVE'/>
 <use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling_with_intrin.cc' l='62' macro='1' c='_ZN3tvm13meta_schedule30MultiLevelTilingWithIntrinNode5ApplyERKNS_3tir8ScheduleERKNS2_7BlockRVE'/>
 <size>408</size>
-<use f='tvm/src/meta_schedule/search_strategy/evolutionary_search.cc' l='405' macro='1' c='_ZN3tvm13meta_schedule22EvolutionarySearchNode9PreTuningERKNS_7runtime5ArrayINS_3tir8ScheduleEvEERKNS2_8OptionalINS0_8DatabaseEEERKNS9_INS0_9CostModelEEE'/>
-<use f='tvm/src/meta_schedule/search_strategy/evolutionary_search.cc' l='508' macro='1' c='_ZN3tvm13meta_schedule22EvolutionarySearchNode5State20SampleInitPopulationEi'/>
-<use f='tvm/src/meta_schedule/search_strategy/evolutionary_search.cc' l='596' macro='1' c='_ZN3tvm13meta_schedule22EvolutionarySearchNode5State19EvolveWithCostModelESt6vectorINS_3tir8ScheduleESaIS5_EEi'/>
-<use f='tvm/src/meta_schedule/search_strategy/evolutionary_search.cc' l='625' macro='1' c='_ZN3tvm13meta_schedule22EvolutionarySearchNode5State19EvolveWithCostModelESt6vectorINS_3tir8ScheduleESaIS5_EEi'/>
+<use f='tvm/src/meta_schedule/search_strategy/evolutionary_search.cc' l='507' macro='1' c='_ZN3tvm13meta_schedule22EvolutionarySearchNode5State20SampleInitPopulationEi'/>
+<use f='tvm/src/meta_schedule/search_strategy/evolutionary_search.cc' l='595' macro='1' c='_ZN3tvm13meta_schedule22EvolutionarySearchNode5State19EvolveWithCostModelESt6vectorINS_3tir8ScheduleESaIS5_EEi'/>
+<use f='tvm/src/meta_schedule/search_strategy/evolutionary_search.cc' l='623' macro='1' c='_ZN3tvm13meta_schedule22EvolutionarySearchNode5State19EvolveWithCostModelESt6vectorINS_3tir8ScheduleESaIS5_EEi'/>
+<use f='tvm/src/meta_schedule/search_strategy/evolutionary_search.cc' l='687' macro='1' c='_ZN3tvm13meta_schedule22EvolutionarySearchNode5State25GenerateMeasureCandidatesEv'/>
 <use f='tvm/src/meta_schedule/search_strategy/evolutionary_search.cc' l='689' macro='1' c='_ZN3tvm13meta_schedule22EvolutionarySearchNode5State25GenerateMeasureCandidatesEv'/>
-<use f='tvm/src/meta_schedule/search_strategy/evolutionary_search.cc' l='691' macro='1' c='_ZN3tvm13meta_schedule22EvolutionarySearchNode5State25GenerateMeasureCandidatesEv'/>
-<use f='tvm/src/meta_schedule/search_strategy/evolutionary_search.cc' l='694' macro='1' c='_ZN3tvm13meta_schedule22EvolutionarySearchNode5State25GenerateMeasureCandidatesEv'/>
+<use f='tvm/src/meta_schedule/search_strategy/evolutionary_search.cc' l='692' macro='1' c='_ZN3tvm13meta_schedule22EvolutionarySearchNode5State25GenerateMeasureCandidatesEv'/>
+<use f='tvm/src/meta_schedule/search_strategy/evolutionary_search.cc' l='696' macro='1' c='_ZN3tvm13meta_schedule22EvolutionarySearchNode5State25GenerateMeasureCandidatesEv'/>
 <use f='tvm/src/meta_schedule/search_strategy/evolutionary_search.cc' l='699' macro='1' c='_ZN3tvm13meta_schedule22EvolutionarySearchNode5State25GenerateMeasureCandidatesEv'/>
-<use f='tvm/src/meta_schedule/search_strategy/evolutionary_search.cc' l='702' macro='1' c='_ZN3tvm13meta_schedule22EvolutionarySearchNode5State25GenerateMeasureCandidatesEv'/>
 <size>408</size>
-<use f='tvm/src/meta_schedule/search_strategy/replay_func.cc' l='81' macro='1' c='_ZN3tvm13meta_schedule14ReplayFuncNode9PreTuningERKNS_7runtime5ArrayINS_3tir8ScheduleEvEERKNS2_8OptionalINS0_8DatabaseEEERKNS9_INS0_9CostModelEEE'/>
+<use f='tvm/src/meta_schedule/search_strategy/replay_func.cc' l='73' macro='1' c='_ZN3tvm13meta_schedule14ReplayFuncNode25InitializeWithTuneContextERKNS0_11TuneContextE'/>
 <size>408</size>
-<use f='tvm/src/meta_schedule/search_strategy/replay_trace.cc' l='94' macro='1' c='_ZN3tvm13meta_schedule15ReplayTraceNode9PreTuningERKNS_7runtime5ArrayINS_3tir8ScheduleEvEERKNS2_8OptionalINS0_8DatabaseEEERKNS9_INS0_9CostModelEEE'/>
+<use f='tvm/src/meta_schedule/search_strategy/replay_trace.cc' l='95' macro='1' c='_ZN3tvm13meta_schedule15ReplayTraceNode25InitializeWithTuneContextERKNS0_11TuneContextE'/>
 <size>408</size>
-<use f='tvm/src/meta_schedule/task_scheduler/gradient_based.cc' l='138' macro='1' c='_ZN3tvm13meta_schedule17GradientBasedNode10NextTaskIdEv'/>
-<use f='tvm/src/meta_schedule/task_scheduler/gradient_based.cc' l='205' macro='1' c='_ZN3tvm13meta_schedule17GradientBasedNode15JoinRunningTaskEi'/>
+<use f='tvm/src/meta_schedule/task_scheduler/gradient_based.cc' l='63' macro='1' c='_ZN3tvm13meta_schedule17GradientBasedNode10NextTaskIdEv'/>
 <size>408</size>
-<use f='tvm/src/meta_schedule/task_scheduler/task_scheduler.cc' l='27' macro='1' c='_ZN3tvm13meta_schedule17TaskSchedulerNode14InitializeTaskEi'/>
-<use f='tvm/src/meta_schedule/task_scheduler/task_scheduler.cc' l='29' macro='1' c='_ZN3tvm13meta_schedule17TaskSchedulerNode14InitializeTaskEi'/>
-<use f='tvm/src/meta_schedule/task_scheduler/task_scheduler.cc' l='36' macro='1' c='_ZN3tvm13meta_schedule17TaskSchedulerNode14InitializeTaskEi'/>
-<use f='tvm/src/meta_schedule/task_scheduler/task_scheduler.cc' l='40' macro='1' c='_ZN3tvm13meta_schedule17TaskSchedulerNode14InitializeTaskEi'/>
-<use f='tvm/src/meta_schedule/task_scheduler/task_scheduler.cc' l='46' macro='1' c='_ZN3tvm13meta_schedule17TaskSchedulerNode14InitializeTaskEi'/>
-<use f='tvm/src/meta_schedule/task_scheduler/task_scheduler.cc' l='60' macro='1' c='_ZN3tvm13meta_schedule17TaskSchedulerNode4TuneEv'/>
-<use f='tvm/src/meta_schedule/task_scheduler/task_scheduler.cc' l='70' macro='1' c='_ZN3tvm13meta_schedule17TaskSchedulerNode4TuneEv'/>
-<use f='tvm/src/meta_schedule/task_scheduler/task_scheduler.cc' l='73' macro='1' c='_ZN3tvm13meta_schedule17TaskSchedulerNode4TuneEv'/>
-<use f='tvm/src/meta_schedule/task_scheduler/task_scheduler.cc' l='80' macro='1' c='_ZN3tvm13meta_schedule17TaskSchedulerNode4TuneEv'/>
-<use f='tvm/src/meta_schedule/task_scheduler/task_scheduler.cc' l='92' macro='1' c='_ZN3tvm13meta_schedule17TaskSchedulerNode4TuneEv'/>
+<use f='tvm/src/meta_schedule/task_scheduler/task_scheduler.cc' l='35' macro='1' c='_ZN3tvm13meta_schedule10TaskRecordC1ENS0_11TuneContextEd'/>
+<use f='tvm/src/meta_schedule/task_scheduler/task_scheduler.cc' l='121' macro='1' c='_ZN3tvm13meta_schedule11TaskCleanUpEPNS0_14TaskRecordNodeEiRKNS_7runtime5ArrayINS0_12RunnerResultEvEE'/>
+<use f='tvm/src/meta_schedule/task_scheduler/task_scheduler.cc' l='129' macro='1' c='_ZN3tvm13meta_schedule11TaskCleanUpEPNS0_14TaskRecordNodeEiRKNS_7runtime5ArrayINS0_12RunnerResultEvEE'/>
+<use f='tvm/src/meta_schedule/task_scheduler/task_scheduler.cc' l='157' macro='1' c='_ZN3tvm13meta_schedule17TaskSchedulerNode4TuneENS_7runtime5ArrayINS0_11TuneContextEvEENS3_INS_8FloatImmEvEEiiiNS0_7BuilderENS0_6RunnerENS3_INS0_15Meas9556795'/>
+<use f='tvm/src/meta_schedule/task_scheduler/task_scheduler.cc' l='158' macro='1' c='_ZN3tvm13meta_schedule17TaskSchedulerNode4TuneENS_7runtime5ArrayINS0_11TuneContextEvEENS3_INS_8FloatImmEvEEiiiNS0_7BuilderENS0_6RunnerENS3_INS0_15Meas9556795'/>
+<use f='tvm/src/meta_schedule/task_scheduler/task_scheduler.cc' l='162' macro='1' c='_ZN3tvm13meta_schedule17TaskSchedulerNode4TuneENS_7runtime5ArrayINS0_11TuneContextEvEENS3_INS_8FloatImmEvEEiiiNS0_7BuilderENS0_6RunnerENS3_INS0_15Meas9556795'/>
+<use f='tvm/src/meta_schedule/task_scheduler/task_scheduler.cc' l='168' macro='1' c='_ZN3tvm13meta_schedule17TaskSchedulerNode4TuneENS_7runtime5ArrayINS0_11TuneContextEvEENS3_INS_8FloatImmEvEEiiiNS0_7BuilderENS0_6RunnerENS3_INS0_15Meas9556795'/>
+<use f='tvm/src/meta_schedule/task_scheduler/task_scheduler.cc' l='178' macro='1' c='_ZN3tvm13meta_schedule17TaskSchedulerNode4TuneENS_7runtime5ArrayINS0_11TuneContextEvEENS3_INS_8FloatImmEvEEiiiNS0_7BuilderENS0_6RunnerENS3_INS0_15Meas9556795'/>
+<use f='tvm/src/meta_schedule/task_scheduler/task_scheduler.cc' l='191' macro='1' c='_ZN3tvm13meta_schedule17TaskSchedulerNode4TuneENS_7runtime5ArrayINS0_11TuneContextEvEENS3_INS_8FloatImmEvEEiiiNS0_7BuilderENS0_6RunnerENS3_INS0_15Meas9556795'/>
+<use f='tvm/src/meta_schedule/task_scheduler/task_scheduler.cc' l='193' macro='1' c='_ZN3tvm13meta_schedule17TaskSchedulerNode4TuneENS_7runtime5ArrayINS0_11TuneContextEvEENS3_INS_8FloatImmEvEEiiiNS0_7BuilderENS0_6RunnerENS3_INS0_15Meas9556795'/>
+<use f='tvm/src/meta_schedule/task_scheduler/task_scheduler.cc' l='235' macro='1' c='_ZN3tvm13meta_schedule17TaskSchedulerNode15JoinRunningTaskEi'/>
+<use f='tvm/src/meta_schedule/task_scheduler/task_scheduler.cc' l='259' macro='1' c='_ZN3tvm13meta_schedule17TaskSchedulerNode13TerminateTaskEi'/>
 <size>408</size>

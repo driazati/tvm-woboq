@@ -1,13 +1,15 @@
 <inh f='tvm/include/tvm/runtime/object.h' l='167' c='tvm::runtime::Object'/>
-<def f='tvm/include/tvm/meta_schedule/space_generator.h' l='72' ll='99'/>
-<use f='tvm/include/tvm/meta_schedule/space_generator.h' l='157' c='_ZNK3tvm13meta_schedule14SpaceGeneratorptEv'/>
-<use f='tvm/include/tvm/meta_schedule/space_generator.h' l='157' c='_ZNK3tvm13meta_schedule14SpaceGeneratorptEv'/>
-<use f='tvm/include/tvm/meta_schedule/space_generator.h' l='157' c='_ZNK3tvm13meta_schedule14SpaceGenerator3getEv'/>
-<use f='tvm/include/tvm/meta_schedule/space_generator.h' l='157'/>
-<ovr f='tvm/include/tvm/meta_schedule/space_generator.h' l='161' c='tvm::meta_schedule::PySpaceGeneratorNode'/>
-<use f='tvm/include/tvm/meta_schedule/space_generator.h' l='161'/>
-<size>24</size>
-<doc f='tvm/include/tvm/meta_schedule/space_generator.h' l='36'>/*!
+<def f='tvm/include/tvm/meta_schedule/space_generator.h' l='76' ll='116'/>
+<use f='tvm/include/tvm/meta_schedule/space_generator.h' l='199' c='_ZNK3tvm13meta_schedule14SpaceGeneratorptEv'/>
+<use f='tvm/include/tvm/meta_schedule/space_generator.h' l='199' c='_ZNK3tvm13meta_schedule14SpaceGeneratorptEv'/>
+<use f='tvm/include/tvm/meta_schedule/space_generator.h' l='199' c='_ZNK3tvm13meta_schedule14SpaceGenerator3getEv'/>
+<use f='tvm/include/tvm/meta_schedule/space_generator.h' l='199'/>
+<ovr f='tvm/include/tvm/meta_schedule/space_generator.h' l='203' c='tvm::meta_schedule::PySpaceGeneratorNode'/>
+<use f='tvm/include/tvm/meta_schedule/space_generator.h' l='203'/>
+<use f='tvm/src/meta_schedule/utils.h' l='474' c='_ZN3tvm13meta_schedule10CloneRulesEPKNS0_18SpaceGeneratorNodeEPS1_'/>
+<use f='tvm/src/meta_schedule/utils.h' l='474' c='_ZN3tvm13meta_schedule10CloneRulesEPKNS0_18SpaceGeneratorNodeEPS1_'/>
+<size>48</size>
+<doc f='tvm/include/tvm/meta_schedule/space_generator.h' l='40'>/*!
  * \brief The abstract class for design space generation.
  * \note The relationship between SpaceGenerator and other classes are as follows:
       ┌──────────────────────────────────────────────────────────────┐
@@ -43,6 +45,10 @@
 │                   └───  Runner Future ◄────┘                        │
 └─────────────────────────────────────────────────────────────────────┘
 */</doc>
+<mbr r='tvm::meta_schedule::SpaceGeneratorNode::sch_rules' o='192' t='Optional&lt;Array&lt;tvm::meta_schedule::ScheduleRule&gt;&gt;'/>
+<mbr r='tvm::meta_schedule::SpaceGeneratorNode::postprocs' o='256' t='Optional&lt;Array&lt;tvm::meta_schedule::Postproc&gt;&gt;'/>
+<mbr r='tvm::meta_schedule::SpaceGeneratorNode::mutator_probs' o='320' t='Optional&lt;Map&lt;tvm::meta_schedule::Mutator, tvm::FloatImm&gt;&gt;'/>
+<fun r='_ZN3tvm13meta_schedule18SpaceGeneratorNode10VisitAttrsEPNS_11AttrVisitorE'/>
 <fun r='_ZN3tvm13meta_schedule18SpaceGeneratorNodeD1Ev'/>
 <fun r='_ZN3tvm13meta_schedule18SpaceGeneratorNode25InitializeWithTuneContextERKNS0_11TuneContextE'/>
 <fun r='_ZN3tvm13meta_schedule18SpaceGeneratorNode19GenerateDesignSpaceERKNS_8IRModuleE'/>
@@ -52,10 +58,10 @@
 <fun r='_ZN3tvm13meta_schedule18SpaceGeneratorNode27_GetOrAllocRuntimeTypeIndexEv'/>
 <ovr f='tvm/src/meta_schedule/space_generator/post_order_apply.cc' l='90' c='tvm::meta_schedule::PostOrderApplyNode'/>
 <use f='tvm/src/meta_schedule/space_generator/post_order_apply.cc' l='90'/>
-<size>24</size>
+<size>48</size>
 <ovr f='tvm/src/meta_schedule/space_generator/schedule_fn.cc' l='25' c='tvm::meta_schedule::ScheduleFnNode'/>
 <use f='tvm/src/meta_schedule/space_generator/schedule_fn.cc' l='25'/>
-<size>24</size>
+<size>48</size>
 <ovr f='tvm/src/meta_schedule/space_generator/space_generator_union.cc' l='25' c='tvm::meta_schedule::SpaceGeneratorUnionNode'/>
 <use f='tvm/src/meta_schedule/space_generator/space_generator_union.cc' l='25'/>
-<size>24</size>
+<size>48</size>
