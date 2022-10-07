@@ -2,7 +2,7 @@
 <use f='tvm/include/tvm/meta_schedule/tune_context.h' l='84' u='a' c='_ZN3tvm13meta_schedule15TuneContextNode10VisitAttrsEPNS_11AttrVisitorE'/>
 <offset>128</offset>
 <doc f='tvm/include/tvm/meta_schedule/tune_context.h' l='51'>/*! \brief The workload to be tuned. */</doc>
-<use f='tvm/src/meta_schedule/feature_extractor/per_store_feature.cc' l='1384' u='m' c='_ZN3tvm13meta_schedule19PerStoreFeatureNode11ExtractFromERKNS0_11TuneContextERKNS_7runtime5ArrayINS0_16MeasureCandidateEvEE'/>
+<use f='tvm/src/meta_schedule/feature_extractor/per_store_feature.cc' l='1395' u='m' c='_ZN3tvm13meta_schedule19PerStoreFeatureNode11ExtractFromERKNS0_11TuneContextERKNS_7runtime5ArrayINS0_16MeasureCandidateEvEE'/>
 <use f='tvm/src/meta_schedule/measure_callback/add_to_database.cc' l='36' u='m' c='_ZN3tvm13meta_schedule17AddToDatabaseNode5ApplyERKNS0_13TaskSchedulerEiRKNS_7runtime5ArrayINS0_16MeasureCandidateEvEERKNS6_INS0_13BuilderResultEvEERKN3362037'/>
 <use f='tvm/src/meta_schedule/measure_callback/echo_statistics.cc' l='113' u='m' c='_ZN3tvm13meta_schedule18EchoStatisticsNode13SetupTaskInfoERKNS_7runtime5ArrayINS0_11TuneContextEvEE'/>
 <use f='tvm/src/meta_schedule/mutator/mutate_compute_location.cc' l='41' u='m' c='_ZN3tvm13meta_schedule25MutateComputeLocationNode25InitializeWithTuneContextERKNS0_11TuneContextE'/>
