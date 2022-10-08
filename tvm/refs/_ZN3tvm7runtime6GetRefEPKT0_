@@ -133,9 +133,9 @@
 <use f='tvm/src/meta_schedule/mutator/mutate_tile_size.cc' l='38' u='c' c='_ZN3tvm13meta_schedule22DowncastTilingDecisionERKNS_7runtime9ObjectRefE'/>
 <use f='tvm/src/meta_schedule/mutator/mutate_unroll.cc' l='115' u='c' c='_ZN3tvm13meta_schedule18FindUnrollDecisionERKNS_3tir5TraceEPlPNS0_16MutateUnrollNode9CandidateE'/>
 <use f='tvm/src/meta_schedule/mutator/mutate_unroll.cc' l='117' u='c' c='_ZN3tvm13meta_schedule18FindUnrollDecisionERKNS_3tir5TraceEPlPNS0_16MutateUnrollNode9CandidateE'/>
-<use f='tvm/src/meta_schedule/postproc/rewrite_layout.cc' l='46' u='c' c='_ZN3tvm3tir22BufferReadPosCollector10VisitStmt_EPKNS0_7ForNodeE'/>
-<use f='tvm/src/meta_schedule/postproc/rewrite_layout.cc' l='52' u='c' c='_ZN3tvm3tir22BufferReadPosCollector10VisitStmt_EPKNS0_16BlockRealizeNodeE'/>
-<use f='tvm/src/meta_schedule/postproc/rewrite_layout.cc' l='140' u='c' c='_ZN3tvm3tir13RewriteLayoutERKNS0_8ScheduleE'/>
+<use f='tvm/src/meta_schedule/postproc/rewrite_layout.cc' l='48' u='c' c='_ZN3tvm3tir22BufferReadPosCollector10VisitStmt_EPKNS0_7ForNodeE'/>
+<use f='tvm/src/meta_schedule/postproc/rewrite_layout.cc' l='54' u='c' c='_ZN3tvm3tir22BufferReadPosCollector10VisitStmt_EPKNS0_16BlockRealizeNodeE'/>
+<use f='tvm/src/meta_schedule/postproc/rewrite_layout.cc' l='170' u='c' c='_ZN3tvm3tir13RewriteLayoutERKNS0_8ScheduleE'/>
 <use f='tvm/src/meta_schedule/postproc/verify_gpu_code.cc' l='134' u='c' c='_ZNK3tvm13meta_schedule17VerifyGPUCodeNode6VerifyERKNS_8IRModuleE'/>
 <use f='tvm/src/meta_schedule/postproc/verify_gpu_code.cc' l='180' u='c' c='_ZN3tvm13meta_schedule17VerifyGPUCodeNode5ApplyERKNS_3tir8ScheduleE'/>
 <use f='tvm/src/meta_schedule/schedule_rule/auto_inline.cc' l='40' u='c' c='_ZN3tvm13meta_schedule19IsInSpatialPrimFuncERKNS_3tir8ScheduleERKNS1_8StmtSRefE'/>
@@ -366,10 +366,10 @@
 <use f='tvm/src/relay/backend/te_compiler.cc' l='907' u='c' c='_ZN3tvm5relay3tec22LowerTensorExprMutator21DeviceAwareVisitExpr_EPKNS0_8CallNodeE'/>
 <use f='tvm/src/relay/backend/te_compiler.cc' l='908' u='c' c='_ZN3tvm5relay3tec22LowerTensorExprMutator21DeviceAwareVisitExpr_EPKNS0_8CallNodeE'/>
 <use f='tvm/src/relay/backend/te_compiler.cc' l='922' u='c' c='_ZN3tvm5relay3tec22LowerTensorExprMutator21DeviceAwareVisitExpr_EPKNS0_8CallNodeE'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='163' u='c' c='_ZN3tvm5relay3tec16LowerToTECompute10VisitExpr_EPKNS0_7VarNodeE'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='238' u='c' c='_ZN3tvm5relay3tec16LowerToTECompute10VisitExpr_EPKNS0_8CallNodeE'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='614' u='c' c='_ZN3tvm5relay3tec13MakeShapeFunc10VisitExpr_EPKNS0_7VarNodeE'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='696' u='c' c='_ZN3tvm5relay3tec13MakeShapeFunc10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='164' u='c' c='_ZN3tvm5relay3tec16LowerToTECompute10VisitExpr_EPKNS0_7VarNodeE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='239' u='c' c='_ZN3tvm5relay3tec16LowerToTECompute10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='755' u='c' c='_ZN3tvm5relay3tec13MakeShapeFunc10VisitExpr_EPKNS0_7VarNodeE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='837' u='c' c='_ZN3tvm5relay3tec13MakeShapeFunc10VisitExpr_EPKNS0_8CallNodeE'/>
 <use f='tvm/src/relay/backend/vm/compiler.cc' l='382' u='c' c='_ZN3tvm5relay2vm18VMFunctionCompiler10VisitExpr_EPKNS0_12ConstantNodeE'/>
 <use f='tvm/src/relay/backend/vm/compiler.cc' l='391' u='c' c='_ZN3tvm5relay2vm18VMFunctionCompiler10VisitExpr_EPKNS0_7VarNodeE'/>
 <use f='tvm/src/relay/backend/vm/compiler.cc' l='398' u='c' c='_ZN3tvm5relay2vm18VMFunctionCompiler10VisitExpr_EPKNS0_9TupleNodeE'/>
@@ -724,7 +724,7 @@
 <use f='tvm/src/relay/transforms/memory_alloc.cc' l='341' u='c' c='_ZN3tvm5relay15DialectRewriter13EmitShapeFuncEPNS0_7LetListERKNS0_5TupleERKNS0_16CallLoweredAttrsE'/>
 <use f='tvm/src/relay/transforms/merge_compiler_regions.cc' l='58' u='c' c='_ZN3tvm5relay21merge_compiler_region12RegionMerger10VisitExpr_EPKNS0_8CallNodeE'/>
 <use f='tvm/src/relay/transforms/merge_compiler_regions.cc' l='149' u='c' c='_ZN3tvm5relay21merge_compiler_region16MergeAnnotations8Rewrite_EPKNS0_8CallNodeERKNS_9RelayExprE'/>
-<use f='tvm/src/relay/transforms/meta_schedule_layout_rewrite.cc' l='130' u='c' c='_ZN3tvm5relay26MetaScheduleLayoutRewriter10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/transforms/meta_schedule_layout_rewrite.cc' l='137' u='c' c='_ZN3tvm5relay26MetaScheduleLayoutRewriter10VisitExpr_EPKNS0_8CallNodeE'/>
 <use f='tvm/src/relay/transforms/partial_eval.cc' l='519' u='c' c='_ZZN3tvm5relay12partial_eval10StatefulOpERKNS_9RelayExprEEN17StatefulOpVisitor10VisitExpr_EPKNS_6OpNodeE'/>
 <use f='tvm/src/relay/transforms/partial_eval.cc' l='607' u='c' c='_ZN3tvm5relay12partial_eval16PartialEvaluator10VisitExpr_EPKNS0_12ConstantNodeEPNS0_7LetListE'/>
 <use f='tvm/src/relay/transforms/partial_eval.cc' l='632' u='c' c='_ZN3tvm5relay12partial_eval16PartialEvaluator10VisitExpr_EPKNS0_7VarNodeEPNS0_7LetListE'/>
@@ -937,9 +937,9 @@
 <use f='tvm/src/te/autodiff/jacobian.cc' l='40' u='c' c='_ZN3tvm2te15JacobianMutator10VisitExpr_EPKNS_3tir11ShuffleNodeE'/>
 <use f='tvm/src/te/autodiff/jacobian.cc' l='40' u='c' c='_ZN3tvm2te15JacobianMutator10VisitExpr_EPKNS_3tir13StringImmNodeE'/>
 <use f='tvm/src/te/operation/create_primfunc.cc' l='90' u='c' c='_ZN3tvm3tir32LayoutFreePlaceholdersNormalizer7ProcessENS0_8PrimFuncE'/>
-<use f='tvm/src/te/operation/create_primfunc.cc' l='247' u='c' c='_ZN3tvm3tir24GenerateBlockFromTensorsERKNS_2te9ComputeOpERKNS_7runtime5ArrayINS1_6TensorEvEENS6_INS_8PrimExprEvEESB_PNS0_14CreateFuncInfoEPNS_5arith8AnalyzerE'/>
-<use f='tvm/src/te/operation/create_primfunc.cc' l='447' u='c' c='_ZN3tvm3tir19RewriteStageToBlockERKNS_2te9OperationEPNS0_14CreateFuncInfoEPNS_7runtime5ArrayINS0_4StmtEvEEPNS_5arith8AnalyzerE'/>
-<use f='tvm/src/te/operation/create_primfunc.cc' l='450' u='c' c='_ZN3tvm3tir19RewriteStageToBlockERKNS_2te9OperationEPNS0_14CreateFuncInfoEPNS_7runtime5ArrayINS0_4StmtEvEEPNS_5arith8AnalyzerE'/>
+<use f='tvm/src/te/operation/create_primfunc.cc' l='249' u='c' c='_ZN3tvm3tir24GenerateBlockFromTensorsERKNS_2te9ComputeOpERKNS_7runtime5ArrayINS1_6TensorEvEENS6_INS_8PrimExprEvEESB_PNS0_14CreateFuncInfoEPNS_5arith8AnalyzerE'/>
+<use f='tvm/src/te/operation/create_primfunc.cc' l='449' u='c' c='_ZN3tvm3tir19RewriteStageToBlockERKNS_2te9OperationEPNS0_14CreateFuncInfoEPNS_7runtime5ArrayINS0_4StmtEvEEPNS_5arith8AnalyzerE'/>
+<use f='tvm/src/te/operation/create_primfunc.cc' l='452' u='c' c='_ZN3tvm3tir19RewriteStageToBlockERKNS_2te9OperationEPNS0_14CreateFuncInfoEPNS_7runtime5ArrayINS0_4StmtEvEEPNS_5arith8AnalyzerE'/>
 <use f='tvm/src/te/operation/hybrid_op.cc' l='410' u='c' c='_ZZN3tvm2te14ApplyLoopOrderERKNS0_5StageERKSt13unordered_mapINS_3tir7IterVarENS_5RangeESt4hashIS6_ESt8equal_toIS6_ESaISt4pairIKS6_S7_EEERKS4_IS6_S6_S92590662'/>
 <use f='tvm/src/te/operation/tensorize.cc' l='181' u='c' c='_ZN3tvm2te19TensorIntrinMatcher10VisitExpr_EPKNS_3tir7VarNodeE'/>
 <use f='tvm/src/te/schedule/schedule_dataflow_rewrite.cc' l='53' u='c' c='_ZN3tvm2te11VarReplacer10VisitExpr_EPKNS_3tir7VarNodeE'/>
@@ -1432,6 +1432,7 @@
 <use f='tvm/src/tir/transforms/narrow_datatype.cc' l='437' u='c' c='_ZN3tvm3tir16DataTypeRewriter10VisitExpr_EPKNS0_6GTNodeE'/>
 <use f='tvm/src/tir/transforms/narrow_datatype.cc' l='437' u='c' c='_ZN3tvm3tir16DataTypeRewriter10VisitExpr_EPKNS0_6GENodeE'/>
 <use f='tvm/src/tir/transforms/remove_no_op.cc' l='117' u='c' c='_ZN3tvm3tir11NoOpRemover10VisitStmt_EPKNS0_12EvaluateNodeE'/>
+<use f='tvm/src/tir/transforms/remove_weight_layout_rewrite_block.cc' l='181' u='c' c='_ZN3tvm3tir20AllocateConstRewrite10VisitExpr_EPKNS0_14BufferLoadNodeE'/>
 <use f='tvm/src/tir/transforms/renew_defs.cc' l='195' u='c' c='_ZN3tvm3tir15RenewDefMutator11VisitBufferERKNS0_6BufferEb'/>
 <use f='tvm/src/tir/transforms/rewrite_unsafe_select.cc' l='53' u='c' c='_ZN3tvm3tir18UnsafeExprDetector10VisitExpr_EPKNS0_8CallNodeE'/>
 <use f='tvm/src/tir/transforms/simplify.cc' l='109' u='c' c='_ZN3tvm5arith14StmtSimplifier10VisitStmt_EPKNS_3tir11LetStmtNodeE'/>

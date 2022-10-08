@@ -40,6 +40,7 @@
 <use f='tvm/src/relay/backend/aot_executor_codegen.cc' l='517' u='r' c='_ZN3tvm5relay7backend18AOTExecutorCodegen12CopyToOutputENS_8PrimExprES3_bm'/>
 <use f='tvm/src/relay/backend/aot_executor_codegen.cc' l='518' u='r' c='_ZN3tvm5relay7backend18AOTExecutorCodegen12CopyToOutputENS_8PrimExprES3_bm'/>
 <use f='tvm/src/relay/backend/aot_executor_codegen.cc' l='813' u='r' c='_ZN3tvm5relay7backend18AOTExecutorCodegen17GetBufferVarForIOEi'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='319' u='m' c='_ZN3tvm5relay3tec27LayoutFreeConstantCollector10VisitStmt_EPKNS_3tir9BlockNodeE'/>
 <use f='tvm/src/script/ir_builder/tir/frame.cc' l='120' u='r' c='_ZN3tvm6script10ir_builder3tir17AllocateFrameNode13ExitWithScopeEv'/>
 <use f='tvm/src/script/ir_builder/tir/frame.cc' l='127' u='r' c='_ZN3tvm6script10ir_builder3tir22AllocateConstFrameNode13ExitWithScopeEv'/>
 <use f='tvm/src/script/ir_builder/tir/ir.cc' l='149' u='r' c='_ZN3tvm6script10ir_builder3tir18PreflattenedBufferENS_3tir6BufferENS_7runtime5ArrayINS_8PrimExprEvEENS5_8DataTypeENS5_8OptionalINS3_3VarEEES8_S7_NS5_612337612'/>
@@ -62,8 +63,8 @@
 <use f='tvm/src/target/stackvm/codegen_stackvm.cc' l='152' u='r' c='_ZN3tvm7codegen14CodeGenStackVM10VisitExpr_EPKNS_3tir14BufferLoadNodeE'/>
 <use f='tvm/src/target/stackvm/codegen_stackvm.cc' l='175' u='r' c='_ZN3tvm7codegen14CodeGenStackVM10VisitStmt_EPKNS_3tir15BufferStoreNodeE'/>
 <use f='tvm/src/target/stackvm/codegen_stackvm.cc' l='200' u='m' c='_ZN3tvm7codegen14CodeGenStackVM10VisitExpr_EPKNS_3tir8CallNodeE'/>
-<use f='tvm/src/te/operation/create_primfunc.cc' l='356' u='m' c='_ZN3tvm3tir24GenerateStmtFromExternOpERKNS_2te8ExternOpEPNS0_14CreateFuncInfoE'/>
-<use f='tvm/src/te/operation/create_primfunc.cc' l='356' u='r' c='_ZN3tvm3tir24GenerateStmtFromExternOpERKNS_2te8ExternOpEPNS0_14CreateFuncInfoE'/>
+<use f='tvm/src/te/operation/create_primfunc.cc' l='358' u='m' c='_ZN3tvm3tir24GenerateStmtFromExternOpERKNS_2te8ExternOpEPNS0_14CreateFuncInfoE'/>
+<use f='tvm/src/te/operation/create_primfunc.cc' l='358' u='r' c='_ZN3tvm3tir24GenerateStmtFromExternOpERKNS_2te8ExternOpEPNS0_14CreateFuncInfoE'/>
 <use f='tvm/src/te/operation/cross_thread_reduction.cc' l='224' u='r' c='_ZN3tvm2te24MakeCrossThreadReductionEPKNS0_13ComputeOpNodeERKNS0_5StageERKSt13unordered_mapINS_3tir7IterVarENS_5RangeESt4hashIS9_ESt8equal_toIS9_ESaISt4pairIKS9_SA_EEEb'/>
 <use f='tvm/src/te/operation/cross_thread_reduction.cc' l='227' u='r' c='_ZN3tvm2te24MakeCrossThreadReductionEPKNS0_13ComputeOpNodeERKNS0_5StageERKSt13unordered_mapINS_3tir7IterVarENS_5RangeESt4hashIS9_ESt8equal_toIS9_ESaISt4pairIKS9_SA_EEEb'/>
 <use f='tvm/src/tir/analysis/block_access_region_detector.cc' l='123' u='r' c='_ZN3tvm3tir22BlockReadWriteDetectorclERKNS0_4StmtE'/>
@@ -244,6 +245,13 @@
 <use f='tvm/src/tir/transforms/plan_update_buffer_allocation_location.cc' l='128' u='r' c='_ZN3tvm3tir23BufferAllocationLocator10VisitStmt_EPKNS0_9BlockNodeE'/>
 <use f='tvm/src/tir/transforms/plan_update_buffer_allocation_location.cc' l='134' u='r' c='_ZN3tvm3tir23BufferAllocationLocator10VisitStmt_EPKNS0_9BlockNodeE'/>
 <use f='tvm/src/tir/transforms/plan_update_buffer_allocation_location.cc' l='172' u='r' c='_ZNK3tvm3tir23BufferAllocationLocator27RemoveRedundantBufferRegionERKNS_7runtime5ArrayINS0_12BufferRegionEvEE'/>
+<use f='tvm/src/tir/transforms/remove_weight_layout_rewrite_block.cc' l='96' u='m' c='_ZN3tvm3tir24RemoveLayoutRewriteBlock10VisitStmt_EPKNS0_9BlockNodeE'/>
+<use f='tvm/src/tir/transforms/remove_weight_layout_rewrite_block.cc' l='152' u='m' c='_ZN3tvm3tir20AllocateConstRewrite10VisitStmt_EPKNS0_9BlockNodeE'/>
+<use f='tvm/src/tir/transforms/remove_weight_layout_rewrite_block.cc' l='179' u='m' c='_ZN3tvm3tir20AllocateConstRewrite10VisitExpr_EPKNS0_14BufferLoadNodeE'/>
+<use f='tvm/src/tir/transforms/remove_weight_layout_rewrite_block.cc' l='184' u='m' c='_ZN3tvm3tir20AllocateConstRewrite10VisitExpr_EPKNS0_14BufferLoadNodeE'/>
+<use f='tvm/src/tir/transforms/remove_weight_layout_rewrite_block.cc' l='219' u='m' c='_ZN3tvm3tir31WeightLayoutRewriteBlockRemover6RemoveENS0_8PrimFuncE'/>
+<use f='tvm/src/tir/transforms/remove_weight_layout_rewrite_block.cc' l='221' u='m' c='_ZN3tvm3tir31WeightLayoutRewriteBlockRemover6RemoveENS0_8PrimFuncE'/>
+<use f='tvm/src/tir/transforms/remove_weight_layout_rewrite_block.cc' l='221' u='m' c='_ZN3tvm3tir31WeightLayoutRewriteBlockRemover6RemoveENS0_8PrimFuncE'/>
 <use f='tvm/src/tir/transforms/renew_defs.cc' l='202' u='r' c='_ZN3tvm3tir15RenewDefMutator11VisitBufferERKNS0_6BufferEb'/>
 <use f='tvm/src/tir/transforms/renew_defs.cc' l='211' u='w' c='_ZN3tvm3tir15RenewDefMutator11VisitBufferERKNS0_6BufferEb'/>
 <use f='tvm/src/tir/transforms/renew_defs.cc' l='242' u='r' c='_ZN3tvm3tir15RenewDefMutator22VisitDeclOrRemapBufferERKNS0_6BufferE'/>

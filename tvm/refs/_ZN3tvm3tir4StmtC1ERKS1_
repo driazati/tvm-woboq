@@ -23,6 +23,7 @@
 <use f='tvm/src/relay/backend/aot_executor_codegen.cc' l='805' u='c' c='_ZN3tvm5relay7backend18AOTExecutorCodegen14CreateMainFuncENS_7runtime6StringEj'/>
 <use f='tvm/src/relay/backend/contrib/example_target_hooks/relay_to_tir.cc' l='146' u='c' c='_ZN3tvm5relay7contrib20example_target_hooks12_GLOBAL__N_120ConvertAddToSubtract30ReplaceAddWithSubtractPrimFuncERKNS0_8FunctionE'/>
 <use f='tvm/src/relay/backend/contrib/example_target_hooks/relay_to_tir.cc' l='154' u='c' c='_ZN3tvm5relay7contrib20example_target_hooks12_GLOBAL__N_120ConvertAddToSubtract30ReplaceAddWithSubtractPrimFuncERKNS0_8FunctionE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='360' u='c' c='_ZN3tvm5relay3tec28AllocateConstReplaceConstant10VisitStmt_EPKNS_3tir17AllocateConstNodeE'/>
 <use f='tvm/src/script/ir_builder/tir/frame.cc' l='70' u='c' c='_ZN3tvm6script10ir_builder3tir14BlockFrameNode13ExitWithScopeEv'/>
 <use f='tvm/src/script/ir_builder/tir/ir.cc' l='341' u='c' c='_ZN3tvm6script10ir_builder3tir6SerialENS_8PrimExprES3_NS_7runtime8OptionalINS4_3MapINS4_6StringENS4_9ObjectRefEvvEEEE'/>
 <use f='tvm/src/script/ir_builder/tir/ir.cc' l='341' u='c' c='_ZN3tvm6script10ir_builder3tir8ParallelENS_8PrimExprES3_NS_7runtime8OptionalINS4_3MapINS4_6StringENS4_9ObjectRefEvvEEEE'/>
@@ -43,8 +44,8 @@
 <use f='tvm/src/te/operation/compute_op.cc' l='382' u='c' c='_ZN3tvm2te15MakeComputeStmtEPKNS0_13ComputeOpNodeERKNS0_5StageERKSt13unordered_mapINS_3tir7IterVarENS_5RangeESt4hashIS9_ESt8equal_toIS9_ESaISt4pairIKS9_SA_EEEb'/>
 <use f='tvm/src/te/operation/compute_op.cc' l='603' u='c' c='_ZN3tvm2te15TransformUpdateERKNS0_5StageERKSt13unordered_mapINS_3tir7IterVarENS_5RangeESt4hashIS6_ESt8equal_toIS6_ESaISt4pairIKS6_S7_EEERKNS0_15Comput2419945'/>
 <use f='tvm/src/te/operation/compute_op.cc' l='603' u='c' c='_ZN3tvm2te15TransformUpdateERKNS0_5StageERKSt13unordered_mapINS_3tir7IterVarENS_5RangeESt4hashIS6_ESt8equal_toIS6_ESaISt4pairIKS6_S7_EEERKNS0_15Comput2419945'/>
-<use f='tvm/src/te/operation/create_primfunc.cc' l='341' u='c' c='_ZN3tvm3tir23GenerateStmtFromComputeERKNS_2te9ComputeOpEPNS0_14CreateFuncInfoEPNS_5arith8AnalyzerE'/>
-<use f='tvm/src/te/operation/create_primfunc.cc' l='380' u='c' c='_ZN3tvm3tir24GenerateStmtFromExternOpERKNS_2te8ExternOpEPNS0_14CreateFuncInfoE'/>
+<use f='tvm/src/te/operation/create_primfunc.cc' l='343' u='c' c='_ZN3tvm3tir23GenerateStmtFromComputeERKNS_2te9ComputeOpEPNS0_14CreateFuncInfoEPNS_5arith8AnalyzerE'/>
+<use f='tvm/src/te/operation/create_primfunc.cc' l='382' u='c' c='_ZN3tvm3tir24GenerateStmtFromExternOpERKNS_2te8ExternOpEPNS0_14CreateFuncInfoE'/>
 <use f='tvm/src/te/operation/cross_thread_reduction.cc' l='205' u='c' c='_ZN3tvm2te24MakeCrossThreadReductionEPKNS0_13ComputeOpNodeERKNS0_5StageERKSt13unordered_mapINS_3tir7IterVarENS_5RangeESt4hashIS9_ESt8equal_toIS9_ESaISt4pairIKS9_SA_EEEb'/>
 <use f='tvm/src/te/operation/cross_thread_reduction.cc' l='210' u='c' c='_ZN3tvm2te24MakeCrossThreadReductionEPKNS0_13ComputeOpNodeERKNS0_5StageERKSt13unordered_mapINS_3tir7IterVarENS_5RangeESt4hashIS9_ESt8equal_toIS9_ESaISt4pairIKS9_SA_EEEb'/>
 <use f='tvm/src/te/operation/cross_thread_reduction.cc' l='211' u='c' c='_ZN3tvm2te24MakeCrossThreadReductionEPKNS0_13ComputeOpNodeERKNS0_5StageERKSt13unordered_mapINS_3tir7IterVarENS_5RangeESt4hashIS9_ESt8equal_toIS9_ESaISt4pairIKS9_SA_EEEb'/>
@@ -458,6 +459,7 @@
 <use f='tvm/src/tir/transforms/remove_no_op.cc' l='114' u='c' c='_ZN3tvm3tir11NoOpRemover10VisitStmt_EPKNS0_19ProducerRealizeNodeE'/>
 <use f='tvm/src/tir/transforms/remove_no_op.cc' l='171' u='c' c='_ZN3tvm3tir11NoOpRemover12MakeEvaluateERKNS_7runtime5ArrayINS_8PrimExprEvEE'/>
 <use f='tvm/src/tir/transforms/remove_store_undef.cc' l='104' u='c' c='_ZN3tvm3tir17StoreUndefRemover5ApplyENS0_4StmtE'/>
+<use f='tvm/src/tir/transforms/remove_weight_layout_rewrite_block.cc' l='173' u='c' c='_ZN3tvm3tir20AllocateConstRewrite10VisitStmt_EPKNS0_17AllocateConstNodeE'/>
 <use f='tvm/src/tir/transforms/renew_defs.cc' l='65' u='c' c='_ZN3tvm3tir15RenewDefMutator9TransformERKNS0_8PrimFuncE'/>
 <use f='tvm/src/tir/transforms/skip_assert.cc' l='33' u='c' c='_ZN3tvm3tir13AssertSkipper10VisitStmt_EPKNS0_14AssertStmtNodeE'/>
 <use f='tvm/src/tir/transforms/split_host_device.cc' l='66' u='c' c='_ZN3tvm3tir17VarUseDefAnalysis10VisitStmt_EPKNS0_12AttrStmtNodeE'/>

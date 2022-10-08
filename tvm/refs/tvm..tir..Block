@@ -45,10 +45,10 @@
 <size>8</size>
 <use f='tvm/src/meta_schedule/mutator/mutate_parallel.cc' l='86' c='_ZN3tvm3tir15AnalyzeParallelERKNS0_13ScheduleStateERKNS_7runtime6StringES7_l'/>
 <size>8</size>
-<use f='tvm/src/meta_schedule/postproc/rewrite_layout.cc' l='36' c='_ZNK3tvm3tir22BufferReadPosCollector18GetBufferLocationsEv'/>
-<use f='tvm/src/meta_schedule/postproc/rewrite_layout.cc' l='84' c='_ZN3tvm3tir22BufferReadPosCollector18GetReadBufferIndexERKNS0_5BlockERKNS0_6BufferE'/>
-<use f='tvm/src/meta_schedule/postproc/rewrite_layout.cc' l='97'/>
-<use f='tvm/src/meta_schedule/postproc/rewrite_layout.cc' l='141' c='_ZN3tvm3tir13RewriteLayoutERKNS0_8ScheduleE'/>
+<use f='tvm/src/meta_schedule/postproc/rewrite_layout.cc' l='38' c='_ZNK3tvm3tir22BufferReadPosCollector18GetBufferLocationsEv'/>
+<use f='tvm/src/meta_schedule/postproc/rewrite_layout.cc' l='86' c='_ZN3tvm3tir22BufferReadPosCollector18GetReadBufferIndexERKNS0_5BlockERKNS0_6BufferE'/>
+<use f='tvm/src/meta_schedule/postproc/rewrite_layout.cc' l='99'/>
+<use f='tvm/src/meta_schedule/postproc/rewrite_layout.cc' l='171' c='_ZN3tvm3tir13RewriteLayoutERKNS0_8ScheduleE'/>
 <size>8</size>
 <use f='tvm/src/meta_schedule/postproc/rewrite_parallel_vectorize_unroll.cc' l='103' c='_ZN3tvm3tir15ParseAnnotationERKNS0_5BlockEPNS0_16ParsedAnnotationE'/>
 <use f='tvm/src/meta_schedule/postproc/rewrite_parallel_vectorize_unroll.cc' l='308' c='_ZN3tvm3tir22FindAnnotatedRootBlockERKNS0_8ScheduleEPNS0_16ParsedAnnotationEPNS0_7BlockRVE'/>
@@ -67,8 +67,8 @@
 <size>8</size>
 <use f='tvm/src/te/operation/create_primfunc.cc' l='109' c='_ZN3tvm3tir32LayoutFreePlaceholdersNormalizer10VisitStmt_EPKNS0_9BlockNodeE'/>
 <use f='tvm/src/te/operation/create_primfunc.cc' l='109' c='_ZN3tvm3tir32LayoutFreePlaceholdersNormalizer10VisitStmt_EPKNS0_9BlockNodeE'/>
-<use f='tvm/src/te/operation/create_primfunc.cc' l='277' c='_ZN3tvm3tir24GenerateBlockFromTensorsERKNS_2te9ComputeOpERKNS_7runtime5ArrayINS1_6TensorEvEENS6_INS_8PrimExprEvEESB_PNS0_14CreateFuncInfoEPNS_5arith8AnalyzerE'/>
-<use f='tvm/src/te/operation/create_primfunc.cc' l='386' c='_ZN3tvm3tir24GenerateStmtFromExternOpERKNS_2te8ExternOpEPNS0_14CreateFuncInfoE'/>
+<use f='tvm/src/te/operation/create_primfunc.cc' l='279' c='_ZN3tvm3tir24GenerateBlockFromTensorsERKNS_2te9ComputeOpERKNS_7runtime5ArrayINS1_6TensorEvEENS6_INS_8PrimExprEvEESB_PNS0_14CreateFuncInfoEPNS_5arith8AnalyzerE'/>
+<use f='tvm/src/te/operation/create_primfunc.cc' l='388' c='_ZN3tvm3tir24GenerateStmtFromExternOpERKNS_2te8ExternOpEPNS0_14CreateFuncInfoE'/>
 <size>8</size>
 <use f='tvm/src/tir/analysis/block_access_region_detector.cc' l='355' c='_ZN3tvm3tir20GetBlockAccessRegionERKNS0_5BlockERKNS_7runtime3MapINS0_3VarENS0_6BufferEvvEE'/>
 <use f='tvm/src/tir/analysis/block_access_region_detector.cc' l='372' c='_ZN3tvm3tir23GetBlockReadWriteRegionERKNS0_5BlockERKNS_7runtime3MapINS0_3VarENS0_6BufferEvvEE'/>
@@ -538,6 +538,8 @@
 <use f='tvm/src/tir/transforms/plan_update_buffer_allocation_location.cc' l='153' c='_ZN3tvm3tir23BufferAllocationLocator17InjectOpaqueBlockENS0_4StmtERKNS_7runtime5ArrayINS0_6BufferEvEE'/>
 <use f='tvm/src/tir/transforms/plan_update_buffer_allocation_location.cc' l='165' c='_ZN3tvm3tir23BufferAllocationLocator17InjectOpaqueBlockENS0_4StmtERKNS_7runtime5ArrayINS0_6BufferEvEE'/>
 <size>8</size>
-<use f='tvm/src/tir/transforms/remove_weight_layout_rewrite_block.cc' l='55' c='_ZN3tvm3tir31WeightLayoutRewriteBlockRemover10VisitStmt_EPKNS0_9BlockNodeE'/>
-<use f='tvm/src/tir/transforms/remove_weight_layout_rewrite_block.cc' l='55' c='_ZN3tvm3tir31WeightLayoutRewriteBlockRemover10VisitStmt_EPKNS0_9BlockNodeE'/>
+<use f='tvm/src/tir/transforms/remove_weight_layout_rewrite_block.cc' l='48' c='_ZN3tvm3tir24RemoveLayoutRewriteBlock10VisitStmt_EPKNS0_9BlockNodeE'/>
+<use f='tvm/src/tir/transforms/remove_weight_layout_rewrite_block.cc' l='48' c='_ZN3tvm3tir24RemoveLayoutRewriteBlock10VisitStmt_EPKNS0_9BlockNodeE'/>
+<use f='tvm/src/tir/transforms/remove_weight_layout_rewrite_block.cc' l='148' c='_ZN3tvm3tir20AllocateConstRewrite10VisitStmt_EPKNS0_9BlockNodeE'/>
+<use f='tvm/src/tir/transforms/remove_weight_layout_rewrite_block.cc' l='148' c='_ZN3tvm3tir20AllocateConstRewrite10VisitStmt_EPKNS0_9BlockNodeE'/>
 <size>8</size>

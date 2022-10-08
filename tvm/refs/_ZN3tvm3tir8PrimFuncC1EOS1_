@@ -7,10 +7,12 @@
 <use f='tvm/src/driver/driver_api.cc' l='346' u='c'/>
 <use f='tvm/src/meta_schedule/feature_extractor/per_store_feature.cc' l='293' u='c' c='_ZN3tvm3tir9transform28SimplifyForFeatureExtractionEv'/>
 <use f='tvm/src/meta_schedule/postproc/verify_gpu_code.cc' l='184' u='c' c='_ZN3tvm13meta_schedule17VerifyGPUCodeNode5ApplyERKNS_3tir8ScheduleE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='348' u='c' c='_ZN3tvm5relay3tec28AllocateConstReplaceConstant7RewriteENS_3tir8PrimFuncERKSt13unordered_mapINS_7runtime7NDArrayES7_NS6_13ObjectPtrHashENS6_14ObjectPt3808425'/>
 <use f='tvm/src/relay/backend/utils.cc' l='431' u='c' c='_ZN3tvm5relay7backend23DefaultTIRConverterImplERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS3_INS2_7NDArrayEvEEb'/>
 <use f='tvm/src/te/operation/create_primfunc.cc' l='98' u='c' c='_ZN3tvm3tir32LayoutFreePlaceholdersNormalizer7ProcessENS0_8PrimFuncE'/>
 <use f='tvm/src/te/operation/create_primfunc.cc' l='105' u='c' c='_ZN3tvm3tir32LayoutFreePlaceholdersNormalizer7ProcessENS0_8PrimFuncE'/>
-<use f='tvm/src/te/operation/create_primfunc.cc' l='476' u='c' c='_ZN3tvm3tir27GenerateAndCompletePrimFuncERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS2_INS0_4StmtEvEEPNS0_14CreateFuncInfoE'/>
+<use f='tvm/src/te/operation/create_primfunc.cc' l='478' u='c' c='_ZN3tvm3tir27GenerateAndCompletePrimFuncERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS2_INS0_4StmtEvEEPNS0_14CreateFuncInfoE'/>
+<use f='tvm/src/te/operation/create_primfunc.cc' l='504' u='c' c='_ZN3tvm3tir27CreatePrimFuncWithConstantsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS2_INS1_7NDArrayEvEE'/>
 <use f='tvm/src/te/schedule/schedule_postproc_to_primfunc.cc' l='187' u='c' c='_ZN3tvm2te28LayoutTransformAttrUnwrapper5ApplyENS_3tir8PrimFuncE'/>
 <use f='tvm/src/te/schedule/schedule_postproc_to_primfunc.cc' l='193' u='c' c='_ZN3tvm2te28LayoutTransformAttrUnwrapper5ApplyENS_3tir8PrimFuncE'/>
 <use f='tvm/src/te/schedule/schedule_postproc_to_primfunc.cc' l='260' u='c' c='_ZN3tvm2te27AxisSeparatorsAttrUnwrapper5ApplyENS_3tir8PrimFuncE'/>
@@ -99,8 +101,7 @@
 <use f='tvm/src/tir/transforms/remove_no_op.cc' l='186' u='c' c='_ZN3tvm3tir9transform10RemoveNoOpEv'/>
 <use f='tvm/src/tir/transforms/remove_store_undef.cc' l='151' u='c' c='_ZN3tvm3tir9transform24RemoveStoreUndefInternalEv'/>
 <use f='tvm/src/tir/transforms/remove_store_undef.cc' l='164' u='c' c='_ZN3tvm3tir9transform23ValidateAllUndefRemovedEv'/>
-<use f='tvm/src/tir/transforms/remove_weight_layout_rewrite_block.cc' l='50' u='c' c='_ZN3tvm3tir31WeightLayoutRewriteBlockRemover6RemoveENS0_8PrimFuncE'/>
-<use f='tvm/src/tir/transforms/remove_weight_layout_rewrite_block.cc' l='110' u='c' c='_ZN3tvm3tir9transform30RemoveWeightLayoutRewriteBlockEv'/>
+<use f='tvm/src/tir/transforms/remove_weight_layout_rewrite_block.cc' l='248' u='c' c='_ZN3tvm3tir9transform30RemoveWeightLayoutRewriteBlockEv'/>
 <use f='tvm/src/tir/transforms/renormalize_split_pattern.cc' l='203' u='c' c='_ZN3tvm3tir9transform23RenormalizeSplitPatternEv'/>
 <use f='tvm/src/tir/transforms/rewrite_unsafe_select.cc' l='141' u='c' c='_ZN3tvm3tir9transform19RewriteUnsafeSelectEv'/>
 <use f='tvm/src/tir/transforms/simplify.cc' l='197' u='c' c='_ZN3tvm3tir9transform8SimplifyEv'/>

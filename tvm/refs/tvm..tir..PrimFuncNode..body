@@ -12,7 +12,8 @@
 <use f='tvm/src/meta_schedule/feature_extractor/per_store_feature.cc' l='1195' u='r' c='_ZN3tvm3tir6group626WorkloadEmbeddingExtractor7ExtractERKNS_8IRModuleE'/>
 <use f='tvm/src/meta_schedule/feature_extractor/per_store_feature.cc' l='1267' u='r' c='_ZN3tvm3tir24PerStoreFeatureCollector7CollectEbllRKNS_8IRModuleE'/>
 <use f='tvm/src/meta_schedule/postproc/disallow_dynamic_loop.cc' l='32' u='r' c='_ZN3tvm3tir19DynamicExtentFinder4FindERKNS_8IRModuleE'/>
-<use f='tvm/src/meta_schedule/postproc/rewrite_layout.cc' l='130' u='r' c='_ZN3tvm3tir13RewriteLayoutERKNS0_8ScheduleE'/>
+<use f='tvm/src/meta_schedule/postproc/rewrite_layout.cc' l='138' u='r' c='_ZN3tvm3tir24CollectLayoutFreeBuffersEPKNS0_12PrimFuncNodeE'/>
+<use f='tvm/src/meta_schedule/postproc/rewrite_layout.cc' l='160' u='r' c='_ZN3tvm3tir13RewriteLayoutERKNS0_8ScheduleE'/>
 <use f='tvm/src/meta_schedule/postproc/rewrite_parallel_vectorize_unroll.cc' l='306' u='m' c='_ZN3tvm3tir22FindAnnotatedRootBlockERKNS0_8ScheduleEPNS0_16ParsedAnnotationEPNS0_7BlockRVE'/>
 <use f='tvm/src/meta_schedule/postproc/rewrite_reduction_block.cc' l='35' u='r' c='_ZN3tvm3tir20ReductionBlockFinder4FindERKNS0_13ScheduleStateE'/>
 <use f='tvm/src/meta_schedule/postproc/rewrite_tensorize.cc' l='35' u='r' c='_ZN3tvm13meta_schedule24CollectTensorizationJobsERKNS_3tir8ScheduleERKNS_7runtime6StringEPKNS1_12PrimFuncNodeEbPSt6vectorISt5tupleIJS6_S6_St8functionI311476'/>
@@ -22,6 +23,9 @@
 <use f='tvm/src/printer/tir_text_printer.cc' l='165' u='r' c='_ZN3tvm3tir14TIRTextPrinter13PrintPrimFuncERKNS0_8PrimFuncE'/>
 <use f='tvm/src/printer/tvmscript_printer.cc' l='1669' u='m' c='_ZN3tvm3tir16TVMScriptPrinter13PrintPrimFuncERKNS0_8PrimFuncE'/>
 <use f='tvm/src/printer/tvmscript_printer.cc' l='1711' u='r' c='_ZN3tvm3tir16TVMScriptPrinter13PrintPrimFuncERKNS0_8PrimFuncE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='347' u='w' c='_ZN3tvm5relay3tec28AllocateConstReplaceConstant7RewriteENS_3tir8PrimFuncERKSt13unordered_mapINS_7runtime7NDArrayES7_NS6_13ObjectPtrHashENS6_14ObjectPt3808425'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='347' u='a' c='_ZN3tvm5relay3tec28AllocateConstReplaceConstant7RewriteENS_3tir8PrimFuncERKSt13unordered_mapINS_7runtime7NDArrayES7_NS6_13ObjectPtrHashENS6_14ObjectPt3808425'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='438' u='r' c='_ZN3tvm5relay3tec15ScheduleBuilder6CreateERKNS0_8FunctionENS_15GlobalVarSupplyE'/>
 <use f='tvm/src/relay/backend/utils.cc' l='421' u='r' c='_ZN3tvm5relay7backend23DefaultTIRConverterImplERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS3_INS2_7NDArrayEvEEb'/>
 <use f='tvm/src/target/llvm/codegen_llvm.cc' l='279' u='r' c='_ZN3tvm7codegen11CodeGenLLVM19AddFunctionInternalERKNS_3tir8PrimFuncEb'/>
 <use f='tvm/src/target/source/codegen_c.cc' l='123' u='r' c='_ZN3tvm7codegen8CodeGenC11AddFunctionERKNS_3tir8PrimFuncE'/>
@@ -192,8 +196,11 @@
 <use f='tvm/src/tir/transforms/remove_store_undef.cc' l='150' u='w' c='_ZN3tvm3tir9transform24RemoveStoreUndefInternalEv'/>
 <use f='tvm/src/tir/transforms/remove_store_undef.cc' l='150' u='a' c='_ZN3tvm3tir9transform24RemoveStoreUndefInternalEv'/>
 <use f='tvm/src/tir/transforms/remove_store_undef.cc' l='158' u='r' c='_ZN3tvm3tir9transform23ValidateAllUndefRemovedEv'/>
-<use f='tvm/src/tir/transforms/remove_weight_layout_rewrite_block.cc' l='37' u='w' c='_ZN3tvm3tir31WeightLayoutRewriteBlockRemover6RemoveENS0_8PrimFuncE'/>
-<use f='tvm/src/tir/transforms/remove_weight_layout_rewrite_block.cc' l='37' u='a' c='_ZN3tvm3tir31WeightLayoutRewriteBlockRemover6RemoveENS0_8PrimFuncE'/>
+<use f='tvm/src/tir/transforms/remove_weight_layout_rewrite_block.cc' l='42' u='w' c='_ZN3tvm3tir24RemoveLayoutRewriteBlock7RewriteENS0_8PrimFuncE'/>
+<use f='tvm/src/tir/transforms/remove_weight_layout_rewrite_block.cc' l='42' u='a' c='_ZN3tvm3tir24RemoveLayoutRewriteBlock7RewriteENS0_8PrimFuncE'/>
+<use f='tvm/src/tir/transforms/remove_weight_layout_rewrite_block.cc' l='213' u='r' c='_ZN3tvm3tir31WeightLayoutRewriteBlockRemover6RemoveENS0_8PrimFuncE'/>
+<use f='tvm/src/tir/transforms/remove_weight_layout_rewrite_block.cc' l='228' u='w' c='_ZN3tvm3tir31WeightLayoutRewriteBlockRemover6RemoveENS0_8PrimFuncE'/>
+<use f='tvm/src/tir/transforms/remove_weight_layout_rewrite_block.cc' l='228' u='a' c='_ZN3tvm3tir31WeightLayoutRewriteBlockRemover6RemoveENS0_8PrimFuncE'/>
 <use f='tvm/src/tir/transforms/renew_defs.cc' l='65' u='r' c='_ZN3tvm3tir15RenewDefMutator9TransformERKNS0_8PrimFuncE'/>
 <use f='tvm/src/tir/transforms/renew_defs.cc' l='70' u='w' c='_ZN3tvm3tir15RenewDefMutator9TransformERKNS0_8PrimFuncE'/>
 <use f='tvm/src/tir/transforms/renormalize_split_pattern.cc' l='202' u='w' c='_ZN3tvm3tir9transform23RenormalizeSplitPatternEv'/>

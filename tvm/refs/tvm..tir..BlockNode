@@ -75,6 +75,8 @@
 <use f='tvm/src/meta_schedule/mutator/mutate_parallel.cc' l='85' c='_ZN3tvm3tir15AnalyzeParallelERKNS0_13ScheduleStateERKNS_7runtime6StringES7_l'/>
 <use f='tvm/src/meta_schedule/mutator/mutate_parallel.cc' l='85' macro='1' c='_ZN3tvm3tir15AnalyzeParallelERKNS0_13ScheduleStateERKNS_7runtime6StringES7_l'/>
 <size>96</size>
+<use f='tvm/src/meta_schedule/postproc/rewrite_layout.cc' l='113' c='_ZN3tvm3tir25LayoutFreeBufferCollector10VisitStmt_EPKNS0_9BlockNodeE'/>
+<size>96</size>
 <use f='tvm/src/meta_schedule/postproc/rewrite_reduction_block.cc' l='36' c='_ZN3tvm3tir20ReductionBlockFinder4FindERKNS0_13ScheduleStateE'/>
 <use f='tvm/src/meta_schedule/postproc/rewrite_reduction_block.cc' l='65' c='_ZNK3tvm3tir20ReductionBlockFinder29AllReductionIterVarAreUnboundEPKNS0_16BlockRealizeNodeE'/>
 <use f='tvm/src/meta_schedule/postproc/rewrite_reduction_block.cc' l='81'/>
@@ -103,8 +105,8 @@
 <use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling_tensor_core.cc' l='421' macro='1' c='_ZNK3tvm13meta_schedule30MultiLevelTilingTensorCoreNode25TransformWithTensorIntrinEPNS0_19TensorCoreStateNodeERKNS_7runtime6StringE'/>
 <use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling_tensor_core.cc' l='501' macro='1' c='_ZNK3tvm13meta_schedule30MultiLevelTilingTensorCoreNode25TransformWithTensorIntrinEPNS0_19TensorCoreStateNodeERKNS_7runtime6StringE'/>
 <size>96</size>
-<use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling_wide_vector.cc' l='52' c='_ZNK3tvm13meta_schedule30MultiLevelTilingWideVectorNode9SplitLoopERKNS_3tir8ScheduleENS2_7BlockRVENS2_6LoopRVEi'/>
-<use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling_wide_vector.cc' l='52' c='_ZNK3tvm13meta_schedule30MultiLevelTilingWideVectorNode9SplitLoopERKNS_3tir8ScheduleENS2_7BlockRVENS2_6LoopRVEi'/>
+<use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling_wide_vector.cc' l='58' c='_ZNK3tvm13meta_schedule30MultiLevelTilingWideVectorNode9SplitLoopERKNS_3tir8ScheduleENS2_7BlockRVENS2_6LoopRVEi'/>
+<use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling_wide_vector.cc' l='58' c='_ZNK3tvm13meta_schedule30MultiLevelTilingWideVectorNode9SplitLoopERKNS_3tir8ScheduleENS2_7BlockRVENS2_6LoopRVEi'/>
 <size>96</size>
 <use f='tvm/src/meta_schedule/schedule_rule/random_compute_location.cc' l='69' macro='1' c='_ZNK3tvm13meta_schedule25RandomComputeLocationNode15CheckConditionsENS_3tir8ScheduleERKNS2_7BlockRVE'/>
 <size>96</size>
@@ -121,6 +123,8 @@
 <use f='tvm/src/printer/tvmscript_printer.cc' l='1530' c='_ZN3tvm3tir16TVMScriptPrinter10VisitStmt_EPKNS0_16BlockRealizeNodeE'/>
 <use f='tvm/src/printer/tvmscript_printer.cc' l='1958' c='_ZN3tvm3tir30TVMScriptPrinterWithDiagnostic14PrintBlockNameEPKNS0_9BlockNodeE'/>
 <use f='tvm/src/printer/tvmscript_printer.cc' l='1963' c='_ZN3tvm3tir30TVMScriptPrinterWithDiagnostic14PrintBlockNameEPKNS0_9BlockNodeE'/>
+<size>96</size>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='315' c='_ZN3tvm5relay3tec27LayoutFreeConstantCollector10VisitStmt_EPKNS_3tir9BlockNodeE'/>
 <size>96</size>
 <use f='tvm/src/te/operation/create_primfunc.cc' l='108' c='_ZN3tvm3tir32LayoutFreePlaceholdersNormalizer10VisitStmt_EPKNS0_9BlockNodeE'/>
 <size>96</size>
@@ -473,7 +477,8 @@
 <use f='tvm/src/tir/transforms/plan_update_buffer_allocation_location.cc' l='138' c='_ZN3tvm3tir23BufferAllocationLocator10VisitStmt_EPKNS0_9BlockNodeE'/>
 <use f='tvm/src/tir/transforms/plan_update_buffer_allocation_location.cc' l='160' c='_ZN3tvm3tir23BufferAllocationLocator17InjectOpaqueBlockENS0_4StmtERKNS_7runtime5ArrayINS0_6BufferEvEE'/>
 <size>96</size>
-<use f='tvm/src/tir/transforms/remove_weight_layout_rewrite_block.cc' l='54' c='_ZN3tvm3tir31WeightLayoutRewriteBlockRemover10VisitStmt_EPKNS0_9BlockNodeE'/>
+<use f='tvm/src/tir/transforms/remove_weight_layout_rewrite_block.cc' l='47' c='_ZN3tvm3tir24RemoveLayoutRewriteBlock10VisitStmt_EPKNS0_9BlockNodeE'/>
+<use f='tvm/src/tir/transforms/remove_weight_layout_rewrite_block.cc' l='147' c='_ZN3tvm3tir20AllocateConstRewrite10VisitStmt_EPKNS0_9BlockNodeE'/>
 <size>96</size>
 <use f='tvm/src/tir/transforms/renew_defs.cc' l='97' c='_ZN3tvm3tir15RenewDefMutator10VisitStmt_EPKNS0_9BlockNodeE'/>
 <use f='tvm/src/tir/transforms/renew_defs.cc' l='112' c='_ZN3tvm3tir15RenewDefMutator10VisitStmt_EPKNS0_9BlockNodeE'/>

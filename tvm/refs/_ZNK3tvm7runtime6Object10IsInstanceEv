@@ -183,7 +183,7 @@
 <use f='tvm/src/relay/backend/te_compiler.cc' l='1161' u='c' c='_ZN3tvm5relay3tec22UpdateFunctionMetadataENS_8BaseFuncERNS_7runtime3MapINS3_6StringENS0_7backend12FunctionInfoEvvEENS_7IntegerE'/>
 <use f='tvm/src/relay/backend/te_compiler.cc' l='1269' u='c' c='_ZN3tvm5relay3tec19GetPerTargetModulesENS_8IRModuleE'/>
 <use f='tvm/src/relay/backend/te_compiler.cc' l='1286' u='c' c='_ZN3tvm5relay3tec19GetPerTargetModulesENS_8IRModuleE'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='115' u='c' c='_ZN3tvm5relay3tec8GetShapeERKNS_7runtime5ArrayINS_8PrimExprEvEE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='116' u='c' c='_ZN3tvm5relay3tec8GetShapeERKNS_7runtime5ArrayINS_8PrimExprEvEE'/>
 <use f='tvm/src/relay/backend/utils.cc' l='156' u='c' c='_ZN3tvm5relay7backend27CalculateRelayExprSizeBytesERKNS_4TypeE'/>
 <use f='tvm/src/relay/backend/utils.cc' l='361' u='c' c='_ZN3tvm5relay7backend18BindParamsInModuleENS_8IRModuleERKSt13unordered_mapINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS_7runtime7NDArrayESt4288342'/>
 <use f='tvm/src/relay/backend/utils.cc' l='392' u='c' c='_ZN3tvm5relay7backend23DefaultTIRConverterImplERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS3_INS2_7NDArrayEvEEb'/>
@@ -274,6 +274,7 @@
 <use f='tvm/src/relay/transforms/inline.cc' l='152' u='c' c='_ZN3tvm5relay7Inliner11MakeNewExprERKNS_9GlobalVarERKNS_7runtime5ArrayINS_9RelayExprEvEERKS7_'/>
 <use f='tvm/src/relay/transforms/inline.cc' l='154' u='c' c='_ZN3tvm5relay7Inliner11MakeNewExprERKNS_9GlobalVarERKNS_7runtime5ArrayINS_9RelayExprEvEERKS7_'/>
 <use f='tvm/src/relay/transforms/merge_compiler_regions.cc' l='146' u='c' c='_ZN3tvm5relay21merge_compiler_region16MergeAnnotations8Rewrite_EPKNS0_8CallNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/meta_schedule_layout_rewrite.cc' l='99' u='c' c='_ZN3tvm5relay23MetaScheduleFuncMutator10VisitExpr_EPKNS0_8CallNodeE'/>
 <use f='tvm/src/relay/transforms/partial_eval.cc' l='879' u='c' c='_ZNK3tvm5relay12partial_eval16PartialEvaluator5ReifyERKNS_7runtime9ObjectRefEPNS0_7LetListE'/>
 <use f='tvm/src/relay/transforms/partition_graph.cc' l='277' u='c' c='_ZNK3tvm5relay12partitioning11Partitioner10IsConstantERKNS_9RelayExprE'/>
 <use f='tvm/src/relay/transforms/partition_graph.cc' l='278' u='c' c='_ZNK3tvm5relay12partitioning11Partitioner10IsConstantERKNS_9RelayExprE'/>
@@ -314,11 +315,11 @@
 <use f='tvm/src/target/target.cc' l='436' u='c' c='_ZN3tvm14TargetInternal9ParseTypeERKNS_7runtime9ObjectRefERKNS_14TargetKindNode13ValueTypeInfoE'/>
 <use f='tvm/src/te/operation/compute_op.cc' l='140' u='c' c='_ZN3tvm2te9ComputeOpC1ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_NS_7runtime3MapINS8_6StringENS8_9ObjectRefEvvEENS8_5ArrayINS_3tir7IterVa14126749'/>
 <use f='tvm/src/te/operation/compute_op.cc' l='176' u='c' c='_ZNK3tvm2te13ComputeOpNode13ReplaceInputsERKNS0_9OperationERKSt13unordered_mapINS0_6TensorES6_St4hashIS6_ESt8equal_toIS6_ESaISt4pairIKS6_S6_EEE'/>
-<use f='tvm/src/te/operation/create_primfunc.cc' l='257' u='c' c='_ZN3tvm3tir24GenerateBlockFromTensorsERKNS_2te9ComputeOpERKNS_7runtime5ArrayINS1_6TensorEvEENS6_INS_8PrimExprEvEESB_PNS0_14CreateFuncInfoEPNS_5arith8AnalyzerE'/>
-<use f='tvm/src/te/operation/create_primfunc.cc' l='301' u='c' c='_ZN3tvm3tir23GenerateStmtFromComputeERKNS_2te9ComputeOpEPNS0_14CreateFuncInfoEPNS_5arith8AnalyzerE'/>
-<use f='tvm/src/te/operation/create_primfunc.cc' l='406' u='c' c='_ZN3tvm3tir17CollectOrderedOpsERKNS_7runtime5ArrayINS_2te6TensorEvEE'/>
-<use f='tvm/src/te/operation/create_primfunc.cc' l='406' u='c' c='_ZN3tvm3tir17CollectOrderedOpsERKNS_7runtime5ArrayINS_2te6TensorEvEE'/>
-<use f='tvm/src/te/operation/create_primfunc.cc' l='407' u='c' c='_ZN3tvm3tir17CollectOrderedOpsERKNS_7runtime5ArrayINS_2te6TensorEvEE'/>
+<use f='tvm/src/te/operation/create_primfunc.cc' l='259' u='c' c='_ZN3tvm3tir24GenerateBlockFromTensorsERKNS_2te9ComputeOpERKNS_7runtime5ArrayINS1_6TensorEvEENS6_INS_8PrimExprEvEESB_PNS0_14CreateFuncInfoEPNS_5arith8AnalyzerE'/>
+<use f='tvm/src/te/operation/create_primfunc.cc' l='303' u='c' c='_ZN3tvm3tir23GenerateStmtFromComputeERKNS_2te9ComputeOpEPNS0_14CreateFuncInfoEPNS_5arith8AnalyzerE'/>
+<use f='tvm/src/te/operation/create_primfunc.cc' l='408' u='c' c='_ZN3tvm3tir17CollectOrderedOpsERKNS_7runtime5ArrayINS_2te6TensorEvEE'/>
+<use f='tvm/src/te/operation/create_primfunc.cc' l='408' u='c' c='_ZN3tvm3tir17CollectOrderedOpsERKNS_7runtime5ArrayINS_2te6TensorEvEE'/>
+<use f='tvm/src/te/operation/create_primfunc.cc' l='409' u='c' c='_ZN3tvm3tir17CollectOrderedOpsERKNS_7runtime5ArrayINS_2te6TensorEvEE'/>
 <use f='tvm/src/te/schedule/schedule_dataflow_rewrite.cc' l='311' u='c' c='_ZN3tvm2te22CacheWriteWithReLayoutENS0_8ScheduleERKNS_7runtime5ArrayINS0_6TensorEvEERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
 <use f='tvm/src/te/schedule/schedule_dataflow_rewrite.cc' l='575' u='c' c='_ZN3tvm2te12InjectInlineEPNS0_12ScheduleNodeEb'/>
 <use f='tvm/src/te/schedule/schedule_dataflow_rewrite.cc' l='929' u='c' c='_ZN3tvm2te8Schedule7rfactorERKNS0_6TensorERKNS_3tir7IterVarEi'/>
@@ -446,6 +447,7 @@
 <use f='tvm/src/tir/transforms/loop_partition.cc' l='150' u='c' c='_ZN3tvm3tir17CandidateSelector10VisitStmt_EPKNS0_12AttrStmtNodeE'/>
 <use f='tvm/src/tir/transforms/lower_cross_thread_reduction.cc' l='496' u='c' c='_ZNK3tvm3tir31CrossThreadReductionTransformer33CheckCanApplyCrossThreadReductionEPKNS0_9BlockNodeERKSt6vectorIPKNS0_7ForNodeESaIS8_EE'/>
 <use f='tvm/src/tir/transforms/lower_match_buffer.cc' l='236' u='c' c='_ZN3tvm3tir16MatchBufferLower4BindERKNS_8PrimExprES2_RKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<use f='tvm/src/tir/transforms/remove_weight_layout_rewrite_block.cc' l='93' u='c' c='_ZN3tvm3tir24RemoveLayoutRewriteBlock10VisitStmt_EPKNS0_9BlockNodeE'/>
 <use f='tvm/src/tir/transforms/split_host_device.cc' l='376' u='c' c='_ZN3tvm3tir9transform15SplitHostDeviceEv'/>
 <use f='tvm/src/tir/transforms/storage_flatten.cc' l='232' u='c' c='_ZN3tvm3tir19BufferShapeLegalize10VisitStmt_EPKNS0_12AttrStmtNodeE'/>
 <use f='tvm/src/tir/transforms/storage_flatten.cc' l='1377' u='c' c='_ZN3tvm3tir16StorageFlattener10VisitStmt_EPKNS0_12AttrStmtNodeE'/>

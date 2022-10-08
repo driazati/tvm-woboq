@@ -81,6 +81,7 @@
 <use f='tvm/src/relay/backend/runtime.cc' l='99' u='c'/>
 <use f='tvm/src/relay/backend/task_extraction.cc' l='37' u='c' c='_ZN3tvm5relay7backend11ExtractTaskENS_8IRModuleENS_6TargetENS_7runtime3MapINS4_6StringENS4_7NDArrayEvvEE'/>
 <use f='tvm/src/relay/backend/te_compiler.cc' l='316' u='c' c='_ZN3tvm5relay3tec14TECompilerImpl17GetDeviceContextsEv'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='360' u='c' c='_ZN3tvm5relay3tec28AllocateConstReplaceConstant10VisitStmt_EPKNS_3tir17AllocateConstNodeE'/>
 <use f='tvm/src/relay/backend/utils.cc' l='138' u='c'/>
 <use f='tvm/src/relay/backend/utils.cc' l='215' u='c' c='_ZN3tvm5relay7backend23ExecutorCodegenMetadataC1ENS_7runtime5ArrayINS_3tir3VarEvEENS4_INS_10TensorTypeEvEENS4_INS3_6StringEvEES9_S7_SB_SA_SA_SA_bNS_7I14228502'/>
 <use f='tvm/src/relay/backend/vm/compiler.cc' l='859' u='c' c='_ZN3tvm5relay2vm10VMCompiler11GetFunctionERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKNS_7runtime9ObjectPtrINSB_6ObjectEEE'/>
@@ -181,7 +182,7 @@
 <use f='tvm/src/te/operation/compute_op.cc' l='121' u='c' c='_ZN3tvm2te7computeENS_7runtime5ArrayINS_8PrimExprEvEESt8functionIFS4_RKNS2_INS_3tir3VarEvEEEENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESI_NS5044246'/>
 <use f='tvm/src/te/operation/compute_op.cc' l='151' u='c'/>
 <use f='tvm/src/te/operation/compute_op.cc' l='196' u='c' c='_ZNK3tvm2te13ComputeOpNode13ReplaceInputsERKNS0_9OperationERKSt13unordered_mapINS0_6TensorES6_St4hashIS6_ESt8equal_toIS6_ESaISt4pairIKS6_S6_EEE'/>
-<use f='tvm/src/te/operation/create_primfunc.cc' l='394' u='c' c='_ZN3tvm3tir24GenerateStmtFromExternOpERKNS_2te8ExternOpEPNS0_14CreateFuncInfoE'/>
+<use f='tvm/src/te/operation/create_primfunc.cc' l='396' u='c' c='_ZN3tvm3tir24GenerateStmtFromExternOpERKNS_2te8ExternOpEPNS0_14CreateFuncInfoE'/>
 <use f='tvm/src/te/operation/extern_op.cc' l='83' u='c'/>
 <use f='tvm/src/te/operation/hybrid_op.cc' l='79' u='c'/>
 <use f='tvm/src/te/operation/hybrid_op.cc' l='281' u='c' c='_ZZN3tvm2te15ApplyLoopShapesERKNS0_5StageERKSt13unordered_mapINS_3tir7IterVarENS_5RangeESt4hashIS6_ESt8equal_toIS6_ESaISt4pairIKS6_S7_EEENS5_4StmtEEN95475935'/>
@@ -243,6 +244,7 @@
 <use f='tvm/src/tir/transforms/narrow_datatype.cc' l='264' u='c' c='_ZN3tvm3tir16DataTypeRewriter10VisitStmt_EPKNS0_7ForNodeE'/>
 <use f='tvm/src/tir/transforms/remap_thread_axis.cc' l='97' u='c' c='_ZN3tvm3tir9transform15RemapThreadAxisENS_7runtime3MapINS2_6StringENS0_7IterVarEvvEE'/>
 <use f='tvm/src/tir/transforms/remap_thread_axis.cc' l='98' u='c' c='_ZN3tvm3tir9transform15RemapThreadAxisENS_7runtime3MapINS2_6StringENS0_7IterVarEvvEE'/>
+<use f='tvm/src/tir/transforms/remove_weight_layout_rewrite_block.cc' l='173' u='c' c='_ZN3tvm3tir20AllocateConstRewrite10VisitStmt_EPKNS0_17AllocateConstNodeE'/>
 <use f='tvm/src/tir/transforms/storage_flatten.cc' l='443' u='c' c='_ZNK3tvm3tir20BufferStrideLegalize22UpdatedExternBufferMapEv'/>
 <use f='tvm/src/tir/transforms/storage_flatten.cc' l='1206' u='c' c='_ZN3tvm3tir21ApplyLayoutTransforms4PassEv'/>
 <use f='tvm/src/tir/transforms/storage_flatten.cc' l='1216' u='c' c='_ZN3tvm3tir21ApplyLayoutTransformsC1ENS_7runtime3MapINS0_6BufferENS2_5ArrayINS0_8IndexMapEvEEvvEE'/>

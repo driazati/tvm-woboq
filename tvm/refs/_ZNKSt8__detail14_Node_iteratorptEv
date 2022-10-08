@@ -121,8 +121,9 @@
 <use f='tvm/src/relay/backend/te_compiler.cc' l='483' u='c' c='_ZN3tvm5relay3tec14TECompilerImpl22LowerShapeFuncInternalERKNS1_9CCacheKeyE'/>
 <use f='tvm/src/relay/backend/te_compiler.cc' l='484' u='c' c='_ZN3tvm5relay3tec14TECompilerImpl22LowerShapeFuncInternalERKNS1_9CCacheKeyE'/>
 <use f='tvm/src/relay/backend/te_compiler.cc' l='659' u='c' c='_ZN3tvm5relay3tec22LowerTensorExprMutator18ResolveToPrimitiveERKNS_9RelayExprE'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='411' u='c' c='_ZN3tvm5relay3tec15ScheduleBuilder6CreateERKNS0_8FunctionENS_15GlobalVarSupplyE'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='619' u='c' c='_ZN3tvm5relay3tec13MakeShapeFunc10VisitExpr_EPKNS0_7VarNodeE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='354' u='c' c='_ZN3tvm5relay3tec28AllocateConstReplaceConstant10VisitStmt_EPKNS_3tir17AllocateConstNodeE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='552' u='c' c='_ZN3tvm5relay3tec15ScheduleBuilder6CreateERKNS0_8FunctionENS_15GlobalVarSupplyE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='760' u='c' c='_ZN3tvm5relay3tec13MakeShapeFunc10VisitExpr_EPKNS0_7VarNodeE'/>
 <use f='tvm/src/relay/backend/vm/compiler.cc' l='394' u='c' c='_ZN3tvm5relay2vm18VMFunctionCompiler10VisitExpr_EPKNS0_7VarNodeE'/>
 <use f='tvm/src/relay/backend/vm/compiler.cc' l='439' u='c' c='_ZN3tvm5relay2vm18VMFunctionCompiler10VisitExpr_EPKNS_13GlobalVarNodeE'/>
 <use f='tvm/src/relay/backend/vm/compiler.cc' l='515' u='c' c='_ZN3tvm5relay2vm18VMFunctionCompiler15EmitInvokeTVMOpERKNS_9RelayExprES5_S5_RKNS_9DictAttrsE'/>
@@ -224,9 +225,9 @@
 <use f='tvm/src/te/autodiff/ad_simplify.cc' l='616' u='c' c='_ZN3tvm2te22EliminateDivModMutator10VisitExpr_EPKNS_3tir12FloorModNodeE'/>
 <use f='tvm/src/te/autodiff/ad_simplify.cc' l='640' u='c' c='_ZN3tvm2te22EliminateDivModMutator13AddNewVarPairERKNS_8PrimExprES4_lNS_5arith7DivModeE'/>
 <use f='tvm/src/te/operation/create_primfunc.cc' l='115' u='c' c='_ZN3tvm3tir32LayoutFreePlaceholdersNormalizer10VisitStmt_EPKNS0_9BlockNodeE'/>
-<use f='tvm/src/te/operation/create_primfunc.cc' l='172' u='c' c='_ZN3tvm3tir24GenerateBlockFromTensorsERKNS_2te9ComputeOpERKNS_7runtime5ArrayINS1_6TensorEvEENS6_INS_8PrimExprEvEESB_PNS0_14CreateFuncInfoEPNS_5arith8AnalyzerE'/>
-<use f='tvm/src/te/operation/create_primfunc.cc' l='356' u='c' c='_ZN3tvm3tir24GenerateStmtFromExternOpERKNS_2te8ExternOpEPNS0_14CreateFuncInfoE'/>
-<use f='tvm/src/te/operation/create_primfunc.cc' l='466' u='c' c='_ZN3tvm3tir27GenerateAndCompletePrimFuncERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS2_INS0_4StmtEvEEPNS0_14CreateFuncInfoE'/>
+<use f='tvm/src/te/operation/create_primfunc.cc' l='174' u='c' c='_ZN3tvm3tir24GenerateBlockFromTensorsERKNS_2te9ComputeOpERKNS_7runtime5ArrayINS1_6TensorEvEENS6_INS_8PrimExprEvEESB_PNS0_14CreateFuncInfoEPNS_5arith8AnalyzerE'/>
+<use f='tvm/src/te/operation/create_primfunc.cc' l='358' u='c' c='_ZN3tvm3tir24GenerateStmtFromExternOpERKNS_2te8ExternOpEPNS0_14CreateFuncInfoE'/>
+<use f='tvm/src/te/operation/create_primfunc.cc' l='468' u='c' c='_ZN3tvm3tir27GenerateAndCompletePrimFuncERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS2_INS0_4StmtEvEEPNS0_14CreateFuncInfoE'/>
 <use f='tvm/src/te/operation/extern_op.cc' l='113' u='c' c='_ZNK3tvm2te12ExternOpNode17PropBoundToInputsERKNS0_9OperationEPNS_5arith8AnalyzerERKSt13unordered_mapIPKNS_3tir7VarNodeENS5_6IntSetESt4hashISC_ESt8equ1920430'/>
 <use f='tvm/src/te/operation/hybrid_op.cc' l='128' u='c' c='_ZNK3tvm2te12HybridOpNode17PropBoundToInputsERKNS0_9OperationEPNS_5arith8AnalyzerERKSt13unordered_mapIPKNS_3tir7VarNodeENS5_6IntSetESt4hashISC_ESt8equ6264819'/>
 <use f='tvm/src/te/operation/tensor_compute_op.cc' l='123' u='c' c='_ZNK3tvm2te19TensorComputeOpNode17PropBoundToInputsERKNS0_9OperationEPNS_5arith8AnalyzerERKSt13unordered_mapIPKNS_3tir7VarNodeENS5_6IntSetESt4hashISC_15099893'/>
@@ -423,6 +424,10 @@
 <use f='tvm/src/tir/transforms/plan_update_buffer_allocation_location.cc' l='133' u='c' c='_ZN3tvm3tir23BufferAllocationLocator10VisitStmt_EPKNS0_9BlockNodeE'/>
 <use f='tvm/src/tir/transforms/remap_thread_axis.cc' l='63' u='c' c='_ZN3tvm3tir18ThreadAxisRewriter10VisitExpr_EPKNS0_7VarNodeE'/>
 <use f='tvm/src/tir/transforms/remap_thread_axis.cc' l='87' u='c' c='_ZN3tvm3tir15RemapThreadAxisEONS0_8PrimFuncENS_7runtime3MapINS3_6StringENS0_7IterVarEvvEE'/>
+<use f='tvm/src/tir/transforms/remove_weight_layout_rewrite_block.cc' l='154' u='c' c='_ZN3tvm3tir20AllocateConstRewrite10VisitStmt_EPKNS0_9BlockNodeE'/>
+<use f='tvm/src/tir/transforms/remove_weight_layout_rewrite_block.cc' l='167' u='c' c='_ZN3tvm3tir20AllocateConstRewrite10VisitStmt_EPKNS0_17AllocateConstNodeE'/>
+<use f='tvm/src/tir/transforms/remove_weight_layout_rewrite_block.cc' l='181' u='c' c='_ZN3tvm3tir20AllocateConstRewrite10VisitExpr_EPKNS0_14BufferLoadNodeE'/>
+<use f='tvm/src/tir/transforms/remove_weight_layout_rewrite_block.cc' l='182' u='c' c='_ZN3tvm3tir20AllocateConstRewrite10VisitExpr_EPKNS0_14BufferLoadNodeE'/>
 <use f='tvm/src/tir/transforms/split_host_device.cc' l='135' u='c' c='_ZN3tvm3tir17VarUseDefAnalysis10VisitExpr_EPKNS0_7LetNodeE'/>
 <use f='tvm/src/tir/transforms/split_host_device.cc' l='137' u='c' c='_ZN3tvm3tir17VarUseDefAnalysis10VisitExpr_EPKNS0_7LetNodeE'/>
 <use f='tvm/src/tir/transforms/split_host_device.cc' l='204' u='c' c='_ZN3tvm3tir17VarUseDefAnalysis9HandleUseERKNS_8PrimExprE'/>

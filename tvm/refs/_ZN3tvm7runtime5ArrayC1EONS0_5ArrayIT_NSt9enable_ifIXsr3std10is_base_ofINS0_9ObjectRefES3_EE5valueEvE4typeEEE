@@ -66,12 +66,13 @@
 <use f='tvm/src/meta_schedule/database/json_database.cc' l='132' u='c' c='_ZN3tvm13meta_schedule16JSONDatabaseNode7GetTopKERKNS0_8WorkloadEi'/>
 <use f='tvm/src/meta_schedule/database/json_database.cc' l='141' u='c' c='_ZN3tvm13meta_schedule16JSONDatabaseNode19GetAllTuningRecordsEv'/>
 <use f='tvm/src/meta_schedule/database/memory_database.cc' l='91' u='c' c='_ZN3tvm13meta_schedule18MemoryDatabaseNode7GetTopKERKNS0_8WorkloadEi'/>
+<use f='tvm/src/meta_schedule/postproc/rewrite_layout.cc' l='143' u='c' c='_ZN3tvm3tir24CollectLayoutFreeBuffersEPKNS0_12PrimFuncNodeE'/>
 <use f='tvm/src/meta_schedule/schedule_rule/add_rfactor.cc' l='119' u='c' c='_ZN3tvm13meta_schedule14AddRFactorNode5ApplyERKNS_3tir8ScheduleERKNS2_7BlockRVE'/>
 <use f='tvm/src/meta_schedule/schedule_rule/auto_bind.cc' l='145' u='c' c='_ZN3tvm13meta_schedule17MakeFactorSamplerENS_3tir8ScheduleENS_7runtime5ArrayINS_7IntegerEvEE'/>
 <use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling.cc' l='104' u='c' c='_ZN3tvm13meta_schedule20MultiLevelTilingNode5ApplyERKNS_3tir8ScheduleERKNS2_7BlockRVE'/>
 <use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling.cc' l='177' u='c' c='_ZNK3tvm13meta_schedule20MultiLevelTilingNode9SplitLoopERKNS_3tir8ScheduleENS2_7BlockRVENS2_6LoopRVEi'/>
 <use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling_tensor_core.cc' l='220' u='c' c='_ZN3tvm13meta_schedule30MultiLevelTilingTensorCoreNode5ApplyERKNS_3tir8ScheduleERKNS2_7BlockRVE'/>
-<use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling_wide_vector.cc' l='96' u='c' c='_ZNK3tvm13meta_schedule30MultiLevelTilingWideVectorNode9SplitLoopERKNS_3tir8ScheduleENS2_7BlockRVENS2_6LoopRVEi'/>
+<use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling_wide_vector.cc' l='102' u='c' c='_ZNK3tvm13meta_schedule30MultiLevelTilingWideVectorNode9SplitLoopERKNS_3tir8ScheduleENS2_7BlockRVENS2_6LoopRVEi'/>
 <use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling_with_intrin.cc' l='63' u='c' c='_ZN3tvm13meta_schedule30MultiLevelTilingWithIntrinNode5ApplyERKNS_3tir8ScheduleERKNS2_7BlockRVE'/>
 <use f='tvm/src/meta_schedule/schedule_rule/schedule_rule.cc' l='170' u='c' c='_ZN3tvm13meta_schedule12ScheduleRule21DefaultCUDATensorCoreEv'/>
 <use f='tvm/src/meta_schedule/search_strategy/evolutionary_search.cc' l='210' u='c' c='_ZN3tvm13meta_schedule18AssembleCandidatesERKSt6vectorINS_3tir8ScheduleESaIS3_EE'/>
@@ -113,13 +114,13 @@
 <use f='tvm/src/relay/backend/te_compiler.cc' l='887' u='c' c='_ZN3tvm5relay3tec22LowerTensorExprMutator21DeviceAwareVisitExpr_EPKNS0_8CallNodeE'/>
 <use f='tvm/src/relay/backend/te_compiler.cc' l='916' u='c' c='_ZN3tvm5relay3tec22LowerTensorExprMutator21DeviceAwareVisitExpr_EPKNS0_8CallNodeE'/>
 <use f='tvm/src/relay/backend/te_compiler.cc' l='925' u='c' c='_ZN3tvm5relay3tec22LowerTensorExprMutator21DeviceAwareVisitExpr_EPKNS0_8CallNodeE'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='122' u='c' c='_ZN3tvm5relay3tec8GetShapeERKNS_7runtime5ArrayINS_8PrimExprEvEE'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='159' u='c' c='_ZN3tvm5relay3tec16LowerToTECompute5LowerERKNS0_8FunctionE'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='251' u='c' c='_ZN3tvm5relay3tec16LowerToTECompute10VisitExpr_EPKNS0_8CallNodeE'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='275' u='c' c='_ZN3tvm5relay3tec16LowerToTECompute10VisitExpr_EPKNS0_9TupleNodeE'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='756' u='c' c='_ZN3tvm5relay3tec13MakeShapeFunc10VisitExpr_EPKNS0_8CallNodeE'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='780' u='c' c='_ZN3tvm5relay3tec13MakeShapeFunc10VisitExpr_EPKNS0_9TupleNodeE'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='787' u='c' c='_ZN3tvm5relay3tec13MakeShapeFunc10VisitExpr_EPKNS0_16TupleGetItemNodeE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='123' u='c' c='_ZN3tvm5relay3tec8GetShapeERKNS_7runtime5ArrayINS_8PrimExprEvEE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='160' u='c' c='_ZN3tvm5relay3tec16LowerToTECompute5LowerERKNS0_8FunctionE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='252' u='c' c='_ZN3tvm5relay3tec16LowerToTECompute10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='276' u='c' c='_ZN3tvm5relay3tec16LowerToTECompute10VisitExpr_EPKNS0_9TupleNodeE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='897' u='c' c='_ZN3tvm5relay3tec13MakeShapeFunc10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='921' u='c' c='_ZN3tvm5relay3tec13MakeShapeFunc10VisitExpr_EPKNS0_9TupleNodeE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='928' u='c' c='_ZN3tvm5relay3tec13MakeShapeFunc10VisitExpr_EPKNS0_16TupleGetItemNodeE'/>
 <use f='tvm/src/relay/backend/utils.cc' l='100' u='c'/>
 <use f='tvm/src/relay/backend/utils.cc' l='109' u='c'/>
 <use f='tvm/src/relay/backend/utils.cc' l='117' u='c'/>
@@ -198,12 +199,12 @@
 <use f='tvm/src/te/operation/compute_op.cc' l='126' u='c' c='_ZN3tvm2te7computeENS_7runtime5ArrayINS_8PrimExprEvEESt8functionIFS4_RKNS2_INS_3tir3VarEvEEEENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESI_NS5044246'/>
 <use f='tvm/src/te/operation/compute_op.cc' l='168' u='c' c='_ZNK3tvm2te13ComputeOpNode12InputTensorsEv'/>
 <use f='tvm/src/te/operation/create_primfunc.cc' l='77' u='c' c='_ZN3tvm3tir14CreateFuncInfoC1ENS_7runtime5ArrayINS_2te6TensorEvEE'/>
-<use f='tvm/src/te/operation/create_primfunc.cc' l='274' u='c' c='_ZN3tvm3tir24GenerateBlockFromTensorsERKNS_2te9ComputeOpERKNS_7runtime5ArrayINS1_6TensorEvEENS6_INS_8PrimExprEvEESB_PNS0_14CreateFuncInfoEPNS_5arith8AnalyzerE'/>
-<use f='tvm/src/te/operation/create_primfunc.cc' l='277' u='c' c='_ZN3tvm3tir24GenerateBlockFromTensorsERKNS_2te9ComputeOpERKNS_7runtime5ArrayINS1_6TensorEvEENS6_INS_8PrimExprEvEESB_PNS0_14CreateFuncInfoEPNS_5arith8AnalyzerE'/>
-<use f='tvm/src/te/operation/create_primfunc.cc' l='387' u='c' c='_ZN3tvm3tir24GenerateStmtFromExternOpERKNS_2te8ExternOpEPNS0_14CreateFuncInfoE'/>
-<use f='tvm/src/te/operation/create_primfunc.cc' l='388' u='c' c='_ZN3tvm3tir24GenerateStmtFromExternOpERKNS_2te8ExternOpEPNS0_14CreateFuncInfoE'/>
-<use f='tvm/src/te/operation/create_primfunc.cc' l='411' u='c' c='_ZN3tvm3tir17CollectOrderedOpsERKNS_7runtime5ArrayINS_2te6TensorEvEE'/>
-<use f='tvm/src/te/operation/create_primfunc.cc' l='468' u='c' c='_ZN3tvm3tir27GenerateAndCompletePrimFuncERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS2_INS0_4StmtEvEEPNS0_14CreateFuncInfoE'/>
+<use f='tvm/src/te/operation/create_primfunc.cc' l='276' u='c' c='_ZN3tvm3tir24GenerateBlockFromTensorsERKNS_2te9ComputeOpERKNS_7runtime5ArrayINS1_6TensorEvEENS6_INS_8PrimExprEvEESB_PNS0_14CreateFuncInfoEPNS_5arith8AnalyzerE'/>
+<use f='tvm/src/te/operation/create_primfunc.cc' l='279' u='c' c='_ZN3tvm3tir24GenerateBlockFromTensorsERKNS_2te9ComputeOpERKNS_7runtime5ArrayINS1_6TensorEvEENS6_INS_8PrimExprEvEESB_PNS0_14CreateFuncInfoEPNS_5arith8AnalyzerE'/>
+<use f='tvm/src/te/operation/create_primfunc.cc' l='389' u='c' c='_ZN3tvm3tir24GenerateStmtFromExternOpERKNS_2te8ExternOpEPNS0_14CreateFuncInfoE'/>
+<use f='tvm/src/te/operation/create_primfunc.cc' l='390' u='c' c='_ZN3tvm3tir24GenerateStmtFromExternOpERKNS_2te8ExternOpEPNS0_14CreateFuncInfoE'/>
+<use f='tvm/src/te/operation/create_primfunc.cc' l='413' u='c' c='_ZN3tvm3tir17CollectOrderedOpsERKNS_7runtime5ArrayINS_2te6TensorEvEE'/>
+<use f='tvm/src/te/operation/create_primfunc.cc' l='470' u='c' c='_ZN3tvm3tir27GenerateAndCompletePrimFuncERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS2_INS0_4StmtEvEEPNS0_14CreateFuncInfoE'/>
 <use f='tvm/src/te/operation/hybrid_op.cc' l='99' u='c' c='_ZNK3tvm2te12HybridOpNode12InputTensorsEv'/>
 <use f='tvm/src/te/operation/scan_op.cc' l='48' u='c' c='_ZNK3tvm2te10ScanOpNode14root_iter_varsEv'/>
 <use f='tvm/src/te/operation/scan_op.cc' l='128' u='c' c='_ZN3tvm2te4scanENS_7runtime5ArrayINS0_6TensorEvEES4_S4_S4_NSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESA_NS1_3MapINS1_6StringENS1_9ObjectRefEvvEE'/>
