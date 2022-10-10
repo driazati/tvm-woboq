@@ -1,5 +1,5 @@
 <def f='tvm/include/tvm/node/structural_equal.h' l='124' ll='325'/>
-<use f='tvm/include/tvm/node/structural_hash.h' l='208' c='_ZN3tvm21NDArrayContainerTrait12SEqualReduceEPKNS_7runtime7NDArray9ContainerES5_NS_13SEqualReducerE'/>
+<use f='tvm/include/tvm/node/structural_hash.h' l='246' c='_ZN3tvm21NDArrayContainerTrait12SEqualReduceEPKNS_7runtime7NDArray9ContainerES5_NS_13SEqualReducerE'/>
 <use f='tvm/include/tvm/node/reflection.h' l='93'/>
 <use f='tvm/include/tvm/node/reflection.h' l='132' c='_ZNK3tvm16ReflectionVTable12SEqualReduceEPKNS_7runtime6ObjectES4_NS_13SEqualReducerE'/>
 <use f='tvm/include/tvm/node/reflection.h' l='303' c='_ZN3tvm6detail16ImplSEqualReduceIT_Lb1EE12SEqualReduceEPKS2_S5_NS_13SEqualReducerE'/>
@@ -163,8 +163,10 @@
 <use f='tvm/src/ir/module.cc' l='77' c='_ZNK3tvm12IRModuleNode12SEqualReduceEPKS0_NS_13SEqualReducerE'/>
 <size>24</size>
 <use f='tvm/src/node/structural_equal.cc' l='55' c='_ZNK3tvm16ReflectionVTable12SEqualReduceEPKNS_7runtime6ObjectES4_NS_13SEqualReducerE'/>
-<use f='tvm/src/node/structural_equal.cc' l='367' c='_ZN3tvm21RemapVarSEqualHandler20DispatchSEqualReduceERKNS_7runtime9ObjectRefES4_bRKNS1_8OptionalINS_14ObjectPathPairEEE'/>
-<use f='tvm/src/node/structural_equal.cc' l='371' c='_ZN3tvm21RemapVarSEqualHandler20DispatchSEqualReduceERKNS_7runtime9ObjectRefES4_bRKNS1_8OptionalINS_14ObjectPathPairEEE'/>
+<use f='tvm/src/node/structural_equal.cc' l='294' c='_ZN3tvm20SEqualHandlerDefault4Impl20DispatchSEqualReduceERKNS_7runtime9ObjectRefES5_bRKNS2_8OptionalINS_14ObjectPathPairEEE'/>
+<use f='tvm/src/node/structural_equal.cc' l='301' c='_ZN3tvm20SEqualHandlerDefault4Impl10GetReducerERKNS_7runtime9ObjectRefES5_bRKNS2_8OptionalINS_14ObjectPathPairEEE'/>
+<use f='tvm/src/node/structural_equal.cc' l='304' c='_ZN3tvm20SEqualHandlerDefault4Impl10GetReducerERKNS_7runtime9ObjectRefES5_bRKNS2_8OptionalINS_14ObjectPathPairEEE'/>
+<use f='tvm/src/node/structural_equal.cc' l='307' c='_ZN3tvm20SEqualHandlerDefault4Impl10GetReducerERKNS_7runtime9ObjectRefES5_bRKNS2_8OptionalINS_14ObjectPathPairEEE'/>
 <size>24</size>
 <fun r='_ZNK3tvm13SEqualReducerclERKNS_7runtime9ObjectRefES4_'/>
 <fun r='_ZN3tvm13SEqualReducer8DefEqualERKNS_7runtime9ObjectRefES4_'/>
@@ -181,17 +183,17 @@
 <fun r='_ZNK3tvm13SEqualReducer21GetCurrentObjectPathsEv'/>
 <fun r='_ZNK3tvm13SEqualReducer19RecordMismatchPathsERKNS_14ObjectPathPairE'/>
 <fun r='_ZNK3tvm13SEqualReducer16ObjectAttrsEqualERKNS_7runtime9ObjectRefES4_bPKNS_14ObjectPathPairE'/>
-<use f='tvm/src/node/structural_hash.cc' l='278' c='_ZN3tvm14StringObjTrait12SEqualReduceEPKNS_7runtime9StringObjES4_NS_13SEqualReducerE'/>
-<use f='tvm/src/node/structural_hash.cc' l='318' c='_ZN3tvm11ADTObjTrait12SEqualReduceEPKNS_7runtime6ADTObjES4_NS_13SEqualReducerE'/>
-<use f='tvm/src/node/structural_hash.cc' l='347' c='_ZN3tvm21NDArrayContainerTrait12SEqualReduceEPKNS_7runtime7NDArray9ContainerES5_NS_13SEqualReducerE'/>
-<use f='tvm/src/node/structural_hash.cc' l='398' c='_ZN3tvm14ArrayNodeTrait12SEqualReduceEPKNS_7runtime9ArrayNodeES4_NS_13SEqualReducerE'/>
-<use f='tvm/src/node/structural_hash.cc' l='412' c='_ZN3tvm14ArrayNodeTrait18SEqualReduceTracedEPKNS_7runtime9ArrayNodeES4_RKNS_13SEqualReducerE'/>
-<use f='tvm/src/node/structural_hash.cc' l='542' c='_ZN3tvm12MapNodeTrait19SEqualReduceForOMapEPKNS_7runtime7MapNodeES4_NS_13SEqualReducerE'/>
-<use f='tvm/src/node/structural_hash.cc' l='557' c='_ZN3tvm12MapNodeTrait19SEqualReduceForSMapEPKNS_7runtime7MapNodeES4_NS_13SEqualReducerE'/>
-<use f='tvm/src/node/structural_hash.cc' l='572' c='_ZN3tvm12MapNodeTrait25SEqualReduceTracedForOMapEPKNS_7runtime7MapNodeES4_RKNS_13SEqualReducerE'/>
-<use f='tvm/src/node/structural_hash.cc' l='617' c='_ZN3tvm12MapNodeTrait25SEqualReduceTracedForSMapEPKNS_7runtime7MapNodeES4_RKNS_13SEqualReducerE'/>
-<use f='tvm/src/node/structural_hash.cc' l='648' c='_ZN3tvm12MapNodeTrait18SEqualReduceTracedEPKNS_7runtime7MapNodeES4_RKNS_13SEqualReducerE'/>
-<use f='tvm/src/node/structural_hash.cc' l='656' c='_ZN3tvm12MapNodeTrait12SEqualReduceEPKNS_7runtime7MapNodeES4_NS_13SEqualReducerE'/>
+<use f='tvm/src/node/structural_hash.cc' l='308' c='_ZN3tvm14StringObjTrait12SEqualReduceEPKNS_7runtime9StringObjES4_NS_13SEqualReducerE'/>
+<use f='tvm/src/node/structural_hash.cc' l='348' c='_ZN3tvm11ADTObjTrait12SEqualReduceEPKNS_7runtime6ADTObjES4_NS_13SEqualReducerE'/>
+<use f='tvm/src/node/structural_hash.cc' l='377' c='_ZN3tvm21NDArrayContainerTrait12SEqualReduceEPKNS_7runtime7NDArray9ContainerES5_NS_13SEqualReducerE'/>
+<use f='tvm/src/node/structural_hash.cc' l='428' c='_ZN3tvm14ArrayNodeTrait12SEqualReduceEPKNS_7runtime9ArrayNodeES4_NS_13SEqualReducerE'/>
+<use f='tvm/src/node/structural_hash.cc' l='442' c='_ZN3tvm14ArrayNodeTrait18SEqualReduceTracedEPKNS_7runtime9ArrayNodeES4_RKNS_13SEqualReducerE'/>
+<use f='tvm/src/node/structural_hash.cc' l='572' c='_ZN3tvm12MapNodeTrait19SEqualReduceForOMapEPKNS_7runtime7MapNodeES4_NS_13SEqualReducerE'/>
+<use f='tvm/src/node/structural_hash.cc' l='587' c='_ZN3tvm12MapNodeTrait19SEqualReduceForSMapEPKNS_7runtime7MapNodeES4_NS_13SEqualReducerE'/>
+<use f='tvm/src/node/structural_hash.cc' l='602' c='_ZN3tvm12MapNodeTrait25SEqualReduceTracedForOMapEPKNS_7runtime7MapNodeES4_RKNS_13SEqualReducerE'/>
+<use f='tvm/src/node/structural_hash.cc' l='647' c='_ZN3tvm12MapNodeTrait25SEqualReduceTracedForSMapEPKNS_7runtime7MapNodeES4_RKNS_13SEqualReducerE'/>
+<use f='tvm/src/node/structural_hash.cc' l='678' c='_ZN3tvm12MapNodeTrait18SEqualReduceTracedEPKNS_7runtime7MapNodeES4_RKNS_13SEqualReducerE'/>
+<use f='tvm/src/node/structural_hash.cc' l='686' c='_ZN3tvm12MapNodeTrait12SEqualReduceEPKNS_7runtime7MapNodeES4_NS_13SEqualReducerE'/>
 <size>24</size>
 <use f='tvm/include/tvm/tir/usmp/utils.h' l='94' c='_ZNK3tvm3tir4usmp14BufferInfoNode12SEqualReduceEPKS2_NS_13SEqualReducerE'/>
 <use f='tvm/include/tvm/tir/usmp/utils.h' l='149' c='_ZNK3tvm3tir4usmp22BufferInfoAnalysisNode12SEqualReduceEPKS2_NS_13SEqualReducerE'/>

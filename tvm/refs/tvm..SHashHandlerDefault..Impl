@@ -1,0 +1,30 @@
+<use f='tvm/include/tvm/node/structural_hash.h' l='238'/>
+<def f='tvm/src/node/structural_hash.cc' l='58' ll='258'/>
+<use f='tvm/src/node/structural_hash.cc' l='260' c='_ZN3tvm19SHashHandlerDefaultC1Ev'/>
+<size>168</size>
+<doc f='tvm/src/node/structural_hash.cc' l='51'>// Hash handler that handles free vars
+// by assigning an unique counter in the order of their ocurrence.
+//
+// This algorithm depends on the determinism of the traversal of SHash function.
+// In particular, when we traverse unordered_map, we should first sort
+// the entries by keys(or hash of keys) before traversing.</doc>
+<fun r='_ZN3tvm19SHashHandlerDefault4ImplC1EPS0_'/>
+<fun r='_ZN3tvm19SHashHandlerDefault4Impl13MarkGraphNodeEv'/>
+<fun r='_ZN3tvm19SHashHandlerDefault4Impl17LookupHashedValueERKNS_7runtime9ObjectRefEPm'/>
+<fun r='_ZN3tvm19SHashHandlerDefault4Impl22SHashReduceHashedValueEm'/>
+<fun r='_ZN3tvm19SHashHandlerDefault4Impl18SHashReduceFreeVarEPKNS_7runtime6ObjectEb'/>
+<fun r='_ZN3tvm19SHashHandlerDefault4Impl11SHashReduceERKNS_7runtime9ObjectRefEb'/>
+<fun r='_ZN3tvm19SHashHandlerDefault4Impl4HashERKNS_7runtime9ObjectRefEb'/>
+<fun r='_ZN3tvm19SHashHandlerDefault4Impl13DispatchSHashERKNS_7runtime9ObjectRefEb'/>
+<fun r='_ZN3tvm19SHashHandlerDefault4Impl12PopTaskStackEv'/>
+<fun r='_ZN3tvm19SHashHandlerDefault4Impl10ReduceHashERKNS1_4TaskE'/>
+<fun r='_ZN3tvm19SHashHandlerDefault4Impl8RunTasksEv'/>
+<mbr r='tvm::SHashHandlerDefault::Impl::parent_' o='0' t='tvm::SHashHandlerDefault *'/>
+<mbr r='tvm::SHashHandlerDefault::Impl::free_var_counter_' o='64' t='size_t'/>
+<mbr r='tvm::SHashHandlerDefault::Impl::graph_node_counter_' o='128' t='size_t'/>
+<mbr r='tvm::SHashHandlerDefault::Impl::allow_push_to_stack_' o='192' t='bool'/>
+<mbr r='tvm::SHashHandlerDefault::Impl::pending_tasks_' o='256' t='std::vector&lt;Task&gt;'/>
+<mbr r='tvm::SHashHandlerDefault::Impl::task_stack_' o='448' t='std::vector&lt;Task&gt;'/>
+<mbr r='tvm::SHashHandlerDefault::Impl::result_stack_' o='640' t='std::vector&lt;size_t&gt;'/>
+<mbr r='tvm::SHashHandlerDefault::Impl::vtable_' o='832' t='tvm::ReflectionVTable *'/>
+<mbr r='tvm::SHashHandlerDefault::Impl::hash_memo_' o='896' t='std::unordered_map&lt;ObjectRef, size_t, ObjectPtrHash, ObjectPtrEqual&gt;'/>
