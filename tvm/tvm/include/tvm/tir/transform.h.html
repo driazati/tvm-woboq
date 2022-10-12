@@ -685,23 +685,31 @@
 <tr><th id="672">672</th><td></td></tr>
 <tr><th id="673">673</th><td><i class="doc">/*!</i></td></tr>
 <tr><th id="674">674</th><td><i class="doc"> * <span class="command">\brief</span> Remove the weight layout rewrite block</i></td></tr>
-<tr><th id="675">675</th><td><i class="doc"> * <span class="command">\return</span> The pass.</i></td></tr>
-<tr><th id="676">676</th><td><i class="doc"> */</i></td></tr>
-<tr><th id="677">677</th><td><a class="macro" href="../runtime/c_runtime_api.h.html#64" title="__attribute__((visibility(&quot;default&quot;)))" data-ref="_M/TVM_DLL">TVM_DLL</a> Pass <dfn class="decl fn" id="_ZN3tvm3tir9transform30RemoveWeightLayoutRewriteBlockEv" title='tvm::tir::transform::RemoveWeightLayoutRewriteBlock' data-ref="_ZN3tvm3tir9transform30RemoveWeightLayoutRewriteBlockEv" data-ref-filename="_ZN3tvm3tir9transform30RemoveWeightLayoutRewriteBlockEv">RemoveWeightLayoutRewriteBlock</dfn>();</td></tr>
-<tr><th id="678">678</th><td></td></tr>
-<tr><th id="679">679</th><td><i class="doc">/*!</i></td></tr>
-<tr><th id="680">680</th><td><i class="doc"> * <span class="command">\brief</span> Add the explicit local stage for the shared memory access on GPU.</i></td></tr>
-<tr><th id="681">681</th><td><i class="doc"> * <span class="command">\return</span> The pass.</i></td></tr>
-<tr><th id="682">682</th><td><i class="doc"> */</i></td></tr>
-<tr><th id="683">683</th><td><a class="macro" href="../runtime/c_runtime_api.h.html#64" title="__attribute__((visibility(&quot;default&quot;)))" data-ref="_M/TVM_DLL">TVM_DLL</a> Pass <dfn class="decl fn" id="_ZN3tvm3tir9transform30ManifestSharedMemoryLocalStageEv" title='tvm::tir::transform::ManifestSharedMemoryLocalStage' data-ref="_ZN3tvm3tir9transform30ManifestSharedMemoryLocalStageEv" data-ref-filename="_ZN3tvm3tir9transform30ManifestSharedMemoryLocalStageEv">ManifestSharedMemoryLocalStage</dfn>();</td></tr>
-<tr><th id="684">684</th><td></td></tr>
-<tr><th id="685">685</th><td>}  <i>// namespace transform</i></td></tr>
-<tr><th id="686">686</th><td>}  <i>// namespace tir</i></td></tr>
-<tr><th id="687">687</th><td>}  <i>// namespace tvm</i></td></tr>
-<tr><th id="688">688</th><td></td></tr>
-<tr><th id="689">689</th><td><u>#<span data-ppcond="24">endif</span>  // TVM_TIR_TRANSFORM_H_</u></td></tr>
-<tr><th id="690">690</th><td></td></tr>
+<tr><th id="675">675</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">skip_ndarray_rewrite</span> If True, exact rewrite of NDArray, according to the given index map,</i></td></tr>
+<tr><th id="676">676</th><td><i class="doc"> *  will be skipped. Only the shape of the NDArray is transformed correctly, and the content of</i></td></tr>
+<tr><th id="677">677</th><td><i class="doc"> *  the destination array will be filled with random values.</i></td></tr>
+<tr><th id="678">678</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="679">679</th><td><i class="doc"> *  When this pass is called many times during MetaSchedule tuning, the raw data of NDArray,</i></td></tr>
+<tr><th id="680">680</th><td><i class="doc"> *  before and after rewrite, does not matter. Since NDArray layout rewrite, using IndexMap's</i></td></tr>
+<tr><th id="681">681</th><td><i class="doc"> *  MapNDArray, is currently slow, skipping the exact rewrite is sometimes necessary.</i></td></tr>
+<tr><th id="682">682</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="683">683</th><td><i class="doc"> * <span class="command">\return</span> The pass.</i></td></tr>
+<tr><th id="684">684</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="685">685</th><td><a class="macro" href="../runtime/c_runtime_api.h.html#64" title="__attribute__((visibility(&quot;default&quot;)))" data-ref="_M/TVM_DLL">TVM_DLL</a> Pass <dfn class="decl fn" id="_ZN3tvm3tir9transform30RemoveWeightLayoutRewriteBlockEb" title='tvm::tir::transform::RemoveWeightLayoutRewriteBlock' data-ref="_ZN3tvm3tir9transform30RemoveWeightLayoutRewriteBlockEb" data-ref-filename="_ZN3tvm3tir9transform30RemoveWeightLayoutRewriteBlockEb">RemoveWeightLayoutRewriteBlock</dfn>(<em>bool</em> <dfn class="local col7 decl" id="127skip_ndarray_rewrite" title='skip_ndarray_rewrite' data-type='bool' data-ref="127skip_ndarray_rewrite" data-ref-filename="127skip_ndarray_rewrite">skip_ndarray_rewrite</dfn> = <b>false</b>);</td></tr>
+<tr><th id="686">686</th><td></td></tr>
+<tr><th id="687">687</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="688">688</th><td><i class="doc"> * <span class="command">\brief</span> Add the explicit local stage for the shared memory access on GPU.</i></td></tr>
+<tr><th id="689">689</th><td><i class="doc"> * <span class="command">\return</span> The pass.</i></td></tr>
+<tr><th id="690">690</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="691">691</th><td><a class="macro" href="../runtime/c_runtime_api.h.html#64" title="__attribute__((visibility(&quot;default&quot;)))" data-ref="_M/TVM_DLL">TVM_DLL</a> Pass <dfn class="decl fn" id="_ZN3tvm3tir9transform30ManifestSharedMemoryLocalStageEv" title='tvm::tir::transform::ManifestSharedMemoryLocalStage' data-ref="_ZN3tvm3tir9transform30ManifestSharedMemoryLocalStageEv" data-ref-filename="_ZN3tvm3tir9transform30ManifestSharedMemoryLocalStageEv">ManifestSharedMemoryLocalStage</dfn>();</td></tr>
+<tr><th id="692">692</th><td></td></tr>
+<tr><th id="693">693</th><td>}  <i>// namespace transform</i></td></tr>
+<tr><th id="694">694</th><td>}  <i>// namespace tir</i></td></tr>
+<tr><th id="695">695</th><td>}  <i>// namespace tvm</i></td></tr>
+<tr><th id="696">696</th><td></td></tr>
+<tr><th id="697">697</th><td><u>#<span data-ppcond="24">endif</span>  // TVM_TIR_TRANSFORM_H_</u></td></tr>
+<tr><th id="698">698</th><td></td></tr>
 </table><hr/><p id='footer'>
-Generated while processing <a href='../../../src/auto_scheduler/feature.cc.html'>tvm/src/auto_scheduler/feature.cc</a><br/>Generated on <em>2022-Oct-12</em> from project tvm revision <em>b8cfc4c</em><br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+Generated while processing <a href='../../../src/auto_scheduler/feature.cc.html'>tvm/src/auto_scheduler/feature.cc</a><br/>Generated on <em>2022-Oct-12</em> from project tvm revision <em>2560755</em><br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
 <br/>Generator usage only permitted with license.</p>
 </div></body></html>
