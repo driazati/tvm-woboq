@@ -289,8 +289,8 @@
 <use f='tvm/src/tir/transforms/bf16_legalize.cc' l='64' u='r' c='_ZN3tvm3tir19BF16PromoteRewriter10VisitExpr_EPKNS0_7MaxNodeE'/>
 <use f='tvm/src/tir/transforms/inject_ptx_async_copy.cc' l='106' u='m' c='_ZN3tvm3tir20PTXAsyncCopyInjector10VisitStmt_EPKNS0_15BufferStoreNodeE'/>
 <use f='tvm/src/tir/transforms/inject_ptx_async_copy.cc' l='107' u='m' c='_ZN3tvm3tir20PTXAsyncCopyInjector10VisitStmt_EPKNS0_15BufferStoreNodeE'/>
-<use f='tvm/src/tir/transforms/inject_rolling_buffer.cc' l='135' u='r' c='_ZN3tvm3tir21RollingBufferInjector10VisitStmt_EPKNS0_12AttrStmtNodeE'/>
-<use f='tvm/src/tir/transforms/inject_rolling_buffer.cc' l='153' u='m' c='_ZN3tvm3tir21RollingBufferInjector10VisitStmt_EPKNS0_12AttrStmtNodeE'/>
+<use f='tvm/src/tir/transforms/inject_rolling_buffer.cc' l='137' u='r' c='_ZN3tvm3tir21RollingBufferInjector10VisitStmt_EPKNS0_12AttrStmtNodeE'/>
+<use f='tvm/src/tir/transforms/inject_rolling_buffer.cc' l='154' u='m' c='_ZN3tvm3tir21RollingBufferInjector10VisitStmt_EPKNS0_12AttrStmtNodeE'/>
 <use f='tvm/src/tir/transforms/lower_intrin.cc' l='87' u='m' c='_ZN3tvm3tir14IntrinInjecter10VisitExpr_EPKNS0_7AddNodeE'/>
 <use f='tvm/src/tir/transforms/lower_intrin.cc' l='88' u='r' c='_ZN3tvm3tir14IntrinInjecter10VisitExpr_EPKNS0_7AddNodeE'/>
 <use f='tvm/src/tir/transforms/lower_intrin.cc' l='90' u='r' c='_ZN3tvm3tir14IntrinInjecter10VisitExpr_EPKNS0_7AddNodeE'/>
