@@ -1,6 +1,6 @@
-<dec f='tvm/include/tvm/arith/analyzer.h' l='601' type='bool tvm::arith::Analyzer::CanProveGreaterEqual(const tvm::PrimExpr &amp; expr, int64_t lower_bound)'/>
+<dec f='tvm/include/tvm/arith/analyzer.h' l='609' type='bool tvm::arith::Analyzer::CanProveGreaterEqual(const tvm::PrimExpr &amp; expr, int64_t lower_bound)'/>
 <def f='tvm/src/arith/analyzer.cc' l='90' ll='97' type='bool tvm::arith::Analyzer::CanProveGreaterEqual(const tvm::PrimExpr &amp; expr, int64_t lower_bound)'/>
-<doc f='tvm/include/tvm/arith/analyzer.h' l='589'>/*!
+<doc f='tvm/include/tvm/arith/analyzer.h' l='597'>/*!
    * \brief Whether can we prove expr &gt;= val.
 
    *  Non-negative proof is very useful in integer analysis
@@ -12,7 +12,7 @@
    *
    * \note Analyzer will call into sub-analyzers to get the result.
    */</doc>
-<use f='tvm/src/arith/rewrite_simplify.h' l='142' u='c' c='_ZN3tvm5arith17RewriteSimplifier4Impl20CanProveGreaterEqualERKNS_8PrimExprEl'/>
+<use f='tvm/src/arith/rewrite_simplify.h' l='146' u='c' c='_ZN3tvm5arith17RewriteSimplifier4Impl20CanProveGreaterEqualERKNS_8PrimExprEl'/>
 <use f='tvm/src/arith/canonical_simplify.cc' l='886' u='c' c='_ZN3tvm5arith19CanonicalSimplifier4Impl10VisitExpr_EPKNS_3tir7DivNodeE'/>
 <use f='tvm/src/arith/canonical_simplify.cc' l='887' u='c' c='_ZN3tvm5arith19CanonicalSimplifier4Impl10VisitExpr_EPKNS_3tir7DivNodeE'/>
 <use f='tvm/src/arith/canonical_simplify.cc' l='949' u='c' c='_ZN3tvm5arith19CanonicalSimplifier4Impl10VisitExpr_EPKNS_3tir12FloorDivNodeE'/>

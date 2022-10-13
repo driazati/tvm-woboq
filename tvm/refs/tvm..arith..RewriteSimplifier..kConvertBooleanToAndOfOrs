@@ -1,0 +1,11 @@
+<dec f='tvm/include/tvm/arith/analyzer.h' l='307' type='2'/>
+<doc f='tvm/include/tvm/arith/analyzer.h' l='301'>/* When simplifying a boolean expression, convert to an AND of ORs
+     * (conjunctive normal form).
+     *
+     * Example:
+     *   (a &amp;&amp; b) || c =&gt; (a || c) &amp;&amp; (b || c)
+     */</doc>
+<use f='tvm/src/arith/conjunctive_normal_form.cc' l='407' u='r' c='_ZN3tvm5arith12_GLOBAL__N_123DisableAndOfOrRecursionC1EPNS0_8AnalyzerE'/>
+<use f='tvm/src/arith/rewrite_simplify.cc' l='1565' u='r' c='_ZN3tvm5arith17RewriteSimplifier4Impl10VisitExpr_EPKNS_3tir7AndNodeE'/>
+<use f='tvm/src/arith/rewrite_simplify.cc' l='1609' u='r' c='_ZN3tvm5arith17RewriteSimplifier4Impl10VisitExpr_EPKNS_3tir6OrNodeE'/>
+<use f='tvm/src/tir/transforms/simplify.cc' l='61' u='r' c='_ZNK3tvm5arith18SimplifyConfigNode20GetEnabledExtensionsEv'/>

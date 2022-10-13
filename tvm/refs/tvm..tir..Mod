@@ -33,7 +33,7 @@
 <use f='tvm/src/arith/int_set.cc' l='228' c='_ZN3tvm5arith7CombineEPNS0_8AnalyzerENS0_11IntervalSetES3_NS_7runtime8DataTypeE'/>
 <use f='tvm/src/arith/int_set.cc' l='435' c='_ZN3tvm5arith20IntervalSetEvaluator10VisitExpr_EPKNS_3tir7ModNodeE'/>
 <size>8</size>
-<use f='tvm/src/arith/rewrite_simplify.cc' l='699' c='_ZN3tvm5arith17RewriteSimplifier4Impl10VisitExpr_EPKNS_3tir7ModNodeE'/>
+<use f='tvm/src/arith/rewrite_simplify.cc' l='700' c='_ZN3tvm5arith17RewriteSimplifier4Impl10VisitExpr_EPKNS_3tir7ModNodeE'/>
 <size>8</size>
 <use f='tvm/src/target/source/codegen_cuda.cc' l='872' c='_ZZN3tvm7codegen11CodeGenCUDA10VisitExpr_EPKNS_3tir8CallNodeERSoEN16LowerFloorDivMod10VisitExpr_EPKNS2_12FloorModNodeE'/>
 <size>8</size>

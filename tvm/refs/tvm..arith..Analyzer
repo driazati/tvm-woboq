@@ -5,22 +5,22 @@
 <use f='tvm/include/tvm/arith/analyzer.h' l='153' c='_ZN3tvm5arith21ConstIntBoundAnalyzerC1EPNS0_8AnalyzerE'/>
 <use f='tvm/include/tvm/arith/analyzer.h' l='232'/>
 <use f='tvm/include/tvm/arith/analyzer.h' l='234' c='_ZN3tvm5arith18ModularSetAnalyzerC1EPNS0_8AnalyzerE'/>
-<use f='tvm/include/tvm/arith/analyzer.h' l='313'/>
-<use f='tvm/include/tvm/arith/analyzer.h' l='316' c='_ZN3tvm5arith17RewriteSimplifierC1EPNS0_8AnalyzerE'/>
-<use f='tvm/include/tvm/arith/analyzer.h' l='345'/>
-<use f='tvm/include/tvm/arith/analyzer.h' l='347' c='_ZN3tvm5arith19CanonicalSimplifierC1EPNS0_8AnalyzerE'/>
-<use f='tvm/include/tvm/arith/analyzer.h' l='421'/>
-<use f='tvm/include/tvm/arith/analyzer.h' l='455' c='_ZN3tvm5arith17ConstraintContextC1EPNS0_8AnalyzerENS_8PrimExprE'/>
-<use f='tvm/include/tvm/arith/analyzer.h' l='462'/>
-<use f='tvm/include/tvm/arith/analyzer.h' l='515'/>
-<use f='tvm/include/tvm/arith/analyzer.h' l='516' c='_ZN3tvm5arith14IntSetAnalyzerC1EPNS0_8AnalyzerE'/>
-<def f='tvm/include/tvm/arith/analyzer.h' l='533' ll='648'/>
-<use f='tvm/include/tvm/arith/analyzer.h' l='538' c='_ZN3tvm5arith8AnalyzerC1ERKS1_'/>
-<use f='tvm/include/tvm/arith/analyzer.h' l='539' c='_ZN3tvm5arith8AnalyzeraSERKS1_'/>
-<use f='tvm/include/tvm/arith/analyzer.h' l='539' c='_ZN3tvm5arith8AnalyzeraSERKS1_'/>
+<use f='tvm/include/tvm/arith/analyzer.h' l='321'/>
+<use f='tvm/include/tvm/arith/analyzer.h' l='324' c='_ZN3tvm5arith17RewriteSimplifierC1EPNS0_8AnalyzerE'/>
+<use f='tvm/include/tvm/arith/analyzer.h' l='353'/>
+<use f='tvm/include/tvm/arith/analyzer.h' l='355' c='_ZN3tvm5arith19CanonicalSimplifierC1EPNS0_8AnalyzerE'/>
+<use f='tvm/include/tvm/arith/analyzer.h' l='429'/>
+<use f='tvm/include/tvm/arith/analyzer.h' l='463' c='_ZN3tvm5arith17ConstraintContextC1EPNS0_8AnalyzerENS_8PrimExprE'/>
+<use f='tvm/include/tvm/arith/analyzer.h' l='470'/>
+<use f='tvm/include/tvm/arith/analyzer.h' l='523'/>
+<use f='tvm/include/tvm/arith/analyzer.h' l='524' c='_ZN3tvm5arith14IntSetAnalyzerC1EPNS0_8AnalyzerE'/>
+<def f='tvm/include/tvm/arith/analyzer.h' l='541' ll='656'/>
+<use f='tvm/include/tvm/arith/analyzer.h' l='546' c='_ZN3tvm5arith8AnalyzerC1ERKS1_'/>
+<use f='tvm/include/tvm/arith/analyzer.h' l='547' c='_ZN3tvm5arith8AnalyzeraSERKS1_'/>
+<use f='tvm/include/tvm/arith/analyzer.h' l='547' c='_ZN3tvm5arith8AnalyzeraSERKS1_'/>
 <use f='tvm/src/arith/analyzer.cc' l='149'/>
 <size>48</size>
-<doc f='tvm/include/tvm/arith/analyzer.h' l='523'>/*!
+<doc f='tvm/include/tvm/arith/analyzer.h' l='531'>/*!
  * \brief Analyzer that contains bunch of sub-analyzers.
  *
  * Each sub-analyzer can make use of another sub-analyzer
@@ -69,6 +69,21 @@
 <use f='tvm/src/arith/canonical_simplify.cc' l='337' c='_ZNK3tvm5arith11SumExprNode21CanPushCastToChildrenENS_7runtime8DataTypeEPNS0_8AnalyzerE'/>
 <use f='tvm/src/arith/canonical_simplify.cc' l='579' c='_ZN3tvm5arith19CanonicalSimplifier4ImplC1EPNS0_8AnalyzerE'/>
 <use f='tvm/src/arith/canonical_simplify.cc' l='1281' c='_ZN3tvm5arith19CanonicalSimplifierC1EPNS0_8AnalyzerE'/>
+<size>48</size>
+<use f='tvm/src/arith/conjunctive_normal_form.h' l='44' c='_ZN3tvm5arith18SimplifyAsAndOfOrsERKNS_8PrimExprEPNS0_8AnalyzerE'/>
+<use f='tvm/src/arith/conjunctive_normal_form.cc' l='57' c='_ZN3tvm5arith12_GLOBAL__N_18AndOfOrs8SimplifyEPNS0_8AnalyzerE'/>
+<use f='tvm/src/arith/conjunctive_normal_form.cc' l='69' c='_ZN3tvm5arith12_GLOBAL__N_18AndOfOrs20SimplifyWithinChunksEPNS0_8AnalyzerE'/>
+<use f='tvm/src/arith/conjunctive_normal_form.cc' l='80' c='_ZN3tvm5arith12_GLOBAL__N_18AndOfOrs20SimplifyAcrossChunksEPNS0_8AnalyzerE'/>
+<use f='tvm/src/arith/conjunctive_normal_form.cc' l='120' c='_ZN3tvm5arith12_GLOBAL__N_18AndOfOrs13TrySimplifyOrEPNS2_3KeyES4_PNS0_8AnalyzerE'/>
+<use f='tvm/src/arith/conjunctive_normal_form.cc' l='127' c='_ZN3tvm5arith12_GLOBAL__N_18AndOfOrs14TrySimplifyAndEPNS2_3KeyES4_PNS0_8AnalyzerE'/>
+<use f='tvm/src/arith/conjunctive_normal_form.cc' l='247' c='_ZN3tvm5arith12_GLOBAL__N_18AndOfOrs13TrySimplifyOrEPNS2_3KeyES4_PNS0_8AnalyzerE'/>
+<use f='tvm/src/arith/conjunctive_normal_form.cc' l='263' c='_ZN3tvm5arith12_GLOBAL__N_18AndOfOrs14TrySimplifyAndEPNS2_3KeyES4_PNS0_8AnalyzerE'/>
+<use f='tvm/src/arith/conjunctive_normal_form.cc' l='279' c='_ZN3tvm5arith12_GLOBAL__N_18AndOfOrs8SimplifyEPNS0_8AnalyzerE'/>
+<use f='tvm/src/arith/conjunctive_normal_form.cc' l='286' c='_ZN3tvm5arith12_GLOBAL__N_18AndOfOrs20SimplifyWithinChunksEPNS0_8AnalyzerE'/>
+<use f='tvm/src/arith/conjunctive_normal_form.cc' l='299' c='_ZN3tvm5arith12_GLOBAL__N_18AndOfOrs20SimplifyAcrossChunksEPNS0_8AnalyzerE'/>
+<use f='tvm/src/arith/conjunctive_normal_form.cc' l='404' c='_ZN3tvm5arith12_GLOBAL__N_123DisableAndOfOrRecursionC1EPNS0_8AnalyzerE'/>
+<use f='tvm/src/arith/conjunctive_normal_form.cc' l='416'/>
+<use f='tvm/src/arith/conjunctive_normal_form.cc' l='422' c='_ZN3tvm5arith18SimplifyAsAndOfOrsERKNS_8PrimExprEPNS0_8AnalyzerE'/>
 <size>48</size>
 <use f='tvm/src/arith/const_int_bound.cc' l='736' c='_ZN3tvm5arith21ConstIntBoundAnalyzerC1EPNS0_8AnalyzerE'/>
 <size>48</size>
@@ -152,7 +167,7 @@
 <use f='tvm/src/arith/modular_set.cc' l='292'/>
 <use f='tvm/src/arith/modular_set.cc' l='383' c='_ZN3tvm5arith18ModularSetAnalyzerC1EPNS0_8AnalyzerE'/>
 <size>48</size>
-<use f='tvm/src/arith/rewrite_simplify.cc' l='1788' c='_ZN3tvm5arith17RewriteSimplifierC1EPNS0_8AnalyzerE'/>
+<use f='tvm/src/arith/rewrite_simplify.cc' l='1799' c='_ZN3tvm5arith17RewriteSimplifierC1EPNS0_8AnalyzerE'/>
 <size>48</size>
 <use f='tvm/src/arith/solve_linear_equation.cc' l='281' c='_ZN3tvm5arith20SolveLinearEquationsERKNS0_14IntConstraintsE'/>
 <use f='tvm/src/arith/solve_linear_equation.cc' l='425' c='_ZN3tvm5arith20SolveLinearEquationsERKNS0_14IntConstraintsE'/>
@@ -460,8 +475,8 @@
 <use f='tvm/src/tir/transforms/renormalize_split_pattern.cc' l='53' c='_ZN3tvm3tir24SplitPatternReNormalizerC1EPNS_5arith8AnalyzerE'/>
 <use f='tvm/src/tir/transforms/renormalize_split_pattern.cc' l='201' c='_ZN3tvm3tir9transform23RenormalizeSplitPatternEv'/>
 <size>48</size>
-<use f='tvm/src/tir/transforms/simplify.cc' l='69' c='_ZN3tvm5arith14StmtSimplifierC1EPNS0_8AnalyzerE'/>
-<use f='tvm/src/tir/transforms/simplify.cc' l='190' c='_ZN3tvm3tir9transform8SimplifyEv'/>
+<use f='tvm/src/tir/transforms/simplify.cc' l='77' c='_ZN3tvm5arith14StmtSimplifierC1EPNS0_8AnalyzerE'/>
+<use f='tvm/src/tir/transforms/simplify.cc' l='198' c='_ZN3tvm3tir9transform8SimplifyEv'/>
 <size>48</size>
 <use f='tvm/src/tir/transforms/storage_flatten.cc' l='1637' c='_ZN3tvm3tir16StorageFlattener14FlattenExtentsERKT_'/>
 <size>48</size>
