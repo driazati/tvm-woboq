@@ -262,13 +262,13 @@
 <use f='tvm/src/tir/transforms/inject_software_pipeline.cc' l='189'/>
 <use f='tvm/src/tir/transforms/inject_software_pipeline.cc' l='211' c='_ZN3tvm3tir17software_pipeline20PipelineBodyRewriterC1ERKNS_7runtime3MapINS0_3VarENS0_6BufferEvvEERKNS4_IS6_S6_vvEENS0_3ForEbRKSt13unordered_mapIPKNS016128990'/>
 <use f='tvm/src/tir/transforms/inject_software_pipeline.cc' l='296'/>
-<use f='tvm/src/tir/transforms/inject_software_pipeline.cc' l='309' c='_ZN3tvm3tir17software_pipeline16PipelineRewriter7RewriteENS_7runtime3MapINS0_3VarENS0_6BufferEvvEERKSt13unordered_setIS6_NS3_13ObjectPtrHashENS3_14Obj14113390'/>
-<use f='tvm/src/tir/transforms/inject_software_pipeline.cc' l='321' c='_ZN3tvm3tir17software_pipeline16PipelineRewriterC1ENS_7runtime3MapINS0_3VarENS0_6BufferEvvEERKSt13unordered_setIS6_NS3_13ObjectPtrHashENS3_14ObjectPtr12251366'/>
-<use f='tvm/src/tir/transforms/inject_software_pipeline.cc' l='908' c='_ZN3tvm3tir17software_pipeline16PipelineRewriter8EmitImplENS_8PrimExprES3_b'/>
-<use f='tvm/src/tir/transforms/inject_software_pipeline.cc' l='937'/>
-<use f='tvm/src/tir/transforms/inject_software_pipeline.cc' l='1040' c='_ZN3tvm3tir17software_pipeline16PipelineInjector10VisitStmt_EPKNS0_7ForNodeE'/>
-<use f='tvm/src/tir/transforms/inject_software_pipeline.cc' l='1040' c='_ZN3tvm3tir17software_pipeline16PipelineInjector10VisitStmt_EPKNS0_7ForNodeE'/>
-<use f='tvm/src/tir/transforms/inject_software_pipeline.cc' l='1130' c='_ZN3tvm3tir17software_pipeline16PipelineInjector10VisitStmt_EPKNS0_7ForNodeE'/>
+<use f='tvm/src/tir/transforms/inject_software_pipeline.cc' l='309' c='_ZN3tvm3tir17software_pipeline16PipelineRewriter7RewriteENS_7runtime3MapINS0_3VarENS0_6BufferEvvEERKSt13unordered_setIS6_NS3_13ObjectPtrHashENS3_14Obj9846108'/>
+<use f='tvm/src/tir/transforms/inject_software_pipeline.cc' l='322' c='_ZN3tvm3tir17software_pipeline16PipelineRewriterC1ENS_7runtime3MapINS0_3VarENS0_6BufferEvvEERKSt13unordered_setIS6_NS3_13ObjectPtrHashENS3_14ObjectPtr8750948'/>
+<use f='tvm/src/tir/transforms/inject_software_pipeline.cc' l='920' c='_ZN3tvm3tir17software_pipeline16PipelineRewriter8EmitImplENS_8PrimExprES3_b'/>
+<use f='tvm/src/tir/transforms/inject_software_pipeline.cc' l='949'/>
+<use f='tvm/src/tir/transforms/inject_software_pipeline.cc' l='1054' c='_ZN3tvm3tir17software_pipeline16PipelineInjector10VisitStmt_EPKNS0_7ForNodeE'/>
+<use f='tvm/src/tir/transforms/inject_software_pipeline.cc' l='1054' c='_ZN3tvm3tir17software_pipeline16PipelineInjector10VisitStmt_EPKNS0_7ForNodeE'/>
+<use f='tvm/src/tir/transforms/inject_software_pipeline.cc' l='1144' c='_ZN3tvm3tir17software_pipeline16PipelineInjector10VisitStmt_EPKNS0_7ForNodeE'/>
 <size>8</size>
 <use f='tvm/src/tir/transforms/inject_virtual_thread.cc' l='469' c='_ZN3tvm3tir10VTInjector12InjectVTLoopENS0_4StmtEb'/>
 <size>8</size>
