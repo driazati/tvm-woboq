@@ -74,6 +74,8 @@
 <use f='tvm/src/te/operation/op_utils.cc' l='135' c='_ZN3tvm2te12MakeLoopNestERKNS0_5StageERKSt13unordered_mapINS_3tir7IterVarENS_5RangeESt4hashIS6_ESt8equal_toIS6_ESaISt4pairIKS6_S7_EEEmbRKSt13unordered9689248'/>
 <use f='tvm/src/te/operation/op_utils.cc' l='139' c='_ZN3tvm2te12MakeLoopNestERKNS0_5StageERKSt13unordered_mapINS_3tir7IterVarENS_5RangeESt4hashIS6_ESt8equal_toIS6_ESaISt4pairIKS6_S7_EEEmbRKSt13unordered9689248'/>
 <size>8</size>
+<use f='tvm/src/tir/ir/data_type_rewriter.cc' l='40' c='_ZN3tvm3tir17DataTypeLegalizer10VisitStmt_EPKNS0_7ForNodeE'/>
+<size>8</size>
 <use f='tvm/src/tir/ir/stmt.cc' l='185'/>
 <size>8</size>
 <fun r='_ZN3tvm3tir3ForC1ENS0_3VarENS_8PrimExprES3_NS0_7ForKindENS0_4StmtENS_7runtime8OptionalINS0_7IterVarEEENS6_3MapINS6_6StringENS6_9ObjectRefEvvEENS_4SpanE'/>
@@ -288,8 +290,6 @@
 <use f='tvm/src/tir/transforms/lower_opaque_block.cc' l='97' c='_ZN3tvm3tir16OpaqueBlockLower10VisitStmt_EPKNS0_7ForNodeE'/>
 <size>8</size>
 <use f='tvm/src/tir/transforms/manifest_shared_memory_local_stage.cc' l='140' c='_ZN3tvm3tir25IntermediateStageRewriter14MakeLocalStageEPKNS0_9BlockNodeERKNS0_6BufferENS_7runtime5ArrayINS_8PrimExprEvEESt6vectorIPKNS0_7ForNodeESaISF9837013'/>
-<size>8</size>
-<use f='tvm/src/tir/transforms/narrow_datatype.cc' l='263' c='_ZN3tvm3tir16DataTypeRewriter10VisitStmt_EPKNS0_7ForNodeE'/>
 <size>8</size>
 <use f='tvm/src/tir/transforms/plan_update_buffer_allocation_location.cc' l='88' c='_ZN3tvm3tir23BufferAllocationLocator10VisitStmt_EPKNS0_7ForNodeE'/>
 <size>8</size>

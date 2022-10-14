@@ -37,6 +37,7 @@
 <use f='tvm/src/te/schedule/schedule_postproc_to_primfunc.cc' l='296' u='c' c='_ZN3tvm2te27AxisSeparatorsAttrUnwrapper10VisitStmt_EPKNS_3tir12AttrStmtNodeE'/>
 <use f='tvm/src/tir/analysis/device_constraint_utils.cc' l='303' u='c' c='_ZN3tvm3tir12_GLOBAL__N_129ApplyDeviceConstraintsMutator10VisitStmt_EPKNS0_12AttrStmtNodeE'/>
 <use f='tvm/src/tir/contrib/ethosu/passes.cc' l='733' u='c' c='_ZN3tvm3tir7contrib6ethosu21MergeConstantsMutator11MakeNewStmtERKNS0_4StmtERKNS_7runtime5ArrayINS_8PrimExprEvEENS7_8OptionalIS9_EE'/>
+<use f='tvm/src/tir/ir/data_type_rewriter.cc' l='105' u='c' c='_ZN3tvm3tir17DataTypeLegalizer10VisitStmt_EPKNS0_12AttrStmtNodeE'/>
 <def f='tvm/src/tir/ir/stmt.cc' l='73' ll='81' type='void tvm::tir::AttrStmt::AttrStmt(tvm::runtime::ObjectRef node, tvm::runtime::String attr_key, tvm::PrimExpr value, tvm::tir::Stmt body, tvm::Span span = tvm::Span())'/>
 <use f='tvm/src/tir/ir/stmt.cc' l='85' u='c'/>
 <doc f='tvm/src/tir/ir/stmt.cc' l='72'>// AttrStmt</doc>
@@ -72,7 +73,6 @@
 <use f='tvm/src/tir/transforms/make_unpacked_api.cc' l='75' u='c' c='_ZN3tvm3tir15MakeUnpackedAPIEONS0_8PrimFuncE'/>
 <use f='tvm/src/tir/transforms/make_unpacked_api.cc' l='76' u='c' c='_ZN3tvm3tir15MakeUnpackedAPIEONS0_8PrimFuncE'/>
 <use f='tvm/src/tir/transforms/merge_dynamic_shared_memory_allocations.cc' l='298' u='c' c='_ZN3tvm3tir27DynamicSharedMemoryRewriter10VisitStmt_EPKNS0_12AttrStmtNodeE'/>
-<use f='tvm/src/tir/transforms/narrow_datatype.cc' l='301' u='c' c='_ZN3tvm3tir16DataTypeRewriter10VisitStmt_EPKNS0_12AttrStmtNodeE'/>
 <use f='tvm/src/tir/transforms/remap_thread_axis.cc' l='55' u='c' c='_ZN3tvm3tir18ThreadAxisRewriter10VisitStmt_EPKNS0_12AttrStmtNodeE'/>
 <use f='tvm/src/tir/transforms/split_host_device.cc' l='66' u='c' c='_ZN3tvm3tir17VarUseDefAnalysis10VisitStmt_EPKNS0_12AttrStmtNodeE'/>
 <use f='tvm/src/tir/transforms/storage_flatten.cc' l='243' u='c' c='_ZN3tvm3tir19BufferShapeLegalize10VisitStmt_EPKNS0_12AttrStmtNodeE'/>
