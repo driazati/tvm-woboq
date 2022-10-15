@@ -30,5 +30,5 @@
 <size>8</size>
 <use f='tvm/src/meta_schedule/task_scheduler/task_scheduler.cc' l='41' c='_ZN3tvm13meta_schedule13SendToBuilderEPNS0_14TaskRecordNodeERKNS0_7BuilderE'/>
 <use f='tvm/src/meta_schedule/task_scheduler/task_scheduler.cc' l='143' c='_ZN3tvm13meta_schedule17TaskSchedulerNode4TuneENS_7runtime5ArrayINS0_11TuneContextEvEENS3_INS_8FloatImmEvEEiiiNS0_7BuilderENS0_6RunnerENS3_INS0_15Meas9556795'/>
-<use f='tvm/src/meta_schedule/task_scheduler/task_scheduler.cc' l='344' c='_ZN3tvm13meta_schedule19PyTaskSchedulerNode4TuneENS_7runtime5ArrayINS0_11TuneContextEvEENS3_INS_8FloatImmEvEEiiiNS0_7BuilderENS0_6RunnerENS3_INS0_15Me9679234'/>
+<use f='tvm/src/meta_schedule/task_scheduler/task_scheduler.cc' l='349' c='_ZN3tvm13meta_schedule19PyTaskSchedulerNode4TuneENS_7runtime5ArrayINS0_11TuneContextEvEENS3_INS_8FloatImmEvEEiiiNS0_7BuilderENS0_6RunnerENS3_INS0_15Me9679234'/>
 <size>8</size>
