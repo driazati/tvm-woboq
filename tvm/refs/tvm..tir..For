@@ -47,9 +47,9 @@
 <use f='tvm/src/printer/tvmscript_printer.cc' l='1960' c='_ZN3tvm3tir30TVMScriptPrinterWithDiagnostic9PrintLoopERKNS0_3ForE'/>
 <use f='tvm/src/printer/tvmscript_printer.cc' l='1979' c='_ZN3tvm3tir30TVMScriptPrinterWithDiagnostic9PrintLoopERKNS0_3ForE'/>
 <size>8</size>
-<use f='tvm/src/relay/backend/aot/aot_lower_main.cc' l='691' c='_ZN3tvm5relay7backend3aot14AOTMainLowerer12CopyToOutputENS_8PrimExprES4_bm'/>
+<use f='tvm/src/relay/backend/aot/aot_lower_main.cc' l='692' c='_ZN3tvm5relay7backend3aot14AOTMainLowerer12CopyToOutputENS_8PrimExprES4_bm'/>
 <size>8</size>
-<use f='tvm/src/relay/backend/aot_executor_codegen.cc' l='515' c='_ZN3tvm5relay7backend18AOTExecutorCodegen12CopyToOutputENS_8PrimExprES3_bm'/>
+<use f='tvm/src/relay/backend/aot_executor_codegen.cc' l='516' c='_ZN3tvm5relay7backend18AOTExecutorCodegen12CopyToOutputENS_8PrimExprES3_bm'/>
 <size>8</size>
 <use f='tvm/src/relay/backend/contrib/example_target_hooks/relay_to_tir.cc' l='146' c='_ZN3tvm5relay7contrib20example_target_hooks12_GLOBAL__N_120ConvertAddToSubtract30ReplaceAddWithSubtractPrimFuncERKNS0_8FunctionE'/>
 <size>8</size>
