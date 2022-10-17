@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>ndarray_hash_equal.h source code [tvm/src/node/ndarray_hash_equal.h] - Woboq Code Browser</title>
+<link rel="stylesheet" href="../../.././data/qtcreator.css" title="QtCreator"/>
+<link rel="alternate stylesheet" href="../../.././data/kdevelop.css" title="KDevelop"/>
+<script type="text/javascript" src="../../.././data/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="../../.././data/jquery/jquery-ui.min.js"></script>
+<script>var file = 'tvm/src/node/ndarray_hash_equal.h'; var root_path = '../../..'; var data_path = '../../.././data'; var ecma_script_api_version = 2;</script>
+<script src='../../.././data/codebrowser.js'></script>
+</head>
+<body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='../..'>tvm</a>/<a href='..'>src</a>/<a href='./'>node</a>/<a href='ndarray_hash_equal.h.html'>ndarray_hash_equal.h</a></h1></div>
+<hr/><div id='content'><table class="code">
+<tr><th id="1">1</th><td><i>/*</i></td></tr>
+<tr><th id="2">2</th><td><i> * Licensed to the Apache Software Foundation (ASF) under one</i></td></tr>
+<tr><th id="3">3</th><td><i> * or more contributor license agreements.  See the NOTICE file</i></td></tr>
+<tr><th id="4">4</th><td><i> * distributed with this work for additional information</i></td></tr>
+<tr><th id="5">5</th><td><i> * regarding copyright ownership.  The ASF licenses this file</i></td></tr>
+<tr><th id="6">6</th><td><i> * to you under the Apache License, Version 2.0 (the</i></td></tr>
+<tr><th id="7">7</th><td><i> * "License"); you may not use this file except in compliance</i></td></tr>
+<tr><th id="8">8</th><td><i> * with the License.  You may obtain a copy of the License at</i></td></tr>
+<tr><th id="9">9</th><td><i> *</i></td></tr>
+<tr><th id="10">10</th><td><i> *   <a href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a></i></td></tr>
+<tr><th id="11">11</th><td><i> *</i></td></tr>
+<tr><th id="12">12</th><td><i> * Unless required by applicable law or agreed to in writing,</i></td></tr>
+<tr><th id="13">13</th><td><i> * software distributed under the License is distributed on an</i></td></tr>
+<tr><th id="14">14</th><td><i> * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY</i></td></tr>
+<tr><th id="15">15</th><td><i> * KIND, either express or implied.  See the License for the</i></td></tr>
+<tr><th id="16">16</th><td><i> * specific language governing permissions and limitations</i></td></tr>
+<tr><th id="17">17</th><td><i> * under the License.</i></td></tr>
+<tr><th id="18">18</th><td><i> */</i></td></tr>
+<tr><th id="19">19</th><td><u>#<span data-ppcond="19">ifndef</span> <span class="macro" data-ref="_M/TVM_NODE_NDARRAY_HASH_EQUAL_H_">TVM_NODE_NDARRAY_HASH_EQUAL_H_</span></u></td></tr>
+<tr><th id="20">20</th><td><u>#define <dfn class="macro" id="_M/TVM_NODE_NDARRAY_HASH_EQUAL_H_" data-ref="_M/TVM_NODE_NDARRAY_HASH_EQUAL_H_">TVM_NODE_NDARRAY_HASH_EQUAL_H_</dfn></u></td></tr>
+<tr><th id="21">21</th><td></td></tr>
+<tr><th id="22">22</th><td><u>#include <a href="../../include/tvm/runtime/ndarray.h.html">&lt;tvm/runtime/ndarray.h&gt;</a></u></td></tr>
+<tr><th id="23">23</th><td></td></tr>
+<tr><th id="24">24</th><td><b>namespace</b> <span class="namespace">tvm</span> {</td></tr>
+<tr><th id="25">25</th><td></td></tr>
+<tr><th id="26">26</th><td><b>class</b> <a class="type" href="../../include/tvm/node/structural_equal.h.html#tvm::SEqualReducer" title='tvm::SEqualReducer' data-ref="tvm::SEqualReducer" data-ref-filename="tvm..SEqualReducer" id="tvm::SEqualReducer">SEqualReducer</a>;</td></tr>
+<tr><th id="27">27</th><td><b>class</b> <a class="type" href="../../include/tvm/node/structural_hash.h.html#tvm::SHashReducer" title='tvm::SHashReducer' data-ref="tvm::SHashReducer" data-ref-filename="tvm..SHashReducer" id="tvm::SHashReducer">SHashReducer</a>;</td></tr>
+<tr><th id="28">28</th><td></td></tr>
+<tr><th id="29">29</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="30">30</th><td><i class="doc"> * <span class="command">\brief</span> Test two NDArrays for equality.</i></td></tr>
+<tr><th id="31">31</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">lhs</span> The left operand.</i></td></tr>
+<tr><th id="32">32</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">rhs</span> The right operand.</i></td></tr>
+<tr><th id="33">33</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">equal</span> A Reducer class to reduce the structural equality result of two objects.</i></td></tr>
+<tr><th id="34">34</th><td><i class="doc"> * See tvm/node/structural_equal.h.</i></td></tr>
+<tr><th id="35">35</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">compare_data</span> Whether or not to consider ndarray raw data in the equality testing.</i></td></tr>
+<tr><th id="36">36</th><td><i class="doc"> * <span class="command">\return</span> The equality testing result.</i></td></tr>
+<tr><th id="37">37</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="38">38</th><td><em>bool</em> <dfn class="decl fn" id="_ZN3tvm12NDArrayEqualEPKNS_7runtime7NDArray9ContainerES4_NS_13SEqualReducerEb" title='tvm::NDArrayEqual' data-ref="_ZN3tvm12NDArrayEqualEPKNS_7runtime7NDArray9ContainerES4_NS_13SEqualReducerEb" data-ref-filename="_ZN3tvm12NDArrayEqualEPKNS_7runtime7NDArray9ContainerES4_NS_13SEqualReducerEb">NDArrayEqual</dfn>(<em>const</em> <span class="namespace">runtime::</span><a class="type" href="../../include/tvm/runtime/ndarray.h.html#tvm::runtime::NDArray" title='tvm::runtime::NDArray' data-ref="tvm::runtime::NDArray" data-ref-filename="tvm..runtime..NDArray">NDArray</a>::<a class="type" href="../../include/tvm/runtime/ndarray.h.html#tvm::runtime::NDArray::Container" title='tvm::runtime::NDArray::Container' data-ref="tvm::runtime::NDArray::Container" data-ref-filename="tvm..runtime..NDArray..Container">Container</a>* <dfn class="local col1 decl" id="1lhs" title='lhs' data-type='const runtime::NDArray::Container *' data-ref="1lhs" data-ref-filename="1lhs">lhs</dfn>, <em>const</em> <span class="namespace">runtime::</span><a class="type" href="../../include/tvm/runtime/ndarray.h.html#tvm::runtime::NDArray" title='tvm::runtime::NDArray' data-ref="tvm::runtime::NDArray" data-ref-filename="tvm..runtime..NDArray">NDArray</a>::<a class="type" href="../../include/tvm/runtime/ndarray.h.html#tvm::runtime::NDArray::Container" title='tvm::runtime::NDArray::Container' data-ref="tvm::runtime::NDArray::Container" data-ref-filename="tvm..runtime..NDArray..Container">Container</a>* <dfn class="local col2 decl" id="2rhs" title='rhs' data-type='const runtime::NDArray::Container *' data-ref="2rhs" data-ref-filename="2rhs">rhs</dfn>,</td></tr>
+<tr><th id="39">39</th><td>                  <a class="type" href="../../include/tvm/node/structural_equal.h.html#tvm::SEqualReducer" title='tvm::SEqualReducer' data-ref="tvm::SEqualReducer" data-ref-filename="tvm..SEqualReducer">SEqualReducer</a> <dfn class="local col3 decl" id="3equal" title='equal' data-type='tvm::SEqualReducer' data-ref="3equal" data-ref-filename="3equal">equal</dfn>, <em>bool</em> <dfn class="local col4 decl" id="4compare_data" title='compare_data' data-type='bool' data-ref="4compare_data" data-ref-filename="4compare_data">compare_data</dfn>);</td></tr>
+<tr><th id="40">40</th><td></td></tr>
+<tr><th id="41">41</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="42">42</th><td><i class="doc"> * <span class="command">\brief</span> Hash NDArray.</i></td></tr>
+<tr><th id="43">43</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">arr</span> The NDArray to compute the hash for.</i></td></tr>
+<tr><th id="44">44</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">hash_reduce</span> A Reducer class to reduce the structural hash value.</i></td></tr>
+<tr><th id="45">45</th><td><i class="doc"> * See tvm/node/structural_hash.h.</i></td></tr>
+<tr><th id="46">46</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">hash_data</span> Whether or not to hash ndarray raw data.</i></td></tr>
+<tr><th id="47">47</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="48">48</th><td><em>void</em> <dfn class="decl fn" id="_ZN3tvm11NDArrayHashEPKNS_7runtime7NDArray9ContainerEPNS_12SHashReducerEb" title='tvm::NDArrayHash' data-ref="_ZN3tvm11NDArrayHashEPKNS_7runtime7NDArray9ContainerEPNS_12SHashReducerEb" data-ref-filename="_ZN3tvm11NDArrayHashEPKNS_7runtime7NDArray9ContainerEPNS_12SHashReducerEb">NDArrayHash</dfn>(<em>const</em> <span class="namespace">runtime::</span><a class="type" href="../../include/tvm/runtime/ndarray.h.html#tvm::runtime::NDArray" title='tvm::runtime::NDArray' data-ref="tvm::runtime::NDArray" data-ref-filename="tvm..runtime..NDArray">NDArray</a>::<a class="type" href="../../include/tvm/runtime/ndarray.h.html#tvm::runtime::NDArray::Container" title='tvm::runtime::NDArray::Container' data-ref="tvm::runtime::NDArray::Container" data-ref-filename="tvm..runtime..NDArray..Container">Container</a>* <dfn class="local col5 decl" id="5arr" title='arr' data-type='const runtime::NDArray::Container *' data-ref="5arr" data-ref-filename="5arr">arr</dfn>, <a class="type" href="../../include/tvm/node/structural_hash.h.html#tvm::SHashReducer" title='tvm::SHashReducer' data-ref="tvm::SHashReducer" data-ref-filename="tvm..SHashReducer">SHashReducer</a>* <dfn class="local col6 decl" id="6hash_reduce" title='hash_reduce' data-type='tvm::SHashReducer *' data-ref="6hash_reduce" data-ref-filename="6hash_reduce">hash_reduce</dfn>, <em>bool</em> <dfn class="local col7 decl" id="7hash_data" title='hash_data' data-type='bool' data-ref="7hash_data" data-ref-filename="7hash_data">hash_data</dfn>);</td></tr>
+<tr><th id="49">49</th><td></td></tr>
+<tr><th id="50">50</th><td>}  <i>// namespace tvm</i></td></tr>
+<tr><th id="51">51</th><td></td></tr>
+<tr><th id="52">52</th><td><u>#<span data-ppcond="19">endif</span>  //  TVM_NODE_NDARRAY_HASH_EQUAL_H_</u></td></tr>
+<tr><th id="53">53</th><td></td></tr>
+</table><hr/><p id='footer'>
+Generated while processing <a href='../meta_schedule/module_equality.cc.html'>tvm/src/meta_schedule/module_equality.cc</a><br/>Generated on <em>2022-Oct-17</em> from project tvm revision <em>69ba30e</em><br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+<br/>Generator usage only permitted with license.</p>
+</div></body></html>

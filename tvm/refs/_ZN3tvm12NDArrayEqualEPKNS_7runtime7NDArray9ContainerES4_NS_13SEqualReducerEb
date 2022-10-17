@@ -1,0 +1,13 @@
+<dec f='tvm/src/node/ndarray_hash_equal.h' l='38' type='bool tvm::NDArrayEqual(const runtime::NDArray::Container * lhs, const runtime::NDArray::Container * rhs, tvm::SEqualReducer equal, bool compare_data)'/>
+<use f='tvm/src/meta_schedule/module_equality.cc' l='49' u='c' c='_ZN3tvm13meta_schedule26SEqualHandlerIgnoreNDArray20DispatchSEqualReduceERKNS_7runtime9ObjectRefES5_bRKNS2_8OptionalINS_14ObjectPathPairEEE'/>
+<doc f='tvm/src/node/ndarray_hash_equal.h' l='29'>/*!
+ * \brief Test two NDArrays for equality.
+ * \param lhs The left operand.
+ * \param rhs The right operand.
+ * \param equal A Reducer class to reduce the structural equality result of two objects.
+ * See tvm/node/structural_equal.h.
+ * \param compare_data Whether or not to consider ndarray raw data in the equality testing.
+ * \return The equality testing result.
+ */</doc>
+<def f='tvm/src/node/structural_equal.cc' l='481' ll='506' type='bool tvm::NDArrayEqual(const runtime::NDArray::Container * lhs, const runtime::NDArray::Container * rhs, tvm::SEqualReducer equal, bool compare_data)'/>
+<use f='tvm/src/node/structural_equal.cc' l='511' u='c' c='_ZN3tvm21NDArrayContainerTrait12SEqualReduceEPKNS_7runtime7NDArray9ContainerES5_NS_13SEqualReducerE'/>

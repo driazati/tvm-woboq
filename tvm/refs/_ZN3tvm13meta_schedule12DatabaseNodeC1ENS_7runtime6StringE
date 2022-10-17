@@ -1,9 +1,11 @@
-<dec f='tvm/include/tvm/meta_schedule/database.h' l='185' type='void tvm::meta_schedule::DatabaseNode::DatabaseNode(tvm::runtime::String mod_eq_name = &quot;structural&quot;)'/>
+<dec f='tvm/include/tvm/meta_schedule/database.h' l='187' type='void tvm::meta_schedule::DatabaseNode::DatabaseNode(tvm::runtime::String mod_eq_name = &quot;structural&quot;)'/>
 <doc f='tvm/include/tvm/meta_schedule/database.h' l='179'>/*!
    * \brief Constructor
    * \param mod_eq_name A string to specify the module equality testing and hashing method.
    *  It must be one of the followings:
    *    - &quot;structural&quot;: Use StructuralEqual/Hash
+   *    - &quot;ignore-ndarray&quot;: Same as &quot;structural&quot;, but ignore ndarray raw data during
+   *                        equality testing and hashing.
    */</doc>
 <def f='tvm/src/meta_schedule/database/database.cc' l='159' type='void tvm::meta_schedule::DatabaseNode::DatabaseNode(tvm::runtime::String mod_eq_name = &quot;structural&quot;)'/>
 <use f='tvm/src/meta_schedule/database/database.cc' l='217' u='c' c='_ZN3tvm13meta_schedule14PyDatabaseNodeC1ENS_7runtime6StringE'/>
