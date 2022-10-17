@@ -7,7 +7,7 @@
 <use f='tvm/src/meta_schedule/mutator/mutate_compute_location.cc' l='41' u='m' c='_ZN3tvm13meta_schedule25MutateComputeLocationNode25InitializeWithTuneContextERKNS0_11TuneContextE'/>
 <use f='tvm/src/meta_schedule/mutator/mutate_parallel.cc' l='187' u='m' c='_ZN3tvm13meta_schedule18MutateParallelNode25InitializeWithTuneContextERKNS0_11TuneContextE'/>
 <use f='tvm/src/meta_schedule/mutator/mutate_thread_binding.cc' l='41' u='m' c='_ZN3tvm13meta_schedule23MutateThreadBindingNode25InitializeWithTuneContextERKNS0_11TuneContextE'/>
-<use f='tvm/src/meta_schedule/search_strategy/evolutionary_search.cc' l='280' u='m' c='_ZN3tvm13meta_schedule22EvolutionarySearchNode5StateC1EPS1_iiNS_7runtime5ArrayINS_3tir8ScheduleEvEENS0_8DatabaseENS0_9CostModelE'/>
+<use f='tvm/src/meta_schedule/search_strategy/evolutionary_search.cc' l='291' u='m' c='_ZN3tvm13meta_schedule22EvolutionarySearchNode5StateC1EPS1_iiNS_7runtime5ArrayINS_3tir8ScheduleEvEENS0_8DatabaseENS0_9CostModelE'/>
 <use f='tvm/src/meta_schedule/search_strategy/replay_func.cc' l='69' u='m' c='_ZN3tvm13meta_schedule14ReplayFuncNode25InitializeWithTuneContextERKNS0_11TuneContextE'/>
 <use f='tvm/src/meta_schedule/search_strategy/replay_func.cc' l='79' u='r' c='_ZN3tvm13meta_schedule14ReplayFuncNode25InitializeWithTuneContextERKNS0_11TuneContextE'/>
 <use f='tvm/src/meta_schedule/search_strategy/replay_trace.cc' l='91' u='m' c='_ZN3tvm13meta_schedule15ReplayTraceNode25InitializeWithTuneContextERKNS0_11TuneContextE'/>

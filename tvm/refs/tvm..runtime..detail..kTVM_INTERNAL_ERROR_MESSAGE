@@ -611,12 +611,13 @@
 <use f='tvm/include/tvm/meta_schedule/runner.h' l='135' macro='1' u='r' c='_ZNK3tvm13meta_schedule16RunnerFutureNode4DoneEv'/>
 <use f='tvm/include/tvm/meta_schedule/runner.h' l='143' macro='1' u='r' c='_ZNK3tvm13meta_schedule16RunnerFutureNode6ResultEv'/>
 <use f='tvm/include/tvm/meta_schedule/runner.h' l='223' macro='1' u='r' c='_ZN3tvm13meta_schedule12PyRunnerNode3RunENS_7runtime5ArrayINS0_11RunnerInputEvEE'/>
-<use f='tvm/include/tvm/meta_schedule/database.h' l='339' macro='1' u='r' c='_ZN3tvm13meta_schedule14PyDatabaseNode11HasWorkloadERKNS_8IRModuleE'/>
-<use f='tvm/include/tvm/meta_schedule/database.h' l='344' macro='1' u='r' c='_ZN3tvm13meta_schedule14PyDatabaseNode14CommitWorkloadERKNS_8IRModuleE'/>
-<use f='tvm/include/tvm/meta_schedule/database.h' l='349' macro='1' u='r' c='_ZN3tvm13meta_schedule14PyDatabaseNode18CommitTuningRecordERKNS0_12TuningRecordE'/>
-<use f='tvm/include/tvm/meta_schedule/database.h' l='355' macro='1' u='r' c='_ZN3tvm13meta_schedule14PyDatabaseNode7GetTopKERKNS0_8WorkloadEi'/>
-<use f='tvm/include/tvm/meta_schedule/database.h' l='360' macro='1' u='r' c='_ZN3tvm13meta_schedule14PyDatabaseNode19GetAllTuningRecordsEv'/>
-<use f='tvm/include/tvm/meta_schedule/database.h' l='393' macro='1' u='r' c='_ZN3tvm13meta_schedule14PyDatabaseNode4SizeEv'/>
+<use f='tvm/include/tvm/meta_schedule/database.h' l='253' macro='1' u='r' c='_ZNK3tvm13meta_schedule12DatabaseNode17GetModuleEqualityEv'/>
+<use f='tvm/include/tvm/meta_schedule/database.h' l='373' macro='1' u='r' c='_ZN3tvm13meta_schedule14PyDatabaseNode11HasWorkloadERKNS_8IRModuleE'/>
+<use f='tvm/include/tvm/meta_schedule/database.h' l='378' macro='1' u='r' c='_ZN3tvm13meta_schedule14PyDatabaseNode14CommitWorkloadERKNS_8IRModuleE'/>
+<use f='tvm/include/tvm/meta_schedule/database.h' l='383' macro='1' u='r' c='_ZN3tvm13meta_schedule14PyDatabaseNode18CommitTuningRecordERKNS0_12TuningRecordE'/>
+<use f='tvm/include/tvm/meta_schedule/database.h' l='389' macro='1' u='r' c='_ZN3tvm13meta_schedule14PyDatabaseNode7GetTopKERKNS0_8WorkloadEi'/>
+<use f='tvm/include/tvm/meta_schedule/database.h' l='394' macro='1' u='r' c='_ZN3tvm13meta_schedule14PyDatabaseNode19GetAllTuningRecordsEv'/>
+<use f='tvm/include/tvm/meta_schedule/database.h' l='427' macro='1' u='r' c='_ZN3tvm13meta_schedule14PyDatabaseNode4SizeEv'/>
 <use f='tvm/include/tvm/relay/pattern_functor.h' l='92' macro='1' u='r' c='_ZN3tvm5relay14PatternFunctorIFT_RKNS0_7PatternEDpT0_EE12VisitPatternES5_S7_'/>
 <use f='tvm/src/relay/transforms/let_list.h' l='67' macro='1' u='r' c='_ZN3tvm5relay7LetList4PushENS0_3VarENS_9RelayExprE'/>
 <use f='tvm/src/relay/transforms/let_list.h' l='68' macro='1' u='r' c='_ZN3tvm5relay7LetList4PushENS0_3VarENS_9RelayExprE'/>
@@ -665,9 +666,9 @@
 <use f='tvm/src/meta_schedule/cost_model/cost_model.cc' l='42' macro='1' u='r' c='_ZN3tvm13meta_schedule15PyCostModelNode7PredictERKNS0_11TuneContextERKNS_7runtime5ArrayINS0_16MeasureCandidateEvEE'/>
 <use f='tvm/src/meta_schedule/cost_model/cost_model.cc' l='65' macro='1' u='r'/>
 <use f='tvm/src/meta_schedule/cost_model/cost_model.cc' l='67' macro='1' u='r'/>
-<use f='tvm/src/meta_schedule/database/database.cc' l='168' macro='1' u='r' c='_ZN3tvm13meta_schedule12DatabaseNode17QueryTuningRecordERKNS_8IRModuleERKNS_6TargetERKNS_7runtime6StringE'/>
+<use f='tvm/src/meta_schedule/database/database.cc' l='171' macro='1' u='r' c='_ZN3tvm13meta_schedule12DatabaseNode17QueryTuningRecordERKNS_8IRModuleERKNS_6TargetERKNS_7runtime6StringE'/>
 <use f='tvm/src/meta_schedule/database/database_utils.cc' l='368' macro='1' u='r' c='_ZN3tvm13meta_schedule10JSONParser9ParseDictEv'/>
-<use f='tvm/src/meta_schedule/database/json_database.cc' l='176' macro='1' u='r' c='_ZN3tvm13meta_schedule8Database12JSONDatabaseENS_7runtime6StringES3_b'/>
+<use f='tvm/src/meta_schedule/database/json_database.cc' l='186' macro='1' u='r' c='_ZN3tvm13meta_schedule8Database12JSONDatabaseENS_7runtime6StringES3_bS3_'/>
 <use f='tvm/src/meta_schedule/feature_extractor/feature_extractor.cc' l='26' macro='1' u='r' c='_ZN3tvm13meta_schedule22PyFeatureExtractorNode11ExtractFromERKNS0_11TuneContextERKNS_7runtime5ArrayINS0_16MeasureCandidateEvEE'/>
 <use f='tvm/src/meta_schedule/feature_extractor/feature_extractor.cc' l='42' macro='1' u='r'/>
 <use f='tvm/src/meta_schedule/feature_extractor/feature_extractor.cc' l='44' macro='1' u='r'/>
@@ -802,15 +803,15 @@
 <use f='tvm/src/meta_schedule/schedule_rule/winograd.cc' l='138' macro='1' u='r'/>
 <use f='tvm/src/meta_schedule/schedule_rule/winograd.cc' l='172' macro='1' u='r'/>
 <use f='tvm/src/meta_schedule/schedule_rule/winograd.cc' l='191' macro='1' u='r'/>
-<use f='tvm/src/meta_schedule/search_strategy/evolutionary_search.cc' l='224' macro='1' u='r' c='_ZN3tvm13meta_schedule22PredictNormalizedScoreERKSt6vectorINS_3tir8ScheduleESaIS3_EERKNS0_11TuneContextERKNS0_9CostModelE'/>
-<use f='tvm/src/meta_schedule/search_strategy/evolutionary_search.cc' l='401' macro='1' u='r' c='_ZN3tvm13meta_schedule22EvolutionarySearchNode9PreTuningEiiRKNS_7runtime5ArrayINS_3tir8ScheduleEvEERKNS2_8OptionalINS0_8DatabaseEEERKNS9_INS0_9CostModelEEE'/>
-<use f='tvm/src/meta_schedule/search_strategy/evolutionary_search.cc' l='426' macro='1' u='r' c='_ZN3tvm13meta_schedule22EvolutionarySearchNode25GenerateMeasureCandidatesEv'/>
-<use f='tvm/src/meta_schedule/search_strategy/evolutionary_search.cc' l='432' macro='1' u='r' c='_ZN3tvm13meta_schedule22EvolutionarySearchNode19NotifyRunnerResultsERKNS_7runtime5ArrayINS0_16MeasureCandidateEvEERKNS3_INS0_12RunnerResultEvEE'/>
-<use f='tvm/src/meta_schedule/search_strategy/evolutionary_search.cc' l='471' macro='1' u='r' c='_ZN3tvm13meta_schedule22EvolutionarySearchNode5State20PickBestFromDatabaseEi'/>
-<use f='tvm/src/meta_schedule/search_strategy/evolutionary_search.cc' l='494' macro='1' u='r' c='_ZN3tvm13meta_schedule22EvolutionarySearchNode5State20SampleInitPopulationEi'/>
-<use f='tvm/src/meta_schedule/search_strategy/evolutionary_search.cc' l='518' macro='1' u='r' c='_ZN3tvm13meta_schedule22EvolutionarySearchNode5State19EvolveWithCostModelESt6vectorINS_3tir8ScheduleESaIS5_EEi'/>
-<use f='tvm/src/meta_schedule/search_strategy/evolutionary_search.cc' l='530' macro='1' u='r' c='_ZN3tvm13meta_schedule22EvolutionarySearchNode5State19EvolveWithCostModelESt6vectorINS_3tir8ScheduleESaIS5_EEi'/>
-<use f='tvm/src/meta_schedule/search_strategy/evolutionary_search.cc' l='682' macro='1' u='r' c='_ZN3tvm13meta_schedule22EvolutionarySearchNode5State25GenerateMeasureCandidatesEv'/>
+<use f='tvm/src/meta_schedule/search_strategy/evolutionary_search.cc' l='234' macro='1' u='r' c='_ZN3tvm13meta_schedule22PredictNormalizedScoreERKSt6vectorINS_3tir8ScheduleESaIS3_EERKNS0_11TuneContextERKNS0_9CostModelE'/>
+<use f='tvm/src/meta_schedule/search_strategy/evolutionary_search.cc' l='418' macro='1' u='r' c='_ZN3tvm13meta_schedule22EvolutionarySearchNode9PreTuningEiiRKNS_7runtime5ArrayINS_3tir8ScheduleEvEERKNS2_8OptionalINS0_8DatabaseEEERKNS9_INS0_9CostModelEEE'/>
+<use f='tvm/src/meta_schedule/search_strategy/evolutionary_search.cc' l='443' macro='1' u='r' c='_ZN3tvm13meta_schedule22EvolutionarySearchNode25GenerateMeasureCandidatesEv'/>
+<use f='tvm/src/meta_schedule/search_strategy/evolutionary_search.cc' l='449' macro='1' u='r' c='_ZN3tvm13meta_schedule22EvolutionarySearchNode19NotifyRunnerResultsERKNS_7runtime5ArrayINS0_16MeasureCandidateEvEERKNS3_INS0_12RunnerResultEvEE'/>
+<use f='tvm/src/meta_schedule/search_strategy/evolutionary_search.cc' l='488' macro='1' u='r' c='_ZN3tvm13meta_schedule22EvolutionarySearchNode5State20PickBestFromDatabaseEi'/>
+<use f='tvm/src/meta_schedule/search_strategy/evolutionary_search.cc' l='511' macro='1' u='r' c='_ZN3tvm13meta_schedule22EvolutionarySearchNode5State20SampleInitPopulationEi'/>
+<use f='tvm/src/meta_schedule/search_strategy/evolutionary_search.cc' l='535' macro='1' u='r' c='_ZN3tvm13meta_schedule22EvolutionarySearchNode5State19EvolveWithCostModelESt6vectorINS_3tir8ScheduleESaIS5_EEi'/>
+<use f='tvm/src/meta_schedule/search_strategy/evolutionary_search.cc' l='547' macro='1' u='r' c='_ZN3tvm13meta_schedule22EvolutionarySearchNode5State19EvolveWithCostModelESt6vectorINS_3tir8ScheduleESaIS5_EEi'/>
+<use f='tvm/src/meta_schedule/search_strategy/evolutionary_search.cc' l='699' macro='1' u='r' c='_ZN3tvm13meta_schedule22EvolutionarySearchNode5State25GenerateMeasureCandidatesEv'/>
 <use f='tvm/src/meta_schedule/search_strategy/replay_func.cc' l='98' macro='1' u='r' c='_ZN3tvm13meta_schedule14ReplayFuncNode25GenerateMeasureCandidatesEv'/>
 <use f='tvm/src/meta_schedule/search_strategy/replay_func.cc' l='104' macro='1' u='r' c='_ZN3tvm13meta_schedule14ReplayFuncNode19NotifyRunnerResultsERKNS_7runtime5ArrayINS0_16MeasureCandidateEvEERKNS3_INS0_12RunnerResultEvEE'/>
 <use f='tvm/src/meta_schedule/search_strategy/replay_trace.cc' l='109' macro='1' u='r' c='_ZN3tvm13meta_schedule15ReplayTraceNode9PreTuningEiiRKNS_7runtime5ArrayINS_3tir8ScheduleEvEERKNS2_8OptionalINS0_8DatabaseEEERKNS9_INS0_9CostModelEEE'/>

@@ -85,8 +85,8 @@
 <use f='tvm/include/tvm/tir/schedule/schedule.h' l='225' c='_ZN3tvm3tir12ScheduleNode17SampleCategoricalERKNS_7runtime5ArrayINS_7IntegerEvEERKNS3_INS_8FloatImmEvEENS2_8OptionalIS4_EE'/>
 <use f='tvm/include/tvm/meta_schedule/runner.h' l='74'/>
 <use f='tvm/include/tvm/meta_schedule/runner.h' l='98' c='_ZN3tvm13meta_schedule12RunnerResultC1ENS_7runtime8OptionalINS2_5ArrayINS_8FloatImmEvEEEENS3_INS2_6StringEEE'/>
-<use f='tvm/include/tvm/meta_schedule/database.h' l='113'/>
-<use f='tvm/include/tvm/meta_schedule/database.h' l='156' c='_ZN3tvm13meta_schedule12TuningRecordC1ENS_3tir5TraceENS0_8WorkloadENS_7runtime8OptionalINS5_5ArrayINS_8FloatImmEvEEEENS6_INS_6TargetEEENS6_INS7_INS0_7ArgInfoEvEEEE'/>
+<use f='tvm/include/tvm/meta_schedule/database.h' l='121'/>
+<use f='tvm/include/tvm/meta_schedule/database.h' l='164' c='_ZN3tvm13meta_schedule12TuningRecordC1ENS_3tir5TraceENS0_8WorkloadENS_7runtime8OptionalINS5_5ArrayINS_8FloatImmEvEEEENS6_INS_6TargetEEENS6_INS7_INS0_7ArgInfoEvEEEE'/>
 <use f='tvm/include/tvm/meta_schedule/mutator.h' l='133' c='_ZN3tvm13meta_schedule7Mutator11DefaultLLVMEv'/>
 <use f='tvm/include/tvm/meta_schedule/mutator.h' l='135' c='_ZN3tvm13meta_schedule7Mutator11DefaultCUDAEv'/>
 <use f='tvm/include/tvm/meta_schedule/mutator.h' l='137' c='_ZN3tvm13meta_schedule7Mutator21DefaultCUDATensorCoreEv'/>
@@ -113,14 +113,14 @@
 <use f='tvm/src/meta_schedule/utils.h' l='502' c='_ZN3tvm13meta_schedule10CloneRulesEPKNS0_18SpaceGeneratorNodeEPS1_'/>
 <use f='tvm/src/meta_schedule/utils.h' l='503' c='_ZN3tvm13meta_schedule10CloneRulesEPKNS0_18SpaceGeneratorNodeEPS1_'/>
 <size>8</size>
-<use f='tvm/src/meta_schedule/database/database.cc' l='77' c='_ZN3tvm13meta_schedule12TuningRecordC1ENS_3tir5TraceENS0_8WorkloadENS_7runtime8OptionalINS5_5ArrayINS_8FloatImmEvEEEENS6_INS_6TargetEEENS6_INS7_INS0_7ArgInfoEvEEEE'/>
-<use f='tvm/src/meta_schedule/database/database.cc' l='117' c='_ZN3tvm13meta_schedule12TuningRecord8FromJSONERKNS_7runtime9ObjectRefERKNS0_8WorkloadE'/>
-<use f='tvm/src/meta_schedule/database/database.cc' l='250'/>
+<use f='tvm/src/meta_schedule/database/database.cc' l='74' c='_ZN3tvm13meta_schedule12TuningRecordC1ENS_3tir5TraceENS0_8WorkloadENS_7runtime8OptionalINS5_5ArrayINS_8FloatImmEvEEEENS6_INS_6TargetEEENS6_INS7_INS0_7ArgInfoEvEEEE'/>
+<use f='tvm/src/meta_schedule/database/database.cc' l='118' c='_ZN3tvm13meta_schedule12TuningRecord8FromJSONERKNS_7runtime9ObjectRefERKNS0_8WorkloadE'/>
+<use f='tvm/src/meta_schedule/database/database.cc' l='254'/>
 <size>8</size>
 <use f='tvm/src/meta_schedule/database/database_utils.cc' l='179' c='_ZN3tvm13meta_schedule13JSONTokenizer10NextNumberEPNS1_5TokenE'/>
 <size>8</size>
-<use f='tvm/src/meta_schedule/database/memory_database.cc' l='67' c='_ZN3tvm13meta_schedule18MemoryDatabaseNode7GetTopKERKNS0_8WorkloadEi'/>
-<use f='tvm/src/meta_schedule/database/memory_database.cc' l='73' c='_ZN3tvm13meta_schedule18MemoryDatabaseNode7GetTopKERKNS0_8WorkloadEi'/>
+<use f='tvm/src/meta_schedule/database/memory_database.cc' l='70' c='_ZN3tvm13meta_schedule18MemoryDatabaseNode7GetTopKERKNS0_8WorkloadEi'/>
+<use f='tvm/src/meta_schedule/database/memory_database.cc' l='76' c='_ZN3tvm13meta_schedule18MemoryDatabaseNode7GetTopKERKNS0_8WorkloadEi'/>
 <size>8</size>
 <use f='tvm/src/meta_schedule/measure_callback/add_to_database.cc' l='43' c='_ZN3tvm13meta_schedule17AddToDatabaseNode5ApplyERKNS0_13TaskSchedulerEiRKNS_7runtime5ArrayINS0_16MeasureCandidateEvEERKNS6_INS0_13BuilderResultEvEERKN3362037'/>
 <use f='tvm/src/meta_schedule/measure_callback/add_to_database.cc' l='47' c='_ZN3tvm13meta_schedule17AddToDatabaseNode5ApplyERKNS0_13TaskSchedulerEiRKNS_7runtime5ArrayINS0_16MeasureCandidateEvEERKNS6_INS0_13BuilderResultEvEERKN3362037'/>
@@ -173,9 +173,9 @@
 <use f='tvm/src/meta_schedule/schedule_rule/parallel_vectorize_unroll.cc' l='71' c='_ZN3tvm13meta_schedule30ParallelizeVectorizeUnrollNode5ApplyERKNS_3tir8ScheduleERKNS2_7BlockRVE'/>
 <use f='tvm/src/meta_schedule/schedule_rule/parallel_vectorize_unroll.cc' l='71' c='_ZN3tvm13meta_schedule30ParallelizeVectorizeUnrollNode5ApplyERKNS_3tir8ScheduleERKNS2_7BlockRVE'/>
 <size>8</size>
-<use f='tvm/src/meta_schedule/search_strategy/evolutionary_search.cc' l='115' c='_ZN3tvm13meta_schedule13PerThreadData3SetERKSt6vectorIdSaIdEEdRKNS_7runtime3MapINS0_7MutatorENS_8FloatImmEvvEE'/>
-<use f='tvm/src/meta_schedule/search_strategy/evolutionary_search.cc' l='128' c='_ZN3tvm13meta_schedule13PerThreadData18MakeMutatorSamplerEdRKNS_7runtime3MapINS0_7MutatorENS_8FloatImmEvvEEPl'/>
-<use f='tvm/src/meta_schedule/search_strategy/evolutionary_search.cc' l='332'/>
+<use f='tvm/src/meta_schedule/search_strategy/evolutionary_search.cc' l='125' c='_ZN3tvm13meta_schedule13PerThreadData3SetERKSt6vectorIdSaIdEEdRKNS_7runtime3MapINS0_7MutatorENS_8FloatImmEvvEE'/>
+<use f='tvm/src/meta_schedule/search_strategy/evolutionary_search.cc' l='138' c='_ZN3tvm13meta_schedule13PerThreadData18MakeMutatorSamplerEdRKNS_7runtime3MapINS0_7MutatorENS_8FloatImmEvvEEPl'/>
+<use f='tvm/src/meta_schedule/search_strategy/evolutionary_search.cc' l='349'/>
 <size>8</size>
 <use f='tvm/src/meta_schedule/space_generator/post_order_apply.cc' l='200' c='_ZN3tvm13meta_schedule14SpaceGenerator14PostOrderApplyENS_7runtime10PackedFuncENS2_8OptionalINS2_5ArrayINS0_12ScheduleRuleEvEEEENS4_INS5_INS0_8Postpro16235914'/>
 <size>8</size>
