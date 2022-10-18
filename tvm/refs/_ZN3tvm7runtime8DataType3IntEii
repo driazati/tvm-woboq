@@ -1,7 +1,7 @@
-<def f='tvm/include/tvm/runtime/data_type.h' l='154' type='static tvm::runtime::DataType tvm::runtime::DataType::Int(int bits, int lanes = 1)'/>
-<use f='tvm/include/tvm/runtime/data_type.h' l='200' u='c' c='_ZN3tvm7runtime8DataType10ShapeIndexEv'/>
-<use f='tvm/include/tvm/runtime/data_type.h' l='218' u='c' c='_ZN3tvm7runtime14GetVectorBytesENS0_8DataTypeE'/>
-<use f='tvm/include/tvm/runtime/data_type.h' l='219' u='c' c='_ZN3tvm7runtime14GetVectorBytesENS0_8DataTypeE'/>
+<def f='tvm/include/tvm/runtime/data_type.h' l='164' type='static tvm::runtime::DataType tvm::runtime::DataType::Int(int bits, int lanes = 1)'/>
+<use f='tvm/include/tvm/runtime/data_type.h' l='210' u='c' c='_ZN3tvm7runtime8DataType10ShapeIndexEv'/>
+<use f='tvm/include/tvm/runtime/data_type.h' l='228' u='c' c='_ZN3tvm7runtime14GetVectorBytesENS0_8DataTypeE'/>
+<use f='tvm/include/tvm/runtime/data_type.h' l='229' u='c' c='_ZN3tvm7runtime14GetVectorBytesENS0_8DataTypeE'/>
 <use f='tvm/include/tvm/ir/expr.h' l='628' u='c' c='_ZN3tvm7IntegerC1EiNS_4SpanE'/>
 <use f='tvm/include/tvm/ir/expr.h' l='767' u='c' c='_ZN3tvm7runtime24PackedFuncValueConverterINS_8PrimExprEE4FromERKNS0_12TVMPODValue_E'/>
 <use f='tvm/include/tvm/tir/var.h' l='97' u='c' c='_ZN3tvm3tir3VarC1ENS_7runtime6StringENS2_8DataTypeENS_4SpanE'/>
@@ -10,7 +10,7 @@
 <use f='tvm/include/tvm/tir/buffer.h' l='192' u='c' c='_ZNK3tvm3tir6Buffer10access_ptrEiNS_7runtime8DataTypeEiNS_8PrimExprENS2_8OptionalIS4_EE'/>
 <use f='tvm/include/tvm/tir/expr.h' l='1144' u='c' c='_ZNK3tvm3tir7AnyNode5ToVarEv'/>
 <use f='tvm/include/tvm/tir/expr.h' l='1147' u='c' c='_ZNK3tvm3tir7AnyNode9ToSizeVarEv'/>
-<doc f='tvm/include/tvm/runtime/data_type.h' l='148'>/*!
+<doc f='tvm/include/tvm/runtime/data_type.h' l='158'>/*!
    * \brief Construct an int type.
    * \param bits The number of bits in the type.
    * \param lanes The number of lanes.
@@ -95,17 +95,17 @@
 <use f='tvm/src/relay/backend/contrib/example_target_hooks/relay_to_tir.cc' l='137' u='c' c='_ZN3tvm5relay7contrib20example_target_hooks12_GLOBAL__N_120ConvertAddToSubtract30ReplaceAddWithSubtractPrimFuncERKNS0_8FunctionE'/>
 <use f='tvm/src/relay/backend/interpreter.cc' l='512' u='c' c='_ZN3tvm5relay11Interpreter19ComputeDynamicShapeERKNS_9GlobalVarERKNS_7runtime5ArrayIS2_vEERKNS6_INS_7IntegerEvEEmmNS_6TargetERKSt6vectorINS5_9ObjectRefESaISG_EE'/>
 <use f='tvm/src/relay/backend/interpreter.cc' l='514' u='c' c='_ZN3tvm5relay11Interpreter19ComputeDynamicShapeERKNS_9GlobalVarERKNS_7runtime5ArrayIS2_vEERKNS6_INS_7IntegerEvEEmmNS_6TargetERKSt6vectorINS5_9ObjectRefESaISG_EE'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='176' u='c' c='_ZN3tvm5relay3tec16LowerToTECompute10VisitExpr_EPKNS0_12ConstantNodeE'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='178' u='c' c='_ZN3tvm5relay3tec16LowerToTECompute10VisitExpr_EPKNS0_12ConstantNodeE'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='182' u='c' c='_ZN3tvm5relay3tec16LowerToTECompute10VisitExpr_EPKNS0_12ConstantNodeE'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='184' u='c' c='_ZN3tvm5relay3tec16LowerToTECompute10VisitExpr_EPKNS0_12ConstantNodeE'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='650' u='c' c='_ZN3tvm5relay3tec13MakeShapeFunc6CreateERKNS0_8FunctionERKNS_6TargetENS_15GlobalVarSupplyE'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='682' u='c' c='_ZN3tvm5relay3tec13MakeShapeFunc6CreateERKNS0_8FunctionERKNS_6TargetENS_15GlobalVarSupplyE'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='797' u='c' c='_ZN3tvm5relay3tec13MakeShapeFunc10VisitExpr_EPKNS0_12ConstantNodeE'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='813' u='c' c='_ZN3tvm5relay3tec13MakeShapeFunc10VisitExpr_EPKNS0_12ConstantNodeE'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='815' u='c' c='_ZN3tvm5relay3tec13MakeShapeFunc10VisitExpr_EPKNS0_12ConstantNodeE'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='833' u='c' c='_ZN3tvm5relay3tec13MakeShapeFunc10VisitExpr_EPKNS0_12ConstantNodeE'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='891' u='c' c='_ZN3tvm5relay3tec13MakeShapeFunc10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='251' u='c' c='_ZN3tvm5relay3tec16LowerToTECompute10VisitExpr_EPKNS0_12ConstantNodeE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='253' u='c' c='_ZN3tvm5relay3tec16LowerToTECompute10VisitExpr_EPKNS0_12ConstantNodeE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='257' u='c' c='_ZN3tvm5relay3tec16LowerToTECompute10VisitExpr_EPKNS0_12ConstantNodeE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='259' u='c' c='_ZN3tvm5relay3tec16LowerToTECompute10VisitExpr_EPKNS0_12ConstantNodeE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='743' u='c' c='_ZN3tvm5relay3tec13MakeShapeFunc6CreateERKNS0_8FunctionERKNS_6TargetENS_15GlobalVarSupplyE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='775' u='c' c='_ZN3tvm5relay3tec13MakeShapeFunc6CreateERKNS0_8FunctionERKNS_6TargetENS_15GlobalVarSupplyE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='890' u='c' c='_ZN3tvm5relay3tec13MakeShapeFunc10VisitExpr_EPKNS0_12ConstantNodeE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='906' u='c' c='_ZN3tvm5relay3tec13MakeShapeFunc10VisitExpr_EPKNS0_12ConstantNodeE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='908' u='c' c='_ZN3tvm5relay3tec13MakeShapeFunc10VisitExpr_EPKNS0_12ConstantNodeE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='926' u='c' c='_ZN3tvm5relay3tec13MakeShapeFunc10VisitExpr_EPKNS0_12ConstantNodeE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='984' u='c' c='_ZN3tvm5relay3tec13MakeShapeFunc10VisitExpr_EPKNS0_8CallNodeE'/>
 <use f='tvm/src/relay/backend/utils.cc' l='253' u='c' c='_ZN3tvm5relay7backend13GetPassPrefixEbb'/>
 <use f='tvm/src/relay/ir/expr.cc' l='94' u='c' c='_ZNK3tvm5relay12ConstantNode11tensor_typeEv'/>
 <use f='tvm/src/relay/op/contrib/ethosu/binary_elementwise.cc' l='59' u='c' c='_ZN3tvm5relay2op7contrib6ethosu26EthosuBinaryElementwiseRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
