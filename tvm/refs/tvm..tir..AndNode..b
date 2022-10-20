@@ -10,7 +10,7 @@
 <use f='tvm/src/auto_scheduler/compute_dag.cc' l='618' u='m' c='_ZN3tvm14auto_scheduler13FlopEstimator10VisitExpr_EPKNS_3tir7AndNodeE'/>
 <use f='tvm/src/auto_scheduler/compute_dag.cc' l='621' u='r' c='_ZN3tvm14auto_scheduler13FlopEstimator10VisitExpr_EPKNS_3tir7AndNodeE'/>
 <use f='tvm/src/printer/tir_text_printer.cc' l='322' u='r' c='_ZN3tvm3tir14TIRTextPrinter10VisitExpr_EPKNS0_7AndNodeE'/>
-<use f='tvm/src/printer/tvmscript_printer.cc' l='801' u='r' c='_ZN3tvm3tir16TVMScriptPrinter10VisitExpr_EPKNS0_7AndNodeEPNS0_14ExprPrecedenceE'/>
+<use f='tvm/src/printer/tvmscript_printer.cc' l='808' u='r' c='_ZN3tvm3tir16TVMScriptPrinter10VisitExpr_EPKNS0_7AndNodeEPNS0_14ExprPrecedenceE'/>
 <use f='tvm/src/target/llvm/codegen_llvm.cc' l='1463' u='r' c='_ZN3tvm7codegen11CodeGenLLVM10VisitExpr_EPKNS_3tir7AndNodeE'/>
 <use f='tvm/src/target/source/codegen_opencl.cc' l='538' u='r' c='_ZN3tvm7codegen13CodeGenOpenCL10VisitExpr_EPKNS_3tir7AndNodeERSo'/>
 <use f='tvm/src/target/stackvm/codegen_stackvm.cc' l='401' u='r' c='_ZN3tvm7codegen14CodeGenStackVM10VisitExpr_EPKNS_3tir7AndNodeE'/>
