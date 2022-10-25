@@ -251,7 +251,7 @@
 <use f='tvm/src/contrib/hybrid/codegen_hybrid.cc' l='394' c='_ZN3tvm7contrib13CodeGenHybrid10VisitStmt_EPKNS_3tir11SeqStmtNodeE'/>
 <use f='tvm/src/contrib/hybrid/codegen_hybrid.cc' l='472' c='_ZN3tvm7contrib13CodeGenHybrid8DumpStmtERKNS_3tir4StmtERKNS_7runtime5ArrayINS6_9ObjectRefEvEERKNS7_INS_2te6TensorEvEERKNSt7__cxx1112basic_stringIcSt1115587276'/>
 <size>8</size>
-<use f='tvm/src/driver/driver_api.cc' l='281' c='_ZN3tvm16ScheduleToModuleENS_2te8ScheduleERKNS_7runtime5ArrayINS2_9ObjectRefEvEERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKSt13unordered_2528338'/>
+<use f='tvm/src/driver/driver_api.cc' l='292' c='_ZN3tvm16ScheduleToModuleENS_2te8ScheduleERKNS_7runtime5ArrayINS2_9ObjectRefEvEERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKSt13unordered_2528338'/>
 <size>8</size>
 <use f='tvm/include/tvm/tir/schedule/state.h' l='129' c='_ZN3tvm3tir17ScheduleStateNode7ReplaceERKNS0_8StmtSRefERKNS0_4StmtERKNS_7runtime3MapINS0_5BlockESA_vvEE'/>
 <use f='tvm/include/tvm/tir/schedule/state.h' l='150' c='_ZN3tvm3tir17ScheduleStateNode20UpdateScopeBlockInfoERKNS0_4StmtE'/>
@@ -384,7 +384,7 @@
 <use f='tvm/src/target/llvm/codegen_cpu.cc' l='738' c='_ZN3tvm7codegen10CodeGenCPU16CreateStaticInitERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKNS_3tir4StmtE'/>
 <size>8</size>
 <use f='tvm/src/target/llvm/codegen_llvm.cc' l='734' c='_ZN3tvm7codegen11CodeGenLLVM15CreateSerialForEPN4llvm5ValueES4_S4_RKNS_3tir3VarERKNS5_4StmtE'/>
-<use f='tvm/src/target/llvm/codegen_llvm.cc' l='1887' c='_ZN3tvm7codegen11CodeGenLLVM10VisitStmt_EPKNS_3tir11SeqStmtNodeE'/>
+<use f='tvm/src/target/llvm/codegen_llvm.cc' l='1891' c='_ZN3tvm7codegen11CodeGenLLVM10VisitStmt_EPKNS_3tir11SeqStmtNodeE'/>
 <size>8</size>
 <use f='tvm/src/target/source/codegen_c.cc' l='951' c='_ZN3tvm7codegen8CodeGenC10VisitStmt_EPKNS_3tir11SeqStmtNodeE'/>
 <size>8</size>
@@ -1726,6 +1726,20 @@
 <use f='tvm/src/tir/transforms/plan_update_buffer_allocation_location.cc' l='146' c='_ZN3tvm3tir23BufferAllocationLocator10VisitStmt_EPKNS0_17BufferRealizeNodeE'/>
 <use f='tvm/src/tir/transforms/plan_update_buffer_allocation_location.cc' l='151' c='_ZN3tvm3tir23BufferAllocationLocator17InjectOpaqueBlockENS0_4StmtERKNS_7runtime5ArrayINS0_6BufferEvEE'/>
 <use f='tvm/src/tir/transforms/plan_update_buffer_allocation_location.cc' l='151' c='_ZN3tvm3tir23BufferAllocationLocator17InjectOpaqueBlockENS0_4StmtERKNS_7runtime5ArrayINS0_6BufferEvEE'/>
+<size>8</size>
+<use f='tvm/src/tir/transforms/profile_instrumentation.cc' l='63' c='_ZN3tvm3tir3lwp12LoopAnalyzer7AnalyzeERKNS0_4StmtE'/>
+<use f='tvm/src/tir/transforms/profile_instrumentation.cc' l='74' c='_ZN3tvm3tir3lwp12LoopAnalyzer12TraverseLoopERKNS0_4StmtEjb'/>
+<use f='tvm/src/tir/transforms/profile_instrumentation.cc' l='80' c='_ZN3tvm3tir3lwp12LoopAnalyzer12TraverseLoopERKNS0_4StmtEjb'/>
+<use f='tvm/src/tir/transforms/profile_instrumentation.cc' l='166' c='_ZN3tvm3tir3lwp16InstrumentIntrin10VisitStmt_EPKNS0_11SeqStmtNodeE'/>
+<use f='tvm/src/tir/transforms/profile_instrumentation.cc' l='167' c='_ZN3tvm3tir3lwp16InstrumentIntrin10VisitStmt_EPKNS0_11SeqStmtNodeE'/>
+<use f='tvm/src/tir/transforms/profile_instrumentation.cc' l='171' c='_ZN3tvm3tir3lwp16InstrumentIntrin10VisitStmt_EPKNS0_7ForNodeE'/>
+<use f='tvm/src/tir/transforms/profile_instrumentation.cc' l='172' c='_ZN3tvm3tir3lwp16InstrumentIntrin10VisitStmt_EPKNS0_7ForNodeE'/>
+<use f='tvm/src/tir/transforms/profile_instrumentation.cc' l='199' c='_ZN3tvm3tir3lwp16InstrumentIntrin10VisitStmt_EPKNS0_7ForNodeE'/>
+<use f='tvm/src/tir/transforms/profile_instrumentation.cc' l='200' c='_ZN3tvm3tir3lwp16InstrumentIntrin10VisitStmt_EPKNS0_7ForNodeE'/>
+<use f='tvm/src/tir/transforms/profile_instrumentation.cc' l='201' c='_ZN3tvm3tir3lwp16InstrumentIntrin10VisitStmt_EPKNS0_7ForNodeE'/>
+<use f='tvm/src/tir/transforms/profile_instrumentation.cc' l='214' c='_ZN3tvm3tir3lwp18CheckParallelLoops16HasParallelLoopsERKNS0_4StmtE'/>
+<use f='tvm/src/tir/transforms/profile_instrumentation.cc' l='239' c='_ZN3tvm3tir3lwp18AddProfileBuiltinsENS0_8PrimFuncEiibb'/>
+<use f='tvm/src/tir/transforms/profile_instrumentation.cc' l='240' c='_ZN3tvm3tir3lwp18AddProfileBuiltinsENS0_8PrimFuncEiibb'/>
 <size>8</size>
 <use f='tvm/src/tir/transforms/remap_thread_axis.cc' l='38' c='_ZN3tvm3tir18ThreadAxisRewriter7RewriteENS0_4StmtE'/>
 <use f='tvm/src/tir/transforms/remap_thread_axis.cc' l='38' c='_ZN3tvm3tir18ThreadAxisRewriter7RewriteENS0_4StmtE'/>
