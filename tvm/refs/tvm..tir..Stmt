@@ -261,9 +261,9 @@
 <use f='tvm/src/printer/text_printer.h' l='276'/>
 <use f='tvm/src/printer/text_printer.h' l='405' c='_ZN3tvm3tir14TIRTextPrinter9PrintBodyERKNS0_4StmtEb'/>
 <use f='tvm/src/printer/text_printer.h' l='411' c='_ZN3tvm3tir25AsTVMScriptWithDiagnosticERKNS_7runtime9ObjectRefERKNS1_6StringEbNS1_15TypedPackedFuncIFNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS0_4StmtEEEE'/>
-<use f='tvm/src/tir/schedule/analysis.h' l='423' c='_ZN3tvm3tir21ProducerConsumerSplit4FindERKNS0_13ScheduleStateERKNS_7runtime5ArrayINS0_4StmtEvEERKNS6_INS0_8StmtSRefEvEESE_PSt13unordered_mapIPKNS0_9Bl15702090'/>
-<use f='tvm/src/tir/schedule/analysis.h' l='597' c='_ZN3tvm3tir5HasOpERKNS0_4StmtERKNS_7runtime5ArrayINS_2OpEvEE'/>
-<use f='tvm/src/tir/schedule/analysis.h' l='608' c='_ZN3tvm3tir13HasIfThenElseERKNS0_4StmtE'/>
+<use f='tvm/src/tir/schedule/analysis.h' l='414' c='_ZN3tvm3tir21ProducerConsumerSplit4FindERKNS0_13ScheduleStateERKNS_7runtime5ArrayINS0_4StmtEvEERKNS6_INS0_8StmtSRefEvEESE_PSt13unordered_mapIPKNS0_9Bl15702090'/>
+<use f='tvm/src/tir/schedule/analysis.h' l='588' c='_ZN3tvm3tir5HasOpERKNS0_4StmtERKNS_7runtime5ArrayINS_2OpEvEE'/>
+<use f='tvm/src/tir/schedule/analysis.h' l='599' c='_ZN3tvm3tir13HasIfThenElseERKNS0_4StmtE'/>
 <use f='tvm/src/tir/schedule/transform.h' l='134' c='_ZN3tvm3tir20ReplaceBufferMutator10VisitStmt_EPKNS0_15BufferStoreNodeE'/>
 <use f='tvm/src/tir/schedule/transform.h' l='140' c='_ZN3tvm3tir20ReplaceBufferMutator10VisitStmt_EPKNS0_9BlockNodeE'/>
 <use f='tvm/src/tir/schedule/transform.h' l='188' c='_ZN3tvm3tir20LeafBlockRemovalPlanERKNS0_13ScheduleStateERKNS0_8StmtSRefEPNS0_4StmtES8_'/>
@@ -651,6 +651,10 @@
 <use f='tvm/src/tir/analysis/estimate_flops.cc' l='203' c='_ZN3tvm3tir16EstimateTIRFlopsERKNS0_4StmtE'/>
 <use f='tvm/src/tir/analysis/estimate_flops.cc' l='221'/>
 <size>8</size>
+<use f='tvm/src/tir/analysis/stmt_finding.cc' l='66' c='_ZN3tvm3tir16GetEnclosingLoopEPKNS0_9BlockNodeENS0_4StmtE'/>
+<use f='tvm/src/tir/analysis/stmt_finding.cc' l='66' c='_ZN3tvm3tir16GetEnclosingLoopEPKNS0_9BlockNodeENS0_4StmtE'/>
+<use f='tvm/src/tir/analysis/stmt_finding.cc' l='101' c='_ZN3tvm3tir16GetEnclosingLoopEPKNS0_9BlockNodeENS0_4StmtE'/>
+<size>8</size>
 <use f='tvm/src/tir/analysis/var_touch.cc' l='35' c='_ZN3tvm3tir15VarTouchVisitor9VisitStmtERKNS0_4StmtE'/>
 <use f='tvm/src/tir/analysis/var_touch.cc' l='75' c='_ZN3tvm3tir7UsesVarERKNS0_4StmtESt8functionIFbPKNS0_7VarNodeEEE'/>
 <size>8</size>
@@ -877,17 +881,17 @@
 <use f='tvm/src/tir/schedule/ir_comparator.h' l='131' c='_ZN3tvm3tir23AutoTensorizeComparator10VisitStmt_EPKNS0_9BlockNodeERKNS0_4StmtE'/>
 <use f='tvm/src/tir/schedule/ir_comparator.h' l='132' c='_ZN3tvm3tir23AutoTensorizeComparator10VisitStmt_EPKNS0_15BufferStoreNodeERKNS0_4StmtE'/>
 <use f='tvm/src/tir/schedule/analysis/analysis.cc' l='45' c='_ZN3tvm3tir15GetRootPrimFuncERKNS_8IRModuleEPKNS0_8StmtNodeEPNS_9GlobalVarE'/>
-<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='449' c='_ZZN3tvm3tir27CheckSubtreeCompactDataflowERKNS0_13ScheduleStateERKNS0_8StmtSRefEEN23NotCompactDataFlowErrorC1ENS_8IRModuleENS0_4StmtENS0_5BlockEii'/>
-<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='480' c='_ZN3tvm3tir27CheckSubtreeCompactDataflowERKNS0_13ScheduleStateERKNS0_8StmtSRefE'/>
-<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='492' c='_ZN3tvm3tir27CheckSubtreeCompactDataflowERKNS0_13ScheduleStateERKNS0_8StmtSRefE'/>
-<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='806' c='_ZZN3tvm3tir30GetChildBlockRealizeOnSRefTreeERKNS0_8StmtSRefEEN9Collector7CollectERKNS0_4StmtE'/>
-<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='835' c='_ZZN3tvm3tir41CheckGetSingleChildBlockRealizeOnSRefTreeERKNS0_13ScheduleStateERKNS0_8StmtSRefEEN24NonSingleChildBlockErrorC1ENS_8IRModuleES6_'/>
-<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='855' c='_ZN3tvm3tir41CheckGetSingleChildBlockRealizeOnSRefTreeERKNS0_13ScheduleStateERKNS0_8StmtSRefE'/>
-<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='871' c='_ZZN3tvm3tir15GetBlockRealizeERKNS0_13ScheduleStateERKNS0_8StmtSRefEEN18BlockRealizeFinder9VisitStmtERKNS0_4StmtE'/>
-<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='895' c='_ZN3tvm3tir15GetBlockRealizeERKNS0_13ScheduleStateERKNS0_8StmtSRefE'/>
-<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='1077' c='_ZN3tvm3tir21ProducerConsumerSplit4FindERKNS0_13ScheduleStateERKNS_7runtime5ArrayINS0_4StmtEvEERKNS6_INS0_8StmtSRefEvEESE_PSt13unordered_mapIPKNS0_9Bl15702090'/>
-<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='1277' c='_ZN3tvm3tir5HasOpERKNS0_4StmtERKNS_7runtime5ArrayINS_2OpEvEE'/>
-<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='1298' c='_ZN3tvm3tir13HasIfThenElseERKNS0_4StmtE'/>
+<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='408' c='_ZZN3tvm3tir27CheckSubtreeCompactDataflowERKNS0_13ScheduleStateERKNS0_8StmtSRefEEN23NotCompactDataFlowErrorC1ENS_8IRModuleENS0_4StmtENS0_5BlockEii'/>
+<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='439' c='_ZN3tvm3tir27CheckSubtreeCompactDataflowERKNS0_13ScheduleStateERKNS0_8StmtSRefE'/>
+<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='451' c='_ZN3tvm3tir27CheckSubtreeCompactDataflowERKNS0_13ScheduleStateERKNS0_8StmtSRefE'/>
+<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='765' c='_ZZN3tvm3tir30GetChildBlockRealizeOnSRefTreeERKNS0_8StmtSRefEEN9Collector7CollectERKNS0_4StmtE'/>
+<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='794' c='_ZZN3tvm3tir41CheckGetSingleChildBlockRealizeOnSRefTreeERKNS0_13ScheduleStateERKNS0_8StmtSRefEEN24NonSingleChildBlockErrorC1ENS_8IRModuleES6_'/>
+<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='814' c='_ZN3tvm3tir41CheckGetSingleChildBlockRealizeOnSRefTreeERKNS0_13ScheduleStateERKNS0_8StmtSRefE'/>
+<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='830' c='_ZZN3tvm3tir15GetBlockRealizeERKNS0_13ScheduleStateERKNS0_8StmtSRefEEN18BlockRealizeFinder9VisitStmtERKNS0_4StmtE'/>
+<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='854' c='_ZN3tvm3tir15GetBlockRealizeERKNS0_13ScheduleStateERKNS0_8StmtSRefE'/>
+<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='1036' c='_ZN3tvm3tir21ProducerConsumerSplit4FindERKNS0_13ScheduleStateERKNS_7runtime5ArrayINS0_4StmtEvEERKNS6_INS0_8StmtSRefEvEESE_PSt13unordered_mapIPKNS0_9Bl15702090'/>
+<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='1236' c='_ZN3tvm3tir5HasOpERKNS0_4StmtERKNS_7runtime5ArrayINS_2OpEvEE'/>
+<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='1257' c='_ZN3tvm3tir13HasIfThenElseERKNS0_4StmtE'/>
 <size>8</size>
 <use f='tvm/src/tir/schedule/analysis/reducer.cc' l='424' c='_ZN3tvm3tir23ExtractReductionUpdatesERKNS_7runtime8OptionalINS0_13ScheduleStateEEENS0_5BlockEPKNS0_11LetStmtNodeEiPNS1_5ArrayINS0_11BufferStoreEvEEPSt14845231'/>
 <use f='tvm/src/tir/schedule/analysis/reducer.cc' l='462' c='_ZN3tvm3tir41GetInitValuesAndUpdatesFromReductionBlockERKNS_7runtime8OptionalINS0_13ScheduleStateEEENS0_5BlockE'/>

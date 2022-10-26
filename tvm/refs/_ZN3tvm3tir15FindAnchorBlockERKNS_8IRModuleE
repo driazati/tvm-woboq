@@ -1,0 +1,17 @@
+<dec f='tvm/include/tvm/tir/analysis.h' l='262' type='const tir::BlockNode * tvm::tir::FindAnchorBlock(const tvm::IRModule &amp; mod)'/>
+<doc f='tvm/include/tvm/tir/analysis.h' l='248'>/*!
+ * \brief Find the &quot;anchor block&quot; of the given module.
+ * We define the anchor block to be the block with (1) an init statement and (2) having
+ * the biggest flops count. The latter condition is only used when there are multiple blocks
+ * with an init statement.
+ * For example, if the input module is conv2d + fused spatial blocks, conv2d is the anchor block.
+ * The input module may not contain more than one such block. For example, a module having
+ * two conv2d is not allowed as an input.
+ * However, a module created from winograd convolution has multiple blocks with an init statement
+ * (input transform, batched GEMM, and output transform). We use the second condition, the flops
+ * count, to determine that the batched GEMM block is the anchor block.
+ * \param mod The input TIR module.
+ * \return The anchor block if found, nullptr otherwise.
+ */</doc>
+<def f='tvm/src/tir/analysis/stmt_finding.cc' l='104' ll='139' type='const tvm::tir::BlockNode * tvm::tir::FindAnchorBlock(const tvm::IRModule &amp; mod)'/>
+<use f='tvm/src/tir/analysis/stmt_finding.cc' l='142' u='c'/>

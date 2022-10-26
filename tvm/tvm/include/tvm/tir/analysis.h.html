@@ -250,56 +250,81 @@
 <tr><th id="236">236</th><td><i class="doc"> */</i></td></tr>
 <tr><th id="237">237</th><td><a class="macro" href="../runtime/c_runtime_api.h.html#64" title="__attribute__((visibility(&quot;default&quot;)))" data-ref="_M/TVM_DLL">TVM_DLL</a> <em>bool</em> <dfn class="decl fn" id="_ZN3tvm3tir16VerifyWellFormedERKNS0_8PrimFuncEb" title='tvm::tir::VerifyWellFormed' data-ref="_ZN3tvm3tir16VerifyWellFormedERKNS0_8PrimFuncEb" data-ref-filename="_ZN3tvm3tir16VerifyWellFormedERKNS0_8PrimFuncEb">VerifyWellFormed</dfn>(<em>const</em> <a class="type" href="function.h.html#tvm::tir::PrimFunc" title='tvm::tir::PrimFunc' data-ref="tvm::tir::PrimFunc" data-ref-filename="tvm..tir..PrimFunc">PrimFunc</a>&amp; <dfn class="local col0 decl" id="120func" title='func' data-type='const tvm::tir::PrimFunc &amp;' data-ref="120func" data-ref-filename="120func">func</dfn>, <em>bool</em> <dfn class="local col1 decl" id="121assert_mode" title='assert_mode' data-type='bool' data-ref="121assert_mode" data-ref-filename="121assert_mode">assert_mode</dfn> = <b>true</b>);</td></tr>
 <tr><th id="238">238</th><td></td></tr>
-<tr><th id="239">239</th><td><i>// Pass variants of verification analysis</i></td></tr>
-<tr><th id="240">240</th><td><i>// directly throws RuntimeError when verification fails.</i></td></tr>
-<tr><th id="241">241</th><td><b>namespace</b> <span class="namespace">transform</span> {</td></tr>
-<tr><th id="242">242</th><td></td></tr>
-<tr><th id="243">243</th><td><b>using</b> <span class="namespace">tvm::transform::</span>Pass;</td></tr>
-<tr><th id="244">244</th><td><b>using</b> <span class="namespace">tvm::transform::</span>PassContext;</td></tr>
-<tr><th id="245">245</th><td></td></tr>
-<tr><th id="246">246</th><td><i class="doc">/*!</i></td></tr>
-<tr><th id="247">247</th><td><i class="doc"> * <span class="command">\brief</span> Pass variant of VerifySSA.</i></td></tr>
-<tr><th id="248">248</th><td><i class="doc"> *</i></td></tr>
-<tr><th id="249">249</th><td><i class="doc"> * <span class="command">\returns</span> The pass.</i></td></tr>
-<tr><th id="250">250</th><td><i class="doc"> * <span class="command">\sa</span> tvm::tir::VerifySSA</i></td></tr>
-<tr><th id="251">251</th><td><i class="doc"> */</i></td></tr>
-<tr><th id="252">252</th><td><a class="macro" href="../runtime/c_runtime_api.h.html#64" title="__attribute__((visibility(&quot;default&quot;)))" data-ref="_M/TVM_DLL">TVM_DLL</a> Pass <dfn class="decl fn" id="_ZN3tvm3tir9transform9VerifySSAEv" title='tvm::tir::transform::VerifySSA' data-ref="_ZN3tvm3tir9transform9VerifySSAEv" data-ref-filename="_ZN3tvm3tir9transform9VerifySSAEv">VerifySSA</dfn>();</td></tr>
-<tr><th id="253">253</th><td></td></tr>
-<tr><th id="254">254</th><td><i class="doc">/*!</i></td></tr>
-<tr><th id="255">255</th><td><i class="doc"> * <span class="command">\brief</span> Pass variant of VerifyMemory.</i></td></tr>
-<tr><th id="256">256</th><td><i class="doc"> *</i></td></tr>
-<tr><th id="257">257</th><td><i class="doc"> * <span class="command">\returns</span> The pass.</i></td></tr>
-<tr><th id="258">258</th><td><i class="doc"> * <span class="command">\sa</span> tvm::tir::VerifyMemory</i></td></tr>
-<tr><th id="259">259</th><td><i class="doc"> */</i></td></tr>
-<tr><th id="260">260</th><td><a class="macro" href="../runtime/c_runtime_api.h.html#64" title="__attribute__((visibility(&quot;default&quot;)))" data-ref="_M/TVM_DLL">TVM_DLL</a> Pass <dfn class="decl fn" id="_ZN3tvm3tir9transform12VerifyMemoryEv" title='tvm::tir::transform::VerifyMemory' data-ref="_ZN3tvm3tir9transform12VerifyMemoryEv" data-ref-filename="_ZN3tvm3tir9transform12VerifyMemoryEv">VerifyMemory</dfn>();</td></tr>
-<tr><th id="261">261</th><td></td></tr>
-<tr><th id="262">262</th><td><i class="doc">/*!</i></td></tr>
-<tr><th id="263">263</th><td><i class="doc"> * <span class="command">\brief</span> Pass variant of VerifyGPUCode.</i></td></tr>
-<tr><th id="264">264</th><td><i class="doc"> *</i></td></tr>
-<tr><th id="265">265</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">constraints</span> The dict to specify constraints to check.</i></td></tr>
-<tr><th id="266">266</th><td><i class="doc"> *</i></td></tr>
-<tr><th id="267">267</th><td><i class="doc"> * <span class="command">\returns</span> The pass.</i></td></tr>
-<tr><th id="268">268</th><td><i class="doc"> * <span class="command">\sa</span> tvm::tir::VerifyGPUCode</i></td></tr>
-<tr><th id="269">269</th><td><i class="doc"> */</i></td></tr>
-<tr><th id="270">270</th><td><a class="macro" href="../runtime/c_runtime_api.h.html#64" title="__attribute__((visibility(&quot;default&quot;)))" data-ref="_M/TVM_DLL">TVM_DLL</a> Pass <dfn class="decl fn" id="_ZN3tvm3tir9transform13VerifyGPUCodeENS_7runtime3MapINS2_6StringENS_8PrimExprEvvEE" title='tvm::tir::transform::VerifyGPUCode' data-ref="_ZN3tvm3tir9transform13VerifyGPUCodeENS_7runtime3MapINS2_6StringENS_8PrimExprEvvEE" data-ref-filename="_ZN3tvm3tir9transform13VerifyGPUCodeENS_7runtime3MapINS2_6StringENS_8PrimExprEvvEE">VerifyGPUCode</dfn>(<a class="type" href="../runtime/container/map.h.html#tvm::runtime::Map" title='tvm::runtime::Map' data-ref="tvm::runtime::Map" data-ref-filename="tvm..runtime..Map">Map</a>&lt;String, <a class="type" href="../ir/expr.h.html#tvm::PrimExpr" title='tvm::PrimExpr' data-ref="tvm::PrimExpr" data-ref-filename="tvm..PrimExpr">PrimExpr</a>&gt; <dfn class="local col2 decl" id="122constraints" title='constraints' data-type='Map&lt;tvm::runtime::String, tvm::PrimExpr&gt;' data-ref="122constraints" data-ref-filename="122constraints">constraints</dfn>);</td></tr>
-<tr><th id="271">271</th><td></td></tr>
-<tr><th id="272">272</th><td><i class="doc">/*!</i></td></tr>
-<tr><th id="273">273</th><td><i class="doc"> * <span class="command">\brief</span> Statically check TIR code for out of bounds array access.</i></td></tr>
-<tr><th id="274">274</th><td><i class="doc"> *</i></td></tr>
-<tr><th id="275">275</th><td><i class="doc"> * This analysis is conservative: it will only raise errors if it can prove</i></td></tr>
-<tr><th id="276">276</th><td><i class="doc"> * that out of bounds access occurs. Cases that are uncertain do not raise</i></td></tr>
-<tr><th id="277">277</th><td><i class="doc"> * errors.</i></td></tr>
-<tr><th id="278">278</th><td><i class="doc"> *</i></td></tr>
-<tr><th id="279">279</th><td><i class="doc"> * <span class="command">\returns</span> The pass.</i></td></tr>
-<tr><th id="280">280</th><td><i class="doc"> */</i></td></tr>
-<tr><th id="281">281</th><td><a class="macro" href="../runtime/c_runtime_api.h.html#64" title="__attribute__((visibility(&quot;default&quot;)))" data-ref="_M/TVM_DLL">TVM_DLL</a> Pass <dfn class="decl fn" id="_ZN3tvm3tir9transform10OOBCheckerEv" title='tvm::tir::transform::OOBChecker' data-ref="_ZN3tvm3tir9transform10OOBCheckerEv" data-ref-filename="_ZN3tvm3tir9transform10OOBCheckerEv">OOBChecker</dfn>();</td></tr>
-<tr><th id="282">282</th><td></td></tr>
-<tr><th id="283">283</th><td>}  <i>// namespace transform</i></td></tr>
-<tr><th id="284">284</th><td>}  <i>// namespace tir</i></td></tr>
-<tr><th id="285">285</th><td>}  <i>// namespace tvm</i></td></tr>
-<tr><th id="286">286</th><td><u>#<span data-ppcond="24">endif</span>  // TVM_TIR_ANALYSIS_H_</u></td></tr>
-<tr><th id="287">287</th><td></td></tr>
+<tr><th id="239">239</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="240">240</th><td><i class="doc"> * <span class="command">\brief</span> Find the entry function of the given IRModule, i.e, functions marked by</i></td></tr>
+<tr><th id="241">241</th><td><i class="doc"> * `tir::attr::kIsEntryFunc`, whose name is `main` or being the only PrimeFunc.</i></td></tr>
+<tr><th id="242">242</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">mod</span> The IRModule to find the entry function.</i></td></tr>
+<tr><th id="243">243</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">result_g_var</span> The result GlobalVar of the entry function.</i></td></tr>
+<tr><th id="244">244</th><td><i class="doc"> * <span class="command">\return</span> The entry function.</i></td></tr>
+<tr><th id="245">245</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="246">246</th><td><em>const</em> <a class="type" href="function.h.html#tvm::tir::PrimFuncNode" title='tvm::tir::PrimFuncNode' data-ref="tvm::tir::PrimFuncNode" data-ref-filename="tvm..tir..PrimFuncNode">PrimFuncNode</a>* <dfn class="decl fn" id="_ZN3tvm3tir13FindEntryFuncERKNS_8IRModuleEPNS_9GlobalVarE" title='tvm::tir::FindEntryFunc' data-ref="_ZN3tvm3tir13FindEntryFuncERKNS_8IRModuleEPNS_9GlobalVarE" data-ref-filename="_ZN3tvm3tir13FindEntryFuncERKNS_8IRModuleEPNS_9GlobalVarE">FindEntryFunc</dfn>(<em>const</em> <a class="type" href="../ir/module.h.html#tvm::IRModule" title='tvm::IRModule' data-ref="tvm::IRModule" data-ref-filename="tvm..IRModule">IRModule</a>&amp; <dfn class="local col2 decl" id="122mod" title='mod' data-type='const tvm::IRModule &amp;' data-ref="122mod" data-ref-filename="122mod">mod</dfn>, <a class="type" href="../ir/expr.h.html#tvm::GlobalVar" title='tvm::GlobalVar' data-ref="tvm::GlobalVar" data-ref-filename="tvm..GlobalVar">GlobalVar</a>* <dfn class="local col3 decl" id="123result_g_var" title='result_g_var' data-type='tvm::GlobalVar *' data-ref="123result_g_var" data-ref-filename="123result_g_var">result_g_var</dfn>);</td></tr>
+<tr><th id="247">247</th><td></td></tr>
+<tr><th id="248">248</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="249">249</th><td><i class="doc"> * <span class="command">\brief</span> Find the "anchor block" of the given module.</i></td></tr>
+<tr><th id="250">250</th><td><i class="doc"> * We define the anchor block to be the block with (1) an init statement and (2) having</i></td></tr>
+<tr><th id="251">251</th><td><i class="doc"> * the biggest flops count. The latter condition is only used when there are multiple blocks</i></td></tr>
+<tr><th id="252">252</th><td><i class="doc"> * with an init statement.</i></td></tr>
+<tr><th id="253">253</th><td><i class="doc"> * For example, if the input module is conv2d + fused spatial blocks, conv2d is the anchor block.</i></td></tr>
+<tr><th id="254">254</th><td><i class="doc"> * The input module may not contain more than one such block. For example, a module having</i></td></tr>
+<tr><th id="255">255</th><td><i class="doc"> * two conv2d is not allowed as an input.</i></td></tr>
+<tr><th id="256">256</th><td><i class="doc"> * However, a module created from winograd convolution has multiple blocks with an init statement</i></td></tr>
+<tr><th id="257">257</th><td><i class="doc"> * (input transform, batched GEMM, and output transform). We use the second condition, the flops</i></td></tr>
+<tr><th id="258">258</th><td><i class="doc"> * count, to determine that the batched GEMM block is the anchor block.</i></td></tr>
+<tr><th id="259">259</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">mod</span> The input TIR module.</i></td></tr>
+<tr><th id="260">260</th><td><i class="doc"> * <span class="command">\return</span> The anchor block if found, nullptr otherwise.</i></td></tr>
+<tr><th id="261">261</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="262">262</th><td><em>const</em> <span class="namespace">tir::</span><a class="type" href="stmt.h.html#tvm::tir::BlockNode" title='tvm::tir::BlockNode' data-ref="tvm::tir::BlockNode" data-ref-filename="tvm..tir..BlockNode">BlockNode</a>* <dfn class="decl fn" id="_ZN3tvm3tir15FindAnchorBlockERKNS_8IRModuleE" title='tvm::tir::FindAnchorBlock' data-ref="_ZN3tvm3tir15FindAnchorBlockERKNS_8IRModuleE" data-ref-filename="_ZN3tvm3tir15FindAnchorBlockERKNS_8IRModuleE">FindAnchorBlock</dfn>(<em>const</em> <a class="type" href="../ir/module.h.html#tvm::IRModule" title='tvm::IRModule' data-ref="tvm::IRModule" data-ref-filename="tvm..IRModule">IRModule</a>&amp; <dfn class="local col4 decl" id="124mod" title='mod' data-type='const tvm::IRModule &amp;' data-ref="124mod" data-ref-filename="124mod">mod</dfn>);</td></tr>
+<tr><th id="263">263</th><td></td></tr>
+<tr><th id="264">264</th><td><i>// Pass variants of verification analysis</i></td></tr>
+<tr><th id="265">265</th><td><i>// directly throws RuntimeError when verification fails.</i></td></tr>
+<tr><th id="266">266</th><td><b>namespace</b> <span class="namespace">transform</span> {</td></tr>
+<tr><th id="267">267</th><td></td></tr>
+<tr><th id="268">268</th><td><b>using</b> <span class="namespace">tvm::transform::</span>Pass;</td></tr>
+<tr><th id="269">269</th><td><b>using</b> <span class="namespace">tvm::transform::</span>PassContext;</td></tr>
+<tr><th id="270">270</th><td></td></tr>
+<tr><th id="271">271</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="272">272</th><td><i class="doc"> * <span class="command">\brief</span> Pass variant of VerifySSA.</i></td></tr>
+<tr><th id="273">273</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="274">274</th><td><i class="doc"> * <span class="command">\returns</span> The pass.</i></td></tr>
+<tr><th id="275">275</th><td><i class="doc"> * <span class="command">\sa</span> tvm::tir::VerifySSA</i></td></tr>
+<tr><th id="276">276</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="277">277</th><td><a class="macro" href="../runtime/c_runtime_api.h.html#64" title="__attribute__((visibility(&quot;default&quot;)))" data-ref="_M/TVM_DLL">TVM_DLL</a> Pass <dfn class="decl fn" id="_ZN3tvm3tir9transform9VerifySSAEv" title='tvm::tir::transform::VerifySSA' data-ref="_ZN3tvm3tir9transform9VerifySSAEv" data-ref-filename="_ZN3tvm3tir9transform9VerifySSAEv">VerifySSA</dfn>();</td></tr>
+<tr><th id="278">278</th><td></td></tr>
+<tr><th id="279">279</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="280">280</th><td><i class="doc"> * <span class="command">\brief</span> Pass variant of VerifyMemory.</i></td></tr>
+<tr><th id="281">281</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="282">282</th><td><i class="doc"> * <span class="command">\returns</span> The pass.</i></td></tr>
+<tr><th id="283">283</th><td><i class="doc"> * <span class="command">\sa</span> tvm::tir::VerifyMemory</i></td></tr>
+<tr><th id="284">284</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="285">285</th><td><a class="macro" href="../runtime/c_runtime_api.h.html#64" title="__attribute__((visibility(&quot;default&quot;)))" data-ref="_M/TVM_DLL">TVM_DLL</a> Pass <dfn class="decl fn" id="_ZN3tvm3tir9transform12VerifyMemoryEv" title='tvm::tir::transform::VerifyMemory' data-ref="_ZN3tvm3tir9transform12VerifyMemoryEv" data-ref-filename="_ZN3tvm3tir9transform12VerifyMemoryEv">VerifyMemory</dfn>();</td></tr>
+<tr><th id="286">286</th><td></td></tr>
+<tr><th id="287">287</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="288">288</th><td><i class="doc"> * <span class="command">\brief</span> Pass variant of VerifyGPUCode.</i></td></tr>
+<tr><th id="289">289</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="290">290</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">constraints</span> The dict to specify constraints to check.</i></td></tr>
+<tr><th id="291">291</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="292">292</th><td><i class="doc"> * <span class="command">\returns</span> The pass.</i></td></tr>
+<tr><th id="293">293</th><td><i class="doc"> * <span class="command">\sa</span> tvm::tir::VerifyGPUCode</i></td></tr>
+<tr><th id="294">294</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="295">295</th><td><a class="macro" href="../runtime/c_runtime_api.h.html#64" title="__attribute__((visibility(&quot;default&quot;)))" data-ref="_M/TVM_DLL">TVM_DLL</a> Pass <dfn class="decl fn" id="_ZN3tvm3tir9transform13VerifyGPUCodeENS_7runtime3MapINS2_6StringENS_8PrimExprEvvEE" title='tvm::tir::transform::VerifyGPUCode' data-ref="_ZN3tvm3tir9transform13VerifyGPUCodeENS_7runtime3MapINS2_6StringENS_8PrimExprEvvEE" data-ref-filename="_ZN3tvm3tir9transform13VerifyGPUCodeENS_7runtime3MapINS2_6StringENS_8PrimExprEvvEE">VerifyGPUCode</dfn>(<a class="type" href="../runtime/container/map.h.html#tvm::runtime::Map" title='tvm::runtime::Map' data-ref="tvm::runtime::Map" data-ref-filename="tvm..runtime..Map">Map</a>&lt;String, <a class="type" href="../ir/expr.h.html#tvm::PrimExpr" title='tvm::PrimExpr' data-ref="tvm::PrimExpr" data-ref-filename="tvm..PrimExpr">PrimExpr</a>&gt; <dfn class="local col5 decl" id="125constraints" title='constraints' data-type='Map&lt;tvm::runtime::String, tvm::PrimExpr&gt;' data-ref="125constraints" data-ref-filename="125constraints">constraints</dfn>);</td></tr>
+<tr><th id="296">296</th><td></td></tr>
+<tr><th id="297">297</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="298">298</th><td><i class="doc"> * <span class="command">\brief</span> Statically check TIR code for out of bounds array access.</i></td></tr>
+<tr><th id="299">299</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="300">300</th><td><i class="doc"> * This analysis is conservative: it will only raise errors if it can prove</i></td></tr>
+<tr><th id="301">301</th><td><i class="doc"> * that out of bounds access occurs. Cases that are uncertain do not raise</i></td></tr>
+<tr><th id="302">302</th><td><i class="doc"> * errors.</i></td></tr>
+<tr><th id="303">303</th><td><i class="doc"> *</i></td></tr>
+<tr><th id="304">304</th><td><i class="doc"> * <span class="command">\returns</span> The pass.</i></td></tr>
+<tr><th id="305">305</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="306">306</th><td><a class="macro" href="../runtime/c_runtime_api.h.html#64" title="__attribute__((visibility(&quot;default&quot;)))" data-ref="_M/TVM_DLL">TVM_DLL</a> Pass <dfn class="decl fn" id="_ZN3tvm3tir9transform10OOBCheckerEv" title='tvm::tir::transform::OOBChecker' data-ref="_ZN3tvm3tir9transform10OOBCheckerEv" data-ref-filename="_ZN3tvm3tir9transform10OOBCheckerEv">OOBChecker</dfn>();</td></tr>
+<tr><th id="307">307</th><td></td></tr>
+<tr><th id="308">308</th><td>}  <i>// namespace transform</i></td></tr>
+<tr><th id="309">309</th><td>}  <i>// namespace tir</i></td></tr>
+<tr><th id="310">310</th><td>}  <i>// namespace tvm</i></td></tr>
+<tr><th id="311">311</th><td><u>#<span data-ppcond="24">endif</span>  // TVM_TIR_ANALYSIS_H_</u></td></tr>
+<tr><th id="312">312</th><td></td></tr>
 </table><hr/><p id='footer'>
-Generated while processing <a href='../../../src/arith/canonical_simplify.cc.html'>tvm/src/arith/canonical_simplify.cc</a><br/>Generated on <em>2022-Oct-26</em> from project tvm revision <em>3836eb9</em><br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+Generated while processing <a href='../../../src/arith/canonical_simplify.cc.html'>tvm/src/arith/canonical_simplify.cc</a><br/>Generated on <em>2022-Oct-26</em> from project tvm revision <em>697533e</em><br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
 <br/>Generator usage only permitted with license.</p>
 </div></body></html>

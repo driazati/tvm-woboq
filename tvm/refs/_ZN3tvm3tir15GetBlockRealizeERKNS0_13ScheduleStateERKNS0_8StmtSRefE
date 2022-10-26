@@ -1,5 +1,5 @@
-<dec f='tvm/src/tir/schedule/analysis.h' l='344' type='tvm::tir::BlockRealize tvm::tir::GetBlockRealize(const tvm::tir::ScheduleState &amp; self, const tvm::tir::StmtSRef &amp; block_sref)'/>
-<doc f='tvm/src/tir/schedule/analysis.h' l='338'>/*!
+<dec f='tvm/src/tir/schedule/analysis.h' l='335' type='tvm::tir::BlockRealize tvm::tir::GetBlockRealize(const tvm::tir::ScheduleState &amp; self, const tvm::tir::StmtSRef &amp; block_sref)'/>
+<doc f='tvm/src/tir/schedule/analysis.h' l='329'>/*!
  * \brief Get the BlockRealize of the input block
  * \param self The schedule state
  * \param block_sref The StmtSRef of the queried block
@@ -8,11 +8,11 @@
 <use f='tvm/src/meta_schedule/postproc/rewrite_parallel_vectorize_unroll.cc' l='171' u='c' c='_ZN3tvm3tir23AdjustParallelVectorizeERKNS0_8ScheduleERKNS0_7BlockRVERKNS_7runtime5ArrayINS0_6LoopRVEvEEPNS0_16ParsedAnnotationE'/>
 <use f='tvm/src/meta_schedule/schedule_rule/auto_inline.cc' l='106' u='c' c='_ZN3tvm13meta_schedule14AutoInlineNode11CheckInlineERKNS_3tir8ScheduleERKNS2_7BlockRVE'/>
 <use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling_wide_vector.cc' l='59' u='c' c='_ZNK3tvm13meta_schedule30MultiLevelTilingWideVectorNode9SplitLoopERKNS_3tir8ScheduleENS2_7BlockRVENS2_6LoopRVEi'/>
-<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='644' u='c' c='_ZN3tvm3tir25CheckPartialAffineBindingERKNS0_13ScheduleStateENS0_5BlockERKNS_7runtime8OptionalINS0_8StmtSRefEEE'/>
-<def f='tvm/src/tir/schedule/analysis/analysis.cc' l='866' ll='900' type='tvm::tir::BlockRealize tvm::tir::GetBlockRealize(const tvm::tir::ScheduleState &amp; self, const tvm::tir::StmtSRef &amp; block_sref)'/>
-<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='1452' u='c' c='_ZN3tvm3tir16IsTrivialBindingERKNS0_13ScheduleStateERKNS0_8StmtSRefE'/>
-<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='1712' u='c' c='_ZN3tvm3tir23GetTensorizeLoopMappingERKNS0_13ScheduleStateERKNS0_8StmtSRefERKNS0_8PrimFuncEb'/>
-<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='2062' u='c' c='_ZN3tvm3tir28CheckAutoTensorizeApplicableERKNS0_13ScheduleStateERKNS0_8StmtSRefERKNS0_8PrimFuncEPNS0_23AutoTensorizeComparatorE'/>
+<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='603' u='c' c='_ZN3tvm3tir25CheckPartialAffineBindingERKNS0_13ScheduleStateENS0_5BlockERKNS_7runtime8OptionalINS0_8StmtSRefEEE'/>
+<def f='tvm/src/tir/schedule/analysis/analysis.cc' l='825' ll='859' type='tvm::tir::BlockRealize tvm::tir::GetBlockRealize(const tvm::tir::ScheduleState &amp; self, const tvm::tir::StmtSRef &amp; block_sref)'/>
+<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='1411' u='c' c='_ZN3tvm3tir16IsTrivialBindingERKNS0_13ScheduleStateERKNS0_8StmtSRefE'/>
+<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='1671' u='c' c='_ZN3tvm3tir23GetTensorizeLoopMappingERKNS0_13ScheduleStateERKNS0_8StmtSRefERKNS0_8PrimFuncEb'/>
+<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='2021' u='c' c='_ZN3tvm3tir28CheckAutoTensorizeApplicableERKNS0_13ScheduleStateERKNS0_8StmtSRefERKNS0_8PrimFuncEPNS0_23AutoTensorizeComparatorE'/>
 <use f='tvm/src/tir/schedule/primitive/blockize_tensorize.cc' l='503' u='c' c='_ZN3tvm3tir8BlockizeENS0_13ScheduleStateERKNS0_8StmtSRefE'/>
 <use f='tvm/src/tir/schedule/primitive/blockize_tensorize.cc' l='513' u='c' c='_ZN3tvm3tir9TensorizeENS0_13ScheduleStateERKNS0_8StmtSRefERKNS0_12TensorIntrinE'/>
 <use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='288' u='c' c='_ZN3tvm3tir19CalculateAffineFlagERKNS0_13ScheduleStateERKNS0_8StmtSRefE'/>

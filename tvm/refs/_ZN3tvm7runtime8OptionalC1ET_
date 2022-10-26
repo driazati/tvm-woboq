@@ -98,7 +98,7 @@
 <use f='tvm/src/auto_scheduler/transform_step.cc' l='1195' u='c' c='_ZNK3tvm14auto_scheduler24FollowFusedSplitStepNode18ExtractSplitLengthERKNS_7runtime5ArrayINS0_4StepEvEE'/>
 <use f='tvm/src/driver/driver_api.cc' l='300' u='c' c='_ZN3tvm16ScheduleToModuleENS_2te8ScheduleERKNS_7runtime5ArrayINS2_9ObjectRefEvEERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKSt13unordered_2528338'/>
 <use f='tvm/src/ir/module.cc' l='410' u='c' c='_ZN3tvm12IRModuleNode6ImportERKNS_7runtime6StringE'/>
-<use f='tvm/src/tir/schedule/analysis.h' l='724' u='c' c='_ZN3tvm3tir25CheckTrivialBufferIndicesERKT_'/>
+<use f='tvm/src/tir/schedule/analysis.h' l='715' u='c' c='_ZN3tvm3tir25CheckTrivialBufferIndicesERKT_'/>
 <use f='tvm/src/tir/schedule/utils.h' l='294' u='c' c='_ZN3tvm3tir19AnalyzeVarWithShiftERKNS_8PrimExprEPNS_7runtime8OptionalINS_6IntImmEEE'/>
 <use f='tvm/src/tir/schedule/utils.h' l='301' u='c' c='_ZN3tvm3tir19AnalyzeVarWithShiftERKNS_8PrimExprEPNS_7runtime8OptionalINS_6IntImmEEE'/>
 <use f='tvm/src/tir/schedule/utils.h' l='307' u='c' c='_ZN3tvm3tir19AnalyzeVarWithShiftERKNS_8PrimExprEPNS_7runtime8OptionalINS_6IntImmEEE'/>
@@ -379,6 +379,7 @@
 <use f='tvm/src/target/virtual_device.cc' l='128' u='c' c='_ZN3tvm13VirtualDevice4JoinERKS0_S2_'/>
 <use f='tvm/src/tir/analysis/device_constraint_utils.cc' l='262' u='c' c='_ZN3tvm3tir12_GLOBAL__N_129ApplyDeviceConstraintsMutator7RewriteERKNS0_8PrimFuncERKNS_8FuncTypeERKNS_7runtime5ArrayINS_13VirtualDeviceEvEE'/>
 <use f='tvm/src/tir/analysis/device_constraint_utils.cc' l='462' u='c' c='_ZN3tvm3tir12_GLOBAL__N_129ApplyDeviceConstraintsMutator19GetBufferConstraintERKNS0_6BufferE'/>
+<use f='tvm/src/tir/analysis/stmt_finding.cc' l='144' u='c'/>
 <use f='tvm/src/tir/contrib/ethosu/passes.cc' l='157' u='c' c='_ZN3tvm3tir7contrib6ethosu21HoistAllocatesMutatorclENS0_8PrimFuncE'/>
 <use f='tvm/src/tir/contrib/ethosu/passes.cc' l='448' u='c' c='_ZN3tvm3tir7contrib6ethosu27MergeConstantsInfoExtractor10VisitStmt_EPKNS0_11SeqStmtNodeE'/>
 <use f='tvm/src/tir/contrib/ethosu/passes.cc' l='651' u='c' c='_ZN3tvm3tir7contrib6ethosu21MergeConstantsMutator15GetMergedCyclesEi'/>
@@ -387,8 +388,8 @@
 <use f='tvm/src/tir/ir/function.cc' l='134' u='c'/>
 <use f='tvm/src/tir/ir/stmt.cc' l='463' u='c' c='_ZN3tvm3tir13AllocateConstC1ENS0_3VarENS_7runtime8DataTypeENS3_5ArrayINS_8PrimExprEvEENS3_9ObjectRefENS0_4StmtENS3_3MapINS3_6StringES8_vvEENS_4SpanE'/>
 <use f='tvm/src/tir/ir/stmt.cc' l='467' u='c' c='_ZN3tvm3tir13AllocateConstC1ENS0_3VarENS_7runtime8DataTypeENS3_5ArrayINS_8PrimExprEvEENS3_9ObjectRefENS0_4StmtENS3_3MapINS3_6StringES8_vvEENS_4SpanE'/>
-<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='1865' u='c' c='_ZN3tvm3tir23GetTensorizeLoopMappingERKNS0_13ScheduleStateERKNS0_8StmtSRefERKNS0_8PrimFuncEb'/>
-<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='2093' u='c' c='_ZN3tvm3tir27GetAutoTensorizeMappingInfoERKNS0_13ScheduleStateERKNS0_8StmtSRefERKNS0_8PrimFuncE'/>
+<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='1824' u='c' c='_ZN3tvm3tir23GetTensorizeLoopMappingERKNS0_13ScheduleStateERKNS0_8StmtSRefERKNS0_8PrimFuncEb'/>
+<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='2052' u='c' c='_ZN3tvm3tir27GetAutoTensorizeMappingInfoERKNS0_13ScheduleStateERKNS0_8StmtSRefERKNS0_8PrimFuncE'/>
 <use f='tvm/src/tir/schedule/analysis/layout.cc' l='238' u='c' c='_ZN3tvm3tir15SuggestIndexMapERKNS0_6BufferERKNS_7runtime5ArrayINS_8PrimExprEvEERKNS5_INS0_3ForEvEERKS6_PNS_5arith8AnalyzerE'/>
 <use f='tvm/src/tir/schedule/analysis/layout.cc' l='238' u='c' c='_ZN3tvm3tir15SuggestIndexMapERKNS0_6BufferERKNS_7runtime5ArrayINS_8PrimExprEvEERKNS5_INS0_3ForEvEERKS6_PNS_5arith8AnalyzerE'/>
 <use f='tvm/src/tir/schedule/analysis/verify.cc' l='70' u='c' c='_ZN3tvm3tir16SRefTreeVerifier10VisitStmt_EPKNS0_9BlockNodeE'/>

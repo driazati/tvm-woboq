@@ -65,8 +65,8 @@
 <use f='tvm/include/tvm/meta_schedule/task_scheduler.h' l='57' u='c'/>
 <use f='tvm/include/tvm/meta_schedule/task_scheduler.h' l='59' u='c'/>
 <use f='tvm/include/tvm/meta_schedule/task_scheduler.h' l='61' u='c'/>
-<use f='tvm/src/tir/schedule/analysis.h' l='266' u='c' c='_ZN3tvm3tir24LoopDomainOfSRefTreePathERKNS0_8StmtSRefERKNS_7runtime8OptionalIS1_EERKNS4_12StorageScopeE'/>
-<use f='tvm/src/tir/schedule/analysis.h' l='720' u='c' c='_ZN3tvm3tir25CheckTrivialBufferIndicesERKT_'/>
+<use f='tvm/src/tir/schedule/analysis.h' l='257' u='c' c='_ZN3tvm3tir24LoopDomainOfSRefTreePathERKNS0_8StmtSRefERKNS_7runtime8OptionalIS1_EERKNS4_12StorageScopeE'/>
+<use f='tvm/src/tir/schedule/analysis.h' l='711' u='c' c='_ZN3tvm3tir25CheckTrivialBufferIndicesERKT_'/>
 <use f='tvm/src/tir/schedule/instruction_traits.h' l='197' u='c' c='_ZN3tvm3tir13PythonAPICallC1ENS_7runtime6StringE'/>
 <use f='tvm/src/tir/schedule/utils.h' l='293' u='c' c='_ZN3tvm3tir19AnalyzeVarWithShiftERKNS_8PrimExprEPNS_7runtime8OptionalINS_6IntImmEEE'/>
 <use f='tvm/src/tir/schedule/utils.h' l='309' u='c' c='_ZN3tvm3tir19AnalyzeVarWithShiftERKNS_8PrimExprEPNS_7runtime8OptionalINS_6IntImmEEE'/>
@@ -206,21 +206,22 @@
 <use f='tvm/src/te/operation/create_primfunc.cc' l='393' u='c' c='_ZN3tvm3tir24GenerateStmtFromExternOpERKNS_2te8ExternOpEPNS0_14CreateFuncInfoE'/>
 <use f='tvm/src/tir/analysis/buffer_access_lca_detector.cc' l='65' u='c' c='_ZN3tvm3tir11LCADetector6DetectERKNS0_8PrimFuncE'/>
 <use f='tvm/src/tir/analysis/deep_equal.cc' l='70' u='c' c='_ZNK3tvm3tir13ExprDeepEqualclERKNS_8PrimExprES4_'/>
+<use f='tvm/src/tir/analysis/stmt_finding.cc' l='146' u='c'/>
 <use f='tvm/src/tir/ir/function.cc' l='105' u='c' c='_ZN3tvm3tir12TensorIntrin3GetENS_7runtime6StringEb'/>
 <use f='tvm/src/tir/ir/index_map.cc' l='195' u='c' c='_ZNK3tvm3tir12IndexMapNode9MapRangesERKNS_7runtime5ArrayINS_5RangeEvEEPNS_5arith8AnalyzerE'/>
 <use f='tvm/src/tir/ir/script/script_complete.cc' l='129' u='c' c='_ZN3tvm3tir14ScriptCompleteENS0_8PrimFuncERKNS_7runtime5ArrayINS0_6BufferEvEE'/>
 <use f='tvm/src/tir/ir/stmt_functor.cc' l='531' u='c' c='_ZN3tvm3tir11StmtMutator10VisitStmt_EPKNS0_9BlockNodeE'/>
-<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='652' u='c' c='_ZN3tvm3tir18CheckAffineBindingERKNS0_13ScheduleStateENS0_5BlockE'/>
-<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='1367' u='c' c='_ZN3tvm3tir23AnalyzeReadWritePatternERKNS0_12BufferRegionES3_'/>
-<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='1729' u='c' c='_ZN3tvm3tir23GetTensorizeLoopMappingERKNS0_13ScheduleStateERKNS0_8StmtSRefERKNS0_8PrimFuncEb'/>
-<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='1746' u='c' c='_ZN3tvm3tir23GetTensorizeLoopMappingERKNS0_13ScheduleStateERKNS0_8StmtSRefERKNS0_8PrimFuncEb'/>
-<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='1788' u='c' c='_ZN3tvm3tir23GetTensorizeLoopMappingERKNS0_13ScheduleStateERKNS0_8StmtSRefERKNS0_8PrimFuncEb'/>
-<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='1804' u='c' c='_ZN3tvm3tir23GetTensorizeLoopMappingERKNS0_13ScheduleStateERKNS0_8StmtSRefERKNS0_8PrimFuncEb'/>
-<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='1828' u='c' c='_ZN3tvm3tir23GetTensorizeLoopMappingERKNS0_13ScheduleStateERKNS0_8StmtSRefERKNS0_8PrimFuncEb'/>
-<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='1837' u='c' c='_ZN3tvm3tir23GetTensorizeLoopMappingERKNS0_13ScheduleStateERKNS0_8StmtSRefERKNS0_8PrimFuncEb'/>
-<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='1851' u='c' c='_ZN3tvm3tir23GetTensorizeLoopMappingERKNS0_13ScheduleStateERKNS0_8StmtSRefERKNS0_8PrimFuncEb'/>
-<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='2080' u='c' c='_ZN3tvm3tir27GetAutoTensorizeMappingInfoERKNS0_13ScheduleStateERKNS0_8StmtSRefERKNS0_8PrimFuncE'/>
-<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='2085' u='c' c='_ZN3tvm3tir27GetAutoTensorizeMappingInfoERKNS0_13ScheduleStateERKNS0_8StmtSRefERKNS0_8PrimFuncE'/>
+<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='611' u='c' c='_ZN3tvm3tir18CheckAffineBindingERKNS0_13ScheduleStateENS0_5BlockE'/>
+<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='1326' u='c' c='_ZN3tvm3tir23AnalyzeReadWritePatternERKNS0_12BufferRegionES3_'/>
+<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='1688' u='c' c='_ZN3tvm3tir23GetTensorizeLoopMappingERKNS0_13ScheduleStateERKNS0_8StmtSRefERKNS0_8PrimFuncEb'/>
+<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='1705' u='c' c='_ZN3tvm3tir23GetTensorizeLoopMappingERKNS0_13ScheduleStateERKNS0_8StmtSRefERKNS0_8PrimFuncEb'/>
+<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='1747' u='c' c='_ZN3tvm3tir23GetTensorizeLoopMappingERKNS0_13ScheduleStateERKNS0_8StmtSRefERKNS0_8PrimFuncEb'/>
+<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='1763' u='c' c='_ZN3tvm3tir23GetTensorizeLoopMappingERKNS0_13ScheduleStateERKNS0_8StmtSRefERKNS0_8PrimFuncEb'/>
+<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='1787' u='c' c='_ZN3tvm3tir23GetTensorizeLoopMappingERKNS0_13ScheduleStateERKNS0_8StmtSRefERKNS0_8PrimFuncEb'/>
+<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='1796' u='c' c='_ZN3tvm3tir23GetTensorizeLoopMappingERKNS0_13ScheduleStateERKNS0_8StmtSRefERKNS0_8PrimFuncEb'/>
+<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='1810' u='c' c='_ZN3tvm3tir23GetTensorizeLoopMappingERKNS0_13ScheduleStateERKNS0_8StmtSRefERKNS0_8PrimFuncEb'/>
+<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='2039' u='c' c='_ZN3tvm3tir27GetAutoTensorizeMappingInfoERKNS0_13ScheduleStateERKNS0_8StmtSRefERKNS0_8PrimFuncE'/>
+<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='2044' u='c' c='_ZN3tvm3tir27GetAutoTensorizeMappingInfoERKNS0_13ScheduleStateERKNS0_8StmtSRefERKNS0_8PrimFuncE'/>
 <use f='tvm/src/tir/schedule/analysis/layout.cc' l='155' u='c' c='_ZN3tvm3tir15SuggestIndexMapERKNS0_6BufferERKNS_7runtime5ArrayINS_8PrimExprEvEERKNS5_INS0_3ForEvEERKS6_PNS_5arith8AnalyzerE'/>
 <use f='tvm/src/tir/schedule/analysis/verify.cc' l='71' u='c' c='_ZN3tvm3tir16SRefTreeVerifier10VisitStmt_EPKNS0_9BlockNodeE'/>
 <use f='tvm/src/tir/schedule/analysis/verify.cc' l='94' u='c' c='_ZN3tvm3tir16SRefTreeVerifier10VisitStmt_EPKNS0_7ForNodeE'/>

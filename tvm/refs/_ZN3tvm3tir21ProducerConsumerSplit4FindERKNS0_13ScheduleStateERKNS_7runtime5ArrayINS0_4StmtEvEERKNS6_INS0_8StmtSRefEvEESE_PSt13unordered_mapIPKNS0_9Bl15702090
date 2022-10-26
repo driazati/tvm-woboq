@@ -1,5 +1,5 @@
-<dec f='tvm/src/tir/schedule/analysis.h' l='422' type='static tvm::tir::ProducerConsumerSplit tvm::tir::ProducerConsumerSplit::Find(const tvm::tir::ScheduleState &amp; state, const Array&lt;tvm::tir::Stmt&gt; &amp; subtrees, const Array&lt;tvm::tir::StmtSRef&gt; &amp; producer_block_srefs, const Array&lt;tvm::tir::StmtSRef&gt; &amp; consumer_block_srefs, std::unordered_map&lt;const BlockNode *, const BlockRealizeNode *&gt; * block2realize)'/>
-<doc f='tvm/src/tir/schedule/analysis.h' l='411'>/*!
+<dec f='tvm/src/tir/schedule/analysis.h' l='413' type='static tvm::tir::ProducerConsumerSplit tvm::tir::ProducerConsumerSplit::Find(const tvm::tir::ScheduleState &amp; state, const Array&lt;tvm::tir::Stmt&gt; &amp; subtrees, const Array&lt;tvm::tir::StmtSRef&gt; &amp; producer_block_srefs, const Array&lt;tvm::tir::StmtSRef&gt; &amp; consumer_block_srefs, std::unordered_map&lt;const BlockNode *, const BlockRealizeNode *&gt; * block2realize)'/>
+<doc f='tvm/src/tir/schedule/analysis.h' l='402'>/*!
    * \brief Find a split among the given `subtree`
    * \param state The schedule state
    * \param subtrees The ordered list of subtrees to be split
@@ -10,5 +10,5 @@
    * \return The valid split points are (last_producer_position, first_consumer_position]
    * \throw ScheduleError is not valid split is found
    */</doc>
-<def f='tvm/src/tir/schedule/analysis/analysis.cc' l='1076' ll='1171' type='static tvm::tir::ProducerConsumerSplit tvm::tir::ProducerConsumerSplit::Find(const tvm::tir::ScheduleState &amp; self, const Array&lt;tvm::tir::Stmt&gt; &amp; subtrees, const Array&lt;tvm::tir::StmtSRef&gt; &amp; producer_block_srefs, const Array&lt;tvm::tir::StmtSRef&gt; &amp; consumer_block_srefs, std::unordered_map&lt;const BlockNode *, const BlockRealizeNode *&gt; * block2realize)'/>
+<def f='tvm/src/tir/schedule/analysis/analysis.cc' l='1035' ll='1130' type='static tvm::tir::ProducerConsumerSplit tvm::tir::ProducerConsumerSplit::Find(const tvm::tir::ScheduleState &amp; self, const Array&lt;tvm::tir::Stmt&gt; &amp; subtrees, const Array&lt;tvm::tir::StmtSRef&gt; &amp; producer_block_srefs, const Array&lt;tvm::tir::StmtSRef&gt; &amp; consumer_block_srefs, std::unordered_map&lt;const BlockNode *, const BlockRealizeNode *&gt; * block2realize)'/>
 <use f='tvm/src/tir/schedule/primitive/compute_at.cc' l='146' u='c' c='_ZN3tvm3tir18FindInsertionPointERKNS0_13ScheduleStateERKNS_7runtime5ArrayINS0_4StmtEvEERKNS5_INS0_8StmtSRefEvEESD_PSt13unordered_mapIPKNS0_9BlockNodeE12832446'/>

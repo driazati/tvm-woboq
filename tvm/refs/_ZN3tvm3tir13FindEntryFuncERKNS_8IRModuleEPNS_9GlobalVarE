@@ -1,11 +1,12 @@
-<dec f='tvm/src/tir/schedule/analysis.h' l='82' type='const tvm::tir::PrimFuncNode * tvm::tir::FindEntryFunc(const tvm::IRModule &amp; mod, tvm::GlobalVar * result_g_var)'/>
-<doc f='tvm/src/tir/schedule/analysis.h' l='75'>/*!
+<dec f='tvm/include/tvm/tir/analysis.h' l='246' type='const tvm::tir::PrimFuncNode * tvm::tir::FindEntryFunc(const tvm::IRModule &amp; mod, tvm::GlobalVar * result_g_var)'/>
+<doc f='tvm/include/tvm/tir/analysis.h' l='239'>/*!
  * \brief Find the entry function of the given IRModule, i.e, functions marked by
  * `tir::attr::kIsEntryFunc`, whose name is `main` or being the only PrimeFunc.
  * \param mod The IRModule to find the entry function.
  * \param result_g_var The result GlobalVar of the entry function.
  * \return The entry function.
  */</doc>
-<def f='tvm/src/tir/schedule/analysis/analysis.cc' l='49' ll='88' type='const tvm::tir::PrimFuncNode * tvm::tir::FindEntryFunc(const tvm::IRModule &amp; mod, tvm::GlobalVar * result_g_var)'/>
+<def f='tvm/src/tir/analysis/stmt_finding.cc' l='25' ll='64' type='const tvm::tir::PrimFuncNode * tvm::tir::FindEntryFunc(const tvm::IRModule &amp; mod, tvm::GlobalVar * result_g_var)'/>
+<use f='tvm/src/tir/analysis/stmt_finding.cc' l='115' u='c' c='_ZN3tvm3tir15FindAnchorBlockERKNS_8IRModuleE'/>
 <use f='tvm/src/tir/schedule/concrete_schedule.cc' l='35' u='c' c='_ZN3tvm3tir8Schedule8ConcreteENS_8IRModuleEliNS0_24ScheduleErrorRenderLevelE'/>
 <use f='tvm/src/tir/schedule/traced_schedule.cc' l='34' u='c' c='_ZN3tvm3tir8Schedule6TracedENS_8IRModuleEliNS0_24ScheduleErrorRenderLevelE'/>

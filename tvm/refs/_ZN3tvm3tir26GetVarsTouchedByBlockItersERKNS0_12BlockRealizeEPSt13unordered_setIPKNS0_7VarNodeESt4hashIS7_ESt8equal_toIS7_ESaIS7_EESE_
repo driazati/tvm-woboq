@@ -1,5 +1,5 @@
-<dec f='tvm/src/tir/schedule/analysis.h' l='286' type='bool tvm::tir::GetVarsTouchedByBlockIters(const tvm::tir::BlockRealize &amp; block_realize, std::unordered_set&lt;const VarNode *&gt; * data_par_vars, std::unordered_set&lt;const VarNode *&gt; * reduce_vars)'/>
-<doc f='tvm/src/tir/schedule/analysis.h' l='277'>/*!
+<dec f='tvm/src/tir/schedule/analysis.h' l='277' type='bool tvm::tir::GetVarsTouchedByBlockIters(const tvm::tir::BlockRealize &amp; block_realize, std::unordered_set&lt;const VarNode *&gt; * data_par_vars, std::unordered_set&lt;const VarNode *&gt; * reduce_vars)'/>
+<doc f='tvm/src/tir/schedule/analysis.h' l='268'>/*!
  * \brief Get the vars involved in the bindings of data parallel block vars and reduction block
  * vars, respectively
  * \param block_realize The BlockRealize to be analyzed
@@ -8,6 +8,6 @@
  * \return A boolean indicating whether the block has block iters that is neither a data parallel
  * block iter nor a reduction block iter
  */</doc>
-<def f='tvm/src/tir/schedule/analysis/analysis.cc' l='727' ll='759' type='bool tvm::tir::GetVarsTouchedByBlockIters(const tvm::tir::BlockRealize &amp; block_realize, std::unordered_set&lt;const VarNode *&gt; * data_par_vars, std::unordered_set&lt;const VarNode *&gt; * reduce_vars)'/>
+<def f='tvm/src/tir/schedule/analysis/analysis.cc' l='686' ll='718' type='bool tvm::tir::GetVarsTouchedByBlockIters(const tvm::tir::BlockRealize &amp; block_realize, std::unordered_set&lt;const VarNode *&gt; * data_par_vars, std::unordered_set&lt;const VarNode *&gt; * reduce_vars)'/>
 <use f='tvm/src/tir/schedule/primitive/reduction.cc' l='1189' u='c' c='_ZN3tvm3tir7RFactorENS0_13ScheduleStateERKNS0_8StmtSRefEi'/>
 <use f='tvm/src/tir/transforms/lower_cross_thread_reduction.cc' l='453' u='c' c='_ZN3tvm3tir31CrossThreadReductionTransformer24NeedCrossThreadReductionEPKNS0_16BlockRealizeNodeE'/>

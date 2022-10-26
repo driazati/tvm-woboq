@@ -21,9 +21,9 @@
 <use f='tvm/src/auto_scheduler/feature.cc' l='637' c='_ZN3tvm14auto_scheduler24PerStoreFeatureExtractor10VisitStmt_EPKNS_3tir12AttrStmtNodeE'/>
 <size>8</size>
 <use f='tvm/include/tvm/tir/schedule/schedule.h' l='163' c='_ZNK3tvm3tir12ScheduleNode3GetERKNS0_6LoopRVE'/>
-<use f='tvm/src/tir/schedule/analysis.h' l='588' c='_ZN3tvm3tir15SuggestIndexMapERKNS0_6BufferERKNS_7runtime5ArrayINS_8PrimExprEvEERKNS5_INS0_3ForEvEERKS6_PNS_5arith8AnalyzerE'/>
-<use f='tvm/src/tir/schedule/analysis.h' l='743'/>
-<use f='tvm/src/tir/schedule/analysis.h' l='745'/>
+<use f='tvm/src/tir/schedule/analysis.h' l='579' c='_ZN3tvm3tir15SuggestIndexMapERKNS0_6BufferERKNS_7runtime5ArrayINS_8PrimExprEvEERKNS5_INS0_3ForEvEERKS6_PNS_5arith8AnalyzerE'/>
+<use f='tvm/src/tir/schedule/analysis.h' l='734'/>
+<use f='tvm/src/tir/schedule/analysis.h' l='736'/>
 <use f='tvm/src/tir/schedule/error.h' l='59' c='_ZN3tvm3tir17LoopPositionErrorC1ENS_8IRModuleENS0_3ForENS0_5BlockERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
 <use f='tvm/src/tir/schedule/error.h' l='80'/>
 <use f='tvm/src/tir/schedule/utils.h' l='126' c='_ZN3tvm3tir15LoopSRefs2LoopsERKNS_7runtime5ArrayINS0_8StmtSRefEvEE'/>
@@ -79,11 +79,11 @@
 <use f='tvm/src/tir/ir/stmt.cc' l='185'/>
 <size>8</size>
 <fun r='_ZN3tvm3tir3ForC1ENS0_3VarENS_8PrimExprES3_NS0_7ForKindENS0_4StmtENS_7runtime8OptionalINS0_7IterVarEEENS6_3MapINS6_6StringENS6_9ObjectRefEvvEENS_4SpanE'/>
-<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='767' c='_ZZN3tvm3tir23CheckLoopStartsWithZeroERKNS0_13ScheduleStateERKNS0_8StmtSRefEPNS_5arith8AnalyzerEEN25LoopNotStartWithZeroErrorC1ENS_8IRModuleENS0_3ForE'/>
-<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='782' c='_ZN3tvm3tir23CheckLoopStartsWithZeroERKNS0_13ScheduleStateERKNS0_8StmtSRefEPNS_5arith8AnalyzerE'/>
-<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='786' c='_ZN3tvm3tir23CheckLoopStartsWithZeroERKNS0_13ScheduleStateERKNS0_8StmtSRefEPNS_5arith8AnalyzerE'/>
-<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='1841' c='_ZN3tvm3tir23GetTensorizeLoopMappingERKNS0_13ScheduleStateERKNS0_8StmtSRefERKNS0_8PrimFuncEb'/>
-<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='1847' c='_ZN3tvm3tir23GetTensorizeLoopMappingERKNS0_13ScheduleStateERKNS0_8StmtSRefERKNS0_8PrimFuncEb'/>
+<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='726' c='_ZZN3tvm3tir23CheckLoopStartsWithZeroERKNS0_13ScheduleStateERKNS0_8StmtSRefEPNS_5arith8AnalyzerEEN25LoopNotStartWithZeroErrorC1ENS_8IRModuleENS0_3ForE'/>
+<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='741' c='_ZN3tvm3tir23CheckLoopStartsWithZeroERKNS0_13ScheduleStateERKNS0_8StmtSRefEPNS_5arith8AnalyzerE'/>
+<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='745' c='_ZN3tvm3tir23CheckLoopStartsWithZeroERKNS0_13ScheduleStateERKNS0_8StmtSRefEPNS_5arith8AnalyzerE'/>
+<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='1800' c='_ZN3tvm3tir23GetTensorizeLoopMappingERKNS0_13ScheduleStateERKNS0_8StmtSRefERKNS0_8PrimFuncEb'/>
+<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='1806' c='_ZN3tvm3tir23GetTensorizeLoopMappingERKNS0_13ScheduleStateERKNS0_8StmtSRefERKNS0_8PrimFuncEb'/>
 <size>8</size>
 <use f='tvm/src/tir/schedule/analysis/layout.cc' l='128' c='_ZN3tvm3tir15SuggestIndexMapERKNS0_6BufferERKNS_7runtime5ArrayINS_8PrimExprEvEERKNS5_INS0_3ForEvEERKS6_PNS_5arith8AnalyzerE'/>
 <use f='tvm/src/tir/schedule/analysis/layout.cc' l='137' c='_ZN3tvm3tir15SuggestIndexMapERKNS0_6BufferERKNS_7runtime5ArrayINS_8PrimExprEvEERKNS5_INS0_3ForEvEERKS6_PNS_5arith8AnalyzerE'/>

@@ -1,5 +1,5 @@
-<dec f='tvm/src/tir/schedule/analysis.h' l='232' type='bool tvm::tir::IsAffineBinding(const tvm::tir::BlockRealize &amp; realize, const Map&lt;tvm::tir::Var, tvm::Range&gt; &amp; loop_var_ranges, arith::Analyzer * analyzer)'/>
-<doc f='tvm/src/tir/schedule/analysis.h' l='224'>/*!
+<dec f='tvm/src/tir/schedule/analysis.h' l='223' type='bool tvm::tir::IsAffineBinding(const tvm::tir::BlockRealize &amp; realize, const Map&lt;tvm::tir::Var, tvm::Range&gt; &amp; loop_var_ranges, arith::Analyzer * analyzer)'/>
+<doc f='tvm/src/tir/schedule/analysis.h' l='215'>/*!
  * \brief Verifies if the block binding in a specific BlockRealize is an affine binding.
  * The binding can be represented as an injective affine map from the loop iterators.
  * \param realize The BlockRealize to be analyzed
@@ -7,9 +7,9 @@
  * \param analyzer The analyzer
  * \return A boolean flag indicating if the binding is affine
  */</doc>
-<def f='tvm/src/tir/schedule/analysis/analysis.cc' l='574' ll='595' type='bool tvm::tir::IsAffineBinding(const tvm::tir::BlockRealize &amp; realize, const Map&lt;tvm::tir::Var, tvm::Range&gt; &amp; loop_var_ranges, arith::Analyzer * analyzer)'/>
-<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='644' u='c' c='_ZN3tvm3tir25CheckPartialAffineBindingERKNS0_13ScheduleStateENS0_5BlockERKNS_7runtime8OptionalINS0_8StmtSRefEEE'/>
-<doc f='tvm/src/tir/schedule/analysis/analysis.cc' l='572'>/******** Binding ********/</doc>
+<def f='tvm/src/tir/schedule/analysis/analysis.cc' l='533' ll='554' type='bool tvm::tir::IsAffineBinding(const tvm::tir::BlockRealize &amp; realize, const Map&lt;tvm::tir::Var, tvm::Range&gt; &amp; loop_var_ranges, arith::Analyzer * analyzer)'/>
+<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='603' u='c' c='_ZN3tvm3tir25CheckPartialAffineBindingERKNS0_13ScheduleStateENS0_5BlockERKNS_7runtime8OptionalINS0_8StmtSRefEEE'/>
+<doc f='tvm/src/tir/schedule/analysis/analysis.cc' l='531'>/******** Binding ********/</doc>
 <use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='288' u='c' c='_ZN3tvm3tir19CalculateAffineFlagERKNS0_13ScheduleStateERKNS0_8StmtSRefE'/>
 <use f='tvm/src/tir/schedule/primitive/compute_at.cc' l='642' u='c' c='_ZN3tvm3tir31ComputeAtOrReverseComputeAtImplENS0_13ScheduleStateERKNS0_8StmtSRefES4_bPNS_5arith8AnalyzerEbi'/>
 <use f='tvm/src/tir/schedule/state.cc' l='220' u='c' c='_ZN3tvm3tir18BlockInfoCollector13MakeBlockInfoENS0_8StmtSRefE'/>
