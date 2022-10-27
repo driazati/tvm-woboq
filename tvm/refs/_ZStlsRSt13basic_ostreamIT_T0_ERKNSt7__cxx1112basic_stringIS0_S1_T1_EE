@@ -1268,7 +1268,7 @@
 <use f='tvm/src/relay/op/nn/convolution.h' l='49' macro='1' u='c' c='_ZN3tvm5relay17Conv2DWinogradRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
 <use f='tvm/src/relay/qnn/utils.h' l='52' macro='1' u='c' c='_ZN3tvm5relay3qnnL7GetQminERKNS_7runtime8DataTypeE'/>
 <use f='tvm/src/relay/qnn/utils.h' l='65' macro='1' u='c' c='_ZN3tvm5relay3qnnL7GetQmaxERKNS_7runtime8DataTypeE'/>
-<use f='tvm/src/relay/qnn/utils.h' l='225' macro='1' u='c' c='_ZN3tvm5relay3qnnL12IsScalarTypeERKNS_4TypeERKNS_7runtime8DataTypeE'/>
+<use f='tvm/src/relay/qnn/utils.h' l='242' macro='1' u='c' c='_ZN3tvm5relay3qnnL12IsScalarTypeERKNS_4TypeERKNS_7runtime8DataTypeE'/>
 <use f='tvm/src/relay/op/contrib/ethosu/convolution.cc' l='44' macro='1' u='c' c='_ZN3tvm5relay2op7contrib6ethosu15EthosuConv2DRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
 <use f='tvm/src/relay/op/contrib/ethosu/depthwise.cc' l='43' macro='1' u='c' c='_ZN3tvm5relay2op7contrib6ethosu24EthosuDepthwiseConv2DRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
 <use f='tvm/src/relay/op/contrib/ethosu/identity.cc' l='39' macro='1' u='c' c='_ZN3tvm5relay2op7contrib6ethosu17EthosuIdentityRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
@@ -1645,6 +1645,12 @@
 <use f='tvm/src/relay/op/tensor/transform.cc' l='4203' macro='1' u='c' c='_ZN3tvm5relay9UniqueRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
 <use f='tvm/src/relay/op/tensor/transform.cc' l='4262' macro='1' u='c' c='_ZN3tvm5relay8TriluRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
 <use f='tvm/src/relay/op/tensor/transform.cc' l='4263' macro='1' u='c' c='_ZN3tvm5relay8TriluRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/src/relay/op/tensor/transform.cc' l='4311' macro='1' u='c' c='_ZN3tvm5relay28FixedPointMultiplyPerAxisRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/src/relay/op/tensor/transform.cc' l='4313' macro='1' u='c' c='_ZN3tvm5relay28FixedPointMultiplyPerAxisRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/src/relay/op/tensor/transform.cc' l='4350' macro='1' u='c' c='_ZN3tvm5relay43FixedPointMultiplyPerAxisInferCorrectLayoutERKNS_5AttrsERKNS_7runtime5ArrayINS_3tir6LayoutEvEESA_RKNS5_INS_4TypeEvEE'/>
+<use f='tvm/src/relay/op/tensor/transform.cc' l='4351' macro='1' u='c' c='_ZN3tvm5relay43FixedPointMultiplyPerAxisInferCorrectLayoutERKNS_5AttrsERKNS_7runtime5ArrayINS_3tir6LayoutEvEESA_RKNS5_INS_4TypeEvEE'/>
+<use f='tvm/src/relay/op/tensor/transform.cc' l='4381' macro='1' u='c' c='_ZN3tvm5relay43FixedPointMultiplyPerAxisInferCorrectLayoutERKNS_5AttrsERKNS_7runtime5ArrayINS_3tir6LayoutEvEESA_RKNS5_INS_4TypeEvEE'/>
+<use f='tvm/src/relay/op/tensor/transform.cc' l='4382' macro='1' u='c' c='_ZN3tvm5relay43FixedPointMultiplyPerAxisInferCorrectLayoutERKNS_5AttrsERKNS_7runtime5ArrayINS_3tir6LayoutEvEESA_RKNS5_INS_4TypeEvEE'/>
 <use f='tvm/src/relay/op/tensor/unary.cc' l='424' macro='1' u='c' c='_ZN3tvm5relay14ShapeOfComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
 <use f='tvm/src/relay/op/tensor/unary.cc' l='458' macro='1' u='c' c='_ZN3tvm5relay14NdarraySizeRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
 <use f='tvm/src/relay/op/tensor/unary.cc' l='473' macro='1' u='c' c='_ZN3tvm5relay18NdarraySizeComputeERKNS_5AttrsERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS_4TypeE'/>
@@ -1721,20 +1727,20 @@
 <use f='tvm/src/relay/qnn/op/requantize.cc' l='59' macro='1' u='c' c='_ZN3tvm5relay3qnn28RequantizeInferCorrectLayoutERKNS_5AttrsERKNS_7runtime5ArrayINS_3tir6LayoutEvEESB_RKNS6_INS_4TypeEvEE'/>
 <use f='tvm/src/relay/qnn/op/requantize.cc' l='60' macro='1' u='c' c='_ZN3tvm5relay3qnn28RequantizeInferCorrectLayoutERKNS_5AttrsERKNS_7runtime5ArrayINS_3tir6LayoutEvEESB_RKNS6_INS_4TypeEvEE'/>
 <use f='tvm/src/relay/qnn/op/requantize.cc' l='97' macro='1' u='c' c='_ZN3tvm5relay3qnn28RequantizeInferCorrectLayoutERKNS_5AttrsERKNS_7runtime5ArrayINS_3tir6LayoutEvEESB_RKNS6_INS_4TypeEvEE'/>
-<use f='tvm/src/relay/qnn/op/requantize.cc' l='419' macro='1' u='c' c='_ZN3tvm5relay3qnn25RequantizeQnnCanonicalizeERKNS_5AttrsERKNS_7runtime5ArrayINS_9RelayExprEvEERKNS6_INS_4TypeEvEE'/>
-<use f='tvm/src/relay/qnn/op/requantize.cc' l='436' macro='1' u='c' c='_ZN3tvm5relay3qnn25RequantizeQnnCanonicalizeERKNS_5AttrsERKNS_7runtime5ArrayINS_9RelayExprEvEERKNS6_INS_4TypeEvEE'/>
-<use f='tvm/src/relay/qnn/op/requantize.cc' l='464' macro='1' u='c' c='_ZN3tvm5relay3qnn13RequantizeRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
-<use f='tvm/src/relay/qnn/op/requantize.cc' l='486' macro='1' u='c' c='_ZN3tvm5relay3qnn13RequantizeRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
-<use f='tvm/src/relay/qnn/op/requantize.cc' l='487' macro='1' u='c' c='_ZN3tvm5relay3qnn13RequantizeRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/src/relay/qnn/op/requantize.cc' l='423' macro='1' u='c' c='_ZN3tvm5relay3qnn25RequantizeQnnCanonicalizeERKNS_5AttrsERKNS_7runtime5ArrayINS_9RelayExprEvEERKNS6_INS_4TypeEvEE'/>
+<use f='tvm/src/relay/qnn/op/requantize.cc' l='440' macro='1' u='c' c='_ZN3tvm5relay3qnn25RequantizeQnnCanonicalizeERKNS_5AttrsERKNS_7runtime5ArrayINS_9RelayExprEvEERKNS6_INS_4TypeEvEE'/>
+<use f='tvm/src/relay/qnn/op/requantize.cc' l='468' macro='1' u='c' c='_ZN3tvm5relay3qnn13RequantizeRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/src/relay/qnn/op/requantize.cc' l='490' macro='1' u='c' c='_ZN3tvm5relay3qnn13RequantizeRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
+<use f='tvm/src/relay/qnn/op/requantize.cc' l='491' macro='1' u='c' c='_ZN3tvm5relay3qnn13RequantizeRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
 <use f='tvm/src/relay/qnn/op/requantize_config.cc' l='77' u='c'/>
 <use f='tvm/src/relay/qnn/op/requantize_config.cc' l='78' u='c'/>
 <use f='tvm/src/relay/qnn/op/simulated_dequantize.cc' l='40' macro='1' u='c' c='_ZN3tvm5relay3qnn22SimulatedDequantizeRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
 <use f='tvm/src/relay/qnn/op/simulated_quantize.cc' l='42' macro='1' u='c' c='_ZN3tvm5relay3qnn20SimulatedQuantizeRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
 <use f='tvm/src/relay/qnn/utils.cc' l='49' macro='1' u='c' c='_ZN3tvm5relay3qnn28GetFixedPointMultiplierShiftEd'/>
 <use f='tvm/src/relay/qnn/utils.cc' l='54' macro='1' u='c' c='_ZN3tvm5relay3qnn28GetFixedPointMultiplierShiftEd'/>
-<use f='tvm/src/relay/qnn/utils.cc' l='186' u='c' c='_ZN3tvm5relay3qnn28FixedPointMultiplyPerChannelENS_9RelayExprESt6vectorIdSaIdEERKNS_7runtime5ArrayINS_8PrimExprEvEEiRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
-<use f='tvm/src/relay/qnn/utils.cc' l='210' u='c' c='_ZN3tvm5relay3qnn24SelectRequntizeParameterERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES9_bS9_'/>
-<use f='tvm/src/relay/qnn/utils.cc' l='206' u='c' c='_ZN3tvm5relay3qnn24SelectRequntizeParameterERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES9_bS9_'/>
+<use f='tvm/src/relay/qnn/utils.cc' l='212' u='c' c='_ZN3tvm5relay3qnn28FixedPointMultiplyPerChannelENS_9RelayExprESt6vectorIdSaIdEERKNS_7runtime5ArrayINS_8PrimExprEvEEiRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<use f='tvm/src/relay/qnn/utils.cc' l='241' u='c' c='_ZN3tvm5relay3qnn24SelectRequntizeParameterERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES9_bS9_'/>
+<use f='tvm/src/relay/qnn/utils.cc' l='237' u='c' c='_ZN3tvm5relay3qnn24SelectRequntizeParameterERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES9_bS9_'/>
 <use f='tvm/src/relay/quantize/quantize.cc' l='42' macro='1' u='c' c='_ZN3tvm5relay8quantize20SimulatedQuantizeRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
 <use f='tvm/src/relay/quantize/quantize.cc' l='52' macro='1' u='c' c='_ZN3tvm5relay8quantize20SimulatedQuantizeRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
 <use f='tvm/src/relay/quantize/quantize.cc' l='125' u='c'/>
@@ -2013,7 +2019,7 @@
 <use f='tvm/src/relay/transforms/to_basic_block_normal_form.cc' l='50' macro='1' u='c' c='_ZN3tvm5relay22ToBasicBlockNormalFormERKNS_8IRModuleE'/>
 <use f='tvm/src/relay/transforms/to_cps.cc' l='313' macro='1' u='c' c='_ZN3tvm5relay5UnCPSERKNS0_8FunctionE'/>
 <use f='tvm/src/relay/transforms/to_cps.cc' l='320' macro='1' u='c' c='_ZN3tvm5relay5UnCPSERKNS0_8FunctionE'/>
-<use f='tvm/src/relay/transforms/to_mixed_precision.cc' l='488' u='c' c='_ZN3tvm5relay16ToMixedPrecisionERKNS_9RelayExprEbRKNS_7runtime8DataTypeEi'/>
+<use f='tvm/src/relay/transforms/to_mixed_precision.cc' l='492' u='c' c='_ZN3tvm5relay16ToMixedPrecisionERKNS_9RelayExprEbRKNS_7runtime8DataTypeEi'/>
 <use f='tvm/src/relay/transforms/type_infer.cc' l='64' macro='1' u='c' c='_ZN3tvm5relay15TupleGetItemRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
 <use f='tvm/src/relay/transforms/type_infer.cc' l='71' macro='1' u='c' c='_ZN3tvm5relay15TupleGetItemRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
 <use f='tvm/src/relay/transforms/type_infer.cc' l='72' macro='1' u='c' c='_ZN3tvm5relay15TupleGetItemRelERKNS_7runtime5ArrayINS_4TypeEvEEiRKNS_5AttrsERKNS_12TypeReporterE'/>
