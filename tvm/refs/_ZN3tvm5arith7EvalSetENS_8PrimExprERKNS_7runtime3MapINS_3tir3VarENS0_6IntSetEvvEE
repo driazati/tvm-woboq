@@ -1,5 +1,16 @@
+<dec f='tvm/include/tvm/arith/int_set.h' l='180' type='tvm::arith::IntSet tvm::arith::EvalSet(tvm::PrimExpr e, const Map&lt;tvm::tir::Var, tvm::arith::IntSet&gt; &amp; dom_map)'/>
+<doc f='tvm/include/tvm/arith/int_set.h' l='172'>/*!
+ * \brief Find an symbolic integer set that contains all possible values of
+ *  e given the domain of each variables.
+ *
+ * \param e The expression to be evaluated.
+ * \param dom_map The domain of each variable.
+ * \return An integer set that can cover all the possible values of e.
+ */</doc>
 <def f='tvm/src/arith/int_set.cc' l='939' ll='942' type='tvm::arith::IntSet tvm::arith::EvalSet(tvm::PrimExpr e, const Map&lt;tvm::tir::Var, tvm::arith::IntSet&gt; &amp; dom_map)'/>
 <use f='tvm/src/arith/int_set.cc' l='951' u='c' c='_ZN3tvm5arith7EvalSetENS_8PrimExprERKNS_7runtime3MapINS_3tir7IterVarENS0_6IntSetEvvEE'/>
 <use f='tvm/src/arith/int_set.cc' l='955' u='c' c='_ZN3tvm5arith7EvalSetENS_8PrimExprERKSt13unordered_mapIPKNS_3tir7VarNodeENS0_6IntSetESt4hashIS6_ESt8equal_toIS6_ESaISt4pairIKS6_S7_EEE'/>
 <use f='tvm/src/arith/int_set.cc' l='961' u='c' c='_ZN3tvm5arith7EvalSetENS_5RangeERKNS_7runtime3MapINS_3tir3VarENS0_6IntSetEvvEE'/>
 <use f='tvm/src/arith/int_set.cc' l='1129' u='c' c='_ZN3tvm5arith24EstimateRegionUpperBoundERKNS_7runtime5ArrayINS_5RangeEvEERKNS1_3MapINS_3tir3VarES3_vvEERKNS_8PrimExprEPNS0_8AnalyzerE'/>
+<use f='tvm/src/tir/schedule/primitive/cache_index.cc' l='219' u='c' c='_ZN3tvm3tir19MakeIndexCacheStageEPNS0_9IndexInfoE'/>
+<use f='tvm/src/tir/schedule/primitive/cache_index.cc' l='226' u='c' c='_ZN3tvm3tir19MakeIndexCacheStageEPNS0_9IndexInfoE'/>

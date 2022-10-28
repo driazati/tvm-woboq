@@ -79,19 +79,19 @@
 <use f='tvm/src/tir/ir/stmt.cc' l='185'/>
 <size>8</size>
 <fun r='_ZN3tvm3tir3ForC1ENS0_3VarENS_8PrimExprES3_NS0_7ForKindENS0_4StmtENS_7runtime8OptionalINS0_7IterVarEEENS6_3MapINS6_6StringENS6_9ObjectRefEvvEENS_4SpanE'/>
-<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='726' c='_ZZN3tvm3tir23CheckLoopStartsWithZeroERKNS0_13ScheduleStateERKNS0_8StmtSRefEPNS_5arith8AnalyzerEEN25LoopNotStartWithZeroErrorC1ENS_8IRModuleENS0_3ForE'/>
-<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='741' c='_ZN3tvm3tir23CheckLoopStartsWithZeroERKNS0_13ScheduleStateERKNS0_8StmtSRefEPNS_5arith8AnalyzerE'/>
-<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='745' c='_ZN3tvm3tir23CheckLoopStartsWithZeroERKNS0_13ScheduleStateERKNS0_8StmtSRefEPNS_5arith8AnalyzerE'/>
-<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='1800' c='_ZN3tvm3tir23GetTensorizeLoopMappingERKNS0_13ScheduleStateERKNS0_8StmtSRefERKNS0_8PrimFuncEb'/>
-<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='1806' c='_ZN3tvm3tir23GetTensorizeLoopMappingERKNS0_13ScheduleStateERKNS0_8StmtSRefERKNS0_8PrimFuncEb'/>
+<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='727' c='_ZZN3tvm3tir23CheckLoopStartsWithZeroERKNS0_13ScheduleStateERKNS0_8StmtSRefEPNS_5arith8AnalyzerEEN25LoopNotStartWithZeroErrorC1ENS_8IRModuleENS0_3ForE'/>
+<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='742' c='_ZN3tvm3tir23CheckLoopStartsWithZeroERKNS0_13ScheduleStateERKNS0_8StmtSRefEPNS_5arith8AnalyzerE'/>
+<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='746' c='_ZN3tvm3tir23CheckLoopStartsWithZeroERKNS0_13ScheduleStateERKNS0_8StmtSRefEPNS_5arith8AnalyzerE'/>
+<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='1801' c='_ZN3tvm3tir23GetTensorizeLoopMappingERKNS0_13ScheduleStateERKNS0_8StmtSRefERKNS0_8PrimFuncEb'/>
+<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='1807' c='_ZN3tvm3tir23GetTensorizeLoopMappingERKNS0_13ScheduleStateERKNS0_8StmtSRefERKNS0_8PrimFuncEb'/>
 <size>8</size>
 <use f='tvm/src/tir/schedule/analysis/layout.cc' l='128' c='_ZN3tvm3tir15SuggestIndexMapERKNS0_6BufferERKNS_7runtime5ArrayINS_8PrimExprEvEERKNS5_INS0_3ForEvEERKS6_PNS_5arith8AnalyzerE'/>
 <use f='tvm/src/tir/schedule/analysis/layout.cc' l='137' c='_ZN3tvm3tir15SuggestIndexMapERKNS0_6BufferERKNS_7runtime5ArrayINS_8PrimExprEvEERKNS5_INS0_3ForEvEERKS6_PNS_5arith8AnalyzerE'/>
 <use f='tvm/src/tir/schedule/analysis/layout.cc' l='242'/>
 <size>8</size>
 <use f='tvm/src/tir/schedule/concrete_schedule.h' l='75' c='_ZNK3tvm3tir20ConcreteScheduleNode3GetERKNS0_6LoopRVE'/>
-<use f='tvm/src/tir/schedule/concrete_schedule.h' l='216' c='_ZNK3tvm3tir20ConcreteScheduleNode3GetERKNS0_6LoopRVE'/>
-<use f='tvm/src/tir/schedule/concrete_schedule.h' l='219' c='_ZNK3tvm3tir20ConcreteScheduleNode3GetERKNS0_6LoopRVE'/>
+<use f='tvm/src/tir/schedule/concrete_schedule.h' l='217' c='_ZNK3tvm3tir20ConcreteScheduleNode3GetERKNS0_6LoopRVE'/>
+<use f='tvm/src/tir/schedule/concrete_schedule.h' l='220' c='_ZNK3tvm3tir20ConcreteScheduleNode3GetERKNS0_6LoopRVE'/>
 <use f='tvm/src/tir/schedule/concrete_schedule.cc' l='391' c='_ZZN3tvm3tir20ConcreteScheduleNode5SplitERKNS0_6LoopRVERKNS_7runtime5ArrayINS5_8OptionalINS_8PrimExprEEEvEEbEN23WrongFactorProductErrorC1ENS_8IRModuleENS0_3ForE'/>
 <use f='tvm/src/tir/schedule/concrete_schedule.cc' l='406' c='_ZN3tvm3tir20ConcreteScheduleNode5SplitERKNS0_6LoopRVERKNS_7runtime5ArrayINS5_8OptionalINS_8PrimExprEEEvEEb'/>
 <use f='tvm/src/tir/schedule/concrete_schedule.cc' l='466' c='_ZN3tvm3tir20ConcreteScheduleNode5SplitERKNS0_6LoopRVERKNS_7runtime5ArrayINS5_8OptionalINS_8PrimExprEEEvEEb'/>
@@ -104,6 +104,8 @@
 <use f='tvm/src/tir/schedule/primitive/blockize_tensorize.cc' l='334' c='_ZN3tvm3tir17GenerateOuterInitERKNS0_4StmtERKNS0_12BlockRealizeERKSt6vectorIPKNS0_7ForNodeESaISA_EENS_7runtime6StringE'/>
 <use f='tvm/src/tir/schedule/primitive/blockize_tensorize.cc' l='422' c='_ZN3tvm3tir12MakeLoopNestENS0_4StmtERKSt6vectorIPKNS0_7ForNodeESaIS5_EE'/>
 <use f='tvm/src/tir/schedule/primitive/blockize_tensorize.cc' l='439' c='_ZN3tvm3tir12BlockizeImplERKNS0_13ScheduleStateERKNS0_8StmtSRefEPNS_7runtime3MapINS0_5BlockES9_vvEEPNS_5arith8AnalyzerE'/>
+<size>8</size>
+<use f='tvm/src/tir/schedule/primitive/cache_index.cc' l='287' c='_ZN3tvm3tir19MakeIndexCacheStageEPNS0_9IndexInfoE'/>
 <size>8</size>
 <use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='157' c='_ZN3tvm3tir14MakeCacheStageERKNS0_12BufferRegionEPNS0_14CacheStageInfoERKNS_7runtime6StringE'/>
 <use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='267' c='_ZN3tvm3tir16MakeReIndexStageERKNS0_5BlockEPNS0_14CacheStageInfoERKSt13unordered_setINS0_3VarENS_7runtime13ObjectPtrHashENS8_14ObjectPtrEqualESaIS7_EE4253367'/>

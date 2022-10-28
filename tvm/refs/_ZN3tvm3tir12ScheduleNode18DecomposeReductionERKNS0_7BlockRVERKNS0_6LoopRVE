@@ -1,5 +1,5 @@
-<dec f='tvm/include/tvm/tir/schedule/schedule.h' l='512' type='tvm::tir::BlockRV tvm::tir::ScheduleNode::DecomposeReduction(const tvm::tir::BlockRV &amp; block_rv, const tvm::tir::LoopRV &amp; loop_rv)'/>
-<doc f='tvm/include/tvm/tir/schedule/schedule.h' l='497'>/*!
+<dec f='tvm/include/tvm/tir/schedule/schedule.h' l='520' type='tvm::tir::BlockRV tvm::tir::ScheduleNode::DecomposeReduction(const tvm::tir::BlockRV &amp; block_rv, const tvm::tir::LoopRV &amp; loop_rv)'/>
+<doc f='tvm/include/tvm/tir/schedule/schedule.h' l='505'>/*!
    * \brief Decompose a reduction block into two separate blocks.
    * a) The init block, which is translated from the init statement of the reduction block;
    * b) The update block, which is the original block without init statement.
@@ -15,6 +15,6 @@
    * \return The init block
    */</doc>
 <use f='tvm/src/meta_schedule/postproc/rewrite_reduction_block.cc' l='142' u='c' c='_ZN3tvm13meta_schedule25RewriteReductionBlockNode5ApplyERKNS_3tir8ScheduleE'/>
-<ovr f='tvm/src/tir/schedule/concrete_schedule.cc' l='661' c='_ZN3tvm3tir20ConcreteScheduleNode18DecomposeReductionERKNS0_7BlockRVERKNS0_6LoopRVE'/>
+<ovr f='tvm/src/tir/schedule/concrete_schedule.cc' l='674' c='_ZN3tvm3tir20ConcreteScheduleNode18DecomposeReductionERKNS0_7BlockRVERKNS0_6LoopRVE'/>
 <use f='tvm/src/tir/schedule/primitive/reduction.cc' l='1286' u='c' c='_ZN3tvm3tir24DecomposeReductionTraits23UnpackedApplyToScheduleENS0_8ScheduleENS0_7BlockRVENS0_6LoopRVE'/>
-<use f='tvm/src/tir/schedule/schedule.cc' l='200' u='a'/>
+<use f='tvm/src/tir/schedule/schedule.cc' l='202' u='a'/>
