@@ -1,13 +1,14 @@
-<def f='tvm/include/tvm/runtime/logging.h' l='379' ll='391'/>
+<def f='tvm/include/tvm/runtime/logging.h' l='382' ll='395'/>
 <size>376</size>
-<doc f='tvm/include/tvm/runtime/logging.h' l='375'>/*!
+<doc f='tvm/include/tvm/runtime/logging.h' l='378'>/*!
  * \brief Class to accumulate an log message. Do not use directly, instead use
  * LOG(INFO), LOG(WARNING), LOG(ERROR).
  */</doc>
-<fun r='_ZN3tvm7runtime6detail10LogMessageC1ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEi'/>
+<fun r='_ZN3tvm7runtime6detail10LogMessageC1ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEii'/>
 <fun r='_ZN3tvm7runtime6detail10LogMessageD1Ev'/>
 <fun r='_ZN3tvm7runtime6detail10LogMessage6streamB5cxx11Ev'/>
 <mbr r='tvm::runtime::detail::LogMessage::stream_' o='0' t='std::ostringstream'/>
+<smbr r='tvm::runtime::detail::LogMessage::level_strings_' t='const char *[]'/>
 <use f='tvm/src/arith/const_fold.h' l='102' macro='1' c='_ZN3tvm5arith23GetFoldResultDoubleReprEf'/>
 <use f='tvm/src/arith/const_fold.h' l='105' macro='1' c='_ZN3tvm5arith23GetFoldResultDoubleReprEf'/>
 <size>376</size>
@@ -62,10 +63,10 @@
 <size>376</size>
 <use f='tvm/src/relay/transforms/let_list.h' l='54' macro='1' c='_ZN3tvm5relay7LetListD1Ev'/>
 <use f='tvm/src/meta_schedule/utils.h' l='96' c='_ZN3tvm13meta_schedule12PyLogMessageD1Ev'/>
-<use f='tvm/src/meta_schedule/utils.h' l='98' c='_ZN3tvm13meta_schedule12PyLogMessageD1Ev'/>
-<use f='tvm/src/meta_schedule/utils.h' l='100' c='_ZN3tvm13meta_schedule12PyLogMessageD1Ev'/>
+<use f='tvm/src/meta_schedule/utils.h' l='99' c='_ZN3tvm13meta_schedule12PyLogMessageD1Ev'/>
 <use f='tvm/src/meta_schedule/utils.h' l='102' c='_ZN3tvm13meta_schedule12PyLogMessageD1Ev'/>
-<use f='tvm/src/meta_schedule/utils.h' l='154' c='_ZN3tvm13meta_schedule13clear_loggingEPKciNS_7runtime10PackedFuncE'/>
+<use f='tvm/src/meta_schedule/utils.h' l='105' c='_ZN3tvm13meta_schedule12PyLogMessageD1Ev'/>
+<use f='tvm/src/meta_schedule/utils.h' l='158' c='_ZN3tvm13meta_schedule13clear_loggingEPKciNS_7runtime10PackedFuncE'/>
 <size>376</size>
 <use f='tvm/src/meta_schedule/database/database_utils.cc' l='168' macro='1' c='_ZN3tvm13meta_schedule13JSONTokenizer10NextNumberEPNS1_5TokenE'/>
 <use f='tvm/src/meta_schedule/database/database_utils.cc' l='172' macro='1' c='_ZN3tvm13meta_schedule13JSONTokenizer10NextNumberEPNS1_5TokenE'/>
@@ -550,9 +551,10 @@
 <size>376</size>
 <use f='tvm/src/runtime/graph_executor/graph_executor_factory.cc' l='223' macro='1' c='_ZN3tvm7runtime35GraphRuntimeFactoryModuleLoadBinaryEPv'/>
 <size>376</size>
-<use f='tvm/src/runtime/logging.cc' l='263' macro='1' c='_ZN3tvm7runtime6detail19TvmLogDebugSettings9ParseSpecEPKc'/>
-<use f='tvm/src/runtime/logging.cc' l='301' macro='1' c='_ZN3tvm7runtime6detail19TvmLogDebugSettings9ParseSpecEPKc'/>
+<use f='tvm/src/runtime/logging.cc' l='270' macro='1' c='_ZN3tvm7runtime6detail19TvmLogDebugSettings9ParseSpecEPKc'/>
+<use f='tvm/src/runtime/logging.cc' l='308' macro='1' c='_ZN3tvm7runtime6detail19TvmLogDebugSettings9ParseSpecEPKc'/>
 <size>376</size>
+<smbr r='tvm::runtime::detail::LogMessage::level_strings_' t='const char *[4]'/>
 <use f='tvm/src/runtime/micro/micro_session.cc' l='328' macro='1' c='_ZN3tvm7runtime9micro_rpc21MicroTransportChannel22ConsumeReceivedPayloadENS0_15TypedPackedFuncIFbvEEE'/>
 <use f='tvm/src/runtime/micro/micro_session.cc' l='370' macro='1' c='_ZN3tvm7runtime9micro_rpc21MicroTransportChannel21HandleMessageReceivedENS1_11MessageTypeEPNS1_11FrameBufferE'/>
 <use f='tvm/src/runtime/micro/micro_session.cc' l='377' macro='1' c='_ZN3tvm7runtime9micro_rpc21MicroTransportChannel21HandleMessageReceivedENS1_11MessageTypeEPNS1_11FrameBufferE'/>

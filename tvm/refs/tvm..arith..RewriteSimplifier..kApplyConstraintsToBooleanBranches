@@ -1,0 +1,15 @@
+<dec f='tvm/include/tvm/arith/analyzer.h' l='320' type='4'/>
+<doc f='tvm/include/tvm/arith/analyzer.h' l='309'>/* When simplifying a boolean AND or a boolean OR, simplify each
+     * branch under the assumption that the other branch does not
+     * already dominate the result.  That is, simplify each branch of
+     * (A &amp;&amp; B) under the assumption that the other branch is true,
+     * and simplify each branch of (A || B) under the assumption that
+     * the other branch is false.
+     *
+     * Example:
+     *   (n &lt; 10) &amp;&amp; (n &lt; 5) =&gt; (n &lt; 10)
+     *   (n &lt; 10) || (n &lt; 5) =&gt; (n &lt; 5)
+     */</doc>
+<use f='tvm/src/arith/rewrite_simplify.cc' l='1596' u='r' c='_ZN3tvm5arith17RewriteSimplifier4Impl10VisitExpr_EPKNS_3tir7AndNodeE'/>
+<use f='tvm/src/arith/rewrite_simplify.cc' l='1685' u='r' c='_ZN3tvm5arith17RewriteSimplifier4Impl10VisitExpr_EPKNS_3tir6OrNodeE'/>
+<use f='tvm/src/tir/transforms/simplify.cc' l='72' u='r' c='_ZNK3tvm5arith18SimplifyConfigNode20GetEnabledExtensionsEv'/>
