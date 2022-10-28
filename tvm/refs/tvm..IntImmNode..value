@@ -533,9 +533,9 @@
 <use f='tvm/src/ir/expr.cc' l='113' u='r'/>
 <use f='tvm/src/ir/expr.cc' l='115' u='r'/>
 <use f='tvm/src/tir/schedule/instruction_traits.h' l='438' u='r' c='_ZN3tvm3tir13PythonAPICall14AsPythonStringERKNS_7runtime9ObjectRefERSo'/>
-<use f='tvm/src/tir/schedule/utils.h' l='306' u='r' c='_ZN3tvm3tir19AnalyzeVarWithShiftERKNS_8PrimExprEPNS_7runtime8OptionalINS_6IntImmEEE'/>
-<use f='tvm/src/meta_schedule/utils.h' l='419' u='r' c='_ZN3tvm13meta_schedule12AsFloatArrayERKNS_7runtime9ObjectRefE'/>
-<use f='tvm/src/meta_schedule/utils.h' l='441' u='r' c='_ZN3tvm13meta_schedule10AsIntArrayERKNS_7runtime9ObjectRefE'/>
+<use f='tvm/src/tir/schedule/utils.h' l='308' u='r' c='_ZN3tvm3tir19AnalyzeVarWithShiftERKNS_8PrimExprEPNS_7runtime8OptionalINS_6IntImmEEE'/>
+<use f='tvm/src/meta_schedule/utils.h' l='420' u='r' c='_ZN3tvm13meta_schedule12AsFloatArrayERKNS_7runtime9ObjectRefE'/>
+<use f='tvm/src/meta_schedule/utils.h' l='442' u='r' c='_ZN3tvm13meta_schedule10AsIntArrayERKNS_7runtime9ObjectRefE'/>
 <use f='tvm/src/meta_schedule/database/database_utils.cc' l='34' u='r' c='_ZN3tvm13meta_schedule9JSONDumpsENS_7runtime9ObjectRefERNSt7__cxx1119basic_ostringstreamIcSt11char_traitsIcESaIcEEE'/>
 <use f='tvm/src/meta_schedule/database/database_utils.cc' l='40' u='r' c='_ZN3tvm13meta_schedule9JSONDumpsENS_7runtime9ObjectRefERNSt7__cxx1119basic_ostringstreamIcSt11char_traitsIcESaIcEEE'/>
 <use f='tvm/src/meta_schedule/feature_extractor/per_store_feature.cc' l='67' u='r' c='_ZN3tvm3tir5utils14GetBufferShapeERKNS0_6BufferEPNS_5arith8AnalyzerE'/>
@@ -574,6 +574,7 @@
 <use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling.cc' l='85' u='r' c='_ZN3tvm13meta_schedule20MultiLevelTilingNode25InitializeWithTuneContextERKNS0_11TuneContextE'/>
 <use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling_tensor_core.cc' l='321' u='r' c='_ZNK3tvm13meta_schedule30MultiLevelTilingTensorCoreNode19AddSoftwarePipelineENS0_15TensorCoreStateE'/>
 <use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling_wide_vector.cc' l='117' u='r' c='_ZN3tvm13meta_schedule12ScheduleRule26MultiLevelTilingWideVectorENS_7runtime6StringENS_7IntegerENS2_8OptionalIS4_EENS5_INS2_3MapIS3_NS2_9ObjectRefEvvEEEESA_'/>
+<use f='tvm/src/meta_schedule/trace_apply.cc' l='226' u='r' c='_ZN3tvm13meta_schedule24ScheduleUsingAnchorTraceENS_3tir8ScheduleERKNS1_5TraceERKNS_6TargetE'/>
 <use f='tvm/src/printer/relay_text_printer.cc' l='785' u='r' c='_ZN3tvm5relay16RelayTextPrinter10VisitAttr_EPKNS_10IntImmNodeE'/>
 <use f='tvm/src/printer/tir_text_printer.cc' l='298' u='r' c='_ZN3tvm3tir14TIRTextPrinter10VisitExpr_EPKNS_10IntImmNodeE'/>
 <use f='tvm/src/printer/tir_text_printer.cc' l='427' u='r' c='_ZN3tvm3tir14TIRTextPrinter10VisitExpr_EPKNS0_8CallNodeE'/>
@@ -620,7 +621,7 @@
 <use f='tvm/src/relay/backend/interpreter.cc' l='746' u='r' c='_ZN3tvm5relay11Interpreter10VisitExpr_EPKNS0_8CallNodeE'/>
 <use f='tvm/src/relay/backend/interpreter.cc' l='752' u='r' c='_ZN3tvm5relay11Interpreter10VisitExpr_EPKNS0_8CallNodeE'/>
 <use f='tvm/src/relay/backend/te_compiler.cc' l='1149' u='r' c='_ZN3tvm5relay3tec22UpdateFunctionMetadataENS_8BaseFuncERNS_7runtime3MapINS3_6StringENS0_7backend12FunctionInfoEvvEENS_7IntegerE'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='971' u='r' c='_ZN3tvm5relay3tec13MakeShapeFunc10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='987' u='r' c='_ZN3tvm5relay3tec13MakeShapeFunc10VisitExpr_EPKNS0_8CallNodeE'/>
 <use f='tvm/src/relay/collage/gather_partition_specs.cc' l='68' u='r' c='_ZN3tvm5relay7collage12_GLOBAL__N_111GetMaxDepthENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
 <use f='tvm/src/relay/collage/gather_partition_specs.cc' l='70' u='r' c='_ZN3tvm5relay7collage12_GLOBAL__N_111GetMaxDepthENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
 <use f='tvm/src/relay/collage/mock_cost_estimator.cc' l='84' u='r' c='_ZNK3tvm5relay7collage21MockCostEstimatorNode8EstimateERKNS_8IRModuleERKNS_6TargetE'/>
@@ -945,14 +946,14 @@
 <use f='tvm/src/tir/schedule/primitive/block_annotate.cc' l='343' u='r' c='_ZN3tvm3tir14SetScopeTraits23UnpackedApplyToScheduleENS0_8ScheduleENS0_7BlockRVENS_7IntegerENS_7runtime6StringE'/>
 <use f='tvm/src/tir/schedule/primitive/cache_index.cc' l='466' u='r' c='_ZN3tvm3tir16CacheIndexTraits23UnpackedApplyToScheduleENS0_8ScheduleENS0_7BlockRVENS_7IntegerE'/>
 <use f='tvm/src/tir/schedule/primitive/cache_index.cc' l='472' u='r' c='_ZN3tvm3tir16CacheIndexTraits16UnpackedAsPythonENS_7runtime5ArrayINS2_6StringEvEES4_NS_7IntegerE'/>
-<use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='1437' u='r' c='_ZN3tvm3tir15CacheReadTraits23UnpackedApplyToScheduleENS0_8ScheduleENS0_7BlockRVENS_7runtime5ArrayIS3_vEENS_7IntegerENS4_6StringE'/>
-<use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='1444' u='r' c='_ZN3tvm3tir15CacheReadTraits16UnpackedAsPythonENS_7runtime5ArrayINS2_6StringEvEES4_S5_NS_7IntegerES4_'/>
-<use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='1469' u='r' c='_ZN3tvm3tir16CacheWriteTraits23UnpackedApplyToScheduleENS0_8ScheduleENS0_7BlockRVENS_7IntegerENS_7runtime6StringE'/>
-<use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='1476' u='r' c='_ZN3tvm3tir16CacheWriteTraits16UnpackedAsPythonENS_7runtime5ArrayINS2_6StringEvEES4_NS_7IntegerES4_'/>
-<use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='1497' u='r' c='_ZN3tvm3tir18CacheInplaceTraits23UnpackedApplyToScheduleENS0_8ScheduleENS0_7BlockRVENS_7IntegerENS_7runtime6StringE'/>
-<use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='1504' u='r' c='_ZN3tvm3tir18CacheInplaceTraits16UnpackedAsPythonENS_7runtime5ArrayINS2_6StringEvEES4_NS_7IntegerES4_'/>
-<use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='1526' u='r' c='_ZN3tvm3tir13ReIndexTraits23UnpackedApplyToScheduleENS0_8ScheduleENS0_7BlockRVENS_7IntegerES4_'/>
-<use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='1534' u='r' c='_ZN3tvm3tir13ReIndexTraits16UnpackedAsPythonENS_7runtime5ArrayINS2_6StringEvEES4_NS_7IntegerES6_'/>
+<use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='1442' u='r' c='_ZN3tvm3tir15CacheReadTraits23UnpackedApplyToScheduleENS0_8ScheduleENS0_7BlockRVENS_7runtime5ArrayIS3_vEENS_7IntegerENS4_6StringE'/>
+<use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='1449' u='r' c='_ZN3tvm3tir15CacheReadTraits16UnpackedAsPythonENS_7runtime5ArrayINS2_6StringEvEES4_S5_NS_7IntegerES4_'/>
+<use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='1474' u='r' c='_ZN3tvm3tir16CacheWriteTraits23UnpackedApplyToScheduleENS0_8ScheduleENS0_7BlockRVENS_7IntegerENS_7runtime6StringE'/>
+<use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='1481' u='r' c='_ZN3tvm3tir16CacheWriteTraits16UnpackedAsPythonENS_7runtime5ArrayINS2_6StringEvEES4_NS_7IntegerES4_'/>
+<use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='1502' u='r' c='_ZN3tvm3tir18CacheInplaceTraits23UnpackedApplyToScheduleENS0_8ScheduleENS0_7BlockRVENS_7IntegerENS_7runtime6StringE'/>
+<use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='1509' u='r' c='_ZN3tvm3tir18CacheInplaceTraits16UnpackedAsPythonENS_7runtime5ArrayINS2_6StringEvEES4_NS_7IntegerES4_'/>
+<use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='1531' u='r' c='_ZN3tvm3tir13ReIndexTraits23UnpackedApplyToScheduleENS0_8ScheduleENS0_7BlockRVENS_7IntegerES4_'/>
+<use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='1539' u='r' c='_ZN3tvm3tir13ReIndexTraits16UnpackedAsPythonENS_7runtime5ArrayINS2_6StringEvEES4_NS_7IntegerES6_'/>
 <use f='tvm/src/tir/schedule/primitive/compute_at.cc' l='699' u='r' c='_ZN3tvm3tir15ComputeAtTraits23UnpackedApplyToScheduleENS0_8ScheduleENS0_7BlockRVENS0_6LoopRVENS_4BoolENS_6IntImmE'/>
 <use f='tvm/src/tir/schedule/primitive/compute_at.cc' l='728' u='r' c='_ZN3tvm3tir22ReverseComputeAtTraits23UnpackedApplyToScheduleENS0_8ScheduleENS0_7BlockRVENS0_6LoopRVENS_4BoolENS_6IntImmE'/>
 <use f='tvm/src/tir/schedule/primitive/layout_transformation.cc' l='1362' u='r' c='_ZN3tvm3tir21TransformLayoutTraits23UnpackedApplyToScheduleENS0_8ScheduleENS0_7BlockRVENS_7IntegerES4_NS0_8IndexMapENS_7runtime8OptionalIS5_EE'/>

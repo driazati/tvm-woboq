@@ -8,6 +8,7 @@
 <use f='tvm/src/arith/domain_touched.cc' l='63' u='c' c='_ZN3tvm5arith19BufferTouchedDomainC1ERKNS_3tir4StmtE'/>
 <use f='tvm/src/auto_scheduler/feature.cc' l='1117' u='c' c='_ZN3tvm14auto_scheduler18GetPerStoreFeatureERKNS_3tir8PrimFuncEiiPSt6vectorIfSaIfEEb'/>
 <use f='tvm/src/autotvm/touch_extractor.h' l='86' u='c' c='_ZN3tvm7autotvm14TouchExtractor7AnalyzeERKNS_3tir4StmtE'/>
+<use f='tvm/src/tir/schedule/utils.h' l='461' u='c' c='_ZN3tvm3tir13GetBlockNamesB5cxx11ERKNS_8IRModuleE'/>
 <use f='tvm/src/meta_schedule/feature_extractor/per_store_feature.cc' l='1195' u='c' c='_ZN3tvm3tir6group626WorkloadEmbeddingExtractor7ExtractERKNS_8IRModuleE'/>
 <use f='tvm/src/meta_schedule/feature_extractor/per_store_feature.cc' l='1267' u='c' c='_ZN3tvm3tir24PerStoreFeatureCollector7CollectEbllRKNS_8IRModuleE'/>
 <use f='tvm/src/meta_schedule/postproc/disallow_dynamic_loop.cc' l='32' u='c' c='_ZN3tvm3tir19DynamicExtentFinder4FindERKNS_8IRModuleE'/>
@@ -15,7 +16,7 @@
 <use f='tvm/src/meta_schedule/postproc/rewrite_layout.cc' l='160' u='c' c='_ZN3tvm3tir13RewriteLayoutERKNS0_8ScheduleE'/>
 <use f='tvm/src/meta_schedule/postproc/rewrite_reduction_block.cc' l='35' u='c' c='_ZN3tvm3tir20ReductionBlockFinder4FindERKNS0_13ScheduleStateE'/>
 <use f='tvm/src/meta_schedule/postproc/rewrite_unbound_block.cc' l='35' u='c' c='_ZN3tvm3tir18UnboundBlockFinder4FindERKNS0_13ScheduleStateE'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='531' u='c' c='_ZN3tvm5relay3tec15ScheduleBuilder6CreateERKNS0_8FunctionENS_15GlobalVarSupplyE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='536' u='c' c='_ZN3tvm5relay3tec15ScheduleBuilder6CreateERKNS0_8FunctionENS_15GlobalVarSupplyE'/>
 <use f='tvm/src/target/source/codegen_cuda.cc' l='79' u='c' c='_ZN3tvm7codegen11CodeGenCUDA15PrintExtraAttrsERKNS_3tir8PrimFuncE'/>
 <use f='tvm/src/te/schedule/schedule_postproc_to_primfunc.cc' l='220' u='c' c='_ZN3tvm2te28LayoutTransformAttrUnwrapper9Collector7CollectENS_3tir4StmtE'/>
 <use f='tvm/src/te/schedule/schedule_postproc_to_primfunc.cc' l='368' u='c' c='_ZN3tvm2te27AxisSeparatorsAttrUnwrapper9Collector7CollectENS_3tir4StmtE'/>
@@ -34,9 +35,9 @@
 <use f='tvm/src/tir/schedule/analysis/analysis.cc' l='855' u='c' c='_ZN3tvm3tir15GetBlockRealizeERKNS0_13ScheduleStateERKNS0_8StmtSRefE'/>
 <use f='tvm/src/tir/schedule/analysis/analysis.cc' l='1112' u='c' c='_ZN3tvm3tir21ProducerConsumerSplit4FindERKNS0_13ScheduleStateERKNS_7runtime5ArrayINS0_4StmtEvEERKNS6_INS0_8StmtSRefEvEESE_PSt13unordered_mapIPKNS0_9Bl15702090'/>
 <use f='tvm/src/tir/schedule/primitive/cache_index.cc' l='78' u='c' c='_ZN3tvm3tir18IndexInfoCollector7CollectERKNS0_13ScheduleStateERKNS0_8StmtSRefES7_PNS0_9IndexInfoE'/>
-<use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='397' u='c' c='_ZN3tvm3tir16CacheLocDetector6DetectERKNS0_13ScheduleStateERKNS0_8StmtSRefES7_PNS0_14CacheStageInfoE'/>
-<use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='511' u='c' c='_ZN3tvm3tir23CacheInplaceLocDetector6DetectERKNS0_13ScheduleStateERKNS0_8StmtSRefES7_PNS0_14CacheStageInfoE'/>
-<use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='917' u='c' c='_ZN3tvm3tir16ReIndexCollector7CollectERKNS_8IRModuleERKNS0_6BufferERKNS0_5BlockE'/>
+<use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='402' u='c' c='_ZN3tvm3tir16CacheLocDetector6DetectERKNS0_13ScheduleStateERKNS0_8StmtSRefES7_PNS0_14CacheStageInfoE'/>
+<use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='516' u='c' c='_ZN3tvm3tir23CacheInplaceLocDetector6DetectERKNS0_13ScheduleStateERKNS0_8StmtSRefES7_PNS0_14CacheStageInfoE'/>
+<use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='922' u='c' c='_ZN3tvm3tir16ReIndexCollector7CollectERKNS_8IRModuleERKNS0_6BufferERKNS0_5BlockE'/>
 <use f='tvm/src/tir/schedule/primitive/get_block_loop.cc' l='45' u='c' c='_ZN3tvm3tir9GetBlocksERKNS0_13ScheduleStateERKNS_7runtime6StringERKNS_9GlobalVarE'/>
 <use f='tvm/src/tir/schedule/primitive/get_block_loop.cc' l='72' u='c' c='_ZN3tvm3tir14GetChildBlocksERKNS0_13ScheduleStateERKNS0_8StmtSRefE'/>
 <use f='tvm/src/tir/schedule/primitive/get_block_loop.cc' l='75' u='c' c='_ZN3tvm3tir14GetChildBlocksERKNS0_13ScheduleStateERKNS0_8StmtSRefE'/>

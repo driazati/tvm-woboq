@@ -1,0 +1,14 @@
+<dec f='tvm/src/meta_schedule/trace_apply.h' l='42' type='void tvm::meta_schedule::ScheduleUsingAnchorTrace(tir::Schedule sch, const tir::Trace &amp; anchor_trace, const tvm::Target &amp; target)'/>
+<def f='tvm/src/meta_schedule/trace_apply.cc' l='197' ll='229' type='void tvm::meta_schedule::ScheduleUsingAnchorTrace(tvm::tir::Schedule sch, const tvm::tir::Trace &amp; anchor_trace, const tvm::Target &amp; target)'/>
+<use f='tvm/src/meta_schedule/trace_apply.cc' l='232' u='r'/>
+<doc f='tvm/src/meta_schedule/trace_apply.h' l='32'>/*!
+ * \brief Apply the trace from a TIR module whose anchor block is the same but fused elemewise
+ * op blocks differ. This function can be used for transferring a trace tuned on a conv2d -&gt; add
+ * subgraph to other subgraphs having the same conv2d workload, for example. We call such trace
+ * an &quot;anchor trace&quot;. Those blocks that are not scheduled by the given anchor trace will be either
+ * inlined or parallelized.
+ * \param sch The schedule to apply the anchor trace.
+ * \param anchor_trace The trace tuned on other subgraph with the same anchor-block workload.
+ * \param target The target information needed for inlining and parallelization.
+ */</doc>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='630' u='c' c='_ZN3tvm5relay3tec15ScheduleBuilder6CreateERKNS0_8FunctionENS_15GlobalVarSupplyE'/>

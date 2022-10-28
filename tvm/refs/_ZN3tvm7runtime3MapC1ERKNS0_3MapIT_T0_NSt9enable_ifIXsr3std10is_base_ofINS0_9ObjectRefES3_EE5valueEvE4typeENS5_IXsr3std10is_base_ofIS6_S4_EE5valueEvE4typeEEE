@@ -45,7 +45,7 @@
 <use f='tvm/src/ir/module.cc' l='441' u='c'/>
 <use f='tvm/src/meta_schedule/mutator/mutate_parallel.cc' l='305' u='c' c='_ZN3tvm13meta_schedule18MutateParallelNode5ApplyERKNS_3tir5TraceEPl'/>
 <use f='tvm/src/meta_schedule/postproc/verify_gpu_code.cc' l='134' u='c' c='_ZNK3tvm13meta_schedule17VerifyGPUCodeNode6VerifyERKNS_8IRModuleE'/>
-<use f='tvm/src/meta_schedule/space_generator/space_generator.cc' l='94' u='c' c='_ZN3tvm13meta_schedule18SpaceGeneratorNode25InitializeWithTuneContextERKNS0_11TuneContextE'/>
+<use f='tvm/src/meta_schedule/space_generator/space_generator.cc' l='93' u='c' c='_ZN3tvm13meta_schedule18SpaceGeneratorNode25InitializeWithTuneContextERKNS0_11TuneContextE'/>
 <use f='tvm/src/parser/meta_ref.cc' l='69' u='c' c='_ZN3tvm6parser15MetaRefExpanderC1ERKNS_7runtime3MapINS2_6StringENS2_5ArrayINS2_9ObjectRefEvEEvvEE'/>
 <use f='tvm/src/parser/parser.cc' l='329' u='c' c='_ZN3tvm6parser6ParserC1ENS_8IRModuleENS_17DiagnosticContextERKNS0_6SourceESt6vectorINS0_5TokenESaIS8_EENS0_13OperatorTableENS_7runtime3MapINSC_6String14996098'/>
 <use f='tvm/src/parser/parser.cc' l='1146' u='c' c='_ZN3tvm6parser6Parser16ParseFunctionDefEv'/>
@@ -81,10 +81,10 @@
 <use f='tvm/src/relay/backend/interpreter.cc' l='1116' u='c' c='_ZN3tvm5relay4EvalENS_9RelayExprENS_7runtime3MapINS_13GlobalTypeVarENS_8TypeDataEvvEESt13unordered_setINS2_6StringESt4hashIS8_ESt8equal_toIS8_ESaIS8_E2654602'/>
 <use f='tvm/src/relay/backend/runtime.cc' l='68' u='c' c='_ZN3tvm5relay7Runtime6CreateENS_7runtime6StringENS2_3MapIS3_NS2_9ObjectRefEvvEE'/>
 <use f='tvm/src/relay/backend/runtime.cc' l='99' u='c'/>
-<use f='tvm/src/relay/backend/task_extraction.cc' l='41' u='c' c='_ZN3tvm5relay7backend11ExtractTaskENS_8IRModuleENS_6TargetENS_7runtime3MapINS4_6StringENS4_7NDArrayEvvEES6_'/>
+<use f='tvm/src/relay/backend/task_extraction.cc' l='62' u='c' c='_ZN3tvm5relay7backend11ExtractTaskENS_8IRModuleENS_6TargetENS_7runtime3MapINS4_6StringENS4_7NDArrayEvvEES6_'/>
 <use f='tvm/src/relay/backend/te_compiler.cc' l='316' u='c' c='_ZN3tvm5relay3tec14TECompilerImpl17GetDeviceContextsEv'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='453' u='c' c='_ZN3tvm5relay3tec28AllocateConstReplaceConstant10VisitStmt_EPKNS_3tir17AllocateConstNodeE'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='627' u='c' c='_ZN3tvm5relay3tec15ScheduleBuilder6CreateERKNS0_8FunctionENS_15GlobalVarSupplyE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='456' u='c' c='_ZN3tvm5relay3tec28AllocateConstReplaceConstant10VisitStmt_EPKNS_3tir17AllocateConstNodeE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='642' u='c' c='_ZN3tvm5relay3tec15ScheduleBuilder6CreateERKNS0_8FunctionENS_15GlobalVarSupplyE'/>
 <use f='tvm/src/relay/backend/utils.cc' l='138' u='c'/>
 <use f='tvm/src/relay/backend/utils.cc' l='215' u='c' c='_ZN3tvm5relay7backend23ExecutorCodegenMetadataC1ENS_7runtime5ArrayINS_3tir3VarEvEENS4_INS_10TensorTypeEvEENS4_INS3_6StringEvEES9_S7_SB_SA_SA_SA_bNS_7I14228502'/>
 <use f='tvm/src/relay/backend/vm/compiler.cc' l='859' u='c' c='_ZN3tvm5relay2vm10VMCompiler11GetFunctionERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKNS_7runtime9ObjectPtrINSB_6ObjectEEE'/>
@@ -221,6 +221,7 @@
 <use f='tvm/src/tir/ir/stmt.cc' l='954' u='c'/>
 <use f='tvm/src/tir/schedule/primitive/annotate.cc' l='40' u='c' c='_ZN3tvm3tir8AnnotateENS0_13ScheduleStateERKNS0_8StmtSRefERKNS_7runtime6StringERKNS5_9ObjectRefE'/>
 <use f='tvm/src/tir/schedule/primitive/annotate.cc' l='71' u='c' c='_ZN3tvm3tir10UnannotateENS0_13ScheduleStateERKNS0_8StmtSRefERKNS_7runtime6StringE'/>
+<use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='304' u='c' c='_ZN3tvm3tir16InsertCacheStageERKNS0_4StmtEiS3_'/>
 <use f='tvm/src/tir/schedule/primitive/decompose_padding.cc' l='340' u='c' c='_ZN3tvm3tirL18CreateInBoundBlockEPKNS0_16BlockRealizeNodeERKNS0_16PaddingBlockInfoERKNS_7runtime5ArrayINS0_3ForEvEERKNS0_4StmtEPNS_5arith8AnalyzerE'/>
 <use f='tvm/src/tir/schedule/primitive/layout_transformation.cc' l='395' u='c' c='_ZNK3tvm3tir22TransformLayoutPlanner23FinalizeReplacementPlanENS0_6BufferENS0_8IndexMapES3_NS_8PrimExprENS_7runtime8OptionalIS3_EE'/>
 <use f='tvm/src/tir/schedule/primitive/loop_transformation.cc' l='83' u='c' c='_ZN3tvm3tir27IterMapSimplifyBlockBindingC1EPNS_7runtime7MapNodeENS2_3MapINS0_3VarENS_5RangeEvvEEb'/>

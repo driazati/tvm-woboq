@@ -33,6 +33,10 @@
 <use f='tvm/src/meta_schedule/database/schedule_fn_database.cc' l='53' u='c' c='_ZN3tvm13meta_schedule22ScheduleFnDatabaseNode13QueryScheduleERKNS_8IRModuleERKNS_6TargetERKNS_7runtime6StringE'/>
 <use f='tvm/src/meta_schedule/mutator/mutate_compute_location.cc' l='91' u='c' c='_ZN3tvm13meta_schedule25MutateComputeLocationNode14FindCandidatesERKNS_3tir5TraceEPl'/>
 <use f='tvm/src/meta_schedule/mutator/mutate_compute_location.cc' l='107' u='c' c='_ZN3tvm13meta_schedule25MutateComputeLocationNode14FindCandidatesERKNS_3tir5TraceEPl'/>
+<use f='tvm/src/meta_schedule/trace_apply.cc' l='99' u='c' c='_ZN3tvm13meta_schedule16ApplyAnchorTraceENS_3tir8ScheduleENS1_5TraceE'/>
+<use f='tvm/src/meta_schedule/trace_apply.cc' l='100' u='c' c='_ZN3tvm13meta_schedule16ApplyAnchorTraceENS_3tir8ScheduleENS1_5TraceE'/>
+<use f='tvm/src/meta_schedule/trace_apply.cc' l='113' u='c' c='_ZN3tvm13meta_schedule16ApplyAnchorTraceENS_3tir8ScheduleENS1_5TraceE'/>
+<use f='tvm/src/meta_schedule/trace_apply.cc' l='115' u='c' c='_ZN3tvm13meta_schedule16ApplyAnchorTraceENS_3tir8ScheduleENS1_5TraceE'/>
 <use f='tvm/src/node/container_printing.cc' l='53' u='c'/>
 <use f='tvm/src/node/reflection.cc' l='80' u='c' c='_ZN3tvm10AttrGetter5VisitEPKcPNS_7runtime9ObjectRefE'/>
 <use f='tvm/src/node/reflection.cc' l='103' u='c' c='_ZNK3tvm16ReflectionVTable7GetAttrEPNS_7runtime6ObjectERKNS1_6StringE'/>
@@ -130,8 +134,8 @@
 <use f='tvm/src/relay/backend/te_compiler.cc' l='735' u='c' c='_ZN3tvm5relay3tec22LowerTensorExprMutator15MakeLoweredCallERKNS_8BaseFuncERKNS_9GlobalVarENS_7runtime5ArrayINS_9RelayExprEvEENS_4SpanERKNS_6TargetERKNS9_3MapIS6_S3_vvEE'/>
 <use f='tvm/src/relay/backend/te_compiler.cc' l='736' u='c' c='_ZN3tvm5relay3tec22LowerTensorExprMutator15MakeLoweredCallERKNS_8BaseFuncERKNS_9GlobalVarENS_7runtime5ArrayINS_9RelayExprEvEENS_4SpanERKNS_6TargetERKNS9_3MapIS6_S3_vvEE'/>
 <use f='tvm/src/relay/backend/te_compiler.cc' l='737' u='c' c='_ZN3tvm5relay3tec22LowerTensorExprMutator15MakeLoweredCallERKNS_8BaseFuncERKNS_9GlobalVarENS_7runtime5ArrayINS_9RelayExprEvEENS_4SpanERKNS_6TargetERKNS9_3MapIS6_S3_vvEE'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='452' u='c' c='_ZN3tvm5relay3tec28AllocateConstReplaceConstant10VisitStmt_EPKNS_3tir17AllocateConstNodeE'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='507' u='c' c='_ZN3tvm5relay3tec15ScheduleBuilder6CreateERKNS0_8FunctionENS_15GlobalVarSupplyE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='455' u='c' c='_ZN3tvm5relay3tec28AllocateConstReplaceConstant10VisitStmt_EPKNS_3tir17AllocateConstNodeE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='512' u='c' c='_ZN3tvm5relay3tec15ScheduleBuilder6CreateERKNS0_8FunctionENS_15GlobalVarSupplyE'/>
 <use f='tvm/src/relay/collage/candidate_partition.cc' l='52' u='c' c='_ZNK3tvm5relay7collage22CandidatePartitionNode14partition_specEv'/>
 <use f='tvm/src/relay/collage/candidate_partition.cc' l='56' u='c' c='_ZNK3tvm5relay7collage22CandidatePartitionNode19partition_spec_nameB5cxx11Ev'/>
 <use f='tvm/src/relay/collage/candidate_partition.cc' l='59' u='c' c='_ZNK3tvm5relay7collage22CandidatePartitionNode6targetEv'/>
@@ -343,7 +347,8 @@
 <use f='tvm/src/tir/schedule/primitive/block_annotate.cc' l='350' u='c' c='_ZN3tvm3tir14SetScopeTraits16UnpackedAsPythonENS_7runtime5ArrayINS2_6StringEvEES4_NS_7IntegerES4_'/>
 <use f='tvm/src/tir/schedule/primitive/cache_index.cc' l='192' u='c' c='_ZN3tvm3tir19MakeIndexCacheStageEPNS0_9IndexInfoE'/>
 <use f='tvm/src/tir/schedule/primitive/cache_index.cc' l='208' u='c' c='_ZN3tvm3tir19MakeIndexCacheStageEPNS0_9IndexInfoE'/>
-<use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='1448' u='c' c='_ZN3tvm3tir15CacheReadTraits16UnpackedAsPythonENS_7runtime5ArrayINS2_6StringEvEES4_S5_NS_7IntegerES4_'/>
+<use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='303' u='c' c='_ZN3tvm3tir16InsertCacheStageERKNS0_4StmtEiS3_'/>
+<use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='1453' u='c' c='_ZN3tvm3tir15CacheReadTraits16UnpackedAsPythonENS_7runtime5ArrayINS2_6StringEvEES4_S5_NS_7IntegerES4_'/>
 <use f='tvm/src/tir/schedule/primitive/compute_at.cc' l='708' u='c' c='_ZN3tvm3tir15ComputeAtTraits16UnpackedAsPythonENS_7runtime5ArrayINS2_6StringEvEES4_S4_NS_4BoolENS_6IntImmE'/>
 <use f='tvm/src/tir/schedule/primitive/compute_at.cc' l='737' u='c' c='_ZN3tvm3tir22ReverseComputeAtTraits16UnpackedAsPythonENS_7runtime5ArrayINS2_6StringEvEES4_S4_NS_4BoolENS_6IntImmE'/>
 <use f='tvm/src/tir/schedule/primitive/decompose_padding.cc' l='561' u='c' c='_ZN3tvm3tir21DecomposPaddingTraits16UnpackedAsPythonENS_7runtime5ArrayINS2_6StringEvEES4_NS0_6LoopRVE'/>

@@ -316,7 +316,7 @@
 <use f='tvm/include/tvm/meta_schedule/schedule_rule.h' l='214' c='_ZN3tvm13meta_schedule12ScheduleRule10AddRFactorEiNS_7runtime8OptionalINS_7IntegerEEE'/>
 <use f='tvm/include/tvm/meta_schedule/schedule_rule.h' l='221' c='_ZN3tvm13meta_schedule12ScheduleRule20CrossThreadReductionENS_7runtime5ArrayINS_7IntegerEvEE'/>
 <use f='tvm/include/tvm/meta_schedule/schedule_rule.h' l='242' c='_ZN3tvm13meta_schedule12ScheduleRule26ParallelizeVectorizeUnrollEiiNS_7runtime5ArrayINS_7IntegerEvEEb'/>
-<use f='tvm/include/tvm/meta_schedule/schedule_rule.h' l='250' c='_ZN3tvm13meta_schedule12ScheduleRule8AutoBindEiNS_7runtime5ArrayINS_7IntegerEvEE'/>
+<use f='tvm/include/tvm/meta_schedule/schedule_rule.h' l='252' c='_ZN3tvm13meta_schedule12ScheduleRule8AutoBindEiNS_7runtime5ArrayINS_7IntegerEvEEi'/>
 <use f='tvm/src/support/array.h' l='94' c='_ZN3tvm7support7AsArrayERKNS_7runtime10ShapeTupleE'/>
 <use f='tvm/src/support/array.h' l='95' c='_ZN3tvm7support7AsArrayERKNS_7runtime10ShapeTupleE'/>
 <use f='tvm/src/support/array.h' l='98' c='_ZN3tvm7support7AsArrayERKNS_7runtime10ShapeTupleE'/>
@@ -331,10 +331,10 @@
 <use f='tvm/src/tir/schedule/primitive.h' l='534' c='_ZN3tvm3tir9PadEinsumENS0_13ScheduleStateERKNS0_8StmtSRefERKNS_7runtime5ArrayINS_7IntegerEvEE'/>
 <use f='tvm/src/tir/schedule/analysis.h' l='736'/>
 <use f='tvm/src/tir/schedule/analysis.h' l='740'/>
-<use f='tvm/src/meta_schedule/utils.h' l='372' c='_ZN3tvm13meta_schedule17GetTargetNumCoresERKNS_6TargetE'/>
-<use f='tvm/src/meta_schedule/utils.h' l='434' c='_ZN3tvm13meta_schedule10AsIntArrayERKNS_7runtime9ObjectRefE'/>
-<use f='tvm/src/meta_schedule/utils.h' l='437' c='_ZN3tvm13meta_schedule10AsIntArrayERKNS_7runtime9ObjectRefE'/>
-<use f='tvm/src/meta_schedule/utils.h' l='441' c='_ZN3tvm13meta_schedule10AsIntArrayERKNS_7runtime9ObjectRefE'/>
+<use f='tvm/src/meta_schedule/utils.h' l='373' c='_ZN3tvm13meta_schedule17GetTargetNumCoresERKNS_6TargetE'/>
+<use f='tvm/src/meta_schedule/utils.h' l='435' c='_ZN3tvm13meta_schedule10AsIntArrayERKNS_7runtime9ObjectRefE'/>
+<use f='tvm/src/meta_schedule/utils.h' l='438' c='_ZN3tvm13meta_schedule10AsIntArrayERKNS_7runtime9ObjectRefE'/>
+<use f='tvm/src/meta_schedule/utils.h' l='442' c='_ZN3tvm13meta_schedule10AsIntArrayERKNS_7runtime9ObjectRefE'/>
 <use f='tvm/src/meta_schedule/arg_info.cc' l='125' c='_ZNK3tvm13meta_schedule14TensorInfoNode6AsJSONEv'/>
 <use f='tvm/src/meta_schedule/arg_info.cc' l='131' c='_ZN3tvm13meta_schedule10TensorInfo8FromJSONERKNS_7runtime9ObjectRefE'/>
 <use f='tvm/src/meta_schedule/arg_info.cc' l='148' c='_ZN3tvm13meta_schedule10TensorInfo8FromJSONERKNS_7runtime9ObjectRefE'/>
@@ -405,7 +405,7 @@
 <use f='tvm/src/meta_schedule/schedule_rule/auto_bind.cc' l='170' c='_ZN3tvm13meta_schedule12AutoBindNode25InitializeWithTuneContextERKNS0_11TuneContextE'/>
 <use f='tvm/src/meta_schedule/schedule_rule/auto_bind.cc' l='171' c='_ZN3tvm13meta_schedule12AutoBindNode25InitializeWithTuneContextERKNS0_11TuneContextE'/>
 <use f='tvm/src/meta_schedule/schedule_rule/auto_bind.cc' l='192'/>
-<use f='tvm/src/meta_schedule/schedule_rule/auto_bind.cc' l='211' c='_ZN3tvm13meta_schedule12ScheduleRule8AutoBindEiNS_7runtime5ArrayINS_7IntegerEvEE'/>
+<use f='tvm/src/meta_schedule/schedule_rule/auto_bind.cc' l='211' c='_ZN3tvm13meta_schedule12ScheduleRule8AutoBindEiNS_7runtime5ArrayINS_7IntegerEvEEi'/>
 <size>8</size>
 <use f='tvm/src/meta_schedule/schedule_rule/cross_thread_reduction.cc' l='31' c='_ZN3tvm13meta_schedule24CrossThreadReductionNode25InitializeWithTuneContextERKNS0_11TuneContextE'/>
 <use f='tvm/src/meta_schedule/schedule_rule/cross_thread_reduction.cc' l='31' c='_ZN3tvm13meta_schedule24CrossThreadReductionNode25InitializeWithTuneContextERKNS0_11TuneContextE'/>
@@ -456,24 +456,27 @@
 <use f='tvm/src/meta_schedule/schedule_rule/parallel_vectorize_unroll.cc' l='105'/>
 <use f='tvm/src/meta_schedule/schedule_rule/parallel_vectorize_unroll.cc' l='125' c='_ZN3tvm13meta_schedule12ScheduleRule26ParallelizeVectorizeUnrollEiiNS_7runtime5ArrayINS_7IntegerEvEEb'/>
 <size>8</size>
-<use f='tvm/src/meta_schedule/schedule_rule/schedule_rule.cc' l='66' c='_ZN3tvm13meta_schedule12ScheduleRule11DefaultLLVMEv'/>
-<use f='tvm/src/meta_schedule/schedule_rule/schedule_rule.cc' l='70' c='_ZN3tvm13meta_schedule12ScheduleRule11DefaultLLVMEv'/>
-<use f='tvm/src/meta_schedule/schedule_rule/schedule_rule.cc' l='75' c='_ZN3tvm13meta_schedule12ScheduleRule11DefaultLLVMEv'/>
-<use f='tvm/src/meta_schedule/schedule_rule/schedule_rule.cc' l='80' c='_ZN3tvm13meta_schedule12ScheduleRule11DefaultLLVMEv'/>
-<use f='tvm/src/meta_schedule/schedule_rule/schedule_rule.cc' l='91' c='_ZN3tvm13meta_schedule12ScheduleRule11DefaultCUDAEv'/>
+<use f='tvm/src/meta_schedule/schedule_rule/schedule_rule.cc' l='59' c='_ZN3tvm13meta_schedule12ScheduleRule11DefaultLLVMEv'/>
+<use f='tvm/src/meta_schedule/schedule_rule/schedule_rule.cc' l='63' c='_ZN3tvm13meta_schedule12ScheduleRule11DefaultLLVMEv'/>
+<use f='tvm/src/meta_schedule/schedule_rule/schedule_rule.cc' l='68' c='_ZN3tvm13meta_schedule12ScheduleRule11DefaultLLVMEv'/>
+<use f='tvm/src/meta_schedule/schedule_rule/schedule_rule.cc' l='73' c='_ZN3tvm13meta_schedule12ScheduleRule11DefaultLLVMEv'/>
+<use f='tvm/src/meta_schedule/schedule_rule/schedule_rule.cc' l='84' c='_ZN3tvm13meta_schedule12ScheduleRule11DefaultCUDAEv'/>
+<use f='tvm/src/meta_schedule/schedule_rule/schedule_rule.cc' l='85' c='_ZN3tvm13meta_schedule12ScheduleRule11DefaultCUDAEv'/>
+<use f='tvm/src/meta_schedule/schedule_rule/schedule_rule.cc' l='88' c='_ZN3tvm13meta_schedule12ScheduleRule11DefaultCUDAEv'/>
 <use f='tvm/src/meta_schedule/schedule_rule/schedule_rule.cc' l='92' c='_ZN3tvm13meta_schedule12ScheduleRule11DefaultCUDAEv'/>
-<use f='tvm/src/meta_schedule/schedule_rule/schedule_rule.cc' l='95' c='_ZN3tvm13meta_schedule12ScheduleRule11DefaultCUDAEv'/>
-<use f='tvm/src/meta_schedule/schedule_rule/schedule_rule.cc' l='99' c='_ZN3tvm13meta_schedule12ScheduleRule11DefaultCUDAEv'/>
-<use f='tvm/src/meta_schedule/schedule_rule/schedule_rule.cc' l='110' c='_ZN3tvm13meta_schedule12ScheduleRule11DefaultCUDAEv'/>
-<use f='tvm/src/meta_schedule/schedule_rule/schedule_rule.cc' l='114' c='_ZN3tvm13meta_schedule12ScheduleRule11DefaultCUDAEv'/>
-<use f='tvm/src/meta_schedule/schedule_rule/schedule_rule.cc' l='118' c='_ZN3tvm13meta_schedule12ScheduleRule11DefaultCUDAEv'/>
-<use f='tvm/src/meta_schedule/schedule_rule/schedule_rule.cc' l='157' c='_ZN3tvm13meta_schedule12ScheduleRule21DefaultCUDATensorCoreEv'/>
-<use f='tvm/src/meta_schedule/schedule_rule/schedule_rule.cc' l='158' c='_ZN3tvm13meta_schedule12ScheduleRule21DefaultCUDATensorCoreEv'/>
-<use f='tvm/src/meta_schedule/schedule_rule/schedule_rule.cc' l='161' c='_ZN3tvm13meta_schedule12ScheduleRule21DefaultCUDATensorCoreEv'/>
-<use f='tvm/src/meta_schedule/schedule_rule/schedule_rule.cc' l='165' c='_ZN3tvm13meta_schedule12ScheduleRule21DefaultCUDATensorCoreEv'/>
-<use f='tvm/src/meta_schedule/schedule_rule/schedule_rule.cc' l='186' c='_ZN3tvm13meta_schedule12ScheduleRule14DefaultHexagonEv'/>
-<use f='tvm/src/meta_schedule/schedule_rule/schedule_rule.cc' l='190' c='_ZN3tvm13meta_schedule12ScheduleRule14DefaultHexagonEv'/>
-<use f='tvm/src/meta_schedule/schedule_rule/schedule_rule.cc' l='195' c='_ZN3tvm13meta_schedule12ScheduleRule14DefaultHexagonEv'/>
+<use f='tvm/src/meta_schedule/schedule_rule/schedule_rule.cc' l='96' c='_ZN3tvm13meta_schedule12ScheduleRule11DefaultCUDAEv'/>
+<use f='tvm/src/meta_schedule/schedule_rule/schedule_rule.cc' l='100' c='_ZN3tvm13meta_schedule12ScheduleRule11DefaultCUDAEv'/>
+<use f='tvm/src/meta_schedule/schedule_rule/schedule_rule.cc' l='104' c='_ZN3tvm13meta_schedule12ScheduleRule11DefaultCUDAEv'/>
+<use f='tvm/src/meta_schedule/schedule_rule/schedule_rule.cc' l='143' c='_ZN3tvm13meta_schedule12ScheduleRule21DefaultCUDATensorCoreEv'/>
+<use f='tvm/src/meta_schedule/schedule_rule/schedule_rule.cc' l='144' c='_ZN3tvm13meta_schedule12ScheduleRule21DefaultCUDATensorCoreEv'/>
+<use f='tvm/src/meta_schedule/schedule_rule/schedule_rule.cc' l='147' c='_ZN3tvm13meta_schedule12ScheduleRule21DefaultCUDATensorCoreEv'/>
+<use f='tvm/src/meta_schedule/schedule_rule/schedule_rule.cc' l='151' c='_ZN3tvm13meta_schedule12ScheduleRule21DefaultCUDATensorCoreEv'/>
+<use f='tvm/src/meta_schedule/schedule_rule/schedule_rule.cc' l='172' c='_ZN3tvm13meta_schedule12ScheduleRule14DefaultHexagonEv'/>
+<use f='tvm/src/meta_schedule/schedule_rule/schedule_rule.cc' l='176' c='_ZN3tvm13meta_schedule12ScheduleRule14DefaultHexagonEv'/>
+<use f='tvm/src/meta_schedule/schedule_rule/schedule_rule.cc' l='181' c='_ZN3tvm13meta_schedule12ScheduleRule14DefaultHexagonEv'/>
+<size>8</size>
+<use f='tvm/src/meta_schedule/trace_apply.cc' l='219' c='_ZN3tvm13meta_schedule24ScheduleUsingAnchorTraceENS_3tir8ScheduleERKNS1_5TraceERKNS_6TargetE'/>
+<use f='tvm/src/meta_schedule/trace_apply.cc' l='225' c='_ZN3tvm13meta_schedule24ScheduleUsingAnchorTraceENS_3tir8ScheduleERKNS1_5TraceERKNS_6TargetE'/>
 <size>8</size>
 <use f='tvm/src/parser/token.h' l='391' c='_ZNK3tvm6parser5Token8ToNumberEv'/>
 <use f='tvm/src/parser/tokenizer.h' l='660' c='_ZN3tvm6parser8CondenseERKSt6vectorINS0_5TokenESaIS2_EEPS2_'/>
@@ -679,9 +682,9 @@
 <use f='tvm/src/relay/backend/te_compiler.cc' l='1249' c='_ZN3tvm5relay3tec7LowerTEERKNS_8IRModuleERKNS_7runtime6StringESt8functionIFvNS_8BaseFuncEEENS_17CompilationConfigE'/>
 <use f='tvm/src/relay/backend/te_compiler.cc' l='1250' c='_ZN3tvm5relay3tec7LowerTEERKNS_8IRModuleERKNS_7runtime6StringESt8functionIFvNS_8BaseFuncEEENS_17CompilationConfigE'/>
 <size>8</size>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='84' c='_ZN3tvm5relay3tec10CachedFuncC1ENS_6TargetENS_9GlobalVarENS_7runtime5ArrayINS_2te6TensorEvEES9_NS7_8ScheduleENS_3tir8PrimFuncENS6_INS_7IntegerEvEENS_810874565'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='740' c='_ZN3tvm5relay3tec13MakeShapeFunc6CreateERKNS0_8FunctionERKNS_6TargetENS_15GlobalVarSupplyE'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='954' c='_ZN3tvm5relay3tec13MakeShapeFunc10VisitExpr_EPKNS0_8CallNodeE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='87' c='_ZN3tvm5relay3tec10CachedFuncC1ENS_6TargetENS_9GlobalVarENS_7runtime5ArrayINS_2te6TensorEvEES9_NS7_8ScheduleENS_3tir8PrimFuncENS6_INS_7IntegerEvEENS_810874565'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='756' c='_ZN3tvm5relay3tec13MakeShapeFunc6CreateERKNS0_8FunctionERKNS_6TargetENS_15GlobalVarSupplyE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='970' c='_ZN3tvm5relay3tec13MakeShapeFunc10VisitExpr_EPKNS0_8CallNodeE'/>
 <size>8</size>
 <use f='tvm/src/relay/backend/utils.cc' l='74'/>
 <use f='tvm/src/relay/backend/utils.cc' l='74'/>
@@ -2082,17 +2085,24 @@
 <use f='tvm/src/target/target_kind.cc' l='348'/>
 <use f='tvm/src/target/target_kind.cc' l='349'/>
 <use f='tvm/src/target/target_kind.cc' l='350'/>
+<use f='tvm/src/target/target_kind.cc' l='363'/>
+<use f='tvm/src/target/target_kind.cc' l='362'/>
+<use f='tvm/src/target/target_kind.cc' l='361'/>
 <use f='tvm/src/target/target_kind.cc' l='360'/>
 <use f='tvm/src/target/target_kind.cc' l='359'/>
-<use f='tvm/src/target/target_kind.cc' l='358'/>
-<use f='tvm/src/target/target_kind.cc' l='357' macro='1'/>
-<use f='tvm/src/target/target_kind.cc' l='357' macro='1'/>
-<use f='tvm/src/target/target_kind.cc' l='358'/>
+<use f='tvm/src/target/target_kind.cc' l='358' macro='1'/>
+<use f='tvm/src/target/target_kind.cc' l='358' macro='1'/>
 <use f='tvm/src/target/target_kind.cc' l='359'/>
 <use f='tvm/src/target/target_kind.cc' l='360'/>
-<use f='tvm/src/target/target_kind.cc' l='398'/>
-<use f='tvm/src/target/target_kind.cc' l='397'/>
-<use f='tvm/src/target/target_kind.cc' l='396'/>
+<use f='tvm/src/target/target_kind.cc' l='361'/>
+<use f='tvm/src/target/target_kind.cc' l='362'/>
+<use f='tvm/src/target/target_kind.cc' l='363'/>
+<use f='tvm/src/target/target_kind.cc' l='401'/>
+<use f='tvm/src/target/target_kind.cc' l='400'/>
+<use f='tvm/src/target/target_kind.cc' l='399'/>
+<use f='tvm/src/target/target_kind.cc' l='394'/>
+<use f='tvm/src/target/target_kind.cc' l='393'/>
+<use f='tvm/src/target/target_kind.cc' l='392'/>
 <use f='tvm/src/target/target_kind.cc' l='391'/>
 <use f='tvm/src/target/target_kind.cc' l='390'/>
 <use f='tvm/src/target/target_kind.cc' l='389'/>
@@ -2101,38 +2111,35 @@
 <use f='tvm/src/target/target_kind.cc' l='386'/>
 <use f='tvm/src/target/target_kind.cc' l='385'/>
 <use f='tvm/src/target/target_kind.cc' l='384'/>
-<use f='tvm/src/target/target_kind.cc' l='383'/>
 <use f='tvm/src/target/target_kind.cc' l='382'/>
-<use f='tvm/src/target/target_kind.cc' l='381'/>
-<use f='tvm/src/target/target_kind.cc' l='379'/>
-<use f='tvm/src/target/target_kind.cc' l='363' macro='1'/>
-<use f='tvm/src/target/target_kind.cc' l='363' macro='1'/>
-<use f='tvm/src/target/target_kind.cc' l='381'/>
-<use f='tvm/src/target/target_kind.cc' l='382'/>
-<use f='tvm/src/target/target_kind.cc' l='383'/>
-<use f='tvm/src/target/target_kind.cc' l='403'/>
-<use f='tvm/src/target/target_kind.cc' l='402' macro='1'/>
-<use f='tvm/src/target/target_kind.cc' l='402' macro='1'/>
-<use f='tvm/src/target/target_kind.cc' l='403'/>
-<use f='tvm/src/target/target_kind.cc' l='406' macro='1'/>
-<use f='tvm/src/target/target_kind.cc' l='406' macro='1'/>
+<use f='tvm/src/target/target_kind.cc' l='366' macro='1'/>
+<use f='tvm/src/target/target_kind.cc' l='366' macro='1'/>
+<use f='tvm/src/target/target_kind.cc' l='384'/>
+<use f='tvm/src/target/target_kind.cc' l='385'/>
+<use f='tvm/src/target/target_kind.cc' l='386'/>
+<use f='tvm/src/target/target_kind.cc' l='406'/>
+<use f='tvm/src/target/target_kind.cc' l='405' macro='1'/>
+<use f='tvm/src/target/target_kind.cc' l='405' macro='1'/>
+<use f='tvm/src/target/target_kind.cc' l='406'/>
 <use f='tvm/src/target/target_kind.cc' l='409' macro='1'/>
 <use f='tvm/src/target/target_kind.cc' l='409' macro='1'/>
 <use f='tvm/src/target/target_kind.cc' l='412' macro='1'/>
 <use f='tvm/src/target/target_kind.cc' l='412' macro='1'/>
-<use f='tvm/src/target/target_kind.cc' l='420'/>
 <use f='tvm/src/target/target_kind.cc' l='415' macro='1'/>
 <use f='tvm/src/target/target_kind.cc' l='415' macro='1'/>
-<use f='tvm/src/target/target_kind.cc' l='423' macro='1'/>
-<use f='tvm/src/target/target_kind.cc' l='423' macro='1'/>
-<use f='tvm/src/target/target_kind.cc' l='425' macro='1'/>
-<use f='tvm/src/target/target_kind.cc' l='425' macro='1'/>
-<use f='tvm/src/target/target_kind.cc' l='427' macro='1'/>
-<use f='tvm/src/target/target_kind.cc' l='427' macro='1'/>
-<use f='tvm/src/target/target_kind.cc' l='429' macro='1'/>
-<use f='tvm/src/target/target_kind.cc' l='429' macro='1'/>
+<use f='tvm/src/target/target_kind.cc' l='423'/>
+<use f='tvm/src/target/target_kind.cc' l='418' macro='1'/>
+<use f='tvm/src/target/target_kind.cc' l='418' macro='1'/>
+<use f='tvm/src/target/target_kind.cc' l='426' macro='1'/>
+<use f='tvm/src/target/target_kind.cc' l='426' macro='1'/>
+<use f='tvm/src/target/target_kind.cc' l='428' macro='1'/>
+<use f='tvm/src/target/target_kind.cc' l='428' macro='1'/>
+<use f='tvm/src/target/target_kind.cc' l='430' macro='1'/>
+<use f='tvm/src/target/target_kind.cc' l='430' macro='1'/>
 <use f='tvm/src/target/target_kind.cc' l='432' macro='1'/>
 <use f='tvm/src/target/target_kind.cc' l='432' macro='1'/>
+<use f='tvm/src/target/target_kind.cc' l='435' macro='1'/>
+<use f='tvm/src/target/target_kind.cc' l='435' macro='1'/>
 <size>8</size>
 <use f='tvm/src/te/operation/create_primfunc.cc' l='100' c='_ZN3tvm3tir32LayoutFreePlaceholdersNormalizer7ProcessENS0_8PrimFuncE'/>
 <use f='tvm/src/te/operation/create_primfunc.cc' l='103' c='_ZN3tvm3tir32LayoutFreePlaceholdersNormalizer7ProcessENS0_8PrimFuncE'/>
@@ -2317,16 +2324,16 @@
 <use f='tvm/src/tir/schedule/primitive/cache_index.cc' l='465' c='_ZN3tvm3tir16CacheIndexTraits23UnpackedApplyToScheduleENS0_8ScheduleENS0_7BlockRVENS_7IntegerE'/>
 <use f='tvm/src/tir/schedule/primitive/cache_index.cc' l='469' c='_ZN3tvm3tir16CacheIndexTraits16UnpackedAsPythonENS_7runtime5ArrayINS2_6StringEvEES4_NS_7IntegerE'/>
 <size>8</size>
-<use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='1435' c='_ZN3tvm3tir15CacheReadTraits23UnpackedApplyToScheduleENS0_8ScheduleENS0_7BlockRVENS_7runtime5ArrayIS3_vEENS_7IntegerENS4_6StringE'/>
-<use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='1441' c='_ZN3tvm3tir15CacheReadTraits16UnpackedAsPythonENS_7runtime5ArrayINS2_6StringEvEES4_S5_NS_7IntegerES4_'/>
-<use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='1467' c='_ZN3tvm3tir16CacheWriteTraits23UnpackedApplyToScheduleENS0_8ScheduleENS0_7BlockRVENS_7IntegerENS_7runtime6StringE'/>
-<use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='1472' c='_ZN3tvm3tir16CacheWriteTraits16UnpackedAsPythonENS_7runtime5ArrayINS2_6StringEvEES4_NS_7IntegerES4_'/>
-<use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='1496' c='_ZN3tvm3tir18CacheInplaceTraits23UnpackedApplyToScheduleENS0_8ScheduleENS0_7BlockRVENS_7IntegerENS_7runtime6StringE'/>
-<use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='1500' c='_ZN3tvm3tir18CacheInplaceTraits16UnpackedAsPythonENS_7runtime5ArrayINS2_6StringEvEES4_NS_7IntegerES4_'/>
-<use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='1523' c='_ZN3tvm3tir13ReIndexTraits23UnpackedApplyToScheduleENS0_8ScheduleENS0_7BlockRVENS_7IntegerES4_'/>
-<use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='1524' c='_ZN3tvm3tir13ReIndexTraits23UnpackedApplyToScheduleENS0_8ScheduleENS0_7BlockRVENS_7IntegerES4_'/>
-<use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='1529' c='_ZN3tvm3tir13ReIndexTraits16UnpackedAsPythonENS_7runtime5ArrayINS2_6StringEvEES4_NS_7IntegerES6_'/>
-<use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='1530' c='_ZN3tvm3tir13ReIndexTraits16UnpackedAsPythonENS_7runtime5ArrayINS2_6StringEvEES4_NS_7IntegerES6_'/>
+<use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='1440' c='_ZN3tvm3tir15CacheReadTraits23UnpackedApplyToScheduleENS0_8ScheduleENS0_7BlockRVENS_7runtime5ArrayIS3_vEENS_7IntegerENS4_6StringE'/>
+<use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='1446' c='_ZN3tvm3tir15CacheReadTraits16UnpackedAsPythonENS_7runtime5ArrayINS2_6StringEvEES4_S5_NS_7IntegerES4_'/>
+<use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='1472' c='_ZN3tvm3tir16CacheWriteTraits23UnpackedApplyToScheduleENS0_8ScheduleENS0_7BlockRVENS_7IntegerENS_7runtime6StringE'/>
+<use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='1477' c='_ZN3tvm3tir16CacheWriteTraits16UnpackedAsPythonENS_7runtime5ArrayINS2_6StringEvEES4_NS_7IntegerES4_'/>
+<use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='1501' c='_ZN3tvm3tir18CacheInplaceTraits23UnpackedApplyToScheduleENS0_8ScheduleENS0_7BlockRVENS_7IntegerENS_7runtime6StringE'/>
+<use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='1505' c='_ZN3tvm3tir18CacheInplaceTraits16UnpackedAsPythonENS_7runtime5ArrayINS2_6StringEvEES4_NS_7IntegerES4_'/>
+<use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='1528' c='_ZN3tvm3tir13ReIndexTraits23UnpackedApplyToScheduleENS0_8ScheduleENS0_7BlockRVENS_7IntegerES4_'/>
+<use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='1529' c='_ZN3tvm3tir13ReIndexTraits23UnpackedApplyToScheduleENS0_8ScheduleENS0_7BlockRVENS_7IntegerES4_'/>
+<use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='1534' c='_ZN3tvm3tir13ReIndexTraits16UnpackedAsPythonENS_7runtime5ArrayINS2_6StringEvEES4_NS_7IntegerES6_'/>
+<use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='1535' c='_ZN3tvm3tir13ReIndexTraits16UnpackedAsPythonENS_7runtime5ArrayINS2_6StringEvEES4_NS_7IntegerES6_'/>
 <size>8</size>
 <use f='tvm/src/tir/schedule/primitive/compute_at.cc' l='291' c='_ZN3tvm3tir18ScopeReconstructor11MakeNewLoopEiSt6vectorINS0_18BlockVarDomainInfoESaIS3_EEPNS_5arith8AnalyzerEb'/>
 <use f='tvm/src/tir/schedule/primitive/compute_at.cc' l='509' c='_ZN3tvm3tir23CalculateBlockVarDomainERKNS_7runtime5ArrayINS0_7IterVarEvEESt13unordered_mapIPKNS0_10BufferNodeESt6vectorISB_INS_5arith6IntSetESaISD_EES8670169'/>

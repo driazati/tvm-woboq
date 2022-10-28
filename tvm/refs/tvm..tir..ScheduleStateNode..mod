@@ -43,10 +43,10 @@
 <use f='tvm/src/tir/schedule/primitive/block_annotate.cc' l='289' u='r' c='_ZN3tvm3tir8SetScopeENS0_13ScheduleStateERKNS0_8StmtSRefEiRKNS_7runtime6StringE'/>
 <use f='tvm/src/tir/schedule/primitive/blockize_tensorize.cc' l='439' u='r' c='_ZN3tvm3tir12BlockizeImplERKNS0_13ScheduleStateERKNS0_8StmtSRefEPNS_7runtime3MapINS0_5BlockES9_vvEEPNS_5arith8AnalyzerE'/>
 <use f='tvm/src/tir/schedule/primitive/blockize_tensorize.cc' l='527' u='r' c='_ZN3tvm3tir9TensorizeENS0_13ScheduleStateERKNS0_8StmtSRefERKNS0_12TensorIntrinE'/>
-<use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='332' u='r' c='_ZN3tvm3tir17GetOnlyWriteBlockENS0_13ScheduleStateERKNS0_8StmtSRefERKNS0_6BufferE'/>
-<use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='1098' u='r' c='_ZN3tvm3tir16CheckRegionCoverERKNS0_13ScheduleStateENS0_8StmtSRefE'/>
-<use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='1286' u='r' c='_ZN3tvm3tir12CacheInplaceENS0_13ScheduleStateERKNS0_8StmtSRefEiRKNS_7runtime6StringE'/>
-<use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='1360' u='r' c='_ZN3tvm3tir7ReIndexENS0_13ScheduleStateERKNS0_8StmtSRefEiNS0_15BufferIndexTypeE'/>
+<use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='337' u='r' c='_ZN3tvm3tir17GetOnlyWriteBlockENS0_13ScheduleStateERKNS0_8StmtSRefERKNS0_6BufferE'/>
+<use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='1103' u='r' c='_ZN3tvm3tir16CheckRegionCoverERKNS0_13ScheduleStateENS0_8StmtSRefE'/>
+<use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='1291' u='r' c='_ZN3tvm3tir12CacheInplaceENS0_13ScheduleStateERKNS0_8StmtSRefEiRKNS_7runtime6StringE'/>
+<use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='1365' u='r' c='_ZN3tvm3tir7ReIndexENS0_13ScheduleStateERKNS0_8StmtSRefEiNS0_15BufferIndexTypeE'/>
 <use f='tvm/src/tir/schedule/primitive/compute_at.cc' l='87' u='r' c='_ZN3tvm3tir19NotInSameScopeError22CheckAndBindLoopDomainERKNS0_13ScheduleStateERKNS0_8StmtSRefES7_S7_PNS_5arith8AnalyzerE'/>
 <use f='tvm/src/tir/schedule/primitive/compute_at.cc' l='94' u='r' c='_ZN3tvm3tir19NotInSameScopeError22CheckAndBindLoopDomainERKNS0_13ScheduleStateERKNS0_8StmtSRefES7_S7_PNS_5arith8AnalyzerE'/>
 <use f='tvm/src/tir/schedule/primitive/compute_at.cc' l='152' u='r' c='_ZN3tvm3tir18FindInsertionPointERKNS0_13ScheduleStateERKNS_7runtime5ArrayINS0_4StmtEvEERKNS5_INS0_8StmtSRefEvEESD_PSt13unordered_mapIPKNS0_9BlockNodeE12832446'/>

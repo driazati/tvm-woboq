@@ -131,7 +131,7 @@
 <use f='tvm/src/relay/backend/aot_executor_codegen.cc' l='1147' u='c' c='_ZN3tvm5relay7backend18AOTExecutorCodegen7CodegenENS_8IRModuleENS0_8FunctionENS_7runtime6StringE'/>
 <use f='tvm/src/relay/backend/aot_executor_codegen.cc' l='1250' u='c' c='_ZN3tvm5relay7backend18AOTExecutorCodegen7CodegenENS_8IRModuleENS0_8FunctionENS_7runtime6StringE'/>
 <use f='tvm/src/relay/backend/aot_executor_codegen.cc' l='1263' u='c' c='_ZN3tvm5relay7backend18AOTExecutorCodegen7CodegenENS_8IRModuleENS0_8FunctionENS_7runtime6StringE'/>
-<use f='tvm/src/relay/backend/task_extraction.cc' l='65' u='c' c='_ZN3tvm5relay7backend11ExtractTaskENS_8IRModuleENS_6TargetENS_7runtime3MapINS4_6StringENS4_7NDArrayEvvEES6_'/>
+<use f='tvm/src/relay/backend/task_extraction.cc' l='87' u='c' c='_ZN3tvm5relay7backend11ExtractTaskENS_8IRModuleENS_6TargetENS_7runtime3MapINS4_6StringENS4_7NDArrayEvvEES6_'/>
 <use f='tvm/src/relay/backend/te_compiler.cc' l='143' u='c' c='_ZN3tvm5relay3tec14TECompilerImplC1ENS_7runtime8OptionalINS_8IRModuleEEENS4_INS3_6StringEEE'/>
 <use f='tvm/src/relay/backend/te_compiler.cc' l='456' u='c' c='_ZN3tvm5relay3tec14TECompilerImpl13LowerInternalERKNS1_9CCacheKeyENS_15GlobalVarSupplyE'/>
 <use f='tvm/src/relay/backend/te_compiler.cc' l='709' u='c' c='_ZN3tvm5relay3tec22LowerTensorExprMutator15MakeLoweredCallERKNS_8BaseFuncERKNS_9GlobalVarENS_7runtime5ArrayINS_9RelayExprEvEENS_4SpanERKNS_6TargetERKNS9_3MapIS6_S3_vvEE'/>
@@ -140,11 +140,11 @@
 <use f='tvm/src/relay/backend/te_compiler.cc' l='1115' macro='1' u='c' c='_ZN3tvm5relay3tec22UpdateFunctionMetadataENS_8BaseFuncERNS_7runtime3MapINS3_6StringENS0_7backend12FunctionInfoEvvEENS_7IntegerE'/>
 <use f='tvm/src/relay/backend/te_compiler.cc' l='1118' macro='1' u='c' c='_ZN3tvm5relay3tec22UpdateFunctionMetadataENS_8BaseFuncERNS_7runtime3MapINS3_6StringENS0_7backend12FunctionInfoEvvEENS_7IntegerE'/>
 <use f='tvm/src/relay/backend/te_compiler.cc' l='1272' macro='1' u='c' c='_ZN3tvm5relay3tec19GetPerTargetModulesENS_8IRModuleE'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='410' u='c' c='_ZN3tvm5relay3tec27LayoutFreeConstantCollector10VisitStmt_EPKNS_3tir9BlockNodeE'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='510' u='c' c='_ZN3tvm5relay3tec15ScheduleBuilder6CreateERKNS0_8FunctionENS_15GlobalVarSupplyE'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='524' u='c' c='_ZN3tvm5relay3tec15ScheduleBuilder6CreateERKNS0_8FunctionENS_15GlobalVarSupplyE'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='526' u='c' c='_ZN3tvm5relay3tec15ScheduleBuilder6CreateERKNS0_8FunctionENS_15GlobalVarSupplyE'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='605' macro='1' u='c' c='_ZN3tvm5relay3tec15ScheduleBuilder6CreateERKNS0_8FunctionENS_15GlobalVarSupplyE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='413' u='c' c='_ZN3tvm5relay3tec27LayoutFreeConstantCollector10VisitStmt_EPKNS_3tir9BlockNodeE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='515' u='c' c='_ZN3tvm5relay3tec15ScheduleBuilder6CreateERKNS0_8FunctionENS_15GlobalVarSupplyE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='529' u='c' c='_ZN3tvm5relay3tec15ScheduleBuilder6CreateERKNS0_8FunctionENS_15GlobalVarSupplyE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='531' u='c' c='_ZN3tvm5relay3tec15ScheduleBuilder6CreateERKNS0_8FunctionENS_15GlobalVarSupplyE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='610' macro='1' u='c' c='_ZN3tvm5relay3tec15ScheduleBuilder6CreateERKNS0_8FunctionENS_15GlobalVarSupplyE'/>
 <use f='tvm/src/relay/ir/transform.cc' l='108' u='c' c='_ZNK3tvm5relay9transform16FunctionPassNodeclENS_8IRModuleERKNS_9transform11PassContextE'/>
 <use f='tvm/src/relay/ir/transform.cc' l='116' macro='1' u='c' c='_ZNK3tvm5relay9transform16FunctionPassNodeclENS_8IRModuleERKNS_9transform11PassContextE'/>
 <use f='tvm/src/relay/ir/transform.cc' l='142' macro='1' u='c' c='_ZNK3tvm5relay9transform16FunctionPassNodeclENS_8IRModuleERKNS_9transform11PassContextE'/>
@@ -240,8 +240,8 @@
 <use f='tvm/src/tir/op/op.cc' l='545' u='c' c='_ZN3tvm10logical_orENS_8PrimExprES0_NS_4SpanE'/>
 <use f='tvm/src/tir/op/op.cc' l='552' u='c' c='_ZN3tvm11logical_notENS_8PrimExprENS_4SpanE'/>
 <use f='tvm/src/tir/schedule/primitive/blockize_tensorize.cc' l='365' u='c' c='_ZZN3tvm3tir10SubstituteERKNS0_4StmtERKNS_7runtime3MapINS0_3VarENS_8PrimExprEvvEEPNS5_INS0_5BlockESB_vvEEPNS_5arith8AnalyzerEEN8Replacer10VisitExpr_EPKNS0_7VarNodeE'/>
-<use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='1148' u='c' c='_ZN3tvm3tir9CacheReadENS0_13ScheduleStateERKNS0_8StmtSRefEiRKNS_7runtime6StringENS5_5ArrayIS2_vEE'/>
-<use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='1163' u='c' c='_ZN3tvm3tir9CacheReadENS0_13ScheduleStateERKNS0_8StmtSRefEiRKNS_7runtime6StringENS5_5ArrayIS2_vEE'/>
+<use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='1153' u='c' c='_ZN3tvm3tir9CacheReadENS0_13ScheduleStateERKNS0_8StmtSRefEiRKNS_7runtime6StringENS5_5ArrayIS2_vEE'/>
+<use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='1168' u='c' c='_ZN3tvm3tir9CacheReadENS0_13ScheduleStateERKNS0_8StmtSRefEiRKNS_7runtime6StringENS5_5ArrayIS2_vEE'/>
 <use f='tvm/src/tir/schedule/primitive/layout_transformation.cc' l='206' u='c' c='_ZN3tvm3tir22TransformLayoutPlanner19BufferStoreReplacer10VisitStmt_EPKNS0_15BufferStoreNodeE'/>
 <use f='tvm/src/tir/schedule/primitive/layout_transformation.cc' l='216' u='c' c='_ZN3tvm3tir22TransformLayoutPlanner19BufferStoreReplacer10VisitStmt_EPKNS0_16BlockRealizeNodeE'/>
 <use f='tvm/src/tir/schedule/primitive/layout_transformation.cc' l='317' u='c' c='_ZNK3tvm3tir22TransformLayoutPlanner23FinalizeReplacementPlanENS0_6BufferENS0_8IndexMapES3_NS_8PrimExprENS_7runtime8OptionalIS3_EE'/>

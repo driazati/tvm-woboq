@@ -1,7 +1,7 @@
 <dec f='tvm/include/tvm/tir/stmt.h' l='677' type='void tvm::tir::AllocateConst::AllocateConst(tvm::tir::Var buffer_var, tvm::DataType dtype, Array&lt;tvm::PrimExpr&gt; extents, tvm::runtime::ObjectRef data_or_idx, tvm::tir::Stmt body, Map&lt;tvm::runtime::String, tvm::runtime::ObjectRef&gt; annotations = Map&lt;tvm::runtime::String, tvm::runtime::ObjectRef&gt;(), tvm::Span span = tvm::Span())'/>
 <use f='tvm/src/relay/backend/aot/aot_lower_main.cc' l='480' u='c' c='_ZN3tvm5relay7backend3aot14AOTMainLowerer14CreateMainFuncENS_7runtime6StringE'/>
 <use f='tvm/src/relay/backend/aot_executor_codegen.cc' l='791' u='c' c='_ZN3tvm5relay7backend18AOTExecutorCodegen14CreateMainFuncENS_7runtime6StringEj'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='452' u='c' c='_ZN3tvm5relay3tec28AllocateConstReplaceConstant10VisitStmt_EPKNS_3tir17AllocateConstNodeE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='455' u='c' c='_ZN3tvm5relay3tec28AllocateConstReplaceConstant10VisitStmt_EPKNS_3tir17AllocateConstNodeE'/>
 <use f='tvm/src/script/ir_builder/tir/frame.cc' l='127' u='c' c='_ZN3tvm6script10ir_builder3tir22AllocateConstFrameNode13ExitWithScopeEv'/>
 <def f='tvm/src/tir/ir/stmt.cc' l='439' ll='472' type='void tvm::tir::AllocateConst::AllocateConst(tvm::tir::Var buffer_var, tvm::DataType dtype, Array&lt;tvm::PrimExpr&gt; extents, tvm::runtime::ObjectRef data_or_idx, tvm::tir::Stmt body, Map&lt;tvm::runtime::String, tvm::runtime::ObjectRef&gt; annotations = Map&lt;tvm::runtime::String, tvm::runtime::ObjectRef&gt;(), tvm::Span span = tvm::Span())'/>
 <use f='tvm/src/tir/ir/stmt.cc' l='492' u='c'/>
@@ -9,6 +9,7 @@
 // The constructor to create a IRNode with constant data
 // depending on the type of ObjectRef, it will either
 // create AllocateConstNode with irmod_storage_idx or data</doc>
+<use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='303' u='c' c='_ZN3tvm3tir16InsertCacheStageERKNS0_4StmtEiS3_'/>
 <use f='tvm/src/tir/schedule/transform.cc' l='266' u='c' c='_ZN3tvm3tir20LeafBlockRemovalPlanERKNS0_13ScheduleStateERKNS0_8StmtSRefEPNS0_4StmtES8_'/>
 <use f='tvm/src/tir/transforms/bind_params.cc' l='124' u='c' c='_ZN3tvm3tir10BindParamsENS0_8PrimFuncERKNS_7runtime5ArrayINS2_7NDArrayEvEE'/>
 <use f='tvm/src/tir/transforms/bind_params.cc' l='127' u='c' c='_ZN3tvm3tir10BindParamsENS0_8PrimFuncERKNS_7runtime5ArrayINS2_7NDArrayEvEE'/>

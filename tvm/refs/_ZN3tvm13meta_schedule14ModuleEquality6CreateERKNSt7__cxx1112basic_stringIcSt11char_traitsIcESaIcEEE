@@ -1,4 +1,4 @@
-<dec f='tvm/src/meta_schedule/module_equality.h' l='47' type='static std::unique_ptr&lt;ModuleEquality&gt; tvm::meta_schedule::ModuleEquality::Create(const std::string &amp; mod_eq_name)'/>
+<dec f='tvm/src/meta_schedule/module_equality.h' l='51' type='static std::unique_ptr&lt;ModuleEquality&gt; tvm::meta_schedule::ModuleEquality::Create(const std::string &amp; mod_eq_name)'/>
 <use f='tvm/src/meta_schedule/database/database.cc' l='30' u='c' c='_ZN3tvm13meta_schedule8WorkloadC1ENS_8IRModuleE'/>
 <use f='tvm/src/meta_schedule/database/database.cc' l='159' u='c' c='_ZN3tvm13meta_schedule12DatabaseNodeC1ENS_7runtime6StringE'/>
 <doc f='tvm/src/meta_schedule/module_equality.h' l='38'>/*!
@@ -8,7 +8,12 @@
    *    - &quot;structural&quot;: Use StructuralEqual/Hash
    *    - &quot;ignore-ndarray&quot;: Same as &quot;structural&quot;, but ignore ndarray raw data during
    *                        equality testing and hashing.
+   *    - &quot;anchor-block&quot;: Apply equality testing and hashing on the anchor block extracted from a
+   *                      given module. The &quot;ignore-ndarray&quot; varint is used for the extracted blocks
+   *                      or in case no anchor block is found.
+   *                      For the definition of the anchor block, see tvm/tir/analysis.h.
    * \return An owning pointer to the created instance
    */</doc>
-<def f='tvm/src/meta_schedule/module_equality.cc' l='76' ll='84' type='static std::unique_ptr&lt;ModuleEquality&gt; tvm::meta_schedule::ModuleEquality::Create(const std::string &amp; mod_eq_name)'/>
-<use f='tvm/src/relay/backend/task_extraction.cc' l='50' u='c' c='_ZN3tvm5relay7backend11ExtractTaskENS_8IRModuleENS_6TargetENS_7runtime3MapINS4_6StringENS4_7NDArrayEvvEES6_'/>
+<def f='tvm/src/meta_schedule/module_equality.cc' l='98' ll='108' type='static std::unique_ptr&lt;ModuleEquality&gt; tvm::meta_schedule::ModuleEquality::Create(const std::string &amp; mod_eq_name)'/>
+<use f='tvm/src/relay/backend/task_extraction.cc' l='71' u='c' c='_ZN3tvm5relay7backend11ExtractTaskENS_8IRModuleENS_6TargetENS_7runtime3MapINS4_6StringENS4_7NDArrayEvvEES6_'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='469' u='c' c='_ZN3tvm5relay3tec15ScheduleBuilderC1ENS_6TargetE'/>

@@ -7,11 +7,15 @@
 <use f='tvm/src/auto_scheduler/search_policy/search_policy.cc' l='67' u='c' c='_ZN3tvm14auto_scheduler16SearchPolicyNode21PreloadMeasuredStatesERKNS_7runtime6StringE'/>
 <use f='tvm/src/auto_scheduler/search_policy/sketch_policy.cc' l='446' u='c' c='_ZN3tvm14auto_scheduler16SketchPolicyNode20SampleInitPopulationERKNS_7runtime5ArrayINS0_5StateEvEE'/>
 <use f='tvm/src/auto_scheduler/search_policy/sketch_policy.cc' l='665' u='c' c='_ZN3tvm14auto_scheduler16SketchPolicyNode23PickStatesWithEpsGreedyERKNS_7runtime5ArrayINS0_5StateEvEES7_i'/>
+<use f='tvm/src/tir/schedule/utils.h' l='453' u='c' c='_ZZN3tvm3tir13GetBlockNamesB5cxx11ERKNS_8IRModuleEEN18BlockNameCollector10VisitStmt_EPKNS0_9BlockNodeE'/>
 <use f='tvm/src/meta_schedule/mutator/mutate_tile_size.cc' l='120' u='c' c='_ZN3tvm13meta_schedule19FindSampleVectorizeERKNS_3tir5TraceEPSt6vectorINS1_11InstructionESaIS6_EEPS5_IlSaIlEE'/>
 <use f='tvm/src/meta_schedule/postproc/rewrite_layout.cc' l='34' u='c' c='_ZN3tvm3tir22BufferReadPosCollectorC1ERKNS_7runtime5ArrayINS0_6BufferEvEE'/>
 <use f='tvm/src/meta_schedule/postproc/rewrite_reduction_block.cc' l='48' u='c' c='_ZN3tvm3tir20ReductionBlockFinder10VisitStmt_EPKNS0_7ForNodeE'/>
 <use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling_tensor_core.cc' l='460' u='c' c='_ZNK3tvm13meta_schedule30MultiLevelTilingTensorCoreNode25TransformWithTensorIntrinEPNS0_19TensorCoreStateNodeERKNS_7runtime6StringE'/>
 <use f='tvm/src/meta_schedule/search_strategy/evolutionary_search.cc' l='41' u='c' c='_ZN3tvm13meta_schedule11IRModuleSet3AddERKNS_8IRModuleEm'/>
+<use f='tvm/src/meta_schedule/trace_apply.cc' l='57' u='c' c='_ZN3tvm13meta_schedule16InlinePostBlocksENS_3tir8ScheduleENS1_5TraceENS_6TargetE'/>
+<use f='tvm/src/meta_schedule/trace_apply.cc' l='113' u='c' c='_ZN3tvm13meta_schedule16ApplyAnchorTraceENS_3tir8ScheduleENS1_5TraceE'/>
+<use f='tvm/src/meta_schedule/trace_apply.cc' l='115' u='c' c='_ZN3tvm13meta_schedule16ApplyAnchorTraceENS_3tir8ScheduleENS1_5TraceE'/>
 <use f='tvm/src/printer/tvmscript_printer.cc' l='104' u='c' c='_ZN3tvm3tir17BufferUsageFinder10VisitStmt_EPKNS0_14DeclBufferNodeE'/>
 <use f='tvm/src/printer/tvmscript_printer.cc' l='119' u='c' c='_ZN3tvm3tir17BufferUsageFinder11VisitBufferERKNS0_6BufferE'/>
 <use f='tvm/src/printer/tvmscript_printer.cc' l='520' u='c' c='_ZN3tvm3tir16TVMScriptPrinter22AllocBufferDeclarationERKNS0_6BufferE'/>
@@ -34,7 +38,7 @@
 <use f='tvm/src/relay/analysis/annotated_region_set.cc' l='151' u='c' c='_ZN3tvm5relay18AnnotatedRegionSet7Creator10VisitExpr_EPKNS0_8CallNodeE'/>
 <use f='tvm/src/relay/analysis/annotated_region_set.cc' l='170' u='c' c='_ZN3tvm5relay18AnnotatedRegionSet7Creator10VisitExpr_EPKNS0_8CallNodeE'/>
 <use f='tvm/src/relay/analysis/util.cc' l='335' u='c' c='_ZN3tvm5relay14DtypeCollector10VisitType_EPKNS_14TensorTypeNodeE'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='412' u='c' c='_ZN3tvm5relay3tec27LayoutFreeConstantCollector10VisitStmt_EPKNS_3tir9BlockNodeE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='415' u='c' c='_ZN3tvm5relay3tec27LayoutFreeConstantCollector10VisitStmt_EPKNS_3tir9BlockNodeE'/>
 <use f='tvm/src/relay/backend/utils.cc' l='397' u='c' c='_ZN3tvm5relay7backend23DefaultTIRConverterImplERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS3_INS2_7NDArrayEvEEb'/>
 <use f='tvm/src/relay/backend/utils.cc' l='411' u='c' c='_ZN3tvm5relay7backend23DefaultTIRConverterImplERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS3_INS2_7NDArrayEvEEb'/>
 <use f='tvm/src/relay/backend/vm/removed_unused_funcs.cc' l='58' u='c' c='_ZN3tvm5relay2vm10CallTracer10VisitExpr_EPKNS_13GlobalVarNodeE'/>
@@ -99,7 +103,7 @@
 <use f='tvm/src/tir/schedule/analysis/reducer.cc' l='552' u='c' c='_ZN3tvm3tir33ReductionIterNotIndexOutputBufferERKNS0_5BlockE'/>
 <use f='tvm/src/tir/schedule/analysis/reducer.cc' l='559' u='c' c='_ZN3tvm3tir33ReductionIterNotIndexOutputBufferERKNS0_5BlockE'/>
 <use f='tvm/src/tir/schedule/primitive/blockize_tensorize.cc' l='100' u='c' c='_ZN3tvm3tir23TrivialSubspaceDivisionERKNS_7runtime5ArrayINS0_7IterVarEvEERKNS2_INS_8PrimExprEvEERKS7_RKNS2_INS0_3VarEvEESG_'/>
-<use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='1373' u='c' c='_ZN3tvm3tir7ReIndexENS0_13ScheduleStateERKNS0_8StmtSRefEiNS0_15BufferIndexTypeE'/>
+<use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='1378' u='c' c='_ZN3tvm3tir7ReIndexENS0_13ScheduleStateERKNS0_8StmtSRefEiNS0_15BufferIndexTypeE'/>
 <use f='tvm/src/tir/schedule/primitive/loop_transformation.cc' l='494' u='c' c='_ZN3tvm3tir4FuseENS0_13ScheduleStateERKNS_7runtime5ArrayINS0_8StmtSRefEvEEb'/>
 <use f='tvm/src/tir/schedule/primitive/loop_transformation.cc' l='555' u='c' c='_ZN3tvm3tir19CollectLoopsIntoSetERKNS0_13ScheduleStateERKNS_7runtime5ArrayINS0_8StmtSRefEvEE'/>
 <use f='tvm/src/tir/schedule/primitive/loop_transformation.cc' l='687' u='c' c='_ZN3tvm3tir21ConstructNewLoopChainERKNS0_13ScheduleStateESt6vectorIPKNS0_12StmtSRefNodeESaIS7_EERKNS_7runtime5ArrayINS0_8StmtSRefEvEERKSt13unordered_s3784274'/>

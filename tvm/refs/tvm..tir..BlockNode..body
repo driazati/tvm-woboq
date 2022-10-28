@@ -5,6 +5,7 @@
 <use f='tvm/include/tvm/tir/stmt.h' l='1282' u='r' c='_ZNK3tvm3tir9BlockNode11SHashReduceENS_12SHashReducerE'/>
 <offset>448</offset>
 <doc f='tvm/include/tvm/tir/stmt.h' l='1238'>/*! \brief The body of the block. */</doc>
+<use f='tvm/src/tir/schedule/utils.h' l='454' u='r' c='_ZZN3tvm3tir13GetBlockNamesB5cxx11ERKNS_8IRModuleEEN18BlockNameCollector10VisitStmt_EPKNS0_9BlockNodeE'/>
 <use f='tvm/src/meta_schedule/postproc/rewrite_unbound_block.cc' l='35' u='r' c='_ZN3tvm3tir18UnboundBlockFinder4FindERKNS0_13ScheduleStateE'/>
 <use f='tvm/src/printer/tir_text_printer.cc' l='702' u='r' c='_ZN3tvm3tir14TIRTextPrinter10VisitStmt_EPKNS0_16BlockRealizeNodeE'/>
 <use f='tvm/src/printer/tvmscript_printer.cc' l='1518' u='r' c='_ZN3tvm3tir16TVMScriptPrinter14PrintBlockBodyEPKNS0_9BlockNodeE'/>
@@ -37,14 +38,14 @@
 <use f='tvm/src/tir/schedule/primitive/blockize_tensorize.cc' l='594' u='r' c='_ZN3tvm3tir9TensorizeENS0_13ScheduleStateERKNS0_8StmtSRefERKNS0_12TensorIntrinE'/>
 <use f='tvm/src/tir/schedule/primitive/cache_index.cc' l='355' u='w' c='_ZN3tvm3tir18CacheIndexRewriter10VisitStmt_EPKNS0_9BlockNodeE'/>
 <use f='tvm/src/tir/schedule/primitive/cache_index.cc' l='355' u='r' c='_ZN3tvm3tir18CacheIndexRewriter10VisitStmt_EPKNS0_9BlockNodeE'/>
-<use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='402' u='m' c='_ZN3tvm3tir16CacheLocDetector6DetectERKNS0_13ScheduleStateERKNS0_8StmtSRefES7_PNS0_14CacheStageInfoE'/>
-<use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='641' u='w' c='_ZN3tvm3tir17CacheReadRewriter10VisitStmt_EPKNS0_9BlockNodeE'/>
-<use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='641' u='r' c='_ZN3tvm3tir17CacheReadRewriter10VisitStmt_EPKNS0_9BlockNodeE'/>
-<use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='752' u='w' c='_ZN3tvm3tir18CacheWriteRewriter10VisitStmt_EPKNS0_9BlockNodeE'/>
-<use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='752' u='r' c='_ZN3tvm3tir18CacheWriteRewriter10VisitStmt_EPKNS0_9BlockNodeE'/>
-<use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='917' u='r' c='_ZN3tvm3tir16ReIndexCollector7CollectERKNS_8IRModuleERKNS0_6BufferERKNS0_5BlockE'/>
-<use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='1000' u='w' c='_ZN3tvm3tir15ReIndexRewriter10VisitStmt_EPKNS0_9BlockNodeE'/>
-<use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='1000' u='r' c='_ZN3tvm3tir15ReIndexRewriter10VisitStmt_EPKNS0_9BlockNodeE'/>
+<use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='407' u='m' c='_ZN3tvm3tir16CacheLocDetector6DetectERKNS0_13ScheduleStateERKNS0_8StmtSRefES7_PNS0_14CacheStageInfoE'/>
+<use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='646' u='w' c='_ZN3tvm3tir17CacheReadRewriter10VisitStmt_EPKNS0_9BlockNodeE'/>
+<use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='646' u='r' c='_ZN3tvm3tir17CacheReadRewriter10VisitStmt_EPKNS0_9BlockNodeE'/>
+<use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='757' u='w' c='_ZN3tvm3tir18CacheWriteRewriter10VisitStmt_EPKNS0_9BlockNodeE'/>
+<use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='757' u='r' c='_ZN3tvm3tir18CacheWriteRewriter10VisitStmt_EPKNS0_9BlockNodeE'/>
+<use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='922' u='r' c='_ZN3tvm3tir16ReIndexCollector7CollectERKNS_8IRModuleERKNS0_6BufferERKNS0_5BlockE'/>
+<use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='1005' u='w' c='_ZN3tvm3tir15ReIndexRewriter10VisitStmt_EPKNS0_9BlockNodeE'/>
+<use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='1005' u='r' c='_ZN3tvm3tir15ReIndexRewriter10VisitStmt_EPKNS0_9BlockNodeE'/>
 <use f='tvm/src/tir/schedule/primitive/compute_inline.cc' l='228' u='m' c='_ZN3tvm3tir11BaseInlinerC1ERKNS0_6BufferERKNS0_5BlockERKNS0_8StmtSRefE'/>
 <use f='tvm/src/tir/schedule/primitive/compute_inline.cc' l='595' u='m' c='_ZN3tvm3tir21ReverseComputeInliner22BodyPatternAllowInlineERKNS0_12BlockRealizeE'/>
 <use f='tvm/src/tir/schedule/primitive/decompose_padding.cc' l='91' u='m' c='_ZN3tvm3tir19PaddingInfoAnalyzer12MatchPaddingEPKNS0_16BlockRealizeNodeERKNS_7runtime3MapINS0_3VarENS_5RangeEvvEE'/>
