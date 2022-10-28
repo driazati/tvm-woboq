@@ -17,6 +17,10 @@
 <use f='tvm/src/arith/detect_linear_equation.cc' l='198' u='r' c='_ZN3tvm5arith15DetectClipBoundERKNS_8PrimExprEPSt13unordered_mapIPKNS_3tir7VarNodeENS0_13IntervalEntryESt4hashIS8_ESt8equal_toIS8_ESaISt4pairIKS8_S9_EEE'/>
 <use f='tvm/src/arith/detect_linear_equation.cc' l='201' u='r' c='_ZN3tvm5arith15DetectClipBoundERKNS_8PrimExprEPSt13unordered_mapIPKNS_3tir7VarNodeENS0_13IntervalEntryESt4hashIS8_ESt8equal_toIS8_ESaISt4pairIKS8_S9_EEE'/>
 <use f='tvm/src/arith/detect_linear_equation.cc' l='204' u='r' c='_ZN3tvm5arith15DetectClipBoundERKNS_8PrimExprEPSt13unordered_mapIPKNS_3tir7VarNodeENS0_13IntervalEntryESt4hashIS8_ESt8equal_toIS8_ESaISt4pairIKS8_S9_EEE'/>
+<use f='tvm/src/arith/narrow_predicate_expression.cc' l='131' u='r' c='_ZN3tvm5arith18ExpressionNarrower10VisitExpr_EPKNS_3tir6EQNodeE'/>
+<use f='tvm/src/arith/narrow_predicate_expression.cc' l='132' u='r' c='_ZN3tvm5arith18ExpressionNarrower10VisitExpr_EPKNS_3tir6EQNodeE'/>
+<use f='tvm/src/arith/narrow_predicate_expression.cc' l='137' u='r' c='_ZN3tvm5arith18ExpressionNarrower10VisitExpr_EPKNS_3tir6NENodeE'/>
+<use f='tvm/src/arith/narrow_predicate_expression.cc' l='138' u='r' c='_ZN3tvm5arith18ExpressionNarrower10VisitExpr_EPKNS_3tir6NENodeE'/>
 <use f='tvm/src/arith/rewrite_simplify.cc' l='1356' u='r' c='_ZN3tvm5arith17RewriteSimplifier4Impl10VisitExpr_EPKNS_3tir6EQNodeE'/>
 <use f='tvm/src/arith/rewrite_simplify.cc' l='1371' u='r' c='_ZN3tvm5arith17RewriteSimplifier4Impl10VisitExpr_EPKNS_3tir6EQNodeE'/>
 <use f='tvm/src/arith/rewrite_simplify.cc' l='1387' u='r' c='_ZN3tvm5arith17RewriteSimplifier4Impl10VisitExpr_EPKNS_3tir6NENodeE'/>

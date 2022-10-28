@@ -1,0 +1,32 @@
+<inh f='tvm/include/tvm/tir/expr_functor.h' l='256' c='tvm::tir::ExprMutator'/>
+<def f='tvm/src/arith/narrow_predicate_expression.cc' l='50' ll='210'/>
+<use f='tvm/src/arith/narrow_predicate_expression.cc' l='54' c='_ZN3tvm5arith18ExpressionNarrower5ApplyENS_8PrimExprENS_7runtime3MapINS_3tir3VarENS_5RangeEvvEE'/>
+<use f='tvm/src/arith/narrow_predicate_expression.cc' l='200' c='_ZN3tvm5arith18ExpressionNarrower11WithContextC1EPS1_NS1_7ContextE'/>
+<use f='tvm/src/arith/narrow_predicate_expression.cc' l='204'/>
+<size>48</size>
+<doc f='tvm/src/arith/narrow_predicate_expression.cc' l='36'>/* \brief Given a true expression that includes free parameter,
+ * generate a true expression without the free parameters.
+ *
+ * This function provides two guarantees:
+ *
+ * 1. If the resulting expression evaluates to True, then the original
+ * expression also evaluates to True.
+ *
+ * 2. The resulting expression does not contain any of the free
+ * parameters.
+ *
+ */
+// Utility for generating a known true expression from an expression
+// with free parameters, and the range of those parameters.</doc>
+<fun r='_ZN3tvm5arith18ExpressionNarrower10VisitExpr_EPKNS_3tir12FloorModNodeE'/>
+<fun r='_ZN3tvm5arith18ExpressionNarrower10VisitExpr_EPKNS_3tir12FloorDivNodeE'/>
+<fun r='_ZN3tvm5arith18ExpressionNarrower10VisitExpr_EPKNS_3tir6GTNodeE'/>
+<fun r='_ZN3tvm5arith18ExpressionNarrower10VisitExpr_EPKNS_3tir6GENodeE'/>
+<fun r='_ZN3tvm5arith18ExpressionNarrower10VisitExpr_EPKNS_3tir6LTNodeE'/>
+<fun r='_ZN3tvm5arith18ExpressionNarrower10VisitExpr_EPKNS_3tir6LENodeE'/>
+<fun r='_ZN3tvm5arith18ExpressionNarrower10VisitExpr_EPKNS_3tir6EQNodeE'/>
+<fun r='_ZN3tvm5arith18ExpressionNarrower10VisitExpr_EPKNS_3tir6NENodeE'/>
+<fun r='_ZN3tvm5arith18ExpressionNarrower10VisitExpr_EPKNS_3tir7SubNodeE'/>
+<fun r='_ZN3tvm5arith18ExpressionNarrower10VisitExpr_EPKNS_3tir7NotNodeE'/>
+<fun r='_ZN3tvm5arith18ExpressionNarrower10VisitExpr_EPKNS_3tir14BufferLoadNodeE'/>
+<fun r='_ZN3tvm5arith18ExpressionNarrower10VisitExpr_EPKNS_3tir7VarNodeE'/>
