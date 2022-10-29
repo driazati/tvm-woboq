@@ -1,8 +1,8 @@
-<use f='tvm/include/tvm/arith/analyzer.h' l='448'/>
-<def f='tvm/src/arith/transitive_comparison_analyzer.cc' l='38' ll='244'/>
-<use f='tvm/src/arith/transitive_comparison_analyzer.cc' l='475' c='_ZN3tvm5arith28TransitiveComparisonAnalyzerC1Ev'/>
+<use f='tvm/include/tvm/arith/analyzer.h' l='457'/>
+<def f='tvm/src/arith/transitive_comparison_analyzer.cc' l='38' ll='298'/>
+<use f='tvm/src/arith/transitive_comparison_analyzer.cc' l='529' c='_ZN3tvm5arith28TransitiveComparisonAnalyzerC1Ev'/>
 <size>112</size>
-<fun r='_ZNK3tvm5arith28TransitiveComparisonAnalyzer4Impl10TryCompareERKNS_8PrimExprES5_'/>
+<fun r='_ZNK3tvm5arith28TransitiveComparisonAnalyzer4Impl10TryCompareERKNS_8PrimExprES5_b'/>
 <fun r='_ZN3tvm5arith28TransitiveComparisonAnalyzer4Impl4BindERKNS_3tir3VarERKNS_8PrimExprEb'/>
 <fun r='_ZN3tvm5arith28TransitiveComparisonAnalyzer4Impl4BindERKNS_3tir3VarERKNS_5RangeEb'/>
 <fun r='_ZN3tvm5arith28TransitiveComparisonAnalyzer4Impl15EnterConstraintERKNS_8PrimExprE'/>
@@ -11,7 +11,10 @@
 <mbr r='tvm::arith::TransitiveComparisonAnalyzer::Impl::expr_to_key' o='0' t='std::unordered_map&lt;PrimExpr, Key, StructuralHash, StructuralEqual&gt;'/>
 <fun r='_ZN3tvm5arith28TransitiveComparisonAnalyzer4Impl8FromExprERKNS_8PrimExprE'/>
 <fun r='_ZN3tvm5arith28TransitiveComparisonAnalyzer4Impl8AddKnownERKNS_8PrimExprEPSt6vectorINS2_10ComparisonESaIS7_EE'/>
-<fun r='_ZNK3tvm5arith28TransitiveComparisonAnalyzer4Impl10DFSFromLHSENS2_3KeyES3_lRKNS_8PrimExprES6_'/>
+<fun r='_ZNK3tvm5arith28TransitiveComparisonAnalyzer4Impl24CollectDirectComparisonsENS2_3KeyES3_'/>
+<fun r='_ZNK3tvm5arith28TransitiveComparisonAnalyzer4Impl26CollectIndirectComparisonsENS2_3KeyES3_'/>
+<fun r='_ZNK3tvm5arith28TransitiveComparisonAnalyzer4Impl10DFSFromLHSENS2_3KeyES3_'/>
+<fun r='_ZNK3tvm5arith28TransitiveComparisonAnalyzer4Impl16MergeComparisonsERKSt6vectorINS2_10ComparisonESaIS4_EEl'/>
 <mbr r='tvm::arith::TransitiveComparisonAnalyzer::Impl::prev_bindings_' o='448' t='Map&lt;tvm::tir::Var, tvm::Range&gt;'/>
 <mbr r='tvm::arith::TransitiveComparisonAnalyzer::Impl::knowns_' o='512' t='std::vector&lt;Comparison&gt;'/>
 <mbr r='tvm::arith::TransitiveComparisonAnalyzer::Impl::scoped_knowns_' o='704' t='std::vector&lt;Comparison&gt;'/>
@@ -22,5 +25,8 @@
 <fun r='_ZN3tvm5arith28TransitiveComparisonAnalyzer4Impl4BindERKNS_3tir3VarERKNS_5RangeEb'/>
 <fun r='_ZN3tvm5arith28TransitiveComparisonAnalyzer4Impl4BindERKNS_3tir3VarERKNS_8PrimExprEb'/>
 <fun r='_ZN3tvm5arith28TransitiveComparisonAnalyzer4Impl15EnterConstraintERKNS_8PrimExprE'/>
-<fun r='_ZNK3tvm5arith28TransitiveComparisonAnalyzer4Impl10TryCompareERKNS_8PrimExprES5_'/>
-<fun r='_ZNK3tvm5arith28TransitiveComparisonAnalyzer4Impl10DFSFromLHSENS2_3KeyES3_lRKNS_8PrimExprES6_'/>
+<fun r='_ZNK3tvm5arith28TransitiveComparisonAnalyzer4Impl10TryCompareERKNS_8PrimExprES5_b'/>
+<fun r='_ZNK3tvm5arith28TransitiveComparisonAnalyzer4Impl24CollectDirectComparisonsENS2_3KeyES3_'/>
+<fun r='_ZNK3tvm5arith28TransitiveComparisonAnalyzer4Impl26CollectIndirectComparisonsENS2_3KeyES3_'/>
+<fun r='_ZNK3tvm5arith28TransitiveComparisonAnalyzer4Impl10DFSFromLHSENS2_3KeyES3_'/>
+<fun r='_ZNK3tvm5arith28TransitiveComparisonAnalyzer4Impl16MergeComparisonsERKSt6vectorINS2_10ComparisonESaIS4_EEl'/>

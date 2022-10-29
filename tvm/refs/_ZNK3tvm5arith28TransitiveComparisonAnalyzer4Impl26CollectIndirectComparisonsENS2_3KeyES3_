@@ -1,0 +1,16 @@
+<dec f='tvm/src/arith/transitive_comparison_analyzer.cc' l='232' type='std::vector&lt;Comparison&gt; tvm::arith::TransitiveComparisonAnalyzer::Impl::CollectIndirectComparisons(tvm::arith::TransitiveComparisonAnalyzer::Impl::Key lhs_key, tvm::arith::TransitiveComparisonAnalyzer::Impl::Key rhs_key) const'/>
+<use f='tvm/src/arith/transitive_comparison_analyzer.cc' l='636' u='c' c='_ZNK3tvm5arith28TransitiveComparisonAnalyzer4Impl10TryCompareERKNS_8PrimExprES5_b'/>
+<def f='tvm/src/arith/transitive_comparison_analyzer.cc' l='666' ll='675' type='std::vector&lt;TransitiveComparisonAnalyzer::Impl::Comparison&gt; tvm::arith::TransitiveComparisonAnalyzer::Impl::CollectIndirectComparisons(tvm::arith::TransitiveComparisonAnalyzer::Impl::Key lhs_key, tvm::arith::TransitiveComparisonAnalyzer::Impl::Key rhs_key) const'/>
+<doc f='tvm/src/arith/transitive_comparison_analyzer.cc' l='219'>/*! Collect known comparisons between LHS and RHS, with propagation
+   *
+   * \param lhs_key The left-hand side of the comparison
+   *
+   * \param rhs_key The right-hand side of the comparison
+   *
+   * \returns All comparisons between `lhs_key` and `rhs_key`,
+   * including the explicitly-provided comparisons in `knowns_` and
+   * `scoped_knowns_`, and comparisons provable through a series of
+   * comparisons through other values.  All comparisons returned are
+   * between `lhs_key` and `rhs_key`, and are normalized such that
+   * `lhs_key` is on the left-hand side.
+   */</doc>

@@ -1,0 +1,17 @@
+<dec f='tvm/src/arith/transitive_comparison_analyzer.cc' l='272' type='tvm::arith::CompareResult tvm::arith::TransitiveComparisonAnalyzer::Impl::MergeComparisons(const std::vector&lt;Comparison&gt; &amp; lhs_to_rhs, int64_t offset) const'/>
+<use f='tvm/src/arith/transitive_comparison_analyzer.cc' l='641' u='c' c='_ZNK3tvm5arith28TransitiveComparisonAnalyzer4Impl10TryCompareERKNS_8PrimExprES5_b'/>
+<def f='tvm/src/arith/transitive_comparison_analyzer.cc' l='819' ll='876' type='tvm::arith::CompareResult tvm::arith::TransitiveComparisonAnalyzer::Impl::MergeComparisons(const std::vector&lt;Comparison&gt; &amp; lhs_to_rhs, int64_t offset) const'/>
+<doc f='tvm/src/arith/transitive_comparison_analyzer.cc' l='258'>/*! \brief Combine a set of comparisons that share a LHS and RHS
+   *
+   * \param lhs_to_rhs The comparisons to merge.  These should all
+   * have the same LHS and RHS.  This parameter will typically be the
+   * result from `CollectDirectComparisons` or
+   * `CollectIndirectComparisons`.
+   *
+   * \param offset The constant offset in the comparison being proven.
+   * This is extracted from any additive/subtractive constants in the
+   * `PrimExpr` arguments to `TryCompare`.
+   *
+   * \returns The possible comparisons between LHS and RHS provided
+   * inequalities.
+   */</doc>

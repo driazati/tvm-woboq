@@ -103,7 +103,7 @@
 <use f='tvm/include/tvm/node/reflection.h' l='193'/>
 <use f='tvm/include/tvm/node/reflection.h' l='195'/>
 <use f='tvm/include/tvm/node/reflection.h' l='197'/>
-<use f='tvm/include/tvm/arith/analyzer.h' l='487'/>
+<use f='tvm/include/tvm/arith/analyzer.h' l='496'/>
 <use f='tvm/include/tvm/runtime/registry.h' l='316' c='_ZN3tvm7runtime8Registry9ListNamesB5cxx11Ev'/>
 <use f='tvm/3rdparty/dmlc-core/include/dmlc/json.h' l='164'/>
 <use f='tvm/3rdparty/dmlc-core/include/dmlc/json.h' l='287'/>
@@ -486,15 +486,23 @@
 <use f='tvm/src/arith/solve_linear_inequality.cc' l='276' c='_ZN3tvm5arith23SolveLinearInequalitiesERKNS0_14IntConstraintsE'/>
 <use f='tvm/src/arith/solve_linear_inequality.cc' l='323' c='_ZN3tvm5arith23SolveLinearInequalitiesERKNS0_14IntConstraintsE'/>
 <use f='tvm/src/arith/solve_linear_inequality.cc' l='326' c='_ZN3tvm5arith23SolveLinearInequalitiesERKNS0_14IntConstraintsE'/>
-<use f='tvm/src/arith/transitive_comparison_analyzer.cc' l='193' c='_ZN3tvm5arith28TransitiveComparisonAnalyzer4Impl8AddKnownERKNS_8PrimExprEPSt6vectorINS2_10ComparisonESaIS7_EE'/>
-<use f='tvm/src/arith/transitive_comparison_analyzer.cc' l='234'/>
-<use f='tvm/src/arith/transitive_comparison_analyzer.cc' l='243'/>
-<use f='tvm/src/arith/transitive_comparison_analyzer.cc' l='494' c='_ZN3tvm5arith28TransitiveComparisonAnalyzer4Impl8AddKnownERKNS_8PrimExprEPSt6vectorINS2_10ComparisonESaIS7_EE'/>
-<use f='tvm/src/arith/transitive_comparison_analyzer.cc' l='596' c='_ZNK3tvm5arith28TransitiveComparisonAnalyzer4Impl10DFSFromLHSENS2_3KeyES3_lRKNS_8PrimExprES6_'/>
-<use f='tvm/src/arith/transitive_comparison_analyzer.cc' l='600' c='_ZNK3tvm5arith28TransitiveComparisonAnalyzer4Impl10DFSFromLHSENS2_3KeyES3_lRKNS_8PrimExprES6_'/>
-<use f='tvm/src/arith/transitive_comparison_analyzer.cc' l='649' c='_ZNK3tvm5arith28TransitiveComparisonAnalyzer4Impl10DFSFromLHSENS2_3KeyES3_lRKNS_8PrimExprES6_'/>
-<use f='tvm/src/arith/transitive_comparison_analyzer.cc' l='652' c='_ZNK3tvm5arith28TransitiveComparisonAnalyzer4Impl10DFSFromLHSENS2_3KeyES3_lRKNS_8PrimExprES6_'/>
-<use f='tvm/src/arith/transitive_comparison_analyzer.cc' l='731' c='_ZNK3tvm5arith28TransitiveComparisonAnalyzer4Impl10DFSFromLHSENS2_3KeyES3_lRKNS_8PrimExprES6_'/>
+<use f='tvm/src/arith/transitive_comparison_analyzer.cc' l='202' c='_ZN3tvm5arith28TransitiveComparisonAnalyzer4Impl8AddKnownERKNS_8PrimExprEPSt6vectorINS2_10ComparisonESaIS7_EE'/>
+<use f='tvm/src/arith/transitive_comparison_analyzer.cc' l='217' c='_ZNK3tvm5arith28TransitiveComparisonAnalyzer4Impl24CollectDirectComparisonsENS2_3KeyES3_'/>
+<use f='tvm/src/arith/transitive_comparison_analyzer.cc' l='232' c='_ZNK3tvm5arith28TransitiveComparisonAnalyzer4Impl26CollectIndirectComparisonsENS2_3KeyES3_'/>
+<use f='tvm/src/arith/transitive_comparison_analyzer.cc' l='256' c='_ZNK3tvm5arith28TransitiveComparisonAnalyzer4Impl10DFSFromLHSENS2_3KeyES3_'/>
+<use f='tvm/src/arith/transitive_comparison_analyzer.cc' l='272' c='_ZNK3tvm5arith28TransitiveComparisonAnalyzer4Impl16MergeComparisonsERKSt6vectorINS2_10ComparisonESaIS4_EEl'/>
+<use f='tvm/src/arith/transitive_comparison_analyzer.cc' l='288'/>
+<use f='tvm/src/arith/transitive_comparison_analyzer.cc' l='297'/>
+<use f='tvm/src/arith/transitive_comparison_analyzer.cc' l='549' c='_ZN3tvm5arith28TransitiveComparisonAnalyzer4Impl8AddKnownERKNS_8PrimExprEPSt6vectorINS2_10ComparisonESaIS7_EE'/>
+<use f='tvm/src/arith/transitive_comparison_analyzer.cc' l='644' c='_ZNK3tvm5arith28TransitiveComparisonAnalyzer4Impl24CollectDirectComparisonsENS2_3KeyES3_'/>
+<use f='tvm/src/arith/transitive_comparison_analyzer.cc' l='646' c='_ZNK3tvm5arith28TransitiveComparisonAnalyzer4Impl24CollectDirectComparisonsENS2_3KeyES3_'/>
+<use f='tvm/src/arith/transitive_comparison_analyzer.cc' l='666' c='_ZNK3tvm5arith28TransitiveComparisonAnalyzer4Impl26CollectIndirectComparisonsENS2_3KeyES3_'/>
+<use f='tvm/src/arith/transitive_comparison_analyzer.cc' l='677' c='_ZNK3tvm5arith28TransitiveComparisonAnalyzer4Impl10DFSFromLHSENS2_3KeyES3_'/>
+<use f='tvm/src/arith/transitive_comparison_analyzer.cc' l='682' c='_ZNK3tvm5arith28TransitiveComparisonAnalyzer4Impl10DFSFromLHSENS2_3KeyES3_'/>
+<use f='tvm/src/arith/transitive_comparison_analyzer.cc' l='686' c='_ZNK3tvm5arith28TransitiveComparisonAnalyzer4Impl10DFSFromLHSENS2_3KeyES3_'/>
+<use f='tvm/src/arith/transitive_comparison_analyzer.cc' l='735' c='_ZNK3tvm5arith28TransitiveComparisonAnalyzer4Impl10DFSFromLHSENS2_3KeyES3_'/>
+<use f='tvm/src/arith/transitive_comparison_analyzer.cc' l='738' c='_ZNK3tvm5arith28TransitiveComparisonAnalyzer4Impl10DFSFromLHSENS2_3KeyES3_'/>
+<use f='tvm/src/arith/transitive_comparison_analyzer.cc' l='820' c='_ZNK3tvm5arith28TransitiveComparisonAnalyzer4Impl16MergeComparisonsERKSt6vectorINS2_10ComparisonESaIS4_EEl'/>
 <use f='tvm/include/tvm/auto_scheduler/transform_step.h' l='127'/>
 <use f='tvm/include/tvm/auto_scheduler/transform_step.h' l='155' c='_ZN3tvm14auto_scheduler8IteratorC1ENS_7runtime6StringENS_5RangeENS0_12IteratorKindENS0_18IteratorAnnotationEPKSt6vectorIS1_SaIS1_EE'/>
 <use f='tvm/include/tvm/auto_scheduler/loop_state.h' l='170'/>
