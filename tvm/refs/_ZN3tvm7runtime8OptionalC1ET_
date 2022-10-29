@@ -359,6 +359,7 @@
 <use f='tvm/src/relay/transforms/type_infer.cc' l='792' u='c' c='_ZN3tvm5relay14TypeInferencer5InferENS_9GlobalVarENS0_8FunctionE'/>
 <use f='tvm/src/runtime/rpc/rpc_module.cc' l='208' u='c' c='_ZN3tvm7runtime13RPCModuleNode16GetTimeEvaluatorERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE8DLDeviceiiiiiiS9_'/>
 <use f='tvm/src/script/ir_builder/tir/frame.cc' l='37' u='c' c='_ZN3tvm6script10ir_builder3tir17PrimFuncFrameNode13ExitWithScopeEv'/>
+<use f='tvm/src/script/ir_builder/tir/frame.cc' l='149' u='c' c='_ZN3tvm6script10ir_builder3tir11IfFrameNode13ExitWithScopeEv'/>
 <use f='tvm/src/script/ir_builder/tir/ir.cc' l='114' u='c' c='_ZN3tvm6script10ir_builder3tir11MatchBufferENS_7runtime9ObjectRefENS3_5ArrayINS_8PrimExprEvEENS3_8DataTypeENS3_8OptionalINS_3tir3VarEEES7_S6_NS3_6Stri4971610'/>
 <use f='tvm/src/script/ir_builder/tir/ir.cc' l='114' u='c' c='_ZN3tvm6script10ir_builder3tir11MatchBufferENS_7runtime9ObjectRefENS3_5ArrayINS_8PrimExprEvEENS3_8DataTypeENS3_8OptionalINS_3tir3VarEEES7_S6_NS3_6Stri4971610'/>
 <use f='tvm/src/script/ir_builder/tir/ir.cc' l='115' u='c' c='_ZN3tvm6script10ir_builder3tir11MatchBufferENS_7runtime9ObjectRefENS3_5ArrayINS_8PrimExprEvEENS3_8DataTypeENS3_8OptionalINS_3tir3VarEEES7_S6_NS3_6Stri4971610'/>
@@ -377,6 +378,7 @@
 <use f='tvm/src/target/target_kind.cc' l='79' u='c' c='_ZN3tvm10TargetKind3GetERKNS_7runtime6StringE'/>
 <use f='tvm/src/target/virtual_device.cc' l='90' u='c' c='_ZN3tvm13VirtualDevice4JoinERKS0_S2_'/>
 <use f='tvm/src/target/virtual_device.cc' l='128' u='c' c='_ZN3tvm13VirtualDevice4JoinERKS0_S2_'/>
+<use f='tvm/src/te/operation/compute_op.cc' l='603' u='c' c='_ZN3tvm2te15TransformUpdateERKNS0_5StageERKSt13unordered_mapINS_3tir7IterVarENS_5RangeESt4hashIS6_ESt8equal_toIS6_ESaISt4pairIKS6_S7_EEERKNS0_15Comput2419945'/>
 <use f='tvm/src/tir/analysis/device_constraint_utils.cc' l='262' u='c' c='_ZN3tvm3tir12_GLOBAL__N_129ApplyDeviceConstraintsMutator7RewriteERKNS0_8PrimFuncERKNS_8FuncTypeERKNS_7runtime5ArrayINS_13VirtualDeviceEvEE'/>
 <use f='tvm/src/tir/analysis/device_constraint_utils.cc' l='462' u='c' c='_ZN3tvm3tir12_GLOBAL__N_129ApplyDeviceConstraintsMutator19GetBufferConstraintERKNS0_6BufferE'/>
 <use f='tvm/src/tir/analysis/stmt_finding.cc' l='144' u='c'/>
@@ -388,6 +390,7 @@
 <use f='tvm/src/tir/ir/function.cc' l='134' u='c'/>
 <use f='tvm/src/tir/ir/stmt.cc' l='463' u='c' c='_ZN3tvm3tir13AllocateConstC1ENS0_3VarENS_7runtime8DataTypeENS3_5ArrayINS_8PrimExprEvEENS3_9ObjectRefENS0_4StmtENS3_3MapINS3_6StringES8_vvEENS_4SpanE'/>
 <use f='tvm/src/tir/ir/stmt.cc' l='467' u='c' c='_ZN3tvm3tir13AllocateConstC1ENS0_3VarENS_7runtime8DataTypeENS3_5ArrayINS_8PrimExprEvEENS3_9ObjectRefENS0_4StmtENS3_3MapINS3_6StringES8_vvEENS_4SpanE'/>
+<use f='tvm/src/tir/ir/stmt.cc' l='660' u='c'/>
 <use f='tvm/src/tir/schedule/analysis/analysis.cc' l='1825' u='c' c='_ZN3tvm3tir23GetTensorizeLoopMappingERKNS0_13ScheduleStateERKNS0_8StmtSRefERKNS0_8PrimFuncEb'/>
 <use f='tvm/src/tir/schedule/analysis/analysis.cc' l='2053' u='c' c='_ZN3tvm3tir27GetAutoTensorizeMappingInfoERKNS0_13ScheduleStateERKNS0_8StmtSRefERKNS0_8PrimFuncE'/>
 <use f='tvm/src/tir/schedule/analysis/layout.cc' l='238' u='c' c='_ZN3tvm3tir15SuggestIndexMapERKNS0_6BufferERKNS_7runtime5ArrayINS_8PrimExprEvEERKNS5_INS0_3ForEvEERKS6_PNS_5arith8AnalyzerE'/>
@@ -424,11 +427,17 @@
 <use f='tvm/src/tir/schedule/trace.cc' l='246' u='c' c='_ZN3tvm3tir9TraceNode3PopEv'/>
 <use f='tvm/src/tir/schedule/traced_schedule.h' l='45' u='c' c='_ZNK3tvm3tir18TracedScheduleNode5traceEv'/>
 <use f='tvm/src/tir/schedule/transform.cc' l='352' u='c' c='_ZN3tvm3tir20TileWithTensorIntrinERKNS0_8ScheduleERKNS0_7BlockRVERKNS_7runtime6StringEb'/>
+<use f='tvm/src/tir/transforms/arg_binder.cc' l='244' u='c' c='_ZN3tvm3tir9ArgBinder12BindDLTensorERKNS0_6BufferERKNS_8PrimExprES7_RKNS0_3VarERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<use f='tvm/src/tir/transforms/bound_checker.cc' l='107' u='c' c='_ZN3tvm3tir12BoundChecker10VisitStmt_EPKNS0_15BufferStoreNodeE'/>
 <use f='tvm/src/tir/transforms/compact_buffer_region.cc' l='91' u='c' c='_ZN3tvm3tir12NDIntSetEvalENS_7runtime5ArrayINS_5RangeEvEENS_8PrimExprERKSt13unordered_mapIPKNS0_7VarNodeENS_5arith6IntSetESt4hashIS9_ESt8equal_toIS9_E14688976'/>
 <use f='tvm/src/tir/transforms/extract_constants.cc' l='66' u='c' c='_ZN3tvm3tir10Applicator10VisitStmt_EPKNS0_17AllocateConstNodeE'/>
+<use f='tvm/src/tir/transforms/hoist_expression.cc' l='470' u='c' c='_ZN3tvm3tir17ExpressionHoister21WrapHoistedStatementsENS0_4StmtERKNS0_18HoistInfoCollector9HoistInfoE'/>
 <use f='tvm/src/tir/transforms/inject_software_pipeline.cc' l='530' u='c'/>
 <use f='tvm/src/tir/transforms/inject_software_pipeline.cc' l='673' u='c' c='_ZN3tvm3tir17software_pipeline16PipelineRewriter18PopulateWaitCountsERKSt6vectorINS2_18RewrittenBlockInfoESaIS4_EEPNS_5arith8AnalyzerERKSt13unordered_10437664'/>
 <use f='tvm/src/tir/transforms/inject_software_pipeline.cc' l='676' u='c' c='_ZN3tvm3tir17software_pipeline16PipelineRewriter18PopulateWaitCountsERKSt6vectorINS2_18RewrittenBlockInfoESaIS4_EEPNS_5arith8AnalyzerERKSt13unordered_10437664'/>
+<use f='tvm/src/tir/transforms/lift_attr_scope.cc' l='140' u='c' c='_ZN3tvm3tir15AttrScopeLifter10VisitStmt_EPKNS0_14IfThenElseNodeE'/>
+<use f='tvm/src/tir/transforms/lift_attr_scope.cc' l='155' u='c' c='_ZN3tvm3tir15AttrScopeLifter10VisitStmt_EPKNS0_14IfThenElseNodeE'/>
+<use f='tvm/src/tir/transforms/loop_partition.cc' l='363' u='c' c='_ZN3tvm3tir23ThreadPartitionInserter10VisitStmt_EPKNS0_12AttrStmtNodeE'/>
 <use f='tvm/src/tir/transforms/lower_cross_thread_reduction.cc' l='184' u='c' c='_ZN3tvm3tir20InThreadReducerMaker4MakeEPKNS0_16BlockRealizeNodeENS_7runtime8OptionalINS0_12BlockRealizeEEENS0_4StmtE'/>
 <use f='tvm/src/tir/transforms/lower_cross_thread_reduction.cc' l='217' u='c' c='_ZN3tvm3tir20InThreadReducerMaker10VisitStmt_EPKNS0_11SeqStmtNodeE'/>
 <use f='tvm/src/tir/transforms/unify_thread_binding.cc' l='143' u='c' c='_ZN3tvm3tir20ThreadBindingUnifier17EmitLaunchThreadsERKNS0_4StmtE'/>

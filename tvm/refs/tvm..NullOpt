@@ -7,6 +7,7 @@
 <use f='tvm/include/tvm/runtime/packed_func.h' l='505' u='r' c='_ZN3tvm7runtime17ObjectTypeCheckerINS0_3MapIT_T0_NSt9enable_ifIXsr3std10is_base_ofINS0_9ObjectRefES3_EE5valueEvE4typeENS5_IXsr3std10is_base_ofIS6_S4_E16230623'/>
 <use f='tvm/include/tvm/runtime/packed_func.h' l='519' u='r' c='_ZN3tvm7runtime17ObjectTypeCheckerINS0_3MapIT_T0_NSt9enable_ifIXsr3std10is_base_ofINS0_9ObjectRefES3_EE5valueEvE4typeENS5_IXsr3std10is_base_ofIS6_S4_E16230623'/>
 <use f='tvm/include/tvm/tir/buffer.h' l='193' u='r' c='_ZNK3tvm3tir6Buffer10access_ptrEiNS_7runtime8DataTypeEiNS_8PrimExprENS2_8OptionalIS4_EE'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='857' u='r' c='_ZN3tvm3tir10IfThenElseC1ENS_8PrimExprENS0_4StmtENS_7runtime8OptionalIS3_EENS_4SpanE'/>
 <use f='tvm/include/tvm/tir/stmt.h' l='1005' u='r' c='_ZN3tvm3tir3ForC1ENS0_3VarENS_8PrimExprES3_NS0_7ForKindENS0_4StmtENS_7runtime8OptionalINS0_7IterVarEEENS6_3MapINS6_6StringENS6_9ObjectRefEvvEENS_4SpanE'/>
 <use f='tvm/include/tvm/tir/stmt.h' l='1299' u='r' c='_ZN3tvm3tir5BlockC1ENS_7runtime5ArrayINS0_7IterVarEvEENS3_INS0_12BufferRegionEvEES7_NS2_6StringENS0_4StmtENS2_8OptionalIS9_EENS3_INS0_6BufferEvEENS3_I7879093'/>
 <use f='tvm/src/arith/const_fold.h' l='146' u='r' c='_ZN3tvm5arith12TryConstFoldENS_8PrimExprES1_'/>
@@ -231,6 +232,7 @@
 <use f='tvm/src/tir/ir/function.cc' l='105' u='r' c='_ZN3tvm3tir12TensorIntrin3GetENS_7runtime6StringEb'/>
 <use f='tvm/src/tir/ir/index_map.cc' l='195' u='r' c='_ZNK3tvm3tir12IndexMapNode9MapRangesERKNS_7runtime5ArrayINS_5RangeEvEEPNS_5arith8AnalyzerE'/>
 <use f='tvm/src/tir/ir/script/script_complete.cc' l='129' u='r' c='_ZN3tvm3tir14ScriptCompleteENS0_8PrimFuncERKNS_7runtime5ArrayINS0_6BufferEvEE'/>
+<use f='tvm/src/tir/ir/stmt_functor.cc' l='355' u='r' c='_ZN3tvm3tir11StmtMutator10VisitStmt_EPKNS0_14IfThenElseNodeE'/>
 <use f='tvm/src/tir/ir/stmt_functor.cc' l='531' u='r' c='_ZN3tvm3tir11StmtMutator10VisitStmt_EPKNS0_9BlockNodeE'/>
 <use f='tvm/src/tir/schedule/analysis/analysis.cc' l='612' u='r' c='_ZN3tvm3tir18CheckAffineBindingERKNS0_13ScheduleStateENS0_5BlockE'/>
 <use f='tvm/src/tir/schedule/analysis/analysis.cc' l='1223' u='r' c='_ZN3tvm3tir21GetBufferDefiningSiteERKNS0_8StmtSRefERKNS0_6BufferE'/>
@@ -300,6 +302,7 @@
 <use f='tvm/src/tir/schedule/transform.cc' l='331' u='r' c='_ZN3tvm3tir20TileWithTensorIntrinERKNS0_8ScheduleERKNS0_7BlockRVERKNS_7runtime6StringEb'/>
 <use f='tvm/src/tir/transforms/inject_software_pipeline.cc' l='922' u='r' c='_ZN3tvm3tir17software_pipeline16PipelineRewriter8EmitImplENS_8PrimExprES3_b'/>
 <use f='tvm/src/tir/transforms/inject_software_pipeline.cc' l='938' u='r' c='_ZN3tvm3tir17software_pipeline16PipelineRewriter8EmitImplENS_8PrimExprES3_b'/>
+<use f='tvm/src/tir/transforms/inject_virtual_thread.cc' l='363' u='r' c='_ZN3tvm3tir10VTInjector10VisitStmt_EPKNS0_14IfThenElseNodeE'/>
 <use f='tvm/src/tir/transforms/lower_cross_thread_reduction.cc' l='261' u='r' c='_ZN3tvm3tir23TransformReductionBlockEPKNS0_16BlockRealizeNodeERKNS_7runtime8OptionalINS4_5ArrayINS0_6BufferEvEEEERKS8_SD_RKNS6_INS_8PrimExprEvEERKNS0_10264619'/>
 <use f='tvm/src/tir/transforms/lower_cross_thread_reduction.cc' l='291' u='r' c='_ZN3tvm3tir23TransformReductionBlockEPKNS0_16BlockRealizeNodeERKNS_7runtime8OptionalINS4_5ArrayINS0_6BufferEvEEEERKS8_SD_RKNS6_INS_8PrimExprEvEERKNS0_10264619'/>
 <use f='tvm/src/tir/transforms/lower_cross_thread_reduction.cc' l='302' u='r' c='_ZN3tvm3tir23TransformReductionBlockEPKNS0_16BlockRealizeNodeERKNS_7runtime8OptionalINS4_5ArrayINS0_6BufferEvEEEERKS8_SD_RKNS6_INS_8PrimExprEvEERKNS0_10264619'/>
@@ -309,3 +312,4 @@
 <use f='tvm/src/tir/transforms/lower_init_block.cc' l='42' u='r' c='_ZN3tvm3tir14InitBlockLower10VisitStmt_EPKNS0_9BlockNodeE'/>
 <use f='tvm/src/tir/transforms/lower_opaque_block.cc' l='98' u='r' c='_ZN3tvm3tir16OpaqueBlockLower10VisitStmt_EPKNS0_7ForNodeE'/>
 <use f='tvm/src/tir/transforms/plan_update_buffer_allocation_location.cc' l='158' u='r' c='_ZN3tvm3tir23BufferAllocationLocator17InjectOpaqueBlockENS0_4StmtERKNS_7runtime5ArrayINS0_6BufferEvEE'/>
+<use f='tvm/src/tir/transforms/vectorize_loop.cc' l='493' u='r' c='_ZN3tvm3tir10Vectorizer10VisitStmt_EPKNS0_14IfThenElseNodeE'/>

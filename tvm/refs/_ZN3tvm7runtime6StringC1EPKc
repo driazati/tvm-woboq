@@ -56,7 +56,7 @@
 <use f='tvm/src/arith/int_set.cc' l='46' u='c'/>
 <use f='tvm/src/arith/int_set.cc' l='47' u='c'/>
 <use f='tvm/src/arith/ir_mutator_with_analyzer.cc' l='66' u='c' c='_ZN3tvm5arith21IRMutatorWithAnalyzer10VisitStmt_EPKNS_3tir14IfThenElseNodeE'/>
-<use f='tvm/src/arith/ir_mutator_with_analyzer.cc' l='134' u='c' c='_ZN3tvm5arith21IRMutatorWithAnalyzer10VisitExpr_EPKNS_3tir8CallNodeE'/>
+<use f='tvm/src/arith/ir_mutator_with_analyzer.cc' l='132' u='c' c='_ZN3tvm5arith21IRMutatorWithAnalyzer10VisitExpr_EPKNS_3tir8CallNodeE'/>
 <use f='tvm/src/arith/ir_visitor_with_analyzer.cc' l='85' u='c' c='_ZN3tvm5arith21IRVisitorWithAnalyzer10VisitExpr_EPKNS_3tir8CallNodeE'/>
 <use f='tvm/src/arith/iter_affine_map.cc' l='1109' u='c' c='_ZN3tvm5arith13DetectIterMapERKNS_7runtime5ArrayINS_8PrimExprEvEERKNS1_3MapINS_3tir3VarENS_5RangeEvvEERKS3_NS0_12IterMapLevelEPNS0_8AnalyzerEb'/>
 <use f='tvm/src/arith/iter_affine_map.cc' l='1116' u='c' c='_ZN3tvm5arith13DetectIterMapERKNS_7runtime5ArrayINS_8PrimExprEvEERKNS1_3MapINS_3tir3VarENS_5RangeEvvEERKS3_NS0_12IterMapLevelEPNS0_8AnalyzerEb'/>
@@ -199,7 +199,7 @@
 <use f='tvm/src/tir/schedule/utils.h' l='443' u='c' c='_ZN3tvm3tir19BufferIndexType2StrENS0_15BufferIndexTypeE'/>
 <use f='tvm/src/meta_schedule/arg_info.cc' l='123' u='c' c='_ZNK3tvm13meta_schedule14TensorInfoNode6AsJSONEv'/>
 <use f='tvm/src/meta_schedule/database/json_database.cc' l='71' u='c' c='_ZN3tvm13meta_schedule16JSONDatabaseNodeC1ENS_7runtime6StringE'/>
-<use f='tvm/src/meta_schedule/database/json_database.cc' l='192' u='c' c='_ZN3tvm13meta_schedule8Database12JSONDatabaseENS_7runtime6StringES3_bS3_'/>
+<use f='tvm/src/meta_schedule/database/json_database.cc' l='193' u='c' c='_ZN3tvm13meta_schedule8Database12JSONDatabaseENS_7runtime6StringES3_bS3_'/>
 <use f='tvm/src/meta_schedule/database/memory_database.cc' l='27' u='c' c='_ZN3tvm13meta_schedule18MemoryDatabaseNodeC1ENS_7runtime6StringE'/>
 <use f='tvm/src/meta_schedule/database/schedule_fn_database.cc' l='26' u='c' c='_ZN3tvm13meta_schedule22ScheduleFnDatabaseNodeC1ENS_7runtime6StringE'/>
 <use f='tvm/src/meta_schedule/feature_extractor/per_store_feature.cc' l='86' u='c' c='_ZN3tvm3tir5utils19GetPragmaAutoUnrollEPKNS0_7ForNodeE'/>
@@ -1628,13 +1628,17 @@
 <use f='tvm/src/relay/transforms/simplify_expr.cc' l='608' u='c' c='_ZN3tvm5relay24EliminateIdentityRewriteC1Ev'/>
 <use f='tvm/src/relay/transforms/simplify_expr.cc' l='614' u='c' c='_ZN3tvm5relay24EliminateIdentityRewriteC1Ev'/>
 <use f='tvm/src/relay/transforms/simplify_expr.cc' l='615' u='c' c='_ZN3tvm5relay24EliminateIdentityRewriteC1Ev'/>
-<use f='tvm/src/relay/transforms/simplify_expr.cc' l='684' u='c' c='_ZN3tvm5relay22SimplifyConsecutiveAddC1Ev'/>
-<use f='tvm/src/relay/transforms/simplify_expr.cc' l='724' u='c' c='_ZN3tvm5relay13SimplifyRSqrtC1Ev'/>
-<use f='tvm/src/relay/transforms/simplify_expr.cc' l='725' u='c' c='_ZN3tvm5relay13SimplifyRSqrtC1Ev'/>
-<use f='tvm/src/relay/transforms/simplify_expr.cc' l='730' u='c' c='_ZNK3tvm5relay13SimplifyRSqrt8CallbackERKNS_9RelayExprES4_RKNS_7runtime3MapINS0_9DFPatternENS5_5ArrayIS2_vEEvvEE'/>
-<use f='tvm/src/relay/transforms/simplify_expr.cc' l='733' u='c' c='_ZNK3tvm5relay13SimplifyRSqrt8CallbackERKNS_9RelayExprES4_RKNS_7runtime3MapINS0_9DFPatternENS5_5ArrayIS2_vEEvvEE'/>
-<use f='tvm/src/relay/transforms/simplify_expr.cc' l='747' u='c' c='_ZN3tvm5relay17SimplifyDQArgFuncC1ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
-<use f='tvm/src/relay/transforms/simplify_expr.cc' l='817' u='c' c='_ZN3tvm5relay9transform12SimplifyExprEv'/>
+<use f='tvm/src/relay/transforms/simplify_expr.cc' l='697' u='c' c='_ZNK3tvm5relay17SwitchAddMultiply8CallbackERKNS_9RelayExprES4_RKNS_7runtime3MapINS0_9DFPatternENS5_5ArrayIS2_vEEvvEE'/>
+<use f='tvm/src/relay/transforms/simplify_expr.cc' l='700' u='c' c='_ZNK3tvm5relay17SwitchAddMultiply8CallbackERKNS_9RelayExprES4_RKNS_7runtime3MapINS0_9DFPatternENS5_5ArrayIS2_vEEvvEE'/>
+<use f='tvm/src/relay/transforms/simplify_expr.cc' l='703' u='c' c='_ZNK3tvm5relay17SwitchAddMultiply8CallbackERKNS_9RelayExprES4_RKNS_7runtime3MapINS0_9DFPatternENS5_5ArrayIS2_vEEvvEE'/>
+<use f='tvm/src/relay/transforms/simplify_expr.cc' l='703' u='c' c='_ZNK3tvm5relay17SwitchAddMultiply8CallbackERKNS_9RelayExprES4_RKNS_7runtime3MapINS0_9DFPatternENS5_5ArrayIS2_vEEvvEE'/>
+<use f='tvm/src/relay/transforms/simplify_expr.cc' l='738' u='c' c='_ZNK3tvm5relay29SimplifyAdjacentMultiplyOrAdd8CallbackERKNS_9RelayExprES4_RKNS_7runtime3MapINS0_9DFPatternENS5_5ArrayIS2_vEEvvEE'/>
+<use f='tvm/src/relay/transforms/simplify_expr.cc' l='756' u='c' c='_ZN3tvm5relay13SimplifyRSqrtC1Ev'/>
+<use f='tvm/src/relay/transforms/simplify_expr.cc' l='757' u='c' c='_ZN3tvm5relay13SimplifyRSqrtC1Ev'/>
+<use f='tvm/src/relay/transforms/simplify_expr.cc' l='762' u='c' c='_ZNK3tvm5relay13SimplifyRSqrt8CallbackERKNS_9RelayExprES4_RKNS_7runtime3MapINS0_9DFPatternENS5_5ArrayIS2_vEEvvEE'/>
+<use f='tvm/src/relay/transforms/simplify_expr.cc' l='765' u='c' c='_ZNK3tvm5relay13SimplifyRSqrt8CallbackERKNS_9RelayExprES4_RKNS_7runtime3MapINS0_9DFPatternENS5_5ArrayIS2_vEEvvEE'/>
+<use f='tvm/src/relay/transforms/simplify_expr.cc' l='779' u='c' c='_ZN3tvm5relay17SimplifyDQArgFuncC1ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<use f='tvm/src/relay/transforms/simplify_expr.cc' l='850' u='c' c='_ZN3tvm5relay9transform12SimplifyExprEv'/>
 <use f='tvm/src/relay/transforms/simplify_fc_transpose.cc' l='44' u='c' c='_ZN3tvm5relay18FCTransposeVisitorC1Ev'/>
 <use f='tvm/src/relay/transforms/simplify_fc_transpose.cc' l='44' u='c' c='_ZN3tvm5relay18FCTransposeVisitorC1Ev'/>
 <use f='tvm/src/relay/transforms/simplify_fc_transpose.cc' l='82' u='c' c='_ZN3tvm5relay18FCTransposeMutatorC1ERKNS_7runtime5ArrayINS2_9ObjectRefEvEE'/>
