@@ -103,6 +103,10 @@
 <use f='tvm/src/tir/schedule/primitive/reduction.cc' l='576' u='r' c='_ZN3tvm3tir17LoopPropertyError17CheckLoopPropertyERKNS0_13ScheduleStateERKNS_7runtime5ArrayINS0_3ForEvEEPKNS0_7ForNodeERKNS0_5BlockERKSt13unordered_se12529618'/>
 <use f='tvm/src/tir/schedule/primitive/reduction.cc' l='1182' u='r' c='_ZN3tvm3tir7RFactorENS0_13ScheduleStateERKNS0_8StmtSRefEi'/>
 <use f='tvm/src/tir/schedule/primitive/reduction.cc' l='1221' u='r' c='_ZN3tvm3tir7RFactorENS0_13ScheduleStateERKNS0_8StmtSRefEi'/>
+<use f='tvm/src/tir/schedule/primitive/rolling_buffer.cc' l='82' u='r' c='_ZN3tvm3tir12_GLOBAL__N_128RollingBufferDependencyError5CheckERKNS0_13ScheduleStateERKNS0_8StmtSRefES8_'/>
+<use f='tvm/src/tir/schedule/primitive/rolling_buffer.cc' l='88' u='r' c='_ZN3tvm3tir12_GLOBAL__N_128RollingBufferDependencyError5CheckERKNS0_13ScheduleStateERKNS0_8StmtSRefES8_'/>
+<use f='tvm/src/tir/schedule/primitive/rolling_buffer.cc' l='420' u='r' c='_ZN3tvm3tir13RollingBufferENS0_13ScheduleStateERKNS0_8StmtSRefEi'/>
+<use f='tvm/src/tir/schedule/primitive/rolling_buffer.cc' l='437' u='r' c='_ZN3tvm3tir13RollingBufferENS0_13ScheduleStateERKNS0_8StmtSRefEi'/>
 <use f='tvm/src/tir/schedule/state.cc' l='412' u='w' c='_ZN3tvm3tir12StateCreator6CreateENS_8IRModuleEi'/>
 <use f='tvm/src/tir/schedule/state.cc' l='417' u='m' c='_ZN3tvm3tir12StateCreator6CreateENS_8IRModuleEi'/>
 <use f='tvm/src/tir/schedule/state.cc' l='982' u='r' c='_ZN3tvm3tir17ScheduleStateNode7ReplaceERKNS0_8StmtSRefERKNS0_4StmtERKNS_7runtime3MapINS0_5BlockESA_vvEE'/>

@@ -1510,8 +1510,8 @@
 <use f='tvm/src/tir/schedule/block_scope.cc' l='125' u='c' c='_ZNK3tvm3tir14BlockScopeNode12GetDepsBySrcERKNS0_8StmtSRefE'/>
 <use f='tvm/src/tir/schedule/block_scope.cc' l='134' u='c' c='_ZNK3tvm3tir14BlockScopeNode12GetDepsByDstERKNS0_8StmtSRefE'/>
 <use f='tvm/src/tir/schedule/concrete_schedule.h' l='116' u='c' c='_ZN3tvm3tir20ConcreteScheduleNode9CacheReadERKNS0_7BlockRVEiRKNS_7runtime6StringENS5_5ArrayIS2_vEE'/>
-<use f='tvm/src/tir/schedule/concrete_schedule.h' l='293' u='c' c='_ZN3tvm3tir14GetSRefsHelperEPKNS0_20ConcreteScheduleNodeERKNS_7runtime5ArrayIT_NSt9enable_ifIXsr3std10is_base_ofINS4_9ObjectRefES6_EE5valueEvE4typeEEE'/>
-<use f='tvm/src/tir/schedule/concrete_schedule.h' l='337' u='c' c='_ZN3tvm3tir20ConcreteScheduleNode8CreateRVERKSt6vectorIlSaIlEE'/>
+<use f='tvm/src/tir/schedule/concrete_schedule.h' l='295' u='c' c='_ZN3tvm3tir14GetSRefsHelperEPKNS0_20ConcreteScheduleNodeERKNS_7runtime5ArrayIT_NSt9enable_ifIXsr3std10is_base_ofINS4_9ObjectRefES6_EE5valueEvE4typeEEE'/>
+<use f='tvm/src/tir/schedule/concrete_schedule.h' l='339' u='c' c='_ZN3tvm3tir20ConcreteScheduleNode8CreateRVERKSt6vectorIlSaIlEE'/>
 <use f='tvm/src/tir/schedule/concrete_schedule.cc' l='101' u='c' c='_ZN3tvm3tir14ScheduleCopier4CopyERKNS_7runtime5ArrayINS0_8StmtSRefEvEE'/>
 <use f='tvm/src/tir/schedule/concrete_schedule.cc' l='111' u='c' c='_ZN3tvm3tir14ScheduleCopier4CopyERKNS_7runtime5ArrayINS0_10DependencyEvEE'/>
 <use f='tvm/src/tir/schedule/concrete_schedule.cc' l='269' u='c' c='_ZZN3tvm3tir20ConcreteScheduleNode8GetBlockERKNS_7runtime6StringERKNS2_8OptionalIS3_EEEN15NotSingleResultC1ES3_NS_8IRModuleERKNS2_5ArrayINS0_8StmtSRefEvEE'/>
@@ -1649,6 +1649,10 @@
 <use f='tvm/src/tir/schedule/primitive/reduction.cc' l='1030' u='c' c='_ZN3tvm3tir29CreateLoopOutsideRfactorBlockENS0_12BlockRealizeERKNS_7runtime5ArrayINS0_3ForEvEE'/>
 <use f='tvm/src/tir/schedule/primitive/reduction.cc' l='1040' u='c' c='_ZN3tvm3tir29CreateLoopOutsideRfactorBlockENS0_12BlockRealizeERKNS_7runtime5ArrayINS0_3ForEvEE'/>
 <use f='tvm/src/tir/schedule/primitive/reduction.cc' l='1149' u='c' c='_ZN3tvm3tir13BlockReplacer10VisitStmt_EPKNS0_11SeqStmtNodeE'/>
+<use f='tvm/src/tir/schedule/primitive/rolling_buffer.cc' l='44' u='c' c='_ZN3tvm3tir12_GLOBAL__N_122GetRelaxedBufferRegionERKNS0_12BlockRealizeERKNS0_12BufferRegionERKNS_7runtime3MapINS0_3VarENS_5arith6IntSetEvvEE'/>
+<use f='tvm/src/tir/schedule/primitive/rolling_buffer.cc' l='278' u='c' c='_ZNK3tvm3tir12_GLOBAL__N_121RollingBufferRewriter19RewriteBufferAccessEPNS0_6BufferEPNS_7runtime5ArrayINS_8PrimExprEvEE'/>
+<use f='tvm/src/tir/schedule/primitive/rolling_buffer.cc' l='299' u='c' c='_ZN3tvm3tir12_GLOBAL__N_121RollingBufferRewriter10VisitStmt_EPKNS0_9BlockNodeE'/>
+<use f='tvm/src/tir/schedule/primitive/rolling_buffer.cc' l='309' u='c' c='_ZN3tvm3tir12_GLOBAL__N_121RollingBufferRewriter10VisitStmt_EPKNS0_9BlockNodeE'/>
 <use f='tvm/src/tir/schedule/state.cc' l='244' u='c' c='_ZN3tvm3tir18BlockInfoCollector32CheckRegionCoverAndStagePipelineERKNS0_9BlockInfoERKNS0_8StmtSRefERKNS_7runtime5ArrayIS5_vEE'/>
 <use f='tvm/src/tir/schedule/state.cc' l='251' u='c' c='_ZN3tvm3tir18BlockInfoCollector32CheckRegionCoverAndStagePipelineERKNS0_9BlockInfoERKNS0_8StmtSRefERKNS_7runtime5ArrayIS5_vEE'/>
 <use f='tvm/src/tir/schedule/trace.cc' l='56' u='c' c='_ZN3tvm3tir17TranslateInputRVsERKNS_7runtime5ArrayINS1_9ObjectRefEvEERKSt13unordered_mapIPKNS1_6ObjectESA_St4hashISA_ESt8equal_toISA_ESaISt4pairIKSA_SA_EEE'/>
@@ -1704,9 +1708,10 @@
 <use f='tvm/src/tir/schedule/traced_schedule.cc' l='553' u='c' c='_ZN3tvm3tir18TracedScheduleNode16SetAxisSeparatorERKNS0_7BlockRVEiNS0_15BufferIndexTypeERKNS_7runtime5ArrayINS_6IntImmEvEE'/>
 <use f='tvm/src/tir/schedule/traced_schedule.cc' l='563' u='c' c='_ZN3tvm3tir18TracedScheduleNode16DecomposePaddingERKNS0_7BlockRVERKNS0_6LoopRVE'/>
 <use f='tvm/src/tir/schedule/traced_schedule.cc' l='575' u='c' c='_ZN3tvm3tir18TracedScheduleNode9PadEinsumERKNS0_7BlockRVERKNS_7runtime5ArrayINS_7IntegerEvEE'/>
-<use f='tvm/src/tir/schedule/traced_schedule.cc' l='584' u='c' c='_ZN3tvm3tir18TracedScheduleNode13EnterPostprocEv'/>
-<use f='tvm/src/tir/schedule/traced_schedule.cc' l='585' u='c' c='_ZN3tvm3tir18TracedScheduleNode13EnterPostprocEv'/>
-<use f='tvm/src/tir/schedule/traced_schedule.cc' l='586' u='c' c='_ZN3tvm3tir18TracedScheduleNode13EnterPostprocEv'/>
+<use f='tvm/src/tir/schedule/traced_schedule.cc' l='587' u='c' c='_ZN3tvm3tir18TracedScheduleNode13RollingBufferERKNS0_7BlockRVEi'/>
+<use f='tvm/src/tir/schedule/traced_schedule.cc' l='596' u='c' c='_ZN3tvm3tir18TracedScheduleNode13EnterPostprocEv'/>
+<use f='tvm/src/tir/schedule/traced_schedule.cc' l='597' u='c' c='_ZN3tvm3tir18TracedScheduleNode13EnterPostprocEv'/>
+<use f='tvm/src/tir/schedule/traced_schedule.cc' l='598' u='c' c='_ZN3tvm3tir18TracedScheduleNode13EnterPostprocEv'/>
 <use f='tvm/src/tir/transforms/arg_binder.cc' l='229' u='c' c='_ZN3tvm3tir9ArgBinder12BindDLTensorERKNS0_6BufferERKNS_8PrimExprES7_RKNS0_3VarERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
 <use f='tvm/src/tir/transforms/bf16_legalize.cc' l='93' u='c' c='_ZN3tvm3tir19BF16PromoteRewriter10VisitExpr_EPKNS0_8CallNodeE'/>
 <use f='tvm/src/tir/transforms/bf16_legalize.cc' l='380' u='c' c='_ZN3tvm3tir9transform11BF16PromoteEv'/>

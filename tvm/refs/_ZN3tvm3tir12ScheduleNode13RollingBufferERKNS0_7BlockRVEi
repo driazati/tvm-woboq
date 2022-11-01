@@ -1,0 +1,18 @@
+<dec f='tvm/include/tvm/tir/schedule/schedule.h' l='707' type='void tvm::tir::ScheduleNode::RollingBuffer(const tvm::tir::BlockRV &amp; block_rv, int write_buffer_index)'/>
+<doc f='tvm/include/tvm/tir/schedule/schedule.h' l='693'>/*!
+   * \brief Compute the target buffer via rolling buffering.
+   * \details This primitive selects the outermost rollable axis with a positive bound overlap that
+   * appears in the block&apos;s ancestor loops as `rolling axis`, fold and circularize the buffer along
+   * the rolling dimension, append block predicate to avoid recomputing overlapping elements.
+   * It requires:
+   * 1) The buffer to be an intermediate buffer defined via `alloc_buffer`.
+   * 2) The LCA of the producer and consumer of the buffer is a for loop, typically,
+   *    the producer and consumer of the buffer are cascaded through compute_at.
+   * 3) The access region of the buffer has at least one dimension that contains
+   *    a positive bound overlap.
+   * \param block_rv The producer block of the buffer.
+   * \param write_buffer_index The index of the buffer in block&apos;s write region.
+   */</doc>
+<ovr f='tvm/src/tir/schedule/concrete_schedule.cc' l='837' c='_ZN3tvm3tir20ConcreteScheduleNode13RollingBufferERKNS0_7BlockRVEi'/>
+<use f='tvm/src/tir/schedule/primitive/rolling_buffer.cc' l='458' u='c' c='_ZN3tvm3tir19RollingBufferTraits23UnpackedApplyToScheduleENS0_8ScheduleENS0_7BlockRVENS_7IntegerE'/>
+<use f='tvm/src/tir/schedule/schedule.cc' l='277' u='a'/>

@@ -90,8 +90,8 @@
 <use f='tvm/src/tir/schedule/analysis/layout.cc' l='242'/>
 <size>8</size>
 <use f='tvm/src/tir/schedule/concrete_schedule.h' l='75' c='_ZNK3tvm3tir20ConcreteScheduleNode3GetERKNS0_6LoopRVE'/>
-<use f='tvm/src/tir/schedule/concrete_schedule.h' l='217' c='_ZNK3tvm3tir20ConcreteScheduleNode3GetERKNS0_6LoopRVE'/>
-<use f='tvm/src/tir/schedule/concrete_schedule.h' l='220' c='_ZNK3tvm3tir20ConcreteScheduleNode3GetERKNS0_6LoopRVE'/>
+<use f='tvm/src/tir/schedule/concrete_schedule.h' l='219' c='_ZNK3tvm3tir20ConcreteScheduleNode3GetERKNS0_6LoopRVE'/>
+<use f='tvm/src/tir/schedule/concrete_schedule.h' l='222' c='_ZNK3tvm3tir20ConcreteScheduleNode3GetERKNS0_6LoopRVE'/>
 <use f='tvm/src/tir/schedule/concrete_schedule.cc' l='391' c='_ZZN3tvm3tir20ConcreteScheduleNode5SplitERKNS0_6LoopRVERKNS_7runtime5ArrayINS5_8OptionalINS_8PrimExprEEEvEEbEN23WrongFactorProductErrorC1ENS_8IRModuleENS0_3ForE'/>
 <use f='tvm/src/tir/schedule/concrete_schedule.cc' l='406' c='_ZN3tvm3tir20ConcreteScheduleNode5SplitERKNS0_6LoopRVERKNS_7runtime5ArrayINS5_8OptionalINS_8PrimExprEEEvEEb'/>
 <use f='tvm/src/tir/schedule/concrete_schedule.cc' l='466' c='_ZN3tvm3tir20ConcreteScheduleNode5SplitERKNS0_6LoopRVERKNS_7runtime5ArrayINS5_8OptionalINS_8PrimExprEEEvEEb'/>
@@ -243,6 +243,9 @@
 <use f='tvm/src/tir/schedule/primitive/reduction.cc' l='1234' c='_ZN3tvm3tir7RFactorENS0_13ScheduleStateERKNS0_8StmtSRefEi'/>
 <use f='tvm/src/tir/schedule/primitive/reduction.cc' l='1240' c='_ZN3tvm3tir7RFactorENS0_13ScheduleStateERKNS0_8StmtSRefEi'/>
 <use f='tvm/src/tir/schedule/primitive/reduction.cc' l='1257' c='_ZN3tvm3tir7RFactorENS0_13ScheduleStateERKNS0_8StmtSRefEi'/>
+<size>8</size>
+<use f='tvm/src/tir/schedule/primitive/rolling_buffer.cc' l='429' c='_ZN3tvm3tir13RollingBufferENS0_13ScheduleStateERKNS0_8StmtSRefEi'/>
+<use f='tvm/src/tir/schedule/primitive/rolling_buffer.cc' l='429' c='_ZN3tvm3tir13RollingBufferENS0_13ScheduleStateERKNS0_8StmtSRefEi'/>
 <size>8</size>
 <use f='tvm/src/tir/schedule/state.cc' l='639' c='_ZN3tvm3tir14SRefTreePruner10VisitStmt_EPKNS0_7ForNodeE'/>
 <use f='tvm/src/tir/schedule/state.cc' l='890' c='_ZN3tvm3tir13ChildReplacer19CopyOnWriteAndVisitEPKNS0_8StmtNodeE'/>

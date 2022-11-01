@@ -4,15 +4,15 @@
 <use f='tvm/include/tvm/tir/schedule/schedule.h' l='103'/>
 <use f='tvm/include/tvm/tir/schedule/schedule.h' l='141' c='_ZN3tvm3tir12ScheduleNode4CopyEv'/>
 <inh f='tvm/include/tvm/runtime/object.h' l='511' c='tvm::runtime::ObjectRef'/>
-<def f='tvm/include/tvm/tir/schedule/schedule.h' l='712' ll='745'/>
-<use f='tvm/include/tvm/tir/schedule/schedule.h' l='727' c='_ZN3tvm3tir8Schedule8ConcreteENS_8IRModuleEliNS0_24ScheduleErrorRenderLevelE'/>
-<use f='tvm/include/tvm/tir/schedule/schedule.h' l='742' c='_ZN3tvm3tir8Schedule6TracedENS_8IRModuleEliNS0_24ScheduleErrorRenderLevelE'/>
-<use f='tvm/include/tvm/tir/schedule/schedule.h' l='744' c='_ZN3tvm3tir8ScheduleC1ERKS1_'/>
-<use f='tvm/include/tvm/tir/schedule/schedule.h' l='744' c='_ZN3tvm3tir8ScheduleC1EOS1_'/>
-<use f='tvm/include/tvm/tir/schedule/schedule.h' l='744' c='_ZN3tvm3tir8ScheduleaSERKS1_'/>
-<use f='tvm/include/tvm/tir/schedule/schedule.h' l='744' c='_ZN3tvm3tir8ScheduleaSERKS1_'/>
-<use f='tvm/include/tvm/tir/schedule/schedule.h' l='744' c='_ZN3tvm3tir8ScheduleaSEOS1_'/>
-<use f='tvm/include/tvm/tir/schedule/schedule.h' l='744' c='_ZN3tvm3tir8ScheduleaSEOS1_'/>
+<def f='tvm/include/tvm/tir/schedule/schedule.h' l='729' ll='762'/>
+<use f='tvm/include/tvm/tir/schedule/schedule.h' l='744' c='_ZN3tvm3tir8Schedule8ConcreteENS_8IRModuleEliNS0_24ScheduleErrorRenderLevelE'/>
+<use f='tvm/include/tvm/tir/schedule/schedule.h' l='759' c='_ZN3tvm3tir8Schedule6TracedENS_8IRModuleEliNS0_24ScheduleErrorRenderLevelE'/>
+<use f='tvm/include/tvm/tir/schedule/schedule.h' l='761' c='_ZN3tvm3tir8ScheduleC1ERKS1_'/>
+<use f='tvm/include/tvm/tir/schedule/schedule.h' l='761' c='_ZN3tvm3tir8ScheduleC1EOS1_'/>
+<use f='tvm/include/tvm/tir/schedule/schedule.h' l='761' c='_ZN3tvm3tir8ScheduleaSERKS1_'/>
+<use f='tvm/include/tvm/tir/schedule/schedule.h' l='761' c='_ZN3tvm3tir8ScheduleaSERKS1_'/>
+<use f='tvm/include/tvm/tir/schedule/schedule.h' l='761' c='_ZN3tvm3tir8ScheduleaSEOS1_'/>
+<use f='tvm/include/tvm/tir/schedule/schedule.h' l='761' c='_ZN3tvm3tir8ScheduleaSEOS1_'/>
 <use f='tvm/include/tvm/meta_schedule/measure_candidate.h' l='36'/>
 <use f='tvm/include/tvm/meta_schedule/measure_candidate.h' l='60' c='_ZN3tvm13meta_schedule16MeasureCandidateC1ENS_3tir8ScheduleENS_7runtime5ArrayINS0_7ArgInfoEvEE'/>
 <use f='tvm/include/tvm/meta_schedule/database.h' l='245' c='_ZN3tvm13meta_schedule12DatabaseNode13QueryScheduleERKNS_8IRModuleERKNS_6TargetERKNS_7runtime6StringE'/>
@@ -45,7 +45,7 @@
 <use f='tvm/src/meta_schedule/utils.h' l='322' c='_ZN3tvm13meta_schedule18ThreadedTraceApply5ApplyERKNS_8IRModuleERKNS_3tir5TraceEPl'/>
 <use f='tvm/src/meta_schedule/utils.h' l='324' c='_ZN3tvm13meta_schedule18ThreadedTraceApply5ApplyERKNS_8IRModuleERKNS_3tir5TraceEPl'/>
 <size>8</size>
-<doc f='tvm/include/tvm/tir/schedule/schedule.h' l='697'>/*!
+<doc f='tvm/include/tvm/tir/schedule/schedule.h' l='714'>/*!
  * \brief Managed reference to ScheduleNode
  *
  * A schedule is a set of transformations that change the order of computation but
@@ -303,6 +303,8 @@
 <use f='tvm/src/tir/schedule/primitive/reduction.cc' l='1285' c='_ZN3tvm3tir24DecomposeReductionTraits23UnpackedApplyToScheduleENS0_8ScheduleENS0_7BlockRVENS0_6LoopRVE'/>
 <use f='tvm/src/tir/schedule/primitive/reduction.cc' l='1310' c='_ZN3tvm3tir13RFactorTraits23UnpackedApplyToScheduleENS0_8ScheduleENS0_6LoopRVENS_7IntegerE'/>
 <size>8</size>
+<use f='tvm/src/tir/schedule/primitive/rolling_buffer.cc' l='457' c='_ZN3tvm3tir19RollingBufferTraits23UnpackedApplyToScheduleENS0_8ScheduleENS0_7BlockRVENS_7IntegerE'/>
+<size>8</size>
 <use f='tvm/src/tir/schedule/primitive/sampling.cc' l='392' c='_ZN3tvm3tir23SampleCategoricalTraits23UnpackedApplyToScheduleENS0_8ScheduleENS_7runtime5ArrayINS_7IntegerEvEENS4_INS_8FloatImmEvEENS3_8OptionalIS5_EE'/>
 <use f='tvm/src/tir/schedule/primitive/sampling.cc' l='424' c='_ZN3tvm3tir23SamplePerfectTileTraits23UnpackedApplyToScheduleENS0_8ScheduleENS0_6LoopRVENS_7IntegerES4_NS_7runtime8OptionalINS5_5ArrayIS4_vEEEE'/>
 <use f='tvm/src/tir/schedule/primitive/sampling.cc' l='454' c='_ZN3tvm3tir27SampleComputeLocationTraits23UnpackedApplyToScheduleENS0_8ScheduleENS0_7BlockRVENS_7runtime8OptionalINS_7IntegerEEE'/>
@@ -358,6 +360,7 @@
 <use f='tvm/src/tir/schedule/schedule.cc' l='272'/>
 <use f='tvm/src/tir/schedule/schedule.cc' l='274'/>
 <use f='tvm/src/tir/schedule/schedule.cc' l='277'/>
+<use f='tvm/src/tir/schedule/schedule.cc' l='280'/>
 <size>8</size>
 <use f='tvm/src/tir/schedule/trace.cc' l='252' c='_ZNK3tvm3tir9TraceNode15ApplyToScheduleENS0_8ScheduleEbNS_7runtime15TypedPackedFuncIFNS3_9ObjectRefERKNS0_11InstructionERKNS3_5ArrayIS5_vEESC_RKNS3_8OptionalIS5_EEEEE'/>
 <use f='tvm/src/tir/schedule/trace.cc' l='333' c='_ZN3tvm3tir5Trace19ApplyJSONToScheduleENS_7runtime9ObjectRefENS0_8ScheduleE'/>
