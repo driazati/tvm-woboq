@@ -6,7 +6,7 @@
 <doc f='tvm/include/tvm/ir/expr.h' l='735'>// implementataions</doc>
 <use f='tvm/src/printer/relay_text_printer.cc' l='71' u='c' c='_ZN3tvm5relay16RelayTextPrinter17PrintOptionalInfoERKNS_9RelayExprE'/>
 <use f='tvm/src/relay/backend/utils.h' l='330' u='c' c='_ZN3tvm5relay7backend15ConstantUpdater10VisitExpr_EPKNS0_12ConstantNodeE'/>
-<use f='tvm/src/relay/transforms/pattern_utils.h' l='222' u='c' c='_ZN3tvm5relay8IsScalarERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/transforms/pattern_utils.h' l='251' u='c' c='_ZN3tvm5relay8IsScalarERKNS_9RelayExprE'/>
 <use f='tvm/src/relay/analysis/mac_count.cc' l='70' u='c' c='_ZN3tvm5relay9mac_count12ConvMacCountERKNS0_4CallE'/>
 <use f='tvm/src/relay/analysis/mac_count.cc' l='80' u='c' c='_ZN3tvm5relay9mac_count12ConvMacCountERKNS0_4CallE'/>
 <use f='tvm/src/relay/analysis/mac_count.cc' l='100' u='c' c='_ZN3tvm5relay9mac_count23Conv2dTransposeMacCountERKNS0_4CallE'/>
@@ -72,9 +72,9 @@
 <use f='tvm/src/relay/collage/sub_graph.cc' l='334' u='c' c='_ZZN3tvm5relay7collage19SubExprKindAndLabelB5cxx11ERKNS_9RelayExprEEN7Visitor10VisitExpr_B5cxx11EPKNS0_8CallNodeE'/>
 <use f='tvm/src/relay/collage/sub_graph.cc' l='369' u='c' c='_ZZN3tvm5relay7collage19SubExprKindAndLabelB5cxx11ERKNS_9RelayExprEEN7Visitor10VisitExpr_B5cxx11EPKNS0_9TupleNodeE'/>
 <use f='tvm/src/relay/collage/sub_graph.cc' l='383' u='c' c='_ZZN3tvm5relay7collage19SubExprKindAndLabelB5cxx11ERKNS_9RelayExprEEN7Visitor10VisitExpr_B5cxx11EPKNS0_16TupleGetItemNodeE'/>
-<use f='tvm/src/relay/ir/dataflow_matcher.cc' l='462' u='c' c='_ZN3tvm5relay16DFPatternMatcher15VisitDFPattern_EPKNS0_15TypePatternNodeERKNS_9RelayExprE'/>
-<use f='tvm/src/relay/ir/dataflow_matcher.cc' l='467' u='c' c='_ZN3tvm5relay16DFPatternMatcher15VisitDFPattern_EPKNS0_16ShapePatternNodeERKNS_9RelayExprE'/>
-<use f='tvm/src/relay/ir/dataflow_matcher.cc' l='475' u='c' c='_ZN3tvm5relay16DFPatternMatcher15VisitDFPattern_EPKNS0_19DataTypePatternNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/ir/dataflow_matcher.cc' l='452' u='c' c='_ZN3tvm5relay16DFPatternMatcher15VisitDFPattern_EPKNS0_15TypePatternNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/ir/dataflow_matcher.cc' l='457' u='c' c='_ZN3tvm5relay16DFPatternMatcher15VisitDFPattern_EPKNS0_16ShapePatternNodeERKNS_9RelayExprE'/>
+<use f='tvm/src/relay/ir/dataflow_matcher.cc' l='465' u='c' c='_ZN3tvm5relay16DFPatternMatcher15VisitDFPattern_EPKNS0_19DataTypePatternNodeERKNS_9RelayExprE'/>
 <use f='tvm/src/relay/ir/expr.cc' l='33' u='c' c='_ZN3tvm10WithFieldsENS_9GlobalVarENS_7runtime8OptionalINS1_6StringEEENS2_INS_4TypeEEENS2_INS_13VirtualDeviceEEENS2_INS_4SpanEEE'/>
 <use f='tvm/src/relay/ir/expr.cc' l='37' u='c' c='_ZN3tvm10WithFieldsENS_9GlobalVarENS_7runtime8OptionalINS1_6StringEEENS2_INS_4TypeEEENS2_INS_13VirtualDeviceEEENS2_INS_4SpanEEE'/>
 <use f='tvm/src/relay/transforms/transform_layout.h' l='344' u='c' c='_ZN3tvm5relay14LayoutRewriterERKNS0_4CallERKNS_7runtime5ArrayINS_9RelayExprEvEERKNS4_9ObjectRefE'/>
@@ -172,6 +172,7 @@
 <use f='tvm/src/relay/transforms/simplify_expr.cc' l='580' u='c' c='_ZNK3tvm5relay21ConcretizeLikeRewrite8CallbackERKNS_9RelayExprES4_RKNS_7runtime3MapINS0_9DFPatternENS5_5ArrayIS2_vEEvvEE'/>
 <use f='tvm/src/relay/transforms/simplify_expr.cc' l='685' u='c' c='_ZNK3tvm5relay25ConcretizeCastLikeRewrite8CallbackERKNS_9RelayExprES4_RKNS_7runtime3MapINS0_9DFPatternENS5_5ArrayIS2_vEEvvEE'/>
 <use f='tvm/src/relay/transforms/simplify_expr.cc' l='689' u='c' c='_ZNK3tvm5relay25ConcretizeCastLikeRewrite8CallbackERKNS_9RelayExprES4_RKNS_7runtime3MapINS0_9DFPatternENS5_5ArrayIS2_vEEvvEE'/>
+<use f='tvm/src/relay/transforms/simplify_expr.cc' l='865' u='c' c='_ZNK3tvm5relay11SimplifyAdd8CallbackERKNS_9RelayExprES4_RKNS_7runtime3MapINS0_9DFPatternENS5_5ArrayIS2_vEEvvEE'/>
 <use f='tvm/src/relay/transforms/simplify_inference.cc' l='209' u='c' c='_ZN3tvm5relay19InferenceSimplifier8Rewrite_EPKNS0_8CallNodeERKNS_9RelayExprE'/>
 <use f='tvm/src/relay/transforms/simplify_inference.cc' l='213' u='c' c='_ZN3tvm5relay19InferenceSimplifier8Rewrite_EPKNS0_8CallNodeERKNS_9RelayExprE'/>
 <use f='tvm/src/relay/transforms/simplify_inference.cc' l='217' u='c' c='_ZN3tvm5relay19InferenceSimplifier8Rewrite_EPKNS0_8CallNodeERKNS_9RelayExprE'/>

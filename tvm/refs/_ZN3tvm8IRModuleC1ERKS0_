@@ -74,6 +74,7 @@
 <use f='tvm/src/relay/analysis/extract_intermediate_expr.cc' l='37' u='c' c='_ZN3tvm5relay30ExtractIntermediateExprWrapperC1ERKNS_8IRModuleEi'/>
 <use f='tvm/src/relay/analysis/extract_operators.cc' l='34' u='c' c='_ZN3tvm5relay24OperatorExtractorWrapperC1ERKNS_8IRModuleE'/>
 <use f='tvm/src/relay/analysis/get_calibration_data.cc' l='195' u='c'/>
+<use f='tvm/src/relay/transforms/pattern_utils.h' l='115' u='c' c='_ZN3tvm5relay9InferTypeERKNS_9RelayExprE'/>
 <use f='tvm/src/relay/analysis/type_solver.cc' l='70' u='c' c='_ZN3tvm5relay10TypeSolver8Reporter9GetModuleEv'/>
 <use f='tvm/src/relay/analysis/type_solver.cc' l='531' u='c' c='_ZN3tvm5relay10TypeSolverC1ERKNS_9GlobalVarENS_17DiagnosticContextE'/>
 <use f='tvm/src/relay/analysis/type_solver.cc' l='648' u='c'/>
@@ -157,10 +158,9 @@
 <use f='tvm/src/relay/backend/vm/removed_unused_funcs.cc' l='117' u='c' c='_ZN3tvm5relay2vm21RemoveUnusedFunctionsERKNS_8IRModuleENS_7runtime5ArrayINS5_6StringEvEE'/>
 <use f='tvm/src/relay/ir/dataflow_matcher_impl.h' l='161' u='c' c='_ZN3tvm5relay15PatternRewriterC1ENS_8IRModuleE'/>
 <use f='tvm/src/relay/collage/candidate_partition.cc' l='190' u='c' c='_ZNK3tvm5relay7collage22CandidatePartitionNode13EstimatedCostERKNS1_13DataflowGraphERKNS1_13CostEstimatorERKSt10shared_ptrINS1_22CandidateFunctionCacheEE'/>
-<use f='tvm/src/relay/ir/dataflow_matcher.cc' l='432' u='c' c='_ZN3tvm5relay9InferTypeERKNS_9RelayExprE'/>
-<use f='tvm/src/relay/ir/dataflow_matcher.cc' l='442' u='c' c='_ZN3tvm5relay19InferTypeWithModuleERKNS_9RelayExprERKNS_8IRModuleE'/>
-<use f='tvm/src/relay/ir/dataflow_matcher.cc' l='451' u='c' c='_ZN3tvm5relay19InferTypeWithModuleERKNS_9RelayExprERKNS_8IRModuleE'/>
-<use f='tvm/src/relay/ir/dataflow_matcher.cc' l='851' u='c' c='_ZN3tvm5relay15RewritePatternsENS_7runtime5ArrayINS0_17DFPatternCallbackEvEENS_9RelayExprENS_8IRModuleE'/>
+<use f='tvm/src/relay/ir/dataflow_matcher.cc' l='432' u='c' c='_ZN3tvm5relay19InferTypeWithModuleERKNS_9RelayExprERKNS_8IRModuleE'/>
+<use f='tvm/src/relay/ir/dataflow_matcher.cc' l='441' u='c' c='_ZN3tvm5relay19InferTypeWithModuleERKNS_9RelayExprERKNS_8IRModuleE'/>
+<use f='tvm/src/relay/ir/dataflow_matcher.cc' l='841' u='c' c='_ZN3tvm5relay15RewritePatternsENS_7runtime5ArrayINS0_17DFPatternCallbackEvEENS_9RelayExprENS_8IRModuleE'/>
 <use f='tvm/src/relay/ir/transform.cc' l='133' u='c' c='_ZNK3tvm5relay9transform16FunctionPassNodeclENS_8IRModuleERKNS_9transform11PassContextE'/>
 <use f='tvm/src/relay/ir/transform.cc' l='152' u='c' c='_ZNK3tvm5relay9transform16FunctionPassNodeclENS_8IRModuleERKNS_9transform11PassContextE'/>
 <use f='tvm/src/relay/qnn/op/op_common.h' l='397' u='c' c='_ZN3tvm5relay3qnnL12LegalizeExprERKNS_9RelayExprE'/>
@@ -210,7 +210,7 @@
 <use f='tvm/src/relay/transforms/remove_standalone_reshapes.cc' l='105' u='c' c='_ZN3tvm5relay9transform24RemoveStandaloneReshapesEv'/>
 <use f='tvm/src/relay/transforms/simplify_expr.cc' l='799' u='c' c='_ZNK3tvm5relay17SwitchAddMultiply8CallbackERKNS_9RelayExprES4_RKNS_7runtime3MapINS0_9DFPatternENS5_5ArrayIS2_vEEvvEE'/>
 <use f='tvm/src/relay/transforms/simplify_expr.cc' l='837' u='c' c='_ZNK3tvm5relay29SimplifyAdjacentMultiplyOrAdd8CallbackERKNS_9RelayExprES4_RKNS_7runtime3MapINS0_9DFPatternENS5_5ArrayIS2_vEEvvEE'/>
-<use f='tvm/src/relay/transforms/simplify_expr.cc' l='942' u='c' c='_ZN3tvm5relay12SimplifyExprERKNS_9RelayExprERKNS_8IRModuleE'/>
+<use f='tvm/src/relay/transforms/simplify_expr.cc' l='974' u='c' c='_ZN3tvm5relay12SimplifyExprERKNS_9RelayExprERKNS_8IRModuleE'/>
 <use f='tvm/src/relay/transforms/target_hooks.cc' l='152' u='c' c='_ZN3tvm5relay9transform20RelayToTIRTargetHookENS_17CompilationConfigE'/>
 <use f='tvm/src/relay/transforms/target_hooks.cc' l='161' u='c' c='_ZN3tvm5relay9transform20RelayToTIRTargetHookENS_17CompilationConfigE'/>
 <use f='tvm/src/relay/transforms/target_hooks.cc' l='168' u='c' c='_ZN3tvm5relay9transform20RelayToTIRTargetHookENS_17CompilationConfigE'/>

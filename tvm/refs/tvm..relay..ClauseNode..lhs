@@ -8,7 +8,7 @@
 <use f='tvm/src/printer/relay_text_printer.cc' l='556' u='r' c='_ZN3tvm5relay16RelayTextPrinter10VisitExpr_EPKNS0_9MatchNodeE'/>
 <use f='tvm/src/relay/analysis/match_exhaustion.cc' l='286' u='r' c='_ZN3tvm5relay14UnmatchedCasesERKNS0_5MatchERKNS_8IRModuleE'/>
 <use f='tvm/src/relay/analysis/match_exhaustion.cc' l='295' u='r' c='_ZN3tvm5relay14UnmatchedCasesERKNS0_5MatchERKNS_8IRModuleE'/>
-<use f='tvm/src/relay/analysis/util.cc' l='454' u='r' c='_ZZN3tvm5relay9TypeSubstERKNS_9RelayExprERKNS_7runtime3MapINS_7TypeVarENS_4TypeEvvEEEN16TypeSubstMutator11VisitClauseERKNS0_6ClauseE'/>
+<use f='tvm/src/relay/analysis/util.cc' l='455' u='r' c='_ZZN3tvm5relay9TypeSubstERKNS_9RelayExprERKNS_7runtime3MapINS_7TypeVarENS_4TypeEvvEEEN16TypeSubstMutator11VisitClauseERKNS0_6ClauseE'/>
 <use f='tvm/src/relay/analysis/well_formed.cc' l='136' u='r' c='_ZN3tvm5relay17WellFormedChecker11VisitClauseERKNS0_6ClauseE'/>
 <use f='tvm/src/relay/backend/interpreter.cc' l='870' u='r' c='_ZN3tvm5relay11Interpreter10VisitExpr_EPKNS0_9MatchNodeE'/>
 <use f='tvm/src/relay/backend/vm/compiler.cc' l='197' u='r' c='_ZN3tvm5relay2vm27BuildDecisionTreeFromClauseESt10shared_ptrINS1_10MatchValueEENS0_6ClauseES2_INS0_8TreeNodeIS2_INS1_13ConditionNodeEEEEE'/>
