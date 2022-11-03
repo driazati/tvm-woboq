@@ -1,6 +1,6 @@
 <inh f='tvm/src/relay/transforms/device_aware_visitors.h' l='308' c='tvm::relay::transform::DeviceAwareExprMutator'/>
-<def f='tvm/src/relay/backend/annotate_used_memory.cc' l='76' ll='202'/>
-<use f='tvm/src/relay/backend/annotate_used_memory.cc' l='220' c='_ZN3tvm5relay9transform18AnnotateUsedMemoryEv'/>
+<def f='tvm/src/relay/backend/annotate_used_memory.cc' l='80' ll='206'/>
+<use f='tvm/src/relay/backend/annotate_used_memory.cc' l='224' c='_ZN3tvm5relay9transform18AnnotateUsedMemoryEv'/>
 <size>520</size>
 <doc f='tvm/src/relay/backend/annotate_used_memory.cc' l='41'>/*!
  * \brief Annotates the minimum required memory of each primitive function callsite by analyzing
@@ -16,6 +16,7 @@
  * A simple example:
  *
  * Before:
+ * \verbatim
  * def @main(%input: Tensor[(1, 2, 2, 4), int8]) -&gt; Tensor[(1, 2, 2, 4), int8] {
  *   let %x_0 = fn (%x: Tensor[(1, 2, 2, 4), int8], Primitive=1) -&gt; Tensor[(1, 2, 2, 4), int8] {
  *     nn.max_pool2d(%x, pool_size=[1, 1], padding=[0, 0, 0, 0])
@@ -23,8 +24,10 @@
  *   let %x_1 = %x_0(%input);
  *   %x_1
  * }
+ * \endverbatim
  *
  * After:
+ * \verbatim
  * def @main(%input: Tensor[(1, 2, 2, 4), int8], io_used_memory=32) -&gt; Tensor[(1, 2, 2, 4), int8] {
  *   let %x_0: fn (%x: Tensor[(1, 2, 2, 4), int8], Primitive=1, used_memory=[32]) -&gt; Tensor[(1, 2,
  * 2, 4), int8] {
@@ -33,6 +36,7 @@
  *   let %x_1: Tensor[(1, 2, 2, 4), int8] = %x_0(%input);
  *   %x_1
  * }
+ * \endverbatim
  *
  * Note that in the simple example above io_used_memory and used_memory are the same since there
  * is only one primitive function.
