@@ -27,6 +27,8 @@
 <use f='tvm/src/arith/int_set.cc' l='97'/>
 <use f='tvm/src/arith/int_set.cc' l='447' c='_ZN3tvm5arith20IntervalSetEvaluator10VisitExpr_EPKNS_3tir6NENodeE'/>
 <size>8</size>
+<use f='tvm/src/arith/rewrite_simplify.cc' l='1431' c='_ZN3tvm5arith17RewriteSimplifier4Impl10VisitExpr_EPKNS_3tir6NENodeE'/>
+<size>8</size>
 <use f='tvm/src/arith/solve_linear_inequality.cc' l='83' c='_ZN3tvm5arith20NormalizeComparisons10VisitExpr_EPKNS_3tir6NENodeE'/>
 <size>8</size>
 <use f='tvm/src/tir/ir/expr.cc' l='424'/>

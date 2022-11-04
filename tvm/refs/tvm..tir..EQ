@@ -23,11 +23,17 @@
 <use f='tvm/src/arith/pattern_match.h' l='406' c='_ZN3tvm5aritheqERKNS0_7PatternIT_EERKNS1_IT0_EE'/>
 <use f='tvm/src/arith/pattern_match.h' l='406' c='_ZN3tvm5aritheqERKNS0_7PatternIT_EEl'/>
 <use f='tvm/src/arith/pattern_match.h' l='406' c='_ZN3tvm5aritheqElRKNS0_7PatternIT_EE'/>
+<use f='tvm/src/arith/rewrite_simplify.h' l='152' c='_ZN3tvm5arith17RewriteSimplifier4Impl17ApplyRewriteRulesENS_3tir2EQE'/>
 <size>8</size>
 <use f='tvm/src/arith/int_set.cc' l='96'/>
 <use f='tvm/src/arith/int_set.cc' l='445' c='_ZN3tvm5arith20IntervalSetEvaluator10VisitExpr_EPKNS_3tir6EQNodeE'/>
 <size>8</size>
-<use f='tvm/src/arith/rewrite_simplify.cc' l='1389' c='_ZN3tvm5arith17RewriteSimplifier4Impl10VisitExpr_EPKNS_3tir6EQNodeE'/>
+<use f='tvm/src/arith/rewrite_simplify.cc' l='1388' c='_ZN3tvm5arith17RewriteSimplifier4Impl10VisitExpr_EPKNS_3tir6EQNodeE'/>
+<use f='tvm/src/arith/rewrite_simplify.cc' l='1388' c='_ZN3tvm5arith17RewriteSimplifier4Impl10VisitExpr_EPKNS_3tir6EQNodeE'/>
+<use f='tvm/src/arith/rewrite_simplify.cc' l='1391' c='_ZN3tvm5arith17RewriteSimplifier4Impl10VisitExpr_EPKNS_3tir6EQNodeE'/>
+<use f='tvm/src/arith/rewrite_simplify.cc' l='1397' c='_ZN3tvm5arith17RewriteSimplifier4Impl17ApplyRewriteRulesENS_3tir2EQE'/>
+<use f='tvm/src/arith/rewrite_simplify.cc' l='1460' c='_ZN3tvm5arith17RewriteSimplifier4Impl10VisitExpr_EPKNS_3tir6NENodeE'/>
+<use f='tvm/src/arith/rewrite_simplify.cc' l='1500' c='_ZN3tvm5arith17RewriteSimplifier4Impl10VisitExpr_EPKNS_3tir6LENodeE'/>
 <size>8</size>
 <use f='tvm/src/arith/solve_linear_inequality.cc' l='82' c='_ZN3tvm5arith20NormalizeComparisons10VisitExpr_EPKNS_3tir6EQNodeE'/>
 <size>8</size>
