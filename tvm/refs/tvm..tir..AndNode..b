@@ -30,7 +30,7 @@
 <use f='tvm/src/tir/ir/specialize.cc' l='54' u='r' c='_ZN3tvm3tir19PrimFuncSpecializer10VisitExpr_EPKNS0_7AndNodeE'/>
 <use f='tvm/src/tir/schedule/analysis/reducer.cc' l='126' u='r' c='_ZN3tvm3tir14PatternMatcher10VisitExpr_EPKNS0_7AndNodeE'/>
 <use f='tvm/src/tir/schedule/analysis/reducer.cc' l='127' u='r' c='_ZN3tvm3tir14PatternMatcher10VisitExpr_EPKNS0_7AndNodeE'/>
-<use f='tvm/src/tir/schedule/ir_comparator.cc' l='148' u='r' c='_ZN3tvm3tir19TensorizeComparator10VisitExpr_EPKNS0_7AndNodeERKNS_8PrimExprE'/>
-<use f='tvm/src/tir/schedule/ir_comparator.cc' l='148' u='r' c='_ZN3tvm3tir19TensorizeComparator10VisitExpr_EPKNS0_7AndNodeERKNS_8PrimExprE'/>
+<use f='tvm/src/tir/schedule/ir_comparator.cc' l='225' u='r' c='_ZN3tvm3tir19TensorizeComparator10VisitExpr_EPKNS0_7AndNodeERKNS_8PrimExprE'/>
+<use f='tvm/src/tir/schedule/ir_comparator.cc' l='225' u='r' c='_ZN3tvm3tir19TensorizeComparator10VisitExpr_EPKNS0_7AndNodeERKNS_8PrimExprE'/>
 <use f='tvm/src/tir/transforms/hoist_expression.cc' l='232' u='r' c='_ZN3tvm3tir18HoistInfoCollector10VisitExpr_EPKNS0_7AndNodeE'/>
 <use f='tvm/src/tir/transforms/ir_utils.cc' l='367' u='r' c='_ZN3tvm3tir24ConditionalBoundsContext25GetVarBoundsFromConditionEv'/>

@@ -516,7 +516,7 @@
 <tr><th id="502">502</th><td><i class="doc"> * base class of such passes to ensure the consistency of data types.</i></td></tr>
 <tr><th id="503">503</th><td><i class="doc"> */</i></td></tr>
 <tr><th id="504">504</th><td><b>class</b> <dfn class="type def" id="tvm::tir::DataTypeLegalizer" title='tvm::tir::DataTypeLegalizer' data-ref="tvm::tir::DataTypeLegalizer" data-ref-filename="tvm..tir..DataTypeLegalizer">DataTypeLegalizer</dfn> : <b>public</b> <a class="type" href="#tvm::tir::StmtExprMutator" title='tvm::tir::StmtExprMutator' data-ref="tvm::tir::StmtExprMutator" data-ref-filename="tvm..tir..StmtExprMutator">StmtExprMutator</a> {</td></tr>
-<tr><th id="505">505</th><td> <b>public</b>:</td></tr>
+<tr><th id="505">505</th><td> <b>protected</b>:</td></tr>
 <tr><th id="506">506</th><td>  <a class="type" href="stmt.h.html#tvm::tir::Stmt" title='tvm::tir::Stmt' data-ref="tvm::tir::Stmt" data-ref-filename="tvm..tir..Stmt">Stmt</a> <dfn class="virtual decl fn" id="_ZN3tvm3tir17DataTypeLegalizer10VisitStmt_EPKNS0_7ForNodeE" title='tvm::tir::DataTypeLegalizer::VisitStmt_' data-ref="_ZN3tvm3tir17DataTypeLegalizer10VisitStmt_EPKNS0_7ForNodeE" data-ref-filename="_ZN3tvm3tir17DataTypeLegalizer10VisitStmt_EPKNS0_7ForNodeE">VisitStmt_</dfn>(<em>const</em> <a class="type" href="stmt.h.html#tvm::tir::ForNode" title='tvm::tir::ForNode' data-ref="tvm::tir::ForNode" data-ref-filename="tvm..tir..ForNode">ForNode</a>* <dfn class="local col4 decl" id="554op" title='op' data-type='const tvm::tir::ForNode *' data-ref="554op" data-ref-filename="554op">op</dfn>) override;</td></tr>
 <tr><th id="507">507</th><td></td></tr>
 <tr><th id="508">508</th><td>  <a class="type" href="stmt.h.html#tvm::tir::Stmt" title='tvm::tir::Stmt' data-ref="tvm::tir::Stmt" data-ref-filename="tvm..tir..Stmt">Stmt</a> <dfn class="virtual decl fn" id="_ZN3tvm3tir17DataTypeLegalizer10VisitStmt_EPKNS0_12AttrStmtNodeE" title='tvm::tir::DataTypeLegalizer::VisitStmt_' data-ref="_ZN3tvm3tir17DataTypeLegalizer10VisitStmt_EPKNS0_12AttrStmtNodeE" data-ref-filename="_ZN3tvm3tir17DataTypeLegalizer10VisitStmt_EPKNS0_12AttrStmtNodeE">VisitStmt_</dfn>(<em>const</em> <a class="type" href="stmt.h.html#tvm::tir::AttrStmtNode" title='tvm::tir::AttrStmtNode' data-ref="tvm::tir::AttrStmtNode" data-ref-filename="tvm..tir..AttrStmtNode">AttrStmtNode</a>* <dfn class="local col5 decl" id="555op" title='op' data-type='const tvm::tir::AttrStmtNode *' data-ref="555op" data-ref-filename="555op">op</dfn>) override;</td></tr>
@@ -544,18 +544,17 @@
 <tr><th id="530">530</th><td>  <b>using</b> <a class="type" href="#tvm::tir::StmtExprMutator" title='tvm::tir::StmtExprMutator' data-ref="tvm::tir::StmtExprMutator" data-ref-filename="tvm..tir..StmtExprMutator">StmtExprMutator</a>::VisitExpr_;</td></tr>
 <tr><th id="531">531</th><td>  <b>using</b> <a class="type" href="#tvm::tir::StmtExprMutator" title='tvm::tir::StmtExprMutator' data-ref="tvm::tir::StmtExprMutator" data-ref-filename="tvm..tir..StmtExprMutator">StmtExprMutator</a>::VisitStmt_;</td></tr>
 <tr><th id="532">532</th><td></td></tr>
-<tr><th id="533">533</th><td> <b>protected</b>:</td></tr>
-<tr><th id="534">534</th><td>  <i>// a map from IterVar before rewrite to that after rewrite,</i></td></tr>
-<tr><th id="535">535</th><td><i>  // ensures one old IterVar maps to exactly one new IterVar</i></td></tr>
-<tr><th id="536">536</th><td>  <span class="namespace">std::</span><a class="type" href="../../../../include/c++/10/bits/unordered_map.h.html#std::unordered_map" title='std::unordered_map' data-ref="std::unordered_map" data-ref-filename="std..unordered_map">unordered_map</a>&lt;<em>const</em> <a class="type" href="var.h.html#tvm::tir::IterVarNode" title='tvm::tir::IterVarNode' data-ref="tvm::tir::IterVarNode" data-ref-filename="tvm..tir..IterVarNode">IterVarNode</a>*, <a class="type" href="var.h.html#tvm::tir::IterVar" title='tvm::tir::IterVar' data-ref="tvm::tir::IterVar" data-ref-filename="tvm..tir..IterVar">IterVar</a>&gt; <dfn class="decl field" id="tvm::tir::DataTypeLegalizer::ivmap_" title='tvm::tir::DataTypeLegalizer::ivmap_' data-ref="tvm::tir::DataTypeLegalizer::ivmap_" data-ref-filename="tvm..tir..DataTypeLegalizer..ivmap_">ivmap_</dfn>;</td></tr>
-<tr><th id="537">537</th><td>};</td></tr>
-<tr><th id="538">538</th><td></td></tr>
-<tr><th id="539">539</th><td>}  <i>// namespace tir</i></td></tr>
-<tr><th id="540">540</th><td>}  <i>// namespace tvm</i></td></tr>
-<tr><th id="541">541</th><td></td></tr>
-<tr><th id="542">542</th><td><u>#<span data-ppcond="26">endif</span>  // TVM_TIR_STMT_FUNCTOR_H_</u></td></tr>
-<tr><th id="543">543</th><td></td></tr>
+<tr><th id="533">533</th><td>  <i>// a map from IterVar before rewrite to that after rewrite,</i></td></tr>
+<tr><th id="534">534</th><td><i>  // ensures one old IterVar maps to exactly one new IterVar</i></td></tr>
+<tr><th id="535">535</th><td>  <span class="namespace">std::</span><a class="type" href="../../../../include/c++/10/bits/unordered_map.h.html#std::unordered_map" title='std::unordered_map' data-ref="std::unordered_map" data-ref-filename="std..unordered_map">unordered_map</a>&lt;<em>const</em> <a class="type" href="var.h.html#tvm::tir::IterVarNode" title='tvm::tir::IterVarNode' data-ref="tvm::tir::IterVarNode" data-ref-filename="tvm..tir..IterVarNode">IterVarNode</a>*, <a class="type" href="var.h.html#tvm::tir::IterVar" title='tvm::tir::IterVar' data-ref="tvm::tir::IterVar" data-ref-filename="tvm..tir..IterVar">IterVar</a>&gt; <dfn class="decl field" id="tvm::tir::DataTypeLegalizer::ivmap_" title='tvm::tir::DataTypeLegalizer::ivmap_' data-ref="tvm::tir::DataTypeLegalizer::ivmap_" data-ref-filename="tvm..tir..DataTypeLegalizer..ivmap_">ivmap_</dfn>;</td></tr>
+<tr><th id="536">536</th><td>};</td></tr>
+<tr><th id="537">537</th><td></td></tr>
+<tr><th id="538">538</th><td>}  <i>// namespace tir</i></td></tr>
+<tr><th id="539">539</th><td>}  <i>// namespace tvm</i></td></tr>
+<tr><th id="540">540</th><td></td></tr>
+<tr><th id="541">541</th><td><u>#<span data-ppcond="26">endif</span>  // TVM_TIR_STMT_FUNCTOR_H_</u></td></tr>
+<tr><th id="542">542</th><td></td></tr>
 </table><hr/><p id='footer'>
-Generated while processing <a href='../../../src/arith/canonical_simplify.cc.html'>tvm/src/arith/canonical_simplify.cc</a><br/>Generated on <em>2022-Nov-04</em> from project tvm revision <em>6da298b</em><br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+Generated while processing <a href='../../../src/arith/canonical_simplify.cc.html'>tvm/src/arith/canonical_simplify.cc</a><br/>Generated on <em>2022-Nov-04</em> from project tvm revision <em>be44e9c</em><br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
 <br/>Generator usage only permitted with license.</p>
 </div></body></html>
