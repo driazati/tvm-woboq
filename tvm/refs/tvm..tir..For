@@ -281,8 +281,8 @@
 <size>8</size>
 <use f='tvm/src/tir/transforms/ir_utils.cc' l='207' c='_ZN3tvm3tir12IRConvertSSA10VisitStmt_EPKNS0_7ForNodeE'/>
 <size>8</size>
-<use f='tvm/src/tir/transforms/loop_partition.cc' l='599' c='_ZN3tvm3tir15LoopPartitioner12TryPartitionERKNS0_4StmtENS0_3VarENS_8PrimExprES6_S2_b'/>
-<use f='tvm/src/tir/transforms/loop_partition.cc' l='705' c='_ZN3tvm3tir15LoopPartitioner7MakeForEPKNS_7runtime6ObjectENS_8PrimExprENS0_4StmtE'/>
+<use f='tvm/src/tir/transforms/loop_partition.cc' l='600' c='_ZN3tvm3tir15LoopPartitioner12TryPartitionERKNS0_4StmtENS0_3VarENS_8PrimExprES6_S2_b'/>
+<use f='tvm/src/tir/transforms/loop_partition.cc' l='706' c='_ZN3tvm3tir15LoopPartitioner7MakeForEPKNS_7runtime6ObjectENS_8PrimExprENS0_4StmtE'/>
 <size>8</size>
 <use f='tvm/src/tir/transforms/lower_cross_thread_reduction.cc' l='201' c='_ZN3tvm3tir20InThreadReducerMaker10VisitStmt_EPKNS0_7ForNodeE'/>
 <use f='tvm/src/tir/transforms/lower_cross_thread_reduction.cc' l='201' c='_ZN3tvm3tir20InThreadReducerMaker10VisitStmt_EPKNS0_7ForNodeE'/>
