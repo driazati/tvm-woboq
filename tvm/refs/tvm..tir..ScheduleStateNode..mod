@@ -5,7 +5,7 @@
 <doc f='tvm/include/tvm/tir/schedule/state.h' l='87'>/*! \brief The AST of the module being scheduled */</doc>
 <use f='tvm/src/meta_schedule/mutator/mutate_parallel.cc' l='83' u='m' c='_ZN3tvm3tir15AnalyzeParallelERKNS0_13ScheduleStateERKNS_7runtime6StringES7_l'/>
 <use f='tvm/src/meta_schedule/postproc/rewrite_reduction_block.cc' l='30' u='m' c='_ZN3tvm3tir20ReductionBlockFinder4FindERKNS0_13ScheduleStateE'/>
-<use f='tvm/src/meta_schedule/postproc/rewrite_unbound_block.cc' l='30' u='m' c='_ZN3tvm3tir18UnboundBlockFinder4FindERKNS0_13ScheduleStateE'/>
+<use f='tvm/src/meta_schedule/postproc/rewrite_unbound_block.cc' l='31' u='m' c='_ZN3tvm3tir18UnboundBlockFinder4FindERKNS0_13ScheduleStateE'/>
 <use f='tvm/src/tir/schedule/analysis/analysis.cc' l='102' u='r' c='_ZN3tvm3tir12GetScopeRootERKNS0_13ScheduleStateERKNS0_8StmtSRefEb'/>
 <use f='tvm/src/tir/schedule/analysis/analysis.cc' l='110' u='r' c='_ZN3tvm3tir12GetScopeRootERKNS0_13ScheduleStateERKNS0_8StmtSRefEb'/>
 <use f='tvm/src/tir/schedule/analysis/analysis.cc' l='288' u='r' c='_ZN3tvm3tir18CheckCompleteBlockERKNS0_13ScheduleStateERKNS0_8StmtSRefES6_'/>

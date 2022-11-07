@@ -327,11 +327,17 @@ tvm/src/meta_schedule/postproc/rewrite_parallel_vectorize_unroll.cc
 tvm/src/meta_schedule/postproc/rewrite_reduction_block.cc
 tvm/src/meta_schedule/postproc/rewrite_tensorize.cc
 tvm/src/meta_schedule/postproc/rewrite_unbound_block.cc
-tvm/src/meta_schedule/schedule_rule/auto_bind.h
+tvm/include/tvm/meta_schedule/schedule/cuda/thread_bind.h
 tvm/src/meta_schedule/postproc/verify_gpu_code.cc
 tvm/src/meta_schedule/profiler.cc
 tvm/src/meta_schedule/runner/runner.cc
+tvm/src/meta_schedule/schedule/cpu/winograd.cc
+tvm/include/tvm/meta_schedule/schedule/generic/winograd.h
+tvm/src/meta_schedule/schedule/cuda/thread_bind.cc
+tvm/src/meta_schedule/schedule/cuda/winograd.cc
+tvm/src/meta_schedule/schedule/generic/winograd.cc
 tvm/src/meta_schedule/schedule_rule/add_rfactor.cc
+tvm/src/meta_schedule/schedule_rule/apply_custom_rule.cc
 tvm/src/meta_schedule/schedule_rule/auto_bind.cc
 tvm/src/meta_schedule/schedule_rule/auto_inline.cc
 tvm/src/meta_schedule/schedule_rule/cross_thread_reduction.cc
@@ -343,7 +349,6 @@ tvm/src/meta_schedule/schedule_rule/multi_level_tiling_with_intrin.cc
 tvm/src/meta_schedule/schedule_rule/parallel_vectorize_unroll.cc
 tvm/src/meta_schedule/schedule_rule/random_compute_location.cc
 tvm/src/meta_schedule/schedule_rule/schedule_rule.cc
-tvm/src/meta_schedule/schedule_rule/winograd.cc
 tvm/src/meta_schedule/search_strategy/evolutionary_search.cc
 tvm/src/meta_schedule/search_strategy/replay_func.cc
 tvm/src/meta_schedule/search_strategy/replay_trace.cc

@@ -1,0 +1,14 @@
+<dec f='tvm/include/tvm/meta_schedule/schedule/cuda/thread_bind.h' l='61' type='void tvm::meta_schedule::BindBlockThreadIdx(tir::Schedule sch, tir::BlockRV block, int64_t max_threadblocks, int64_t max_threads_per_block, std::function&lt;tir::ExprRV (int64_t)&gt; get_factor = nullptr)'/>
+<use f='tvm/src/meta_schedule/postproc/rewrite_unbound_block.cc' l='136' u='c' c='_ZN3tvm13meta_schedule23RewriteUnboundBlockNode5ApplyERKNS_3tir8ScheduleE'/>
+<doc f='tvm/include/tvm/meta_schedule/schedule/cuda/thread_bind.h' l='53'>/*!
+ * \brief Bind the given block if it is not bound to blockIdx or threadIdx.
+ * \param sch The schedule.
+ * \param block The block to be bound.
+ * \param max_threadblocks The maximum number of threadblocks allowed.
+ * \param max_threads_per_block The maximum number of threads allowed.
+ * \param get_factor A function that returns the tiling factor.
+ */</doc>
+<doc f='tvm/include/tvm/meta_schedule/schedule/cuda/thread_bind.h' l='61'>//</doc>
+<def f='tvm/src/meta_schedule/schedule/cuda/thread_bind.cc' l='87' ll='178' type='void tvm::meta_schedule::BindBlockThreadIdx(tir::Schedule sch, tir::BlockRV block_rv, int64_t max_threadblocks, int64_t max_threads_per_block, std::function&lt;tir::ExprRV (int64_t)&gt; get_factor = nullptr)'/>
+<doc f='tvm/src/meta_schedule/schedule/cuda/thread_bind.cc' l='87'>//</doc>
+<use f='tvm/src/meta_schedule/schedule_rule/auto_bind.cc' l='71' u='c' c='_ZN3tvm13meta_schedule12AutoBindNode5ApplyERKNS_3tir8ScheduleERKNS2_7BlockRVE'/>

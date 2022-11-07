@@ -1,5 +1,25 @@
 <def f='tvm/include/tvm/tir/schedule/schedule.h' l='66' macro='1' type='void tvm::tir::BlockRV::BlockRV(const tvm::tir::BlockRV &amp; other)'/>
 <use f='tvm/src/meta_schedule/postproc/rewrite_tensorize.cc' l='98' u='c' c='_ZN3tvm13meta_schedule20RewriteTensorizeNode5ApplyERKNS_3tir8ScheduleE'/>
+<use f='tvm/src/meta_schedule/postproc/rewrite_unbound_block.cc' l='136' u='c' c='_ZN3tvm13meta_schedule23RewriteUnboundBlockNode5ApplyERKNS_3tir8ScheduleE'/>
+<use f='tvm/src/meta_schedule/schedule/cpu/winograd.cc' l='64' u='c'/>
+<use f='tvm/src/meta_schedule/schedule/cpu/winograd.cc' l='65' u='c'/>
+<use f='tvm/src/meta_schedule/schedule/cpu/winograd.cc' l='66' u='c'/>
+<use f='tvm/src/meta_schedule/schedule/cpu/winograd.cc' l='76' u='c'/>
+<use f='tvm/src/meta_schedule/schedule/cpu/winograd.cc' l='77' u='c'/>
+<use f='tvm/src/meta_schedule/schedule/cpu/winograd.cc' l='83' u='c'/>
+<use f='tvm/src/meta_schedule/schedule/cpu/winograd.cc' l='84' u='c'/>
+<use f='tvm/src/meta_schedule/schedule/cpu/winograd.cc' l='85' u='c'/>
+<use f='tvm/src/meta_schedule/schedule/cpu/winograd.cc' l='95' u='c'/>
+<use f='tvm/src/meta_schedule/schedule/cpu/winograd.cc' l='96' u='c'/>
+<use f='tvm/src/meta_schedule/schedule/cuda/winograd.cc' l='68' u='c'/>
+<use f='tvm/src/meta_schedule/schedule/cuda/winograd.cc' l='69' u='c'/>
+<use f='tvm/src/meta_schedule/schedule/cuda/winograd.cc' l='70' u='c'/>
+<use f='tvm/src/meta_schedule/schedule/cuda/winograd.cc' l='93' u='c'/>
+<use f='tvm/src/meta_schedule/schedule/cuda/winograd.cc' l='94' u='c'/>
+<use f='tvm/src/meta_schedule/schedule/cuda/winograd.cc' l='108' u='c'/>
+<use f='tvm/src/meta_schedule/schedule/cuda/winograd.cc' l='109' u='c'/>
+<use f='tvm/src/meta_schedule/schedule/cuda/winograd.cc' l='136' u='c'/>
+<use f='tvm/src/meta_schedule/schedule_rule/auto_bind.cc' l='71' u='c' c='_ZN3tvm13meta_schedule12AutoBindNode5ApplyERKNS_3tir8ScheduleERKNS2_7BlockRVE'/>
 <use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling.cc' l='101' u='c' c='_ZN3tvm13meta_schedule20MultiLevelTilingNode5ApplyERKNS_3tir8ScheduleERKNS2_7BlockRVE'/>
 <use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling.cc' l='214' u='c' c='_ZNK3tvm13meta_schedule20MultiLevelTilingNode12TileLoopNestENS0_5StateE'/>
 <use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling_tensor_core.cc' l='208' u='c' c='_ZN3tvm13meta_schedule30MultiLevelTilingTensorCoreNode5ApplyERKNS_3tir8ScheduleERKNS2_7BlockRVE'/>
@@ -8,18 +28,6 @@
 <use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling_tensor_core.cc' l='416' u='c' c='_ZNK3tvm13meta_schedule30MultiLevelTilingTensorCoreNode25TransformWithTensorIntrinEPNS0_19TensorCoreStateNodeERKNS_7runtime6StringE'/>
 <use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling_wide_vector.cc' l='88' u='c' c='_ZNK3tvm13meta_schedule30MultiLevelTilingWideVectorNode9SplitLoopERKNS_3tir8ScheduleENS2_7BlockRVENS2_6LoopRVEi'/>
 <use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling_with_intrin.cc' l='77' u='c' c='_ZN3tvm13meta_schedule30MultiLevelTilingWithIntrinNode13ApplySubRulesESt6vectorINS0_5StateESaIS3_EE'/>
-<use f='tvm/src/meta_schedule/schedule_rule/winograd.cc' l='111' u='c'/>
-<use f='tvm/src/meta_schedule/schedule_rule/winograd.cc' l='117' u='c'/>
-<use f='tvm/src/meta_schedule/schedule_rule/winograd.cc' l='118' u='c'/>
-<use f='tvm/src/meta_schedule/schedule_rule/winograd.cc' l='119' u='c'/>
-<use f='tvm/src/meta_schedule/schedule_rule/winograd.cc' l='144' u='c'/>
-<use f='tvm/src/meta_schedule/schedule_rule/winograd.cc' l='160' u='c'/>
-<use f='tvm/src/meta_schedule/schedule_rule/winograd.cc' l='216' u='c'/>
-<use f='tvm/src/meta_schedule/schedule_rule/winograd.cc' l='217' u='c'/>
-<use f='tvm/src/meta_schedule/schedule_rule/winograd.cc' l='218' u='c'/>
-<use f='tvm/src/meta_schedule/schedule_rule/winograd.cc' l='231' u='c'/>
-<use f='tvm/src/meta_schedule/schedule_rule/winograd.cc' l='232' u='c'/>
-<use f='tvm/src/meta_schedule/schedule_rule/winograd.cc' l='236' u='c'/>
 <use f='tvm/src/meta_schedule/trace_apply.cc' l='42' u='c' c='_ZN3tvm13meta_schedule10IsAncestorENS_3tir7BlockRVES2_NS1_8ScheduleE'/>
 <use f='tvm/src/meta_schedule/trace_apply.cc' l='42' u='c' c='_ZN3tvm13meta_schedule10IsAncestorENS_3tir7BlockRVES2_NS1_8ScheduleE'/>
 <use f='tvm/src/meta_schedule/trace_apply.cc' l='69' u='c' c='_ZN3tvm13meta_schedule16InlinePostBlocksENS_3tir8ScheduleENS1_5TraceENS_6TargetE'/>

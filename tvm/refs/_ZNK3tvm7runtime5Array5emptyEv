@@ -48,7 +48,8 @@
 <use f='tvm/src/meta_schedule/database/memory_database.cc' l='71' u='c' c='_ZN3tvm13meta_schedule18MemoryDatabaseNode7GetTopKERKNS0_8WorkloadEi'/>
 <use f='tvm/src/meta_schedule/mutator/mutate_compute_location.cc' l='103' u='c' c='_ZN3tvm13meta_schedule25MutateComputeLocationNode14FindCandidatesERKNS_3tir5TraceEPl'/>
 <use f='tvm/src/meta_schedule/postproc/rewrite_parallel_vectorize_unroll.cc' l='362' u='c' c='_ZN3tvm13meta_schedule34RewriteParallelVectorizeUnrollNode5ApplyERKNS_3tir8ScheduleE'/>
-<use f='tvm/src/meta_schedule/schedule_rule/auto_bind.cc' l='91' u='c' c='_ZN3tvm13meta_schedule18BindBlockThreadIdxERKNS_3tir8ScheduleERKNS1_7BlockRVEllSt8functionIFNS_8PrimExprElEE'/>
+<use f='tvm/src/meta_schedule/schedule/cuda/thread_bind.cc' l='149' u='c' c='_ZN3tvm13meta_schedule18BindBlockThreadIdxENS_3tir8ScheduleENS1_7BlockRVEllSt8functionIFNS_8PrimExprElEE'/>
+<use f='tvm/src/meta_schedule/schedule/generic/winograd.cc' l='35' u='c' c='_ZN3tvm13meta_schedule33GetWinogradProducerAndInlineConstENS_3tir8ScheduleENS1_7BlockRVE'/>
 <use f='tvm/src/meta_schedule/schedule_rule/auto_inline.cc' l='112' u='c' c='_ZN3tvm13meta_schedule14AutoInlineNode11CheckInlineERKNS_3tir8ScheduleERKNS2_7BlockRVE'/>
 <use f='tvm/src/meta_schedule/schedule_rule/auto_inline.cc' l='114' u='c' c='_ZN3tvm13meta_schedule14AutoInlineNode11CheckInlineERKNS_3tir8ScheduleERKNS2_7BlockRVE'/>
 <use f='tvm/src/meta_schedule/schedule_rule/auto_inline.cc' l='119' u='c' c='_ZN3tvm13meta_schedule14AutoInlineNode11CheckInlineERKNS_3tir8ScheduleERKNS2_7BlockRVE'/>
@@ -62,7 +63,7 @@
 <use f='tvm/src/meta_schedule/schedule_rule/random_compute_location.cc' l='95' u='c' c='_ZNK3tvm13meta_schedule25RandomComputeLocationNode15CheckConditionsENS_3tir8ScheduleERKNS2_7BlockRVE'/>
 <use f='tvm/src/meta_schedule/search_strategy/evolutionary_search.cc' l='421' u='c' c='_ZN3tvm13meta_schedule22EvolutionarySearchNode9PreTuningEiiRKNS_7runtime5ArrayINS_3tir8ScheduleEvEERKNS2_8OptionalINS0_8DatabaseEEERKNS9_INS0_9CostModelEEE'/>
 <use f='tvm/src/meta_schedule/search_strategy/replay_trace.cc' l='109' u='c' c='_ZN3tvm13meta_schedule15ReplayTraceNode9PreTuningEiiRKNS_7runtime5ArrayINS_3tir8ScheduleEvEERKNS2_8OptionalINS0_8DatabaseEEERKNS9_INS0_9CostModelEEE'/>
-<use f='tvm/src/meta_schedule/space_generator/post_order_apply.cc' l='142' u='c' c='_ZN3tvm13meta_schedule18PostOrderApplyNode19GenerateDesignSpaceERKNS_8IRModuleE'/>
+<use f='tvm/src/meta_schedule/space_generator/post_order_apply.cc' l='133' u='c' c='_ZN3tvm13meta_schedule18PostOrderApplyNode19GenerateDesignSpaceERKNS_8IRModuleE'/>
 <use f='tvm/src/printer/relay_text_printer.cc' l='587' u='c' c='_ZN3tvm5relay16RelayTextPrinter13VisitPattern_EPKNS0_22PatternConstructorNodeE'/>
 <use f='tvm/src/printer/tvmscript_printer.cc' l='522' u='c' c='_ZN3tvm3tir16TVMScriptPrinter22AllocBufferDeclarationERKNS0_6BufferE'/>
 <use f='tvm/src/printer/tvmscript_printer.cc' l='627' u='c' c='_ZN3tvm3tir16TVMScriptPrinter14IsSimpleBufferERKNS0_6BufferE'/>
@@ -132,9 +133,9 @@
 <use f='tvm/src/te/operation/compute_op.cc' l='62' u='c' c='_ZN3tvm2te11ReduceEqualEPKNS_3tir10ReduceNodeES4_'/>
 <use f='tvm/src/te/operation/compute_op.cc' l='62' u='c' c='_ZN3tvm2te11ReduceEqualEPKNS_3tir10ReduceNodeES4_'/>
 <use f='tvm/src/te/operation/compute_op.cc' l='317' u='c' c='_ZN3tvm2te13MakeReductionEPKNS0_13ComputeOpNodeERKNS_7runtime5ArrayINS0_6TensorEvEEPNS_3tir4StmtESC_'/>
-<use f='tvm/src/te/operation/create_primfunc.cc' l='268' u='c' c='_ZN3tvm3tir24GenerateBlockFromTensorsERKNS_2te9ComputeOpERKNS_7runtime5ArrayINS1_6TensorEvEENS6_INS_8PrimExprEvEESB_PNS0_14CreateFuncInfoEPNS_5arith8AnalyzerE'/>
-<use f='tvm/src/te/operation/create_primfunc.cc' l='309' u='c' c='_ZN3tvm3tir23GenerateStmtFromComputeERKNS_2te9ComputeOpEPNS0_14CreateFuncInfoEPNS_5arith8AnalyzerE'/>
-<use f='tvm/src/te/operation/create_primfunc.cc' l='309' u='c' c='_ZN3tvm3tir23GenerateStmtFromComputeERKNS_2te9ComputeOpEPNS0_14CreateFuncInfoEPNS_5arith8AnalyzerE'/>
+<use f='tvm/src/te/operation/create_primfunc.cc' l='275' u='c' c='_ZN3tvm3tir24GenerateBlockFromTensorsERKNS_2te9ComputeOpERKNS_7runtime5ArrayINS1_6TensorEvEENS6_INS_8PrimExprEvEESB_PNS0_14CreateFuncInfoEPNS_5arith8AnalyzerE'/>
+<use f='tvm/src/te/operation/create_primfunc.cc' l='316' u='c' c='_ZN3tvm3tir23GenerateStmtFromComputeERKNS_2te9ComputeOpEPNS0_14CreateFuncInfoEPNS_5arith8AnalyzerE'/>
+<use f='tvm/src/te/operation/create_primfunc.cc' l='316' u='c' c='_ZN3tvm3tir23GenerateStmtFromComputeERKNS_2te9ComputeOpEPNS0_14CreateFuncInfoEPNS_5arith8AnalyzerE'/>
 <use f='tvm/src/te/operation/cross_thread_reduction.cc' l='100' u='c' c='_ZN3tvm2te24MakeCrossThreadReductionEPKNS0_13ComputeOpNodeERKNS0_5StageERKSt13unordered_mapINS_3tir7IterVarENS_5RangeESt4hashIS9_ESt8equal_toIS9_ESaISt4pairIKS9_SA_EEEb'/>
 <use f='tvm/src/te/schedule/schedule_dataflow_rewrite.cc' l='129' u='c' c='_ZN3tvm2te11ReduceEqualEPKNS_3tir10ReduceNodeES4_'/>
 <use f='tvm/src/te/schedule/schedule_dataflow_rewrite.cc' l='129' u='c' c='_ZN3tvm2te11ReduceEqualEPKNS_3tir10ReduceNodeES4_'/>

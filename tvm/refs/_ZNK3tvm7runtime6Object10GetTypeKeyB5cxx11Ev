@@ -32,6 +32,7 @@
 <use f='tvm/src/meta_schedule/utils.h' l='429' u='c' c='_ZN3tvm13meta_schedule12AsFloatArrayERKNS_7runtime9ObjectRefE'/>
 <use f='tvm/src/meta_schedule/utils.h' l='442' u='c' c='_ZN3tvm13meta_schedule10AsIntArrayERKNS_7runtime9ObjectRefE'/>
 <use f='tvm/src/meta_schedule/utils.h' l='449' u='c' c='_ZN3tvm13meta_schedule10AsIntArrayERKNS_7runtime9ObjectRefE'/>
+<use f='tvm/src/meta_schedule/utils.h' l='534' u='c' c='_ZN3tvm13meta_schedule20GetDefaultAutoInlineERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
 <use f='tvm/src/meta_schedule/database/database_utils.cc' l='65' u='c' c='_ZN3tvm13meta_schedule9JSONDumpsENS_7runtime9ObjectRefERNSt7__cxx1119basic_ostringstreamIcSt11char_traitsIcESaIcEEE'/>
 <use f='tvm/src/meta_schedule/database/database_utils.cc' l='81' u='c' c='_ZN3tvm13meta_schedule9JSONDumpsENS_7runtime9ObjectRefERNSt7__cxx1119basic_ostringstreamIcSt11char_traitsIcESaIcEEE'/>
 <use f='tvm/src/meta_schedule/mutator/mutate_parallel.cc' l='67' macro='1' u='c' c='_ZN3tvm3tir21GetInstGetBlockOutputERKNS0_11InstructionE'/>
@@ -46,7 +47,7 @@
 <use f='tvm/src/meta_schedule/mutator/mutate_unroll.cc' l='111' macro='1' u='c' c='_ZN3tvm13meta_schedule18FindUnrollDecisionERKNS_3tir5TraceEPlPNS0_16MutateUnrollNode9CandidateE'/>
 <use f='tvm/src/meta_schedule/postproc/rewrite_parallel_vectorize_unroll.cc' l='236' macro='1' u='c' c='_ZN3tvm3tir23AdjustParallelVectorizeERKNS0_8ScheduleERKNS0_7BlockRVERKNS_7runtime5ArrayINS0_6LoopRVEvEEPNS0_16ParsedAnnotationE'/>
 <use f='tvm/src/meta_schedule/postproc/rewrite_parallel_vectorize_unroll.cc' l='265' macro='1' u='c' c='_ZN3tvm3tir23AdjustParallelVectorizeERKNS0_8ScheduleERKNS0_7BlockRVERKNS_7runtime5ArrayINS0_6LoopRVEvEEPNS0_16ParsedAnnotationE'/>
-<use f='tvm/src/meta_schedule/schedule_rule/auto_bind.cc' l='48' macro='1' u='c' c='_ZN3tvm13meta_schedule18BindBlockThreadIdxERKNS_3tir8ScheduleERKNS1_7BlockRVEllSt8functionIFNS_8PrimExprElEE'/>
+<use f='tvm/src/meta_schedule/schedule/cuda/thread_bind.cc' l='106' macro='1' u='c' c='_ZN3tvm13meta_schedule18BindBlockThreadIdxENS_3tir8ScheduleENS1_7BlockRVEllSt8functionIFNS_8PrimExprElEE'/>
 <use f='tvm/src/meta_schedule/schedule_rule/auto_inline.cc' l='105' macro='1' u='c' c='_ZN3tvm13meta_schedule14AutoInlineNode11CheckInlineERKNS_3tir8ScheduleERKNS2_7BlockRVE'/>
 <use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling.cc' l='40' macro='1' u='c' c='_ZN3tvm3tir18GetReadBufferNDimsERKNS0_8StmtSRefE'/>
 <use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling_tensor_core.cc' l='421' macro='1' u='c' c='_ZNK3tvm13meta_schedule30MultiLevelTilingTensorCoreNode25TransformWithTensorIntrinEPNS0_19TensorCoreStateNodeERKNS_7runtime6StringE'/>
@@ -125,8 +126,8 @@
 <use f='tvm/src/target/target.cc' l='887' u='c' c='_ZN3tvm14TargetInternal10FromConfigENS_7runtime3MapINS1_6StringENS1_9ObjectRefEvvEE'/>
 <use f='tvm/src/target/target.cc' l='906' u='c' c='_ZN3tvm14TargetInternal10FromConfigENS_7runtime3MapINS1_6StringENS1_9ObjectRefEvvEE'/>
 <use f='tvm/src/target/target.cc' l='911' u='c' c='_ZN3tvm14TargetInternal10FromConfigENS_7runtime3MapINS1_6StringENS1_9ObjectRefEvvEE'/>
-<use f='tvm/src/te/operation/create_primfunc.cc' l='410' u='c' c='_ZN3tvm3tir17CollectOrderedOpsERKNS_7runtime5ArrayINS_2te6TensorEvEE'/>
-<use f='tvm/src/te/operation/create_primfunc.cc' l='454' u='c' c='_ZN3tvm3tir19RewriteStageToBlockERKNS_2te9OperationEPNS0_14CreateFuncInfoEPNS_7runtime5ArrayINS0_4StmtEvEEPNS_5arith8AnalyzerE'/>
+<use f='tvm/src/te/operation/create_primfunc.cc' l='417' u='c' c='_ZN3tvm3tir17CollectOrderedOpsERKNS_7runtime5ArrayINS_2te6TensorEvEE'/>
+<use f='tvm/src/te/operation/create_primfunc.cc' l='461' u='c' c='_ZN3tvm3tir19RewriteStageToBlockERKNS_2te9OperationEPNS0_14CreateFuncInfoEPNS_7runtime5ArrayINS0_4StmtEvEEPNS_5arith8AnalyzerE'/>
 <use f='tvm/src/te/schedule/schedule_postproc_to_primfunc.cc' l='426' u='c' c='_ZN3tvm2te26SchedulePostProcToPrimFuncENS_7runtime5ArrayINS1_9ObjectRefEvEENS_3tir4StmtENS1_8OptionalINS1_3MapINS0_6TensorENS5_6BufferEvvEEEE'/>
 <use f='tvm/src/tir/analysis/block_access_region_detector.cc' l='121' u='c' c='_ZN3tvm3tir22BlockReadWriteDetectorclERKNS0_4StmtE'/>
 <use f='tvm/src/tir/analysis/estimate_flops.cc' l='144' u='c' c='_ZN3tvm3tir13FlopEstimator10VisitStmt_EPKNS0_7ForNodeE'/>

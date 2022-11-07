@@ -460,7 +460,7 @@
 <size>40</size>
 <use f='tvm/src/meta_schedule/postproc/rewrite_tensorize.cc' l='110' macro='1'/>
 <size>40</size>
-<use f='tvm/src/meta_schedule/postproc/rewrite_unbound_block.cc' l='148' macro='1'/>
+<use f='tvm/src/meta_schedule/postproc/rewrite_unbound_block.cc' l='149' macro='1'/>
 <size>40</size>
 <use f='tvm/src/meta_schedule/postproc/verify_gpu_code.cc' l='215' macro='1'/>
 <size>40</size>
@@ -480,9 +480,21 @@
 <use f='tvm/src/meta_schedule/runner/runner.cc' l='76' macro='1'/>
 <use f='tvm/src/meta_schedule/runner/runner.cc' l='77' macro='1'/>
 <size>40</size>
+<use f='tvm/src/meta_schedule/schedule/cpu/winograd.cc' l='62' macro='1'/>
+<use f='tvm/src/meta_schedule/schedule/cpu/winograd.cc' l='74' macro='1'/>
+<use f='tvm/src/meta_schedule/schedule/cpu/winograd.cc' l='81' macro='1'/>
+<use f='tvm/src/meta_schedule/schedule/cpu/winograd.cc' l='93' macro='1'/>
+<size>40</size>
+<use f='tvm/src/meta_schedule/schedule/cuda/winograd.cc' l='66' macro='1'/>
+<use f='tvm/src/meta_schedule/schedule/cuda/winograd.cc' l='91' macro='1'/>
+<use f='tvm/src/meta_schedule/schedule/cuda/winograd.cc' l='104' macro='1'/>
+<use f='tvm/src/meta_schedule/schedule/cuda/winograd.cc' l='134' macro='1'/>
+<size>40</size>
 <use f='tvm/src/meta_schedule/schedule_rule/add_rfactor.cc' l='123' macro='1'/>
 <size>40</size>
-<use f='tvm/src/meta_schedule/schedule_rule/auto_bind.cc' l='221' macro='1'/>
+<use f='tvm/src/meta_schedule/schedule_rule/apply_custom_rule.cc' l='88' macro='1'/>
+<size>40</size>
+<use f='tvm/src/meta_schedule/schedule_rule/auto_bind.cc' l='85' macro='1'/>
 <size>40</size>
 <use f='tvm/src/meta_schedule/schedule_rule/auto_inline.cc' l='189' macro='1'/>
 <size>40</size>
@@ -500,24 +512,14 @@
 <size>40</size>
 <use f='tvm/src/meta_schedule/schedule_rule/random_compute_location.cc' l='125' macro='1'/>
 <size>40</size>
-<use f='tvm/src/meta_schedule/schedule_rule/schedule_rule.cc' l='198' macro='1'/>
-<use f='tvm/src/meta_schedule/schedule_rule/schedule_rule.cc' l='200' macro='1'/>
-<use f='tvm/src/meta_schedule/schedule_rule/schedule_rule.cc' l='202' macro='1'/>
-<use f='tvm/src/meta_schedule/schedule_rule/schedule_rule.cc' l='204' macro='1'/>
-<use f='tvm/src/meta_schedule/schedule_rule/schedule_rule.cc' l='206' macro='1'/>
-<use f='tvm/src/meta_schedule/schedule_rule/schedule_rule.cc' l='208' macro='1'/>
-<use f='tvm/src/meta_schedule/schedule_rule/schedule_rule.cc' l='210' macro='1'/>
-<use f='tvm/src/meta_schedule/schedule_rule/schedule_rule.cc' l='212' macro='1'/>
-<size>40</size>
-<use f='tvm/src/meta_schedule/schedule_rule/winograd.cc' l='27' macro='1'/>
-<use f='tvm/src/meta_schedule/schedule_rule/winograd.cc' l='109' macro='1'/>
-<use f='tvm/src/meta_schedule/schedule_rule/winograd.cc' l='115' macro='1'/>
-<use f='tvm/src/meta_schedule/schedule_rule/winograd.cc' l='127' macro='1'/>
-<use f='tvm/src/meta_schedule/schedule_rule/winograd.cc' l='158' macro='1'/>
-<use f='tvm/src/meta_schedule/schedule_rule/winograd.cc' l='168' macro='1'/>
-<use f='tvm/src/meta_schedule/schedule_rule/winograd.cc' l='188' macro='1'/>
-<use f='tvm/src/meta_schedule/schedule_rule/winograd.cc' l='214' macro='1'/>
-<use f='tvm/src/meta_schedule/schedule_rule/winograd.cc' l='229' macro='1'/>
+<use f='tvm/src/meta_schedule/schedule_rule/schedule_rule.cc' l='218' macro='1'/>
+<use f='tvm/src/meta_schedule/schedule_rule/schedule_rule.cc' l='220' macro='1'/>
+<use f='tvm/src/meta_schedule/schedule_rule/schedule_rule.cc' l='222' macro='1'/>
+<use f='tvm/src/meta_schedule/schedule_rule/schedule_rule.cc' l='224' macro='1'/>
+<use f='tvm/src/meta_schedule/schedule_rule/schedule_rule.cc' l='226' macro='1'/>
+<use f='tvm/src/meta_schedule/schedule_rule/schedule_rule.cc' l='228' macro='1'/>
+<use f='tvm/src/meta_schedule/schedule_rule/schedule_rule.cc' l='230' macro='1'/>
+<use f='tvm/src/meta_schedule/schedule_rule/schedule_rule.cc' l='232' macro='1'/>
 <size>40</size>
 <use f='tvm/src/meta_schedule/search_strategy/evolutionary_search.cc' l='804' macro='1'/>
 <use f='tvm/src/meta_schedule/search_strategy/evolutionary_search.cc' l='806' macro='1'/>
@@ -536,7 +538,7 @@
 <use f='tvm/src/meta_schedule/search_strategy/search_strategy.cc' l='103' macro='1'/>
 <use f='tvm/src/meta_schedule/search_strategy/search_strategy.cc' l='105' macro='1'/>
 <size>40</size>
-<use f='tvm/src/meta_schedule/space_generator/post_order_apply.cc' l='210' macro='1'/>
+<use f='tvm/src/meta_schedule/space_generator/post_order_apply.cc' l='181' macro='1'/>
 <size>40</size>
 <use f='tvm/src/meta_schedule/space_generator/schedule_fn.cc' l='100' macro='1'/>
 <size>40</size>
@@ -1681,7 +1683,7 @@
 <size>40</size>
 <use f='tvm/src/te/operation/compute_op.cc' l='148' macro='1'/>
 <size>40</size>
-<use f='tvm/src/te/operation/create_primfunc.cc' l='511' macro='1'/>
+<use f='tvm/src/te/operation/create_primfunc.cc' l='518' macro='1'/>
 <size>40</size>
 <use f='tvm/src/te/operation/extern_op.cc' l='79' macro='1'/>
 <size>40</size>

@@ -1,0 +1,15 @@
+<dec f='tvm/include/tvm/meta_schedule/schedule/cuda/thread_bind.h' l='49' type='Array&lt;tir::LoopRV&gt; tvm::meta_schedule::BindSpatialLoop(tir::Schedule sch, tir::LoopRV loop, int64_t max_threadblocks, int64_t max_threads_per_block, std::function&lt;tir::ExprRV (int64_t)&gt; get_factor = nullptr)'/>
+<doc f='tvm/include/tvm/meta_schedule/schedule/cuda/thread_bind.h' l='41'>/*!
+ * \brief Bind blockIdx.x and threadIdx.x to the given loop
+ * \param sch The schedule.
+ * \param loop The loop to be bound.
+ * \param max_threadblocks The maximum number of threadblocks allowed.
+ * \param max_threads_per_block The maximum number of threads allowed.
+ * \param get_factor A function that returns the tiling factor.
+ */</doc>
+<doc f='tvm/include/tvm/meta_schedule/schedule/cuda/thread_bind.h' l='49'>//</doc>
+<def f='tvm/src/meta_schedule/schedule/cuda/thread_bind.cc' l='56' ll='85' type='Array&lt;tvm::tir::LoopRV&gt; tvm::meta_schedule::BindSpatialLoop(tvm::tir::Schedule sch, tvm::tir::LoopRV loop, int64_t max_threadblocks, int64_t max_threads_per_block, std::function&lt;ExprRV (int64_t)&gt; get_factor = nullptr)'/>
+<use f='tvm/src/meta_schedule/schedule/cuda/thread_bind.cc' l='177' u='c' c='_ZN3tvm13meta_schedule18BindBlockThreadIdxENS_3tir8ScheduleENS1_7BlockRVEllSt8functionIFNS_8PrimExprElEE'/>
+<use f='tvm/src/meta_schedule/schedule/cuda/winograd.cc' l='85' u='c'/>
+<use f='tvm/src/meta_schedule/schedule/cuda/winograd.cc' l='99' u='c'/>
+<use f='tvm/src/meta_schedule/schedule/cuda/winograd.cc' l='119' u='c'/>
