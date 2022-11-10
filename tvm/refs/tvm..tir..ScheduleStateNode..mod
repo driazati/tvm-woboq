@@ -24,7 +24,7 @@
 <use f='tvm/src/tir/schedule/analysis/analysis.cc' l='2031' u='r' c='_ZN3tvm3tir28CheckAutoTensorizeApplicableERKNS0_8ScheduleERKNS0_7BlockRVERKNS0_8PrimFuncE'/>
 <use f='tvm/src/tir/schedule/analysis/analysis.cc' l='2038' u='r' c='_ZN3tvm3tir27GetAutoTensorizeMappingInfoERKNS0_13ScheduleStateERKNS0_8StmtSRefERKNS0_8PrimFuncE'/>
 <use f='tvm/src/tir/schedule/analysis/reducer.cc' l='357' u='r' c='_ZN3tvm3tir45ErrorRFactorCrossThreadReductionNotApplicableERKNS_7runtime8OptionalINS0_13ScheduleStateEEENS0_5BlockEi'/>
-<use f='tvm/src/tir/schedule/analysis/reducer.cc' l='627' u='r' c='_ZN3tvm3tir27GetReducerAndCombinerLhsRhsERKNS_7runtime8OptionalINS0_13ScheduleStateEEERKNS1_5ArrayINS_8PrimExprEvEERKNS7_INS0_11BufferStoreEvEE'/>
+<use f='tvm/src/tir/schedule/analysis/reducer.cc' l='643' u='r' c='_ZN3tvm3tir27GetReducerAndCombinerLhsRhsERKNS_7runtime8OptionalINS0_13ScheduleStateEEERKNS1_5ArrayINS_8PrimExprEvEERKNS7_INS0_11BufferStoreEvEE'/>
 <use f='tvm/src/tir/schedule/analysis/verify.cc' l='33' u='r' c='_ZN3tvm3tir16SRefTreeVerifier6VerifyEv'/>
 <use f='tvm/src/tir/schedule/analysis/verify.cc' l='151' u='r' c='_ZN3tvm3tir17VerifyCachedFlagsERKNS0_13ScheduleStateE'/>
 <use f='tvm/src/tir/schedule/analysis/verify.cc' l='237' u='r' c='_ZN3tvm3tir17VerifyCachedFlagsERKNS0_13ScheduleStateE'/>
