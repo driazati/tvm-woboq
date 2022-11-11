@@ -554,12 +554,25 @@
 <tr><th id="540">540</th><td>  <b>throw</b>;</td></tr>
 <tr><th id="541">541</th><td>}</td></tr>
 <tr><th id="542">542</th><td></td></tr>
-<tr><th id="543">543</th><td>}  <i>// namespace meta_schedule</i></td></tr>
-<tr><th id="544">544</th><td>}  <i>// namespace tvm</i></td></tr>
-<tr><th id="545">545</th><td></td></tr>
-<tr><th id="546">546</th><td><u>#<span data-ppcond="19">endif</span>  // TVM_META_SCHEDULE_UTILS_H_</u></td></tr>
-<tr><th id="547">547</th><td></td></tr>
+<tr><th id="543">543</th><td><i class="doc">/*!</i></td></tr>
+<tr><th id="544">544</th><td><i class="doc"> * <span class="command">\brief</span> Summarize the run time of the given FloatImm array.</i></td></tr>
+<tr><th id="545">545</th><td><i class="doc"> * <span class="command">\param</span> <span class="arg">arr</span> The array of FloatImm.</i></td></tr>
+<tr><th id="546">546</th><td><i class="doc"> * <span class="command">\return</span> The summary of the values in the given array.</i></td></tr>
+<tr><th id="547">547</th><td><i class="doc"> */</i></td></tr>
+<tr><th id="548">548</th><td><b>inline</b> <em>double</em> <dfn class="decl def fn" id="_ZN3tvm13meta_schedule3SumERKNS_7runtime5ArrayINS_8FloatImmEvEE" title='tvm::meta_schedule::Sum' data-ref="_ZN3tvm13meta_schedule3SumERKNS_7runtime5ArrayINS_8FloatImmEvEE" data-ref-filename="_ZN3tvm13meta_schedule3SumERKNS_7runtime5ArrayINS_8FloatImmEvEE">Sum</dfn>(<em>const</em> <a class="type" href="../../include/tvm/runtime/container/array.h.html#tvm::runtime::Array" title='tvm::runtime::Array' data-ref="tvm::runtime::Array" data-ref-filename="tvm..runtime..Array">Array</a>&lt;<a class="type" href="../../include/tvm/ir/expr.h.html#tvm::FloatImm" title='tvm::FloatImm' data-ref="tvm::FloatImm" data-ref-filename="tvm..FloatImm">FloatImm</a>&gt;&amp; <dfn class="local col3 decl" id="1723arr" title='arr' data-type='const Array&lt;tvm::FloatImm&gt; &amp;' data-ref="1723arr" data-ref-filename="1723arr">arr</dfn>) {</td></tr>
+<tr><th id="549">549</th><td>  <em>double</em> <dfn class="local col4 decl" id="1724sum" title='sum' data-type='double' data-ref="1724sum" data-ref-filename="1724sum">sum</dfn> = <var>0</var>;</td></tr>
+<tr><th id="550">550</th><td>  <b>for</b> (<em>const</em> <a class="type" href="../../include/tvm/ir/expr.h.html#tvm::FloatImm" title='tvm::FloatImm' data-ref="tvm::FloatImm" data-ref-filename="tvm..FloatImm">FloatImm</a>&amp; <dfn class="local col5 decl" id="1725f" title='f' data-type='const tvm::FloatImm &amp;' data-ref="1725f" data-ref-filename="1725f">f</dfn> : <a class="local col3 ref" href="#1723arr" title='arr' data-ref="1723arr" data-ref-filename="1723arr">arr</a>) {</td></tr>
+<tr><th id="551">551</th><td>    <a class="local col4 ref" href="#1724sum" title='sum' data-ref="1724sum" data-ref-filename="1724sum">sum</a> += <a class="local col5 ref" href="#1725f" title='f' data-ref="1725f" data-ref-filename="1725f">f</a><a class="ref fn" href="../../include/tvm/ir/expr.h.html#574" title='tvm::FloatImm::operator-&gt;' data-ref="_ZNK3tvm8FloatImmptEv" data-ref-filename="_ZNK3tvm8FloatImmptEv">-&gt;</a><a class="ref field" href="../../include/tvm/ir/expr.h.html#tvm::FloatImmNode::value" title='tvm::FloatImmNode::value' data-ref="tvm::FloatImmNode::value" data-ref-filename="tvm..FloatImmNode..value">value</a>;</td></tr>
+<tr><th id="552">552</th><td>  }</td></tr>
+<tr><th id="553">553</th><td>  <b>return</b> <a class="local col4 ref" href="#1724sum" title='sum' data-ref="1724sum" data-ref-filename="1724sum">sum</a>;</td></tr>
+<tr><th id="554">554</th><td>}</td></tr>
+<tr><th id="555">555</th><td></td></tr>
+<tr><th id="556">556</th><td>}  <i>// namespace meta_schedule</i></td></tr>
+<tr><th id="557">557</th><td>}  <i>// namespace tvm</i></td></tr>
+<tr><th id="558">558</th><td></td></tr>
+<tr><th id="559">559</th><td><u>#<span data-ppcond="19">endif</span>  // TVM_META_SCHEDULE_UTILS_H_</u></td></tr>
+<tr><th id="560">560</th><td></td></tr>
 </table><hr/><p id='footer'>
-Generated while processing <a href='arg_info.cc.html'>tvm/src/meta_schedule/arg_info.cc</a><br/>Generated on <em>2022-Nov-11</em> from project tvm revision <em>93fdf83</em><br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+Generated while processing <a href='arg_info.cc.html'>tvm/src/meta_schedule/arg_info.cc</a><br/>Generated on <em>2022-Nov-11</em> from project tvm revision <em>f3eb239</em><br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
 <br/>Generator usage only permitted with license.</p>
 </div></body></html>
