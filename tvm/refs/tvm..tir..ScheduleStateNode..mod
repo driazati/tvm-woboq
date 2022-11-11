@@ -18,11 +18,11 @@
 <use f='tvm/src/tir/schedule/analysis/analysis.cc' l='746' u='r' c='_ZN3tvm3tir23CheckLoopStartsWithZeroERKNS0_13ScheduleStateERKNS0_8StmtSRefEPNS_5arith8AnalyzerE'/>
 <use f='tvm/src/tir/schedule/analysis/analysis.cc' l='821' u='r' c='_ZN3tvm3tir41CheckGetSingleChildBlockRealizeOnSRefTreeERKNS0_13ScheduleStateERKNS0_8StmtSRefE'/>
 <use f='tvm/src/tir/schedule/analysis/analysis.cc' l='851' u='r' c='_ZN3tvm3tir15GetBlockRealizeERKNS0_13ScheduleStateERKNS0_8StmtSRefE'/>
-<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='1125' u='r' c='_ZN3tvm3tir21ProducerConsumerSplit4FindERKNS0_13ScheduleStateERKNS_7runtime5ArrayINS0_4StmtEvEERKNS6_INS0_8StmtSRefEvEESE_PSt13unordered_mapIPKNS0_9Bl15702090'/>
-<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='1185' u='r' c='_ZN3tvm3tir24GetNthAccessBufferRegionERKNS0_13ScheduleStateERKNS0_5BlockEiNS0_15BufferIndexTypeE'/>
-<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='1395' u='r' c='_ZN3tvm3tir17CheckStorageScopeERKNS0_13ScheduleStateENS_7runtime6StringE'/>
-<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='2031' u='r' c='_ZN3tvm3tir28CheckAutoTensorizeApplicableERKNS0_8ScheduleERKNS0_7BlockRVERKNS0_8PrimFuncE'/>
-<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='2038' u='r' c='_ZN3tvm3tir27GetAutoTensorizeMappingInfoERKNS0_13ScheduleStateERKNS0_8StmtSRefERKNS0_8PrimFuncE'/>
+<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='1135' u='r' c='_ZN3tvm3tir21ProducerConsumerSplit4FindERKNS0_13ScheduleStateERKNS_7runtime5ArrayINS0_4StmtEvEERKNS6_INS0_8StmtSRefEvEESE_PSt13unordered_mapIPKNS0_9Bl15702090'/>
+<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='1195' u='r' c='_ZN3tvm3tir24GetNthAccessBufferRegionERKNS0_13ScheduleStateERKNS0_5BlockEiNS0_15BufferIndexTypeE'/>
+<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='1405' u='r' c='_ZN3tvm3tir17CheckStorageScopeERKNS0_13ScheduleStateENS_7runtime6StringE'/>
+<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='2041' u='r' c='_ZN3tvm3tir28CheckAutoTensorizeApplicableERKNS0_8ScheduleERKNS0_7BlockRVERKNS0_8PrimFuncE'/>
+<use f='tvm/src/tir/schedule/analysis/analysis.cc' l='2048' u='r' c='_ZN3tvm3tir27GetAutoTensorizeMappingInfoERKNS0_13ScheduleStateERKNS0_8StmtSRefERKNS0_8PrimFuncE'/>
 <use f='tvm/src/tir/schedule/analysis/reducer.cc' l='357' u='r' c='_ZN3tvm3tir45ErrorRFactorCrossThreadReductionNotApplicableERKNS_7runtime8OptionalINS0_13ScheduleStateEEENS0_5BlockEi'/>
 <use f='tvm/src/tir/schedule/analysis/reducer.cc' l='643' u='r' c='_ZN3tvm3tir27GetReducerAndCombinerLhsRhsERKNS_7runtime8OptionalINS0_13ScheduleStateEEERKNS1_5ArrayINS_8PrimExprEvEERKNS7_INS0_11BufferStoreEvEE'/>
 <use f='tvm/src/tir/schedule/analysis/verify.cc' l='33' u='r' c='_ZN3tvm3tir16SRefTreeVerifier6VerifyEv'/>
@@ -65,7 +65,7 @@
 <use f='tvm/src/tir/schedule/primitive/decompose_padding.cc' l='459' u='r' c='_ZN3tvm3tir20DecomposePaddingImplENS0_13ScheduleStateERKNS0_8StmtSRefES4_b'/>
 <use f='tvm/src/tir/schedule/primitive/decompose_padding.cc' l='465' u='r' c='_ZN3tvm3tir20DecomposePaddingImplENS0_13ScheduleStateERKNS0_8StmtSRefES4_b'/>
 <use f='tvm/src/tir/schedule/primitive/for_kind.cc' l='106' u='r' c='_ZN3tvm3tir30CheckLoopParallelizableInBlockERKNS0_13ScheduleStateENS0_7ForKindERKNS0_3VarERKNS0_12BlockRealizeENS_7runtime11ThreadScopeE'/>
-<use f='tvm/src/tir/schedule/primitive/get_block_loop.cc' l='42' u='m' c='_ZN3tvm3tir9GetBlocksERKNS0_13ScheduleStateERKNS_7runtime6StringERKNS_9GlobalVarE'/>
+<use f='tvm/src/tir/schedule/primitive/get_block_loop.cc' l='43' u='m' c='_ZN3tvm3tir9GetBlocksERKNS0_13ScheduleStateERKNS_7runtime6StringERKNS_9GlobalVarE'/>
 <use f='tvm/src/tir/schedule/primitive/layout_transformation.cc' l='973' u='r' c='_ZN3tvm3tir15TransformLayoutENS0_13ScheduleStateERKNS0_8StmtSRefEiNS0_15BufferIndexTypeERKNS0_8IndexMapERKNS_7runtime8OptionalIS6_EE'/>
 <use f='tvm/src/tir/schedule/primitive/layout_transformation.cc' l='977' u='r' c='_ZN3tvm3tir15TransformLayoutENS0_13ScheduleStateERKNS0_8StmtSRefEiNS0_15BufferIndexTypeERKNS0_8IndexMapERKNS_7runtime8OptionalIS6_EE'/>
 <use f='tvm/src/tir/schedule/primitive/layout_transformation.cc' l='980' u='r' c='_ZN3tvm3tir15TransformLayoutENS0_13ScheduleStateERKNS0_8StmtSRefEiNS0_15BufferIndexTypeERKNS0_8IndexMapERKNS_7runtime8OptionalIS6_EE'/>
