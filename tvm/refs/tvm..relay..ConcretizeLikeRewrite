@@ -1,25 +1,25 @@
 <inh f='tvm/src/relay/transforms/simplify_expr.h' l='37' c='tvm::relay::DFPatternRewrite'/>
-<def f='tvm/src/relay/transforms/simplify_expr.cc' l='545' ll='597'/>
-<ovr f='tvm/src/relay/transforms/simplify_expr.cc' l='599' c='tvm::relay::ConcretizeZerosLikeRewrite'/>
-<use f='tvm/src/relay/transforms/simplify_expr.cc' l='599'/>
-<use f='tvm/src/relay/transforms/simplify_expr.cc' l='601' c='_ZN3tvm5relay26ConcretizeZerosLikeRewriteC1Ev'/>
-<ovr f='tvm/src/relay/transforms/simplify_expr.cc' l='609' c='tvm::relay::ConcretizeOnesLikeRewrite'/>
-<use f='tvm/src/relay/transforms/simplify_expr.cc' l='609'/>
-<use f='tvm/src/relay/transforms/simplify_expr.cc' l='611' c='_ZN3tvm5relay25ConcretizeOnesLikeRewriteC1Ev'/>
-<ovr f='tvm/src/relay/transforms/simplify_expr.cc' l='619' c='tvm::relay::ConcretizeFullLikeRewrite'/>
-<use f='tvm/src/relay/transforms/simplify_expr.cc' l='619'/>
-<use f='tvm/src/relay/transforms/simplify_expr.cc' l='621' c='_ZN3tvm5relay25ConcretizeFullLikeRewriteC1Ev'/>
-<ovr f='tvm/src/relay/transforms/simplify_expr.cc' l='630' c='tvm::relay::ConcretizeReshapeLikeRewrite'/>
-<use f='tvm/src/relay/transforms/simplify_expr.cc' l='630'/>
-<use f='tvm/src/relay/transforms/simplify_expr.cc' l='632' c='_ZN3tvm5relay28ConcretizeReshapeLikeRewriteC1Ev'/>
-<ovr f='tvm/src/relay/transforms/simplify_expr.cc' l='640' c='tvm::relay::ConcretizeCollapseSumLikeRewrite'/>
-<use f='tvm/src/relay/transforms/simplify_expr.cc' l='640'/>
-<use f='tvm/src/relay/transforms/simplify_expr.cc' l='642' c='_ZN3tvm5relay32ConcretizeCollapseSumLikeRewriteC1Ev'/>
-<ovr f='tvm/src/relay/transforms/simplify_expr.cc' l='658' c='tvm::relay::ConcretizeBroadcastToLikeRewrite'/>
-<use f='tvm/src/relay/transforms/simplify_expr.cc' l='658'/>
-<use f='tvm/src/relay/transforms/simplify_expr.cc' l='660' c='_ZN3tvm5relay32ConcretizeBroadcastToLikeRewriteC1Ev'/>
+<def f='tvm/src/relay/transforms/simplify_expr.cc' l='546' ll='598'/>
+<ovr f='tvm/src/relay/transforms/simplify_expr.cc' l='600' c='tvm::relay::ConcretizeZerosLikeRewrite'/>
+<use f='tvm/src/relay/transforms/simplify_expr.cc' l='600'/>
+<use f='tvm/src/relay/transforms/simplify_expr.cc' l='602' c='_ZN3tvm5relay26ConcretizeZerosLikeRewriteC1Ev'/>
+<ovr f='tvm/src/relay/transforms/simplify_expr.cc' l='610' c='tvm::relay::ConcretizeOnesLikeRewrite'/>
+<use f='tvm/src/relay/transforms/simplify_expr.cc' l='610'/>
+<use f='tvm/src/relay/transforms/simplify_expr.cc' l='612' c='_ZN3tvm5relay25ConcretizeOnesLikeRewriteC1Ev'/>
+<ovr f='tvm/src/relay/transforms/simplify_expr.cc' l='620' c='tvm::relay::ConcretizeFullLikeRewrite'/>
+<use f='tvm/src/relay/transforms/simplify_expr.cc' l='620'/>
+<use f='tvm/src/relay/transforms/simplify_expr.cc' l='622' c='_ZN3tvm5relay25ConcretizeFullLikeRewriteC1Ev'/>
+<ovr f='tvm/src/relay/transforms/simplify_expr.cc' l='631' c='tvm::relay::ConcretizeReshapeLikeRewrite'/>
+<use f='tvm/src/relay/transforms/simplify_expr.cc' l='631'/>
+<use f='tvm/src/relay/transforms/simplify_expr.cc' l='633' c='_ZN3tvm5relay28ConcretizeReshapeLikeRewriteC1Ev'/>
+<ovr f='tvm/src/relay/transforms/simplify_expr.cc' l='641' c='tvm::relay::ConcretizeCollapseSumLikeRewrite'/>
+<use f='tvm/src/relay/transforms/simplify_expr.cc' l='641'/>
+<use f='tvm/src/relay/transforms/simplify_expr.cc' l='643' c='_ZN3tvm5relay32ConcretizeCollapseSumLikeRewriteC1Ev'/>
+<ovr f='tvm/src/relay/transforms/simplify_expr.cc' l='659' c='tvm::relay::ConcretizeBroadcastToLikeRewrite'/>
+<use f='tvm/src/relay/transforms/simplify_expr.cc' l='659'/>
+<use f='tvm/src/relay/transforms/simplify_expr.cc' l='661' c='_ZN3tvm5relay32ConcretizeBroadcastToLikeRewriteC1Ev'/>
 <size>40</size>
-<doc f='tvm/src/relay/transforms/simplify_expr.cc' l='540'>/*!
+<doc f='tvm/src/relay/transforms/simplify_expr.cc' l='541'>/*!
  * \brief Converts `*_like` operators to their explicit shape equivalent (e.g. `zeros_like(x, y)` to
  * `zeros(x, y.shape)`), when the target shape is concrete. This removes unnecessary dependencies
  * and can enable more opportunities for operator fusion.

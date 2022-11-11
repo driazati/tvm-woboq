@@ -1,0 +1,16 @@
+<dec f='tvm/src/relay/transforms/fold_constant.h' l='40' type='tvm::relay::Expr tvm::relay::transform::FoldConstantExpr(const tvm::relay::Expr &amp; expr, bool fold_qnn = true)'/>
+<use f='tvm/src/relay/quantize/realize.cc' l='181' u='c' c='_ZN3tvm5relay8quantize13Conv2dRealizeERKNS0_4CallERKNS_7runtime5ArrayINS_9RelayExprEvEERKNS5_9ObjectRefE'/>
+<use f='tvm/src/relay/quantize/realize.cc' l='215' u='c' c='_ZN3tvm5relay8quantize13Conv1dRealizeERKNS0_4CallERKNS_7runtime5ArrayINS_9RelayExprEvEERKNS5_9ObjectRefE'/>
+<use f='tvm/src/relay/quantize/realize.cc' l='244' u='c' c='_ZN3tvm5relay8quantize12DenseRealizeERKNS0_4CallERKNS_7runtime5ArrayINS_9RelayExprEvEERKNS5_9ObjectRefE'/>
+<use f='tvm/src/relay/quantize/realize.cc' l='270' u='c' c='_ZN3tvm5relay8quantize10MulRealizeERKNS0_4CallERKNS_7runtime5ArrayINS_9RelayExprEvEERKNS5_9ObjectRefE'/>
+<use f='tvm/src/relay/quantize/realize.cc' l='524' u='c' c='_ZN3tvm5relay8quantize18BatchMatmulRealizeERKNS0_4CallERKNS_7runtime5ArrayINS_9RelayExprEvEERKNS5_9ObjectRefE'/>
+<doc f='tvm/src/relay/transforms/fold_constant.h' l='33'>/*!
+ * \brief Apply constant folding on an expression.
+ *
+ * \param expr The expression to fold.
+ * \param fold_qnn Whether to fold constants for QNN operations.
+ * \returns The new folded expression.
+ */</doc>
+<def f='tvm/src/relay/transforms/fold_constant.cc' l='429' ll='432' type='tvm::relay::Expr tvm::relay::transform::FoldConstantExpr(const tvm::relay::Expr &amp; expr, bool fold_qnn)'/>
+<use f='tvm/src/relay/transforms/simplify_expr.cc' l='799' u='c' c='_ZNK3tvm5relay17SwitchAddMultiply8CallbackERKNS_9RelayExprES4_RKNS_7runtime3MapINS0_9DFPatternENS5_5ArrayIS2_vEEvvEE'/>
+<use f='tvm/src/relay/transforms/simplify_expr.cc' l='834' u='c' c='_ZNK3tvm5relay29SimplifyAdjacentMultiplyOrAdd8CallbackERKNS_9RelayExprES4_RKNS_7runtime3MapINS0_9DFPatternENS5_5ArrayIS2_vEEvvEE'/>
