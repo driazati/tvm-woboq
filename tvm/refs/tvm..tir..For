@@ -31,8 +31,8 @@
 <use f='tvm/src/tir/schedule/utils.h' l='133' c='_ZN3tvm3tir15LoopSRefs2LoopsERKNS_7runtime5ArrayINS0_8StmtSRefEvEE'/>
 <use f='tvm/src/tir/schedule/utils.h' l='232' c='_ZN3tvm3tir15IterVarFromLoopERKNS0_3ForENS_7runtime6StringENS0_11IterVarTypeE'/>
 <size>8</size>
-<use f='tvm/src/meta_schedule/postproc/rewrite_layout.cc' l='48' c='_ZN3tvm3tir22BufferReadPosCollector10VisitStmt_EPKNS0_7ForNodeE'/>
-<use f='tvm/src/meta_schedule/postproc/rewrite_layout.cc' l='104'/>
+<use f='tvm/src/meta_schedule/postproc/rewrite_layout.cc' l='41' c='_ZN3tvm3tir22BufferReadPosCollector10VisitStmt_EPKNS0_7ForNodeE'/>
+<use f='tvm/src/meta_schedule/postproc/rewrite_layout.cc' l='97'/>
 <size>8</size>
 <use f='tvm/src/meta_schedule/schedule_rule/cross_thread_reduction.cc' l='133' c='_ZN3tvm13meta_schedule24CrossThreadReductionNode13InThreadScopeERKNS_3tir8ScheduleERKNS2_7BlockRVE'/>
 <size>8</size>
@@ -63,7 +63,7 @@
 <size>8</size>
 <use f='tvm/src/target/llvm/codegen_cpu.cc' l='1527' c='_ZN3tvm7codegen10CodeGenCPU10VisitStmt_EPKNS_3tir7ForNodeE'/>
 <size>8</size>
-<use f='tvm/src/te/operation/create_primfunc.cc' l='350' c='_ZN3tvm3tir23GenerateStmtFromComputeERKNS_2te9ComputeOpEPNS0_14CreateFuncInfoEPNS_5arith8AnalyzerE'/>
+<use f='tvm/src/te/operation/create_primfunc.cc' l='357' c='_ZN3tvm3tir23GenerateStmtFromComputeERKNS_2te9ComputeOpEPNS0_14CreateFuncInfoEPNS_5arith8AnalyzerE'/>
 <size>8</size>
 <use f='tvm/src/te/operation/hybrid_op.cc' l='236' c='_ZZN3tvm2te15ApplyLoopShapesERKNS0_5StageERKSt13unordered_mapINS_3tir7IterVarENS_5RangeESt4hashIS6_ESt8equal_toIS6_ESaISt4pairIKS6_S7_EEENS5_4StmtEEN114292304'/>
 <use f='tvm/src/te/operation/hybrid_op.cc' l='238' c='_ZZN3tvm2te15ApplyLoopShapesERKNS0_5StageERKSt13unordered_mapINS_3tir7IterVarENS_5RangeESt4hashIS6_ESt8equal_toIS6_ESaISt4pairIKS6_S7_EEENS5_4StmtEEN114292304'/>

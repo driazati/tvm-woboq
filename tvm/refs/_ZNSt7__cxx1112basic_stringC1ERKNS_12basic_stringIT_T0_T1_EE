@@ -319,6 +319,8 @@
 <use f='tvm/src/meta_schedule/feature_extractor/per_store_feature.cc' l='370' u='c' c='_ZN3tvm3tir8LoopNest4PushEPKNS0_7ForNodeEPl'/>
 <use f='tvm/src/meta_schedule/mutator/mutate_compute_location.cc' l='74' u='c' c='_ZN3tvm13meta_schedule25MutateComputeLocationNode14FindCandidatesERKNS_3tir5TraceEPl'/>
 <use f='tvm/src/meta_schedule/mutator/mutate_parallel.cc' l='257' u='c' c='_ZN3tvm13meta_schedule18MutateParallelNode5ApplyERKNS_3tir5TraceEPl'/>
+<use f='tvm/src/meta_schedule/postproc/rewrite_layout.cc' l='214' u='c' c='_ZN3tvm3tir13RewriteLayoutERKNS0_8ScheduleE'/>
+<use f='tvm/src/meta_schedule/postproc/rewrite_layout.cc' l='227' u='c' c='_ZN3tvm3tir13RewriteLayoutERKNS0_8ScheduleE'/>
 <use f='tvm/src/meta_schedule/profiler.cc' l='31' u='c' c='_ZNK3tvm13meta_schedule12ProfilerNode3GetEv'/>
 <use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling_with_intrin.cc' l='34' u='c' c='_ZN3tvm13meta_schedule13TileForIntrinENS_3tir8ScheduleENS1_7BlockRVERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
 <use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling_with_intrin.cc' l='40' u='c' c='_ZN3tvm13meta_schedule13TileForIntrinENS_3tir8ScheduleENS1_7BlockRVERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
@@ -840,9 +842,9 @@
 <use f='tvm/src/te/operation/compute_op.cc' l='151' u='c'/>
 <use f='tvm/src/te/operation/compute_op.cc' l='196' u='c' c='_ZNK3tvm2te13ComputeOpNode13ReplaceInputsERKNS0_9OperationERKSt13unordered_mapINS0_6TensorES6_St4hashIS6_ESt8equal_toIS6_ESaISt4pairIKS6_S6_EEE'/>
 <use f='tvm/src/te/operation/compute_op.cc' l='196' u='c' c='_ZNK3tvm2te13ComputeOpNode13ReplaceInputsERKNS0_9OperationERKSt13unordered_mapINS0_6TensorES6_St4hashIS6_ESt8equal_toIS6_ESaISt4pairIKS6_S6_EEE'/>
-<use f='tvm/src/te/operation/create_primfunc.cc' l='190' u='c' c='_ZN3tvm3tir24GenerateBlockFromTensorsERKNS_2te9ComputeOpERKNS_7runtime5ArrayINS1_6TensorEvEENS6_INS_8PrimExprEvEESB_PNS0_14CreateFuncInfoEPNS_5arith8AnalyzerE'/>
-<use f='tvm/src/te/operation/create_primfunc.cc' l='398' u='c' c='_ZN3tvm3tir24GenerateStmtFromExternOpERKNS_2te8ExternOpEPNS0_14CreateFuncInfoE'/>
-<use f='tvm/src/te/operation/create_primfunc.cc' l='450' u='c' c='_ZN3tvm3tir19RewriteStageToBlockERKNS_2te9OperationEPNS0_14CreateFuncInfoEPNS_7runtime5ArrayINS0_4StmtEvEEPNS_5arith8AnalyzerE'/>
+<use f='tvm/src/te/operation/create_primfunc.cc' l='197' u='c' c='_ZN3tvm3tir24GenerateBlockFromTensorsERKNS_2te9ComputeOpERKNS_7runtime5ArrayINS1_6TensorEvEENS6_INS_8PrimExprEvEESB_PNS0_14CreateFuncInfoEPNS_5arith8AnalyzerE'/>
+<use f='tvm/src/te/operation/create_primfunc.cc' l='405' u='c' c='_ZN3tvm3tir24GenerateStmtFromExternOpERKNS_2te8ExternOpEPNS0_14CreateFuncInfoE'/>
+<use f='tvm/src/te/operation/create_primfunc.cc' l='457' u='c' c='_ZN3tvm3tir19RewriteStageToBlockERKNS_2te9OperationEPNS0_14CreateFuncInfoEPNS_7runtime5ArrayINS0_4StmtEvEEPNS_5arith8AnalyzerE'/>
 <use f='tvm/src/te/operation/extern_op.cc' l='83' u='c'/>
 <use f='tvm/src/te/operation/extern_op.cc' l='83' u='c'/>
 <use f='tvm/src/te/operation/hybrid_op.cc' l='79' u='c'/>

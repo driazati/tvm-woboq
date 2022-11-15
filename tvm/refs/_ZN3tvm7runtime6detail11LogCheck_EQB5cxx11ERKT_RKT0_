@@ -144,6 +144,7 @@
 <use f='tvm/src/meta_schedule/postproc/rewrite_cooperative_fetch.cc' l='59' macro='1' u='c' c='_ZN3tvm3tir13ParseAnnotateERKNS0_8ScheduleERKNS0_11InstructionEPl'/>
 <use f='tvm/src/meta_schedule/postproc/rewrite_cooperative_fetch.cc' l='79' macro='1' u='c' c='_ZN3tvm3tir21ParseWarpExecutionAnnERKNS0_8ScheduleERKNS0_11InstructionE'/>
 <use f='tvm/src/meta_schedule/postproc/rewrite_cooperative_fetch.cc' l='80' macro='1' u='c' c='_ZN3tvm3tir21ParseWarpExecutionAnnERKNS0_8ScheduleERKNS0_11InstructionE'/>
+<use f='tvm/src/meta_schedule/postproc/rewrite_layout.cc' l='215' macro='1' u='c' c='_ZN3tvm3tir13RewriteLayoutERKNS0_8ScheduleE'/>
 <use f='tvm/src/meta_schedule/postproc/rewrite_reduction_block.cc' l='66' macro='1' u='c' c='_ZNK3tvm3tir20ReductionBlockFinder29AllReductionIterVarAreUnboundEPKNS0_16BlockRealizeNodeE'/>
 <use f='tvm/src/meta_schedule/schedule/cpu/winograd.cc' l='31' macro='1' u='c' c='_ZN3tvm13meta_scheduleL16ScheduleDataPackENS_3tir8ScheduleENS1_7BlockRVESt6vectorIiSaIiEES6_'/>
 <use f='tvm/src/meta_schedule/schedule/cpu/winograd.cc' l='32' macro='1' u='c' c='_ZN3tvm13meta_scheduleL16ScheduleDataPackENS_3tir8ScheduleENS1_7BlockRVESt6vectorIiSaIiEES6_'/>
@@ -935,11 +936,11 @@
 <use f='tvm/src/te/operation/compute_op.cc' l='424' macro='1' u='c' c='_ZNK3tvm2te13ComputeOpNode12BuildProvideERKNS0_5StageERKSt13unordered_mapINS_3tir7IterVarENS_5RangeESt4hashIS7_ESt8equal_toIS7_ESaISt4pairIKS7_S8_EEEb'/>
 <use f='tvm/src/te/operation/compute_op.cc' l='439' macro='1' u='c' c='_ZN3tvm2te15ComputeLoopNest6CreateEPKNS0_17BaseComputeOpNodeERKNS0_5StageERKSt13unordered_mapINS_3tir7IterVarENS_5RangeESt4hashISA_ESt8equal_toISA_ESaISt4pairIKSA_SB_EEEb'/>
 <use f='tvm/src/te/operation/compute_op.cc' l='491' macro='1' u='c' c='_ZN3tvm2te15ComputeLoopNest6CreateEPKNS0_17BaseComputeOpNodeERKNS0_5StageERKSt13unordered_mapINS_3tir7IterVarENS_5RangeESt4hashISA_ESt8equal_toISA_ESaISt4pairIKSA_SB_EEEb'/>
-<use f='tvm/src/te/operation/create_primfunc.cc' l='207' macro='1' u='c' c='_ZN3tvm3tir24GenerateBlockFromTensorsERKNS_2te9ComputeOpERKNS_7runtime5ArrayINS1_6TensorEvEENS6_INS_8PrimExprEvEESB_PNS0_14CreateFuncInfoEPNS_5arith8AnalyzerE'/>
-<use f='tvm/src/te/operation/create_primfunc.cc' l='246' macro='1' u='c' c='_ZN3tvm3tir24GenerateBlockFromTensorsERKNS_2te9ComputeOpERKNS_7runtime5ArrayINS1_6TensorEvEENS6_INS_8PrimExprEvEESB_PNS0_14CreateFuncInfoEPNS_5arith8AnalyzerE'/>
-<use f='tvm/src/te/operation/create_primfunc.cc' l='359' macro='1' u='c' c='_ZN3tvm3tir24GenerateStmtFromExternOpERKNS_2te8ExternOpEPNS0_14CreateFuncInfoE'/>
-<use f='tvm/src/te/operation/create_primfunc.cc' l='369' macro='1' u='c' c='_ZN3tvm3tir24GenerateStmtFromExternOpERKNS_2te8ExternOpEPNS0_14CreateFuncInfoE'/>
-<use f='tvm/src/te/operation/create_primfunc.cc' l='428' macro='1' u='c' c='_ZN3tvm3tir21InitializeBufferBindsERKNS_7runtime5ArrayINS_2te9OperationEvEEPNS0_14CreateFuncInfoE'/>
+<use f='tvm/src/te/operation/create_primfunc.cc' l='214' macro='1' u='c' c='_ZN3tvm3tir24GenerateBlockFromTensorsERKNS_2te9ComputeOpERKNS_7runtime5ArrayINS1_6TensorEvEENS6_INS_8PrimExprEvEESB_PNS0_14CreateFuncInfoEPNS_5arith8AnalyzerE'/>
+<use f='tvm/src/te/operation/create_primfunc.cc' l='253' macro='1' u='c' c='_ZN3tvm3tir24GenerateBlockFromTensorsERKNS_2te9ComputeOpERKNS_7runtime5ArrayINS1_6TensorEvEENS6_INS_8PrimExprEvEESB_PNS0_14CreateFuncInfoEPNS_5arith8AnalyzerE'/>
+<use f='tvm/src/te/operation/create_primfunc.cc' l='366' macro='1' u='c' c='_ZN3tvm3tir24GenerateStmtFromExternOpERKNS_2te8ExternOpEPNS0_14CreateFuncInfoE'/>
+<use f='tvm/src/te/operation/create_primfunc.cc' l='376' macro='1' u='c' c='_ZN3tvm3tir24GenerateStmtFromExternOpERKNS_2te8ExternOpEPNS0_14CreateFuncInfoE'/>
+<use f='tvm/src/te/operation/create_primfunc.cc' l='435' macro='1' u='c' c='_ZN3tvm3tir21InitializeBufferBindsERKNS_7runtime5ArrayINS_2te9OperationEvEEPNS0_14CreateFuncInfoE'/>
 <use f='tvm/src/te/operation/extern_op.cc' l='63' macro='1' u='c' c='_ZN3tvm2te8ExternOpC1ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_NS_7runtime3MapINS8_6StringENS8_9ObjectRefEvvEENS8_5ArrayINS0_6TensorEvEE7497917'/>
 <use f='tvm/src/te/operation/extern_op.cc' l='65' macro='1' u='c' c='_ZN3tvm2te8ExternOpC1ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_NS_7runtime3MapINS8_6StringENS8_9ObjectRefEvvEENS8_5ArrayINS0_6TensorEvEE7497917'/>
 <use f='tvm/src/te/operation/extern_op.cc' l='66' macro='1' u='c' c='_ZN3tvm2te8ExternOpC1ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_NS_7runtime3MapINS8_6StringENS8_9ObjectRefEvvEENS8_5ArrayINS0_6TensorEvEE7497917'/>
