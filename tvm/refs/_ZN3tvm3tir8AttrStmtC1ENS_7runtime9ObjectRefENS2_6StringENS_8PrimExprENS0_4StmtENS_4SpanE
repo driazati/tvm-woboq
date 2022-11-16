@@ -1,7 +1,7 @@
 <dec f='tvm/include/tvm/tir/stmt.h' l='158' type='void tvm::tir::AttrStmt::AttrStmt(tvm::runtime::ObjectRef node, tvm::runtime::String attr_key, tvm::PrimExpr value, tvm::tir::Stmt body, tvm::Span span = tvm::Span())'/>
-<use f='tvm/src/script/ir_builder/tir/frame.cc' l='107' u='c' c='_ZN3tvm6script10ir_builder3tir16RealizeFrameNode13ExitWithScopeEv'/>
-<use f='tvm/src/script/ir_builder/tir/frame.cc' l='115' u='c' c='_ZN3tvm6script10ir_builder3tir21LaunchThreadFrameNode13ExitWithScopeEv'/>
-<use f='tvm/src/script/ir_builder/tir/frame.cc' l='131' u='c' c='_ZN3tvm6script10ir_builder3tir13AttrFrameNode13ExitWithScopeEv'/>
+<use f='tvm/src/script/ir_builder/tir/frame.cc' l='106' u='c' c='_ZN3tvm6script10ir_builder3tir16RealizeFrameNode13ExitWithScopeEv'/>
+<use f='tvm/src/script/ir_builder/tir/frame.cc' l='114' u='c' c='_ZN3tvm6script10ir_builder3tir21LaunchThreadFrameNode13ExitWithScopeEv'/>
+<use f='tvm/src/script/ir_builder/tir/frame.cc' l='130' u='c' c='_ZN3tvm6script10ir_builder3tir13AttrFrameNode13ExitWithScopeEv'/>
 <use f='tvm/src/te/operation/compute_op.cc' l='282' u='c' c='_ZNK3tvm2te17BaseComputeOpNode12BuildRealizeERKNS0_5StageERKSt13unordered_mapINS_3tir7IterVarENS_5RangeESt4hashIS7_ESt8equal_toIS7_ESaISt4pairIKS7_S8_15811504'/>
 <use f='tvm/src/te/operation/cross_thread_reduction.cc' l='204' u='c' c='_ZN3tvm2te24MakeCrossThreadReductionEPKNS0_13ComputeOpNodeERKNS0_5StageERKSt13unordered_mapINS_3tir7IterVarENS_5RangeESt4hashIS9_ESt8equal_toIS9_ESaISt4pairIKS9_SA_EEEb'/>
 <use f='tvm/src/te/operation/extern_op.cc' l='145' u='c' c='_ZNK3tvm2te12ExternOpNode12BuildProvideERKNS0_5StageERKSt13unordered_mapINS_3tir7IterVarENS_5RangeESt4hashIS7_ESt8equal_toIS7_ESaISt4pairIKS7_S8_EEEb'/>
@@ -35,8 +35,8 @@
 <use f='tvm/src/te/schedule/schedule_postproc_to_primfunc.cc' l='90' u='c' c='_ZN3tvm2te20TensorToBufferMapper10VisitStmt_EPKNS_3tir12AttrStmtNodeE'/>
 <use f='tvm/src/te/schedule/schedule_postproc_to_primfunc.cc' l='101' u='c' c='_ZN3tvm2te20TensorToBufferMapper10VisitStmt_EPKNS_3tir12AttrStmtNodeE'/>
 <use f='tvm/src/te/schedule/schedule_postproc_to_primfunc.cc' l='296' u='c' c='_ZN3tvm2te27AxisSeparatorsAttrUnwrapper10VisitStmt_EPKNS_3tir12AttrStmtNodeE'/>
-<use f='tvm/src/tir/analysis/device_constraint_utils.cc' l='303' u='c' c='_ZN3tvm3tir12_GLOBAL__N_129ApplyDeviceConstraintsMutator10VisitStmt_EPKNS0_12AttrStmtNodeE'/>
-<use f='tvm/src/tir/contrib/ethosu/passes.cc' l='733' u='c' c='_ZN3tvm3tir7contrib6ethosu21MergeConstantsMutator11MakeNewStmtERKNS0_4StmtERKNS_7runtime5ArrayINS_8PrimExprEvEENS7_8OptionalIS9_EE'/>
+<use f='tvm/src/tir/analysis/device_constraint_utils.cc' l='283' u='c' c='_ZN3tvm3tir12_GLOBAL__N_129ApplyDeviceConstraintsMutator10VisitStmt_EPKNS0_12AttrStmtNodeE'/>
+<use f='tvm/src/tir/contrib/ethosu/passes.cc' l='731' u='c' c='_ZN3tvm3tir7contrib6ethosu21MergeConstantsMutator11MakeNewStmtERKNS0_4StmtERKNS_7runtime5ArrayINS_8PrimExprEvEENS7_8OptionalIS9_EE'/>
 <use f='tvm/src/tir/ir/data_type_rewriter.cc' l='105' u='c' c='_ZN3tvm3tir17DataTypeLegalizer10VisitStmt_EPKNS0_12AttrStmtNodeE'/>
 <def f='tvm/src/tir/ir/stmt.cc' l='73' ll='81' type='void tvm::tir::AttrStmt::AttrStmt(tvm::runtime::ObjectRef node, tvm::runtime::String attr_key, tvm::PrimExpr value, tvm::tir::Stmt body, tvm::Span span = tvm::Span())'/>
 <use f='tvm/src/tir/ir/stmt.cc' l='85' u='c'/>
@@ -68,9 +68,9 @@
 <use f='tvm/src/tir/transforms/lower_opaque_block.cc' l='131' u='c' c='_ZN3tvm3tir16OpaqueBlockLower16MakeLaunchThreadENS_8PrimExprES2_NS0_3VarENS_7runtime6StringENS0_4StmtE'/>
 <use f='tvm/src/tir/transforms/lower_thread_allreduce.cc' l='54' u='c' c='_ZN3tvm3tir34UpdatePointerStorageScopeAllReduce10VisitStmt_EPKNS0_12AllocateNodeE'/>
 <use f='tvm/src/tir/transforms/lower_tvm_builtin.cc' l='266' u='c' c='_ZN3tvm3tir12BuiltinLower10VisitStmt_EPKNS0_12AllocateNodeE'/>
-<use f='tvm/src/tir/transforms/make_packed_api.cc' l='267' u='c' c='_ZN3tvm3tir13MakePackedAPIEONS0_8PrimFuncE'/>
-<use f='tvm/src/tir/transforms/make_packed_api.cc' l='272' u='c' c='_ZN3tvm3tir13MakePackedAPIEONS0_8PrimFuncE'/>
-<use f='tvm/src/tir/transforms/make_packed_api.cc' l='273' u='c' c='_ZN3tvm3tir13MakePackedAPIEONS0_8PrimFuncE'/>
+<use f='tvm/src/tir/transforms/make_packed_api.cc' l='265' u='c' c='_ZN3tvm3tir13MakePackedAPIEONS0_8PrimFuncE'/>
+<use f='tvm/src/tir/transforms/make_packed_api.cc' l='270' u='c' c='_ZN3tvm3tir13MakePackedAPIEONS0_8PrimFuncE'/>
+<use f='tvm/src/tir/transforms/make_packed_api.cc' l='271' u='c' c='_ZN3tvm3tir13MakePackedAPIEONS0_8PrimFuncE'/>
 <use f='tvm/src/tir/transforms/make_unpacked_api.cc' l='75' u='c' c='_ZN3tvm3tir15MakeUnpackedAPIEONS0_8PrimFuncE'/>
 <use f='tvm/src/tir/transforms/make_unpacked_api.cc' l='76' u='c' c='_ZN3tvm3tir15MakeUnpackedAPIEONS0_8PrimFuncE'/>
 <use f='tvm/src/tir/transforms/merge_dynamic_shared_memory_allocations.cc' l='298' u='c' c='_ZN3tvm3tir27DynamicSharedMemoryRewriter10VisitStmt_EPKNS0_12AttrStmtNodeE'/>
@@ -79,11 +79,11 @@
 <use f='tvm/src/tir/transforms/storage_flatten.cc' l='243' u='c' c='_ZN3tvm3tir19BufferShapeLegalize10VisitStmt_EPKNS0_12AttrStmtNodeE'/>
 <use f='tvm/src/tir/transforms/storage_flatten.cc' l='245' u='c' c='_ZN3tvm3tir19BufferShapeLegalize10VisitStmt_EPKNS0_12AttrStmtNodeE'/>
 <use f='tvm/src/tir/transforms/storage_flatten.cc' l='359' u='c' c='_ZN3tvm3tir19BufferShapeLegalize21HandleBufferBindScopeEPKNS0_12AttrStmtNodeE'/>
-<use f='tvm/src/tir/transforms/storage_flatten.cc' l='526' u='c' c='_ZN3tvm3tir20BufferStrideLegalize10VisitStmt_EPKNS0_12AttrStmtNodeE'/>
-<use f='tvm/src/tir/transforms/storage_flatten.cc' l='804' u='c' c='_ZN3tvm3tir20ThreadScopePropagate21HandleBufferBindScopeEPKNS0_12AttrStmtNodeE'/>
-<use f='tvm/src/tir/transforms/storage_flatten.cc' l='1381' u='c' c='_ZN3tvm3tir16StorageFlattener10VisitStmt_EPKNS0_12AttrStmtNodeE'/>
-<use f='tvm/src/tir/transforms/storage_flatten.cc' l='1413' u='c' c='_ZN3tvm3tir16StorageFlattener10VisitStmt_EPKNS0_15BufferStoreNodeE'/>
-<use f='tvm/src/tir/transforms/storage_flatten.cc' l='1524' u='c' c='_ZN3tvm3tir16StorageFlattener10VisitStmt_EPKNS0_17BufferRealizeNodeE'/>
+<use f='tvm/src/tir/transforms/storage_flatten.cc' l='523' u='c' c='_ZN3tvm3tir20BufferStrideLegalize10VisitStmt_EPKNS0_12AttrStmtNodeE'/>
+<use f='tvm/src/tir/transforms/storage_flatten.cc' l='785' u='c' c='_ZN3tvm3tir20ThreadScopePropagate21HandleBufferBindScopeEPKNS0_12AttrStmtNodeE'/>
+<use f='tvm/src/tir/transforms/storage_flatten.cc' l='1416' u='c' c='_ZN3tvm3tir16StorageFlattener10VisitStmt_EPKNS0_12AttrStmtNodeE'/>
+<use f='tvm/src/tir/transforms/storage_flatten.cc' l='1448' u='c' c='_ZN3tvm3tir16StorageFlattener10VisitStmt_EPKNS0_15BufferStoreNodeE'/>
+<use f='tvm/src/tir/transforms/storage_flatten.cc' l='1561' u='c' c='_ZN3tvm3tir16StorageFlattener10VisitStmt_EPKNS0_17BufferRealizeNodeE'/>
 <use f='tvm/src/tir/transforms/storage_rewrite.cc' l='516' u='c' c='_ZN3tvm3tir19StoragePlanRewriter10VisitStmt_EPKNS0_12AttrStmtNodeE'/>
 <use f='tvm/src/tir/transforms/storage_rewrite.cc' l='525' u='c' c='_ZN3tvm3tir19StoragePlanRewriter10VisitStmt_EPKNS0_12AttrStmtNodeE'/>
 <use f='tvm/src/tir/transforms/tensorcore_infer_fragment.cc' l='182' u='c' c='_ZN3tvm3tir15InferFragmenter10VisitStmt_EPKNS0_12AllocateNodeE'/>

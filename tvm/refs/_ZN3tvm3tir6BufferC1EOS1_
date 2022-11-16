@@ -1,12 +1,12 @@
 <def f='tvm/include/tvm/tir/buffer.h' l='225' macro='1' type='void tvm::tir::Buffer::Buffer(tvm::tir::Buffer &amp;&amp; other)'/>
-<use f='tvm/src/script/ir_builder/tir/ir.cc' l='81' u='c' c='_ZN3tvm6script10ir_builder3tir3ArgENS_7runtime6StringENS_3tir6BufferE'/>
-<use f='tvm/src/script/ir_builder/tir/ir.cc' l='122' u='c' c='_ZN3tvm6script10ir_builder3tir11MatchBufferENS_7runtime9ObjectRefENS3_5ArrayINS_8PrimExprEvEENS3_8DataTypeENS3_8OptionalINS_3tir3VarEEES7_S6_NS3_6Stri4971610'/>
-<use f='tvm/src/script/ir_builder/tir/ir.cc' l='137' u='c' c='_ZN3tvm6script10ir_builder3tir11MatchBufferENS_7runtime9ObjectRefENS3_5ArrayINS_8PrimExprEvEENS3_8DataTypeENS3_8OptionalINS_3tir3VarEEES7_S6_NS3_6Stri4971610'/>
-<use f='tvm/src/script/ir_builder/tir/ir.cc' l='248' u='c' c='_ZN3tvm6script10ir_builder3tir11AllocBufferENS_7runtime5ArrayINS_8PrimExprEvEENS3_8DataTypeENS3_8OptionalINS_3tir3VarEEES6_S5_NS3_6StringEiiSC_NS4_INS_6IntImmEvEE'/>
+<use f='tvm/src/script/ir_builder/tir/ir.cc' l='80' u='c' c='_ZN3tvm6script10ir_builder3tir3ArgENS_7runtime6StringENS_3tir6BufferE'/>
+<use f='tvm/src/script/ir_builder/tir/ir.cc' l='121' u='c' c='_ZN3tvm6script10ir_builder3tir11MatchBufferENS_7runtime9ObjectRefENS3_5ArrayINS_8PrimExprEvEENS3_8DataTypeENS3_8OptionalINS_3tir3VarEEES7_S6_NS3_6Stri4971610'/>
+<use f='tvm/src/script/ir_builder/tir/ir.cc' l='136' u='c' c='_ZN3tvm6script10ir_builder3tir11MatchBufferENS_7runtime9ObjectRefENS3_5ArrayINS_8PrimExprEvEENS3_8DataTypeENS3_8OptionalINS_3tir3VarEEES7_S6_NS3_6Stri4971610'/>
+<use f='tvm/src/script/ir_builder/tir/ir.cc' l='227' u='c' c='_ZN3tvm6script10ir_builder3tir11AllocBufferENS_7runtime5ArrayINS_8PrimExprEvEENS3_8DataTypeENS3_8OptionalINS_3tir3VarEEES6_S5_NS3_6StringEiiSC_NS4_INS_6IntImmEvEE'/>
 <use f='tvm/src/te/schedule/schedule_postproc_to_primfunc.cc' l='60' u='c' c='_ZN3tvm2te15CreateBufferForERKNS0_6TensorENS_7runtime6StringE'/>
 <use f='tvm/src/te/schedule/schedule_postproc_to_primfunc.cc' l='147' u='c' c='_ZN3tvm2te20TensorToBufferMapper9GetBufferERKNS0_6TensorENS_7runtime6StringEb'/>
 <use f='tvm/src/te/schedule/schedule_postproc_to_primfunc.cc' l='355' u='c' c='_ZN3tvm2te27AxisSeparatorsAttrUnwrapper17GetRemappedBufferENS_3tir6BufferE'/>
-<use f='tvm/src/tir/analysis/device_constraint_utils.cc' l='450' u='c' c='_ZN3tvm3tir12_GLOBAL__N_129ApplyDeviceConstraintsMutator13RewriteBufferERKNS0_6BufferERKNS_13VirtualDeviceE'/>
+<use f='tvm/src/tir/analysis/device_constraint_utils.cc' l='430' u='c' c='_ZN3tvm3tir12_GLOBAL__N_129ApplyDeviceConstraintsMutator13RewriteBufferERKNS0_6BufferERKNS_13VirtualDeviceE'/>
 <use f='tvm/src/tir/ir/buffer.cc' l='396' u='c' c='_ZNK3tvm3tir6Buffer18GetFlattenedBufferEv'/>
 <use f='tvm/src/tir/ir/buffer.cc' l='498' u='c' c='_ZNK3tvm3tir6Buffer9MakeSliceENS_7runtime5ArrayINS_8PrimExprEvEES5_'/>
 <use f='tvm/src/tir/ir/specialize.cc' l='235' u='c' c='_ZN3tvm3tir19PrimFuncSpecializer17MutateAllocBufferERKNS0_6BufferE'/>
@@ -23,8 +23,8 @@
 <use f='tvm/src/tir/schedule/primitive/pad_einsum.cc' l='383' u='c' c='_ZN3tvm3tir9PadEinsumENS0_13ScheduleStateERKNS0_8StmtSRefERKNS_7runtime5ArrayINS_7IntegerEvEE'/>
 <use f='tvm/src/tir/schedule/primitive/reduction.cc' l='457' u='c' c='_ZN3tvm3tir25FactorAxisOutOfRangeErrorC1ENS_8IRModuleENS0_6BufferEi'/>
 <use f='tvm/src/tir/schedule/primitive/rolling_buffer.cc' l='127' u='c' c='_ZN3tvm3tir12_GLOBAL__N_127RollingBufferInsertionErrorC1ENS_8IRModuleENS0_6BufferENS0_5BlockE'/>
-<use f='tvm/src/tir/transforms/bf16_legalize.cc' l='365' u='c' c='_ZN3tvm3tir17BF16LowerRewriter17GetRemappedBufferENS0_6BufferE'/>
-<use f='tvm/src/tir/transforms/flatten_buffer.cc' l='174' u='c' c='_ZN3tvm3tir15BufferFlattener18GetFlattenedBufferENS0_6BufferE'/>
+<use f='tvm/src/tir/transforms/bf16_legalize.cc' l='336' u='c' c='_ZN3tvm3tir17BF16LowerRewriter17GetRemappedBufferENS0_6BufferE'/>
+<use f='tvm/src/tir/transforms/flatten_buffer.cc' l='170' u='c' c='_ZN3tvm3tir15BufferFlattener18GetFlattenedBufferENS0_6BufferE'/>
 <use f='tvm/src/tir/transforms/inject_double_buffer.cc' l='243' u='c' c='_ZN3tvm3tir20DoubleBufferInjector17GetRemappedBufferENS0_6BufferENS_8PrimExprE'/>
 <use f='tvm/src/tir/transforms/inject_virtual_thread.cc' l='299' u='c' c='_ZN3tvm3tir10VTInjector17GetRemappedBufferENS0_6BufferENS_8PrimExprE'/>
 <use f='tvm/src/tir/transforms/ir_utils.cc' l='167' u='c' c='_ZN3tvm3tir12IRConvertSSA17GetRemappedBufferENS0_6BufferE'/>
@@ -35,11 +35,8 @@
 <use f='tvm/src/tir/transforms/renew_defs.cc' l='256' u='c' c='_ZN3tvm3tir15RenewDefMutator22VisitDeclOrRemapBufferERKNS0_6BufferE'/>
 <use f='tvm/src/tir/transforms/renew_defs.cc' l='262' u='c' c='_ZN3tvm3tir15RenewDefMutator16VisitMatchBufferERKNS0_17MatchBufferRegionE'/>
 <use f='tvm/src/tir/transforms/renew_defs.cc' l='282' u='c' c='_ZN3tvm3tir15RenewDefMutator17VisitBufferRegionERKNS0_12BufferRegionE'/>
-<use f='tvm/src/tir/transforms/storage_flatten.cc' l='456' u='c' c='_ZN3tvm3tir20BufferStrideLegalize11WithStridesENS0_6BufferE'/>
-<use f='tvm/src/tir/transforms/storage_flatten.cc' l='464' u='c' c='_ZN3tvm3tir20BufferStrideLegalize11WithStridesENS0_6BufferE'/>
-<use f='tvm/src/tir/transforms/storage_flatten.cc' l='470' u='c' c='_ZN3tvm3tir20BufferStrideLegalize11WithStridesENS0_6BufferE'/>
-<use f='tvm/src/tir/transforms/storage_flatten.cc' l='492' u='c' c='_ZN3tvm3tir20BufferStrideLegalize11WithStridesENS0_6BufferE'/>
-<use f='tvm/src/tir/transforms/storage_flatten.cc' l='1295' u='c' c='_ZN3tvm3tir21ApplyLayoutTransforms14GetBufferRemapENS0_6BufferEb'/>
+<use f='tvm/src/tir/transforms/storage_flatten.cc' l='495' u='c' c='_ZN3tvm3tir20BufferStrideLegalize11WithStridesENS0_6BufferE'/>
+<use f='tvm/src/tir/transforms/storage_flatten.cc' l='1334' u='c' c='_ZN3tvm3tir21ApplyLayoutTransforms14GetBufferRemapENS0_6BufferEb'/>
 <use f='tvm/src/tir/transforms/storage_rewrite.cc' l='461' u='c' c='_ZN3tvm3tir19StoragePlanRewriter11RemapBufferENS0_6BufferENS0_3VarE'/>
 <use f='tvm/src/tir/transforms/storage_rewrite.cc' l='1516' u='c' c='_ZN3tvm3tir18VectorTypeRewriter11RemapBufferENS0_6BufferE'/>
 <use f='tvm/src/tir/transforms/update_pointer_storage_scope.cc' l='94' u='c' c='_ZN3tvm3tir25UpdatePointerStorageScope16GetUpdatedBufferENS0_6BufferE'/>

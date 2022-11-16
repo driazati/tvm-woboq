@@ -4,7 +4,7 @@
 <use f='tvm/src/relay/backend/aot/aot_lower_main.cc' l='797' u='c' c='_ZN3tvm5relay7backend3aot14AOTMainLowerer11CreateIOVarERKNS_4TypeERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEb'/>
 <use f='tvm/src/relay/backend/aot_executor_codegen.cc' l='854' u='c' c='_ZN3tvm5relay7backend18AOTExecutorCodegen11CreateIOVarERKNS_4TypeERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEb'/>
 <use f='tvm/src/script/ir_builder/tir/ir.cc' l='49' u='c' c='_ZN3tvm6script10ir_builder3tir10BufferDeclENS_7runtime5ArrayINS_8PrimExprEvEENS3_8DataTypeENS3_6StringENS3_8OptionalINS_3tir3VarEEENS9_IS6_EENS9_IS5_E3135450'/>
-<use f='tvm/src/tir/contrib/ethosu/passes.cc' l='670' u='c' c='_ZN3tvm3tir7contrib6ethosu21MergeConstantsMutator15MakeNewCopyArgsERKNS0_4StmtERKNS0_6BufferEi'/>
+<use f='tvm/src/tir/contrib/ethosu/passes.cc' l='668' u='c' c='_ZN3tvm3tir7contrib6ethosu21MergeConstantsMutator15MakeNewCopyArgsERKNS0_4StmtERKNS0_6BufferEi'/>
 <use f='tvm/src/tir/ir/buffer.cc' l='53' u='c' c='_ZN3tvm3tir11decl_bufferENS_7runtime5ArrayINS_8PrimExprEvEENS1_8DataTypeENS1_6StringES6_NS2_INS_6IntImmEvEENS_4SpanE'/>
 <use f='tvm/src/tir/ir/buffer.cc' l='485' u='c' c='_ZNK3tvm3tir6Buffer9MakeSliceENS_7runtime5ArrayINS_8PrimExprEvEES5_'/>
 <def f='tvm/src/tir/ir/buffer.cc' l='534' ll='586' type='void tvm::tir::Buffer::Buffer(tvm::tir::Var data, tvm::DataType dtype, Array&lt;tvm::PrimExpr&gt; shape, Array&lt;tvm::PrimExpr&gt; strides, tvm::PrimExpr elem_offset, tvm::runtime::String name, int data_alignment, int offset_factor, tvm::tir::BufferType buffer_type, Array&lt;tvm::IntImm&gt; axis_separators = {}, tvm::Span span = tvm::Span())'/>
@@ -12,8 +12,7 @@
 <use f='tvm/src/tir/ir/buffer.cc' l='627' u='c'/>
 <use f='tvm/src/tir/schedule/primitive/cache_index.cc' l='228' u='c' c='_ZN3tvm3tir19MakeIndexCacheStageEPNS0_9IndexInfoE'/>
 <use f='tvm/src/tir/transforms/bf16_legalize.cc' l='300' u='c' c='_ZN3tvm3tir17BF16LowerRewriter12AlterBuffersEPNS0_12PrimFuncNodeE'/>
-<use f='tvm/src/tir/transforms/bf16_legalize.cc' l='329' u='c' c='_ZN3tvm3tir17BF16LowerRewriter12AlterBuffersEPNS0_12PrimFuncNodeE'/>
-<use f='tvm/src/tir/transforms/bf16_legalize.cc' l='358' u='c' c='_ZN3tvm3tir17BF16LowerRewriter17GetRemappedBufferENS0_6BufferE'/>
+<use f='tvm/src/tir/transforms/bf16_legalize.cc' l='329' u='c' c='_ZN3tvm3tir17BF16LowerRewriter17GetRemappedBufferENS0_6BufferE'/>
 <use f='tvm/src/tir/transforms/ir_utils.cc' l='182' u='c' c='_ZN3tvm3tir12IRConvertSSA17GetRemappedBufferENS0_6BufferE'/>
 <use f='tvm/src/tir/transforms/lower_cross_thread_reduction.cc' l='126' u='c' c='_ZN3tvm3tir15MakeScratchpadsERKNS_7runtime5ArrayINS0_6BufferEvEEb'/>
 <use f='tvm/src/tir/transforms/lower_thread_allreduce.cc' l='146' u='c' c='_ZN3tvm3tir22ThreadAllreduceBuilder10VisitExpr_EPKNS0_14BufferLoadNodeE'/>
@@ -21,7 +20,7 @@
 <use f='tvm/src/tir/transforms/make_packed_api.cc' l='102' u='c' c='_ZN3tvm3tir14ReturnRewriter13ConvertForFFIENS_8PrimExprE'/>
 <use f='tvm/src/tir/transforms/make_packed_api.cc' l='109' u='c' c='_ZN3tvm3tir14ReturnRewriter13ConvertForFFIENS_8PrimExprE'/>
 <use f='tvm/src/tir/transforms/remove_weight_layout_rewrite_block.cc' l='195' u='c' c='_ZN3tvm3tir20AllocateConstRewrite10VisitExpr_EPKNS0_14BufferLoadNodeE'/>
-<use f='tvm/src/tir/transforms/storage_flatten.cc' l='1501' u='c' c='_ZN3tvm3tir16StorageFlattener10VisitStmt_EPKNS0_17BufferRealizeNodeE'/>
+<use f='tvm/src/tir/transforms/storage_flatten.cc' l='1536' u='c' c='_ZN3tvm3tir16StorageFlattener10VisitStmt_EPKNS0_17BufferRealizeNodeE'/>
 <use f='tvm/src/tir/transforms/storage_rewrite.cc' l='457' u='c' c='_ZN3tvm3tir19StoragePlanRewriter11RemapBufferENS0_6BufferENS0_3VarE'/>
 <use f='tvm/src/tir/usmp/transform/convert_pool_allocations_to_offsets.cc' l='220' u='c' c='_ZN3tvm3tir4usmp31PoolAllocationToOffsetConverter23UpdateFunctionScopeInfoERKNS0_8PrimFuncE'/>
 <use f='tvm/src/tir/usmp/transform/convert_pool_allocations_to_offsets.cc' l='420' u='c' c='_ZN3tvm3tir4usmp31PoolAllocationToOffsetConverter17GetRemappedBufferENS0_6BufferE'/>

@@ -36,12 +36,12 @@
 <use f='tvm/src/ir/expr.cc' l='59' u='c' c='_ZN3tvm8PrimExpr11FromObject_ENS_7runtime9ObjectRefE'/>
 <use f='tvm/src/meta_schedule/feature_extractor/per_store_feature.cc' l='279' u='c' c='_ZZN3tvm3tir9transform28SimplifyForFeatureExtractionEvEN10Simplifier10VisitStmt_EPKNS0_7ForNodeE'/>
 <use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling_tensor_core.cc' l='476' u='c' c='_ZNK3tvm13meta_schedule30MultiLevelTilingTensorCoreNode25TransformWithTensorIntrinEPNS0_19TensorCoreStateNodeERKNS_7runtime6StringE'/>
-<use f='tvm/src/printer/tir_text_printer.cc' l='279' u='c' c='_ZN3tvm3tir14TIRTextPrinter17PrintBufferRegionEPKNS0_16BufferRegionNodeE'/>
-<use f='tvm/src/printer/tir_text_printer.cc' l='394' u='c' c='_ZN3tvm3tir14TIRTextPrinter10VisitExpr_EPKNS0_8LoadNodeE'/>
-<use f='tvm/src/printer/tir_text_printer.cc' l='491' u='c' c='_ZN3tvm3tir14TIRTextPrinter10VisitStmt_EPKNS0_9StoreNodeE'/>
-<use f='tvm/src/printer/tir_text_printer.cc' l='536' u='c' c='_ZN3tvm3tir14TIRTextPrinter10VisitStmt_EPKNS0_12AllocateNodeE'/>
-<use f='tvm/src/printer/tir_text_printer.cc' l='575' u='c' c='_ZN3tvm3tir14TIRTextPrinter10VisitStmt_EPKNS0_14IfThenElseNodeE'/>
-<use f='tvm/src/printer/tir_text_printer.cc' l='669' u='c' c='_ZN3tvm3tir14TIRTextPrinter10VisitStmt_EPKNS0_16BlockRealizeNodeE'/>
+<use f='tvm/src/printer/tir_text_printer.cc' l='269' u='c' c='_ZN3tvm3tir14TIRTextPrinter17PrintBufferRegionEPKNS0_16BufferRegionNodeE'/>
+<use f='tvm/src/printer/tir_text_printer.cc' l='384' u='c' c='_ZN3tvm3tir14TIRTextPrinter10VisitExpr_EPKNS0_8LoadNodeE'/>
+<use f='tvm/src/printer/tir_text_printer.cc' l='481' u='c' c='_ZN3tvm3tir14TIRTextPrinter10VisitStmt_EPKNS0_9StoreNodeE'/>
+<use f='tvm/src/printer/tir_text_printer.cc' l='526' u='c' c='_ZN3tvm3tir14TIRTextPrinter10VisitStmt_EPKNS0_12AllocateNodeE'/>
+<use f='tvm/src/printer/tir_text_printer.cc' l='565' u='c' c='_ZN3tvm3tir14TIRTextPrinter10VisitStmt_EPKNS0_14IfThenElseNodeE'/>
+<use f='tvm/src/printer/tir_text_printer.cc' l='659' u='c' c='_ZN3tvm3tir14TIRTextPrinter10VisitStmt_EPKNS0_16BlockRealizeNodeE'/>
 <use f='tvm/src/printer/tvmscript_printer.cc' l='913' u='c' c='_ZN3tvm3tir16TVMScriptPrinter10VisitExpr_EPKNS0_8LoadNodeEPNS0_14ExprPrecedenceE'/>
 <use f='tvm/src/printer/tvmscript_printer.cc' l='919' u='c' c='_ZN3tvm3tir16TVMScriptPrinter10VisitExpr_EPKNS0_8LoadNodeEPNS0_14ExprPrecedenceE'/>
 <use f='tvm/src/printer/tvmscript_printer.cc' l='1019' u='c' c='_ZN3tvm3tir16TVMScriptPrinter10VisitStmt_EPKNS0_12AttrStmtNodeE'/>
@@ -50,7 +50,7 @@
 <use f='tvm/src/printer/tvmscript_printer.cc' l='1149' u='c' c='_ZN3tvm3tir16TVMScriptPrinter10VisitStmt_EPKNS0_12AllocateNodeE'/>
 <use f='tvm/src/printer/tvmscript_printer.cc' l='1262' u='c' c='_ZN3tvm3tir16TVMScriptPrinter10VisitStmt_EPKNS0_14IfThenElseNodeE'/>
 <use f='tvm/src/printer/tvmscript_printer.cc' l='1446' u='c' c='_ZN3tvm3tir16TVMScriptPrinter19PrintBlockPredicateEPKNS0_16BlockRealizeNodeE'/>
-<use f='tvm/src/printer/tvmscript_printer.cc' l='1890' u='c' c='_ZN3tvm3tir16TVMScriptPrinter17PrintBufferRegionEPKNS0_16BufferRegionNodeE'/>
+<use f='tvm/src/printer/tvmscript_printer.cc' l='1870' u='c' c='_ZN3tvm3tir16TVMScriptPrinter17PrintBufferRegionEPKNS0_16BufferRegionNodeE'/>
 <use f='tvm/src/target/llvm/codegen_llvm.cc' l='1545' u='c' c='_ZN3tvm7codegen11CodeGenLLVM18BufferAccessHelperENS_3tir6BufferENS_7runtime5ArrayINS_8PrimExprEvEENS4_8DataTypeESt8functionIFPN4llvm11InstructionENS1_12TypedPointerEiibEE'/>
 <use f='tvm/src/te/autodiff/ad_simplify.cc' l='904' u='c' c='_ZN3tvm2te34RemoveRedundantInequalitiesMutator10VisitExpr_EPKNS_3tir10SelectNodeE'/>
 <use f='tvm/src/te/autodiff/ad_simplify.cc' l='924' u='c' c='_ZN3tvm2te34RemoveRedundantInequalitiesMutator10VisitExpr_EPKNS_3tir8CallNodeE'/>
@@ -103,7 +103,7 @@
 <use f='tvm/src/tir/transforms/lower_opaque_block.cc' l='92' u='c' c='_ZN3tvm3tir16OpaqueBlockLower10VisitStmt_EPKNS0_7ForNodeE'/>
 <use f='tvm/src/tir/transforms/lower_thread_allreduce.cc' l='224' u='c' c='_ZN3tvm3tir22ThreadAllreduceBuilder13MakeAllreduceEPKNS0_8CallNodeE'/>
 <use f='tvm/src/tir/transforms/remove_weight_layout_rewrite_block.cc' l='53' u='c' c='_ZN3tvm3tir24RemoveLayoutRewriteBlock10VisitStmt_EPKNS0_9BlockNodeE'/>
-<use f='tvm/src/tir/transforms/storage_flatten.cc' l='1480' u='c' c='_ZN3tvm3tir16StorageFlattener10VisitStmt_EPKNS0_17BufferRealizeNodeE'/>
-<use f='tvm/src/tir/transforms/storage_flatten.cc' l='1823' u='c' c='_ZN3tvm3tir16AssertSimplifier10VisitStmt_EPKNS0_14AssertStmtNodeE'/>
+<use f='tvm/src/tir/transforms/storage_flatten.cc' l='1515' u='c' c='_ZN3tvm3tir16StorageFlattener10VisitStmt_EPKNS0_17BufferRealizeNodeE'/>
+<use f='tvm/src/tir/transforms/storage_flatten.cc' l='1858' u='c' c='_ZN3tvm3tir16AssertSimplifier10VisitStmt_EPKNS0_14AssertStmtNodeE'/>
 <use f='tvm/src/tir/transforms/storage_rewrite.cc' l='1314' u='c' c='_ZN3tvm3tir23VectorTypeAccessChecker13OnArrayAccessENS_7runtime8DataTypeEPKNS0_7VarNodeERKNS2_5ArrayINS_8PrimExprEvEE'/>
 <use f='tvm/src/tir/transforms/storage_rewrite.cc' l='1444' u='c' c='_ZN3tvm3tir18VectorTypeRewriter17VisitBufferAccessET_'/>

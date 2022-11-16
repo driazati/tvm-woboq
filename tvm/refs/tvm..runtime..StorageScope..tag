@@ -25,7 +25,7 @@
 <use f='tvm/src/tir/transforms/lower_device_storage_access_info.cc' l='45' u='r' c='_ZN3tvm3tir22StorageAccessInfoLower10VisitStmt_EPKNS0_12AllocateNodeE'/>
 <use f='tvm/src/tir/transforms/merge_dynamic_shared_memory_allocations.cc' l='45' u='r' c='_ZN3tvm3tir21IsDynamicSharedMemoryENS0_3VarE'/>
 <use f='tvm/src/tir/transforms/split_host_device.cc' l='97' u='r' c='_ZN3tvm3tir17VarUseDefAnalysis10VisitStmt_EPKNS0_12AllocateNodeE'/>
-<use f='tvm/src/tir/transforms/storage_flatten.cc' l='1492' u='m' c='_ZN3tvm3tir16StorageFlattener10VisitStmt_EPKNS0_17BufferRealizeNodeE'/>
+<use f='tvm/src/tir/transforms/storage_flatten.cc' l='1527' u='m' c='_ZN3tvm3tir16StorageFlattener10VisitStmt_EPKNS0_17BufferRealizeNodeE'/>
 <use f='tvm/src/tir/transforms/storage_rewrite.cc' l='588' u='m' c='_ZN3tvm3tir19StoragePlanRewriter21IsSpecialTaggedMemoryERKNS_7runtime12StorageScopeE'/>
 <use f='tvm/src/tir/transforms/storage_rewrite.cc' l='588' u='r' c='_ZN3tvm3tir19StoragePlanRewriter21IsSpecialTaggedMemoryERKNS_7runtime12StorageScopeE'/>
 <use f='tvm/src/tir/transforms/storage_rewrite.cc' l='588' u='r' c='_ZN3tvm3tir19StoragePlanRewriter21IsSpecialTaggedMemoryERKNS_7runtime12StorageScopeE'/>

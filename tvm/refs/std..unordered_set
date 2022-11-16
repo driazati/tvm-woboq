@@ -319,13 +319,13 @@
 <use f='tvm/src/tir/analysis/block_access_region_detector.cc' l='377' c='_ZN3tvm3tir23GetBlockReadWriteRegionERKNS0_5BlockERKNS_7runtime3MapINS0_3VarENS0_6BufferEvvEE'/>
 <use f='tvm/src/tir/analysis/buffer_access_lca_detector.cc' l='313'/>
 <use f='tvm/src/tir/analysis/verify_gpu_code.cc' l='257'/>
-<use f='tvm/src/tir/contrib/ethosu/passes.cc' l='511' c='_ZN3tvm3tir7contrib6ethosu21MergeConstantsMutatorclENS0_8PrimFuncERKNS_7runtime3MapINS_6IntImmENS5_7NDArrayEvvEE'/>
-<use f='tvm/src/tir/contrib/ethosu/passes.cc' l='550'/>
-<use f='tvm/src/tir/contrib/ethosu/passes.cc' l='556' c='_ZN3tvm3tir7contrib6ethosu21MergeConstantsMutator19RewritePrimFuncBodyENS0_4StmtE'/>
-<use f='tvm/src/tir/contrib/ethosu/passes.cc' l='637' c='_ZN3tvm3tir7contrib6ethosu21MergeConstantsMutator28GetVarsForWrittenCopyBuffersEv'/>
-<use f='tvm/src/tir/contrib/ethosu/passes.cc' l='638' c='_ZN3tvm3tir7contrib6ethosu21MergeConstantsMutator28GetVarsForWrittenCopyBuffersEv'/>
-<use f='tvm/src/tir/contrib/ethosu/passes.cc' l='752' c='_ZN3tvm3tir7contrib6ethosu21MergeConstantsMutator16MakeNewBufferMapERKNS_7runtime3MapINS0_3VarENS0_6BufferEvvEEPSt13unordered_setIPKNS0_7VarNodeESt4ha16534861'/>
-<use f='tvm/src/tir/contrib/ethosu/passes.cc' l='770' c='_ZN3tvm3tir7contrib6ethosu21MergeConstantsMutator13MakeNewParamsERKNS_7runtime5ArrayINS0_3VarEvEERKSt13unordered_setIPKNS0_7VarNodeESt4hashISD_ESt8equal_toISD_ESaISD_EE'/>
+<use f='tvm/src/tir/contrib/ethosu/passes.cc' l='510' c='_ZN3tvm3tir7contrib6ethosu21MergeConstantsMutatorclENS0_8PrimFuncERKNS_7runtime3MapINS_6IntImmENS5_7NDArrayEvvEE'/>
+<use f='tvm/src/tir/contrib/ethosu/passes.cc' l='548'/>
+<use f='tvm/src/tir/contrib/ethosu/passes.cc' l='554' c='_ZN3tvm3tir7contrib6ethosu21MergeConstantsMutator19RewritePrimFuncBodyENS0_4StmtE'/>
+<use f='tvm/src/tir/contrib/ethosu/passes.cc' l='635' c='_ZN3tvm3tir7contrib6ethosu21MergeConstantsMutator28GetVarsForWrittenCopyBuffersEv'/>
+<use f='tvm/src/tir/contrib/ethosu/passes.cc' l='636' c='_ZN3tvm3tir7contrib6ethosu21MergeConstantsMutator28GetVarsForWrittenCopyBuffersEv'/>
+<use f='tvm/src/tir/contrib/ethosu/passes.cc' l='750' c='_ZN3tvm3tir7contrib6ethosu21MergeConstantsMutator16MakeNewBufferMapERKNS_7runtime3MapINS0_3VarENS0_6BufferEvvEEPSt13unordered_setIPKNS0_7VarNodeESt4ha16534861'/>
+<use f='tvm/src/tir/contrib/ethosu/passes.cc' l='768' c='_ZN3tvm3tir7contrib6ethosu21MergeConstantsMutator13MakeNewParamsERKNS_7runtime5ArrayINS0_3VarEvEERKSt13unordered_setIPKNS0_7VarNodeESt4hashISD_ESt8equal_toISD_ESaISD_EE'/>
 <use f='tvm/src/tir/ir/data_layout.cc' l='337' c='_ZN3tvm3tir14TransformShapeERKNS_7runtime5ArrayINS_8PrimExprEvEERKNS2_INS0_7IterVarEvEESA_S6_'/>
 <use f='tvm/src/tir/ir/index_map.cc' l='322' c='_ZN3tvm3tir25IndexMap2PythonLambdaExprB5cxx11ERKNS_7runtime5ArrayINS0_3VarEvEERKNS2_INS_8PrimExprEvEE'/>
 <use f='tvm/src/tir/ir/stmt_functor.cc' l='588'/>
@@ -437,7 +437,7 @@
 <use f='tvm/src/tir/transforms/merge_dynamic_shared_memory_allocations.cc' l='420' c='_ZN3tvm3tir27DynamicSharedMemoryRewriter16LivenessAnalysisERKSt6vectorINS0_37DynSharedMemLinearAccessPatternFinder9StmtEntryESaIS4_EE'/>
 <use f='tvm/src/tir/transforms/merge_dynamic_shared_memory_allocations.cc' l='451' c='_ZN3tvm3tir27DynamicSharedMemoryRewriter10PlanMemoryERKSt6vectorINS0_37DynSharedMemLinearAccessPatternFinder9StmtEntryESaIS4_EE'/>
 <use f='tvm/src/tir/transforms/plan_update_buffer_allocation_location.cc' l='48'/>
-<use f='tvm/src/tir/transforms/plan_update_buffer_allocation_location.cc' l='59' c='_ZN3tvm3tir23BufferAllocationLocatorC1ERKNS0_8PrimFuncE'/>
+<use f='tvm/src/tir/transforms/plan_update_buffer_allocation_location.cc' l='55' c='_ZN3tvm3tir23BufferAllocationLocatorC1ERKNS0_8PrimFuncE'/>
 <use f='tvm/src/tir/transforms/plan_update_buffer_allocation_location.cc' l='184'/>
 <use f='tvm/src/tir/transforms/remove_store_undef.cc' l='37' c='_ZN3tvm3tir17StoreUndefLocator6LocateENS0_4StmtE'/>
 <use f='tvm/src/tir/transforms/remove_store_undef.cc' l='96'/>
@@ -447,11 +447,11 @@
 <use f='tvm/src/tir/transforms/remove_weight_layout_rewrite_block.cc' l='109'/>
 <use f='tvm/src/tir/transforms/remove_weight_layout_rewrite_block.cc' l='239'/>
 <use f='tvm/src/tir/transforms/storage_flatten.cc' l='372'/>
-<use f='tvm/src/tir/transforms/storage_flatten.cc' l='633'/>
-<use f='tvm/src/tir/transforms/storage_flatten.cc' l='811'/>
-<use f='tvm/src/tir/transforms/storage_flatten.cc' l='1181'/>
-<use f='tvm/src/tir/transforms/storage_flatten.cc' l='1186'/>
-<use f='tvm/src/tir/transforms/storage_flatten.cc' l='1773'/>
+<use f='tvm/src/tir/transforms/storage_flatten.cc' l='614'/>
+<use f='tvm/src/tir/transforms/storage_flatten.cc' l='792'/>
+<use f='tvm/src/tir/transforms/storage_flatten.cc' l='1217'/>
+<use f='tvm/src/tir/transforms/storage_flatten.cc' l='1225'/>
+<use f='tvm/src/tir/transforms/storage_flatten.cc' l='1810'/>
 <use f='tvm/src/tir/transforms/storage_rewrite.cc' l='780' c='_ZN3tvm3tir19StoragePlanRewriter16LivenessAnalysisERKSt6vectorINS0_25LinearAccessPatternFinder9StmtEntryESaIS4_EE'/>
 <use f='tvm/src/tir/transforms/storage_rewrite.cc' l='831' c='_ZN3tvm3tir19StoragePlanRewriter10PlanMemoryERKSt6vectorINS0_25LinearAccessPatternFinder9StmtEntryESaIS4_EERKSt13unordered_mapIPKNS0_7VarNodeENS3_10Al13373811'/>
 <use f='tvm/src/tir/transforms/storage_rewrite.cc' l='1075'/>

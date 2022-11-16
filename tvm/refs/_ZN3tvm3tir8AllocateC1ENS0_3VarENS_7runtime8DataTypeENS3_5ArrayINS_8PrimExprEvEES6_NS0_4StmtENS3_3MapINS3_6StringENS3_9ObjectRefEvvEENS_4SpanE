@@ -1,13 +1,13 @@
 <dec f='tvm/include/tvm/tir/stmt.h' l='584' type='void tvm::tir::Allocate::Allocate(tvm::tir::Var buffer_var, tvm::DataType dtype, Array&lt;tvm::PrimExpr&gt; extents, tvm::PrimExpr condition, tvm::tir::Stmt body, Map&lt;tvm::runtime::String, tvm::runtime::ObjectRef&gt; annotations = Map&lt;tvm::runtime::String, tvm::runtime::ObjectRef&gt;(), tvm::Span span = tvm::Span())'/>
 <use f='tvm/src/relay/backend/aot/aot_lower_main.cc' l='464' u='c' c='_ZN3tvm5relay7backend3aot14AOTMainLowerer14CreateMainFuncENS_7runtime6StringE'/>
 <use f='tvm/src/relay/backend/aot_executor_codegen.cc' l='774' u='c' c='_ZN3tvm5relay7backend18AOTExecutorCodegen14CreateMainFuncENS_7runtime6StringEj'/>
-<use f='tvm/src/script/ir_builder/tir/frame.cc' l='121' u='c' c='_ZN3tvm6script10ir_builder3tir17AllocateFrameNode13ExitWithScopeEv'/>
-<use f='tvm/src/script/ir_builder/tir/frame.cc' l='188' u='c' c='_ZN3tvm6script10ir_builder3tir19DeclBufferFrameNode13ExitWithScopeEv'/>
+<use f='tvm/src/script/ir_builder/tir/frame.cc' l='120' u='c' c='_ZN3tvm6script10ir_builder3tir17AllocateFrameNode13ExitWithScopeEv'/>
+<use f='tvm/src/script/ir_builder/tir/frame.cc' l='187' u='c' c='_ZN3tvm6script10ir_builder3tir19DeclBufferFrameNode13ExitWithScopeEv'/>
 <use f='tvm/src/te/operation/cross_thread_reduction.cc' l='224' u='c' c='_ZN3tvm2te24MakeCrossThreadReductionEPKNS0_13ComputeOpNodeERKNS0_5StageERKSt13unordered_mapINS_3tir7IterVarENS_5RangeESt4hashIS9_ESt8equal_toIS9_ESaISt4pairIKS9_SA_EEEb'/>
 <use f='tvm/src/te/operation/cross_thread_reduction.cc' l='227' u='c' c='_ZN3tvm2te24MakeCrossThreadReductionEPKNS0_13ComputeOpNodeERKNS0_5StageERKSt13unordered_mapINS_3tir7IterVarENS_5RangeESt4hashIS9_ESt8equal_toIS9_ESaISt4pairIKS9_SA_EEEb'/>
 <use f='tvm/src/tir/contrib/ethosu/passes.cc' l='150' u='c' c='_ZN3tvm3tir7contrib6ethosu21HoistAllocatesMutatorclENS0_8PrimFuncE'/>
-<use f='tvm/src/tir/contrib/ethosu/passes.cc' l='561' u='c' c='_ZN3tvm3tir7contrib6ethosu21MergeConstantsMutator19RewritePrimFuncBodyENS0_4StmtE'/>
-<use f='tvm/src/tir/contrib/ethosu/passes.cc' l='581' u='c' c='_ZN3tvm3tir7contrib6ethosu21MergeConstantsMutator19RewritePrimFuncBodyENS0_4StmtE'/>
+<use f='tvm/src/tir/contrib/ethosu/passes.cc' l='559' u='c' c='_ZN3tvm3tir7contrib6ethosu21MergeConstantsMutator19RewritePrimFuncBodyENS0_4StmtE'/>
+<use f='tvm/src/tir/contrib/ethosu/passes.cc' l='579' u='c' c='_ZN3tvm3tir7contrib6ethosu21MergeConstantsMutator19RewritePrimFuncBodyENS0_4StmtE'/>
 <def f='tvm/src/tir/ir/stmt.cc' l='364' ll='390' type='void tvm::tir::Allocate::Allocate(tvm::tir::Var buffer_var, tvm::DataType dtype, Array&lt;tvm::PrimExpr&gt; extents, tvm::PrimExpr condition, tvm::tir::Stmt body, Map&lt;tvm::runtime::String, tvm::runtime::ObjectRef&gt; annotations = Map&lt;tvm::runtime::String, tvm::runtime::ObjectRef&gt;(), tvm::Span span = tvm::Span())'/>
 <use f='tvm/src/tir/ir/stmt.cc' l='410' u='c'/>
 <doc f='tvm/src/tir/ir/stmt.cc' l='363'>// Allocate</doc>
@@ -25,8 +25,8 @@
 <use f='tvm/src/tir/transforms/lower_thread_allreduce.cc' l='508' u='c' c='_ZN3tvm3tir22ThreadAllreduceBuilder13MakeAllreduceEPKNS0_8CallNodeE'/>
 <use f='tvm/src/tir/transforms/lower_warp_memory.cc' l='255' u='c' c='_ZN3tvm3tir18WarpAccessRewriter7RewriteEPKNS0_12AllocateNodeE'/>
 <use f='tvm/src/tir/transforms/merge_dynamic_shared_memory_allocations.cc' l='296' u='c' c='_ZN3tvm3tir27DynamicSharedMemoryRewriter10VisitStmt_EPKNS0_12AttrStmtNodeE'/>
-<use f='tvm/src/tir/transforms/storage_flatten.cc' l='1426' u='c' c='_ZN3tvm3tir16StorageFlattener10VisitStmt_EPKNS0_12AllocateNodeE'/>
-<use f='tvm/src/tir/transforms/storage_flatten.cc' l='1520' u='c' c='_ZN3tvm3tir16StorageFlattener10VisitStmt_EPKNS0_17BufferRealizeNodeE'/>
+<use f='tvm/src/tir/transforms/storage_flatten.cc' l='1461' u='c' c='_ZN3tvm3tir16StorageFlattener10VisitStmt_EPKNS0_12AllocateNodeE'/>
+<use f='tvm/src/tir/transforms/storage_flatten.cc' l='1557' u='c' c='_ZN3tvm3tir16StorageFlattener10VisitStmt_EPKNS0_17BufferRealizeNodeE'/>
 <use f='tvm/src/tir/transforms/storage_rewrite.cc' l='678' u='c' c='_ZN3tvm3tir19StoragePlanRewriter15PrepareNewAllocEv'/>
 <use f='tvm/src/tir/transforms/storage_rewrite.cc' l='727' u='c' c='_ZN3tvm3tir19StoragePlanRewriter15PrepareNewAllocEv'/>
 <use f='tvm/src/tir/transforms/storage_rewrite.cc' l='771' u='c' c='_ZN3tvm3tir19StoragePlanRewriter17NewAllocTagMergedEPNS1_12StorageEntryE'/>

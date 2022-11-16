@@ -28,7 +28,7 @@
 <size>8</size>
 <use f='tvm/src/relay/backend/contrib/example_target_hooks/relay_to_tir.cc' l='145' c='_ZN3tvm5relay7contrib20example_target_hooks12_GLOBAL__N_120ConvertAddToSubtract30ReplaceAddWithSubtractPrimFuncERKNS0_8FunctionE'/>
 <size>8</size>
-<use f='tvm/src/script/ir_builder/tir/ir.cc' l='516' c='_ZN3tvm6script10ir_builder3tir11BufferStoreENS_3tir6BufferENS_8PrimExprENS_7runtime5ArrayIS5_vEE'/>
+<use f='tvm/src/script/ir_builder/tir/ir.cc' l='495' c='_ZN3tvm6script10ir_builder3tir11BufferStoreENS_3tir6BufferENS_8PrimExprENS_7runtime5ArrayIS5_vEE'/>
 <size>8</size>
 <use f='tvm/src/te/operation/create_primfunc.cc' l='231' c='_ZN3tvm3tir24GenerateBlockFromTensorsERKNS_2te9ComputeOpERKNS_7runtime5ArrayINS1_6TensorEvEENS6_INS_8PrimExprEvEESB_PNS0_14CreateFuncInfoEPNS_5arith8AnalyzerE'/>
 <use f='tvm/src/te/operation/create_primfunc.cc' l='239' c='_ZN3tvm3tir24GenerateBlockFromTensorsERKNS_2te9ComputeOpERKNS_7runtime5ArrayINS1_6TensorEvEENS6_INS_8PrimExprEvEESB_PNS0_14CreateFuncInfoEPNS_5arith8AnalyzerE'/>
@@ -40,9 +40,9 @@
 <use f='tvm/src/te/schedule/schedule_postproc_to_primfunc.cc' l='124' c='_ZN3tvm2te20TensorToBufferMapper10VisitStmt_EPKNS_3tir17ProducerStoreNodeE'/>
 <use f='tvm/src/te/schedule/schedule_postproc_to_primfunc.cc' l='310' c='_ZN3tvm2te27AxisSeparatorsAttrUnwrapper10VisitStmt_EPKNS_3tir15BufferStoreNodeE'/>
 <size>8</size>
-<use f='tvm/src/tir/analysis/device_constraint_utils.cc' l='329' c='_ZN3tvm3tir12_GLOBAL__N_129ApplyDeviceConstraintsMutator10VisitStmt_EPKNS0_15BufferStoreNodeE'/>
-<use f='tvm/src/tir/analysis/device_constraint_utils.cc' l='330' c='_ZN3tvm3tir12_GLOBAL__N_129ApplyDeviceConstraintsMutator10VisitStmt_EPKNS0_15BufferStoreNodeE'/>
-<use f='tvm/src/tir/analysis/device_constraint_utils.cc' l='333' c='_ZN3tvm3tir12_GLOBAL__N_129ApplyDeviceConstraintsMutator10VisitStmt_EPKNS0_15BufferStoreNodeE'/>
+<use f='tvm/src/tir/analysis/device_constraint_utils.cc' l='309' c='_ZN3tvm3tir12_GLOBAL__N_129ApplyDeviceConstraintsMutator10VisitStmt_EPKNS0_15BufferStoreNodeE'/>
+<use f='tvm/src/tir/analysis/device_constraint_utils.cc' l='310' c='_ZN3tvm3tir12_GLOBAL__N_129ApplyDeviceConstraintsMutator10VisitStmt_EPKNS0_15BufferStoreNodeE'/>
+<use f='tvm/src/tir/analysis/device_constraint_utils.cc' l='313' c='_ZN3tvm3tir12_GLOBAL__N_129ApplyDeviceConstraintsMutator10VisitStmt_EPKNS0_15BufferStoreNodeE'/>
 <size>8</size>
 <use f='tvm/src/tir/ir/buffer.cc' l='429' c='_ZNK3tvm3tir6Buffer6vstoreENS_7runtime5ArrayINS_8PrimExprEvEES4_'/>
 <size>8</size>
@@ -123,8 +123,8 @@
 <use f='tvm/src/tir/transforms/compact_buffer_region.cc' l='455' c='_ZN3tvm3tir15BufferCompactor10VisitStmt_EPKNS0_15BufferStoreNodeE'/>
 <use f='tvm/src/tir/transforms/compact_buffer_region.cc' l='455' c='_ZN3tvm3tir15BufferCompactor10VisitStmt_EPKNS0_15BufferStoreNodeE'/>
 <size>8</size>
-<use f='tvm/src/tir/transforms/flatten_buffer.cc' l='178' c='_ZN3tvm3tir15BufferFlattener10VisitStmt_EPKNS0_15BufferStoreNodeE'/>
-<use f='tvm/src/tir/transforms/flatten_buffer.cc' l='178' c='_ZN3tvm3tir15BufferFlattener10VisitStmt_EPKNS0_15BufferStoreNodeE'/>
+<use f='tvm/src/tir/transforms/flatten_buffer.cc' l='174' c='_ZN3tvm3tir15BufferFlattener10VisitStmt_EPKNS0_15BufferStoreNodeE'/>
+<use f='tvm/src/tir/transforms/flatten_buffer.cc' l='174' c='_ZN3tvm3tir15BufferFlattener10VisitStmt_EPKNS0_15BufferStoreNodeE'/>
 <size>8</size>
 <use f='tvm/src/tir/transforms/inject_double_buffer.cc' l='184' c='_ZN3tvm3tir20DoubleBufferInjector10VisitStmt_EPKNS0_15BufferStoreNodeE'/>
 <size>8</size>
@@ -182,11 +182,11 @@
 <use f='tvm/src/tir/transforms/simplify.cc' l='173' c='_ZN3tvm5arith14StmtSimplifier10VisitStmt_EPKNS_3tir15BufferStoreNodeE'/>
 <size>8</size>
 <use f='tvm/src/tir/transforms/storage_flatten.cc' l='186' c='_ZN3tvm3tir19BufferShapeLegalize10VisitStmt_EPKNS0_15BufferStoreNodeE'/>
-<use f='tvm/src/tir/transforms/storage_flatten.cc' l='581' c='_ZN3tvm3tir20BufferStrideLegalize10VisitStmt_EPKNS0_15BufferStoreNodeE'/>
-<use f='tvm/src/tir/transforms/storage_flatten.cc' l='765' c='_ZN3tvm3tir20ThreadScopePropagate10VisitStmt_EPKNS0_15BufferStoreNodeE'/>
-<use f='tvm/src/tir/transforms/storage_flatten.cc' l='983' c='_ZN3tvm3tir19BufferBindUnwrapper10VisitStmt_EPKNS0_15BufferStoreNodeE'/>
-<use f='tvm/src/tir/transforms/storage_flatten.cc' l='1248' c='_ZN3tvm3tir21ApplyLayoutTransforms10VisitStmt_EPKNS0_15BufferStoreNodeE'/>
-<use f='tvm/src/tir/transforms/storage_flatten.cc' l='1406' c='_ZN3tvm3tir16StorageFlattener10VisitStmt_EPKNS0_15BufferStoreNodeE'/>
+<use f='tvm/src/tir/transforms/storage_flatten.cc' l='571' c='_ZN3tvm3tir20BufferStrideLegalize10VisitStmt_EPKNS0_15BufferStoreNodeE'/>
+<use f='tvm/src/tir/transforms/storage_flatten.cc' l='746' c='_ZN3tvm3tir20ThreadScopePropagate10VisitStmt_EPKNS0_15BufferStoreNodeE'/>
+<use f='tvm/src/tir/transforms/storage_flatten.cc' l='965' c='_ZN3tvm3tir19BufferBindUnwrapper10VisitStmt_EPKNS0_15BufferStoreNodeE'/>
+<use f='tvm/src/tir/transforms/storage_flatten.cc' l='1287' c='_ZN3tvm3tir21ApplyLayoutTransforms10VisitStmt_EPKNS0_15BufferStoreNodeE'/>
+<use f='tvm/src/tir/transforms/storage_flatten.cc' l='1441' c='_ZN3tvm3tir16StorageFlattener10VisitStmt_EPKNS0_15BufferStoreNodeE'/>
 <size>8</size>
 <use f='tvm/src/tir/transforms/storage_rewrite.cc' l='465' c='_ZN3tvm3tir19StoragePlanRewriter10VisitStmt_EPKNS0_15BufferStoreNodeE'/>
 <use f='tvm/src/tir/transforms/storage_rewrite.cc' l='1478' c='_ZN3tvm3tir18VectorTypeRewriter10VisitStmt_EPKNS0_15BufferStoreNodeE'/>

@@ -3,10 +3,10 @@
 <use f='tvm/include/tvm/ir/function.h' l='132' u='m' c='_ZNK3tvm12BaseFuncNode14HasNonzeroAttrERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
 <offset>320</offset>
 <doc f='tvm/include/tvm/ir/function.h' l='79'>/*! \brief Additional attributes storing the meta-data */</doc>
-<use f='tvm/include/tvm/tir/function.h' l='118' u='a' c='_ZN3tvm3tir12PrimFuncNode10VisitAttrsEPNS_11AttrVisitorE'/>
-<use f='tvm/include/tvm/tir/function.h' l='128' u='r' c='_ZNK3tvm3tir12PrimFuncNode12SEqualReduceEPKS1_NS_13SEqualReducerE'/>
-<use f='tvm/include/tvm/tir/function.h' l='128' u='r' c='_ZNK3tvm3tir12PrimFuncNode12SEqualReduceEPKS1_NS_13SEqualReducerE'/>
-<use f='tvm/include/tvm/tir/function.h' l='137' u='r' c='_ZNK3tvm3tir12PrimFuncNode11SHashReduceENS_12SHashReducerE'/>
+<use f='tvm/include/tvm/tir/function.h' l='107' u='a' c='_ZN3tvm3tir12PrimFuncNode10VisitAttrsEPNS_11AttrVisitorE'/>
+<use f='tvm/include/tvm/tir/function.h' l='116' u='r' c='_ZNK3tvm3tir12PrimFuncNode12SEqualReduceEPKS1_NS_13SEqualReducerE'/>
+<use f='tvm/include/tvm/tir/function.h' l='116' u='r' c='_ZNK3tvm3tir12PrimFuncNode12SEqualReduceEPKS1_NS_13SEqualReducerE'/>
+<use f='tvm/include/tvm/tir/function.h' l='124' u='r' c='_ZNK3tvm3tir12PrimFuncNode11SHashReduceENS_12SHashReducerE'/>
 <use f='tvm/include/tvm/relay/function.h' l='66' u='a' c='_ZN3tvm5relay12FunctionNode10VisitAttrsEPNS_11AttrVisitorE'/>
 <use f='tvm/include/tvm/relay/function.h' l='77' u='r' c='_ZNK3tvm5relay12FunctionNode12SEqualReduceEPKS1_NS_13SEqualReducerE'/>
 <use f='tvm/include/tvm/relay/function.h' l='77' u='r' c='_ZNK3tvm5relay12FunctionNode12SEqualReduceEPKS1_NS_13SEqualReducerE'/>
@@ -17,8 +17,8 @@
 <use f='tvm/src/printer/tir_text_printer.cc' l='87' u='m' c='_ZN3tvm3tir14TIRTextPrinter13PrintPrimFuncERKNS0_8PrimFuncE'/>
 <use f='tvm/src/printer/tir_text_printer.cc' l='123' u='m' c='_ZN3tvm3tir14TIRTextPrinter13PrintPrimFuncERKNS0_8PrimFuncE'/>
 <use f='tvm/src/printer/tir_text_printer.cc' l='124' u='m' c='_ZN3tvm3tir14TIRTextPrinter13PrintPrimFuncERKNS0_8PrimFuncE'/>
-<use f='tvm/src/printer/tvmscript_printer.cc' l='1746' u='m' c='_ZN3tvm3tir16TVMScriptPrinter13PrintPrimFuncERKNS0_8PrimFuncE'/>
-<use f='tvm/src/printer/tvmscript_printer.cc' l='1750' u='m' c='_ZN3tvm3tir16TVMScriptPrinter13PrintPrimFuncERKNS0_8PrimFuncE'/>
+<use f='tvm/src/printer/tvmscript_printer.cc' l='1726' u='m' c='_ZN3tvm3tir16TVMScriptPrinter13PrintPrimFuncERKNS0_8PrimFuncE'/>
+<use f='tvm/src/printer/tvmscript_printer.cc' l='1730' u='m' c='_ZN3tvm3tir16TVMScriptPrinter13PrintPrimFuncERKNS0_8PrimFuncE'/>
 <use f='tvm/src/relay/analysis/extract_fused_functions.cc' l='58' u='r' c='_ZN3tvm5relay29FusedFunctionExtractorWrapper10VisitExpr_EPKNS0_12FunctionNodeE'/>
 <use f='tvm/src/relay/analysis/get_calibration_data.cc' l='104' u='r' c='_ZN3tvm5relay18GetCalibrateModuleENS_8IRModuleE'/>
 <use f='tvm/src/relay/backend/annotate_used_memory.cc' l='119' u='m' c='_ZN3tvm5relay7backend25AnnotateUsedMemoryMutator19PreVisitLetBinding_ERKNS0_3VarERKNS_9RelayExprE'/>
@@ -47,17 +47,17 @@
 <use f='tvm/src/relay/transforms/remove_standalone_reshapes.cc' l='101' u='r' c='_ZN3tvm5relay9transform24RemoveStandaloneReshapesEv'/>
 <use f='tvm/src/relay/transforms/type_infer.cc' l='872' u='r' c='_ZN3tvm5relay26SameTypedSubgraphExtractor10VisitExpr_EPKNS0_12FunctionNodeE'/>
 <use f='tvm/src/te/schedule/schedule_postproc_to_primfunc.cc' l='259' u='m' c='_ZN3tvm2te27AxisSeparatorsAttrUnwrapper5ApplyENS_3tir8PrimFuncE'/>
-<use f='tvm/src/tir/analysis/device_constraint_utils.cc' l='263' u='r' c='_ZN3tvm3tir12_GLOBAL__N_129ApplyDeviceConstraintsMutator7RewriteERKNS0_8PrimFuncERKNS_8FuncTypeERKNS_7runtime5ArrayINS_13VirtualDeviceEvEE'/>
-<use f='tvm/src/tir/contrib/ethosu/passes.cc' l='157' u='r' c='_ZN3tvm3tir7contrib6ethosu21HoistAllocatesMutatorclENS0_8PrimFuncE'/>
-<use f='tvm/src/tir/contrib/ethosu/passes.cc' l='907' u='m' c='_ZN3tvm3tir7contrib6ethosu14MergeConstantsEv'/>
-<use f='tvm/src/tir/ir/function.cc' l='46' u='w' c='_ZN3tvm3tir8PrimFuncC1ENS_7runtime5ArrayINS0_3VarEvEENS0_4StmtENS_4TypeENS2_3MapIS4_NS0_6BufferEvvEENS2_8OptionalISA_EENS_9DictAttrsENS_4SpanE'/>
-<use f='tvm/src/tir/ir/function.cc' l='120' u='m'/>
-<use f='tvm/src/tir/ir/function.cc' l='121' u='r'/>
+<use f='tvm/src/tir/analysis/device_constraint_utils.cc' l='243' u='r' c='_ZN3tvm3tir12_GLOBAL__N_129ApplyDeviceConstraintsMutator7RewriteERKNS0_8PrimFuncERKNS_8FuncTypeERKNS_7runtime5ArrayINS_13VirtualDeviceEvEE'/>
+<use f='tvm/src/tir/contrib/ethosu/passes.cc' l='156' u='r' c='_ZN3tvm3tir7contrib6ethosu21HoistAllocatesMutatorclENS0_8PrimFuncE'/>
+<use f='tvm/src/tir/contrib/ethosu/passes.cc' l='905' u='m' c='_ZN3tvm3tir7contrib6ethosu14MergeConstantsEv'/>
+<use f='tvm/src/tir/ir/function.cc' l='43' u='w' c='_ZN3tvm3tir8PrimFuncC1ENS_7runtime5ArrayINS0_3VarEvEENS0_4StmtENS_4TypeENS2_3MapIS4_NS0_6BufferEvvEENS_9DictAttrsENS_4SpanE'/>
+<use f='tvm/src/tir/ir/function.cc' l='117' u='m'/>
+<use f='tvm/src/tir/ir/function.cc' l='118' u='r'/>
 <use f='tvm/src/tir/transforms/storage_flatten.cc' l='75' u='m' c='_ZN3tvm3tir19BufferShapeLegalize4PassEv'/>
-<use f='tvm/src/tir/transforms/storage_flatten.cc' l='405' u='m' c='_ZN3tvm3tir20BufferStrideLegalize4PassEv'/>
-<use f='tvm/src/tir/transforms/storage_flatten.cc' l='653' u='m' c='_ZN3tvm3tir20ThreadScopePropagate4PassEv'/>
-<use f='tvm/src/tir/transforms/storage_flatten.cc' l='1196' u='m' c='_ZN3tvm3tir21ApplyLayoutTransforms4PassEv'/>
+<use f='tvm/src/tir/transforms/storage_flatten.cc' l='406' u='m' c='_ZN3tvm3tir20BufferStrideLegalize4PassEv'/>
+<use f='tvm/src/tir/transforms/storage_flatten.cc' l='634' u='m' c='_ZN3tvm3tir20ThreadScopePropagate4PassEv'/>
+<use f='tvm/src/tir/transforms/storage_flatten.cc' l='1235' u='m' c='_ZN3tvm3tir21ApplyLayoutTransforms4PassEv'/>
 <use f='tvm/src/tir/usmp/transform/assign_pool_info.cc' l='170' u='r' c='_ZN3tvm3tir4usmp16PoolInfoAssignerclEv'/>
 <use f='tvm/src/tir/usmp/transform/convert_pool_allocations_to_offsets.cc' l='239' u='r' c='_ZN3tvm3tir4usmp31PoolAllocationToOffsetConverter28CreatePrimFuncWithPoolParamsERKNS0_8PrimFuncE'/>
 <use f='tvm/src/tir/usmp/transform/convert_pool_allocations_to_offsets.cc' l='453' u='r' c='_ZN3tvm3tir4usmp31PoolAllocationToOffsetConverterclEv'/>
-<use f='tvm/src/tir/usmp/transform/create_io_allocates.cc' l='200' u='r' c='_ZN3tvm3tir4usmp17IOAllocateCreatorclEv'/>
+<use f='tvm/src/tir/usmp/transform/create_io_allocates.cc' l='199' u='r' c='_ZN3tvm3tir4usmp17IOAllocateCreatorclEv'/>

@@ -26,7 +26,7 @@
 <use f='tvm/include/tvm/tir/stmt.h' l='1355' macro='1' u='c' c='_ZN3tvm3tir12BlockRealize11CopyOnWriteEv'/>
 <doc f='tvm/include/tvm/runtime/object.h' l='393'>// NOLINT(*)</doc>
 <use f='tvm/src/arith/interval_set.h' l='113' macro='1' u='c' c='_ZN3tvm5arith11IntervalSet11CopyOnWriteEv'/>
-<use f='tvm/include/tvm/tir/function.h' l='189' macro='1' u='c' c='_ZN3tvm3tir8PrimFunc11CopyOnWriteEv'/>
+<use f='tvm/include/tvm/tir/function.h' l='168' macro='1' u='c' c='_ZN3tvm3tir8PrimFunc11CopyOnWriteEv'/>
 <use f='tvm/src/arith/canonical_simplify.cc' l='216' macro='1' u='c' c='_ZN3tvm5arith9SplitExpr11CopyOnWriteEv'/>
 <use f='tvm/src/arith/canonical_simplify.cc' l='526' macro='1' u='c' c='_ZN3tvm5arith7SumExpr11CopyOnWriteEv'/>
 <use f='tvm/src/arith/const_int_bound.cc' l='39' macro='1' u='c'/>
@@ -757,6 +757,7 @@
 <use f='tvm/src/script/ir_builder/base.cc' l='97' macro='1' u='c'/>
 <use f='tvm/src/script/ir_builder/base.cc' l='98' macro='1' u='c'/>
 <use f='tvm/src/script/ir_builder/ir/frame.cc' l='40' macro='1' u='c'/>
+<use f='tvm/src/script/ir_builder/tir/frame.cc' l='193' macro='1' u='c'/>
 <use f='tvm/src/script/ir_builder/tir/frame.cc' l='194' macro='1' u='c'/>
 <use f='tvm/src/script/ir_builder/tir/frame.cc' l='195' macro='1' u='c'/>
 <use f='tvm/src/script/ir_builder/tir/frame.cc' l='196' macro='1' u='c'/>
@@ -773,8 +774,7 @@
 <use f='tvm/src/script/ir_builder/tir/frame.cc' l='207' macro='1' u='c'/>
 <use f='tvm/src/script/ir_builder/tir/frame.cc' l='208' macro='1' u='c'/>
 <use f='tvm/src/script/ir_builder/tir/frame.cc' l='209' macro='1' u='c'/>
-<use f='tvm/src/script/ir_builder/tir/frame.cc' l='210' macro='1' u='c'/>
-<use f='tvm/src/script/ir_builder/tir/ir.cc' l='176' u='c' c='_ZN3tvm6script10ir_builder3tir4InitEv'/>
+<use f='tvm/src/script/ir_builder/tir/ir.cc' l='155' u='c' c='_ZN3tvm6script10ir_builder3tir4InitEv'/>
 <use f='tvm/include/tvm/script/printer/doc.h' l='661' u='c' c='_ZN3tvm6script7printer8TupleDocC1Ev'/>
 <use f='tvm/include/tvm/script/printer/doc.h' l='699' u='c' c='_ZN3tvm6script7printer7ListDocC1Ev'/>
 <use f='tvm/include/tvm/script/printer/doc.h' l='745' u='c' c='_ZN3tvm6script7printer7DictDocC1Ev'/>
@@ -972,10 +972,10 @@
 <use f='tvm/src/tir/ir/expr.cc' l='1119' macro='1' u='c'/>
 <use f='tvm/src/tir/ir/expr.cc' l='1141' u='c' c='_ZN3tvm3tir12ProducerLoadC1ENS0_12DataProducerENS_7runtime5ArrayINS_8PrimExprEvEENS_4SpanE'/>
 <use f='tvm/src/tir/ir/expr.cc' l='1149' macro='1' u='c'/>
-<use f='tvm/src/tir/ir/function.cc' l='49' u='c' c='_ZN3tvm3tir8PrimFuncC1ENS_7runtime5ArrayINS0_3VarEvEENS0_4StmtENS_4TypeENS2_3MapIS4_NS0_6BufferEvvEENS2_8OptionalISA_EENS_9DictAttrsENS_4SpanE'/>
-<use f='tvm/src/tir/ir/function.cc' l='60' macro='1' u='c'/>
-<use f='tvm/src/tir/ir/function.cc' l='88' u='c' c='_ZN3tvm3tir12TensorIntrinC1ENS0_8PrimFuncES2_'/>
-<use f='tvm/src/tir/ir/function.cc' l='113' macro='1' u='c'/>
+<use f='tvm/src/tir/ir/function.cc' l='46' u='c' c='_ZN3tvm3tir8PrimFuncC1ENS_7runtime5ArrayINS0_3VarEvEENS0_4StmtENS_4TypeENS2_3MapIS4_NS0_6BufferEvvEENS_9DictAttrsENS_4SpanE'/>
+<use f='tvm/src/tir/ir/function.cc' l='57' macro='1' u='c'/>
+<use f='tvm/src/tir/ir/function.cc' l='85' u='c' c='_ZN3tvm3tir12TensorIntrinC1ENS0_8PrimFuncES2_'/>
+<use f='tvm/src/tir/ir/function.cc' l='110' macro='1' u='c'/>
 <use f='tvm/src/tir/ir/index_map.cc' l='43' u='c' c='_ZN3tvm3tir8IndexMapC1ENS_7runtime5ArrayINS0_3VarEvEENS3_INS_8PrimExprEvEENS2_8OptionalIS1_EE'/>
 <use f='tvm/src/tir/ir/index_map.cc' l='379' macro='1' u='c'/>
 <use f='tvm/src/tir/ir/stmt.cc' l='52' u='c' c='_ZN3tvm3tir7LetStmtC1ENS0_3VarENS_8PrimExprENS0_4StmtENS_4SpanE'/>

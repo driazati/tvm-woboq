@@ -1,0 +1,18 @@
+<dec f='tvm/include/tvm/tir/function.h' l='163' type='void tvm::tir::PrimFunc::PrimFunc(Array&lt;tir::Var&gt; params, tvm::tir::Stmt body, tvm::Type ret_type = VoidType(), Map&lt;tir::Var, tvm::tir::Buffer&gt; buffer_map = Map&lt;tir::Var, tvm::tir::Buffer&gt;(), tvm::DictAttrs attrs = NullValue&lt;tvm::DictAttrs&gt;(), tvm::Span span = tvm::Span())'/>
+<use f='tvm/src/relay/backend/aot/aot_lower_main.cc' l='507' u='c' c='_ZN3tvm5relay7backend3aot14AOTMainLowerer14CreateMainFuncENS_7runtime6StringE'/>
+<use f='tvm/src/relay/backend/aot_executor_codegen.cc' l='806' u='c' c='_ZN3tvm5relay7backend18AOTExecutorCodegen14CreateMainFuncENS_7runtime6StringEj'/>
+<use f='tvm/src/relay/backend/contrib/example_target_hooks/relay_to_tir.cc' l='154' u='c' c='_ZN3tvm5relay7contrib20example_target_hooks12_GLOBAL__N_120ConvertAddToSubtract30ReplaceAddWithSubtractPrimFuncERKNS0_8FunctionE'/>
+<use f='tvm/src/script/ir_builder/tir/frame.cc' l='32' u='c' c='_ZN3tvm6script10ir_builder3tir17PrimFuncFrameNode13ExitWithScopeEv'/>
+<use f='tvm/src/te/operation/create_primfunc.cc' l='484' u='c' c='_ZN3tvm3tir27GenerateAndCompletePrimFuncERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS2_INS0_4StmtEvEEPNS0_14CreateFuncInfoE'/>
+<use f='tvm/src/te/schedule/schedule_postproc_to_primfunc.cc' l='432' u='c' c='_ZN3tvm2te26SchedulePostProcToPrimFuncENS_7runtime5ArrayINS1_9ObjectRefEvEENS_3tir4StmtENS1_8OptionalINS1_3MapINS0_6TensorENS5_6BufferEvvEEEE'/>
+<use f='tvm/src/tir/analysis/device_constraint_utils.cc' l='242' u='c' c='_ZN3tvm3tir12_GLOBAL__N_129ApplyDeviceConstraintsMutator7RewriteERKNS0_8PrimFuncERKNS_8FuncTypeERKNS_7runtime5ArrayINS_13VirtualDeviceEvEE'/>
+<use f='tvm/src/tir/contrib/ethosu/passes.cc' l='155' u='c' c='_ZN3tvm3tir7contrib6ethosu21HoistAllocatesMutatorclENS0_8PrimFuncE'/>
+<def f='tvm/src/tir/ir/function.cc' l='31' ll='47' type='void tvm::tir::PrimFunc::PrimFunc(Array&lt;tir::Var&gt; params, tvm::tir::Stmt body, tvm::Type ret_type = VoidType(), Map&lt;tir::Var, tvm::tir::Buffer&gt; buffer_map = Map&lt;tir::Var, tvm::tir::Buffer&gt;(), tvm::DictAttrs attrs = NullValue&lt;tvm::DictAttrs&gt;(), tvm::Span span = tvm::Span())'/>
+<use f='tvm/src/tir/ir/function.cc' l='130' u='c'/>
+<doc f='tvm/src/tir/ir/function.cc' l='30'>// Get the function type of a PrimFunc</doc>
+<use f='tvm/src/tir/transforms/split_host_device.cc' l='309' u='c' c='_ZN3tvm3tir18HostDeviceSplitter15SplitDeviceFuncENS0_4StmtE'/>
+<use f='tvm/src/tir/usmp/transform/assign_pool_info.cc' l='170' u='c' c='_ZN3tvm3tir4usmp16PoolInfoAssignerclEv'/>
+<use f='tvm/src/tir/usmp/transform/convert_pool_allocations_to_offsets.cc' l='246' u='c' c='_ZN3tvm3tir4usmp31PoolAllocationToOffsetConverter28CreatePrimFuncWithPoolParamsERKNS0_8PrimFuncE'/>
+<use f='tvm/src/tir/usmp/transform/convert_pool_allocations_to_offsets.cc' l='453' u='c' c='_ZN3tvm3tir4usmp31PoolAllocationToOffsetConverterclEv'/>
+<use f='tvm/src/tir/usmp/transform/convert_pool_allocations_to_offsets.cc' l='457' u='c' c='_ZN3tvm3tir4usmp31PoolAllocationToOffsetConverterclEv'/>
+<use f='tvm/src/tir/usmp/transform/create_io_allocates.cc' l='198' u='c' c='_ZN3tvm3tir4usmp17IOAllocateCreatorclEv'/>

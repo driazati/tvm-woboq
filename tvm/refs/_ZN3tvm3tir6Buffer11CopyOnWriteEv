@@ -1,7 +1,7 @@
 <def f='tvm/include/tvm/tir/buffer.h' l='226' macro='1' type='tvm::tir::BufferNode * tvm::tir::Buffer::CopyOnWrite()'/>
 <use f='tvm/src/te/schedule/schedule_postproc_to_primfunc.cc' l='347' u='c' c='_ZN3tvm2te27AxisSeparatorsAttrUnwrapper17GetRemappedBufferENS_3tir6BufferE'/>
-<use f='tvm/src/tir/analysis/device_constraint_utils.cc' l='448' u='c' c='_ZN3tvm3tir12_GLOBAL__N_129ApplyDeviceConstraintsMutator13RewriteBufferERKNS0_6BufferERKNS_13VirtualDeviceE'/>
-<use f='tvm/src/tir/contrib/ethosu/passes.cc' l='575' u='c' c='_ZN3tvm3tir7contrib6ethosu21MergeConstantsMutator19RewritePrimFuncBodyENS0_4StmtE'/>
+<use f='tvm/src/tir/analysis/device_constraint_utils.cc' l='428' u='c' c='_ZN3tvm3tir12_GLOBAL__N_129ApplyDeviceConstraintsMutator13RewriteBufferERKNS0_6BufferERKNS_13VirtualDeviceE'/>
+<use f='tvm/src/tir/contrib/ethosu/passes.cc' l='573' u='c' c='_ZN3tvm3tir7contrib6ethosu21MergeConstantsMutator19RewritePrimFuncBodyENS0_4StmtE'/>
 <use f='tvm/src/tir/ir/buffer.cc' l='391' u='c' c='_ZNK3tvm3tir6Buffer18GetFlattenedBufferEv'/>
 <use f='tvm/src/tir/ir/buffer.cc' l='496' u='c' c='_ZNK3tvm3tir6Buffer9MakeSliceENS_7runtime5ArrayINS_8PrimExprEvEES5_'/>
 <use f='tvm/src/tir/ir/stmt_functor.cc' l='717' u='c' c='_ZN3tvm3tir12IRSubstitute17GetRemappedBufferENS0_6BufferE'/>
@@ -11,7 +11,7 @@
 <use f='tvm/src/tir/schedule/primitive/layout_transformation.cc' l='1413' u='c' c='_ZN3tvm3tir16SetAxisSeparatorENS0_13ScheduleStateERKNS0_8StmtSRefEiNS0_15BufferIndexTypeERKNS_7runtime5ArrayINS_6IntImmEvEE'/>
 <use f='tvm/src/tir/schedule/primitive/pad_einsum.cc' l='382' u='c' c='_ZN3tvm3tir9PadEinsumENS0_13ScheduleStateERKNS0_8StmtSRefERKNS_7runtime5ArrayINS_7IntegerEvEE'/>
 <use f='tvm/src/tir/schedule/primitive/rolling_buffer.cc' l='239' u='c' c='_ZN3tvm3tir12_GLOBAL__N_126RollingBufferInfoCollector18MatchRollingBufferERKNS0_8StmtSRefERKNS0_12BufferRegionE'/>
-<use f='tvm/src/tir/transforms/flatten_buffer.cc' l='169' u='c' c='_ZN3tvm3tir15BufferFlattener18GetFlattenedBufferENS0_6BufferE'/>
+<use f='tvm/src/tir/transforms/flatten_buffer.cc' l='165' u='c' c='_ZN3tvm3tir15BufferFlattener18GetFlattenedBufferENS0_6BufferE'/>
 <use f='tvm/src/tir/transforms/inject_copy_intrin.cc' l='174' u='c' c='_ZN3tvm3tir18CopyIntrinInjector16MatchCopyPatternENS0_4StmtEPS2_PNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
 <use f='tvm/src/tir/transforms/inject_copy_intrin.cc' l='182' u='c' c='_ZN3tvm3tir18CopyIntrinInjector16MatchCopyPatternENS0_4StmtEPS2_PNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
 <use f='tvm/src/tir/transforms/inject_double_buffer.cc' l='239' u='c' c='_ZN3tvm3tir20DoubleBufferInjector17GetRemappedBufferENS0_6BufferENS_8PrimExprE'/>
@@ -21,14 +21,15 @@
 <use f='tvm/src/tir/transforms/merge_dynamic_shared_memory_allocations.cc' l='360' u='c' c='_ZN3tvm3tir27DynamicSharedMemoryRewriter16GetUpdatedBufferENS0_6BufferE'/>
 <use f='tvm/src/tir/transforms/storage_flatten.cc' l='167' u='c' c='_ZN3tvm3tir19BufferShapeLegalize10VisitStmt_EPKNS0_17BufferRealizeNodeE'/>
 <use f='tvm/src/tir/transforms/storage_flatten.cc' l='337' u='c' c='_ZN3tvm3tir19BufferShapeLegalize21HandleBufferBindScopeEPKNS0_12AttrStmtNodeE'/>
-<use f='tvm/src/tir/transforms/storage_flatten.cc' l='489' u='c' c='_ZN3tvm3tir20BufferStrideLegalize11WithStridesENS0_6BufferE'/>
-<use f='tvm/src/tir/transforms/storage_flatten.cc' l='737' u='c' c='_ZN3tvm3tir20ThreadScopePropagate10VisitStmt_EPKNS0_17BufferRealizeNodeE'/>
-<use f='tvm/src/tir/transforms/storage_flatten.cc' l='1115' u='c' c='_ZN3tvm3tir19BufferBindUnwrapper21HandleBufferBindScopeEPKNS0_12AttrStmtNodeE'/>
-<use f='tvm/src/tir/transforms/storage_flatten.cc' l='1288' u='c' c='_ZN3tvm3tir21ApplyLayoutTransforms14GetBufferRemapENS0_6BufferEb'/>
-<use f='tvm/src/tir/transforms/storage_flatten.cc' l='1339' u='c' c='_ZN3tvm3tir16StorageFlattenerC1ERKNS_7runtime3MapINS0_3VarENS0_6BufferEvvEEibPNS_5arith21IRVisitorWithAnalyzerE'/>
-<use f='tvm/src/tir/transforms/storage_flatten.cc' l='1343' u='c' c='_ZN3tvm3tir16StorageFlattenerC1ERKNS_7runtime3MapINS0_3VarENS0_6BufferEvvEEibPNS_5arith21IRVisitorWithAnalyzerE'/>
-<use f='tvm/src/tir/transforms/storage_flatten.cc' l='1511' u='c' c='_ZN3tvm3tir16StorageFlattener10VisitStmt_EPKNS0_17BufferRealizeNodeE'/>
-<use f='tvm/src/tir/transforms/storage_flatten.cc' l='1755' u='c' c='_ZN3tvm3tir16StorageFlattener14GetBufferEntryENS0_6BufferE'/>
+<use f='tvm/src/tir/transforms/storage_flatten.cc' l='487' u='c' c='_ZN3tvm3tir20BufferStrideLegalize11WithStridesENS0_6BufferE'/>
+<use f='tvm/src/tir/transforms/storage_flatten.cc' l='718' u='c' c='_ZN3tvm3tir20ThreadScopePropagate10VisitStmt_EPKNS0_17BufferRealizeNodeE'/>
+<use f='tvm/src/tir/transforms/storage_flatten.cc' l='1099' u='c' c='_ZN3tvm3tir19BufferBindUnwrapper21HandleBufferBindScopeEPKNS0_12AttrStmtNodeE'/>
+<use f='tvm/src/tir/transforms/storage_flatten.cc' l='1182' u='c' c='_ZN3tvm3tir19BufferBindUnwrapper14GetBufferEntryENS0_6BufferE'/>
+<use f='tvm/src/tir/transforms/storage_flatten.cc' l='1327' u='c' c='_ZN3tvm3tir21ApplyLayoutTransforms14GetBufferRemapENS0_6BufferEb'/>
+<use f='tvm/src/tir/transforms/storage_flatten.cc' l='1377' u='c' c='_ZN3tvm3tir16StorageFlattenerC1ERKNS_7runtime3MapINS0_3VarENS0_6BufferEvvEEibPNS_5arith21IRVisitorWithAnalyzerE'/>
+<use f='tvm/src/tir/transforms/storage_flatten.cc' l='1381' u='c' c='_ZN3tvm3tir16StorageFlattenerC1ERKNS_7runtime3MapINS0_3VarENS0_6BufferEvvEEibPNS_5arith21IRVisitorWithAnalyzerE'/>
+<use f='tvm/src/tir/transforms/storage_flatten.cc' l='1546' u='c' c='_ZN3tvm3tir16StorageFlattener10VisitStmt_EPKNS0_17BufferRealizeNodeE'/>
+<use f='tvm/src/tir/transforms/storage_flatten.cc' l='1792' u='c' c='_ZN3tvm3tir16StorageFlattener14GetBufferEntryENS0_6BufferE'/>
 <use f='tvm/src/tir/transforms/storage_rewrite.cc' l='1509' u='c' c='_ZN3tvm3tir18VectorTypeRewriter11RemapBufferENS0_6BufferE'/>
 <use f='tvm/src/tir/transforms/update_pointer_storage_scope.cc' l='88' u='c' c='_ZN3tvm3tir25UpdatePointerStorageScope16GetUpdatedBufferENS0_6BufferE'/>
 <use f='tvm/src/tir/transforms/vectorize_loop.cc' l='124' u='c' c='_ZN3tvm3tir14VecAllocAccess18UpdateBufferAccessET_'/>

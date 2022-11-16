@@ -13,9 +13,9 @@
 <use f='tvm/src/te/operation/cross_thread_reduction.cc' l='179' u='c' c='_ZN3tvm2te24MakeCrossThreadReductionEPKNS0_13ComputeOpNodeERKNS0_5StageERKSt13unordered_mapINS_3tir7IterVarENS_5RangeESt4hashIS9_ESt8equal_toIS9_ESaISt4pairIKS9_SA_EEEb'/>
 <use f='tvm/src/te/operation/cross_thread_reduction.cc' l='217' u='c' c='_ZN3tvm2te24MakeCrossThreadReductionEPKNS0_13ComputeOpNodeERKNS0_5StageERKSt13unordered_mapINS_3tir7IterVarENS_5RangeESt4hashIS9_ESt8equal_toIS9_ESaISt4pairIKS9_SA_EEEb'/>
 <use f='tvm/src/te/schedule/schedule_postproc_to_primfunc.cc' l='132' u='c' c='_ZN3tvm2te20TensorToBufferMapper10VisitExpr_EPKNS_3tir16ProducerLoadNodeE'/>
-<use f='tvm/src/tir/analysis/device_constraint_utils.cc' l='286' u='c' c='_ZN3tvm3tir12_GLOBAL__N_129ApplyDeviceConstraintsMutator10VisitExpr_EPKNS0_14BufferLoadNodeE'/>
-<use f='tvm/src/tir/contrib/ethosu/passes.cc' l='682' u='c' c='_ZN3tvm3tir7contrib6ethosu21MergeConstantsMutator15MakeNewCopyArgsERKNS0_4StmtERKNS0_6BufferEi'/>
-<use f='tvm/src/tir/contrib/ethosu/passes.cc' l='746' u='c' c='_ZN3tvm3tir7contrib6ethosu21MergeConstantsMutator17MakeNewBufferLoadERKNS0_6BufferERKNS_8PrimExprEb'/>
+<use f='tvm/src/tir/analysis/device_constraint_utils.cc' l='266' u='c' c='_ZN3tvm3tir12_GLOBAL__N_129ApplyDeviceConstraintsMutator10VisitExpr_EPKNS0_14BufferLoadNodeE'/>
+<use f='tvm/src/tir/contrib/ethosu/passes.cc' l='680' u='c' c='_ZN3tvm3tir7contrib6ethosu21MergeConstantsMutator15MakeNewCopyArgsERKNS0_4StmtERKNS0_6BufferEi'/>
+<use f='tvm/src/tir/contrib/ethosu/passes.cc' l='744' u='c' c='_ZN3tvm3tir7contrib6ethosu21MergeConstantsMutator17MakeNewBufferLoadERKNS0_6BufferERKNS_8PrimExprEb'/>
 <use f='tvm/src/tir/ir/buffer.cc' l='412' u='c' c='_ZNK3tvm3tir6Buffer5vloadENS_7runtime5ArrayINS_8PrimExprEvEENS2_8DataTypeE'/>
 <use f='tvm/src/tir/ir/expr.cc' l='850' u='c'/>
 <def f='tvm/src/tir/ir/expr.cc' l='1100' ll='1112' type='void tvm::tir::BufferLoad::BufferLoad(tvm::tir::Buffer buffer, Array&lt;tvm::PrimExpr&gt; indices, tvm::Span span = tvm::Span())'/>
@@ -53,10 +53,10 @@
 <use f='tvm/src/tir/transforms/lower_thread_allreduce.cc' l='534' u='c' c='_ZN3tvm3tir22ThreadAllreduceBuilder16MakeBufAllreduceEPKNS0_15CommReducerNodeERKSt6vectorINS_7runtime8DataTypeESaIS7_EERKNS6_5ArrayINS0_6BufferEvEENS_8PrimExprESH_iii'/>
 <use f='tvm/src/tir/transforms/lower_thread_allreduce.cc' l='539' u='c' c='_ZN3tvm3tir22ThreadAllreduceBuilder16MakeBufAllreduceEPKNS0_15CommReducerNodeERKSt6vectorINS_7runtime8DataTypeESaIS7_EERKNS6_5ArrayINS0_6BufferEvEENS_8PrimExprESH_iii'/>
 <use f='tvm/src/tir/transforms/lower_thread_allreduce.cc' l='661' u='c' c='_ZN3tvm3tir22ThreadAllreduceBuilder11WarpShuffleERKNS_2OpENS0_6BufferENS_8PrimExprES6_'/>
-<use f='tvm/src/tir/transforms/make_packed_api.cc' l='225' u='c' c='_ZN3tvm3tir13MakePackedAPIEONS0_8PrimFuncE'/>
+<use f='tvm/src/tir/transforms/make_packed_api.cc' l='223' u='c' c='_ZN3tvm3tir13MakePackedAPIEONS0_8PrimFuncE'/>
 <use f='tvm/src/tir/transforms/manifest_shared_memory_local_stage.cc' l='70' u='c' c='_ZN3tvm3tir25IntermediateStageRewriter7RewriteEPKNS0_9BlockNodeE'/>
 <use f='tvm/src/tir/transforms/remove_weight_layout_rewrite_block.cc' l='199' u='c' c='_ZN3tvm3tir20AllocateConstRewrite10VisitExpr_EPKNS0_14BufferLoadNodeE'/>
-<use f='tvm/src/tir/transforms/storage_flatten.cc' l='752' u='c' c='_ZN3tvm3tir20ThreadScopePropagate10VisitExpr_EPKNS0_14BufferLoadNodeE'/>
-<use f='tvm/src/tir/transforms/storage_flatten.cc' l='969' u='c' c='_ZN3tvm3tir19BufferBindUnwrapper10VisitExpr_EPKNS0_14BufferLoadNodeE'/>
-<use f='tvm/src/tir/transforms/storage_flatten.cc' l='1551' u='c' c='_ZN3tvm3tir16StorageFlattener10VisitExpr_EPKNS0_14BufferLoadNodeE'/>
+<use f='tvm/src/tir/transforms/storage_flatten.cc' l='733' u='c' c='_ZN3tvm3tir20ThreadScopePropagate10VisitExpr_EPKNS0_14BufferLoadNodeE'/>
+<use f='tvm/src/tir/transforms/storage_flatten.cc' l='951' u='c' c='_ZN3tvm3tir19BufferBindUnwrapper10VisitExpr_EPKNS0_14BufferLoadNodeE'/>
+<use f='tvm/src/tir/transforms/storage_flatten.cc' l='1588' u='c' c='_ZN3tvm3tir16StorageFlattener10VisitExpr_EPKNS0_14BufferLoadNodeE'/>
 <use f='tvm/src/tir/usmp/transform/convert_pool_allocations_to_offsets.cc' l='336' u='c' c='_ZN3tvm3tir4usmp31PoolAllocationToOffsetConverter9ToLetStmtERKNS1_14PoolAllocationERKNS0_3VarERKNS0_4StmtE'/>
