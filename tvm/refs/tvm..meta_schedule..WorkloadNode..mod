@@ -14,4 +14,4 @@
 <use f='tvm/src/meta_schedule/database/json_database.cc' l='193' u='r' c='_ZN3tvm13meta_schedule8Database12JSONDatabaseENS_7runtime6StringES3_bS3_'/>
 <use f='tvm/src/meta_schedule/database/memory_database.cc' l='43' u='r' c='_ZN3tvm13meta_schedule18MemoryDatabaseNode11HasWorkloadERKNS_8IRModuleE'/>
 <use f='tvm/src/meta_schedule/database/memory_database.cc' l='52' u='r' c='_ZN3tvm13meta_schedule18MemoryDatabaseNode14CommitWorkloadERKNS_8IRModuleE'/>
-<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='626' u='r' c='_ZN3tvm5relay3tec15ScheduleBuilder6CreateERKNS0_8FunctionENS_15GlobalVarSupplyE'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='629' u='r' c='_ZN3tvm5relay3tec15ScheduleBuilder6CreateERKNS0_8FunctionENS_15GlobalVarSupplyENS_10NameSupplyE'/>
