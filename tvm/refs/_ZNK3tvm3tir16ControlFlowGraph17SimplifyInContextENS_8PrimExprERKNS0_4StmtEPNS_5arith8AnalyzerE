@@ -1,0 +1,18 @@
+<dec f='tvm/src/tir/analysis/control_flow_graph.h' l='432' type='tvm::PrimExpr tvm::tir::ControlFlowGraph::SimplifyInContext(tvm::PrimExpr expr, const tvm::tir::Stmt &amp; context, arith::Analyzer * analyzer) const'/>
+<def f='tvm/src/tir/analysis/control_flow_graph.cc' l='1624' ll='1644' type='tvm::PrimExpr tvm::tir::ControlFlowGraph::SimplifyInContext(tvm::PrimExpr expr, const tir::Stmt &amp; context, tvm::arith::Analyzer * analyzer) const'/>
+<doc f='tvm/src/tir/analysis/control_flow_graph.h' l='418'>/* \brief Simplify the expression, assuming it occurs within the given context
+   *
+   * \param expr The expression to be simplified.  Does not need to
+   * have occurred within the statement used to construct this
+   * BufferTouchPattern.
+   *
+   * \param context The statement where this expression occurred, or
+   * is to be inserted.  Must occur within the statement used to
+   * construct this BufferTouchPattern.
+   *
+   * \param analyzer The analyzer to be used for simplifications
+   *
+   * \returns The simplified statement
+   */</doc>
+<use f='tvm/src/tir/transforms/simplify.cc' l='128' u='c' c='_ZN3tvm5arith14StmtSimplifier9VisitExprERKNS_8PrimExprE'/>
+<use f='tvm/src/tir/transforms/simplify.cc' l='252' u='c' c='_ZNK3tvm5arith14StmtSimplifier14ProveConditionENS_8PrimExprE'/>

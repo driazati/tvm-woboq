@@ -1,0 +1,16 @@
+<dec f='tvm/src/tir/analysis/control_flow_graph.h' l='228' type='void tvm::tir::BufferState::ApplyTouches(const Map&lt;tvm::tir::Buffer, Array&lt;tvm::tir::Var&gt;&gt; &amp; axis_var_lookup, const std::vector&lt;BufferTouch&gt; &amp; touch_points, arith::Analyzer * analyzer)'/>
+<def f='tvm/src/tir/analysis/control_flow_graph.cc' l='1133' ll='1216' type='void tvm::tir::BufferState::ApplyTouches(const Map&lt;tvm::tir::Buffer, Array&lt;tvm::tir::Var&gt;&gt; &amp; axis_var_lookup, const std::vector&lt;BufferTouch&gt; &amp; touch_points, tvm::arith::Analyzer * analyzer)'/>
+<use f='tvm/src/tir/analysis/control_flow_graph.cc' l='1444' u='c' c='_ZN3tvm3tir16ControlFlowGraph27ForwardPropagateKnownValuesEm'/>
+<doc f='tvm/src/tir/analysis/control_flow_graph.h' l='215'>/*! \brief Update the known buffer values based on buffer touches
+   *
+   * For any Write or Assume touches, update the known values.  For
+   * any Read touches, ignore.  Used to determine known values at the
+   * end of a control flow block, given the known values at the start.
+   *
+   * \param axis_var_lookup A map from buffer to the variables
+   * representing positions along the buffer&apos;s axes.
+   *
+   * \param touch_points The buffer touch points to apply
+   *
+   * \param analyzer The analyzer to use for simplifications
+   */</doc>

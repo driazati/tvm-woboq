@@ -1,5 +1,6 @@
-<dec f='tvm/include/tvm/tir/op_attr_types.h' l='67' type='1'/>
-<doc f='tvm/include/tvm/tir/op_attr_types.h' l='63'>/*!
+<dec f='tvm/include/tvm/tir/op_attr_types.h' l='69' type='1'/>
+<use f='tvm/include/tvm/tir/op_attr_types.h' l='102' c='_ZN3tvm3tirlsERSoNS0_14CallEffectKindE'/>
+<doc f='tvm/include/tvm/tir/op_attr_types.h' l='65'>/*!
    * \brief Pure function that do not interacts
    *        with any external state.
    */</doc>
@@ -11,6 +12,9 @@
 <use f='tvm/src/meta_schedule/feature_extractor/per_store_feature.cc' l='576' u='r' c='_ZZN3tvm3tir6group17Feature8ArithOpsC1EPKNS0_15BufferStoreNodeElEN14ArithOpCounter10VisitExpr_EPKNS0_8CallNodeE'/>
 <use f='tvm/src/target/source/intrin_rule_cuda.cc' l='255' u='r'/>
 <use f='tvm/src/te/schedule/schedule_ops.cc' l='175' u='r' c='_ZN3tvm2te16SchedulePostProc10VisitStmt_EPKNS_3tir11LetStmtNodeE'/>
+<use f='tvm/src/tir/analysis/control_flow_graph.cc' l='256' u='r' c='_ZN3tvm3tir23ControlFlowGraphBuilder25AssumeConstraintComponentENS_8PrimExprEb'/>
+<use f='tvm/src/tir/analysis/control_flow_graph.cc' l='305' u='r' c='_ZN3tvm3tir23ControlFlowGraphBuilder25AssumeConstraintComponentENS_8PrimExprEb'/>
+<use f='tvm/src/tir/analysis/control_flow_graph.cc' l='537' u='r' c='_ZN3tvm3tir23ControlFlowGraphBuilder25InternalConstraintContextC1EPS1_NS_8PrimExprE'/>
 <use f='tvm/src/tir/analysis/side_effect.cc' l='70'/>
 <use f='tvm/src/tir/ir/stmt.cc' l='1092' u='r'/>
 <use f='tvm/src/tir/op/builtin.cc' l='42' u='r'/>
@@ -77,5 +81,5 @@
 <use f='tvm/src/tir/op/op.cc' l='49' u='r'/>
 <use f='tvm/src/tir/transforms/hoist_expression.cc' l='203' u='r' c='_ZN3tvm3tir18HoistInfoCollector23AttemptHoistConditionalENS_8PrimExprENS0_19HoistedConditionalsEb'/>
 <use f='tvm/src/tir/transforms/rewrite_unsafe_select.cc' l='54' u='r' c='_ZN3tvm3tir18UnsafeExprDetector10VisitExpr_EPKNS0_8CallNodeE'/>
-<use f='tvm/src/tir/transforms/simplify.cc' l='111' u='r' c='_ZN3tvm5arith14StmtSimplifier16CanInlineLetStmtEPKNS_3tir11LetStmtNodeE'/>
-<use f='tvm/src/tir/transforms/simplify.cc' l='121' u='r' c='_ZN3tvm5arith14StmtSimplifier10VisitStmt_EPKNS_3tir11LetStmtNodeE'/>
+<use f='tvm/src/tir/transforms/simplify.cc' l='157' u='r' c='_ZN3tvm5arith14StmtSimplifier16CanInlineLetStmtEPKNS_3tir11LetStmtNodeE'/>
+<use f='tvm/src/tir/transforms/simplify.cc' l='167' u='r' c='_ZN3tvm5arith14StmtSimplifier10VisitStmt_EPKNS_3tir11LetStmtNodeE'/>

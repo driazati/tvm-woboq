@@ -16,7 +16,8 @@
 <use f='tvm/include/tvm/ir/error.h' l='129' u='c' c='_ZN3tvm13ErrorReporter6ReportERKNS_12CompileErrorE'/>
 <use f='tvm/src/arith/canonical_simplify.cc' l='810' u='c' c='_ZN3tvm5arith19CanonicalSimplifier4Impl22SeparateDivisiblePartsEPKNS0_11SumExprNodeElPNS0_7SumExprES7_'/>
 <use f='tvm/src/arith/canonical_simplify.cc' l='812' u='c' c='_ZN3tvm5arith19CanonicalSimplifier4Impl22SeparateDivisiblePartsEPKNS0_11SumExprNodeElPNS0_7SumExprES7_'/>
-<use f='tvm/src/arith/constraint_extract.cc' l='35' u='c' c='_ZN3tvm5arith18CollectConstraintsERKNS_8PrimExprEPNS0_8AnalyzerEPSt6vectorIS1_SaIS1_EE'/>
+<use f='tvm/src/arith/constraint_extract.cc' l='52' u='c' c='_ZN3tvm5arith18ExtractConstraintsERKNS_8PrimExprEb'/>
+<use f='tvm/src/arith/constraint_extract.cc' l='69' u='c' c='_ZN3tvm5arith17ExtractComponentsERKNS_8PrimExprE'/>
 <use f='tvm/src/arith/detect_linear_equation.cc' l='240' u='c' c='_ZN3tvm5arith13SplitCommExprERKNS_8PrimExprEPSt6vectorIS1_SaIS1_EE'/>
 <use f='tvm/src/arith/domain_touched.cc' l='157' u='c' c='_ZN3tvm5arith22DomainTouchedAccessMapERKNS_3tir8PrimFuncE'/>
 <use f='tvm/src/arith/domain_touched.cc' l='158' u='c' c='_ZN3tvm5arith22DomainTouchedAccessMapERKNS_3tir8PrimFuncE'/>
@@ -541,6 +542,14 @@
 <use f='tvm/src/tir/analysis/buffer_access_lca_detector.cc' l='101' u='c' c='_ZN3tvm3tir11LCADetector10VisitStmt_EPKNS0_7ForNodeE'/>
 <use f='tvm/src/tir/analysis/buffer_access_lca_detector.cc' l='118' u='c' c='_ZN3tvm3tir11LCADetector10VisitStmt_EPKNS0_16BlockRealizeNodeE'/>
 <use f='tvm/src/tir/analysis/buffer_access_lca_detector.cc' l='215' u='c' c='_ZN3tvm3tir11LCADetector10VisitStmt_EPKNS0_12AttrStmtNodeE'/>
+<use f='tvm/src/tir/analysis/control_flow_graph.cc' l='265' u='c' c='_ZN3tvm3tir23ControlFlowGraphBuilder25AssumeConstraintComponentENS_8PrimExprEb'/>
+<use f='tvm/src/tir/analysis/control_flow_graph.cc' l='477' u='c' c='_ZN3tvm3tir23ControlFlowGraphBuilder11VisitAccessERKT_NS0_11BufferTouch10AccessTypeENS_8PrimExprE'/>
+<use f='tvm/src/tir/analysis/control_flow_graph.cc' l='538' u='c' c='_ZN3tvm3tir23ControlFlowGraphBuilder25InternalConstraintContextC1EPS1_NS_8PrimExprE'/>
+<use f='tvm/src/tir/analysis/control_flow_graph.cc' l='972' u='c' c='_ZN3tvm3tir11BufferState5UnionERKS1_PNS_5arith8AnalyzerE'/>
+<use f='tvm/src/tir/analysis/control_flow_graph.cc' l='1166' u='c' c='_ZN3tvm3tir11BufferState12ApplyTouchesERKNS_7runtime3MapINS0_6BufferENS2_5ArrayINS0_3VarEvEEvvEERKSt6vectorINS0_11BufferTouchESaISC_EEPNS_5arith8AnalyzerE'/>
+<use f='tvm/src/tir/analysis/control_flow_graph.cc' l='1207' u='c' c='_ZN3tvm3tir11BufferState12ApplyTouchesERKNS_7runtime3MapINS0_6BufferENS2_5ArrayINS0_3VarEvEEvvEERKSt6vectorINS0_11BufferTouchESaISC_EEPNS_5arith8AnalyzerE'/>
+<use f='tvm/src/tir/analysis/control_flow_graph.cc' l='1388' u='c' c='_ZN3tvm3tir16ControlFlowGraph27ForwardPropagateKnownValuesEm'/>
+<use f='tvm/src/tir/analysis/control_flow_graph.cc' l='1511' u='c' c='_ZN3tvm3tir16ControlFlowGraph29BackwardPropagateUnusedValuesEm'/>
 <use f='tvm/src/tir/analysis/oob_checker.cc' l='62' u='c' c='_ZNK3tvm3tir9transform8OOBError19LocationsOfInterestEv'/>
 <use f='tvm/src/tir/analysis/stmt_finding.cc' l='108' u='c' c='_ZZN3tvm3tir15FindAnchorBlockERKNS_8IRModuleEEN23ReductionBlockCollector10VisitStmt_EPKNS0_9BlockNodeE'/>
 <use f='tvm/src/tir/contrib/ethosu/passes.cc' l='263' u='c' c='_ZN3tvm3tir7contrib6ethosu28CopyComputeReorderingMutator10VisitStmt_EPKNS0_11SeqStmtNodeE'/>

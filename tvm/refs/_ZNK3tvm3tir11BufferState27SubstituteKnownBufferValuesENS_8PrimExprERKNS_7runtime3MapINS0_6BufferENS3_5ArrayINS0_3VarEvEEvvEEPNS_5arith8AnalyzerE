@@ -1,0 +1,16 @@
+<dec f='tvm/src/tir/analysis/control_flow_graph.h' l='187' type='tvm::PrimExpr tvm::tir::BufferState::SubstituteKnownBufferValues(tvm::PrimExpr expr, const Map&lt;tvm::tir::Buffer, Array&lt;tvm::tir::Var&gt;&gt; &amp; axis_var_lookup, arith::Analyzer * analyzer) const'/>
+<def f='tvm/src/tir/analysis/control_flow_graph.cc' l='929' ll='934' type='tvm::PrimExpr tvm::tir::BufferState::SubstituteKnownBufferValues(tvm::PrimExpr expr, const Map&lt;tir::Buffer, Array&lt;tir::Var&gt;&gt; &amp; axis_var_lookup, tvm::arith::Analyzer * analyzer) const'/>
+<use f='tvm/src/tir/analysis/control_flow_graph.cc' l='1639' u='c' c='_ZNK3tvm3tir16ControlFlowGraph17SimplifyInContextENS_8PrimExprERKNS0_4StmtEPNS_5arith8AnalyzerE'/>
+<doc f='tvm/src/tir/analysis/control_flow_graph.h' l='174'>/*! \brief Replace BufferLoad instances with known values
+   *
+   * \param expr The expression to be updated.
+   *
+   * \param axis_var_lookup A map from buffer to the variables
+   * representing positions along the buffer&apos;s axes.
+   *
+   * \param analyzer The analyzer to use when validating a
+   * constraint&apos;s predicate.
+   *
+   * \returns The modified expression.  If no substitutions are made,
+   * the original expression is returned.
+   */</doc>

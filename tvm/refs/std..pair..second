@@ -112,7 +112,7 @@
 <use f='tvm/src/arith/narrow_predicate_expression.cc' l='164' u='r' c='_ZN3tvm5arith18ExpressionNarrower10VisitExpr_EPKNS_3tir7VarNodeE'/>
 <use f='tvm/src/arith/rewrite_simplify.cc' l='179' u='r' c='_ZN3tvm5arith17RewriteSimplifier4Impl6UpdateERKNS_3tir3VarERKNS_8PrimExprEb'/>
 <use f='tvm/src/arith/rewrite_simplify.cc' l='181' u='r' c='_ZN3tvm5arith17RewriteSimplifier4Impl6UpdateERKNS_3tir3VarERKNS_8PrimExprEb'/>
-<use f='tvm/src/arith/rewrite_simplify.cc' l='1951' u='r' c='_ZN3tvm5arith17RewriteSimplifier4Impl10VisitExpr_EPKNS_3tir7VarNodeE'/>
+<use f='tvm/src/arith/rewrite_simplify.cc' l='2000' u='r' c='_ZN3tvm5arith17RewriteSimplifier4Impl10VisitExpr_EPKNS_3tir7VarNodeE'/>
 <use f='tvm/src/arith/solve_linear_equation.cc' l='225' u='r' c='_ZN3tvm5arith10InferRangeERKNS_7runtime3MapINS_3tir3VarENS_8PrimExprEvvEERKNS1_5ArrayIS4_vEERKNS2_IS4_NS_5RangeEvvEE'/>
 <use f='tvm/src/arith/solve_linear_equation.cc' l='228' u='r' c='_ZN3tvm5arith10InferRangeERKNS_7runtime3MapINS_3tir3VarENS_8PrimExprEvvEERKNS1_5ArrayIS4_vEERKNS2_IS4_NS_5RangeEvvEE'/>
 <use f='tvm/src/arith/solve_linear_equation.cc' l='234' u='r' c='_ZN3tvm5arith10InferRangeERKNS_7runtime3MapINS_3tir3VarENS_8PrimExprEvvEERKNS1_5ArrayIS4_vEERKNS2_IS4_NS_5RangeEvvEE'/>
@@ -135,6 +135,7 @@
 <use f='tvm/src/arith/transitive_comparison_analyzer.cc' l='565' u='m' c='_ZN3tvm5arith28TransitiveComparisonAnalyzer4Impl4BindERKNS_3tir3VarERKNS_5RangeEb'/>
 <use f='tvm/src/arith/transitive_comparison_analyzer.cc' l='568' u='r' c='_ZN3tvm5arith28TransitiveComparisonAnalyzer4Impl4BindERKNS_3tir3VarERKNS_5RangeEb'/>
 <use f='tvm/src/arith/transitive_comparison_analyzer.cc' l='811' u='r' c='_ZNK3tvm5arith28TransitiveComparisonAnalyzer4Impl10DFSFromLHSENS2_3KeyES3_'/>
+<use f='tvm/src/arith/unwrap_vector_expr.cc' l='54' u='r' c='_ZN3tvm5arith10Scalarizer10VisitExpr_EPKNS_3tir7VarNodeE'/>
 <use f='tvm/include/tvm/auto_scheduler/loop_state.h' l='163' u='r' c='_ZNK3tvm14auto_scheduler13AttachMapNode11IterKeyHashclERKSt4pairIiiE'/>
 <use f='tvm/include/tvm/target/target.h' l='107' c='_ZNK3tvm10TargetNode7GetAttrERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS_7runtime8OptionalIT_EE'/>
 <use f='tvm/src/auto_scheduler/search_policy/utils.h' l='463' c='_ZN3tvm14auto_scheduler23HasCrossThreadReductionERKNS0_5StateEi'/>
@@ -1070,6 +1071,19 @@
 <use f='tvm/src/tir/analysis/buffer_access_lca_detector.cc' l='176' u='r' c='_ZN3tvm3tir11LCADetector31UpdateDominateScopeOfOpaqueIterEPKNS0_16BlockRealizeNodeE'/>
 <use f='tvm/src/tir/analysis/buffer_access_lca_detector.cc' l='177' u='r' c='_ZN3tvm3tir11LCADetector31UpdateDominateScopeOfOpaqueIterEPKNS0_16BlockRealizeNodeE'/>
 <use f='tvm/src/tir/analysis/buffer_access_lca_detector.cc' l='252' u='r' c='_ZN3tvm3tir11LCADetector14VisitBufferVarEPKNS0_7VarNodeE'/>
+<use f='tvm/src/tir/analysis/control_flow_graph.cc' l='85' u='r' c='_ZNK3tvm3tir11BufferTouch19BeforeLoopIterationEv'/>
+<use f='tvm/src/tir/analysis/control_flow_graph.cc' l='95' u='r' c='_ZNK3tvm3tir11BufferTouch15AtLoopIterationEv'/>
+<use f='tvm/src/tir/analysis/control_flow_graph.cc' l='105' u='r' c='_ZNK3tvm3tir11BufferTouch18AfterLoopIterationEv'/>
+<use f='tvm/src/tir/analysis/control_flow_graph.cc' l='785' u='r' c='_ZNK3tvm3tir16ControlFlowGraph16ControlFlowBlock15MakeBufferTouchERKNS0_6BufferENS_7runtime5ArrayINS0_3VarEvEENS7_INS_8PrimExprEvEENS0_11BufferTouch10AccessTypeESA_'/>
+<use f='tvm/src/tir/analysis/control_flow_graph.cc' l='817' u='r' c='_ZNK3tvm3tir16ControlFlowGraph16ControlFlowBlock15MakeBufferTouchEPS1_RKNS0_6BufferERKNS_7runtime5ArrayINS_8PrimExprEvEENS0_11BufferTouch10AccessTypeES9_'/>
+<use f='tvm/src/tir/analysis/control_flow_graph.cc' l='1123' u='m' c='_ZN3tvm3tir25BufferRegionValueReplacer10VisitExpr_EPKNS0_14BufferLoadNodeE'/>
+<use f='tvm/src/tir/analysis/control_flow_graph.cc' l='1124' u='m' c='_ZN3tvm3tir25BufferRegionValueReplacer10VisitExpr_EPKNS0_14BufferLoadNodeE'/>
+<use f='tvm/src/tir/analysis/control_flow_graph.cc' l='1159' u='r' c='_ZN3tvm3tir11BufferState12ApplyTouchesERKNS_7runtime3MapINS0_6BufferENS2_5ArrayINS0_3VarEvEEvvEERKSt6vectorINS0_11BufferTouchESaISC_EEPNS_5arith8AnalyzerE'/>
+<use f='tvm/src/tir/analysis/control_flow_graph.cc' l='1175' u='r' c='_ZN3tvm3tir11BufferState12ApplyTouchesERKNS_7runtime3MapINS0_6BufferENS2_5ArrayINS0_3VarEvEEvvEERKSt6vectorINS0_11BufferTouchESaISC_EEPNS_5arith8AnalyzerE'/>
+<use f='tvm/src/tir/analysis/control_flow_graph.cc' l='1308' u='r' c='_ZNK3tvm3tir16ControlFlowGraph17GetIndexVariablesERKNS0_6BufferE'/>
+<use f='tvm/src/tir/analysis/control_flow_graph.cc' l='1316' u='r' c='_ZN3tvm3tir16ControlFlowGraph17GetIndexVariablesERKNS0_6BufferERKNS_7runtime5ArrayINS_8PrimExprEvEE'/>
+<use f='tvm/src/tir/analysis/control_flow_graph.cc' l='1596' u='r' c='_ZNK3tvm3tir16ControlFlowGraph26IsOverwrittenWithoutEffectERKNS0_11BufferStoreERKNS0_4StmtE'/>
+<use f='tvm/src/tir/analysis/control_flow_graph.cc' l='1630' u='r' c='_ZNK3tvm3tir16ControlFlowGraph17SimplifyInContextENS_8PrimExprERKNS0_4StmtEPNS_5arith8AnalyzerE'/>
 <use f='tvm/src/tir/analysis/device_constraint_utils.cc' l='70' u='r' c='_ZN3tvm3tir12_GLOBAL__N_116FindPointerParamERKNS0_8PrimFuncEPm'/>
 <use f='tvm/src/tir/analysis/device_constraint_utils.cc' l='96' u='r' c='_ZN3tvm3tir12_GLOBAL__N_129CheckNoRemainingPointerParamsERKNS0_8PrimFuncEPm'/>
 <use f='tvm/src/tir/analysis/device_constraint_utils.cc' l='115' u='r' c='_ZN3tvm3tir12_GLOBAL__N_125ConsistentParamConstraintERKNS0_8PrimFuncERKNS_4TypeEPm'/>

@@ -55,22 +55,51 @@
 <tr><th id="42">42</th><td><i> * Example: `i==5 || j==3` =&gt; `[i==5 || j==3]`</i></td></tr>
 <tr><th id="43">43</th><td><i> * Example: `!(i&gt;5 || j==3)` =&gt; `[!(i==5 || j==3), i&lt;=5, j!=3]`</i></td></tr>
 <tr><th id="44">44</th><td><i> *</i></td></tr>
-<tr><th id="45">45</th><td><i> * Intended for use in bounds analysis or simplification within a</i></td></tr>
-<tr><th id="46">46</th><td><i> * conditional, or identifying independent conditionals that may be</i></td></tr>
-<tr><th id="47">47</th><td><i> * hoisted.</i></td></tr>
+<tr><th id="45">45</th><td><i> * If `keep_composite_constraints` is true (default), a constraint</i></td></tr>
+<tr><th id="46">46</th><td><i> * that can be decomposed will be included in the output.  If false,</i></td></tr>
+<tr><th id="47">47</th><td><i> * they will be excluded.</i></td></tr>
 <tr><th id="48">48</th><td><i> *</i></td></tr>
-<tr><th id="49">49</th><td><i> * \param expr The expression to be analyzers</i></td></tr>
+<tr><th id="49">49</th><td><i> * Example, removing composite: `!(i&gt;5 || j==3)` =&gt; `[i&lt;=5, j!=3]`</i></td></tr>
 <tr><th id="50">50</th><td><i> *</i></td></tr>
-<tr><th id="51">51</th><td><i> * \returns A vector of independent constraints</i></td></tr>
-<tr><th id="52">52</th><td><i> */</i></td></tr>
-<tr><th id="53">53</th><td><span class="namespace">std::</span><a class="type" href="../../../include/c++/10/bits/stl_vector.h.html#std::vector" title='std::vector' data-ref="std::vector" data-ref-filename="std..vector">vector</a>&lt;<a class="type" href="../../include/tvm/ir/expr.h.html#tvm::PrimExpr" title='tvm::PrimExpr' data-ref="tvm::PrimExpr" data-ref-filename="tvm..PrimExpr">PrimExpr</a>&gt; <dfn class="decl fn" id="_ZN3tvm5arith18ExtractConstraintsERKNS_8PrimExprE" title='tvm::arith::ExtractConstraints' data-ref="_ZN3tvm5arith18ExtractConstraintsERKNS_8PrimExprE" data-ref-filename="_ZN3tvm5arith18ExtractConstraintsERKNS_8PrimExprE">ExtractConstraints</dfn>(<em>const</em> <a class="type" href="../../include/tvm/ir/expr.h.html#tvm::PrimExpr" title='tvm::PrimExpr' data-ref="tvm::PrimExpr" data-ref-filename="tvm..PrimExpr">PrimExpr</a>&amp; <dfn class="local col1 decl" id="1expr" title='expr' data-type='const tvm::PrimExpr &amp;' data-ref="1expr" data-ref-filename="1expr">expr</dfn>);</td></tr>
-<tr><th id="54">54</th><td></td></tr>
-<tr><th id="55">55</th><td>}  <i>// namespace arith</i></td></tr>
-<tr><th id="56">56</th><td>}  <i>// namespace tvm</i></td></tr>
-<tr><th id="57">57</th><td></td></tr>
-<tr><th id="58">58</th><td><u>#<span data-ppcond="26">endif</span>  // TVM_ARITH_CONSTRAINT_EXTRACT_H_</u></td></tr>
-<tr><th id="59">59</th><td></td></tr>
+<tr><th id="51">51</th><td><i> * Intended for use in bounds analysis or simplification within a</i></td></tr>
+<tr><th id="52">52</th><td><i> * conditional, or identifying independent conditionals that may be</i></td></tr>
+<tr><th id="53">53</th><td><i> * hoisted.</i></td></tr>
+<tr><th id="54">54</th><td><i> *</i></td></tr>
+<tr><th id="55">55</th><td><i> * \param expr The expression to be analyzers</i></td></tr>
+<tr><th id="56">56</th><td><i> *</i></td></tr>
+<tr><th id="57">57</th><td><i> * \param keep_composite_constraints Whether to include composite</i></td></tr>
+<tr><th id="58">58</th><td><i> * constraints in the output.</i></td></tr>
+<tr><th id="59">59</th><td><i> *</i></td></tr>
+<tr><th id="60">60</th><td><i> * \returns A vector of independent constraints</i></td></tr>
+<tr><th id="61">61</th><td><i> */</i></td></tr>
+<tr><th id="62">62</th><td><span class="namespace">std::</span><a class="type" href="../../../include/c++/10/bits/stl_vector.h.html#std::vector" title='std::vector' data-ref="std::vector" data-ref-filename="std..vector">vector</a>&lt;<a class="type" href="../../include/tvm/ir/expr.h.html#tvm::PrimExpr" title='tvm::PrimExpr' data-ref="tvm::PrimExpr" data-ref-filename="tvm..PrimExpr">PrimExpr</a>&gt; <dfn class="decl fn" id="_ZN3tvm5arith18ExtractConstraintsERKNS_8PrimExprEb" title='tvm::arith::ExtractConstraints' data-ref="_ZN3tvm5arith18ExtractConstraintsERKNS_8PrimExprEb" data-ref-filename="_ZN3tvm5arith18ExtractConstraintsERKNS_8PrimExprEb">ExtractConstraints</dfn>(<em>const</em> <a class="type" href="../../include/tvm/ir/expr.h.html#tvm::PrimExpr" title='tvm::PrimExpr' data-ref="tvm::PrimExpr" data-ref-filename="tvm..PrimExpr">PrimExpr</a>&amp; <dfn class="local col1 decl" id="1expr" title='expr' data-type='const tvm::PrimExpr &amp;' data-ref="1expr" data-ref-filename="1expr">expr</dfn>,</td></tr>
+<tr><th id="63">63</th><td>                                         <em>bool</em> <dfn class="local col2 decl" id="2keep_composite_constraints" title='keep_composite_constraints' data-type='bool' data-ref="2keep_composite_constraints" data-ref-filename="2keep_composite_constraints">keep_composite_constraints</dfn> = <b>true</b>);</td></tr>
+<tr><th id="64">64</th><td></td></tr>
+<tr><th id="65">65</th><td><i>/* \brief Returns components that are false if the expression is false.</i></td></tr>
+<tr><th id="66">66</th><td><i> *</i></td></tr>
+<tr><th id="67">67</th><td><i> * Utility to break up a boolean expression into independent</i></td></tr>
+<tr><th id="68">68</th><td><i> * components.</i></td></tr>
+<tr><th id="69">69</th><td><i> *</i></td></tr>
+<tr><th id="70">70</th><td><i> * Example: `i==5 || j==3` =&gt; `[i==5, j==3]`</i></td></tr>
+<tr><th id="71">71</th><td><i> * Example: `i==5 &amp;&amp; j==3` =&gt; `[i==5 &amp;&amp; j==3]`</i></td></tr>
+<tr><th id="72">72</th><td><i> * Example: `!(i&gt;5 &amp;&amp; j==3)` =&gt; `[i&lt;=5, j!=3]`</i></td></tr>
+<tr><th id="73">73</th><td><i> *</i></td></tr>
+<tr><th id="74">74</th><td><i> * Intended for use in bounds analysis or simplification within a</i></td></tr>
+<tr><th id="75">75</th><td><i> * conditional, or identifying independent conditionals that may be</i></td></tr>
+<tr><th id="76">76</th><td><i> * hoisted.</i></td></tr>
+<tr><th id="77">77</th><td><i> *</i></td></tr>
+<tr><th id="78">78</th><td><i> * \param expr The expression to be analyzers</i></td></tr>
+<tr><th id="79">79</th><td><i> *</i></td></tr>
+<tr><th id="80">80</th><td><i> * \returns A vector of independent constraints</i></td></tr>
+<tr><th id="81">81</th><td><i> */</i></td></tr>
+<tr><th id="82">82</th><td><span class="namespace">std::</span><a class="type" href="../../../include/c++/10/bits/stl_vector.h.html#std::vector" title='std::vector' data-ref="std::vector" data-ref-filename="std..vector">vector</a>&lt;<a class="type" href="../../include/tvm/ir/expr.h.html#tvm::PrimExpr" title='tvm::PrimExpr' data-ref="tvm::PrimExpr" data-ref-filename="tvm..PrimExpr">PrimExpr</a>&gt; <dfn class="decl fn" id="_ZN3tvm5arith17ExtractComponentsERKNS_8PrimExprE" title='tvm::arith::ExtractComponents' data-ref="_ZN3tvm5arith17ExtractComponentsERKNS_8PrimExprE" data-ref-filename="_ZN3tvm5arith17ExtractComponentsERKNS_8PrimExprE">ExtractComponents</dfn>(<em>const</em> <a class="type" href="../../include/tvm/ir/expr.h.html#tvm::PrimExpr" title='tvm::PrimExpr' data-ref="tvm::PrimExpr" data-ref-filename="tvm..PrimExpr">PrimExpr</a>&amp; <dfn class="local col3 decl" id="3expr" title='expr' data-type='const tvm::PrimExpr &amp;' data-ref="3expr" data-ref-filename="3expr">expr</dfn>);</td></tr>
+<tr><th id="83">83</th><td></td></tr>
+<tr><th id="84">84</th><td>}  <i>// namespace arith</i></td></tr>
+<tr><th id="85">85</th><td>}  <i>// namespace tvm</i></td></tr>
+<tr><th id="86">86</th><td></td></tr>
+<tr><th id="87">87</th><td><u>#<span data-ppcond="26">endif</span>  // TVM_ARITH_CONSTRAINT_EXTRACT_H_</u></td></tr>
+<tr><th id="88">88</th><td></td></tr>
 </table><hr/><p id='footer'>
-Generated while processing <a href='const_int_bound.cc.html'>tvm/src/arith/const_int_bound.cc</a><br/>Generated on <em>2022-Nov-16</em> from project tvm revision <em>b4d4b82</em><br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+Generated while processing <a href='const_int_bound.cc.html'>tvm/src/arith/const_int_bound.cc</a><br/>Generated on <em>2022-Nov-16</em> from project tvm revision <em>a80cdc2</em><br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
 <br/>Generator usage only permitted with license.</p>
 </div></body></html>

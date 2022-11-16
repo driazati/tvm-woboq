@@ -1,0 +1,19 @@
+<dec f='tvm/src/tir/analysis/control_flow_graph.h' l='247' type='void tvm::tir::BufferState::BackpropUnusedIndices(const Map&lt;tvm::tir::Buffer, Array&lt;tvm::tir::Var&gt;&gt; &amp; axis_var_lookup, const std::vector&lt;BufferTouch&gt; &amp; touch_points, arith::Analyzer * analyzer)'/>
+<def f='tvm/src/tir/analysis/control_flow_graph.cc' l='1218' ll='1282' type='void tvm::tir::BufferState::BackpropUnusedIndices(const Map&lt;tvm::tir::Buffer, Array&lt;tvm::tir::Var&gt;&gt; &amp; axis_var_lookup, const std::vector&lt;BufferTouch&gt; &amp; touch_points, tvm::arith::Analyzer * analyzer)'/>
+<use f='tvm/src/tir/analysis/control_flow_graph.cc' l='1568' u='c' c='_ZN3tvm3tir16ControlFlowGraph29BackwardPropagateUnusedValuesEm'/>
+<doc f='tvm/src/tir/analysis/control_flow_graph.h' l='231'>/*! \brief Update unused buffer locations based on buffer touches
+   *
+   * For any Write, mark the written-to indices as unused.  (That is,
+   * immediately prior to assigning `buf[i] = expr`, the value stored
+   * at `buf[i]` is irrelevant.)  For any Read, mark the read-from
+   * indices as used.  This method is used to determine unused buffer
+   * indices at the start of a control flow block, given the unused
+   * buffer indices values at the end.
+   *
+   * \param axis_var_lookup A map from buffer to the variables
+   * representing positions along the buffer&apos;s axes.
+   *
+   * \param touch_points The buffer touch points to apply
+   *
+   * \param analyzer The analyzer to use for simplifications
+   */</doc>

@@ -1,0 +1,21 @@
+<use f='tvm/src/tir/analysis/control_flow_graph.h' l='59' u='w' c='_ZN3tvm3tir11BufferTouchC1ENS0_6BufferENS_8PrimExprES3_'/>
+<use f='tvm/src/tir/analysis/control_flow_graph.h' l='67' u='w' c='_ZN3tvm3tir11BufferTouchC1ENS0_6BufferENS_8PrimExprES3_St6vectorISt4pairINS0_3VarES3_ESaIS7_EENS1_10AccessTypeE'/>
+<dec f='tvm/src/tir/analysis/control_flow_graph.h' l='99' type='std::vector&lt;std::pair&lt;Var, PrimExpr&gt;&gt;'/>
+<use f='tvm/src/tir/analysis/control_flow_graph.cc' l='83' u='m' c='_ZNK3tvm3tir11BufferTouch19BeforeLoopIterationEv'/>
+<use f='tvm/src/tir/analysis/control_flow_graph.cc' l='83' u='m' c='_ZNK3tvm3tir11BufferTouch19BeforeLoopIterationEv'/>
+<use f='tvm/src/tir/analysis/control_flow_graph.cc' l='93' u='m' c='_ZNK3tvm3tir11BufferTouch15AtLoopIterationEv'/>
+<use f='tvm/src/tir/analysis/control_flow_graph.cc' l='93' u='m' c='_ZNK3tvm3tir11BufferTouch15AtLoopIterationEv'/>
+<use f='tvm/src/tir/analysis/control_flow_graph.cc' l='103' u='m' c='_ZNK3tvm3tir11BufferTouch18AfterLoopIterationEv'/>
+<use f='tvm/src/tir/analysis/control_flow_graph.cc' l='103' u='m' c='_ZNK3tvm3tir11BufferTouch18AfterLoopIterationEv'/>
+<offset>192</offset>
+<doc f='tvm/src/tir/analysis/control_flow_graph.h' l='88'>/*! \brief Active loops during the buffer touch
+   *
+   * The vector contains one entry for each loop that contains the
+   * buffer touch.  The `Var` item in each entry is the loop variable
+   * itself.  The `PrimExpr` item is an expression for the loop
+   * variable in terms of the buffer axis variables in
+   * `ControlFlowGraph::axis_var_lookup_`.
+   *
+   * Used to construct boolean expressions indicating whether the loop
+   * iteration that performs this touch has been reached.
+   */</doc>

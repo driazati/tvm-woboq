@@ -1,0 +1,26 @@
+<dec f='tvm/src/tir/analysis/control_flow_graph.h' l='598' type='std::pair&lt;BufferTouch, Map&lt;Var, Range&gt;&gt; tvm::tir::ControlFlowGraph::ControlFlowBlock::MakeBufferTouch(const tvm::tir::Buffer &amp; buf, Array&lt;tvm::tir::Var&gt; index_variables, Array&lt;tvm::PrimExpr&gt; indices, BufferTouch::AccessType touch_type, tvm::PrimExpr known_value_expr) const'/>
+<def f='tvm/src/tir/analysis/control_flow_graph.cc' l='637' ll='806' type='std::pair&lt;BufferTouch, Map&lt;Var, Range&gt;&gt; tvm::tir::ControlFlowGraph::ControlFlowBlock::MakeBufferTouch(const tir::Buffer &amp; buf, Array&lt;tvm::tir::Var&gt; index_variables, Array&lt;tvm::PrimExpr&gt; indices, BufferTouch::AccessType touch_type, tvm::PrimExpr known_value_expr) const'/>
+<use f='tvm/src/tir/analysis/control_flow_graph.cc' l='814' u='c' c='_ZNK3tvm3tir16ControlFlowGraph16ControlFlowBlock15MakeBufferTouchEPS1_RKNS0_6BufferERKNS_7runtime5ArrayINS_8PrimExprEvEENS0_11BufferTouch10AccessTypeES9_'/>
+<use f='tvm/src/tir/analysis/control_flow_graph.cc' l='1598' u='c' c='_ZNK3tvm3tir16ControlFlowGraph26IsOverwrittenWithoutEffectERKNS0_11BufferStoreERKNS0_4StmtE'/>
+<doc f='tvm/src/tir/analysis/control_flow_graph.h' l='576'>/* \brief Construct a BufferTouch instance as if it occurred in
+     * this ControlFlowBlock
+     *
+     * Used when speculative checking if a BufferStore could be
+     * inserted.
+     *
+     * \param buf The Buffer being accessed
+     *
+     * \param index_variables The variables representing location
+     * within a buffer, with one variable for each axis of the buffer.
+     *
+     * \param indices The indices at which the buffer is accessed, in
+     * terms of the loop variables.
+     *
+     * \param touch_type The type of touch being generated
+     *
+     * \param known_expr_value The value being written to the buffer
+     *
+     * \returns The newly generated BufferTouch, and a map specifying
+     * all free parameters that may occur in the BufferTouch&apos;s
+     * predicate.
+     */</doc>

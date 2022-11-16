@@ -1,0 +1,16 @@
+<dec f='tvm/src/tir/analysis/control_flow_graph.h' l='416' type='bool tvm::tir::ControlFlowGraph::IsOverwrittenWithoutEffect(const tvm::tir::BufferStore &amp; store, const tvm::tir::Stmt &amp; context) const'/>
+<def f='tvm/src/tir/analysis/control_flow_graph.cc' l='1586' ll='1622' type='bool tvm::tir::ControlFlowGraph::IsOverwrittenWithoutEffect(const tir::BufferStore &amp; store, const tvm::tir::Stmt &amp; context) const'/>
+<doc f='tvm/src/tir/analysis/control_flow_graph.h' l='402'>/* \brief Check if a write is overwritten without impacting final results
+   *
+   * \param store The store to be examined
+   *
+   * \param context The context in which the buffer store occurs, used
+   * to identify the control-flow block in which the store occurs.  In
+   * most cases, this will be the same object as the `store` itself.
+   *
+   * \param analyzer The analyzer to be used for simplifications
+   *
+   * \return True if the specified store can be proven to be
+   * overwritten without contributing to any later statements.
+   * Returns false otherwise.
+   */</doc>

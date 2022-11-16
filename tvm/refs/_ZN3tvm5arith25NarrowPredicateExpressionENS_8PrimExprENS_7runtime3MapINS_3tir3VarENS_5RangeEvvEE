@@ -1,2 +1,23 @@
 <def f='tvm/src/arith/narrow_predicate_expression.cc' l='212' ll='214' type='tvm::PrimExpr tvm::arith::NarrowPredicateExpression(tvm::PrimExpr expr, Map&lt;tvm::tir::Var, tvm::Range&gt; free_parameters)'/>
 <use f='tvm/src/arith/narrow_predicate_expression.cc' l='216' u='r'/>
+<dec f='tvm/src/arith/narrow_predicate_expression.h' l='53' type='tvm::PrimExpr tvm::arith::NarrowPredicateExpression(tvm::PrimExpr expr, Map&lt;tir::Var, tvm::Range&gt; free_parameters)'/>
+<use f='tvm/src/tir/analysis/control_flow_graph.cc' l='1287' u='c' c='_ZN3tvm3tir11BufferState20RemoveFreeParametersERKNS_7runtime3MapINS0_3VarENS_5RangeEvvEEPNS_5arith8AnalyzerE'/>
+<doc f='tvm/src/arith/narrow_predicate_expression.h' l='34'>/* \brief Narrow a true expression to remove free parameters
+ *
+ * This function provides two guarantees:
+ *
+ * 1. If the resulting expression evaluates to True, then the original
+ * expression also evaluates to True.
+ *
+ * 2. The resulting expression does not contain any of the free
+ * parameters.
+ *
+ * 3. The resulting expression does not contain any BufferLoad
+ *
+ * \param expr The expression to be examined.
+ *
+ * \param ranges The variables to be removed from the expression
+ *
+ * \returns An expression that, if true, implies that the original
+ * expression is also true.
+ */</doc>

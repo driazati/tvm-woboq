@@ -1,0 +1,11 @@
+<dec f='tvm/src/tir/analysis/control_flow_graph.h' l='207' type='void tvm::tir::BufferState::Substitute(const Map&lt;tvm::tir::Var, tvm::PrimExpr&gt; &amp; var_remap, arith::Analyzer * analyzer)'/>
+<def f='tvm/src/tir/analysis/control_flow_graph.cc' l='942' ll='951' type='void tvm::tir::BufferState::Substitute(const Map&lt;tvm::tir::Var, tvm::PrimExpr&gt; &amp; var_remap, tvm::arith::Analyzer * analyzer)'/>
+<use f='tvm/src/tir/analysis/control_flow_graph.cc' l='1387' u='c' c='_ZN3tvm3tir16ControlFlowGraph27ForwardPropagateKnownValuesEm'/>
+<use f='tvm/src/tir/analysis/control_flow_graph.cc' l='1510' u='c' c='_ZN3tvm3tir16ControlFlowGraph29BackwardPropagateUnusedValuesEm'/>
+<doc f='tvm/src/tir/analysis/control_flow_graph.h' l='200'>/*! \brief Perform a variable substitution for all constraints
+   *
+   * For example, when propagating constraints from the end of a loop
+   * to the beginning, replace `i` with `i-1`.
+   *
+   * \param var_remap The variable remapping to apply.
+   */</doc>

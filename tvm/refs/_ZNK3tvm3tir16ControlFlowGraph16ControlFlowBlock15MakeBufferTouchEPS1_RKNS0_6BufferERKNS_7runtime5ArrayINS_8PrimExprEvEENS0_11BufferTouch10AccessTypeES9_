@@ -1,0 +1,20 @@
+<dec f='tvm/src/tir/analysis/control_flow_graph.h' l='572' type='tvm::tir::BufferTouch tvm::tir::ControlFlowGraph::ControlFlowBlock::MakeBufferTouch(tvm::tir::ControlFlowGraph * graph, const tvm::tir::Buffer &amp; buf, const Array&lt;tvm::PrimExpr&gt; &amp; indices, BufferTouch::AccessType touch_type, tvm::PrimExpr known_value_expr) const'/>
+<def f='tvm/src/tir/analysis/control_flow_graph.cc' l='808' ll='820' type='tvm::tir::BufferTouch tvm::tir::ControlFlowGraph::ControlFlowBlock::MakeBufferTouch(tvm::tir::ControlFlowGraph * graph, const tir::Buffer &amp; buf, const Array&lt;tvm::PrimExpr&gt; &amp; indices, BufferTouch::AccessType touch_type, tvm::PrimExpr known_value_expr) const'/>
+<doc f='tvm/src/tir/analysis/control_flow_graph.h' l='554'>/* \brief Construct a BufferTouch instance within this
+     * ControlFlowBlock
+     *
+     * \param graph The mutable ControlFlowGraph that owns the buffer
+     * touch.  Any free parameters used in the BufferTouch&apos;s predicate
+     * will be tracked by the ControlFlowGraph.
+     *
+     * \param buf The Buffer being accessed
+     *
+     * \param indices The indices at which the buffer is accessed, in
+     * terms of the loop variables.
+     *
+     * \param touch_type The type of touch being generated
+     *
+     * \param known_expr_value The value being written to the buffer
+     *
+     * \returns The newly generated BufferTouch
+     */</doc>

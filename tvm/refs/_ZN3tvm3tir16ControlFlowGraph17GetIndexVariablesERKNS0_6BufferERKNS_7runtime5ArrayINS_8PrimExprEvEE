@@ -1,0 +1,15 @@
+<dec f='tvm/src/tir/analysis/control_flow_graph.h' l='462' type='Array&lt;tvm::tir::Var&gt; tvm::tir::ControlFlowGraph::GetIndexVariables(const tvm::tir::Buffer &amp; buf, const Array&lt;tvm::PrimExpr&gt; &amp; indices)'/>
+<use f='tvm/src/tir/analysis/control_flow_graph.cc' l='814' u='c' c='_ZNK3tvm3tir16ControlFlowGraph16ControlFlowBlock15MakeBufferTouchEPS1_RKNS0_6BufferERKNS_7runtime5ArrayINS_8PrimExprEvEENS0_11BufferTouch10AccessTypeES9_'/>
+<def f='tvm/src/tir/analysis/control_flow_graph.cc' l='1314' ll='1328' type='Array&lt;tvm::tir::Var&gt; tvm::tir::ControlFlowGraph::GetIndexVariables(const tvm::tir::Buffer &amp; buf, const Array&lt;tvm::PrimExpr&gt; &amp; indices)'/>
+<doc f='tvm/src/tir/analysis/control_flow_graph.h' l='450'>/*! \brief Return index variables representing locations within a
+   *   buffer.
+   *
+   * For a given buffer, will always return the same set of variables.
+   *
+   * \param buf The buffer being accessed
+   *
+   * \param indices The indices at which the buffer is being accessed.
+   * These are used to set the dtype of the buffer axis variables.
+   *
+   * \returns Variables representing a position along the buffer&apos;s axis.
+   */</doc>

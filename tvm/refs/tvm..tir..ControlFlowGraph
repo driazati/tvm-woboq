@@ -1,0 +1,138 @@
+<use f='tvm/src/tir/analysis/control_flow_graph.h' l='289'/>
+<def f='tvm/src/tir/analysis/control_flow_graph.h' l='396' ll='649'/>
+<use f='tvm/src/tir/analysis/control_flow_graph.h' l='447' c='_ZN3tvm3tirlsERSoRKNS0_16ControlFlowGraphE'/>
+<use f='tvm/src/tir/analysis/control_flow_graph.h' l='572' c='_ZNK3tvm3tir16ControlFlowGraph16ControlFlowBlock15MakeBufferTouchEPS1_RKNS0_6BufferERKNS_7runtime5ArrayINS_8PrimExprEvEENS0_11BufferTouch10AccessTypeES9_'/>
+<use f='tvm/src/tir/analysis/control_flow_graph.cc' l='208' c='_ZN3tvm3tir23ControlFlowGraphBuilder5BuildEPNS0_16ControlFlowGraphERKNS0_4StmtE'/>
+<use f='tvm/src/tir/analysis/control_flow_graph.cc' l='215' c='_ZN3tvm3tir23ControlFlowGraphBuilderC1EPNS0_16ControlFlowGraphE'/>
+<use f='tvm/src/tir/analysis/control_flow_graph.cc' l='634'/>
+<use f='tvm/src/tir/analysis/control_flow_graph.cc' l='808' c='_ZNK3tvm3tir16ControlFlowGraph16ControlFlowBlock15MakeBufferTouchEPS1_RKNS0_6BufferERKNS_7runtime5ArrayINS_8PrimExprEvEENS0_11BufferTouch10AccessTypeES9_'/>
+<use f='tvm/src/tir/analysis/control_flow_graph.cc' l='881' c='_ZN3tvm3tirlsERSoRKNS0_16ControlFlowGraphE'/>
+<size>128</size>
+<doc f='tvm/src/tir/analysis/control_flow_graph.h' l='294'>/*! \brief Represents the flow of control through a `tir::Stmt`
+ *
+ * This class contains an internal representation of the possible
+ * control flow that may occur during execution of a `tir::Stmt`.  It
+ * consists of a collection of ControlFlowBlock objects, each of which
+ * represents a subset of operations performed during execution, along
+ * with edges that represent allowed transitions between
+ * `ControlFlowBlock`.
+ *
+ * In addition, the following restrictions are used.
+ *
+ * 1. Each block may have at most two predecessors, and at most two
+ *    successors.
+ *
+ * 2. Within each block, values stored in a buffer do not change.
+ *    That is, encountering a `BufferStore` node requires creating a
+ *    new block.
+ *
+ * For example, consider the following PrimFunc
+ *
+ * ```python
+ * @T.prim_func
+ * def func(T.Buffer[16, &quot;float32&quot;]):
+ *     for i in T.serial(16):
+ *         if i &lt; 8:
+ *              B[i] = i
+ *         else:
+ *              B[i] = i-8
+ * ```
+ *
+ * The control flow graph would have eight control blocks.
+ *
+ * 1. function_entry, from the start of the function through the
+ *    evaluation of the loop&apos;s extent.
+ *
+ *    Predecessors: n/a
+ *    Successors: loop_start
+ *
+ * 2. loop_start, after entering the body of the loop, through the
+ *    evaluation of the conditional `i &lt; 8`
+ *
+ *    Predecessors: function_entry, after_conditional
+ *    Successors: then_clause_start, else_clause_start
+ *
+ * 3. then_clause_start, after entering the then_clause of `i &lt; 8`,
+ *    through evaluation of the value `i`.
+ *
+ *    Predecessors: loop_start
+ *    Successors: then_clause_end
+ *
+ * 4. then_clause_end, after storing to `B[i]` prior to exiting the
+ *    then_clause.
+ *
+ *    Predecessors: then_clause_start
+ *    Successors: after_conditional
+ *
+ * 5. else_clause_start, after entering the else_clause of `i &lt; 8`,
+ *    through evaluation of the value `i-8`.
+ *
+ *    Predecessors: loop_start
+ *    Successors: else_clause_end
+ *
+ * 6. else_clause_end, after storing to `B[i]` prior to exiting the
+ *    else_clause.
+ *
+ *    Predecessors: else_clause_start
+ *    Successors: after_conditional
+ *
+ * 7. after_conditional, after the end of the if/then/else, before the
+ *    end of the loop body
+ *
+ *    Predecessors: then_clause_end, else_clause_end
+ *    Successors: loop_start, after_loop
+ *
+ * 8. after_loop, after the loop
+ *
+ *    Predecessors: after_conditional
+ *    Successors: n/a
+ *
+ *
+ * By identifying `BufferStore` nodes whose value does not depend on
+ * values stored in input buffers (e.g. initializing `buf[i] = 0.0`),
+ * or whose values are provided using `builtin::assume()`
+ * (e.g. `T.assume(buf[i] == 0.0)`), the value stored in a buffer at
+ * those indices may be known for a given control block.  These known
+ * values can then be propagated forward to successor blocks, to be
+ * used in context-dependent simplifications.
+ *
+ * In addition to the allowed transitions between control-flow
+ * blocks, each block also tracks the buffer touch points; which
+ * indices are read from a buffer, which values are written to which
+ * indices of a buffer, and assumptions are provided using
+ * `builtin::assume()`; that occur during the control-flow block.
+ *
+ * Note: The current implementation only tracks the values of
+ * buffers that are constrained to a specific value, and does not
+ * track inequalities that may partially constrain buffer values.
+ * That is, entering a scoped context with a data-dependent equality
+ * condition (e.g. `if buf[i] == value`) is tracked, but entering a
+ * scoped context with a data-dependent inequality condition
+ * (e.g. `if buf[i] &gt; value`) is not tracked.
+ */</doc>
+<fun r='_ZN3tvm3tir16ControlFlowGraphC1ERKNS0_4StmtEm'/>
+<fun r='_ZNK3tvm3tir16ControlFlowGraph26IsOverwrittenWithoutEffectERKNS0_11BufferStoreERKNS0_4StmtE'/>
+<fun r='_ZNK3tvm3tir16ControlFlowGraph17SimplifyInContextENS_8PrimExprERKNS0_4StmtEPNS_5arith8AnalyzerE'/>
+<fun r='_ZN3tvm3tir16ControlFlowGraph11RemoveStoreERKNS0_11BufferStoreE'/>
+<fun r='_ZN3tvm3tir16ControlFlowGraph17GetIndexVariablesERKNS0_6BufferERKNS_7runtime5ArrayINS_8PrimExprEvEE'/>
+<fun r='_ZNK3tvm3tir16ControlFlowGraph17GetIndexVariablesERKNS0_6BufferE'/>
+<fun r='_ZN3tvm3tir16ControlFlowGraph27ForwardPropagateKnownValuesEm'/>
+<fun r='_ZN3tvm3tir16ControlFlowGraph29BackwardPropagateUnusedValuesEm'/>
+<mbr r='tvm::tir::ControlFlowGraph::control_flow_' o='0' t='std::vector&lt;ControlFlowBlock&gt;'/>
+<mbr r='tvm::tir::ControlFlowGraph::control_flow_lookup_' o='192' t='std::unordered_map&lt;const StmtNode *, size_t&gt;'/>
+<mbr r='tvm::tir::ControlFlowGraph::free_predicate_parameters_' o='640' t='Map&lt;tvm::tir::Var, tvm::Range&gt;'/>
+<mbr r='tvm::tir::ControlFlowGraph::iterator_ranges_' o='704' t='Map&lt;tvm::tir::Var, tvm::Range&gt;'/>
+<mbr r='tvm::tir::ControlFlowGraph::axis_var_lookup_' o='768' t='Map&lt;tvm::tir::Buffer, Array&lt;tvm::tir::Var&gt;&gt;'/>
+<mbr r='tvm::tir::ControlFlowGraph::non_buffer_assumptions_' o='832' t='std::vector&lt;PrimExpr&gt;'/>
+<fun r='_ZN3tvm3tir16ControlFlowGraphC1ERKNS0_4StmtEm'/>
+<fun r='_ZNK3tvm3tir16ControlFlowGraph17GetIndexVariablesERKNS0_6BufferE'/>
+<fun r='_ZN3tvm3tir16ControlFlowGraph17GetIndexVariablesERKNS0_6BufferERKNS_7runtime5ArrayINS_8PrimExprEvEE'/>
+<fun r='_ZN3tvm3tir16ControlFlowGraph27ForwardPropagateKnownValuesEm'/>
+<fun r='_ZN3tvm3tir16ControlFlowGraph29BackwardPropagateUnusedValuesEm'/>
+<fun r='_ZNK3tvm3tir16ControlFlowGraph26IsOverwrittenWithoutEffectERKNS0_11BufferStoreERKNS0_4StmtE'/>
+<fun r='_ZNK3tvm3tir16ControlFlowGraph17SimplifyInContextENS_8PrimExprERKNS0_4StmtEPNS_5arith8AnalyzerE'/>
+<use f='tvm/src/tir/transforms/simplify.cc' l='108' c='_ZN3tvm5arith14StmtSimplifier5ApplyENS_3tir4StmtEPNS0_8AnalyzerENS_7runtime8OptionalINS0_14SimplifyConfigEEE'/>
+<use f='tvm/src/tir/transforms/simplify.cc' l='111' c='_ZN3tvm5arith14StmtSimplifier5ApplyENS_3tir4StmtEPNS0_8AnalyzerENS_7runtime8OptionalINS0_14SimplifyConfigEEE'/>
+<use f='tvm/src/tir/transforms/simplify.cc' l='119' c='_ZN3tvm5arith14StmtSimplifierC1EPNS0_8AnalyzerENS0_14SimplifyConfigESt8optionalINS_3tir16ControlFlowGraphEE'/>
+<use f='tvm/src/tir/transforms/simplify.cc' l='264'/>
+<size>128</size>

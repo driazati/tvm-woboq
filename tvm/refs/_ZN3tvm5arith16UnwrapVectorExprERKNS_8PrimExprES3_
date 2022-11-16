@@ -1,0 +1,18 @@
+<dec f='tvm/src/arith/unwrap_vector_expr.h' l='51' type='tvm::PrimExpr tvm::arith::UnwrapVectorExpr(const tvm::PrimExpr &amp; vector_expr, const tvm::PrimExpr &amp; lane)'/>
+<def f='tvm/src/arith/unwrap_vector_expr.cc' l='85' ll='87' type='tvm::PrimExpr tvm::arith::UnwrapVectorExpr(const tvm::PrimExpr &amp; vector_expr, const tvm::PrimExpr &amp; lane)'/>
+<doc f='tvm/src/arith/unwrap_vector_expr.h' l='36'>/* \brief Unwraps a component of a vector expression
+ *
+ * Utility to break up a vector expression into a specific component
+ * of the expression.
+ *
+ * Example: `Ramp(start, stride, n)` =&gt; `start + stride*lane`
+ * Example: `Broadcast(value, n)` =&gt; `value`
+ * Example: `2*Ramp(start, stride, n) + Broadcast(value,n)` =&gt; `2*(start + stride*lane) + value`
+ *
+ * \param vector_expr The vectorized expression to examine
+ *
+ * \param lane Which lane of the vectorized expression to extract.
+ *
+ * \returns A scalar expression
+ */</doc>
+<use f='tvm/src/tir/analysis/control_flow_graph.cc' l='770' u='c' c='_ZNK3tvm3tir16ControlFlowGraph16ControlFlowBlock15MakeBufferTouchERKNS0_6BufferENS_7runtime5ArrayINS0_3VarEvEENS7_INS_8PrimExprEvEENS0_11BufferTouch10AccessTypeESA_'/>

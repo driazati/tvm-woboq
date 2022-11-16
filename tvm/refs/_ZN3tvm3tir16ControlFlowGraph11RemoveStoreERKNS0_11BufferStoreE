@@ -1,0 +1,12 @@
+<dec f='tvm/src/tir/analysis/control_flow_graph.h' l='445' type='void tvm::tir::ControlFlowGraph::RemoveStore(const tir::BufferStore &amp; store)'/>
+<doc f='tvm/src/tir/analysis/control_flow_graph.h' l='434'>/*! \brief Remove the specified BufferStore from the control-flow
+   *  graph
+   *
+   * Removing the specified store, which may reflow known values.
+   * This is necessary when simplifying sequential stores of the same
+   * value.  Otherwise, the first could be removed as a no-op because
+   * it is overwritten by the second, and the second could be removed
+   * as a no-op because it is the same value as the first.
+   *
+   * \param store The store to remove
+   */</doc>

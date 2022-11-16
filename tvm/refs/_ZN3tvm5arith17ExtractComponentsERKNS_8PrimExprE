@@ -1,0 +1,20 @@
+<dec f='tvm/src/arith/constraint_extract.h' l='82' type='std::vector&lt;PrimExpr&gt; tvm::arith::ExtractComponents(const tvm::PrimExpr &amp; expr)'/>
+<doc f='tvm/src/arith/constraint_extract.h' l='65'>/* \brief Returns components that are false if the expression is false.
+ *
+ * Utility to break up a boolean expression into independent
+ * components.
+ *
+ * Example: `i==5 || j==3` =&gt; `[i==5, j==3]`
+ * Example: `i==5 &amp;&amp; j==3` =&gt; `[i==5 &amp;&amp; j==3]`
+ * Example: `!(i&gt;5 &amp;&amp; j==3)` =&gt; `[i&lt;=5, j!=3]`
+ *
+ * Intended for use in bounds analysis or simplification within a
+ * conditional, or identifying independent conditionals that may be
+ * hoisted.
+ *
+ * \param expr The expression to be analyzers
+ *
+ * \returns A vector of independent constraints
+ */</doc>
+<def f='tvm/src/arith/constraint_extract.cc' l='67' ll='71' type='std::vector&lt;PrimExpr&gt; tvm::arith::ExtractComponents(const tvm::PrimExpr &amp; expr)'/>
+<use f='tvm/src/tir/analysis/control_flow_graph.cc' l='254' u='c' c='_ZN3tvm3tir23ControlFlowGraphBuilder25AssumeConstraintComponentENS_8PrimExprEb'/>

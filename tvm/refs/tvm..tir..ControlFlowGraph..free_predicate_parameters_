@@ -1,0 +1,17 @@
+<dec f='tvm/src/tir/analysis/control_flow_graph.h' l='625' type='Map&lt;tvm::tir::Var, tvm::Range&gt;'/>
+<use f='tvm/src/tir/analysis/control_flow_graph.cc' l='817' u='m' c='_ZNK3tvm3tir16ControlFlowGraph16ControlFlowBlock15MakeBufferTouchEPS1_RKNS0_6BufferERKNS_7runtime5ArrayINS_8PrimExprEvEENS0_11BufferTouch10AccessTypeES9_'/>
+<use f='tvm/src/tir/analysis/control_flow_graph.cc' l='1360' u='r' c='_ZN3tvm3tir16ControlFlowGraph27ForwardPropagateKnownValuesEm'/>
+<use f='tvm/src/tir/analysis/control_flow_graph.cc' l='1445' u='r' c='_ZN3tvm3tir16ControlFlowGraph27ForwardPropagateKnownValuesEm'/>
+<use f='tvm/src/tir/analysis/control_flow_graph.cc' l='1487' u='r' c='_ZN3tvm3tir16ControlFlowGraph29BackwardPropagateUnusedValuesEm'/>
+<use f='tvm/src/tir/analysis/control_flow_graph.cc' l='1569' u='r' c='_ZN3tvm3tir16ControlFlowGraph29BackwardPropagateUnusedValuesEm'/>
+<use f='tvm/src/tir/analysis/control_flow_graph.cc' l='1603' u='r' c='_ZNK3tvm3tir16ControlFlowGraph26IsOverwrittenWithoutEffectERKNS0_11BufferStoreERKNS0_4StmtE'/>
+<offset>640</offset>
+<doc f='tvm/src/tir/analysis/control_flow_graph.h' l='616'>/*! \brief A map from free parameters to their range
+   *
+   * A BufferStore/BufferLoad has indices in terms of loop iterators,
+   * while the internal BufferTouch must have predicate in terms of
+   * the buffer&apos;s axes.  While converting to the internal BufferTouch,
+   * reduction axes show up as free parameters.  Tracking the range of
+   * the free parameters allows them to be removed later, by requiring
+   * a predicate to be true for all values of the free parameters.
+   */</doc>

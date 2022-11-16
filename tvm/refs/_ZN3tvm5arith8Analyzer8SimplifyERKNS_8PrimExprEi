@@ -16,9 +16,8 @@
    *
    * \note Analyzer will call into sub-analyzers to get the result.
    */</doc>
-<use f='tvm/src/arith/conjunctive_normal_form.cc' l='251' u='c' c='_ZN3tvm5arith12_GLOBAL__N_18AndOfOrs13TrySimplifyOrEPNS2_3KeyES4_PNS0_8AnalyzerE'/>
-<use f='tvm/src/arith/conjunctive_normal_form.cc' l='267' u='c' c='_ZN3tvm5arith12_GLOBAL__N_18AndOfOrs14TrySimplifyAndEPNS2_3KeyES4_PNS0_8AnalyzerE'/>
-<use f='tvm/src/arith/conjunctive_normal_form.cc' l='424' u='c' c='_ZN3tvm5arith18SimplifyAsAndOfOrsERKNS_8PrimExprEPNS0_8AnalyzerE'/>
+<use f='tvm/src/arith/conjunctive_normal_form.cc' l='372' u='c' c='_ZN3tvm5arith12_GLOBAL__N_18AndOfOrs20SimplifyAcrossChunksEPNS0_8AnalyzerE'/>
+<use f='tvm/src/arith/conjunctive_normal_form.cc' l='438' u='c' c='_ZN3tvm5arith18SimplifyAsAndOfOrsERKNS_8PrimExprEPNS0_8AnalyzerE'/>
 <use f='tvm/src/arith/detect_linear_equation.cc' l='211' u='c' c='_ZN3tvm5arith15DetectClipBoundERKNS_8PrimExprEPSt13unordered_mapIPKNS_3tir7VarNodeENS0_13IntervalEntryESt4hashIS8_ESt8equal_toIS8_ESaISt4pairIKS8_S9_EEE'/>
 <use f='tvm/src/arith/detect_linear_equation.cc' l='249' u='c' c='_ZN3tvm5arith15DetectClipBoundERKNS_8PrimExprERKNS_7runtime5ArrayINS_3tir3VarEvEE'/>
 <use f='tvm/src/arith/detect_linear_equation.cc' l='261' u='c' c='_ZN3tvm5arith15DetectClipBoundERKNS_8PrimExprERKNS_7runtime5ArrayINS_3tir3VarEvEE'/>
@@ -145,6 +144,12 @@
 <use f='tvm/src/te/schedule/message_passing.cc' l='420' u='c' c='_ZN3tvm2te12PassUpDomainEPKNS0_8FuseNodeERKSt13unordered_mapINS_3tir7IterVarENS_5RangeESt4hashIS6_ESt8equal_toIS6_ESaISt4pairIKS6_S7_EEERKNS_5arith6IntSetEPSK_SN_'/>
 <use f='tvm/src/te/schedule/message_passing.cc' l='421' u='c' c='_ZN3tvm2te12PassUpDomainEPKNS0_8FuseNodeERKSt13unordered_mapINS_3tir7IterVarENS_5RangeESt4hashIS6_ESt8equal_toIS6_ESaISt4pairIKS6_S7_EEERKNS_5arith6IntSetEPSK_SN_'/>
 <use f='tvm/src/te/schedule/schedule_ops.cc' l='195' u='c' c='_ZN3tvm2te16SchedulePostProc10VisitStmt_EPKNS_3tir12AttrStmtNodeE'/>
+<use f='tvm/src/tir/analysis/control_flow_graph.cc' l='369' u='c' c='_ZN3tvm3tir23ControlFlowGraphBuilder10VisitStmt_EPKNS0_7ForNodeE'/>
+<use f='tvm/src/tir/analysis/control_flow_graph.cc' l='745' u='c' c='_ZNK3tvm3tir16ControlFlowGraph16ControlFlowBlock15MakeBufferTouchERKNS0_6BufferENS_7runtime5ArrayINS0_3VarEvEENS7_INS_8PrimExprEvEENS0_11BufferTouch10AccessTypeESA_'/>
+<use f='tvm/src/tir/analysis/control_flow_graph.cc' l='796' u='c' c='_ZNK3tvm3tir16ControlFlowGraph16ControlFlowBlock15MakeBufferTouchERKNS0_6BufferENS_7runtime5ArrayINS0_3VarEvEENS7_INS_8PrimExprEvEENS0_11BufferTouch10AccessTypeESA_'/>
+<use f='tvm/src/tir/analysis/control_flow_graph.cc' l='800' u='c' c='_ZNK3tvm3tir16ControlFlowGraph16ControlFlowBlock15MakeBufferTouchERKNS0_6BufferENS_7runtime5ArrayINS0_3VarEvEENS7_INS_8PrimExprEvEENS0_11BufferTouch10AccessTypeESA_'/>
+<use f='tvm/src/tir/analysis/control_flow_graph.cc' l='1107' u='c' c='_ZN3tvm3tir25BufferRegionValueReplacer5ApplyERKSt13unordered_mapIPKNS0_14BufferLoadNodeENS_7runtime8OptionalINS_8PrimExprEEESt4hashIS5_ESt8equal_toIS5314874'/>
+<use f='tvm/src/tir/analysis/control_flow_graph.cc' l='1642' u='c' c='_ZNK3tvm3tir16ControlFlowGraph17SimplifyInContextENS_8PrimExprERKNS0_4StmtEPNS_5arith8AnalyzerE'/>
 <use f='tvm/src/tir/ir/buffer.cc' l='45' u='c' c='_ZN3tvm3tir13SimplifyArrayEPNS_5arith8AnalyzerENS_7runtime5ArrayINS_8PrimExprEvEE'/>
 <use f='tvm/src/tir/ir/buffer.cc' l='194' u='c' c='_ZN3tvm3tir11MergeMulModEPNS_5arith8AnalyzerERKNS_8PrimExprE'/>
 <use f='tvm/src/tir/ir/buffer.cc' l='465' u='c' c='_ZNK3tvm3tir6Buffer9MakeSliceENS_7runtime5ArrayINS_8PrimExprEvEES5_'/>
@@ -218,9 +223,8 @@
 <use f='tvm/src/tir/transforms/lower_async_dma.cc' l='158' u='c' c='_ZN3tvm3tir15AsyncDMALowerer10VisitStmt_EPKNS0_12AttrStmtNodeE'/>
 <use f='tvm/src/tir/transforms/lower_device_storage_access_info.cc' l='101' u='c' c='_ZN3tvm3tir22StorageAccessInfoLower19MakeTaggedAccessPtrENS_7runtime8DataTypeENS0_3VarES3_NS_8PrimExprERKNS_10MemoryInfoE'/>
 <use f='tvm/src/tir/transforms/lower_thread_allreduce.cc' l='648' u='c' c='_ZN3tvm3tir22ThreadAllreduceBuilder8BufIndexENS_8PrimExprES2_i'/>
-<use f='tvm/src/tir/transforms/simplify.cc' l='94' u='c' c='_ZN3tvm5arith14StmtSimplifier9VisitExprERKNS_8PrimExprE'/>
-<use f='tvm/src/tir/transforms/simplify.cc' l='138' u='c' c='_ZN3tvm5arith14StmtSimplifier10VisitStmt_EPKNS_3tir14IfThenElseNodeE'/>
-<use f='tvm/src/tir/transforms/simplify.cc' l='154' u='c' c='_ZN3tvm5arith14StmtSimplifier10VisitExpr_EPKNS_3tir8CallNodeE'/>
+<use f='tvm/src/tir/transforms/simplify.cc' l='130' u='c' c='_ZN3tvm5arith14StmtSimplifier9VisitExprERKNS_8PrimExprE'/>
+<use f='tvm/src/tir/transforms/simplify.cc' l='254' u='c' c='_ZNK3tvm5arith14StmtSimplifier14ProveConditionENS_8PrimExprE'/>
 <use f='tvm/src/tir/transforms/storage_rewrite.cc' l='725' u='c' c='_ZN3tvm3tir19StoragePlanRewriter15PrepareNewAllocEv'/>
 <use f='tvm/src/tir/transforms/unroll_loop.cc' l='188' u='c' c='_ZN3tvm3tir12LoopUnroller9GetExtentEPKNS0_7ForNodeE'/>
 <use f='tvm/src/tir/transforms/vectorize_loop.cc' l='104' u='c' c='_ZN3tvm3tir14VecAllocAccess18UpdateBufferAccessET_'/>
