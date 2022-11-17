@@ -245,9 +245,10 @@
 <use f='tvm/src/te/operation/compute_op.cc' l='571' c='_ZN3tvm2te15TransformUpdateERKNS0_5StageERKSt13unordered_mapINS_3tir7IterVarENS_5RangeESt4hashIS6_ESt8equal_toIS6_ESaISt4pairIKS6_S7_EEERKNS0_15Comput2419945'/>
 <use f='tvm/src/te/operation/compute_op.cc' l='590' c='_ZN3tvm2te15TransformUpdateERKNS0_5StageERKSt13unordered_mapINS_3tir7IterVarENS_5RangeESt4hashIS6_ESt8equal_toIS6_ESaISt4pairIKS6_S7_EEERKNS0_15Comput2419945'/>
 <size>48</size>
-<use f='tvm/src/te/operation/create_primfunc.cc' l='90' c='_ZN3tvm3tir32LayoutFreePlaceholdersNormalizer7ProcessENS0_8PrimFuncE'/>
-<use f='tvm/src/te/operation/create_primfunc.cc' l='150' c='_ZN3tvm3tir24GenerateBlockFromTensorsERKNS_2te9ComputeOpERKNS_7runtime5ArrayINS1_6TensorEvEENS6_INS_8PrimExprEvEESB_PNS0_14CreateFuncInfoEPNS_5arith8AnalyzerE'/>
-<use f='tvm/src/te/operation/create_primfunc.cc' l='365' c='_ZN3tvm3tir24GenerateStmtFromExternOpERKNS_2te8ExternOpEPNS0_14CreateFuncInfoE'/>
+<use f='tvm/include/tvm/tir/data_type_rewriter.h' l='147' c='_ZN3tvm3tir23IndexDataTypeNormalizer10VisitExpr_EPKNS0_7VarNodeE'/>
+<use f='tvm/src/te/operation/create_primfunc.cc' l='91' c='_ZN3tvm3tir32LayoutFreePlaceholdersNormalizer7ProcessENS0_8PrimFuncE'/>
+<use f='tvm/src/te/operation/create_primfunc.cc' l='151' c='_ZN3tvm3tir24GenerateBlockFromTensorsERKNS_2te9ComputeOpERKNS_7runtime5ArrayINS1_6TensorEvEENS6_INS_8PrimExprEvEESB_PNS0_14CreateFuncInfoEPNS_5arith8AnalyzerE'/>
+<use f='tvm/src/te/operation/create_primfunc.cc' l='366' c='_ZN3tvm3tir24GenerateStmtFromExternOpERKNS_2te8ExternOpEPNS0_14CreateFuncInfoE'/>
 <size>48</size>
 <use f='tvm/src/te/operation/extern_op.cc' l='108' c='_ZNK3tvm2te12ExternOpNode17PropBoundToInputsERKNS0_9OperationEPNS_5arith8AnalyzerERKSt13unordered_mapIPKNS_3tir7VarNodeENS5_6IntSetESt4hashISC_ESt8equ1920430'/>
 <size>48</size>
@@ -381,6 +382,8 @@
 <use f='tvm/src/tir/ir/data_layout.cc' l='298' c='_ZN3tvm3tir14TransformIndexERKNS_7runtime5ArrayINS_8PrimExprEvEERKNS2_INS0_7IterVarEvEES6_'/>
 <use f='tvm/src/tir/ir/data_layout.cc' l='336' c='_ZN3tvm3tir14TransformShapeERKNS_7runtime5ArrayINS_8PrimExprEvEERKNS2_INS0_7IterVarEvEESA_S6_'/>
 <size>48</size>
+<use f='tvm/src/tir/ir/data_type_rewriter.cc' l='533' c='_ZN3tvm3tir23IndexDataTypeNormalizer10VisitExpr_EPKNS0_7VarNodeE'/>
+<size>48</size>
 <use f='tvm/src/tir/ir/expr.cc' l='66' c='_ZN3tvm3tir3VarC1ENS_7runtime6StringENS2_8DataTypeENS_4SpanE'/>
 <use f='tvm/src/tir/ir/expr.cc' l='75' c='_ZN3tvm3tir3VarC1ENS_7runtime6StringENS_4TypeENS_4SpanE'/>
 <use f='tvm/src/tir/ir/expr.cc' l='84' c='_ZNK3tvm3tir3Var16copy_with_suffixERKNS_7runtime6StringE'/>
@@ -408,10 +411,10 @@
 <size>48</size>
 <use f='tvm/src/tir/ir/stmt.cc' l='899' c='_ZN3tvm3tir17MatchBufferRegionC1ENS0_6BufferENS0_12BufferRegionE'/>
 <size>48</size>
-<use f='tvm/src/tir/ir/stmt_functor.cc' l='660' c='_ZN3tvm3tir12IRSubstitute10VisitExpr_EPKNS0_7VarNodeE'/>
-<use f='tvm/src/tir/ir/stmt_functor.cc' l='729' c='_ZN3tvm3tir12IRSubstitute10VisitStmt_EPKNS0_12AttrStmtNodeE'/>
-<use f='tvm/src/tir/ir/stmt_functor.cc' l='820' c='_ZN3tvm3tir36IRSubstituteWithDataTypeLegalization10VisitExpr_EPKNS0_7VarNodeE'/>
-<use f='tvm/src/tir/ir/stmt_functor.cc' l='872' c='_ZN3tvm3tir36IRSubstituteWithDataTypeLegalization10VisitStmt_EPKNS0_12AttrStmtNodeE'/>
+<use f='tvm/src/tir/ir/stmt_functor.cc' l='661' c='_ZN3tvm3tir12IRSubstitute10VisitExpr_EPKNS0_7VarNodeE'/>
+<use f='tvm/src/tir/ir/stmt_functor.cc' l='730' c='_ZN3tvm3tir12IRSubstitute10VisitStmt_EPKNS0_12AttrStmtNodeE'/>
+<use f='tvm/src/tir/ir/stmt_functor.cc' l='821' c='_ZN3tvm3tir36IRSubstituteWithDataTypeLegalization10VisitExpr_EPKNS0_7VarNodeE'/>
+<use f='tvm/src/tir/ir/stmt_functor.cc' l='873' c='_ZN3tvm3tir36IRSubstituteWithDataTypeLegalization10VisitStmt_EPKNS0_12AttrStmtNodeE'/>
 <size>48</size>
 <use f='tvm/src/tir/op/op.cc' l='67' c='_ZN3tvm7GetTypeERKNS_8PrimExprE'/>
 <size>48</size>
@@ -462,13 +465,13 @@
 <use f='tvm/src/tir/schedule/ir_comparator.cc' l='280' c='_ZN3tvm3tir19TensorizeComparator10VisitExpr_EPKNS0_7VarNodeERKNS_8PrimExprE'/>
 <use f='tvm/src/tir/schedule/ir_comparator.cc' l='671' c='_ZN3tvm3tir23AutoTensorizeComparator19CompareBufferAccessEPKT_S4_'/>
 <size>48</size>
-<use f='tvm/src/tir/schedule/primitive/blockize_tensorize.cc' l='29' c='_ZN3tvm3tir7UsesVarERKT_RKNS0_3VarE'/>
-<use f='tvm/src/tir/schedule/primitive/blockize_tensorize.cc' l='93' c='_ZN3tvm3tir23TrivialSubspaceDivisionERKNS_7runtime5ArrayINS0_7IterVarEvEERKNS2_INS_8PrimExprEvEERKS7_RKNS2_INS0_3VarEvEESG_'/>
-<use f='tvm/src/tir/schedule/primitive/blockize_tensorize.cc' l='94' c='_ZN3tvm3tir23TrivialSubspaceDivisionERKNS_7runtime5ArrayINS0_7IterVarEvEERKNS2_INS_8PrimExprEvEERKS7_RKNS2_INS0_3VarEvEESG_'/>
-<use f='tvm/src/tir/schedule/primitive/blockize_tensorize.cc' l='97' c='_ZN3tvm3tir23TrivialSubspaceDivisionERKNS_7runtime5ArrayINS0_7IterVarEvEERKNS2_INS_8PrimExprEvEERKS7_RKNS2_INS0_3VarEvEESG_'/>
-<use f='tvm/src/tir/schedule/primitive/blockize_tensorize.cc' l='103' c='_ZN3tvm3tir23TrivialSubspaceDivisionERKNS_7runtime5ArrayINS0_7IterVarEvEERKNS2_INS_8PrimExprEvEERKS7_RKNS2_INS0_3VarEvEESG_'/>
-<use f='tvm/src/tir/schedule/primitive/blockize_tensorize.cc' l='116' c='_ZN3tvm3tir23TrivialSubspaceDivisionERKNS_7runtime5ArrayINS0_7IterVarEvEERKNS2_INS_8PrimExprEvEERKS7_RKNS2_INS0_3VarEvEESG_'/>
-<use f='tvm/src/tir/schedule/primitive/blockize_tensorize.cc' l='364' c='_ZZN3tvm3tir10SubstituteERKNS0_4StmtERKNS_7runtime3MapINS0_3VarENS_8PrimExprEvvEEPNS5_INS0_5BlockESB_vvEEPNS_5arith8AnalyzerEEN8Replacer10VisitExpr_EPKNS0_7VarNodeE'/>
+<use f='tvm/src/tir/schedule/primitive/blockize_tensorize.cc' l='31' c='_ZN3tvm3tir7UsesVarERKT_RKNS0_3VarE'/>
+<use f='tvm/src/tir/schedule/primitive/blockize_tensorize.cc' l='95' c='_ZN3tvm3tir23TrivialSubspaceDivisionERKNS_7runtime5ArrayINS0_7IterVarEvEERKNS2_INS_8PrimExprEvEERKS7_RKNS2_INS0_3VarEvEESG_'/>
+<use f='tvm/src/tir/schedule/primitive/blockize_tensorize.cc' l='96' c='_ZN3tvm3tir23TrivialSubspaceDivisionERKNS_7runtime5ArrayINS0_7IterVarEvEERKNS2_INS_8PrimExprEvEERKS7_RKNS2_INS0_3VarEvEESG_'/>
+<use f='tvm/src/tir/schedule/primitive/blockize_tensorize.cc' l='99' c='_ZN3tvm3tir23TrivialSubspaceDivisionERKNS_7runtime5ArrayINS0_7IterVarEvEERKNS2_INS_8PrimExprEvEERKS7_RKNS2_INS0_3VarEvEESG_'/>
+<use f='tvm/src/tir/schedule/primitive/blockize_tensorize.cc' l='105' c='_ZN3tvm3tir23TrivialSubspaceDivisionERKNS_7runtime5ArrayINS0_7IterVarEvEERKNS2_INS_8PrimExprEvEERKS7_RKNS2_INS0_3VarEvEESG_'/>
+<use f='tvm/src/tir/schedule/primitive/blockize_tensorize.cc' l='118' c='_ZN3tvm3tir23TrivialSubspaceDivisionERKNS_7runtime5ArrayINS0_7IterVarEvEERKNS2_INS_8PrimExprEvEERKS7_RKNS2_INS0_3VarEvEESG_'/>
+<use f='tvm/src/tir/schedule/primitive/blockize_tensorize.cc' l='366' c='_ZZN3tvm3tir10SubstituteERKNS0_4StmtERKNS_7runtime3MapINS0_3VarENS_8PrimExprEvvEEPNS5_INS0_5BlockESB_vvEEPNS_5arith8AnalyzerEEN8Replacer10VisitExpr_EPKNS0_7VarNodeE'/>
 <size>48</size>
 <use f='tvm/src/tir/schedule/primitive/cache_index.cc' l='142' c='_ZN3tvm3tir18IndexInfoCollector10VisitExpr_EPKNS0_14BufferLoadNodeE'/>
 <use f='tvm/src/tir/schedule/primitive/cache_index.cc' l='191' c='_ZN3tvm3tir19MakeIndexCacheStageEPNS0_9IndexInfoE'/>
@@ -777,13 +780,14 @@
 <use f='tvm/src/tir/transforms/merge_dynamic_shared_memory_allocations.cc' l='597'/>
 <use f='tvm/src/tir/transforms/merge_dynamic_shared_memory_allocations.cc' l='609'/>
 <size>48</size>
-<use f='tvm/src/tir/transforms/narrow_datatype.cc' l='101' c='_ZN3tvm3tir15DataTypeVisitor10VisitStmt_EPKNS0_7ForNodeE'/>
-<use f='tvm/src/tir/transforms/narrow_datatype.cc' l='110' c='_ZN3tvm3tir15DataTypeVisitor10VisitStmt_EPKNS0_12AttrStmtNodeE'/>
-<use f='tvm/src/tir/transforms/narrow_datatype.cc' l='121' c='_ZN3tvm3tir15DataTypeVisitor10VisitExpr_EPKNS0_10ReduceNodeE'/>
-<use f='tvm/src/tir/transforms/narrow_datatype.cc' l='127' c='_ZN3tvm3tir15DataTypeVisitor10VisitExpr_EPKNS0_7VarNodeE'/>
-<use f='tvm/src/tir/transforms/narrow_datatype.cc' l='185'/>
-<use f='tvm/src/tir/transforms/narrow_datatype.cc' l='278' c='_ZN3tvm3tir16DataTypeRewriter10VisitExpr_EPKNS0_7VarNodeE'/>
-<use f='tvm/src/tir/transforms/narrow_datatype.cc' l='331'/>
+<use f='tvm/src/tir/transforms/narrow_datatype.cc' l='103' c='_ZN3tvm3tir15DataTypeVisitor10VisitStmt_EPKNS0_7ForNodeE'/>
+<use f='tvm/src/tir/transforms/narrow_datatype.cc' l='110' c='_ZN3tvm3tir15DataTypeVisitor10VisitStmt_EPKNS0_9BlockNodeE'/>
+<use f='tvm/src/tir/transforms/narrow_datatype.cc' l='120' c='_ZN3tvm3tir15DataTypeVisitor10VisitStmt_EPKNS0_12AttrStmtNodeE'/>
+<use f='tvm/src/tir/transforms/narrow_datatype.cc' l='131' c='_ZN3tvm3tir15DataTypeVisitor10VisitExpr_EPKNS0_10ReduceNodeE'/>
+<use f='tvm/src/tir/transforms/narrow_datatype.cc' l='137' c='_ZN3tvm3tir15DataTypeVisitor10VisitExpr_EPKNS0_7VarNodeE'/>
+<use f='tvm/src/tir/transforms/narrow_datatype.cc' l='195'/>
+<use f='tvm/src/tir/transforms/narrow_datatype.cc' l='237' c='_ZN3tvm3tir22NarrowDataTypeRewriter10VisitExpr_EPKNS0_7VarNodeE'/>
+<use f='tvm/src/tir/transforms/narrow_datatype.cc' l='273'/>
 <size>48</size>
 <use f='tvm/src/tir/transforms/plan_update_buffer_allocation_location.cc' l='48'/>
 <use f='tvm/src/tir/transforms/plan_update_buffer_allocation_location.cc' l='55' c='_ZN3tvm3tir23BufferAllocationLocatorC1ERKNS0_8PrimFuncE'/>

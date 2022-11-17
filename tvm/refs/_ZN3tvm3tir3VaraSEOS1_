@@ -11,6 +11,7 @@
 <use f='tvm/src/target/llvm/codegen_cpu.cc' l='702' u='c' c='_ZN3tvm7codegen10CodeGenCPU20CreateParallelLaunchERKNS_3tir4StmtEiNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
 <use f='tvm/src/te/operation/op_utils.cc' l='94' u='c' c='_ZN3tvm2te12MakeLoopNestERKNS0_5StageERKSt13unordered_mapINS_3tir7IterVarENS_5RangeESt4hashIS6_ESt8equal_toIS6_ESaISt4pairIKS6_S7_EEEmbRKSt13unordered9689248'/>
 <use f='tvm/src/tir/ir/buffer.cc' l='559' u='c' c='_ZN3tvm3tir6BufferC1ENS0_3VarENS_7runtime8DataTypeENS3_5ArrayINS_8PrimExprEvEES7_S6_NS3_6StringEiiNS0_10BufferTypeENS5_INS_6IntImmEvEENS_4SpanE'/>
+<use f='tvm/src/tir/ir/data_type_rewriter.cc' l='342' u='c' c='_ZN3tvm3tir21IndexDataTypeRewriter12VisitIterVarERKNS0_7IterVarE'/>
 <use f='tvm/src/tir/ir/expr.cc' l='685' u='c' c='_ZN3tvm3tir4LoadC1ENS_7runtime8DataTypeENS0_3VarENS_8PrimExprES5_NS_4SpanE'/>
 <use f='tvm/src/tir/ir/expr.cc' l='789' u='c' c='_ZN3tvm3tir3LetC1ENS0_3VarENS_8PrimExprES3_NS_4SpanE'/>
 <use f='tvm/src/tir/ir/stmt.cc' l='48' u='c' c='_ZN3tvm3tir7LetStmtC1ENS0_3VarENS_8PrimExprENS0_4StmtENS_4SpanE'/>
@@ -18,10 +19,10 @@
 <use f='tvm/src/tir/ir/stmt.cc' l='294' u='c' c='_ZN3tvm3tir5StoreC1ENS0_3VarENS_8PrimExprES3_S3_NS_4SpanE'/>
 <use f='tvm/src/tir/ir/stmt.cc' l='382' u='c' c='_ZN3tvm3tir8AllocateC1ENS0_3VarENS_7runtime8DataTypeENS3_5ArrayINS_8PrimExprEvEES6_NS0_4StmtENS3_3MapINS3_6StringENS3_9ObjectRefEvvEENS_4SpanE'/>
 <use f='tvm/src/tir/ir/stmt.cc' l='456' u='c' c='_ZN3tvm3tir13AllocateConstC1ENS0_3VarENS_7runtime8DataTypeENS3_5ArrayINS_8PrimExprEvEENS3_9ObjectRefENS0_4StmtENS3_3MapINS3_6StringES8_vvEENS_4SpanE'/>
-<use f='tvm/src/tir/ir/stmt_functor.cc' l='718' u='c' c='_ZN3tvm3tir12IRSubstitute17GetRemappedBufferENS0_6BufferE'/>
-<use f='tvm/src/tir/ir/stmt_functor.cc' l='861' u='c' c='_ZN3tvm3tir36IRSubstituteWithDataTypeLegalization17GetRemappedBufferENS0_6BufferE'/>
-<use f='tvm/src/tir/schedule/primitive/blockize_tensorize.cc' l='303' u='c' c='_ZN3tvm3tir17GenerateOuterInitERKNS0_4StmtERKNS0_12BlockRealizeERKSt6vectorIPKNS0_7ForNodeESaISA_EENS_7runtime6StringE'/>
-<use f='tvm/src/tir/schedule/primitive/blockize_tensorize.cc' l='331' u='c' c='_ZN3tvm3tir17GenerateOuterInitERKNS0_4StmtERKNS0_12BlockRealizeERKSt6vectorIPKNS0_7ForNodeESaISA_EENS_7runtime6StringE'/>
+<use f='tvm/src/tir/ir/stmt_functor.cc' l='719' u='c' c='_ZN3tvm3tir12IRSubstitute17GetRemappedBufferENS0_6BufferE'/>
+<use f='tvm/src/tir/ir/stmt_functor.cc' l='862' u='c' c='_ZN3tvm3tir36IRSubstituteWithDataTypeLegalization17GetRemappedBufferENS0_6BufferE'/>
+<use f='tvm/src/tir/schedule/primitive/blockize_tensorize.cc' l='305' u='c' c='_ZN3tvm3tir17GenerateOuterInitERKNS0_4StmtERKNS0_12BlockRealizeERKSt6vectorIPKNS0_7ForNodeESaISA_EENS_7runtime6StringE'/>
+<use f='tvm/src/tir/schedule/primitive/blockize_tensorize.cc' l='333' u='c' c='_ZN3tvm3tir17GenerateOuterInitERKNS0_4StmtERKNS0_12BlockRealizeERKSt6vectorIPKNS0_7ForNodeESaISA_EENS_7runtime6StringE'/>
 <use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='856' u='c' c='_ZN3tvm3tir19CreateReindexBufferERKNS0_6BufferERKNS_7runtime5ArrayINS0_7IterVarEvEERKSt13unordered_setINS0_3VarENS4_13ObjectPtrHashENS4_14ObjectPtrEqualESaISB_EE'/>
 <use f='tvm/src/tir/schedule/primitive/compute_at.cc' l='409' u='c' c='_ZN3tvm3tir19SolveBlockVarDomainERKNS_5arith6IntSetES4_PNS1_8AnalyzerE'/>
 <use f='tvm/src/tir/schedule/primitive/compute_at.cc' l='414' u='c' c='_ZN3tvm3tir19SolveBlockVarDomainERKNS_5arith6IntSetES4_PNS1_8AnalyzerE'/>
@@ -36,8 +37,6 @@
 <use f='tvm/src/tir/transforms/ir_utils.cc' l='246' u='c' c='_ZN3tvm3tir12IRConvertSSA14ScopedRedefineC1EPS1_NS0_3VarE'/>
 <use f='tvm/src/tir/transforms/lower_cross_thread_reduction.cc' l='386' u='c' c='_ZN3tvm3tir23TransformReductionBlockEPKNS0_16BlockRealizeNodeERKNS_7runtime8OptionalINS4_5ArrayINS0_6BufferEvEEEERKS8_SD_RKNS6_INS_8PrimExprEvEERKNS0_10264619'/>
 <use f='tvm/src/tir/transforms/manifest_shared_memory_local_stage.cc' l='138' u='c' c='_ZN3tvm3tir25IntermediateStageRewriter14MakeLocalStageEPKNS0_9BlockNodeERKNS0_6BufferENS_7runtime5ArrayINS_8PrimExprEvEESt6vectorIPKNS0_7ForNodeESaISF9837013'/>
-<use f='tvm/src/tir/transforms/narrow_datatype.cc' l='281' u='c' c='_ZN3tvm3tir16DataTypeRewriter10VisitExpr_EPKNS0_7VarNodeE'/>
-<use f='tvm/src/tir/transforms/narrow_datatype.cc' l='291' u='c' c='_ZN3tvm3tir16DataTypeRewriter10VisitExpr_EPKNS0_11SizeVarNodeE'/>
 <use f='tvm/src/tir/transforms/renew_defs.cc' l='40' u='c' c='_ZN3tvm3tir15RenewDefMutator10VisitStmt_EPKNS0_11LetStmtNodeE'/>
 <use f='tvm/src/tir/transforms/renew_defs.cc' l='40' u='c' c='_ZN3tvm3tir15RenewDefMutator10VisitStmt_EPKNS0_12AllocateNodeE'/>
 <use f='tvm/src/tir/transforms/renew_defs.cc' l='40' u='c' c='_ZN3tvm3tir15RenewDefMutator10VisitStmt_EPKNS0_17AllocateConstNodeE'/>

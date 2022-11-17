@@ -1,10 +1,10 @@
-<dec f='tvm/include/tvm/tir/stmt.h' l='1320' type='tvm::PrimExpr'/>
-<use f='tvm/include/tvm/tir/stmt.h' l='1326' u='a' c='_ZN3tvm3tir16BlockRealizeNode10VisitAttrsEPNS_11AttrVisitorE'/>
-<use f='tvm/include/tvm/tir/stmt.h' l='1331' u='r' c='_ZNK3tvm3tir16BlockRealizeNode12SEqualReduceEPKS1_NS_13SEqualReducerE'/>
-<use f='tvm/include/tvm/tir/stmt.h' l='1331' u='r' c='_ZNK3tvm3tir16BlockRealizeNode12SEqualReduceEPKS1_NS_13SEqualReducerE'/>
-<use f='tvm/include/tvm/tir/stmt.h' l='1337' u='r' c='_ZNK3tvm3tir16BlockRealizeNode11SHashReduceENS_12SHashReducerE'/>
+<dec f='tvm/include/tvm/tir/stmt.h' l='1321' type='tvm::PrimExpr'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='1327' u='a' c='_ZN3tvm3tir16BlockRealizeNode10VisitAttrsEPNS_11AttrVisitorE'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='1332' u='r' c='_ZNK3tvm3tir16BlockRealizeNode12SEqualReduceEPKS1_NS_13SEqualReducerE'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='1332' u='r' c='_ZNK3tvm3tir16BlockRealizeNode12SEqualReduceEPKS1_NS_13SEqualReducerE'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='1338' u='r' c='_ZNK3tvm3tir16BlockRealizeNode11SHashReduceENS_12SHashReducerE'/>
 <offset>256</offset>
-<doc f='tvm/include/tvm/tir/stmt.h' l='1316'>/*!
+<doc f='tvm/include/tvm/tir/stmt.h' l='1317'>/*!
    * \brief The predicate of the block realization, the block will only be executed when the
    * predicate is true.
    */</doc>
@@ -13,20 +13,23 @@
 <use f='tvm/src/printer/tir_text_printer.cc' l='660' u='r' c='_ZN3tvm3tir14TIRTextPrinter10VisitStmt_EPKNS0_16BlockRealizeNodeE'/>
 <use f='tvm/src/printer/tvmscript_printer.cc' l='1446' u='r' c='_ZN3tvm3tir16TVMScriptPrinter19PrintBlockPredicateEPKNS0_16BlockRealizeNodeE'/>
 <use f='tvm/src/printer/tvmscript_printer.cc' l='1447' u='r' c='_ZN3tvm3tir16TVMScriptPrinter19PrintBlockPredicateEPKNS0_16BlockRealizeNodeE'/>
+<use f='tvm/src/tir/ir/data_type_rewriter.cc' l='230' u='r' c='_ZN3tvm3tir21IndexDataTypeRewriter10VisitStmt_EPKNS0_16BlockRealizeNodeE'/>
+<use f='tvm/src/tir/ir/data_type_rewriter.cc' l='239' u='r' c='_ZN3tvm3tir21IndexDataTypeRewriter10VisitStmt_EPKNS0_16BlockRealizeNodeE'/>
+<use f='tvm/src/tir/ir/data_type_rewriter.cc' l='243' u='w' c='_ZN3tvm3tir21IndexDataTypeRewriter10VisitStmt_EPKNS0_16BlockRealizeNodeE'/>
 <use f='tvm/src/tir/ir/stmt.cc' l='1038' u='w' c='_ZN3tvm3tir12BlockRealizeC1ENS_7runtime5ArrayINS_8PrimExprEvEES4_NS0_5BlockENS_4SpanE'/>
 <use f='tvm/src/tir/ir/stmt.cc' l='1070' u='r'/>
 <use f='tvm/src/tir/ir/stmt.cc' l='1073' u='r'/>
-<use f='tvm/src/tir/ir/stmt_functor.cc' l='152' u='r' c='_ZN3tvm3tir11StmtVisitor10VisitStmt_EPKNS0_16BlockRealizeNodeE'/>
-<use f='tvm/src/tir/ir/stmt_functor.cc' l='554' u='r' c='_ZN3tvm3tir11StmtMutator10VisitStmt_EPKNS0_16BlockRealizeNodeE'/>
-<use f='tvm/src/tir/ir/stmt_functor.cc' l='556' u='r' c='_ZN3tvm3tir11StmtMutator10VisitStmt_EPKNS0_16BlockRealizeNodeE'/>
-<use f='tvm/src/tir/ir/stmt_functor.cc' l='561' u='w' c='_ZN3tvm3tir11StmtMutator10VisitStmt_EPKNS0_16BlockRealizeNodeE'/>
+<use f='tvm/src/tir/ir/stmt_functor.cc' l='153' u='r' c='_ZN3tvm3tir11StmtVisitor10VisitStmt_EPKNS0_16BlockRealizeNodeE'/>
+<use f='tvm/src/tir/ir/stmt_functor.cc' l='555' u='r' c='_ZN3tvm3tir11StmtMutator10VisitStmt_EPKNS0_16BlockRealizeNodeE'/>
+<use f='tvm/src/tir/ir/stmt_functor.cc' l='557' u='r' c='_ZN3tvm3tir11StmtMutator10VisitStmt_EPKNS0_16BlockRealizeNodeE'/>
+<use f='tvm/src/tir/ir/stmt_functor.cc' l='562' u='w' c='_ZN3tvm3tir11StmtMutator10VisitStmt_EPKNS0_16BlockRealizeNodeE'/>
 <use f='tvm/src/tir/schedule/analysis/analysis.cc' l='541' u='r' c='_ZN3tvm3tir15IsAffineBindingERKNS0_12BlockRealizeERKNS_7runtime3MapINS0_3VarENS_5RangeEvvEEPNS_5arith8AnalyzerE'/>
 <use f='tvm/src/tir/schedule/analysis/analysis.cc' l='1277' u='r' c='_ZN3tvm3tir13HasIfThenElseERKNS0_4StmtE'/>
 <use f='tvm/src/tir/schedule/ir_comparator.cc' l='171' u='r' c='_ZN3tvm3tir19TensorizeComparator10VisitStmt_EPKNS0_16BlockRealizeNodeERKNS0_4StmtE'/>
 <use f='tvm/src/tir/schedule/ir_comparator.cc' l='171' u='r' c='_ZN3tvm3tir19TensorizeComparator10VisitStmt_EPKNS0_16BlockRealizeNodeERKNS0_4StmtE'/>
-<use f='tvm/src/tir/schedule/primitive/blockize_tensorize.cc' l='173' u='r' c='_ZN3tvm3tir14SubspaceDivideERKNS0_12BlockRealizeERKNS0_8StmtSRefES6_PSt6vectorIPKNS0_7ForNodeESaISA_EEPNS_5arith8AnalyzerE'/>
-<use f='tvm/src/tir/schedule/primitive/blockize_tensorize.cc' l='180' u='r' c='_ZN3tvm3tir14SubspaceDivideERKNS0_12BlockRealizeERKNS0_8StmtSRefES6_PSt6vectorIPKNS0_7ForNodeESaISA_EEPNS_5arith8AnalyzerE'/>
-<use f='tvm/src/tir/schedule/primitive/blockize_tensorize.cc' l='312' u='r' c='_ZN3tvm3tir17GenerateOuterInitERKNS0_4StmtERKNS0_12BlockRealizeERKSt6vectorIPKNS0_7ForNodeESaISA_EENS_7runtime6StringE'/>
+<use f='tvm/src/tir/schedule/primitive/blockize_tensorize.cc' l='175' u='r' c='_ZN3tvm3tir14SubspaceDivideERKNS0_12BlockRealizeERKNS0_8StmtSRefES6_PSt6vectorIPKNS0_7ForNodeESaISA_EEPNS_5arith8AnalyzerE'/>
+<use f='tvm/src/tir/schedule/primitive/blockize_tensorize.cc' l='182' u='r' c='_ZN3tvm3tir14SubspaceDivideERKNS0_12BlockRealizeERKNS0_8StmtSRefES6_PSt6vectorIPKNS0_7ForNodeESaISA_EEPNS_5arith8AnalyzerE'/>
+<use f='tvm/src/tir/schedule/primitive/blockize_tensorize.cc' l='314' u='r' c='_ZN3tvm3tir17GenerateOuterInitERKNS0_4StmtERKNS0_12BlockRealizeERKSt6vectorIPKNS0_7ForNodeESaISA_EENS_7runtime6StringE'/>
 <use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='362' u='r' c='_ZN3tvm3tir17RelaxBufferRegionENS0_13ScheduleStateERKNS0_12BufferRegionERKNS0_8StmtSRefES7_S7_'/>
 <use f='tvm/src/tir/schedule/primitive/compute_inline.cc' l='229' u='r' c='_ZNK3tvm3tir35ProducerHasNonTrivialPredicateError20DetailRenderTemplateEv'/>
 <use f='tvm/src/tir/schedule/primitive/compute_inline.cc' l='579' u='r' c='_ZN3tvm3tir21ReverseComputeInliner22BodyPatternAllowInlineERKNS0_12BlockRealizeE'/>

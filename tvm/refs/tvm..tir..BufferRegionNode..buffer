@@ -1,10 +1,10 @@
-<dec f='tvm/include/tvm/tir/stmt.h' l='1109' type='tvm::tir::Buffer'/>
-<use f='tvm/include/tvm/tir/stmt.h' l='1114' u='a' c='_ZN3tvm3tir16BufferRegionNode10VisitAttrsEPNS_11AttrVisitorE'/>
-<use f='tvm/include/tvm/tir/stmt.h' l='1119' u='r' c='_ZNK3tvm3tir16BufferRegionNode12SEqualReduceEPKS1_NS_13SEqualReducerE'/>
-<use f='tvm/include/tvm/tir/stmt.h' l='1119' u='r' c='_ZNK3tvm3tir16BufferRegionNode12SEqualReduceEPKS1_NS_13SEqualReducerE'/>
-<use f='tvm/include/tvm/tir/stmt.h' l='1123' u='r' c='_ZNK3tvm3tir16BufferRegionNode11SHashReduceENS_12SHashReducerE'/>
+<dec f='tvm/include/tvm/tir/stmt.h' l='1110' type='tvm::tir::Buffer'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='1115' u='a' c='_ZN3tvm3tir16BufferRegionNode10VisitAttrsEPNS_11AttrVisitorE'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='1120' u='r' c='_ZNK3tvm3tir16BufferRegionNode12SEqualReduceEPKS1_NS_13SEqualReducerE'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='1120' u='r' c='_ZNK3tvm3tir16BufferRegionNode12SEqualReduceEPKS1_NS_13SEqualReducerE'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='1124' u='r' c='_ZNK3tvm3tir16BufferRegionNode11SHashReduceENS_12SHashReducerE'/>
 <offset>128</offset>
-<doc f='tvm/include/tvm/tir/stmt.h' l='1108'>/*! \brief The buffer of the buffer region. */</doc>
+<doc f='tvm/include/tvm/tir/stmt.h' l='1109'>/*! \brief The buffer of the buffer region. */</doc>
 <use f='tvm/src/ir/expr.cc' l='67' u='r' c='_ZN3tvm8PrimExpr11FromObject_ENS_7runtime9ObjectRefE'/>
 <use f='tvm/src/meta_schedule/postproc/rewrite_layout.cc' l='81' u='m' c='_ZN3tvm3tir22BufferReadPosCollector18GetReadBufferIndexERKNS0_5BlockERKNS0_6BufferE'/>
 <use f='tvm/src/meta_schedule/postproc/rewrite_layout.cc' l='164' u='m' c='_ZZN3tvm3tir17GetCacheReadChainB5cxx11ERKNS0_6BufferEPKNS0_12PrimFuncNodeEEN24BufferReadChainCollector10VisitStmt_EPKNS0_9BlockNodeE'/>
@@ -34,13 +34,15 @@
 <use f='tvm/src/tir/analysis/device_constraint_utils.cc' l='348' u='m' c='_ZN3tvm3tir12_GLOBAL__N_129ApplyDeviceConstraintsMutator9VisitItemEPKNS0_16BufferRegionNodeE'/>
 <use f='tvm/src/tir/analysis/device_constraint_utils.cc' l='349' u='r' c='_ZN3tvm3tir12_GLOBAL__N_129ApplyDeviceConstraintsMutator9VisitItemEPKNS0_16BufferRegionNodeE'/>
 <use f='tvm/src/tir/analysis/device_constraint_utils.cc' l='361' u='r' c='_ZN3tvm3tir12_GLOBAL__N_129ApplyDeviceConstraintsMutator9VisitItemEPKNS0_21MatchBufferRegionNodeE'/>
+<use f='tvm/src/tir/ir/data_type_rewriter.cc' l='375' u='r' c='_ZN3tvm3tir21IndexDataTypeRewriter17VisitBufferRegionERKNS0_12BufferRegionE'/>
+<use f='tvm/src/tir/ir/data_type_rewriter.cc' l='384' u='r' c='_ZN3tvm3tir21IndexDataTypeRewriter17VisitBufferRegionERKNS0_12BufferRegionE'/>
 <use f='tvm/src/tir/ir/expr.cc' l='850' u='r'/>
 <use f='tvm/src/tir/ir/specialize.cc' l='240' u='r' c='_ZN3tvm3tir19PrimFuncSpecializer18MutateBufferRegionERKNS0_12BufferRegionE'/>
 <use f='tvm/src/tir/ir/stmt.cc' l='814' u='w' c='_ZN3tvm3tir12BufferRegionC1ENS0_6BufferENS_7runtime5ArrayINS_5RangeEvEE'/>
 <use f='tvm/src/tir/ir/stmt.cc' l='849' u='m'/>
 <use f='tvm/src/tir/ir/stmt.cc' l='865' u='r' c='_ZN3tvm3tir17MatchBufferRegionC1ENS0_6BufferENS0_12BufferRegionE'/>
-<use f='tvm/src/tir/ir/stmt_functor.cc' l='236' u='r' c='_ZN3tvm3tir11StmtMutator8Internal6MutateEPS1_RKNS_7runtime5ArrayINS0_12BufferRegionEvEE'/>
-<use f='tvm/src/tir/ir/stmt_functor.cc' l='249' u='r' c='_ZN3tvm3tir11StmtMutator8Internal6MutateEPS1_RKNS_7runtime5ArrayINS0_17MatchBufferRegionEvEE'/>
+<use f='tvm/src/tir/ir/stmt_functor.cc' l='237' u='r' c='_ZN3tvm3tir11StmtMutator8Internal6MutateEPS1_RKNS_7runtime5ArrayINS0_12BufferRegionEvEE'/>
+<use f='tvm/src/tir/ir/stmt_functor.cc' l='250' u='r' c='_ZN3tvm3tir11StmtMutator8Internal6MutateEPS1_RKNS_7runtime5ArrayINS0_17MatchBufferRegionEvEE'/>
 <use f='tvm/src/tir/schedule/analysis/analysis.cc' l='190' u='r' c='_ZN3tvm3tir15IsDominantBlockERKNS0_13ScheduleStateERKNS0_8StmtSRefES6_'/>
 <use f='tvm/src/tir/schedule/analysis/analysis.cc' l='191' u='r' c='_ZN3tvm3tir15IsDominantBlockERKNS0_13ScheduleStateERKNS0_8StmtSRefES6_'/>
 <use f='tvm/src/tir/schedule/analysis/analysis.cc' l='226' u='m' c='_ZN3tvm3tir27CheckCompleteBlockErrorCodeERKNS0_13ScheduleStateERKNS0_8StmtSRefES6_'/>
@@ -66,9 +68,9 @@
 <use f='tvm/src/tir/schedule/ir_comparator.cc' l='418' u='r' c='_ZN3tvm3tir19TensorizeComparator19CompareBufferRegionERKNS0_12BufferRegionES4_'/>
 <use f='tvm/src/tir/schedule/ir_comparator.cc' l='452' u='r' c='_ZN3tvm3tir19TensorizeComparator19CompareBufferRegionERKNS0_12BufferRegionES4_'/>
 <use f='tvm/src/tir/schedule/primitive/block_annotate.cc' l='225' u='m' c='_ZN3tvm3tir19StorageScopeMutator22VisitMatchBufferRegionERKNS0_17MatchBufferRegionE'/>
-<use f='tvm/src/tir/schedule/primitive/blockize_tensorize.cc' l='398' u='r' c='_ZN3tvm3tir14EvalSetRegionsERKNS_7runtime5ArrayINS0_12BufferRegionEvEERKNS1_3MapINS0_3VarENS_5arith6IntSetEvvEE'/>
-<use f='tvm/src/tir/schedule/primitive/blockize_tensorize.cc' l='550' u='r' c='_ZN3tvm3tir9TensorizeENS0_13ScheduleStateERKNS0_8StmtSRefERKNS0_12TensorIntrinE'/>
-<use f='tvm/src/tir/schedule/primitive/blockize_tensorize.cc' l='553' u='r' c='_ZN3tvm3tir9TensorizeENS0_13ScheduleStateERKNS0_8StmtSRefERKNS0_12TensorIntrinE'/>
+<use f='tvm/src/tir/schedule/primitive/blockize_tensorize.cc' l='400' u='r' c='_ZN3tvm3tir14EvalSetRegionsERKNS_7runtime5ArrayINS0_12BufferRegionEvEERKNS1_3MapINS0_3VarENS_5arith6IntSetEvvEE'/>
+<use f='tvm/src/tir/schedule/primitive/blockize_tensorize.cc' l='565' u='r' c='_ZN3tvm3tir9TensorizeENS0_13ScheduleStateERKNS0_8StmtSRefERKNS0_12TensorIntrinE'/>
+<use f='tvm/src/tir/schedule/primitive/blockize_tensorize.cc' l='568' u='r' c='_ZN3tvm3tir9TensorizeENS0_13ScheduleStateERKNS0_8StmtSRefERKNS0_12TensorIntrinE'/>
 <use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='89' u='m' c='_ZN3tvm3tir25GetBufferRegionFromBufferERKNS_7runtime5ArrayINS0_12BufferRegionEvEERKNS0_6BufferE'/>
 <use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='126' u='m' c='_ZN3tvm3tir14MakeCacheStageERKNS0_12BufferRegionEPNS0_14CacheStageInfoERKNS_7runtime6StringE'/>
 <use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='143' u='m' c='_ZN3tvm3tir14MakeCacheStageERKNS0_12BufferRegionEPNS0_14CacheStageInfoERKNS_7runtime6StringE'/>

@@ -1,0 +1,9 @@
+<dec f='tvm/src/te/operation/create_primfunc.h' l='41' type='tvm::tir::PrimFunc tvm::tir::CreatePrimFuncWithConstants(const Array&lt;te::Tensor&gt; &amp; arg_list, const Array&lt;runtime::NDArray&gt; &amp; constants, std::optional&lt;DataType&gt; index_dtype_override = std::nullopt)'/>
+<doc f='tvm/src/te/operation/create_primfunc.h' l='36'>/*! \brief The same as above but create a PrimFunc with AllocateConstNode. If the size of the
+ * constants array is N, the last N tensors in arg_list will be treated as constant tensors.
+ * Constant tensors will not be part of the parameters of the created PrimFunc, instead constants
+ * will be embedded in the body as AllocateConstNode.
+ */</doc>
+<use f='tvm/src/relay/backend/utils.cc' l='419' u='c' c='_ZN3tvm5relay7backend23DefaultTIRConverterImplERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS3_INS2_7NDArrayEvEEb'/>
+<def f='tvm/src/te/operation/create_primfunc.cc' l='496' ll='525' type='tvm::tir::PrimFunc tvm::tir::CreatePrimFuncWithConstants(const Array&lt;te::Tensor&gt; &amp; arg_list, const Array&lt;runtime::NDArray&gt; &amp; constants, std::optional&lt;DataType&gt; index_dtype_override = std::nullopt)'/>
+<use f='tvm/src/te/operation/create_primfunc.cc' l='529' u='c' c='_ZN3tvm3tir14CreatePrimFuncERKNS_7runtime5ArrayINS_2te6TensorEvEESt8optionalINS1_8DataTypeEE'/>

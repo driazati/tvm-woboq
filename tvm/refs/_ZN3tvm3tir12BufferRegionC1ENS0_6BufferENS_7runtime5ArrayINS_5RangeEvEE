@@ -1,18 +1,19 @@
-<dec f='tvm/include/tvm/tir/stmt.h' l='1139' type='void tvm::tir::BufferRegion::BufferRegion(tvm::tir::Buffer buffer, Array&lt;tvm::Range&gt; region)'/>
+<dec f='tvm/include/tvm/tir/stmt.h' l='1140' type='void tvm::tir::BufferRegion::BufferRegion(tvm::tir::Buffer buffer, Array&lt;tvm::Range&gt; region)'/>
 <use f='tvm/src/script/ir_builder/tir/utils.h' l='116' u='c' c='_ZN3tvm6script10ir_builder3tir20BufferRegionFromLoadENS_3tir10BufferLoadE'/>
 <use f='tvm/src/tir/analysis/block_access_region_detector.cc' l='335' u='c' c='_ZN3tvm3tir22BlockReadWriteDetector14CollectRegionsERKSt6vectorINS0_6BufferESaIS3_EERKS2_IS2_INS_5arith6IntSetESaIS9_EESaISB_EEPKSt13unordered_setIPKN9306419'/>
 <use f='tvm/src/tir/analysis/device_constraint_utils.cc' l='350' u='c' c='_ZN3tvm3tir12_GLOBAL__N_129ApplyDeviceConstraintsMutator9VisitItemEPKNS0_16BufferRegionNodeE'/>
+<use f='tvm/src/tir/ir/data_type_rewriter.cc' l='386' u='c' c='_ZN3tvm3tir21IndexDataTypeRewriter17VisitBufferRegionERKNS0_12BufferRegionE'/>
 <use f='tvm/src/tir/ir/specialize.cc' l='246' u='c' c='_ZN3tvm3tir19PrimFuncSpecializer18MutateBufferRegionERKNS0_12BufferRegionE'/>
 <def f='tvm/src/tir/ir/stmt.cc' l='809' ll='817' type='void tvm::tir::BufferRegion::BufferRegion(tvm::tir::Buffer buffer, Array&lt;tvm::Range&gt; region)'/>
 <use f='tvm/src/tir/ir/stmt.cc' l='824' u='c' c='_ZN3tvm3tir12BufferRegion10FullRegionENS0_6BufferE'/>
 <use f='tvm/src/tir/ir/stmt.cc' l='837' u='c' c='_ZN3tvm3tir12BufferRegion9FromPointENS0_6BufferENS_7runtime5ArrayINS_8PrimExprEvEE'/>
 <use f='tvm/src/tir/ir/stmt.cc' l='841' u='c'/>
 <doc f='tvm/src/tir/ir/stmt.cc' l='808'>// BufferRegion</doc>
-<use f='tvm/src/tir/ir/stmt_functor.cc' l='236' u='c' c='_ZN3tvm3tir11StmtMutator8Internal6MutateEPS1_RKNS_7runtime5ArrayINS0_12BufferRegionEvEE'/>
-<use f='tvm/src/tir/ir/stmt_functor.cc' l='249' u='c' c='_ZN3tvm3tir11StmtMutator8Internal6MutateEPS1_RKNS_7runtime5ArrayINS0_17MatchBufferRegionEvEE'/>
+<use f='tvm/src/tir/ir/stmt_functor.cc' l='237' u='c' c='_ZN3tvm3tir11StmtMutator8Internal6MutateEPS1_RKNS_7runtime5ArrayINS0_12BufferRegionEvEE'/>
+<use f='tvm/src/tir/ir/stmt_functor.cc' l='250' u='c' c='_ZN3tvm3tir11StmtMutator8Internal6MutateEPS1_RKNS_7runtime5ArrayINS0_17MatchBufferRegionEvEE'/>
 <use f='tvm/src/tir/schedule/primitive/block_annotate.cc' l='230' u='c' c='_ZN3tvm3tir19StorageScopeMutator22VisitMatchBufferRegionERKNS0_17MatchBufferRegionE'/>
-<use f='tvm/src/tir/schedule/primitive/blockize_tensorize.cc' l='407' u='c' c='_ZN3tvm3tir14EvalSetRegionsERKNS_7runtime5ArrayINS0_12BufferRegionEvEERKNS1_3MapINS0_3VarENS_5arith6IntSetEvvEE'/>
-<use f='tvm/src/tir/schedule/primitive/blockize_tensorize.cc' l='578' u='c' c='_ZN3tvm3tir9TensorizeENS0_13ScheduleStateERKNS0_8StmtSRefERKNS0_12TensorIntrinE'/>
+<use f='tvm/src/tir/schedule/primitive/blockize_tensorize.cc' l='409' u='c' c='_ZN3tvm3tir14EvalSetRegionsERKNS_7runtime5ArrayINS0_12BufferRegionEvEERKNS1_3MapINS0_3VarENS_5arith6IntSetEvvEE'/>
+<use f='tvm/src/tir/schedule/primitive/blockize_tensorize.cc' l='593' u='c' c='_ZN3tvm3tir9TensorizeENS0_13ScheduleStateERKNS0_8StmtSRefERKNS0_12TensorIntrinE'/>
 <use f='tvm/src/tir/schedule/primitive/cache_index.cc' l='272' u='c' c='_ZN3tvm3tir19MakeIndexCacheStageEPNS0_9IndexInfoE'/>
 <use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='141' u='c' c='_ZN3tvm3tir14MakeCacheStageERKNS0_12BufferRegionEPNS0_14CacheStageInfoERKNS_7runtime6StringE'/>
 <use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='142' u='c' c='_ZN3tvm3tir14MakeCacheStageERKNS0_12BufferRegionEPNS0_14CacheStageInfoERKNS_7runtime6StringE'/>
