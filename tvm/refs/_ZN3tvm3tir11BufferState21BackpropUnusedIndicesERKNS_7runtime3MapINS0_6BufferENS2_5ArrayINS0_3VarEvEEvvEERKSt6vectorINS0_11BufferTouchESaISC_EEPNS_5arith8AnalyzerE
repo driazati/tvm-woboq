@@ -1,7 +1,7 @@
-<dec f='tvm/src/tir/analysis/control_flow_graph.h' l='247' type='void tvm::tir::BufferState::BackpropUnusedIndices(const Map&lt;tvm::tir::Buffer, Array&lt;tvm::tir::Var&gt;&gt; &amp; axis_var_lookup, const std::vector&lt;BufferTouch&gt; &amp; touch_points, arith::Analyzer * analyzer)'/>
-<def f='tvm/src/tir/analysis/control_flow_graph.cc' l='1218' ll='1282' type='void tvm::tir::BufferState::BackpropUnusedIndices(const Map&lt;tvm::tir::Buffer, Array&lt;tvm::tir::Var&gt;&gt; &amp; axis_var_lookup, const std::vector&lt;BufferTouch&gt; &amp; touch_points, tvm::arith::Analyzer * analyzer)'/>
-<use f='tvm/src/tir/analysis/control_flow_graph.cc' l='1568' u='c' c='_ZN3tvm3tir16ControlFlowGraph29BackwardPropagateUnusedValuesEm'/>
-<doc f='tvm/src/tir/analysis/control_flow_graph.h' l='231'>/*! \brief Update unused buffer locations based on buffer touches
+<dec f='tvm/src/tir/analysis/control_flow_graph.h' l='248' type='void tvm::tir::BufferState::BackpropUnusedIndices(const Map&lt;tvm::tir::Buffer, Array&lt;tvm::tir::Var&gt;&gt; &amp; axis_var_lookup, const std::vector&lt;BufferTouch&gt; &amp; touch_points, arith::Analyzer * analyzer)'/>
+<def f='tvm/src/tir/analysis/control_flow_graph.cc' l='1239' ll='1303' type='void tvm::tir::BufferState::BackpropUnusedIndices(const Map&lt;tvm::tir::Buffer, Array&lt;tvm::tir::Var&gt;&gt; &amp; axis_var_lookup, const std::vector&lt;BufferTouch&gt; &amp; touch_points, tvm::arith::Analyzer * analyzer)'/>
+<use f='tvm/src/tir/analysis/control_flow_graph.cc' l='1600' u='c' c='_ZN3tvm3tir16ControlFlowGraph29BackwardPropagateUnusedValuesESt8optionalImE'/>
+<doc f='tvm/src/tir/analysis/control_flow_graph.h' l='232'>/*! \brief Update unused buffer locations based on buffer touches
    *
    * For any Write, mark the written-to indices as unused.  (That is,
    * immediately prior to assigning `buf[i] = expr`, the value stored

@@ -1430,10 +1430,10 @@
 <use f='tvm/src/tir/analysis/block_access_region_detector.cc' l='335' u='c' c='_ZN3tvm3tir22BlockReadWriteDetector14CollectRegionsERKSt6vectorINS0_6BufferESaIS3_EERKS2_IS2_INS_5arith6IntSetESaIS9_EESaISB_EEPKSt13unordered_setIPKN9306419'/>
 <use f='tvm/src/tir/analysis/block_access_region_detector.cc' l='389' u='c' c='_ZN3tvm3tir23GetBlockReadWriteRegionERKNS0_5BlockERKNS_7runtime3MapINS0_3VarENS0_6BufferEvvEE'/>
 <use f='tvm/src/tir/analysis/block_access_region_detector.cc' l='390' u='c' c='_ZN3tvm3tir23GetBlockReadWriteRegionERKNS0_5BlockERKNS_7runtime3MapINS0_3VarENS0_6BufferEvvEE'/>
-<use f='tvm/src/tir/analysis/control_flow_graph.cc' l='662' u='c' c='_ZNK3tvm3tir16ControlFlowGraph16ControlFlowBlock15MakeBufferTouchERKNS0_6BufferENS_7runtime5ArrayINS0_3VarEvEENS7_INS_8PrimExprEvEENS0_11BufferTouch10AccessTypeESA_'/>
-<use f='tvm/src/tir/analysis/control_flow_graph.cc' l='670' u='c' c='_ZNK3tvm3tir16ControlFlowGraph16ControlFlowBlock15MakeBufferTouchERKNS0_6BufferENS_7runtime5ArrayINS0_3VarEvEENS7_INS_8PrimExprEvEENS0_11BufferTouch10AccessTypeESA_'/>
-<use f='tvm/src/tir/analysis/control_flow_graph.cc' l='684' u='c' c='_ZNK3tvm3tir16ControlFlowGraph16ControlFlowBlock15MakeBufferTouchERKNS0_6BufferENS_7runtime5ArrayINS0_3VarEvEENS7_INS_8PrimExprEvEENS0_11BufferTouch10AccessTypeESA_'/>
-<use f='tvm/src/tir/analysis/control_flow_graph.cc' l='1323' u='c' c='_ZN3tvm3tir16ControlFlowGraph17GetIndexVariablesERKNS0_6BufferERKNS_7runtime5ArrayINS_8PrimExprEvEE'/>
+<use f='tvm/src/tir/analysis/control_flow_graph.cc' l='663' u='c' c='_ZNK3tvm3tir16ControlFlowGraph16ControlFlowBlock15MakeBufferTouchERKNS0_6BufferENS_7runtime5ArrayINS0_3VarEvEENS7_INS_8PrimExprEvEENS0_11BufferTouch10AccessTypeESA_'/>
+<use f='tvm/src/tir/analysis/control_flow_graph.cc' l='671' u='c' c='_ZNK3tvm3tir16ControlFlowGraph16ControlFlowBlock15MakeBufferTouchERKNS0_6BufferENS_7runtime5ArrayINS0_3VarEvEENS7_INS_8PrimExprEvEENS0_11BufferTouch10AccessTypeESA_'/>
+<use f='tvm/src/tir/analysis/control_flow_graph.cc' l='685' u='c' c='_ZNK3tvm3tir16ControlFlowGraph16ControlFlowBlock15MakeBufferTouchERKNS0_6BufferENS_7runtime5ArrayINS0_3VarEvEENS7_INS_8PrimExprEvEENS0_11BufferTouch10AccessTypeESA_'/>
+<use f='tvm/src/tir/analysis/control_flow_graph.cc' l='1344' u='c' c='_ZN3tvm3tir16ControlFlowGraph17GetIndexVariablesERKNS0_6BufferERKNS_7runtime5ArrayINS_8PrimExprEvEE'/>
 <use f='tvm/src/tir/analysis/device_constraint_utils.cc' l='470' u='c' c='_ZN3tvm3tir34GetPrimFuncArgAndResultConstraintsERKNS0_8PrimFuncERKNS_8FuncTypeE'/>
 <use f='tvm/src/tir/analysis/device_constraint_utils.cc' l='477' u='c' c='_ZN3tvm3tir34GetPrimFuncArgAndResultConstraintsERKNS0_8PrimFuncERKNS_8FuncTypeE'/>
 <use f='tvm/src/tir/analysis/device_constraint_utils.cc' l='491' u='c'/>
@@ -1805,6 +1805,10 @@
 <use f='tvm/src/tir/transforms/plan_update_buffer_allocation_location.cc' l='73' u='c' c='_ZN3tvm3tir23BufferAllocationLocatorC1ERKNS0_8PrimFuncE'/>
 <use f='tvm/src/tir/transforms/plan_update_buffer_allocation_location.cc' l='94' u='c' c='_ZN3tvm3tir23BufferAllocationLocator10VisitStmt_EPKNS0_7ForNodeE'/>
 <use f='tvm/src/tir/transforms/plan_update_buffer_allocation_location.cc' l='173' u='c' c='_ZNK3tvm3tir23BufferAllocationLocator27RemoveRedundantBufferRegionERKNS_7runtime5ArrayINS0_12BufferRegionEvEE'/>
+<use f='tvm/src/tir/transforms/remove_no_op.cc' l='186' u='c' c='_ZN3tvm3tir11NoOpRemover10VisitStmt_EPKNS0_11SeqStmtNodeE'/>
+<use f='tvm/src/tir/transforms/remove_no_op.cc' l='209' u='c' c='_ZN3tvm3tir11NoOpRemover10VisitStmt_EPKNS0_15BufferStoreNodeE'/>
+<use f='tvm/src/tir/transforms/remove_no_op.cc' l='211' u='c' c='_ZN3tvm3tir11NoOpRemover10VisitStmt_EPKNS0_15BufferStoreNodeE'/>
+<use f='tvm/src/tir/transforms/remove_no_op.cc' l='278' u='c' c='_ZN3tvm3tir11NoOpRemover12MakeEvaluateERKNS_7runtime5ArrayINS_8PrimExprEvEE'/>
 <use f='tvm/src/tir/transforms/remove_weight_layout_rewrite_block.cc' l='59' u='c' c='_ZN3tvm3tir24RemoveLayoutRewriteBlock10VisitStmt_EPKNS0_9BlockNodeE'/>
 <use f='tvm/src/tir/transforms/remove_weight_layout_rewrite_block.cc' l='96' u='c' c='_ZN3tvm3tir24RemoveLayoutRewriteBlock10VisitStmt_EPKNS0_9BlockNodeE'/>
 <use f='tvm/src/tir/transforms/remove_weight_layout_rewrite_block.cc' l='166' u='c' c='_ZN3tvm3tir20AllocateConstRewrite10VisitStmt_EPKNS0_9BlockNodeE'/>

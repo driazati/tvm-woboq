@@ -39,13 +39,13 @@
 <use f='tvm/src/printer/tvmscript_printer.cc' l='195'/>
 <use f='tvm/src/printer/tvmscript_printer.cc' l='197'/>
 <use f='tvm/src/printer/tvmscript_printer.cc' l='319' c='_ZN3tvm3tir16TVMScriptPrinter9PrintLoopERKNS0_3ForE'/>
-<use f='tvm/src/printer/tvmscript_printer.cc' l='1307' c='_ZN3tvm3tir16TVMScriptPrinter10VisitStmt_EPKNS0_7ForNodeE'/>
-<use f='tvm/src/printer/tvmscript_printer.cc' l='1310' c='_ZN3tvm3tir16TVMScriptPrinter10VisitStmt_EPKNS0_7ForNodeE'/>
-<use f='tvm/src/printer/tvmscript_printer.cc' l='1313' c='_ZN3tvm3tir16TVMScriptPrinter10VisitStmt_EPKNS0_7ForNodeE'/>
-<use f='tvm/src/printer/tvmscript_printer.cc' l='1328' c='_ZN3tvm3tir16TVMScriptPrinter10VisitStmt_EPKNS0_7ForNodeE'/>
-<use f='tvm/src/printer/tvmscript_printer.cc' l='1910' c='_ZN3tvm3tir16TVMScriptPrinter9PrintLoopERKNS0_3ForE'/>
-<use f='tvm/src/printer/tvmscript_printer.cc' l='1982' c='_ZN3tvm3tir30TVMScriptPrinterWithDiagnostic9PrintLoopERKNS0_3ForE'/>
-<use f='tvm/src/printer/tvmscript_printer.cc' l='2001' c='_ZN3tvm3tir30TVMScriptPrinterWithDiagnostic9PrintLoopERKNS0_3ForE'/>
+<use f='tvm/src/printer/tvmscript_printer.cc' l='1309' c='_ZN3tvm3tir16TVMScriptPrinter10VisitStmt_EPKNS0_7ForNodeE'/>
+<use f='tvm/src/printer/tvmscript_printer.cc' l='1312' c='_ZN3tvm3tir16TVMScriptPrinter10VisitStmt_EPKNS0_7ForNodeE'/>
+<use f='tvm/src/printer/tvmscript_printer.cc' l='1315' c='_ZN3tvm3tir16TVMScriptPrinter10VisitStmt_EPKNS0_7ForNodeE'/>
+<use f='tvm/src/printer/tvmscript_printer.cc' l='1330' c='_ZN3tvm3tir16TVMScriptPrinter10VisitStmt_EPKNS0_7ForNodeE'/>
+<use f='tvm/src/printer/tvmscript_printer.cc' l='1912' c='_ZN3tvm3tir16TVMScriptPrinter9PrintLoopERKNS0_3ForE'/>
+<use f='tvm/src/printer/tvmscript_printer.cc' l='1984' c='_ZN3tvm3tir30TVMScriptPrinterWithDiagnostic9PrintLoopERKNS0_3ForE'/>
+<use f='tvm/src/printer/tvmscript_printer.cc' l='2003' c='_ZN3tvm3tir30TVMScriptPrinterWithDiagnostic9PrintLoopERKNS0_3ForE'/>
 <size>8</size>
 <use f='tvm/src/relay/backend/aot/aot_lower_main.cc' l='697' c='_ZN3tvm5relay7backend3aot14AOTMainLowerer12CopyToOutputENS_8PrimExprES4_bm'/>
 <size>8</size>

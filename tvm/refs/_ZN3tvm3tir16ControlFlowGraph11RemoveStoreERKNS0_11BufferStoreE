@@ -1,5 +1,6 @@
-<dec f='tvm/src/tir/analysis/control_flow_graph.h' l='445' type='void tvm::tir::ControlFlowGraph::RemoveStore(const tir::BufferStore &amp; store)'/>
-<doc f='tvm/src/tir/analysis/control_flow_graph.h' l='434'>/*! \brief Remove the specified BufferStore from the control-flow
+<dec f='tvm/src/tir/analysis/control_flow_graph.h' l='446' type='void tvm::tir::ControlFlowGraph::RemoveStore(const tir::BufferStore &amp; store)'/>
+<def f='tvm/src/tir/analysis/control_flow_graph.cc' l='830' ll='847' type='void tvm::tir::ControlFlowGraph::RemoveStore(const tir::BufferStore &amp; store)'/>
+<doc f='tvm/src/tir/analysis/control_flow_graph.h' l='435'>/*! \brief Remove the specified BufferStore from the control-flow
    *  graph
    *
    * Removing the specified store, which may reflow known values.
@@ -10,3 +11,4 @@
    *
    * \param store The store to remove
    */</doc>
+<use f='tvm/src/tir/transforms/remove_no_op.cc' l='220' u='c' c='_ZN3tvm3tir11NoOpRemover10VisitStmt_EPKNS0_15BufferStoreNodeE'/>

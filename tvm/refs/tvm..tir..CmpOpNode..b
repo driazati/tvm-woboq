@@ -92,10 +92,10 @@
 <use f='tvm/src/target/stackvm/codegen_stackvm.cc' l='384' u='r' c='_ZN3tvm7codegen14CodeGenStackVM10VisitExpr_EPKNS_3tir6LTNodeE'/>
 <use f='tvm/src/target/stackvm/codegen_stackvm.cc' l='387' u='r' c='_ZN3tvm7codegen14CodeGenStackVM10VisitExpr_EPKNS_3tir6GENodeE'/>
 <use f='tvm/src/target/stackvm/codegen_stackvm.cc' l='392' u='r' c='_ZN3tvm7codegen14CodeGenStackVM10VisitExpr_EPKNS_3tir6GTNodeE'/>
-<use f='tvm/src/tir/analysis/control_flow_graph.cc' l='295' u='r' c='_ZN3tvm3tir23ControlFlowGraphBuilder25AssumeConstraintComponentENS_8PrimExprEb'/>
-<use f='tvm/src/tir/analysis/control_flow_graph.cc' l='296' u='m' c='_ZN3tvm3tir23ControlFlowGraphBuilder25AssumeConstraintComponentENS_8PrimExprEb'/>
-<use f='tvm/src/tir/analysis/control_flow_graph.cc' l='726' u='r' c='_ZNK3tvm3tir16ControlFlowGraph16ControlFlowBlock15MakeBufferTouchERKNS0_6BufferENS_7runtime5ArrayINS0_3VarEvEENS7_INS_8PrimExprEvEENS0_11BufferTouch10AccessTypeESA_'/>
+<use f='tvm/src/tir/analysis/control_flow_graph.cc' l='296' u='r' c='_ZN3tvm3tir23ControlFlowGraphBuilder25AssumeConstraintComponentENS_8PrimExprEb'/>
+<use f='tvm/src/tir/analysis/control_flow_graph.cc' l='297' u='m' c='_ZN3tvm3tir23ControlFlowGraphBuilder25AssumeConstraintComponentENS_8PrimExprEb'/>
 <use f='tvm/src/tir/analysis/control_flow_graph.cc' l='727' u='r' c='_ZNK3tvm3tir16ControlFlowGraph16ControlFlowBlock15MakeBufferTouchERKNS0_6BufferENS_7runtime5ArrayINS0_3VarEvEENS7_INS_8PrimExprEvEENS0_11BufferTouch10AccessTypeESA_'/>
+<use f='tvm/src/tir/analysis/control_flow_graph.cc' l='728' u='r' c='_ZNK3tvm3tir16ControlFlowGraph16ControlFlowBlock15MakeBufferTouchERKNS0_6BufferENS_7runtime5ArrayINS0_3VarEvEENS7_INS_8PrimExprEvEENS0_11BufferTouch10AccessTypeESA_'/>
 <use f='tvm/src/tir/ir/data_type_rewriter.cc' l='148' u='r' c='_ZN3tvm3tir17DataTypeLegalizer10VisitExpr_EPKNS0_6EQNodeE'/>
 <use f='tvm/src/tir/ir/data_type_rewriter.cc' l='149' u='m' c='_ZN3tvm3tir17DataTypeLegalizer10VisitExpr_EPKNS0_6EQNodeE'/>
 <use f='tvm/src/tir/ir/data_type_rewriter.cc' l='148' u='r' c='_ZN3tvm3tir17DataTypeLegalizer10VisitExpr_EPKNS0_6NENodeE'/>
