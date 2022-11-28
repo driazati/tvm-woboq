@@ -155,7 +155,7 @@
 <use f='tvm/src/tir/schedule/primitive/layout_transformation.cc' l='680'/>
 <use f='tvm/src/tir/schedule/primitive/layout_transformation.cc' l='789' c='_ZN3tvm3tir23TransformLayoutRewriter10VisitStmt_EPKNS0_7ForNodeE'/>
 <use f='tvm/src/tir/schedule/primitive/layout_transformation.cc' l='789' c='_ZN3tvm3tir23TransformLayoutRewriter10VisitStmt_EPKNS0_7ForNodeE'/>
-<use f='tvm/src/tir/schedule/primitive/layout_transformation.cc' l='1356' c='_ZN3tvm3tir20TransformBlockLayoutENS0_13ScheduleStateERKNS0_8StmtSRefERKNS0_8IndexMapE'/>
+<use f='tvm/src/tir/schedule/primitive/layout_transformation.cc' l='1388' c='_ZN3tvm3tir20TransformBlockLayoutENS0_13ScheduleStateERKNS0_8StmtSRefERKNS0_8IndexMapE'/>
 <size>8</size>
 <use f='tvm/src/tir/schedule/primitive/loop_transformation.cc' l='86' c='_ZN3tvm3tir27IterMapSimplifyBlockBinding16SimplifyBindingsENS0_4StmtERKNS_7runtime5ArrayINS0_8StmtSRefEvEEPNS3_7MapNodeEb'/>
 <use f='tvm/src/tir/schedule/primitive/loop_transformation.cc' l='93' c='_ZN3tvm3tir27IterMapSimplifyBlockBinding16SimplifyBindingsENS0_4StmtERKNS_7runtime5ArrayINS0_8StmtSRefEvEEPNS3_7MapNodeEb'/>
