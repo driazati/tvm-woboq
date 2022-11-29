@@ -1,13 +1,13 @@
 <inh f='tvm/include/tvm/ir/expr.h' l='112' c='tvm::PrimExpr'/>
-<def f='tvm/include/tvm/tir/expr.h' l='362' ll='366'/>
-<use f='tvm/include/tvm/tir/expr.h' l='365' c='_ZN3tvm3tir2NEC1ERKS1_'/>
-<use f='tvm/include/tvm/tir/expr.h' l='365' c='_ZN3tvm3tir2NEC1EOS1_'/>
-<use f='tvm/include/tvm/tir/expr.h' l='365' c='_ZN3tvm3tir2NEaSERKS1_'/>
-<use f='tvm/include/tvm/tir/expr.h' l='365' c='_ZN3tvm3tir2NEaSERKS1_'/>
-<use f='tvm/include/tvm/tir/expr.h' l='365' c='_ZN3tvm3tir2NEaSEOS1_'/>
-<use f='tvm/include/tvm/tir/expr.h' l='365' c='_ZN3tvm3tir2NEaSEOS1_'/>
+<def f='tvm/include/tvm/tir/expr.h' l='374' ll='379'/>
+<use f='tvm/include/tvm/tir/expr.h' l='377' c='_ZN3tvm3tir2NEC1ERKS1_'/>
+<use f='tvm/include/tvm/tir/expr.h' l='377' c='_ZN3tvm3tir2NEC1EOS1_'/>
+<use f='tvm/include/tvm/tir/expr.h' l='377' c='_ZN3tvm3tir2NEaSERKS1_'/>
+<use f='tvm/include/tvm/tir/expr.h' l='377' c='_ZN3tvm3tir2NEaSERKS1_'/>
+<use f='tvm/include/tvm/tir/expr.h' l='377' c='_ZN3tvm3tir2NEaSEOS1_'/>
+<use f='tvm/include/tvm/tir/expr.h' l='377' c='_ZN3tvm3tir2NEaSEOS1_'/>
 <size>8</size>
-<doc f='tvm/include/tvm/tir/expr.h' l='358'>/*!
+<doc f='tvm/include/tvm/tir/expr.h' l='370'>/*!
  * \brief Managed reference to NENode
  * \sa NENode
  */</doc>
@@ -17,6 +17,7 @@
 <fun r='_ZN3tvm3tir2NEC1ERKS1_'/>
 <fun r='_ZN3tvm3tir2NEC1EOS1_'/>
 <fun r='_ZNK3tvm3tir2NE3getEv'/>
+<fun r='_ZN3tvm3tir2NE11CopyOnWriteEv'/>
 <use f='tvm/src/arith/const_fold.h' l='402' c='_ZN3tvm5arith12TryConstFoldENS_8PrimExprES1_'/>
 <size>8</size>
 <use f='tvm/src/arith/pattern_match.h' l='407' c='_ZN3tvm5arithneERKNS0_7PatternIT_EERKNS1_IT0_EE'/>

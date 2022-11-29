@@ -1,13 +1,13 @@
 <inh f='tvm/include/tvm/tir/stmt.h' l='57' c='tvm::tir::Stmt'/>
-<def f='tvm/include/tvm/tir/stmt.h' l='1003' ll='1011'/>
-<use f='tvm/include/tvm/tir/stmt.h' l='1009' c='_ZN3tvm3tir3ForC1ERKS1_'/>
-<use f='tvm/include/tvm/tir/stmt.h' l='1009' c='_ZN3tvm3tir3ForC1EOS1_'/>
-<use f='tvm/include/tvm/tir/stmt.h' l='1009' c='_ZN3tvm3tir3ForaSERKS1_'/>
-<use f='tvm/include/tvm/tir/stmt.h' l='1009' c='_ZN3tvm3tir3ForaSERKS1_'/>
-<use f='tvm/include/tvm/tir/stmt.h' l='1009' c='_ZN3tvm3tir3ForaSEOS1_'/>
-<use f='tvm/include/tvm/tir/stmt.h' l='1009' c='_ZN3tvm3tir3ForaSEOS1_'/>
+<def f='tvm/include/tvm/tir/stmt.h' l='1012' ll='1020'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='1018' c='_ZN3tvm3tir3ForC1ERKS1_'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='1018' c='_ZN3tvm3tir3ForC1EOS1_'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='1018' c='_ZN3tvm3tir3ForaSERKS1_'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='1018' c='_ZN3tvm3tir3ForaSERKS1_'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='1018' c='_ZN3tvm3tir3ForaSEOS1_'/>
+<use f='tvm/include/tvm/tir/stmt.h' l='1018' c='_ZN3tvm3tir3ForaSEOS1_'/>
 <size>8</size>
-<doc f='tvm/include/tvm/tir/stmt.h' l='999'>/*!
+<doc f='tvm/include/tvm/tir/stmt.h' l='1008'>/*!
  * \brief Managed reference to ForNode.
  * \sa ForNode
  */</doc>

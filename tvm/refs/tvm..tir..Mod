@@ -1,13 +1,13 @@
 <inh f='tvm/include/tvm/ir/expr.h' l='112' c='tvm::PrimExpr'/>
-<def f='tvm/include/tvm/tir/expr.h' l='234' ll='238'/>
-<use f='tvm/include/tvm/tir/expr.h' l='237' c='_ZN3tvm3tir3ModC1ERKS1_'/>
-<use f='tvm/include/tvm/tir/expr.h' l='237' c='_ZN3tvm3tir3ModC1EOS1_'/>
-<use f='tvm/include/tvm/tir/expr.h' l='237' c='_ZN3tvm3tir3ModaSERKS1_'/>
-<use f='tvm/include/tvm/tir/expr.h' l='237' c='_ZN3tvm3tir3ModaSERKS1_'/>
-<use f='tvm/include/tvm/tir/expr.h' l='237' c='_ZN3tvm3tir3ModaSEOS1_'/>
-<use f='tvm/include/tvm/tir/expr.h' l='237' c='_ZN3tvm3tir3ModaSEOS1_'/>
+<def f='tvm/include/tvm/tir/expr.h' l='240' ll='245'/>
+<use f='tvm/include/tvm/tir/expr.h' l='243' c='_ZN3tvm3tir3ModC1ERKS1_'/>
+<use f='tvm/include/tvm/tir/expr.h' l='243' c='_ZN3tvm3tir3ModC1EOS1_'/>
+<use f='tvm/include/tvm/tir/expr.h' l='243' c='_ZN3tvm3tir3ModaSERKS1_'/>
+<use f='tvm/include/tvm/tir/expr.h' l='243' c='_ZN3tvm3tir3ModaSERKS1_'/>
+<use f='tvm/include/tvm/tir/expr.h' l='243' c='_ZN3tvm3tir3ModaSEOS1_'/>
+<use f='tvm/include/tvm/tir/expr.h' l='243' c='_ZN3tvm3tir3ModaSEOS1_'/>
 <size>8</size>
-<doc f='tvm/include/tvm/tir/expr.h' l='230'>/*!
+<doc f='tvm/include/tvm/tir/expr.h' l='236'>/*!
  * \brief Managed reference to ModNode
  * \sa ModNode
  */</doc>
@@ -17,6 +17,7 @@
 <fun r='_ZN3tvm3tir3ModC1ERKS1_'/>
 <fun r='_ZN3tvm3tir3ModC1EOS1_'/>
 <fun r='_ZNK3tvm3tir3Mod3getEv'/>
+<fun r='_ZN3tvm3tir3Mod11CopyOnWriteEv'/>
 <use f='tvm/src/arith/const_fold.h' l='260' c='_ZN3tvm5arith12TryConstFoldENS_8PrimExprES1_'/>
 <size>8</size>
 <use f='tvm/src/arith/pattern_match.h' l='387' c='_ZN3tvm5arithrmERKNS0_7PatternIT_EERKNS1_IT0_EE'/>
