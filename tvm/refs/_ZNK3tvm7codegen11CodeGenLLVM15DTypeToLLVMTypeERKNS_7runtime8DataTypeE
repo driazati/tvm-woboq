@@ -1,7 +1,7 @@
-<dec f='tvm/src/target/llvm/codegen_llvm.h' l='364' type='llvm::Type * tvm::codegen::CodeGenLLVM::DTypeToLLVMType(const tvm::DataType &amp; dtype) const'/>
+<dec f='tvm/src/target/llvm/codegen_llvm.h' l='367' type='llvm::Type * tvm::codegen::CodeGenLLVM::DTypeToLLVMType(const tvm::DataType &amp; dtype) const'/>
 <use f='tvm/src/target/llvm/codegen_amdgpu.cc' l='122' u='c' c='_ZN3tvm7codegen13CodeGenAMDGPU10VisitStmt_EPKNS_3tir12AllocateNodeE'/>
 <use f='tvm/src/target/llvm/codegen_amdgpu.cc' l='147' u='c' c='_ZN3tvm7codegen13CodeGenAMDGPU10VisitStmt_EPKNS_3tir12AllocateNodeE'/>
-<doc f='tvm/src/target/llvm/codegen_llvm.h' l='354'>/*!
+<doc f='tvm/src/target/llvm/codegen_llvm.h' l='357'>/*!
    * \brief Get the LLVM Type for a given runtime type.
    * \param dtype The runtime dtype.
    *
@@ -13,27 +13,27 @@
    */</doc>
 <use f='tvm/src/target/llvm/codegen_cpu.cc' l='921' u='c' c='_ZN3tvm7codegen10CodeGenCPU21MakeCallPackedLoweredERKNS_7runtime5ArrayINS_8PrimExprEvEERKNS2_8DataTypeEllb'/>
 <use f='tvm/src/target/llvm/codegen_hexagon.cc' l='450' u='c' c='_ZN3tvm7codegen14CodeGenHexagon16VectorLookupLoadENS_3tir6BufferENS_7runtime8DataTypeENS4_5ArrayINS_8PrimExprEvEE'/>
-<def f='tvm/src/target/llvm/codegen_llvm.cc' l='430' ll='466' type='llvm::Type * tvm::codegen::CodeGenLLVM::DTypeToLLVMType(const tvm::DataType &amp; dtype) const'/>
-<use f='tvm/src/target/llvm/codegen_llvm.cc' l='470' u='c' c='_ZNK3tvm7codegen11CodeGenLLVM11GetLLVMTypeERKNS_4TypeE'/>
-<use f='tvm/src/target/llvm/codegen_llvm.cc' l='588' u='c' c='_ZN3tvm7codegen11CodeGenLLVM20AllocateSharedMemoryENS_7runtime8DataTypeEmjiN4llvm11GlobalValue12LinkageTypesE'/>
-<use f='tvm/src/target/llvm/codegen_llvm.cc' l='668' u='c' c='_ZN3tvm7codegen11CodeGenLLVM12CreateVecPadEPN4llvm5ValueEi'/>
-<use f='tvm/src/target/llvm/codegen_llvm.cc' l='761' u='c' c='_ZN3tvm7codegen11CodeGenLLVM10CreateCastENS_7runtime8DataTypeES3_PN4llvm5ValueE'/>
-<use f='tvm/src/target/llvm/codegen_llvm.cc' l='767' u='c' c='_ZN3tvm7codegen11CodeGenLLVM10CreateCastENS_7runtime8DataTypeES3_PN4llvm5ValueE'/>
-<use f='tvm/src/target/llvm/codegen_llvm.cc' l='770' u='c' c='_ZN3tvm7codegen11CodeGenLLVM10CreateCastENS_7runtime8DataTypeES3_PN4llvm5ValueE'/>
-<use f='tvm/src/target/llvm/codegen_llvm.cc' l='779' u='c' c='_ZN3tvm7codegen11CodeGenLLVM10CreateCastENS_7runtime8DataTypeES3_PN4llvm5ValueE'/>
-<use f='tvm/src/target/llvm/codegen_llvm.cc' l='830' u='c' c='_ZN3tvm7codegen11CodeGenLLVM15CreateBufferPtrEPN4llvm5ValueENS_7runtime8DataTypeENS2_8ArrayRefIS4_EES6_'/>
-<use f='tvm/src/target/llvm/codegen_llvm.cc' l='832' u='c' c='_ZN3tvm7codegen11CodeGenLLVM15CreateBufferPtrEPN4llvm5ValueENS_7runtime8DataTypeENS2_8ArrayRefIS4_EES6_'/>
-<use f='tvm/src/target/llvm/codegen_llvm.cc' l='833' u='c' c='_ZN3tvm7codegen11CodeGenLLVM15CreateBufferPtrEPN4llvm5ValueENS_7runtime8DataTypeENS2_8ArrayRefIS4_EES6_'/>
-<use f='tvm/src/target/llvm/codegen_llvm.cc' l='1255' u='c' c='_ZN3tvm7codegen11CodeGenLLVM15CreateIntrinsicEPKNS_3tir8CallNodeE'/>
-<use f='tvm/src/target/llvm/codegen_llvm.cc' l='1290' u='c' c='_ZN3tvm7codegen11CodeGenLLVM15CreateIntrinsicEPKNS_3tir8CallNodeE'/>
-<use f='tvm/src/target/llvm/codegen_llvm.cc' l='1352' u='c' c='_ZN3tvm7codegen11CodeGenLLVM10VisitExpr_EPKNS_10IntImmNodeE'/>
-<use f='tvm/src/target/llvm/codegen_llvm.cc' l='1356' u='c' c='_ZN3tvm7codegen11CodeGenLLVM10VisitExpr_EPKNS_12FloatImmNodeE'/>
-<use f='tvm/src/target/llvm/codegen_llvm.cc' l='1505' u='c' c='_ZN3tvm7codegen11CodeGenLLVM19HasAlignmentPaddingENS_7runtime8DataTypeE'/>
-<use f='tvm/src/target/llvm/codegen_llvm.cc' l='1506' u='c' c='_ZN3tvm7codegen11CodeGenLLVM19HasAlignmentPaddingENS_7runtime8DataTypeE'/>
-<use f='tvm/src/target/llvm/codegen_llvm.cc' l='1629' u='c' c='_ZN3tvm7codegen11CodeGenLLVM10VisitExpr_EPKNS_3tir14BufferLoadNodeE'/>
-<use f='tvm/src/target/llvm/codegen_llvm.cc' l='1664' u='c' c='_ZN3tvm7codegen11CodeGenLLVM10VisitExpr_EPKNS_3tir8RampNodeE'/>
-<use f='tvm/src/target/llvm/codegen_llvm.cc' l='1810' u='c' c='_ZN3tvm7codegen11CodeGenLLVM10VisitStmt_EPKNS_3tir12AllocateNodeE'/>
-<use f='tvm/src/target/llvm/codegen_llvm.cc' l='1833' u='c' c='_ZN3tvm7codegen11CodeGenLLVM10VisitStmt_EPKNS_3tir12AllocateNodeE'/>
+<def f='tvm/src/target/llvm/codegen_llvm.cc' l='495' ll='531' type='llvm::Type * tvm::codegen::CodeGenLLVM::DTypeToLLVMType(const tvm::DataType &amp; dtype) const'/>
+<use f='tvm/src/target/llvm/codegen_llvm.cc' l='535' u='c' c='_ZNK3tvm7codegen11CodeGenLLVM11GetLLVMTypeERKNS_4TypeE'/>
+<use f='tvm/src/target/llvm/codegen_llvm.cc' l='653' u='c' c='_ZN3tvm7codegen11CodeGenLLVM20AllocateSharedMemoryENS_7runtime8DataTypeEmjiN4llvm11GlobalValue12LinkageTypesE'/>
+<use f='tvm/src/target/llvm/codegen_llvm.cc' l='733' u='c' c='_ZN3tvm7codegen11CodeGenLLVM12CreateVecPadEPN4llvm5ValueEi'/>
+<use f='tvm/src/target/llvm/codegen_llvm.cc' l='826' u='c' c='_ZN3tvm7codegen11CodeGenLLVM10CreateCastENS_7runtime8DataTypeES3_PN4llvm5ValueE'/>
+<use f='tvm/src/target/llvm/codegen_llvm.cc' l='832' u='c' c='_ZN3tvm7codegen11CodeGenLLVM10CreateCastENS_7runtime8DataTypeES3_PN4llvm5ValueE'/>
+<use f='tvm/src/target/llvm/codegen_llvm.cc' l='835' u='c' c='_ZN3tvm7codegen11CodeGenLLVM10CreateCastENS_7runtime8DataTypeES3_PN4llvm5ValueE'/>
+<use f='tvm/src/target/llvm/codegen_llvm.cc' l='844' u='c' c='_ZN3tvm7codegen11CodeGenLLVM10CreateCastENS_7runtime8DataTypeES3_PN4llvm5ValueE'/>
+<use f='tvm/src/target/llvm/codegen_llvm.cc' l='895' u='c' c='_ZN3tvm7codegen11CodeGenLLVM15CreateBufferPtrEPN4llvm5ValueENS_7runtime8DataTypeENS2_8ArrayRefIS4_EES6_'/>
+<use f='tvm/src/target/llvm/codegen_llvm.cc' l='897' u='c' c='_ZN3tvm7codegen11CodeGenLLVM15CreateBufferPtrEPN4llvm5ValueENS_7runtime8DataTypeENS2_8ArrayRefIS4_EES6_'/>
+<use f='tvm/src/target/llvm/codegen_llvm.cc' l='898' u='c' c='_ZN3tvm7codegen11CodeGenLLVM15CreateBufferPtrEPN4llvm5ValueENS_7runtime8DataTypeENS2_8ArrayRefIS4_EES6_'/>
+<use f='tvm/src/target/llvm/codegen_llvm.cc' l='1320' u='c' c='_ZN3tvm7codegen11CodeGenLLVM15CreateIntrinsicEPKNS_3tir8CallNodeE'/>
+<use f='tvm/src/target/llvm/codegen_llvm.cc' l='1355' u='c' c='_ZN3tvm7codegen11CodeGenLLVM15CreateIntrinsicEPKNS_3tir8CallNodeE'/>
+<use f='tvm/src/target/llvm/codegen_llvm.cc' l='1417' u='c' c='_ZN3tvm7codegen11CodeGenLLVM10VisitExpr_EPKNS_10IntImmNodeE'/>
+<use f='tvm/src/target/llvm/codegen_llvm.cc' l='1421' u='c' c='_ZN3tvm7codegen11CodeGenLLVM10VisitExpr_EPKNS_12FloatImmNodeE'/>
+<use f='tvm/src/target/llvm/codegen_llvm.cc' l='1570' u='c' c='_ZN3tvm7codegen11CodeGenLLVM19HasAlignmentPaddingENS_7runtime8DataTypeE'/>
+<use f='tvm/src/target/llvm/codegen_llvm.cc' l='1571' u='c' c='_ZN3tvm7codegen11CodeGenLLVM19HasAlignmentPaddingENS_7runtime8DataTypeE'/>
+<use f='tvm/src/target/llvm/codegen_llvm.cc' l='1694' u='c' c='_ZN3tvm7codegen11CodeGenLLVM10VisitExpr_EPKNS_3tir14BufferLoadNodeE'/>
+<use f='tvm/src/target/llvm/codegen_llvm.cc' l='1729' u='c' c='_ZN3tvm7codegen11CodeGenLLVM10VisitExpr_EPKNS_3tir8RampNodeE'/>
+<use f='tvm/src/target/llvm/codegen_llvm.cc' l='1875' u='c' c='_ZN3tvm7codegen11CodeGenLLVM10VisitStmt_EPKNS_3tir12AllocateNodeE'/>
+<use f='tvm/src/target/llvm/codegen_llvm.cc' l='1898' u='c' c='_ZN3tvm7codegen11CodeGenLLVM10VisitStmt_EPKNS_3tir12AllocateNodeE'/>
 <use f='tvm/src/target/llvm/codegen_nvptx.cc' l='103' u='c' c='_ZN3tvm7codegen12CodeGenNVPTX10VisitStmt_EPKNS_3tir12AllocateNodeE'/>
 <use f='tvm/src/target/llvm/codegen_nvptx.cc' l='127' u='c' c='_ZN3tvm7codegen12CodeGenNVPTX10VisitStmt_EPKNS_3tir12AllocateNodeE'/>
 <use f='tvm/src/target/llvm/codegen_x86_64.cc' l='102' u='c' c='_ZN3tvm7codegen13CodeGenX86_6410VisitExpr_EPKNS_3tir8CastNodeE'/>
