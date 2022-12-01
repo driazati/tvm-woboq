@@ -17,8 +17,9 @@
 <use f='tvm/include/tvm/tir/analysis.h' l='170' c='_ZN3tvm3tir13VerifyGPUCodeERKNS0_8PrimFuncENS_7runtime3MapINS4_6StringENS_8PrimExprEvvEE'/>
 <use f='tvm/include/tvm/tir/analysis.h' l='209' c='_ZN3tvm3tir22CalculateConstantBytesERKNS0_8PrimFuncERKNS_7IntegerE'/>
 <use f='tvm/include/tvm/tir/analysis.h' l='217' c='_ZN3tvm3tir23CalculateWorkspaceBytesERKNS0_8PrimFuncERKNS_7IntegerE'/>
-<use f='tvm/include/tvm/tir/analysis.h' l='228' c='_ZN3tvm3tir21DetectBufferAccessLCAERKNS0_8PrimFuncE'/>
-<use f='tvm/include/tvm/tir/analysis.h' l='237' c='_ZN3tvm3tir16VerifyWellFormedERKNS0_8PrimFuncEb'/>
+<use f='tvm/include/tvm/tir/analysis.h' l='224' c='_ZN3tvm3tir23CalculateAllocatedBytesERKNS0_8PrimFuncE'/>
+<use f='tvm/include/tvm/tir/analysis.h' l='234' c='_ZN3tvm3tir21DetectBufferAccessLCAERKNS0_8PrimFuncE'/>
+<use f='tvm/include/tvm/tir/analysis.h' l='243' c='_ZN3tvm3tir16VerifyWellFormedERKNS0_8PrimFuncEb'/>
 <use f='tvm/include/tvm/tir/stmt_functor.h' l='455' c='_ZN3tvm3tir9RenewDefsERKNS0_8PrimFuncE'/>
 <use f='tvm/include/tvm/tir/stmt_functor.h' l='455' c='_ZN3tvm3tir9RenewDefsERKNS0_8PrimFuncE'/>
 <size>8</size>
@@ -47,18 +48,18 @@
 <use f='tvm/include/tvm/tir/transform.h' l='58' c='_ZN3tvm3tir9transform18CreatePrimFuncPassERKNS_7runtime15TypedPackedFuncIFNS0_8PrimFuncES4_NS_8IRModuleENS_9transform11PassContextEEEEiNS2_6StringENS2_5ArrayISC_vEE'/>
 <use f='tvm/include/tvm/tir/transform.h' l='665' c='_ZN3tvm3tir9transform6FilterENS_7runtime15TypedPackedFuncIFbNS0_8PrimFuncEEEE'/>
 <use f='tvm/src/auto_scheduler/feature.cc' l='1114' c='_ZN3tvm14auto_scheduler18GetPerStoreFeatureERKNS_3tir8PrimFuncEiiPSt6vectorIfSaIfEEb'/>
-<use f='tvm/src/auto_scheduler/feature.cc' l='1407' c='_ZN3tvm14auto_scheduler29GetPerStoreFeaturesWorkerFuncERKNS0_10SearchTaskERKNS0_5StateEiPSt6vectorIfSaIfEEPSt6atomicIiE'/>
-<use f='tvm/src/auto_scheduler/feature.cc' l='1407' c='_ZN3tvm14auto_scheduler29GetPerStoreFeaturesWorkerFuncERKNS0_10SearchTaskERKNS0_5StateEiPSt6vectorIfSaIfEEPSt6atomicIiE'/>
-<use f='tvm/src/auto_scheduler/feature.cc' l='1736'/>
+<use f='tvm/src/auto_scheduler/feature.cc' l='1414' c='_ZN3tvm14auto_scheduler29GetPerStoreFeaturesWorkerFuncERKNS0_10SearchTaskERKNS0_5StateEiPSt6vectorIfSaIfEEPSt6atomicIiE'/>
+<use f='tvm/src/auto_scheduler/feature.cc' l='1414' c='_ZN3tvm14auto_scheduler29GetPerStoreFeaturesWorkerFuncERKNS0_10SearchTaskERKNS0_5StateEiPSt6vectorIfSaIfEEPSt6atomicIiE'/>
+<use f='tvm/src/auto_scheduler/feature.cc' l='1743'/>
 <size>8</size>
-<use f='tvm/src/driver/driver_api.cc' l='298' c='_ZN3tvm16ScheduleToModuleENS_2te8ScheduleERKNS_7runtime5ArrayINS2_9ObjectRefEvEERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKSt13unordered_2528338'/>
-<use f='tvm/src/driver/driver_api.cc' l='338' c='_ZN3tvm13LowerPrimFuncENS_3tir8PrimFuncERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEb'/>
-<use f='tvm/src/driver/driver_api.cc' l='340' c='_ZN3tvm13LowerPrimFuncENS_3tir8PrimFuncERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEb'/>
-<use f='tvm/src/driver/driver_api.cc' l='355'/>
-<use f='tvm/src/driver/driver_api.cc' l='589' c='_ZN3tvm21HostModulePassManagerENS_8IRModuleENS_6TargetE'/>
-<use f='tvm/src/driver/driver_api.cc' l='589' c='_ZN3tvm21HostModulePassManagerENS_8IRModuleENS_6TargetE'/>
-<use f='tvm/src/driver/driver_api.cc' l='615' c='_ZN3tvm23DeviceModulePassManagerENS_8IRModuleENS_6TargetE'/>
-<use f='tvm/src/driver/driver_api.cc' l='615' c='_ZN3tvm23DeviceModulePassManagerENS_8IRModuleENS_6TargetE'/>
+<use f='tvm/src/driver/driver_api.cc' l='297' c='_ZN3tvm16ScheduleToModuleENS_2te8ScheduleERKNS_7runtime5ArrayINS2_9ObjectRefEvEERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKSt13unordered_2528338'/>
+<use f='tvm/src/driver/driver_api.cc' l='337' c='_ZN3tvm13LowerPrimFuncENS_3tir8PrimFuncERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEb'/>
+<use f='tvm/src/driver/driver_api.cc' l='339' c='_ZN3tvm13LowerPrimFuncENS_3tir8PrimFuncERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEb'/>
+<use f='tvm/src/driver/driver_api.cc' l='354'/>
+<use f='tvm/src/driver/driver_api.cc' l='602' c='_ZN3tvm21HostModulePassManagerENS_8IRModuleENS_6TargetE'/>
+<use f='tvm/src/driver/driver_api.cc' l='602' c='_ZN3tvm21HostModulePassManagerENS_8IRModuleENS_6TargetE'/>
+<use f='tvm/src/driver/driver_api.cc' l='628' c='_ZN3tvm23DeviceModulePassManagerENS_8IRModuleENS_6TargetE'/>
+<use f='tvm/src/driver/driver_api.cc' l='628' c='_ZN3tvm23DeviceModulePassManagerENS_8IRModuleENS_6TargetE'/>
 <size>8</size>
 <use f='tvm/src/ir/function.cc' l='43'/>
 <size>8</size>
@@ -261,6 +262,12 @@
 <size>8</size>
 <use f='tvm/src/tir/analysis/buffer_access_lca_detector.cc' l='44' c='_ZN3tvm3tir11LCADetector6DetectERKNS0_8PrimFuncE'/>
 <use f='tvm/src/tir/analysis/buffer_access_lca_detector.cc' l='322' c='_ZN3tvm3tir21DetectBufferAccessLCAERKNS0_8PrimFuncE'/>
+<size>8</size>
+<use f='tvm/src/tir/analysis/calculate_allocated_memory.cc' l='43' c='_ZN3tvm3tir20AllocationCalculatorclERKNS0_8PrimFuncE'/>
+<use f='tvm/src/tir/analysis/calculate_allocated_memory.cc' l='52' c='_ZN3tvm3tir20AllocationCalculatorclERKNS0_8PrimFuncE'/>
+<use f='tvm/src/tir/analysis/calculate_allocated_memory.cc' l='82' c='_ZN3tvm3tir23CalculateAllocatedBytesERKNS0_8PrimFuncE'/>
+<use f='tvm/src/tir/analysis/calculate_allocated_memory.cc' l='86'/>
+<use f='tvm/src/tir/analysis/calculate_allocated_memory.cc' l='96' c='_ZN3tvm3tir9transform15VerifyVTCMLimitERKNS_7IntegerE'/>
 <size>8</size>
 <use f='tvm/src/tir/analysis/calculate_workspace.cc' l='38' c='_ZN3tvm3tir19WorkspaceCalculatorclERKNS0_8PrimFuncE'/>
 <use f='tvm/src/tir/analysis/calculate_workspace.cc' l='50' c='_ZN3tvm3tir19WorkspaceCalculatorclERKNS0_8PrimFuncE'/>

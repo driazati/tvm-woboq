@@ -94,8 +94,9 @@
 <use f='tvm/include/tvm/tir/analysis.h' l='170' c='_ZN3tvm3tir13VerifyGPUCodeERKNS0_8PrimFuncENS_7runtime3MapINS4_6StringENS_8PrimExprEvvEE'/>
 <use f='tvm/include/tvm/tir/analysis.h' l='185' c='_ZN3tvm3tir20GetBlockAccessRegionERKNS0_5BlockERKNS_7runtime3MapINS0_3VarENS0_6BufferEvvEE'/>
 <use f='tvm/include/tvm/tir/analysis.h' l='196' c='_ZN3tvm3tir23GetBlockReadWriteRegionERKNS0_5BlockERKNS_7runtime3MapINS0_3VarENS0_6BufferEvvEE'/>
-<use f='tvm/include/tvm/tir/analysis.h' l='228' c='_ZN3tvm3tir21DetectBufferAccessLCAERKNS0_8PrimFuncE'/>
-<use f='tvm/include/tvm/tir/analysis.h' l='295' c='_ZN3tvm3tir9transform13VerifyGPUCodeENS_7runtime3MapINS2_6StringENS_8PrimExprEvvEE'/>
+<use f='tvm/include/tvm/tir/analysis.h' l='224' c='_ZN3tvm3tir23CalculateAllocatedBytesERKNS0_8PrimFuncE'/>
+<use f='tvm/include/tvm/tir/analysis.h' l='234' c='_ZN3tvm3tir21DetectBufferAccessLCAERKNS0_8PrimFuncE'/>
+<use f='tvm/include/tvm/tir/analysis.h' l='301' c='_ZN3tvm3tir9transform13VerifyGPUCodeENS_7runtime3MapINS2_6StringENS_8PrimExprEvvEE'/>
 <use f='tvm/include/tvm/tir/stmt_functor.h' l='376' c='_ZN3tvm3tir10SubstituteERKNS_7runtime5ArrayINS_5RangeEvEERKNS1_3MapINS0_3VarENS_8PrimExprEvvEE'/>
 <use f='tvm/include/tvm/tir/stmt_functor.h' l='386' c='_ZN3tvm3tir10SubstituteET_RKNS_7runtime3MapINS0_3VarENS_8PrimExprEvvEE'/>
 <use f='tvm/include/tvm/arith/bound.h' l='56' c='_ZN3tvm5arith11DeduceBoundENS_8PrimExprES1_RKNS_7runtime3MapINS_3tir3VarENS0_6IntSetEvvEES9_'/>
@@ -216,10 +217,10 @@
 <use f='tvm/include/tvm/te/schedule_pass.h' l='67' c='_ZN3tvm2te10InferBoundERKNS0_8ScheduleE'/>
 <use f='tvm/include/tvm/te/schedule_pass.h' l='89' c='_ZN3tvm2te11ScheduleOpsENS0_8ScheduleENS_7runtime3MapINS_3tir7IterVarENS_5RangeEvvEEb'/>
 <use f='tvm/include/tvm/te/schedule_pass.h' l='108' c='_ZN3tvm2te26SchedulePostProcToPrimFuncENS_7runtime5ArrayINS1_9ObjectRefEvEENS_3tir4StmtENS1_8OptionalINS1_3MapINS0_6TensorENS5_6BufferEvvEEEE'/>
-<use f='tvm/src/auto_scheduler/search_policy/utils.h' l='98' c='_ZN3tvm14auto_scheduler11GetIntParamERKNS_7runtime3MapINS1_6StringENS1_9ObjectRefEvvEERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
-<use f='tvm/src/auto_scheduler/search_policy/utils.h' l='106' c='_ZN3tvm14auto_scheduler14GetDoubleParamERKNS_7runtime3MapINS1_6StringENS1_9ObjectRefEvvEERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
-<use f='tvm/src/auto_scheduler/search_policy/utils.h' l='114' c='_ZN3tvm14auto_scheduler14GetStringParamERKNS_7runtime3MapINS1_6StringENS1_9ObjectRefEvvEERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
-<use f='tvm/src/auto_scheduler/search_policy/utils.h' l='126' c='_ZN3tvm14auto_scheduler19GetIterNameSetParamERKNS_7runtime3MapINS1_6StringENS1_9ObjectRefEvvEERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<use f='tvm/src/auto_scheduler/search_policy/utils.h' l='103' c='_ZN3tvm14auto_scheduler11GetIntParamERKNS_7runtime3MapINS1_6StringENS1_9ObjectRefEvvEERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<use f='tvm/src/auto_scheduler/search_policy/utils.h' l='111' c='_ZN3tvm14auto_scheduler14GetDoubleParamERKNS_7runtime3MapINS1_6StringENS1_9ObjectRefEvvEERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<use f='tvm/src/auto_scheduler/search_policy/utils.h' l='119' c='_ZN3tvm14auto_scheduler14GetStringParamERKNS_7runtime3MapINS1_6StringENS1_9ObjectRefEvvEERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
+<use f='tvm/src/auto_scheduler/search_policy/utils.h' l='131' c='_ZN3tvm14auto_scheduler19GetIterNameSetParamERKNS_7runtime3MapINS1_6StringENS1_9ObjectRefEvvEERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
 <use f='tvm/src/auto_scheduler/compute_dag.cc' l='917' c='_ZNK3tvm14auto_scheduler10ComputeDAG13RewriteLayoutEPNS_7runtime5ArrayINS0_4StepEvEENS0_19LayoutRewriteOptionE'/>
 <use f='tvm/src/auto_scheduler/compute_dag.cc' l='1333' c='_ZNK3tvm14auto_scheduler10ComputeDAG10InferBoundERKNS0_5StateE'/>
 <use f='tvm/include/tvm/driver/driver_api.h' l='162' c='_ZN3tvm5buildERKNS_7runtime3MapINS_6TargetENS_8IRModuleEvvEERKS2_'/>
@@ -243,23 +244,23 @@
 <use f='tvm/include/tvm/relay/executor.h' l='147' c='_ZN3tvm5relay8Executor19ListExecutorOptionsERKNS_7runtime6StringE'/>
 <use f='tvm/include/tvm/relay/runtime.h' l='134' c='_ZN3tvm5relay7Runtime6CreateENS_7runtime6StringENS2_3MapIS3_NS2_9ObjectRefEvvEE'/>
 <use f='tvm/include/tvm/relay/runtime.h' l='147' c='_ZN3tvm5relay7Runtime18ListRuntimeOptionsERKNS_7runtime6StringE'/>
-<use f='tvm/src/driver/driver_api.cc' l='88' c='_ZN3tvm8GetBindsERKNS_7runtime5ArrayINS0_9ObjectRefEvEEbRKSt13unordered_mapINS_2te6TensorENS_3tir6BufferESt4hashIS8_ESt8equal_toIS8_ESaISt4pairIKS8_SA4030814'/>
-<use f='tvm/src/driver/driver_api.cc' l='114' c='_ZN3tvm8GetBindsERKNS_7runtime5ArrayINS_2te6TensorEvEEbRKSt13unordered_mapIS3_NS_3tir6BufferESt4hashIS3_ESt8equal_toIS3_ESaISt4pairIKS3_S9_EEEPNS0_3Ma4840112'/>
-<use f='tvm/src/driver/driver_api.cc' l='124'/>
-<use f='tvm/src/driver/driver_api.cc' l='132'/>
-<use f='tvm/src/driver/driver_api.cc' l='293' c='_ZN3tvm16ScheduleToModuleENS_2te8ScheduleERKNS_7runtime5ArrayINS2_9ObjectRefEvEERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKSt13unordered_2528338'/>
-<use f='tvm/src/driver/driver_api.cc' l='311' c='_ZN3tvm16ScheduleToModuleENS_2te8ScheduleERKNS_7runtime5ArrayINS2_9ObjectRefEvEERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKSt13unordered_2528338'/>
-<use f='tvm/src/driver/driver_api.cc' l='316'/>
-<use f='tvm/src/driver/driver_api.cc' l='347' c='_ZN3tvm13LowerPrimFuncENS_3tir8PrimFuncERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEb'/>
-<use f='tvm/src/driver/driver_api.cc' l='380'/>
-<use f='tvm/src/driver/driver_api.cc' l='423' c='_ZN3tvm12TIRToRuntimeERKNS_7runtime3MapINS_6TargetENS_8IRModuleEvvEERKS2_'/>
-<use f='tvm/src/driver/driver_api.cc' l='426' c='_ZN3tvm12TIRToRuntimeERKNS_7runtime3MapINS_6TargetENS_8IRModuleEvvEERKS2_'/>
-<use f='tvm/src/driver/driver_api.cc' l='452' c='_ZN3tvm12TIRToRuntimeERKNS_7runtime3MapINS_6TargetENS_8IRModuleEvvEERKS2_'/>
-<use f='tvm/src/driver/driver_api.cc' l='498'/>
-<use f='tvm/src/driver/driver_api.cc' l='505' c='_ZN3tvm5buildERKNS_7runtime3MapINS_6TargetENS_8IRModuleEvvEERKS2_'/>
+<use f='tvm/src/driver/driver_api.cc' l='89' c='_ZN3tvm8GetBindsERKNS_7runtime5ArrayINS0_9ObjectRefEvEEbRKSt13unordered_mapINS_2te6TensorENS_3tir6BufferESt4hashIS8_ESt8equal_toIS8_ESaISt4pairIKS8_SA4030814'/>
+<use f='tvm/src/driver/driver_api.cc' l='115' c='_ZN3tvm8GetBindsERKNS_7runtime5ArrayINS_2te6TensorEvEEbRKSt13unordered_mapIS3_NS_3tir6BufferESt4hashIS3_ESt8equal_toIS3_ESaISt4pairIKS3_S9_EEEPNS0_3Ma4840112'/>
+<use f='tvm/src/driver/driver_api.cc' l='125'/>
+<use f='tvm/src/driver/driver_api.cc' l='133'/>
+<use f='tvm/src/driver/driver_api.cc' l='292' c='_ZN3tvm16ScheduleToModuleENS_2te8ScheduleERKNS_7runtime5ArrayINS2_9ObjectRefEvEERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKSt13unordered_2528338'/>
+<use f='tvm/src/driver/driver_api.cc' l='310' c='_ZN3tvm16ScheduleToModuleENS_2te8ScheduleERKNS_7runtime5ArrayINS2_9ObjectRefEvEERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKSt13unordered_2528338'/>
+<use f='tvm/src/driver/driver_api.cc' l='315'/>
+<use f='tvm/src/driver/driver_api.cc' l='346' c='_ZN3tvm13LowerPrimFuncENS_3tir8PrimFuncERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEb'/>
+<use f='tvm/src/driver/driver_api.cc' l='379'/>
+<use f='tvm/src/driver/driver_api.cc' l='422' c='_ZN3tvm12TIRToRuntimeERKNS_7runtime3MapINS_6TargetENS_8IRModuleEvvEERKS2_'/>
+<use f='tvm/src/driver/driver_api.cc' l='425' c='_ZN3tvm12TIRToRuntimeERKNS_7runtime3MapINS_6TargetENS_8IRModuleEvvEERKS2_'/>
+<use f='tvm/src/driver/driver_api.cc' l='451' c='_ZN3tvm12TIRToRuntimeERKNS_7runtime3MapINS_6TargetENS_8IRModuleEvvEERKS2_'/>
+<use f='tvm/src/driver/driver_api.cc' l='497'/>
+<use f='tvm/src/driver/driver_api.cc' l='504' c='_ZN3tvm5buildERKNS_7runtime3MapINS_6TargetENS_8IRModuleEvvEERKS2_'/>
+<use f='tvm/src/driver/driver_api.cc' l='509' c='_ZN3tvm5buildERKNS_7runtime3MapINS0_6StringENS_8IRModuleEvvEERKNS_6TargetE'/>
 <use f='tvm/src/driver/driver_api.cc' l='510' c='_ZN3tvm5buildERKNS_7runtime3MapINS0_6StringENS_8IRModuleEvvEERKNS_6TargetE'/>
-<use f='tvm/src/driver/driver_api.cc' l='511' c='_ZN3tvm5buildERKNS_7runtime3MapINS0_6StringENS_8IRModuleEvvEERKNS_6TargetE'/>
-<use f='tvm/src/driver/driver_api.cc' l='531' c='_ZN3tvm5buildERKNS_8IRModuleERKNS_6TargetES5_'/>
+<use f='tvm/src/driver/driver_api.cc' l='530' c='_ZN3tvm5buildERKNS_8IRModuleERKNS_6TargetES5_'/>
 <use f='tvm/src/ir/attrs.cc' l='50' c='_ZN3tvm9DictAttrsC1ENS_7runtime3MapINS1_6StringENS1_9ObjectRefEvvEE'/>
 <use f='tvm/include/tvm/ir/memory_pools.h' l='56'/>
 <use f='tvm/include/tvm/ir/memory_pools.h' l='140' c='_ZN3tvm8PoolInfoC1ENS_7runtime6StringENS_7IntegerES3_S3_S3_S3_S3_NS1_3MapINS_6TargetES3_vvEENS_4BoolE'/>
@@ -977,6 +978,10 @@
 <use f='tvm/src/tir/analysis/buffer_access_lca_detector.cc' l='44' c='_ZN3tvm3tir11LCADetector6DetectERKNS0_8PrimFuncE'/>
 <use f='tvm/src/tir/analysis/buffer_access_lca_detector.cc' l='62' c='_ZN3tvm3tir11LCADetector6DetectERKNS0_8PrimFuncE'/>
 <use f='tvm/src/tir/analysis/buffer_access_lca_detector.cc' l='322' c='_ZN3tvm3tir21DetectBufferAccessLCAERKNS0_8PrimFuncE'/>
+<use f='tvm/src/tir/analysis/calculate_allocated_memory.cc' l='43' c='_ZN3tvm3tir20AllocationCalculatorclERKNS0_8PrimFuncE'/>
+<use f='tvm/src/tir/analysis/calculate_allocated_memory.cc' l='52' c='_ZN3tvm3tir20AllocationCalculatorclERKNS0_8PrimFuncE'/>
+<use f='tvm/src/tir/analysis/calculate_allocated_memory.cc' l='54' c='_ZN3tvm3tir20AllocationCalculatorclERKNS0_8PrimFuncE'/>
+<use f='tvm/src/tir/analysis/calculate_allocated_memory.cc' l='82' c='_ZN3tvm3tir23CalculateAllocatedBytesERKNS0_8PrimFuncE'/>
 <use f='tvm/src/tir/analysis/control_flow_graph.h' l='189' c='_ZNK3tvm3tir11BufferState27SubstituteKnownBufferValuesENS_8PrimExprERKNS_7runtime3MapINS0_6BufferENS3_5ArrayINS0_3VarEvEEvvEEPNS_5arith8AnalyzerE'/>
 <use f='tvm/src/tir/analysis/control_flow_graph.h' l='208' c='_ZN3tvm3tir11BufferState10SubstituteERKNS_7runtime3MapINS0_3VarENS_8PrimExprEvvEEPNS_5arith8AnalyzerE'/>
 <use f='tvm/src/tir/analysis/control_flow_graph.h' l='229' c='_ZN3tvm3tir11BufferState12ApplyTouchesERKNS_7runtime3MapINS0_6BufferENS2_5ArrayINS0_3VarEvEEvvEERKSt6vectorINS0_11BufferTouchESaISC_EEPNS_5arith8AnalyzerE'/>
