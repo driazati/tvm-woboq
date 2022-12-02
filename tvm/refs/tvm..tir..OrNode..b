@@ -6,9 +6,9 @@
 <offset>320</offset>
 <doc f='tvm/include/tvm/tir/expr.h' l='494'>/*! \brief The right operand. */</doc>
 <use f='tvm/src/arith/conjunctive_normal_form.cc' l='255' u='r' c='_ZN3tvm5arith12_GLOBAL__N_18AndOfOrs13TrySimplifyOrEPNS2_3KeyES4_PNS0_8AnalyzerE'/>
-<use f='tvm/src/arith/rewrite_simplify.cc' l='1834' u='r' c='_ZN3tvm5arith17RewriteSimplifier4Impl10VisitExpr_EPKNS_3tir6OrNodeE'/>
-<use f='tvm/src/arith/rewrite_simplify.cc' l='1864' u='r' c='_ZN3tvm5arith17RewriteSimplifier4Impl10VisitExpr_EPKNS_3tir6OrNodeE'/>
-<use f='tvm/src/arith/rewrite_simplify.cc' l='1872' u='r' c='_ZN3tvm5arith17RewriteSimplifier4Impl10VisitExpr_EPKNS_3tir6OrNodeE'/>
+<use f='tvm/src/arith/rewrite_simplify.cc' l='1838' u='r' c='_ZN3tvm5arith17RewriteSimplifier4Impl10VisitExpr_EPKNS_3tir6OrNodeE'/>
+<use f='tvm/src/arith/rewrite_simplify.cc' l='1868' u='r' c='_ZN3tvm5arith17RewriteSimplifier4Impl10VisitExpr_EPKNS_3tir6OrNodeE'/>
+<use f='tvm/src/arith/rewrite_simplify.cc' l='1876' u='r' c='_ZN3tvm5arith17RewriteSimplifier4Impl10VisitExpr_EPKNS_3tir6OrNodeE'/>
 <use f='tvm/src/auto_scheduler/compute_dag.cc' l='618' u='m' c='_ZN3tvm14auto_scheduler13FlopEstimator10VisitExpr_EPKNS_3tir6OrNodeE'/>
 <use f='tvm/src/auto_scheduler/compute_dag.cc' l='621' u='r' c='_ZN3tvm14auto_scheduler13FlopEstimator10VisitExpr_EPKNS_3tir6OrNodeE'/>
 <use f='tvm/src/printer/tir_text_printer.cc' l='312' u='r' c='_ZN3tvm3tir14TIRTextPrinter10VisitExpr_EPKNS0_6OrNodeE'/>
