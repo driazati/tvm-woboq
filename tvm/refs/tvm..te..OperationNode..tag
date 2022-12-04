@@ -9,7 +9,7 @@
 <offset>448</offset>
 <doc f='tvm/include/tvm/te/operation.h' l='60'>/*! \brief optional tag of the operation */</doc>
 <use f='tvm/src/te/autodiff/ad_utils.cc' l='118' u='r' c='_ZN3tvm2te19TransformTensorBodyERKNS0_6TensorERKSt8functionIFNS_8PrimExprERKS5_RKNS_7runtime5ArrayINS_3tir7IterVarEvEEEE'/>
-<use f='tvm/src/te/autodiff/jacobian.cc' l='353' u='r' c='_ZN3tvm2te8JacobianERKNS0_6TensorES3_'/>
+<use f='tvm/src/te/autodiff/jacobian.cc' l='352' u='r' c='_ZN3tvm2te8JacobianERKNS0_6TensorES3_'/>
 <use f='tvm/src/te/operation/compute_op.cc' l='50' u='r'/>
 <use f='tvm/src/te/operation/compute_op.cc' l='136' u='w' c='_ZN3tvm2te9ComputeOpC1ENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES7_NS_7runtime3MapINS8_6StringENS8_9ObjectRefEvvEENS8_5ArrayINS_3tir7IterVa14126749'/>
 <use f='tvm/src/te/operation/compute_op.cc' l='196' u='r' c='_ZNK3tvm2te13ComputeOpNode13ReplaceInputsERKNS0_9OperationERKSt13unordered_mapINS0_6TensorES6_St4hashIS6_ESt8equal_toIS6_ESaISt4pairIKS6_S6_EEE'/>
@@ -22,8 +22,8 @@
 <use f='tvm/src/te/schedule/schedule_dataflow_rewrite.cc' l='348' u='r' c='_ZN3tvm2te22CacheWriteWithReLayoutENS0_8ScheduleERKNS_7runtime5ArrayINS0_6TensorEvEERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
 <use f='tvm/src/te/schedule/schedule_dataflow_rewrite.cc' l='396' u='r' c='_ZN3tvm2te28CacheWriteWithReLayoutTensorENS0_8ScheduleERKNS_7runtime5ArrayINS0_6TensorEvEERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
 <use f='tvm/src/te/schedule/schedule_dataflow_rewrite.cc' l='434' u='r' c='_ZN3tvm2te28CacheWriteWithReLayoutTensorENS0_8ScheduleERKNS_7runtime5ArrayINS0_6TensorEvEERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
-<use f='tvm/src/te/schedule/schedule_dataflow_rewrite.cc' l='634' u='r' c='_ZN3tvm2te12InjectInlineEPNS0_12ScheduleNodeEb'/>
-<use f='tvm/src/te/schedule/schedule_dataflow_rewrite.cc' l='646' u='r' c='_ZN3tvm2te12InjectInlineEPNS0_12ScheduleNodeEb'/>
+<use f='tvm/src/te/schedule/schedule_dataflow_rewrite.cc' l='633' u='r' c='_ZN3tvm2te12InjectInlineEPNS0_12ScheduleNodeEb'/>
+<use f='tvm/src/te/schedule/schedule_dataflow_rewrite.cc' l='645' u='r' c='_ZN3tvm2te12InjectInlineEPNS0_12ScheduleNodeEb'/>
 <use f='tvm/include/tvm/topi/cuda/dense.h' l='129' u='r' c='_ZN3tvm4topi4cuda14schedule_denseERKNS_6TargetERKNS_7runtime5ArrayINS_2te6TensorEvEE'/>
 <use f='tvm/include/tvm/topi/cuda/dense.h' l='138' u='r' c='_ZN3tvm4topi4cuda14schedule_denseERKNS_6TargetERKNS_7runtime5ArrayINS_2te6TensorEvEE'/>
 <use f='tvm/include/tvm/topi/cuda/dense.h' l='143' u='r' c='_ZN3tvm4topi4cuda14schedule_denseERKNS_6TargetERKNS_7runtime5ArrayINS_2te6TensorEvEE'/>

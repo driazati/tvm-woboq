@@ -1,5 +1,5 @@
-<dec f='tvm/include/tvm/tir/stmt_functor.h' l='290' type='tvm::tir::Stmt tvm::tir::StmtMutator::VisitSeqStmt_(const tvm::tir::SeqStmtNode * op, bool flatten_before_visit, std::function&lt;Stmt (const Stmt &amp;)&gt; fmutate = nullptr)'/>
-<doc f='tvm/include/tvm/tir/stmt_functor.h' l='278'>/*!
+<dec f='tvm/include/tvm/tir/stmt_functor.h' l='289' type='tvm::tir::Stmt tvm::tir::StmtMutator::VisitSeqStmt_(const tvm::tir::SeqStmtNode * op, bool flatten_before_visit, std::function&lt;Stmt (const Stmt &amp;)&gt; fmutate = nullptr)'/>
+<doc f='tvm/include/tvm/tir/stmt_functor.h' l='277'>/*!
    * \brief Alternative advance method for SeqStmtNode.
    *
    *  This function can be called when a child class override
@@ -11,9 +11,9 @@
    * \param fmutate The mutate function, can be nullptr, which defaults to Visit.
    * \return The mutated result.
    */</doc>
-<def f='tvm/src/tir/ir/stmt_functor.cc' l='458' ll='498' type='tvm::tir::Stmt tvm::tir::StmtMutator::VisitSeqStmt_(const tvm::tir::SeqStmtNode * op, bool flatten_before_visit, std::function&lt;Stmt (const Stmt &amp;)&gt; fmutate = nullptr)'/>
-<doc f='tvm/src/tir/ir/stmt_functor.cc' l='457'>// advanced visit function for seqstmt.</doc>
-<use f='tvm/src/tir/transforms/inject_virtual_thread.cc' l='395' u='c' c='_ZN3tvm3tir10VTInjector10VisitStmt_EPKNS0_11SeqStmtNodeE'/>
+<def f='tvm/src/tir/ir/stmt_functor.cc' l='457' ll='497' type='tvm::tir::Stmt tvm::tir::StmtMutator::VisitSeqStmt_(const tvm::tir::SeqStmtNode * op, bool flatten_before_visit, std::function&lt;Stmt (const Stmt &amp;)&gt; fmutate = nullptr)'/>
+<doc f='tvm/src/tir/ir/stmt_functor.cc' l='456'>// advanced visit function for seqstmt.</doc>
+<use f='tvm/src/tir/transforms/inject_virtual_thread.cc' l='392' u='c' c='_ZN3tvm3tir10VTInjector10VisitStmt_EPKNS0_11SeqStmtNodeE'/>
 <use f='tvm/src/tir/transforms/lift_attr_scope.cc' l='87' u='c' c='_ZN3tvm3tir15AttrScopeLifter10VisitStmt_EPKNS0_11SeqStmtNodeE'/>
 <use f='tvm/src/tir/transforms/remove_no_op.cc' l='177' u='c' c='_ZN3tvm3tir11NoOpRemover10VisitStmt_EPKNS0_11SeqStmtNodeE'/>
-<use f='tvm/src/tir/transforms/unroll_loop.cc' l='165' u='c' c='_ZN3tvm3tir12LoopUnroller10VisitStmt_EPKNS0_11SeqStmtNodeE'/>
+<use f='tvm/src/tir/transforms/unroll_loop.cc' l='164' u='c' c='_ZN3tvm3tir12LoopUnroller10VisitStmt_EPKNS0_11SeqStmtNodeE'/>

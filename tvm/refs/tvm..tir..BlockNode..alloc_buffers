@@ -7,8 +7,8 @@
 <doc f='tvm/include/tvm/tir/stmt.h' l='1261'>/*! \brief The buffer allocated in the block. */</doc>
 <use f='tvm/src/meta_schedule/feature_extractor/per_store_feature.cc' l='1322' c='_ZN3tvm3tir24PerStoreFeatureCollector10VisitStmt_EPKNS0_9BlockNodeE'/>
 <use f='tvm/src/printer/tir_text_printer.cc' l='678' c='_ZN3tvm3tir14TIRTextPrinter10VisitStmt_EPKNS0_16BlockRealizeNodeE'/>
-<use f='tvm/src/printer/tvmscript_printer.cc' l='1534' c='_ZN3tvm3tir16TVMScriptPrinter14PrintBlockBodyEPKNS0_9BlockNodeE'/>
-<use f='tvm/src/printer/tvmscript_printer.cc' l='1706' u='m' c='_ZN3tvm3tir16TVMScriptPrinter13PrintPrimFuncERKNS0_8PrimFuncE'/>
+<use f='tvm/src/printer/tvmscript_printer.cc' l='1531' c='_ZN3tvm3tir16TVMScriptPrinter14PrintBlockBodyEPKNS0_9BlockNodeE'/>
+<use f='tvm/src/printer/tvmscript_printer.cc' l='1703' u='m' c='_ZN3tvm3tir16TVMScriptPrinter13PrintPrimFuncERKNS0_8PrimFuncE'/>
 <use f='tvm/src/tir/analysis/buffer_access_lca_detector.cc' l='111' c='_ZN3tvm3tir11LCADetector10VisitStmt_EPKNS0_16BlockRealizeNodeE'/>
 <use f='tvm/src/tir/analysis/device_constraint_utils.cc' l='389' u='r' c='_ZN3tvm3tir12_GLOBAL__N_129ApplyDeviceConstraintsMutator10VisitStmt_EPKNS0_9BlockNodeE'/>
 <use f='tvm/src/tir/ir/data_type_rewriter.cc' l='254' u='m' c='_ZN3tvm3tir21IndexDataTypeRewriter10VisitStmt_EPKNS0_9BlockNodeE'/>
@@ -32,14 +32,14 @@
 <use f='tvm/src/tir/schedule/ir_comparator.cc' l='591' u='r' c='_ZN3tvm3tir23AutoTensorizeComparator10VisitStmt_EPKNS0_9BlockNodeERKNS0_4StmtE'/>
 <use f='tvm/src/tir/schedule/primitive/cache_index.cc' l='357' u='m' c='_ZN3tvm3tir18CacheIndexRewriter10VisitStmt_EPKNS0_9BlockNodeE'/>
 <use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='655' u='m' c='_ZN3tvm3tir17CacheReadRewriter10VisitStmt_EPKNS0_9BlockNodeE'/>
-<use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='765' u='m' c='_ZN3tvm3tir18CacheWriteRewriter10VisitStmt_EPKNS0_9BlockNodeE'/>
-<use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='1006' u='m' c='_ZN3tvm3tir15ReIndexRewriter10VisitStmt_EPKNS0_9BlockNodeE'/>
-<use f='tvm/src/tir/schedule/primitive/compute_inline.cc' l='337' c='_ZN3tvm3tir11BaseInliner26AddBuffersInBlockSignatureEPKNS0_9BlockNodeE'/>
-<use f='tvm/src/tir/schedule/primitive/compute_inline.cc' l='355' u='m' c='_ZN3tvm3tir11BaseInliner29UpdateBuffersInBlockSignatureENS0_5BlockEb'/>
-<use f='tvm/src/tir/schedule/primitive/compute_inline.cc' l='356' c='_ZN3tvm3tir11BaseInliner29UpdateBuffersInBlockSignatureENS0_5BlockEb'/>
-<use f='tvm/src/tir/schedule/primitive/compute_inline.cc' l='362' u='r' c='_ZN3tvm3tir11BaseInliner29UpdateBuffersInBlockSignatureENS0_5BlockEb'/>
-<use f='tvm/src/tir/schedule/primitive/compute_inline.cc' l='380' u='w' c='_ZN3tvm3tir11BaseInliner29UpdateBuffersInBlockSignatureENS0_5BlockEb'/>
-<use f='tvm/src/tir/schedule/primitive/layout_transformation.cc' l='848' u='m' c='_ZN3tvm3tir23TransformLayoutRewriter10VisitStmt_EPKNS0_9BlockNodeE'/>
+<use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='764' u='m' c='_ZN3tvm3tir18CacheWriteRewriter10VisitStmt_EPKNS0_9BlockNodeE'/>
+<use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='1003' u='m' c='_ZN3tvm3tir15ReIndexRewriter10VisitStmt_EPKNS0_9BlockNodeE'/>
+<use f='tvm/src/tir/schedule/primitive/compute_inline.cc' l='335' c='_ZN3tvm3tir11BaseInliner26AddBuffersInBlockSignatureEPKNS0_9BlockNodeE'/>
+<use f='tvm/src/tir/schedule/primitive/compute_inline.cc' l='353' u='m' c='_ZN3tvm3tir11BaseInliner29UpdateBuffersInBlockSignatureENS0_5BlockEb'/>
+<use f='tvm/src/tir/schedule/primitive/compute_inline.cc' l='354' c='_ZN3tvm3tir11BaseInliner29UpdateBuffersInBlockSignatureENS0_5BlockEb'/>
+<use f='tvm/src/tir/schedule/primitive/compute_inline.cc' l='360' u='r' c='_ZN3tvm3tir11BaseInliner29UpdateBuffersInBlockSignatureENS0_5BlockEb'/>
+<use f='tvm/src/tir/schedule/primitive/compute_inline.cc' l='378' u='w' c='_ZN3tvm3tir11BaseInliner29UpdateBuffersInBlockSignatureENS0_5BlockEb'/>
+<use f='tvm/src/tir/schedule/primitive/layout_transformation.cc' l='847' u='m' c='_ZN3tvm3tir23TransformLayoutRewriter10VisitStmt_EPKNS0_9BlockNodeE'/>
 <use f='tvm/src/tir/schedule/primitive/reduction.cc' l='1099' u='m' c='_ZN3tvm3tir13BlockReplacer7ReplaceENS0_5BlockENS0_4StmtENS0_3ForENS0_12BlockRealizeES5_S4_St13unordered_setIPKNS0_7VarNodeESt4hashIS9_ESt8equal_toIS9_12847655'/>
 <use f='tvm/src/tir/schedule/primitive/rolling_buffer.cc' l='300' c='_ZN3tvm3tir12_GLOBAL__N_121RollingBufferRewriter10VisitStmt_EPKNS0_9BlockNodeE'/>
 <use f='tvm/src/tir/schedule/primitive/rolling_buffer.cc' l='307' u='w' c='_ZN3tvm3tir12_GLOBAL__N_121RollingBufferRewriter10VisitStmt_EPKNS0_9BlockNodeE'/>

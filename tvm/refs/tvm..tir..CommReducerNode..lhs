@@ -12,10 +12,10 @@
 <use f='tvm/src/te/autodiff/ad_simplify.cc' l='148' u='m' c='_ZN3tvm2te13IsSumCombinerERKNS_3tir11CommReducerERKNS_7runtime3MapINS1_3VarENS_5RangeEvvEE'/>
 <use f='tvm/src/te/autodiff/ad_simplify.cc' l='149' u='m' c='_ZN3tvm2te13IsSumCombinerERKNS_3tir11CommReducerERKNS_7runtime3MapINS1_3VarENS_5RangeEvvEE'/>
 <use f='tvm/src/te/autodiff/ad_simplify.cc' l='163' u='m' c='_ZN3tvm2te25CanFactorZeroFromCombinerERKNS_3tir11CommReducerEiRKNS_7runtime3MapINS1_3VarENS_5RangeEvvEE'/>
-<use f='tvm/src/te/autodiff/jacobian.cc' l='191' c='_ZN3tvm2te15JacobianMutator10VisitExpr_EPKNS_3tir10ReduceNodeE'/>
-<use f='tvm/src/te/autodiff/jacobian.cc' l='194' c='_ZN3tvm2te15JacobianMutator10VisitExpr_EPKNS_3tir10ReduceNodeE'/>
+<use f='tvm/src/te/autodiff/jacobian.cc' l='190' c='_ZN3tvm2te15JacobianMutator10VisitExpr_EPKNS_3tir10ReduceNodeE'/>
+<use f='tvm/src/te/autodiff/jacobian.cc' l='193' c='_ZN3tvm2te15JacobianMutator10VisitExpr_EPKNS_3tir10ReduceNodeE'/>
+<use f='tvm/src/te/autodiff/jacobian.cc' l='212' u='m' c='_ZN3tvm2te15JacobianMutator10VisitExpr_EPKNS_3tir10ReduceNodeE'/>
 <use f='tvm/src/te/autodiff/jacobian.cc' l='213' u='m' c='_ZN3tvm2te15JacobianMutator10VisitExpr_EPKNS_3tir10ReduceNodeE'/>
-<use f='tvm/src/te/autodiff/jacobian.cc' l='214' u='m' c='_ZN3tvm2te15JacobianMutator10VisitExpr_EPKNS_3tir10ReduceNodeE'/>
 <use f='tvm/src/te/schedule/schedule_dataflow_rewrite.cc' l='67' u='r' c='_ZN3tvm2te11VarReplacer17MutateCommReducerENS_3tir11CommReducerE'/>
 <use f='tvm/src/tir/ir/expr.cc' l='980' u='w' c='_ZN3tvm3tir11CommReducerC1ENS_7runtime5ArrayINS0_3VarEvEES5_NS3_INS_8PrimExprEvEES7_NS_4SpanE'/>
 <use f='tvm/src/tir/ir/expr.cc' l='990' u='m' c='_ZNK3tvm3tir15CommReducerNodeclENS_7runtime5ArrayINS_8PrimExprEvEES5_'/>

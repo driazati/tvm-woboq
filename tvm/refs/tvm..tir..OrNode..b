@@ -12,10 +12,10 @@
 <use f='tvm/src/auto_scheduler/compute_dag.cc' l='618' u='m' c='_ZN3tvm14auto_scheduler13FlopEstimator10VisitExpr_EPKNS_3tir6OrNodeE'/>
 <use f='tvm/src/auto_scheduler/compute_dag.cc' l='621' u='r' c='_ZN3tvm14auto_scheduler13FlopEstimator10VisitExpr_EPKNS_3tir6OrNodeE'/>
 <use f='tvm/src/printer/tir_text_printer.cc' l='312' u='r' c='_ZN3tvm3tir14TIRTextPrinter10VisitExpr_EPKNS0_6OrNodeE'/>
-<use f='tvm/src/printer/tvmscript_printer.cc' l='812' u='r' c='_ZN3tvm3tir16TVMScriptPrinter10VisitExpr_EPKNS0_6OrNodeEPNS0_14ExprPrecedenceE'/>
-<use f='tvm/src/printer/tvmscript_printer.cc' l='814' u='r' c='_ZN3tvm3tir16TVMScriptPrinter10VisitExpr_EPKNS0_6OrNodeEPNS0_14ExprPrecedenceE'/>
-<use f='tvm/src/printer/tvmscript_printer.cc' l='821' u='r' c='_ZN3tvm3tir16TVMScriptPrinter10VisitExpr_EPKNS0_6OrNodeEPNS0_14ExprPrecedenceE'/>
-<use f='tvm/src/target/llvm/codegen_llvm.cc' l='1536' u='r' c='_ZN3tvm7codegen11CodeGenLLVM10VisitExpr_EPKNS_3tir6OrNodeE'/>
+<use f='tvm/src/printer/tvmscript_printer.cc' l='809' u='r' c='_ZN3tvm3tir16TVMScriptPrinter10VisitExpr_EPKNS0_6OrNodeEPNS0_14ExprPrecedenceE'/>
+<use f='tvm/src/printer/tvmscript_printer.cc' l='811' u='r' c='_ZN3tvm3tir16TVMScriptPrinter10VisitExpr_EPKNS0_6OrNodeEPNS0_14ExprPrecedenceE'/>
+<use f='tvm/src/printer/tvmscript_printer.cc' l='818' u='r' c='_ZN3tvm3tir16TVMScriptPrinter10VisitExpr_EPKNS0_6OrNodeEPNS0_14ExprPrecedenceE'/>
+<use f='tvm/src/target/llvm/codegen_llvm.cc' l='1526' u='r' c='_ZN3tvm7codegen11CodeGenLLVM10VisitExpr_EPKNS_3tir6OrNodeE'/>
 <use f='tvm/src/target/source/codegen_opencl.cc' l='550' u='r' c='_ZN3tvm7codegen13CodeGenOpenCL10VisitExpr_EPKNS_3tir6OrNodeERSo'/>
 <use f='tvm/src/target/stackvm/codegen_stackvm.cc' l='410' u='r' c='_ZN3tvm7codegen14CodeGenStackVM10VisitExpr_EPKNS_3tir6OrNodeE'/>
 <use f='tvm/src/te/autodiff/ad_simplify.cc' l='398' u='r' c='_ZN3tvm2te30FactorOutAtomicFormulasFunctor10VisitExpr_EPKNS_3tir7NotNodeE'/>
@@ -25,8 +25,8 @@
 <use f='tvm/src/tir/ir/expr.cc' l='558' u='w' c='_ZN3tvm3tir2OrC1ENS_8PrimExprES2_NS_4SpanE'/>
 <use f='tvm/src/tir/ir/expr.cc' l='575' u='r'/>
 <use f='tvm/src/tir/ir/expr_functor.cc' l='61' u='r' c='_ZN3tvm3tir11ExprVisitor10VisitExpr_EPKNS0_6OrNodeE'/>
+<use f='tvm/src/tir/ir/expr_functor.cc' l='183' u='r' c='_ZN3tvm3tir11ExprMutator10VisitExpr_EPKNS0_6OrNodeE'/>
 <use f='tvm/src/tir/ir/expr_functor.cc' l='184' u='r' c='_ZN3tvm3tir11ExprMutator10VisitExpr_EPKNS0_6OrNodeE'/>
-<use f='tvm/src/tir/ir/expr_functor.cc' l='185' u='r' c='_ZN3tvm3tir11ExprMutator10VisitExpr_EPKNS0_6OrNodeE'/>
 <use f='tvm/src/tir/ir/specialize.cc' l='53' u='r' c='_ZN3tvm3tir19PrimFuncSpecializer10VisitExpr_EPKNS0_6OrNodeE'/>
 <use f='tvm/src/tir/ir/specialize.cc' l='54' u='r' c='_ZN3tvm3tir19PrimFuncSpecializer10VisitExpr_EPKNS0_6OrNodeE'/>
 <use f='tvm/src/tir/schedule/analysis/reducer.cc' l='126' u='r' c='_ZN3tvm3tir14PatternMatcher10VisitExpr_EPKNS0_6OrNodeE'/>

@@ -43,12 +43,12 @@
 <use f='tvm/src/tir/ir/expr.cc' l='405'/>
 <size>8</size>
 <fun r='_ZN3tvm3tir2EQC1ENS_8PrimExprES2_NS_4SpanE'/>
-<use f='tvm/src/tir/ir/expr_functor.cc' l='201' c='_ZN3tvm3tir11ExprMutator10VisitExpr_EPKNS0_6EQNodeE'/>
+<use f='tvm/src/tir/ir/expr_functor.cc' l='200' c='_ZN3tvm3tir11ExprMutator10VisitExpr_EPKNS0_6EQNodeE'/>
 <size>8</size>
-<use f='tvm/src/tir/op/op.cc' l='505' c='_ZN3tvm5equalENS_8PrimExprES0_NS_4SpanE'/>
-<use f='tvm/src/tir/op/op.cc' l='506' c='_ZN3tvm5equalENS_8PrimExprES0_NS_4SpanE'/>
+<use f='tvm/src/tir/op/op.cc' l='501' c='_ZN3tvm5equalENS_8PrimExprES0_NS_4SpanE'/>
+<use f='tvm/src/tir/op/op.cc' l='502' c='_ZN3tvm5equalENS_8PrimExprES0_NS_4SpanE'/>
 <size>8</size>
 <use f='tvm/src/tir/transforms/loop_partition.cc' l='320' c='_ZN3tvm3tir15PartitionFinder11InverseCondERKNS_8PrimExprE'/>
 <size>8</size>
-<use f='tvm/src/tir/transforms/vectorize_loop.cc' l='214' c='_ZN3tvm3tir10Vectorizer10VisitExpr_EPKNS0_6EQNodeE'/>
+<use f='tvm/src/tir/transforms/vectorize_loop.cc' l='212' c='_ZN3tvm3tir10Vectorizer10VisitExpr_EPKNS0_6EQNodeE'/>
 <size>8</size>

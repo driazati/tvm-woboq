@@ -43,10 +43,10 @@
 <use f='tvm/src/tir/ir/expr.cc' l='318'/>
 <size>8</size>
 <fun r='_ZN3tvm3tir3ModC1ENS_8PrimExprES2_NS_4SpanE'/>
-<use f='tvm/src/tir/ir/expr_functor.cc' l='196' c='_ZN3tvm3tir11ExprMutator10VisitExpr_EPKNS0_7ModNodeE'/>
+<use f='tvm/src/tir/ir/expr_functor.cc' l='195' c='_ZN3tvm3tir11ExprMutator10VisitExpr_EPKNS0_7ModNodeE'/>
 <size>8</size>
-<use f='tvm/src/tir/op/op.cc' l='385' c='_ZN3tvm8truncmodENS_8PrimExprES0_NS_4SpanE'/>
-<use f='tvm/src/tir/op/op.cc' l='386' c='_ZN3tvm8truncmodENS_8PrimExprES0_NS_4SpanE'/>
+<use f='tvm/src/tir/op/op.cc' l='381' c='_ZN3tvm8truncmodENS_8PrimExprES0_NS_4SpanE'/>
+<use f='tvm/src/tir/op/op.cc' l='382' c='_ZN3tvm8truncmodENS_8PrimExprES0_NS_4SpanE'/>
 <size>8</size>
-<use f='tvm/src/tir/transforms/vectorize_loop.cc' l='209' c='_ZN3tvm3tir10Vectorizer10VisitExpr_EPKNS0_7ModNodeE'/>
+<use f='tvm/src/tir/transforms/vectorize_loop.cc' l='207' c='_ZN3tvm3tir10Vectorizer10VisitExpr_EPKNS0_7ModNodeE'/>
 <size>8</size>
