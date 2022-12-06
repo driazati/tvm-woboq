@@ -1162,7 +1162,7 @@
 <use f='tvm/include/tvm/meta_schedule/mutator.h' l='68' u='c' c='_ZN3tvm13meta_schedule11MutatorNode27_GetOrAllocRuntimeTypeIndexEv'/>
 <use f='tvm/include/tvm/meta_schedule/mutator.h' l='175' u='c' c='_ZN3tvm13meta_schedule13PyMutatorNode27_GetOrAllocRuntimeTypeIndexEv'/>
 <use f='tvm/include/tvm/meta_schedule/postproc.h' l='65' u='c' c='_ZN3tvm13meta_schedule12PostprocNode27_GetOrAllocRuntimeTypeIndexEv'/>
-<use f='tvm/include/tvm/meta_schedule/postproc.h' l='195' u='c' c='_ZN3tvm13meta_schedule14PyPostprocNode27_GetOrAllocRuntimeTypeIndexEv'/>
+<use f='tvm/include/tvm/meta_schedule/postproc.h' l='200' u='c' c='_ZN3tvm13meta_schedule14PyPostprocNode27_GetOrAllocRuntimeTypeIndexEv'/>
 <use f='tvm/include/tvm/meta_schedule/schedule_rule.h' l='70' u='c' c='_ZN3tvm13meta_schedule16ScheduleRuleNode27_GetOrAllocRuntimeTypeIndexEv'/>
 <use f='tvm/include/tvm/meta_schedule/schedule_rule.h' l='329' u='c' c='_ZN3tvm13meta_schedule18PyScheduleRuleNode27_GetOrAllocRuntimeTypeIndexEv'/>
 <use f='tvm/include/tvm/meta_schedule/space_generator.h' l='115' u='c' c='_ZN3tvm13meta_schedule18SpaceGeneratorNode27_GetOrAllocRuntimeTypeIndexEv'/>
@@ -1301,14 +1301,14 @@
 <use f='tvm/src/meta_schedule/mutator/mutator.cc' l='106' u='c'/>
 <use f='tvm/src/meta_schedule/postproc/disallow_dynamic_loop.cc' l='77' u='c' c='_ZN3tvm13meta_schedule23DisallowDynamicLoopNode27_GetOrAllocRuntimeTypeIndexEv'/>
 <use f='tvm/src/meta_schedule/postproc/disallow_dynamic_loop.cc' l='86' u='c'/>
-<use f='tvm/src/meta_schedule/postproc/postproc.cc' l='116' u='c'/>
+<use f='tvm/src/meta_schedule/postproc/postproc.cc' l='115' u='c'/>
+<use f='tvm/src/meta_schedule/postproc/postproc.cc' l='117' u='c'/>
 <use f='tvm/src/meta_schedule/postproc/postproc.cc' l='118' u='c'/>
 <use f='tvm/src/meta_schedule/postproc/postproc.cc' l='119' u='c'/>
 <use f='tvm/src/meta_schedule/postproc/postproc.cc' l='120' u='c'/>
 <use f='tvm/src/meta_schedule/postproc/postproc.cc' l='121' u='c'/>
 <use f='tvm/src/meta_schedule/postproc/postproc.cc' l='122' u='c'/>
-<use f='tvm/src/meta_schedule/postproc/postproc.cc' l='123' u='c'/>
-<use f='tvm/src/meta_schedule/postproc/postproc.cc' l='125' u='c'/>
+<use f='tvm/src/meta_schedule/postproc/postproc.cc' l='124' u='c'/>
 <use f='tvm/src/meta_schedule/postproc/rewrite_cooperative_fetch.cc' l='120' u='c' c='_ZN3tvm13meta_schedule27RewriteCooperativeFetchNode25InitializeWithTuneContextERKNS0_11TuneContextE'/>
 <use f='tvm/src/meta_schedule/postproc/rewrite_cooperative_fetch.cc' l='138' u='c' c='_ZN3tvm13meta_schedule27RewriteCooperativeFetchNode27_GetOrAllocRuntimeTypeIndexEv'/>
 <use f='tvm/src/meta_schedule/postproc/rewrite_cooperative_fetch.cc' l='230' u='c'/>
@@ -1336,6 +1336,10 @@
 <use f='tvm/src/meta_schedule/postproc/verify_gpu_code.cc' l='187' u='c' c='_ZN3tvm13meta_schedule17VerifyGPUCodeNode5ApplyERKNS_3tir8ScheduleE'/>
 <use f='tvm/src/meta_schedule/postproc/verify_gpu_code.cc' l='209' u='c' c='_ZN3tvm13meta_schedule17VerifyGPUCodeNode27_GetOrAllocRuntimeTypeIndexEv'/>
 <use f='tvm/src/meta_schedule/postproc/verify_gpu_code.cc' l='218' u='c'/>
+<use f='tvm/src/meta_schedule/postproc/verify_vtcm_limit.cc' l='35' u='c' c='_ZN3tvm13meta_schedule19VerifyVTCMLimitNode25InitializeWithTuneContextERKNS0_11TuneContextE'/>
+<use f='tvm/src/meta_schedule/postproc/verify_vtcm_limit.cc' l='70' u='c' c='_ZN3tvm13meta_schedule19VerifyVTCMLimitNode5ApplyERKNS_3tir8ScheduleE'/>
+<use f='tvm/src/meta_schedule/postproc/verify_vtcm_limit.cc' l='91' u='c' c='_ZN3tvm13meta_schedule19VerifyVTCMLimitNode27_GetOrAllocRuntimeTypeIndexEv'/>
+<use f='tvm/src/meta_schedule/postproc/verify_vtcm_limit.cc' l='100' u='c'/>
 <use f='tvm/src/meta_schedule/profiler.cc' l='38' u='c' c='_ZNK3tvm13meta_schedule12ProfilerNode5TableEv'/>
 <use f='tvm/src/meta_schedule/profiler.cc' l='41' u='c' c='_ZNK3tvm13meta_schedule12ProfilerNode5TableEv'/>
 <use f='tvm/src/meta_schedule/profiler.cc' l='54' u='c' c='_ZNK3tvm13meta_schedule12ProfilerNode5TableEv'/>
@@ -7979,7 +7983,7 @@
 <use f='tvm/src/tir/analysis/block_access_region_detector.cc' l='396' u='c'/>
 <use f='tvm/src/tir/analysis/buffer_access_lca_detector.cc' l='326' u='c'/>
 <use f='tvm/src/tir/analysis/calculate_allocated_memory.cc' l='86' u='c'/>
-<use f='tvm/src/tir/analysis/calculate_allocated_memory.cc' l='113' u='c'/>
+<use f='tvm/src/tir/analysis/calculate_allocated_memory.cc' l='122' u='c'/>
 <use f='tvm/src/tir/analysis/calculate_workspace.cc' l='86' u='c'/>
 <use f='tvm/src/tir/analysis/calculate_workspace.cc' l='91' u='c'/>
 <use f='tvm/src/tir/analysis/deep_equal.cc' l='73' u='c'/>

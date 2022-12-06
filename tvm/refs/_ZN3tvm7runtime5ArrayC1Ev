@@ -320,6 +320,7 @@
 <use f='tvm/src/meta_schedule/postproc/rewrite_layout.cc' l='123' u='c' c='_ZN3tvm3tir24CollectLayoutFreeBuffersEPKNS0_12PrimFuncNodeE'/>
 <use f='tvm/src/meta_schedule/postproc/rewrite_parallel_vectorize_unroll.cc' l='160' u='c' c='_ZN3tvm3tir23AdjustParallelVectorizeERKNS0_8ScheduleERKNS0_7BlockRVERKNS_7runtime5ArrayINS0_6LoopRVEvEEPNS0_16ParsedAnnotationE'/>
 <use f='tvm/src/meta_schedule/postproc/verify_gpu_code.cc' l='154' u='c' c='_ZN3tvm13meta_schedule17VerifyGPUCodeNode5ApplyERKNS_3tir8ScheduleE'/>
+<use f='tvm/src/meta_schedule/postproc/verify_vtcm_limit.cc' l='57' u='c' c='_ZN3tvm13meta_schedule19VerifyVTCMLimitNode5ApplyERKNS_3tir8ScheduleE'/>
 <use f='tvm/src/meta_schedule/schedule/cuda/thread_bind.cc' l='37' u='c' c='_ZN3tvm13meta_schedule17MakeFactorSamplerENS_3tir8ScheduleENS_7runtime5ArrayINS_7IntegerEvEE'/>
 <use f='tvm/src/meta_schedule/schedule/generic/winograd.cc' l='33' u='c' c='_ZN3tvm13meta_schedule33GetWinogradProducerAndInlineConstENS_3tir8ScheduleENS1_7BlockRVE'/>
 <use f='tvm/src/meta_schedule/schedule_rule/add_rfactor.cc' l='101' u='c' c='_ZN3tvm13meta_schedule14AddRFactorNode5ApplyERKNS_3tir8ScheduleERKNS2_7BlockRVE'/>
@@ -1427,7 +1428,7 @@
 <use f='tvm/src/tir/analysis/block_access_region_detector.cc' l='274' u='c' c='_ZNK3tvm3tir22BlockReadWriteDetector20ConvertMatchedRegionERKNS0_17MatchBufferRegionERKSt6vectorINS_5arith6IntSetESaIS7_EE'/>
 <use f='tvm/src/tir/analysis/block_access_region_detector.cc' l='322' u='c' c='_ZN3tvm3tir22BlockReadWriteDetector14CollectRegionsERKSt6vectorINS0_6BufferESaIS3_EERKS2_IS2_INS_5arith6IntSetESaIS9_EESaISB_EEPKSt13unordered_setIPKN9306419'/>
 <use f='tvm/src/tir/analysis/block_access_region_detector.cc' l='328' u='c' c='_ZN3tvm3tir22BlockReadWriteDetector14CollectRegionsERKSt6vectorINS0_6BufferESaIS3_EERKS2_IS2_INS_5arith6IntSetESaIS9_EESaISB_EEPKSt13unordered_setIPKN9306419'/>
-<use f='tvm/src/tir/analysis/calculate_allocated_memory.cc' l='110' u='c' c='_ZN3tvm3tir9transform15VerifyVTCMLimitERKNS_7IntegerE'/>
+<use f='tvm/src/tir/analysis/calculate_allocated_memory.cc' l='119' u='c' c='_ZN3tvm3tir9transform15VerifyVTCMLimitERKNS_7IntegerE'/>
 <use f='tvm/src/tir/analysis/control_flow_graph.cc' l='659' u='c' c='_ZNK3tvm3tir16ControlFlowGraph16ControlFlowBlock15MakeBufferTouchERKNS0_6BufferENS_7runtime5ArrayINS0_3VarEvEENS7_INS_8PrimExprEvEENS0_11BufferTouch10AccessTypeESA_'/>
 <use f='tvm/src/tir/analysis/control_flow_graph.cc' l='678' u='c' c='_ZNK3tvm3tir16ControlFlowGraph16ControlFlowBlock15MakeBufferTouchERKNS0_6BufferENS_7runtime5ArrayINS0_3VarEvEENS7_INS_8PrimExprEvEENS0_11BufferTouch10AccessTypeESA_'/>
 <use f='tvm/src/tir/analysis/control_flow_graph.cc' l='1287' u='c' c='_ZN3tvm3tir11BufferState21BackpropUnusedIndicesERKNS_7runtime3MapINS0_6BufferENS2_5ArrayINS0_3VarEvEEvvEERKSt6vectorINS0_11BufferTouchESaISC_EEPNS_5arith8AnalyzerE'/>
