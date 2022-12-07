@@ -1,42 +1,47 @@
 <inh f='tvm/src/target/source/codegen_c.h' l='59' c='tvm::codegen::CodeGenC'/>
-<def f='tvm/src/target/source/codegen_c_host.h' l='40' ll='108'/>
+<def f='tvm/src/target/source/codegen_c_host.h' l='40' ll='113'/>
 <ovr f='tvm/src/relay/backend/contrib/example_target_hooks/tir_to_runtime.cc' l='31' c='tvm::relay::contrib::example_target_hooks::CodeGenExampleTargetHook'/>
 <use f='tvm/src/relay/backend/contrib/example_target_hooks/tir_to_runtime.cc' l='31'/>
-<size>1352</size>
+<size>1728</size>
 <fun r='_ZN3tvm7codegen12CodeGenCHostC1Ev'/>
-<fun r='_ZN3tvm7codegen12CodeGenCHost4InitEbbNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKSt13unordered_setIS7_St4hashIS7_ESt8equal_toIS7_ESaIS7_EE'/>
+<fun r='_ZN3tvm7codegen12CodeGenCHost4InitEbbbNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKSt13unordered_setIS7_St4hashIS7_ESt8equal_toIS7_ESaIS7_EE'/>
 <fun r='_ZN3tvm7codegen12CodeGenCHost17InitGlobalContextEv'/>
-<fun r='_ZN3tvm7codegen12CodeGenCHost11AddFunctionERKNS_3tir8PrimFuncE'/>
+<fun r='_ZN3tvm7codegen12CodeGenCHost11AddFunctionERKNS_3tir8PrimFuncEb'/>
+<fun r='_ZN3tvm7codegen12CodeGenCHost6FinishB5cxx11Ev'/>
 <fun r='_ZN3tvm7codegen12CodeGenCHost19AddFunctionsOrderedESt6vectorISt4pairINS_9GlobalVarENS_8BaseFuncEESaIS6_EE'/>
 <fun r='_ZN3tvm7codegen12CodeGenCHost16DefineModuleNameEv'/>
 <fun r='_ZN3tvm7codegen12CodeGenCHost9PrintTypeENS_7runtime8DataTypeERSo'/>
-<fun r='_ZN3tvm7codegen12CodeGenCHost15PrintFuncPrefixEv'/>
+<fun r='_ZN3tvm7codegen12CodeGenCHost15PrintFuncPrefixERSo'/>
 <fun r='_ZN3tvm7codegen12CodeGenCHost16PrintFinalReturnEv'/>
 <fun r='_ZN3tvm7codegen12CodeGenCHost10VisitExpr_EPKNS_3tir13BroadcastNodeERSo'/>
 <fun r='_ZN3tvm7codegen12CodeGenCHost10VisitExpr_EPKNS_3tir8CallNodeERSo'/>
 <fun r='_ZN3tvm7codegen12CodeGenCHost10VisitExpr_EPKNS_3tir7MinNodeERSo'/>
 <fun r='_ZN3tvm7codegen12CodeGenCHost10VisitExpr_EPKNS_3tir7MaxNodeERSo'/>
 <fun r='_ZN3tvm7codegen12CodeGenCHost10VisitStmt_EPKNS_3tir14AssertStmtNodeE'/>
+<fun r='_ZN3tvm7codegen12CodeGenCHost35GenerateForwardFunctionDeclarationsENS_7runtime6StringERKNS2_5ArrayINS_8PrimExprEvEE'/>
 <fun r='_ZN3tvm7codegen12CodeGenCHost16GetFunctionNamesEv'/>
-<mbr r='tvm::codegen::CodeGenCHost::module_name_' o='9984' t='std::string'/>
-<mbr r='tvm::codegen::CodeGenCHost::declared_globals_' o='10240' t='std::unordered_map&lt;std::string, std::string&gt;'/>
-<mbr r='tvm::codegen::CodeGenCHost::function_names_' o='10688' t='Array&lt;tvm::runtime::String&gt;'/>
-<mbr r='tvm::codegen::CodeGenCHost::emit_asserts_' o='10752' t='bool'/>
+<mbr r='tvm::codegen::CodeGenCHost::module_name_' o='12992' t='std::string'/>
+<mbr r='tvm::codegen::CodeGenCHost::declared_globals_' o='13248' t='std::unordered_map&lt;std::string, std::string&gt;'/>
+<mbr r='tvm::codegen::CodeGenCHost::function_names_' o='13696' t='Array&lt;tvm::runtime::String&gt;'/>
+<mbr r='tvm::codegen::CodeGenCHost::emit_asserts_' o='13760' t='bool'/>
+<mbr r='tvm::codegen::CodeGenCHost::emit_fwd_func_decl_' o='13768' t='bool'/>
 <fun r='_ZN3tvm7codegen12CodeGenCHost15GetFunctionInfoEPKNS_3tir8CallNodeEb'/>
 <fun r='_ZN3tvm7codegen12CodeGenCHost13GetPackedNameB5cxx11EPKNS_3tir8CallNodeE'/>
 <fun r='_ZN3tvm7codegen12CodeGenCHost23PrintGetFuncFromBackendERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES9_'/>
 <fun r='_ZN3tvm7codegen12CodeGenCHost13PrintFuncCallERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEi'/>
 <fun r='_ZN3tvm7codegen12CodeGenCHost14PrintFuncCallCERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEiS9_'/>
 <fun r='_ZN3tvm7codegen12CodeGenCHost20PrintTernaryCondExprEPKT_PKcRSo'/>
-<use f='tvm/src/target/source/codegen_c_host.cc' l='404' c='_ZN3tvm7codegen10BuildCHostENS_8IRModuleENS_6TargetE'/>
-<size>1352</size>
+<use f='tvm/src/target/source/codegen_c_host.cc' l='438' c='_ZN3tvm7codegen10BuildCHostENS_8IRModuleENS_6TargetE'/>
+<size>1728</size>
 <fun r='_ZN3tvm7codegen12CodeGenCHostC1Ev'/>
-<fun r='_ZN3tvm7codegen12CodeGenCHost4InitEbbNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKSt13unordered_setIS7_St4hashIS7_ESt8equal_toIS7_ESaIS7_EE'/>
+<fun r='_ZN3tvm7codegen12CodeGenCHost4InitEbbbNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKSt13unordered_setIS7_St4hashIS7_ESt8equal_toIS7_ESaIS7_EE'/>
 <fun r='_ZN3tvm7codegen12CodeGenCHost17InitGlobalContextEv'/>
 <fun r='_ZN3tvm7codegen12CodeGenCHost16DefineModuleNameEv'/>
-<fun r='_ZN3tvm7codegen12CodeGenCHost11AddFunctionERKNS_3tir8PrimFuncE'/>
-<fun r='_ZN3tvm7codegen12CodeGenCHost15PrintFuncPrefixEv'/>
+<fun r='_ZN3tvm7codegen12CodeGenCHost11AddFunctionERKNS_3tir8PrimFuncEb'/>
+<fun r='_ZN3tvm7codegen12CodeGenCHost35GenerateForwardFunctionDeclarationsENS_7runtime6StringERKNS2_5ArrayINS_8PrimExprEvEE'/>
+<fun r='_ZN3tvm7codegen12CodeGenCHost15PrintFuncPrefixERSo'/>
 <fun r='_ZN3tvm7codegen12CodeGenCHost16PrintFinalReturnEv'/>
+<fun r='_ZN3tvm7codegen12CodeGenCHost6FinishB5cxx11Ev'/>
 <fun r='_ZN3tvm7codegen12CodeGenCHost9PrintTypeENS_7runtime8DataTypeERSo'/>
 <fun r='_ZN3tvm7codegen12CodeGenCHost10VisitExpr_EPKNS_3tir13BroadcastNodeERSo'/>
 <fun r='_ZN3tvm7codegen12CodeGenCHost23PrintGetFuncFromBackendERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES9_'/>

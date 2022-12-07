@@ -1,10 +1,10 @@
 <inh f='tvm/include/tvm/tir/expr_functor.h' l='87' c='tvm::tir::ExprFunctor'/>
 <inh f='tvm/include/tvm/tir/stmt_functor.h' l='57' c='tvm::tir::StmtFunctor'/>
 <inh f='tvm/src/target/source/codegen_source_base.h' l='48' c='tvm::codegen::CodeGenSourceBase'/>
-<def f='tvm/src/target/source/codegen_c.h' l='59' ll='285'/>
+<def f='tvm/src/target/source/codegen_c.h' l='59' ll='294'/>
 <ovr f='tvm/src/target/source/codegen_c_host.h' l='40' c='tvm::codegen::CodeGenCHost'/>
 <use f='tvm/src/target/source/codegen_c_host.h' l='40'/>
-<size>1248</size>
+<size>1624</size>
 <doc f='tvm/src/target/source/codegen_c.h' l='49'>/*!
  * \brief A base class to generate C code.
  *
@@ -21,7 +21,7 @@
 <fun r='_ZN3tvm7codegen8CodeGenC9PrintStmtERKNS_3tir4StmtE'/>
 <fun r='_ZN3tvm7codegen8CodeGenC9PrintExprERKNS_8PrimExprERSo'/>
 <fun r='_ZN3tvm7codegen8CodeGenC9PrintExprB5cxx11ERKNS_8PrimExprE'/>
-<fun r='_ZN3tvm7codegen8CodeGenC15PrintFuncPrefixEv'/>
+<fun r='_ZN3tvm7codegen8CodeGenC15PrintFuncPrefixERSo'/>
 <fun r='_ZN3tvm7codegen8CodeGenC15PrintExtraAttrsERKNS_3tir8PrimFuncE'/>
 <fun r='_ZN3tvm7codegen8CodeGenC16PrintFinalReturnEv'/>
 <fun r='_ZN3tvm7codegen8CodeGenC15PreFunctionBodyERKNS_3tir8PrimFuncE'/>
@@ -84,37 +84,38 @@
 <fun r='_ZN3tvm7codegen8CodeGenC12GetBufferRefB5cxx11ENS_7runtime8DataTypeEPKNS_3tir10BufferNodeENS_8PrimExprE'/>
 <fun r='_ZN3tvm7codegen8CodeGenC19HandleVolatileLoadsERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEPKNS_3tir14BufferLoadNodeERSo'/>
 <fun r='_ZNK3tvm7codegen8CodeGenC17IsScopePartOfTypeEv'/>
+<fun r='_ZN3tvm7codegen8CodeGenC35GenerateForwardFunctionDeclarationsENS_7runtime6StringERKNS2_5ArrayINS_8PrimExprEvEE'/>
 <fun r='_ZN3tvm7codegen8CodeGenC15PrintCallExternENS_4TypeENS_7runtime6StringERKNS3_5ArrayINS_8PrimExprEvEEbRSo'/>
 <fun r='_ZNK3tvm7codegen8CodeGenC15HandleTypeMatchEPKNS_3tir7VarNodeENS_7runtime8DataTypeE'/>
 <fun r='_ZN3tvm7codegen8CodeGenC18RegisterHandleTypeEPKNS_3tir7VarNodeENS_7runtime8DataTypeE'/>
 <fun r='_ZN3tvm7codegen8CodeGenC14PrintSSAAssignERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES9_NS_7runtime8DataTypeE'/>
 <fun r='_ZN3tvm7codegen8CodeGenC23ReserveKeywordsAsUniqueEv'/>
 <fun r='_ZNK3tvm7codegen8CodeGenC10IsVolatileEPKNS_3tir7VarNodeE'/>
-<mbr r='tvm::codegen::CodeGenC::restrict_keyword_' o='7552' t='std::string'/>
-<mbr r='tvm::codegen::CodeGenC::alloc_storage_scope_' o='7808' t='std::unordered_map&lt;const VarNode *, std::string&gt;'/>
-<mbr r='tvm::codegen::CodeGenC::handle_data_type_' o='8256' t='std::unordered_map&lt;const VarNode *, DataType&gt;'/>
-<mbr r='tvm::codegen::CodeGenC::op_attr_global_symbol_' o='8704' t='OpAttrMap&lt;tvm::tir::TGlobalSymbol&gt;'/>
-<mbr r='tvm::codegen::CodeGenC::builtin_call_extern_' o='8768' t='const tvm::Op &amp;'/>
-<mbr r='tvm::codegen::CodeGenC::builtin_call_pure_extern_' o='8832' t='const tvm::Op &amp;'/>
-<mbr r='tvm::codegen::CodeGenC::constants_byte_alignment_' o='8896' t='tvm::Integer'/>
-<mbr r='tvm::codegen::CodeGenC::print_ssa_form_' o='8960' t='bool'/>
-<mbr r='tvm::codegen::CodeGenC::volatile_buf_' o='9024' t='std::unordered_set&lt;const VarNode *&gt;'/>
-<mbr r='tvm::codegen::CodeGenC::deep_equal_' o='9472' t='tvm::tir::ExprDeepEqual'/>
-<mbr r='tvm::codegen::CodeGenC::let_binding_' o='9536' t='std::unordered_map&lt;Var, const LetNode *, ObjectPtrHash, ObjectPtrEqual&gt;'/>
+<mbr r='tvm::codegen::CodeGenC::restrict_keyword_' o='10560' t='std::string'/>
+<mbr r='tvm::codegen::CodeGenC::alloc_storage_scope_' o='10816' t='std::unordered_map&lt;const VarNode *, std::string&gt;'/>
+<mbr r='tvm::codegen::CodeGenC::handle_data_type_' o='11264' t='std::unordered_map&lt;const VarNode *, DataType&gt;'/>
+<mbr r='tvm::codegen::CodeGenC::op_attr_global_symbol_' o='11712' t='OpAttrMap&lt;tvm::tir::TGlobalSymbol&gt;'/>
+<mbr r='tvm::codegen::CodeGenC::builtin_call_extern_' o='11776' t='const tvm::Op &amp;'/>
+<mbr r='tvm::codegen::CodeGenC::builtin_call_pure_extern_' o='11840' t='const tvm::Op &amp;'/>
+<mbr r='tvm::codegen::CodeGenC::constants_byte_alignment_' o='11904' t='tvm::Integer'/>
+<mbr r='tvm::codegen::CodeGenC::print_ssa_form_' o='11968' t='bool'/>
+<mbr r='tvm::codegen::CodeGenC::volatile_buf_' o='12032' t='std::unordered_set&lt;const VarNode *&gt;'/>
+<mbr r='tvm::codegen::CodeGenC::deep_equal_' o='12480' t='tvm::tir::ExprDeepEqual'/>
+<mbr r='tvm::codegen::CodeGenC::let_binding_' o='12544' t='std::unordered_map&lt;Var, const LetNode *, ObjectPtrHash, ObjectPtrEqual&gt;'/>
 <ovr f='tvm/src/target/source/codegen_opencl.h' l='37' c='tvm::codegen::CodeGenOpenCL'/>
 <use f='tvm/src/target/source/codegen_opencl.h' l='37'/>
-<size>1248</size>
+<size>1624</size>
 <use f='tvm/src/target/source/codegen_c.cc' l='346' c='_ZN3tvm7codegen10PrintConstEPKNS_10IntImmNodeERSoPNS0_8CodeGenCE'/>
 <use f='tvm/src/target/source/codegen_c.cc' l='360' c='_ZN3tvm7codegen14PrintUIntConstENS_7runtime8DataTypeEmRSoPNS0_8CodeGenCE'/>
 <use f='tvm/src/target/source/codegen_c.cc' l='373' c='_ZN3tvm7codegen10PrintConstEPKNS_12FloatImmNodeERSoPNS0_8CodeGenCE'/>
 <use f='tvm/src/target/source/codegen_c.cc' l='409' c='_ZN3tvm7codegen15PrintBinaryExprEPKT_PKcRSoPNS0_8CodeGenCE'/>
 <use f='tvm/src/target/source/codegen_c.cc' l='431' c='_ZN3tvm7codegen20PrintBinaryIntrinsicEPKNS_3tir8CallNodeEPKcRSoPNS0_8CodeGenCE'/>
-<size>1248</size>
+<size>1624</size>
 <fun r='_ZN3tvm7codegen8CodeGenC4InitEb'/>
 <fun r='_ZN3tvm7codegen8CodeGenC13InitFuncStateERKNS_3tir8PrimFuncE'/>
 <fun r='_ZN3tvm7codegen8CodeGenC23ReserveKeywordsAsUniqueEv'/>
 <fun r='_ZN3tvm7codegen8CodeGenC11AddFunctionERKNS_3tir8PrimFuncE'/>
-<fun r='_ZN3tvm7codegen8CodeGenC15PrintFuncPrefixEv'/>
+<fun r='_ZN3tvm7codegen8CodeGenC15PrintFuncPrefixERSo'/>
 <fun r='_ZN3tvm7codegen8CodeGenC15PrintExtraAttrsERKNS_3tir8PrimFuncE'/>
 <fun r='_ZN3tvm7codegen8CodeGenC16PrintFinalReturnEv'/>
 <fun r='_ZN3tvm7codegen8CodeGenC6FinishB5cxx11Ev'/>
@@ -180,10 +181,10 @@
 <fun r='_ZN3tvm7codegen8CodeGenC13PrintRestrictERKNS_3tir3VarERSo'/>
 <ovr f='tvm/src/target/source/codegen_cuda.h' l='39' c='tvm::codegen::CodeGenCUDA'/>
 <use f='tvm/src/target/source/codegen_cuda.h' l='39'/>
-<size>1248</size>
+<size>1624</size>
 <ovr f='tvm/src/target/source/codegen_metal.h' l='36' c='tvm::codegen::CodeGenMetal'/>
 <use f='tvm/src/target/source/codegen_metal.h' l='36'/>
-<size>1248</size>
+<size>1624</size>
 <ovr f='tvm/src/target/source/codegen_vhls.h' l='38' c='tvm::codegen::CodeGenVivadoHLS'/>
 <use f='tvm/src/target/source/codegen_vhls.h' l='38'/>
-<size>1248</size>
+<size>1624</size>
