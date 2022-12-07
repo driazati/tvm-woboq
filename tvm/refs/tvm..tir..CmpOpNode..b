@@ -108,12 +108,12 @@
 <use f='tvm/src/tir/ir/data_type_rewriter.cc' l='149' u='m' c='_ZN3tvm3tir17DataTypeLegalizer10VisitExpr_EPKNS0_6GTNodeE'/>
 <use f='tvm/src/tir/ir/data_type_rewriter.cc' l='148' u='r' c='_ZN3tvm3tir17DataTypeLegalizer10VisitExpr_EPKNS0_6GENodeE'/>
 <use f='tvm/src/tir/ir/data_type_rewriter.cc' l='149' u='m' c='_ZN3tvm3tir17DataTypeLegalizer10VisitExpr_EPKNS0_6GENodeE'/>
-<use f='tvm/src/tir/ir/data_type_rewriter.cc' l='485' u='m' c='_ZN3tvm3tir21IndexDataTypeRewriter10VisitExpr_EPKNS0_6EQNodeE'/>
-<use f='tvm/src/tir/ir/data_type_rewriter.cc' l='485' u='m' c='_ZN3tvm3tir21IndexDataTypeRewriter10VisitExpr_EPKNS0_6NENodeE'/>
-<use f='tvm/src/tir/ir/data_type_rewriter.cc' l='485' u='m' c='_ZN3tvm3tir21IndexDataTypeRewriter10VisitExpr_EPKNS0_6LENodeE'/>
-<use f='tvm/src/tir/ir/data_type_rewriter.cc' l='485' u='m' c='_ZN3tvm3tir21IndexDataTypeRewriter10VisitExpr_EPKNS0_6LTNodeE'/>
-<use f='tvm/src/tir/ir/data_type_rewriter.cc' l='485' u='m' c='_ZN3tvm3tir21IndexDataTypeRewriter10VisitExpr_EPKNS0_6GTNodeE'/>
-<use f='tvm/src/tir/ir/data_type_rewriter.cc' l='485' u='m' c='_ZN3tvm3tir21IndexDataTypeRewriter10VisitExpr_EPKNS0_6GENodeE'/>
+<use f='tvm/src/tir/ir/data_type_rewriter.cc' l='488' u='m' c='_ZN3tvm3tir21IndexDataTypeRewriter10VisitExpr_EPKNS0_6EQNodeE'/>
+<use f='tvm/src/tir/ir/data_type_rewriter.cc' l='488' u='m' c='_ZN3tvm3tir21IndexDataTypeRewriter10VisitExpr_EPKNS0_6NENodeE'/>
+<use f='tvm/src/tir/ir/data_type_rewriter.cc' l='488' u='m' c='_ZN3tvm3tir21IndexDataTypeRewriter10VisitExpr_EPKNS0_6LENodeE'/>
+<use f='tvm/src/tir/ir/data_type_rewriter.cc' l='488' u='m' c='_ZN3tvm3tir21IndexDataTypeRewriter10VisitExpr_EPKNS0_6LTNodeE'/>
+<use f='tvm/src/tir/ir/data_type_rewriter.cc' l='488' u='m' c='_ZN3tvm3tir21IndexDataTypeRewriter10VisitExpr_EPKNS0_6GTNodeE'/>
+<use f='tvm/src/tir/ir/data_type_rewriter.cc' l='488' u='m' c='_ZN3tvm3tir21IndexDataTypeRewriter10VisitExpr_EPKNS0_6GENodeE'/>
 <use f='tvm/src/tir/ir/expr.cc' l='59' u='w' c='_ZN3tvm3tir2EQC1ENS_8PrimExprES2_NS_4SpanE'/>
 <use f='tvm/src/tir/ir/expr.cc' l='416' u='r'/>
 <use f='tvm/src/tir/ir/expr.cc' l='59' u='w' c='_ZN3tvm3tir2NEC1ENS_8PrimExprES2_NS_4SpanE'/>
