@@ -11,7 +11,7 @@
 </head>
 <body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='./'>include</a>/<a href='limits.h.html'>limits.h</a></h1></div>
 <hr/><div id='content'><table class="code">
-<tr><th id="1">1</th><td><i>/* Copyright (C) 1991-2020 Free Software Foundation, Inc.</i></td></tr>
+<tr><th id="1">1</th><td><i>/* Copyright (C) 1991-2022 Free Software Foundation, Inc.</i></td></tr>
 <tr><th id="2">2</th><td><i>   This file is part of the GNU C Library.</i></td></tr>
 <tr><th id="3">3</th><td><i></i></td></tr>
 <tr><th id="4">4</th><td><i>   The GNU C Library is free software; you can redistribute it and/or</i></td></tr>
@@ -140,7 +140,7 @@
 <tr><th id="127">127</th><td><i>/* The &lt;limits.h&gt; files in some gcc versions don't define LLONG_MIN,</i></td></tr>
 <tr><th id="128">128</th><td><i>   LLONG_MAX, and ULLONG_MAX.  Instead only the values gcc defined for</i></td></tr>
 <tr><th id="129">129</th><td><i>   ages are available.  */</i></td></tr>
-<tr><th id="130">130</th><td><u>#<span data-ppcond="130">if</span> defined <a class="macro" href="features.h.html#362" data-ref="_M/__USE_ISOC99">__USE_ISOC99</a> &amp;&amp; defined <span class="macro" data-ref="_M/__GNUC__">__GNUC__</span></u></td></tr>
+<tr><th id="130">130</th><td><u>#<span data-ppcond="130">if</span> defined <a class="macro" href="features.h.html#371" data-ref="_M/__USE_ISOC99">__USE_ISOC99</a> &amp;&amp; defined <span class="macro" data-ref="_M/__GNUC__">__GNUC__</span></u></td></tr>
 <tr><th id="131">131</th><td><u># <span data-ppcond="131">ifndef</span> <span class="macro" data-ref="_M/LLONG_MIN">LLONG_MIN</span></u></td></tr>
 <tr><th id="132">132</th><td><u>#  define <dfn class="macro" id="_M/LLONG_MIN" data-ref="_M/LLONG_MIN">LLONG_MIN</dfn>	(-LLONG_MAX-1)</u></td></tr>
 <tr><th id="133">133</th><td><u># <span data-ppcond="131">endif</span></u></td></tr>
@@ -155,7 +155,7 @@
 <tr><th id="142">142</th><td><i>/* The integer width macros are not defined by GCC's &lt;limits.h&gt; before</i></td></tr>
 <tr><th id="143">143</th><td><i>   GCC 7, or if _GNU_SOURCE rather than</i></td></tr>
 <tr><th id="144">144</th><td><i>   __STDC_WANT_IEC_60559_BFP_EXT__ is used to enable this feature.  */</i></td></tr>
-<tr><th id="145">145</th><td><u>#<span data-ppcond="145">if</span> <a class="macro" href="features.h.html#179" title="1" data-ref="_M/__GLIBC_USE">__GLIBC_USE</a> (IEC_60559_BFP_EXT_C2X)</u></td></tr>
+<tr><th id="145">145</th><td><u>#<span data-ppcond="145">if</span> <a class="macro" href="features.h.html#186" title="1" data-ref="_M/__GLIBC_USE">__GLIBC_USE</a> (IEC_60559_BFP_EXT_C2X)</u></td></tr>
 <tr><th id="146">146</th><td><u># <span data-ppcond="146">ifndef</span> <span class="macro" data-ref="_M/CHAR_WIDTH">CHAR_WIDTH</span></u></td></tr>
 <tr><th id="147">147</th><td><u>#  define <dfn class="macro" id="_M/CHAR_WIDTH" data-ref="_M/CHAR_WIDTH">CHAR_WIDTH</dfn> 8</u></td></tr>
 <tr><th id="148">148</th><td><u># <span data-ppcond="146">endif</span></u></td></tr>
@@ -191,19 +191,31 @@
 <tr><th id="178">178</th><td><u># <span data-ppcond="176">endif</span></u></td></tr>
 <tr><th id="179">179</th><td><u>#<span data-ppcond="145">endif</span> /* Use IEC_60559_BFP_EXT.  */</u></td></tr>
 <tr><th id="180">180</th><td></td></tr>
-<tr><th id="181">181</th><td><u>#<span data-ppcond="181">ifdef</span>	<a class="macro" href="features.h.html#316" data-ref="_M/__USE_POSIX">__USE_POSIX</a></u></td></tr>
-<tr><th id="182">182</th><td><i>/* POSIX adds things to &lt;limits.h&gt;.  */</i></td></tr>
-<tr><th id="183">183</th><td><u># include <a href="x86_64-linux-gnu/bits/posix1_lim.h.html">&lt;bits/posix1_lim.h&gt;</a></u></td></tr>
-<tr><th id="184">184</th><td><u>#<span data-ppcond="181">endif</span></u></td></tr>
-<tr><th id="185">185</th><td></td></tr>
-<tr><th id="186">186</th><td><u>#<span data-ppcond="186">ifdef</span>	<a class="macro" href="features.h.html#320" data-ref="_M/__USE_POSIX2">__USE_POSIX2</a></u></td></tr>
-<tr><th id="187">187</th><td><u># include <a href="x86_64-linux-gnu/bits/posix2_lim.h.html">&lt;bits/posix2_lim.h&gt;</a></u></td></tr>
-<tr><th id="188">188</th><td><u>#<span data-ppcond="186">endif</span></u></td></tr>
-<tr><th id="189">189</th><td></td></tr>
-<tr><th id="190">190</th><td><u>#<span data-ppcond="190">ifdef</span>	<a class="macro" href="features.h.html#346" data-ref="_M/__USE_XOPEN">__USE_XOPEN</a></u></td></tr>
-<tr><th id="191">191</th><td><u># include <a href="x86_64-linux-gnu/bits/xopen_lim.h.html">&lt;bits/xopen_lim.h&gt;</a></u></td></tr>
-<tr><th id="192">192</th><td><u>#<span data-ppcond="190">endif</span></u></td></tr>
-<tr><th id="193">193</th><td></td></tr>
+<tr><th id="181">181</th><td><i>/* The macros for _Bool are not defined by GCC's &lt;limits.h&gt; before GCC</i></td></tr>
+<tr><th id="182">182</th><td><i>   11, or if _GNU_SOURCE is defined rather than enabling C2x support</i></td></tr>
+<tr><th id="183">183</th><td><i>   with -std.  */</i></td></tr>
+<tr><th id="184">184</th><td><u>#<span data-ppcond="184">if</span> <a class="macro" href="features.h.html#186" title="1" data-ref="_M/__GLIBC_USE">__GLIBC_USE</a> (ISOC2X)</u></td></tr>
+<tr><th id="185">185</th><td><u># <span data-ppcond="185">ifndef</span> <span class="macro" data-ref="_M/BOOL_MAX">BOOL_MAX</span></u></td></tr>
+<tr><th id="186">186</th><td><u>#  define <dfn class="macro" id="_M/BOOL_MAX" data-ref="_M/BOOL_MAX">BOOL_MAX</dfn> 1</u></td></tr>
+<tr><th id="187">187</th><td><u># <span data-ppcond="185">endif</span></u></td></tr>
+<tr><th id="188">188</th><td><u># <span data-ppcond="188">ifndef</span> <span class="macro" data-ref="_M/BOOL_WIDTH">BOOL_WIDTH</span></u></td></tr>
+<tr><th id="189">189</th><td><u>#  define <dfn class="macro" id="_M/BOOL_WIDTH" data-ref="_M/BOOL_WIDTH">BOOL_WIDTH</dfn> 1</u></td></tr>
+<tr><th id="190">190</th><td><u># <span data-ppcond="188">endif</span></u></td></tr>
+<tr><th id="191">191</th><td><u>#<span data-ppcond="184">endif</span></u></td></tr>
+<tr><th id="192">192</th><td></td></tr>
+<tr><th id="193">193</th><td><u>#<span data-ppcond="193">ifdef</span>	<a class="macro" href="features.h.html#325" data-ref="_M/__USE_POSIX">__USE_POSIX</a></u></td></tr>
+<tr><th id="194">194</th><td><i>/* POSIX adds things to &lt;limits.h&gt;.  */</i></td></tr>
+<tr><th id="195">195</th><td><u># include <a href="x86_64-linux-gnu/bits/posix1_lim.h.html">&lt;bits/posix1_lim.h&gt;</a></u></td></tr>
+<tr><th id="196">196</th><td><u>#<span data-ppcond="193">endif</span></u></td></tr>
+<tr><th id="197">197</th><td></td></tr>
+<tr><th id="198">198</th><td><u>#<span data-ppcond="198">ifdef</span>	<a class="macro" href="features.h.html#329" data-ref="_M/__USE_POSIX2">__USE_POSIX2</a></u></td></tr>
+<tr><th id="199">199</th><td><u># include <a href="x86_64-linux-gnu/bits/posix2_lim.h.html">&lt;bits/posix2_lim.h&gt;</a></u></td></tr>
+<tr><th id="200">200</th><td><u>#<span data-ppcond="198">endif</span></u></td></tr>
+<tr><th id="201">201</th><td></td></tr>
+<tr><th id="202">202</th><td><u>#<span data-ppcond="202">ifdef</span>	<a class="macro" href="features.h.html#355" data-ref="_M/__USE_XOPEN">__USE_XOPEN</a></u></td></tr>
+<tr><th id="203">203</th><td><u># include <a href="x86_64-linux-gnu/bits/xopen_lim.h.html">&lt;bits/xopen_lim.h&gt;</a></u></td></tr>
+<tr><th id="204">204</th><td><u>#<span data-ppcond="202">endif</span></u></td></tr>
+<tr><th id="205">205</th><td></td></tr>
 </table><hr/><p id='footer'>
 Generated while processing <a href='../tvm/src/target/llvm/codegen_amdgpu.cc.html'>tvm/src/target/llvm/codegen_amdgpu.cc</a><br/>Generated on <em>2022-Dec-07</em> from project include<br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
 <br/>Generator usage only permitted with license.</p>

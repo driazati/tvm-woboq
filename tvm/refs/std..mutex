@@ -1,8 +1,11 @@
-<inh f='include/c++/10/bits/std_mutex.h' l='57' c='std::__mutex_base'/>
-<def f='include/c++/10/bits/std_mutex.h' l='83' ll='124'/>
-<use f='include/c++/10/bits/std_mutex.h' l='94' c='_ZNSt5mutexC1ERKS_'/>
-<use f='include/c++/10/bits/std_mutex.h' l='95' c='_ZNSt5mutexaSERKS_'/>
-<use f='include/c++/10/bits/std_mutex.h' l='95' c='_ZNSt5mutexaSERKS_'/>
+<inh f='include/c++/12/bits/std_mutex.h' l='57' c='std::__mutex_base'/>
+<def f='include/c++/12/bits/std_mutex.h' l='83' ll='124'/>
+<use f='include/c++/12/bits/std_mutex.h' l='94' c='_ZNSt5mutexC1ERKS_'/>
+<use f='include/c++/12/bits/std_mutex.h' l='95' c='_ZNSt5mutexaSERKS_'/>
+<use f='include/c++/12/bits/std_mutex.h' l='95' c='_ZNSt5mutexaSERKS_'/>
+<use f='include/c++/12/bits/std_mutex.h' l='152' c='_ZNSt9__condvar4waitERSt5mutex'/>
+<use f='include/c++/12/bits/std_mutex.h' l='160' c='_ZNSt9__condvar10wait_untilERSt5mutexR8timespec'/>
+<use f='include/c++/12/bits/std_mutex.h' l='167' c='_ZNSt9__condvar10wait_untilERSt5mutexiR8timespec'/>
 <use f='tvm/3rdparty/dmlc-core/include/dmlc/common.h' l='58'/>
 <use f='tvm/3rdparty/dmlc-core/include/dmlc/common.h' l='69' c='_ZN4dmlc12OMPException3RunET_DpT0_'/>
 <use f='tvm/3rdparty/dmlc-core/include/dmlc/common.h' l='74' c='_ZN4dmlc12OMPException3RunET_DpT0_'/>
@@ -12,7 +15,7 @@
 <use f='tvm/3rdparty/dmlc-core/include/dmlc/registry.h' l='79' c='_ZN4dmlc8Registry12__REGISTER__ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
 <use f='tvm/3rdparty/dmlc-core/include/dmlc/registry.h' l='117'/>
 <size>40</size>
-<doc f='include/c++/10/bits/std_mutex.h' l='82'>/// The standard mutex type.</doc>
+<doc f='include/c++/12/bits/std_mutex.h' l='82'>/// The standard mutex type.</doc>
 <fun r='_ZNSt5mutexC1Ev'/>
 <fun r='_ZNSt5mutexD1Ev'/>
 <fun r='_ZNSt5mutexC1ERKS_'/>
@@ -21,27 +24,27 @@
 <fun r='_ZNSt5mutex8try_lockEv'/>
 <fun r='_ZNSt5mutex6unlockEv'/>
 <fun r='_ZNSt5mutex13native_handleEv'/>
-<use f='include/c++/10/condition_variable' l='104' c='_ZNSt18condition_variable4waitERSt11unique_lockISt5mutexE'/>
-<use f='include/c++/10/condition_variable' l='108' c='_ZNSt18condition_variable4waitERSt11unique_lockISt5mutexET_'/>
-<use f='include/c++/10/condition_variable' l='117' c='_ZNSt18condition_variable10wait_untilERSt11unique_lockISt5mutexERKNSt6chrono10time_pointINS4_3_V212steady_clockET_EE'/>
-<use f='include/c++/10/condition_variable' l='124' c='_ZNSt18condition_variable10wait_untilERSt11unique_lockISt5mutexERKNSt6chrono10time_pointINS4_3_V212system_clockET_EE'/>
-<use f='include/c++/10/condition_variable' l='130' c='_ZNSt18condition_variable10wait_untilERSt11unique_lockISt5mutexERKNSt6chrono10time_pointIT_T0_EE'/>
-<use f='include/c++/10/condition_variable' l='153' c='_ZNSt18condition_variable10wait_untilERSt11unique_lockISt5mutexERKNSt6chrono10time_pointIT_T0_EET1_'/>
-<use f='include/c++/10/condition_variable' l='165' c='_ZNSt18condition_variable8wait_forERSt11unique_lockISt5mutexERKNSt6chrono8durationIT_T0_EE'/>
-<use f='include/c++/10/condition_variable' l='177' c='_ZNSt18condition_variable8wait_forERSt11unique_lockISt5mutexERKNSt6chrono8durationIT_T0_EET1_'/>
-<use f='include/c++/10/condition_variable' l='197' c='_ZNSt18condition_variable17__wait_until_implERSt11unique_lockISt5mutexERKNSt6chrono10time_pointINS4_3_V212steady_clockET_EE'/>
-<use f='include/c++/10/condition_variable' l='220' c='_ZNSt18condition_variable17__wait_until_implERSt11unique_lockISt5mutexERKNSt6chrono10time_pointINS4_3_V212system_clockET_EE'/>
-<use f='include/c++/10/condition_variable' l='241' c='_ZSt25notify_all_at_thread_exitRSt18condition_variableSt11unique_lockISt5mutexE'/>
-<use f='include/c++/10/condition_variable' l='261'/>
-<use f='include/c++/10/condition_variable' l='294' c='_ZNSt3_V222condition_variable_anyC1Ev'/>
-<use f='include/c++/10/condition_variable' l='303' c='_ZNSt3_V222condition_variable_any10notify_oneEv'/>
-<use f='include/c++/10/condition_variable' l='310' c='_ZNSt3_V222condition_variable_any10notify_allEv'/>
-<use f='include/c++/10/condition_variable' l='318' c='_ZNSt3_V222condition_variable_any4waitERT_'/>
-<use f='include/c++/10/condition_variable' l='319' c='_ZNSt3_V222condition_variable_any4waitERT_'/>
-<use f='include/c++/10/condition_variable' l='323' c='_ZNSt3_V222condition_variable_any4waitERT_'/>
-<use f='include/c++/10/condition_variable' l='341' c='_ZNSt3_V222condition_variable_any10wait_untilERT_RKNSt6chrono10time_pointIT0_T1_EE'/>
-<use f='include/c++/10/condition_variable' l='342' c='_ZNSt3_V222condition_variable_any10wait_untilERT_RKNSt6chrono10time_pointIT0_T1_EE'/>
-<use f='include/c++/10/condition_variable' l='346' c='_ZNSt3_V222condition_variable_any10wait_untilERT_RKNSt6chrono10time_pointIT0_T1_EE'/>
+<use f='include/c++/12/condition_variable' l='95' c='_ZNSt18condition_variable4waitERSt11unique_lockISt5mutexE'/>
+<use f='include/c++/12/condition_variable' l='99' c='_ZNSt18condition_variable4waitERSt11unique_lockISt5mutexET_'/>
+<use f='include/c++/12/condition_variable' l='108' c='_ZNSt18condition_variable10wait_untilERSt11unique_lockISt5mutexERKNSt6chrono10time_pointINS4_3_V212steady_clockET_EE'/>
+<use f='include/c++/12/condition_variable' l='115' c='_ZNSt18condition_variable10wait_untilERSt11unique_lockISt5mutexERKNSt6chrono10time_pointINS4_3_V212system_clockET_EE'/>
+<use f='include/c++/12/condition_variable' l='121' c='_ZNSt18condition_variable10wait_untilERSt11unique_lockISt5mutexERKNSt6chrono10time_pointIT_T0_EE'/>
+<use f='include/c++/12/condition_variable' l='146' c='_ZNSt18condition_variable10wait_untilERSt11unique_lockISt5mutexERKNSt6chrono10time_pointIT_T0_EET1_'/>
+<use f='include/c++/12/condition_variable' l='158' c='_ZNSt18condition_variable8wait_forERSt11unique_lockISt5mutexERKNSt6chrono8durationIT_T0_EE'/>
+<use f='include/c++/12/condition_variable' l='169' c='_ZNSt18condition_variable8wait_forERSt11unique_lockISt5mutexERKNSt6chrono8durationIT_T0_EET1_'/>
+<use f='include/c++/12/condition_variable' l='188' c='_ZNSt18condition_variable17__wait_until_implERSt11unique_lockISt5mutexERKNSt6chrono10time_pointINS4_3_V212steady_clockET_EE'/>
+<use f='include/c++/12/condition_variable' l='209' c='_ZNSt18condition_variable17__wait_until_implERSt11unique_lockISt5mutexERKNSt6chrono10time_pointINS4_3_V212system_clockET_EE'/>
+<use f='include/c++/12/condition_variable' l='229' c='_ZSt25notify_all_at_thread_exitRSt18condition_variableSt11unique_lockISt5mutexE'/>
+<use f='include/c++/12/condition_variable' l='249'/>
+<use f='include/c++/12/condition_variable' l='282' c='_ZNSt3_V222condition_variable_anyC1Ev'/>
+<use f='include/c++/12/condition_variable' l='291' c='_ZNSt3_V222condition_variable_any10notify_oneEv'/>
+<use f='include/c++/12/condition_variable' l='298' c='_ZNSt3_V222condition_variable_any10notify_allEv'/>
+<use f='include/c++/12/condition_variable' l='306' c='_ZNSt3_V222condition_variable_any4waitERT_'/>
+<use f='include/c++/12/condition_variable' l='307' c='_ZNSt3_V222condition_variable_any4waitERT_'/>
+<use f='include/c++/12/condition_variable' l='311' c='_ZNSt3_V222condition_variable_any4waitERT_'/>
+<use f='include/c++/12/condition_variable' l='329' c='_ZNSt3_V222condition_variable_any10wait_untilERT_RKNSt6chrono10time_pointIT0_T1_EE'/>
+<use f='include/c++/12/condition_variable' l='330' c='_ZNSt3_V222condition_variable_any10wait_untilERT_RKNSt6chrono10time_pointIT0_T1_EE'/>
+<use f='include/c++/12/condition_variable' l='334' c='_ZNSt3_V222condition_variable_any10wait_untilERT_RKNSt6chrono10time_pointIT0_T1_EE'/>
 <size>40</size>
 <use f='tvm/src/node/attr_registry.h' l='99' c='_ZN3tvm12AttrRegistry10UpdateAttrERKNS_7runtime6StringERKT0_NS1_11TVMRetValueEi'/>
 <use f='tvm/src/node/attr_registry.h' l='126' c='_ZN3tvm12AttrRegistry9ResetAttrERKNS_7runtime6StringERKT0_'/>

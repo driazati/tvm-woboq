@@ -13,7 +13,7 @@
 <hr/><div id='content'><table class="code">
 <tr><th id="1">1</th><td><i>/* Macros to control TS 18661-3 glibc features where the same</i></td></tr>
 <tr><th id="2">2</th><td><i>   definitions are appropriate for all platforms.</i></td></tr>
-<tr><th id="3">3</th><td><i>   Copyright (C) 2017-2020 Free Software Foundation, Inc.</i></td></tr>
+<tr><th id="3">3</th><td><i>   Copyright (C) 2017-2022 Free Software Foundation, Inc.</i></td></tr>
 <tr><th id="4">4</th><td><i>   This file is part of the GNU C Library.</i></td></tr>
 <tr><th id="5">5</th><td><i></i></td></tr>
 <tr><th id="6">6</th><td><i>   The GNU C Library is free software; you can redistribute it and/or</i></td></tr>
@@ -79,7 +79,7 @@
 <tr><th id="66">66</th><td><i>/* Defined to 1 if any _FloatN or _FloatNx types that are not</i></td></tr>
 <tr><th id="67">67</th><td><i>   ABI-distinct are however distinct types at the C language level (so</i></td></tr>
 <tr><th id="68">68</th><td><i>   for the purposes of __builtin_types_compatible_p and _Generic).  */</i></td></tr>
-<tr><th id="69">69</th><td><u>#<span data-ppcond="69">if</span> <a class="macro" href="../../features.h.html#161" title="((4 &lt;&lt; 16) + 2 &gt;= ((7) &lt;&lt; 16) + (0))" data-ref="_M/__GNUC_PREREQ">__GNUC_PREREQ</a> (7, 0) &amp;&amp; !defined <span class="macro" data-ref="_M/__cplusplus">__cplusplus</span></u></td></tr>
+<tr><th id="69">69</th><td><u>#<span data-ppcond="69">if</span> <a class="macro" href="../../features.h.html#168" title="((4 &lt;&lt; 16) + 2 &gt;= ((7) &lt;&lt; 16) + (0))" data-ref="_M/__GNUC_PREREQ">__GNUC_PREREQ</a> (7, 0) &amp;&amp; !defined <span class="macro" data-ref="_M/__cplusplus">__cplusplus</span></u></td></tr>
 <tr><th id="70">70</th><td><u># define __HAVE_FLOATN_NOT_TYPEDEF 1</u></td></tr>
 <tr><th id="71">71</th><td><u>#<span data-ppcond="69">else</span></u></td></tr>
 <tr><th id="72">72</th><td><u># define <dfn class="macro" id="_M/__HAVE_FLOATN_NOT_TYPEDEF" data-ref="_M/__HAVE_FLOATN_NOT_TYPEDEF">__HAVE_FLOATN_NOT_TYPEDEF</dfn> 0</u></td></tr>
@@ -100,7 +100,7 @@
 <tr><th id="87">87</th><td><u># <span data-ppcond="80">endif</span></u></td></tr>
 <tr><th id="88">88</th><td></td></tr>
 <tr><th id="89">89</th><td><u># <span data-ppcond="89">if</span> <a class="macro" href="#35" title="1" data-ref="_M/__HAVE_FLOAT32">__HAVE_FLOAT32</a></u></td></tr>
-<tr><th id="90">90</th><td><u>#  <span data-ppcond="90">if</span> !<a class="macro" href="../../features.h.html#161" title="((4 &lt;&lt; 16) + 2 &gt;= ((7) &lt;&lt; 16) + (0))" data-ref="_M/__GNUC_PREREQ">__GNUC_PREREQ</a> (7, 0) || defined <span class="macro" data-ref="_M/__cplusplus">__cplusplus</span></u></td></tr>
+<tr><th id="90">90</th><td><u>#  <span data-ppcond="90">if</span> !<a class="macro" href="../../features.h.html#168" title="((4 &lt;&lt; 16) + 2 &gt;= ((7) &lt;&lt; 16) + (0))" data-ref="_M/__GNUC_PREREQ">__GNUC_PREREQ</a> (7, 0) || defined <span class="macro" data-ref="_M/__cplusplus">__cplusplus</span></u></td></tr>
 <tr><th id="91">91</th><td><u>#   define <dfn class="macro" id="_M/__f32" data-ref="_M/__f32">__f32</dfn>(x) x##f</u></td></tr>
 <tr><th id="92">92</th><td><u>#  <span data-ppcond="90">else</span></u></td></tr>
 <tr><th id="93">93</th><td><u>#   define __f32(x) x##f32</u></td></tr>
@@ -108,7 +108,7 @@
 <tr><th id="95">95</th><td><u># <span data-ppcond="89">endif</span></u></td></tr>
 <tr><th id="96">96</th><td></td></tr>
 <tr><th id="97">97</th><td><u># <span data-ppcond="97">if</span> <a class="macro" href="#36" title="1" data-ref="_M/__HAVE_FLOAT64">__HAVE_FLOAT64</a></u></td></tr>
-<tr><th id="98">98</th><td><u>#  <span data-ppcond="98">if</span> !<a class="macro" href="../../features.h.html#161" title="((4 &lt;&lt; 16) + 2 &gt;= ((7) &lt;&lt; 16) + (0))" data-ref="_M/__GNUC_PREREQ">__GNUC_PREREQ</a> (7, 0) || defined <span class="macro" data-ref="_M/__cplusplus">__cplusplus</span></u></td></tr>
+<tr><th id="98">98</th><td><u>#  <span data-ppcond="98">if</span> !<a class="macro" href="../../features.h.html#168" title="((4 &lt;&lt; 16) + 2 &gt;= ((7) &lt;&lt; 16) + (0))" data-ref="_M/__GNUC_PREREQ">__GNUC_PREREQ</a> (7, 0) || defined <span class="macro" data-ref="_M/__cplusplus">__cplusplus</span></u></td></tr>
 <tr><th id="99">99</th><td><u>#   <span data-ppcond="99">ifdef</span> <span class="macro" data-ref="_M/__NO_LONG_DOUBLE_MATH">__NO_LONG_DOUBLE_MATH</span></u></td></tr>
 <tr><th id="100">100</th><td><u>#    define __f64(x) x##l</u></td></tr>
 <tr><th id="101">101</th><td><u>#   <span data-ppcond="99">else</span></u></td></tr>
@@ -120,16 +120,16 @@
 <tr><th id="107">107</th><td><u># <span data-ppcond="97">endif</span></u></td></tr>
 <tr><th id="108">108</th><td></td></tr>
 <tr><th id="109">109</th><td><u># <span data-ppcond="109">if</span> <a class="macro" href="#37" title="1" data-ref="_M/__HAVE_FLOAT32X">__HAVE_FLOAT32X</a></u></td></tr>
-<tr><th id="110">110</th><td><u>#  <span data-ppcond="110">if</span> !<a class="macro" href="../../features.h.html#161" title="((4 &lt;&lt; 16) + 2 &gt;= ((7) &lt;&lt; 16) + (0))" data-ref="_M/__GNUC_PREREQ">__GNUC_PREREQ</a> (7, 0) || defined <span class="macro" data-ref="_M/__cplusplus">__cplusplus</span></u></td></tr>
+<tr><th id="110">110</th><td><u>#  <span data-ppcond="110">if</span> !<a class="macro" href="../../features.h.html#168" title="((4 &lt;&lt; 16) + 2 &gt;= ((7) &lt;&lt; 16) + (0))" data-ref="_M/__GNUC_PREREQ">__GNUC_PREREQ</a> (7, 0) || defined <span class="macro" data-ref="_M/__cplusplus">__cplusplus</span></u></td></tr>
 <tr><th id="111">111</th><td><u>#   define <dfn class="macro" id="_M/__f32x" data-ref="_M/__f32x">__f32x</dfn>(x) x</u></td></tr>
 <tr><th id="112">112</th><td><u>#  <span data-ppcond="110">else</span></u></td></tr>
 <tr><th id="113">113</th><td><u>#   define __f32x(x) x##f32x</u></td></tr>
 <tr><th id="114">114</th><td><u>#  <span data-ppcond="110">endif</span></u></td></tr>
 <tr><th id="115">115</th><td><u># <span data-ppcond="109">endif</span></u></td></tr>
 <tr><th id="116">116</th><td></td></tr>
-<tr><th id="117">117</th><td><u># <span data-ppcond="117">if</span> <a class="macro" href="floatn.h.html#49" title="1" data-ref="_M/__HAVE_FLOAT64X">__HAVE_FLOAT64X</a></u></td></tr>
-<tr><th id="118">118</th><td><u>#  <span data-ppcond="118">if</span> !<a class="macro" href="../../features.h.html#161" title="((4 &lt;&lt; 16) + 2 &gt;= ((7) &lt;&lt; 16) + (0))" data-ref="_M/__GNUC_PREREQ">__GNUC_PREREQ</a> (7, 0) || defined <span class="macro" data-ref="_M/__cplusplus">__cplusplus</span></u></td></tr>
-<tr><th id="119">119</th><td><u>#   <span data-ppcond="119">if</span> <a class="macro" href="floatn.h.html#55" title="1" data-ref="_M/__HAVE_FLOAT64X_LONG_DOUBLE">__HAVE_FLOAT64X_LONG_DOUBLE</a></u></td></tr>
+<tr><th id="117">117</th><td><u># <span data-ppcond="117">if</span> <a class="macro" href="floatn.h.html#48" title="1" data-ref="_M/__HAVE_FLOAT64X">__HAVE_FLOAT64X</a></u></td></tr>
+<tr><th id="118">118</th><td><u>#  <span data-ppcond="118">if</span> !<a class="macro" href="../../features.h.html#168" title="((4 &lt;&lt; 16) + 2 &gt;= ((7) &lt;&lt; 16) + (0))" data-ref="_M/__GNUC_PREREQ">__GNUC_PREREQ</a> (7, 0) || defined <span class="macro" data-ref="_M/__cplusplus">__cplusplus</span></u></td></tr>
+<tr><th id="119">119</th><td><u>#   <span data-ppcond="119">if</span> <a class="macro" href="floatn.h.html#54" title="1" data-ref="_M/__HAVE_FLOAT64X_LONG_DOUBLE">__HAVE_FLOAT64X_LONG_DOUBLE</a></u></td></tr>
 <tr><th id="120">120</th><td><u>#    define <dfn class="macro" id="_M/__f64x" data-ref="_M/__f64x">__f64x</dfn>(x) x##l</u></td></tr>
 <tr><th id="121">121</th><td><u>#   <span data-ppcond="119">else</span></u></td></tr>
 <tr><th id="122">122</th><td><u>#    define __f64x(x) __f128 (x)</u></td></tr>
@@ -158,7 +158,7 @@
 <tr><th id="145">145</th><td><u># <span data-ppcond="138">endif</span></u></td></tr>
 <tr><th id="146">146</th><td></td></tr>
 <tr><th id="147">147</th><td><u># <span data-ppcond="147">if</span> <a class="macro" href="#35" title="1" data-ref="_M/__HAVE_FLOAT32">__HAVE_FLOAT32</a></u></td></tr>
-<tr><th id="148">148</th><td><u>#  <span data-ppcond="148">if</span> !<a class="macro" href="../../features.h.html#161" title="((4 &lt;&lt; 16) + 2 &gt;= ((7) &lt;&lt; 16) + (0))" data-ref="_M/__GNUC_PREREQ">__GNUC_PREREQ</a> (7, 0) || defined <span class="macro" data-ref="_M/__cplusplus">__cplusplus</span></u></td></tr>
+<tr><th id="148">148</th><td><u>#  <span data-ppcond="148">if</span> !<a class="macro" href="../../features.h.html#168" title="((4 &lt;&lt; 16) + 2 &gt;= ((7) &lt;&lt; 16) + (0))" data-ref="_M/__GNUC_PREREQ">__GNUC_PREREQ</a> (7, 0) || defined <span class="macro" data-ref="_M/__cplusplus">__cplusplus</span></u></td></tr>
 <tr><th id="149">149</th><td><u>#   define <dfn class="macro" id="_M/__CFLOAT32" data-ref="_M/__CFLOAT32">__CFLOAT32</dfn> _Complex float</u></td></tr>
 <tr><th id="150">150</th><td><u>#  <span data-ppcond="148">else</span></u></td></tr>
 <tr><th id="151">151</th><td><u>#   define __CFLOAT32 _Complex _Float32</u></td></tr>
@@ -166,7 +166,7 @@
 <tr><th id="153">153</th><td><u># <span data-ppcond="147">endif</span></u></td></tr>
 <tr><th id="154">154</th><td></td></tr>
 <tr><th id="155">155</th><td><u># <span data-ppcond="155">if</span> <a class="macro" href="#36" title="1" data-ref="_M/__HAVE_FLOAT64">__HAVE_FLOAT64</a></u></td></tr>
-<tr><th id="156">156</th><td><u>#  <span data-ppcond="156">if</span> !<a class="macro" href="../../features.h.html#161" title="((4 &lt;&lt; 16) + 2 &gt;= ((7) &lt;&lt; 16) + (0))" data-ref="_M/__GNUC_PREREQ">__GNUC_PREREQ</a> (7, 0) || defined <span class="macro" data-ref="_M/__cplusplus">__cplusplus</span></u></td></tr>
+<tr><th id="156">156</th><td><u>#  <span data-ppcond="156">if</span> !<a class="macro" href="../../features.h.html#168" title="((4 &lt;&lt; 16) + 2 &gt;= ((7) &lt;&lt; 16) + (0))" data-ref="_M/__GNUC_PREREQ">__GNUC_PREREQ</a> (7, 0) || defined <span class="macro" data-ref="_M/__cplusplus">__cplusplus</span></u></td></tr>
 <tr><th id="157">157</th><td><u>#   <span data-ppcond="157">ifdef</span> <span class="macro" data-ref="_M/__NO_LONG_DOUBLE_MATH">__NO_LONG_DOUBLE_MATH</span></u></td></tr>
 <tr><th id="158">158</th><td><u>#    define __CFLOAT64 _Complex long double</u></td></tr>
 <tr><th id="159">159</th><td><u>#   <span data-ppcond="157">else</span></u></td></tr>
@@ -178,16 +178,16 @@
 <tr><th id="165">165</th><td><u># <span data-ppcond="155">endif</span></u></td></tr>
 <tr><th id="166">166</th><td></td></tr>
 <tr><th id="167">167</th><td><u># <span data-ppcond="167">if</span> <a class="macro" href="#37" title="1" data-ref="_M/__HAVE_FLOAT32X">__HAVE_FLOAT32X</a></u></td></tr>
-<tr><th id="168">168</th><td><u>#  <span data-ppcond="168">if</span> !<a class="macro" href="../../features.h.html#161" title="((4 &lt;&lt; 16) + 2 &gt;= ((7) &lt;&lt; 16) + (0))" data-ref="_M/__GNUC_PREREQ">__GNUC_PREREQ</a> (7, 0) || defined <span class="macro" data-ref="_M/__cplusplus">__cplusplus</span></u></td></tr>
+<tr><th id="168">168</th><td><u>#  <span data-ppcond="168">if</span> !<a class="macro" href="../../features.h.html#168" title="((4 &lt;&lt; 16) + 2 &gt;= ((7) &lt;&lt; 16) + (0))" data-ref="_M/__GNUC_PREREQ">__GNUC_PREREQ</a> (7, 0) || defined <span class="macro" data-ref="_M/__cplusplus">__cplusplus</span></u></td></tr>
 <tr><th id="169">169</th><td><u>#   define <dfn class="macro" id="_M/__CFLOAT32X" data-ref="_M/__CFLOAT32X">__CFLOAT32X</dfn> _Complex double</u></td></tr>
 <tr><th id="170">170</th><td><u>#  <span data-ppcond="168">else</span></u></td></tr>
 <tr><th id="171">171</th><td><u>#   define __CFLOAT32X _Complex _Float32x</u></td></tr>
 <tr><th id="172">172</th><td><u>#  <span data-ppcond="168">endif</span></u></td></tr>
 <tr><th id="173">173</th><td><u># <span data-ppcond="167">endif</span></u></td></tr>
 <tr><th id="174">174</th><td></td></tr>
-<tr><th id="175">175</th><td><u># <span data-ppcond="175">if</span> <a class="macro" href="floatn.h.html#49" title="1" data-ref="_M/__HAVE_FLOAT64X">__HAVE_FLOAT64X</a></u></td></tr>
-<tr><th id="176">176</th><td><u>#  <span data-ppcond="176">if</span> !<a class="macro" href="../../features.h.html#161" title="((4 &lt;&lt; 16) + 2 &gt;= ((7) &lt;&lt; 16) + (0))" data-ref="_M/__GNUC_PREREQ">__GNUC_PREREQ</a> (7, 0) || defined <span class="macro" data-ref="_M/__cplusplus">__cplusplus</span></u></td></tr>
-<tr><th id="177">177</th><td><u>#   <span data-ppcond="177">if</span> <a class="macro" href="floatn.h.html#55" title="1" data-ref="_M/__HAVE_FLOAT64X_LONG_DOUBLE">__HAVE_FLOAT64X_LONG_DOUBLE</a></u></td></tr>
+<tr><th id="175">175</th><td><u># <span data-ppcond="175">if</span> <a class="macro" href="floatn.h.html#48" title="1" data-ref="_M/__HAVE_FLOAT64X">__HAVE_FLOAT64X</a></u></td></tr>
+<tr><th id="176">176</th><td><u>#  <span data-ppcond="176">if</span> !<a class="macro" href="../../features.h.html#168" title="((4 &lt;&lt; 16) + 2 &gt;= ((7) &lt;&lt; 16) + (0))" data-ref="_M/__GNUC_PREREQ">__GNUC_PREREQ</a> (7, 0) || defined <span class="macro" data-ref="_M/__cplusplus">__cplusplus</span></u></td></tr>
+<tr><th id="177">177</th><td><u>#   <span data-ppcond="177">if</span> <a class="macro" href="floatn.h.html#54" title="1" data-ref="_M/__HAVE_FLOAT64X_LONG_DOUBLE">__HAVE_FLOAT64X_LONG_DOUBLE</a></u></td></tr>
 <tr><th id="178">178</th><td><u>#    define <dfn class="macro" id="_M/__CFLOAT64X" data-ref="_M/__CFLOAT64X">__CFLOAT64X</dfn> _Complex long double</u></td></tr>
 <tr><th id="179">179</th><td><u>#   <span data-ppcond="177">else</span></u></td></tr>
 <tr><th id="180">180</th><td><u>#    define __CFLOAT64X __CFLOAT128</u></td></tr>
@@ -223,11 +223,11 @@
 <tr><th id="210">210</th><td></td></tr>
 <tr><th id="211">211</th><td><u># <span data-ppcond="211">if</span> <a class="macro" href="#35" title="1" data-ref="_M/__HAVE_FLOAT32">__HAVE_FLOAT32</a></u></td></tr>
 <tr><th id="212">212</th><td></td></tr>
-<tr><th id="213">213</th><td><u>#  <span data-ppcond="213">if</span> !<a class="macro" href="../../features.h.html#161" title="((4 &lt;&lt; 16) + 2 &gt;= ((7) &lt;&lt; 16) + (0))" data-ref="_M/__GNUC_PREREQ">__GNUC_PREREQ</a> (7, 0) || defined <span class="macro" data-ref="_M/__cplusplus">__cplusplus</span></u></td></tr>
+<tr><th id="213">213</th><td><u>#  <span data-ppcond="213">if</span> !<a class="macro" href="../../features.h.html#168" title="((4 &lt;&lt; 16) + 2 &gt;= ((7) &lt;&lt; 16) + (0))" data-ref="_M/__GNUC_PREREQ">__GNUC_PREREQ</a> (7, 0) || defined <span class="macro" data-ref="_M/__cplusplus">__cplusplus</span></u></td></tr>
 <tr><th id="214">214</th><td><b>typedef</b> <em>float</em> <dfn class="typedef" id="_Float32" title='_Float32' data-type='float' data-ref="_Float32" data-ref-filename="_Float32">_Float32</dfn>;</td></tr>
 <tr><th id="215">215</th><td><u>#  <span data-ppcond="213">endif</span></u></td></tr>
 <tr><th id="216">216</th><td></td></tr>
-<tr><th id="217">217</th><td><u>#  <span data-ppcond="217">if</span> !<a class="macro" href="../../features.h.html#161" title="((4 &lt;&lt; 16) + 2 &gt;= ((7) &lt;&lt; 16) + (0))" data-ref="_M/__GNUC_PREREQ">__GNUC_PREREQ</a> (7, 0)</u></td></tr>
+<tr><th id="217">217</th><td><u>#  <span data-ppcond="217">if</span> !<a class="macro" href="../../features.h.html#168" title="((4 &lt;&lt; 16) + 2 &gt;= ((7) &lt;&lt; 16) + (0))" data-ref="_M/__GNUC_PREREQ">__GNUC_PREREQ</a> (7, 0)</u></td></tr>
 <tr><th id="218">218</th><td><u>#   define <dfn class="macro" id="_M/__builtin_huge_valf32" data-ref="_M/__builtin_huge_valf32">__builtin_huge_valf32</dfn>() (__builtin_huge_valf ())</u></td></tr>
 <tr><th id="219">219</th><td><u>#   define <dfn class="macro" id="_M/__builtin_inff32" data-ref="_M/__builtin_inff32">__builtin_inff32</dfn>() (__builtin_inff ())</u></td></tr>
 <tr><th id="220">220</th><td><u>#   define <dfn class="macro" id="_M/__builtin_nanf32" data-ref="_M/__builtin_nanf32">__builtin_nanf32</dfn>(x) (__builtin_nanf (x))</u></td></tr>
@@ -260,11 +260,11 @@
 <tr><th id="247">247</th><td></td></tr>
 <tr><th id="248">248</th><td><u>#  <span data-ppcond="235">else</span></u></td></tr>
 <tr><th id="249">249</th><td></td></tr>
-<tr><th id="250">250</th><td><u>#   <span data-ppcond="250">if</span> !<a class="macro" href="../../features.h.html#161" title="((4 &lt;&lt; 16) + 2 &gt;= ((7) &lt;&lt; 16) + (0))" data-ref="_M/__GNUC_PREREQ">__GNUC_PREREQ</a> (7, 0) || defined <span class="macro" data-ref="_M/__cplusplus">__cplusplus</span></u></td></tr>
+<tr><th id="250">250</th><td><u>#   <span data-ppcond="250">if</span> !<a class="macro" href="../../features.h.html#168" title="((4 &lt;&lt; 16) + 2 &gt;= ((7) &lt;&lt; 16) + (0))" data-ref="_M/__GNUC_PREREQ">__GNUC_PREREQ</a> (7, 0) || defined <span class="macro" data-ref="_M/__cplusplus">__cplusplus</span></u></td></tr>
 <tr><th id="251">251</th><td><b>typedef</b> <em>double</em> <dfn class="typedef" id="_Float64" title='_Float64' data-type='double' data-ref="_Float64" data-ref-filename="_Float64">_Float64</dfn>;</td></tr>
 <tr><th id="252">252</th><td><u>#   <span data-ppcond="250">endif</span></u></td></tr>
 <tr><th id="253">253</th><td></td></tr>
-<tr><th id="254">254</th><td><u>#   <span data-ppcond="254">if</span> !<a class="macro" href="../../features.h.html#161" title="((4 &lt;&lt; 16) + 2 &gt;= ((7) &lt;&lt; 16) + (0))" data-ref="_M/__GNUC_PREREQ">__GNUC_PREREQ</a> (7, 0)</u></td></tr>
+<tr><th id="254">254</th><td><u>#   <span data-ppcond="254">if</span> !<a class="macro" href="../../features.h.html#168" title="((4 &lt;&lt; 16) + 2 &gt;= ((7) &lt;&lt; 16) + (0))" data-ref="_M/__GNUC_PREREQ">__GNUC_PREREQ</a> (7, 0)</u></td></tr>
 <tr><th id="255">255</th><td><u>#    define <dfn class="macro" id="_M/__builtin_huge_valf64" data-ref="_M/__builtin_huge_valf64">__builtin_huge_valf64</dfn>() (__builtin_huge_val ())</u></td></tr>
 <tr><th id="256">256</th><td><u>#    define <dfn class="macro" id="_M/__builtin_inff64" data-ref="_M/__builtin_inff64">__builtin_inff64</dfn>() (__builtin_inf ())</u></td></tr>
 <tr><th id="257">257</th><td><u>#    define <dfn class="macro" id="_M/__builtin_nanf64" data-ref="_M/__builtin_nanf64">__builtin_nanf64</dfn>(x) (__builtin_nan (x))</u></td></tr>
@@ -277,11 +277,11 @@
 <tr><th id="264">264</th><td></td></tr>
 <tr><th id="265">265</th><td><u># <span data-ppcond="265">if</span> <a class="macro" href="#37" title="1" data-ref="_M/__HAVE_FLOAT32X">__HAVE_FLOAT32X</a></u></td></tr>
 <tr><th id="266">266</th><td></td></tr>
-<tr><th id="267">267</th><td><u>#  <span data-ppcond="267">if</span> !<a class="macro" href="../../features.h.html#161" title="((4 &lt;&lt; 16) + 2 &gt;= ((7) &lt;&lt; 16) + (0))" data-ref="_M/__GNUC_PREREQ">__GNUC_PREREQ</a> (7, 0) || defined <span class="macro" data-ref="_M/__cplusplus">__cplusplus</span></u></td></tr>
+<tr><th id="267">267</th><td><u>#  <span data-ppcond="267">if</span> !<a class="macro" href="../../features.h.html#168" title="((4 &lt;&lt; 16) + 2 &gt;= ((7) &lt;&lt; 16) + (0))" data-ref="_M/__GNUC_PREREQ">__GNUC_PREREQ</a> (7, 0) || defined <span class="macro" data-ref="_M/__cplusplus">__cplusplus</span></u></td></tr>
 <tr><th id="268">268</th><td><b>typedef</b> <em>double</em> <dfn class="typedef" id="_Float32x" title='_Float32x' data-type='double' data-ref="_Float32x" data-ref-filename="_Float32x">_Float32x</dfn>;</td></tr>
 <tr><th id="269">269</th><td><u>#  <span data-ppcond="267">endif</span></u></td></tr>
 <tr><th id="270">270</th><td></td></tr>
-<tr><th id="271">271</th><td><u>#  <span data-ppcond="271">if</span> !<a class="macro" href="../../features.h.html#161" title="((4 &lt;&lt; 16) + 2 &gt;= ((7) &lt;&lt; 16) + (0))" data-ref="_M/__GNUC_PREREQ">__GNUC_PREREQ</a> (7, 0)</u></td></tr>
+<tr><th id="271">271</th><td><u>#  <span data-ppcond="271">if</span> !<a class="macro" href="../../features.h.html#168" title="((4 &lt;&lt; 16) + 2 &gt;= ((7) &lt;&lt; 16) + (0))" data-ref="_M/__GNUC_PREREQ">__GNUC_PREREQ</a> (7, 0)</u></td></tr>
 <tr><th id="272">272</th><td><u>#   define <dfn class="macro" id="_M/__builtin_huge_valf32x" data-ref="_M/__builtin_huge_valf32x">__builtin_huge_valf32x</dfn>() (__builtin_huge_val ())</u></td></tr>
 <tr><th id="273">273</th><td><u>#   define <dfn class="macro" id="_M/__builtin_inff32x" data-ref="_M/__builtin_inff32x">__builtin_inff32x</dfn>() (__builtin_inf ())</u></td></tr>
 <tr><th id="274">274</th><td><u>#   define <dfn class="macro" id="_M/__builtin_nanf32x" data-ref="_M/__builtin_nanf32x">__builtin_nanf32x</dfn>(x) (__builtin_nan (x))</u></td></tr>
@@ -290,15 +290,15 @@
 <tr><th id="277">277</th><td></td></tr>
 <tr><th id="278">278</th><td><u># <span data-ppcond="265">endif</span></u></td></tr>
 <tr><th id="279">279</th><td></td></tr>
-<tr><th id="280">280</th><td><u># <span data-ppcond="280">if</span> <a class="macro" href="floatn.h.html#49" title="1" data-ref="_M/__HAVE_FLOAT64X">__HAVE_FLOAT64X</a></u></td></tr>
+<tr><th id="280">280</th><td><u># <span data-ppcond="280">if</span> <a class="macro" href="floatn.h.html#48" title="1" data-ref="_M/__HAVE_FLOAT64X">__HAVE_FLOAT64X</a></u></td></tr>
 <tr><th id="281">281</th><td></td></tr>
-<tr><th id="282">282</th><td><u>#  <span data-ppcond="282">if</span> <a class="macro" href="floatn.h.html#55" title="1" data-ref="_M/__HAVE_FLOAT64X_LONG_DOUBLE">__HAVE_FLOAT64X_LONG_DOUBLE</a></u></td></tr>
+<tr><th id="282">282</th><td><u>#  <span data-ppcond="282">if</span> <a class="macro" href="floatn.h.html#54" title="1" data-ref="_M/__HAVE_FLOAT64X_LONG_DOUBLE">__HAVE_FLOAT64X_LONG_DOUBLE</a></u></td></tr>
 <tr><th id="283">283</th><td></td></tr>
-<tr><th id="284">284</th><td><u>#   <span data-ppcond="284">if</span> !<a class="macro" href="../../features.h.html#161" title="((4 &lt;&lt; 16) + 2 &gt;= ((7) &lt;&lt; 16) + (0))" data-ref="_M/__GNUC_PREREQ">__GNUC_PREREQ</a> (7, 0) || defined <span class="macro" data-ref="_M/__cplusplus">__cplusplus</span></u></td></tr>
+<tr><th id="284">284</th><td><u>#   <span data-ppcond="284">if</span> !<a class="macro" href="../../features.h.html#168" title="((4 &lt;&lt; 16) + 2 &gt;= ((7) &lt;&lt; 16) + (0))" data-ref="_M/__GNUC_PREREQ">__GNUC_PREREQ</a> (7, 0) || defined <span class="macro" data-ref="_M/__cplusplus">__cplusplus</span></u></td></tr>
 <tr><th id="285">285</th><td><b>typedef</b> <em>long</em> <em>double</em> <dfn class="typedef" id="_Float64x" title='_Float64x' data-type='long double' data-ref="_Float64x" data-ref-filename="_Float64x">_Float64x</dfn>;</td></tr>
 <tr><th id="286">286</th><td><u>#   <span data-ppcond="284">endif</span></u></td></tr>
 <tr><th id="287">287</th><td></td></tr>
-<tr><th id="288">288</th><td><u>#   <span data-ppcond="288">if</span> !<a class="macro" href="../../features.h.html#161" title="((4 &lt;&lt; 16) + 2 &gt;= ((7) &lt;&lt; 16) + (0))" data-ref="_M/__GNUC_PREREQ">__GNUC_PREREQ</a> (7, 0)</u></td></tr>
+<tr><th id="288">288</th><td><u>#   <span data-ppcond="288">if</span> !<a class="macro" href="../../features.h.html#168" title="((4 &lt;&lt; 16) + 2 &gt;= ((7) &lt;&lt; 16) + (0))" data-ref="_M/__GNUC_PREREQ">__GNUC_PREREQ</a> (7, 0)</u></td></tr>
 <tr><th id="289">289</th><td><u>#    define <dfn class="macro" id="_M/__builtin_huge_valf64x" data-ref="_M/__builtin_huge_valf64x">__builtin_huge_valf64x</dfn>() (__builtin_huge_vall ())</u></td></tr>
 <tr><th id="290">290</th><td><u>#    define <dfn class="macro" id="_M/__builtin_inff64x" data-ref="_M/__builtin_inff64x">__builtin_inff64x</dfn>() (__builtin_infl ())</u></td></tr>
 <tr><th id="291">291</th><td><u>#    define <dfn class="macro" id="_M/__builtin_nanf64x" data-ref="_M/__builtin_nanf64x">__builtin_nanf64x</dfn>(x) (__builtin_nanl (x))</u></td></tr>

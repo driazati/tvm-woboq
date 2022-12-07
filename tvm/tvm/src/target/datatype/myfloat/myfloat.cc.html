@@ -41,9 +41,9 @@
 <tr><th id="28">28</th><td><i class="doc"> */</i></td></tr>
 <tr><th id="29">29</th><td><u>#include <a href="../../../../include/tvm/runtime/c_runtime_api.h.html">&lt;tvm/runtime/c_runtime_api.h&gt;</a></u></td></tr>
 <tr><th id="30">30</th><td></td></tr>
-<tr><th id="31">31</th><td><u>#include <a href="../../../../../include/c++/10/cmath.html">&lt;cmath&gt;</a></u></td></tr>
-<tr><th id="32">32</th><td><u>#include <a href="../../../../../include/c++/10/cstdint.html">&lt;cstdint&gt;</a></u></td></tr>
-<tr><th id="33">33</th><td><u>#include <a href="../../../../../include/c++/10/limits.html">&lt;limits&gt;</a></u></td></tr>
+<tr><th id="31">31</th><td><u>#include <a href="../../../../../include/c++/12/cmath.html">&lt;cmath&gt;</a></u></td></tr>
+<tr><th id="32">32</th><td><u>#include <a href="../../../../../include/c++/12/cstdint.html">&lt;cstdint&gt;</a></u></td></tr>
+<tr><th id="33">33</th><td><u>#include <a href="../../../../../include/c++/12/limits.html">&lt;limits&gt;</a></u></td></tr>
 <tr><th id="34">34</th><td></td></tr>
 <tr><th id="35">35</th><td><i>// Custom datatypes are stored as bits in a uint of the appropriate bit length.</i></td></tr>
 <tr><th id="36">36</th><td><i>// Thus, when TVM calls these C functions,</i></td></tr>
@@ -72,7 +72,7 @@
 <tr><th id="59">59</th><td><b>extern</b> <q>"C"</q> {</td></tr>
 <tr><th id="60">60</th><td><a class="macro" href="../../../../include/tvm/runtime/c_runtime_api.h.html#64" title="__attribute__((visibility(&quot;default&quot;)))" data-ref="_M/TVM_DLL">TVM_DLL</a> <a class="typedef" href="../../../../../include/x86_64-linux-gnu/bits/stdint-uintn.h.html#uint32_t" title='uint32_t' data-type='__uint32_t' data-ref="uint32_t" data-ref-filename="uint32_t">uint32_t</a> <dfn class="decl def fn" id="MinCustom32" title='MinCustom32' data-ref="MinCustom32" data-ref-filename="MinCustom32">MinCustom32</dfn>() {</td></tr>
 <tr><th id="61">61</th><td>  <i>// return minimum representable value</i></td></tr>
-<tr><th id="62">62</th><td>  <em>float</em> <dfn class="local col5 decl" id="5min" title='min' data-type='float' data-ref="5min" data-ref-filename="5min">min</dfn> = <span class="namespace">std::</span><a class="type" href="../../../../../include/c++/10/limits.html#std::numeric_limits" title='std::numeric_limits' data-ref="std::numeric_limits" data-ref-filename="std..numeric_limits">numeric_limits</a>&lt;<em>float</em>&gt;::<a class="ref fn" href="../../../../../include/c++/10/limits.html#_ZNSt14numeric_limitsIfE6lowestEv" title='std::numeric_limits&lt;float&gt;::lowest' data-ref="_ZNSt14numeric_limitsIfE6lowestEv" data-ref-filename="_ZNSt14numeric_limitsIfE6lowestEv">lowest</a>();</td></tr>
+<tr><th id="62">62</th><td>  <em>float</em> <dfn class="local col5 decl" id="5min" title='min' data-type='float' data-ref="5min" data-ref-filename="5min">min</dfn> = <span class="namespace">std::</span><a class="type" href="../../../../../include/c++/12/limits.html#std::numeric_limits" title='std::numeric_limits' data-ref="std::numeric_limits" data-ref-filename="std..numeric_limits">numeric_limits</a>&lt;<em>float</em>&gt;::<a class="ref fn" href="../../../../../include/c++/12/limits.html#_ZNSt14numeric_limitsIfE6lowestEv" title='std::numeric_limits&lt;float&gt;::lowest' data-ref="_ZNSt14numeric_limitsIfE6lowestEv" data-ref-filename="_ZNSt14numeric_limitsIfE6lowestEv">lowest</a>();</td></tr>
 <tr><th id="63">63</th><td>  <b>return</b> <a class="ref fn" href="#_Z16Custom32ToUint32T_" title='Custom32ToUint32' data-ref="_Z16Custom32ToUint32T_" data-ref-filename="_Z16Custom32ToUint32T_">Custom32ToUint32</a>&lt;<em>float</em>&gt;(<a class="local col5 ref" href="#5min" title='min' data-ref="5min" data-ref-filename="5min">min</a>);</td></tr>
 <tr><th id="64">64</th><td>}</td></tr>
 <tr><th id="65">65</th><td></td></tr>

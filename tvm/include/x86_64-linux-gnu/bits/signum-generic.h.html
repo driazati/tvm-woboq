@@ -12,7 +12,7 @@
 <body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='../..'>include</a>/<a href='..'>x86_64-linux-gnu</a>/<a href='./'>bits</a>/<a href='signum-generic.h.html'>signum-generic.h</a></h1></div>
 <hr/><div id='content'><table class="code">
 <tr><th id="1">1</th><td><i>/* Signal number constants.  Generic template.</i></td></tr>
-<tr><th id="2">2</th><td><i>   Copyright (C) 1991-2020 Free Software Foundation, Inc.</i></td></tr>
+<tr><th id="2">2</th><td><i>   Copyright (C) 1991-2022 Free Software Foundation, Inc.</i></td></tr>
 <tr><th id="3">3</th><td><i>   This file is part of the GNU C Library.</i></td></tr>
 <tr><th id="4">4</th><td><i></i></td></tr>
 <tr><th id="5">5</th><td><i>   The GNU C Library is free software; you can redistribute it and/or</i></td></tr>
@@ -42,7 +42,7 @@
 <tr><th id="29">29</th><td><u>#define	<dfn class="macro" id="_M/SIG_DFL" data-ref="_M/SIG_DFL">SIG_DFL</dfn>	 ((__sighandler_t)  0)	/* Default action.  */</u></td></tr>
 <tr><th id="30">30</th><td><u>#define	<dfn class="macro" id="_M/SIG_IGN" data-ref="_M/SIG_IGN">SIG_IGN</dfn>	 ((__sighandler_t)  1)	/* Ignore signal.  */</u></td></tr>
 <tr><th id="31">31</th><td></td></tr>
-<tr><th id="32">32</th><td><u>#<span data-ppcond="32">ifdef</span> <a class="macro" href="../../features.h.html#346" data-ref="_M/__USE_XOPEN">__USE_XOPEN</a></u></td></tr>
+<tr><th id="32">32</th><td><u>#<span data-ppcond="32">ifdef</span> <a class="macro" href="../../features.h.html#355" data-ref="_M/__USE_XOPEN">__USE_XOPEN</a></u></td></tr>
 <tr><th id="33">33</th><td><u># define <dfn class="macro" id="_M/SIG_HOLD" data-ref="_M/SIG_HOLD">SIG_HOLD</dfn> ((__sighandler_t) 2)	/* Add signal to hold mask.  */</u></td></tr>
 <tr><th id="34">34</th><td><u>#<span data-ppcond="32">endif</span></u></td></tr>
 <tr><th id="35">35</th><td></td></tr>
@@ -70,50 +70,29 @@
 <tr><th id="57">57</th><td><u>#define	<dfn class="macro" id="_M/SIGQUIT" data-ref="_M/SIGQUIT">SIGQUIT</dfn>		3	/* Quit.  */</u></td></tr>
 <tr><th id="58">58</th><td><u>#define	<dfn class="macro" id="_M/SIGTRAP" data-ref="_M/SIGTRAP">SIGTRAP</dfn>		5	/* Trace/breakpoint trap.  */</u></td></tr>
 <tr><th id="59">59</th><td><u>#define	<dfn class="macro" id="_M/SIGKILL" data-ref="_M/SIGKILL">SIGKILL</dfn>		9	/* Killed.  */</u></td></tr>
-<tr><th id="60">60</th><td><u>#define <dfn class="macro" id="_M/SIGBUS" data-ref="_M/SIGBUS">SIGBUS</dfn>		10	/* Bus error.  */</u></td></tr>
-<tr><th id="61">61</th><td><u>#define	<dfn class="macro" id="_M/SIGSYS" data-ref="_M/SIGSYS">SIGSYS</dfn>		12	/* Bad system call.  */</u></td></tr>
-<tr><th id="62">62</th><td><u>#define	<dfn class="macro" id="_M/SIGPIPE" data-ref="_M/SIGPIPE">SIGPIPE</dfn>		13	/* Broken pipe.  */</u></td></tr>
-<tr><th id="63">63</th><td><u>#define	<dfn class="macro" id="_M/SIGALRM" data-ref="_M/SIGALRM">SIGALRM</dfn>		14	/* Alarm clock.  */</u></td></tr>
-<tr><th id="64">64</th><td></td></tr>
-<tr><th id="65">65</th><td><i>/* New(er) POSIX signals (1003.1-2008, 1003.1-2013).  */</i></td></tr>
-<tr><th id="66">66</th><td><u>#define	<dfn class="macro" id="_M/SIGURG" data-ref="_M/SIGURG">SIGURG</dfn>		16	/* Urgent data is available at a socket.  */</u></td></tr>
-<tr><th id="67">67</th><td><u>#define	<dfn class="macro" id="_M/SIGSTOP" data-ref="_M/SIGSTOP">SIGSTOP</dfn>		17	/* Stop, unblockable.  */</u></td></tr>
-<tr><th id="68">68</th><td><u>#define	<dfn class="macro" id="_M/SIGTSTP" data-ref="_M/SIGTSTP">SIGTSTP</dfn>		18	/* Keyboard stop.  */</u></td></tr>
-<tr><th id="69">69</th><td><u>#define	<dfn class="macro" id="_M/SIGCONT" data-ref="_M/SIGCONT">SIGCONT</dfn>		19	/* Continue.  */</u></td></tr>
-<tr><th id="70">70</th><td><u>#define	<dfn class="macro" id="_M/SIGCHLD" data-ref="_M/SIGCHLD">SIGCHLD</dfn>		20	/* Child terminated or stopped.  */</u></td></tr>
-<tr><th id="71">71</th><td><u>#define	<dfn class="macro" id="_M/SIGTTIN" data-ref="_M/SIGTTIN">SIGTTIN</dfn>		21	/* Background read from control terminal.  */</u></td></tr>
-<tr><th id="72">72</th><td><u>#define	<dfn class="macro" id="_M/SIGTTOU" data-ref="_M/SIGTTOU">SIGTTOU</dfn>		22	/* Background write to control terminal.  */</u></td></tr>
-<tr><th id="73">73</th><td><u>#define	<dfn class="macro" id="_M/SIGPOLL" data-ref="_M/SIGPOLL">SIGPOLL</dfn>		23	/* Pollable event occurred (System V).  */</u></td></tr>
-<tr><th id="74">74</th><td><u>#define	<dfn class="macro" id="_M/SIGXCPU" data-ref="_M/SIGXCPU">SIGXCPU</dfn>		24	/* CPU time limit exceeded.  */</u></td></tr>
-<tr><th id="75">75</th><td><u>#define	<dfn class="macro" id="_M/SIGXFSZ" data-ref="_M/SIGXFSZ">SIGXFSZ</dfn>		25	/* File size limit exceeded.  */</u></td></tr>
-<tr><th id="76">76</th><td><u>#define	<dfn class="macro" id="_M/SIGVTALRM" data-ref="_M/SIGVTALRM">SIGVTALRM</dfn>	26	/* Virtual timer expired.  */</u></td></tr>
-<tr><th id="77">77</th><td><u>#define	<dfn class="macro" id="_M/SIGPROF" data-ref="_M/SIGPROF">SIGPROF</dfn>		27	/* Profiling timer expired.  */</u></td></tr>
-<tr><th id="78">78</th><td><u>#define	<dfn class="macro" id="_M/SIGUSR1" data-ref="_M/SIGUSR1">SIGUSR1</dfn>		30	/* User-defined signal 1.  */</u></td></tr>
-<tr><th id="79">79</th><td><u>#define	<dfn class="macro" id="_M/SIGUSR2" data-ref="_M/SIGUSR2">SIGUSR2</dfn>		31	/* User-defined signal 2.  */</u></td></tr>
+<tr><th id="60">60</th><td><u>#define	<dfn class="macro" id="_M/SIGPIPE" data-ref="_M/SIGPIPE">SIGPIPE</dfn>		13	/* Broken pipe.  */</u></td></tr>
+<tr><th id="61">61</th><td><u>#define	<dfn class="macro" id="_M/SIGALRM" data-ref="_M/SIGALRM">SIGALRM</dfn>		14	/* Alarm clock.  */</u></td></tr>
+<tr><th id="62">62</th><td></td></tr>
+<tr><th id="63">63</th><td><i>/* Archaic names for compatibility.  */</i></td></tr>
+<tr><th id="64">64</th><td><u>#define	<dfn class="macro" id="_M/SIGIO" data-ref="_M/SIGIO">SIGIO</dfn>		SIGPOLL	/* I/O now possible (4.2 BSD).  */</u></td></tr>
+<tr><th id="65">65</th><td><u>#define	<dfn class="macro" id="_M/SIGIOT" data-ref="_M/SIGIOT">SIGIOT</dfn>		SIGABRT	/* IOT instruction, abort() on a PDP-11.  */</u></td></tr>
+<tr><th id="66">66</th><td><u>#define	<dfn class="macro" id="_M/SIGCLD" data-ref="_M/SIGCLD">SIGCLD</dfn>		SIGCHLD	/* Old System V name */</u></td></tr>
+<tr><th id="67">67</th><td></td></tr>
+<tr><th id="68">68</th><td><i>/* Not all systems support real-time signals.  bits/signum.h indicates</i></td></tr>
+<tr><th id="69">69</th><td><i>   that they are supported by overriding __SIGRTMAX to a value greater</i></td></tr>
+<tr><th id="70">70</th><td><i>   than __SIGRTMIN.  These constants give the kernel-level hard limits,</i></td></tr>
+<tr><th id="71">71</th><td><i>   but some real-time signals may be used internally by glibc.  Do not</i></td></tr>
+<tr><th id="72">72</th><td><i>   use these constants in application code; use SIGRTMIN and SIGRTMAX</i></td></tr>
+<tr><th id="73">73</th><td><i>   (defined in signal.h) instead.  */</i></td></tr>
+<tr><th id="74">74</th><td></td></tr>
+<tr><th id="75">75</th><td><i>/* Include system specific bits.  */</i></td></tr>
+<tr><th id="76">76</th><td><u>#include <a href="signum-arch.h.html">&lt;bits/signum-arch.h&gt;</a></u></td></tr>
+<tr><th id="77">77</th><td></td></tr>
+<tr><th id="78">78</th><td><i>/* Biggest signal number + 1 (including real-time signals).  */</i></td></tr>
+<tr><th id="79">79</th><td><u>#define <dfn class="macro" id="_M/_NSIG" data-ref="_M/_NSIG">_NSIG</dfn>		(__SIGRTMAX + 1)</u></td></tr>
 <tr><th id="80">80</th><td></td></tr>
-<tr><th id="81">81</th><td><i>/* Nonstandard signals found in all modern POSIX systems</i></td></tr>
-<tr><th id="82">82</th><td><i>   (including both BSD and Linux).  */</i></td></tr>
-<tr><th id="83">83</th><td><u>#define	<dfn class="macro" id="_M/SIGWINCH" data-ref="_M/SIGWINCH">SIGWINCH</dfn>	28	/* Window size change (4.3 BSD, Sun).  */</u></td></tr>
-<tr><th id="84">84</th><td></td></tr>
-<tr><th id="85">85</th><td><i>/* Archaic names for compatibility.  */</i></td></tr>
-<tr><th id="86">86</th><td><u>#define	<dfn class="macro" id="_M/SIGIO" data-ref="_M/SIGIO">SIGIO</dfn>		SIGPOLL	/* I/O now possible (4.2 BSD).  */</u></td></tr>
-<tr><th id="87">87</th><td><u>#define	<dfn class="macro" id="_M/SIGIOT" data-ref="_M/SIGIOT">SIGIOT</dfn>		SIGABRT	/* IOT instruction, abort() on a PDP-11.  */</u></td></tr>
-<tr><th id="88">88</th><td><u>#define	<dfn class="macro" id="_M/SIGCLD" data-ref="_M/SIGCLD">SIGCLD</dfn>		SIGCHLD	/* Old System V name */</u></td></tr>
-<tr><th id="89">89</th><td></td></tr>
-<tr><th id="90">90</th><td><i>/* Not all systems support real-time signals.  bits/signum.h indicates</i></td></tr>
-<tr><th id="91">91</th><td><i>   that they are supported by overriding __SIGRTMAX to a value greater</i></td></tr>
-<tr><th id="92">92</th><td><i>   than __SIGRTMIN.  These constants give the kernel-level hard limits,</i></td></tr>
-<tr><th id="93">93</th><td><i>   but some real-time signals may be used internally by glibc.  Do not</i></td></tr>
-<tr><th id="94">94</th><td><i>   use these constants in application code; use SIGRTMIN and SIGRTMAX</i></td></tr>
-<tr><th id="95">95</th><td><i>   (defined in signal.h) instead.  */</i></td></tr>
-<tr><th id="96">96</th><td><u>#define <dfn class="macro" id="_M/__SIGRTMIN" data-ref="_M/__SIGRTMIN">__SIGRTMIN</dfn>	32</u></td></tr>
-<tr><th id="97">97</th><td><u>#define <dfn class="macro" id="_M/__SIGRTMAX" data-ref="_M/__SIGRTMAX">__SIGRTMAX</dfn>	__SIGRTMIN</u></td></tr>
-<tr><th id="98">98</th><td></td></tr>
-<tr><th id="99">99</th><td><i>/* Biggest signal number + 1 (including real-time signals).  */</i></td></tr>
-<tr><th id="100">100</th><td><u>#define <dfn class="macro" id="_M/_NSIG" data-ref="_M/_NSIG">_NSIG</dfn>		(__SIGRTMAX + 1)</u></td></tr>
-<tr><th id="101">101</th><td></td></tr>
-<tr><th id="102">102</th><td><u>#<span data-ppcond="19">endif</span> /* bits/signum-generic.h.  */</u></td></tr>
-<tr><th id="103">103</th><td></td></tr>
+<tr><th id="81">81</th><td><u>#<span data-ppcond="19">endif</span> /* bits/signum-generic.h.  */</u></td></tr>
+<tr><th id="82">82</th><td></td></tr>
 </table><hr/><p id='footer'>
 Generated while processing <a href='../../../tvm/src/arith/iter_affine_map.cc.html'>tvm/src/arith/iter_affine_map.cc</a><br/>Generated on <em>2022-Dec-07</em> from project include<br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
 <br/>Generator usage only permitted with license.</p>

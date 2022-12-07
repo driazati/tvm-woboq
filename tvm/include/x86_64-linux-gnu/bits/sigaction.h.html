@@ -12,7 +12,7 @@
 <body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='../..'>include</a>/<a href='..'>x86_64-linux-gnu</a>/<a href='./'>bits</a>/<a href='sigaction.h.html'>sigaction.h</a></h1></div>
 <hr/><div id='content'><table class="code">
 <tr><th id="1">1</th><td><i>/* The proper definitions for Linux's sigaction.</i></td></tr>
-<tr><th id="2">2</th><td><i>   Copyright (C) 1993-2020 Free Software Foundation, Inc.</i></td></tr>
+<tr><th id="2">2</th><td><i>   Copyright (C) 1993-2022 Free Software Foundation, Inc.</i></td></tr>
 <tr><th id="3">3</th><td><i>   This file is part of the GNU C Library.</i></td></tr>
 <tr><th id="4">4</th><td><i></i></td></tr>
 <tr><th id="5">5</th><td><i>   The GNU C Library is free software; you can redistribute it and/or</i></td></tr>
@@ -40,7 +40,7 @@
 <tr><th id="27">27</th><td><b>struct</b> <dfn class="type def" id="sigaction" title='sigaction' data-ref="sigaction" data-ref-filename="sigaction">sigaction</dfn></td></tr>
 <tr><th id="28">28</th><td>  {</td></tr>
 <tr><th id="29">29</th><td>    <i>/* Signal handler.  */</i></td></tr>
-<tr><th id="30">30</th><td><u>#<span data-ppcond="30">if</span> defined <a class="macro" href="../../features.h.html#324" data-ref="_M/__USE_POSIX199309">__USE_POSIX199309</a> || defined <a class="macro" href="../../features.h.html#348" data-ref="_M/__USE_XOPEN_EXTENDED">__USE_XOPEN_EXTENDED</a></u></td></tr>
+<tr><th id="30">30</th><td><u>#<span data-ppcond="30">if</span> defined <a class="macro" href="../../features.h.html#333" data-ref="_M/__USE_POSIX199309">__USE_POSIX199309</a> || defined <a class="macro" href="../../features.h.html#357" data-ref="_M/__USE_XOPEN_EXTENDED">__USE_XOPEN_EXTENDED</a></u></td></tr>
 <tr><th id="31">31</th><td>    <b>union</b></td></tr>
 <tr><th id="32">32</th><td>      {</td></tr>
 <tr><th id="33">33</th><td>	<i>/* Used if SA_SIGINFO is not set.  */</i></td></tr>
@@ -70,16 +70,16 @@
 <tr><th id="57">57</th><td><u>#define <dfn class="macro" id="_M/SA_NOCLDWAIT" data-ref="_M/SA_NOCLDWAIT">SA_NOCLDWAIT</dfn>  2		 /* Don't create zombie on child death.  */</u></td></tr>
 <tr><th id="58">58</th><td><u>#define <dfn class="macro" id="_M/SA_SIGINFO" data-ref="_M/SA_SIGINFO">SA_SIGINFO</dfn>    4		 /* Invoke signal-catching function with</u></td></tr>
 <tr><th id="59">59</th><td><u>				    three arguments instead of one.  */</u></td></tr>
-<tr><th id="60">60</th><td><u>#<span data-ppcond="60">if</span> defined <a class="macro" href="../../features.h.html#348" data-ref="_M/__USE_XOPEN_EXTENDED">__USE_XOPEN_EXTENDED</a> || defined <a class="macro" href="../../features.h.html#384" data-ref="_M/__USE_MISC">__USE_MISC</a></u></td></tr>
+<tr><th id="60">60</th><td><u>#<span data-ppcond="60">if</span> defined <a class="macro" href="../../features.h.html#357" data-ref="_M/__USE_XOPEN_EXTENDED">__USE_XOPEN_EXTENDED</a> || defined <a class="macro" href="../../features.h.html#395" data-ref="_M/__USE_MISC">__USE_MISC</a></u></td></tr>
 <tr><th id="61">61</th><td><u># define <dfn class="macro" id="_M/SA_ONSTACK" data-ref="_M/SA_ONSTACK">SA_ONSTACK</dfn>   0x08000000 /* Use signal stack by using `sa_restorer'. */</u></td></tr>
 <tr><th id="62">62</th><td><u>#<span data-ppcond="60">endif</span></u></td></tr>
-<tr><th id="63">63</th><td><u>#<span data-ppcond="63">if</span> defined <a class="macro" href="../../features.h.html#348" data-ref="_M/__USE_XOPEN_EXTENDED">__USE_XOPEN_EXTENDED</a> || defined <a class="macro" href="../../features.h.html#354" data-ref="_M/__USE_XOPEN2K8">__USE_XOPEN2K8</a></u></td></tr>
+<tr><th id="63">63</th><td><u>#<span data-ppcond="63">if</span> defined <a class="macro" href="../../features.h.html#357" data-ref="_M/__USE_XOPEN_EXTENDED">__USE_XOPEN_EXTENDED</a> || defined <a class="macro" href="../../features.h.html#363" data-ref="_M/__USE_XOPEN2K8">__USE_XOPEN2K8</a></u></td></tr>
 <tr><th id="64">64</th><td><u># define <dfn class="macro" id="_M/SA_RESTART" data-ref="_M/SA_RESTART">SA_RESTART</dfn>   0x10000000 /* Restart syscall on signal return.  */</u></td></tr>
 <tr><th id="65">65</th><td><u># define <dfn class="macro" id="_M/SA_NODEFER" data-ref="_M/SA_NODEFER">SA_NODEFER</dfn>   0x40000000 /* Don't automatically block the signal when</u></td></tr>
 <tr><th id="66">66</th><td><u>				    its handler is being executed.  */</u></td></tr>
 <tr><th id="67">67</th><td><u># define <dfn class="macro" id="_M/SA_RESETHAND" data-ref="_M/SA_RESETHAND">SA_RESETHAND</dfn> 0x80000000 /* Reset to SIG_DFL on entry to handler.  */</u></td></tr>
 <tr><th id="68">68</th><td><u>#<span data-ppcond="63">endif</span></u></td></tr>
-<tr><th id="69">69</th><td><u>#<span data-ppcond="69">ifdef</span> <a class="macro" href="../../features.h.html#384" data-ref="_M/__USE_MISC">__USE_MISC</a></u></td></tr>
+<tr><th id="69">69</th><td><u>#<span data-ppcond="69">ifdef</span> <a class="macro" href="../../features.h.html#395" data-ref="_M/__USE_MISC">__USE_MISC</a></u></td></tr>
 <tr><th id="70">70</th><td><u># define <dfn class="macro" id="_M/SA_INTERRUPT" data-ref="_M/SA_INTERRUPT">SA_INTERRUPT</dfn> 0x20000000 /* Historical no-op.  */</u></td></tr>
 <tr><th id="71">71</th><td></td></tr>
 <tr><th id="72">72</th><td><i>/* Some aliases for the SA_ constants.  */</i></td></tr>

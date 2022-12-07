@@ -11,7 +11,7 @@
 </head>
 <body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='./'>include</a>/<a href='assert.h.html'>assert.h</a></h1></div>
 <hr/><div id='content'><table class="code">
-<tr><th id="1">1</th><td><i>/* Copyright (C) 1991-2020 Free Software Foundation, Inc.</i></td></tr>
+<tr><th id="1">1</th><td><i>/* Copyright (C) 1991-2022 Free Software Foundation, Inc.</i></td></tr>
 <tr><th id="2">2</th><td><i>   This file is part of the GNU C Library.</i></td></tr>
 <tr><th id="3">3</th><td><i></i></td></tr>
 <tr><th id="4">4</th><td><i>   The GNU C Library is free software; you can redistribute it and/or</i></td></tr>
@@ -47,7 +47,7 @@
 <tr><th id="34">34</th><td><u>#define	<dfn class="macro" id="_M/_ASSERT_H" data-ref="_M/_ASSERT_H">_ASSERT_H</dfn>	1</u></td></tr>
 <tr><th id="35">35</th><td><u>#include <a href="features.h.html">&lt;features.h&gt;</a></u></td></tr>
 <tr><th id="36">36</th><td></td></tr>
-<tr><th id="37">37</th><td><u>#<span data-ppcond="37">if</span> defined <span class="macro" data-ref="_M/__cplusplus">__cplusplus</span> &amp;&amp; <a class="macro" href="features.h.html#161" title="((4 &lt;&lt; 16) + 2 &gt;= ((2) &lt;&lt; 16) + (95))" data-ref="_M/__GNUC_PREREQ">__GNUC_PREREQ</a> (2,95)</u></td></tr>
+<tr><th id="37">37</th><td><u>#<span data-ppcond="37">if</span> defined <span class="macro" data-ref="_M/__cplusplus">__cplusplus</span> &amp;&amp; <a class="macro" href="features.h.html#168" title="((4 &lt;&lt; 16) + 2 &gt;= ((2) &lt;&lt; 16) + (95))" data-ref="_M/__GNUC_PREREQ">__GNUC_PREREQ</a> (2,95)</u></td></tr>
 <tr><th id="38">38</th><td><u># define <dfn class="macro" id="_M/__ASSERT_VOID_CAST" data-ref="_M/__ASSERT_VOID_CAST">__ASSERT_VOID_CAST</dfn> static_cast&lt;void&gt;</u></td></tr>
 <tr><th id="39">39</th><td><u>#<span data-ppcond="37">else</span></u></td></tr>
 <tr><th id="40">40</th><td><u># define __ASSERT_VOID_CAST (void)</u></td></tr>
@@ -68,7 +68,7 @@
 <tr><th id="55">55</th><td><i>   error message with the error text for ERRNUM and abort.</i></td></tr>
 <tr><th id="56">56</th><td><i>   (This is a GNU extension.) */</i></td></tr>
 <tr><th id="57">57</th><td></td></tr>
-<tr><th id="58">58</th><td><u># <span data-ppcond="58">ifdef</span>	<a class="macro" href="features.h.html#392" data-ref="_M/__USE_GNU">__USE_GNU</a></u></td></tr>
+<tr><th id="58">58</th><td><u># <span data-ppcond="58">ifdef</span>	<a class="macro" href="features.h.html#407" data-ref="_M/__USE_GNU">__USE_GNU</a></u></td></tr>
 <tr><th id="59">59</th><td><u>#  define <dfn class="macro" id="_M/assert_perror" data-ref="_M/assert_perror">assert_perror</dfn>(errnum)	(__ASSERT_VOID_CAST (0))</u></td></tr>
 <tr><th id="60">60</th><td><u># <span data-ppcond="58">endif</span></u></td></tr>
 <tr><th id="61">61</th><td></td></tr>
@@ -151,7 +151,7 @@
 <tr><th id="138">138</th><td><u>#<span data-ppcond="48">endif</span> /* NDEBUG.  */</u></td></tr>
 <tr><th id="139">139</th><td></td></tr>
 <tr><th id="140">140</th><td></td></tr>
-<tr><th id="141">141</th><td><u>#<span data-ppcond="141">if</span> defined <a class="macro" href="features.h.html#261" data-ref="_M/__USE_ISOC11">__USE_ISOC11</a> &amp;&amp; !defined <span class="macro" data-ref="_M/__cplusplus">__cplusplus</span></u></td></tr>
+<tr><th id="141">141</th><td><u>#<span data-ppcond="141">if</span> defined <a class="macro" href="features.h.html#270" data-ref="_M/__USE_ISOC11">__USE_ISOC11</a> &amp;&amp; !defined <span class="macro" data-ref="_M/__cplusplus">__cplusplus</span></u></td></tr>
 <tr><th id="142">142</th><td><u># undef static_assert</u></td></tr>
 <tr><th id="143">143</th><td><u># define static_assert _Static_assert</u></td></tr>
 <tr><th id="144">144</th><td><u>#<span data-ppcond="141">endif</span></u></td></tr>

@@ -11,7 +11,7 @@
 </head>
 <body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='../..'>include</a>/<a href='..'>x86_64-linux-gnu</a>/<a href='./'>bits</a>/<a href='in.h.html'>in.h</a></h1></div>
 <hr/><div id='content'><table class="code">
-<tr><th id="1">1</th><td><i>/* Copyright (C) 1991-2020 Free Software Foundation, Inc.</i></td></tr>
+<tr><th id="1">1</th><td><i>/* Copyright (C) 1991-2022 Free Software Foundation, Inc.</i></td></tr>
 <tr><th id="2">2</th><td><i>   This file is part of the GNU C Library.</i></td></tr>
 <tr><th id="3">3</th><td><i></i></td></tr>
 <tr><th id="4">4</th><td><i>   The GNU C Library is free software; you can redistribute it and/or</i></td></tr>
@@ -75,7 +75,7 @@
 <tr><th id="62">62</th><td><u>#define <dfn class="macro" id="_M/IP_ADD_SOURCE_MEMBERSHIP" data-ref="_M/IP_ADD_SOURCE_MEMBERSHIP">IP_ADD_SOURCE_MEMBERSHIP</dfn> 39 /* ip_mreq_source: join source group */</u></td></tr>
 <tr><th id="63">63</th><td><u>#define <dfn class="macro" id="_M/IP_DROP_SOURCE_MEMBERSHIP" data-ref="_M/IP_DROP_SOURCE_MEMBERSHIP">IP_DROP_SOURCE_MEMBERSHIP</dfn> 40 /* ip_mreq_source: leave source group */</u></td></tr>
 <tr><th id="64">64</th><td><u>#define <dfn class="macro" id="_M/IP_MSFILTER" data-ref="_M/IP_MSFILTER">IP_MSFILTER</dfn> 41</u></td></tr>
-<tr><th id="65">65</th><td><u>#<span data-ppcond="65">ifdef</span> <a class="macro" href="../../features.h.html#384" data-ref="_M/__USE_MISC">__USE_MISC</a></u></td></tr>
+<tr><th id="65">65</th><td><u>#<span data-ppcond="65">ifdef</span> <a class="macro" href="../../features.h.html#395" data-ref="_M/__USE_MISC">__USE_MISC</a></u></td></tr>
 <tr><th id="66">66</th><td><u># define <dfn class="macro" id="_M/MCAST_JOIN_GROUP" data-ref="_M/MCAST_JOIN_GROUP">MCAST_JOIN_GROUP</dfn> 42	/* group_req: join any-source group */</u></td></tr>
 <tr><th id="67">67</th><td><u># define <dfn class="macro" id="_M/MCAST_BLOCK_SOURCE" data-ref="_M/MCAST_BLOCK_SOURCE">MCAST_BLOCK_SOURCE</dfn> 43	/* group_source_req: block from given group */</u></td></tr>
 <tr><th id="68">68</th><td><u># define <dfn class="macro" id="_M/MCAST_UNBLOCK_SOURCE" data-ref="_M/MCAST_UNBLOCK_SOURCE">MCAST_UNBLOCK_SOURCE</dfn> 44 /* group_source_req: unblock from given group*/</u></td></tr>
@@ -115,162 +115,164 @@
 <tr><th id="102">102</th><td><u>#define <dfn class="macro" id="_M/IP_CHECKSUM" data-ref="_M/IP_CHECKSUM">IP_CHECKSUM</dfn>     23</u></td></tr>
 <tr><th id="103">103</th><td><u>#define <dfn class="macro" id="_M/IP_BIND_ADDRESS_NO_PORT" data-ref="_M/IP_BIND_ADDRESS_NO_PORT">IP_BIND_ADDRESS_NO_PORT</dfn> 24</u></td></tr>
 <tr><th id="104">104</th><td><u>#define <dfn class="macro" id="_M/IP_RECVFRAGSIZE" data-ref="_M/IP_RECVFRAGSIZE">IP_RECVFRAGSIZE</dfn> 25</u></td></tr>
-<tr><th id="105">105</th><td></td></tr>
-<tr><th id="106">106</th><td><i>/* IP_MTU_DISCOVER arguments.  */</i></td></tr>
-<tr><th id="107">107</th><td><u>#define <dfn class="macro" id="_M/IP_PMTUDISC_DONT" data-ref="_M/IP_PMTUDISC_DONT">IP_PMTUDISC_DONT</dfn>   0	/* Never send DF frames.  */</u></td></tr>
-<tr><th id="108">108</th><td><u>#define <dfn class="macro" id="_M/IP_PMTUDISC_WANT" data-ref="_M/IP_PMTUDISC_WANT">IP_PMTUDISC_WANT</dfn>   1	/* Use per route hints.  */</u></td></tr>
-<tr><th id="109">109</th><td><u>#define <dfn class="macro" id="_M/IP_PMTUDISC_DO" data-ref="_M/IP_PMTUDISC_DO">IP_PMTUDISC_DO</dfn>     2	/* Always DF.  */</u></td></tr>
-<tr><th id="110">110</th><td><u>#define <dfn class="macro" id="_M/IP_PMTUDISC_PROBE" data-ref="_M/IP_PMTUDISC_PROBE">IP_PMTUDISC_PROBE</dfn>  3	/* Ignore dst pmtu.  */</u></td></tr>
-<tr><th id="111">111</th><td><i>/* Always use interface mtu (ignores dst pmtu) but don't set DF flag.</i></td></tr>
-<tr><th id="112">112</th><td><i>   Also incoming ICMP frag_needed notifications will be ignored on</i></td></tr>
-<tr><th id="113">113</th><td><i>   this socket to prevent accepting spoofed ones.  */</i></td></tr>
-<tr><th id="114">114</th><td><u>#define <dfn class="macro" id="_M/IP_PMTUDISC_INTERFACE" data-ref="_M/IP_PMTUDISC_INTERFACE">IP_PMTUDISC_INTERFACE</dfn>           4</u></td></tr>
-<tr><th id="115">115</th><td><i>/* Like IP_PMTUDISC_INTERFACE but allow packets to be fragmented.  */</i></td></tr>
-<tr><th id="116">116</th><td><u>#define <dfn class="macro" id="_M/IP_PMTUDISC_OMIT" data-ref="_M/IP_PMTUDISC_OMIT">IP_PMTUDISC_OMIT</dfn>		5</u></td></tr>
-<tr><th id="117">117</th><td></td></tr>
-<tr><th id="118">118</th><td><u>#define <dfn class="macro" id="_M/IP_MULTICAST_IF" data-ref="_M/IP_MULTICAST_IF">IP_MULTICAST_IF</dfn>			32</u></td></tr>
-<tr><th id="119">119</th><td><u>#define <dfn class="macro" id="_M/IP_MULTICAST_TTL" data-ref="_M/IP_MULTICAST_TTL">IP_MULTICAST_TTL</dfn> 		33</u></td></tr>
-<tr><th id="120">120</th><td><u>#define <dfn class="macro" id="_M/IP_MULTICAST_LOOP" data-ref="_M/IP_MULTICAST_LOOP">IP_MULTICAST_LOOP</dfn> 		34</u></td></tr>
-<tr><th id="121">121</th><td><u>#define <dfn class="macro" id="_M/IP_ADD_MEMBERSHIP" data-ref="_M/IP_ADD_MEMBERSHIP">IP_ADD_MEMBERSHIP</dfn>		35</u></td></tr>
-<tr><th id="122">122</th><td><u>#define <dfn class="macro" id="_M/IP_DROP_MEMBERSHIP" data-ref="_M/IP_DROP_MEMBERSHIP">IP_DROP_MEMBERSHIP</dfn>		36</u></td></tr>
-<tr><th id="123">123</th><td><u>#define <dfn class="macro" id="_M/IP_UNBLOCK_SOURCE" data-ref="_M/IP_UNBLOCK_SOURCE">IP_UNBLOCK_SOURCE</dfn>		37</u></td></tr>
-<tr><th id="124">124</th><td><u>#define <dfn class="macro" id="_M/IP_BLOCK_SOURCE" data-ref="_M/IP_BLOCK_SOURCE">IP_BLOCK_SOURCE</dfn>			38</u></td></tr>
-<tr><th id="125">125</th><td><u>#define <dfn class="macro" id="_M/IP_ADD_SOURCE_MEMBERSHIP" data-ref="_M/IP_ADD_SOURCE_MEMBERSHIP">IP_ADD_SOURCE_MEMBERSHIP</dfn>	39</u></td></tr>
-<tr><th id="126">126</th><td><u>#define <dfn class="macro" id="_M/IP_DROP_SOURCE_MEMBERSHIP" data-ref="_M/IP_DROP_SOURCE_MEMBERSHIP">IP_DROP_SOURCE_MEMBERSHIP</dfn>	40</u></td></tr>
-<tr><th id="127">127</th><td><u>#define <dfn class="macro" id="_M/IP_MSFILTER" data-ref="_M/IP_MSFILTER">IP_MSFILTER</dfn>			41</u></td></tr>
-<tr><th id="128">128</th><td><u>#define <dfn class="macro" id="_M/IP_MULTICAST_ALL" data-ref="_M/IP_MULTICAST_ALL">IP_MULTICAST_ALL</dfn>		49</u></td></tr>
-<tr><th id="129">129</th><td><u>#define <dfn class="macro" id="_M/IP_UNICAST_IF" data-ref="_M/IP_UNICAST_IF">IP_UNICAST_IF</dfn>			50</u></td></tr>
-<tr><th id="130">130</th><td></td></tr>
-<tr><th id="131">131</th><td><i>/* To select the IP level.  */</i></td></tr>
-<tr><th id="132">132</th><td><u>#define <dfn class="macro" id="_M/SOL_IP" data-ref="_M/SOL_IP">SOL_IP</dfn>	0</u></td></tr>
-<tr><th id="133">133</th><td></td></tr>
-<tr><th id="134">134</th><td><u>#define <dfn class="macro" id="_M/IP_DEFAULT_MULTICAST_TTL" data-ref="_M/IP_DEFAULT_MULTICAST_TTL">IP_DEFAULT_MULTICAST_TTL</dfn>        1</u></td></tr>
-<tr><th id="135">135</th><td><u>#define <dfn class="macro" id="_M/IP_DEFAULT_MULTICAST_LOOP" data-ref="_M/IP_DEFAULT_MULTICAST_LOOP">IP_DEFAULT_MULTICAST_LOOP</dfn>       1</u></td></tr>
-<tr><th id="136">136</th><td><u>#define <dfn class="macro" id="_M/IP_MAX_MEMBERSHIPS" data-ref="_M/IP_MAX_MEMBERSHIPS">IP_MAX_MEMBERSHIPS</dfn>              20</u></td></tr>
-<tr><th id="137">137</th><td></td></tr>
-<tr><th id="138">138</th><td><u>#<span data-ppcond="138">ifdef</span> <a class="macro" href="../../features.h.html#384" data-ref="_M/__USE_MISC">__USE_MISC</a></u></td></tr>
-<tr><th id="139">139</th><td><i>/* Structure used to describe IP options for IP_OPTIONS and IP_RETOPTS.</i></td></tr>
-<tr><th id="140">140</th><td><i>   The `ip_dst' field is used for the first-hop gateway when using a</i></td></tr>
-<tr><th id="141">141</th><td><i>   source route (this gets put into the header proper).  */</i></td></tr>
-<tr><th id="142">142</th><td><b>struct</b> <dfn class="type def" id="ip_opts" title='ip_opts' data-ref="ip_opts" data-ref-filename="ip_opts">ip_opts</dfn></td></tr>
-<tr><th id="143">143</th><td>  {</td></tr>
-<tr><th id="144">144</th><td>    <b>struct</b> <a class="type" href="../../netinet/in.h.html#in_addr" title='in_addr' data-ref="in_addr" data-ref-filename="in_addr">in_addr</a> <dfn class="decl field" id="ip_opts::ip_dst" title='ip_opts::ip_dst' data-ref="ip_opts::ip_dst" data-ref-filename="ip_opts..ip_dst">ip_dst</dfn>;	<i>/* First hop; zero without source route.  */</i></td></tr>
-<tr><th id="145">145</th><td>    <em>char</em> <dfn class="decl field" id="ip_opts::ip_opts" title='ip_opts::ip_opts' data-ref="ip_opts::ip_opts" data-ref-filename="ip_opts..ip_opts">ip_opts</dfn>[<var>40</var>];		<i>/* Actually variable in size.  */</i></td></tr>
-<tr><th id="146">146</th><td>  };</td></tr>
-<tr><th id="147">147</th><td></td></tr>
-<tr><th id="148">148</th><td><i>/* Like `struct ip_mreq' but including interface specification by index.  */</i></td></tr>
-<tr><th id="149">149</th><td><b>struct</b> <dfn class="type def" id="ip_mreqn" title='ip_mreqn' data-ref="ip_mreqn" data-ref-filename="ip_mreqn">ip_mreqn</dfn></td></tr>
-<tr><th id="150">150</th><td>  {</td></tr>
-<tr><th id="151">151</th><td>    <b>struct</b> <a class="type" href="../../netinet/in.h.html#in_addr" title='in_addr' data-ref="in_addr" data-ref-filename="in_addr">in_addr</a> <dfn class="decl field" id="ip_mreqn::imr_multiaddr" title='ip_mreqn::imr_multiaddr' data-ref="ip_mreqn::imr_multiaddr" data-ref-filename="ip_mreqn..imr_multiaddr">imr_multiaddr</dfn>;	<i>/* IP multicast address of group */</i></td></tr>
-<tr><th id="152">152</th><td>    <b>struct</b> <a class="type" href="../../netinet/in.h.html#in_addr" title='in_addr' data-ref="in_addr" data-ref-filename="in_addr">in_addr</a> <dfn class="decl field" id="ip_mreqn::imr_address" title='ip_mreqn::imr_address' data-ref="ip_mreqn::imr_address" data-ref-filename="ip_mreqn..imr_address">imr_address</dfn>;		<i>/* local IP address of interface */</i></td></tr>
-<tr><th id="153">153</th><td>    <em>int</em>	<dfn class="decl field" id="ip_mreqn::imr_ifindex" title='ip_mreqn::imr_ifindex' data-ref="ip_mreqn::imr_ifindex" data-ref-filename="ip_mreqn..imr_ifindex">imr_ifindex</dfn>;			<i>/* Interface index */</i></td></tr>
-<tr><th id="154">154</th><td>  };</td></tr>
-<tr><th id="155">155</th><td></td></tr>
-<tr><th id="156">156</th><td><i>/* Structure used for IP_PKTINFO.  */</i></td></tr>
-<tr><th id="157">157</th><td><b>struct</b> <dfn class="type def" id="in_pktinfo" title='in_pktinfo' data-ref="in_pktinfo" data-ref-filename="in_pktinfo">in_pktinfo</dfn></td></tr>
-<tr><th id="158">158</th><td>  {</td></tr>
-<tr><th id="159">159</th><td>    <em>int</em> <dfn class="decl field" id="in_pktinfo::ipi_ifindex" title='in_pktinfo::ipi_ifindex' data-ref="in_pktinfo::ipi_ifindex" data-ref-filename="in_pktinfo..ipi_ifindex">ipi_ifindex</dfn>;			<i>/* Interface index  */</i></td></tr>
-<tr><th id="160">160</th><td>    <b>struct</b> <a class="type" href="../../netinet/in.h.html#in_addr" title='in_addr' data-ref="in_addr" data-ref-filename="in_addr">in_addr</a> <dfn class="decl field" id="in_pktinfo::ipi_spec_dst" title='in_pktinfo::ipi_spec_dst' data-ref="in_pktinfo::ipi_spec_dst" data-ref-filename="in_pktinfo..ipi_spec_dst">ipi_spec_dst</dfn>;	<i>/* Routing destination address  */</i></td></tr>
-<tr><th id="161">161</th><td>    <b>struct</b> <a class="type" href="../../netinet/in.h.html#in_addr" title='in_addr' data-ref="in_addr" data-ref-filename="in_addr">in_addr</a> <dfn class="decl field" id="in_pktinfo::ipi_addr" title='in_pktinfo::ipi_addr' data-ref="in_pktinfo::ipi_addr" data-ref-filename="in_pktinfo..ipi_addr">ipi_addr</dfn>;		<i>/* Header destination address  */</i></td></tr>
-<tr><th id="162">162</th><td>  };</td></tr>
-<tr><th id="163">163</th><td><u>#<span data-ppcond="138">endif</span></u></td></tr>
-<tr><th id="164">164</th><td></td></tr>
-<tr><th id="165">165</th><td><i>/* Options for use with `getsockopt' and `setsockopt' at the IPv6 level.</i></td></tr>
-<tr><th id="166">166</th><td><i>   The first word in the comment at the right is the data type used;</i></td></tr>
-<tr><th id="167">167</th><td><i>   "bool" means a boolean value stored in an `int'.  */</i></td></tr>
-<tr><th id="168">168</th><td><u>#define <dfn class="macro" id="_M/IPV6_ADDRFORM" data-ref="_M/IPV6_ADDRFORM">IPV6_ADDRFORM</dfn>		1</u></td></tr>
-<tr><th id="169">169</th><td><u>#define <dfn class="macro" id="_M/IPV6_2292PKTINFO" data-ref="_M/IPV6_2292PKTINFO">IPV6_2292PKTINFO</dfn>	2</u></td></tr>
-<tr><th id="170">170</th><td><u>#define <dfn class="macro" id="_M/IPV6_2292HOPOPTS" data-ref="_M/IPV6_2292HOPOPTS">IPV6_2292HOPOPTS</dfn>	3</u></td></tr>
-<tr><th id="171">171</th><td><u>#define <dfn class="macro" id="_M/IPV6_2292DSTOPTS" data-ref="_M/IPV6_2292DSTOPTS">IPV6_2292DSTOPTS</dfn>	4</u></td></tr>
-<tr><th id="172">172</th><td><u>#define <dfn class="macro" id="_M/IPV6_2292RTHDR" data-ref="_M/IPV6_2292RTHDR">IPV6_2292RTHDR</dfn>		5</u></td></tr>
-<tr><th id="173">173</th><td><u>#define <dfn class="macro" id="_M/IPV6_2292PKTOPTIONS" data-ref="_M/IPV6_2292PKTOPTIONS">IPV6_2292PKTOPTIONS</dfn>	6</u></td></tr>
-<tr><th id="174">174</th><td><u>#define <dfn class="macro" id="_M/IPV6_CHECKSUM" data-ref="_M/IPV6_CHECKSUM">IPV6_CHECKSUM</dfn>		7</u></td></tr>
-<tr><th id="175">175</th><td><u>#define <dfn class="macro" id="_M/IPV6_2292HOPLIMIT" data-ref="_M/IPV6_2292HOPLIMIT">IPV6_2292HOPLIMIT</dfn>	8</u></td></tr>
-<tr><th id="176">176</th><td></td></tr>
-<tr><th id="177">177</th><td><u>#define <dfn class="macro" id="_M/SCM_SRCRT" data-ref="_M/SCM_SRCRT">SCM_SRCRT</dfn>		IPV6_RXSRCRT</u></td></tr>
-<tr><th id="178">178</th><td></td></tr>
-<tr><th id="179">179</th><td><u>#define <dfn class="macro" id="_M/IPV6_NEXTHOP" data-ref="_M/IPV6_NEXTHOP">IPV6_NEXTHOP</dfn>		9</u></td></tr>
-<tr><th id="180">180</th><td><u>#define <dfn class="macro" id="_M/IPV6_AUTHHDR" data-ref="_M/IPV6_AUTHHDR">IPV6_AUTHHDR</dfn>		10</u></td></tr>
-<tr><th id="181">181</th><td><u>#define <dfn class="macro" id="_M/IPV6_UNICAST_HOPS" data-ref="_M/IPV6_UNICAST_HOPS">IPV6_UNICAST_HOPS</dfn>	16</u></td></tr>
-<tr><th id="182">182</th><td><u>#define <dfn class="macro" id="_M/IPV6_MULTICAST_IF" data-ref="_M/IPV6_MULTICAST_IF">IPV6_MULTICAST_IF</dfn>	17</u></td></tr>
-<tr><th id="183">183</th><td><u>#define <dfn class="macro" id="_M/IPV6_MULTICAST_HOPS" data-ref="_M/IPV6_MULTICAST_HOPS">IPV6_MULTICAST_HOPS</dfn>	18</u></td></tr>
-<tr><th id="184">184</th><td><u>#define <dfn class="macro" id="_M/IPV6_MULTICAST_LOOP" data-ref="_M/IPV6_MULTICAST_LOOP">IPV6_MULTICAST_LOOP</dfn>	19</u></td></tr>
-<tr><th id="185">185</th><td><u>#define <dfn class="macro" id="_M/IPV6_JOIN_GROUP" data-ref="_M/IPV6_JOIN_GROUP">IPV6_JOIN_GROUP</dfn>		20</u></td></tr>
-<tr><th id="186">186</th><td><u>#define <dfn class="macro" id="_M/IPV6_LEAVE_GROUP" data-ref="_M/IPV6_LEAVE_GROUP">IPV6_LEAVE_GROUP</dfn>	21</u></td></tr>
-<tr><th id="187">187</th><td><u>#define <dfn class="macro" id="_M/IPV6_ROUTER_ALERT" data-ref="_M/IPV6_ROUTER_ALERT">IPV6_ROUTER_ALERT</dfn>	22</u></td></tr>
-<tr><th id="188">188</th><td><u>#define <dfn class="macro" id="_M/IPV6_MTU_DISCOVER" data-ref="_M/IPV6_MTU_DISCOVER">IPV6_MTU_DISCOVER</dfn>	23</u></td></tr>
-<tr><th id="189">189</th><td><u>#define <dfn class="macro" id="_M/IPV6_MTU" data-ref="_M/IPV6_MTU">IPV6_MTU</dfn>		24</u></td></tr>
-<tr><th id="190">190</th><td><u>#define <dfn class="macro" id="_M/IPV6_RECVERR" data-ref="_M/IPV6_RECVERR">IPV6_RECVERR</dfn>		25</u></td></tr>
-<tr><th id="191">191</th><td><u>#define <dfn class="macro" id="_M/IPV6_V6ONLY" data-ref="_M/IPV6_V6ONLY">IPV6_V6ONLY</dfn>		26</u></td></tr>
-<tr><th id="192">192</th><td><u>#define <dfn class="macro" id="_M/IPV6_JOIN_ANYCAST" data-ref="_M/IPV6_JOIN_ANYCAST">IPV6_JOIN_ANYCAST</dfn>	27</u></td></tr>
-<tr><th id="193">193</th><td><u>#define <dfn class="macro" id="_M/IPV6_LEAVE_ANYCAST" data-ref="_M/IPV6_LEAVE_ANYCAST">IPV6_LEAVE_ANYCAST</dfn>	28</u></td></tr>
-<tr><th id="194">194</th><td><u>#define <dfn class="macro" id="_M/IPV6_MULTICAST_ALL" data-ref="_M/IPV6_MULTICAST_ALL">IPV6_MULTICAST_ALL</dfn>	29</u></td></tr>
-<tr><th id="195">195</th><td><u>#define <dfn class="macro" id="_M/IPV6_ROUTER_ALERT_ISOLATE" data-ref="_M/IPV6_ROUTER_ALERT_ISOLATE">IPV6_ROUTER_ALERT_ISOLATE</dfn> 30</u></td></tr>
-<tr><th id="196">196</th><td><u>#define <dfn class="macro" id="_M/IPV6_IPSEC_POLICY" data-ref="_M/IPV6_IPSEC_POLICY">IPV6_IPSEC_POLICY</dfn>	34</u></td></tr>
-<tr><th id="197">197</th><td><u>#define <dfn class="macro" id="_M/IPV6_XFRM_POLICY" data-ref="_M/IPV6_XFRM_POLICY">IPV6_XFRM_POLICY</dfn>	35</u></td></tr>
-<tr><th id="198">198</th><td><u>#define <dfn class="macro" id="_M/IPV6_HDRINCL" data-ref="_M/IPV6_HDRINCL">IPV6_HDRINCL</dfn>		36</u></td></tr>
-<tr><th id="199">199</th><td></td></tr>
-<tr><th id="200">200</th><td><i>/* Advanced API (RFC3542) (1).  */</i></td></tr>
-<tr><th id="201">201</th><td><u>#define <dfn class="macro" id="_M/IPV6_RECVPKTINFO" data-ref="_M/IPV6_RECVPKTINFO">IPV6_RECVPKTINFO</dfn>	49</u></td></tr>
-<tr><th id="202">202</th><td><u>#define <dfn class="macro" id="_M/IPV6_PKTINFO" data-ref="_M/IPV6_PKTINFO">IPV6_PKTINFO</dfn>		50</u></td></tr>
-<tr><th id="203">203</th><td><u>#define <dfn class="macro" id="_M/IPV6_RECVHOPLIMIT" data-ref="_M/IPV6_RECVHOPLIMIT">IPV6_RECVHOPLIMIT</dfn>	51</u></td></tr>
-<tr><th id="204">204</th><td><u>#define <dfn class="macro" id="_M/IPV6_HOPLIMIT" data-ref="_M/IPV6_HOPLIMIT">IPV6_HOPLIMIT</dfn>		52</u></td></tr>
-<tr><th id="205">205</th><td><u>#define <dfn class="macro" id="_M/IPV6_RECVHOPOPTS" data-ref="_M/IPV6_RECVHOPOPTS">IPV6_RECVHOPOPTS</dfn>	53</u></td></tr>
-<tr><th id="206">206</th><td><u>#define <dfn class="macro" id="_M/IPV6_HOPOPTS" data-ref="_M/IPV6_HOPOPTS">IPV6_HOPOPTS</dfn>		54</u></td></tr>
-<tr><th id="207">207</th><td><u>#define <dfn class="macro" id="_M/IPV6_RTHDRDSTOPTS" data-ref="_M/IPV6_RTHDRDSTOPTS">IPV6_RTHDRDSTOPTS</dfn>	55</u></td></tr>
-<tr><th id="208">208</th><td><u>#define <dfn class="macro" id="_M/IPV6_RECVRTHDR" data-ref="_M/IPV6_RECVRTHDR">IPV6_RECVRTHDR</dfn>		56</u></td></tr>
-<tr><th id="209">209</th><td><u>#define <dfn class="macro" id="_M/IPV6_RTHDR" data-ref="_M/IPV6_RTHDR">IPV6_RTHDR</dfn>		57</u></td></tr>
-<tr><th id="210">210</th><td><u>#define <dfn class="macro" id="_M/IPV6_RECVDSTOPTS" data-ref="_M/IPV6_RECVDSTOPTS">IPV6_RECVDSTOPTS</dfn>	58</u></td></tr>
-<tr><th id="211">211</th><td><u>#define <dfn class="macro" id="_M/IPV6_DSTOPTS" data-ref="_M/IPV6_DSTOPTS">IPV6_DSTOPTS</dfn>		59</u></td></tr>
-<tr><th id="212">212</th><td><u>#define <dfn class="macro" id="_M/IPV6_RECVPATHMTU" data-ref="_M/IPV6_RECVPATHMTU">IPV6_RECVPATHMTU</dfn>	60</u></td></tr>
-<tr><th id="213">213</th><td><u>#define <dfn class="macro" id="_M/IPV6_PATHMTU" data-ref="_M/IPV6_PATHMTU">IPV6_PATHMTU</dfn>		61</u></td></tr>
-<tr><th id="214">214</th><td><u>#define <dfn class="macro" id="_M/IPV6_DONTFRAG" data-ref="_M/IPV6_DONTFRAG">IPV6_DONTFRAG</dfn>		62</u></td></tr>
-<tr><th id="215">215</th><td></td></tr>
-<tr><th id="216">216</th><td><i>/* Advanced API (RFC3542) (2).  */</i></td></tr>
-<tr><th id="217">217</th><td><u>#define <dfn class="macro" id="_M/IPV6_RECVTCLASS" data-ref="_M/IPV6_RECVTCLASS">IPV6_RECVTCLASS</dfn>		66</u></td></tr>
-<tr><th id="218">218</th><td><u>#define <dfn class="macro" id="_M/IPV6_TCLASS" data-ref="_M/IPV6_TCLASS">IPV6_TCLASS</dfn>		67</u></td></tr>
-<tr><th id="219">219</th><td></td></tr>
-<tr><th id="220">220</th><td><u>#define <dfn class="macro" id="_M/IPV6_AUTOFLOWLABEL" data-ref="_M/IPV6_AUTOFLOWLABEL">IPV6_AUTOFLOWLABEL</dfn>	70</u></td></tr>
+<tr><th id="105">105</th><td><u>#define <dfn class="macro" id="_M/IP_RECVERR_RFC4884" data-ref="_M/IP_RECVERR_RFC4884">IP_RECVERR_RFC4884</dfn> 26</u></td></tr>
+<tr><th id="106">106</th><td></td></tr>
+<tr><th id="107">107</th><td><i>/* IP_MTU_DISCOVER arguments.  */</i></td></tr>
+<tr><th id="108">108</th><td><u>#define <dfn class="macro" id="_M/IP_PMTUDISC_DONT" data-ref="_M/IP_PMTUDISC_DONT">IP_PMTUDISC_DONT</dfn>   0	/* Never send DF frames.  */</u></td></tr>
+<tr><th id="109">109</th><td><u>#define <dfn class="macro" id="_M/IP_PMTUDISC_WANT" data-ref="_M/IP_PMTUDISC_WANT">IP_PMTUDISC_WANT</dfn>   1	/* Use per route hints.  */</u></td></tr>
+<tr><th id="110">110</th><td><u>#define <dfn class="macro" id="_M/IP_PMTUDISC_DO" data-ref="_M/IP_PMTUDISC_DO">IP_PMTUDISC_DO</dfn>     2	/* Always DF.  */</u></td></tr>
+<tr><th id="111">111</th><td><u>#define <dfn class="macro" id="_M/IP_PMTUDISC_PROBE" data-ref="_M/IP_PMTUDISC_PROBE">IP_PMTUDISC_PROBE</dfn>  3	/* Ignore dst pmtu.  */</u></td></tr>
+<tr><th id="112">112</th><td><i>/* Always use interface mtu (ignores dst pmtu) but don't set DF flag.</i></td></tr>
+<tr><th id="113">113</th><td><i>   Also incoming ICMP frag_needed notifications will be ignored on</i></td></tr>
+<tr><th id="114">114</th><td><i>   this socket to prevent accepting spoofed ones.  */</i></td></tr>
+<tr><th id="115">115</th><td><u>#define <dfn class="macro" id="_M/IP_PMTUDISC_INTERFACE" data-ref="_M/IP_PMTUDISC_INTERFACE">IP_PMTUDISC_INTERFACE</dfn>           4</u></td></tr>
+<tr><th id="116">116</th><td><i>/* Like IP_PMTUDISC_INTERFACE but allow packets to be fragmented.  */</i></td></tr>
+<tr><th id="117">117</th><td><u>#define <dfn class="macro" id="_M/IP_PMTUDISC_OMIT" data-ref="_M/IP_PMTUDISC_OMIT">IP_PMTUDISC_OMIT</dfn>		5</u></td></tr>
+<tr><th id="118">118</th><td></td></tr>
+<tr><th id="119">119</th><td><u>#define <dfn class="macro" id="_M/IP_MULTICAST_IF" data-ref="_M/IP_MULTICAST_IF">IP_MULTICAST_IF</dfn>			32</u></td></tr>
+<tr><th id="120">120</th><td><u>#define <dfn class="macro" id="_M/IP_MULTICAST_TTL" data-ref="_M/IP_MULTICAST_TTL">IP_MULTICAST_TTL</dfn> 		33</u></td></tr>
+<tr><th id="121">121</th><td><u>#define <dfn class="macro" id="_M/IP_MULTICAST_LOOP" data-ref="_M/IP_MULTICAST_LOOP">IP_MULTICAST_LOOP</dfn> 		34</u></td></tr>
+<tr><th id="122">122</th><td><u>#define <dfn class="macro" id="_M/IP_ADD_MEMBERSHIP" data-ref="_M/IP_ADD_MEMBERSHIP">IP_ADD_MEMBERSHIP</dfn>		35</u></td></tr>
+<tr><th id="123">123</th><td><u>#define <dfn class="macro" id="_M/IP_DROP_MEMBERSHIP" data-ref="_M/IP_DROP_MEMBERSHIP">IP_DROP_MEMBERSHIP</dfn>		36</u></td></tr>
+<tr><th id="124">124</th><td><u>#define <dfn class="macro" id="_M/IP_UNBLOCK_SOURCE" data-ref="_M/IP_UNBLOCK_SOURCE">IP_UNBLOCK_SOURCE</dfn>		37</u></td></tr>
+<tr><th id="125">125</th><td><u>#define <dfn class="macro" id="_M/IP_BLOCK_SOURCE" data-ref="_M/IP_BLOCK_SOURCE">IP_BLOCK_SOURCE</dfn>			38</u></td></tr>
+<tr><th id="126">126</th><td><u>#define <dfn class="macro" id="_M/IP_ADD_SOURCE_MEMBERSHIP" data-ref="_M/IP_ADD_SOURCE_MEMBERSHIP">IP_ADD_SOURCE_MEMBERSHIP</dfn>	39</u></td></tr>
+<tr><th id="127">127</th><td><u>#define <dfn class="macro" id="_M/IP_DROP_SOURCE_MEMBERSHIP" data-ref="_M/IP_DROP_SOURCE_MEMBERSHIP">IP_DROP_SOURCE_MEMBERSHIP</dfn>	40</u></td></tr>
+<tr><th id="128">128</th><td><u>#define <dfn class="macro" id="_M/IP_MSFILTER" data-ref="_M/IP_MSFILTER">IP_MSFILTER</dfn>			41</u></td></tr>
+<tr><th id="129">129</th><td><u>#define <dfn class="macro" id="_M/IP_MULTICAST_ALL" data-ref="_M/IP_MULTICAST_ALL">IP_MULTICAST_ALL</dfn>		49</u></td></tr>
+<tr><th id="130">130</th><td><u>#define <dfn class="macro" id="_M/IP_UNICAST_IF" data-ref="_M/IP_UNICAST_IF">IP_UNICAST_IF</dfn>			50</u></td></tr>
+<tr><th id="131">131</th><td></td></tr>
+<tr><th id="132">132</th><td><i>/* To select the IP level.  */</i></td></tr>
+<tr><th id="133">133</th><td><u>#define <dfn class="macro" id="_M/SOL_IP" data-ref="_M/SOL_IP">SOL_IP</dfn>	0</u></td></tr>
+<tr><th id="134">134</th><td></td></tr>
+<tr><th id="135">135</th><td><u>#define <dfn class="macro" id="_M/IP_DEFAULT_MULTICAST_TTL" data-ref="_M/IP_DEFAULT_MULTICAST_TTL">IP_DEFAULT_MULTICAST_TTL</dfn>        1</u></td></tr>
+<tr><th id="136">136</th><td><u>#define <dfn class="macro" id="_M/IP_DEFAULT_MULTICAST_LOOP" data-ref="_M/IP_DEFAULT_MULTICAST_LOOP">IP_DEFAULT_MULTICAST_LOOP</dfn>       1</u></td></tr>
+<tr><th id="137">137</th><td><u>#define <dfn class="macro" id="_M/IP_MAX_MEMBERSHIPS" data-ref="_M/IP_MAX_MEMBERSHIPS">IP_MAX_MEMBERSHIPS</dfn>              20</u></td></tr>
+<tr><th id="138">138</th><td></td></tr>
+<tr><th id="139">139</th><td><u>#<span data-ppcond="139">ifdef</span> <a class="macro" href="../../features.h.html#395" data-ref="_M/__USE_MISC">__USE_MISC</a></u></td></tr>
+<tr><th id="140">140</th><td><i>/* Structure used to describe IP options for IP_OPTIONS and IP_RETOPTS.</i></td></tr>
+<tr><th id="141">141</th><td><i>   The `ip_dst' field is used for the first-hop gateway when using a</i></td></tr>
+<tr><th id="142">142</th><td><i>   source route (this gets put into the header proper).  */</i></td></tr>
+<tr><th id="143">143</th><td><b>struct</b> <dfn class="type def" id="ip_opts" title='ip_opts' data-ref="ip_opts" data-ref-filename="ip_opts">ip_opts</dfn></td></tr>
+<tr><th id="144">144</th><td>  {</td></tr>
+<tr><th id="145">145</th><td>    <b>struct</b> <a class="type" href="../../netinet/in.h.html#in_addr" title='in_addr' data-ref="in_addr" data-ref-filename="in_addr">in_addr</a> <dfn class="decl field" id="ip_opts::ip_dst" title='ip_opts::ip_dst' data-ref="ip_opts::ip_dst" data-ref-filename="ip_opts..ip_dst">ip_dst</dfn>;	<i>/* First hop; zero without source route.  */</i></td></tr>
+<tr><th id="146">146</th><td>    <em>char</em> <dfn class="decl field" id="ip_opts::ip_opts" title='ip_opts::ip_opts' data-ref="ip_opts::ip_opts" data-ref-filename="ip_opts..ip_opts">ip_opts</dfn>[<var>40</var>];		<i>/* Actually variable in size.  */</i></td></tr>
+<tr><th id="147">147</th><td>  };</td></tr>
+<tr><th id="148">148</th><td></td></tr>
+<tr><th id="149">149</th><td><i>/* Like `struct ip_mreq' but including interface specification by index.  */</i></td></tr>
+<tr><th id="150">150</th><td><b>struct</b> <dfn class="type def" id="ip_mreqn" title='ip_mreqn' data-ref="ip_mreqn" data-ref-filename="ip_mreqn">ip_mreqn</dfn></td></tr>
+<tr><th id="151">151</th><td>  {</td></tr>
+<tr><th id="152">152</th><td>    <b>struct</b> <a class="type" href="../../netinet/in.h.html#in_addr" title='in_addr' data-ref="in_addr" data-ref-filename="in_addr">in_addr</a> <dfn class="decl field" id="ip_mreqn::imr_multiaddr" title='ip_mreqn::imr_multiaddr' data-ref="ip_mreqn::imr_multiaddr" data-ref-filename="ip_mreqn..imr_multiaddr">imr_multiaddr</dfn>;	<i>/* IP multicast address of group */</i></td></tr>
+<tr><th id="153">153</th><td>    <b>struct</b> <a class="type" href="../../netinet/in.h.html#in_addr" title='in_addr' data-ref="in_addr" data-ref-filename="in_addr">in_addr</a> <dfn class="decl field" id="ip_mreqn::imr_address" title='ip_mreqn::imr_address' data-ref="ip_mreqn::imr_address" data-ref-filename="ip_mreqn..imr_address">imr_address</dfn>;		<i>/* local IP address of interface */</i></td></tr>
+<tr><th id="154">154</th><td>    <em>int</em>	<dfn class="decl field" id="ip_mreqn::imr_ifindex" title='ip_mreqn::imr_ifindex' data-ref="ip_mreqn::imr_ifindex" data-ref-filename="ip_mreqn..imr_ifindex">imr_ifindex</dfn>;			<i>/* Interface index */</i></td></tr>
+<tr><th id="155">155</th><td>  };</td></tr>
+<tr><th id="156">156</th><td></td></tr>
+<tr><th id="157">157</th><td><i>/* Structure used for IP_PKTINFO.  */</i></td></tr>
+<tr><th id="158">158</th><td><b>struct</b> <dfn class="type def" id="in_pktinfo" title='in_pktinfo' data-ref="in_pktinfo" data-ref-filename="in_pktinfo">in_pktinfo</dfn></td></tr>
+<tr><th id="159">159</th><td>  {</td></tr>
+<tr><th id="160">160</th><td>    <em>int</em> <dfn class="decl field" id="in_pktinfo::ipi_ifindex" title='in_pktinfo::ipi_ifindex' data-ref="in_pktinfo::ipi_ifindex" data-ref-filename="in_pktinfo..ipi_ifindex">ipi_ifindex</dfn>;			<i>/* Interface index  */</i></td></tr>
+<tr><th id="161">161</th><td>    <b>struct</b> <a class="type" href="../../netinet/in.h.html#in_addr" title='in_addr' data-ref="in_addr" data-ref-filename="in_addr">in_addr</a> <dfn class="decl field" id="in_pktinfo::ipi_spec_dst" title='in_pktinfo::ipi_spec_dst' data-ref="in_pktinfo::ipi_spec_dst" data-ref-filename="in_pktinfo..ipi_spec_dst">ipi_spec_dst</dfn>;	<i>/* Routing destination address  */</i></td></tr>
+<tr><th id="162">162</th><td>    <b>struct</b> <a class="type" href="../../netinet/in.h.html#in_addr" title='in_addr' data-ref="in_addr" data-ref-filename="in_addr">in_addr</a> <dfn class="decl field" id="in_pktinfo::ipi_addr" title='in_pktinfo::ipi_addr' data-ref="in_pktinfo::ipi_addr" data-ref-filename="in_pktinfo..ipi_addr">ipi_addr</dfn>;		<i>/* Header destination address  */</i></td></tr>
+<tr><th id="163">163</th><td>  };</td></tr>
+<tr><th id="164">164</th><td><u>#<span data-ppcond="139">endif</span></u></td></tr>
+<tr><th id="165">165</th><td></td></tr>
+<tr><th id="166">166</th><td><i>/* Options for use with `getsockopt' and `setsockopt' at the IPv6 level.</i></td></tr>
+<tr><th id="167">167</th><td><i>   The first word in the comment at the right is the data type used;</i></td></tr>
+<tr><th id="168">168</th><td><i>   "bool" means a boolean value stored in an `int'.  */</i></td></tr>
+<tr><th id="169">169</th><td><u>#define <dfn class="macro" id="_M/IPV6_ADDRFORM" data-ref="_M/IPV6_ADDRFORM">IPV6_ADDRFORM</dfn>		1</u></td></tr>
+<tr><th id="170">170</th><td><u>#define <dfn class="macro" id="_M/IPV6_2292PKTINFO" data-ref="_M/IPV6_2292PKTINFO">IPV6_2292PKTINFO</dfn>	2</u></td></tr>
+<tr><th id="171">171</th><td><u>#define <dfn class="macro" id="_M/IPV6_2292HOPOPTS" data-ref="_M/IPV6_2292HOPOPTS">IPV6_2292HOPOPTS</dfn>	3</u></td></tr>
+<tr><th id="172">172</th><td><u>#define <dfn class="macro" id="_M/IPV6_2292DSTOPTS" data-ref="_M/IPV6_2292DSTOPTS">IPV6_2292DSTOPTS</dfn>	4</u></td></tr>
+<tr><th id="173">173</th><td><u>#define <dfn class="macro" id="_M/IPV6_2292RTHDR" data-ref="_M/IPV6_2292RTHDR">IPV6_2292RTHDR</dfn>		5</u></td></tr>
+<tr><th id="174">174</th><td><u>#define <dfn class="macro" id="_M/IPV6_2292PKTOPTIONS" data-ref="_M/IPV6_2292PKTOPTIONS">IPV6_2292PKTOPTIONS</dfn>	6</u></td></tr>
+<tr><th id="175">175</th><td><u>#define <dfn class="macro" id="_M/IPV6_CHECKSUM" data-ref="_M/IPV6_CHECKSUM">IPV6_CHECKSUM</dfn>		7</u></td></tr>
+<tr><th id="176">176</th><td><u>#define <dfn class="macro" id="_M/IPV6_2292HOPLIMIT" data-ref="_M/IPV6_2292HOPLIMIT">IPV6_2292HOPLIMIT</dfn>	8</u></td></tr>
+<tr><th id="177">177</th><td></td></tr>
+<tr><th id="178">178</th><td><u>#define <dfn class="macro" id="_M/SCM_SRCRT" data-ref="_M/SCM_SRCRT">SCM_SRCRT</dfn>		IPV6_RXSRCRT</u></td></tr>
+<tr><th id="179">179</th><td></td></tr>
+<tr><th id="180">180</th><td><u>#define <dfn class="macro" id="_M/IPV6_NEXTHOP" data-ref="_M/IPV6_NEXTHOP">IPV6_NEXTHOP</dfn>		9</u></td></tr>
+<tr><th id="181">181</th><td><u>#define <dfn class="macro" id="_M/IPV6_AUTHHDR" data-ref="_M/IPV6_AUTHHDR">IPV6_AUTHHDR</dfn>		10</u></td></tr>
+<tr><th id="182">182</th><td><u>#define <dfn class="macro" id="_M/IPV6_UNICAST_HOPS" data-ref="_M/IPV6_UNICAST_HOPS">IPV6_UNICAST_HOPS</dfn>	16</u></td></tr>
+<tr><th id="183">183</th><td><u>#define <dfn class="macro" id="_M/IPV6_MULTICAST_IF" data-ref="_M/IPV6_MULTICAST_IF">IPV6_MULTICAST_IF</dfn>	17</u></td></tr>
+<tr><th id="184">184</th><td><u>#define <dfn class="macro" id="_M/IPV6_MULTICAST_HOPS" data-ref="_M/IPV6_MULTICAST_HOPS">IPV6_MULTICAST_HOPS</dfn>	18</u></td></tr>
+<tr><th id="185">185</th><td><u>#define <dfn class="macro" id="_M/IPV6_MULTICAST_LOOP" data-ref="_M/IPV6_MULTICAST_LOOP">IPV6_MULTICAST_LOOP</dfn>	19</u></td></tr>
+<tr><th id="186">186</th><td><u>#define <dfn class="macro" id="_M/IPV6_JOIN_GROUP" data-ref="_M/IPV6_JOIN_GROUP">IPV6_JOIN_GROUP</dfn>		20</u></td></tr>
+<tr><th id="187">187</th><td><u>#define <dfn class="macro" id="_M/IPV6_LEAVE_GROUP" data-ref="_M/IPV6_LEAVE_GROUP">IPV6_LEAVE_GROUP</dfn>	21</u></td></tr>
+<tr><th id="188">188</th><td><u>#define <dfn class="macro" id="_M/IPV6_ROUTER_ALERT" data-ref="_M/IPV6_ROUTER_ALERT">IPV6_ROUTER_ALERT</dfn>	22</u></td></tr>
+<tr><th id="189">189</th><td><u>#define <dfn class="macro" id="_M/IPV6_MTU_DISCOVER" data-ref="_M/IPV6_MTU_DISCOVER">IPV6_MTU_DISCOVER</dfn>	23</u></td></tr>
+<tr><th id="190">190</th><td><u>#define <dfn class="macro" id="_M/IPV6_MTU" data-ref="_M/IPV6_MTU">IPV6_MTU</dfn>		24</u></td></tr>
+<tr><th id="191">191</th><td><u>#define <dfn class="macro" id="_M/IPV6_RECVERR" data-ref="_M/IPV6_RECVERR">IPV6_RECVERR</dfn>		25</u></td></tr>
+<tr><th id="192">192</th><td><u>#define <dfn class="macro" id="_M/IPV6_V6ONLY" data-ref="_M/IPV6_V6ONLY">IPV6_V6ONLY</dfn>		26</u></td></tr>
+<tr><th id="193">193</th><td><u>#define <dfn class="macro" id="_M/IPV6_JOIN_ANYCAST" data-ref="_M/IPV6_JOIN_ANYCAST">IPV6_JOIN_ANYCAST</dfn>	27</u></td></tr>
+<tr><th id="194">194</th><td><u>#define <dfn class="macro" id="_M/IPV6_LEAVE_ANYCAST" data-ref="_M/IPV6_LEAVE_ANYCAST">IPV6_LEAVE_ANYCAST</dfn>	28</u></td></tr>
+<tr><th id="195">195</th><td><u>#define <dfn class="macro" id="_M/IPV6_MULTICAST_ALL" data-ref="_M/IPV6_MULTICAST_ALL">IPV6_MULTICAST_ALL</dfn>	29</u></td></tr>
+<tr><th id="196">196</th><td><u>#define <dfn class="macro" id="_M/IPV6_ROUTER_ALERT_ISOLATE" data-ref="_M/IPV6_ROUTER_ALERT_ISOLATE">IPV6_ROUTER_ALERT_ISOLATE</dfn> 30</u></td></tr>
+<tr><th id="197">197</th><td><u>#define <dfn class="macro" id="_M/IPV6_RECVERR_RFC4884" data-ref="_M/IPV6_RECVERR_RFC4884">IPV6_RECVERR_RFC4884</dfn>	31</u></td></tr>
+<tr><th id="198">198</th><td><u>#define <dfn class="macro" id="_M/IPV6_IPSEC_POLICY" data-ref="_M/IPV6_IPSEC_POLICY">IPV6_IPSEC_POLICY</dfn>	34</u></td></tr>
+<tr><th id="199">199</th><td><u>#define <dfn class="macro" id="_M/IPV6_XFRM_POLICY" data-ref="_M/IPV6_XFRM_POLICY">IPV6_XFRM_POLICY</dfn>	35</u></td></tr>
+<tr><th id="200">200</th><td><u>#define <dfn class="macro" id="_M/IPV6_HDRINCL" data-ref="_M/IPV6_HDRINCL">IPV6_HDRINCL</dfn>		36</u></td></tr>
+<tr><th id="201">201</th><td></td></tr>
+<tr><th id="202">202</th><td><i>/* Advanced API (RFC3542) (1).  */</i></td></tr>
+<tr><th id="203">203</th><td><u>#define <dfn class="macro" id="_M/IPV6_RECVPKTINFO" data-ref="_M/IPV6_RECVPKTINFO">IPV6_RECVPKTINFO</dfn>	49</u></td></tr>
+<tr><th id="204">204</th><td><u>#define <dfn class="macro" id="_M/IPV6_PKTINFO" data-ref="_M/IPV6_PKTINFO">IPV6_PKTINFO</dfn>		50</u></td></tr>
+<tr><th id="205">205</th><td><u>#define <dfn class="macro" id="_M/IPV6_RECVHOPLIMIT" data-ref="_M/IPV6_RECVHOPLIMIT">IPV6_RECVHOPLIMIT</dfn>	51</u></td></tr>
+<tr><th id="206">206</th><td><u>#define <dfn class="macro" id="_M/IPV6_HOPLIMIT" data-ref="_M/IPV6_HOPLIMIT">IPV6_HOPLIMIT</dfn>		52</u></td></tr>
+<tr><th id="207">207</th><td><u>#define <dfn class="macro" id="_M/IPV6_RECVHOPOPTS" data-ref="_M/IPV6_RECVHOPOPTS">IPV6_RECVHOPOPTS</dfn>	53</u></td></tr>
+<tr><th id="208">208</th><td><u>#define <dfn class="macro" id="_M/IPV6_HOPOPTS" data-ref="_M/IPV6_HOPOPTS">IPV6_HOPOPTS</dfn>		54</u></td></tr>
+<tr><th id="209">209</th><td><u>#define <dfn class="macro" id="_M/IPV6_RTHDRDSTOPTS" data-ref="_M/IPV6_RTHDRDSTOPTS">IPV6_RTHDRDSTOPTS</dfn>	55</u></td></tr>
+<tr><th id="210">210</th><td><u>#define <dfn class="macro" id="_M/IPV6_RECVRTHDR" data-ref="_M/IPV6_RECVRTHDR">IPV6_RECVRTHDR</dfn>		56</u></td></tr>
+<tr><th id="211">211</th><td><u>#define <dfn class="macro" id="_M/IPV6_RTHDR" data-ref="_M/IPV6_RTHDR">IPV6_RTHDR</dfn>		57</u></td></tr>
+<tr><th id="212">212</th><td><u>#define <dfn class="macro" id="_M/IPV6_RECVDSTOPTS" data-ref="_M/IPV6_RECVDSTOPTS">IPV6_RECVDSTOPTS</dfn>	58</u></td></tr>
+<tr><th id="213">213</th><td><u>#define <dfn class="macro" id="_M/IPV6_DSTOPTS" data-ref="_M/IPV6_DSTOPTS">IPV6_DSTOPTS</dfn>		59</u></td></tr>
+<tr><th id="214">214</th><td><u>#define <dfn class="macro" id="_M/IPV6_RECVPATHMTU" data-ref="_M/IPV6_RECVPATHMTU">IPV6_RECVPATHMTU</dfn>	60</u></td></tr>
+<tr><th id="215">215</th><td><u>#define <dfn class="macro" id="_M/IPV6_PATHMTU" data-ref="_M/IPV6_PATHMTU">IPV6_PATHMTU</dfn>		61</u></td></tr>
+<tr><th id="216">216</th><td><u>#define <dfn class="macro" id="_M/IPV6_DONTFRAG" data-ref="_M/IPV6_DONTFRAG">IPV6_DONTFRAG</dfn>		62</u></td></tr>
+<tr><th id="217">217</th><td></td></tr>
+<tr><th id="218">218</th><td><i>/* Advanced API (RFC3542) (2).  */</i></td></tr>
+<tr><th id="219">219</th><td><u>#define <dfn class="macro" id="_M/IPV6_RECVTCLASS" data-ref="_M/IPV6_RECVTCLASS">IPV6_RECVTCLASS</dfn>		66</u></td></tr>
+<tr><th id="220">220</th><td><u>#define <dfn class="macro" id="_M/IPV6_TCLASS" data-ref="_M/IPV6_TCLASS">IPV6_TCLASS</dfn>		67</u></td></tr>
 <tr><th id="221">221</th><td></td></tr>
-<tr><th id="222">222</th><td><i>/* RFC5014.  */</i></td></tr>
-<tr><th id="223">223</th><td><u>#define <dfn class="macro" id="_M/IPV6_ADDR_PREFERENCES" data-ref="_M/IPV6_ADDR_PREFERENCES">IPV6_ADDR_PREFERENCES</dfn>	72</u></td></tr>
-<tr><th id="224">224</th><td></td></tr>
-<tr><th id="225">225</th><td><i>/* RFC5082.  */</i></td></tr>
-<tr><th id="226">226</th><td><u>#define <dfn class="macro" id="_M/IPV6_MINHOPCOUNT" data-ref="_M/IPV6_MINHOPCOUNT">IPV6_MINHOPCOUNT</dfn>	73</u></td></tr>
-<tr><th id="227">227</th><td></td></tr>
-<tr><th id="228">228</th><td><u>#define <dfn class="macro" id="_M/IPV6_ORIGDSTADDR" data-ref="_M/IPV6_ORIGDSTADDR">IPV6_ORIGDSTADDR</dfn>	74</u></td></tr>
-<tr><th id="229">229</th><td><u>#define <dfn class="macro" id="_M/IPV6_RECVORIGDSTADDR" data-ref="_M/IPV6_RECVORIGDSTADDR">IPV6_RECVORIGDSTADDR</dfn>	IPV6_ORIGDSTADDR</u></td></tr>
-<tr><th id="230">230</th><td><u>#define <dfn class="macro" id="_M/IPV6_TRANSPARENT" data-ref="_M/IPV6_TRANSPARENT">IPV6_TRANSPARENT</dfn>	75</u></td></tr>
-<tr><th id="231">231</th><td><u>#define <dfn class="macro" id="_M/IPV6_UNICAST_IF" data-ref="_M/IPV6_UNICAST_IF">IPV6_UNICAST_IF</dfn>		76</u></td></tr>
-<tr><th id="232">232</th><td><u>#define <dfn class="macro" id="_M/IPV6_RECVFRAGSIZE" data-ref="_M/IPV6_RECVFRAGSIZE">IPV6_RECVFRAGSIZE</dfn>	77</u></td></tr>
-<tr><th id="233">233</th><td><u>#define <dfn class="macro" id="_M/IPV6_FREEBIND" data-ref="_M/IPV6_FREEBIND">IPV6_FREEBIND</dfn>		78</u></td></tr>
-<tr><th id="234">234</th><td></td></tr>
-<tr><th id="235">235</th><td><i>/* Obsolete synonyms for the above.  */</i></td></tr>
-<tr><th id="236">236</th><td><u>#<span data-ppcond="236">if</span> !<a class="macro" href="#41" title="0" data-ref="_M/__USE_KERNEL_IPV6_DEFS">__USE_KERNEL_IPV6_DEFS</a></u></td></tr>
-<tr><th id="237">237</th><td><u># define <dfn class="macro" id="_M/IPV6_ADD_MEMBERSHIP" data-ref="_M/IPV6_ADD_MEMBERSHIP">IPV6_ADD_MEMBERSHIP</dfn>	IPV6_JOIN_GROUP</u></td></tr>
-<tr><th id="238">238</th><td><u># define <dfn class="macro" id="_M/IPV6_DROP_MEMBERSHIP" data-ref="_M/IPV6_DROP_MEMBERSHIP">IPV6_DROP_MEMBERSHIP</dfn>	IPV6_LEAVE_GROUP</u></td></tr>
-<tr><th id="239">239</th><td><u>#<span data-ppcond="236">endif</span></u></td></tr>
-<tr><th id="240">240</th><td><u>#define <dfn class="macro" id="_M/IPV6_RXHOPOPTS" data-ref="_M/IPV6_RXHOPOPTS">IPV6_RXHOPOPTS</dfn>		IPV6_HOPOPTS</u></td></tr>
-<tr><th id="241">241</th><td><u>#define <dfn class="macro" id="_M/IPV6_RXDSTOPTS" data-ref="_M/IPV6_RXDSTOPTS">IPV6_RXDSTOPTS</dfn>		IPV6_DSTOPTS</u></td></tr>
-<tr><th id="242">242</th><td></td></tr>
-<tr><th id="243">243</th><td><i>/* IPV6_MTU_DISCOVER values.  */</i></td></tr>
-<tr><th id="244">244</th><td><u>#define <dfn class="macro" id="_M/IPV6_PMTUDISC_DONT" data-ref="_M/IPV6_PMTUDISC_DONT">IPV6_PMTUDISC_DONT</dfn>	0	/* Never send DF frames.  */</u></td></tr>
-<tr><th id="245">245</th><td><u>#define <dfn class="macro" id="_M/IPV6_PMTUDISC_WANT" data-ref="_M/IPV6_PMTUDISC_WANT">IPV6_PMTUDISC_WANT</dfn>	1	/* Use per route hints.  */</u></td></tr>
-<tr><th id="246">246</th><td><u>#define <dfn class="macro" id="_M/IPV6_PMTUDISC_DO" data-ref="_M/IPV6_PMTUDISC_DO">IPV6_PMTUDISC_DO</dfn>	2	/* Always DF.  */</u></td></tr>
-<tr><th id="247">247</th><td><u>#define <dfn class="macro" id="_M/IPV6_PMTUDISC_PROBE" data-ref="_M/IPV6_PMTUDISC_PROBE">IPV6_PMTUDISC_PROBE</dfn>	3	/* Ignore dst pmtu.  */</u></td></tr>
-<tr><th id="248">248</th><td><u>#define <dfn class="macro" id="_M/IPV6_PMTUDISC_INTERFACE" data-ref="_M/IPV6_PMTUDISC_INTERFACE">IPV6_PMTUDISC_INTERFACE</dfn>	4	/* See IP_PMTUDISC_INTERFACE.  */</u></td></tr>
-<tr><th id="249">249</th><td><u>#define <dfn class="macro" id="_M/IPV6_PMTUDISC_OMIT" data-ref="_M/IPV6_PMTUDISC_OMIT">IPV6_PMTUDISC_OMIT</dfn>	5	/* See IP_PMTUDISC_OMIT.  */</u></td></tr>
-<tr><th id="250">250</th><td></td></tr>
-<tr><th id="251">251</th><td><i>/* Socket level values for IPv6.  */</i></td></tr>
-<tr><th id="252">252</th><td><u>#define <dfn class="macro" id="_M/SOL_IPV6" data-ref="_M/SOL_IPV6">SOL_IPV6</dfn>        41</u></td></tr>
-<tr><th id="253">253</th><td><u>#define <dfn class="macro" id="_M/SOL_ICMPV6" data-ref="_M/SOL_ICMPV6">SOL_ICMPV6</dfn>      58</u></td></tr>
-<tr><th id="254">254</th><td></td></tr>
-<tr><th id="255">255</th><td><i>/* Routing header options for IPv6.  */</i></td></tr>
-<tr><th id="256">256</th><td><u>#define <dfn class="macro" id="_M/IPV6_RTHDR_LOOSE" data-ref="_M/IPV6_RTHDR_LOOSE">IPV6_RTHDR_LOOSE</dfn>	0	/* Hop doesn't need to be neighbour. */</u></td></tr>
-<tr><th id="257">257</th><td><u>#define <dfn class="macro" id="_M/IPV6_RTHDR_STRICT" data-ref="_M/IPV6_RTHDR_STRICT">IPV6_RTHDR_STRICT</dfn>	1	/* Hop must be a neighbour.  */</u></td></tr>
-<tr><th id="258">258</th><td></td></tr>
-<tr><th id="259">259</th><td><u>#define <dfn class="macro" id="_M/IPV6_RTHDR_TYPE_0" data-ref="_M/IPV6_RTHDR_TYPE_0">IPV6_RTHDR_TYPE_0</dfn>	0	/* IPv6 Routing header type 0.  */</u></td></tr>
+<tr><th id="222">222</th><td><u>#define <dfn class="macro" id="_M/IPV6_AUTOFLOWLABEL" data-ref="_M/IPV6_AUTOFLOWLABEL">IPV6_AUTOFLOWLABEL</dfn>	70</u></td></tr>
+<tr><th id="223">223</th><td></td></tr>
+<tr><th id="224">224</th><td><i>/* RFC5014.  */</i></td></tr>
+<tr><th id="225">225</th><td><u>#define <dfn class="macro" id="_M/IPV6_ADDR_PREFERENCES" data-ref="_M/IPV6_ADDR_PREFERENCES">IPV6_ADDR_PREFERENCES</dfn>	72</u></td></tr>
+<tr><th id="226">226</th><td></td></tr>
+<tr><th id="227">227</th><td><i>/* RFC5082.  */</i></td></tr>
+<tr><th id="228">228</th><td><u>#define <dfn class="macro" id="_M/IPV6_MINHOPCOUNT" data-ref="_M/IPV6_MINHOPCOUNT">IPV6_MINHOPCOUNT</dfn>	73</u></td></tr>
+<tr><th id="229">229</th><td></td></tr>
+<tr><th id="230">230</th><td><u>#define <dfn class="macro" id="_M/IPV6_ORIGDSTADDR" data-ref="_M/IPV6_ORIGDSTADDR">IPV6_ORIGDSTADDR</dfn>	74</u></td></tr>
+<tr><th id="231">231</th><td><u>#define <dfn class="macro" id="_M/IPV6_RECVORIGDSTADDR" data-ref="_M/IPV6_RECVORIGDSTADDR">IPV6_RECVORIGDSTADDR</dfn>	IPV6_ORIGDSTADDR</u></td></tr>
+<tr><th id="232">232</th><td><u>#define <dfn class="macro" id="_M/IPV6_TRANSPARENT" data-ref="_M/IPV6_TRANSPARENT">IPV6_TRANSPARENT</dfn>	75</u></td></tr>
+<tr><th id="233">233</th><td><u>#define <dfn class="macro" id="_M/IPV6_UNICAST_IF" data-ref="_M/IPV6_UNICAST_IF">IPV6_UNICAST_IF</dfn>		76</u></td></tr>
+<tr><th id="234">234</th><td><u>#define <dfn class="macro" id="_M/IPV6_RECVFRAGSIZE" data-ref="_M/IPV6_RECVFRAGSIZE">IPV6_RECVFRAGSIZE</dfn>	77</u></td></tr>
+<tr><th id="235">235</th><td><u>#define <dfn class="macro" id="_M/IPV6_FREEBIND" data-ref="_M/IPV6_FREEBIND">IPV6_FREEBIND</dfn>		78</u></td></tr>
+<tr><th id="236">236</th><td></td></tr>
+<tr><th id="237">237</th><td><i>/* Obsolete synonyms for the above.  */</i></td></tr>
+<tr><th id="238">238</th><td><u>#<span data-ppcond="238">if</span> !<a class="macro" href="#41" title="0" data-ref="_M/__USE_KERNEL_IPV6_DEFS">__USE_KERNEL_IPV6_DEFS</a></u></td></tr>
+<tr><th id="239">239</th><td><u># define <dfn class="macro" id="_M/IPV6_ADD_MEMBERSHIP" data-ref="_M/IPV6_ADD_MEMBERSHIP">IPV6_ADD_MEMBERSHIP</dfn>	IPV6_JOIN_GROUP</u></td></tr>
+<tr><th id="240">240</th><td><u># define <dfn class="macro" id="_M/IPV6_DROP_MEMBERSHIP" data-ref="_M/IPV6_DROP_MEMBERSHIP">IPV6_DROP_MEMBERSHIP</dfn>	IPV6_LEAVE_GROUP</u></td></tr>
+<tr><th id="241">241</th><td><u>#<span data-ppcond="238">endif</span></u></td></tr>
+<tr><th id="242">242</th><td><u>#define <dfn class="macro" id="_M/IPV6_RXHOPOPTS" data-ref="_M/IPV6_RXHOPOPTS">IPV6_RXHOPOPTS</dfn>		IPV6_HOPOPTS</u></td></tr>
+<tr><th id="243">243</th><td><u>#define <dfn class="macro" id="_M/IPV6_RXDSTOPTS" data-ref="_M/IPV6_RXDSTOPTS">IPV6_RXDSTOPTS</dfn>		IPV6_DSTOPTS</u></td></tr>
+<tr><th id="244">244</th><td></td></tr>
+<tr><th id="245">245</th><td><i>/* IPV6_MTU_DISCOVER values.  */</i></td></tr>
+<tr><th id="246">246</th><td><u>#define <dfn class="macro" id="_M/IPV6_PMTUDISC_DONT" data-ref="_M/IPV6_PMTUDISC_DONT">IPV6_PMTUDISC_DONT</dfn>	0	/* Never send DF frames.  */</u></td></tr>
+<tr><th id="247">247</th><td><u>#define <dfn class="macro" id="_M/IPV6_PMTUDISC_WANT" data-ref="_M/IPV6_PMTUDISC_WANT">IPV6_PMTUDISC_WANT</dfn>	1	/* Use per route hints.  */</u></td></tr>
+<tr><th id="248">248</th><td><u>#define <dfn class="macro" id="_M/IPV6_PMTUDISC_DO" data-ref="_M/IPV6_PMTUDISC_DO">IPV6_PMTUDISC_DO</dfn>	2	/* Always DF.  */</u></td></tr>
+<tr><th id="249">249</th><td><u>#define <dfn class="macro" id="_M/IPV6_PMTUDISC_PROBE" data-ref="_M/IPV6_PMTUDISC_PROBE">IPV6_PMTUDISC_PROBE</dfn>	3	/* Ignore dst pmtu.  */</u></td></tr>
+<tr><th id="250">250</th><td><u>#define <dfn class="macro" id="_M/IPV6_PMTUDISC_INTERFACE" data-ref="_M/IPV6_PMTUDISC_INTERFACE">IPV6_PMTUDISC_INTERFACE</dfn>	4	/* See IP_PMTUDISC_INTERFACE.  */</u></td></tr>
+<tr><th id="251">251</th><td><u>#define <dfn class="macro" id="_M/IPV6_PMTUDISC_OMIT" data-ref="_M/IPV6_PMTUDISC_OMIT">IPV6_PMTUDISC_OMIT</dfn>	5	/* See IP_PMTUDISC_OMIT.  */</u></td></tr>
+<tr><th id="252">252</th><td></td></tr>
+<tr><th id="253">253</th><td><i>/* Socket level values for IPv6.  */</i></td></tr>
+<tr><th id="254">254</th><td><u>#define <dfn class="macro" id="_M/SOL_IPV6" data-ref="_M/SOL_IPV6">SOL_IPV6</dfn>        41</u></td></tr>
+<tr><th id="255">255</th><td><u>#define <dfn class="macro" id="_M/SOL_ICMPV6" data-ref="_M/SOL_ICMPV6">SOL_ICMPV6</dfn>      58</u></td></tr>
+<tr><th id="256">256</th><td></td></tr>
+<tr><th id="257">257</th><td><i>/* Routing header options for IPv6.  */</i></td></tr>
+<tr><th id="258">258</th><td><u>#define <dfn class="macro" id="_M/IPV6_RTHDR_LOOSE" data-ref="_M/IPV6_RTHDR_LOOSE">IPV6_RTHDR_LOOSE</dfn>	0	/* Hop doesn't need to be neighbour. */</u></td></tr>
+<tr><th id="259">259</th><td><u>#define <dfn class="macro" id="_M/IPV6_RTHDR_STRICT" data-ref="_M/IPV6_RTHDR_STRICT">IPV6_RTHDR_STRICT</dfn>	1	/* Hop must be a neighbour.  */</u></td></tr>
 <tr><th id="260">260</th><td></td></tr>
+<tr><th id="261">261</th><td><u>#define <dfn class="macro" id="_M/IPV6_RTHDR_TYPE_0" data-ref="_M/IPV6_RTHDR_TYPE_0">IPV6_RTHDR_TYPE_0</dfn>	0	/* IPv6 Routing header type 0.  */</u></td></tr>
+<tr><th id="262">262</th><td></td></tr>
 </table><hr/><p id='footer'>
 Generated while processing <a href='../../../tvm/src/runtime/rpc/rpc_socket_impl.cc.html'>tvm/src/runtime/rpc/rpc_socket_impl.cc</a><br/>Generated on <em>2022-Dec-07</em> from project include<br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
 <br/>Generator usage only permitted with license.</p>

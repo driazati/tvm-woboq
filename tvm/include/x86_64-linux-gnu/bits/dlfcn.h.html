@@ -12,7 +12,7 @@
 <body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='../..'>include</a>/<a href='..'>x86_64-linux-gnu</a>/<a href='./'>bits</a>/<a href='dlfcn.h.html'>dlfcn.h</a></h1></div>
 <hr/><div id='content'><table class="code">
 <tr><th id="1">1</th><td><i>/* System dependent definitions for run-time dynamic loading.</i></td></tr>
-<tr><th id="2">2</th><td><i>   Copyright (C) 1996-2020 Free Software Foundation, Inc.</i></td></tr>
+<tr><th id="2">2</th><td><i>   Copyright (C) 1996-2022 Free Software Foundation, Inc.</i></td></tr>
 <tr><th id="3">3</th><td><i>   This file is part of the GNU C Library.</i></td></tr>
 <tr><th id="4">4</th><td><i></i></td></tr>
 <tr><th id="5">5</th><td><i>   The GNU C Library is free software; you can redistribute it and/or</i></td></tr>
@@ -53,7 +53,7 @@
 <tr><th id="40">40</th><td><i>/* Do not delete object when closed.  */</i></td></tr>
 <tr><th id="41">41</th><td><u>#define <dfn class="macro" id="_M/RTLD_NODELETE" data-ref="_M/RTLD_NODELETE">RTLD_NODELETE</dfn>	0x01000</u></td></tr>
 <tr><th id="42">42</th><td></td></tr>
-<tr><th id="43">43</th><td><u>#<span data-ppcond="43">ifdef</span> <a class="macro" href="../../features.h.html#392" data-ref="_M/__USE_GNU">__USE_GNU</a></u></td></tr>
+<tr><th id="43">43</th><td><u>#<span data-ppcond="43">ifdef</span> <a class="macro" href="../../features.h.html#407" data-ref="_M/__USE_GNU">__USE_GNU</a></u></td></tr>
 <tr><th id="44">44</th><td><i>/* To support profiling of shared objects it is a good idea to call</i></td></tr>
 <tr><th id="45">45</th><td><i>   the function found using `dlsym' using the following macro since</i></td></tr>
 <tr><th id="46">46</th><td><i>   these calls do not use the PLT.  But this would mean the dynamic</i></td></tr>
@@ -67,12 +67,12 @@
 <tr><th id="54">54</th><td><u># define <dfn class="macro" id="_M/DL_CALL_FCT" data-ref="_M/DL_CALL_FCT">DL_CALL_FCT</dfn>(fctp, args) \</u></td></tr>
 <tr><th id="55">55</th><td><u>  (_dl_mcount_wrapper_check ((void *) (fctp)), (*(fctp)) args)</u></td></tr>
 <tr><th id="56">56</th><td></td></tr>
-<tr><th id="57">57</th><td><a class="macro" href="../sys/cdefs.h.html#114" title="extern &quot;C&quot; {" data-ref="_M/__BEGIN_DECLS">__BEGIN_DECLS</a></td></tr>
+<tr><th id="57">57</th><td><a class="macro" href="../sys/cdefs.h.html#133" title="extern &quot;C&quot; {" data-ref="_M/__BEGIN_DECLS">__BEGIN_DECLS</a></td></tr>
 <tr><th id="58">58</th><td></td></tr>
 <tr><th id="59">59</th><td><i>/* This function calls the profiling functions.  */</i></td></tr>
-<tr><th id="60">60</th><td><b>extern</b> <em>void</em> <dfn class="decl fn" id="_dl_mcount_wrapper_check" title='_dl_mcount_wrapper_check' data-ref="_dl_mcount_wrapper_check" data-ref-filename="_dl_mcount_wrapper_check">_dl_mcount_wrapper_check</dfn> (<em>void</em> *<dfn class="local col2 decl" id="12__selfpc" title='__selfpc' data-type='void *' data-ref="12__selfpc" data-ref-filename="12__selfpc">__selfpc</dfn>) <a class="macro" href="../sys/cdefs.h.html#61" title="throw ()" data-ref="_M/__THROW">__THROW</a>;</td></tr>
+<tr><th id="60">60</th><td><b>extern</b> <em>void</em> <dfn class="decl fn" id="_dl_mcount_wrapper_check" title='_dl_mcount_wrapper_check' data-ref="_dl_mcount_wrapper_check" data-ref-filename="_dl_mcount_wrapper_check">_dl_mcount_wrapper_check</dfn> (<em>void</em> *<dfn class="local col2 decl" id="12__selfpc" title='__selfpc' data-type='void *' data-ref="12__selfpc" data-ref-filename="12__selfpc">__selfpc</dfn>) <a class="macro" href="../sys/cdefs.h.html#86" title="noexcept (true)" data-ref="_M/__THROW">__THROW</a>;</td></tr>
 <tr><th id="61">61</th><td></td></tr>
-<tr><th id="62">62</th><td><a class="macro" href="../sys/cdefs.h.html#115" title="}" data-ref="_M/__END_DECLS">__END_DECLS</a></td></tr>
+<tr><th id="62">62</th><td><a class="macro" href="../sys/cdefs.h.html#134" title="}" data-ref="_M/__END_DECLS">__END_DECLS</a></td></tr>
 <tr><th id="63">63</th><td></td></tr>
 <tr><th id="64">64</th><td><u>#<span data-ppcond="43">endif</span></u></td></tr>
 <tr><th id="65">65</th><td></td></tr>

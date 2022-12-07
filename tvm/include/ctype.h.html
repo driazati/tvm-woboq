@@ -11,7 +11,7 @@
 </head>
 <body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='./'>include</a>/<a href='ctype.h.html'>ctype.h</a></h1></div>
 <hr/><div id='content'><table class="code">
-<tr><th id="1">1</th><td><i>/* Copyright (C) 1991-2020 Free Software Foundation, Inc.</i></td></tr>
+<tr><th id="1">1</th><td><i>/* Copyright (C) 1991-2022 Free Software Foundation, Inc.</i></td></tr>
 <tr><th id="2">2</th><td><i>   This file is part of the GNU C Library.</i></td></tr>
 <tr><th id="3">3</th><td><i></i></td></tr>
 <tr><th id="4">4</th><td><i>   The GNU C Library is free software; you can redistribute it and/or</i></td></tr>
@@ -38,7 +38,7 @@
 <tr><th id="25">25</th><td><u>#include <a href="features.h.html">&lt;features.h&gt;</a></u></td></tr>
 <tr><th id="26">26</th><td><u>#include <a href="x86_64-linux-gnu/bits/types.h.html">&lt;bits/types.h&gt;</a></u></td></tr>
 <tr><th id="27">27</th><td></td></tr>
-<tr><th id="28">28</th><td><a class="macro" href="x86_64-linux-gnu/sys/cdefs.h.html#114" title="extern &quot;C&quot; {" data-ref="_M/__BEGIN_DECLS">__BEGIN_DECLS</a></td></tr>
+<tr><th id="28">28</th><td><a class="macro" href="x86_64-linux-gnu/sys/cdefs.h.html#133" title="extern &quot;C&quot; {" data-ref="_M/__BEGIN_DECLS">__BEGIN_DECLS</a></td></tr>
 <tr><th id="29">29</th><td></td></tr>
 <tr><th id="30">30</th><td><u>#<span data-ppcond="30">ifndef</span> <span class="macro" data-ref="_M/_ISbit">_ISbit</span></u></td></tr>
 <tr><th id="31">31</th><td><i>/* These are all the characteristics of characters.</i></td></tr>
@@ -90,17 +90,17 @@
 <tr><th id="77">77</th><td><i>   doesn't fit into an `unsigned char'.  But today more important is that</i></td></tr>
 <tr><th id="78">78</th><td><i>   the arrays are also used for multi-byte character sets.  */</i></td></tr>
 <tr><th id="79">79</th><td><b>extern</b> <em>const</em> <em>unsigned</em> <em>short</em> <em>int</em> **<dfn class="decl fn" id="__ctype_b_loc" title='__ctype_b_loc' data-ref="__ctype_b_loc" data-ref-filename="__ctype_b_loc">__ctype_b_loc</dfn> (<em>void</em>)</td></tr>
-<tr><th id="80">80</th><td>     <a class="macro" href="x86_64-linux-gnu/sys/cdefs.h.html#61" title="throw ()" data-ref="_M/__THROW">__THROW</a> <b>__attribute__</b> ((<em>__const__</em>));</td></tr>
+<tr><th id="80">80</th><td>     <a class="macro" href="x86_64-linux-gnu/sys/cdefs.h.html#86" title="noexcept (true)" data-ref="_M/__THROW">__THROW</a> <b>__attribute__</b> ((<em>__const__</em>));</td></tr>
 <tr><th id="81">81</th><td><b>extern</b> <em>const</em> <a class="typedef" href="x86_64-linux-gnu/bits/types.h.html#__int32_t" title='__int32_t' data-type='int' data-ref="__int32_t" data-ref-filename="__int32_t">__int32_t</a> **<dfn class="decl fn" id="__ctype_tolower_loc" title='__ctype_tolower_loc' data-ref="__ctype_tolower_loc" data-ref-filename="__ctype_tolower_loc">__ctype_tolower_loc</dfn> (<em>void</em>)</td></tr>
-<tr><th id="82">82</th><td>     <a class="macro" href="x86_64-linux-gnu/sys/cdefs.h.html#61" title="throw ()" data-ref="_M/__THROW">__THROW</a> <b>__attribute__</b> ((<em>__const__</em>));</td></tr>
+<tr><th id="82">82</th><td>     <a class="macro" href="x86_64-linux-gnu/sys/cdefs.h.html#86" title="noexcept (true)" data-ref="_M/__THROW">__THROW</a> <b>__attribute__</b> ((<em>__const__</em>));</td></tr>
 <tr><th id="83">83</th><td><b>extern</b> <em>const</em> <a class="typedef" href="x86_64-linux-gnu/bits/types.h.html#__int32_t" title='__int32_t' data-type='int' data-ref="__int32_t" data-ref-filename="__int32_t">__int32_t</a> **<dfn class="decl fn" id="__ctype_toupper_loc" title='__ctype_toupper_loc' data-ref="__ctype_toupper_loc" data-ref-filename="__ctype_toupper_loc">__ctype_toupper_loc</dfn> (<em>void</em>)</td></tr>
-<tr><th id="84">84</th><td>     <a class="macro" href="x86_64-linux-gnu/sys/cdefs.h.html#61" title="throw ()" data-ref="_M/__THROW">__THROW</a> <b>__attribute__</b> ((<em>__const__</em>));</td></tr>
+<tr><th id="84">84</th><td>     <a class="macro" href="x86_64-linux-gnu/sys/cdefs.h.html#86" title="noexcept (true)" data-ref="_M/__THROW">__THROW</a> <b>__attribute__</b> ((<em>__const__</em>));</td></tr>
 <tr><th id="85">85</th><td></td></tr>
 <tr><th id="86">86</th><td></td></tr>
 <tr><th id="87">87</th><td><u>#<span data-ppcond="87">ifndef</span> <span class="macro" data-ref="_M/__cplusplus">__cplusplus</span></u></td></tr>
 <tr><th id="88">88</th><td><u># define __isctype(c, type) \</u></td></tr>
 <tr><th id="89">89</th><td><u>  ((*__ctype_b_loc ())[(int) (c)] &amp; (unsigned short int) type)</u></td></tr>
-<tr><th id="90">90</th><td><u>#<span data-ppcond="87">elif</span> defined <a class="macro" href="features.h.html#477" data-ref="_M/__USE_EXTERN_INLINES">__USE_EXTERN_INLINES</a></u></td></tr>
+<tr><th id="90">90</th><td><u>#<span data-ppcond="87">elif</span> defined <a class="macro" href="features.h.html#502" data-ref="_M/__USE_EXTERN_INLINES">__USE_EXTERN_INLINES</a></u></td></tr>
 <tr><th id="91">91</th><td><u># define <dfn class="macro" id="_M/__isctype_f" data-ref="_M/__isctype_f">__isctype_f</dfn>(type) \</u></td></tr>
 <tr><th id="92">92</th><td><u>  __extern_inline int							      \</u></td></tr>
 <tr><th id="93">93</th><td><u>  is##type (int __c) __THROW						      \</u></td></tr>
@@ -118,50 +118,50 @@
 <tr><th id="105">105</th><td><i>     int isCHARACTERISTIC(int c);</i></td></tr>
 <tr><th id="106">106</th><td><i>   which return nonzero iff C has CHARACTERISTIC.</i></td></tr>
 <tr><th id="107">107</th><td><i>   For the meaning of the characteristic names, see the `enum' above.  */</i></td></tr>
-<tr><th id="108">108</th><td><a class="macro" href="#102" title="extern int isalnum (int) throw ()" data-ref="_M/__exctype">__exctype</a> (<dfn class="decl fn" id="isalnum" title='isalnum' data-ref="isalnum" data-ref-filename="isalnum">isalnum</dfn>);</td></tr>
-<tr><th id="109">109</th><td><a class="macro" href="#102" title="extern int isalpha (int) throw ()" data-ref="_M/__exctype">__exctype</a> (<dfn class="decl fn" id="isalpha" title='isalpha' data-ref="isalpha" data-ref-filename="isalpha">isalpha</dfn>);</td></tr>
-<tr><th id="110">110</th><td><a class="macro" href="#102" title="extern int iscntrl (int) throw ()" data-ref="_M/__exctype">__exctype</a> (<dfn class="decl fn" id="iscntrl" title='iscntrl' data-ref="iscntrl" data-ref-filename="iscntrl">iscntrl</dfn>);</td></tr>
-<tr><th id="111">111</th><td><a class="macro" href="#102" title="extern int isdigit (int) throw ()" data-ref="_M/__exctype">__exctype</a> (<dfn class="decl fn" id="isdigit" title='isdigit' data-ref="isdigit" data-ref-filename="isdigit">isdigit</dfn>);</td></tr>
-<tr><th id="112">112</th><td><a class="macro" href="#102" title="extern int islower (int) throw ()" data-ref="_M/__exctype">__exctype</a> (<dfn class="decl fn" id="islower" title='islower' data-ref="islower" data-ref-filename="islower">islower</dfn>);</td></tr>
-<tr><th id="113">113</th><td><a class="macro" href="#102" title="extern int isgraph (int) throw ()" data-ref="_M/__exctype">__exctype</a> (<dfn class="decl fn" id="isgraph" title='isgraph' data-ref="isgraph" data-ref-filename="isgraph">isgraph</dfn>);</td></tr>
-<tr><th id="114">114</th><td><a class="macro" href="#102" title="extern int isprint (int) throw ()" data-ref="_M/__exctype">__exctype</a> (<dfn class="decl fn" id="isprint" title='isprint' data-ref="isprint" data-ref-filename="isprint">isprint</dfn>);</td></tr>
-<tr><th id="115">115</th><td><a class="macro" href="#102" title="extern int ispunct (int) throw ()" data-ref="_M/__exctype">__exctype</a> (<dfn class="decl fn" id="ispunct" title='ispunct' data-ref="ispunct" data-ref-filename="ispunct">ispunct</dfn>);</td></tr>
-<tr><th id="116">116</th><td><a class="macro" href="#102" title="extern int isspace (int) throw ()" data-ref="_M/__exctype">__exctype</a> (<dfn class="decl fn" id="isspace" title='isspace' data-ref="isspace" data-ref-filename="isspace">isspace</dfn>);</td></tr>
-<tr><th id="117">117</th><td><a class="macro" href="#102" title="extern int isupper (int) throw ()" data-ref="_M/__exctype">__exctype</a> (<dfn class="decl fn" id="isupper" title='isupper' data-ref="isupper" data-ref-filename="isupper">isupper</dfn>);</td></tr>
-<tr><th id="118">118</th><td><a class="macro" href="#102" title="extern int isxdigit (int) throw ()" data-ref="_M/__exctype">__exctype</a> (<dfn class="decl fn" id="isxdigit" title='isxdigit' data-ref="isxdigit" data-ref-filename="isxdigit">isxdigit</dfn>);</td></tr>
+<tr><th id="108">108</th><td><a class="macro" href="#102" title="extern int isalnum (int) noexcept (true)" data-ref="_M/__exctype">__exctype</a> (<dfn class="decl fn" id="isalnum" title='isalnum' data-ref="isalnum" data-ref-filename="isalnum">isalnum</dfn>);</td></tr>
+<tr><th id="109">109</th><td><a class="macro" href="#102" title="extern int isalpha (int) noexcept (true)" data-ref="_M/__exctype">__exctype</a> (<dfn class="decl fn" id="isalpha" title='isalpha' data-ref="isalpha" data-ref-filename="isalpha">isalpha</dfn>);</td></tr>
+<tr><th id="110">110</th><td><a class="macro" href="#102" title="extern int iscntrl (int) noexcept (true)" data-ref="_M/__exctype">__exctype</a> (<dfn class="decl fn" id="iscntrl" title='iscntrl' data-ref="iscntrl" data-ref-filename="iscntrl">iscntrl</dfn>);</td></tr>
+<tr><th id="111">111</th><td><a class="macro" href="#102" title="extern int isdigit (int) noexcept (true)" data-ref="_M/__exctype">__exctype</a> (<dfn class="decl fn" id="isdigit" title='isdigit' data-ref="isdigit" data-ref-filename="isdigit">isdigit</dfn>);</td></tr>
+<tr><th id="112">112</th><td><a class="macro" href="#102" title="extern int islower (int) noexcept (true)" data-ref="_M/__exctype">__exctype</a> (<dfn class="decl fn" id="islower" title='islower' data-ref="islower" data-ref-filename="islower">islower</dfn>);</td></tr>
+<tr><th id="113">113</th><td><a class="macro" href="#102" title="extern int isgraph (int) noexcept (true)" data-ref="_M/__exctype">__exctype</a> (<dfn class="decl fn" id="isgraph" title='isgraph' data-ref="isgraph" data-ref-filename="isgraph">isgraph</dfn>);</td></tr>
+<tr><th id="114">114</th><td><a class="macro" href="#102" title="extern int isprint (int) noexcept (true)" data-ref="_M/__exctype">__exctype</a> (<dfn class="decl fn" id="isprint" title='isprint' data-ref="isprint" data-ref-filename="isprint">isprint</dfn>);</td></tr>
+<tr><th id="115">115</th><td><a class="macro" href="#102" title="extern int ispunct (int) noexcept (true)" data-ref="_M/__exctype">__exctype</a> (<dfn class="decl fn" id="ispunct" title='ispunct' data-ref="ispunct" data-ref-filename="ispunct">ispunct</dfn>);</td></tr>
+<tr><th id="116">116</th><td><a class="macro" href="#102" title="extern int isspace (int) noexcept (true)" data-ref="_M/__exctype">__exctype</a> (<dfn class="decl fn" id="isspace" title='isspace' data-ref="isspace" data-ref-filename="isspace">isspace</dfn>);</td></tr>
+<tr><th id="117">117</th><td><a class="macro" href="#102" title="extern int isupper (int) noexcept (true)" data-ref="_M/__exctype">__exctype</a> (<dfn class="decl fn" id="isupper" title='isupper' data-ref="isupper" data-ref-filename="isupper">isupper</dfn>);</td></tr>
+<tr><th id="118">118</th><td><a class="macro" href="#102" title="extern int isxdigit (int) noexcept (true)" data-ref="_M/__exctype">__exctype</a> (<dfn class="decl fn" id="isxdigit" title='isxdigit' data-ref="isxdigit" data-ref-filename="isxdigit">isxdigit</dfn>);</td></tr>
 <tr><th id="119">119</th><td></td></tr>
 <tr><th id="120">120</th><td></td></tr>
 <tr><th id="121">121</th><td><i>/* Return the lowercase version of C.  */</i></td></tr>
-<tr><th id="122">122</th><td><b>extern</b> <em>int</em> <dfn class="decl fn" id="tolower" title='tolower' data-ref="tolower" data-ref-filename="tolower">tolower</dfn> (<em>int</em> <dfn class="local col5 decl" id="1705__c" title='__c' data-type='int' data-ref="1705__c" data-ref-filename="1705__c">__c</dfn>) <a class="macro" href="x86_64-linux-gnu/sys/cdefs.h.html#61" title="throw ()" data-ref="_M/__THROW">__THROW</a>;</td></tr>
+<tr><th id="122">122</th><td><b>extern</b> <em>int</em> <dfn class="decl fn" id="tolower" title='tolower' data-ref="tolower" data-ref-filename="tolower">tolower</dfn> (<em>int</em> <dfn class="local col2 decl" id="1092__c" title='__c' data-type='int' data-ref="1092__c" data-ref-filename="1092__c">__c</dfn>) <a class="macro" href="x86_64-linux-gnu/sys/cdefs.h.html#86" title="noexcept (true)" data-ref="_M/__THROW">__THROW</a>;</td></tr>
 <tr><th id="123">123</th><td></td></tr>
 <tr><th id="124">124</th><td><i>/* Return the uppercase version of C.  */</i></td></tr>
-<tr><th id="125">125</th><td><b>extern</b> <em>int</em> <dfn class="decl fn" id="toupper" title='toupper' data-ref="toupper" data-ref-filename="toupper">toupper</dfn> (<em>int</em> <dfn class="local col6 decl" id="1706__c" title='__c' data-type='int' data-ref="1706__c" data-ref-filename="1706__c">__c</dfn>) <a class="macro" href="x86_64-linux-gnu/sys/cdefs.h.html#61" title="throw ()" data-ref="_M/__THROW">__THROW</a>;</td></tr>
+<tr><th id="125">125</th><td><b>extern</b> <em>int</em> <dfn class="decl fn" id="toupper" title='toupper' data-ref="toupper" data-ref-filename="toupper">toupper</dfn> (<em>int</em> <dfn class="local col3 decl" id="1093__c" title='__c' data-type='int' data-ref="1093__c" data-ref-filename="1093__c">__c</dfn>) <a class="macro" href="x86_64-linux-gnu/sys/cdefs.h.html#86" title="noexcept (true)" data-ref="_M/__THROW">__THROW</a>;</td></tr>
 <tr><th id="126">126</th><td></td></tr>
 <tr><th id="127">127</th><td></td></tr>
 <tr><th id="128">128</th><td><i>/* ISO C99 introduced one new function.  */</i></td></tr>
-<tr><th id="129">129</th><td><u>#<span data-ppcond="129">ifdef</span>	<a class="macro" href="features.h.html#362" data-ref="_M/__USE_ISOC99">__USE_ISOC99</a></u></td></tr>
-<tr><th id="130">130</th><td><a class="macro" href="#102" title="extern int isblank (int) throw ()" data-ref="_M/__exctype">__exctype</a> (<dfn class="decl fn" id="isblank" title='isblank' data-ref="isblank" data-ref-filename="isblank">isblank</dfn>);</td></tr>
+<tr><th id="129">129</th><td><u>#<span data-ppcond="129">ifdef</span>	<a class="macro" href="features.h.html#371" data-ref="_M/__USE_ISOC99">__USE_ISOC99</a></u></td></tr>
+<tr><th id="130">130</th><td><a class="macro" href="#102" title="extern int isblank (int) noexcept (true)" data-ref="_M/__exctype">__exctype</a> (<dfn class="decl fn" id="isblank" title='isblank' data-ref="isblank" data-ref-filename="isblank">isblank</dfn>);</td></tr>
 <tr><th id="131">131</th><td><u>#<span data-ppcond="129">endif</span></u></td></tr>
 <tr><th id="132">132</th><td></td></tr>
-<tr><th id="133">133</th><td><u>#<span data-ppcond="133">ifdef</span> <a class="macro" href="features.h.html#392" data-ref="_M/__USE_GNU">__USE_GNU</a></u></td></tr>
+<tr><th id="133">133</th><td><u>#<span data-ppcond="133">ifdef</span> <a class="macro" href="features.h.html#407" data-ref="_M/__USE_GNU">__USE_GNU</a></u></td></tr>
 <tr><th id="134">134</th><td><i>/* Test C for a set of character classes according to MASK.  */</i></td></tr>
-<tr><th id="135">135</th><td><b>extern</b> <em>int</em> <dfn class="decl fn" id="isctype" title='isctype' data-ref="isctype" data-ref-filename="isctype">isctype</dfn> (<em>int</em> <dfn class="local col7 decl" id="1707__c" title='__c' data-type='int' data-ref="1707__c" data-ref-filename="1707__c">__c</dfn>, <em>int</em> <dfn class="local col8 decl" id="1708__mask" title='__mask' data-type='int' data-ref="1708__mask" data-ref-filename="1708__mask">__mask</dfn>) <a class="macro" href="x86_64-linux-gnu/sys/cdefs.h.html#61" title="throw ()" data-ref="_M/__THROW">__THROW</a>;</td></tr>
+<tr><th id="135">135</th><td><b>extern</b> <em>int</em> <dfn class="decl fn" id="isctype" title='isctype' data-ref="isctype" data-ref-filename="isctype">isctype</dfn> (<em>int</em> <dfn class="local col4 decl" id="1094__c" title='__c' data-type='int' data-ref="1094__c" data-ref-filename="1094__c">__c</dfn>, <em>int</em> <dfn class="local col5 decl" id="1095__mask" title='__mask' data-type='int' data-ref="1095__mask" data-ref-filename="1095__mask">__mask</dfn>) <a class="macro" href="x86_64-linux-gnu/sys/cdefs.h.html#86" title="noexcept (true)" data-ref="_M/__THROW">__THROW</a>;</td></tr>
 <tr><th id="136">136</th><td><u>#<span data-ppcond="133">endif</span></u></td></tr>
 <tr><th id="137">137</th><td></td></tr>
-<tr><th id="138">138</th><td><u>#<span data-ppcond="138">if</span> defined <a class="macro" href="features.h.html#384" data-ref="_M/__USE_MISC">__USE_MISC</a> || defined <a class="macro" href="features.h.html#346" data-ref="_M/__USE_XOPEN">__USE_XOPEN</a></u></td></tr>
+<tr><th id="138">138</th><td><u>#<span data-ppcond="138">if</span> defined <a class="macro" href="features.h.html#395" data-ref="_M/__USE_MISC">__USE_MISC</a> || defined <a class="macro" href="features.h.html#355" data-ref="_M/__USE_XOPEN">__USE_XOPEN</a></u></td></tr>
 <tr><th id="139">139</th><td></td></tr>
 <tr><th id="140">140</th><td><i>/* Return nonzero iff C is in the ASCII set</i></td></tr>
 <tr><th id="141">141</th><td><i>   (i.e., is no more than 7 bits wide).  */</i></td></tr>
-<tr><th id="142">142</th><td><b>extern</b> <em>int</em> <dfn class="decl fn" id="isascii" title='isascii' data-ref="isascii" data-ref-filename="isascii">isascii</dfn> (<em>int</em> <dfn class="local col9 decl" id="1709__c" title='__c' data-type='int' data-ref="1709__c" data-ref-filename="1709__c">__c</dfn>) <a class="macro" href="x86_64-linux-gnu/sys/cdefs.h.html#61" title="throw ()" data-ref="_M/__THROW">__THROW</a>;</td></tr>
+<tr><th id="142">142</th><td><b>extern</b> <em>int</em> <dfn class="decl fn" id="isascii" title='isascii' data-ref="isascii" data-ref-filename="isascii">isascii</dfn> (<em>int</em> <dfn class="local col6 decl" id="1096__c" title='__c' data-type='int' data-ref="1096__c" data-ref-filename="1096__c">__c</dfn>) <a class="macro" href="x86_64-linux-gnu/sys/cdefs.h.html#86" title="noexcept (true)" data-ref="_M/__THROW">__THROW</a>;</td></tr>
 <tr><th id="143">143</th><td></td></tr>
 <tr><th id="144">144</th><td><i>/* Return the part of C that is in the ASCII set</i></td></tr>
 <tr><th id="145">145</th><td><i>   (i.e., the low-order 7 bits of C).  */</i></td></tr>
-<tr><th id="146">146</th><td><b>extern</b> <em>int</em> <dfn class="decl fn" id="toascii" title='toascii' data-ref="toascii" data-ref-filename="toascii">toascii</dfn> (<em>int</em> <dfn class="local col0 decl" id="1710__c" title='__c' data-type='int' data-ref="1710__c" data-ref-filename="1710__c">__c</dfn>) <a class="macro" href="x86_64-linux-gnu/sys/cdefs.h.html#61" title="throw ()" data-ref="_M/__THROW">__THROW</a>;</td></tr>
+<tr><th id="146">146</th><td><b>extern</b> <em>int</em> <dfn class="decl fn" id="toascii" title='toascii' data-ref="toascii" data-ref-filename="toascii">toascii</dfn> (<em>int</em> <dfn class="local col7 decl" id="1097__c" title='__c' data-type='int' data-ref="1097__c" data-ref-filename="1097__c">__c</dfn>) <a class="macro" href="x86_64-linux-gnu/sys/cdefs.h.html#86" title="noexcept (true)" data-ref="_M/__THROW">__THROW</a>;</td></tr>
 <tr><th id="147">147</th><td></td></tr>
 <tr><th id="148">148</th><td><i>/* These are the same as `toupper' and `tolower' except that they do not</i></td></tr>
 <tr><th id="149">149</th><td><i>   check the argument for being in the range of a `char'.  */</i></td></tr>
-<tr><th id="150">150</th><td><a class="macro" href="#102" title="extern int _toupper (int) throw ()" data-ref="_M/__exctype">__exctype</a> (<dfn class="decl fn" id="_toupper" title='_toupper' data-ref="_toupper" data-ref-filename="_toupper">_toupper</dfn>);</td></tr>
-<tr><th id="151">151</th><td><a class="macro" href="#102" title="extern int _tolower (int) throw ()" data-ref="_M/__exctype">__exctype</a> (<dfn class="decl fn" id="_tolower" title='_tolower' data-ref="_tolower" data-ref-filename="_tolower">_tolower</dfn>);</td></tr>
+<tr><th id="150">150</th><td><a class="macro" href="#102" title="extern int _toupper (int) noexcept (true)" data-ref="_M/__exctype">__exctype</a> (<dfn class="decl fn" id="_toupper" title='_toupper' data-ref="_toupper" data-ref-filename="_toupper">_toupper</dfn>);</td></tr>
+<tr><th id="151">151</th><td><a class="macro" href="#102" title="extern int _tolower (int) noexcept (true)" data-ref="_M/__exctype">__exctype</a> (<dfn class="decl fn" id="_tolower" title='_tolower' data-ref="_tolower" data-ref-filename="_tolower">_tolower</dfn>);</td></tr>
 <tr><th id="152">152</th><td><u>#<span data-ppcond="138">endif</span> /* Use X/Open or use misc.  */</u></td></tr>
 <tr><th id="153">153</th><td></td></tr>
 <tr><th id="154">154</th><td><i>/* This code is needed for the optimized mapping functions.  */</i></td></tr>
@@ -182,7 +182,7 @@
 <tr><th id="169">169</th><td><u>	__res = (a)[(int) (c)];						      \</u></td></tr>
 <tr><th id="170">170</th><td><u>      __res; }))</u></td></tr>
 <tr><th id="171">171</th><td></td></tr>
-<tr><th id="172">172</th><td><u>#<span data-ppcond="172">if</span> !defined <a class="macro" href="x86_64-linux-gnu/c++/10/bits/os_defines.h.html#37" data-ref="_M/__NO_CTYPE">__NO_CTYPE</a></u></td></tr>
+<tr><th id="172">172</th><td><u>#<span data-ppcond="172">if</span> !defined <a class="macro" href="x86_64-linux-gnu/c++/12/bits/os_defines.h.html#37" data-ref="_M/__NO_CTYPE">__NO_CTYPE</a></u></td></tr>
 <tr><th id="173">173</th><td><u># ifdef __isctype_f</u></td></tr>
 <tr><th id="174">174</th><td>__isctype_f (alnum)</td></tr>
 <tr><th id="175">175</th><td>__isctype_f (alpha)</td></tr>
@@ -245,7 +245,7 @@
 <tr><th id="232">232</th><td><u>#<span data-ppcond="172">endif</span> /* Not __NO_CTYPE.  */</u></td></tr>
 <tr><th id="233">233</th><td></td></tr>
 <tr><th id="234">234</th><td></td></tr>
-<tr><th id="235">235</th><td><u>#<span data-ppcond="235">ifdef</span> <a class="macro" href="features.h.html#354" data-ref="_M/__USE_XOPEN2K8">__USE_XOPEN2K8</a></u></td></tr>
+<tr><th id="235">235</th><td><u>#<span data-ppcond="235">ifdef</span> <a class="macro" href="features.h.html#363" data-ref="_M/__USE_XOPEN2K8">__USE_XOPEN2K8</a></u></td></tr>
 <tr><th id="236">236</th><td><i>/* POSIX.1-2008 extended locale interface (see locale.h).  */</i></td></tr>
 <tr><th id="237">237</th><td><u># include <a href="x86_64-linux-gnu/bits/types/locale_t.h.html">&lt;bits/types/locale_t.h&gt;</a></u></td></tr>
 <tr><th id="238">238</th><td></td></tr>
@@ -261,28 +261,28 @@
 <tr><th id="248">248</th><td><i>     int isCHARACTERISTIC(int c, locale_t *locale);</i></td></tr>
 <tr><th id="249">249</th><td><i>   which return nonzero iff C has CHARACTERISTIC.</i></td></tr>
 <tr><th id="250">250</th><td><i>   For the meaning of the characteristic names, see the `enum' above.  */</i></td></tr>
-<tr><th id="251">251</th><td><a class="macro" href="#244" title="extern int isalnum_l (int, locale_t) throw ()" data-ref="_M/__exctype_l">__exctype_l</a> (<dfn class="decl fn" id="isalnum_l" title='isalnum_l' data-ref="isalnum_l" data-ref-filename="isalnum_l">isalnum_l</dfn>);</td></tr>
-<tr><th id="252">252</th><td><a class="macro" href="#244" title="extern int isalpha_l (int, locale_t) throw ()" data-ref="_M/__exctype_l">__exctype_l</a> (<dfn class="decl fn" id="isalpha_l" title='isalpha_l' data-ref="isalpha_l" data-ref-filename="isalpha_l">isalpha_l</dfn>);</td></tr>
-<tr><th id="253">253</th><td><a class="macro" href="#244" title="extern int iscntrl_l (int, locale_t) throw ()" data-ref="_M/__exctype_l">__exctype_l</a> (<dfn class="decl fn" id="iscntrl_l" title='iscntrl_l' data-ref="iscntrl_l" data-ref-filename="iscntrl_l">iscntrl_l</dfn>);</td></tr>
-<tr><th id="254">254</th><td><a class="macro" href="#244" title="extern int isdigit_l (int, locale_t) throw ()" data-ref="_M/__exctype_l">__exctype_l</a> (<dfn class="decl fn" id="isdigit_l" title='isdigit_l' data-ref="isdigit_l" data-ref-filename="isdigit_l">isdigit_l</dfn>);</td></tr>
-<tr><th id="255">255</th><td><a class="macro" href="#244" title="extern int islower_l (int, locale_t) throw ()" data-ref="_M/__exctype_l">__exctype_l</a> (<dfn class="decl fn" id="islower_l" title='islower_l' data-ref="islower_l" data-ref-filename="islower_l">islower_l</dfn>);</td></tr>
-<tr><th id="256">256</th><td><a class="macro" href="#244" title="extern int isgraph_l (int, locale_t) throw ()" data-ref="_M/__exctype_l">__exctype_l</a> (<dfn class="decl fn" id="isgraph_l" title='isgraph_l' data-ref="isgraph_l" data-ref-filename="isgraph_l">isgraph_l</dfn>);</td></tr>
-<tr><th id="257">257</th><td><a class="macro" href="#244" title="extern int isprint_l (int, locale_t) throw ()" data-ref="_M/__exctype_l">__exctype_l</a> (<dfn class="decl fn" id="isprint_l" title='isprint_l' data-ref="isprint_l" data-ref-filename="isprint_l">isprint_l</dfn>);</td></tr>
-<tr><th id="258">258</th><td><a class="macro" href="#244" title="extern int ispunct_l (int, locale_t) throw ()" data-ref="_M/__exctype_l">__exctype_l</a> (<dfn class="decl fn" id="ispunct_l" title='ispunct_l' data-ref="ispunct_l" data-ref-filename="ispunct_l">ispunct_l</dfn>);</td></tr>
-<tr><th id="259">259</th><td><a class="macro" href="#244" title="extern int isspace_l (int, locale_t) throw ()" data-ref="_M/__exctype_l">__exctype_l</a> (<dfn class="decl fn" id="isspace_l" title='isspace_l' data-ref="isspace_l" data-ref-filename="isspace_l">isspace_l</dfn>);</td></tr>
-<tr><th id="260">260</th><td><a class="macro" href="#244" title="extern int isupper_l (int, locale_t) throw ()" data-ref="_M/__exctype_l">__exctype_l</a> (<dfn class="decl fn" id="isupper_l" title='isupper_l' data-ref="isupper_l" data-ref-filename="isupper_l">isupper_l</dfn>);</td></tr>
-<tr><th id="261">261</th><td><a class="macro" href="#244" title="extern int isxdigit_l (int, locale_t) throw ()" data-ref="_M/__exctype_l">__exctype_l</a> (<dfn class="decl fn" id="isxdigit_l" title='isxdigit_l' data-ref="isxdigit_l" data-ref-filename="isxdigit_l">isxdigit_l</dfn>);</td></tr>
+<tr><th id="251">251</th><td><a class="macro" href="#244" title="extern int isalnum_l (int, locale_t) noexcept (true)" data-ref="_M/__exctype_l">__exctype_l</a> (<dfn class="decl fn" id="isalnum_l" title='isalnum_l' data-ref="isalnum_l" data-ref-filename="isalnum_l">isalnum_l</dfn>);</td></tr>
+<tr><th id="252">252</th><td><a class="macro" href="#244" title="extern int isalpha_l (int, locale_t) noexcept (true)" data-ref="_M/__exctype_l">__exctype_l</a> (<dfn class="decl fn" id="isalpha_l" title='isalpha_l' data-ref="isalpha_l" data-ref-filename="isalpha_l">isalpha_l</dfn>);</td></tr>
+<tr><th id="253">253</th><td><a class="macro" href="#244" title="extern int iscntrl_l (int, locale_t) noexcept (true)" data-ref="_M/__exctype_l">__exctype_l</a> (<dfn class="decl fn" id="iscntrl_l" title='iscntrl_l' data-ref="iscntrl_l" data-ref-filename="iscntrl_l">iscntrl_l</dfn>);</td></tr>
+<tr><th id="254">254</th><td><a class="macro" href="#244" title="extern int isdigit_l (int, locale_t) noexcept (true)" data-ref="_M/__exctype_l">__exctype_l</a> (<dfn class="decl fn" id="isdigit_l" title='isdigit_l' data-ref="isdigit_l" data-ref-filename="isdigit_l">isdigit_l</dfn>);</td></tr>
+<tr><th id="255">255</th><td><a class="macro" href="#244" title="extern int islower_l (int, locale_t) noexcept (true)" data-ref="_M/__exctype_l">__exctype_l</a> (<dfn class="decl fn" id="islower_l" title='islower_l' data-ref="islower_l" data-ref-filename="islower_l">islower_l</dfn>);</td></tr>
+<tr><th id="256">256</th><td><a class="macro" href="#244" title="extern int isgraph_l (int, locale_t) noexcept (true)" data-ref="_M/__exctype_l">__exctype_l</a> (<dfn class="decl fn" id="isgraph_l" title='isgraph_l' data-ref="isgraph_l" data-ref-filename="isgraph_l">isgraph_l</dfn>);</td></tr>
+<tr><th id="257">257</th><td><a class="macro" href="#244" title="extern int isprint_l (int, locale_t) noexcept (true)" data-ref="_M/__exctype_l">__exctype_l</a> (<dfn class="decl fn" id="isprint_l" title='isprint_l' data-ref="isprint_l" data-ref-filename="isprint_l">isprint_l</dfn>);</td></tr>
+<tr><th id="258">258</th><td><a class="macro" href="#244" title="extern int ispunct_l (int, locale_t) noexcept (true)" data-ref="_M/__exctype_l">__exctype_l</a> (<dfn class="decl fn" id="ispunct_l" title='ispunct_l' data-ref="ispunct_l" data-ref-filename="ispunct_l">ispunct_l</dfn>);</td></tr>
+<tr><th id="259">259</th><td><a class="macro" href="#244" title="extern int isspace_l (int, locale_t) noexcept (true)" data-ref="_M/__exctype_l">__exctype_l</a> (<dfn class="decl fn" id="isspace_l" title='isspace_l' data-ref="isspace_l" data-ref-filename="isspace_l">isspace_l</dfn>);</td></tr>
+<tr><th id="260">260</th><td><a class="macro" href="#244" title="extern int isupper_l (int, locale_t) noexcept (true)" data-ref="_M/__exctype_l">__exctype_l</a> (<dfn class="decl fn" id="isupper_l" title='isupper_l' data-ref="isupper_l" data-ref-filename="isupper_l">isupper_l</dfn>);</td></tr>
+<tr><th id="261">261</th><td><a class="macro" href="#244" title="extern int isxdigit_l (int, locale_t) noexcept (true)" data-ref="_M/__exctype_l">__exctype_l</a> (<dfn class="decl fn" id="isxdigit_l" title='isxdigit_l' data-ref="isxdigit_l" data-ref-filename="isxdigit_l">isxdigit_l</dfn>);</td></tr>
 <tr><th id="262">262</th><td></td></tr>
-<tr><th id="263">263</th><td><a class="macro" href="#244" title="extern int isblank_l (int, locale_t) throw ()" data-ref="_M/__exctype_l">__exctype_l</a> (<dfn class="decl fn" id="isblank_l" title='isblank_l' data-ref="isblank_l" data-ref-filename="isblank_l">isblank_l</dfn>);</td></tr>
+<tr><th id="263">263</th><td><a class="macro" href="#244" title="extern int isblank_l (int, locale_t) noexcept (true)" data-ref="_M/__exctype_l">__exctype_l</a> (<dfn class="decl fn" id="isblank_l" title='isblank_l' data-ref="isblank_l" data-ref-filename="isblank_l">isblank_l</dfn>);</td></tr>
 <tr><th id="264">264</th><td></td></tr>
 <tr><th id="265">265</th><td></td></tr>
 <tr><th id="266">266</th><td><i>/* Return the lowercase version of C in locale L.  */</i></td></tr>
-<tr><th id="267">267</th><td><b>extern</b> <em>int</em> <dfn class="decl fn" id="__tolower_l" title='__tolower_l' data-ref="__tolower_l" data-ref-filename="__tolower_l">__tolower_l</dfn> (<em>int</em> <dfn class="local col1 decl" id="1711__c" title='__c' data-type='int' data-ref="1711__c" data-ref-filename="1711__c">__c</dfn>, <a class="typedef" href="x86_64-linux-gnu/bits/types/locale_t.h.html#locale_t" title='locale_t' data-type='__locale_t' data-ref="locale_t" data-ref-filename="locale_t">locale_t</a> <dfn class="local col2 decl" id="1712__l" title='__l' data-type='locale_t' data-ref="1712__l" data-ref-filename="1712__l">__l</dfn>) <a class="macro" href="x86_64-linux-gnu/sys/cdefs.h.html#61" title="throw ()" data-ref="_M/__THROW">__THROW</a>;</td></tr>
-<tr><th id="268">268</th><td><b>extern</b> <em>int</em> <dfn class="decl fn" id="tolower_l" title='tolower_l' data-ref="tolower_l" data-ref-filename="tolower_l">tolower_l</dfn> (<em>int</em> <dfn class="local col3 decl" id="1713__c" title='__c' data-type='int' data-ref="1713__c" data-ref-filename="1713__c">__c</dfn>, <a class="typedef" href="x86_64-linux-gnu/bits/types/locale_t.h.html#locale_t" title='locale_t' data-type='__locale_t' data-ref="locale_t" data-ref-filename="locale_t">locale_t</a> <dfn class="local col4 decl" id="1714__l" title='__l' data-type='locale_t' data-ref="1714__l" data-ref-filename="1714__l">__l</dfn>) <a class="macro" href="x86_64-linux-gnu/sys/cdefs.h.html#61" title="throw ()" data-ref="_M/__THROW">__THROW</a>;</td></tr>
+<tr><th id="267">267</th><td><b>extern</b> <em>int</em> <dfn class="decl fn" id="__tolower_l" title='__tolower_l' data-ref="__tolower_l" data-ref-filename="__tolower_l">__tolower_l</dfn> (<em>int</em> <dfn class="local col8 decl" id="1098__c" title='__c' data-type='int' data-ref="1098__c" data-ref-filename="1098__c">__c</dfn>, <a class="typedef" href="x86_64-linux-gnu/bits/types/locale_t.h.html#locale_t" title='locale_t' data-type='__locale_t' data-ref="locale_t" data-ref-filename="locale_t">locale_t</a> <dfn class="local col9 decl" id="1099__l" title='__l' data-type='locale_t' data-ref="1099__l" data-ref-filename="1099__l">__l</dfn>) <a class="macro" href="x86_64-linux-gnu/sys/cdefs.h.html#86" title="noexcept (true)" data-ref="_M/__THROW">__THROW</a>;</td></tr>
+<tr><th id="268">268</th><td><b>extern</b> <em>int</em> <dfn class="decl fn" id="tolower_l" title='tolower_l' data-ref="tolower_l" data-ref-filename="tolower_l">tolower_l</dfn> (<em>int</em> <dfn class="local col0 decl" id="1100__c" title='__c' data-type='int' data-ref="1100__c" data-ref-filename="1100__c">__c</dfn>, <a class="typedef" href="x86_64-linux-gnu/bits/types/locale_t.h.html#locale_t" title='locale_t' data-type='__locale_t' data-ref="locale_t" data-ref-filename="locale_t">locale_t</a> <dfn class="local col1 decl" id="1101__l" title='__l' data-type='locale_t' data-ref="1101__l" data-ref-filename="1101__l">__l</dfn>) <a class="macro" href="x86_64-linux-gnu/sys/cdefs.h.html#86" title="noexcept (true)" data-ref="_M/__THROW">__THROW</a>;</td></tr>
 <tr><th id="269">269</th><td></td></tr>
 <tr><th id="270">270</th><td><i>/* Return the uppercase version of C.  */</i></td></tr>
-<tr><th id="271">271</th><td><b>extern</b> <em>int</em> <dfn class="decl fn" id="__toupper_l" title='__toupper_l' data-ref="__toupper_l" data-ref-filename="__toupper_l">__toupper_l</dfn> (<em>int</em> <dfn class="local col5 decl" id="1715__c" title='__c' data-type='int' data-ref="1715__c" data-ref-filename="1715__c">__c</dfn>, <a class="typedef" href="x86_64-linux-gnu/bits/types/locale_t.h.html#locale_t" title='locale_t' data-type='__locale_t' data-ref="locale_t" data-ref-filename="locale_t">locale_t</a> <dfn class="local col6 decl" id="1716__l" title='__l' data-type='locale_t' data-ref="1716__l" data-ref-filename="1716__l">__l</dfn>) <a class="macro" href="x86_64-linux-gnu/sys/cdefs.h.html#61" title="throw ()" data-ref="_M/__THROW">__THROW</a>;</td></tr>
-<tr><th id="272">272</th><td><b>extern</b> <em>int</em> <dfn class="decl fn" id="toupper_l" title='toupper_l' data-ref="toupper_l" data-ref-filename="toupper_l">toupper_l</dfn> (<em>int</em> <dfn class="local col7 decl" id="1717__c" title='__c' data-type='int' data-ref="1717__c" data-ref-filename="1717__c">__c</dfn>, <a class="typedef" href="x86_64-linux-gnu/bits/types/locale_t.h.html#locale_t" title='locale_t' data-type='__locale_t' data-ref="locale_t" data-ref-filename="locale_t">locale_t</a> <dfn class="local col8 decl" id="1718__l" title='__l' data-type='locale_t' data-ref="1718__l" data-ref-filename="1718__l">__l</dfn>) <a class="macro" href="x86_64-linux-gnu/sys/cdefs.h.html#61" title="throw ()" data-ref="_M/__THROW">__THROW</a>;</td></tr>
+<tr><th id="271">271</th><td><b>extern</b> <em>int</em> <dfn class="decl fn" id="__toupper_l" title='__toupper_l' data-ref="__toupper_l" data-ref-filename="__toupper_l">__toupper_l</dfn> (<em>int</em> <dfn class="local col2 decl" id="1102__c" title='__c' data-type='int' data-ref="1102__c" data-ref-filename="1102__c">__c</dfn>, <a class="typedef" href="x86_64-linux-gnu/bits/types/locale_t.h.html#locale_t" title='locale_t' data-type='__locale_t' data-ref="locale_t" data-ref-filename="locale_t">locale_t</a> <dfn class="local col3 decl" id="1103__l" title='__l' data-type='locale_t' data-ref="1103__l" data-ref-filename="1103__l">__l</dfn>) <a class="macro" href="x86_64-linux-gnu/sys/cdefs.h.html#86" title="noexcept (true)" data-ref="_M/__THROW">__THROW</a>;</td></tr>
+<tr><th id="272">272</th><td><b>extern</b> <em>int</em> <dfn class="decl fn" id="toupper_l" title='toupper_l' data-ref="toupper_l" data-ref-filename="toupper_l">toupper_l</dfn> (<em>int</em> <dfn class="local col4 decl" id="1104__c" title='__c' data-type='int' data-ref="1104__c" data-ref-filename="1104__c">__c</dfn>, <a class="typedef" href="x86_64-linux-gnu/bits/types/locale_t.h.html#locale_t" title='locale_t' data-type='__locale_t' data-ref="locale_t" data-ref-filename="locale_t">locale_t</a> <dfn class="local col5 decl" id="1105__l" title='__l' data-type='locale_t' data-ref="1105__l" data-ref-filename="1105__l">__l</dfn>) <a class="macro" href="x86_64-linux-gnu/sys/cdefs.h.html#86" title="noexcept (true)" data-ref="_M/__THROW">__THROW</a>;</td></tr>
 <tr><th id="273">273</th><td></td></tr>
 <tr><th id="274">274</th><td><u># <span data-ppcond="274">if</span> <span class="macro" title="4" data-ref="_M/__GNUC__">__GNUC__</span> &gt;= 2 &amp;&amp; defined <span class="macro" data-ref="_M/__OPTIMIZE__">__OPTIMIZE__</span> &amp;&amp; !defined <span class="macro" data-ref="_M/__cplusplus">__cplusplus</span></u></td></tr>
 <tr><th id="275">275</th><td><u>#  define __tolower_l(c, locale) \</u></td></tr>
@@ -294,7 +294,7 @@
 <tr><th id="281">281</th><td><u># <span data-ppcond="274">endif</span>	/* Optimizing gcc */</u></td></tr>
 <tr><th id="282">282</th><td></td></tr>
 <tr><th id="283">283</th><td></td></tr>
-<tr><th id="284">284</th><td><u># <span data-ppcond="284">ifndef</span> <a class="macro" href="x86_64-linux-gnu/c++/10/bits/os_defines.h.html#37" data-ref="_M/__NO_CTYPE">__NO_CTYPE</a></u></td></tr>
+<tr><th id="284">284</th><td><u># <span data-ppcond="284">ifndef</span> <a class="macro" href="x86_64-linux-gnu/c++/12/bits/os_defines.h.html#37" data-ref="_M/__NO_CTYPE">__NO_CTYPE</a></u></td></tr>
 <tr><th id="285">285</th><td><u>#  define __isalnum_l(c,l)	__isctype_l((c), _ISalnum, (l))</u></td></tr>
 <tr><th id="286">286</th><td><u>#  define __isalpha_l(c,l)	__isctype_l((c), _ISalpha, (l))</u></td></tr>
 <tr><th id="287">287</th><td><u>#  define __iscntrl_l(c,l)	__isctype_l((c), _IScntrl, (l))</u></td></tr>
@@ -337,7 +337,7 @@
 <tr><th id="324">324</th><td></td></tr>
 <tr><th id="325">325</th><td><u>#<span data-ppcond="235">endif</span> /* Use POSIX 2008.  */</u></td></tr>
 <tr><th id="326">326</th><td></td></tr>
-<tr><th id="327">327</th><td><a class="macro" href="x86_64-linux-gnu/sys/cdefs.h.html#115" title="}" data-ref="_M/__END_DECLS">__END_DECLS</a></td></tr>
+<tr><th id="327">327</th><td><a class="macro" href="x86_64-linux-gnu/sys/cdefs.h.html#134" title="}" data-ref="_M/__END_DECLS">__END_DECLS</a></td></tr>
 <tr><th id="328">328</th><td></td></tr>
 <tr><th id="329">329</th><td><u>#<span data-ppcond="22">endif</span> /* ctype.h  */</u></td></tr>
 <tr><th id="330">330</th><td></td></tr>

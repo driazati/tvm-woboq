@@ -11,7 +11,7 @@
 </head>
 <body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='./'>include</a>/<a href='locale.h.html'>locale.h</a></h1></div>
 <hr/><div id='content'><table class="code">
-<tr><th id="1">1</th><td><i>/* Copyright (C) 1991-2020 Free Software Foundation, Inc.</i></td></tr>
+<tr><th id="1">1</th><td><i>/* Copyright (C) 1991-2022 Free Software Foundation, Inc.</i></td></tr>
 <tr><th id="2">2</th><td><i>   This file is part of the GNU C Library.</i></td></tr>
 <tr><th id="3">3</th><td><i></i></td></tr>
 <tr><th id="4">4</th><td><i>   The GNU C Library is free software; you can redistribute it and/or</i></td></tr>
@@ -41,7 +41,7 @@
 <tr><th id="28">28</th><td><u>#include &lt;stddef.h&gt;</u></td></tr>
 <tr><th id="29">29</th><td><u>#include <a href="x86_64-linux-gnu/bits/locale.h.html">&lt;bits/locale.h&gt;</a></u></td></tr>
 <tr><th id="30">30</th><td></td></tr>
-<tr><th id="31">31</th><td><a class="macro" href="x86_64-linux-gnu/sys/cdefs.h.html#114" title="extern &quot;C&quot; {" data-ref="_M/__BEGIN_DECLS">__BEGIN_DECLS</a></td></tr>
+<tr><th id="31">31</th><td><a class="macro" href="x86_64-linux-gnu/sys/cdefs.h.html#133" title="extern &quot;C&quot; {" data-ref="_M/__BEGIN_DECLS">__BEGIN_DECLS</a></td></tr>
 <tr><th id="32">32</th><td></td></tr>
 <tr><th id="33">33</th><td><i>/* These are the possibilities for the first argument to setlocale.</i></td></tr>
 <tr><th id="34">34</th><td><i>   The code assumes that the lowest LC_* symbol has the value zero.  */</i></td></tr>
@@ -103,7 +103,7 @@
 <tr><th id="90">90</th><td><i>     4 The sign string immediately follows the currency_symbol.  */</i></td></tr>
 <tr><th id="91">91</th><td>  <em>char</em> <dfn class="decl field" id="lconv::p_sign_posn" title='lconv::p_sign_posn' data-ref="lconv::p_sign_posn" data-ref-filename="lconv..p_sign_posn">p_sign_posn</dfn>;</td></tr>
 <tr><th id="92">92</th><td>  <em>char</em> <dfn class="decl field" id="lconv::n_sign_posn" title='lconv::n_sign_posn' data-ref="lconv::n_sign_posn" data-ref-filename="lconv..n_sign_posn">n_sign_posn</dfn>;</td></tr>
-<tr><th id="93">93</th><td><u>#<span data-ppcond="93">ifdef</span> <a class="macro" href="features.h.html#362" data-ref="_M/__USE_ISOC99">__USE_ISOC99</a></u></td></tr>
+<tr><th id="93">93</th><td><u>#<span data-ppcond="93">ifdef</span> <a class="macro" href="features.h.html#371" data-ref="_M/__USE_ISOC99">__USE_ISOC99</a></u></td></tr>
 <tr><th id="94">94</th><td>  <i>/* 1 if int_curr_symbol precedes a positive value, 0 if succeeds.  */</i></td></tr>
 <tr><th id="95">95</th><td>  <em>char</em> <dfn class="decl field" id="lconv::int_p_cs_precedes" title='lconv::int_p_cs_precedes' data-ref="lconv::int_p_cs_precedes" data-ref-filename="lconv..int_p_cs_precedes">int_p_cs_precedes</dfn>;</td></tr>
 <tr><th id="96">96</th><td>  <i>/* 1 iff a space separates int_curr_symbol from a positive value.  */</i></td></tr>
@@ -132,13 +132,13 @@
 <tr><th id="119">119</th><td></td></tr>
 <tr><th id="120">120</th><td></td></tr>
 <tr><th id="121">121</th><td><i>/* Set and/or return the current locale.  */</i></td></tr>
-<tr><th id="122">122</th><td><b>extern</b> <em>char</em> *<dfn class="decl fn" id="setlocale" title='setlocale' data-ref="setlocale" data-ref-filename="setlocale">setlocale</dfn> (<em>int</em> <dfn class="local col0 decl" id="1690__category" title='__category' data-type='int' data-ref="1690__category" data-ref-filename="1690__category">__category</dfn>, <em>const</em> <em>char</em> *<dfn class="local col1 decl" id="1691__locale" title='__locale' data-type='const char *' data-ref="1691__locale" data-ref-filename="1691__locale">__locale</dfn>) <a class="macro" href="x86_64-linux-gnu/sys/cdefs.h.html#61" title="throw ()" data-ref="_M/__THROW">__THROW</a>;</td></tr>
+<tr><th id="122">122</th><td><b>extern</b> <em>char</em> *<dfn class="decl fn" id="setlocale" title='setlocale' data-ref="setlocale" data-ref-filename="setlocale">setlocale</dfn> (<em>int</em> <dfn class="local col7 decl" id="1077__category" title='__category' data-type='int' data-ref="1077__category" data-ref-filename="1077__category">__category</dfn>, <em>const</em> <em>char</em> *<dfn class="local col8 decl" id="1078__locale" title='__locale' data-type='const char *' data-ref="1078__locale" data-ref-filename="1078__locale">__locale</dfn>) <a class="macro" href="x86_64-linux-gnu/sys/cdefs.h.html#86" title="noexcept (true)" data-ref="_M/__THROW">__THROW</a>;</td></tr>
 <tr><th id="123">123</th><td></td></tr>
 <tr><th id="124">124</th><td><i>/* Return the numeric/monetary information for the current locale.  */</i></td></tr>
-<tr><th id="125">125</th><td><b>extern</b> <b>struct</b> <a class="type" href="#lconv" title='lconv' data-ref="lconv" data-ref-filename="lconv">lconv</a> *<dfn class="decl fn" id="localeconv" title='localeconv' data-ref="localeconv" data-ref-filename="localeconv">localeconv</dfn> (<em>void</em>) <a class="macro" href="x86_64-linux-gnu/sys/cdefs.h.html#61" title="throw ()" data-ref="_M/__THROW">__THROW</a>;</td></tr>
+<tr><th id="125">125</th><td><b>extern</b> <b>struct</b> <a class="type" href="#lconv" title='lconv' data-ref="lconv" data-ref-filename="lconv">lconv</a> *<dfn class="decl fn" id="localeconv" title='localeconv' data-ref="localeconv" data-ref-filename="localeconv">localeconv</dfn> (<em>void</em>) <a class="macro" href="x86_64-linux-gnu/sys/cdefs.h.html#86" title="noexcept (true)" data-ref="_M/__THROW">__THROW</a>;</td></tr>
 <tr><th id="126">126</th><td></td></tr>
 <tr><th id="127">127</th><td></td></tr>
-<tr><th id="128">128</th><td><u>#<span data-ppcond="128">ifdef</span>	<a class="macro" href="features.h.html#354" data-ref="_M/__USE_XOPEN2K8">__USE_XOPEN2K8</a></u></td></tr>
+<tr><th id="128">128</th><td><u>#<span data-ppcond="128">ifdef</span>	<a class="macro" href="features.h.html#363" data-ref="_M/__USE_XOPEN2K8">__USE_XOPEN2K8</a></u></td></tr>
 <tr><th id="129">129</th><td><i>/* POSIX.1-2008 extends the locale interface with functions for</i></td></tr>
 <tr><th id="130">130</th><td><i>   explicit creation and manipulation of 'locale_t' objects</i></td></tr>
 <tr><th id="131">131</th><td><i>   representing locale contexts, and a set of parallel</i></td></tr>
@@ -151,8 +151,8 @@
 <tr><th id="138">138</th><td><i>   datasets.  Unlike for the CATEGORY parameter for `setlocale' the</i></td></tr>
 <tr><th id="139">139</th><td><i>   CATEGORY_MASK parameter here uses a single bit for each category,</i></td></tr>
 <tr><th id="140">140</th><td><i>   made by OR'ing together LC_*_MASK bits above.  */</i></td></tr>
-<tr><th id="141">141</th><td><b>extern</b> <a class="typedef" href="x86_64-linux-gnu/bits/types/locale_t.h.html#locale_t" title='locale_t' data-type='__locale_t' data-ref="locale_t" data-ref-filename="locale_t">locale_t</a> <dfn class="decl fn" id="newlocale" title='newlocale' data-ref="newlocale" data-ref-filename="newlocale">newlocale</dfn> (<em>int</em> <dfn class="local col2 decl" id="1692__category_mask" title='__category_mask' data-type='int' data-ref="1692__category_mask" data-ref-filename="1692__category_mask">__category_mask</dfn>, <em>const</em> <em>char</em> *<dfn class="local col3 decl" id="1693__locale" title='__locale' data-type='const char *' data-ref="1693__locale" data-ref-filename="1693__locale">__locale</dfn>,</td></tr>
-<tr><th id="142">142</th><td>			   <a class="typedef" href="x86_64-linux-gnu/bits/types/locale_t.h.html#locale_t" title='locale_t' data-type='__locale_t' data-ref="locale_t" data-ref-filename="locale_t">locale_t</a> <dfn class="local col4 decl" id="1694__base" title='__base' data-type='locale_t' data-ref="1694__base" data-ref-filename="1694__base">__base</dfn>) <a class="macro" href="x86_64-linux-gnu/sys/cdefs.h.html#61" title="throw ()" data-ref="_M/__THROW">__THROW</a>;</td></tr>
+<tr><th id="141">141</th><td><b>extern</b> <a class="typedef" href="x86_64-linux-gnu/bits/types/locale_t.h.html#locale_t" title='locale_t' data-type='__locale_t' data-ref="locale_t" data-ref-filename="locale_t">locale_t</a> <dfn class="decl fn" id="newlocale" title='newlocale' data-ref="newlocale" data-ref-filename="newlocale">newlocale</dfn> (<em>int</em> <dfn class="local col9 decl" id="1079__category_mask" title='__category_mask' data-type='int' data-ref="1079__category_mask" data-ref-filename="1079__category_mask">__category_mask</dfn>, <em>const</em> <em>char</em> *<dfn class="local col0 decl" id="1080__locale" title='__locale' data-type='const char *' data-ref="1080__locale" data-ref-filename="1080__locale">__locale</dfn>,</td></tr>
+<tr><th id="142">142</th><td>			   <a class="typedef" href="x86_64-linux-gnu/bits/types/locale_t.h.html#locale_t" title='locale_t' data-type='__locale_t' data-ref="locale_t" data-ref-filename="locale_t">locale_t</a> <dfn class="local col1 decl" id="1081__base" title='__base' data-type='locale_t' data-ref="1081__base" data-ref-filename="1081__base">__base</dfn>) <a class="macro" href="x86_64-linux-gnu/sys/cdefs.h.html#86" title="noexcept (true)" data-ref="_M/__THROW">__THROW</a>;</td></tr>
 <tr><th id="143">143</th><td></td></tr>
 <tr><th id="144">144</th><td><i>/* These are the bits that can be set in the CATEGORY_MASK argument to</i></td></tr>
 <tr><th id="145">145</th><td><i>   `newlocale'.  In the GNU implementation, LC_FOO_MASK has the value</i></td></tr>
@@ -186,18 +186,18 @@
 <tr><th id="173">173</th><td></td></tr>
 <tr><th id="174">174</th><td><i>/* Return a duplicate of the set of locale in DATASET.  All usage</i></td></tr>
 <tr><th id="175">175</th><td><i>   counters are increased if necessary.  */</i></td></tr>
-<tr><th id="176">176</th><td><b>extern</b> <a class="typedef" href="x86_64-linux-gnu/bits/types/locale_t.h.html#locale_t" title='locale_t' data-type='__locale_t' data-ref="locale_t" data-ref-filename="locale_t">locale_t</a> <dfn class="decl fn" id="duplocale" title='duplocale' data-ref="duplocale" data-ref-filename="duplocale">duplocale</dfn> (<a class="typedef" href="x86_64-linux-gnu/bits/types/locale_t.h.html#locale_t" title='locale_t' data-type='__locale_t' data-ref="locale_t" data-ref-filename="locale_t">locale_t</a> <dfn class="local col5 decl" id="1695__dataset" title='__dataset' data-type='locale_t' data-ref="1695__dataset" data-ref-filename="1695__dataset">__dataset</dfn>) <a class="macro" href="x86_64-linux-gnu/sys/cdefs.h.html#61" title="throw ()" data-ref="_M/__THROW">__THROW</a>;</td></tr>
+<tr><th id="176">176</th><td><b>extern</b> <a class="typedef" href="x86_64-linux-gnu/bits/types/locale_t.h.html#locale_t" title='locale_t' data-type='__locale_t' data-ref="locale_t" data-ref-filename="locale_t">locale_t</a> <dfn class="decl fn" id="duplocale" title='duplocale' data-ref="duplocale" data-ref-filename="duplocale">duplocale</dfn> (<a class="typedef" href="x86_64-linux-gnu/bits/types/locale_t.h.html#locale_t" title='locale_t' data-type='__locale_t' data-ref="locale_t" data-ref-filename="locale_t">locale_t</a> <dfn class="local col2 decl" id="1082__dataset" title='__dataset' data-type='locale_t' data-ref="1082__dataset" data-ref-filename="1082__dataset">__dataset</dfn>) <a class="macro" href="x86_64-linux-gnu/sys/cdefs.h.html#86" title="noexcept (true)" data-ref="_M/__THROW">__THROW</a>;</td></tr>
 <tr><th id="177">177</th><td></td></tr>
 <tr><th id="178">178</th><td><i>/* Free the data associated with a locale dataset previously returned</i></td></tr>
 <tr><th id="179">179</th><td><i>   by a call to `setlocale_r'.  */</i></td></tr>
-<tr><th id="180">180</th><td><b>extern</b> <em>void</em> <dfn class="decl fn" id="freelocale" title='freelocale' data-ref="freelocale" data-ref-filename="freelocale">freelocale</dfn> (<a class="typedef" href="x86_64-linux-gnu/bits/types/locale_t.h.html#locale_t" title='locale_t' data-type='__locale_t' data-ref="locale_t" data-ref-filename="locale_t">locale_t</a> <dfn class="local col6 decl" id="1696__dataset" title='__dataset' data-type='locale_t' data-ref="1696__dataset" data-ref-filename="1696__dataset">__dataset</dfn>) <a class="macro" href="x86_64-linux-gnu/sys/cdefs.h.html#61" title="throw ()" data-ref="_M/__THROW">__THROW</a>;</td></tr>
+<tr><th id="180">180</th><td><b>extern</b> <em>void</em> <dfn class="decl fn" id="freelocale" title='freelocale' data-ref="freelocale" data-ref-filename="freelocale">freelocale</dfn> (<a class="typedef" href="x86_64-linux-gnu/bits/types/locale_t.h.html#locale_t" title='locale_t' data-type='__locale_t' data-ref="locale_t" data-ref-filename="locale_t">locale_t</a> <dfn class="local col3 decl" id="1083__dataset" title='__dataset' data-type='locale_t' data-ref="1083__dataset" data-ref-filename="1083__dataset">__dataset</dfn>) <a class="macro" href="x86_64-linux-gnu/sys/cdefs.h.html#86" title="noexcept (true)" data-ref="_M/__THROW">__THROW</a>;</td></tr>
 <tr><th id="181">181</th><td></td></tr>
 <tr><th id="182">182</th><td><i>/* Switch the current thread's locale to DATASET.</i></td></tr>
 <tr><th id="183">183</th><td><i>   If DATASET is null, instead just return the current setting.</i></td></tr>
 <tr><th id="184">184</th><td><i>   The special value LC_GLOBAL_LOCALE is the initial setting</i></td></tr>
 <tr><th id="185">185</th><td><i>   for all threads and can also be installed any time, meaning</i></td></tr>
 <tr><th id="186">186</th><td><i>   the thread uses the global settings controlled by `setlocale'.  */</i></td></tr>
-<tr><th id="187">187</th><td><b>extern</b> <a class="typedef" href="x86_64-linux-gnu/bits/types/locale_t.h.html#locale_t" title='locale_t' data-type='__locale_t' data-ref="locale_t" data-ref-filename="locale_t">locale_t</a> <dfn class="decl fn" id="uselocale" title='uselocale' data-ref="uselocale" data-ref-filename="uselocale">uselocale</dfn> (<a class="typedef" href="x86_64-linux-gnu/bits/types/locale_t.h.html#locale_t" title='locale_t' data-type='__locale_t' data-ref="locale_t" data-ref-filename="locale_t">locale_t</a> <dfn class="local col7 decl" id="1697__dataset" title='__dataset' data-type='locale_t' data-ref="1697__dataset" data-ref-filename="1697__dataset">__dataset</dfn>) <a class="macro" href="x86_64-linux-gnu/sys/cdefs.h.html#61" title="throw ()" data-ref="_M/__THROW">__THROW</a>;</td></tr>
+<tr><th id="187">187</th><td><b>extern</b> <a class="typedef" href="x86_64-linux-gnu/bits/types/locale_t.h.html#locale_t" title='locale_t' data-type='__locale_t' data-ref="locale_t" data-ref-filename="locale_t">locale_t</a> <dfn class="decl fn" id="uselocale" title='uselocale' data-ref="uselocale" data-ref-filename="uselocale">uselocale</dfn> (<a class="typedef" href="x86_64-linux-gnu/bits/types/locale_t.h.html#locale_t" title='locale_t' data-type='__locale_t' data-ref="locale_t" data-ref-filename="locale_t">locale_t</a> <dfn class="local col4 decl" id="1084__dataset" title='__dataset' data-type='locale_t' data-ref="1084__dataset" data-ref-filename="1084__dataset">__dataset</dfn>) <a class="macro" href="x86_64-linux-gnu/sys/cdefs.h.html#86" title="noexcept (true)" data-ref="_M/__THROW">__THROW</a>;</td></tr>
 <tr><th id="188">188</th><td></td></tr>
 <tr><th id="189">189</th><td><i>/* This value can be passed to `uselocale' and may be returned by it.</i></td></tr>
 <tr><th id="190">190</th><td><i>   Passing this value to any other function has undefined behavior.  */</i></td></tr>
@@ -205,7 +205,7 @@
 <tr><th id="192">192</th><td></td></tr>
 <tr><th id="193">193</th><td><u>#<span data-ppcond="128">endif</span></u></td></tr>
 <tr><th id="194">194</th><td></td></tr>
-<tr><th id="195">195</th><td><a class="macro" href="x86_64-linux-gnu/sys/cdefs.h.html#115" title="}" data-ref="_M/__END_DECLS">__END_DECLS</a></td></tr>
+<tr><th id="195">195</th><td><a class="macro" href="x86_64-linux-gnu/sys/cdefs.h.html#134" title="}" data-ref="_M/__END_DECLS">__END_DECLS</a></td></tr>
 <tr><th id="196">196</th><td></td></tr>
 <tr><th id="197">197</th><td><u>#<span data-ppcond="22">endif</span> /* locale.h  */</u></td></tr>
 <tr><th id="198">198</th><td></td></tr>

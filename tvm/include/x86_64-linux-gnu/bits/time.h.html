@@ -12,7 +12,7 @@
 <body><div id='header'><h1 id='breadcrumb'><span>Browse the source code of </span><a href='../..'>include</a>/<a href='..'>x86_64-linux-gnu</a>/<a href='./'>bits</a>/<a href='time.h.html'>time.h</a></h1></div>
 <hr/><div id='content'><table class="code">
 <tr><th id="1">1</th><td><i>/* System-dependent timing definitions.  Linux version.</i></td></tr>
-<tr><th id="2">2</th><td><i>   Copyright (C) 1996-2020 Free Software Foundation, Inc.</i></td></tr>
+<tr><th id="2">2</th><td><i>   Copyright (C) 1996-2022 Free Software Foundation, Inc.</i></td></tr>
 <tr><th id="3">3</th><td><i>   This file is part of the GNU C Library.</i></td></tr>
 <tr><th id="4">4</th><td><i></i></td></tr>
 <tr><th id="5">5</th><td><i>   The GNU C Library is free software; you can redistribute it and/or</i></td></tr>
@@ -46,15 +46,15 @@
 <tr><th id="33">33</th><td><i>   XSI-conformant systems. */</i></td></tr>
 <tr><th id="34">34</th><td><u>#define <dfn class="macro" id="_M/CLOCKS_PER_SEC" data-ref="_M/CLOCKS_PER_SEC">CLOCKS_PER_SEC</dfn>  ((__clock_t) 1000000)</u></td></tr>
 <tr><th id="35">35</th><td></td></tr>
-<tr><th id="36">36</th><td><u>#<span data-ppcond="36">if</span> (!defined <span class="macro" data-ref="_M/__STRICT_ANSI__">__STRICT_ANSI__</span> || defined <a class="macro" href="../../features.h.html#316" data-ref="_M/__USE_POSIX">__USE_POSIX</a>) \</u></td></tr>
-<tr><th id="37">37</th><td><u>   &amp;&amp; !defined <a class="macro" href="../../features.h.html#357" data-ref="_M/__USE_XOPEN2K">__USE_XOPEN2K</a></u></td></tr>
+<tr><th id="36">36</th><td><u>#<span data-ppcond="36">if</span> (!defined <span class="macro" data-ref="_M/__STRICT_ANSI__">__STRICT_ANSI__</span> || defined <a class="macro" href="../../features.h.html#325" data-ref="_M/__USE_POSIX">__USE_POSIX</a>) \</u></td></tr>
+<tr><th id="37">37</th><td><u>   &amp;&amp; !defined <a class="macro" href="../../features.h.html#366" data-ref="_M/__USE_XOPEN2K">__USE_XOPEN2K</a></u></td></tr>
 <tr><th id="38">38</th><td><i>/* Even though CLOCKS_PER_SEC has such a strange value CLK_TCK</i></td></tr>
 <tr><th id="39">39</th><td><i>   presents the real value for clock ticks per second for the system.  */</i></td></tr>
 <tr><th id="40">40</th><td><b>extern</b> <em>long</em> <em>int</em> __sysconf (<em>int</em>);</td></tr>
 <tr><th id="41">41</th><td><u># define CLK_TCK ((__clock_t) __sysconf (2))	/* 2 is _SC_CLK_TCK */</u></td></tr>
 <tr><th id="42">42</th><td><u>#<span data-ppcond="36">endif</span></u></td></tr>
 <tr><th id="43">43</th><td></td></tr>
-<tr><th id="44">44</th><td><u>#<span data-ppcond="44">ifdef</span> <a class="macro" href="../../features.h.html#324" data-ref="_M/__USE_POSIX199309">__USE_POSIX199309</a></u></td></tr>
+<tr><th id="44">44</th><td><u>#<span data-ppcond="44">ifdef</span> <a class="macro" href="../../features.h.html#333" data-ref="_M/__USE_POSIX199309">__USE_POSIX199309</a></u></td></tr>
 <tr><th id="45">45</th><td><i>/* Identifier for system-wide realtime clock.  */</i></td></tr>
 <tr><th id="46">46</th><td><u># define <dfn class="macro" id="_M/CLOCK_REALTIME" data-ref="_M/CLOCK_REALTIME">CLOCK_REALTIME</dfn>			0</u></td></tr>
 <tr><th id="47">47</th><td><i>/* Monotonic system-wide clock.  */</i></td></tr>
@@ -82,19 +82,29 @@
 <tr><th id="69">69</th><td><u># define <dfn class="macro" id="_M/TIMER_ABSTIME" data-ref="_M/TIMER_ABSTIME">TIMER_ABSTIME</dfn>			1</u></td></tr>
 <tr><th id="70">70</th><td><u>#<span data-ppcond="44">endif</span></u></td></tr>
 <tr><th id="71">71</th><td></td></tr>
-<tr><th id="72">72</th><td><u>#<span data-ppcond="72">ifdef</span> <a class="macro" href="../../features.h.html#392" data-ref="_M/__USE_GNU">__USE_GNU</a></u></td></tr>
+<tr><th id="72">72</th><td><u>#<span data-ppcond="72">ifdef</span> <a class="macro" href="../../features.h.html#407" data-ref="_M/__USE_GNU">__USE_GNU</a></u></td></tr>
 <tr><th id="73">73</th><td><u># include <a href="timex.h.html">&lt;bits/timex.h&gt;</a></u></td></tr>
 <tr><th id="74">74</th><td></td></tr>
-<tr><th id="75">75</th><td><a class="macro" href="../sys/cdefs.h.html#114" title="extern &quot;C&quot; {" data-ref="_M/__BEGIN_DECLS">__BEGIN_DECLS</a></td></tr>
+<tr><th id="75">75</th><td><a class="macro" href="../sys/cdefs.h.html#133" title="extern &quot;C&quot; {" data-ref="_M/__BEGIN_DECLS">__BEGIN_DECLS</a></td></tr>
 <tr><th id="76">76</th><td></td></tr>
 <tr><th id="77">77</th><td><i>/* Tune a POSIX clock.  */</i></td></tr>
-<tr><th id="78">78</th><td><b>extern</b> <em>int</em> <dfn class="decl fn" id="clock_adjtime" title='clock_adjtime' data-ref="clock_adjtime" data-ref-filename="clock_adjtime">clock_adjtime</dfn> (<a class="typedef" href="types.h.html#__clockid_t" title='__clockid_t' data-type='int' data-ref="__clockid_t" data-ref-filename="__clockid_t">__clockid_t</a> <dfn class="local col4 decl" id="1964__clock_id" title='__clock_id' data-type='__clockid_t' data-ref="1964__clock_id" data-ref-filename="1964__clock_id">__clock_id</dfn>, <b>struct</b> <a class="type" href="timex.h.html#timex" title='timex' data-ref="timex" data-ref-filename="timex">timex</a> *<dfn class="local col5 decl" id="1965__utx" title='__utx' data-type='struct timex *' data-ref="1965__utx" data-ref-filename="1965__utx">__utx</dfn>) <a class="macro" href="../sys/cdefs.h.html#61" title="throw ()" data-ref="_M/__THROW">__THROW</a>;</td></tr>
+<tr><th id="78">78</th><td><b>extern</b> <em>int</em> <dfn class="decl fn" id="clock_adjtime" title='clock_adjtime' data-ref="clock_adjtime" data-ref-filename="clock_adjtime">clock_adjtime</dfn> (<a class="typedef" href="types.h.html#__clockid_t" title='__clockid_t' data-type='int' data-ref="__clockid_t" data-ref-filename="__clockid_t">__clockid_t</a> <dfn class="local col1 decl" id="1991__clock_id" title='__clock_id' data-type='__clockid_t' data-ref="1991__clock_id" data-ref-filename="1991__clock_id">__clock_id</dfn>, <b>struct</b> <a class="type" href="timex.h.html#timex" title='timex' data-ref="timex" data-ref-filename="timex">timex</a> *<dfn class="local col2 decl" id="1992__utx" title='__utx' data-type='struct timex *' data-ref="1992__utx" data-ref-filename="1992__utx">__utx</dfn>) <a class="macro" href="../sys/cdefs.h.html#86" title="noexcept (true)" data-ref="_M/__THROW">__THROW</a>;</td></tr>
 <tr><th id="79">79</th><td></td></tr>
-<tr><th id="80">80</th><td><a class="macro" href="../sys/cdefs.h.html#115" title="}" data-ref="_M/__END_DECLS">__END_DECLS</a></td></tr>
-<tr><th id="81">81</th><td><u>#<span data-ppcond="72">endif</span> /* use GNU */</u></td></tr>
-<tr><th id="82">82</th><td></td></tr>
-<tr><th id="83">83</th><td><u>#<span data-ppcond="23">endif</span>	/* bits/time.h */</u></td></tr>
-<tr><th id="84">84</th><td></td></tr>
+<tr><th id="80">80</th><td><u>#<span data-ppcond="80">ifdef</span> <span class="macro" data-ref="_M/__USE_TIME_BITS64">__USE_TIME_BITS64</span></u></td></tr>
+<tr><th id="81">81</th><td><u># if defined(__REDIRECT_NTH)</u></td></tr>
+<tr><th id="82">82</th><td><b>extern</b> <em>int</em> __REDIRECT_NTH (clock_adjtime, (__clockid_t __clock_id,</td></tr>
+<tr><th id="83">83</th><td>                                           <b>struct</b> timex *__utx),</td></tr>
+<tr><th id="84">84</th><td>                           __clock_adjtime64);</td></tr>
+<tr><th id="85">85</th><td><u># else</u></td></tr>
+<tr><th id="86">86</th><td><u># define clock_adjtime __clock_adjtime64</u></td></tr>
+<tr><th id="87">87</th><td><u># endif</u></td></tr>
+<tr><th id="88">88</th><td><u>#<span data-ppcond="80">endif</span></u></td></tr>
+<tr><th id="89">89</th><td></td></tr>
+<tr><th id="90">90</th><td><a class="macro" href="../sys/cdefs.h.html#134" title="}" data-ref="_M/__END_DECLS">__END_DECLS</a></td></tr>
+<tr><th id="91">91</th><td><u>#<span data-ppcond="72">endif</span> /* use GNU */</u></td></tr>
+<tr><th id="92">92</th><td></td></tr>
+<tr><th id="93">93</th><td><u>#<span data-ppcond="23">endif</span>	/* bits/time.h */</u></td></tr>
+<tr><th id="94">94</th><td></td></tr>
 </table><hr/><p id='footer'>
 Generated while processing <a href='../../../tvm/src/arith/analyzer.cc.html'>tvm/src/arith/analyzer.cc</a><br/>Generated on <em>2022-Dec-07</em> from project include<br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
 <br/>Generator usage only permitted with license.</p>

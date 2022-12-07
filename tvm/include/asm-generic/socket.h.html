@@ -132,31 +132,38 @@
 <tr><th id="119">119</th><td></td></tr>
 <tr><th id="120">120</th><td><u>#define <dfn class="macro" id="_M/SO_DETACH_REUSEPORT_BPF" data-ref="_M/SO_DETACH_REUSEPORT_BPF">SO_DETACH_REUSEPORT_BPF</dfn> 68</u></td></tr>
 <tr><th id="121">121</th><td></td></tr>
-<tr><th id="122">122</th><td></td></tr>
-<tr><th id="123">123</th><td><u>#<span data-ppcond="123">if</span> <a class="macro" href="../x86_64-linux-gnu/asm/bitsperlong.h.html#6" title="64" data-ref="_M/__BITS_PER_LONG">__BITS_PER_LONG</a> == 64 || (defined(<span class="macro" data-ref="_M/__x86_64__">__x86_64__</span>) &amp;&amp; defined(<span class="macro" data-ref="_M/__ILP32__">__ILP32__</span>))</u></td></tr>
-<tr><th id="124">124</th><td><i>/* on 64-bit and x32, avoid the ?: operator */</i></td></tr>
-<tr><th id="125">125</th><td><u>#define <dfn class="macro" id="_M/SO_TIMESTAMP" data-ref="_M/SO_TIMESTAMP">SO_TIMESTAMP</dfn>		SO_TIMESTAMP_OLD</u></td></tr>
-<tr><th id="126">126</th><td><u>#define <dfn class="macro" id="_M/SO_TIMESTAMPNS" data-ref="_M/SO_TIMESTAMPNS">SO_TIMESTAMPNS</dfn>		SO_TIMESTAMPNS_OLD</u></td></tr>
-<tr><th id="127">127</th><td><u>#define <dfn class="macro" id="_M/SO_TIMESTAMPING" data-ref="_M/SO_TIMESTAMPING">SO_TIMESTAMPING</dfn>		SO_TIMESTAMPING_OLD</u></td></tr>
+<tr><th id="122">122</th><td><u>#define <dfn class="macro" id="_M/SO_PREFER_BUSY_POLL" data-ref="_M/SO_PREFER_BUSY_POLL">SO_PREFER_BUSY_POLL</dfn>	69</u></td></tr>
+<tr><th id="123">123</th><td><u>#define <dfn class="macro" id="_M/SO_BUSY_POLL_BUDGET" data-ref="_M/SO_BUSY_POLL_BUDGET">SO_BUSY_POLL_BUDGET</dfn>	70</u></td></tr>
+<tr><th id="124">124</th><td></td></tr>
+<tr><th id="125">125</th><td><u>#define <dfn class="macro" id="_M/SO_NETNS_COOKIE" data-ref="_M/SO_NETNS_COOKIE">SO_NETNS_COOKIE</dfn>		71</u></td></tr>
+<tr><th id="126">126</th><td></td></tr>
+<tr><th id="127">127</th><td><u>#define <dfn class="macro" id="_M/SO_BUF_LOCK" data-ref="_M/SO_BUF_LOCK">SO_BUF_LOCK</dfn>		72</u></td></tr>
 <tr><th id="128">128</th><td></td></tr>
-<tr><th id="129">129</th><td><u>#define <dfn class="macro" id="_M/SO_RCVTIMEO" data-ref="_M/SO_RCVTIMEO">SO_RCVTIMEO</dfn>		SO_RCVTIMEO_OLD</u></td></tr>
-<tr><th id="130">130</th><td><u>#define <dfn class="macro" id="_M/SO_SNDTIMEO" data-ref="_M/SO_SNDTIMEO">SO_SNDTIMEO</dfn>		SO_SNDTIMEO_OLD</u></td></tr>
-<tr><th id="131">131</th><td><u>#<span data-ppcond="123">else</span></u></td></tr>
-<tr><th id="132">132</th><td><u>#define SO_TIMESTAMP (sizeof(time_t) == sizeof(__kernel_long_t) ? SO_TIMESTAMP_OLD : SO_TIMESTAMP_NEW)</u></td></tr>
-<tr><th id="133">133</th><td><u>#define SO_TIMESTAMPNS (sizeof(time_t) == sizeof(__kernel_long_t) ? SO_TIMESTAMPNS_OLD : SO_TIMESTAMPNS_NEW)</u></td></tr>
-<tr><th id="134">134</th><td><u>#define SO_TIMESTAMPING (sizeof(time_t) == sizeof(__kernel_long_t) ? SO_TIMESTAMPING_OLD : SO_TIMESTAMPING_NEW)</u></td></tr>
+<tr><th id="129">129</th><td></td></tr>
+<tr><th id="130">130</th><td><u>#<span data-ppcond="130">if</span> <a class="macro" href="../x86_64-linux-gnu/asm/bitsperlong.h.html#6" title="64" data-ref="_M/__BITS_PER_LONG">__BITS_PER_LONG</a> == 64 || (defined(<span class="macro" data-ref="_M/__x86_64__">__x86_64__</span>) &amp;&amp; defined(<span class="macro" data-ref="_M/__ILP32__">__ILP32__</span>))</u></td></tr>
+<tr><th id="131">131</th><td><i>/* on 64-bit and x32, avoid the ?: operator */</i></td></tr>
+<tr><th id="132">132</th><td><u>#define <dfn class="macro" id="_M/SO_TIMESTAMP" data-ref="_M/SO_TIMESTAMP">SO_TIMESTAMP</dfn>		SO_TIMESTAMP_OLD</u></td></tr>
+<tr><th id="133">133</th><td><u>#define <dfn class="macro" id="_M/SO_TIMESTAMPNS" data-ref="_M/SO_TIMESTAMPNS">SO_TIMESTAMPNS</dfn>		SO_TIMESTAMPNS_OLD</u></td></tr>
+<tr><th id="134">134</th><td><u>#define <dfn class="macro" id="_M/SO_TIMESTAMPING" data-ref="_M/SO_TIMESTAMPING">SO_TIMESTAMPING</dfn>		SO_TIMESTAMPING_OLD</u></td></tr>
 <tr><th id="135">135</th><td></td></tr>
-<tr><th id="136">136</th><td><u>#define SO_RCVTIMEO (sizeof(time_t) == sizeof(__kernel_long_t) ? SO_RCVTIMEO_OLD : SO_RCVTIMEO_NEW)</u></td></tr>
-<tr><th id="137">137</th><td><u>#define SO_SNDTIMEO (sizeof(time_t) == sizeof(__kernel_long_t) ? SO_SNDTIMEO_OLD : SO_SNDTIMEO_NEW)</u></td></tr>
-<tr><th id="138">138</th><td><u>#<span data-ppcond="123">endif</span></u></td></tr>
-<tr><th id="139">139</th><td></td></tr>
-<tr><th id="140">140</th><td><u>#define <dfn class="macro" id="_M/SCM_TIMESTAMP" data-ref="_M/SCM_TIMESTAMP">SCM_TIMESTAMP</dfn>           SO_TIMESTAMP</u></td></tr>
-<tr><th id="141">141</th><td><u>#define <dfn class="macro" id="_M/SCM_TIMESTAMPNS" data-ref="_M/SCM_TIMESTAMPNS">SCM_TIMESTAMPNS</dfn>         SO_TIMESTAMPNS</u></td></tr>
-<tr><th id="142">142</th><td><u>#define <dfn class="macro" id="_M/SCM_TIMESTAMPING" data-ref="_M/SCM_TIMESTAMPING">SCM_TIMESTAMPING</dfn>        SO_TIMESTAMPING</u></td></tr>
-<tr><th id="143">143</th><td></td></tr>
-<tr><th id="144">144</th><td></td></tr>
-<tr><th id="145">145</th><td><u>#<span data-ppcond="2">endif</span> /* __ASM_GENERIC_SOCKET_H */</u></td></tr>
+<tr><th id="136">136</th><td><u>#define <dfn class="macro" id="_M/SO_RCVTIMEO" data-ref="_M/SO_RCVTIMEO">SO_RCVTIMEO</dfn>		SO_RCVTIMEO_OLD</u></td></tr>
+<tr><th id="137">137</th><td><u>#define <dfn class="macro" id="_M/SO_SNDTIMEO" data-ref="_M/SO_SNDTIMEO">SO_SNDTIMEO</dfn>		SO_SNDTIMEO_OLD</u></td></tr>
+<tr><th id="138">138</th><td><u>#<span data-ppcond="130">else</span></u></td></tr>
+<tr><th id="139">139</th><td><u>#define SO_TIMESTAMP (sizeof(time_t) == sizeof(__kernel_long_t) ? SO_TIMESTAMP_OLD : SO_TIMESTAMP_NEW)</u></td></tr>
+<tr><th id="140">140</th><td><u>#define SO_TIMESTAMPNS (sizeof(time_t) == sizeof(__kernel_long_t) ? SO_TIMESTAMPNS_OLD : SO_TIMESTAMPNS_NEW)</u></td></tr>
+<tr><th id="141">141</th><td><u>#define SO_TIMESTAMPING (sizeof(time_t) == sizeof(__kernel_long_t) ? SO_TIMESTAMPING_OLD : SO_TIMESTAMPING_NEW)</u></td></tr>
+<tr><th id="142">142</th><td></td></tr>
+<tr><th id="143">143</th><td><u>#define SO_RCVTIMEO (sizeof(time_t) == sizeof(__kernel_long_t) ? SO_RCVTIMEO_OLD : SO_RCVTIMEO_NEW)</u></td></tr>
+<tr><th id="144">144</th><td><u>#define SO_SNDTIMEO (sizeof(time_t) == sizeof(__kernel_long_t) ? SO_SNDTIMEO_OLD : SO_SNDTIMEO_NEW)</u></td></tr>
+<tr><th id="145">145</th><td><u>#<span data-ppcond="130">endif</span></u></td></tr>
 <tr><th id="146">146</th><td></td></tr>
+<tr><th id="147">147</th><td><u>#define <dfn class="macro" id="_M/SCM_TIMESTAMP" data-ref="_M/SCM_TIMESTAMP">SCM_TIMESTAMP</dfn>           SO_TIMESTAMP</u></td></tr>
+<tr><th id="148">148</th><td><u>#define <dfn class="macro" id="_M/SCM_TIMESTAMPNS" data-ref="_M/SCM_TIMESTAMPNS">SCM_TIMESTAMPNS</dfn>         SO_TIMESTAMPNS</u></td></tr>
+<tr><th id="149">149</th><td><u>#define <dfn class="macro" id="_M/SCM_TIMESTAMPING" data-ref="_M/SCM_TIMESTAMPING">SCM_TIMESTAMPING</dfn>        SO_TIMESTAMPING</u></td></tr>
+<tr><th id="150">150</th><td></td></tr>
+<tr><th id="151">151</th><td></td></tr>
+<tr><th id="152">152</th><td><u>#<span data-ppcond="2">endif</span> /* __ASM_GENERIC_SOCKET_H */</u></td></tr>
+<tr><th id="153">153</th><td></td></tr>
 </table><hr/><p id='footer'>
 Generated while processing <a href='../../tvm/src/runtime/rpc/rpc_socket_impl.cc.html'>tvm/src/runtime/rpc/rpc_socket_impl.cc</a><br/>Generated on <em>2022-Dec-07</em> from project include<br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
 <br/>Generator usage only permitted with license.</p>

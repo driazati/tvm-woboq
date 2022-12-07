@@ -1,3 +1,5 @@
-<dec f='include/c++/10/mutex' l='676' type='std::once_flag::__native_type'/>
-<use f='include/c++/10/mutex' l='729' u='a' c='_ZSt9call_onceRSt9once_flagOT_DpOT0_'/>
+<dec f='include/c++/12/mutex' l='762' type='__gthread_once_t'/>
+<use f='include/c++/12/mutex' l='859' u='a' c='_ZSt9call_onceRSt9once_flagOT_DpOT0_'/>
 <offset>0</offset>
+<doc f='include/c++/12/mutex' l='760'>// For gthreads targets a pthread_once_t is used with pthread_once, but
+    // for most targets this doesn&apos;t work correctly for exceptional executions.</doc>

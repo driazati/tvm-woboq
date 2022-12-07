@@ -13,7 +13,7 @@
 <hr/><div id='content'><table class="code">
 <tr><th id="1">1</th><td><i>/* Definition of the cpu_set_t structure used by the POSIX 1003.1b-1993</i></td></tr>
 <tr><th id="2">2</th><td><i>   scheduling interface.</i></td></tr>
-<tr><th id="3">3</th><td><i>   Copyright (C) 1996-2020 Free Software Foundation, Inc.</i></td></tr>
+<tr><th id="3">3</th><td><i>   Copyright (C) 1996-2022 Free Software Foundation, Inc.</i></td></tr>
 <tr><th id="4">4</th><td><i>   This file is part of the GNU C Library.</i></td></tr>
 <tr><th id="5">5</th><td><i></i></td></tr>
 <tr><th id="6">6</th><td><i>   The GNU C Library is free software; you can redistribute it and/or</i></td></tr>
@@ -42,7 +42,7 @@
 <tr><th id="29">29</th><td><u>#define <dfn class="macro" id="_M/__NCPUBITS" data-ref="_M/__NCPUBITS">__NCPUBITS</dfn>	(8 * sizeof (<a class="typedef" href="#__cpu_mask" title='__cpu_mask' data-type='unsigned long' data-ref="__cpu_mask" data-ref-filename="__cpu_mask">__cpu_mask</a>))</u></td></tr>
 <tr><th id="30">30</th><td></td></tr>
 <tr><th id="31">31</th><td><i>/* Type for array elements in 'cpu_set_t'.  */</i></td></tr>
-<tr><th id="32">32</th><td><b>typedef</b> <a class="macro" href="typesizes.h.html#74" title="unsigned long int" data-ref="_M/__CPU_MASK_TYPE">__CPU_MASK_TYPE</a> <dfn class="typedef" id="__cpu_mask" title='__cpu_mask' data-type='unsigned long' data-ref="__cpu_mask" data-ref-filename="__cpu_mask">__cpu_mask</dfn>;</td></tr>
+<tr><th id="32">32</th><td><b>typedef</b> <a class="macro" href="typesizes.h.html#75" title="unsigned long int" data-ref="_M/__CPU_MASK_TYPE">__CPU_MASK_TYPE</a> <dfn class="typedef" id="__cpu_mask" title='__cpu_mask' data-type='unsigned long' data-ref="__cpu_mask" data-ref-filename="__cpu_mask">__cpu_mask</dfn>;</td></tr>
 <tr><th id="33">33</th><td></td></tr>
 <tr><th id="34">34</th><td><i>/* Basic access functions.  */</i></td></tr>
 <tr><th id="35">35</th><td><u>#define <dfn class="macro" id="_M/__CPUELT" data-ref="_M/__CPUELT">__CPUELT</dfn>(cpu)	((cpu) / __NCPUBITS)</u></td></tr>
@@ -55,7 +55,7 @@
 <tr><th id="42">42</th><td>} <dfn class="typedef" id="cpu_set_t" title='cpu_set_t' data-type='struct cpu_set_t' data-ref="cpu_set_t" data-ref-filename="cpu_set_t">cpu_set_t</dfn>;</td></tr>
 <tr><th id="43">43</th><td></td></tr>
 <tr><th id="44">44</th><td><i>/* Access functions for CPU masks.  */</i></td></tr>
-<tr><th id="45">45</th><td><u>#<span data-ppcond="45">if</span> <a class="macro" href="../../features.h.html#161" title="((4 &lt;&lt; 16) + 2 &gt;= ((2) &lt;&lt; 16) + (91))" data-ref="_M/__GNUC_PREREQ">__GNUC_PREREQ</a> (2, 91)</u></td></tr>
+<tr><th id="45">45</th><td><u>#<span data-ppcond="45">if</span> <a class="macro" href="../../features.h.html#168" title="((4 &lt;&lt; 16) + 2 &gt;= ((2) &lt;&lt; 16) + (91))" data-ref="_M/__GNUC_PREREQ">__GNUC_PREREQ</a> (2, 91)</u></td></tr>
 <tr><th id="46">46</th><td><u># define <dfn class="macro" id="_M/__CPU_ZERO_S" data-ref="_M/__CPU_ZERO_S">__CPU_ZERO_S</dfn>(setsize, cpusetp) \</u></td></tr>
 <tr><th id="47">47</th><td><u>  do __builtin_memset (cpusetp, '\0', setsize); while (0)</u></td></tr>
 <tr><th id="48">48</th><td><u>#<span data-ppcond="45">else</span></u></td></tr>
@@ -93,7 +93,7 @@
 <tr><th id="80">80</th><td><u>#define <dfn class="macro" id="_M/__CPU_COUNT_S" data-ref="_M/__CPU_COUNT_S">__CPU_COUNT_S</dfn>(setsize, cpusetp) \</u></td></tr>
 <tr><th id="81">81</th><td><u>  __sched_cpucount (setsize, cpusetp)</u></td></tr>
 <tr><th id="82">82</th><td></td></tr>
-<tr><th id="83">83</th><td><u>#<span data-ppcond="83">if</span> <a class="macro" href="../../features.h.html#161" title="((4 &lt;&lt; 16) + 2 &gt;= ((2) &lt;&lt; 16) + (91))" data-ref="_M/__GNUC_PREREQ">__GNUC_PREREQ</a> (2, 91)</u></td></tr>
+<tr><th id="83">83</th><td><u>#<span data-ppcond="83">if</span> <a class="macro" href="../../features.h.html#168" title="((4 &lt;&lt; 16) + 2 &gt;= ((2) &lt;&lt; 16) + (91))" data-ref="_M/__GNUC_PREREQ">__GNUC_PREREQ</a> (2, 91)</u></td></tr>
 <tr><th id="84">84</th><td><u># define <dfn class="macro" id="_M/__CPU_EQUAL_S" data-ref="_M/__CPU_EQUAL_S">__CPU_EQUAL_S</dfn>(setsize, cpusetp1, cpusetp2) \</u></td></tr>
 <tr><th id="85">85</th><td><u>  (__builtin_memcmp (cpusetp1, cpusetp2, setsize) == 0)</u></td></tr>
 <tr><th id="86">86</th><td><u>#<span data-ppcond="83">else</span></u></td></tr>
@@ -125,14 +125,14 @@
 <tr><th id="112">112</th><td><u>#define <dfn class="macro" id="_M/__CPU_ALLOC" data-ref="_M/__CPU_ALLOC">__CPU_ALLOC</dfn>(count) __sched_cpualloc (count)</u></td></tr>
 <tr><th id="113">113</th><td><u>#define <dfn class="macro" id="_M/__CPU_FREE" data-ref="_M/__CPU_FREE">__CPU_FREE</dfn>(cpuset) __sched_cpufree (cpuset)</u></td></tr>
 <tr><th id="114">114</th><td></td></tr>
-<tr><th id="115">115</th><td><a class="macro" href="../sys/cdefs.h.html#114" title="extern &quot;C&quot; {" data-ref="_M/__BEGIN_DECLS">__BEGIN_DECLS</a></td></tr>
+<tr><th id="115">115</th><td><a class="macro" href="../sys/cdefs.h.html#133" title="extern &quot;C&quot; {" data-ref="_M/__BEGIN_DECLS">__BEGIN_DECLS</a></td></tr>
 <tr><th id="116">116</th><td></td></tr>
-<tr><th id="117">117</th><td><b>extern</b> <em>int</em> <dfn class="decl fn" id="__sched_cpucount" title='__sched_cpucount' data-ref="__sched_cpucount" data-ref-filename="__sched_cpucount">__sched_cpucount</dfn> (<span class='typedef' title='size_t' data-type='unsigned long' data-ref="size_t" data-ref-filename="size_t">size_t</span> <dfn class="local col2 decl" id="1942__setsize" title='__setsize' data-type='size_t' data-ref="1942__setsize" data-ref-filename="1942__setsize">__setsize</dfn>, <em>const</em> <a class="typedef" href="#cpu_set_t" title='cpu_set_t' data-type='struct cpu_set_t' data-ref="cpu_set_t" data-ref-filename="cpu_set_t">cpu_set_t</a> *<dfn class="local col3 decl" id="1943__setp" title='__setp' data-type='const cpu_set_t *' data-ref="1943__setp" data-ref-filename="1943__setp">__setp</dfn>)</td></tr>
-<tr><th id="118">118</th><td>     <a class="macro" href="../sys/cdefs.h.html#61" title="throw ()" data-ref="_M/__THROW">__THROW</a>;</td></tr>
-<tr><th id="119">119</th><td><b>extern</b> <a class="typedef" href="#cpu_set_t" title='cpu_set_t' data-type='struct cpu_set_t' data-ref="cpu_set_t" data-ref-filename="cpu_set_t">cpu_set_t</a> *<dfn class="decl fn" id="__sched_cpualloc" title='__sched_cpualloc' data-ref="__sched_cpualloc" data-ref-filename="__sched_cpualloc">__sched_cpualloc</dfn> (<span class='typedef' title='size_t' data-type='unsigned long' data-ref="size_t" data-ref-filename="size_t">size_t</span> <dfn class="local col4 decl" id="1944__count" title='__count' data-type='size_t' data-ref="1944__count" data-ref-filename="1944__count">__count</dfn>) <a class="macro" href="../sys/cdefs.h.html#61" title="throw ()" data-ref="_M/__THROW">__THROW</a> <a class="macro" href="../sys/cdefs.h.html#310" title="" data-ref="_M/__wur">__wur</a>;</td></tr>
-<tr><th id="120">120</th><td><b>extern</b> <em>void</em> <dfn class="decl fn" id="__sched_cpufree" title='__sched_cpufree' data-ref="__sched_cpufree" data-ref-filename="__sched_cpufree">__sched_cpufree</dfn> (<a class="typedef" href="#cpu_set_t" title='cpu_set_t' data-type='struct cpu_set_t' data-ref="cpu_set_t" data-ref-filename="cpu_set_t">cpu_set_t</a> *<dfn class="local col5 decl" id="1945__set" title='__set' data-type='cpu_set_t *' data-ref="1945__set" data-ref-filename="1945__set">__set</dfn>) <a class="macro" href="../sys/cdefs.h.html#61" title="throw ()" data-ref="_M/__THROW">__THROW</a>;</td></tr>
+<tr><th id="117">117</th><td><b>extern</b> <em>int</em> <dfn class="decl fn" id="__sched_cpucount" title='__sched_cpucount' data-ref="__sched_cpucount" data-ref-filename="__sched_cpucount">__sched_cpucount</dfn> (<span class='typedef' title='size_t' data-type='unsigned long' data-ref="size_t" data-ref-filename="size_t">size_t</span> <dfn class="local col9 decl" id="1969__setsize" title='__setsize' data-type='size_t' data-ref="1969__setsize" data-ref-filename="1969__setsize">__setsize</dfn>, <em>const</em> <a class="typedef" href="#cpu_set_t" title='cpu_set_t' data-type='struct cpu_set_t' data-ref="cpu_set_t" data-ref-filename="cpu_set_t">cpu_set_t</a> *<dfn class="local col0 decl" id="1970__setp" title='__setp' data-type='const cpu_set_t *' data-ref="1970__setp" data-ref-filename="1970__setp">__setp</dfn>)</td></tr>
+<tr><th id="118">118</th><td>     <a class="macro" href="../sys/cdefs.h.html#86" title="noexcept (true)" data-ref="_M/__THROW">__THROW</a>;</td></tr>
+<tr><th id="119">119</th><td><b>extern</b> <a class="typedef" href="#cpu_set_t" title='cpu_set_t' data-type='struct cpu_set_t' data-ref="cpu_set_t" data-ref-filename="cpu_set_t">cpu_set_t</a> *<dfn class="decl fn" id="__sched_cpualloc" title='__sched_cpualloc' data-ref="__sched_cpualloc" data-ref-filename="__sched_cpualloc">__sched_cpualloc</dfn> (<span class='typedef' title='size_t' data-type='unsigned long' data-ref="size_t" data-ref-filename="size_t">size_t</span> <dfn class="local col1 decl" id="1971__count" title='__count' data-type='size_t' data-ref="1971__count" data-ref-filename="1971__count">__count</dfn>) <a class="macro" href="../sys/cdefs.h.html#86" title="noexcept (true)" data-ref="_M/__THROW">__THROW</a> <a class="macro" href="../sys/cdefs.h.html#415" title="" data-ref="_M/__wur">__wur</a>;</td></tr>
+<tr><th id="120">120</th><td><b>extern</b> <em>void</em> <dfn class="decl fn" id="__sched_cpufree" title='__sched_cpufree' data-ref="__sched_cpufree" data-ref-filename="__sched_cpufree">__sched_cpufree</dfn> (<a class="typedef" href="#cpu_set_t" title='cpu_set_t' data-type='struct cpu_set_t' data-ref="cpu_set_t" data-ref-filename="cpu_set_t">cpu_set_t</a> *<dfn class="local col2 decl" id="1972__set" title='__set' data-type='cpu_set_t *' data-ref="1972__set" data-ref-filename="1972__set">__set</dfn>) <a class="macro" href="../sys/cdefs.h.html#86" title="noexcept (true)" data-ref="_M/__THROW">__THROW</a>;</td></tr>
 <tr><th id="121">121</th><td></td></tr>
-<tr><th id="122">122</th><td><a class="macro" href="../sys/cdefs.h.html#115" title="}" data-ref="_M/__END_DECLS">__END_DECLS</a></td></tr>
+<tr><th id="122">122</th><td><a class="macro" href="../sys/cdefs.h.html#134" title="}" data-ref="_M/__END_DECLS">__END_DECLS</a></td></tr>
 <tr><th id="123">123</th><td></td></tr>
 <tr><th id="124">124</th><td><u>#<span data-ppcond="20">endif</span> /* bits/cpu-set.h */</u></td></tr>
 <tr><th id="125">125</th><td></td></tr>

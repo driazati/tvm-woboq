@@ -13,7 +13,7 @@
 <hr/><div id='content'><table class="code">
 <tr><th id="1">1</th><td><i>/* Definitions of constants and data structure for POSIX 1003.1b-1993</i></td></tr>
 <tr><th id="2">2</th><td><i>   scheduling interface.</i></td></tr>
-<tr><th id="3">3</th><td><i>   Copyright (C) 1996-2020 Free Software Foundation, Inc.</i></td></tr>
+<tr><th id="3">3</th><td><i>   Copyright (C) 1996-2022 Free Software Foundation, Inc.</i></td></tr>
 <tr><th id="4">4</th><td><i>   This file is part of the GNU C Library.</i></td></tr>
 <tr><th id="5">5</th><td><i></i></td></tr>
 <tr><th id="6">6</th><td><i>   The GNU C Library is free software; you can redistribute it and/or</i></td></tr>
@@ -41,7 +41,7 @@
 <tr><th id="28">28</th><td><u>#define <dfn class="macro" id="_M/SCHED_OTHER" data-ref="_M/SCHED_OTHER">SCHED_OTHER</dfn>		0</u></td></tr>
 <tr><th id="29">29</th><td><u>#define <dfn class="macro" id="_M/SCHED_FIFO" data-ref="_M/SCHED_FIFO">SCHED_FIFO</dfn>		1</u></td></tr>
 <tr><th id="30">30</th><td><u>#define <dfn class="macro" id="_M/SCHED_RR" data-ref="_M/SCHED_RR">SCHED_RR</dfn>		2</u></td></tr>
-<tr><th id="31">31</th><td><u>#<span data-ppcond="31">ifdef</span> <a class="macro" href="../../features.h.html#392" data-ref="_M/__USE_GNU">__USE_GNU</a></u></td></tr>
+<tr><th id="31">31</th><td><u>#<span data-ppcond="31">ifdef</span> <a class="macro" href="../../features.h.html#407" data-ref="_M/__USE_GNU">__USE_GNU</a></u></td></tr>
 <tr><th id="32">32</th><td><u># define <dfn class="macro" id="_M/SCHED_BATCH" data-ref="_M/SCHED_BATCH">SCHED_BATCH</dfn>		3</u></td></tr>
 <tr><th id="33">33</th><td><u># define <dfn class="macro" id="_M/SCHED_ISO" data-ref="_M/SCHED_ISO">SCHED_ISO</dfn>		4</u></td></tr>
 <tr><th id="34">34</th><td><u># define <dfn class="macro" id="_M/SCHED_IDLE" data-ref="_M/SCHED_IDLE">SCHED_IDLE</dfn>		5</u></td></tr>
@@ -50,7 +50,7 @@
 <tr><th id="37">37</th><td><u># define <dfn class="macro" id="_M/SCHED_RESET_ON_FORK" data-ref="_M/SCHED_RESET_ON_FORK">SCHED_RESET_ON_FORK</dfn>	0x40000000</u></td></tr>
 <tr><th id="38">38</th><td><u>#<span data-ppcond="31">endif</span></u></td></tr>
 <tr><th id="39">39</th><td></td></tr>
-<tr><th id="40">40</th><td><u>#<span data-ppcond="40">ifdef</span> <a class="macro" href="../../features.h.html#392" data-ref="_M/__USE_GNU">__USE_GNU</a></u></td></tr>
+<tr><th id="40">40</th><td><u>#<span data-ppcond="40">ifdef</span> <a class="macro" href="../../features.h.html#407" data-ref="_M/__USE_GNU">__USE_GNU</a></u></td></tr>
 <tr><th id="41">41</th><td><i>/* Cloning flags.  */</i></td></tr>
 <tr><th id="42">42</th><td><u># define <dfn class="macro" id="_M/CSIGNAL" data-ref="_M/CSIGNAL">CSIGNAL</dfn>       0x000000ff /* Signal mask to be sent at exit.  */</u></td></tr>
 <tr><th id="43">43</th><td><u># define <dfn class="macro" id="_M/CLONE_VM" data-ref="_M/CLONE_VM">CLONE_VM</dfn>      0x00000100 /* Set if VM shared between processes.  */</u></td></tr>
@@ -88,27 +88,27 @@
 <tr><th id="75">75</th><td></td></tr>
 <tr><th id="76">76</th><td><u>#include <a href="types/struct_sched_param.h.html">&lt;bits/types/struct_sched_param.h&gt;</a></u></td></tr>
 <tr><th id="77">77</th><td></td></tr>
-<tr><th id="78">78</th><td><a class="macro" href="../sys/cdefs.h.html#114" title="extern &quot;C&quot; {" data-ref="_M/__BEGIN_DECLS">__BEGIN_DECLS</a></td></tr>
+<tr><th id="78">78</th><td><a class="macro" href="../sys/cdefs.h.html#133" title="extern &quot;C&quot; {" data-ref="_M/__BEGIN_DECLS">__BEGIN_DECLS</a></td></tr>
 <tr><th id="79">79</th><td></td></tr>
-<tr><th id="80">80</th><td><u>#<span data-ppcond="80">ifdef</span> <a class="macro" href="../../features.h.html#392" data-ref="_M/__USE_GNU">__USE_GNU</a></u></td></tr>
+<tr><th id="80">80</th><td><u>#<span data-ppcond="80">ifdef</span> <a class="macro" href="../../features.h.html#407" data-ref="_M/__USE_GNU">__USE_GNU</a></u></td></tr>
 <tr><th id="81">81</th><td><i>/* Clone current process.  */</i></td></tr>
-<tr><th id="82">82</th><td><b>extern</b> <em>int</em> <dfn class="decl fn" id="clone" title='clone' data-ref="clone" data-ref-filename="clone">clone</dfn> (<em>int</em> (*<dfn class="local col4 decl" id="1934__fn" title='__fn' data-type='int (*)(void *)' data-ref="1934__fn" data-ref-filename="1934__fn">__fn</dfn>) (<em>void</em> *<dfn class="local col5 decl" id="1935__arg" title='__arg' data-type='void *' data-ref="1935__arg" data-ref-filename="1935__arg">__arg</dfn>), <em>void</em> *<dfn class="local col6 decl" id="1936__child_stack" title='__child_stack' data-type='void *' data-ref="1936__child_stack" data-ref-filename="1936__child_stack">__child_stack</dfn>,</td></tr>
-<tr><th id="83">83</th><td>		  <em>int</em> <dfn class="local col7 decl" id="1937__flags" title='__flags' data-type='int' data-ref="1937__flags" data-ref-filename="1937__flags">__flags</dfn>, <em>void</em> *<dfn class="local col8 decl" id="1938__arg" title='__arg' data-type='void *' data-ref="1938__arg" data-ref-filename="1938__arg">__arg</dfn>, ...) <a class="macro" href="../sys/cdefs.h.html#61" title="throw ()" data-ref="_M/__THROW">__THROW</a>;</td></tr>
+<tr><th id="82">82</th><td><b>extern</b> <em>int</em> <dfn class="decl fn" id="clone" title='clone' data-ref="clone" data-ref-filename="clone">clone</dfn> (<em>int</em> (*<dfn class="local col1 decl" id="1961__fn" title='__fn' data-type='int (*)(void *)' data-ref="1961__fn" data-ref-filename="1961__fn">__fn</dfn>) (<em>void</em> *<dfn class="local col2 decl" id="1962__arg" title='__arg' data-type='void *' data-ref="1962__arg" data-ref-filename="1962__arg">__arg</dfn>), <em>void</em> *<dfn class="local col3 decl" id="1963__child_stack" title='__child_stack' data-type='void *' data-ref="1963__child_stack" data-ref-filename="1963__child_stack">__child_stack</dfn>,</td></tr>
+<tr><th id="83">83</th><td>		  <em>int</em> <dfn class="local col4 decl" id="1964__flags" title='__flags' data-type='int' data-ref="1964__flags" data-ref-filename="1964__flags">__flags</dfn>, <em>void</em> *<dfn class="local col5 decl" id="1965__arg" title='__arg' data-type='void *' data-ref="1965__arg" data-ref-filename="1965__arg">__arg</dfn>, ...) <a class="macro" href="../sys/cdefs.h.html#86" title="noexcept (true)" data-ref="_M/__THROW">__THROW</a>;</td></tr>
 <tr><th id="84">84</th><td></td></tr>
 <tr><th id="85">85</th><td><i>/* Unshare the specified resources.  */</i></td></tr>
-<tr><th id="86">86</th><td><b>extern</b> <em>int</em> <dfn class="decl fn" id="unshare" title='unshare' data-ref="unshare" data-ref-filename="unshare">unshare</dfn> (<em>int</em> <dfn class="local col9 decl" id="1939__flags" title='__flags' data-type='int' data-ref="1939__flags" data-ref-filename="1939__flags">__flags</dfn>) <a class="macro" href="../sys/cdefs.h.html#61" title="throw ()" data-ref="_M/__THROW">__THROW</a>;</td></tr>
+<tr><th id="86">86</th><td><b>extern</b> <em>int</em> <dfn class="decl fn" id="unshare" title='unshare' data-ref="unshare" data-ref-filename="unshare">unshare</dfn> (<em>int</em> <dfn class="local col6 decl" id="1966__flags" title='__flags' data-type='int' data-ref="1966__flags" data-ref-filename="1966__flags">__flags</dfn>) <a class="macro" href="../sys/cdefs.h.html#86" title="noexcept (true)" data-ref="_M/__THROW">__THROW</a>;</td></tr>
 <tr><th id="87">87</th><td></td></tr>
 <tr><th id="88">88</th><td><i>/* Get index of currently used CPU.  */</i></td></tr>
-<tr><th id="89">89</th><td><b>extern</b> <em>int</em> <dfn class="decl fn" id="sched_getcpu" title='sched_getcpu' data-ref="sched_getcpu" data-ref-filename="sched_getcpu">sched_getcpu</dfn> (<em>void</em>) <a class="macro" href="../sys/cdefs.h.html#61" title="throw ()" data-ref="_M/__THROW">__THROW</a>;</td></tr>
+<tr><th id="89">89</th><td><b>extern</b> <em>int</em> <dfn class="decl fn" id="sched_getcpu" title='sched_getcpu' data-ref="sched_getcpu" data-ref-filename="sched_getcpu">sched_getcpu</dfn> (<em>void</em>) <a class="macro" href="../sys/cdefs.h.html#86" title="noexcept (true)" data-ref="_M/__THROW">__THROW</a>;</td></tr>
 <tr><th id="90">90</th><td></td></tr>
 <tr><th id="91">91</th><td><i>/* Get currently used CPU and NUMA node.  */</i></td></tr>
-<tr><th id="92">92</th><td><b>extern</b> <em>int</em> <dfn class="decl fn" id="getcpu" title='getcpu' data-ref="getcpu" data-ref-filename="getcpu">getcpu</dfn> (<em>unsigned</em> <em>int</em> *, <em>unsigned</em> <em>int</em> *) <a class="macro" href="../sys/cdefs.h.html#61" title="throw ()" data-ref="_M/__THROW">__THROW</a>;</td></tr>
+<tr><th id="92">92</th><td><b>extern</b> <em>int</em> <dfn class="decl fn" id="getcpu" title='getcpu' data-ref="getcpu" data-ref-filename="getcpu">getcpu</dfn> (<em>unsigned</em> <em>int</em> *, <em>unsigned</em> <em>int</em> *) <a class="macro" href="../sys/cdefs.h.html#86" title="noexcept (true)" data-ref="_M/__THROW">__THROW</a>;</td></tr>
 <tr><th id="93">93</th><td></td></tr>
 <tr><th id="94">94</th><td><i>/* Switch process to namespace of type NSTYPE indicated by FD.  */</i></td></tr>
-<tr><th id="95">95</th><td><b>extern</b> <em>int</em> <dfn class="decl fn" id="setns" title='setns' data-ref="setns" data-ref-filename="setns">setns</dfn> (<em>int</em> <dfn class="local col0 decl" id="1940__fd" title='__fd' data-type='int' data-ref="1940__fd" data-ref-filename="1940__fd">__fd</dfn>, <em>int</em> <dfn class="local col1 decl" id="1941__nstype" title='__nstype' data-type='int' data-ref="1941__nstype" data-ref-filename="1941__nstype">__nstype</dfn>) <a class="macro" href="../sys/cdefs.h.html#61" title="throw ()" data-ref="_M/__THROW">__THROW</a>;</td></tr>
+<tr><th id="95">95</th><td><b>extern</b> <em>int</em> <dfn class="decl fn" id="setns" title='setns' data-ref="setns" data-ref-filename="setns">setns</dfn> (<em>int</em> <dfn class="local col7 decl" id="1967__fd" title='__fd' data-type='int' data-ref="1967__fd" data-ref-filename="1967__fd">__fd</dfn>, <em>int</em> <dfn class="local col8 decl" id="1968__nstype" title='__nstype' data-type='int' data-ref="1968__nstype" data-ref-filename="1968__nstype">__nstype</dfn>) <a class="macro" href="../sys/cdefs.h.html#86" title="noexcept (true)" data-ref="_M/__THROW">__THROW</a>;</td></tr>
 <tr><th id="96">96</th><td><u>#<span data-ppcond="80">endif</span></u></td></tr>
 <tr><th id="97">97</th><td></td></tr>
-<tr><th id="98">98</th><td><a class="macro" href="../sys/cdefs.h.html#115" title="}" data-ref="_M/__END_DECLS">__END_DECLS</a></td></tr>
+<tr><th id="98">98</th><td><a class="macro" href="../sys/cdefs.h.html#134" title="}" data-ref="_M/__END_DECLS">__END_DECLS</a></td></tr>
 <tr><th id="99">99</th><td></td></tr>
 <tr><th id="100">100</th><td><u>#<span data-ppcond="20">endif</span> /* bits/sched.h */</u></td></tr>
 <tr><th id="101">101</th><td></td></tr>
