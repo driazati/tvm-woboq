@@ -1,0 +1,31 @@
+<dec f='tvm/include/tvm/arith/iter_affine_map.h' l='409' type='Array&lt;Array&lt;tvm::arith::IterMark&gt;&gt; tvm::arith::SubspaceDivide(const Array&lt;tvm::PrimExpr&gt; &amp; bindings, const Map&lt;tvm::tir::Var, tvm::Range&gt; &amp; input_iters, const Array&lt;tvm::tir::Var&gt; &amp; sub_iters, const tvm::PrimExpr &amp; predicate, tvm::arith::IterMapLevel check_level, arith::Analyzer * analyzer, bool simplify_trivial_iterators = true)'/>
+<doc f='tvm/include/tvm/arith/iter_affine_map.h' l='382'>/*!
+ * \brief Detect if bindings can be written as
+ * [a_0*e_0 + b_0 + c_0, a_1*e_1 + b_1, ..., a_n*e_n + b_n]
+ *
+ * where a = some-quasi-affine-iter-map(input_iters set_minus sub_iters)
+ *       b = some-quasi-affine-iter-map(sub_iters)
+ *       c is constant symbols
+ *       e is the extent of b
+ *
+ * For example, z*12 + y*3 + x + c = (z*4+y)*3 + x, if sub_iters={x}
+ *
+ * \param bindings The input bindings
+ * \param input_iters Map from variable to iterator&apos;s range.
+ * \param sub_iters Iterators of subspace.
+ * \param predicate The predicate constraints on the input iterators
+ * \param check_level The iter mapping checking level.
+ * \param analyzer Analyzer used to get context information.
+ * \param simplify_trivial_iterators If true, iterators with extent of
+ *           1 will be replaced with a constant value.
+ *
+ * \return The result list has length len(bindings) + 1
+        [0, len(bindings)): The iter map matching result. The inner list is of length 2.
+                            The first expr is the basis of the quotient space.
+                            The second expr is the basis of the subspace.
+        len(bindings): the predicate of outer space and inner space
+        Empty array if no match can be found.
+ */</doc>
+<def f='tvm/src/arith/iter_affine_map.cc' l='2074' ll='2105' type='Array&lt;Array&lt;tvm::arith::IterMark&gt;&gt; tvm::arith::SubspaceDivide(const Array&lt;tvm::PrimExpr&gt; &amp; bindings, const Map&lt;tvm::tir::Var, tvm::Range&gt; &amp; input_iters, const Array&lt;tvm::tir::Var&gt; &amp; sub_iters, const tvm::PrimExpr &amp; predicate, tvm::arith::IterMapLevel check_level, arith::Analyzer * analyzer, bool simplify_trivial_iterators = true)'/>
+<use f='tvm/src/arith/iter_affine_map.cc' l='2112' u='c'/>
+<use f='tvm/src/tir/schedule/primitive/blockize_tensorize.cc' l='176' u='c' c='_ZN3tvm3tir14SubspaceDivideERKNS0_12BlockRealizeERKNS0_8StmtSRefES6_PSt6vectorIPKNS0_7ForNodeESaISA_EEPNS_5arith8AnalyzerEb'/>

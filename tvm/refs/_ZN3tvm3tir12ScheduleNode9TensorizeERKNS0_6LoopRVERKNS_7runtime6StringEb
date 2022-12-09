@@ -1,0 +1,10 @@
+<dec f='tvm/include/tvm/tir/schedule/schedule.h' l='576' type='void tvm::tir::ScheduleNode::Tensorize(const tvm::tir::LoopRV &amp; loop_rv, const tvm::runtime::String &amp; intrin, bool preserve_unit_iters = true)'/>
+<doc f='tvm/include/tvm/tir/schedule/schedule.h' l='570'>/*!
+   * \brief Tensorize the computation enclosed by loop with the tensor intrin.
+   * \param loop_rv The loop to be tensorized
+   * \param intrin Name of the tensor intrinsic
+   * \param preserve_unit_iters Whether or not to preserve unit iterators in block bindings
+   */</doc>
+<ovr f='tvm/src/tir/schedule/concrete_schedule.cc' l='702' c='_ZN3tvm3tir20ConcreteScheduleNode9TensorizeERKNS0_6LoopRVERKNS_7runtime6StringEb'/>
+<use f='tvm/src/tir/schedule/primitive/blockize_tensorize.cc' l='660' u='c' c='_ZN3tvm3tir15TensorizeTraits23UnpackedApplyToScheduleENS0_8ScheduleENS_7runtime9ObjectRefENS3_6StringENS_4BoolE'/>
+<use f='tvm/src/tir/schedule/schedule.cc' l='218' u='c'/>

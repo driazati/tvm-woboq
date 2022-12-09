@@ -41,8 +41,8 @@
 <use f='tvm/src/tir/schedule/primitive/block_annotate.cc' l='244' u='r' c='_ZN3tvm3tir12StorageAlignENS0_13ScheduleStateERKNS0_8StmtSRefEiiii'/>
 <use f='tvm/src/tir/schedule/primitive/block_annotate.cc' l='248' u='r' c='_ZN3tvm3tir12StorageAlignENS0_13ScheduleStateERKNS0_8StmtSRefEiiii'/>
 <use f='tvm/src/tir/schedule/primitive/block_annotate.cc' l='289' u='r' c='_ZN3tvm3tir8SetScopeENS0_13ScheduleStateERKNS0_8StmtSRefEiRKNS_7runtime6StringE'/>
-<use f='tvm/src/tir/schedule/primitive/blockize_tensorize.cc' l='441' u='r' c='_ZN3tvm3tir12BlockizeImplERKNS0_13ScheduleStateERKNS0_8StmtSRefEPNS_7runtime3MapINS0_5BlockES9_vvEEPNS_5arith8AnalyzerE'/>
-<use f='tvm/src/tir/schedule/primitive/blockize_tensorize.cc' l='542' u='r' c='_ZN3tvm3tir9TensorizeENS0_13ScheduleStateERKNS0_8StmtSRefERKNS0_12TensorIntrinE'/>
+<use f='tvm/src/tir/schedule/primitive/blockize_tensorize.cc' l='445' u='r' c='_ZN3tvm3tir12BlockizeImplERKNS0_13ScheduleStateERKNS0_8StmtSRefEPNS_7runtime3MapINS0_5BlockES9_vvEEPNS_5arith8AnalyzerEb'/>
+<use f='tvm/src/tir/schedule/primitive/blockize_tensorize.cc' l='549' u='r' c='_ZN3tvm3tir9TensorizeENS0_13ScheduleStateERKNS0_8StmtSRefERKNS0_12TensorIntrinEb'/>
 <use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='337' u='r' c='_ZN3tvm3tir17GetOnlyWriteBlockENS0_13ScheduleStateERKNS0_8StmtSRefERKNS0_6BufferE'/>
 <use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='1102' u='r' c='_ZN3tvm3tir16CheckRegionCoverERKNS0_13ScheduleStateENS0_8StmtSRefENS0_6BufferE'/>
 <use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='1292' u='r' c='_ZN3tvm3tir12CacheInplaceENS0_13ScheduleStateERKNS0_8StmtSRefEiRKNS_7runtime6StringE'/>

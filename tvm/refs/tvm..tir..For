@@ -103,9 +103,9 @@
 <size>8</size>
 <use f='tvm/src/tir/schedule/primitive/blockize_tensorize.cc' l='49' c='_ZN3tvm3tir25SubspaceNotDivisibleErrorC1ENS_8IRModuleENS0_3ForENS0_5BlockE'/>
 <use f='tvm/src/tir/schedule/primitive/blockize_tensorize.cc' l='69'/>
-<use f='tvm/src/tir/schedule/primitive/blockize_tensorize.cc' l='336' c='_ZN3tvm3tir17GenerateOuterInitERKNS0_4StmtERKNS0_12BlockRealizeERKSt6vectorIPKNS0_7ForNodeESaISA_EENS_7runtime6StringE'/>
-<use f='tvm/src/tir/schedule/primitive/blockize_tensorize.cc' l='424' c='_ZN3tvm3tir12MakeLoopNestENS0_4StmtERKSt6vectorIPKNS0_7ForNodeESaIS5_EE'/>
-<use f='tvm/src/tir/schedule/primitive/blockize_tensorize.cc' l='441' c='_ZN3tvm3tir12BlockizeImplERKNS0_13ScheduleStateERKNS0_8StmtSRefEPNS_7runtime3MapINS0_5BlockES9_vvEEPNS_5arith8AnalyzerE'/>
+<use f='tvm/src/tir/schedule/primitive/blockize_tensorize.cc' l='339' c='_ZN3tvm3tir17GenerateOuterInitERKNS0_4StmtERKNS0_12BlockRealizeERKSt6vectorIPKNS0_7ForNodeESaISA_EENS_7runtime6StringE'/>
+<use f='tvm/src/tir/schedule/primitive/blockize_tensorize.cc' l='427' c='_ZN3tvm3tir12MakeLoopNestENS0_4StmtERKSt6vectorIPKNS0_7ForNodeESaIS5_EE'/>
+<use f='tvm/src/tir/schedule/primitive/blockize_tensorize.cc' l='445' c='_ZN3tvm3tir12BlockizeImplERKNS0_13ScheduleStateERKNS0_8StmtSRefEPNS_7runtime3MapINS0_5BlockES9_vvEEPNS_5arith8AnalyzerEb'/>
 <size>8</size>
 <use f='tvm/src/tir/schedule/primitive/cache_index.cc' l='287' c='_ZN3tvm3tir19MakeIndexCacheStageEPNS0_9IndexInfoE'/>
 <size>8</size>
@@ -298,7 +298,7 @@
 <size>8</size>
 <use f='tvm/src/tir/transforms/manifest_shared_memory_local_stage.cc' l='140' c='_ZN3tvm3tir25IntermediateStageRewriter14MakeLocalStageEPKNS0_9BlockNodeERKNS0_6BufferENS_7runtime5ArrayINS_8PrimExprEvEESt6vectorIPKNS0_7ForNodeESaISF9837013'/>
 <size>8</size>
-<use f='tvm/src/tir/transforms/plan_update_buffer_allocation_location.cc' l='88' c='_ZN3tvm3tir23BufferAllocationLocator10VisitStmt_EPKNS0_7ForNodeE'/>
+<use f='tvm/src/tir/transforms/plan_update_buffer_allocation_location.cc' l='133' c='_ZN3tvm3tir23BufferAllocationLocator10VisitStmt_EPKNS0_7ForNodeE'/>
 <size>8</size>
 <use f='tvm/src/tir/transforms/storage_flatten.cc' l='1631' c='_ZN3tvm3tir16StorageFlattener10VisitStmt_EPKNS0_12PrefetchNodeE'/>
 <use f='tvm/src/tir/transforms/storage_flatten.cc' l='1638' c='_ZN3tvm3tir16StorageFlattener10VisitStmt_EPKNS0_12PrefetchNodeE'/>
