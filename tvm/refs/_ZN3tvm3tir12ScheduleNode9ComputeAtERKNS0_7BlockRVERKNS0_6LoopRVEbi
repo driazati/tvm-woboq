@@ -1,5 +1,5 @@
-<dec f='tvm/include/tvm/tir/schedule/schedule.h' l='458' type='void tvm::tir::ScheduleNode::ComputeAt(const tvm::tir::BlockRV &amp; block_rv, const tvm::tir::LoopRV &amp; loop_rv, bool preserve_unit_loops, int index = -1)'/>
-<doc f='tvm/include/tvm/tir/schedule/schedule.h' l='438'>/*!
+<dec f='tvm/include/tvm/tir/schedule/schedule.h' l='460' type='void tvm::tir::ScheduleNode::ComputeAt(const tvm::tir::BlockRV &amp; block_rv, const tvm::tir::LoopRV &amp; loop_rv, bool preserve_unit_loops, int index = -1)'/>
+<doc f='tvm/include/tvm/tir/schedule/schedule.h' l='440'>/*!
    * \brief Move a producer block under the specific loop, and regenerate the
    * loops induced by the block so that the buffer region produced by the producer block could
    * cover those regions consumed by its consumer blocks under the given loop. It requires:
@@ -30,6 +30,6 @@
 <use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling.cc' l='270' u='c' c='_ZNK3tvm13meta_schedule20MultiLevelTilingNode12AddReadReuseENS0_5StateE'/>
 <use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling_tensor_core.cc' l='281' u='c' c='_ZNK3tvm13meta_schedule30MultiLevelTilingTensorCoreNode22AddReadReuseTensorCoreENS0_15TensorCoreStateE'/>
 <use f='tvm/src/meta_schedule/schedule_rule/random_compute_location.cc' l='109' u='c' c='_ZN3tvm13meta_schedule25RandomComputeLocationNode17RandomlyComputeAtERKNS_3tir8ScheduleERKNS2_7BlockRVE'/>
-<ovr f='tvm/src/tir/schedule/concrete_schedule.cc' l='602' c='_ZN3tvm3tir20ConcreteScheduleNode9ComputeAtERKNS0_7BlockRVERKNS0_6LoopRVEbi'/>
+<ovr f='tvm/src/tir/schedule/concrete_schedule.cc' l='609' c='_ZN3tvm3tir20ConcreteScheduleNode9ComputeAtERKNS0_7BlockRVERKNS0_6LoopRVEbi'/>
 <use f='tvm/src/tir/schedule/primitive/compute_at.cc' l='699' u='c' c='_ZN3tvm3tir15ComputeAtTraits23UnpackedApplyToScheduleENS0_8ScheduleENS0_7BlockRVENS0_6LoopRVENS_4BoolENS_6IntImmE'/>
 <use f='tvm/src/tir/schedule/schedule.cc' l='193' u='a'/>

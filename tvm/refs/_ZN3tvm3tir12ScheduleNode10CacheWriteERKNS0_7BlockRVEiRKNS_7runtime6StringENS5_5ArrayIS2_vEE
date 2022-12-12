@@ -1,4 +1,4 @@
-<dec f='tvm/include/tvm/tir/schedule/schedule.h' l='404' type='tvm::tir::BlockRV tvm::tir::ScheduleNode::CacheWrite(const tvm::tir::BlockRV &amp; block_rv, int write_buffer_index, const tvm::runtime::String &amp; storage_scope)'/>
+<dec f='tvm/include/tvm/tir/schedule/schedule.h' l='405' type='tvm::tir::BlockRV tvm::tir::ScheduleNode::CacheWrite(const tvm::tir::BlockRV &amp; block_rv, int write_buffer_index, const tvm::runtime::String &amp; storage_scope, const Array&lt;tvm::tir::BlockRV&gt; consumer_blocks = {})'/>
 <doc f='tvm/include/tvm/tir/schedule/schedule.h' l='395'>/*!
    * \brief Create a block that writes a buffer region into a write cache. It requires:
    * 1) There is only one block who writes the target buffer.
@@ -6,12 +6,13 @@
    * \param block_rv The producer of the buffer
    * \param write_buffer_index The index of the buffer in block&apos;s write region
    * \param storage_scope The target storage scope
+   * \param consumer_blocks An optional list of consumers to read from cache directly.
    * \return The cache stage block.
    */</doc>
 <use f='tvm/src/meta_schedule/schedule/cuda/winograd.cc' l='72' u='c'/>
 <use f='tvm/src/meta_schedule/schedule/cuda/winograd.cc' l='124' u='c'/>
 <use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling.cc' l='158' u='c' c='_ZNK3tvm13meta_schedule20MultiLevelTilingNode13AddWriteReuseENS0_5StateE'/>
 <use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling_tensor_core.cc' l='257' u='c' c='_ZNK3tvm13meta_schedule30MultiLevelTilingTensorCoreNode23AddWriteReuseTensorCoreENS0_15TensorCoreStateE'/>
-<ovr f='tvm/src/tir/schedule/concrete_schedule.cc' l='554' c='_ZN3tvm3tir20ConcreteScheduleNode10CacheWriteERKNS0_7BlockRVEiRKNS_7runtime6StringE'/>
-<use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='1477' u='c' c='_ZN3tvm3tir16CacheWriteTraits23UnpackedApplyToScheduleENS0_8ScheduleENS0_7BlockRVENS_7IntegerENS_7runtime6StringE'/>
+<ovr f='tvm/src/tir/schedule/concrete_schedule.cc' l='554' c='_ZN3tvm3tir20ConcreteScheduleNode10CacheWriteERKNS0_7BlockRVEiRKNS_7runtime6StringENS5_5ArrayIS2_vEE'/>
+<use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='1523' u='c' c='_ZN3tvm3tir16CacheWriteTraits23UnpackedApplyToScheduleENS0_8ScheduleENS0_7BlockRVENS_7runtime5ArrayIS3_vEENS_7IntegerENS4_6StringE'/>
 <use f='tvm/src/tir/schedule/schedule.cc' l='181' u='a'/>

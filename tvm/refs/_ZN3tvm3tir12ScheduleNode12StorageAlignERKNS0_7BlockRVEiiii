@@ -1,5 +1,5 @@
-<dec f='tvm/include/tvm/tir/schedule/schedule.h' l='552' type='void tvm::tir::ScheduleNode::StorageAlign(const tvm::tir::BlockRV &amp; block_rv, int buffer_index, int axis, int factor, int offset)'/>
-<doc f='tvm/include/tvm/tir/schedule/schedule.h' l='540'>/*!
+<dec f='tvm/include/tvm/tir/schedule/schedule.h' l='554' type='void tvm::tir::ScheduleNode::StorageAlign(const tvm::tir::BlockRV &amp; block_rv, int buffer_index, int axis, int factor, int offset)'/>
+<doc f='tvm/include/tvm/tir/schedule/schedule.h' l='542'>/*!
    * \brief Set alignment requirement for specific dimension such that
    *        stride[axis] == k * factor + offset for some k. This is useful to set memory layout for
    *        more friendly memory access pattern. For example, we can set alignment to be factor=2,
@@ -13,6 +13,6 @@
    */</doc>
 <use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling_tensor_core.cc' l='297' u='c' c='_ZNK3tvm13meta_schedule30MultiLevelTilingTensorCoreNode22AddReadReuseTensorCoreENS0_15TensorCoreStateE'/>
 <use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling_tensor_core.cc' l='299' u='c' c='_ZNK3tvm13meta_schedule30MultiLevelTilingTensorCoreNode22AddReadReuseTensorCoreENS0_15TensorCoreStateE'/>
-<ovr f='tvm/src/tir/schedule/concrete_schedule.cc' l='656' c='_ZN3tvm3tir20ConcreteScheduleNode12StorageAlignERKNS0_7BlockRVEiiii'/>
+<ovr f='tvm/src/tir/schedule/concrete_schedule.cc' l='663' c='_ZN3tvm3tir20ConcreteScheduleNode12StorageAlignERKNS0_7BlockRVEiiii'/>
 <use f='tvm/src/tir/schedule/primitive/block_annotate.cc' l='313' u='c' c='_ZN3tvm3tir18StorageAlignTraits23UnpackedApplyToScheduleENS0_8ScheduleENS0_7BlockRVENS_7IntegerES4_S4_S4_'/>
 <use f='tvm/src/tir/schedule/schedule.cc' l='207' u='a'/>

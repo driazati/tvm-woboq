@@ -1,5 +1,5 @@
-<dec f='tvm/include/tvm/tir/schedule/schedule.h' l='414' type='Array&lt;tvm::tir::BlockRV&gt; tvm::tir::ScheduleNode::CacheInplace(const tvm::tir::BlockRV &amp; block_rv, int read_buffer_index, const tvm::runtime::String &amp; storage_scope)'/>
-<doc f='tvm/include/tvm/tir/schedule/schedule.h' l='406'>/*!
+<dec f='tvm/include/tvm/tir/schedule/schedule.h' l='416' type='Array&lt;tvm::tir::BlockRV&gt; tvm::tir::ScheduleNode::CacheInplace(const tvm::tir::BlockRV &amp; block_rv, int read_buffer_index, const tvm::runtime::String &amp; storage_scope)'/>
+<doc f='tvm/include/tvm/tir/schedule/schedule.h' l='408'>/*!
    * \brief Create 2 blocks that read&amp;write a buffer region into a read/write cache.
    * It requires the the target block both read &amp; write the target buffer.
    * \param block_rv The target block operates on the target buffer.
@@ -7,6 +7,6 @@
    * \param storage_scope The target storage scope
    * \return The cache stage blocks, cache read block together with cache write block.
    */</doc>
-<ovr f='tvm/src/tir/schedule/concrete_schedule.cc' l='564' c='_ZN3tvm3tir20ConcreteScheduleNode12CacheInplaceERKNS0_7BlockRVEiRKNS_7runtime6StringE'/>
-<use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='1505' u='c' c='_ZN3tvm3tir18CacheInplaceTraits23UnpackedApplyToScheduleENS0_8ScheduleENS0_7BlockRVENS_7IntegerENS_7runtime6StringE'/>
+<ovr f='tvm/src/tir/schedule/concrete_schedule.cc' l='571' c='_ZN3tvm3tir20ConcreteScheduleNode12CacheInplaceERKNS0_7BlockRVEiRKNS_7runtime6StringE'/>
+<use f='tvm/src/tir/schedule/primitive/cache_read_write.cc' l='1555' u='c' c='_ZN3tvm3tir18CacheInplaceTraits23UnpackedApplyToScheduleENS0_8ScheduleENS0_7BlockRVENS_7IntegerENS_7runtime6StringE'/>
 <use f='tvm/src/tir/schedule/schedule.cc' l='183' u='a'/>
