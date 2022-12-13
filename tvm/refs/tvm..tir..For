@@ -298,7 +298,7 @@
 <size>8</size>
 <use f='tvm/src/tir/transforms/manifest_shared_memory_local_stage.cc' l='140' c='_ZN3tvm3tir25IntermediateStageRewriter14MakeLocalStageEPKNS0_9BlockNodeERKNS0_6BufferENS_7runtime5ArrayINS_8PrimExprEvEESt6vectorIPKNS0_7ForNodeESaISF9837013'/>
 <size>8</size>
-<use f='tvm/src/tir/transforms/plan_update_buffer_allocation_location.cc' l='133' c='_ZN3tvm3tir23BufferAllocationLocator10VisitStmt_EPKNS0_7ForNodeE'/>
+<use f='tvm/src/tir/transforms/plan_update_buffer_allocation_location.cc' l='144' c='_ZN3tvm3tir23BufferAllocationLocator10VisitStmt_EPKNS0_7ForNodeE'/>
 <size>8</size>
 <use f='tvm/src/tir/transforms/storage_flatten.cc' l='1631' c='_ZN3tvm3tir16StorageFlattener10VisitStmt_EPKNS0_12PrefetchNodeE'/>
 <use f='tvm/src/tir/transforms/storage_flatten.cc' l='1638' c='_ZN3tvm3tir16StorageFlattener10VisitStmt_EPKNS0_12PrefetchNodeE'/>
