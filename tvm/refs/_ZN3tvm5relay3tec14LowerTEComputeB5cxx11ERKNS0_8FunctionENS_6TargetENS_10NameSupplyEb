@@ -1,12 +1,12 @@
 <dec f='tvm/src/relay/backend/te_compiler_cache.h' l='223' type='std::tuple&lt;Array&lt;te::Tensor&gt;, Array&lt;runtime::NDArray&gt;, std::string&gt; tvm::relay::tec::LowerTECompute(const tvm::relay::Function &amp; source_func, tvm::Target target, tvm::NameSupply constant_name_supply, bool return_inputs = true)'/>
 <doc f='tvm/src/relay/backend/te_compiler_cache.h' l='214'>/*!
- * \brief Lowers Relay primitive Function to TE Compute
+ * \brief Lower Relay primitive Function to TE Compute
  * \param source_func The primitive function to be lowered.
- * \param target The target we want to create schedule for.
- * \param constant_name_supply A name supplier for constants.
+ * \param target The compilation target.
+ * \param constant_name_supply A name supplier for constants
  *  across different invocations of this function.
  * \param return_inputs If true, prepend input tensors to the output array of tensors.
  * \return Tuple of the lowered TE compute, constant raw data, and fused function name.
  */</doc>
-<use f='tvm/src/relay/backend/task_extraction.cc' l='88' u='c' c='_ZN3tvm5relay7backend11ExtractTaskENS_8IRModuleENS_6TargetENS_7runtime3MapINS4_6StringENS4_7NDArrayEvvEES6_'/>
 <def f='tvm/src/relay/backend/te_compiler_cache.cc' l='1065' ll='1089' type='std::tuple&lt;Array&lt;te::Tensor&gt;, Array&lt;runtime::NDArray&gt;, std::string&gt; tvm::relay::tec::LowerTECompute(const tvm::relay::Function &amp; source_func, tvm::Target target, tvm::NameSupply constant_name_supply, bool return_inputs = true)'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='1098' u='c' c='_ZN3tvm5relay3tec15LowerToPrimFuncB5cxx11ERKNS0_8FunctionENS_6TargetENS_10NameSupplyE'/>

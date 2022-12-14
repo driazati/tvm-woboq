@@ -1,0 +1,12 @@
+<dec f='tvm/src/relay/backend/te_compiler_cache.h' l='235' type='std::pair&lt;Optional&lt;tir::PrimFunc&gt;, std::string&gt; tvm::relay::tec::LowerToPrimFunc(const tvm::relay::Function &amp; relay_func, tvm::Target target, tvm::NameSupply constant_name_supply)'/>
+<doc f='tvm/src/relay/backend/te_compiler_cache.h' l='227'>/*!
+ * \brief Lower Relay Function to TIR PrimFunc, by composing LowerTECompute and CreatePrimFunc.
+ * \param relay_func The primitive function to be lowered.
+ * \param target The compilation target.
+ * \param constant_name_supply A name supplier for constants
+ *  across different invocations of this function.
+ * \return A pair of the created prim func and the name of the fused function.
+ */</doc>
+<use f='tvm/src/relay/backend/task_extraction.cc' l='87' u='c' c='_ZN3tvm5relay7backend11ExtractTaskENS_8IRModuleENS_6TargetENS_7runtime3MapINS4_6StringENS4_7NDArrayEvvEES6_'/>
+<def f='tvm/src/relay/backend/te_compiler_cache.cc' l='1091' ll='1101' type='std::pair&lt;Optional&lt;tir::PrimFunc&gt;, std::string&gt; tvm::relay::tec::LowerToPrimFunc(const tvm::relay::Function &amp; relay_func, tvm::Target target, tvm::NameSupply constant_name_supply)'/>
+<use f='tvm/src/relay/backend/te_compiler_cache.cc' l='1104' u='c' c='_ZN3tvm5relay3tec15LowerToPrimFuncERKNS0_8FunctionENS_6TargetE'/>
