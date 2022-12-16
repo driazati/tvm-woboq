@@ -18,7 +18,7 @@
 <fun r='_ZN3tvm3tir2EQC1EOS1_'/>
 <fun r='_ZNK3tvm3tir2EQ3getEv'/>
 <fun r='_ZN3tvm3tir2EQ11CopyOnWriteEv'/>
-<use f='tvm/src/arith/const_fold.h' l='393' c='_ZN3tvm5arith12TryConstFoldENS_8PrimExprES1_'/>
+<use f='tvm/src/arith/const_fold.h' l='385' c='_ZN3tvm5arith12TryConstFoldENS_8PrimExprES1_'/>
 <size>8</size>
 <use f='tvm/src/arith/pattern_match.h' l='406' c='_ZN3tvm5aritheqERKNS0_7PatternIT_EERKNS1_IT0_EE'/>
 <use f='tvm/src/arith/pattern_match.h' l='406' c='_ZN3tvm5aritheqERKNS0_7PatternIT_EERKNS1_IT0_EE'/>
