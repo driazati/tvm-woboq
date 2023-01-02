@@ -138,8 +138,8 @@
 <use f='tvm/src/target/llvm/codegen_llvm.cc' l='1478' u='r' c='_ZN3tvm7codegen11CodeGenLLVM10VisitExpr_EPKNS_3tir7ModNodeE'/>
 <use f='tvm/src/target/llvm/codegen_llvm.cc' l='1491' u='r' c='_ZN3tvm7codegen11CodeGenLLVM10VisitExpr_EPKNS_3tir7MinNodeE'/>
 <use f='tvm/src/target/llvm/codegen_llvm.cc' l='1497' u='r' c='_ZN3tvm7codegen11CodeGenLLVM10VisitExpr_EPKNS_3tir7MaxNodeE'/>
-<use f='tvm/src/target/source/codegen_cuda.cc' l='869' u='r' c='_ZZN3tvm7codegen11CodeGenCUDA10VisitExpr_EPKNS_3tir8CallNodeERSoEN16LowerFloorDivMod10VisitExpr_EPKNS2_12FloorDivNodeE'/>
-<use f='tvm/src/target/source/codegen_cuda.cc' l='872' u='r' c='_ZZN3tvm7codegen11CodeGenCUDA10VisitExpr_EPKNS_3tir8CallNodeERSoEN16LowerFloorDivMod10VisitExpr_EPKNS2_12FloorModNodeE'/>
+<use f='tvm/src/target/source/codegen_cuda.cc' l='886' u='r' c='_ZZN3tvm7codegen11CodeGenCUDA10VisitExpr_EPKNS_3tir8CallNodeERSoEN16LowerFloorDivMod10VisitExpr_EPKNS2_12FloorDivNodeE'/>
+<use f='tvm/src/target/source/codegen_cuda.cc' l='889' u='r' c='_ZZN3tvm7codegen11CodeGenCUDA10VisitExpr_EPKNS_3tir8CallNodeERSoEN16LowerFloorDivMod10VisitExpr_EPKNS2_12FloorModNodeE'/>
 <use f='tvm/src/target/stackvm/codegen_stackvm.cc' l='347' u='r' c='_ZN3tvm7codegen14CodeGenStackVM10VisitExpr_EPKNS_3tir7AddNodeE'/>
 <use f='tvm/src/target/stackvm/codegen_stackvm.cc' l='349' u='r' c='_ZN3tvm7codegen14CodeGenStackVM10VisitExpr_EPKNS_3tir7SubNodeE'/>
 <use f='tvm/src/target/stackvm/codegen_stackvm.cc' l='351' u='r' c='_ZN3tvm7codegen14CodeGenStackVM10VisitExpr_EPKNS_3tir7MulNodeE'/>

@@ -36,7 +36,7 @@
 <size>8</size>
 <use f='tvm/src/arith/rewrite_simplify.cc' l='734' c='_ZN3tvm5arith17RewriteSimplifier4Impl10VisitExpr_EPKNS_3tir7ModNodeE'/>
 <size>8</size>
-<use f='tvm/src/target/source/codegen_cuda.cc' l='872' c='_ZZN3tvm7codegen11CodeGenCUDA10VisitExpr_EPKNS_3tir8CallNodeERSoEN16LowerFloorDivMod10VisitExpr_EPKNS2_12FloorModNodeE'/>
+<use f='tvm/src/target/source/codegen_cuda.cc' l='889' c='_ZZN3tvm7codegen11CodeGenCUDA10VisitExpr_EPKNS_3tir8CallNodeERSoEN16LowerFloorDivMod10VisitExpr_EPKNS2_12FloorModNodeE'/>
 <size>8</size>
 <use f='tvm/src/te/autodiff/ad_simplify.cc' l='203' c='_ZN3tvm2te23NonzeroConditionFunctor10VisitExpr_EPKNS_3tir7ModNodeE'/>
 <size>8</size>
