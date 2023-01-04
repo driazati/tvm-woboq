@@ -1,0 +1,25 @@
+<dec f='tvm/src/runtime/graph_executor/debug/graph_executor_debug.h' l='63' type='std::string tvm::runtime::GraphExecutorDebug::RunIndividual(int number, int repeat, int min_repeat_ms, int limit_zero_time_iterations, int cooldown_interval_ms, int repeats_to_cooldown)'/>
+<def f='tvm/src/runtime/graph_executor/debug/graph_executor_debug.cc' l='40' ll='86' type='std::string tvm::runtime::GraphExecutorDebug::RunIndividual(int number, int repeat, int min_repeat_ms, int limit_zero_time_iterations, int cooldown_interval_ms, int repeats_to_cooldown)'/>
+<use f='tvm/src/runtime/graph_executor/debug/graph_executor_debug.cc' l='228' u='c' c='_ZN3tvm7runtime18GraphExecutorDebug11GetFunctionERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKNS0_9ObjectPtrINS0_6ObjectEEE'/>
+<doc f='tvm/src/runtime/graph_executor/debug/graph_executor_debug.h' l='41'>/*!
+   * \brief Run each operation in the graph and get the time per op for all ops.
+   * \param number The number of times to run this function for taking average.
+   * \param repeat The number of times to repeat the measurement.
+   *        In total, the function will be invoked (1 + number x repeat) times,
+   *        where the first one is warmed up and will be discarded in case
+   *        there is lazy initialization.
+   * \param min_repeat_ms The minimum duration of one `repeat` in milliseconds.
+   *        By default, one `repeat` contains `number` runs. If this parameter is set,
+   *        the parameters `number` will be dynamically adjusted to meet the
+   *        minimum duration requirement of one `repeat`.
+   * \param limit_zero_time_iterations The maximum number of repeats when
+   *        measured time is equal to 0.  It helps to avoid hanging during
+   *        measurements.
+   * \param cooldown_interval_ms The cooldown interval in milliseconds between the number of repeats
+   *        defined by `repeats_to_cooldown`.
+   * \param repeats_to_cooldown The number of repeats before the
+   *        cooldown is activated.
+   * \return Returns a string with an encoded byte array. Where the first 8 bytes are int64_t
+   * representing the number of layers. Next the encoded real numbers are float32_t in the number of
+   * repeat multiplied by the number of layers.
+   */</doc>

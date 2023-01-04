@@ -1,0 +1,17 @@
+<dec f='tvm/src/runtime/graph_executor/debug/graph_executor_debug.h' l='138' type='profiling::Report tvm::runtime::GraphExecutorDebug::Profile(Array&lt;profiling::MetricCollector&gt; collectors)'/>
+<use f='tvm/src/runtime/graph_executor/debug/graph_executor_debug.cc' l='266' u='c' c='_ZN3tvm7runtime18GraphExecutorDebug11GetFunctionERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKNS0_9ObjectPtrINS0_6ObjectEEE'/>
+<use f='tvm/src/runtime/graph_executor/debug/graph_executor_debug.cc' l='268' u='c' c='_ZN3tvm7runtime18GraphExecutorDebug11GetFunctionERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKNS0_9ObjectPtrINS0_6ObjectEEE'/>
+<def f='tvm/src/runtime/graph_executor/debug/graph_executor_debug.cc' l='334' ll='377' type='profiling::Report tvm::runtime::GraphExecutorDebug::Profile(Array&lt;profiling::MetricCollector&gt; collectors)'/>
+<doc f='tvm/src/runtime/graph_executor/debug/graph_executor_debug.h' l='125'>/*!
+   * \brief Profile execution time of the module.
+   *
+   * We run the entire module while recording overall and per-op timing
+   * information. The module may be run multiple times to ensure everything is
+   * warmed up. This function is a more correct reflection of actual runtime of
+   * the module compared to GraphRuntimeDebug::RunIndividual as it runs the
+   * entire graph in order.
+   *
+   * \param collectors Optional user defined `MetricCollector`s to use with this profiling run.
+   *
+   * \returns A table of per-op runtimes and total times.
+   */</doc>
