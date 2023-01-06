@@ -61,7 +61,7 @@
 <use f='tvm/src/script/ir_builder/tir/ir.cc' l='347' c='_ZN3tvm6script10ir_builder3tir13ThreadBindingENS_8PrimExprES3_NS_7runtime6StringENS4_8OptionalINS4_3MapIS5_NS4_9ObjectRefEvvEEEE'/>
 <use f='tvm/src/script/ir_builder/tir/ir.cc' l='369' c='_ZN3tvm6script10ir_builder3tir4GridENS_7runtime5ArrayINS_8PrimExprEvEE'/>
 <size>8</size>
-<use f='tvm/src/target/llvm/codegen_cpu.cc' l='1525' c='_ZN3tvm7codegen10CodeGenCPU10VisitStmt_EPKNS_3tir7ForNodeE'/>
+<use f='tvm/src/target/llvm/codegen_cpu.cc' l='1539' c='_ZN3tvm7codegen10CodeGenCPU10VisitStmt_EPKNS_3tir7ForNodeE'/>
 <size>8</size>
 <use f='tvm/src/te/operation/create_primfunc.cc' l='358' c='_ZN3tvm3tir23GenerateStmtFromComputeERKNS_2te9ComputeOpEPNS0_14CreateFuncInfoEPNS_5arith8AnalyzerE'/>
 <size>8</size>
@@ -280,6 +280,8 @@
 <use f='tvm/src/tir/transforms/inject_software_pipeline.cc' l='1144' c='_ZN3tvm3tir17software_pipeline16PipelineInjector10VisitStmt_EPKNS0_7ForNodeE'/>
 <size>8</size>
 <use f='tvm/src/tir/transforms/inject_virtual_thread.cc' l='466' c='_ZN3tvm3tir10VTInjector12InjectVTLoopENS0_4StmtEb'/>
+<size>8</size>
+<use f='tvm/src/tir/transforms/install_debug_spans.cc' l='125' macro='1' c='_ZN3tvm3tir18DebugInfoInstaller10VisitStmt_EPKNS0_7ForNodeE'/>
 <size>8</size>
 <use f='tvm/src/tir/transforms/ir_utils.cc' l='205' c='_ZN3tvm3tir12IRConvertSSA10VisitStmt_EPKNS0_7ForNodeE'/>
 <size>8</size>

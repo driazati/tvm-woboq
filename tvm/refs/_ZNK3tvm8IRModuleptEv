@@ -2,13 +2,13 @@
 <doc f='tvm/include/tvm/ir/module.h' l='374'>/*! \return mutable pointers to the node. */</doc>
 <use f='tvm/include/tvm/tir/analysis.h' l='67' u='c' c='_ZN3tvm3tir14VisitPrimFuncsERKNS_8IRModuleET_'/>
 <use f='tvm/src/auto_scheduler/feature.cc' l='1414' u='c' c='_ZN3tvm14auto_scheduler29GetPerStoreFeaturesWorkerFuncERKNS0_10SearchTaskERKNS0_5StateEiPSt6vectorIfSaIfEEPSt6atomicIiE'/>
-<use f='tvm/src/driver/driver_api.cc' l='74' u='c' c='_ZN3tvm23ShouldAnnotateEntryFuncENS_8IRModuleE'/>
-<use f='tvm/src/driver/driver_api.cc' l='76' u='c' c='_ZN3tvm23ShouldAnnotateEntryFuncENS_8IRModuleE'/>
-<use f='tvm/src/driver/driver_api.cc' l='420' u='c' c='_ZN3tvm16SplitMixedModuleENS_8IRModuleERKNS_6TargetES3_'/>
-<use f='tvm/src/driver/driver_api.cc' l='457' u='c' c='_ZN3tvm12TIRToRuntimeERKNS_7runtime3MapINS_6TargetENS_8IRModuleEvvEERKS2_'/>
-<use f='tvm/src/driver/driver_api.cc' l='483' u='c' c='_ZN3tvm12TIRToRuntimeERKNS_7runtime3MapINS_6TargetENS_8IRModuleEvvEERKS2_'/>
-<use f='tvm/src/driver/driver_api.cc' l='486' u='c' c='_ZN3tvm12TIRToRuntimeERKNS_7runtime3MapINS_6TargetENS_8IRModuleEvvEERKS2_'/>
-<use f='tvm/src/driver/driver_api.cc' l='586' u='c' c='_ZN3tvm22MixedModulePassManagerENS_8IRModuleENS_6TargetE'/>
+<use f='tvm/src/driver/driver_api.cc' l='75' u='c' c='_ZN3tvm23ShouldAnnotateEntryFuncENS_8IRModuleE'/>
+<use f='tvm/src/driver/driver_api.cc' l='77' u='c' c='_ZN3tvm23ShouldAnnotateEntryFuncENS_8IRModuleE'/>
+<use f='tvm/src/driver/driver_api.cc' l='421' u='c' c='_ZN3tvm16SplitMixedModuleENS_8IRModuleERKNS_6TargetES3_'/>
+<use f='tvm/src/driver/driver_api.cc' l='458' u='c' c='_ZN3tvm12TIRToRuntimeERKNS_7runtime3MapINS_6TargetENS_8IRModuleEvvEERKS2_'/>
+<use f='tvm/src/driver/driver_api.cc' l='484' u='c' c='_ZN3tvm12TIRToRuntimeERKNS_7runtime3MapINS_6TargetENS_8IRModuleEvvEERKS2_'/>
+<use f='tvm/src/driver/driver_api.cc' l='487' u='c' c='_ZN3tvm12TIRToRuntimeERKNS_7runtime3MapINS_6TargetENS_8IRModuleEvvEERKS2_'/>
+<use f='tvm/src/driver/driver_api.cc' l='587' u='c' c='_ZN3tvm22MixedModulePassManagerENS_8IRModuleENS_6TargetE'/>
 <use f='tvm/src/ir/diagnostic.cc' l='233' u='c' c='_ZN3tvm8ReportAtERKNS_17DiagnosticContextERSoRKNS_4SpanERKNS_10DiagnosticE'/>
 <use f='tvm/src/ir/diagnostic.cc' l='234' u='c' c='_ZN3tvm8ReportAtERKNS_17DiagnosticContextERSoRKNS_4SpanERKNS_10DiagnosticE'/>
 <use f='tvm/src/ir/diagnostic.cc' l='237' u='c' c='_ZN3tvm8ReportAtERKNS_17DiagnosticContextERSoRKNS_4SpanERKNS_10DiagnosticE'/>
@@ -62,7 +62,7 @@
 <use f='tvm/src/printer/text_printer.cc' l='56' u='c' c='_ZN3tvm11TextPrinter8PrintModERKNS_8IRModuleE'/>
 <use f='tvm/src/printer/text_printer.cc' l='62' u='c' c='_ZN3tvm11TextPrinter8PrintModERKNS_8IRModuleE'/>
 <use f='tvm/src/printer/text_printer.cc' l='69' u='c' c='_ZN3tvm11TextPrinter8PrintModERKNS_8IRModuleE'/>
-<use f='tvm/src/printer/tir_text_printer.cc' l='160' u='c' c='_ZN3tvm3tir14TIRTextPrinter13PrintIRModuleERKNS_8IRModuleE'/>
+<use f='tvm/src/printer/tir_text_printer.cc' l='162' u='c' c='_ZN3tvm3tir14TIRTextPrinter13PrintIRModuleERKNS_8IRModuleE'/>
 <use f='tvm/src/printer/tvmscript_printer.cc' l='1611' u='c' c='_ZN3tvm3tir16TVMScriptPrinter13PrintIRModuleERKNS_8IRModuleE'/>
 <use f='tvm/src/relay/analysis/call_graph.h' l='105' u='c' c='_ZNK3tvm5relay13CallGraphNodeixERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
 <use f='tvm/src/relay/analysis/call_graph.h' l='115' u='c' c='_ZN3tvm5relay13CallGraphNodeixERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
@@ -405,6 +405,8 @@
 <use f='tvm/src/tir/transforms/extract_constants.cc' l='81' u='c' c='_ZN3tvm3tir9transform24ExtractPrimFuncConstantsEv'/>
 <use f='tvm/src/tir/transforms/extract_constants.cc' l='97' u='c' c='_ZN3tvm3tir9transform24ExtractPrimFuncConstantsEv'/>
 <use f='tvm/src/tir/transforms/extract_constants.cc' l='100' u='c' c='_ZN3tvm3tir9transform24ExtractPrimFuncConstantsEv'/>
+<use f='tvm/src/tir/transforms/install_debug_spans.cc' l='132' u='c' c='_ZN3tvm3tir9transform17InstallDebugSpansEv'/>
+<use f='tvm/src/tir/transforms/install_debug_spans.cc' l='135' u='c' c='_ZN3tvm3tir9transform17InstallDebugSpansEv'/>
 <use f='tvm/src/tir/transforms/legalize_packed_calls.cc' l='62' u='c' c='_ZN3tvm3tir19PackedCallLegalizer10VisitStmt_EPKNS0_12EvaluateNodeE'/>
 <use f='tvm/src/tir/transforms/primfunc_utils.cc' l='40' u='c' c='_ZN3tvm3tir9transform17AnnotateEntryFuncEv'/>
 <use f='tvm/src/tir/transforms/split_host_device.cc' l='320' u='c' c='_ZN3tvm3tir18HostDeviceSplitter15SplitDeviceFuncENS0_4StmtE'/>

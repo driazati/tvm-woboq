@@ -40,6 +40,8 @@
 <use f='tvm/src/tir/op/op.cc' l='508' c='_ZN3tvm9not_equalENS_8PrimExprES0_NS_4SpanE'/>
 <use f='tvm/src/tir/op/op.cc' l='509' c='_ZN3tvm9not_equalENS_8PrimExprES0_NS_4SpanE'/>
 <size>8</size>
+<use f='tvm/src/tir/transforms/install_debug_spans.cc' l='114' macro='1' c='_ZN3tvm3tir18DebugInfoInstaller10VisitExpr_EPKNS0_6NENodeE'/>
+<size>8</size>
 <use f='tvm/src/tir/transforms/loop_partition.cc' l='317' c='_ZN3tvm3tir15PartitionFinder11InverseCondERKNS_8PrimExprE'/>
 <size>8</size>
 <use f='tvm/src/tir/transforms/vectorize_loop.cc' l='213' c='_ZN3tvm3tir10Vectorizer10VisitExpr_EPKNS0_6NENodeE'/>

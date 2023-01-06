@@ -23,6 +23,8 @@
    *        Reserved debug information.
    */</doc>
 <use f='tvm/src/relay/backend/te_compiler_cache.cc' l='455' u='r' c='_ZN3tvm5relay3tec28AllocateConstReplaceConstant10VisitStmt_EPKNS_3tir17AllocateConstNodeE'/>
+<use f='tvm/src/target/llvm/codegen_llvm.cc' l='795' u='r' c='_ZN3tvm7codegen11CodeGenLLVM15CreateSerialForEPN4llvm5ValueES4_S4_RKNS_3tir3VarERKNS5_4StmtE'/>
+<use f='tvm/src/target/llvm/codegen_llvm.cc' l='1988' u='r' c='_ZN3tvm7codegen11CodeGenLLVM17EmitDebugLocationEPKNS_3tir8StmtNodeE'/>
 <use f='tvm/src/tir/analysis/device_constraint_utils.cc' l='314' u='r' c='_ZN3tvm3tir12_GLOBAL__N_129ApplyDeviceConstraintsMutator10VisitStmt_EPKNS0_15BufferStoreNodeE'/>
 <use f='tvm/src/tir/analysis/device_constraint_utils.cc' l='325' u='r' c='_ZN3tvm3tir12_GLOBAL__N_129ApplyDeviceConstraintsMutator10VisitStmt_EPKNS0_17BufferRealizeNodeE'/>
 <use f='tvm/src/tir/analysis/device_constraint_utils.cc' l='339' u='r' c='_ZN3tvm3tir12_GLOBAL__N_129ApplyDeviceConstraintsMutator10VisitStmt_EPKNS0_12PrefetchNodeE'/>
@@ -60,6 +62,24 @@
 <use f='tvm/src/tir/transforms/inject_rolling_buffer.cc' l='94' u='r' c='_ZN3tvm3tir21RollingBufferInjector10VisitStmt_EPKNS0_7ForNodeE'/>
 <use f='tvm/src/tir/transforms/inject_rolling_buffer.cc' l='208' u='r' c='_ZN3tvm3tir21RollingBufferInjector10VisitStmt_EPKNS0_12AttrStmtNodeE'/>
 <use f='tvm/src/tir/transforms/inject_rolling_buffer.cc' l='260' u='r' c='_ZN3tvm3tir21RollingBufferInjector10VisitStmt_EPKNS0_15BufferStoreNodeE'/>
+<use f='tvm/src/tir/transforms/install_debug_spans.cc' l='122' u='w' c='_ZN3tvm3tir18DebugInfoInstaller10VisitStmt_EPKNS0_12AttrStmtNodeE'/>
+<use f='tvm/src/tir/transforms/install_debug_spans.cc' l='122' u='w' c='_ZN3tvm3tir18DebugInfoInstaller10VisitStmt_EPKNS0_14IfThenElseNodeE'/>
+<use f='tvm/src/tir/transforms/install_debug_spans.cc' l='122' u='w' c='_ZN3tvm3tir18DebugInfoInstaller10VisitStmt_EPKNS0_11LetStmtNodeE'/>
+<use f='tvm/src/tir/transforms/install_debug_spans.cc' l='122' u='w' c='_ZN3tvm3tir18DebugInfoInstaller10VisitStmt_EPKNS0_7ForNodeE'/>
+<use f='tvm/src/tir/transforms/install_debug_spans.cc' l='122' u='w' c='_ZN3tvm3tir18DebugInfoInstaller10VisitStmt_EPKNS0_9WhileNodeE'/>
+<use f='tvm/src/tir/transforms/install_debug_spans.cc' l='122' u='w' c='_ZN3tvm3tir18DebugInfoInstaller10VisitStmt_EPKNS0_12AllocateNodeE'/>
+<use f='tvm/src/tir/transforms/install_debug_spans.cc' l='122' u='w' c='_ZN3tvm3tir18DebugInfoInstaller10VisitStmt_EPKNS0_17AllocateConstNodeE'/>
+<use f='tvm/src/tir/transforms/install_debug_spans.cc' l='122' u='w' c='_ZN3tvm3tir18DebugInfoInstaller10VisitStmt_EPKNS0_14DeclBufferNodeE'/>
+<use f='tvm/src/tir/transforms/install_debug_spans.cc' l='122' u='w' c='_ZN3tvm3tir18DebugInfoInstaller10VisitStmt_EPKNS0_9StoreNodeE'/>
+<use f='tvm/src/tir/transforms/install_debug_spans.cc' l='122' u='w' c='_ZN3tvm3tir18DebugInfoInstaller10VisitStmt_EPKNS0_15BufferStoreNodeE'/>
+<use f='tvm/src/tir/transforms/install_debug_spans.cc' l='122' u='w' c='_ZN3tvm3tir18DebugInfoInstaller10VisitStmt_EPKNS0_17BufferRealizeNodeE'/>
+<use f='tvm/src/tir/transforms/install_debug_spans.cc' l='122' u='w' c='_ZN3tvm3tir18DebugInfoInstaller10VisitStmt_EPKNS0_14AssertStmtNodeE'/>
+<use f='tvm/src/tir/transforms/install_debug_spans.cc' l='122' u='w' c='_ZN3tvm3tir18DebugInfoInstaller10VisitStmt_EPKNS0_17ProducerStoreNodeE'/>
+<use f='tvm/src/tir/transforms/install_debug_spans.cc' l='122' u='w' c='_ZN3tvm3tir18DebugInfoInstaller10VisitStmt_EPKNS0_19ProducerRealizeNodeE'/>
+<use f='tvm/src/tir/transforms/install_debug_spans.cc' l='122' u='w' c='_ZN3tvm3tir18DebugInfoInstaller10VisitStmt_EPKNS0_12PrefetchNodeE'/>
+<use f='tvm/src/tir/transforms/install_debug_spans.cc' l='122' u='w' c='_ZN3tvm3tir18DebugInfoInstaller10VisitStmt_EPKNS0_11SeqStmtNodeE'/>
+<use f='tvm/src/tir/transforms/install_debug_spans.cc' l='122' u='w' c='_ZN3tvm3tir18DebugInfoInstaller10VisitStmt_EPKNS0_12EvaluateNodeE'/>
+<use f='tvm/src/tir/transforms/install_debug_spans.cc' l='122' u='w' c='_ZN3tvm3tir18DebugInfoInstaller10VisitStmt_EPKNS0_16BlockRealizeNodeE'/>
 <use f='tvm/src/tir/transforms/lower_thread_allreduce.cc' l='173' u='r' c='_ZN3tvm3tir22ThreadAllreduceBuilder10VisitStmt_EPKNS0_15BufferStoreNodeE'/>
 <use f='tvm/src/tir/transforms/lower_thread_allreduce.cc' l='186' u='r' c='_ZN3tvm3tir22ThreadAllreduceBuilder10VisitStmt_EPKNS0_15BufferStoreNodeE'/>
 <use f='tvm/src/tir/transforms/merge_dynamic_shared_memory_allocations.cc' l='298' u='r' c='_ZN3tvm3tir27DynamicSharedMemoryRewriter10VisitStmt_EPKNS0_12AttrStmtNodeE'/>
