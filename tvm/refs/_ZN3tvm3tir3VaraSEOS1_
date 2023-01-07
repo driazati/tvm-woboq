@@ -11,7 +11,8 @@
 <use f='tvm/src/target/llvm/codegen_cpu.cc' l='712' u='c' c='_ZN3tvm7codegen10CodeGenCPU20CreateParallelLaunchERKNS_3tir4StmtEiNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE'/>
 <use f='tvm/src/te/operation/op_utils.cc' l='94' u='c' c='_ZN3tvm2te12MakeLoopNestERKNS0_5StageERKSt13unordered_mapINS_3tir7IterVarENS_5RangeESt4hashIS6_ESt8equal_toIS6_ESaISt4pairIKS6_S7_EEEmbRKSt13unordered9689248'/>
 <use f='tvm/src/tir/ir/buffer.cc' l='559' u='c' c='_ZN3tvm3tir6BufferC1ENS0_3VarENS_7runtime8DataTypeENS3_5ArrayINS_8PrimExprEvEES7_S6_NS3_6StringEiiNS0_10BufferTypeENS5_INS_6IntImmEvEENS_4SpanE'/>
-<use f='tvm/src/tir/ir/data_type_rewriter.cc' l='345' u='c' c='_ZN3tvm3tir21IndexDataTypeRewriter12VisitIterVarERKNS0_7IterVarE'/>
+<use f='tvm/src/tir/ir/data_type_rewriter.cc' l='374' u='c' c='_ZN3tvm3tir21IndexDataTypeRewriter12VisitIterVarERKNS0_7IterVarE'/>
+<use f='tvm/src/tir/ir/data_type_rewriter.cc' l='571' u='c' c='_ZN3tvm3tir23IndexDataTypeNormalizer10VisitExpr_EPKNS0_7VarNodeE'/>
 <use f='tvm/src/tir/ir/expr.cc' l='685' u='c' c='_ZN3tvm3tir4LoadC1ENS_7runtime8DataTypeENS0_3VarENS_8PrimExprES5_NS_4SpanE'/>
 <use f='tvm/src/tir/ir/expr.cc' l='789' u='c' c='_ZN3tvm3tir3LetC1ENS0_3VarENS_8PrimExprES3_NS_4SpanE'/>
 <use f='tvm/src/tir/ir/stmt.cc' l='48' u='c' c='_ZN3tvm3tir7LetStmtC1ENS0_3VarENS_8PrimExprENS0_4StmtENS_4SpanE'/>
@@ -37,6 +38,7 @@
 <use f='tvm/src/tir/transforms/ir_utils.cc' l='244' u='c' c='_ZN3tvm3tir12IRConvertSSA14ScopedRedefineC1EPS1_NS0_3VarE'/>
 <use f='tvm/src/tir/transforms/lower_cross_thread_reduction.cc' l='386' u='c' c='_ZN3tvm3tir23TransformReductionBlockEPKNS0_16BlockRealizeNodeERKNS_7runtime8OptionalINS4_5ArrayINS0_6BufferEvEEEERKS8_SD_RKNS6_INS_8PrimExprEvEERKNS0_10264619'/>
 <use f='tvm/src/tir/transforms/manifest_shared_memory_local_stage.cc' l='138' u='c' c='_ZN3tvm3tir25IntermediateStageRewriter14MakeLocalStageEPKNS0_9BlockNodeERKNS0_6BufferENS_7runtime5ArrayINS_8PrimExprEvEESt6vectorIPKNS0_7ForNodeESaISF9837013'/>
+<use f='tvm/src/tir/transforms/narrow_datatype.cc' l='237' u='c' c='_ZN3tvm3tir22NarrowDataTypeRewriter10VisitExpr_EPKNS0_7VarNodeE'/>
 <use f='tvm/src/tir/transforms/renew_defs.cc' l='40' u='c' c='_ZN3tvm3tir15RenewDefMutator10VisitStmt_EPKNS0_11LetStmtNodeE'/>
 <use f='tvm/src/tir/transforms/renew_defs.cc' l='40' u='c' c='_ZN3tvm3tir15RenewDefMutator10VisitStmt_EPKNS0_12AllocateNodeE'/>
 <use f='tvm/src/tir/transforms/renew_defs.cc' l='40' u='c' c='_ZN3tvm3tir15RenewDefMutator10VisitStmt_EPKNS0_17AllocateConstNodeE'/>

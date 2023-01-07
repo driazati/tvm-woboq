@@ -75,8 +75,8 @@
 <use f='tvm/src/te/operation/op_utils.cc' l='139' c='_ZN3tvm2te12MakeLoopNestERKNS0_5StageERKSt13unordered_mapINS_3tir7IterVarENS_5RangeESt4hashIS6_ESt8equal_toIS6_ESaISt4pairIKS6_S7_EEEmbRKSt13unordered9689248'/>
 <size>8</size>
 <use f='tvm/src/tir/ir/data_type_rewriter.cc' l='40' c='_ZN3tvm3tir17DataTypeLegalizer10VisitStmt_EPKNS0_7ForNodeE'/>
-<use f='tvm/src/tir/ir/data_type_rewriter.cc' l='473' c='_ZN3tvm3tir21IndexDataTypeRewriter10VisitStmt_EPKNS0_7ForNodeE'/>
-<use f='tvm/src/tir/ir/data_type_rewriter.cc' l='473' c='_ZN3tvm3tir21IndexDataTypeRewriter10VisitStmt_EPKNS0_7ForNodeE'/>
+<use f='tvm/src/tir/ir/data_type_rewriter.cc' l='505' c='_ZN3tvm3tir21IndexDataTypeRewriter10VisitStmt_EPKNS0_7ForNodeE'/>
+<use f='tvm/src/tir/ir/data_type_rewriter.cc' l='505' c='_ZN3tvm3tir21IndexDataTypeRewriter10VisitStmt_EPKNS0_7ForNodeE'/>
 <size>8</size>
 <use f='tvm/src/tir/ir/stmt.cc' l='185'/>
 <size>8</size>

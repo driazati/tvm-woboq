@@ -1,9 +1,9 @@
 <inh f='tvm/include/tvm/tir/stmt_functor.h' l='314' c='tvm::tir::StmtExprMutator'/>
-<def f='tvm/include/tvm/tir/data_type_rewriter.h' l='50' ll='82'/>
-<ovr f='tvm/include/tvm/tir/data_type_rewriter.h' l='93' c='tvm::tir::IndexDataTypeRewriter'/>
-<use f='tvm/include/tvm/tir/data_type_rewriter.h' l='93'/>
-<use f='tvm/include/tvm/tir/data_type_rewriter.h' l='95'/>
-<size>80</size>
+<def f='tvm/include/tvm/tir/data_type_rewriter.h' l='50' ll='86'/>
+<ovr f='tvm/include/tvm/tir/data_type_rewriter.h' l='97' c='tvm::tir::IndexDataTypeRewriter'/>
+<use f='tvm/include/tvm/tir/data_type_rewriter.h' l='97'/>
+<use f='tvm/include/tvm/tir/data_type_rewriter.h' l='99'/>
+<size>136</size>
 <doc f='tvm/include/tvm/tir/data_type_rewriter.h' l='34'>/*!
  * \brief Legalize the data types of expressions to make sure they are consistent with other
  * parts of the program.
@@ -24,6 +24,8 @@
 <fun r='_ZN3tvm3tir17DataTypeLegalizer10VisitStmt_EPKNS0_12AttrStmtNodeE'/>
 <fun r='_ZN3tvm3tir17DataTypeLegalizer10VisitStmt_EPKNS0_16BlockRealizeNodeE'/>
 <fun r='_ZN3tvm3tir17DataTypeLegalizer10VisitStmt_EPKNS0_9BlockNodeE'/>
+<fun r='_ZN3tvm3tir17DataTypeLegalizer10VisitStmt_EPKNS0_11LetStmtNodeE'/>
+<fun r='_ZN3tvm3tir17DataTypeLegalizer10VisitExpr_EPKNS0_7VarNodeE'/>
 <fun r='_ZN3tvm3tir17DataTypeLegalizer10VisitExpr_EPKNS0_10SelectNodeE'/>
 <fun r='_ZN3tvm3tir17DataTypeLegalizer10VisitExpr_EPKNS0_8RampNodeE'/>
 <fun r='_ZN3tvm3tir17DataTypeLegalizer10VisitExpr_EPKNS0_7AddNodeE'/>
@@ -44,6 +46,7 @@
 <fun r='_ZN3tvm3tir17DataTypeLegalizer10VisitExpr_EPKNS0_8CallNodeE'/>
 <fun r='_ZN3tvm3tir17DataTypeLegalizer10VisitExpr_EPKNS0_8CastNodeE'/>
 <mbr r='tvm::tir::DataTypeLegalizer::ivmap_' o='192' t='std::unordered_map&lt;const IterVarNode *, IterVar&gt;'/>
+<mbr r='tvm::tir::DataTypeLegalizer::var_remap_' o='640' t='std::unordered_map&lt;const VarNode *, Var&gt;'/>
 <ovr f='tvm/src/tir/ir/stmt_functor.cc' l='810' c='tvm::tir::IRSubstituteWithDataTypeLegalization'/>
 <use f='tvm/src/tir/ir/stmt_functor.cc' l='810'/>
-<size>80</size>
+<size>136</size>
