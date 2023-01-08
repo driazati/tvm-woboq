@@ -1,0 +1,19 @@
+<dec f='tvm/include/tvm/script/printer/ir_docsifier.h' l='197' type='void tvm::script::printer::IRDocsifierNode::Define(const tvm::runtime::ObjectRef &amp; obj, const tvm::script::printer::Frame &amp; frame, tvm::script::printer::IRDocsifierNode::DocCreator doc_factory)'/>
+<doc f='tvm/include/tvm/script/printer/ir_docsifier.h' l='181'>/*!
+   * \brief Define variable by doc factory.
+   * \param obj The variable object.
+   * \param frame The frame that this variable is defined in.
+   * \param doc_factory The function to return an ExprDoc object for this variable.
+   *
+   * This function is a special form of `Define`. Variable is mapped to ExprDoc rather
+   * than IdDoc. It&apos;s useful when a variable is implicitly defined without a name, like
+   * the buf-&gt;data in TIR, which should be mapped to `AttrDoc(IdDoc(&quot;&lt;buffer_name&gt;&quot;), &quot;data&quot;)`.
+   *
+   * This function takes a DocFactory instead of Doc. It&apos;s because GetVarDoc needs to
+   * return a new Doc object every time it&apos;s called, as the returned doc will have
+   * different `source_path`. Currently there isn&apos;t a good way to deep copy a TVMObject
+   * so VarTable needs to call a factory function to get a freshly-constructed Doc object
+   * every time GetVarDoc is called.
+   */</doc>
+<def f='tvm/src/script/printer/ir_docsifier.cc' l='51' ll='57' type='void tvm::script::printer::IRDocsifierNode::Define(const tvm::runtime::ObjectRef &amp; obj, const tvm::script::printer::Frame &amp; frame, tvm::script::printer::IRDocsifierNode::DocCreator doc_factory)'/>
+<use f='tvm/src/script/printer/tir/buffer.cc' l='36' u='c' c='_ZN3tvm6script7printer11BufferAttrsERKNS_3tir6BufferERKNS_10ObjectPathERKNS1_5FrameERKNS1_11IRDocsifierE'/>

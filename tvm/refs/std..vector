@@ -2732,29 +2732,38 @@
 <use f='tvm/src/script/ir_builder/base.cc' l='64' c='_ZN3tvm6script10ir_builder9IRBuilder14EnterWithScopeEv'/>
 <use f='tvm/src/script/ir_builder/base.cc' l='69' c='_ZN3tvm6script10ir_builder9IRBuilder13ExitWithScopeEv'/>
 <use f='tvm/src/script/ir_builder/base.cc' l='75' c='_ZN3tvm6script10ir_builder9IRBuilder7CurrentEv'/>
-<use f='tvm/include/tvm/script/printer/frame.h' l='70'/>
-<use f='tvm/include/tvm/script/printer/traced_object_functor.h' l='41'/>
-<use f='tvm/src/script/printer/base_doc_printer.h' l='268'/>
-<use f='tvm/src/script/printer/base_doc_printer.h' l='277'/>
-<use f='tvm/src/script/printer/base_doc_printer.h' l='283'/>
-<use f='tvm/src/script/printer/base_doc_printer.cc' l='28' c='_ZN3tvm6script7printer12_GLOBAL__N_117SortAndMergeSpansEPSt6vectorISt4pairImmESaIS5_EE'/>
-<use f='tvm/src/script/printer/base_doc_printer.cc' l='63' c='_ZN3tvm6script7printer12_GLOBAL__N_112GetLineIndexEmRKSt6vectorImSaImEE'/>
-<use f='tvm/src/script/printer/base_doc_printer.cc' l='68'/>
-<use f='tvm/src/script/printer/base_doc_printer.cc' l='80' c='_ZN3tvm6script7printer12_GLOBAL__N_110PrintChunkERKSt4pairImmERKS3_IN9__gnu_cxx17__normal_iteratorIPS5_St6vectorIS4_SaIS4_EEEESD_ERKNSt7__cxx1112basic6146444'/>
-<use f='tvm/src/script/printer/base_doc_printer.cc' l='150' c='_ZN3tvm6script7printer12_GLOBAL__N_120GetLinesForUnderlineERKSt4pairImmERKSt6vectorImSaImEEmRKNS1_17DocPrinterOptionsE'/>
-<use f='tvm/src/script/printer/base_doc_printer.cc' l='175' c='_ZN3tvm6script7printer12_GLOBAL__N_111GetNumLinesERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKSt6vectorImSaImEE'/>
-<use f='tvm/src/script/printer/base_doc_printer.cc' l='192' c='_ZN3tvm6script7printer12_GLOBAL__N_112DecorateTextERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKSt6vectorImSaImEERKNS1_17DocPrinterOptionsE14861667'/>
-<use f='tvm/src/script/printer/base_doc_printer.cc' l='194' c='_ZN3tvm6script7printer12_GLOBAL__N_112DecorateTextERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKSt6vectorImSaImEERKNS1_17DocPrinterOptionsE14861667'/>
-<use f='tvm/src/script/printer/base_doc_printer.cc' l='268' c='_ZNK3tvm6script7printer10DocPrinter9GetStringEv'/>
-<use f='tvm/src/script/printer/python_doc_printer.cc' l='77' c='_ZN3tvm6script7printer17GetExprPrecedenceERKNS1_7ExprDocE'/>
-<use f='tvm/src/script/printer/python_doc_printer.cc' l='106' c='_ZN3tvm6script7printer17GetExprPrecedenceERKNS1_7ExprDocE'/>
-<use f='tvm/src/script/printer/python_doc_printer.cc' l='257' c='_ZN3tvm6script7printer16PythonDocPrinter28MaybePrintCommentWithNewLineERKNS1_7StmtDocE'/>
-<use f='tvm/src/script/printer/python_doc_printer.cc' l='269' c='_ZN3tvm6script7printer16PythonDocPrinter17PrintBlockCommentERKNS_7runtime6StringE'/>
-<use f='tvm/src/script/printer/python_doc_printer.cc' l='324' c='_ZN3tvm6script7printer16OperatorToStringB5cxx11ENS1_16OperationDocNode4KindE'/>
-<use f='tvm/src/script/printer/python_doc_printer.cc' l='352' c='_ZN3tvm6script7printer16OperatorToStringB5cxx11ENS1_16OperationDocNode4KindE'/>
-<use f='tvm/src/script/printer/traced_object_functor.cc' l='32' c='_ZN3tvm6script7printer27GetDispatchFunctionForTokenERKSt13unordered_mapINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt6vectorINS_7runtime10Pac534444'/>
-<use f='tvm/src/script/printer/traced_object_functor.cc' l='62' c='_ZN3tvm6script7printer19SetDispatchFunctionEPSt13unordered_mapINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt6vectorINS_7runtime10PackedFuncES8356545'/>
-<use f='tvm/src/script/printer/traced_object_functor.cc' l='76' c='_ZN3tvm6script7printer22RemoveDispatchFunctionEPSt13unordered_mapINSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESt6vectorINS_7runtime10PackedFun5955663'/>
+<use f='tvm/src/script/printer/doc_printer/base_doc_printer.h' l='267'/>
+<use f='tvm/src/script/printer/doc_printer/base_doc_printer.h' l='276'/>
+<use f='tvm/src/script/printer/doc_printer/base_doc_printer.h' l='282'/>
+<use f='tvm/src/script/printer/doc_printer/base_doc_printer.cc' l='28' c='_ZN3tvm6script7printer12_GLOBAL__N_117SortAndMergeSpansEPSt6vectorISt4pairImmESaIS5_EE'/>
+<use f='tvm/src/script/printer/doc_printer/base_doc_printer.cc' l='63' c='_ZN3tvm6script7printer12_GLOBAL__N_112GetLineIndexEmRKSt6vectorImSaImEE'/>
+<use f='tvm/src/script/printer/doc_printer/base_doc_printer.cc' l='68'/>
+<use f='tvm/src/script/printer/doc_printer/base_doc_printer.cc' l='80' c='_ZN3tvm6script7printer12_GLOBAL__N_110PrintChunkERKSt4pairImmERKS3_IN9__gnu_cxx17__normal_iteratorIPS5_St6vectorIS4_SaIS4_EEEESD_ERKNSt7__cxx1112basic6146444'/>
+<use f='tvm/src/script/printer/doc_printer/base_doc_printer.cc' l='150' c='_ZN3tvm6script7printer12_GLOBAL__N_120GetLinesForUnderlineERKSt4pairImmERKSt6vectorImSaImEEmRKNS1_17DocPrinterOptionsE'/>
+<use f='tvm/src/script/printer/doc_printer/base_doc_printer.cc' l='175' c='_ZN3tvm6script7printer12_GLOBAL__N_111GetNumLinesERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKSt6vectorImSaImEE'/>
+<use f='tvm/src/script/printer/doc_printer/base_doc_printer.cc' l='192' c='_ZN3tvm6script7printer12_GLOBAL__N_112DecorateTextERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKSt6vectorImSaImEERKNS1_17DocPrinterOptionsE14861667'/>
+<use f='tvm/src/script/printer/doc_printer/base_doc_printer.cc' l='194' c='_ZN3tvm6script7printer12_GLOBAL__N_112DecorateTextERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEERKSt6vectorImSaImEERKNS1_17DocPrinterOptionsE14861667'/>
+<use f='tvm/src/script/printer/doc_printer/base_doc_printer.cc' l='268' c='_ZNK3tvm6script7printer10DocPrinter9GetStringEv'/>
+<use f='tvm/src/script/printer/doc_printer/python_doc_printer.cc' l='78' c='_ZN3tvm6script7printer17GetExprPrecedenceERKNS1_7ExprDocE'/>
+<use f='tvm/src/script/printer/doc_printer/python_doc_printer.cc' l='107' c='_ZN3tvm6script7printer17GetExprPrecedenceERKNS1_7ExprDocE'/>
+<use f='tvm/src/script/printer/doc_printer/python_doc_printer.cc' l='258' c='_ZN3tvm6script7printer16PythonDocPrinter28MaybePrintCommentWithNewLineERKNS1_7StmtDocE'/>
+<use f='tvm/src/script/printer/doc_printer/python_doc_printer.cc' l='270' c='_ZN3tvm6script7printer16PythonDocPrinter17PrintBlockCommentERKNS_7runtime6StringE'/>
+<use f='tvm/src/script/printer/doc_printer/python_doc_printer.cc' l='329' c='_ZN3tvm6script7printer16OperatorToStringB5cxx11ENS1_16OperationDocNode4KindE'/>
+<use f='tvm/src/script/printer/doc_printer/python_doc_printer.cc' l='357' c='_ZN3tvm6script7printer16OperatorToStringB5cxx11ENS1_16OperationDocNode4KindE'/>
+<use f='tvm/include/tvm/script/printer/ir_docsifier_functor.h' l='87' c='_ZN3tvm6script7printer18IRDocsifierFunctor12set_dispatchENS_7runtime6StringEjNS3_10PackedFuncE'/>
+<use f='tvm/include/tvm/script/printer/ir_docsifier_functor.h' l='121' c='_ZN3tvm6script7printer18IRDocsifierFunctor15remove_dispatchENS_7runtime6StringEj'/>
+<use f='tvm/include/tvm/script/printer/ir_docsifier_functor.h' l='140' c='_ZNK3tvm6script7printer18IRDocsifierFunctor19LookupDispatchTableERKNS_7runtime6StringEj'/>
+<use f='tvm/include/tvm/script/printer/ir_docsifier_functor.h' l='155'/>
+<use f='tvm/include/tvm/script/printer/ir_docsifier.h' l='52'/>
+<use f='tvm/include/tvm/script/printer/ir_docsifier.h' l='152'/>
+<use f='tvm/src/script/printer/ir/ir.cc' l='29'/>
+<use f='tvm/src/script/printer/ir/misc.cc' l='46'/>
+<use f='tvm/src/script/printer/ir_docsifier.cc' l='125' c='_ZZN3tvm6script7printer15IRDocsifierNode15SetCommonPrefixERKNS_7runtime9ObjectRefENS3_15TypedPackedFuncIFbS4_EEEEN7Visitor9HandleVarEPKNS3_6ObjectE'/>
+<use f='tvm/src/script/printer/ir_docsifier.cc' l='126' c='_ZZN3tvm6script7printer15IRDocsifierNode15SetCommonPrefixERKNS_7runtime9ObjectRefENS3_15TypedPackedFuncIFbS4_EEEEN7Visitor9HandleVarEPKNS3_6ObjectE'/>
+<use f='tvm/src/script/printer/ir_docsifier.cc' l='137' c='_ZN3tvm6script7printer15IRDocsifierNode15SetCommonPrefixERKNS_7runtime9ObjectRefENS3_15TypedPackedFuncIFbS4_EEE'/>
+<use f='tvm/src/script/printer/ir_docsifier.cc' l='141' c='_ZN3tvm6script7printer15IRDocsifierNode15SetCommonPrefixERKNS_7runtime9ObjectRefENS3_15TypedPackedFuncIFbS4_EEE'/>
+<use f='tvm/src/script/printer/tir/utils.h' l='150' c='_ZN3tvm6script7printer16FindLowestVarDefERKNS_7runtime9ObjectRefERKNS1_11IRDocsifierE'/>
+<use f='tvm/src/script/printer/tir/for_loop.cc' l='28'/>
 <use f='tvm/src/support/parallel_for.cc' l='35' c='_ZN3tvm7support14rr_partitionerEiiii'/>
 <use f='tvm/src/support/parallel_for.cc' l='35' c='_ZN3tvm7support14rr_partitionerEiiii'/>
 <use f='tvm/src/support/parallel_for.cc' l='39' c='_ZN3tvm7support14rr_partitionerEiiii'/>

@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>with.h source code [tvm/include/tvm/support/with.h] - Woboq Code Browser</title>
-<meta name="woboq:interestingDefinitions" content="tvm::ContextManager,tvm::With "/>
+<meta name="woboq:interestingDefinitions" content="tvm::With "/>
 <link rel="stylesheet" href="../../../.././data/qtcreator.css" title="QtCreator"/>
 <link rel="alternate stylesheet" href="../../../.././data/kdevelop.css" title="KDevelop"/>
 <script type="text/javascript" src="../../../.././data/jquery/jquery.min.js"></script>
@@ -106,39 +106,10 @@
 <tr><th id="92">92</th><td>  ContextType <dfn class="decl field" id="tvm::With::ctx_" title='tvm::With::ctx_' data-ref="tvm::With::ctx_" data-ref-filename="tvm..With..ctx_">ctx_</dfn>;</td></tr>
 <tr><th id="93">93</th><td>};</td></tr>
 <tr><th id="94">94</th><td></td></tr>
-<tr><th id="95">95</th><td><i class="doc">/*!</i></td></tr>
-<tr><th id="96">96</th><td><i class="doc"> * <span class="command">\brief</span> A context type that delegates EnterWithScope and ExitWithScope</i></td></tr>
-<tr><th id="97">97</th><td><i class="doc"> *        to user-provided functions.</i></td></tr>
-<tr><th id="98">98</th><td><i class="doc"> */</i></td></tr>
-<tr><th id="99">99</th><td><b>class</b> <dfn class="type def" id="tvm::ContextManager" title='tvm::ContextManager' data-ref="tvm::ContextManager" data-ref-filename="tvm..ContextManager">ContextManager</dfn> {</td></tr>
-<tr><th id="100">100</th><td> <b>public</b>:</td></tr>
-<tr><th id="101">101</th><td>  <i class="doc">/*!</i></td></tr>
-<tr><th id="102">102</th><td><i class="doc">   * <span class="command">\brief</span> Constructor of ContextManager.</i></td></tr>
-<tr><th id="103">103</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">f_enter</span> The function to call when entering scope. If it's nullptr, do nothing when</i></td></tr>
-<tr><th id="104">104</th><td><i class="doc">   *                entering.</i></td></tr>
-<tr><th id="105">105</th><td><i class="doc">   * <span class="command">\param</span> <span class="arg">f_exit</span> The function to call when exiting scope. If it's nullptr, do nothing</i></td></tr>
-<tr><th id="106">106</th><td><i class="doc">   *               when exiting.</i></td></tr>
-<tr><th id="107">107</th><td><i class="doc">   */</i></td></tr>
-<tr><th id="108">108</th><td>  <b>template</b> &lt;<b>class</b> FEnter, <b>class</b> FExit&gt;</td></tr>
-<tr><th id="109">109</th><td>  <b>explicit</b> <dfn class="decl def fn" id="_ZN3tvm14ContextManagerC1ET_T0_" title='tvm::ContextManager::ContextManager' data-ref="_ZN3tvm14ContextManagerC1ET_T0_" data-ref-filename="_ZN3tvm14ContextManagerC1ET_T0_">ContextManager</dfn>(FEnter <dfn class="local col8 decl" id="15158f_enter" title='f_enter' data-type='FEnter' data-ref="15158f_enter" data-ref-filename="15158f_enter">f_enter</dfn>, FExit <dfn class="local col9 decl" id="15159f_exit" title='f_exit' data-type='FExit' data-ref="15159f_exit" data-ref-filename="15159f_exit">f_exit</dfn>) : <a class="member field" href="#tvm::ContextManager::f_enter_" title='tvm::ContextManager::f_enter_' data-ref="tvm::ContextManager::f_enter_" data-ref-filename="tvm..ContextManager..f_enter_">f_enter_</a>(<a class="local col8 ref" href="#15158f_enter" title='f_enter' data-ref="15158f_enter" data-ref-filename="15158f_enter">f_enter</a>), <a class="member field" href="#tvm::ContextManager::f_exit_" title='tvm::ContextManager::f_exit_' data-ref="tvm::ContextManager::f_exit_" data-ref-filename="tvm..ContextManager..f_exit_">f_exit_</a>(<a class="local col9 ref" href="#15159f_exit" title='f_exit' data-ref="15159f_exit" data-ref-filename="15159f_exit">f_exit</a>) {}</td></tr>
-<tr><th id="110">110</th><td></td></tr>
-<tr><th id="111">111</th><td> <b>private</b>:</td></tr>
-<tr><th id="112">112</th><td>  <em>void</em> <dfn class="decl def fn" id="_ZN3tvm14ContextManager14EnterWithScopeEv" title='tvm::ContextManager::EnterWithScope' data-ref="_ZN3tvm14ContextManager14EnterWithScopeEv" data-ref-filename="_ZN3tvm14ContextManager14EnterWithScopeEv">EnterWithScope</dfn>() {</td></tr>
-<tr><th id="113">113</th><td>    <b>if</b> (<a class="ref fn fake" href="../../../../include/c++/12/bits/std_function.h.html#_ZNKSt8functionIFT_DpT0_EEcvbEv" title='std::function&lt;type-parameter-0-0 (type-parameter-0-1...)&gt;::operator bool' data-ref="_ZNKSt8functionIFT_DpT0_EEcvbEv" data-ref-filename="_ZNKSt8functionIFT_DpT0_EEcvbEv"></a><a class="member field" href="#tvm::ContextManager::f_enter_" title='tvm::ContextManager::f_enter_' data-ref="tvm::ContextManager::f_enter_" data-ref-filename="tvm..ContextManager..f_enter_">f_enter_</a>) <a class="member field" href="#tvm::ContextManager::f_enter_" title='tvm::ContextManager::f_enter_' data-ref="tvm::ContextManager::f_enter_" data-ref-filename="tvm..ContextManager..f_enter_">f_enter_</a><a class="ref fn" href="../../../../include/c++/12/bits/std_function.h.html#_ZNKSt8functionIFT_DpT0_EEclES2_" title='std::function&lt;type-parameter-0-0 (type-parameter-0-1...)&gt;::operator()' data-ref="_ZNKSt8functionIFT_DpT0_EEclES2_" data-ref-filename="_ZNKSt8functionIFT_DpT0_EEclES2_">()</a>;</td></tr>
-<tr><th id="114">114</th><td>  }</td></tr>
-<tr><th id="115">115</th><td>  <em>void</em> <dfn class="decl def fn" id="_ZN3tvm14ContextManager13ExitWithScopeEv" title='tvm::ContextManager::ExitWithScope' data-ref="_ZN3tvm14ContextManager13ExitWithScopeEv" data-ref-filename="_ZN3tvm14ContextManager13ExitWithScopeEv">ExitWithScope</dfn>() {</td></tr>
-<tr><th id="116">116</th><td>    <b>if</b> (<a class="ref fn fake" href="../../../../include/c++/12/bits/std_function.h.html#_ZNKSt8functionIFT_DpT0_EEcvbEv" title='std::function&lt;type-parameter-0-0 (type-parameter-0-1...)&gt;::operator bool' data-ref="_ZNKSt8functionIFT_DpT0_EEcvbEv" data-ref-filename="_ZNKSt8functionIFT_DpT0_EEcvbEv"></a><a class="member field" href="#tvm::ContextManager::f_exit_" title='tvm::ContextManager::f_exit_' data-ref="tvm::ContextManager::f_exit_" data-ref-filename="tvm..ContextManager..f_exit_">f_exit_</a>) <a class="member field" href="#tvm::ContextManager::f_exit_" title='tvm::ContextManager::f_exit_' data-ref="tvm::ContextManager::f_exit_" data-ref-filename="tvm..ContextManager..f_exit_">f_exit_</a><a class="ref fn" href="../../../../include/c++/12/bits/std_function.h.html#_ZNKSt8functionIFT_DpT0_EEclES2_" title='std::function&lt;type-parameter-0-0 (type-parameter-0-1...)&gt;::operator()' data-ref="_ZNKSt8functionIFT_DpT0_EEclES2_" data-ref-filename="_ZNKSt8functionIFT_DpT0_EEclES2_">()</a>;</td></tr>
-<tr><th id="117">117</th><td>  }</td></tr>
-<tr><th id="118">118</th><td>  <span class="namespace">std::</span><a class="type" href="../../../../include/c++/12/bits/std_function.h.html#std::function" title='std::function' data-ref="std::function" data-ref-filename="std..function">function</a>&lt;<em>void</em>()&gt; <dfn class="decl field" id="tvm::ContextManager::f_enter_" title='tvm::ContextManager::f_enter_' data-ref="tvm::ContextManager::f_enter_" data-ref-filename="tvm..ContextManager..f_enter_">f_enter_</dfn>;</td></tr>
-<tr><th id="119">119</th><td>  <span class="namespace">std::</span><a class="type" href="../../../../include/c++/12/bits/std_function.h.html#std::function" title='std::function' data-ref="std::function" data-ref-filename="std..function">function</a>&lt;<em>void</em>()&gt; <dfn class="decl field" id="tvm::ContextManager::f_exit_" title='tvm::ContextManager::f_exit_' data-ref="tvm::ContextManager::f_exit_" data-ref-filename="tvm..ContextManager..f_exit_">f_exit_</dfn>;</td></tr>
-<tr><th id="120">120</th><td>  <b>template</b> &lt;<b>typename</b>&gt;</td></tr>
-<tr><th id="121">121</th><td>  <b>friend</b> <b>class</b> <a class="type" href="#tvm::With" title='tvm::With' data-ref="tvm::With" data-ref-filename="tvm..With">With</a>;</td></tr>
-<tr><th id="122">122</th><td>};</td></tr>
-<tr><th id="123">123</th><td></td></tr>
-<tr><th id="124">124</th><td>}  <i>// namespace tvm</i></td></tr>
-<tr><th id="125">125</th><td><u>#<span data-ppcond="25">endif</span>  // TVM_SUPPORT_WITH_H_</u></td></tr>
-<tr><th id="126">126</th><td></td></tr>
+<tr><th id="95">95</th><td>}  <i>// namespace tvm</i></td></tr>
+<tr><th id="96">96</th><td><u>#<span data-ppcond="25">endif</span>  // TVM_SUPPORT_WITH_H_</u></td></tr>
+<tr><th id="97">97</th><td></td></tr>
 </table><hr/><p id='footer'>
-Generated while processing <a href='../../../src/arith/analyzer.cc.html'>tvm/src/arith/analyzer.cc</a><br/>Generated on <em>2023-Jan-08</em> from project tvm revision <em>bd37515</em><br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
+Generated while processing <a href='../../../src/arith/analyzer.cc.html'>tvm/src/arith/analyzer.cc</a><br/>Generated on <em>2023-Jan-08</em> from project tvm revision <em>a99f0c1</em><br />Powered by <a href='https://woboq.com'><img alt='Woboq' src='https://code.woboq.org/woboq-16.png' width='41' height='16' /></a> <a href='https://code.woboq.org'>Code Browser</a> 2.1
 <br/>Generator usage only permitted with license.</p>
 </div></body></html>

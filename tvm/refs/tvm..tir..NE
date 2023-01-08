@@ -32,6 +32,9 @@
 <size>8</size>
 <use f='tvm/src/arith/solve_linear_inequality.cc' l='83' c='_ZN3tvm5arith20NormalizeComparisons10VisitExpr_EPKNS_3tir6NENodeE'/>
 <size>8</size>
+<use f='tvm/src/script/printer/tir/expr.cc' l='284'/>
+<use f='tvm/src/script/printer/tir/expr.cc' l='284'/>
+<size>8</size>
 <use f='tvm/src/tir/ir/expr.cc' l='424'/>
 <size>8</size>
 <fun r='_ZN3tvm3tir2NEC1ENS_8PrimExprES2_NS_4SpanE'/>

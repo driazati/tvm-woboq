@@ -80,6 +80,12 @@
 <use f='tvm/src/printer/tvmscript_printer.cc' l='809' u='r' c='_ZN3tvm3tir16TVMScriptPrinter10VisitExpr_EPKNS0_6NENodeEPNS0_14ExprPrecedenceE'/>
 <use f='tvm/src/printer/tvmscript_printer.cc' l='811' u='r' c='_ZN3tvm3tir16TVMScriptPrinter10VisitExpr_EPKNS0_6NENodeEPNS0_14ExprPrecedenceE'/>
 <use f='tvm/src/printer/tvmscript_printer.cc' l='818' u='r' c='_ZN3tvm3tir16TVMScriptPrinter10VisitExpr_EPKNS0_6NENodeEPNS0_14ExprPrecedenceE'/>
+<use f='tvm/src/script/printer/tir/expr.cc' l='268' u='r'/>
+<use f='tvm/src/script/printer/tir/expr.cc' l='268' u='r'/>
+<use f='tvm/src/script/printer/tir/expr.cc' l='268' u='r'/>
+<use f='tvm/src/script/printer/tir/expr.cc' l='268' u='r'/>
+<use f='tvm/src/script/printer/tir/expr.cc' l='268' u='r'/>
+<use f='tvm/src/script/printer/tir/expr.cc' l='268' u='r'/>
 <use f='tvm/src/target/llvm/codegen_llvm.cc' l='1461' u='r' c='_ZN3tvm7codegen11CodeGenLLVM10VisitExpr_EPKNS_3tir6LTNodeE'/>
 <use f='tvm/src/target/llvm/codegen_llvm.cc' l='1461' u='r' c='_ZN3tvm7codegen11CodeGenLLVM10VisitExpr_EPKNS_3tir6LENodeE'/>
 <use f='tvm/src/target/llvm/codegen_llvm.cc' l='1461' u='r' c='_ZN3tvm7codegen11CodeGenLLVM10VisitExpr_EPKNS_3tir6GTNodeE'/>

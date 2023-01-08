@@ -38,6 +38,9 @@
 <size>8</size>
 <use f='tvm/src/arith/solve_linear_inequality.cc' l='82' c='_ZN3tvm5arith20NormalizeComparisons10VisitExpr_EPKNS_3tir6EQNodeE'/>
 <size>8</size>
+<use f='tvm/src/script/printer/tir/expr.cc' l='283'/>
+<use f='tvm/src/script/printer/tir/expr.cc' l='283'/>
+<size>8</size>
 <use f='tvm/src/te/autodiff/jacobian.cc' l='88' c='_ZN3tvm2te15JacobianMutator10VisitExpr_EPKNS_3tir16ProducerLoadNodeE'/>
 <size>8</size>
 <use f='tvm/src/tir/ir/expr.cc' l='405'/>

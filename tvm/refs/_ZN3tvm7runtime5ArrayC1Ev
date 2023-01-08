@@ -6,12 +6,12 @@
 <use f='tvm/include/tvm/tir/stmt.h' l='791' u='c' c='_ZN3tvm3tir7SeqStmt7FlattenEDpOT_'/>
 <use f='tvm/include/tvm/tir/stmt.h' l='1313' u='c' c='_ZN3tvm3tir5BlockC1ENS_7runtime5ArrayINS0_7IterVarEvEENS3_INS0_12BufferRegionEvEES7_NS2_6StringENS0_4StmtENS2_8OptionalIS9_EENS3_INS0_6BufferEvEENS3_I7879093'/>
 <use f='tvm/include/tvm/tir/stmt.h' l='1314' u='c' c='_ZN3tvm3tir5BlockC1ENS_7runtime5ArrayINS0_7IterVarEvEENS3_INS0_12BufferRegionEvEES7_NS2_6StringENS0_4StmtENS2_8OptionalIS9_EENS3_INS0_6BufferEvEENS3_I7879093'/>
-<use f='tvm/include/tvm/tir/op.h' l='547' u='c' c='_ZN3tvm3sumENS_8PrimExprENS_7runtime5ArrayINS_3tir7IterVarEvEENS2_IS0_vEENS_4SpanE'/>
-<use f='tvm/include/tvm/tir/op.h' l='557' u='c' c='_ZN3tvm3allENS_8PrimExprENS_7runtime5ArrayINS_3tir7IterVarEvEENS2_IS0_vEENS_4SpanE'/>
-<use f='tvm/include/tvm/tir/op.h' l='568' u='c' c='_ZN3tvm3anyENS_8PrimExprENS_7runtime5ArrayINS_3tir7IterVarEvEENS2_IS0_vEENS_4SpanE'/>
-<use f='tvm/include/tvm/tir/op.h' l='579' u='c' c='_ZN3tvm3maxENS_8PrimExprENS_7runtime5ArrayINS_3tir7IterVarEvEENS2_IS0_vEENS_4SpanE'/>
-<use f='tvm/include/tvm/tir/op.h' l='590' u='c' c='_ZN3tvm3minENS_8PrimExprENS_7runtime5ArrayINS_3tir7IterVarEvEENS2_IS0_vEENS_4SpanE'/>
-<use f='tvm/include/tvm/tir/op.h' l='601' u='c' c='_ZN3tvm4prodENS_8PrimExprENS_7runtime5ArrayINS_3tir7IterVarEvEENS2_IS0_vEENS_4SpanE'/>
+<use f='tvm/include/tvm/tir/op.h' l='550' u='c' c='_ZN3tvm3sumENS_8PrimExprENS_7runtime5ArrayINS_3tir7IterVarEvEENS2_IS0_vEENS_4SpanE'/>
+<use f='tvm/include/tvm/tir/op.h' l='560' u='c' c='_ZN3tvm3allENS_8PrimExprENS_7runtime5ArrayINS_3tir7IterVarEvEENS2_IS0_vEENS_4SpanE'/>
+<use f='tvm/include/tvm/tir/op.h' l='571' u='c' c='_ZN3tvm3anyENS_8PrimExprENS_7runtime5ArrayINS_3tir7IterVarEvEENS2_IS0_vEENS_4SpanE'/>
+<use f='tvm/include/tvm/tir/op.h' l='582' u='c' c='_ZN3tvm3maxENS_8PrimExprENS_7runtime5ArrayINS_3tir7IterVarEvEENS2_IS0_vEENS_4SpanE'/>
+<use f='tvm/include/tvm/tir/op.h' l='593' u='c' c='_ZN3tvm3minENS_8PrimExprENS_7runtime5ArrayINS_3tir7IterVarEvEENS2_IS0_vEENS_4SpanE'/>
+<use f='tvm/include/tvm/tir/op.h' l='604' u='c' c='_ZN3tvm4prodENS_8PrimExprENS_7runtime5ArrayINS_3tir7IterVarEvEENS2_IS0_vEENS_4SpanE'/>
 <doc f='tvm/include/tvm/runtime/container/array.h' l='293'>/*!
    * \brief default constructor
    */</doc>
@@ -1274,8 +1274,44 @@
 <use f='tvm/src/script/ir_builder/tir/ir.cc' l='172' u='c' c='_ZN3tvm6script10ir_builder3tir5ReadsENS_7runtime5ArrayINS3_9ObjectRefEvEE'/>
 <use f='tvm/src/script/ir_builder/tir/ir.cc' l='192' u='c' c='_ZN3tvm6script10ir_builder3tir6WritesENS_7runtime5ArrayINS3_9ObjectRefEvEE'/>
 <use f='tvm/src/script/ir_builder/tir/ir.cc' l='259' u='c' c='_ZN3tvm6script10ir_builder3tir4axis5RemapENS_7runtime6StringENS4_5ArrayINS_8PrimExprEvEENS4_8DataTypeE'/>
-<use f='tvm/src/script/printer/doc.cc' l='41' u='c' c='_ZNK3tvm6script7printer11ExprDocNode4CallENS_7runtime5ArrayINS1_7ExprDocEvEE'/>
-<use f='tvm/src/script/printer/doc.cc' l='41' u='c' c='_ZNK3tvm6script7printer11ExprDocNode4CallENS_7runtime5ArrayINS1_7ExprDocEvEE'/>
+<use f='tvm/src/script/printer/doc.cc' l='35' u='c' c='_ZNK3tvm6script7printer11ExprDocNode4CallENS_7runtime5ArrayINS1_7ExprDocEvEE'/>
+<use f='tvm/src/script/printer/doc.cc' l='35' u='c' c='_ZNK3tvm6script7printer11ExprDocNode4CallENS_7runtime5ArrayINS1_7ExprDocEvEE'/>
+<use f='tvm/src/script/printer/ir/misc.cc' l='34' u='c'/>
+<use f='tvm/src/script/printer/ir/misc.cc' l='64' u='c'/>
+<use f='tvm/src/script/printer/ir/misc.cc' l='65' u='c'/>
+<use f='tvm/src/script/printer/tir/block.cc' l='79' u='c' c='_ZN3tvm6script7printer10PrintBlockENS1_11IRDocsifierENS_3tir5BlockENS_10ObjectPathENS_7runtime8OptionalINS3_12BlockRealizeEEENS7_IS5_EE'/>
+<use f='tvm/src/script/printer/tir/block.cc' l='84' u='c' c='_ZN3tvm6script7printer10PrintBlockENS1_11IRDocsifierENS_3tir5BlockENS_10ObjectPathENS_7runtime8OptionalINS3_12BlockRealizeEEENS7_IS5_EE'/>
+<use f='tvm/src/script/printer/tir/block.cc' l='102' u='c' c='_ZN3tvm6script7printer10PrintBlockENS1_11IRDocsifierENS_3tir5BlockENS_10ObjectPathENS_7runtime8OptionalINS3_12BlockRealizeEEENS7_IS5_EE'/>
+<use f='tvm/src/script/printer/tir/block.cc' l='118' u='c' c='_ZN3tvm6script7printer10PrintBlockENS1_11IRDocsifierENS_3tir5BlockENS_10ObjectPathENS_7runtime8OptionalINS3_12BlockRealizeEEENS7_IS5_EE'/>
+<use f='tvm/src/script/printer/tir/buffer.cc' l='45' u='c' c='_ZN3tvm6script7printer11BufferAttrsERKNS_3tir6BufferERKNS_10ObjectPathERKNS1_5FrameERKNS1_11IRDocsifierE'/>
+<use f='tvm/src/script/printer/tir/buffer.cc' l='105' u='c' c='_ZN3tvm6script7printer10BufferCallERKNS1_7ExprDocERKNS_7runtime3MapINS5_6StringES2_vvEENS5_5ArrayIS2_vEE'/>
+<use f='tvm/src/script/printer/tir/buffer.cc' l='106' u='c' c='_ZN3tvm6script7printer10BufferCallERKNS1_7ExprDocERKNS_7runtime3MapINS5_6StringES2_vvEENS5_5ArrayIS2_vEE'/>
+<use f='tvm/src/script/printer/tir/buffer.cc' l='147' u='c' c='_ZN3tvm6script7printer13BufferIndicesERKNS_3tir6BufferERKNS_7runtime5ArrayINS_8PrimExprEvEERKNS_10ObjectPathERKNS1_11IRDocsifierE'/>
+<use f='tvm/src/script/printer/tir/buffer.cc' l='162' u='c'/>
+<use f='tvm/src/script/printer/tir/expr.cc' l='76' u='c'/>
+<use f='tvm/src/script/printer/tir/expr.cc' l='152' u='c'/>
+<use f='tvm/src/script/printer/tir/expr.cc' l='161' u='c'/>
+<use f='tvm/src/script/printer/tir/expr.cc' l='218' u='c'/>
+<use f='tvm/src/script/printer/tir/expr.cc' l='235' u='c'/>
+<use f='tvm/src/script/printer/tir/for_loop.cc' l='51' u='c'/>
+<use f='tvm/src/script/printer/tir/for_loop.cc' l='52' u='c'/>
+<use f='tvm/src/script/printer/tir/for_loop.cc' l='98' u='c'/>
+<use f='tvm/src/script/printer/tir/for_loop.cc' l='99' u='c'/>
+<use f='tvm/src/script/printer/tir/for_loop.cc' l='100' u='c'/>
+<use f='tvm/src/script/printer/tir/function.cc' l='46' u='c'/>
+<use f='tvm/src/script/printer/tir/stmt.cc' l='112' u='c'/>
+<use f='tvm/src/script/printer/tir/stmt.cc' l='123' u='c'/>
+<use f='tvm/src/script/printer/tir/stmt.cc' l='124' u='c'/>
+<use f='tvm/src/script/printer/tir/stmt.cc' l='162' u='c'/>
+<use f='tvm/src/script/printer/tir/stmt.cc' l='163' u='c'/>
+<use f='tvm/src/script/printer/tir/stmt.cc' l='164' u='c'/>
+<use f='tvm/src/script/printer/tir/stmt.cc' l='191' u='c' c='_ZN3tvm6script7printer12PrintNDArrayENS_7runtime7NDArrayE'/>
+<use f='tvm/src/script/printer/tir/stmt.cc' l='212' u='c'/>
+<use f='tvm/src/script/printer/tir/stmt.cc' l='213' u='c'/>
+<use f='tvm/src/script/printer/tir/stmt.cc' l='214' u='c'/>
+<use f='tvm/src/script/printer/tir/stmt.cc' l='267' u='c' c='_ZN3tvm6script7printer20DocsifyBufferRealizeEPKNS_3tir17BufferRealizeNodeENS_7runtime8OptionalINS1_7ExprDocEEENS_10ObjectPathENS1_11IRDocsifierE'/>
+<use f='tvm/src/script/printer/tir/stmt.cc' l='280' u='c' c='_ZN3tvm6script7printer20DocsifyBufferRealizeEPKNS_3tir17BufferRealizeNodeENS_7runtime8OptionalINS1_7ExprDocEEENS_10ObjectPathENS1_11IRDocsifierE'/>
+<use f='tvm/src/script/printer/tir/stmt.cc' l='281' u='c' c='_ZN3tvm6script7printer20DocsifyBufferRealizeEPKNS_3tir17BufferRealizeNodeENS_7runtime8OptionalINS1_7ExprDocEEENS_10ObjectPathENS1_11IRDocsifierE'/>
 <use f='tvm/src/target/llvm/codegen_arm.cc' l='77' u='c' c='_ZN3tvm7codegen10CodeGenARM11ARMPopcountEPKNS_3tir8CallNodeE'/>
 <use f='tvm/src/target/llvm/codegen_arm.cc' l='101' u='c' c='_ZN3tvm7codegen10CodeGenARM11ARMPopcountEPKNS_3tir8CallNodeE'/>
 <use f='tvm/src/target/llvm/codegen_arm.cc' l='108' u='c' c='_ZN3tvm7codegen10CodeGenARM11ARMPopcountEPKNS_3tir8CallNodeE'/>

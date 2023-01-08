@@ -61,6 +61,9 @@
 <use f='tvm/src/script/ir_builder/tir/ir.cc' l='347' c='_ZN3tvm6script10ir_builder3tir13ThreadBindingENS_8PrimExprES3_NS_7runtime6StringENS4_8OptionalINS4_3MapIS5_NS4_9ObjectRefEvvEEEE'/>
 <use f='tvm/src/script/ir_builder/tir/ir.cc' l='369' c='_ZN3tvm6script10ir_builder3tir4GridENS_7runtime5ArrayINS_8PrimExprEvEE'/>
 <size>8</size>
+<use f='tvm/src/script/printer/tir/for_loop.cc' l='26'/>
+<use f='tvm/src/script/printer/tir/for_loop.cc' l='26'/>
+<size>8</size>
 <use f='tvm/src/target/llvm/codegen_cpu.cc' l='1539' c='_ZN3tvm7codegen10CodeGenCPU10VisitStmt_EPKNS_3tir7ForNodeE'/>
 <size>8</size>
 <use f='tvm/src/te/operation/create_primfunc.cc' l='358' c='_ZN3tvm3tir23GenerateStmtFromComputeERKNS_2te9ComputeOpEPNS0_14CreateFuncInfoEPNS_5arith8AnalyzerE'/>
