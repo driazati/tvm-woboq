@@ -220,6 +220,7 @@
 <use f='tvm/src/meta_schedule/mutator/mutate_tile_size.cc' l='105' u='c' c='_ZN3tvm13meta_schedule19FindSampleVectorizeERKNS_3tir5TraceEPSt6vectorINS1_11InstructionESaIS6_EEPS5_IlSaIlEE'/>
 <use f='tvm/src/meta_schedule/mutator/mutate_unroll.cc' l='31' u='c' c='_ZN3tvm3tir20IsAnnotateWithUnrollERKNS0_11InstructionE'/>
 <use f='tvm/src/meta_schedule/mutator/mutate_unroll.cc' l='91' u='c' c='_ZN3tvm13meta_schedule18FindUnrollDecisionERKNS_3tir5TraceEPlPNS0_16MutateUnrollNode9CandidateE'/>
+<use f='tvm/src/meta_schedule/postproc/disallow_async_strided_mem_copy.cc' l='149' u='c' c='_ZN3tvm13meta_schedule31DisallowAsyncStridedMemCopyNode5ApplyERKNS_3tir8ScheduleE'/>
 <use f='tvm/src/meta_schedule/postproc/rewrite_cooperative_fetch.cc' l='32' u='c' c='_ZN3tvm3tir18ParseThreadBindingERKNS0_8ScheduleERKNS0_11InstructionENS_7runtime6StringE'/>
 <use f='tvm/src/meta_schedule/postproc/rewrite_cooperative_fetch.cc' l='54' u='c' c='_ZN3tvm3tir13ParseAnnotateERKNS0_8ScheduleERKNS0_11InstructionEPl'/>
 <use f='tvm/src/meta_schedule/postproc/rewrite_cooperative_fetch.cc' l='75' u='c' c='_ZN3tvm3tir21ParseWarpExecutionAnnERKNS0_8ScheduleERKNS0_11InstructionE'/>
@@ -4328,7 +4329,7 @@
 <use f='tvm/src/tir/transforms/legalize_packed_calls.cc' l='131' u='c' c='_ZN3tvm3tir9transform19LegalizePackedCallsEv'/>
 <use f='tvm/src/tir/transforms/lift_attr_scope.cc' l='195' u='c' c='_ZN3tvm3tir9transform13LiftAttrScopeENS_7runtime6StringE'/>
 <use f='tvm/src/tir/transforms/loop_partition.cc' l='754' u='c' c='_ZN3tvm3tir9transform13LoopPartitionEv'/>
-<use f='tvm/src/tir/transforms/lower_async_dma.cc' l='219' u='c' c='_ZN3tvm3tir9transform13LowerAsyncDMAEv'/>
+<use f='tvm/src/tir/transforms/lower_async_dma.cc' l='222' u='c' c='_ZN3tvm3tir9transform13LowerAsyncDMAEv'/>
 <use f='tvm/src/tir/transforms/lower_cross_thread_reduction.cc' l='124' u='c' c='_ZN3tvm3tir15MakeScratchpadsERKNS_7runtime5ArrayINS0_6BufferEvEEb'/>
 <use f='tvm/src/tir/transforms/lower_cross_thread_reduction.cc' l='126' u='c' c='_ZN3tvm3tir15MakeScratchpadsERKNS_7runtime5ArrayINS0_6BufferEvEEb'/>
 <use f='tvm/src/tir/transforms/lower_cross_thread_reduction.cc' l='362' u='c' c='_ZN3tvm3tir23TransformReductionBlockEPKNS0_16BlockRealizeNodeERKNS_7runtime8OptionalINS4_5ArrayINS0_6BufferEvEEEERKS8_SD_RKNS6_INS_8PrimExprEvEERKNS0_10264619'/>

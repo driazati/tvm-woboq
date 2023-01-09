@@ -48,6 +48,8 @@
 <use f='tvm/src/meta_schedule/database/json_database.cc' l='130' u='c' c='_ZN3tvm13meta_schedule16JSONDatabaseNode7GetTopKERKNS0_8WorkloadEi'/>
 <use f='tvm/src/meta_schedule/database/memory_database.cc' l='75' u='c' c='_ZN3tvm13meta_schedule18MemoryDatabaseNode7GetTopKERKNS0_8WorkloadEi'/>
 <use f='tvm/src/meta_schedule/mutator/mutate_compute_location.cc' l='103' u='c' c='_ZN3tvm13meta_schedule25MutateComputeLocationNode14FindCandidatesERKNS_3tir5TraceEPl'/>
+<use f='tvm/src/meta_schedule/postproc/disallow_async_strided_mem_copy.cc' l='90' u='c' c='_ZN3tvm3tir25AsyncStridedMemCopyFinder10VisitStmt_EPKNS0_12AttrStmtNodeE'/>
+<use f='tvm/src/meta_schedule/postproc/disallow_async_strided_mem_copy.cc' l='100' u='c' c='_ZN3tvm3tir25AsyncStridedMemCopyFinder10VisitStmt_EPKNS0_12AttrStmtNodeE'/>
 <use f='tvm/src/meta_schedule/postproc/rewrite_parallel_vectorize_unroll.cc' l='362' u='c' c='_ZN3tvm13meta_schedule34RewriteParallelVectorizeUnrollNode5ApplyERKNS_3tir8ScheduleE'/>
 <use f='tvm/src/meta_schedule/schedule/cuda/thread_bind.cc' l='149' u='c' c='_ZN3tvm13meta_schedule18BindBlockThreadIdxENS_3tir8ScheduleENS1_7BlockRVEllSt8functionIFNS_8PrimExprElEE'/>
 <use f='tvm/src/meta_schedule/schedule/generic/winograd.cc' l='35' u='c' c='_ZN3tvm13meta_schedule33GetWinogradProducerAndInlineConstENS_3tir8ScheduleENS1_7BlockRVE'/>
@@ -193,10 +195,10 @@
 <use f='tvm/src/tir/transforms/ir_utils.cc' l='374' u='c' c='_ZN3tvm3tir24ConditionalBoundsContext25GetVarBoundsFromConditionEv'/>
 <use f='tvm/src/tir/transforms/ir_utils.cc' l='374' u='c' c='_ZN3tvm3tir24ConditionalBoundsContext25GetVarBoundsFromConditionEv'/>
 <use f='tvm/src/tir/transforms/loop_partition.cc' l='478' u='c' c='_ZN3tvm3tir15LoopPartitioner21GetIntervalAndCondsetERKSt13unordered_mapISt4pairINS_8PrimExprEbENS_5arith6IntSetENS0_16PartitionKeyHashENS0_17Partition11033115'/>
-<use f='tvm/src/tir/transforms/lower_async_dma.cc' l='141' u='c' c='_ZN3tvm3tir15AsyncDMALowerer10VisitStmt_EPKNS0_12AttrStmtNodeE'/>
-<use f='tvm/src/tir/transforms/lower_async_dma.cc' l='145' u='c' c='_ZN3tvm3tir15AsyncDMALowerer10VisitStmt_EPKNS0_12AttrStmtNodeE'/>
-<use f='tvm/src/tir/transforms/lower_async_dma.cc' l='161' u='c' c='_ZN3tvm3tir15AsyncDMALowerer10VisitStmt_EPKNS0_12AttrStmtNodeE'/>
-<use f='tvm/src/tir/transforms/lower_async_dma.cc' l='178' u='c' c='_ZN3tvm3tir15AsyncDMALowerer10VisitStmt_EPKNS0_12AttrStmtNodeE'/>
+<use f='tvm/src/tir/transforms/lower_async_dma.cc' l='144' u='c' c='_ZN3tvm3tir15AsyncDMALowerer10VisitStmt_EPKNS0_12AttrStmtNodeE'/>
+<use f='tvm/src/tir/transforms/lower_async_dma.cc' l='148' u='c' c='_ZN3tvm3tir15AsyncDMALowerer10VisitStmt_EPKNS0_12AttrStmtNodeE'/>
+<use f='tvm/src/tir/transforms/lower_async_dma.cc' l='164' u='c' c='_ZN3tvm3tir15AsyncDMALowerer10VisitStmt_EPKNS0_12AttrStmtNodeE'/>
+<use f='tvm/src/tir/transforms/lower_async_dma.cc' l='181' u='c' c='_ZN3tvm3tir15AsyncDMALowerer10VisitStmt_EPKNS0_12AttrStmtNodeE'/>
 <use f='tvm/src/tir/transforms/lower_cross_thread_reduction.cc' l='221' u='c' c='_ZN3tvm3tir20InThreadReducerMaker10VisitStmt_EPKNS0_11SeqStmtNodeE'/>
 <use f='tvm/src/tir/transforms/lower_match_buffer.cc' l='59' u='c' c='_ZN3tvm3tir16MatchBufferLower10VisitStmt_EPKNS0_9BlockNodeE'/>
 <use f='tvm/src/tir/transforms/lower_match_buffer.cc' l='206' u='c' c='_ZN3tvm3tir16MatchBufferLower20CheckAndUpdateVarMapERKNS0_17MatchBufferRegionE'/>

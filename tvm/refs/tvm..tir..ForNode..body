@@ -7,6 +7,7 @@
 <doc f='tvm/include/tvm/tir/stmt.h' l='960'>/*! \brief The body of the for loop. */</doc>
 <use f='tvm/src/contrib/hybrid/codegen_hybrid.cc' l='366' u='r' c='_ZN3tvm7contrib13CodeGenHybrid10VisitStmt_EPKNS_3tir7ForNodeE'/>
 <use f='tvm/src/meta_schedule/feature_extractor/per_store_feature.cc' l='282' u='r' c='_ZZN3tvm3tir9transform28SimplifyForFeatureExtractionEvEN10Simplifier10VisitStmt_EPKNS0_7ForNodeE'/>
+<use f='tvm/src/meta_schedule/postproc/disallow_async_strided_mem_copy.cc' l='63' u='m' c='_ZN3tvm3tir25AsyncStridedMemCopyFinder10VisitStmt_EPKNS0_12AttrStmtNodeE'/>
 <use f='tvm/src/meta_schedule/postproc/rewrite_parallel_vectorize_unroll.cc' l='249' u='r' c='_ZN3tvm3tir23AdjustParallelVectorizeERKNS0_8ScheduleERKNS0_7BlockRVERKNS_7runtime5ArrayINS0_6LoopRVEvEEPNS0_16ParsedAnnotationE'/>
 <use f='tvm/src/meta_schedule/postproc/rewrite_parallel_vectorize_unroll.cc' l='274' u='r' c='_ZN3tvm3tir23AdjustParallelVectorizeERKNS0_8ScheduleERKNS0_7BlockRVERKNS_7runtime5ArrayINS0_6LoopRVEvEEPNS0_16ParsedAnnotationE'/>
 <use f='tvm/src/meta_schedule/schedule/cuda/thread_bind.cc' l='123' u='r' c='_ZN3tvm13meta_schedule18BindBlockThreadIdxENS_3tir8ScheduleENS1_7BlockRVEllSt8functionIFNS_8PrimExprElEE'/>
@@ -104,7 +105,7 @@
 <use f='tvm/src/tir/transforms/ir_utils.cc' l='44' u='w' c='_ZN3tvm3tir9MergeNestERKSt6vectorINS0_4StmtESaIS2_EES2_'/>
 <use f='tvm/src/tir/transforms/ir_utils.cc' l='205' u='r' c='_ZN3tvm3tir12IRConvertSSA10VisitStmt_EPKNS0_7ForNodeE'/>
 <use f='tvm/src/tir/transforms/loop_partition.cc' l='399' u='r' c='_ZN3tvm3tir15LoopPartitioner10VisitStmt_EPKNS0_7ForNodeE'/>
-<use f='tvm/src/tir/transforms/lower_async_dma.cc' l='123' u='m' c='_ZN3tvm3tir15AsyncDMALowerer10VisitStmt_EPKNS0_12AttrStmtNodeE'/>
+<use f='tvm/src/tir/transforms/lower_async_dma.cc' l='126' u='m' c='_ZN3tvm3tir15AsyncDMALowerer10VisitStmt_EPKNS0_12AttrStmtNodeE'/>
 <use f='tvm/src/tir/transforms/lower_cross_thread_reduction.cc' l='204' u='r' c='_ZN3tvm3tir20InThreadReducerMaker10VisitStmt_EPKNS0_7ForNodeE'/>
 <use f='tvm/src/tir/transforms/lower_cross_thread_reduction.cc' l='426' u='w' c='_ZN3tvm3tir23TransformReductionBlockEPKNS0_16BlockRealizeNodeERKNS_7runtime8OptionalINS4_5ArrayINS0_6BufferEvEEEERKS8_SD_RKNS6_INS_8PrimExprEvEERKNS0_10264619'/>
 <use f='tvm/src/tir/transforms/lower_opaque_block.cc' l='81' u='r' c='_ZN3tvm3tir16OpaqueBlockLower10VisitStmt_EPKNS0_7ForNodeE'/>

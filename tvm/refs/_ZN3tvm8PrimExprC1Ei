@@ -111,6 +111,8 @@
 <use f='tvm/src/auto_scheduler/transform_step.cc' l='1181' u='c' c='_ZNK3tvm14auto_scheduler24FollowFusedSplitStepNode18ExtractSplitLengthERKNS_7runtime5ArrayINS0_4StepEvEE'/>
 <use f='tvm/src/autotvm/touch_extractor.cc' l='264' u='c' c='_ZN3tvm7autotvm17GetItervarFeatureENS_3tir4StmtEbPNS_7runtime5ArrayINS4_INS4_INS_8PrimExprEvEEvEEvEE'/>
 <def f='tvm/src/ir/expr.cc' l='40' type='void tvm::PrimExpr::PrimExpr(int32_t value)'/>
+<use f='tvm/src/meta_schedule/postproc/disallow_async_strided_mem_copy.cc' l='88' u='c' c='_ZN3tvm3tir25AsyncStridedMemCopyFinder10VisitStmt_EPKNS0_12AttrStmtNodeE'/>
+<use f='tvm/src/meta_schedule/postproc/disallow_async_strided_mem_copy.cc' l='98' u='c' c='_ZN3tvm3tir25AsyncStridedMemCopyFinder10VisitStmt_EPKNS0_12AttrStmtNodeE'/>
 <use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling_wide_vector.cc' l='94' u='c' c='_ZNK3tvm13meta_schedule30MultiLevelTilingWideVectorNode9SplitLoopERKNS_3tir8ScheduleENS2_7BlockRVENS2_6LoopRVEi'/>
 <use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling_wide_vector.cc' l='104' u='c' c='_ZNK3tvm13meta_schedule30MultiLevelTilingWideVectorNode9SplitLoopERKNS_3tir8ScheduleENS2_7BlockRVENS2_6LoopRVEi'/>
 <use f='tvm/src/relay/backend/aot/aot_lower_main.cc' l='697' u='c' c='_ZN3tvm5relay7backend3aot14AOTMainLowerer12CopyToOutputENS_8PrimExprES4_bm'/>
@@ -365,8 +367,8 @@
 <use f='tvm/src/tir/transforms/ir_utils.cc' l='311' u='c' c='_ZN3tvm3tir13ConvertRegionERKNS0_17MatchBufferRegionERKNS_7runtime5ArrayINS_5RangeEvEE'/>
 <use f='tvm/src/tir/transforms/ir_utils.cc' l='312' u='c' c='_ZN3tvm3tir13ConvertRegionERKNS0_17MatchBufferRegionERKNS_7runtime5ArrayINS_5RangeEvEE'/>
 <use f='tvm/src/tir/transforms/loop_partition.cc' l='421' u='c' c='_ZN3tvm3tir15LoopPartitioner10VisitStmt_EPKNS0_12AttrStmtNodeE'/>
-<use f='tvm/src/tir/transforms/lower_async_dma.cc' l='159' u='c' c='_ZN3tvm3tir15AsyncDMALowerer10VisitStmt_EPKNS0_12AttrStmtNodeE'/>
-<use f='tvm/src/tir/transforms/lower_async_dma.cc' l='177' u='c' c='_ZN3tvm3tir15AsyncDMALowerer10VisitStmt_EPKNS0_12AttrStmtNodeE'/>
+<use f='tvm/src/tir/transforms/lower_async_dma.cc' l='162' u='c' c='_ZN3tvm3tir15AsyncDMALowerer10VisitStmt_EPKNS0_12AttrStmtNodeE'/>
+<use f='tvm/src/tir/transforms/lower_async_dma.cc' l='179' u='c' c='_ZN3tvm3tir15AsyncDMALowerer10VisitStmt_EPKNS0_12AttrStmtNodeE'/>
 <use f='tvm/src/tir/transforms/lower_cross_thread_reduction.cc' l='255' u='c' c='_ZN3tvm3tir23TransformReductionBlockEPKNS0_16BlockRealizeNodeERKNS_7runtime8OptionalINS4_5ArrayINS0_6BufferEvEEEERKS8_SD_RKNS6_INS_8PrimExprEvEERKNS0_10264619'/>
 <use f='tvm/src/tir/transforms/lower_cross_thread_reduction.cc' l='255' u='c' c='_ZN3tvm3tir23TransformReductionBlockEPKNS0_16BlockRealizeNodeERKNS_7runtime8OptionalINS4_5ArrayINS0_6BufferEvEEEERKS8_SD_RKNS6_INS_8PrimExprEvEERKNS0_10264619'/>
 <use f='tvm/src/tir/transforms/lower_match_buffer.cc' l='191' u='c' c='_ZN3tvm3tir16MatchBufferLower20CheckAndUpdateVarMapERKNS0_17MatchBufferRegionE'/>

@@ -8,6 +8,8 @@
 <use f='tvm/include/tvm/topi/transform.h' l='1511' u='c' c='_ZN3tvm4topi9tensordotERKNS_2te6TensorES4_NS_7runtime5ArrayINS_8PrimExprEvEES8_NSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESE_'/>
 <def f='tvm/src/ir/expr.cc' l='171' ll='172' type='void tvm::Range::Range(tvm::PrimExpr begin, tvm::PrimExpr end, tvm::Span span = tvm::Span())'/>
 <use f='tvm/src/ir/expr.cc' l='181' u='c'/>
+<use f='tvm/src/meta_schedule/postproc/disallow_async_strided_mem_copy.cc' l='43' u='c' c='_ZN3tvm3tir25AsyncStridedMemCopyFinder10VisitStmt_EPKNS0_7ForNodeE'/>
+<use f='tvm/src/meta_schedule/postproc/disallow_async_strided_mem_copy.cc' l='61' u='c' c='_ZN3tvm3tir25AsyncStridedMemCopyFinder10VisitStmt_EPKNS0_12AttrStmtNodeE'/>
 <use f='tvm/include/tvm/topi/reduction.h' l='93' u='c' c='_ZN3tvm4topi14MakeReduceAxesERKSt6vectorIiSaIiEERKNS_2te6TensorE'/>
 <use f='tvm/include/tvm/topi/nn.h' l='282' u='c' c='_ZN3tvm4topi11conv2d_nchwERKNS_2te6TensorES4_iiiiNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESA_'/>
 <use f='tvm/include/tvm/topi/nn.h' l='283' u='c' c='_ZN3tvm4topi11conv2d_nchwERKNS_2te6TensorES4_iiiiNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESA_'/>
@@ -61,6 +63,7 @@
 <use f='tvm/src/tir/transforms/inject_software_pipeline.cc' l='815' u='c' c='_ZN3tvm3tir17software_pipeline16PipelineRewriter8EmitImplENS_8PrimExprES3_b'/>
 <use f='tvm/src/tir/transforms/loop_partition.cc' l='251' u='c' c='_ZN3tvm3tir15PartitionFinder10VisitStmt_EPKNS0_12AttrStmtNodeE'/>
 <use f='tvm/src/tir/transforms/lower_async_dma.cc' l='40' u='c' c='_ZN3tvm3tir15AsyncDMALowerer10VisitStmt_EPKNS0_7ForNodeE'/>
+<use f='tvm/src/tir/transforms/lower_async_dma.cc' l='123' u='c' c='_ZN3tvm3tir15AsyncDMALowerer10VisitStmt_EPKNS0_12AttrStmtNodeE'/>
 <use f='tvm/src/tir/transforms/renew_defs.cc' l='225' u='c' c='_ZN3tvm3tir15RenewDefMutator12VisitIterVarERKNS0_7IterVarE'/>
 <use f='tvm/src/tir/transforms/storage_flatten.cc' l='155' u='c' c='_ZN3tvm3tir19BufferShapeLegalize10VisitStmt_EPKNS0_17BufferRealizeNodeE'/>
 <use f='tvm/src/topi/einsum.cc' l='268' u='c' c='_ZN3tvm4topi13EinsumBuilder30PrepareReductionIndicesMappingERKNS_7runtime5ArrayINS_3tir3VarEvEEPSt13unordered_mapIcS5_St4hashIcESt8equal_toIcESaISt4pa7674980'/>

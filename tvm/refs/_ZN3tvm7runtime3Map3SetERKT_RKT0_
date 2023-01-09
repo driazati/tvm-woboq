@@ -69,6 +69,9 @@
 <use f='tvm/src/ir/transform.cc' l='156' u='c' c='_ZN3tvm9transform17PassConfigManager11ListConfigsEv'/>
 <use f='tvm/src/meta_schedule/utils.h' l='505' u='c' c='_ZN3tvm13meta_schedule10CloneRulesEPKNS0_18SpaceGeneratorNodeEPS1_'/>
 <use f='tvm/src/meta_schedule/database/database_utils.cc' l='374' u='c' c='_ZN3tvm13meta_schedule10JSONParser9ParseDictEv'/>
+<use f='tvm/src/meta_schedule/postproc/disallow_async_strided_mem_copy.cc' l='43' u='c' c='_ZN3tvm3tir25AsyncStridedMemCopyFinder10VisitStmt_EPKNS0_7ForNodeE'/>
+<use f='tvm/src/meta_schedule/postproc/disallow_async_strided_mem_copy.cc' l='61' u='c' c='_ZN3tvm3tir25AsyncStridedMemCopyFinder10VisitStmt_EPKNS0_12AttrStmtNodeE'/>
+<use f='tvm/src/meta_schedule/postproc/disallow_async_strided_mem_copy.cc' l='149' u='c' c='_ZN3tvm13meta_schedule31DisallowAsyncStridedMemCopyNode5ApplyERKNS_3tir8ScheduleE'/>
 <use f='tvm/src/meta_schedule/postproc/rewrite_layout.cc' l='62' u='c' c='_ZN3tvm3tir22BufferReadPosCollector10VisitExpr_EPKNS0_14BufferLoadNodeE'/>
 <use f='tvm/src/meta_schedule/profiler.cc' l='31' u='c' c='_ZNK3tvm13meta_schedule12ProfilerNode3GetEv'/>
 <use f='tvm/src/meta_schedule/schedule_rule/multi_level_tiling_tensor_core.cc' l='510' u='c' c='_ZNK3tvm13meta_schedule30MultiLevelTilingTensorCoreNode25TransformWithTensorIntrinEPNS0_19TensorCoreStateNodeERKNS_7runtime6StringE'/>
@@ -446,6 +449,7 @@
 <use f='tvm/src/tir/transforms/inject_software_pipeline.cc' l='1175' u='c' c='_ZN3tvm3tir17software_pipeline16PipelineInjector10VisitStmt_EPKNS0_9BlockNodeE'/>
 <use f='tvm/src/tir/transforms/ir_utils.cc' l='391' u='c' c='_ZN3tvm3tir24ConditionalBoundsContext25GetVarBoundsFromConditionEv'/>
 <use f='tvm/src/tir/transforms/lower_async_dma.cc' l='40' u='c' c='_ZN3tvm3tir15AsyncDMALowerer10VisitStmt_EPKNS0_7ForNodeE'/>
+<use f='tvm/src/tir/transforms/lower_async_dma.cc' l='123' u='c' c='_ZN3tvm3tir15AsyncDMALowerer10VisitStmt_EPKNS0_12AttrStmtNodeE'/>
 <use f='tvm/src/tir/transforms/lower_cross_thread_reduction.cc' l='150' u='c' c='_ZN3tvm3tir14BufferReplacer3RunENS_7runtime5ArrayINS0_6BufferEvEES5_NS0_4StmtE'/>
 <use f='tvm/src/tir/transforms/lower_cross_thread_reduction.cc' l='391' u='c' c='_ZN3tvm3tir23TransformReductionBlockEPKNS0_16BlockRealizeNodeERKNS_7runtime8OptionalINS4_5ArrayINS0_6BufferEvEEEERKS8_SD_RKNS6_INS_8PrimExprEvEERKNS0_10264619'/>
 <use f='tvm/src/tir/transforms/lower_cross_thread_reduction.cc' l='574' u='c' c='_ZN3tvm3tir31CrossThreadReductionTransformer10VisitStmt_EPKNS0_7ForNodeE'/>
