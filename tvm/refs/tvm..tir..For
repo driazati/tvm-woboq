@@ -66,7 +66,7 @@
 <size>8</size>
 <use f='tvm/src/target/llvm/codegen_cpu.cc' l='1539' c='_ZN3tvm7codegen10CodeGenCPU10VisitStmt_EPKNS_3tir7ForNodeE'/>
 <size>8</size>
-<use f='tvm/src/te/operation/create_primfunc.cc' l='358' c='_ZN3tvm3tir23GenerateStmtFromComputeERKNS_2te9ComputeOpEPNS0_14CreateFuncInfoEPNS_5arith8AnalyzerE'/>
+<use f='tvm/src/te/operation/create_primfunc.cc' l='396' c='_ZN3tvm3tir23GenerateStmtFromComputeERKNS_2te9ComputeOpEPNS0_14CreateFuncInfoEPNS_5arith8AnalyzerE'/>
 <size>8</size>
 <use f='tvm/src/te/operation/hybrid_op.cc' l='236' c='_ZZN3tvm2te15ApplyLoopShapesERKNS0_5StageERKSt13unordered_mapINS_3tir7IterVarENS_5RangeESt4hashIS6_ESt8equal_toIS6_ESaISt4pairIKS6_S7_EEENS5_4StmtEEN114292304'/>
 <use f='tvm/src/te/operation/hybrid_op.cc' l='238' c='_ZZN3tvm2te15ApplyLoopShapesERKNS0_5StageERKSt13unordered_mapINS_3tir7IterVarENS_5RangeESt4hashIS6_ESt8equal_toIS6_ESaISt4pairIKS6_S7_EEENS5_4StmtEEN114292304'/>

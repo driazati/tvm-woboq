@@ -240,10 +240,13 @@
 <use f='tvm/src/te/autodiff/ad_simplify.cc' l='639' u='c' c='_ZN3tvm2te22EliminateDivModMutator13AddNewVarPairERKNS_8PrimExprES4_lNS_5arith7DivModeE'/>
 <use f='tvm/src/te/operation/compute_op.cc' l='583' u='c' c='_ZN3tvm2te15TransformUpdateERKNS0_5StageERKSt13unordered_mapINS_3tir7IterVarENS_5RangeESt4hashIS6_ESt8equal_toIS6_ESaISt4pairIKS6_S7_EEERKNS0_15Comput2419945'/>
 <use f='tvm/src/te/operation/create_primfunc.cc' l='53' u='c' c='_ZN3tvm3tir27ProducerToBufferTransformer10VisitExpr_EPKNS0_16ProducerLoadNodeE'/>
-<use f='tvm/src/te/operation/create_primfunc.cc' l='117' u='c' c='_ZN3tvm3tir32LayoutFreePlaceholdersNormalizer10VisitStmt_EPKNS0_9BlockNodeE'/>
-<use f='tvm/src/te/operation/create_primfunc.cc' l='188' u='c' c='_ZN3tvm3tir24GenerateBlockFromTensorsERKNS_2te9ComputeOpERKNS_7runtime5ArrayINS1_6TensorEvEENS6_INS_8PrimExprEvEESB_PNS0_14CreateFuncInfoEPNS_5arith8AnalyzerE'/>
-<use f='tvm/src/te/operation/create_primfunc.cc' l='372' u='c' c='_ZN3tvm3tir24GenerateStmtFromExternOpERKNS_2te8ExternOpEPNS0_14CreateFuncInfoE'/>
-<use f='tvm/src/te/operation/create_primfunc.cc' l='482' u='c' c='_ZN3tvm3tir27GenerateAndCompletePrimFuncERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS2_INS0_4StmtEvEEPNS0_14CreateFuncInfoE'/>
+<use f='tvm/src/te/operation/create_primfunc.cc' l='72' u='c' c='_ZN3tvm3tir17BufferSubstituter10VisitExpr_EPKNS0_7VarNodeE'/>
+<use f='tvm/src/te/operation/create_primfunc.cc' l='81' u='c' c='_ZN3tvm3tir17BufferSubstituter10VisitExpr_EPKNS0_14BufferLoadNodeE'/>
+<use f='tvm/src/te/operation/create_primfunc.cc' l='90' u='c' c='_ZN3tvm3tir17BufferSubstituter10VisitStmt_EPKNS0_15BufferStoreNodeE'/>
+<use f='tvm/src/te/operation/create_primfunc.cc' l='155' u='c' c='_ZN3tvm3tir32LayoutFreePlaceholdersNormalizer10VisitStmt_EPKNS0_9BlockNodeE'/>
+<use f='tvm/src/te/operation/create_primfunc.cc' l='226' u='c' c='_ZN3tvm3tir24GenerateBlockFromTensorsERKNS_2te9ComputeOpERKNS_7runtime5ArrayINS1_6TensorEvEENS6_INS_8PrimExprEvEESB_PNS0_14CreateFuncInfoEPNS_5arith8AnalyzerE'/>
+<use f='tvm/src/te/operation/create_primfunc.cc' l='411' u='c' c='_ZN3tvm3tir24GenerateStmtFromExternOpERKNS_2te8ExternOpEPNS0_14CreateFuncInfoE'/>
+<use f='tvm/src/te/operation/create_primfunc.cc' l='523' u='c' c='_ZN3tvm3tir27GenerateAndCompletePrimFuncERKNS_7runtime5ArrayINS_2te6TensorEvEERKNS2_INS0_4StmtEvEEPNS0_14CreateFuncInfoE'/>
 <use f='tvm/src/te/operation/hybrid_op.cc' l='467' u='c' c='_ZN3tvm2te16ProviderReplacer10VisitStmt_EPKNS_3tir17ProducerStoreNodeE'/>
 <use f='tvm/src/te/operation/op_utils.cc' l='231' u='c' c='_ZN3tvm2te14TensorReplacer10VisitExpr_EPKNS_3tir16ProducerLoadNodeE'/>
 <use f='tvm/src/te/operation/tensorize.cc' l='55' u='c' c='_ZN3tvm2te20InferTensorizeRegionEPKNS0_13ComputeOpNodeERKNS0_5StageERKSt13unordered_mapINS_3tir7IterVarENS_5RangeESt4hashIS9_ESt8equal_toIS9_ESaISt4pa14645131'/>
@@ -296,7 +299,8 @@
 <use f='tvm/src/tir/contrib/ethosu/passes.cc' l='648' u='c' c='_ZN3tvm3tir7contrib6ethosu21MergeConstantsMutator15GetMergedCyclesEi'/>
 <use f='tvm/src/tir/contrib/ethosu/passes.cc' l='740' u='c' c='_ZN3tvm3tir7contrib6ethosu21MergeConstantsMutator17MakeNewBufferLoadERKNS0_6BufferERKNS_8PrimExprEb'/>
 <use f='tvm/src/tir/ir/data_type_rewriter.cc' l='133' u='c' c='_ZN3tvm3tir17DataTypeLegalizer10VisitExpr_EPKNS0_7VarNodeE'/>
-<use f='tvm/src/tir/ir/specialize.cc' l='292' u='c' c='_ZN3tvm3tir22UpdateSpecializeVarMapERKNS0_8PrimFuncERKNS0_3VarERKNS0_6BufferEPSt13unordered_mapIS4_NS_8PrimExprENS_7runtime13ObjectPtrHashENSC_14Objec12872565'/>
+<use f='tvm/src/tir/ir/specialize.cc' l='242' u='c' c='_ZN3tvm3tir19PrimFuncSpecializer18MutateBufferRegionERKNS0_12BufferRegionE'/>
+<use f='tvm/src/tir/ir/specialize.cc' l='294' u='c' c='_ZN3tvm3tir22UpdateSpecializeVarMapERKNS0_8PrimFuncERKNS0_3VarERKNS0_6BufferEPSt13unordered_mapIS4_NS_8PrimExprENS_7runtime13ObjectPtrHashENSC_14Objec12872565'/>
 <use f='tvm/src/tir/ir/stmt_functor.cc' l='709' u='c' c='_ZN3tvm3tir12IRSubstitute17GetRemappedBufferENS0_6BufferE'/>
 <use f='tvm/src/tir/ir/stmt_functor.cc' l='852' u='c' c='_ZN3tvm3tir36IRSubstituteWithDataTypeLegalization17GetRemappedBufferENS0_6BufferE'/>
 <use f='tvm/src/tir/schedule/analysis/analysis.cc' l='1826' u='c' c='_ZN3tvm3tir23GetTensorizeLoopMappingERKNS0_13ScheduleStateERKNS0_8StmtSRefERKNS0_8PrimFuncEb'/>
